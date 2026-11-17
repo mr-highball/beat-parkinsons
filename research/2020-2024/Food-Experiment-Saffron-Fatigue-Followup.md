@@ -2,7 +2,7 @@
 
 ## Simple saffron syrup in multiple sclerosis
 
-Ashtiani et al. reported a July 27, 2020 uncontrolled pre–post study in 30 people with multiple sclerosis. Participants took 7.5 mL of simple saffron syrup every eight hours for 60 days. The publisher’s abstract reports reduced Fatigue Severity Scale scores (p < .001), with no group means, confidence interval, or control group. The syrup and diagnosis provide indirect context for `0485`. [Primary abstract](https://doi.org/10.1515/jbcpp-2020-0063)
+Ashtiani et al. reported a July 27, 2020 uncontrolled before-and-after study in 30 people with multiple sclerosis, PMID 32716906. Participants took 7.5 mL of syrup containing 0.5% saffron water extract every eight hours over 60 days. Table 2 in the author-uploaded full article gives means (SD) of 71.10 (7.76) at baseline, 48.40 (9.95) at 30 days and 35.30 (15.34) at 60 days. The authors report p < .001 for comparisons with baseline. Their Methods describe nine Fatigue Severity Scale items scored 1–7, whose untransformed sum has a maximum of 63. The article does not describe a conversion that would reconcile the reported baseline mean with that range. The numbers document a reported within-group decline with uncertain units, without a control group to estimate a treatment effect. The syrup and multiple sclerosis population provide indirect context for `0485`. The article cites registry ID `IRCT2017061226667N6`. [Publisher abstract](https://doi.org/10.1515/jbcpp-2020-0063) · [Author-uploaded full report, Methods and Table 2](https://www.researchgate.net/publication/343260009_The_effect_of_novel_simple_saffron_syrup_on_fatigue_reduction_in_patients_with_multiple_sclerosis)
 
 ## Saffron honey and rose-water beverage in breast cancer
 
