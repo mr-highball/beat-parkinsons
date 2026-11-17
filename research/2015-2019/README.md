@@ -4,6 +4,8 @@ January 1, 2015 through December 31, 2019.
 
 ## Annotated research
 
+- [Parkinson motor scores, tremor subtype and culinary exposure](Food-Experiment-Tremor-Primary-Studies.md)
+
 - [Sage-containing teas in controlled trial records](Food-Experiment-Sage-Tea-Trial-Records.md)
 
 - [Oat foods, formulations and sleep](Food-Experiment-Oats-Insomnia.md)

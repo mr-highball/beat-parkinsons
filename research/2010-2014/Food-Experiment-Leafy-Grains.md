@@ -17,3 +17,7 @@ ClinicalTrials.gov first posted NCT02152150 on June 2, 2014, after the recorded 
 ## Talbinah and anxiety scales in long-term care
 
 Badrasawi and colleagues’ crossover included 30 older residents. The barley-based product was a prepared talbinah mixture, with habitual diet as the comparison. Table 2 reports an inconclusive within-intervention change on DASS anxiety (11.2 to 8.8, p = .100) and a decrease on the POMS tension–anxiety subscale (11.7 to 7.9, p = .002). The table gives paired within-period tests, and the anxiety-related scores differed at baseline. The trial does not isolate boiled barley or report a Parkinson subgroup. [Primary article, Methods and Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC3593710/)
+
+## Second 2014 case of gluten withdrawal and overall motor symptoms
+
+Congress abstract P.02.3 identifies a separate person with established Parkinson disease and suspected gluten sensitivity. Tremor already responded to levodopa. The authors describe better overall motor symptoms and OFF time after gluten withdrawal and report a later medication change. Individual rest tremor, replacement foods and cooked wheat berry intake are unresolved. The abstract is split across pages S56 and S57. [Original conference abstract](https://doi.org/10.1016/S1590-8658(14)60162-6) · [Local factual text](Source-Text/2014-Jafrancesco-Gluten-Withdrawal-Parkinson-Extract.txt)
