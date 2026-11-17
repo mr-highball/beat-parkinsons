@@ -20,9 +20,13 @@ Use only Pinky, Slinky, Binky, Blimbo, and The Brain as subagents unless the use
 
 Commit verified research and experiment updates incrementally. Use a descriptive subject and include the material source additions, verdict changes, or open evidence gaps in the commit body. Keep temporary downloads and build outputs in the ignored build directories.
 
-# Local research lookup
+# Oracle-first research
 
-Use [Parkinson’s oracle](experiments/tools/parkinsons-oracle/README.md) for relevant local claim and catalog lookups when its MCP server is available. Inspect the claim’s assessment and coverage records before drawing a directional conclusion. Continue with the experiment’s documented evidence workflow when local results leave a question open.
+- Dexter, Pinky, Binky, Slinky, Blimbo, and The Brain use [Parkinson’s oracle](experiments/tools/parkinsons-oracle/README.md) as the first knowledge base for each evidence question. Consult it before broad file scans or web discovery. During blind generation, use only the experiment inputs.
+- For claim evidence, start with `oracle_query` using the ingredient, symptom, and `scope: "assessed"`. Retrieve the needed `oracle_claim` assessments and coverage. For a specific paper or registration, search the indexed catalog by stable identifier and check the actual source passage. Check earlier experiments for reusable work while preserving the exact exposure, preparation, population, and endpoint.
+- Use the local MCP launcher when the session has no direct oracle tools. The [launcher example](experiments/oracle-coverage/README.md#local-launcher) and the same read-only tools apply to all project agents. Use small replies to locate evidence, then page and follow supporting, opposing, and open trails as needed. A local match does not close any required external search.
+- Record one first-pass result per evidence question as a hit, partial, miss, or unavailable. Send the outcome, query, citation, and unresolved dimension to Dexter for the [coverage ledger](experiments/oracle-coverage/README.md). Log repeat searches as part of the same question. Keep tool and index failures separate from catalog gaps.
+- At each research checkpoint, compare strict hit rates for comparable batches and record the denominator. When rates decline, identify recurring partials and misses by exposure, symptom, and missing evidence. Prioritize those gaps for catalog expansion, while keeping the experiment’s existing review order and search coverage requirements. Verify index health before interpreting the trend and refresh the index after committed catalog updates.
 
 # Publication privacy
 

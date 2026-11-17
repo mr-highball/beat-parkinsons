@@ -10,6 +10,8 @@
 
 ## Evidence assessment
 
+- Start each post-freeze question with the project's [oracle-first workflow](../oracle-coverage/README.md). Record the first local outcome, then continue every required catalog and external evidence check. Use the tracked gaps to prioritize additions to the appropriate research period.
+
 - Scan the entire local research catalog after the freeze. Log file coverage, unavailable full text, and any read or extraction failures. Search both directions and deduplicate reports of the same study.
 - Evaluate human Parkinson’s evidence against the named ingredient, preparation, and symptom. Record related preparations, isolated constituents, combined interventions, other endpoints, and nonhuman studies as indirect leads.
 - Start with at least two targeted external searches for each locally Unknown or Maybe claim, then broaden them as needed. Share a query only when it covers each mapped claim. Record its date, text, results, screening depth, and provider or access limits. Save new relevant sources or original summaries in the appropriate local research period before citing them.
