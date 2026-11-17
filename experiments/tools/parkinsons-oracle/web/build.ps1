@@ -20,6 +20,7 @@ if (!$Runtime) {
     $Runtime = $Candidate
 }
 $Vendor = Join-Path $Repo 'experiments/tools/vendor/nyx/src'
+$SharedUnits = Split-Path -Parent $PSScriptRoot
 $Output = $OutputDirectory
 if (!$Output) {
     $Output = Join-Path $Repo 'build/parkinsons-oracle/web'
@@ -27,7 +28,7 @@ if (!$Output) {
 New-Item -ItemType Directory -Path $Output -Force | Out-Null
 $CompilerArgs = @(
     '-Mdelphi', '-Tbrowser', '-Jc',
-    "-Fu$Vendor", "-Fi$Vendor", "-FE$Output"
+    "-Fu$Vendor", "-Fi$Vendor", "-Fu$SharedUnits", "-FE$Output"
 )
 if ($UnitRoot) {
     $Packages = (Resolve-Path -LiteralPath $UnitRoot).Path

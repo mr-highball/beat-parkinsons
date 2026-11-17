@@ -7,7 +7,7 @@ program OracleWeb;
 
 uses
   SysUtils, StrUtils, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
-  oraclestatic;
+  oraclestatic, parkinsonsoracle.trend;
 
 type
   TOracleView = (ovClaims, ovCatalog);
@@ -27,6 +27,7 @@ var
   GSequence: Integer;
   GResults: TJSObject;
   GArguments: TJSObject;
+  GTrend: String;
   GFilterOptions: TJSObject;
   GStaticOracle: TStaticOracle;
   GSymptom: TOraclePicker;
@@ -210,27 +211,27 @@ begin
   LVerdict := TextOf(AClaim, 'verdict');
   LEvidence := EvidenceLabel(LVerdict);
   LEffect := '';
-  if (LVerdict = 'True') or (LVerdict = 'Maybe True') then
-  begin
-    case IndexStr(TextOf(AClaim, 'hypothesis_direction'), ['reduces', 'worsens']) of
-      0:
-        begin
-          LEffect := '↓ May ease';
-          LEffectId := 'effect-relief-';
-        end;
-      1:
-        begin
-          LEffect := '↑ May worsen';
-          LEffectId := 'effect-worse-';
-        end;
-    end;
-    if (LEffect <> '') and (LVerdict = 'Maybe True') then
-      LEvidence := 'Limited evidence';
+  case IndexStr(ClaimTrend(LVerdict, TextOf(AClaim, 'hypothesis_direction')),
+    ['eases', 'worsens']) of
+    0:
+      begin
+        LEffect := '↓ May ease';
+        LEffectId := 'effect-relief-';
+      end;
+    1:
+      begin
+        LEffect := '↑ May worsen';
+        LEffectId := 'effect-worse-';
+      end;
   end;
 
   Result := Section(nkRow, 'claim-indicators-' + AId);
   if LEffect <> '' then
+  begin
     Result.Add(Caption(nkBadge, LEffectId + AId, LEffect));
+    if LVerdict = 'Maybe True' then
+      LEvidence := 'Limited evidence';
+  end;
   Result.Add(Caption(nkBadge, 'grade-' + AId, LEvidence));
 end;
 
@@ -350,6 +351,24 @@ begin
     function(AEvent: TEventListenerEvent): Boolean
     begin
       GSymptom.Pick(AValue);
+      Result := True;
+    end);
+end;
+
+procedure SelectTrend(const ATrend: String);
+begin
+  GTrend := ATrend;
+  SetPressed('trend-any', GTrend = '');
+  SetPressed('trend-eases', GTrend = 'eases');
+  SetPressed('trend-worsens', GTrend = 'worsens');
+end;
+
+procedure BindTrend(const ANodeId, ATrend: String);
+begin
+  BindEvent(GRenderer.ElementFor(ANodeId), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      SelectTrend(ATrend);
       Result := True;
     end);
 end;
@@ -490,13 +509,19 @@ var
   LOffset: Integer;
   LNext: Integer;
   LTag: String;
+  LTrend: String;
   LMessage: String;
   LCanShowReviewed: Boolean;
+  LCanShowAnyTrend: Boolean;
 begin
   LDocument := TNyxDocument.Create;
   LPage := Section(nkPage, 'result-page');
   LDocument.AddPage(LPage);
+  LTrend := TextOf(GArguments, 'trend');
+  LCanShowAnyTrend := (GView = ovClaims) and (LTrend <> '') and
+    (CountOf(AResults, 'total_matches') = 0);
   LCanShowReviewed := (GView = ovClaims) and
+    (LTrend = '') and
     (TextOf(GArguments, 'scope') = '') and
     (TextOf(AResults, 'no_match_reason') = 'evidence_filters') and
     (CountOf(AResults, 'total_matches') = 0);
@@ -523,14 +548,23 @@ begin
       ' of ' + IntToStr(LTotal)))
   else
   begin
-    if LCanShowReviewed then
+    if LCanShowAnyTrend then
+    begin
+      if LTrend = 'eases' then
+        LMessage := 'No matching claims point toward easing this symptom.'
+      else
+        LMessage := 'No matching claims point toward worsening this symptom.';
+    end
+    else if LCanShowReviewed then
       LMessage := 'No clear direction in the reviewed evidence for this search. You can explore what the studies looked at.'
     else if GView = ovClaims then
       LMessage := 'No matches for these filters. Try a different symptom or clear a filter.'
     else
       LMessage := 'No indexed document contains all of these search terms.';
     LPage.Add(Caption(nkLabel, 'result-message', LMessage));
-    if LCanShowReviewed then
+    if LCanShowAnyTrend then
+      LPage.Add(Button('show-any-trend', 'Show any trend', nvSecondary))
+    else if LCanShowReviewed then
       LPage.Add(Button('show-reviewed', 'Show reviewed claims', nvSecondary));
   end;
 
@@ -568,6 +602,14 @@ begin
 
   PublishResults(LDocument, LPage);
   FocusResults;
+  if LCanShowAnyTrend then
+    BindEvent(GResultsRenderer.ElementFor('show-any-trend'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        SelectTrend('');
+        Query(True, 0);
+        Result := True;
+      end);
   if LCanShowReviewed then
     BindEvent(GResultsRenderer.ElementFor('show-reviewed'), 'click',
       function(AEvent: TEventListenerEvent): Boolean
@@ -643,6 +685,7 @@ begin
         1: GArguments['direction'] := 'reduces';
         2: GArguments['direction'] := 'worsens';
       end;
+      MaybeSet(GArguments, 'trend', GTrend);
     end
     else
     begin
@@ -750,6 +793,7 @@ var
   LClaims: TNyxNode;
   LCatalog: TNyxNode;
   LQuick: TNyxNode;
+  LTrendOptions: TNyxNode;
   LFilters: TNyxNode;
   LHelp: TNyxNode;
   LIndex: Integer;
@@ -781,6 +825,13 @@ begin
       nvSecondary));
   LClaims.Add(LQuick);
   LClaims.Add(Button('browse-symptoms', 'Browse all symptoms', nvSecondary));
+  LClaims.Add(Caption(nkLabel, 'trend-label', 'Symptom effect'));
+  LTrendOptions := Section(nkRow, 'trend-options').Configure
+    .AccessibleName('Symptom effect').Done;
+  LTrendOptions.Add(Button('trend-any', 'Any trend', nvSecondary));
+  LTrendOptions.Add(Button('trend-eases', '↓ May ease', nvSecondary));
+  LTrendOptions.Add(Button('trend-worsens', '↑ May worsen', nvSecondary));
+  LClaims.Add(LTrendOptions);
   LClaims.Add(Button('show-filters', 'More filters', nvSecondary));
   LFilters := Section(nkColumn, 'extra-filters');
   LFilters.Add(CreatePickerField('ingredient', 'Food or ingredient', 'Any ingredient'));
@@ -826,6 +877,11 @@ begin
   for LIndex := Low(CQuickSymptoms) to High(CQuickSymptoms) do
     BindQuickSymptom('quick-' + IntToStr(LIndex), CQuickSymptoms[LIndex]);
   SymptomChanged;
+  GRenderer.ElementFor('trend-options').setAttribute('role', 'group');
+  BindTrend('trend-any', '');
+  BindTrend('trend-eases', 'eases');
+  BindTrend('trend-worsens', 'worsens');
+  SelectTrend('');
   GRenderer.ElementFor('extra-filters').id := 'extra-filters';
   GRenderer.ElementFor('extra-filters').setAttribute('hidden', '');
   GRenderer.ElementFor('show-filters').setAttribute('aria-controls', 'extra-filters');

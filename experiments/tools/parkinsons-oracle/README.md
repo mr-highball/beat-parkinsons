@@ -21,6 +21,8 @@ The oracle is a local Free Pascal MCP server for the Parkinson’s research cata
 
 Query scope defaults to `directional`, which requires a True, False, Maybe True or Maybe False verdict with a nonpending assessment. Use `assessed` to inspect records with at least one nonpending assessment, including Unknown, or `frozen` to include hypotheses still awaiting review. Filter by the canonical `preparation`, `round`, `direction` or `verdict` as needed. Results use stable round and claim-ID order. Follow `next_offset` to page through larger result sets.
 
+Use `{"symptom":"tremors","trend":"eases"}` to look up evidence that may point toward relief. Set `trend` to `worsens` for evidence of worsening. The trend uses the card arrows, which require support for the claim being tested. Evidence against a claim leaves the opposite effect open. The `direction` filter applies to the original hypothesis wording.
+
 Use `oracle_claim` for the relevant study outcomes and access gaps. If the claim search is empty or the evidence is unresolved, search the text catalog with alternate spellings, preparation names or endpoint terminology. A lexical hit needs source-level review. A gap in the indexed catalog is a reason to continue discovery, with the index timestamp and its read errors in view.
 
 ## Build and connect
@@ -58,7 +60,7 @@ The catalog refresh records its own timestamp and failed reads. Check `oracle_st
 
 ## Browser interface
 
-The Nyx web target uses the same claim and catalog service as MCP. The local workbench offers common symptom pills, a browse list and suggestions for symptoms, ingredients and preparations. The arrows flag evidence of easing or worsening a symptom. Evidence against a claim leaves its symptom direction open. Selecting a result opens its study assessments and citations. The local server binds to the loopback address by default.
+The Nyx web target uses the same claim and catalog service as MCP. The local workbench offers common symptom pills, a browse list and suggestions for symptoms, ingredients and preparations. Under Symptom effect, choose May ease, May worsen, or Any trend before searching. The filters match the arrows on the cards. Selecting a result opens its study assessments and citations. The local server binds to the loopback address by default.
 
 ```powershell
 git submodule update --init -- experiments/tools/vendor/nyx

@@ -15,6 +15,7 @@ type
     Ingredient: String;
     Preparation: String;
     Direction: String;
+    Trend: String;
     Scope: String;
     Verdict: String;
     Round: Integer;
@@ -76,7 +77,8 @@ type
 
 implementation
 
-uses Process, StrUtils, FPSHA256, foodexperiment.externaldata, wfc;
+uses Process, StrUtils, FPSHA256, foodexperiment.externaldata, parkinsonsoracle.trend,
+  wfc;
 
 const
   CBase = 'experiments/1000_see_what_sticks_food';
@@ -556,7 +558,8 @@ end;
 
 function EvidenceAllowed(AClaim: TClaim; const AQuery: TClaimQuery): Boolean;
 begin
-  Result := (AQuery.Verdict = '') or SameText(AQuery.Verdict, AClaim.Verdict);
+  Result := ((AQuery.Verdict = '') or SameText(AQuery.Verdict, AClaim.Verdict)) and
+    ((AQuery.Trend = '') or (ClaimTrend(AClaim.Verdict, AClaim.Direction) = AQuery.Trend));
   case IndexStr(AQuery.Scope, ['directional', 'assessed', 'frozen']) of
     0: Result := Result and AClaim.IsDirectional and (AClaim.AssessedRows > 0);
     1: Result := Result and (AClaim.AssessedRows > 0);
@@ -676,10 +679,13 @@ begin
   LQuery.Ingredient := LookupAlias(AQuery.Ingredient, FIngredientAliases);
   LQuery.Preparation := Normalize(AQuery.Preparation);
   LQuery.Direction := Normalize(AQuery.Direction);
+  LQuery.Trend := Normalize(AQuery.Trend);
   if IndexStr(LQuery.Scope, ['directional', 'assessed', 'frozen']) < 0 then
     raise EConvertError.Create('Scope must be directional, assessed or frozen.');
   if IndexStr(LQuery.Direction, ['', 'reduces', 'worsens']) < 0 then
     raise EConvertError.Create('Direction must be reduces or worsens.');
+  if IndexStr(LQuery.Trend, ['', 'eases', 'worsens']) < 0 then
+    raise EConvertError.Create('Trend must be eases or worsens.');
   if IndexText(LQuery.Verdict, ['', 'True', 'False', 'Maybe True', 'Maybe False',
     'Unknown', 'Unreviewed']) < 0 then
     raise EConvertError.Create('Invalid verdict filter.');
@@ -716,6 +722,8 @@ begin
         'offset', LQuery.Offset, 'identity_excluded', LResolved.IdentityExcluded,
         'hypothesis_excluded', LResolved.PremiseExcluded,
         'evidence_excluded', LResolved.EvidenceExcluded]);
+      if LQuery.Trend <> '' then
+        Result.Add('trend_filter', LQuery.Trend);
       Result.Add('options', LResolved.Options);
       LResolved.Options := nil;
       if (LQuery.Offset < LResolved.Selected) and

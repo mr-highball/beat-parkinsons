@@ -14,12 +14,13 @@ const
   CToolsJSON =
     '{"tools":[' +
     '{"name":"oracle_query","description":"Find frozen local claims with the requested symptom, ' +
-      'ingredient, preparation, hypothesis direction, and evidence scope. Default scope returns ' +
+      'ingredient, preparation, hypothesis direction, evidence trend, and scope. Default scope returns ' +
       'only directional verdicts with assessments. Maybe remains provisional.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
       '"additionalProperties":false,"properties":{"symptom":{"type":"string"},' +
       '"ingredient":{"type":"string"},"preparation":{"type":"string"},' +
-      '"direction":{"enum":["reduces","worsens"]},"scope":{"enum":["directional","assessed","frozen"]},' +
+      '"direction":{"enum":["reduces","worsens"]},"trend":{"enum":["eases","worsens",""]},' +
+      '"scope":{"enum":["directional","assessed","frozen"]},' +
       '"verdict":{"enum":["True","False","Maybe True","Maybe False","Unknown","Unreviewed"]},' +
       '"round":{"type":"integer","minimum":1,"maximum":7},"offset":{"type":"integer","minimum":0},' +
       '"limit":{"type":"integer","minimum":1,"maximum":100}}}},' +
@@ -184,12 +185,13 @@ begin
     0:
       begin
         RequireFields(AArguments, ['symptom', 'ingredient', 'preparation', 'direction',
-          'scope', 'verdict', 'round', 'offset', 'limit']);
+          'trend', 'scope', 'verdict', 'round', 'offset', 'limit']);
         LQuery := Default(TClaimQuery);
         LQuery.Symptom := ReadString(AArguments, 'symptom', '');
         LQuery.Ingredient := ReadString(AArguments, 'ingredient', '');
         LQuery.Preparation := ReadString(AArguments, 'preparation', '');
         LQuery.Direction := ReadString(AArguments, 'direction', '');
+        LQuery.Trend := ReadString(AArguments, 'trend', '');
         LQuery.Scope := ReadString(AArguments, 'scope', 'directional');
         LQuery.Verdict := ReadString(AArguments, 'verdict', '');
         LQuery.Round := ReadInteger(AArguments, 'round', 0, 1, 7);

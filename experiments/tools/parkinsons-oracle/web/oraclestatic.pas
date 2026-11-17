@@ -35,7 +35,7 @@ type
 
 implementation
 
-uses StrUtils, oraclevocab;
+uses StrUtils, oraclevocab, parkinsonsoracle.trend;
 
 function AsText(AValue: JSValue): String; external name 'String';
 function EncodePathSegment(const AText: String): String; external name 'encodeURIComponent';
@@ -170,6 +170,7 @@ var
   LPreparation: String;
   LDirection: String;
   LVerdict: String;
+  LTrend: String;
   LRound: Integer;
   LOffset: Integer;
   LLimit: Integer;
@@ -185,6 +186,7 @@ begin
   LPreparation := LowerCase(VocabularyText(AArguments, 'preparation'));
   LDirection := VocabularyText(AArguments, 'direction');
   LVerdict := VocabularyText(AArguments, 'verdict');
+  LTrend := VocabularyText(AArguments, 'trend');
   LRound := Count(AArguments, 'round');
   LOffset := Count(AArguments, 'offset');
   LLimit := Count(AArguments, 'limit', 12);
@@ -204,7 +206,9 @@ begin
     LRowScope := VocabularyText(LRow, 'evidence_scope');
     if ((LScope = 'directional') and (LRowScope <> 'directional')) or
       ((LScope = 'assessed') and (LRowScope = 'frozen')) or
-      ((LVerdict <> '') and (VocabularyText(LRow, 'verdict') <> LVerdict)) then
+      ((LVerdict <> '') and (VocabularyText(LRow, 'verdict') <> LVerdict)) or
+      ((LTrend <> '') and (ClaimTrend(VocabularyText(LRow, 'verdict'),
+        VocabularyText(LRow, 'hypothesis_direction')) <> LTrend)) then
     begin
       Inc(LEvidenceExcluded);
       Continue;
@@ -219,6 +223,8 @@ begin
   Result['total_matches'] := LCount;
   Result['offset'] := LOffset;
   Result['options'] := LRows;
+  if LTrend <> '' then
+    Result['trend_filter'] := LTrend;
   if LOffset + LLimit < LCount then
     Result['next_offset'] := LOffset + LLimit;
   if LEvidenceExcluded > 0 then
