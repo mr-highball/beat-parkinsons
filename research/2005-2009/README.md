@@ -4,6 +4,7 @@ January 1, 2005 through December 31, 2009.
 
 ## Annotated research
 
+- [Apigenin and luteolin in fresh celery petioles](Source-Text/2007-Vina-Chaves-Fresh-Celery-Petiole-Flavones-Extract.txt)
 - [Wild lettuce, ataxia and acute toxicity in eight cases](Source-Text/2009-PMID21686920-Wild-Lettuce-Case-Extract.txt)
 - [Corn oil carrier in an open-label Parkinson psychosis trial](Source-Text/2008-PMID18801821-Corn-Oil-Carrier-Extract.txt)
 - [Essential-tremor blood harmane and reported animal protein](Source-Text/2005-PMID16087903-Protein-Harmane-Extract.txt)

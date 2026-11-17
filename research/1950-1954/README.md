@@ -4,6 +4,7 @@ January 1, 1950 through December 31, 1954.
 
 ## Annotated research
 
+- [Peanut oil as a historical drug carrier in a Parkinson review](Source-Text/1951-PMID14879233-Ebin-Parkinson-Peanut-Carrier-Extract.txt)
 - [Clinical and diagnosis](Clinical-and-Diagnosis.md)
 - [Mechanisms and models](Mechanisms-and-Models.md)
 - [Drugs and remedies](Drugs-and-Remedies.md)

@@ -4,6 +4,7 @@ January 1, 1945 through December 31, 1949.
 
 ## Annotated research
 
+- [Bird and Meyers Parkinson electromyography paper and full-source gap](Source-Text/1949-PMID18130078-Bird-Meyers-Index-Receipt.txt)
 - [Almond oil in original historical collections](Food-Experiment-Almond-Historical-Collections.md)
 
 - [Mechanisms and models](Mechanisms-and-Models.md)

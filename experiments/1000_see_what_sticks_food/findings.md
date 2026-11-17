@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The thirteenth rest-tremor checkpoint closed 394 original pairs and added four assessments. The verified main bodies include 300 fig records and 40 apple records. Clinical apple-chewing, celery formulation and historical peanut-carrier sources leave their isolated resting-tremor effects unresolved. The original queue totals 49,600 pairs, including 3,487 rest-tremor pairs. [Evidence and source verification](followup/tremor-priority-nov17-13/README.md)
+
 The twelfth rest-tremor checkpoint closed 111 original pairs, reconciled 97 PubMed appearances including the retained-term retry, and added eight assessments. The source follow-through distinguishes cold-pressed oil chemistry, Parkinson occurrence, motor tasks and combined clinical scores. The original queue totals 49,994 pairs, including 3,881 rest-tremor pairs. [Evidence and exact decisions](followup/tremor-priority-nov17-12/README.md)
 
 The eleventh rest-tremor checkpoint closed 71 original pairs, including all 46 individual olive-oil records, and preserved 70 assigned access gaps. The original queue totals 50,105 pairs, with 3,992 rest-tremor pairs. Five olive-oil conference collections remain open. Results retain the previously recorded grades. [Four-claim source review](followup/tremor-priority-nov17-11/README.md)
