@@ -1,0 +1,15 @@
+# Common sage, muscle tone and movement
+
+## Conductive education history and sage preparation
+
+Vissi and colleagues published their historical account on October 4, 2021 (PMID 34693049, PMC8517838, DOI 10.1016/j.heliyon.2021.e08114). Interviews and institutional records describe sage baths, wraps and later a cream in conductive education. Passive joint exercise and active tasks followed the sage application. The contemporary cream contained 4% standardized common-sage extract and 0.02% sage oil. This historical account presents no controlled range-of-motion or tone estimate, and describes a planned investigation of the cream. [Original Methods, Table 1 and planned trial](https://www.cell.com/article/S2405844021022179/pdf)
+
+## Sage cream and pediatric spasticity
+
+Vissi, Földesi and Túri reported their 2021–2022 investigation in the November 2022 World Congress on Conductive Education abstract book. Eight children aged 3–6 with spastic muscle tone used sage and placebo creams in five-week periods under a double-blind design. Joint range of motion at the hip, knee and ankle was measured around the periods. The authors reported no measurable effect on muscle tone. In a separate four-week subjective component with six participants aged 13–15, three reported less pain and four reported less spasticity. The abstract gives no numerical range-of-motion contrasts, sequence allocation or comparator for the subjective counts. This is a topical preparation in a pediatric spasticity setting. It supplies no estimate for Parkinson rigidity or pain after consuming sage. [Original 2022 abstract, p. 76](https://semmelweis.hu/pak/files/2022/11/11th-Abstact-Book-word-1112.pdf#page=76)
+
+An expanded 2024 chapter with the same title and authors is listed at pp. 149–156, ISBN 9786158145169, MTMT 34819989. The library identifies the printed volume at shelf mark KOPE 525. The chapter body remains unverified, so it remains an access trail for the earlier report. [Chapter bibliography](https://m2.mtmt.hu/api/publication/34819989) · [Faculty library holding](https://semmelweis.hu/petokonyvtar/ami-a-konpeditabol-kimaradt/)
+
+## Common sage extract in a rotenone motor model
+
+Sabeeh, Selman and Makkey's February 14, 2023 journal listing reports 50 male rats in five arms. The extract-alone arm used oral `Salvia officinalis` extract during rotenone exposure, alongside other arms involving levodopa/carbidopa. The author abstract reports improved rotarod, open-field and grip outcomes for the extract-alone group compared with untreated rotenone rats, with p<.05 reported by test family. Those endpoints measure motor performance and strength. The abstract presents no catalepsy or separate rigidity measure, group-level estimates, or basis for equating the extract with ground leaf. The indexed journal abstract was available, while the live article route redirected to an unavailable site. Full methods and tables remain open. [Original journal article record](https://hivnursing.net/index.php/hiv/article/view/1693)

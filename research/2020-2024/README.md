@@ -181,6 +181,7 @@ January 1, 2020 through December 31, 2024.
 - [Sichuan pepper symptom follow-up](Food-Experiment-Sichuan-Pepper-Followup.md)
 - [Macadamia and hazelnut oil symptom follow-up](Food-Experiment-Macadamia-Hazelnut-Followup.md)
 - [Sage and summer savory symptom studies](Food-Experiment-Sage-Savory-Outcomes.md)
+- [Common sage, muscle tone and movement](Food-Experiment-Sage-Muscle-Tone.md)
 - [Oats and carrot symptom studies](Food-Experiment-Oats-Carrot-Followup.md)
 - [Turmeric symptom follow-up](Food-Experiment-Turmeric-Followup.md)
 - [Grapeseed and flaxseed oil follow-up](Food-Experiment-Grapeseed-Flaxseed-Followup.md)
