@@ -2,7 +2,7 @@
 
 ## Lemon balm extract and neuropsychiatric outcomes in mild Alzheimer dementia
 
-Noguchi-Shinohara and colleagues published October 29, 2020. Twenty-three participants with mild Alzheimer dementia were randomized to rosmarinic-acid-rich lemon balm extract or placebo. At 24 weeks the NPI-Q total changed by −0.5 versus +0.7 points (p = .012), with no clear group differences on composite cognitive measures. The trial used an extract of a different herb from rosemary, and its composite scales give no separate speech intelligibility estimate. [Local CC BY article text](Source-Text/PMC7596544.txt) · [Original report](https://doi.org/10.1038/s41598-020-73729-2)
+Noguchi-Shinohara and colleagues published October 29, 2020. Twenty-three participants with mild Alzheimer dementia were randomized to rosmarinic-acid-rich lemon balm extract or placebo. At 24 weeks the NPI-Q total changed by −0.5 versus +0.7 points (p = .012), with no clear group differences on composite cognitive measures. The original specifies an irritability/lability interaction of p=.006. The full eight-page supplement was recovered. Its page 7 lists participant-level total NPI-Q scores at each visit, with no separate depression result. The preparation is lemon balm extract. There is no ingredient-specific rosemary dose, speech intelligibility result or Parkinson comparison. [Local CC BY article text](Source-Text/PMC7596544.txt) · [Original report](https://doi.org/10.1038/s41598-020-73729-2) · [Original supplement](https://pmc-oa-opendata.s3.amazonaws.com/PMC7596544.1/41598_2020_73729_MOESM1_ESM.pdf#page=7)
 
 ## Second case of a migrating rosemary twig
 
@@ -30,7 +30,7 @@ ClinicalTrials.gov first posted NCT05602688 on November 2, 2022. In the October 
 
 ## Lemon balm anise and rose formula and depression in IBS
 
-Azimi and colleagues first published May 29, 2024. Eighty-eight of 96 adults with constipation-predominant IBS completed the randomized comparison of a lemon balm, anise and damask rose capsule against cornstarch. The abstract favors the formula but gives a depression interval that crosses zero. The original tables are needed to resolve the contrast and the effect-size label. There was no lemon-balm-only arm or Parkinson population. [Original author abstract](https://pubmed.ncbi.nlm.nih.gov/38937193/)
+Azimi and colleagues first published May 29, 2024. Eighty-eight of 96 adults with constipation-predominant IBS completed the randomized comparison of a lemon balm, anise and damask rose capsule against cornstarch. The paper identifies IRCT20150927024228N4. The abstract labels the HADS depression contrast as d=−1.93 with reported CI −4.32 to +2.79, which crosses zero and is asymmetrical around the stated estimate. The result tables remain unavailable. A later gastrointestinal report uses the same study design and arm counts and provides distinct outcomes from the same likely cohort. There was no lemon-balm-only arm or Parkinson population. [Original author abstract](https://pubmed.ncbi.nlm.nih.gov/38937193/) · [Official registry](Source-Text/Trials/IRCT20150927024228N4.txt) · [Gastrointestinal companion](https://doi.org/10.1016/j.aimed.2024.12.006)
 
 ## Rosemary extract and bidirectional gut motility
 

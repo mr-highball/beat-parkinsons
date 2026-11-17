@@ -1,3 +1,5 @@
 # Mixed products and lemon balm attribution
 
 The 2009 Ze 185 study reported better depression outcomes with two herbal mixtures. Both active arms contained lemon balm and varied butterbur. The 2011 egg-isolate trial changes the lemon balm component while keeping the egg isolate dose the same. It reports no clear difference between active groups. Neither capsule comparison uses brewed leaf or Parkinson participants. [2009 older trial](../../2005-2009/Source-Text/2009-PMID19274698-Melzer-Ze185-Extract.txt) · [2011 add-on comparison](../Source-Text/2011-PMID21631360-Solberg-YTE-Melissa-Extract.txt)
+
+The 2013 burn registration specifies brewed lemon balm against black tea and a Beck depression outcome. It was registered after enrollment began. Its later report conditions follow-up on staying hospitalized and the published table leaves the depression change contrast unclear. [Earlier burn registry](../Source-Text/Trials/IRCT201205198177N4.txt) · [Later trial outcome](../../2015-2019/Food-Experiment-Herb-Spice-Followup.md#brewed-lemon-balm-and-depression-after-burn-injury)

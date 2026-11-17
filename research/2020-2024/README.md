@@ -546,3 +546,4 @@ January 1, 2020 through December 31, 2024.
 - [Lemon balm capsules and cognition during electroconvulsive therapy](Source-Text/Trials/IRCT20180613040083N1.txt)
 - [Older women, depression measures and lemon balm translation discrepancy](Source-Text/Trials/IRCT20150519022320N32.txt)
 - [Separate lemon balm and lavender nasal sprays with Hamilton depression](Source-Text/Trials/IRCT20140617018126N7.txt)
+- [Lemon balm, anise and rose capsule trial registration in IBS](Source-Text/Trials/IRCT20150927024228N4.txt)

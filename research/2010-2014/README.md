@@ -341,3 +341,5 @@ January 1, 2010 through December 31, 2014.
 
 - [Kiwi feeding studies](Food-Experiment-Kiwi-Feeding-Studies.md)
 - [Egg isolate with and without lemon balm in depression](Source-Text/2011-PMID21631360-Solberg-YTE-Melissa-Extract.txt)
+- [Burn-patient brewed lemon balm and black tea registry](Source-Text/Trials/IRCT201205198177N4.txt)
+- [Integrative group visits for pain and depression registry](Source-Text/Trials/NCT02262377.txt)
