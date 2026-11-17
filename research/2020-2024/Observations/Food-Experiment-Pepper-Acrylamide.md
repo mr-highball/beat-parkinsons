@@ -1,0 +1,9 @@
+# Pepper contaminant exposure remains separate from symptom effects
+
+The prior period's [Korean abstract](../../2015-2019/Source-Text/2017-Kim-Lee-Korean-Acrylamide-Furan-Abstract-Extract.txt) estimates a substantial black-pepper contribution to dietary acrylamide. The [2023 Singapore primary analysis](../Source-Text/2023-PMID37628020-Yu-Singapore-Acrylamide-Extract.txt) and [2024 methods report](../Source-Text/2024-PMID38397488-Lim-Singapore-Total-Diet-Methods-Extract.txt) add measured food concentrations and modeled intake from another national program.
+
+These records broaden the catalog beyond expected beneficial constituents. They measure concentration or estimated exposure, without measuring Parkinson pain, swallowing, insomnia or another frozen symptom. Portion size, preparation, lot variation, total diet and absorbed dose prevent translating a concentration ranking directly into a symptom claim. The two Singapore publications share a program and should not count as independent confirmation.
+
+The original Oracle lexical hits concerned a Sichuan-pepper acrylamide derivative and a TRPV1 antagonist. Similar chemical words did not identify dietary acrylamide in black pepper. The source question was a catalog miss, not a broken-index event or evidence against a pepper claim.
+
+The original supplement now verifies black pepper at 403.8 micrograms/kg with no cooking, and pepper-derived intake estimates among 226 survey eaters. This resolves the source of the 2024 rounded value. It does not resolve whole/ground form, prior processing, analytical replication or a controlled black-pepper cooking comparison. White pepper powder is a separate material, not an experiment isolating grinding or cooking. Chemical identity and exposure scope must be verified before following toxicity or symptom mechanisms. No new clinical grade follows from these dietary-contaminant records alone.

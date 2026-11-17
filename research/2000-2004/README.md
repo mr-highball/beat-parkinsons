@@ -136,3 +136,4 @@ January 1, 2000 through December 31, 2004.
 - [Sunflower Aromatherapy Comparators](Food-Experiment-Sunflower-Aromatherapy-Comparators.md)
 
 - [Cumin bioavailability patent families](Food-Experiment-Cumin-Bioavailability-Patents.md)
+The walnut-oil lipid trial is archived at author-abstract depth, with processing and between-group details still open. [2003 original abstract](Source-Text/2003-PMID12934760-Zibaeenezhad-Walnut-Oil-Lipids-Abstract-Extract.txt).

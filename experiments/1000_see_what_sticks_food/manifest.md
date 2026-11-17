@@ -13,13 +13,15 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 943 |
-| Maybe True | 0 | 26 |
+| Unknown | 1000 | 942 |
+| Maybe True | 0 | 27 |
 | Maybe False | 0 | 31 |
 | True | 0 | 0 |
 | False | 0 | 0 |
 
 ## Findings and limits
+
+The ninth lemon balm checkpoint verifies 68 more original pairs and preserves 12 assigned source holds. Thirteen earlier source exclusions now retain genuine ingredient leads as related, without clinical direction changes. Recovered mouse pain outcomes and a limited chemical preparation bridge move cold-pressed walnut oil and pain, claim 0065, to Maybe True 51; human Parkinson pain efficacy remains unverified. Totals are 27 Maybe True, 31 Maybe False and 942 Unknown, with zero True/False. The original queue holds 48,194 pairs, including 525 for 0133, which remains Maybe True 51. [Verified source roles, clinical limits and remaining scope](followup/lemon-balm-depression-nov17-09/README.md)
 
 The eighth lemon balm checkpoint verifies 152 original pairs, including 11 for 0133, and preserves one assigned collection hold. Primary sources distinguish the Carmint trio from GJS and retain mixed STW5 gastrointestinal findings and incomplete brain-gut methods. The original queue holds 48,262 pairs, including 537 for 0133. Claim 0133 remains Maybe True 51. [Product identity, original outcomes and source coverage](followup/lemon-balm-depression-nov17-08/README.md)
 
@@ -773,6 +775,7 @@ The initial published verdicts were 997 Unknown and three Maybe False. [Open tra
 - [0039](statements/0039.txt) **Maybe False** (51%) Consuming cold-pressed sesame oil worsens anxiety severity in people with Parkinson's disease.
 - [0060](statements/0060.txt) **Maybe False** (51%) Consuming dried sage worsens insomnia severity in people with Parkinson's disease.
 - [0063](statements/0063.txt) **Maybe False** (58%) Consuming ground saffron worsens depressive symptom severity in people with Parkinson's disease.
+- [0065](statements/0065.txt) **Maybe True** (51%) Consuming cold-pressed walnut oil reduces pain severity in people with Parkinson's disease.
 - [0072](statements/0072.txt) **Maybe True** (53%) Consuming extra-virgin olive oil reduces constipation severity in people with Parkinson's disease.
 - [0082](statements/0082.txt) **Maybe True** (51%) Consuming brewed black tea reduces bradykinesia severity in people with Parkinson's disease.
 - [0100](statements/0100.txt) **Maybe False** (52%) Consuming plain dark chocolate worsens anxiety severity in people with Parkinson's disease.

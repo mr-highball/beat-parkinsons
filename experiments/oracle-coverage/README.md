@@ -36,6 +36,19 @@ new sources into their chronological buckets, refresh the index and verify
 retrieval. Use batch summaries to identify the gaps that motivate that work.
 Record only research identifiers and relative source paths.
 
+## Validate a coverage append
+
+The native [coverage merger](../tools/parkinsons-oracle/oraclecoverage.merge.lpr) validates the old and proposed question and aggregate tables before writing distinct staged outputs under `build/`. It rejects duplicate question identities, duplicate aggregate keys, malformed rows, orphan groups, invalid outcomes, count/rate mismatches and input overwrite. Existing table bytes and order remain exact prefixes. An aggregate key includes batch, workstream and lookup kind; a question key includes batch and question. Unavailable lookups stay outside rate denominators.
+
+```powershell
+$run = 'build/oracle-coverage-merge'
+New-Item -ItemType Directory -Force "$run/units", "$run/bin" | Out-Null
+fpc -B -Sa -Cr -Co -Ci -gl "-FU$run/units" "-FE$run/bin" experiments/tools/parkinsons-oracle/oraclecoverage.merge.lpr
+& "$run/bin/oraclecoverage.merge.exe" experiments/oracle-coverage/lookups.tsv experiments/oracle-coverage/batches.tsv "$run/new-lookups.tsv" "$run/new-batches.tsv" "$run/combined-lookups.tsv" "$run/combined-batches.tsv"
+```
+
+Prepare new rows in the existing schemas, verify the staged combined files, and publish both only after exit zero. This verifies accounting rather than whether an evidence question was substantively answered. The [native fixtures](../tools/parkinsons-oracle/oraclecoverage.merge.tests.lpr) take the merger executable and a fresh ignored fixture directory. The November 17 checkpoint preserves [15 passing fixtures](../1000_see_what_sticks_food/followup/lemon-balm-depression-nov17-09/oracle-merge-fixtures.txt) and [the actual 37-question append](../1000_see_what_sticks_food/followup/lemon-balm-depression-nov17-09/oracle-merge-verification.txt).
+
 ## Exact ClinicalTrials.gov lookups
 
 A November 17 inventory found two canonical NCT records with matching official URLs under labeled header fields that revision 55 did not recognize. The native parser now reads those fields and requires the same official host, path and matching identifier as the other recognized source formats. Conflicting IDs are rejected. The registry identifier refresh backfills unchanged files. At revision 56 both records and five sampled existing matches returned their canonical paths through the same exact requests. A repeated refresh retained the revision. The reproduced index failure is recorded as unavailable in the first-pass rate. [NCT03532789](../../research/2015-2019/Source-Text/Trials/NCT03532789.txt) · [NCT05602688](../../research/2020-2024/Source-Text/Trials/NCT05602688.txt)

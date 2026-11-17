@@ -443,3 +443,5 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Observation on the earlier group-visit outcomes and later cinnamon analysis](Observations/Food-Experiment-Cinnamon-Group-Visits.md)
 - [Lemcog original results and supplementary mood tables](Source-Text/2026-PMID41782777-Mathews-Lemcog-Extract.txt)
 - [Botanical compound computational depression screen](Source-Text/2026-PMID42168279-Rahbar-Botanical-Depression-Screen-Extract.txt)
+
+- [2026 walnut-oil chemometrics abstract and access limits](Source-Text/2026-PMID42982915-Qian-Walnut-Oil-Chemometrics-Abstract-Extract.txt)

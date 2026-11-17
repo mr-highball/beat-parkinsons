@@ -357,3 +357,6 @@ January 1, 2010 through December 31, 2014.
 - [Carmint and GJS identity reconciliation](Food-Experiment-GJS-Carmint-Identity.md)
 - [Observations on formula attribution](Observations/Food-Experiment-GJS-Carmint-Identity.md)
 - [Retrospective Parkinson coffee presentation](Source-Text/2013-PMC5619206-Caprara-Coffee-Parkinson-Abstract-Extract.txt)
+Walnut-fraction methods identify solvent-extracted oil, and the two Iranian oil protocols retain distinct registrations and date conflicts. [2013 component trial](Source-Text/2013-PMID23616506-Berryman-Walnut-Fractions-Extract.txt) · [Glucose registration](Source-Text/Trials/IRCT2014022216682N1.txt) · [Lipid registration](Source-Text/Trials/IRCT2014030611375N2.txt).
+
+Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinary treatment. [2011 original presentation](Source-Text/2011-PMC6863370-Clove-Odor-Stimulus-Abstract-Extract.txt).

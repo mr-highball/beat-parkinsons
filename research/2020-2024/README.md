@@ -553,3 +553,4 @@ January 1, 2020 through December 31, 2024.
 - [Observations on regional serotonin endpoints](Observations/Food-Experiment-STW5-Endpoints.md)
 
 - [STW5 P27 meeting abstract and unresolved paper linkage](Source-Text/2022-Khayyal-STW5-Brain-Gut-P27-Abstract-Extract.txt)
+The Singapore total-diet papers and original supplement preserve measured black-pepper concentration, eater-only modeled exposure and shared-program identity. They do not measure a Parkinson symptom. [2023 original and supplement](Source-Text/2023-PMID37628020-Yu-Singapore-Acrylamide-Extract.txt) · [2024 methods](Source-Text/2024-PMID38397488-Lim-Singapore-Total-Diet-Methods-Extract.txt) · [Observations across periods](Observations/Food-Experiment-Pepper-Acrylamide.md).

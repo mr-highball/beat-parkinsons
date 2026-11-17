@@ -516,3 +516,14 @@ January 1, 2015 through December 31, 2019.
 - [ISEV grape-vesicle comparator](Source-Text/2018-PMC5933288-ISEV-Grape-Vesicle-Abstract-Extract.txt)
 - [Observations on gastric versus mood endpoints](Observations/Food-Experiment-STW5-Endpoints.md)
 - [Observations on review identity and route](Observations/Food-Experiment-Review-Identity-and-Route.md)
+
+- [Walnut kernel oil and original mouse pain outcomes](Source-Text/2018-Raafat-Juglans-Oil-Pain-Extract.txt)
+- [Observations on preparation and pain transfer](Observations/Food-Experiment-Walnut-Oil-Pain.md)
+
+- [Original 2018 extraction comparison and fatty-acid attribution](Source-Text/2018-PMID30065427-Al-Juhaimi-Nut-Oil-Extraction-Extract.txt)
+- [Original 2019 walnut-oil composition comparison](Source-Text/2019-PMID30651416-Ahmed-Walnut-Oil-Extraction-Extract.txt)
+The walnut clinical-family index preserves protocol, cohort, preparation and endpoint differences. [2016 glucose report](Source-Text/2016-PMID28115966-Zibaeenezhad-Walnut-Oil-Glucose-Extract.txt) · [2017 lipid report](Source-Text/2017-PMID28394361-Zibaeenezhad-Walnut-Oil-Lipids-Extract.txt) · [2018 posted crossover results](Source-Text/Trials/NCT00938340-Results-2018.txt) · [Study-family index](Food-Experiment-Walnut-Oil-Clinical-Families.md) · [Observations](Observations/Food-Experiment-Walnut-Oil-Clinical-Families.md).
+
+Recovered conference contexts distinguish genuine foods, laboratory derivatives and separate members. [2018 nutrition collection](Source-Text/2018-PMC6265811-Nutritional-Epidemiology-Culinary-Members-Extract.txt) · [Nuclear food-preparation poster](Source-Text/2018-PMC6354729-Nuclear-Imaging-Food-Preparation-Abstract-Extract.txt) · [Duplicate deposit identity](Source-Text/2018-PMC6231292-Nuclear-Collection-Identity-Extract.txt) · [2019 Cinnamomum leaf isolate](Source-Text/2019-PMC6493311-Cinnamomum-Leaf-Isolate-Abstract-Extract.txt) · [2019 green-tea polyphenols](Source-Text/2019-PMC6738495-Green-Tea-Polyphenols-Abstract-Extract.txt) · [Context observations](Observations/Food-Experiment-Conference-Context-Recovery.md).
+
+The contaminant trail includes an original total-diet abstract, without a measured Parkinson symptom outcome. [2017 Korean acrylamide and furan](Source-Text/2017-Kim-Lee-Korean-Acrylamide-Furan-Abstract-Extract.txt).

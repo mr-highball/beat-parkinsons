@@ -1,5 +1,7 @@
 # Food thought experiment follow-up
 
+The ninth lemon balm checkpoint verifies 68 original decisions, preserves 12 access or completeness holds, and corrects 13 earlier source-role exclusions. Cold-pressed walnut oil and pain becomes Maybe True 51 on weak indirect evidence with clinical transfer unverified. The global original queue holds 48,194 pairs, including 525 for 0133. [Current source and clinical evidence](lemon-balm-depression-nov17-09/README.md)
+
 Two original conference collections supplied 84 body-level claim–source decisions. A separate poster collection added 43 documented access gaps still in the queue. Four publications and three registrations supplied six study assessments for brewed lemongrass and cracked black pepper. No verdict changed. The original Europe PMC queue holds 52,344 pairs. [Original collections and focused searches](unmatched-clinical-leads-nov17/README.md)
 
 Three original conference collections supplied 144 exact claim–source decisions. Six dated records detail celery and pumpkin seed exposures, including a likely registration-to-publication link and a regulator-reported hypotension event type. Five study assessments were added. No verdict changed. The original Europe PMC queue held 52,428 pairs at that checkpoint. [Original sources and complementary searches](complementary-sources-nov17/README.md)

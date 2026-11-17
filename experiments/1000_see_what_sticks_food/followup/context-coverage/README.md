@@ -1,18 +1,20 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The full per-pair and source-grouped queues regenerate under the experiment's ignored `build/context-coverage/output/` directory. Keep the curated exact ledger, per-claim counters, provenance and replay summary in Git; do not copy the full generated queues into this source folder.
+
 The original searches produced 69,107 result appearances across 2,000 expressions. There are 61,252 distinct frozen claim and provider-key pairs across 34,099 source keys. Results map to 679 claims. The other 321 have zero returns in this original search layer and can still have follow-up searches, other providers or evidence assessments. The inventory leaves the original provider keys intact and reports ambiguous identifier aliases separately. [Original lexical screen](../claim-query-screen.tsv) · [All 1,000 claim denominators](coverage-by-claim.tsv) · [Ambiguous identifiers](ambiguous-source-aliases.tsv)
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 12,680 |
+| Local body or other primary-source context | 12,748 |
 | Exact assessment with basis unspecified | 128 |
 | Abstract context | 182 |
 | Title or index | 139 |
 | Pending or access-only disposition | 201 |
-| No imported exact review | 47,922 |
+| No imported exact review | 47,854 |
 | **Total** | **61,252** |
 
-The native replay keeps 48,262 pairs queued across 29,940 sources. That includes 139 title/index reviews, 201 pending pairs and 47,922 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
+The native replay keeps 48,194 pairs queued across 29,928 sources. That includes 139 title/index reviews, 201 pending pairs and 47,854 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
 
 ## Intake for exact source reviews
 
@@ -21,6 +23,8 @@ Compile [the Free Pascal intake](../../tools/foodexperiment.contextintake.lpr) u
 The program rejects duplicate and out-of-queue pairs or a downgrade of an existing review before writing. The packet retains all reviewed keys and unresolved rows. Existing pending rows that reach greater depth replace their canonical entry. Unchanged pending depth preserves the old ledger row and the new receipt remains available in the packet. Verify the staged rows and rerun the native context replay after publishing the canonical ledger.
 
 ## Contextual reviews
+
+The ninth lemon balm checkpoint verifies 68 more original pairs, retains 12 source holds, and corrects 13 settled source roles without changing their review depth or the original queue keys. Genuine ingredients and derived preparations remain visible despite endpoint gaps. [Source-role audit, walnut pain and clinical limits](../lemon-balm-depression-nov17-09/README.md)
 
 The eighth lemon balm checkpoint verifies 152 original pairs, including 11 for 0133 and 141 independently reviewed shared-source pairs. One assigned ACTS collection remains held. Primary formula reconciliation separates Carmint from GJS, and the STW5 originals preserve distinct gastrointestinal, biochemical and psychiatric endpoints. [Source identity and original outcomes](../lemon-balm-depression-nov17-08/README.md)
 

@@ -1,0 +1,3 @@
+# Animal pain findings and preparation limits
+
+The earlier walnut-oil component studies concern metabolic or vascular measurements. The 2018 study instead measures evoked pain in mice and supplies favorable oil-specific results, with an unreconciled comparator description. Independent composition studies provide a limited linoleic-acid bridge to cold-pressed oil. That changes the assessment to the smallest favorable lean while clinical transfer remains uncertain. A preparation difference alone should not suppress this evidence. [Original pain extract](../Source-Text/2018-Raafat-Juglans-Oil-Pain-Extract.txt) · [Composition and corrected attribution](../Food-Experiment-Walnut-Oil-Extraction-ALA.md) · [Oil evidence and earlier trials](../Food-Experiment-Tree-Nut-Oils.md)

@@ -243,3 +243,4 @@ January 1, 2005 through December 31, 2009.
 
 - [STW5 original dyspepsia placebo comparison](Source-Text/2007-PMID17531013-von-Arnim-STW5-Dyspepsia-Extract.txt)
 - [Observations on mixed-product endpoint limits](Observations/Food-Experiment-STW5-Endpoints.md)
+The original walnut-fraction crossover registration is bucketed by first public posting; its later results are a separate 2018 release of the same trial. [NCT00938340 registration](Source-Text/Trials/NCT00938340.txt).
