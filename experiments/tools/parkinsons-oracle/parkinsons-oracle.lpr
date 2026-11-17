@@ -59,6 +59,7 @@ type
     destructor Destroy; override;
     procedure RefreshCatalog;
     function Invoke(const AName: String; AArguments: TJSONObject): TJSONObject;
+    function InvokeWeb(const AName: String; AArguments: TJSONObject): TJSONObject;
   end;
 
 function ReadString(AArguments: TJSONObject; const AName, ADefault: String): String;
@@ -234,6 +235,32 @@ begin
       end;
   else
     raise EConvertError.Create('Unknown tool: ' + AName);
+  end;
+end;
+
+function TOracle.InvokeWeb(const AName: String; AArguments: TJSONObject): TJSONObject;
+var
+  LPath: String;
+  LOffset: Integer;
+begin
+  if AName <> 'oracle_read_source' then
+  begin
+    Exit(Invoke(AName, AArguments));
+  end;
+  RequireFields(AArguments, ['path', 'offset']);
+  LPath := ReadString(AArguments, 'path', '');
+  LOffset := ReadInteger(AArguments, 'offset', 0, 0, MaxInt);
+  try
+    Result := Catalog.ReadSource(LPath, LOffset);
+  except
+    on ESourceReadError do
+    begin
+      raise;
+    end;
+    on Exception do
+    begin
+      raise EConvertError.Create('Cannot read the currently indexed source.');
+    end;
   end;
 end;
 
@@ -448,7 +475,7 @@ begin
             LLanBinding := ParamStr(4);
           if ParamCount > 4 then
             raise EArgumentException.Create('Use web <repo> [port] [private-ipv4/prefix].');
-          ServeOracleWeb(LWebRoot, LPort, LOracle.Invoke, LLanBinding);
+          ServeOracleWeb(LWebRoot, LPort, LOracle.InvokeWeb, LLanBinding);
         end;
       4:
         begin

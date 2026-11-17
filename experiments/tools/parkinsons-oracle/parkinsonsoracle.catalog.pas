@@ -8,9 +8,11 @@ unit parkinsonsoracle.catalog;
 interface
 
 uses
-  fpjson, sqlite3dyn;
+  fpjson, sqlite3dyn, SysUtils;
 
 type
+  ESourceReadError = class(EConvertError);
+
   TResearchCatalog = class
   private
     FDatabase: PSQLite3;
@@ -25,13 +27,14 @@ type
     procedure Refresh;
     procedure ExportSearch(const AOutputDirectory: String);
     function Search(const ATerms, APeriod: String; AOffset, ALimit: Integer): TJSONObject;
+    function ReadSource(const APath: String; AOffset: Int64): TJSONObject;
     function Status(AIncludeDiagnostics: Boolean = True): TJSONObject;
   end;
 
 implementation
 
 uses
-  BufStream, Classes, Generics.Collections, SysUtils, Windows;
+  BufStream, Classes, Generics.Collections, JwaNative, JwaWinternl, Windows;
 
 const
   CatalogApplicationId = $504F5243;
@@ -39,6 +42,8 @@ const
   MaximumPageSize = 100;
   MaximumTermsBytes = 512;
   ErrorExampleLimit = 10;
+  SourcePageBytes = 16384;
+  ResearchPathPrefix = 'research/';
   OpenReparsePoint = $00200000;
   MatchFrom = ' FROM document_fts JOIN documents ON documents.id=document_fts.rowid' +
     ' WHERE document_fts MATCH ?1 AND (?2='''' OR documents.period=?2)';
@@ -220,6 +225,13 @@ begin
   Result := Int64(AHigh) shl 32 or ALow;
 end;
 
+function CatalogStampMatches(const AInfo: TByHandleFileInformation;
+  ABytes, AMTime: Int64): Boolean;
+begin
+  Result := (FileBytes(AInfo.nFileSizeHigh, AInfo.nFileSizeLow) = ABytes) and
+    (FileStamp(AInfo.ftLastWriteTime) = AMTime);
+end;
+
 function SystemSqlite: UnicodeString;
 var
   LBuffer: array[0..MAX_PATH] of WideChar;
@@ -369,8 +381,7 @@ begin
     begin
       raise ECatalogReadError.Create('Path ceased to name a regular file during refresh');
     end;
-    if (FileBytes(LInfo.nFileSizeHigh, LInfo.nFileSizeLow) <> ABytes) or
-      (FileStamp(LInfo.ftLastWriteTime) <> AMTime) then
+    if not CatalogStampMatches(LInfo, ABytes, AMTime) then
     begin
       raise ECatalogReadError.Create('File changed before read');
     end;
@@ -388,8 +399,7 @@ begin
     begin
       RaiseLastOSError;
     end;
-    if (FileBytes(LInfo.nFileSizeHigh, LInfo.nFileSizeLow) <> ABytes) or
-      (FileStamp(LInfo.ftLastWriteTime) <> AMTime) then
+    if not CatalogStampMatches(LInfo, ABytes, AMTime) then
     begin
       raise ECatalogReadError.Create('File changed during read');
     end;
@@ -403,6 +413,319 @@ begin
   if Result <> '' then
   begin
     Utf8ToUnicode(nil, 0, PAnsiChar(Result), Length(Result), False);
+  end;
+end;
+
+function ResolveWindowsHandlePath(AHandle: THandle; APath: PWideChar;
+  ACapacity, AFlags: DWORD): DWORD; stdcall; external 'kernel32.dll'
+  name 'GetFinalPathNameByHandleW';
+
+function SourcePathIsExact(const APath: UTF8String): Boolean;
+var
+  LChar: AnsiChar;
+  LStart: Integer;
+  LIndex: Integer;
+  LExtension: String;
+begin
+  Result := False;
+  if Copy(APath, 1, Length(ResearchPathPrefix)) <> ResearchPathPrefix then
+  begin
+    Exit;
+  end;
+  LStart := Length(ResearchPathPrefix) + 1;
+  for LIndex := LStart to Length(APath) do
+  begin
+    LChar := APath[LIndex];
+    if (Ord(LChar) < 32) or (LChar in ['\', ':', '<', '>', '"', '|', '?', '*']) then
+    begin
+      Exit;
+    end;
+    if LChar = '/' then
+    begin
+      if (LIndex = LStart) or (APath[LIndex - 1] in ['.', ' ']) then
+      begin
+        Exit;
+      end;
+      LStart := LIndex + 1;
+    end;
+  end;
+  if (LStart > Length(APath)) or (APath[Length(APath)] in ['.', ' ']) then
+  begin
+    Exit;
+  end;
+  LExtension := LowerCase(ExtractFileExt(String(APath)));
+  Result := (LExtension = '.md') or (LExtension = '.txt') or (LExtension = '.tsv');
+end;
+
+function FinalSourceHandlePath(AHandle: THandle): UnicodeString;
+var
+  LLength: DWORD;
+begin
+  SetLength(Result, 256);
+  LLength := ResolveWindowsHandlePath(AHandle, PWideChar(Result), Length(Result), 0);
+  if LLength >= DWORD(Length(Result)) then
+  begin
+    SetLength(Result, LLength);
+    LLength := ResolveWindowsHandlePath(AHandle, PWideChar(Result), Length(Result), 0);
+  end;
+  if (LLength = 0) or (LLength >= DWORD(Length(Result))) then
+  begin
+    raise ESourceReadError.Create('Cannot verify the indexed source path.');
+  end;
+  SetLength(Result, LLength);
+end;
+
+procedure SourceHandleInfo(AHandle: THandle; ADirectory: Boolean;
+  out AInfo: TByHandleFileInformation);
+begin
+  if (GetFileType(AHandle) <> FILE_TYPE_DISK) or
+    not GetFileInformationByHandle(AHandle, AInfo) then
+  begin
+    raise ESourceReadError.Create('Cannot verify the indexed source.');
+  end;
+  if ((AInfo.dwFileAttributes and FILE_ATTRIBUTE_REPARSE_POINT) <> 0) or
+    (((AInfo.dwFileAttributes and FILE_ATTRIBUTE_DIRECTORY) <> 0) <> ADirectory) or
+    ((not ADirectory) and (AInfo.nNumberOfLinks <> 1)) then
+  begin
+    raise ESourceReadError.Create('The indexed source uses an unsupported filesystem link.');
+  end;
+end;
+
+function OpenSourceChild(AParent: THandle; const AName: UnicodeString;
+  ADirectory: Boolean): THandle;
+const
+  DontReparse = $00001000;
+var
+  LName: JwaWinternl.TUnicodeString;
+  LAttributes: JwaWinternl.TObjectAttributes;
+  LStatus: JwaWinternl.TIoStatusBlock;
+  LOptions: DWORD;
+  LAccess: DWORD;
+begin
+  if (Length(AName) = 0) or (Length(AName) > High(Word) div SizeOf(WideChar)) then
+  begin
+    raise ESourceReadError.Create('Cannot verify the indexed source path.');
+  end;
+  LName.Length := Length(AName) * SizeOf(WideChar);
+  LName.MaximumLength := LName.Length;
+  LName.Buffer := PWideChar(AName);
+  LAttributes := Default(JwaWinternl.TObjectAttributes);
+  LAttributes.Length := SizeOf(LAttributes);
+  LAttributes.RootDirectory := AParent;
+  LAttributes.ObjectName := @LName;
+  LAttributes.Attributes := DontReparse;
+  LOptions := JwaNative.FILE_OPEN_REPARSE_POINT or JwaNative.FILE_SYNCHRONOUS_IO_NONALERT;
+  if ADirectory then
+  begin
+    LAccess := FILE_LIST_DIRECTORY or FILE_TRAVERSE or FILE_READ_ATTRIBUTES or SYNCHRONIZE;
+    LOptions := LOptions or JwaNative.FILE_DIRECTORY_FILE;
+  end
+  else
+  begin
+    LAccess := GENERIC_READ or SYNCHRONIZE;
+    LOptions := LOptions or JwaNative.FILE_NON_DIRECTORY_FILE;
+  end;
+  if JwaWinternl.NtOpenFile(@Result, LAccess, @LAttributes, @LStatus, FILE_SHARE_READ,
+    LOptions) <> 0 then
+  begin
+    raise ESourceReadError.Create('The indexed source is missing, linked, or unavailable.');
+  end;
+end;
+
+function OpenVerifiedSource(const ARoot, ASuffix: UnicodeString): THandle;
+var
+  LParents: TList<THandle>;
+  LParent: THandle;
+  LChild: THandle;
+  LHandle: THandle;
+  LInfo: TByHandleFileInformation;
+  LExpectedPath: UnicodeString;
+  LSegment: UnicodeString;
+  LStart: Integer;
+  LSeparator: Integer;
+begin
+  LParents := TList<THandle>.Create;
+  try
+    LParent := CreateFileW(PWideChar(FileSystemPath(ARoot)),
+      FILE_LIST_DIRECTORY or FILE_TRAVERSE or FILE_READ_ATTRIBUTES or SYNCHRONIZE,
+      FILE_SHARE_READ, nil, OPEN_EXISTING, OpenReparsePoint or FILE_FLAG_BACKUP_SEMANTICS, 0);
+    if LParent = INVALID_HANDLE_VALUE then
+    begin
+      raise ESourceReadError.Create('The research directory is unavailable.');
+    end;
+    LParents.Add(LParent);
+    SourceHandleInfo(LParent, True, LInfo);
+    LExpectedPath := FinalSourceHandlePath(LParent);
+    if not UnicodeSameText(LExpectedPath, FileSystemPath(ARoot)) then
+    begin
+      raise ESourceReadError.Create('Cannot verify the research directory.');
+    end;
+
+    // Resolve each single name against the actual parent handle. An intermediate
+    // directory replacement cannot redirect a later open through an ambient path.
+    LStart := 1;
+    repeat
+      LSeparator := Pos('/', ASuffix, LStart);
+      if LSeparator = 0 then
+      begin
+        LSegment := Copy(ASuffix, LStart, MaxInt);
+      end
+      else
+      begin
+        LSegment := Copy(ASuffix, LStart, LSeparator - LStart);
+      end;
+      LChild := OpenSourceChild(LParent, LSegment, LSeparator <> 0);
+      try
+        SourceHandleInfo(LChild, LSeparator <> 0, LInfo);
+        LExpectedPath := LExpectedPath + '\' + LSegment;
+        if FinalSourceHandlePath(LChild) <> LExpectedPath then
+        begin
+          raise ESourceReadError.Create('The indexed source path no longer matches.');
+        end;
+        if LSeparator = 0 then
+        begin
+          Result := LChild;
+          LChild := INVALID_HANDLE_VALUE;
+          Exit;
+        end;
+        LParents.Add(LChild);
+        LParent := LChild;
+        LChild := INVALID_HANDLE_VALUE;
+        LStart := LSeparator + 1;
+      finally
+        if LChild <> INVALID_HANDLE_VALUE then
+        begin
+          CloseHandle(LChild);
+        end;
+      end;
+    until False;
+  finally
+    for LHandle in LParents do
+    begin
+      CloseHandle(LHandle);
+    end;
+    LParents.Free;
+  end;
+end;
+
+function Utf8Continuation(AByte: AnsiChar): Boolean;
+begin
+  Result := (Ord(AByte) and $C0) = $80;
+end;
+
+function ReadSourcePage(AHandle: THandle; AOffset, ABytes, AMTime: Int64): UTF8String;
+var
+  LInfo: TByHandleFileInformation;
+  LStream: THandleStream;
+  LReadBytes: Integer;
+  LPageBytes: Integer;
+begin
+  Result := '';
+  SourceHandleInfo(AHandle, False, LInfo);
+  if not CatalogStampMatches(LInfo, ABytes, AMTime) then
+  begin
+    raise ESourceReadError.Create('The source changed since its index refresh.');
+  end;
+  if ABytes = AOffset then
+  begin
+    Exit;
+  end;
+
+  LReadBytes := SourcePageBytes + 1;
+  if ABytes - AOffset < LReadBytes then
+  begin
+    LReadBytes := ABytes - AOffset;
+  end;
+  LStream := THandleStream.Create(AHandle);
+  try
+    LStream.Position := AOffset;
+    SetLength(Result, LReadBytes);
+    LStream.ReadBuffer(Result[1], LReadBytes);
+  finally
+    LStream.Free;
+  end;
+  SourceHandleInfo(AHandle, False, LInfo);
+  if not CatalogStampMatches(LInfo, ABytes, AMTime) then
+  begin
+    raise ESourceReadError.Create('The source changed while it was being read.');
+  end;
+  if Utf8Continuation(Result[1]) then
+  begin
+    raise ESourceReadError.Create('The source offset must be a UTF-8 character boundary.');
+  end;
+  if LReadBytes > SourcePageBytes then
+  begin
+    LPageBytes := SourcePageBytes;
+    while (LPageBytes > 0) and Utf8Continuation(Result[LPageBytes + 1]) do
+    begin
+      Dec(LPageBytes);
+    end;
+    if LPageBytes = 0 then
+    begin
+      raise ESourceReadError.Create('The indexed source contains invalid UTF-8.');
+    end;
+    SetLength(Result, LPageBytes);
+  end;
+  if Pos(#0, Result) <> 0 then
+  begin
+    raise ESourceReadError.Create('The indexed source is not readable UTF-8 text.');
+  end;
+  try
+    Utf8ToUnicode(nil, 0, PAnsiChar(Result), Length(Result), False);
+  except
+    on EConvertError do
+    begin
+      raise ESourceReadError.Create('The indexed source is not readable UTF-8 text.');
+    end;
+  end;
+end;
+
+function TResearchCatalog.ReadSource(const APath: String; AOffset: Int64): TJSONObject;
+var
+  LPath: UTF8String;
+  LPeriod: UTF8String;
+  LText: UTF8String;
+  LBytes: Int64;
+  LMTime: Int64;
+  LSource: TSqlStatement;
+  LHandle: THandle;
+begin
+  LPath := UTF8String(APath);
+  if not SourcePathIsExact(LPath) then
+  begin
+    raise ESourceReadError.Create('Use an exact indexed research text path.');
+  end;
+  LSource := TSqlStatement.Create(FDatabase,
+    'SELECT period,bytes,mtime FROM documents WHERE path=?1 COLLATE BINARY AND read_error=''''');
+  try
+    LSource.BindText(1, LPath);
+    if not LSource.Next then
+    begin
+      raise ESourceReadError.Create('The source is unavailable in the current index.');
+    end;
+    LPeriod := LSource.Text(0);
+    LBytes := LSource.Number(1);
+    LMTime := LSource.Number(2);
+  finally
+    LSource.Free;
+  end;
+  if (AOffset < 0) or (AOffset > LBytes) then
+  begin
+    raise ESourceReadError.Create('The source offset is outside this document.');
+  end;
+
+  LHandle := OpenVerifiedSource(FResearchRoot,
+    Copy(UTF8Decode(LPath), Length(ResearchPathPrefix) + 1, MaxInt));
+  try
+    LText := ReadSourcePage(LHandle, AOffset, LBytes, LMTime);
+  finally
+    CloseHandle(LHandle);
+  end;
+  Result := TJSONObject.Create(['path', LPath, 'period', LPeriod, 'text', LText,
+    'offset', AOffset]);
+  if AOffset + Length(LText) < LBytes then
+  begin
+    Result.Add('next_offset', AOffset + Length(LText));
   end;
 end;
 

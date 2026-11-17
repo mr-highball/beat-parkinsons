@@ -62,6 +62,8 @@ The catalog refresh records its own timestamp and failed reads. Check `oracle_st
 
 The Nyx web target uses the same claim and catalog service as MCP. The local workbench offers common symptom pills, a browse list and suggestions for symptoms, ingredients and preparations. Under Symptom effect, choose May ease, May worsen, or Any trend before searching. The filters match the arrows on the cards. Selecting a result opens its study assessments and citations. The local server binds to the loopback address by default.
 
+In Search sources, choose Open source to read the indexed file as text. Long documents have Previous part and Next part controls. Back to results restores the catalog page you were reading.
+
 ```powershell
 git submodule update --init -- experiments/tools/vendor/nyx
 & ./experiments/tools/parkinsons-oracle/web/build.ps1 -Compiler 'path-to-pas2js' -Runtime 'path-to-rtl.js'

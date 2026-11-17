@@ -11,6 +11,7 @@ uses
 
 type
   TOracleView = (ovClaims, ovCatalog);
+  TSourceOffsets = array of Integer;
 
 const
   CPageSize = 8;
@@ -496,6 +497,107 @@ begin
     end);
 end;
 
+procedure OpenSource(const APath, ATag: String; const AOffsets: TSourceOffsets);
+var
+  LArgs: TJSObject;
+  LSequence: Integer;
+  LOffset: Integer;
+begin
+  Inc(GSequence);
+  LSequence := GSequence;
+  LOffset := AOffsets[High(AOffsets)];
+  LArgs := TJSObject.new;
+  LArgs['path'] := APath;
+  LArgs['offset'] := LOffset;
+  MessageView('Opening source', 'Reading the indexed research file.');
+  Request('oracle_read_source', LArgs,
+    procedure(AData: TJSObject; const AError: String)
+    var
+      LDocument: TNyxDocument;
+      LPage: TNyxNode;
+      LPaging: TNyxNode;
+      LNext: Integer;
+      LText: String;
+      LHasPrevious: Boolean;
+      LHasNext: Boolean;
+    begin
+      if LSequence <> GSequence then
+        Exit;
+      LDocument := TNyxDocument.Create;
+      LPage := Section(nkPage, 'result-page');
+      LDocument.AddPage(LPage);
+      LPage.Add(Button('back-results', '‹ Back to results', nvSecondary));
+      LPage.Add(Caption(nkHeading, 'result-heading', ExtractFileName(APath)));
+      LPage.Add(Caption(nkCode, 'source-path', APath));
+      LNext := CountOf(AData, 'next_offset');
+      LHasPrevious := (AError = '') and (Length(AOffsets) > 1);
+      LHasNext := (AError = '') and (LNext > LOffset);
+      if AError <> '' then
+        LPage.Add(Caption(nkLabel, 'result-message', AError))
+      else
+      begin
+        if LHasPrevious or LHasNext then
+          LPage.Add(Caption(nkLabel, 'source-part', 'Part ' + IntToStr(Length(AOffsets))));
+        LText := TextOf(AData, 'text');
+        if LText <> '' then
+          LPage.Add(Caption(nkCode, 'source-body', LText))
+        else
+          LPage.Add(Caption(nkLabel, 'result-message', 'This file has no text.'));
+      end;
+      if LHasPrevious or LHasNext then
+      begin
+        LPaging := Section(nkRow, 'result-pagination');
+        if LHasPrevious then
+          LPaging.Add(Button('previous-page', 'Previous part', nvSecondary));
+        if LHasNext then
+          LPaging.Add(Button('next-page', 'Next part', nvSecondary));
+        LPage.Add(LPaging);
+      end;
+      PublishResults(LDocument, LPage);
+      FocusResults;
+      BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
+        function(AEvent: TEventListenerEvent): Boolean
+        begin
+          ShowList(GResults);
+          GResultsRenderer.ElementFor('open-source-' + ATag).focus;
+          Result := True;
+        end);
+      if LHasPrevious then
+        BindEvent(GResultsRenderer.ElementFor('previous-page'), 'click',
+          function(AEvent: TEventListenerEvent): Boolean
+          begin
+            OpenSource(APath, ATag, Copy(AOffsets, 0, Length(AOffsets) - 1));
+            Result := True;
+          end);
+      if LHasNext then
+        BindEvent(GResultsRenderer.ElementFor('next-page'), 'click',
+          function(AEvent: TEventListenerEvent): Boolean
+          var
+            LOffsets: TSourceOffsets;
+          begin
+            LOffsets := Copy(AOffsets, 0, Length(AOffsets));
+            SetLength(LOffsets, Length(LOffsets) + 1);
+            LOffsets[High(LOffsets)] := LNext;
+            OpenSource(APath, ATag, LOffsets);
+            Result := True;
+          end);
+    end);
+end;
+
+procedure BindSource(const ATag, APath: String);
+begin
+  BindEvent(GResultsRenderer.ElementFor('open-source-' + ATag), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    var
+      LOffsets: TSourceOffsets;
+    begin
+      SetLength(LOffsets, 1);
+      LOffsets[0] := 0;
+      OpenSource(APath, ATag, LOffsets);
+      Result := True;
+    end);
+end;
+
 procedure ShowList(AResults: TJSObject);
 var
   LDocument: TNyxDocument;
@@ -509,6 +611,7 @@ var
   LOffset: Integer;
   LNext: Integer;
   LTag: String;
+  LPath: String;
   LTrend: String;
   LMessage: String;
   LCanShowReviewed: Boolean;
@@ -585,7 +688,12 @@ begin
     else
     begin
       LCard.Add(Caption(nkLabel, 'period-' + LTag, TextOf(LRow, 'period')));
-      LCard.Add(SourceLink('path-' + LTag, TextOf(LRow, 'path')));
+      LPath := TextOf(LRow, 'path');
+      if GStaticOracle = nil then
+        LCard.Add(Button('open-source-' + LTag, 'Open source' + #10 + LPath, nvSecondary)
+          .Configure.AccessibleName('Open source ' + ExtractFileName(LPath)).Done)
+      else
+        LCard.Add(SourceLink('path-' + LTag, LPath));
     end;
     LPage.Add(LCard);
   end;
@@ -620,12 +728,14 @@ begin
         Query(False, 0);
         Result := True;
       end);
-  if GView = ovClaims then
-    for LIndex := 0 to LRecords.Length - 1 do
-    begin
-      LRow := TJSObject(LRecords[LIndex]);
+  for LIndex := 0 to LRecords.Length - 1 do
+  begin
+    LRow := TJSObject(LRecords[LIndex]);
+    if GView = ovClaims then
       BindDetail(IntToStr(LIndex), CountOf(LRow, 'round'), TextOf(LRow, 'claim_id'));
-    end;
+    if (GView = ovCatalog) and (GStaticOracle = nil) then
+      BindSource(IntToStr(LIndex), TextOf(LRow, 'path'));
+  end;
   if LOffset > 0 then
     BindEvent(GResultsRenderer.ElementFor('previous-page'), 'click',
       function(AEvent: TEventListenerEvent): Boolean
