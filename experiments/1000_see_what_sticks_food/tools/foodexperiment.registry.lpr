@@ -229,6 +229,9 @@ var
   LHasResults: String;
   LType: String;
   LNames: UTF8String;
+  LInterventionDescriptions: UTF8String;
+  LArmLabels: UTF8String;
+  LArmDescriptions: UTF8String;
   LConditions: UTF8String;
   LMeasures: UTF8String;
   LMatch: String;
@@ -249,14 +252,17 @@ begin
   LType := Field(AStudy, Protocol + 'designModule.studyType');
   LConditions := ListField(AStudy, Protocol + 'conditionsModule.conditions', '');
   LNames := ListField(AStudy, Interventions, 'name');
+  LInterventionDescriptions := ListField(AStudy, Interventions, 'description');
+  LArmLabels := ListField(AStudy, Arms, 'label');
+  LArmDescriptions := ListField(AStudy, Arms, 'description');
   LMeasures := ListField(AStudy, Outcomes + 'primaryOutcomes', 'measure') + '; ' +
     ListField(AStudy, Outcomes + 'secondaryOutcomes', 'measure');
   Write(FInventory, LId, #9, LFirstPosted, #9, LLastPosted, #9, LStatus, #9,
     LHasResults, #9, LType, #9, LTitle, #9, LConditions, #10);
   if Assigned(FDetails) then
   begin
-    WriteDetailRow(LId + #9 + LNames + #9 + ListField(AStudy, Interventions, 'description') +
-      #9 + ListField(AStudy, Arms, 'label') + #9 + ListField(AStudy, Arms, 'description') +
+    WriteDetailRow(LId + #9 + LNames + #9 + LInterventionDescriptions +
+      #9 + LArmLabels + #9 + LArmDescriptions +
       #9 + ListField(AStudy, Outcomes + 'primaryOutcomes', 'measure') +
       #9 + ListField(AStudy, Outcomes + 'primaryOutcomes', 'description') +
       #9 + ListField(AStudy, Outcomes + 'secondaryOutcomes', 'measure') +
@@ -269,7 +275,9 @@ begin
 
   FillChar(FPrimary[0], Length(FPrimary) * SizeOf(Boolean), 0);
   FillChar(FContext[0], Length(FContext) * SizeOf(Boolean), 0);
-  FMatcher.Match(LNames + ' ' + ListField(AStudy, Interventions, 'description'), FPrimary);
+  FMatcher.Match(LNames + ' ' + LInterventionDescriptions, FPrimary);
+  // A generic intervention label can leave the exposure only in a comparator arm.
+  FMatcher.Match(LArmLabels + ' ' + LArmDescriptions, FPrimary);
   FMatcher.Match(LTitle + ' ' + Field(AStudy, Protocol + 'descriptionModule.briefSummary') +
     ' ' + Field(AStudy, Protocol + 'descriptionModule.detailedDescription'), FContext);
   for LIndex := 0 to High(FPrimary) do
