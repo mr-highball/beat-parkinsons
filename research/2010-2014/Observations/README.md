@@ -16,6 +16,7 @@ A culinary powder comparison in athletes provides an inconclusive muscle-sorenes
 
 ## Minor observations
 
+- The earlier oil assays distinguish filbertone ratios and roasting. The 2014 cold-pressed samples add preparation-specific signals and below-quantification results. The period also adds a pooled cucurbit comparison for Parkinson occurrence. [Earlier assay context](../../2000-2004/Food-Experiment-Hazelnut-Filbertone.md) · [Cold-pressed oil measurements](../Source-Text/2014-Bendini-Cold-Pressed-Hazelnut-Filbertone-Extract.txt) · [Cucurbit estimate](../Source-Text/2014-PMID24122934-Cucurbit-Intake-Reply-Extract.txt)
 - The sunflower comparator trial supplies an oral preparation and working-memory outcome. It shares the limitation of other active-oil comparisons in identifying a separate oil effect. [Sunflower comparator](../Food-Experiment-Hazelnut-Sunflower-Oils.md#high-oleic-sunflower-comparator-and-working-memory-reaction-time)
 
 - The previously registered insomnia study measured sleep diaries and actigraphy. Participants in the olive-oil arm reported improvement, with no usable extra-virgin oil effect estimate. [Original insomnia trial](../Food-Experiment-Marjoram-Olive-Outcomes.md#olive-oil-comparator-and-sleep-diaries-in-primary-insomnia)

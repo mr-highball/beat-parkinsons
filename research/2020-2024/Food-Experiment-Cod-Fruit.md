@@ -2,6 +2,8 @@
 
 ## Pineapple plum and cantaloupe in a Parkinson dietary intervention
 
+Table 3 explicitly labels cantaloupe melon. The preparation and participant portions are unspecified. Figure 4 and the described Supplementary Figure S2 report UPDRS III totals at different follow-up times. Neither reports an individual fruit contrast or rest-tremor item. [Original Table 3 and Figure 4](https://pmc.ncbi.nlm.nih.gov/articles/PMC7072275/)
+
 Hegelmaier and colleagues' February 6, 2020 study lists pineapple, plums and cantaloupe melon in the same ovo-lacto-vegetarian inpatient menu. All 16 participants received the diet and ten also had bowel cleansing. At one year the total UPDRS III improved in both groups. Part III includes hand movements, finger tapping and rest tremor, and the supplement gives individual total scores. The study supplies no item-level motor results, individual fruit portions, preparation or food contrast. Dyskinesia, fatigue and urinary urgency were outside the reported motor outcome. [Existing local primary text, Table 3 and Figure 4](Source-Text/PMC7072275.txt#L285) · [Primary article and supplements](https://doi.org/10.3390/cells9020376)
 
 ## Plum extract under paraquat and rotenone

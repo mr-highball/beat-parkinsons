@@ -10,6 +10,7 @@ The 1992 black pepper study measured time from the mouth to the cecum in healthy
 
 ## Minor observations
 
+- The randomized diet comparison confirms macadamia oil as a dietary lipid source. Its author abstract gives lipid results while processing and adverse effects remain open. [Original abstract extract](../Source-Text/1994-PMID8006520-Macadamia-Oil-Lipid-Abstract-Extract.txt)
 - The later UK series added food hemagglutinin confirmation to earlier outbreak descriptions. Its years overlap the case report in the 1980–1984 bucket. The study measured acute digestive illness. [Lentil and kidney bean evidence](../Food-Experiment-Lentil-Kidney-Bean.md)
 - [Controlled rehabilitation](../Movement-and-Rehabilitation.md) produced short-term motor and daily activity gains. The gains receded during follow-up without regular exercise.
 - [Interviews and patient accounts](../Community-and-Care.md) documented support, independence, driving, and counseling as care priorities.

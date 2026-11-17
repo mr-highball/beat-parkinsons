@@ -4,6 +4,8 @@ January 1, 2010 through December 31, 2014.
 
 ## Annotated research
 
+- [Cantaloupe in grouped cucumber and squash intake and Parkinson occurrence](Source-Text/2014-PMID24122934-Cucurbit-Intake-Reply-Extract.txt)
+- [Measured filbertone signal by cold-pressed hazelnut preparation](Source-Text/2014-Bendini-Cold-Pressed-Hazelnut-Filbertone-Extract.txt)
 - [Parkinson blood harmane and clinical tremor subtypes](Source-Text/2013-PMID24300779-Parkinson-Harmane-Extract.txt)
 
 - [PREDIMED-Plus registration with shared extra-virgin olive oil](Source-Text/Trials/ISRCTN89898870.txt)

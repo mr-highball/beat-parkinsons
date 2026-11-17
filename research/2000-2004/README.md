@@ -4,6 +4,7 @@ January 1, 2000 through December 31, 2004.
 
 ## Annotated research
 
+- [Filbertone in roasted and unroasted hazelnut oils](Food-Experiment-Hazelnut-Filbertone.md)
 - [Enteral formula comparison and separately reported motor signs](Food-Experiment-Clinical-Nutrition-Followup.md)
 - [Pumpkin seed extract in prostate surveillance](Food-Experiment-Pumpkin-Extract-Surveillance.md)
 

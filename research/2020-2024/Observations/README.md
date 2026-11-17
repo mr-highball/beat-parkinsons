@@ -16,6 +16,7 @@ Migraine and multiple-sclerosis reports add VAS pain measurements to preceding c
 
 ## Minor observations
 
+- Earlier oil samples provide a preparation-dependent filbertone exposure signal. The newer animal work measures isolated compound results, first in rotarod and treadmill tasks and later in biochemical or tissue outcomes. Neither paper measures a human resting-tremor response to cold-pressed oil. [Earlier oil measurements](../../2010-2014/Source-Text/2014-Bendini-Cold-Pressed-Hazelnut-Filbertone-Extract.txt) · [2023 motor study](../Source-Text/2023-PMID36958418-Filbertone-Motor-Model-Extract.txt) · [2024 biochemical study](../Source-Text/2024-PMID39636503-Filbertone-Neurotrophic-Extract.txt)
 - The earlier student trial used oral rosemary and reported lower HADS depression scores in its abstract. The newer nursing-home study gives HADS results for several oils delivered in massage, and the dementia study gives an inconclusive comparison for a multiodor program on a different depression scale. Neither newer study estimates the effect of eating rosemary. [Earlier oral trial](../../2015-2019/Food-Experiment-Herb-Spice-Followup.md) · [Newer original studies](../Food-Experiment-Rosemary-Saffron-and-Odor-Trials.md)
 
 - The clove capsule comparison supplies original depression scores but prints a conflicting outcome label. Controlled sleep or anxiety evidence in the previous period used different preparations. [Original clove methods](../Food-Experiment-Clove-Remaining-Outcomes.md#clove-capsule-adjunct-and-a-mislabeled-beck-table)

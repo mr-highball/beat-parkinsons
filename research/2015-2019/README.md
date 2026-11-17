@@ -4,6 +4,9 @@ January 1, 2015 through December 31, 2019.
 
 ## Annotated research
 
+- [Liu butylphthalide Parkinson dementia group and total UPDRS](Source-Text/2016-Liu-Butylphthalide-Parkinson-Dementia-Extract.txt)
+- [Dai butylphthalide Parkinson dementia abstract and total UPDRS](Source-Text/2018-Dai-Butylphthalide-Parkinson-Dementia-Abstract-Extract.txt)
+- [Li butylphthalide Parkinson dementia composite outcome](Source-Text/2019-Li-Butylphthalide-Parkinson-Dementia-Abstract-Extract.txt)
 - [Licorice extract trial and unspecific tremor outcome in the original abstract](Source-Text/2019-PMID31574343-Licorice-Parkinson-Abstract-Extract.txt)
 - [Capsicum extract and rearing behavior in a rat model](Source-Text/2019-PMID31440456-Capsicum-Rearing-Extract.txt)
 - [2016 butylphthalide registration and combined motor outcome](Source-Text/2016-ChiCTR-IPR-16009395-Butylphthalide-Registry-Extract.txt)
