@@ -1,5 +1,7 @@
 # Food thought experiment follow-up
 
+The tenth checkpoint adds 147 source dispositions, keeps 56 index-level pairs queued and corrects 33 earlier eligibility exclusions. Small animal motor-proxy evidence moves ground cinnamon and walking-slowness worsening to Maybe False 51; human gait benefit remains unverified. The original queue holds 48,103 pairs, including 516 for 0133. The complementary walnut retrieval screen reconciles all 1,024 records at declared depths while preserving body, symptom and registry gaps. [Current checkpoint](lemon-balm-depression-nov17-10/README.md)
+
 The ninth lemon balm checkpoint verifies 68 original decisions, preserves 12 access or completeness holds, and corrects 13 earlier source-role exclusions. Cold-pressed walnut oil and pain becomes Maybe True 51 on weak indirect evidence with clinical transfer unverified. The global original queue holds 48,194 pairs, including 525 for 0133. [Current source and clinical evidence](lemon-balm-depression-nov17-09/README.md)
 
 Two original conference collections supplied 84 body-level claim–source decisions. A separate poster collection added 43 documented access gaps still in the queue. Four publications and three registrations supplied six study assessments for brewed lemongrass and cracked black pepper. No verdict changed. The original Europe PMC queue holds 52,344 pairs. [Original collections and focused searches](unmatched-clinical-leads-nov17/README.md)

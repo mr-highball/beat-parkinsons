@@ -13,13 +13,15 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 942 |
+| Unknown | 1000 | 941 |
 | Maybe True | 0 | 27 |
-| Maybe False | 0 | 31 |
+| Maybe False | 0 | 32 |
 | True | 0 | 0 |
 | False | 0 | 0 |
 
 ## Findings and limits
+
+The tenth lemon balm checkpoint records 147 original-source decisions: 91 body reviews and 56 title/index reviews that remain queued. Thirty-three earlier exclusions now retain genuine exposure leads. Ground cinnamon and worsening walking slowness moves to Maybe False 51 on small animal motor proxies, with no established clinical gait-speed benefit. Walnut oil and pain stays Maybe True 51 while unfavorable and indirect human contexts remain explicit. Totals are 27 Maybe True, 32 Maybe False and 941 Unknown, with zero True/False. The original queue holds 48,103 pairs, including 516 for 0133. The 1,024-record complementary walnut screen is reconciled at recorded depths; primary-body and registry work remains open. [Source depths, directions and unresolved evidence](followup/lemon-balm-depression-nov17-10/README.md)
 
 The ninth lemon balm checkpoint verifies 68 more original pairs and preserves 12 assigned source holds. Thirteen earlier source exclusions now retain genuine ingredient leads as related, without clinical direction changes. Recovered mouse pain outcomes and a limited chemical preparation bridge move cold-pressed walnut oil and pain, claim 0065, to Maybe True 51; human Parkinson pain efficacy remains unverified. Totals are 27 Maybe True, 31 Maybe False and 942 Unknown, with zero True/False. The original queue holds 48,194 pairs, including 525 for 0133, which remains Maybe True 51. [Verified source roles, clinical limits and remaining scope](followup/lemon-balm-depression-nov17-09/README.md)
 
@@ -823,6 +825,7 @@ The initial published verdicts were 997 Unknown and three Maybe False. [Open tra
 - [0874](statements/0874.txt) **Maybe False** (51%) Consuming poached trout worsens depressive symptom severity in people with Parkinson's disease.
 - [0878](statements/0878.txt) **Maybe False** (51%) Consuming raw orange worsens constipation severity in people with Parkinson's disease.
 - [0883](statements/0883.txt) **Maybe False** (51%) Consuming fresh sage worsens fatigue severity in people with Parkinson's disease.
+- [0889](statements/0889.txt) **Maybe False** (51%) Consuming ground cinnamon worsens walking slowness in people with Parkinson's disease.
 - [0904](statements/0904.txt) **Maybe True** (51%) Consuming brewed black tea reduces rest tremor severity in people with Parkinson's disease.
 - [0913](statements/0913.txt) **Maybe True** (51%) Consuming cold-pressed flaxseed oil reduces bradykinesia severity in people with Parkinson's disease.
 - [0948](statements/0948.txt) **Maybe True** (51%) Consuming brewed green tea worsens fatigue severity in people with Parkinson's disease.

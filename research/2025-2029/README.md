@@ -1,5 +1,7 @@
 # 2025-2029
 
+New dated profiles preserve the [2025 cinnamon image correction](Source-Text/2025-PMID40072646-Cinnamon-Correction-Extract.txt) and [2026 immature green-walnut local pain experiment](Source-Text/2026-PMID41596967-Marinaccio-Green-Walnut-Pain-Extract.txt). [Observations and route-specific limits](Observations/Food-Experiment-Source-Context-Nov17-10.md).
+
 January 1, 2025 through November 11, 2026 (partial period).
 
 ## Annotated research

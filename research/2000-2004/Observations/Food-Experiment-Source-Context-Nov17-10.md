@@ -1,0 +1,3 @@
+# Historical plant references and unresolved original pages
+
+The 2000 anticonvulsant review and 2003 protease review have bibliographic identities, but the original pages behind the Melissa index entries remain unread. Hysteria, anticonvulsant use and an unqualified plant name cannot establish an antidepressant comparison. These records add citation trails, not efficacy findings. The later cumulative indices help locate the older literature without resolving the preparation or outcome. [2000 record](../Source-Text/2000-Anticonvulsant-Plant-Review-Index-Record.txt) · [2003 record](../Source-Text/2003-Polya-Plant-Protease-Review-Index-Record.txt)

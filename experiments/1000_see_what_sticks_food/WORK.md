@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 17 tenth checkpoint records 147 new original-source dispositions: 91 full-text and 56 index-level, with the index pairs still queued and one collection-figure hold retained. Thirty-three earlier source-role exclusions become related without implying clinical direction. Cinnamon claim 0889 changes to Maybe False 51; walnut claim 0065 remains Maybe True 51 with conflicting human contexts preserved. The active ledger has 3,999 assessments; totals are 27 Maybe True, 32 Maybe False and 941 Unknown. The original queue holds 48,103 pairs, including 516 for 0133. Frozen fields, receipts and the historical local-pass grade column are preserved. [Evidence, native proofs and open trails](followup/lemon-balm-depression-nov17-10/README.md)
+
 The November 17 ninth lemon balm checkpoint verifies 68 original source decisions, retains 12 access/completeness holds and corrects 13 settled source roles. Cold-pressed walnut oil and pain becomes Maybe True 51 on indirect animal and composition evidence, with Parkinson efficacy unverified. The original queue has 48,194 pairs; 525 remain for 0133. Current totals are 27 Maybe True, 31 Maybe False and 942 Unknown; frozen claims and the original local-pass grade column remain unchanged. [Evidence, limits and reproduction](followup/lemon-balm-depression-nov17-09/README.md)
 
 ## Acceptance

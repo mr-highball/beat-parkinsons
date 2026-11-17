@@ -1,0 +1,5 @@
+# Aged motor model and planned mixed-oil symptom outcomes
+
+The aged A53T cinnamon experiment adds timed pole-test outcomes to the earlier MPTP models, while retaining small groups, overlapping investigators and no clinical gait-velocity comparison. Its first online date is September 5, 2020; the earlier September 4 local date is corrected. A later image correction remains relevant to reliability. [Motor methods and limits](../Source-Text/2020-PMID32889602-Cinnamon-A53T-Motor-Extract.txt) · [2025 correction](../../2025-2029/Source-Text/2025-PMID40072646-Cinnamon-Correction-Extract.txt)
+
+MedCan 3 plans individual symptom outcomes in advanced cancer and currently lists cold-pressed walnut oil among the placebo's mixed oils. Unlike the earlier uncontrolled cancer diet, this is a registered comparison, but there are no verified results or isolated walnut-oil estimates. The protocol does not name the individual placebo oils; recruitment dates differ across records and are retained. [2022 registration](../Source-Text/Trials/ACTRN12622000083796.txt) · [2024 protocol](../Source-Text/2024-Gurgenci-MedCan3-Protocol-Extract.txt)

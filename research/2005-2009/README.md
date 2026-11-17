@@ -1,5 +1,7 @@
 # 2005-2009
 
+Original-source context additions: [2005 pharmacological index](Source-Text/2005-PMC7148939-Pharmacological-Index-Culinary-Leads-Extract.txt), [2005 general index](Source-Text/2005-PMC7148975-General-Index-Culinary-Leads-Extract.txt), [2006 egg-protein conference experiment](Source-Text/2006-PMC7134099-Neuroimmunology-Egg-Protein-Abstract-Extract.txt), [2008 chicken-tissue physics specimen](Source-Text/2008-PMC7097478-Physics-Chicken-Specimen-Abstract-Extract.txt) and [2009 aging and dietary abstracts](Source-Text/2009-PMC7103906-Aging-Diet-Culinary-Abstracts-Extract.txt). [Observations and member boundaries](Observations/Food-Experiment-Source-Context-Nov17-10.md).
+
 January 1, 2005 through December 31, 2009.
 
 ## Annotated research

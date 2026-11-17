@@ -1,0 +1,5 @@
+# Original outcomes add direction with transfer limits
+
+Compared with the preceding bucket's indices and conference mentions, original studies permit closer examination of exposure and outcome. The uncontrolled cancer diet offered a multi-oil shake containing walnut oil; pain worsened among the seven evaluable questionnaire participants. Intake and disease progression prevent assigning that trajectory to walnut oil. [Cancer diet](../Source-Text/2011-PMID21794124-Schmidt-Ketogenic-Cancer-Diet-Extract.txt)
+
+Ground Ceylon cinnamon was given after MPTP, and mouse motor proxies favored cinnamon. This supplies a minimal indirect challenge to the worsening hypothesis, not a human gait-speed finding. The ethnobotanical Ocimum identity and the Alzheimer's chapter's compounds remain distinct from culinary preparations and clinical Parkinson outcomes. [Cinnamon](../Source-Text/2014-PMID24946862-Cinnamon-Motor-Extract.txt) · [Ocimum](../Source-Text/2012-PMC7119873-Ocimum-Ethnobotany-Abstract-Extract.txt) · [Plant chapter](../Source-Text/2014-PMC7149555-Alzheimer-Plant-Compound-Chapter-Extract.txt)
