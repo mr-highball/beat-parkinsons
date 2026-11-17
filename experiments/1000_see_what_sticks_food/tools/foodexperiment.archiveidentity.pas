@@ -21,6 +21,10 @@ function ReadArchiveIdentity(const APath: String): TArchiveIdentity;
 function ParseArchiveIdentity(const AText: RawByteString): TArchiveIdentity;
 function ParseTrialArchiveIdentifier(const AText: RawByteString;
   const AExpected: String): String;
+function OtherRegistryIdentifier(const AValue: String): String;
+function OtherRegistryFileIdentifier(const AFileName: String): String;
+function OtherRegistryHeaderMatches(const AText: RawByteString;
+  const AExpected: String): Boolean;
 function NormalizeArchiveIdentifier(const AValue: String): String;
 function ArchiveIdentityConflicts(const AExpected, AArchive: TArchiveIdentity): String;
 function SameTitledArchive(const AExpected, AArchive: TArchiveIdentity): Boolean;
@@ -74,6 +78,26 @@ begin
   end;
 end;
 
+function OtherRegistryIdentifier(const AValue: String): String;
+var
+  LSeparator: Integer;
+begin
+  Result := '';
+  if AnsiStartsStr('ACTRN', AValue) and (Length(AValue) = 19) and
+    DigitsOnly(Copy(AValue, 6, MaxInt)) then
+    Exit(AValue);
+  if AnsiStartsStr('ISRCTN', AValue) and (Length(AValue) = 14) and
+    DigitsOnly(Copy(AValue, 7, MaxInt)) then
+    Exit(AValue);
+  if AnsiStartsStr('IRCT', AValue) then
+  begin
+    LSeparator := Pos('N', AValue);
+    if (LSeparator >= 14) and DigitsOnly(Copy(AValue, 5, LSeparator - 5)) and
+      DigitsOnly(Copy(AValue, LSeparator + 1, MaxInt)) then
+      Exit(AValue);
+  end;
+end;
+
 function NormalizeArchiveIdentifier(const AValue: String): String;
 var
   LValue: String;
@@ -100,6 +124,9 @@ begin
   if AnsiStartsStr('NCT', LValue) and (Length(LValue) = 11) and
     DigitsOnly(Copy(LValue, 4, MaxInt)) then
     Exit(LValue);
+  Result := OtherRegistryIdentifier(LValue);
+  if Result <> '' then
+    Exit;
   LDoi := NormalizeDoi(AValue);
   if LDoi <> '' then
     Exit('DOI:' + LDoi);
@@ -121,6 +148,85 @@ begin
     LFile.Free;
   end;
   Result := ParseArchiveIdentity(LText);
+end;
+
+function OtherRegistryFileIdentifier(const AFileName: String): String;
+var
+  LName: String;
+  LStart: Integer;
+  LEnd: Integer;
+begin
+  LName := UpperCase(ChangeFileExt(AFileName, ''));
+  LStart := 1;
+  while (LStart <= Length(LName)) and (LName[LStart] in ['0'..'9', '-']) do
+    Inc(LStart);
+  LEnd := PosEx('-', LName, LStart);
+  if LEnd = 0 then
+    LEnd := Length(LName) + 1;
+  Result := OtherRegistryIdentifier(Copy(LName, LStart, LEnd - LStart));
+end;
+
+function OtherRegistryHeaderMatches(const AText: RawByteString;
+  const AExpected: String): Boolean;
+const
+  CHeaderBytes = 1024;
+var
+  LHeader: String;
+  LLine: String;
+  LIdentity: String;
+  LUrl: String;
+  LStart: Integer;
+  LEnd: Integer;
+  LSplit: Integer;
+  LHasIdentity: Boolean;
+  LHasProvider: Boolean;
+begin
+  Result := False;
+  if OtherRegistryIdentifier(AExpected) = '' then
+    Exit;
+  LHeader := Copy(AText, 1, CHeaderBytes);
+  LStart := 1;
+  LHasIdentity := False;
+  LHasProvider := False;
+  while LStart <= Length(LHeader) do
+  begin
+    LEnd := PosEx(#10, LHeader, LStart);
+    if LEnd = 0 then
+      Break;
+    LLine := Trim(Copy(LHeader, LStart, LEnd - LStart));
+    LStart := LEnd + 1;
+    LSplit := Pos(':', LLine);
+    if LSplit > 0 then
+      case IndexText(Copy(LLine, 1, LSplit - 1),
+        ['record', 'registration', 'registration number', 'registry id']) of
+        0..3:
+          begin
+            LIdentity := OtherRegistryIdentifier(UpperCase(Trim(Copy(LLine,
+              LSplit + 1, MaxInt))));
+            if (LIdentity <> '') and (LIdentity <> AExpected) then
+              Exit;
+            LHasIdentity := LHasIdentity or (LIdentity = AExpected);
+          end;
+      end;
+    LHasIdentity := LHasIdentity or AnsiStartsText(AExpected + '.', LLine);
+    if AnsiStartsText('Source: https://', LLine) then
+      LLine := Copy(LLine, 9, MaxInt)
+    else if AnsiStartsText('URL: https://', LLine) then
+      LLine := Copy(LLine, 6, MaxInt);
+    LUrl := LowerCase(LLine);
+    if AnsiStartsStr('ACTRN', AExpected) then
+      LHasProvider := LHasProvider or
+        AnsiStartsStr('https://anzctr.org.au/trial/registration/trialreview.aspx?id=', LUrl) or
+        AnsiStartsStr('https://www.anzctr.org.au/trial/registration/trialreview.aspx?id=', LUrl) or
+        (Pos(' https://anzctr.org.au/trial/registration/trialreview.aspx?id=', LUrl) > 0)
+    else if AnsiStartsStr('IRCT', AExpected) then
+      LHasProvider := LHasProvider or AnsiStartsStr('https://irct.ir/trial/', LUrl) or
+        AnsiStartsStr('https://en.irct.ir/trial/', LUrl)
+    else
+      LHasProvider := LHasProvider or (LUrl = 'https://www.isrctn.com/' +
+        LowerCase(AExpected)) or (LUrl = 'https://www.isrctn.com/pdf/' + LowerCase(AExpected));
+  end;
+  Result := LHasIdentity and LHasProvider;
 end;
 
 function ParseTrialArchiveIdentifier(const AText: RawByteString;

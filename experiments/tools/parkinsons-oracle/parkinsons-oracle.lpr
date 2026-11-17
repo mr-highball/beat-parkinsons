@@ -46,7 +46,8 @@ const
       '"period":{"type":"string","pattern":"^[0-9]{4}-[0-9]{4}$"},' +
       '"offset":{"type":"integer","minimum":0},"limit":{"type":"integer","minimum":1,"maximum":100}}}},' +
     '{"name":"oracle_find_sources","description":"Find archived source documents by PMID, PMCID, ' +
-      'DOI or NCT ID. Matches come from source metadata. Use oracle_search_catalog for citation ' +
+      'DOI, NCT, ACTRN, ISRCTN or IRCT ID. Matches come from source metadata. ' +
+      'Use oracle_search_catalog for citation ' +
       'mentions and other catalog notes.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
       '"additionalProperties":false,"required":["identifiers"],"properties":{"identifiers":{' +

@@ -27,10 +27,14 @@ Use `{"symptom":"tremors","trend":"eases"}` to look up evidence that may point t
 
 Use `oracle_claim` for the relevant study outcomes and access gaps. If the claim search is empty or the evidence is unresolved, search the text catalog with alternate spellings, preparation names or endpoint terminology. A lexical hit needs source-level review. A gap in the indexed catalog is a reason to continue discovery, with the index timestamp and its read errors in view.
 
-For known identifiers, send up to 100 PMIDs, PMCIDs, DOIs or ClinicalTrials.gov
-NCT IDs to `oracle_find_sources`. Bare numeric identifiers are PMIDs. Each
+For known identifiers, send up to 100 PMIDs, PMCIDs, DOIs, NCT IDs or trial IDs
+from ANZCTR (ACTRN), ISRCTN and IRCT to `oracle_find_sources`. Bare numeric
+identifiers are PMIDs. Each
 result includes the normalized identifier and matching paths in sorted order.
 Results follow the input order, including identifiers with zero archive matches.
+The three additional registries require a matching source filename, an exact
+registration field or leading ID, and the official registry address in the
+source header. Use text search for other archives and citation trails.
 The tool indexes leading publication metadata from `Source-Text` text files and
 matching registry provenance from `Source-Text/Trials` exports. A match can be
 a curated extraction or collection, so confirm the actual article and its depth.

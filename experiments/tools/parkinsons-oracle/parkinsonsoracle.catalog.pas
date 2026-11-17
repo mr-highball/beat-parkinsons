@@ -792,9 +792,18 @@ var
   LStoreIdentifier: TSqlStatement;
   LFinish: TSqlStatement;
   LRebuildIdentifiers: Boolean;
+  LRefreshOtherRegistries: Boolean;
   LChanged: Boolean;
   LReparseCount: Int64;
   LRootAttributes: DWORD;
+
+  procedure StoreIdentifier(ADocumentId: Int64; const AIdentifier: String);
+  begin
+    LStoreIdentifier.Reset;
+    LStoreIdentifier.BindNumber(1, ADocumentId);
+    LStoreIdentifier.BindText(2, UTF8String(AIdentifier));
+    LStoreIdentifier.Execute;
+  end;
 
   procedure IndexSourceIdentifiers(ADocumentId: Int64; const ARelative, APeriod, ABody: UTF8String);
   const
@@ -804,28 +813,19 @@ var
     LStart: Integer;
     LTrialId: String;
     LTrialName: UTF8String;
-
-    procedure Store(const AIdentifier: String);
-    begin
-      LStoreIdentifier.Reset;
-      LStoreIdentifier.BindNumber(1, ADocumentId);
-      LStoreIdentifier.BindText(2, UTF8String(AIdentifier));
-      LStoreIdentifier.Execute;
-    end;
-
   begin
     LIdentity := ParseArchiveIdentity(ABody);
     if LIdentity.Pmid <> '' then
     begin
-      Store('PMID:' + LIdentity.Pmid);
+      StoreIdentifier(ADocumentId, 'PMID:' + LIdentity.Pmid);
     end;
     if LIdentity.Pmcid <> '' then
     begin
-      Store('PMCID:' + LIdentity.Pmcid);
+      StoreIdentifier(ADocumentId, 'PMCID:' + LIdentity.Pmcid);
     end;
     if LIdentity.Doi <> '' then
     begin
-      Store('DOI:' + LIdentity.Doi);
+      StoreIdentifier(ADocumentId, 'DOI:' + LIdentity.Doi);
     end;
     LStart := Length(ResearchPathPrefix) + Length(APeriod) + 1;
     if Copy(ARelative, LStart, Length(CTrialFolder) + 3) = CTrialFolder + 'NCT' then
@@ -840,7 +840,7 @@ var
       LTrialId := ParseTrialArchiveIdentifier(ABody, LTrialId);
       if LTrialId <> '' then
       begin
-        Store(LTrialId);
+        StoreIdentifier(ADocumentId, LTrialId);
       end;
     end;
   end;
@@ -856,6 +856,7 @@ var
     LError: UTF8String;
     LBody: UTF8String;
     LPrefixBytes: Integer;
+    LOtherRegistryId: String;
   begin
     LSeen.Reset;
     LSeen.BindText(1, ARelative);
@@ -877,7 +878,13 @@ var
     LArchivedSource := (APeriod <> '') and
       (Pos('/Source-Text/', ARelative) = Length(ResearchPathPrefix) + Length(APeriod) + 1) and
       (ExtractFileExt(LowerCase(String(ARelative))) = '.txt');
-    if LHadBody and LSameMetadata and not (LArchivedSource and LRebuildIdentifiers) then
+    LOtherRegistryId := '';
+    if LArchivedSource and (LRefreshOtherRegistries or not (LHadBody and LSameMetadata)) then
+    begin
+      LOtherRegistryId := OtherRegistryFileIdentifier(ExtractFileName(String(ARelative)));
+    end;
+    if LHadBody and LSameMetadata and not ((LArchivedSource and LRebuildIdentifiers) or
+      (LOtherRegistryId <> '')) then
     begin
       Exit;
     end;
@@ -913,6 +920,11 @@ var
       if LArchivedSource and LRebuildIdentifiers and (LError = '') then
       begin
         IndexSourceIdentifiers(LId, ARelative, APeriod, LBody);
+      end;
+      if (LError = '') and (LOtherRegistryId <> '') and
+        OtherRegistryHeaderMatches(LBody, LOtherRegistryId) then
+      begin
+        StoreIdentifier(LId, LOtherRegistryId);
       end;
       Exit;
     end;
@@ -951,6 +963,10 @@ var
       if LArchivedSource then
       begin
         IndexSourceIdentifiers(LId, ARelative, APeriod, LBody);
+      end;
+      if (LOtherRegistryId <> '') and OtherRegistryHeaderMatches(LBody, LOtherRegistryId) then
+      begin
+        StoreIdentifier(LId, LOtherRegistryId);
       end;
     end;
   end;
@@ -1057,6 +1073,12 @@ begin
       ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_identifier_state VALUES (1,-1)');
       LRebuildIdentifiers := Scalar(FDatabase, 'SELECT source_identifier_state.revision' +
         ' <> catalog_state.revision FROM source_identifier_state, catalog_state') <> 0;
+      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_registry_state (' +
+        ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
+      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_registry_state VALUES (1,-1)');
+      LRefreshOtherRegistries := LRebuildIdentifiers or
+        (Scalar(FDatabase, 'SELECT source_registry_state.revision <> catalog_state.revision' +
+          ' FROM source_registry_state, catalog_state') <> 0);
       if LRebuildIdentifiers then
       begin
         // Also recover when an older executable has refreshed the text catalog.
@@ -1079,7 +1101,7 @@ begin
       LDeleteIdentifiers := TSqlStatement.Create(FDatabase,
         'DELETE FROM source_identifiers WHERE document_id=?1');
       LStoreIdentifier := TSqlStatement.Create(FDatabase,
-        'INSERT INTO source_identifiers(identifier,document_id) VALUES (?2,?1)');
+        'INSERT OR IGNORE INTO source_identifiers(identifier,document_id) VALUES (?2,?1)');
 
       Walk(FResearchRoot, 'research', '');
       ExecuteSql(FDatabase, 'DELETE FROM document_fts WHERE rowid IN (' +
@@ -1097,6 +1119,8 @@ begin
       LFinish.BindNumber(2, LReparseCount);
       LFinish.Execute;
       ExecuteSql(FDatabase, 'UPDATE source_identifier_state' +
+        ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
+      ExecuteSql(FDatabase, 'UPDATE source_registry_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
       ExecuteSql(FDatabase, 'COMMIT');
       FLastRefreshError := '';
@@ -1321,6 +1345,7 @@ var
   LIndex: Integer;
   LInput: TJSONData;
   LRevision: Int64;
+  LNeedsOtherRegistries: Boolean;
   LQuery: TSqlStatement;
   LResults: TJSONArray;
   LMatches: TJSONArray;
@@ -1331,6 +1356,7 @@ begin
     raise EConvertError.CreateFmt('Provide from 1 to %d source identifiers.', [MaximumIdentifiers]);
   end;
   SetLength(LIdentifiers, AIdentifiers.Count);
+  LNeedsOtherRegistries := False;
   for LIndex := 0 to High(LIdentifiers) do
   begin
     LInput := AIdentifiers.Items[LIndex];
@@ -1342,9 +1368,11 @@ begin
     LIdentifiers[LIndex] := NormalizeArchiveIdentifier(LInput.AsString);
     if LIdentifiers[LIndex] = '' then
     begin
-      raise EConvertError.CreateFmt('Expected a PMID, PMCID, DOI or NCT ID at position %d.',
+      raise EConvertError.CreateFmt('Expected a PMID, PMCID, DOI or supported registry ID at position %d.',
         [LIndex + 1]);
     end;
+    LNeedsOtherRegistries := LNeedsOtherRegistries or
+      (OtherRegistryIdentifier(LIdentifiers[LIndex]) <> '');
   end;
 
   LQuery := nil;
@@ -1359,6 +1387,13 @@ begin
           LRevision) then
       begin
         raise Exception.Create('Source identifiers need a catalog refresh');
+      end;
+      if LNeedsOtherRegistries and
+        ((Scalar(FDatabase, 'SELECT count(*) FROM sqlite_schema' +
+          ' WHERE type=''table'' AND name=''source_registry_state''') = 0) or
+        (Scalar(FDatabase, 'SELECT revision FROM source_registry_state WHERE id=1') <> LRevision)) then
+      begin
+        raise Exception.Create('Source registry identifiers need a catalog refresh');
       end;
       LResults := TJSONArray.Create;
       LResult.Add('results', LResults);

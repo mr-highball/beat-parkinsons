@@ -60,7 +60,8 @@ $Reply.result.content[0].text | ConvertFrom-Json
 
 Use `oracle_status` to record the claim and catalog revisions. For a batch of
 known study identifiers, call `oracle_find_sources` with, for example,
-`identifiers: ["PMID:40647065", "NCT04986982"]`. Open the returned source
+`identifiers: ["PMID:40647065", "NCT04986982", "ACTRN12610000710022"]`.
+Exact lookup also accepts ISRCTN and IRCT IDs. Open the returned source
 passages to verify identity, eligibility and depth. When archive matches are
 empty, use `oracle_search_catalog` to find citations and catalog notes before
 classifying a question. Use the text search for alternate terms, then review the
