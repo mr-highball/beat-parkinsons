@@ -496,3 +496,4 @@ January 1, 2015 through December 31, 2019.
 - [Dried Melissa leaf capsules and postoperative HADS depression](Source-Text/2016-Heidari-Melissa-CABG-Depression-Extract.txt)
 - [Official CABG dried lemon balm and HADS depression registration](Source-Text/Trials/IRCT2014071918531N1.txt)
 - [Echium syrup depression trial and unresolved lemon balm attribution](Source-Text/PMID29468978-Anushiravani-Combined-Syrup-Abstract-Extract.txt)
+- [Dry lemon balm capsules and postpartum depression scores](Source-Text/2019-Beihaghi-Melissa-Postpartum-Blues-Extract.txt)

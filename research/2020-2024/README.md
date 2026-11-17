@@ -538,3 +538,8 @@ January 1, 2020 through December 31, 2024.
 - [Stress supplement and Hamilton depression outcomes](Source-Text/Trials/NCT06672965.txt)
 - [Aqueous extract sleep study with secondary depression scale](Source-Text/Trials/NCT05422599.txt)
 - [PanTrek combination intervention and Hamilton depression endpoint](Source-Text/Trials/NCT05841173.txt)
+- [Brewed lemon balm versus black tea and DASS depression in nurses](Source-Text/Trials/IRCT20190204042617N2.txt)
+- [Brewed lemon balm versus rose inhalation and Beck depression](Source-Text/Trials/IRCT20220821055767N1.txt)
+- [Rose and tea crossover abstract with unresolved botanical identity](Source-Text/2024-Fatali-Rose-Tea-Depression-Conference-Extract.txt)
+- [StressZen mixed extract and mood outcomes](Source-Text/Trials/ISRCTN14084189.txt)
+- [Lemon balm depression meta-analysis and initial study-membership audit](Source-Text/2021-PMID34449930-Ghazizadeh-Lemon-Balm-Meta-Abstract.txt)

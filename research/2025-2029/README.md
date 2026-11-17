@@ -435,3 +435,4 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Registered phospholipid lemon balm pilot and protocol discrepancy](Source-Text/Trials/NCT06942897.txt)
 - [Mazzola high-dose subgroup and depression measurements](Source-Text/2026-PMID42232738-Mazzola-Melissa-Cortisol-Extract.txt)
 - [Inhaled lemon balm and the dialysis sadness item](Source-Text/2025-PMID40082838-Pasyar-Lemon-Balm-Dialysis-Extract.txt)
+- [Lemon balm tea versus rooibos with a shared program](Source-Text/Trials/ACTRN12626001145392.txt)

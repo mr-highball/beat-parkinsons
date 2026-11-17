@@ -1,3 +1,5 @@
 # Dried lemon balm and postoperative HADS depression
 
 The earlier egg supplement study left the effect of its added lemon balm component uncertain. The postoperative trial tested dried leaf capsules against starch and reported a larger decrease in HADS depression under dried leaf. Its test statistic and p-value do not reconcile, and a separate surgery report appears to measure other outcomes from the same trial. The preparation and population differ from those of the brewed Parkinson hypothesis. [Earlier add-on trial](../../2010-2014/Source-Text/2011-PMID21631360-Solberg-YTE-Melissa-Extract.txt) · [Postoperative comparison](../Source-Text/2016-Heidari-Melissa-CABG-Depression-Extract.txt)
+
+A separate 2019 postpartum capsule trial found a smaller rise in depression scores than placebo after cesarean delivery. Both groups rose from low baseline scores. Attrition handling is unclear. Its endpoint concerns early postpartum prevention. [Original postpartum trial](../Source-Text/2019-Beihaghi-Melissa-Postpartum-Blues-Extract.txt)
