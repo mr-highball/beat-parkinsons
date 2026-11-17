@@ -1,0 +1,27 @@
+# Stroke proceedings, original exposure boundaries and crossover follow-through
+
+## Exact original queue
+
+The intake accepted 131 exact pairs across five source keys at original body or complete conference-member depth. The source-specific review recorded 103 related contexts and 28 exclusions. [Pinned original scope](pinned-scope.tsv) · [Dispositions](dispositions.tsv) · [Replay and freeze checks](verification.txt)
+
+| Source | Exact pairs | Member and exposure boundaries |
+| --- | ---: | --- |
+| ESOC 2018, PMC6453219 | 31 | The matched Florence PDF and PMC reader provide exact presentation and printed-page boundaries. AS18-047 was a diet-preference survey and AS23-010 an apathy and imaging study in a different cohort. AS08-029 used prior falls as a covariate for agoraphobia and AS16-121 used falls efficacy and balance. Neither tested roasted kale or ground sage. |
+| Emergency Care, PMC7186847 | 18 | The original chapter separates veterinary fur cleaning with a coconut-oil soap, respiratory muscle fatigue, canine allium or grape poisonings and a topical green-tea preparation. These are distinct exposures from culinary food and human clinical outcomes. |
+| EASD 2016, PMID 27539147 | 14 | Member 16 gives postmeal glycemia with extra-virgin olive oil compared with butter in type 1 diabetes. Member 288 studies coffee and green-tea intake and metabolic syndrome. Member 678 describes animal medium-chain fats. Member 497 reports exercise exhaustion in a separate diabetes study. |
+| Biophysics 2021 posters, PMC8551951 | 32 | HA.43 and HA.34 concern planned flaxseed-oil combinations in animal models, with original planned methods and no outcomes. Canola and peanut oil are treated as study vehicles in separate members and routes. |
+| European Congress on Obesity 2017, PMID 28528328 | 36 | Member T1P33 uses corn oil in an animal metabolic design. T1P147 concerns coffee and gut flora. T2P123 assesses a mixed dietary index. T3P187 measures weight and iron status in an unrelated green-tea intervention. The original reader has an ambiguous olive-oil paragraph boundary, with no additional named poster credited. |
+
+The stroke review follows the 31 pairs held in the previous packet. The Florence PDF covers the 2018 DOI and matches authenticated members beyond the shorter page range shown in the PMC metadata. The actual symptom reports were scoped by member and page. The journal follow-up to AS23-010 concerns the same apathy cohort. [Previous access boundary](../oracle-conference-members-nov17/stroke-proceedings-access.md) · [Institutional original](https://flore.unifi.it/bitstream/2158/1149605/1/ESJ.pdf) · [Apathy follow-up](https://www.neurology.org/doi/10.1212/WNL.0000000000007095)
+
+The separate 2025 ESOC proceedings supplied an authenticated individual apathy member and the publication's version history. The full version-matched collection remains unavailable and its 35 exact original pairs stay open. [Source scope and access checks](search-receipts.tsv)
+
+## Coconut oil, fatigue and executive function
+
+The original ketogenic crossover from PACTR201707002406306 was recovered through the author-posted advance article. Its two diets were compared in 11 healthy completers. The protocol gives coconut oil as an optional cooking fat. The article records morning freshness, evening mood and executive task performance, with no individual coconut-oil intake or separate fatigue result identified. The linked 2022 metabolic paper and its accessible ethics and raw-data supplements supply study-family and schema context. The 2019 supplement and direct PACTR posting remain unverified. These sources retain claim 0229 at **Maybe False, 51** and claim 0598 at **Unknown, 50**. [Original protocol and outcomes](../../../../research/2015-2019/Food-Experiment-Coconut-Ketogenic-Crossover.md) · [Same-cohort supplement review](../../../../research/2020-2024/Food-Experiment-Oil-Followup.md#registered-ketogenic-crossover-metabolic-report-and-supplement-schema)
+
+The complete 2016 SGIM report 2462117 links coconut oil applied for mouth dryness to suspected aspiration in an uncontrolled case. Different presentations concern fatigue, Parkinson disease and dietary problems. The report supplies a route-specific safety observation, without a measured fatigue outcome or known virgin grade. The veterinary and EASD original bodies resolve their focused rank scope. The 1971 CMAJ administrative article identity was verified, with its scanned body still unavailable. The 2025 UEG proceedings remain partially accessible through an original constituent poster. [Dated case](../../../../research/2015-2019/Food-Experiment-Oil-Followup.md#suspected-aspiration-of-coconut-oil-applied-for-mouth-dryness) · [Rank and source access](coconut-followthrough.tsv)
+
+## Flaxseed oil and anxiety, 0141
+
+The 2024 physiological conference poster and a closely related defense abstract extend the earlier HA.43 planned study. The combined flaxseed oil and alpha-lipoic acid arm favored open-arm behavior over haloperidol alone and over the oil supplementation arm. The report gives no favorable oil-only anxiety comparison. It measures an animal proxy, includes inconsistent arm reporting across versions and does not establish cold pressing. This evidence does not strengthen the existing weak culinary claim, which remains **Maybe True, 51**. [Dated abstracts and version limits](../../../../research/2020-2024/Food-Experiment-Grapeseed-Flaxseed-Followup.md#flaxseed-oil-and-alpha-lipoic-acid-in-a-haloperidol-model)
