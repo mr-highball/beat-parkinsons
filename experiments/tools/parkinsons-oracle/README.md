@@ -50,6 +50,8 @@ Codex reads MCP configuration at session startup. The server uses newline-delimi
 
 The server reloads claim data when the repository’s committed revision changes. An in-progress evidence review stays in the working tree until publication.
 
+Each reload resolves the committed revision, checks which evidence tables exist and reads the round files with one Git batch process. Required files and tracked evidence tables must be readable. The loader hashes the exact committed freeze bytes for every round.
+
 Refresh the text index after adding local research. This reuses the existing index and checks the local inventory for changes:
 
 ```powershell

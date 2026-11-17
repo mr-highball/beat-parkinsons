@@ -27,6 +27,7 @@ Commit verified research and experiment updates incrementally. Use a descriptive
 - Use the local MCP launcher when the session has no direct oracle tools. The [launcher example](experiments/oracle-coverage/README.md#local-launcher) and the same read-only tools apply to all project agents. Use small replies to locate evidence, then page and follow supporting, opposing, and open trails as needed. A local match does not close any required external search.
 - Record one first-pass result per evidence question as a hit, partial, miss, or unavailable. Send the outcome, query, citation, and unresolved dimension to Dexter for the [coverage ledger](experiments/oracle-coverage/README.md). Log repeat searches as part of the same question. Keep tool and index failures separate from catalog gaps.
 - At each research checkpoint, compare strict hit rates for comparable batches and record the denominator. When rates decline, identify recurring partials and misses by exposure, symptom, and missing evidence. Prioritize those gaps for catalog expansion, while keeping the experiment’s existing review order and search coverage requirements. Verify index health before interpreting the trend and refresh the index after committed catalog updates.
+- Fix verified oracle inefficiencies when they materially slow research. Compare equivalent requests against the same data before and after each fix, verify that evidence and freshness checks still work, and report lookup timing separately from any measured model token savings.
 
 # Publication privacy
 

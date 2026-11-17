@@ -7,7 +7,7 @@ unit parkinsonsoracle.claims;
 
 interface
 
-uses Classes, SysUtils, Generics.Collections, fpjson;
+uses Classes, Process, SysUtils, Generics.Collections, fpjson;
 
 type
   TClaimQuery = record
@@ -62,8 +62,8 @@ type
     FDirectional: Integer;
     FUnknown: Integer;
     function Git(const AArguments: array of String): String;
-    function Blob(const APath: String): String;
-    procedure LoadRound(ARound: Integer);
+    function ReadBlob(AProcess: TProcess; const APath: String): String;
+    procedure LoadRound(ARound: Integer; AProcess: TProcess; APublishedTables: TStrings);
   public
     constructor Create(const ARepoRoot: String);
     destructor Destroy; override;
@@ -77,11 +77,15 @@ type
 
 implementation
 
-uses Process, StrUtils, FPSHA256, foodexperiment.externaldata, parkinsonsoracle.trend,
+uses StrUtils, FPSHA256, foodexperiment.externaldata, parkinsonsoracle.trend,
   wfc;
 
 const
   CBase = 'experiments/1000_see_what_sticks_food';
+  CRoundCount = 7;
+  CVerdictPath = '/verdicts.tsv';
+  CEvidencePath = '/followup/assessments.tsv';
+  CCoveragePath = '/followup/context-coverage/coverage-by-claim.tsv';
   CFreezeHeader = 'id'#9'category'#9'ingredient'#9'preparation'#9'symptom'#9'direction'#9'statement';
   CVerdictHeader = 'id'#9'verdict'#9'confidence'#9'rationale'#9'local_references'#9'search_record'#9 +
     'local_verdict';
@@ -91,6 +95,15 @@ const
     'abstract_context_reviewed'#9'exact_assessment_basis_unspecified'#9 +
     'body_or_primary_context_reviewed'#9'queue_priority_1'#9'queue_priority_2'#9 +
     'queue_priority_3'#9'queue_priority_4'#9'queue_priority_5'#9'queue_priority_6';
+
+function ExperimentPath(ARound: Integer): String;
+begin
+  Result := CBase;
+  if ARound > 1 then
+  begin
+    Result := Result + '_round_' + IntToStr(ARound);
+  end;
+end;
 
 function Key(ARound: Integer; const AId: String): String;
 begin
@@ -215,8 +228,16 @@ begin
 end;
 
 constructor TClaimIndex.Create(const ARepoRoot: String);
+const
+  CTreeArguments = 5;
+  COptionalPaths: array[0..2] of String = (CVerdictPath, CEvidencePath, CCoveragePath);
 var
   LRound: Integer;
+  LIndex: Integer;
+  LSuffix: String;
+  LArguments: TFields;
+  LTables: TStringList;
+  LProcess: TProcess;
 begin
   inherited Create;
   FRoot := IncludeTrailingPathDelimiter(ExpandFileName(ARepoRoot));
@@ -227,8 +248,52 @@ begin
   FSymptomAliases := TDictionary<String, String>.Create;
   FIngredientAliases := TDictionary<String, String>.Create;
   FRevision := Trim(Git(['rev-parse', '--verify', 'HEAD']));
-  for LRound := 1 to 7 do
-    LoadRound(LRound);
+  // A batch "missing" response also covers unreadable objects. Check the
+  // pinned tree once so a damaged published table cannot pass as absent.
+  SetLength(LArguments, CTreeArguments + CRoundCount * Length(COptionalPaths));
+  LArguments[0] := 'ls-tree';
+  LArguments[1] := '-rt';
+  LArguments[2] := '--name-only';
+  LArguments[3] := FRevision;
+  LArguments[4] := '--';
+  LIndex := CTreeArguments;
+  for LRound := 1 to CRoundCount do
+  begin
+    for LSuffix in COptionalPaths do
+    begin
+      LArguments[LIndex] := ExperimentPath(LRound) + LSuffix;
+      Inc(LIndex);
+    end;
+  end;
+  // Reuse one Git process and address every blob through the same commit.
+  LProcess := nil;
+  LTables := TStringList.Create;
+  try
+    LTables.CaseSensitive := True;
+    LTables.Text := Git(LArguments);
+    LProcess := TProcess.Create(nil);
+    LProcess.Executable := 'git';
+    LProcess.CurrentDirectory := FRoot;
+    LProcess.Parameters.Add('cat-file');
+    LProcess.Parameters.Add('--batch');
+    LProcess.Options := [poUsePipes];
+    LProcess.ShowWindow := swoHide;
+    LProcess.Execute;
+    for LRound := 1 to CRoundCount do
+    begin
+      LoadRound(LRound, LProcess, LTables);
+    end;
+    // FPC's pipe stream owns the writer once Input has been accessed.
+    LProcess.Input.DontClose := True;
+    FileClose(LProcess.Input.Handle);
+    if not LProcess.WaitOnExit or (LProcess.ExitStatus <> 0) then
+    begin
+      raise EInOutError.Create('Git could not finish reading the published experiment.');
+    end;
+  finally
+    LProcess.Free;
+    LTables.Free;
+  end;
   AddAlias(FSymptomAliases, 'tremor', 'rest tremor severity');
   AddAlias(FSymptomAliases, 'tremors', 'rest tremor severity');
   AddAlias(FSymptomAliases, 'attention', 'attention impairment');
@@ -251,15 +316,57 @@ begin
     raise EInOutError.CreateFmt('Unable to read the published experiment in %s.', [FRoot]);
 end;
 
-function TClaimIndex.Blob(const APath: String): String;
+function TClaimIndex.ReadBlob(AProcess: TProcess; const APath: String): String;
+var
+  LObjectName: String;
+  LRequest: String;
+  LHeader: String;
+  LFields: TFields;
+  LSize: Integer;
+  LByte: AnsiChar;
 begin
-  Result := Git(['show', FRevision + ':' + APath]);
+  LObjectName := FRevision + ':' + APath;
+  LRequest := LObjectName + #10;
+  AProcess.Input.WriteBuffer(LRequest[1], Length(LRequest));
+  LHeader := '';
+  repeat
+    AProcess.Output.ReadBuffer(LByte, 1);
+    if LByte = #10 then
+    begin
+      Break;
+    end;
+    if Length(LHeader) >= Length(LObjectName) + 64 then
+    begin
+      raise EInOutError.Create('Invalid Git response for ' + APath);
+    end;
+    LHeader := LHeader + LByte;
+  until False;
+
+  if LHeader = LObjectName + ' missing' then
+  begin
+    raise EInOutError.Create('Cannot read published experiment file: ' + APath);
+  end;
+  LFields := SplitFields(LHeader, ' ');
+  if (Length(LFields) <> 3) or (LFields[1] <> 'blob') or
+    not TryStrToInt(LFields[2], LSize) or (LSize < 0) then
+  begin
+    raise EInOutError.Create('Expected a Git blob for ' + APath);
+  end;
+  SetLength(Result, LSize);
+  if LSize > 0 then
+  begin
+    AProcess.Output.ReadBuffer(Result[1], LSize);
+  end;
+  AProcess.Output.ReadBuffer(LByte, 1);
+  if LByte <> #10 then
+  begin
+    raise EInOutError.Create('Invalid Git blob terminator for ' + APath);
+  end;
 end;
 
-procedure TClaimIndex.LoadRound(ARound: Integer);
+procedure TClaimIndex.LoadRound(ARound: Integer; AProcess: TProcess; APublishedTables: TStrings);
 var
   LExperiment: String;
-  LFiles: String;
   LData: String;
   LHash: String;
   LLines: TStringList;
@@ -270,20 +377,21 @@ var
   LThresholdValid: Boolean;
   LCanonical: String;
   LRoundClaims: Integer;
+
+  function RoundBlob(const ASuffix: String): String;
+  begin
+    Result := ReadBlob(AProcess, LExperiment + ASuffix);
+  end;
+
 begin
-  LExperiment := CBase;
-  if ARound > 1 then
-    LExperiment := LExperiment + '_round_' + IntToStr(ARound);
-  LFiles := Git(['ls-tree', '-r', '--name-only', FRevision, '--',
-    LExperiment + '/verdicts.tsv', LExperiment + '/followup/assessments.tsv',
-    LExperiment + '/followup/context-coverage/coverage-by-claim.tsv']);
-  LData := Blob(LExperiment + '/freeze.tsv');
-  LHash := Trim(Blob(LExperiment + '/freeze.sha256'));
+  LExperiment := ExperimentPath(ARound);
+  LData := RoundBlob('/freeze.tsv');
+  LHash := Trim(RoundBlob('/freeze.sha256'));
   if HashText(LData) <> LHash then
     raise EConvertError.CreateFmt('Frozen claim hash mismatch in Round %d.', [ARound]);
   LLines := TStringList.Create;
   try
-    ReadTable(LLines, Blob(LExperiment + '/symptoms.tsv'), 'symptom'#9'aliases');
+    ReadTable(LLines, RoundBlob('/symptoms.tsv'), 'symptom'#9'aliases');
     for LIndex := 1 to LLines.Count - 1 do
     begin
       LFields := SplitFields(LLines[LIndex], #9);
@@ -292,7 +400,7 @@ begin
       for LField in SplitFields(LFields[1], '|') do
         AddAlias(FSymptomAliases, LField, LCanonical);
     end;
-    ReadTable(LLines, Blob(LExperiment + '/ingredients.tsv'),
+    ReadTable(LLines, RoundBlob('/ingredients.tsv'),
       'category'#9'ingredient'#9'forms'#9'aliases');
     for LIndex := 1 to LLines.Count - 1 do
     begin
@@ -336,9 +444,9 @@ begin
       AddPosting(FByIngredient, Normalize(LClaim.Ingredient), LClaim);
     end;
 
-    if Pos(LExperiment + '/verdicts.tsv', LFiles) > 0 then
+    if APublishedTables.IndexOf(LExperiment + CVerdictPath) >= 0 then
     begin
-      ReadTable(LLines, Blob(LExperiment + '/verdicts.tsv'), CVerdictHeader);
+      ReadTable(LLines, RoundBlob(CVerdictPath), CVerdictHeader);
       if LLines.Count - 1 <> LRoundClaims then
         raise EConvertError.Create('Published verdicts do not cover the frozen round.');
       for LIndex := 1 to LLines.Count - 1 do
@@ -369,9 +477,9 @@ begin
           Inc(FUnknown);
       end;
     end;
-    if Pos(LExperiment + '/followup/assessments.tsv', LFiles) > 0 then
+    if APublishedTables.IndexOf(LExperiment + CEvidencePath) >= 0 then
     begin
-      ReadTable(LLines, Blob(LExperiment + '/followup/assessments.tsv'), CEvidenceHeader);
+      ReadTable(LLines, RoundBlob(CEvidencePath), CEvidenceHeader);
       for LIndex := 1 to LLines.Count - 1 do
       begin
         LFields := SplitFields(LLines[LIndex], #9);
@@ -387,10 +495,9 @@ begin
           Inc(LClaim.AssessedRows);
       end;
     end;
-    if Pos(LExperiment + '/followup/context-coverage/coverage-by-claim.tsv', LFiles) > 0 then
+    if APublishedTables.IndexOf(LExperiment + CCoveragePath) >= 0 then
     begin
-      ReadTable(LLines, Blob(LExperiment + '/followup/context-coverage/coverage-by-claim.tsv'),
-        CCoverageHeader);
+      ReadTable(LLines, RoundBlob(CCoveragePath), CCoverageHeader);
       if LLines.Count - 1 <> LRoundClaims then
         raise EConvertError.Create('Published coverage does not cover the frozen round.');
       for LIndex := 1 to LLines.Count - 1 do
