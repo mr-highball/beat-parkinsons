@@ -1,0 +1,9 @@
+# Thyme Anxiety Comparators
+
+## Injected thyme essential oil and rodent anxiety proxies
+
+Kourat and colleagues studied injected Thymus ciliatus essential oil in BPA-exposed rats. Oil-treated rats increased open-field center visits and had lower center-entry latency compared with BPA alone. The article interprets the BPA animals spending more time in light as worse anxiety and their spending more time in darkness after oil as improvement. This interpretation and movement differences limit the use of the behavioral proxies. Species, preparation, route, toxicant and endpoints differ from dried thyme and Parkinson anxiety. [Original source](https://www.mdpi.com/1424-8247/18/4/509) · [Local factual text](Source-Text/PMID40283944-Thyme-Oil-Behavior.txt)
+
+## Wild thyme extract and measured anxiety domain
+
+López-Zambrano and colleagues report 178 adults with gastrointestinal discomfort randomized to a dry aqueous extract of Thymus serpyllum aerial parts or cellulose placebo for eight weeks. The exploratory FDDQL anxiety domain favored extract by +3.21 points (95% CI −4.17 to 10.60, p=.410), on a 0–100 scale with higher scores representing better quality of life. The anxiety-domain contrast was inconclusive. Observed week-eight outcomes were available for 65 of 90 and 66 of 88, with imputation for intention-to-treat estimates. The cited registry lists a 75-person crossover, investigator-only masking and primary microbiome outcome. The paper describes parallel allocation, double blinding and primary gastrointestinal symptom score. Public supplements do not resolve these differences or establish prespecification of the anxiety analysis. [Official registration](https://clinicaltrials.gov/study/NCT06639126) · [Author data supplement](https://doi.org/10.6084/m9.figshare.32727798) [Original source](https://www.mdpi.com/2076-3271/14/6/611) · [Local factual text](Source-Text/PMID42930530-Wild-Thyme-FDDQL-Anxiety.txt)

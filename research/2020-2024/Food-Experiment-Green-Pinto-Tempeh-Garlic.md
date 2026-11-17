@@ -1,0 +1,30 @@
+# Food experiment evidence for green beans, pinto beans, tempeh, and garlic
+
+## Common bean pod extract and rat catalepsy
+
+Kaur and Saxena's 2022 study used a methanol extract of authenticated *Phaseolus vulgaris* pods. The paper gives a voucher but no cultivar or edible cooking preparation. At 90 minutes, Table 1 reports a mean catalepsy score of 126.16 under haloperidol, 104.16 and 83.16 with two extract doses, and 30.16 under levodopa–carbidopa. The same paper measured tacrine-induced jaw movements and memory-task performance. These are rodent pharmacological outcomes and do not supply a cooked green bean, muscle rigidity or executive-function result in people with Parkinson. [Primary paper, Methods and Tables 1–3](https://archives.ijper.org/sites/default/files/IndJPhaEdRes-56-3-804.pdf)
+
+## Cooked pulse rotation and constipation severity
+
+NCT04692298 first posted December 31, 2020. It enrolled postmenopausal women in a single open-label arm and assigned a rotation of cooked pulses including pinto beans. The June 14, 2022 Orphan conference report describes 35 recruits and a lower Cleveland Clinic constipation score after 12 weeks (p = .003), with no clear Bristol stool-quality change. Registry enrollment is 41 and the sponsor, pulse rotation and timing are consistent with the conference study. The abstract gives no trial identifier, so their identity is probable. The protocol and abstract do not separate pinto beans from the pulse mixture, identify home boiling, or provide a Parkinson comparison. [Official registration](https://clinicaltrials.gov/study/NCT04692298) · [Local registry snapshot](Source-Text/Trials/NCT04692298.txt) · [Primary conference results](https://pmc.ncbi.nlm.nih.gov/articles/PMC9193655/)
+
+## Cooked garlic metabolites in urine
+
+Qin and colleagues’ September 18, 2020 study detected metabolites in urine after ingestion of cooked and roasted garlic. The sample reflects a preparation-specific excretion profile. Urine chemistry and time of sample collection give no estimate of urgency, nocturia or void counts. [Primary article text](Source-Text/PMC7531236.txt)
+
+## Canned pinto and green beans in a crossover
+
+Hutchins and Winham’s March 4, 2020 article reports a randomized crossover in adults with type 2 diabetes, with 13 randomized and eight completing both phases. Participants received daily canned pinto beans or canned sliced French-style green beans, drained and rinsed. They answered weekly questions about changes in stool frequency and consistency, flatulence and bloating. Table 7 records stool changes in four pinto-phase participants (57%) and two green-bean-phase participants (25%) at week one, with no clear difference between phases or across weeks. Its combined stool-change measure does not give the direction of constipation. The pinto preparation was commercially canned and neither treatment arm studied Parkinson. [Primary report, Methods and Table 7](https://medwinpublishers.com/FSNT/FSNT16000211.pdf) · [Official registration](../2015-2019/Food-Experiment-Green-Pinto-Tempeh-Garlic.md#registered-pinto-and-green-bean-crossover)
+
+## Registered tempeh results
+
+This is the same cohort as the 2016 Setiawan dissertation. The official result first posted June 21, 2022 and reports six-minute walking distance changes of +49.67 m with cooked soy tempeh and tuberculosis treatment (n = 64 for this outcome) and +25.75 m with tuberculosis treatment alone (n = 63). The non-systematically collected adverse events include vomiting in one of 75 tempeh participants and none of 72 controls. The registry measures walking distance and provides no stride length, short-stride or Parkinson outcome. [Official registry and results](https://clinicaltrials.gov/study/NCT02554318?tab=results) · [Local registry snapshot](Source-Text/Trials/NCT02554318-results.txt)
+
+
+## Levodopa measured in common bean pods and seeds
+
+Tesoro and colleagues published a validated LC–ESI/MS/MS study July 3, 2023. Figure 4 compares fresh seeds, dried seeds and pod material from four protected-origin Fagioli di Sarconi *Phaseolus vulgaris* ecotypes (Cannellino Rosso, Munachedda Nera, Risi and San Michele Rosso), plus a dried commercial black bean comparator. The reported range across samples was 0.020 ± 0.005 to 2.34 ± 0.05 µg/g dry weight, with Munachedda Nera pods at the top. Fresh Cannellino Rosso seeds contained 1.79 ± 0.07 µg/g dry weight, and dried Italian seeds ranged from 0.070 ± 0.001 to 1.99 ± 0.03 µg/g dry weight. The authors describe an isobaric interference and used retention time and two ion transitions to distinguish levodopa. The sampled pod material and seeds were uncooked analytical samples. The study gives no concentration for steamed or cooked commercial snap beans and measures no Parkinson symptom. [Full primary paper, Figure 4 and section 3.3](https://iris.unibas.it/retrieve/4a5fbd5b-ddd2-4975-af39-3088dc60d4ae/Journal%20of%20Mass%20Spectrometry%20-%202023%20-%20Tesoro%20-%20A%20validated%20LC%20MS%20MS%20method%20for%20quantitative%20determination%20of%20L%E2%80%90dopa%20in.pdf) · [First publication and identifiers](https://pubmed.ncbi.nlm.nih.gov/37401097/)
+
+## Cooked bean rotation and stool outcomes
+
+Bell and colleagues first published September 30, 2024. Random assignment compared meals rotating several cooked bean types, cooked peas, or rice in adults with mild hypercholesterolemia. The bean rotation included pinto. Compared with rice, the pooled bean group more often reported increased stool frequency at week one (p = .045) and softer stools at weeks one (p = .016) and three (p = .034). Increased bloating was also reported at week one. Bean types were pooled and the questionnaire does not give clinical constipation severity. The evidence leaves the effect of isolated boiled pinto beans in Parkinson disease unresolved. [Local factual extract](Source-Text/2024-Bell-Bean-Rotation-Stool-Factual-Extract.txt) · [Original Methods and Figure 4](https://pmc.ncbi.nlm.nih.gov/articles/PMC11600120/) · [Earlier registration](../2010-2014/Food-Experiment-Green-Pinto-Tempeh-Garlic.md#cooked-bean-rotation-registration-and-first-public-protocol)

@@ -1,0 +1,11 @@
+# Dried basil and daily OFF time
+
+## The Dec 2023 Behera basil report and its June 2024 counterpart
+
+First identified public issue: December 2023, Bulletin of Environment, Pharmacology and Life Sciences 13(1):445–449, [original PDF](https://bepls.com/dec_2023/60.pdf). A second [June 2024 PDF](https://bepls.com/beplsjune2024/17.pdf) gives the identical title, authors, collection location, plant authentication, 220 g leaf/1100 mL methanol extraction, 60.64 g yield, methods and catalepsy numbers; treat as one study, not independent replication. Exact earlier online posting date and reason for republication unverified.
+
+Identified *Ocimum basilicum* fresh leaves were shade dried, powdered and Soxhlet extracted in methanol. Authors describe 1 mg/kg intraperitoneal haloperidol, 200 or 400 mg/kg extract and a levodopa comparison. The methods state two Wistar rats despite multiple groups, without clear group sizes; authors describe 21-day induction but compare day 0 and day 7. These reporting issues prevent reliable precision assessment. The 2024 Figure 1 text reports day-seven rotarod times of 12.7 ± 1.87 seconds for haloperidol, 31 ± 2.82 at 200 mg/kg and 32.7 ± 3.01 at 400 mg/kg. Catalepsy text reports control, haloperidol and the two extract values of 0.25 ± 0.41, 3.0 ± 0.44, 0.25 ± 0.27 and 0.58 ± 0.37, respectively. These are authors' figures and significance claims, not independently validated estimates.
+
+Relevance to 0266 is remote: drug-induced rat motor tests do not measure daily OFF time, the methanolic extract is not consumption of dried culinary basil, and no human Parkinson population is included. Results do not quantify support or opposition to the frozen worsening premise.
+
+[Local factual extract](Source-Text/2023-Behera-Haloperidol-Basil-Extract.txt)

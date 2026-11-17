@@ -1,0 +1,9 @@
+# Dietary exposure and symptom evidence
+
+## Grouped spicy foods and bladder or pelvic pain flares
+
+First online December 27, 2017. Eligible paired diary data were available for 292 participants, with 582 flare and 797 nonflare assessments. The within-participant estimate for flare onset per category increase in servings of grouped spicy foods in the previous three days was OR 0.99 (95% CI 0.81–1.22). The estimate was 1.67 (1.13–2.48) in the subgroup who suspected a dietary trigger. The food contrast measures composite flare onset. Urgency was higher during flares, but there was no separate food-specific urgency estimate or smoked paprika exposure. [Local factual extract](Source-Text/2017-Sutcliffe-Spicy-Foods-Flare-Factual-Extract.txt) · [Sutcliffe and colleagues, primary case-crossover Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC5911194/)
+
+## Mixed oral Capsicum product and urgency intensity
+
+The publisher dates this study December 31, 2017. A 12-week open-label comparison in women with overactive bladder tested a mixed oral product containing Capsicum annuum, pumpkin, Polygonum ingredients, vitamins and glutamine against solifenacin. Table 2 reports urgency intensity scores changing from 3.47 to 1.94 on the combination and 3.55 to 2.65 on solifenacin, with reported post-treatment p = .0039. The paper gives conflicting enrollment counts. Abstract and methods say 45 per group while results say 50 per group entered and 42 and 48 were evaluable. Neurologic disease was excluded. The comparator and combination leave the individual pepper effect unresolved. [Local factual extract](Source-Text/2017-Vecchioli-Scaldazza-Capsicum-Combination-Factual-Extract.txt) · [Vecchioli-Scaldazza and colleagues, original Tables 1 and 2](https://www.pagepressjournals.org/aiua/article/download/aiua.2017.4.296/6920)

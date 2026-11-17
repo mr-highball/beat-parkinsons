@@ -1,0 +1,5 @@
+# Food experiment evidence for green beans, pinto beans, tempeh, and garlic
+
+## Garlic extract and reported urinary frequency in prostate disease
+
+Durak and colleagues reported a one-month before-and-after study in February 2003. It included 27 people with benign prostatic hyperplasia and nine with prostate cancer. The intervention was a water extract of Kastamonu garlic prepared by a month-long soak. Table 1 reports mean urine frequency declining from 4.6 to 1.2 in the hyperplasia group (p < .01), and from 6.4 to 1.6 in the cancer group (p < .05). Methods calls the measure a nocturia history, while the table footnote says times per day. The International Prostate Symptom Score was given as a total, without separate urgency episodes. The study used no concurrent control and did not enroll a Parkinson population or assign cooked whole garlic. [Primary publisher report](https://doi.org/10.1016/S0271-5317(02)00495-5) · [Primary article copy, Table 1 and Methods](https://www.academia.edu/50441627/Consumption_of_aqueous_garlic_extract_leads_to_significant_improvement_in_patients_with_benign_prostate_hyperplasia_and_prostate_cancer)

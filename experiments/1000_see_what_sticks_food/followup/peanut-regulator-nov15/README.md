@@ -1,0 +1,7 @@
+# Peanut oil adverse-event field searches
+
+The FDA snapshot dated October 28, 2026 was checked on November 15. Exact FDA drug-event phrase searches covered product name, recorded active ingredient and harmonized substance annotation. All five successful result sets fit on one returned page. The native parser reconciled 46 appearances to 42 unique report ID/version keys. A 404 captured from one no-match request has the provider's no-matches body. The other 404 entries preserve their exact HTTP status and query. [Query receipts](requests.json) · [Report-level entries](report-memberships.tsv) · [Native counts](native-counts.txt) · [FDA event fields](https://open.fda.gov/apis/drug/event/searchable-fields/)
+
+One record lists a general hallucination term and a separate visual impairment term alongside a mixed zinc product that lists arachis hypogaea oil. This does not encode a visual hallucination. The product is recorded with multiple ingredients and unknown route, grade and timing. The FDA dataset supplies no denominator of exposed people or clinical event frequency. [Dated research context](../../../../research/2025-2029/Food-Experiment-Peanut-Regulator-Context.md)
+
+The MHRA arachis oil profile's former public ZIP timed out. The live successor renders general interpretive text without numeric rows in the available view. The original disclosure supplies the old code and link. Its reaction table remains a separate open source. [Dated original disclosure and queries](../../../../research/2020-2024/Food-Experiment-Peanut-Regulator-Context.md)

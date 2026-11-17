@@ -1,0 +1,5 @@
+# Corn oil in both arms of an overnight crossover
+
+## Corn oil in both arms of an overnight crossover
+
+Linares and colleagues published this randomized, double-blind crossover on April 5, 2018. Twenty-six healthy adults completed both nights. One condition added cannabidiol to corn oil and the other used the same amount of corn oil alone in an identical capsule. Table 3 reports sleep-onset latency of 13.4 minutes with the corn-oil capsule and 9.8 with the added-drug capsule. Wake after sleep onset was 46.2 and 47.10 minutes, respectively. The original labels both comparisons inconclusive. The Pittsburgh Sleep Quality Index was used during screening and was not repeated as an intervention outcome. Neither comparison estimates a refined corn-oil effect without a shared carrier or measures Parkinson insomnia. [Original article](https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2018.00315/full) · [Local factual text](Source-Text/2018-Linares-Corn-Oil-Polysomnography.txt)

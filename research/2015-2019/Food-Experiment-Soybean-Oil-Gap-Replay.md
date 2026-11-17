@@ -1,0 +1,14 @@
+# Soybean oil comparator exposure and motor outcome follow-up
+
+## Soybean-oil placebo and measured acoustic voice tremor
+
+Lowell and colleagues randomized participants with essential voice tremor to take octanoic acid and a matched soybean-oil softgel in crossover periods. Sixteen participants completed the study. The oil source, grade, and processing were not reported. Table 3 shows that percent amplitude modulation changed from 12.91 to 12.43 during soybean-oil placebo and from 13.49 to 9.35 during octanoic acid. The period comparison adjusted for baseline gave p=.0499. Frequency modulation changed from 5.57 to 5.35 during placebo and from 5.19 to 3.98 during octanoic acid, with adjusted p=.0450. Listening ratings and Voice Handicap Index-10 did not separate the periods clearly.
+
+The laboratory acoustic measures quantify fluctuations during sustained vowels. The paper gives no ordinary speaking sound-pressure level or low voice volume outcome. The randomized comparison contrasts the study drug with an oil-containing placebo in essential voice tremor. The within-placebo change has no oil-free comparison to estimate a soybean-oil effect. [Primary study, first published December 25, 2018](https://pmc.ncbi.nlm.nih.gov/articles/PMC6592780/) · [Same-trial registry, NCT01864525](https://clinicaltrials.gov/study/NCT01864525) · [Local factual extract](Source-Text/2018-Lowell-Soybean-Oil-Essential-Voice-Tremor-Extract.txt)
+
+
+The posted NCT01864525 results from August 20, 2018 agree with Table 3 for all four baseline and follow-up means per condition and both baseline-adjusted comparisons. The official record calls the comparator inactive. The paper provides its soybean-oil identity. The two records describe one crossover. [Official posted results](https://clinicaltrials.gov/study/NCT01864525?tab=results) · [Local factual results extract](Source-Text/2018-NCT01864525-Acoustic-Results-Extract.txt)
+
+## Soybean oil held equal in the synuclein mouse gait comparison
+
+The 2015 Syn-GFP experiment premixed 500 ppm curcumin in soybean oil for one diet and used the same quantity of soybean oil in the comparison diet. After six months, fixed-speed treadmill data in four animals per arm show forepaw stride-length variability of 15.76% in the control diet versus 10.18% with curcumin (p<.05). Hindpaw stride frequency was 3.9 versus 3.6 steps per second (p=.0671). Variability and cadence are distinct gait outcomes. The comparison holds soybean oil equal and does not specify oil refining or establish an oil effect on stride length. [Original Methods and Figure 3](https://pmc.ncbi.nlm.nih.gov/articles/PMC4452784/) · [Existing local source text](Source-Text/PMC4452784.txt) · [Curcumin review](Food-Experiment-Cumin-and-Motor-Items.md#synthetic-dietary-curcumin-and-fixed-speed-treadmill-gait)

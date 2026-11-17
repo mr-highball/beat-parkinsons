@@ -1,0 +1,7 @@
+# Kale original-source follow-through
+
+The 2016 original of Null, Pennesi and Feldman contains two relevant testimonials. A woman with dementia and prior strokes reportedly drank kale-containing juices and spoke more fluently. A Parkinson participant reported no longer screaming at night after the same combined program, without verifying her own kale intake or dream enactment. Reviews of claim 0616 and claim 0368 use different people within the same article. [Dated primary evidence and factual extract](../../../../../research/2015-2019/Food-Experiment-Kale-Lifestyle-Context.md)
+
+The 2020 Duffy study offered thawed kale in a flavor test with nostrils blocked or released. The same participants supplied the existing Brussels sprouts sensory results. Claim 0793 remains pending only for the kale-seed registry because the study gives neither roasted-leaf exposure nor changes in someone's olfactory ability. [Dated original sensory context](../../../../../research/2020-2024/Food-Experiment-Romaine-Celery-Stalk-Cabbage.md#kale-flavor-sampling-and-retronasal-perception)
+
+The native roasted-kale pass retrieved 0, 6, 0 and 29 query appearances on four complete queries. The four targeted steamed-kale queries returned zero. The original case reports were recovered using independent source discovery beyond those queries. Search-result counts describe query scope. [Roasted query receipts](roasted-epmc-queries.tsv) · [Steamed query receipts](steamed-epmc-queries.tsv)

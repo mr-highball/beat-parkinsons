@@ -1,0 +1,5 @@
+# Canola oxidation and rodent motor tasks
+
+## Native and heated canola in developing rats
+
+Keremane and colleagues. Metabolic Brain Disease, first public December 20, 2024. DOI 10.1007/s11011-024-01509-2. The original abstract reports native and heated canola and sunflower diets and separate probiotic cointerventions. Animals were exposed maternally and after weaning. Heated oil groups had poorer rotarod or motor-test performance as summarized by the authors relative to their respective controls. The abstract does not report exact oil-specific rotarod values or indicate whether native oil was cold pressed. Developmental exposure and experimental motor performance give no clinical Parkinson postural instability estimate. [Original source](https://pubmed.ncbi.nlm.nih.gov/39704875/)

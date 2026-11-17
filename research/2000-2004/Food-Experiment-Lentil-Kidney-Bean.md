@@ -1,0 +1,5 @@
+# Lentil and kidney bean evidence
+
+## Grass pea preparation and neurolathyrism in Ethiopia
+
+Getahun and colleagues' 2003 case-control study concerned *Lathyrus sativus*, called grass pea, chickling pea, almorta or kesari dal. Its endpoint was neurolathyrism, a spastic paraparesis associated with high grass-pea intake during famine. The abstract reports adjusted odds ratios for boiled grass peas of 2.78 (95% CI 1.09–7.13) with cereal and 5.22 (2.01–13.55) without cereal. The article names grass pea explicitly, even though a prepared dish can be called dal. Culinary lentil is *Lens culinaris*, also indexed as *Vicia lens*, *Lens esculenta* or *Ervum lens*. Neither the exposure nor the neurologic diagnosis in the Ethiopian study maps to the frozen lentil claims. [Primary study, PMID 14654321](https://pubmed.ncbi.nlm.nih.gov/14654321/) · [Kew grass pea names](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:501990-1/general-information) · [Kew lentil synonyms](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:524872-1/general-information)

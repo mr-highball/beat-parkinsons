@@ -1,0 +1,5 @@
+# Cinnamon and individual speech and handwriting outcomes
+
+Both main Parkinson meal plans include cinnamon. Their reported motor exam and daily activity totals provide no separately measured low voice volume or handwriting size. An older-adult multiherb formula includes cinnamon bark extract and reports an oral condition composite including speech. Its effect on acoustic amplitude remains unresolved. [Parkinson meal plans](../../../../research/2015-2019/Food-Experiment-MDS-Diet-Followup.md#low-fat-and-ketogenic-meal-plans-with-measured-symptom-outcomes) · [Cinnamon formula](../../../../research/2025-2029/Food-Experiment-Cinnamon-Sesame.md#cinnamon-containing-formula-and-oral-function)
+
+The Europe PMC search reconciled 59 distinct keys. One lacked an abstract. The Korean patent body describes cell assays. The original menu PDFs were unavailable in this replay, with content details carried through prior dated archived checks. Both frozen outcomes remain Unknown. [Europe PMC queries](epmc/ingredient_queries.tsv) · [Source key screen](source-key-screen.tsv)

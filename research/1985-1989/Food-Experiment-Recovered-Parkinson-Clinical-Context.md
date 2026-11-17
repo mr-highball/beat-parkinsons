@@ -1,0 +1,9 @@
+# Recovered Parkinson clinical reports
+
+## Leukocyte enzyme activity and diagnosis-group vignettes
+
+Aubby and colleagues measured leukocyte glutamate dehydrogenase in 158 people with ataxia or movement disorders and 71 controls. The clinical descriptions include a four-person dystonia-parkinsonism group and vignettes involving cervical and limb dystonia, rigidity and rest tremor. The primary comparison concerns enzyme activity across diagnostic groups. No food exposure was assigned and no food-linked severity contrast was reported. [Original journal article](https://jnnp.bmj.com/content/jnnp/51/7/893.full.pdf) · [Local factual text](Source-Text/1988-Aubby-Leukocyte-GDH-Parkinsonism-Extract.txt)
+
+## Rest tremor and visual hallucinations in early Lewy body series
+
+In Gibb and colleagues’ study, two of five parkinsonian cases had rest tremor. Cases 2 and 3 report visual hallucinations on different sides of the observed onset of rest tremor. The case descriptions supply no standardized tremor severity ratings or hallucination episode rate. In Byrne and colleagues’ series, all six people presenting with typical parkinsonism had rest tremor. The original page 713 separately describes visual hallucinations in cases 13 and 14. The count of five on page 716 combines several psychiatric features and cannot be read as a visual-hallucination count. Byrne’s case 12 also appears in a 1987 report according to the 1989 paper. The London and Nottingham series have different authors and centers, and individual overlap is unverified. [Gibb original, pp. 186–187](https://jnnp.bmj.com/content/jnnp/52/2/185.full.pdf) · [Byrne official page scans, pp. 713 and 716](https://pmc.ncbi.nlm.nih.gov/articles/PMC1032020/) · [Local Gibb summary](Source-Text/1989-Gibb-Rest-Tremor-and-Hallucinations.txt) · [Local Byrne summary](Source-Text/1989-Byrne-Rest-Tremor-and-Hallucinations.txt)

@@ -1,0 +1,5 @@
+# Banana intake and mood measures
+
+## Whole banana intake and mood subscales
+
+Kobayashi and colleagues reported a two-week open randomized comparison in healthy Japanese adults. The banana group had 13 people, and the assignment with no bananas had seven. The original Methods specify Cavendish bananas and the assigned intake but leave food processing unstated. The groups showed inconclusive differences in POMS2 vigor–activity and fatigue–inertia change rates. The reported between-group difference concerned confusion–bewilderment. The later improvement-defined split within the banana group uses the observed outcomes to define its subgroups. Parkinson disease and validated apathy severity were outside the trial. [Original report, section 3.4](https://pubs.sciepub.com/jfnr/10/12/2/index.html) · [Local factual extract](Source-Text/2022-Kobayashi-Banana-Mood-Factual-Extract.txt) · [Earlier fruit observation during staged oral feeding](../1995-1999/Food-Experiment-JSPEN-Citation-Followup.md#kelp-and-banana-during-staged-oral-feeding)

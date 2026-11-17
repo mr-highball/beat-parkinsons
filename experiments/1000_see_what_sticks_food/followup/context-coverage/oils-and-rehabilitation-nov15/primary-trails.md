@@ -1,0 +1,13 @@
+# Same-study outcome trails from the date and sage body review
+
+## CO-OP occupational rehabilitation
+
+The protocol PMID 36785891, a 2024 goal-characterization report PMID 38716035, and Davies and colleagues' randomized results PMID 40134279 / PMC12881151 all identify ACTRN12621001483842 and ethics number 2020/HE002650. This links the papers to one trial. The randomized report first appeared March 26, 2025, with the March 2026 issue. It reports 20 participants and CO-OP strategy training versus waitlist. The protocol's schedule table groups fatigue and apathy with repeat assessments. The results Methods classify the Fatigue Severity Scale and Starkstein Apathy Scale as baseline tertiary measures used to characterize possible influences on feasibility and goal attainment. This resolves the reported outcome scope. The report supplies neither an ingredient contrast nor a longitudinal fatigue or apathy treatment estimate. Publisher licensing is CC BY-NC 4.0. [Protocol](https://pmc.ncbi.nlm.nih.gov/articles/PMC10647899/) · [2024 goal report](https://pubmed.ncbi.nlm.nih.gov/38716035/) · [Results and Methods](https://journals.sagepub.com/doi/10.1177/00084174251327307)
+
+## Music, dance and meditation
+
+The published protocol PMID 39471378 and Doshi and colleagues' July 12, 2025 results PMID 40697491 / PMC12282261 share CTRI/2023/03/051064 and the sponsor-site ethics identifier. The trial randomized 30 participants and analyzed 28. Among 15 participants assigned the activity plus meditation arm, three selected dance and twelve selected music. The main comparison is the bundled activity program versus usual activity. The reported UPDRS and PDQ-39 analyses use aggregate measures, and the paper gives no separate pain or apathy treatment estimate and no date-fruit intervention. Two control participants did not complete follow-up. The source identifies CC BY-NC-ND 4.0. [Protocol](https://pmc.ncbi.nlm.nih.gov/articles/PMC11558214/) · [Results, Methods and Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC12282261/)
+
+## Isfahan continuous-care protocol
+
+PMID 40999495 / PMC12465541 identifies IRCT20190712044181N7. The protocol's session table specifies general diet education and its primary and secondary measures are PDQ-8, fatigue and self-efficacy. The exact identifier and author/title searches returned the protocol without locating a verified standalone registry results record or outcome report. The source-specific exclusions concern exposure and endpoint identity. Actual trial status and reporting remain unverified. [Published protocol](https://link.springer.com/article/10.1186/s13063-025-09057-5)

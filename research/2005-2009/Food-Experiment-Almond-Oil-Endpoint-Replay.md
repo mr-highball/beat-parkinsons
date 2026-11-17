@@ -1,0 +1,5 @@
+# Almond oil preparation and endpoint search
+
+## Ibn al Tilmid formulary separates sweet almond oil and the named hoarseness recipe
+
+Oliver Kahl’s 2007 bilingual edition of Ibn al-Tilmīdh’s dispensatory lists sweet almond oil in separate compound preparations for cough or sore throat, chest raucity in children, and asthma. Recipe 179 specifies drinking a mixture. The explicitly titled longstanding cough and hoarseness recipe 181 on page 235 lists no almond oil. Recipe numbering and ingredient fields matter when tracing the later archaeological summary. This historical material identifies intended oral preparations but provides no outcome measurement, extraction grade or clinical Parkinson population. [Original edition public transcription](https://dokumen.pub/the-dispensatory-of-ibn-at-tilm-bilingualnbsped-9004156208-9789004156203.html) [Published bilingual edition catalog](https://wellcomecollection.org/works/rjrxgam2) · [Local factual extract](Source-Text/2007-Kahl-Ibn-al-Tilmid-Sweet-Almond-Oil-Formulary.txt)

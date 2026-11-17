@@ -1,0 +1,7 @@
+# Summer savory voice follow-up, 2020–2024
+
+## Pirot District uses of two savory species
+
+Marković and colleagues surveyed traditional plant knowledge across 144 villages in southeastern Serbia. Of 631 informants, 73 supplied 78 reports concerning two *Satureja* species. Eight respondents named *S. hortensis*: five described dried plants as food seasoning, one an infusion for diabetes, one an infusion for disease prevention, and one did not know the use. The three reports of a sore-throat infusion concerned *S. montana*, a different species. These are reports of traditional use, not measured clinical results; the survey does not establish fresh summer savory consumption, Parkinson status, acoustic intensity, or speech intelligibility. [Primary article, methods and Table 2](https://www.nbpi.org.rs/wordpress/wp-content/uploads/2024/11/Marija-Markovic-et-al.-Traditional-use-of-plants-from-the-genus-Satureja-in-the-Pirot-District.pdf) · [Local factual extract](Source-Text/2024-Markovic-Pirot-Savory-Species.txt)
+
+The 2024 paper draws on the same underlying questionnaire survey as the broader record first published in July 2023. The earlier original supplement already lists these species-specific uses. Both reports name 631 informants. The broader public abstract reports 157 villages and the savory article reports 144. The accessible records leave the village denominator difference unresolved. [Earlier original supplement and same-cohort note](Food-Experiment-Summer-Savory-Pirot-2023.md)

@@ -1,0 +1,17 @@
+# Post-traumatic smell testing and olfactory training
+
+## Thyme extract in fixed post-traumatic olfactory training
+
+The 2020 report describes 16 weeks of fixed four-odor training for post-traumatic smell loss. Original Methods specify inhaled *Thymus vulgaris* extract alongside three other odorants. The article reports eight trained and eight untreated participants. Mean threshold, discrimination and identification composite scores were 12.42 to 18.35 and 12.59 to 13.06, respectively. The Results report a follow-up between-group composite difference (p<.033). This tests the complete scent regimen in a post-traumatic cohort. Participant overlap with the Rezaeyan imaging series remains unresolved. [Hosseini et al. original Methods and Table I](https://ane.pl/index.php/ane/article/download/2282/2274/2299) · [Local factual text](Source-Text/2020-Hosseini-Thyme-Olfactory-Training-Extract.txt)
+
+## Rotating odors in post-traumatic olfactory training
+
+First online May 3, 2021. The original abstract describes 25 adults with post-traumatic olfactory impairment, allocated nine to no training, nine to fixed training and seven to rotating training for 16 weeks. The trained groups reportedly improved on smell testing, particularly identification. The 2021 abstract omits individual odor names. The full 2024 companion Methods verify the scents in the same patients and resolve the conflicting review descriptions of first-month thyme. The earlier clinical outcomes and later imaging analyses refer to one study family. [Original Rezaeyan abstract and study allocation](https://pubmed.ncbi.nlm.nih.gov/33957160/) · [Local factual text](Source-Text/2021-Rezaeyan-Rotating-Odor-Training-Abstract-Extract.txt)
+
+## Later functional-connectivity report with the same arm counts
+
+First online December 3, 2024. The original Methods identify the same participants as the earlier structural MRI report, PMID 33957160. The 25 analyzed patients had post-traumatic anosmia, with nine untrained, nine in fixed training and seven in the modified regimen. The Methods list thyme in fixed training and in the first month of the modified regimen, cardamom in the second month, and saffron and cinnamon in the third. These were sniffed odor mixtures and sequences. The study compares regimens and does not provide an individual odor's effect, a culinary exposure or a Parkinson cohort. It cites IRCT2017102034225N1. The original register lists a different exposure plan with a fixed scent set and two arms. [Dated registry and discrepancies](../2015-2019/Food-Experiment-Olfactory-Training-Followup.md#post-traumatic-olfactory-training-registration) [Original 2024 Methods and cohort link](https://pmc.ncbi.nlm.nih.gov/articles/PMC11615909/) · [Local factual text](Source-Text/2024-Rezaeyan-Functional-Connectivity-Methods-Extract.txt)
+
+The conflicting first-month descriptions come from a trauma scoping review and a separate cognition review. Both cite the same 2021 study. [Trauma review](https://pmc.ncbi.nlm.nih.gov/articles/PMC10374209/) · [Cognition review](https://pmc.ncbi.nlm.nih.gov/articles/PMC9891899/)
+
+The 2024 Results give a follow-up composite smell score difference for fixed training versus control (p=.023) and an odor identification difference for modified training versus control (p=.044). The modified arm has seven participants in Methods and Table 1 and six in the olfactory outcome table. Those estimates apply to whole training regimens. [Original Results and Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC11615909/?report=classic)

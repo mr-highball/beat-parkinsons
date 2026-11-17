@@ -1,0 +1,25 @@
+# Food experiment evidence for cod, pineapple, plum, and cantaloupe
+
+## Pineapple intake and bladder or pelvic pain flares
+
+Sutcliffe and colleagues' MAPP case-crossover study first published in December 2017 and compared preceding exposures at flares and at sampled nonflare times for 292 participants. Table 2 gives pineapple odds ratios of 0.87 (95% CI 0.67–1.13) overall and 1.32 (0.81–2.15) in participants with a suspected dietary trigger. The official questionnaire combined a cup of pineapple with a glass of pineapple juice in one serving category. A separate 2019 survey from one MAPP site found 35.3% of 51 participants recalled pineapple or juice as a flare trigger. Neither provides a raw-fruit Parkinson urgency effect, and the reports share a research network with possible participant overlap. [Primary case-crossover, Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC5911194/) · [NIDDK survey form](https://repository.niddk.nih.gov/media/studies/mapp_ep/Forms/MAPP_FLARE_v3.0.20091110.pdf) · [Primary 2019 survey, Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC6874838/)
+
+## Injected bromelain and rat motor responses
+
+Adu and Mabandla's July 22, 2019 report tested injected bromelain before or after a 6-OHDA lesion in rats. The abstract describes better motor performance with pretreatment on cylinder and stepping tests. It reports no preservation of striatal or cortical dopamine and describes efficacy as unresolved. Forelimb movement and stepping are proxies in a lesion model. The exposure was isolated enzyme by intraperitoneal injection and the study did not measure human hand dexterity or raw fruit ingestion. [Primary report](https://pubmed.ncbi.nlm.nih.gov/31332728/)
+
+## Cod protein hydrolysate and cycling exhaustion
+
+Mjøs and colleagues' October 29, 2019 crossover included 14 healthy male cyclists. It compared a whey and carbohydrate drink with or without Atlantic cod fillet protein hydrolysate. Time to exhaustion differed by 0.85 minutes (95% CI −0.37 to 2.06, p = .156). The endpoint was performance during exercise, without a Parkinson fatigue severity scale or grilled cod. The January 2020 correction specifies bicycle instead of treadmill in Table 1 and corrects a typesetting error in Table 3. NCT03136133 first posted May 2, 2017. [Primary article](Source-Text/PMC6819466.txt) · [Official registration](https://clinicaltrials.gov/study/NCT03136133) · [Local registry snapshot](Source-Text/Trials/NCT03136133.txt) · [Dated correction](../2020-2024/Food-Experiment-Cod-Fruit.md#cod-cycling-report-correction)
+
+## Cod fillet and cod hydrolysate trial registrations
+
+NCT02350595 first posted January 29, 2015 for an eight-week comparison of lean fish, fatty fish and no fish in adults with overweight or obesity. Its primary papers identify cod fillets in the lean fish arm. Outcomes concern metabolism and stool measurements. NCT02890290 first posted September 7, 2016 for a randomized older-adult marine-protein hydrolysate trial with physical performance, grip and gait outcomes. The resulting 2021 paper identifies Atlantic cod fillets as the raw material. Both registry records show completion and no posted results. [Fillet registration](https://clinicaltrials.gov/study/NCT02350595) · [Fillet registry snapshot](Source-Text/Trials/NCT02350595.txt) · [Hydrolysate registration](https://clinicaltrials.gov/study/NCT02890290) · [Hydrolysate registry snapshot](Source-Text/Trials/NCT02890290.txt) · [Dated hydrolysate results](../2020-2024/Food-Experiment-Cod-Fruit.md#cod-hydrolysate-and-physical-function-in-older-adults)
+
+## Melon concentrate exercise trial registration
+
+NCT02880657 first posted August 26, 2016. It compares SODB melon concentrate with placebo in healthy adults and includes an exercise physical condition endpoint and fatigue measure. The API lists unknown status and no posted results. The 2020 report identifies the same registry ID. [Official registration](https://clinicaltrials.gov/study/NCT02880657) · [Local registry snapshot](Source-Text/Trials/NCT02880657.txt) · [Dated results](../2020-2024/Food-Experiment-Cod-Fruit.md#melon-concentrate-and-exercise-fatigue)
+
+## Pooled fish and olfactory impairment in the Blue Mountains cohort
+
+First published June 16, 2015. The 145-item food questionnaire pooled fish and the eight-odor San Diego test assessed identification in older community adults. For top versus bottom fish-intake quartile, adjusted odds ratios in 1,331 participants were 0.65 (95% CI 0.44–0.96) for prevalent impairment, 0.50 (0.31–0.82) for mild, and 0.86 (0.51–1.45) for moderate or severe. Over five years in 667 reexamined participants the corresponding incident estimate was 1.23 (0.75–2.02). Total and long-chain omega-3 intake did not show an independent association. The pooled exposure, different prevalence and incidence results, and non-Parkinson population leave baked cod unresolved. [Primary cohort publication and Tables 3–4](https://doi.org/10.1017/S0007114515001257) · [Local text](Source-Text/2015-Gopinath-Pooled-Fish-Olfaction-Factual-Extract.txt)

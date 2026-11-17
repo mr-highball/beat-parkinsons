@@ -1,0 +1,9 @@
+# Ginger constipation comparators, 2020-2024
+
+## Constipation adverse events in a ginger extract versus loratadine trial
+
+Yamprasert and colleagues randomized 80 people with allergic rhinitis to ginger extract or loratadine. Six-week Table 6 lists constipation in 0 of 36 ginger and 3 of 36 loratadine participants. Eructation was reported in 26 and 6, respectively. No inactive arm or constipation severity endpoint was included. This is a comparison of reported adverse events in rhinitis. The separate official NCT02576808 registry first posted October 15, 2015, lists the study complete and has no registry results. The journal article supplies the observed outcomes. [Original source](https://pmc.ncbi.nlm.nih.gov/articles/PMC7171779/) · [Local factual text](Source-Text/2020-Yamprasert-Ginger-Extract-Rhinitis-Adverse-Events.txt)
+
+## Combined perilla and ginger extracts in functional dyspepsia
+
+Di Pierro and colleagues described 65 treated adults with functional dyspepsia. Seven stopped after the first week without a response and were omitted from the final 58-person single-group analysis. Enteric tablets provided 375 mg ginger extract and 150 mg perilla extract per tablet, taken twice daily for two weeks. Table II combined diarrhea and constipation in one score. The mean was 4.7 (SD 1.4) at baseline and 1.5 (SD 1.3) at week two, p<.01 versus baseline. The text reports 38 with constipation and 15 with diarrhea, with no separate effect estimate for either subgroup. The retrospective series had no comparison group and no separately assigned ginger exposure. [Original source](https://www.mednews.care/wp-content/uploads/2023/10/effectiveness-of-a-nutraceutcal-supplement-containing-highly-standardized-perilla-and-ginger-extracts-in-patients-with-functional-dyspepsia.pdf) · [Local factual text](Source-Text/2020-Di-Pierro-Perilla-Ginger-Combined-Bowel-Score.txt)

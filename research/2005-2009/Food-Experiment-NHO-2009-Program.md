@@ -1,0 +1,9 @@
+# Aroma and swallowing leads in the 2009 NHO program
+
+## Lavender aroma during nursing care
+
+The 2009 poster program names a nurse-led aromatherapy study at NHO Niigata Hospital. The matching government-funded primary report followed six stage V Parkinson inpatients during dressing care with inhaled lavender aroma. Blinded nurse ratings of facial expression improved during aroma weeks two and three compared with the first dressing-only week. The comparison between sequences was inconclusive. Some participants reported lower dressing pain or distress, with no quantitative effect estimate in the report prose. Only one identified the aroma, four said they wanted future use, and vital signs showed no reported change. There was no parallel sham group or ingestion exposure. Lavender is outside the frozen ingredient list. The portal released the FY2008 report in December 2009. [2009 poster program, page 9](https://web.archive.org/web/20121119034943id_/http://www2.convention.co.jp:80/nms63/files/poster_1024.pdf#page=9) · [Original report, printed pp. 106–111](https://mhlw-grants.niph.go.jp/system/files/2008/083141/200834053A/200834053A0006.pdf) · [Grant release record](https://mhlw-grants.niph.go.jp/project/15740)
+
+## Swallowing assessment and food service titles
+
+Kotomi Sato of NHO Nanao Hospital presented on a dysphagia assessment tool in Parkinson’s. The same program page lists separate reports on preparing jelly meals and managing diet texture in a patient with severe pneumonia. The titles give no named food or Parkinson symptom comparison and the abstracts remain in the print issue. [2009 poster program, page 57](https://web.archive.org/web/20121119034943id_/http://www2.convention.co.jp:80/nms63/files/poster_1024.pdf#page=57) · [Print issue](https://ndlsearch.ndl.go.jp/books/R100000002-I000008338786-i24352013)

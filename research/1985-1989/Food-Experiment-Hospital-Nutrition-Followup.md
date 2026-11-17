@@ -1,0 +1,5 @@
+# Food texture in the National Shizuoka Hospital proceedings
+
+## Minced and semi-gelled meals in Parkinson and parkinsonism
+
+Satō and colleagues reviewed 43 inpatients with Parkinson’s disease or parkinsonism from October 1984 through August 1985. Thirteen had difficulty eating and received chopped, blenderized or jelly-textured meals. The team reported that finer mincing made food easier to pick up with a spoon. For more severe swallowing difficulty, the authors observed that watery blenderized food could be harder to swallow than a semi-gelled or yogurt-like texture. The report does not identify yogurt as an ingredient and gives no subgroup counts by diagnosis, aspiration measurements or food-specific symptom effect. [1985 original abstract 30-11, printed p. 607](https://www.jstage.jst.go.jp/article/iryo1946/39/Supplement/39_Supplement_a602/_pdf#page=6) · [Archived original page](https://web.archive.org/web/20240902141018id_/https://www.jstage.jst.go.jp/article/iryo1946/39/Supplement/39_Supplement_a602/_pdf#page=6)

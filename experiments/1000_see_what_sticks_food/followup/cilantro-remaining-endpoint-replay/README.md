@@ -1,0 +1,5 @@
+# Cilantro leaves, apathy and drooling
+
+A Parkinson diet lists coriander as a seasoning without an identifiable plant part or individual use. Healthy students in a separate study viewed and smelled a living coriander plant. Its mood and salivary analyte measures did not assess clinical apathy or salivary flow. The other oral human study uses coriander seed essential oil in a mouthwash and measures salivary microbiome and periodontal outcomes. No matched frozen direction is established. [Parkinson diet context](../../../../research/2020-2024/Food-Experiment-Umbellifer-Herbs.md#chervil-lovage-and-coriander-in-a-parkinson-diet-intervention) · [Living plant study](../../../../research/2020-2024/Food-Experiment-Cilantro-Apathy-Saliva.md) · [Seed oil rinse](../../../../research/2025-2029/Food-Experiment-Cilantro-Saliva-Rinse.md)
+
+The native Europe PMC run retrieved 82 appearances. PubMed found 15 distinct identifiers. The regional PubMed translation dropped a term and literal operator context. Two conference archive XML calls failed and two exposed wrappers. The full presentation and multilingual trails remain open. [Europe PMC queries](epmc/ingredient_queries.tsv)

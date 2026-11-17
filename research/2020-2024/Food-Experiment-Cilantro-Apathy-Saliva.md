@@ -1,0 +1,5 @@
+# Cilantro, mood and salivary measurements
+
+## Living coriander plants, mood and saliva in healthy students
+
+[Zhang et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC8698652/) first published 6 December 2021 (PMID 34943198, DOI 10.3390/biology10121283). Twenty-six healthy nonsmoking university students, 13 per group, worked for 50 minutes in a room with or without living *Coriandrum sativum* plants, then observed the plants or control surroundings for five minutes. Participants could both see and smell the plants; there was no cilantro ingestion. They answered a Profile of Mood States questionnaire and provided saliva for alpha-amylase, cortisol and amino-acid analysis. Anger-hostility scores and some saliva analyte concentrations differed between groups; the paper does not report a clinical apathy assessment, a salivary flow rate, or a drooling measure. Mood, amylase concentration and swallowing-related drooling are distinct outcomes. [Factual extract](Source-Text/2021-Zhang-Cilantro-Plant-Saliva-Extract.txt).

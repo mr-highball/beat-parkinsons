@@ -1,0 +1,5 @@
+# Named foods in a Japanese nursing case
+
+## Kelp and banana during staged oral feeding
+
+Yoshizaki and colleagues described an 81-year-old with advanced parkinsonian syndrome, profound dysphagia and weakness. Oral care and chewing exercises preceded use of a preferred strip of kelp as a saliva stimulus. By day 45 she drank water through a straw without observed coughing. Later, when intake from semi-solid meals declined, family members brought preferred foods including banana and ice cream. She smiled and spoke while snacks and feeding assistance were reintroduced. The team later changed mealtime and advanced rice porridge to a regular-texture rice meal with chopped side dishes. Tube feeds ended on day 84 and she returned home on day 171. The report gives no banana preparation, symptom scale, single-food comparison or confirmation of idiopathic Parkinson’s. Speech and smiling during meals cannot establish an apathy effect. [Original 1998 report, pp. 116–120](https://doi.org/10.2185/jjrm.47.116)

@@ -1,0 +1,11 @@
+# Dietary measures and lactulose in constipation care
+
+## Laxatives, coffee and steamed rice in a Thai chart study
+
+Methawasin and colleagues compared 67 Parkinson patients treated for constipation in a neurology clinic with 50 patients treated for constipation in a gastroenterology clinic. Mean post-treatment Constipation Scoring System scores were 6.07 and 5.24 respectively (P = .172). Ten of 67 Parkinson patients and 17 of 50 comparison patients used lactulose (P = .015). Coffee frequency, water, fruit and vegetables, and carbohydrate intake estimated from ladles of steamed rice were recorded. Tables compare dietary intake and laxative use by diagnosis. The study lacks a pretreatment constipation score and reports no within-Parkinson food-specific or lactulose-specific treatment response. Coffee preparation and fatigue were not assessed. [Local article text](Source-Text/PMC12927904.txt) · [Primary article](https://pmc.ncbi.nlm.nih.gov/articles/PMC12927904/)
+
+Bedarf and colleagues had introduced lactulose alongside a high-fiber diet in both members of Parkinson–spouse pairs in 2025. The Parkinson participants received higher lactulose doses than their household comparators. The exposure design does not estimate the individual contribution of lactulose, raw apple, olive oil or other components. [2025 combined dietary pilot](Food-Experiment-Registry-Followup.md#apples-and-lactulose-in-a-high-fiber-diet) · [2024 lactulose pilot and conference reports](../2020-2024/Food-Experiment-JSMCN-2024.md#lactulose-syrup-and-spontaneous-bowel-movements)
+
+## Choking on lactulose jelly in a non-Parkinson case
+
+A 2026 swallowing meeting report describes a woman with cirrhosis who inhaled an oral lactulose jelly and lost consciousness after coughing. She recovered after rescue. The abstract names Ragnoz NF as the product and gives no Parkinson diagnosis. A separate case in the same report describes a woman who died after choking at dinner after a stroke. Her meal texture had been advanced to soft rice, and the authors give no recovered bolus or identified choking food. Both are case descriptions. Neither tests the lactulose syrup studied for bowel symptoms in Parkinson’s outpatients. [Enge49 P3-8, PDF p135](https://www.gakkai.co.jp/enge49/files/abstracts.pdf#page=135)

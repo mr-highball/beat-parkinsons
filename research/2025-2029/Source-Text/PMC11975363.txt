@@ -1,0 +1,333 @@
+Title: CoPPIs algorithm: a tool to unravel protein cooperative strategies in pathophysiological conditions
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC11975363/
+Text object: https://pmc-oa-opendata.s3.amazonaws.com/PMC11975363.1/PMC11975363.1.txt
+Data source: U.S. National Library of Medicine, PMC Cloud Service
+PMCID: PMC11975363
+PMID: 40194557
+DOI: 10.1093/bib/bbaf146
+Citation: Brief Bioinform. 2025 Apr 7;26(2):bbaf146. doi: 10.1093/bib/bbaf146
+License: CC BY (article license statement below)
+Version: 1
+Retracted in PMC metadata: no
+Text coverage: article text
+Format: NLM plain-text extraction. This provenance header was added.
+
+
+JOURNAL INFORMATION
+==============================
+NLM Title Abbreviation: Brief Bioinform
+Journal ID: Brief Bioinform
+NLM Journal ID: 100912837
+Journal ID: bib
+
+Briefings in Bioinformatics
+
+ISSN: 1467-5463
+EISSN: 1477-4054
+Publisher: Oxford University Press
+
+ARTICLE INFORMATION
+==============================
+PMCID: PMC11975363
+PMID: 40194557
+DOI: 10.1093/bib/bbaf146
+Article ID: bbaf146
+Article version: 1
+Subjects: Case Study, AcademicSubjects/SCI01060
+
+CoPPIs algorithm: a tool to unravel protein cooperative strategies in pathophysiological conditions
+
+Lomagno Andrea Clinical Proteomics Laboratory, Elixir Infrastructure, Institute for Biomedical Technologies – National Research Council, F.lli Cervi 93, 20054 Segrate, Milan, Italy
+
+Yusuf Ishak Clinical Proteomics Laboratory, Elixir Infrastructure, Institute for Biomedical Technologies – National Research Council, F.lli Cervi 93, 20054 Segrate, Milan, Italy
+
+Tosadori Gabriele Institute of Microbiology, Czech Academy of Sciences, Vídeňská 1083, 14200 Praha 4, Czech Republic
+
+Bonanomi Dario Division of Neuroscience, IRCCS San Raffaele Scientific Institute, Olgettina 60, 20132 Milan, Italy
+
+Luigi Mauri Pietro Clinical Proteomics Laboratory, Elixir Infrastructure, Institute for Biomedical Technologies – National Research Council, F.lli Cervi 93, 20054 Segrate, Milan, Italy
+Institute of Experimental Endocrinology and Oncology “G. Salvatore” – National Research Council, Pietro Castellino 111, 80131 Naples, Italy
+
+https://orcid.org/0000-0002-7143-6229 Di Silvestre Dario Clinical Proteomics Laboratory, Elixir Infrastructure, Institute for Biomedical Technologies – National Research Council, F.lli Cervi 93, 20054 Segrate, Milan, Italy
+
+Corresponding author. Clinical Proteomics Laboratory, Elixir Infrastructure, Institute for Biomedical Technologies – National Research Council, F.lli Cervi 93, 20054 Segrate, Milan, Italy. E-mail: dario.disilvestre@itb.cnr.it
+Publication date: 2025 Mar
+Electronic publication date: 2025 Apr 7
+Volume: 26
+Issue: 2
+Electronic Location ID: bbaf146
+Received 2024 Dec 16; Revised 2025 Mar 11; Accepted 2025 Mar 14
+Copyright: © The Author(s) 2025. Published by Oxford University Press.
+Copyright year: 2025
+License: This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Keywords: proteomics, PPI network, co-expression network, topology, Parkinson
+
+Funding: PRIN2022 2022Z2TE5P 2022LNHZAP PRIN PNRR P2022LY3F4
+Page count: 12
+
+==============================
+Abstract
+
+We present here the co-expressed protein–protein interactions algorithm. In addition to minimizing correlation-causality imbalance and contextualizing protein-protein interactions to the investigated systems, it combines protein-protein interactions and protein co-expression networks to identify differentially correlated functional modules. To test the algorithm, we processed a set of proteomic profiles from different brain regions of controls and subjects affected by idiopathic Parkinson’s disease or carrying a GBA1 mutation. Its robustness was supported by the extraction of functional modules, related to translation and mitochondria, whose involvement in Parkinson’s disease pathogenesis is well documented. Furthermore, the selection of hubs and bottlenecks from the weightedprotein-protein interactions networks provided molecular clues consistent with the Parkinson pathophysiology. Of note, like quantification, the algorithm revealed less variations when comparing disease groups than when comparing diseased and controls. However, correlation and quantification results showed low overlap, suggesting the complementarity of these measures. An observation that opens the way to a new investigation strategy that takes into account not only protein expression, but also the level of coordination among proteins that cooperate to perform a given function.
+
+Introduction
+
+The development of data-driven systems biology approaches is receiving a major boost by improvements in omics technologies, including single-cell ones, which allow for increasingly accurate large scale qualitative and quantitative measurements [1]. At the same time, the identification and validation of protein–protein interactions (PPIs) is benefiting from the development of new strategies and methodologies [2, 3]. Following these advances, network models are increasingly adopted to analyze complex biological systems by investigating the molecular relationships that characterize the network structure [4–6]; thus, the emergent properties that arise from it [7].
+
+In the context of molecular network analysis, co-expression models have historically been used to describe large scale gene expression data through correlation patterns [8]. In particular, they have been used to identify modules of genes associated with phenotypic traits, pathophysiological states, treatments, and other factors [9]. For this purpose, on the contrary, the use of large-scale proteomic data may still be considered in its infancy. However, a growing number of studies are modeling the proteome as co-expression network [5, 10–14]. Indeed, an ever more in-depth characterization of the proteome is now achievable [15]. Furthermore, an ever-increasing number of samples, stored in dedicated databases can be systematically analyzed [16]. These two key factors offering an unprecedented opportunity for extensive evaluation of proteomic data through correlational studies [4].
+
+So far, most studies combining large-scale proteomic data and co-expression network models have relied on weighted gene co-expression network analysis (WGCNA) [17]. The growing interest in this field has fueled the implementation of computational tools, including JUMPn [18] and ProtExA [19], to support differential expression, functional analysis, and identification of PPIs and co-expression network modules. Additionally, more recently, Buljan et al. developed an algorithm that, through the systematic measurement of the ratio between protein complex subunits, aims to identify compromised interactions [20]. However, prior to Buljan et al., we combined co-expression network models and PPIs to identify protein complexes, pathways, and biological processes that showed altered correlation values in adipose tissue from patients with amyloidosis [5].
+
+To automate the extraction of differentially correlated functional modules in pairwise comparisons, i.e. healthy vs. control, treated vs. untreated, etc., we propose here an algorithm called CoPPIs (co-expressed protein-protein interactions). Unlike other methods, we focus a priori on proteins that are known to interact physically or functionally to carry out a biological process (Fig. 1). By focusing on PPIs, we aim to reduce the imbalance between correlation determination and causality assessment [21]. On the other hand, this strategy is based on the assumption that, in order to cooperate, two or more proteins must be close and coordinated. This concept is reminiscent of starlings (Sturnus vulgaris), which form sinuous shapes in the sky through collective behavior [22]. In other words, we assume that the execution of a given process or function requires that the cooperating subunits/proteins be expressed in a well-defined stoichiometry [5, 20, 23].
+
+Figure 1 Genesis and objectives of the combination of PPI and co-expression models. This strategy aims to assess whether proteins interacting physically and/or functionally, in order to cooperate to carry out functions and processes, are coordinated. In some ways we took inspiration from starlings (Sturnus vulgaris) when they defend themselves from aerial predators [22]. In particular, a single starling observes its neighbors and imitates them; usually it keeps a fixed number of neighbors under control, about 7–8. Therefore, we assume that proteins can have a similar behavior.
+
+To test CoPPIs, and the robustness of the score it produces, we processed a set of proteomic profiles previously characterized by a collection of brain tissues from healthy controls and subjects affected by idiopathic Parkinson’s disease (IPD) or carrying a GBA1 mutation (PD-GBA1) [24]. Specifically, data from four brain regions, such as Substantia Nigra (SN), Striatum (STR), Occipital Cortex (OCC) and Middle Temporal Gyrus (MTG), were considered. In addition to provide a set of functional modules whose level of correlation significantly varies between conditions or brain regions, the correlation between protein pairs was used in the reconstruction of weighted PPI network models for a more accurate extraction of hubs and bottlenecks [4]. Unweighted PPI network models are in fact usually made of cell- and condition-type independent PPIs, thus their weighting is a way to contextualize them to the actual system investigated [25].
+
+Results
+
+Co-expressed protein–protein interactions algorithm flowchart
+
+CoPPIs algorithm aims to automate the extraction of significant differentially correlated functional modules, i.e. protein complexes, pathways, biological processes etc., by combining PPI networks with co-expression models inferred by liquid chromatography–mass spectrometry (LC–MS) experimental data (Fig. 2A). Starting from a protein data matrix mxn (where m represents genes/proteins and n samples) reporting semi-quantitative values (peptide spectrum matches, peak area, intensity], the first step involves the computation of Spearman’s correlation for pairs of identified proteins; alternatively, if data are normally distributed, Pearson’s correlation is applied. The same set of proteins [identification frequency (IF) = 100% in all conditions] is processed for each investigated group of samples (e.g. healthy, diseased, treated).
+
+Figure 2 CoPPis algorithm. (A) Flowchart showing the main steps of CoPPIs algorithm. (B) Maths rationale of CoPPIs score. Top left, distribution of kRandomEdges ratios between the average values from a number of randomly selected correlations (NRandomEdges) in a pair of groups/conditions compared; the distribution of kRandomEdges ratios, which tends to K (green dashed line), is depicted as a function of the number of random correlations selected. Top-right, distribution of ratios between the average values of correlations ki corresponding to a specific biological term (Nedges_TERMi) in a pair of groups/conditions compared; the distribution of ki ratios, which tends to K (dashed line in the top boxes), is depicted as a function of the number of interactions of each term. In the box below, it is shown a detailed view of a generic term (Nedges_TERMi) with ratio V, while inside the circle the mathematical steps that lead to the formulation of the CoPPIs algorithm score.
+
+CoPPIs relies on PPI network models retrieved from STRING database. The acquired data are then transformed by a CoPPIs function into a graph, where proteins represent nodes, and PPIs form edges. The reconstructed interactome is integrated with the Spearman’s correlation score measured per pair of identified proteins, and the corresponding edges are weighted accordingly. In this way, the condition-specific correlations are encapsulated in the PPI network model, providing a more refined representation of biological relationships. Additionally, non-significant correlations (false discovery rate\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} $\ \ge 0.05$\end{document}) undergo a process of transformation to be further penalized in comparison to their significant counterparts (Supplementary Information).
+
+Once the interactome has been weighted with the transformed correlation scores, it is processed at a functional level by CoPPIs. This step allows the annotation of functional modules by referring to different sources, including Gene Ontology Terms, Reactome, KEGG, Wikipathways, and CORUM [26]. Each module is represented as a graph, where the annotated proteins serve as nodes, and the edges correspond to PPIs weighted as previously described. Nodes that lack any connections, due to the absence of known interactions, are subsequently removed from the graph. For each module, unweighted edges, which arise from the absence of matching proteins in the input data matrix, are weighted to 1 by default. This step helps to reduce the extraction of false positive differentially correlated modules, mainly in the case of large ones where a low percentage of weighted edges could bias the detection of significant differences. Finally, the functional modules are processed in pairwise comparisons (e.g. healthy vs disease, treated vs untreated, wild type vs mutant, etc.), and for each of them the CoPPIs score (Supplementary Information) is calculated to extract the significantly differentially correlated ones (Fig. 2B). The CoPPIs score is defined by a formula that increases with the ratio R, which is calculated as the number of significant edges for a biological term (x) divided by the total number of PPIs for the same biological term (y). To maintain an equal behavior for R lesser or greater than 0.5, two formulas were used, with equal partial derivatives with respect to x and y. The formula are designed so that, for a given value of R, a higher score is assigned when x and y are larger and the partial derivatives with respect to x and y are positive.
+
+In parallel, a weighted PPI network model per group/condition is built and topologically evaluated by network centralities for the selection of hub and bottleneck nodes.
+
+Protein correlation and proximity effect
+
+Before calculating the CoPPI score comparing control subjects with those affected by IPD and PD-GBA1 across different brain regions, we investigated the hypothesis that protein correlation is influenced by a proximity effect, at the level of physically interacting proteins and of subcellular localization.
+
+Globally, we found that, compared to non-PPIs, PPIs were associated with higher mean correlation values (Fig. 3A). This was further confirmed for all brain regions, where we also assessed a higher number of significant correlations associated with PPIs (Supplementary Fig. S1). Of note, the largest difference in correlation was observed for SN (Supplementary Fig. S1A), the main brain region involved in Parkinson’s disease [27].
+
+Figure 3 PPIs vs. not PPIs correlation. (A) Barplot reporting the average absolute values of significant correlations associated with protein pairs physically/functionally interacting (PPIs) and not (non-PPIs). (B) Spearman’s correlation density distribution by comparing PPIs, where P1 and P2 are annotated with the same cellular component (CC), and PPIs where P1 and P2 are annotated with a different CC; blue and pink dotted lines indicate the average correlation. For both graphs, p value from Student’s t-test with NULL hypothesis that the mean of the distributions are the same.
+
+Considering only PPIs, we evaluated the percentage of GO terms and pathways whose corresponding proteins were significantly correlated. Following these criteria, compartments and cellular components (CC) had the highest percentage of terms with a significant correlation (Supplementary Fig. S1). In contrast, Wikipathways showed the lowest one. Taking CC as a reference, we found that PPIs consisting of protein pairs with the same subcellular localization showed a higher average correlation value than PPIs consisting of proteins localized in different compartments (Fig. 3B). These results suggest a proximity effect on protein correlation, as well as further confirming a greater correlation between physically interacting proteins. Indeed, compartments and CC include protein complexes, whose correct functioning requires a well-defined stoichiometry between the subunits that compose them [28].
+
+Differentially correlated functional modules in brain regions of control, IPD, and PD-GBA1 subjects
+
+To test CoPPIs, we processed a collection of protein profiles obtained by analyzing different brain regions of control, IPD, and PD-GBA1 subjects [24]. For each group, we considered from 19 to 21 subjects, and for each subject we took into consideration the SN, the STR, the OCC, and the MTG. In particular, CoPPIs was used for evaluating the shift of correlation, by comparing the same brain region among the groups of subjects considered (Supplementary Table S1, Supplementary Figs S2–S4). Also, by comparing different brain regions within the same group (Supplementary Table S2, Supplementary Figs S5–S10).
+
+Globally, most differentially correlated functional modules in intergroup comparisons were involved in mitochondrial ATP synthesis, including the respiratory chain complexes, and neurotransmitter release, including clathrin-sculpted GABA and glutamate transport vesicle (Fig. 4). Mitochondrial dysfunctions are strongly implicated in the etiology of IPD and genetic PD [29]; in particular, through the role of oxidative phosphorilation, complex I and Akt signaling pathway [30]. On the other hand, alterations in GABAergic and glutamatergic neurotransmission were associated with some PD symptoms [31].
+
+Figure 4 Scheme summarizing the Nigrostriatal pathway and the functional modules differentially correlated in the corresponding brain regions (SN, STR, OCC, MTG). Dashed boxes show the main CC (green), biological processes (red), and Reactome pathways (blue), whose correlation significantly varies by comparing Control vs. IPD and PD-GBA1 subjects. In each box, up- and down-arrow indicates modules whose correlation is increased and decreased in IPD and PD-GBA1 (vs. Control), respectively.
+
+Similarly to label-free quantification, the number of differentially correlated functional modules decreased when comparing the two groups of disease subjects, such as IPD and PD-GBA1 (Fig. 5A and B). Nevertheless, quantitative analysis and correlation resulted complementary. Indeed, the results obtained following these approaches were barely overlapped. In that cases, we didn’t observe a relationship between the expression and correlation trend; some of them agreed, while others did not. SN and STR were the brain regions with the higher number of functional modules with an opposite trend. Of note, most of them were up-regulated in C and most correlated in IPD and PD-GBA1 (Fig. 5C).
+
+Figure 5 Histograms showing the number of (A) differentially regulated and (B) differentially correlated functional modules by comparing the same brain region in the following pairwise comparisons: IPD vs. C, PD-GBA1 vs. C and IPD vs. PD-GBA1. In (C), it is reported that the number of functional modules with a similar (red, blue, green) and opposite (gray and black) trend of expression and correlation.
+
+Due to the multitude of CoPPIs output, and the complexity of the study design, an overview of the main results by brain region is presented in the following paragraphs.
+
+Substantia nigra
+
+In SN of IPD and PD-GBA1 subjects, CoPPIs detected a significant decrease of correlation in modules which refer to cytoplasmic and mitochondrial translation (Fig. 4); noteworthy, through higher CoPPIs score values (Supplementary Table S1, Supplementary Figs S2–S4). It represents a case where correlation and quantitation followed the same trend (Supplementary Tables S3–S4 and Figs 5C and 6). Consistent with these results, down-regulation of mitochondrial and cytoplasmic ribosomal subunits has been reported in the SN of PD patients, pointing to translation machinery impairment in disease pathogenesis [32]. Moreover, with the exception of IPD group, translation machinery-related modules were more correlated in SN vs all other brain regions, suggesting a specific role in this region (Supplementary Figs S8–S10). This hypothesis is supported by a recent study showing an enrichment of translation-associated proteins in neuromelanin granules in the SN. These structures are formed after the inhibition of translation further indicating that this process is impaired in the SN of PD cases [33].
+
+Figure 6 Functional modules showing the same and the opposite trend between quantitation and CoPPIs correlation. A) Cytoplasmic ribosomal subunits, B) Mitochondrial ribosomal subunits, and C) Mitochondrial respiratory chain Complex I in SNCvs SNIPD; the thickness of blue and red edges is proportional to the correlation value.
+
+Similar to the translation machinery, some functional modules related to ATP synthesis, mitochondrial electron transport, and acetyl-CoA metabolism were down-regulated in patient groups, but with an opposite trend of correlation (Fig. 5C). These quantitative variations observed following tissue analysis could mirror the mitochondrial dysfunctions occurring in PD, including a reduced bioenergetic capacity and the mitochondrial complex I deficiency [34]. They could also derive from the loss of functioning mitochondria and dopaminergic neurons, as a consequence of mitochondrial oxidative stress-mediated apoptosis [35]. In agreement, in both patient groups, CoPPIs identified an higher correlation in mitochondrial fragmentation associated with apoptosis. This result aligns with the notion that, to maintain neural transmission in PD, the spared SN neurons enact a compensatory increase in mitochondrial density within the remaining axons and synapses [36]. Although this quantitative compensatory effect is not appreciated by classical quantitative proteomic approaches, it may be associated with the increased CoPPIs correlation in mitochondrial-related processes, including mitochondrial respiratory chain complex I (Fig. 6). Thus suggesting protein coordination as part of such compensation.
+
+Concerning other CoPPIs results from SN, the prefoldin complex resulted less correlated in both PD groups (Fig. 4). Prefoldin is a molecular chaperone that co-localizes with \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} $\alpha $\end{document}-synuclein in the lysosome. The knockdown of some Prefoldin subunits induced the accumulation of \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} $\alpha $\end{document}-synuclein aggregates, suggesting a role of Prefoldin in preventing \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} $\alpha $\end{document}-synuclein cell toxicity [37]. Finally, although at quantitative level IPD and PD-GBA1 group together, and their comparison provides a lower number of differentially expressed proteins and processes (Fig. 5A, Supplementary Fig. S11), CoPPIs highlighted some differences supporting the heterogenous spectrum of parkinsonian disorders [38]. For instance, it is known that dopaminergic neuronal death in Substantia Nigra pars compacta (SNc) of PD patients affects GABAergic transmission in basal ganglia and this, in turn, augments GABAergic transmission in the Substantia Nigra reticulata (SNr) [39]. These pathological changes are consistent with our observation of increased correlation of GABA synthesis, vesicular transport release, reuptake, and degradation in IPD. However, these functional modules were less correlated in PD-PGBA1 vs C (Fig. 4), warranting further investigation.
+
+Striatum
+
+The increased GABAergic transmission from the basal ganglia to the SNr [39] may fit the increased correlation between proteins involved in functional modules linked to GABA synthesis, release, and metabolism. Striatal dopamine deficiency enhances activity in the ’indirect pathway’ at the expenses of the ’direct pathway’. This modulation is thought to increase GABA level in the striatum [40]. Striatal dopamine denervation induces significant remodeling of corticostriatal and thalamostriatal glutamatergic synapses, which is consistent with increased synaptic transmission [41]. This hypothesis is supported by the increased correlation of glutamate binding, AMPA receptor activation and the synaptic plasticity pathway and the clathrin-sculpted glutamate transport vesicle complex (Fig. 4). The hypothesized increase in synaptic transmission may also account for the elevated correlation of functional modules involved in ATP synthesis, which is crucial for supporting synaptic vesicle pools, and neurotransmitter release during heightened neuronal activity [42]. However, mitochondrial related processes were down-regulated. Finally, as demonstrated by Mitchell et al., endogenous glutamate can induce apoptosis of striatal projection neurons [43], a mechanism consistent with the decreased correlation between proteins involved in suppression of apoptosis.
+
+Occipital cortex and Middle temporal gyrus
+
+In contrast to SN and STR, in OCC and MTG we recorded a reduced correlation between proteins involved in mitochondrial energy production, as well as neurotransmission, including GABA (Fig. 4). In the OCC lobe of cognitively normal PD patients, Zhu et ala. observed a small but statistically significant decrease in NAD and ATP concentration, suggesting that defects in energy metabolism are quantifiable even before regional neurological deficits become evident [44]. Meanwhile, reduced GABA levels were associated with visual hallucinations [45]. The reduced correlation between proteins involved in mitochondrial energy production, including ATP synthesis, TCA cycle, and respiratory channel complex I, II, II, and IV, was more consistent in MTG than in OCC. Regarding glucose metabolism, some authors have observed hypometabolism in several brain regions of PD patients [46], including the middle temporal gyrus [47], and associated this observation with the onset of significant cognitive decline. Although CoPPIs have not identified a differential correlation in modules related to glucose metabolism, glucose is a critical energy substrate for the brain, essential in ATP production, management of oxidative stress, and the synthesis of neurotransmitters, neuromodulators, and structural components [48].
+
+Hubs and bottlenecks in weighted PPI networks
+
+The correlation score calculated and transformed by CoPPIs was used to weight a PPI network model, by region and group, and extract topological relevant nodes, such as hubs and bottlenecks (Supplementary Table S5). Unweighted and weighted PPI network models showed scale-free distribution (Supplementary Fig. S12). From the comparison of the average centrality values, major differences were observed for Degree and Bridging (Table 1); respectively, they were reduced and augmented in weighted models indicating a selection of the most relevant paths.
+
+Table 1 Weighted network topological analysis. Degree, betweenness, centroid, and bridging average values per brain region and condition are shown. Both unweighted and weighted PPI network models were analyzed
+
+ 	Substantia nigra	Striatum	Occipital cortex	Middle Temporal Gyrus	
+ 	 	Weighted	 	Weighted	 	Weighted	 	Weighted	
+ 	Unweighted	C	IPD	PGBA1	Unweighted	C	IPD	PGBA1	Unweighted	C	IPD	PGBA1	Unweighted	C	IPD	PGBA1	
+Degree	76.2	16.7	16	17.4	78.4	12.1	21	19.9	78.3	18.3	14.7	16.8	81	14.3	11.9	11.8	
+Betweenness	3170	6145	6154	6021	3305	5426	6035	6153	3040	6097	5504	5752	3523	5935	5095	5244	
+Centroid	–2400	–3969	–4003	–4046	–2494	–4156	–4218	–4191	–2286	–3893	–3818	–3801	–2665	–4389	–4329	–4268	
+Bridging	28.7	60.4	64.4	59.3	28.8	50.3	55.5	60.8	26.3	62.8	53.1	55.4	29.4	52.7	43.1	45.4	
+
+On average, the brain regions from controls showed a higher number of topologically relevant nodes (Fig. 7). STR and MTG were the most enriched in hubs and bottlenecks in the control group, whereas SN showed these characteristics in IPD and PD-GBA1. Some proteins were hubs/bottlenecks in different brain regions, and OCC and MTG shared the highest number in both control and disease conditions. At the functional level, hubs/bottlenecks characterizing conditions and brain regions were matched with the differentially correlated modules extracted by CoPPIs. For instance, the increased correlation of mitochondrial-related processes in SN and STR of patient groups agreed with the selection of mitochondrial-related hubs/bottlenecks (Supplementary Table S6). The same was observed in OCC and MTG areas of the control group (Fig. 4, Supplementary Fig. S13).
+
+Figure 7 Venn diagram of hubs and bottlenecks found in brain regions from (A) controls and (B) IPD and PD-GBA1 subjects. Boxes show the best-five ranked hubs (in gray, by betweenness and centroid), bottlenecks (in black, by betweenness and bridging), and hubs/bottlenecks (in red, by betweenness, centroid and bridging) per brain region (sorted by betweenness).
+
+In the context of the highest-ranked topologically relevant nodes, proteins previously associated with Parkinson’s disease were identified (Fig. 7). An overview by brain region is provided in the following paragraphs.
+
+Substantia nigra
+
+Among hubs/bottlenecks characterizing IPD and PD-GBA1 groups, we found superoxide dismutase 1 (SOD1), an essential antioxidant enzyme, and the heat shock protein 75 kDa (TRAP1), which is a regulator of mitochondrial homeostasis; both proteins are implicated in protection against oxidative stress and mitochondrial dysfunction associated with PD pathogenesis [49, 50]. Noteworthy, two different SN hubs/bottlenecks, such as F-box only protein 7 (FBXO7) and ubiquitin-specific-processing protease 7 (USP7), have been proposed to play a crucial role in the pathogenesis of PD. They are involved in regulating the balance between protein synthesis and degradation. Indeed, while FBXO7 is involved in the ubiquitination of various target proteins, UPS7 is a deubiquitinating enzyme. Moreover, UPS7 modulates the stability of FBXO7 and mitigate ER stress-induced cytotoxicity and apoptosis by preventing FBXO7 proteasomal degradation [51].
+
+In the SN of control subjects, we found the O-linked N-acetylglucosamine (GlcNAc) transferase (OGT) that catalyzes O-GlcNAcylation, a post-translational modification essential for the survival of dopaminergic neurons [52]. Another relevant hub characterizing this region/condition is the mitochondrial ribosomal protein L44 (MRPL44). In addition to further highlighting the role of the mitochondrial translation, this result is in line with evidence that the absence or defects in MRPL44 are associated with neurodegenerative diseases in humans, including PD [53].
+
+Striatum
+
+The best-ranked STR bottleneck of IPD and PD-GBA1 subjects resulted the glutamate dehydrogenase 1 (GLUD1), a mitochondrial matrix enzyme that catalyzes the oxidative deamination of glutamate to \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} $\alpha $\end{document}-ketoglutarate, which serves as a TCA cycle intermediate. GDH activity could support the mitochondrial factory for protecting neurons against metabolic failure [54]. Thus, its role could be consistent with an increased glutamate synaptic transmission (Fig. 4) probably induced by striatal dopamine denervation [41]. Another bottlenecks, L1 protein (L1CAM), was already proposed as hub in human postmortem SN samples analyzed at transcriptomic level, and processed by WGCNA [55]. Moreover, L1CAM is widely used as a target biomarker to detect Parkinson-associated neuronal extracellular vesicles in human serum [56]. Ubiquitin carboxy-terminal hydrolase L1 (UCHL1) is instead a protein hub highly expressed in the brain, where it acts as a deubiquitinase enzyme. Although its association with PD as a genetic risk is controversial [57], UCHL1 interactors include proteins related to the development of PD, such as \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} $\alpha $\end{document}-synuclein and ubiquitin-protein ligase parkin [58]. Finally, we found Nipsnap Homolog 1 (NIPSNAP1) in the double role of hub and bottleneck. Recent evidence demonstrated it is involved in the regulation of mitophagy and may probably act as a sensor for mitochondrial health [59].
+
+Glutathione s-transferase omega 1 (GSTO1) emerged as the most critical bottleneck in controls. In Drosophila, it exerts a protective mechanism in mutant parkin restoring the activity and assembly of the mitochondrial F(1)F(0)-ATP synthase [60]. A protective role against amyloid formation in many neurodegenerative disorders has been widely described for Clusterin (CLU), which we identified as both hub and bottleneck [61]. Specifically, it binds \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} $\alpha $\end{document}-synuclein oligomers by suppressing their toxicity and the increase in ROS production [62].
+
+Occipital cortex
+
+The Synaptosome Associated Protein 91 (SNAP1) was found as a bottleneck in IPD and PD-GBA1 subjects. Involved in the regulation of clathrin-dependent endocytosis, it has recently linked to PD [63]. Similarly, Junction Plakoglobin (JUP), which has the double role of hub and bottleneck, has been associated with Parkinson’s disease initiation [64].
+
+On the side of controls, we noted the presence of three different translation factors, such as Eukaryotic Translation Initiation Factor 3 Subunit E (EIF3E), Eukaryotic Translation Initiation Factor 4A2 (EIF4A2) and Eukaryotic Translation Initiation Factor 4 Gamma 1 (EIF4G1). Of note, the genetic variants of EIF4G1 [65] and EIF3E [66] have been linked to PD, while EIF4A2 has been described in pediatric cases with developmental delay and dystonia-tremor syndrome [67]. Another interesting hub is Sequestosome-1 (SQSTM1) that, in combination with p62, is deregulated in a variety of neurodegenerative disorders [68]; this complex promote the degradation of unwanted molecules by macroautophagy, thereby serving as a signiling hub for multiple pathways associated with neurodegeneration and as a potential therapeutic target [68]. In the context of autophagosome/lysosome maturation and function, we found also acid ceramidase 1 (ASAH1) and Lysosomal Associated Membrane Protein 1 (LAMP1). The inhibition of ASAH1 resulted in reduced \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} $\alpha $\end{document}-synuclein levels in PD-GBA1-derived dopaminergic neurons, supporting a this link between ceramide and PD [69]. LAMP1 is instead a transmembrane glycoproteins localized in lysosomes and late endosomes. Several studies have confirmed that proteosomal and LAMP1-associated endolysosomal pathway dysfunctions lead to an increased toxicity of \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} $\alpha $\end{document}-synuclein aggregates [70].
+
+Middle temporal gyrus
+
+Endophilin-A1 (SH3GL2) is the best ranked bottleneck found in IPD and PD-GBA1 subjects. It has been described among the genetic risk factors for Parkinson’s disease. Specifically, SH3GL2 mutations are associated with the impairment in synaptic vesicle endocytosis prior to loss of dopaminergic neurons, therefore representing a significant contributor to PD pathogenesis [71].
+
+As for controls, SPG7 Matrix AAA Peptidase Subunit, Paraplegin (SPG7) was selected as hub. SPG7 is associated with hereditary spastic paraplegia overlapping with mitochondrial disease features. SPG7 pathogenic variants impair mitochondrial homeostasis owing to mitochondrial DNA abnormalities, which represents a possible link explaining the parkinsonism symptoms frequently observed in patients affected by this disease [72].
+
+Materials and methods
+
+CoPPIs algorithm
+
+CoPPIs algorithm was built in R and different libraries, including stringr, matrixStats, rbioapi, igraph, openxlsx, Hmisc, RCy3, tidyr, and dplyr were adopted. The complete code is available at https://github.com/lomi95/CoPPIs. CoPPIs uses PPI network models from STRING [73]. The current version of CoPPIs include the human interactome reconstructed by considering the interactions experiments (score \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} $\ge 0.15$\end{document}) or database (score \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} $\ge 0.3$\end{document}) annotated (Supplementary Fig. S14); of course, different interactomes and thresholds may be adopted.
+
+Data test
+
+To test the functionality of CoPPIs in identifying molecular alterations, we processed a set of proteomic profiles previously characterized by analyzing a collection of brain tissues from IPD patients and PD patients carrying a GBA1 mutation (PD-GBA1) [24]. The original collection counted 21 IPD patients, 21 PD-GBA1 patients and 21 controls from five different brain regions including the SN, the STR, the OCC, the MTG, and the CG. However, due to a different number of available samples among control, IPD and PGBA1, the CG region was not considered (Supplementary Table S7).
+
+Label-free quantitation
+
+The log2 intensities values of the identified proteins, already normalized to the total signal, were compared using a label-free quantification approach, as previously reported [5]. Specifically, the data matrix dimensionality (SN: 4534 proteins identified in 20 Controls, 20 PD and 20 PGBA1; STR: 4714 proteins identified in 19 Controls, 21 PD and 21 PGBA1; OCC: 4411 proteins identified in 21 Controls, 21 PD and 21 PGBA1; MTG: 5002 proteins identified in 21 Controls, 20 PD and 21 PGBA1) was reduced by linear discriminant analysis (LDA). Only proteins with P-value \documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} $\le $\end{document}0̇01 were retained. Pairwise comparisons were performed by DAve index [5]. All data processing were performed using an in house R script.
+
+Topological analysis of weighted PPI network models
+
+The network topological analysis was performed using an in house R script that calculate weighted betweenness, centroid, and bridging centralities on PPI network models, with correlation used as edge weight. Specifically, centroid formula refers to Gräßler et al. [74], while concerning bridging, instead of using the degree, the sum of incident edges per node was adopted [75]. The statistical significance of the model’s robustness was assessed by comparing the average weighted betweenness of our networks with the betweenness of random networks [76]; the random networks were generated by creating networks with the same degree distribution (using the degseq(method = ”vl”) function from the igraph package) and assigning the original weights to the new edges, thereby preserving the identical weight distribution. Visualization was carried out using the ggplot package. Subsequently, nodes with betweenness and centroid values above the 75th percentile were considered hubs, while nodes with betweenness and bridging values above the 75th percentile were classified as bottlenecks.
+
+Discussion and conclusion
+
+In this study, we introduced CoPPIs algorithm, a comprehensive end-to-end workflow that combines PPI models and experimental protein profiles to identify differentially correlated functional modules. The large-scale correlation assessment of PPI represents a novelty, and it fits a broad applicability to established and novel MS technologies. The results obtained in the testing phase suggest the general utility of the algorithm, demonstrating that it is complementary to classical protein quantification. Indeed, the results obtained from these two different approaches showed a low overlap. However, like quantification, CoPPIs extracted few significant differences when disease groups were compared. While a higher number emerged from the comparison between control and disease groups, highlighting the robustness of the CoPPIs strategy. The quality of the results obtained by CoPPIs has been further supported by the extraction of functional modules, i.e. translation [33, 77] and mitochondria-related [34–36], whose involvement in Parkinson’s disease is widely documented. Noteworthy, they emerged from the processing of other independent datasets [32, 78]. Confirming their involvement in the pathogenesis of PD and the reliability of the CoPPIs algorithm in providing useful and robust information (Supplementary Fig. S15).
+
+The increased correlation of mitochondrial processes, in the face of a decrease in quantity, suggests a stress response and coordination that could fit with a compensatory effect already proposed in previous works [36]. This brings us to the behavior of starlings that draw their choreographed shapes in the sky in a stressful situation, that is, when they have to defend themselves from aerial predators [22]. These mechanisms are locally developed, and an individual bird observes its neighbors, about 7–8, and imitates them by following a single segment of the collective flight. Similarly, a proximity effect on protein correlation was observed, providing compelling evidence for the interdependence of protein interactions and their coordinated behavior within distinct functional contexts. This is consistent with the correlation between protein localization and function; a phenomenon already emerged at the level of gene expression, where genes with similar expression patterns participate in the same signaling and regulatory pathways and circuits [79].
+
+Since proteins represent the ultimate effector of biological functions, we expect that advanced PPI models, which clarify their relationships, will be powerful tools for deciphering the role of protein networks in physiology and disease. In addition to minimizing the imbalance between correlation determinations and causality assessments [21], the inclusion of protein correlation scores in PPIs aims to achieve a more accurate identification of protein hubs and bottlenecks. Indeed, up to today, PPI networks have been often matched with gene expression level, and weighted through correlation scores computed from gene expression profiles [80]. On the other hand, besides signaling pathways, PPI network models are usually reconstructed from cell-type independent PPIs, which is in contrast to our understanding that protein dynamics are context-specific and highly dependent on their environment [25]. As a consequence, PPIs weighting with experimentally defined protein profiles represents a step forward for addressing these weaknesses and contextualize our models. This strategy produced network models devoid of potentially less relevant interactions, thereby more closely adhering to the biological systems under investigation. Here, we demonstrate that this fundamental improvement, combined with the identification of topologically relevant nodes, enables the discovery of molecular hits that align with the pathophysiology of PD [49–53, 55, 60, 62, 65, 66, 68, 72].
+
+In summary, the CoPPIs scoring system provides an elaborate assessment that considers the magnitude of change and the structural characteristics of the interaction network. It is designed to avoid biases associated with pure ratio-based assessments and offers a robust metric to discern the functional relevance of differentially correlated terms. Conversely, it may suffer from a different sample size between the groups or conditions being compared. More generally, the sample size represents one of the major limitations to the effective application of the algorithm [81]. Indeed, correlational studies require a larger number of profiles than are typically available in proteomics. However, with the rapid evolution of proteomic technologies, method standardization, and data archiving and cataloging, obtaining a sufficient number of proteomic profiles is becoming a realistic expectation in the near future. The data used in the testing phase in this study are moderately large; however, the heterogeneity of groups and conditions facilitated a reliable evaluation of the algorithm’s behavior. While these samples, collected post-mortem, allowed us to provide a snapshot of the late phase of the pathological process, the algorithm would be valuable to assess the co-expression variation at different disease stages. Furthermore, the analyzed protein profiles derive from a tissue analysis, making them a composite representation; for example, in the case of the SN, where different regions, such as the pars compacta (SNc) and reticulata (SNr), perform different functions [24]. Nevertheless, the results obtained by CoPPIs are very promising and improvements will be introduced in the near future, including capturing nonlinear relationships, the use of signaling networks and the integration of profiles that take into account post-translational modifications, such as phosphorylation [82]. These advancements hold great potential for further enhancing the accuracy of the CoPPIs algorithm and its ability to illuminate fundamental pathophysiological mechanisms that depend on complex protein networks.
+
+Key Points
+
+The combination of protein–protein interaction (PPI) and co-expression network models aims to minimize the correlation-causality imbalance and to contextualize PPIs.
+
+The co-expressed protein-protein interactions (CoPPIs) algorithm allows the identification of differentially correlated functional modules.
+
+The selection of hubs and bottlenecks from the weighted PPI networks provide molecular clues consistent with the investigated systems.
+
+Correlation and quantification are complementary measures.
+
+The CoPPIs results pave the way for a new investigation strategy that takes into account not only protein expression, but also the level of coordination between proteins.
+
+Supplementary Material
+
+Supplementary_Information_and_Figures_rev_bbaf146
+
+Acknowledgments
+
+We thank Valeria Bellettato for the technical and administrative support.
+
+Author contributions
+
+Andrea Lomagno (Algorithm writing, Methodology, Original draft writing), Ishak Yusuf (Methodology), Gabriele Tosadori (Methodology), Dario Bonanomi (Result supervison, Manuscript revision), Pietro Luigi Mauri (Result supervison, Manuscript revision), and Dario Di Silvestre (Conceptualization, Supervision, Writing—Review & Editing).
+
+Conflict of interest
+
+All authors declare that they have no conflicts of interest.
+
+Funding
+
+PRIN2022: 2022Z2TE5P and 2022LNHZAP; PRIN PNRR: P2022LY3F4.
+
+
+References
+
+1. Joshi  A, Rienks  M, Theofilatos  K. et al.  Systems biology in cardiovascular disease: a multiomics approach. Nat Rev Cardiol  2020;18:313–30. 10.1038/s41569-020-00477-1 33340009
+2. Suzuki  Y, Kadomatsu  K, Sakamoto  K. Towards the in vivo identification of protein-protein interactions. J Biochem  2023;173:413–5. 10.1093/jb/mvad013 36821413
+3. Kewalramani  N, Emili  A, Crovella  M. State-of-the-art computational methods to predict protein-protein interactions with high accuracy and coverage. Proteomics  2023;23:e2200292. 10.1002/pmic.202200292 37401192
+4. Vella  D, Zoppis  I, Mauri  G. et al.  From protein-protein interactions to protein co-expression networks: a new perspective to evaluate large-scale proteomic data. EURASIP J Bioinform Syst Biol  2017;6. 10.1186/s13637-017-0059-z PMC5359264 28477207
+5. Di Silvestre  D, Brambilla  F, Lavatelli  F. et al.  The protein network in subcutaneous fat biopsies from patients with AL amyloidosis: more than diagnosis?  Cells  2023;12:699. 10.3390/cells12050699 36899835 PMC10000381
+6. Arfin  S, Kumar  D, Lomagno  A. et al.  Differentially expressed genes, miRNAs and network models: a strategy to shed light on molecular interactions driving HNSCC tumorigenesis. Cancer  2023;15:4420. 10.3390/cancers15174420 PMC10563081 37686696
+7. Albert  R, Barabśsi  AL. Statistical mechanics of complex networks. Rev Mod Phys  2002;74:47–97.
+8. Rotival  M, Petretto  E. Leveraging gene co-expression networks to pinpoint the regulation of complex traits and disease, with a focus on cardiovascular traits. Brief Funct Genomics  2013;13:66–78. 10.1093/bfgp/elt030 23960099
+9. Li  M, Zhang  J, Zhang  Z. et al.  Identification of transcriptional pattern related to immune cell infiltration with gene co-expression network in papillary thyroid cancer. Front Endocrinol  2022;13:721569. 10.3389/fendo.2022.721569 PMC8854657 35185791
+10. Walker  CK, Greathouse  KM, Tuscher  JJ. et al.  Cross-platform synaptic network analysis of human entorhinal cortex identifies TWF2 as a modulator of dendritic spine length. J Neurosci  2023;43:3764–85. 10.1523/JNEUROSCI.2102-22.2023 37055180 PMC10198456
+11. Zhang  SQ, Pan  SM, Lai  SZ. et al.  Novel plasma proteomic biomarkers for early identification of induction chemotherapy beneficiaries in locoregionally advanced nasopharyngeal carcinoma. Front Oncol  2022;12:889516. 10.3389/fonc.2022.889516 PMC9279567 35847896
+12. Johnson  ECB, Carter  EK, Dammer  EB. et al.  Large-scale deep multi-layer analysis of Alzheimer’s disease brain reveals strong proteomic disease-related changes not observed at the RNA level. Nat Neurosci  2022;25:213–25. 10.1038/s41593-021-00999-y 35115731 PMC8825285
+13. Shi  L, Winchester  LM, Westwood  S. et al.  Replication study of plasma proteins relating to Alzheimer’s pathology. Alzheimers Dement  2021;17:1452–64. 10.1002/alz.12322 33792144
+14. Sebastiani  P, Federico  A, Morris  M. et al.  Protein signatures of centenarians and their offspring suggest centenarians age slower than other humans. Aging Cell  2021;20:e13290. 10.1111/acel.13290 PMC7884029 33512769
+15. Meier  F, Geyer  PE, Virreira Winter  S. et al.  BoxCar acquisition method enables single-shot proteomics at a depth of 10,000 proteins in 100 minutes. Nat Methods  2018;15:440–8. 10.1038/s41592-018-0003-5 29735998
+16. Deutsch  EW, Bandeira  N, Sharma  V. et al.  The ProteomeXchange consortium in 2020: enabling ’big data’ approaches in proteomics. Nucleic Acids Res  2020;48:D1145–52. 10.1093/nar/gkz984 31686107 PMC7145525
+17. Langfelder  P, Horvath  S. WGCNA: an R package for weighted correlation network analysis. BMC Bioinform  2008;9:559. 10.1186/1471-2105-9-559 PMC2631488 19114008
+18. Vanderwall  D, Suresh  P, Fu  Y. et al.  JUMPn: a streamlined application for protein co-expression clustering and network analysis in proteomics. J Vis Exp  2021;176:e62796. 10.3791/62796-v PMC9185798 34747401
+19. Minadakis  G, Sokratous  K, Spyrou  GM. ProtExA: a tool for post-processing proteomics data providing differential expression metrics, co-expression networks and functional analytics. Comput Struct Biotechnol J  2020;18:1695–703. 10.1016/j.csbj.2020.06.036 32670509 PMC7340977
+20. Buljan  M, Banaei-Esfahani  A, Blattmann  P. et al.  A computational framework for the inference of protein complex remodeling from whole-proteome measurements. Nat Methods  2023;20:1523–9. 10.1038/s41592-023-02011-w 37749212 PMC10555833
+21. An  G . Closing the scientific loop: Bridging correlation and causality in the petaflop age. Sci Transl Med  2010;2:41ps34–41ps34. 10.1126/scitranslmed.3000390 20650869
+22. Cavagna  A, Cimarelli  A, Giardina  I. et al.  Scale-free correlations in starling flocks. Proc Natl Acad Sci USA  2010;107:11865–70. 10.1073/pnas.1005766107 20547832 PMC2900681
+23. Holland  DO, Johnson  ME. Stoichiometric balance of protein copy numbers is measurable and functionally significant in a protein-protein interaction network for yeast endocytosis. PLoS Comput Biol  2018;14:e1006022. 10.1371/journal.pcbi.1006022 29518071 PMC5860782
+24. Blumenreich  S, Nehushtan  T, Kupervaser  M. et al.  Large-scale proteomics analysis of five brain regions from Parkinson’s disease patients with a GBA1 mutation. npj Parkinson’s Disease  2024;10:33. 10.1038/s41531-024-00645-x PMC10853186 38331996
+25. Federico  A, Monti  S. Contextualized protein-protein interactions. Patterns  2021;2:100153. 10.1016/j.patter.2020.100153 33511361 PMC7815950
+26. Tsitsiridis  G, Steinkamp  R, Giurgiu  M. et al.  CORUM: The comprehensive resource of mammalian protein complexes-2022. Nucleic Acids Res  2022;51:D539–45. 10.1093/nar/gkac1015 PMC9825459 36382402
+27. Trist  BG, Hare  DJ, Double  KL. Oxidative stress in the aging substantia nigra and the etiology of Parkinson’s disease. Aging Cell  2019;18:e13031. 10.1111/acel.13031 PMC6826160 31432604
+28. Ishikawa  K . Multilayered regulation of proteome stoichiometry. Curr Genet  2021;67:883–90. 10.1007/s00294-021-01205-z 34382105 PMC8592966
+29. Henrich  MT, Oertel  WH, Surmeier  DJ. et al.  Mitochondrial dysfunction in Parkinson’s disease - a key disease hallmark with therapeutic potential. Mol Neurodegener  2023;18:83. 10.1186/s13024-023-00676-7 PMC10640762 37951933
+30. Ali  MZ, Dholaniya  PS. Oxidative phosphorylation mediated pathogenesis of Parkinson’s disease and its implication via Akt signaling. Neurochem Int  2022;157:105344.35483538 10.1016/j.neuint.2022.105344
+31. O’Gorman , Tuura  RL, Baumann  CR, Baumann-Vogel  H. Beyond dopamine: GABA, glutamate, and the axial symptoms of Parkinson disease. Front Neurol  2018;9:806. 10.3389/fneur.2018.00806 PMC6168661 30319535
+32. Jang  Y, Pletnikova  O, Troncoso  JC. et al.  Mass spectrometry-based proteomics analysis of human substantia Nigra from Parkinson’s disease patients identifies multiple pathways potentially involved in the disease. Mol Cell Proteomics  2023; 22:100452. 10.1016/j.mcpro.2022.100452 36423813 PMC9792365
+33. Wulf  M, Barkovits  K, Schork  K. et al.  Neuromelanin granules of the substantia nigra: proteomic profile provides links to tyrosine hydroxylase, stress granules and lysosomes. J Neural Transm  2022;129:1257–70. 10.1007/s00702-022-02530-4 35852604 PMC9468065
+34. Flønes  IH, Toker  L, Sandnes  DA. et al.  Mitochondrial complex I deficiency stratifies idiopathic Parkinson’s disease. Nat  Commun  2024;15:3631. 10.1038/s41467-024-47867-4 PMC11059185 38684731
+35. Haque  ME, Akther  M, Azam  S. et al.  GPR4 knockout improves the neurotoxin-induced, caspase-dependent mitochondrial apoptosis of the dopaminergic neuronal cell. Int J Mol Sci  2020;21:7517.33053856 10.3390/ijms21207517 PMC7589616
+36. Reeve  AK, Grady  JP, Cosgrave  EM. et al.  Mitochondrial dysfunction within the synapses of substantia nigra neurons in Parkinson’s disease. npj Parkinson’s Disease  2018;4:9. 10.1038/s41531-018-0044-6 PMC5979968 29872690
+37. Takano  M, Tashiro  E, Kitamura  A. et al.  Prefoldin prevents aggregation of synuclein. Brain Res  2014;1542:186–94. 10.1016/j.brainres.2013.10.034 24511594
+38. Skrahin  A, Horowitz  M, Istaiti  M. et al.  GBA1-associated Parkinson’s disease is a distinct entity. Int J Mol Sci  2024;25:7102.39000225 10.3390/ijms25137102 PMC11241486
+39. Faynveitz  A, Lavian  H, Jacob  A. et al.  Proliferation of inhibitory input to the substantia nigra in experimental parkinsonism. Front Cell Neurosci  2019;13:417. 10.3389/fncel.2019.00417 PMC6753199 31572130
+40. Huang  L, Ren  Y, Zeng  Z. et al.  Comparative study of striatum GABA concentrations and magnetic resonance spectroscopic imaging in Parkinson’s disease monkeys. BMC Neurosci  2019;20:42. 10.1186/s12868-019-0522-8 PMC6686405 31395015
+41. Smith  Y, Villalba  RM, Raju  DV. Striatal spine plasticity in Parkinson’s disease: pathological or not?  Parkinsonism Relat Disord  2009;15:S156–61. 10.1016/S1353-8020(09)70805-3 20082980 PMC3076277
+42. Vos  M, Lauwers  E, Verstreken  P. Synaptic mitochondria in synaptic transmission and organization of vesicle pools in health and disease. Front Synap  Neurosci  2010;2:139. 10.3389/fnsyn.2010.00139 PMC3059669 21423525
+43. Mitchell  IJ, Lawson  S, Moser  B. et al.  Glutamate-induced apoptosis results in a loss of striatal neurons in the parkinsonian rat. Neuroscience  1994;63:1–5.7898642 10.1016/0306-4522(94)90002-7
+44. Zhu  XH, Lee  BY, Tuite  P. et al.  Quantitative assessment of occipital metabolic and energetic changes in Parkinson’s patients, using in vivo 31P MRS-based metabolic imaging at 7T. Metabolites  2021;11:145. 10.3390/metabo11030145 33804401 PMC8000945
+45. Firbank  MJ, Parikh  J, Murphy  N. et al.  Reduced occipital GABA in Parkinson disease with visual hallucinations. Neurology  2018;91:e675-e685. 10.1212/WNL.0000000000006007 PMC6105043 30021920
+46. Dai  C, Tan  C, Zhao  L. et al.  Glucose metabolism impairment in Parkinson’s disease. Brain Res Bull  2023;199:110672. 10.1016/j.brainresbull.2023.110672 37210012
+47. Tard  C, Demailly  F, Delval  A. et al.  Hypometabolism in posterior and temporal areas of the brain is associated with cognitive decline in Parkinson’s disease. J Parkinsons Dis  2015;5:569–74. 10.3233/JPD-150583 26406137
+48. Dienel  GA . Brain glucose metabolism: integration of energetics with function. Physiol Rev  2019;99:949–1045. 10.1152/physrev.00062.2017 30565508
+49. Lee  YM, He  W, Liou  YC. The redox language in neurodegenerative diseases: oxidative post-translational modifications by hydrogen peroxide. Cell Death Dis  2021;12:58. 10.1038/s41419-020-03355-3 PMC7801447 33431811
+50. Faienza  F, Rizza  S, Giglio  P. et al.  TRAP1: a metabolic hub linking aging pathophysiology to mitochondrial S-nitrosylation. Front Physiol  2020;11:340. 10.3389/fphys.2020.00340 PMC7201090 32411008
+51. Lee  SH, Chung  KC. USP7 attenuates endoplasmic reticulum stress-induced apoptotic cell death through deubiquitination and stabilization of FBXO7. PloS One  2023;18:e0290371. 10.1371/journal.pone.0290371 37874827 PMC10597484
+52. Lee  BE, Kim  HY, Kim  HJ. et al.  O-GlcNAcylation regulates dopamine neuron function, survival and degeneration in Parkinson disease. Brain  2020;143:3699–716. 10.1093/brain/awaa320 33300544 PMC7805798
+53. Del Giudice  L, Pontieri  P, Aletta  M. et al.  Mitochondrial neurodegenerative diseases: three mitochondrial ribosomal proteins as intermediate stage in the pathway that associates damaged genes with Alzheimer’s and Parkinson’s. Biology  2023;12:972. 10.3390/biology12070972 37508402 PMC10376763
+54. Kim  AY, Baik  EJ. Glutamate dehydrogenase as a neuroprotective target against neurodegeneration. Neurochem Res  2018;44:147–53. 10.1007/s11064-018-2467-1 29357018
+55. Chen  L, Wang  Y, Huang  J. et al.  Identification of immune-related hub genes in Parkinson’s disease. Front Genet  2022;13:914645. 10.3389/fgene.2022.914645 PMC9353688 35938039
+56. Li  D, Zou  S, Huang  Z. et al.  Isolation and quantification of L1CAM-positive extracellular vesicles on a chip as a potential biomarker for Parkinson’s disease. J Extracell Vesicles  2024;13:e12467. 10.1002/jev2.12467 PMC11186740 38898558
+57. Saini  P, Rudakou  U, Yu  E. et al.  Association study of DNAJC13, UCHL1, HTRA2, GIGYF2, and EIF4G1 with Parkinson’s disease. Neurobiol Aging  2021;100:119.e7–119.e13. 10.1016/j.neurobiolaging.2020.10.019 PMC7940813 33239198
+58. Buneeva  O, Medvedev  A. Ubiquitin carboxyl-terminal hydrolase L1 and its role in Parkinson’s disease. Int J Mol Sci  2024;25:1303. 10.3390/ijms25021303 38279302 PMC10816476
+59. Fathi  E, Yarbro  JM, Homayouni  R. NIPSNAP protein family emerges as a sensor of mitochondrial health. Bioessays  2021;43:2100014. 10.1002/bies.202100014.PMC10577685 33852167
+60. Kim  K, Kim  SH, Kim  J. et al.  Glutathione S-transferase omega 1 activity is sufficient to suppress neurodegeneration in a Drosophila model of Parkinson disease. J Biol Chem  2012;287:6628–41. 10.1074/jbc.M111.291179 22219196 PMC3307323
+61. Gharibyan  AL, Wasana Jayaweera  S, Lehmann  M. et al.  Endogenous human proteins interfering with amyloid formation. Biomolecules  2022;12:446.35327638 10.3390/biom12030446 PMC8946693
+62. Whiten  DR, Cox  D, Horrocks  MH. et al.  Single-molecule characterization of the interactions between extracellular chaperones and toxic synuclein oligomers. Cell Rep  2018;23:3492–500. 10.1016/j.celrep.2018.05.074 29924993 PMC6024880
+63. Yemni  EA, Monies  D, Alkhairallah  T. et al.  Integrated analysis of whole exome sequencing and copy number evaluation in Parkinson’s disease. Sci Rep  2019;9:3344. 10.1038/s41598-019-40102-x PMC6399448 30833663
+64. Wang  H, Sun  C, Liang  Y. et al.  Identification of regulatory relationships in Parkinson’s disease. J Mol Neurosci  2013;51:9–12. 10.1007/s12031-012-9937-8 23430405
+65. Deng  H, Wu  Y, Jankovic  J. TheEIF4G1gene and Parkinson’s disease. Acta Neurol Scand  2015;132:73–8. 10.1111/ane.12397 25765080
+66. Chartier-Harlin  MC, Dachsel  J, Vilariño-Güell  C. et al.  Translation initiator EIF4G1 mutations in familial Parkinson disease. Am J Hum Genet  2011;89:398–406. 10.1016/j.ajhg.2011.08.009 21907011 PMC3169825
+67. Harrer  P, Škorvánek  M, Kittke  V. et al.  Dystonia linked to EIF4A2 haploinsufficiency: a disorder of protein translation dysfunction. Mov Disord  2023;38:1914–24. 10.1002/mds.29562 37485550
+68. Ma  S, Attarwala  IY, Xie  XQ. SQSTM1/p62: a potential target for neurodegenerative disease. ACS Chem Nerosci  2019;10:2094–114. 10.1021/acschemneuro.8b00516 PMC6712989 30657305
+69. Kim  MJ, Jeon  S, Burbulla  LF. et al.  Acid ceramidase inhibition ameliorates synuclein accumulation upon loss of GBA1 function. Hum Mol Genet  2018;27:1972–88. 10.1093/hmg/ddy105 29579237 PMC6251682
+70. Rahmani  Z, Surabhi  S, Rojo-Cortés  F. et al.  Lamp1 deficiency enhances sensitivity to synuclein and oxidative stress in Drosophila models of Parkinson disease. Int J Mol Sci  2022;23: 13078. 10.3390/ijms232113078 36361864 PMC9657416
+71. Nguyen  M, Wong  YC, Ysselstein  D. et al.  Synaptic, mitochondrial, and lysosomal dysfunction in Parkinson’s disease. Trends Neurosci  2019;42:140–9. 10.1016/j.tins.2018.11.001 30509690 PMC6452863
+72. De la Casa-Fages  B, Fernśndez-Eulate  G, Gamez  J. et al.  Parkinsonism and spastic paraplegia type 7: expanding the spectrum of mitochondrial parkinsonism. Mov Disord  2019;34:1547–61. 10.1002/mds.27812 31433872
+73. Szklarczyk  D, Kirsch  R, Koutrouli  M. et al.  The STRING database in 2023: protein-protein association networks and functional enrichment analyses for any sequenced genome of interest. Nucleic Acids Res  2022;51:D638–46. 10.1093/nar/gkac1000 PMC9825434 36370105
+74. Gräßler  J, Koschützki  D, Schreiber  F. CentiLib: comprehensive analysis and exploration of network centralities. Bioinformatics  2012;28:1178–9. 10.1093/bioinformatics/bts106 22390940
+75. Ramanathan  M, Zhang  A, Cho  YR. et al. Bridging Centrality: Identifying Bridging Nodes in Scale-Free Networks. KDD '06: Proceedings of the 12th ACM SIGKDD international conference on Knowledge discovery and data mining. New York, NY, (USA): Association for Computing Machinery, 2006. https://api.semanticscholar.org/CorpusID:2706470.
+76. Tosadori  G, Bestvina  I, Spoto  F. et al.  Creating, generating and comparing random network models with NetworkRandomizer. F1000Research  2017;5:2524.10.12688/f1000research.9203.1 PMC5686481 29188012
+77. Plum  S, Eggers  B, Helling  S. et al.  Proteomic characterization of synaptosomes from human substantia nigra indicates altered mitochondrial translation in Parkinson’s disease. Cells  2020;9:2580. 10.3390/cells9122580 33276480 PMC7761546
+78. Petyuk  VA, Yu  L, Olson  HM. et al.  Proteomic profiling of the substantia nigra to identify determinants of Lewy body pathology and dopaminergic neuronal loss. J Proteome Res  2021;20:2266–82. 10.1021/acs.jproteome.0c00747 33900085 PMC9190253
+79. Eisen  MB, Spellman  PT, Brown  PO. et al.  Cluster analysis and display of genome-wide expression patterns. Proc Natl Acad Sci  1998;95:14863–8. 10.1073/pnas.95.25.14863 9843981 PMC24541
+80. Su  L, Liu  G, Guo  Y. et al.  Integration of protein-protein interaction networks and gene expression profiles helps detect pancreatic adenocarcinoma candidate genes. Front Genet  2022;13:854661. 10.3389/fgene.2022.854661 PMC9197464 35711911
+81. Fraenkel  JR, Norman  HHRP, Wallen  E. How to Design and Evaluate Research in Education. New York, NY, (USA): McGraw-Hill Humanities/Social Sciences/Languages, 2011.
+82. Invergo  B, Beltrao  P. Reconstructing phosphorylation signalling networks from quantitative phosphoproteomic data. Essays Biochem  2018;62:525–34. 10.1042/EBC20180019 30072490 PMC6204553

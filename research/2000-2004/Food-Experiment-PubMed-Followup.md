@@ -1,0 +1,9 @@
+# Food experiment PubMed follow-up
+
+## Supplemental ascorbic acid and levodopa exposure
+
+Nagayama and colleagues gave 67 older people with Parkinson’s levodopa/carbidopa on two visits one week apart, adding isolated ascorbic acid on the second visit. Across the sample the study detected no clear difference in peak level, time to peak, or total levodopa exposure. Participants with low levodopa exposure on the first visit had higher peak and total exposure and shorter time to peak at the second. The fixed visit order and subgroup defined by the first measurement limit attribution. This is a constituent and drug-exposure lead for [0259, raw orange and fall frequency](../../experiments/1000_see_what_sticks_food/statements/0259.txt). The study measured blood drug levels after supplemental vitamin C and did not record falls. [Primary report, PMID 15613930](https://doi.org/10.1097/01.wnf.0000150865.21759.bc)
+
+## Dihydroergocryptine and caffeine in parkinsonism
+
+Sadekov’s 2000 report describes adding Vasobral to existing treatment in 20 people with parkinsonism. The English abstract reports improvement in asthenia, anxiety and depression, and several other symptoms after treatment. It gives no numerical estimate for asthenia or description of a control arm. The original Russian title and abstract describe parkinsonism, with diagnostic subtypes unspecified in the accessible record. The French drug assessment identifies Vasobral as a combination of dihydroergocryptine and caffeine. Any effect of caffeine is inseparable from the other active drug and concurrent therapy in this series. Frozen claim `0121` concerns fatigue severity after brewed coffee. [Primary abstract, PMID 11195537](https://pubmed.ncbi.nlm.nih.gov/11195537/) · [French Haute Autorité de Santé assessment of Vasobral](https://www.has-sante.fr/jcms/c_1138409/fr/vasobral-02-11-2011-avis-ct-11390)

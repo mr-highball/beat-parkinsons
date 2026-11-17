@@ -1,0 +1,7 @@
+# Mixed soybean and corn oil and depression outcomes
+
+## Mixed-oil placebo and depression scores during coronary rehabilitation
+
+Mazereeuw and colleagues reported a double-blind 12-week randomized trial in 92 adults in cardiac rehabilitation after coronary artery disease; 45 received omega-3 and 47 placebo. The placebo was three 1-g capsules daily containing a 50:50 soybean/corn oil blend, with refining and pressing unspecified. People with neurological conditions were excluded. Both those with and without a depressive episode were eligible.
+
+The treatment-by-time comparison between omega-3 and mixed-oil placebo was not significant for the 17-item Hamilton Depression Rating Scale (F₃,₉₁ = 1.59, p = .20) or the Beck Depression Inventory II (F₃,₉₁ = 0.46, p = .50). These are comparisons with active omega-3, not estimates of a mixed-oil effect against no oil; rehabilitation was common to both arms. The study provides no isolated oil effect or Parkinson-specific result. The journal issue is October 2016; Europe PMC indexed the report in August, while a precise earlier online publication date was not verified. [Original article, PMID 27529771](https://pmc.ncbi.nlm.nih.gov/articles/PMC5017271/) · [Local factual extract](Source-Text/PMID27529771-Mazereeuw-Mixed-Oil-Extract.txt) · [2009 registry](../2005-2009/Food-Experiment-Mixed-Oil-Depression-Registry.md#coronary-rehabilitation-trial-and-mixed-oil-placebo-registration)

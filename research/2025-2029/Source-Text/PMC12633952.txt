@@ -1,0 +1,603 @@
+Title: Research on partial discharge signal recognition and classification of power transformer based on acoustic-VMD and CNN-LSTM
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12633952/
+Text object: https://pmc-oa-opendata.s3.amazonaws.com/PMC12633952.1/PMC12633952.1.txt
+Data source: U.S. National Library of Medicine, PMC Cloud Service
+PMCID: PMC12633952
+PMID: 41264639
+DOI: 10.1371/journal.pone.0335447
+Citation: PLoS One. 2025 Nov 20;20(11):e0335447. doi: 10.1371/journal.pone.0335447
+License: CC BY (article license statement below)
+Version: 1
+Retracted in PMC metadata: no
+Text coverage: article text
+Format: NLM plain-text extraction. This provenance header was added.
+
+
+JOURNAL INFORMATION
+==============================
+NLM Title Abbreviation: PLoS One
+Journal ID: PLoS One
+NLM Journal ID: 101285081
+Journal ID: plos
+
+PLOS One
+
+EISSN: 1932-6203
+Publisher: PLOS
+
+ARTICLE INFORMATION
+==============================
+PMCID: PMC12633952
+PMID: 41264639
+DOI: 10.1371/journal.pone.0335447
+Article ID: PONE-D-25-38347
+Article version: 1
+Subjects: Research Article, Engineering and Technology, Signal Processing, Computer and Information Sciences, Artificial Intelligence, Machine Learning, Deep Learning, Physical Sciences, Physics, Acoustics, Acoustic Signals, Engineering and Technology, Signal Processing, Audio Signal Processing, Physical Sciences, Physics, Acoustics, Physical Sciences, Mathematics, Optimization, Medicine and Health Sciences, Medical Conditions, Neurodegenerative Diseases, Movement Disorders, Parkinson Disease, Medicine and Health Sciences, Neurology, Neurodegenerative Diseases, Movement Disorders, Parkinson Disease, Computer and Information Sciences, Software Engineering, Preprocessing, Engineering and Technology, Software Engineering, Preprocessing
+
+Research on partial discharge signal recognition and classification of power transformer based on acoustic-VMD and CNN-LSTM
+
+Deep learning-based partial discharge signal recognition and classification
+
+https://orcid.org/0009-0002-0626-0930 Chen Liang Conceptualization Software Writing – original draft 1 2 *
+Wen You Methodology Software Writing – review & editing 2
+Su Huaquan Supervision Visualization Writing – review & editing 2
+Xiong Ke Data curation Validation Writing – review & editing 2
+Chen Dani Data curation Formal analysis Validation Writing – review & editing 2
+1 School of Software, South China University of Technology, Guangzhou, China
+2 Guangdong Power Grid Co., Ltd., Information Center, Guangdong, Guangzhou, China
+Zhang Qichun Editor
+Buckinghamshire New University - High Wycombe Campus: Buckinghamshire New University, UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND
+Competing Interests: The authors declare that they have no competing interests.
+
+* E-mail: adfnge1042@sina.com
+Electronic publication date: 2025 Nov 20
+Publication date: 2025
+Volume: 20
+Issue: 11
+Electronic Location ID: e0335447
+Received 2025 Jul 15; Accepted 2025 Oct 10
+Copyright: © 2025 Chen et al
+Copyright year: 2025
+Copyright holder: Chen et al
+License: This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Erratum in: Correction: Research on partial discharge signal recognition and classification of power transformer based on acoustic-VMD and CNN-LSTM 20 12 26 12 2025 e0339800 PLOS One 10.1371/journal.pone.0339800 PMC12742778 41452815
+
+Funding: Digital Operations Work Order Project for 2024, 037800HK2312006.
+
+Figure count: 13
+Table count: 11
+Page count: 28
+Data Availability: The dataset used in this study is Partial Discharge - Localisation (PD-Loc) Dataset: https://ieee-dataport.org/open-access/partial-discharge-localisation-pd-loc-dataset.
+
+Data Availability
+
+The dataset used in this study is Partial Discharge - Localisation (PD-Loc) Dataset: https://ieee-dataport.org/open-access/partial-discharge-localisation-pd-loc-dataset.
+
+==============================
+Partial discharge (PD) detection in power transformers is critical for preventing insulation failures in modern power grids, yet remains challenging due to signal complexity and environmental noise. Existing methods struggle with accurate PD classification under strong electromagnetic interference and varying load conditions. This study proposes a novel hybrid Acoustic-VMD and CNN-LSTM model featuring: (1) sample entropy-optimized variational mode decomposition (automatically determining modes and penalty factor), (2) parallel 1D-CNN (5 layers and bidirectional LSTM (2 layers, 256 units) branches, and (3) hierarchical attention mechanisms (8 heads) for dynamic feature fusion. Experimental results demonstrate superior performance with 96.2% classification accuracy for multi-source defects (38% improvement over wavelet methods), 5.8mm mean absolute localization error (53% better than TDOA), and consistent 4.2° angular accuracy under high noise, while maintaining practical 0.8s processing time. The research conclusively establishes that synergistic integration of adaptive signal processing and attention-based deep learning significantly advances PD diagnostics, achieving both computational efficiency and robust performance in complex operational environments.
+
+1 Introduction
+
+The identification and classification of partial discharge (PD) signals [1] in power transformers hold significant importance for ensuring the reliability and safety of modern electrical power systems. Partial discharge, as a precursor to insulation degradation, serves as a critical indicator of potential transformer failures, which may lead to catastrophic consequences such as unplanned outages, equipment damage, and even threats to human safety. Early detection [2] and accurate classification of PD signals enable timely maintenance interventions, thereby extending the operational lifespan of transformers and reducing the economic losses associated with unexpected breakdowns. Given the complexity of PD signals, which often manifest as transient and non-stationary phenomena superimposed with noise, advanced signal processing and machine learning techniques are essential to distinguish between different discharge types, such as corona, surface, and internal discharges, each of which reflects distinct insulation defects. The development of robust PD recognition systems not only enhances the diagnostic capabilities of condition monitoring but also contributes to the optimization of asset management strategies in power grids [3]. Furthermore, as power systems increasingly integrate renewable energy sources and smart grid technologies, the demand for more sophisticated PD detection methods grows, necessitating continuous research to improve the accuracy and adaptability of classification algorithms.
+
+Practical PD monitoring faces three primary hurdles: (1) Noise interference from switching operations and load variations that mask weak PD pulses, (2) Signal complexity due to overlapping discharge types with similar time-frequency signatures, and (3) Operational constraints where conventional methods require stationary conditions—unrealistic for transformers experiencing dynamic loads. Field studies report up to 40% false alarms in substations with high electromagnetic interference (EMI), while intermittent discharges often evade detection due to their non-stationary nature. These limitations necessitate adaptive signal processing combined with robust machine learning, as addressed by our hybrid approach.
+
+The application of deep learning (DL) techniques in the recognition and classification of partial discharge (PD) signals in power transformers has emerged as a transformative approach in condition monitoring and fault diagnosis [4]. Traditional methods for PD analysis, such as phase-resolved partial discharge (PRPD) pattern analysis [5] and statistical feature extraction, often struggle with the inherent variability and noise in PD signals, leading to limited accuracy and generalizability. Deep learning, particularly convolutional neural networks (CNNs) [6] and recurrent neural networks (RNNs) [7], offers a powerful alternative by automatically learning discriminative features from raw or preprocessed PD data, eliminating the need for manual feature engineering. CNNs excel in capturing spatial patterns in time-frequency representations of PD signals, such as short-time Fourier transforms (STFT) [8] or wavelet transforms[9], while RNNs, including long short-term memory (LSTM) networks, are adept at modeling temporal dependencies in sequential PD measurements. Recent advancements in transformer-based architectures have further enhanced the ability to process long-range dependencies and multi-modal PD data, enabling more robust classification across diverse operating conditions. These DL models can effectively distinguish between different PD types, such as internal discharges, surface tracking, and corona discharges, even in the presence of noise and interference, thereby improving diagnostic reliability.
+
+Despite their promise, the deployment of deep learning techniques for PD signal analysis faces several challenges, including the scarcity of labeled PD datasets, the computational complexity of training high-accuracy models, and the need for interpretability in decision-making processes. To address these issues, researchers have explored techniques such as transfer learning [10], where pre-trained models on related tasks are fine-tuned for PD classification, and data augmentation strategies to artificially expand limited datasets. Additionally, hybrid approaches combining DL with traditional signal processing methods or physics-based models have shown potential in enhancing both accuracy and interpretability. The integration of edge computing [11] and real-time processing frameworks [12] further extends the applicability of DL-based PD monitoring in industrial settings, enabling on-site analysis and timely maintenance interventions. As deep learning continues to evolve, its role in advancing PD diagnostics is expected to grow, offering scalable and adaptive solutions for ensuring the reliability and longevity of power transformers in modern smart grids.
+
+This study proposes a hybrid Acoustic-VMD and CNN-LSTM model for partial discharge (PD) signal recognition and classification in power transformers. The research design comprises three key phases: (1) Data acquisition and preprocessing, where UHF sensor arrays collect PD signals under various defect types, followed by wavelet denoising and normalization; (2) Signal feature extraction optimization, introducing sample entropy to adaptively determine VMD parameters (modal number K and penalty factor α), decomposing PD signals into IMFs, and extracting time-frequency features; (3) Hybrid model construction, integrating 1D-CNN for spatial feature extraction and LSTM for temporal dependency learning, enhanced by attention mechanisms and dropout regularization.
+
+Conventional methods suffer from mode mixing and empirical parameter limitations, leading to feature distortion. The proposed improved VMD algorithm incorporates sample entropy to adaptively optimize both the mode number k and penalty factor α, coupled with multi-modal time-frequency feature fusion, significantly enhancing decomposition robustness and feature interpretability under strong electromagnetic interference. Existing approaches (single CNN or LSTM) fail to simultaneously capture spatial-temporal correlations of PD pulses. The hybrid CNN-LSTM model integrates 1D-CNN for local spatial feature extraction and LSTM for long-term temporal dependency learning, augmented by attention mechanisms to dynamically weight critical features, achieving synergistic characterization of pulse waveforms and temporal evolution patterns.
+
+The contributions of this paper are as follows:
+
+Adaptive VMD optimization: The proposed sample entropy-based parameter selection automatically determines optimal VMD modes (K) and penalty factor (α), overcoming empirical limitations in traditional signal decomposition while preserving PD characteristics.
+
+Hybrid spatiotemporal learning: The 1D-CNN and LSTM integration synergistically captures local pulse shapes and long-term discharge patterns through parallel spatial convolution and sequential temporal processing branches.
+
+Attention-enhanced feature fusion: A lightweight attention mechanism dynamically weights critical IMF components and temporal features, enabling focused learning of discriminative PD signatures across different defect types.
+
+The paper consists of five sections. Sect 1 introduces the critical importance of partial discharge (PD) detection in power transformers and reviews existing challenges in PD classification. Sect 2 presents related work covering PD detection methods, VMD signal decomposition, and deep learning approaches for time-series analysis. Sect 3 details the proposed hybrid methodology, including data acquisition (UHF sensors), adaptive VMD optimization, and the CNN-LSTM architecture with attention mechanisms. Sect 4 provides comprehensive experimental results comparing feature extraction methods (STFT, Wavelet, VMD-CNN), temporal models (LSTM, Transformer), and localization techniques (TDOA, U-Net, Hybrid). Finally, Sect 5 concludes with research contributions and future directions for PD diagnostics.
+
+2 Related work
+
+2.1 Partial discharge detection methods
+
+Partial discharge (PD) detection methods have become essential for assessing insulation conditions in high-voltage equipment. These techniques rely on capturing various physical phenomena accompanying PD activities, including electromagnetic waves, acoustic emissions, and chemical byproducts. The underlying principle involves identifying characteristic signals that correlate with insulation degradation, where different sensing modalities offer complementary advantages in diverse operational environments. Electromagnetic detection, particularly in the UHF range, has gained prominence due to its sensitivity and ability to localize discharges within complex apparatus.Beura et al. emphasize the significance of understanding signal propagation within transformer tanks, noting that the design of windings can significantly affect the sensitivity of UHF PD measurements. This foundational knowledge is crucial for developing effective monitoring systems. Sun et al. [13] introduce a MobileNets convolutional neural network (MCNN) model that enhances the real-time classification of PD patterns, addressing the limitations of existing classifiers in terms of memory consumption and speed. This advancement demonstrates the potential for improved accuracy and efficiency in PD detection. Govindarajan et al. [14] propose a method for localizing PD sources based on energy characteristics, which is essential for early fault prediction. Their approach shows promise in accurately identifying PD locations, thereby preventing transformer failures. Zhang et al. [15] present a three-dimensional visualization technology for ultrasonic detection of PDs, which enhances the precision of locating discharges within transformers. This method addresses the challenges of traditional detection techniques, such as poor sensitivity in noisy environments.
+
+2.2 VMD signal decomposition
+
+Variational Mode Decomposition (VMD) has emerged as a powerful signal processing technique for analyzing non-stationary and nonlinear signals across various engineering applications. This adaptive decomposition method fundamentally differs from traditional approaches by formulating the signal separation as an optimization problem, where intrinsic mode functions (IMFs) are extracted through a variational framework. The core principle involves concurrently minimizing the bandwidth of each mode while preserving the original signal’s essential characteristics, creating a mathematically rigorous decomposition mechanism that avoids the mode mixing issues prevalent in other methods.Huang et al. [16] highlight that VMD, when optimized using the Salp Swarm Algorithm (SSA), can achieve over 98% accuracy in detecting internal defects in arc magnets, showcasing its potential in acoustic signal analysis. Similarly, Sud [17] illustrates that VMD enhances the performance of Singular Spectral Analysis (SSA) in low signal-to-noise ratio environments, making it less sensitive to window length selection, which is crucial for accurate signal separation. Lu et al. [18] further emphasize VMD’s denoising capabilities in natural gas pipeline leak detection, where optimized parameters significantly improve detection accuracy. Other studies, such as those by Xu [19] and Liu [20], reinforce VMD’s adaptability and effectiveness in various signal processing tasks, including fiber optic gyro measurements and pipeline leakage location, respectively.
+
+2.3 Deep learning for time-series analysis
+
+Deep learning has revolutionized time-series analysis by providing powerful tools to automatically extract complex temporal patterns from sequential data. These techniques fundamentally differ from traditional statistical methods through their ability to learn hierarchical representations directly from raw data, eliminating the need for manual feature engineering. The core principle involves training multi-layer neural networks to capture both short-term dependencies and long-term trends in temporal data, with various architectures specifically designed to handle sequential information through specialized connection patterns and memory mechanisms. Spadon et al. [21] highlight that deep learning methods, particularly their proposed Recurrent Graph Evolution Neural Network (ReGENN), significantly outperform classical statistical and ensemble methods, achieving improvements of up to 64.87% in predictive performance. Similarly, Althelaya et al. [22] found that deep neural networks, when combined with multiresolution analysis, enhance stock market forecasting accuracy, showcasing deep learning’s efficiency in complex financial time-series data. Halim et al. [23] further corroborate this by reporting that deep learning models, such as LSTM and GRU, achieved over 90% accuracy in predicting financial distress, outperforming traditional models. Additionally, Xu et al. [24] and Lim et al. [25] emphasize the adaptability of deep learning architectures to various time-series datasets, underscoring their effectiveness in capturing temporal dependencies and relationships among variables.
+
+The discussed deep learning principles directly inform our architecture design in Sect 3. Specifically, the CNN’s hierarchical feature extraction is crucial for isolating PD pulses from EMI-corrupted signals, while the LSTM’s sequential modeling captures temporal patterns in partial discharge sequences—critical given their stochastic yet phase-dependent nature in power equipment. This dual capability addresses key limitations of traditional PD analysis methods, which often treat time-domain and frequency-domain features separately.
+
+3 Method
+
+3.1 Overview
+
+Compared to alternative decomposition methods, VMD offers superior performance for PD analysis due to: (i) exact bandwidth control for separating closely-spaced PD pulses, (ii) immunity to mode mixing when processing intermittent discharges, and (iii) inherent noise suppression through its Wiener-filtered demodulation approach. This makes VMD particularly effective for extracting PD features from signals contaminated by cyclostationary interference that would alias across wavelet scales or EMD modes.
+
+The proposed model presents a novel framework for partial discharge recognition in power transformers by synergistically combining variational mode decomposition (VMD) optimization with deep spatiotemporal feature learning (see Fig 1). At its core, the architecture addresses three fundamental challenges in PD analysis: adaptive signal decomposition, comprehensive feature representation, and discriminative pattern learning. The first innovation lies in the sample entropy-guided VMD that automatically determines optimal decomposition parameters, replacing empirical selections with data-driven optimization to better preserve defect-specific PD characteristics while suppressing noise interference. This adaptive approach dynamically adjusts both the number of intrinsic mode functions (IMFs) and the penalty factor based on signal complexity, establishing a robust preprocessing foundation for subsequent feature extraction. The algorithm is represented in pseudo-code form in Appendix.
+
+10.1371/journal.pone.0335447.g001 Fig 1 The framework for partial discharge recognition in power transformers by synergistically combining variational mode decomposition (VMD) optimization with deep spatiotemporal feature learning.
+
+The model’s hybrid learning architecture uniquely integrates parallel processing streams for spatial and temporal feature extraction. A 1D CNN branch processes the VMD-decomposed IMFs to capture localized pulse shapes and high-frequency discharge signatures, while a LSTM network analyzes sequential dependencies in discharge activities across time windows. This dual-path design enables simultaneous learning of both transient discharge morphologies and their evolutionary patterns, overcoming limitations of conventional single-path models that typically emphasize either spatial or temporal aspects alone. The spatial-temporal features are further refined through attention mechanisms that automatically weight the most discriminative components from both CNN-extracted spatial features and LSTM-learned temporal patterns.
+
+The final innovation involves an attention-based feature fusion strategy that dynamically emphasizes critical PD signatures corresponding to different defect types. Lightweight attention modules operate at multiple levels - first weighting the importance of individual VMD components during signal decomposition, then focusing on salient spatial-temporal features during classification. This hierarchical attention mechanism, combined with strategic dropout regularization, ensures the model’s robustness against noise while maintaining interpretability of the learned features. The complete framework forms an end-to-end solution that progresses from adaptive signal decomposition through intelligent feature fusion to final classification, demonstrating superior capability in handling the non-stationary, noisy nature of PD signals compared to existing approaches.
+
+3.2 Data acquisition and preprocessing
+
+The data acquisition system employs a strategically designed UHF sensor array configuration that captures comprehensive electromagnetic wave signatures of partial discharge activities across multiple spatial positions(see Fig 2). Unlike conventional single-sensor setups, this distributed sensing approach enables three-dimensional localization of PD sources while simultaneously acquiring multi-perspective signal characteristics under various defect conditions. The sensor array operates in the 300 MHz to 3 GHz frequency range, specifically optimized to capture the rich frequency components of PD pulses while maintaining sufficient signal-to-noise ratio in substation environments. Special attention is given to sensor placement geometry to ensure optimal coverage of the transformer’s critical zones, including bushings, windings, and tap changers, where PD activity most frequently originates.
+
+10.1371/journal.pone.0335447.g002 Fig 2 Data acquisition and preprocessing process.
+
+The preprocessing pipeline introduces an advanced wavelet denoising technique that significantly improves upon traditional thresholding methods. The proposed approach combines multi-resolution analysis with adaptive threshold selection, automatically adjusting decomposition levels and threshold values based on the instantaneous noise characteristics of each acquired PD signal. This dynamic denoising strategy effectively preserves transient PD pulse features while suppressing diverse noise sources, including periodic narrowband interference from power electronics and random white noise. The algorithm particularly excels in maintaining the integrity of weak PD signals that would otherwise be lost in conventional denoising approaches, a critical capability for early-stage fault detection.
+
+Normalization procedures incorporate a novel dual-stage processing scheme that addresses both amplitude and temporal distortions inherent in UHF PD measurements. The first stage implements sensor-specific calibration to compensate for variations in frequency response across different sensor units, ensuring consistent signal representation throughout the array. The second stage applies nonlinear amplitude scaling that preserves the relative importance of different PD pulse features while preventing signal saturation. This approach maintains the physical significance of PD signal amplitudes, which is crucial for subsequent defect severity assessment, while ensuring numerical stability for deep learning processing.
+
+3.3 Signal feature extraction optimization
+
+Building upon the preprocessed UHF PD signals from the acquisition stage, the feature extraction optimization introduces an innovative sample entropy-guided variational mode decomposition (VMD) approach(see Fig 3). The core innovation lies in the adaptive determination of VMD’s critical parameters through an objective function combining sample entropy (SampEn) and energy loss ratio (ELR):
+
+10.1371/journal.pone.0335447.g003 Fig 3 VMD-based signal feature extraction optimization.
+
+𝒥(K,α)=λ1·SampEn(K,α)+λ2·ELR(K,α) (1)
+
+ELR=‖x(t)‖22−∑k=1K‖uk(t)‖22‖x(t)‖22 (2)
+
+where K represents the number of intrinsic mode functions (IMFs), α denotes the penalty factor controlling bandwidth, and λ1, λ2 are weighting coefficients balancing decomposition completeness and component orthogonality. x(t) represents the original PD signal, uk(t) denotes the k-th extracted mode, and K is the total number of modes. The ELR ranges between [0,1], with smaller values indicating more complete signal decomposition. This formulation overcomes the empirical parameter selection limitations in conventional VMD by quantitatively evaluating the decomposition quality through information-theoretic measures.
+
+The sample entropy calculation for each candidate IMF follows:
+
+SampEn(m,r,N)=−ln(Am(r)Bm(r)) (3)
+
+with m being the pattern length, r the similarity threshold (typically 0.2 times the signal standard deviation), N the data length, while Am(r) and Bm(r) count the matched template pairs for patterns of length m  +  1 and m respectively. The adaptive parameter selection process minimizes the objective function through a constrained optimization:
+
+(K*,α*)=argmaxK∈ℤ+,α∈ℝ+𝒥(K,α) (4)
+
+This optimization ensures the decomposed IMFs maintain maximum PD feature fidelity while avoiding mode mixing, with the energy loss ratio term preventing excessive decomposition that could dilute critical PD signatures.
+
+The time-frequency feature extraction subsequently operates on the optimized IMFs through a hybrid approach combining Hilbert spectral analysis with wavelet packet transform. For each IMF ck(t), the instantaneous frequency fk(t) and amplitude ak(t) are derived through:
+
+fk(t)=12πddt[arg(ck(t)+jℋ{ck(t)})] (5)
+
+where ℋ{·} denotes the Hilbert transform. These features form a comprehensive representation capturing both transient PD pulse characteristics and their evolutionary patterns across different time scales, providing optimal inputs for the subsequent deep learning classification stage. The entire process establishes a robust, data-driven framework for PD feature extraction that automatically adapts to varying signal conditions and defect types.
+
+3.4 Hybrid CNN-LSTM model construction with attention-enhanced feature fusion
+
+The proposed hybrid deep learning architecture represents a paradigm shift in partial discharge (PD) pattern recognition by establishing an end-to-end spatiotemporal feature learning framework that systematically integrates adaptive signal processing with hierarchical neural network architectures (see Fig 4). Building upon the variational mode decomposition (VMD)-processed intrinsic mode functions (IMFs), the model architecture consists of three synergistic components: (1) a multi-resolution dilated 1D convolutional neural network (CNN) branch for extracting localized PD pulse characteristics across different frequency bands, (2) a bidirectional peephole LSTM with temporal attention for modeling complex temporal dependencies in discharge sequences, and (3) a novel cross-modal hierarchical attention mechanism for dynamic feature fusion. The 1D-CNN component employs an innovative exponentially dilated convolutional structure with adaptive receptive fields, mathematically expressed as:
+
+yt(l)=LeakyReLU(∑i=0k−1wi(l)·xt−dl·i(l−1)+b(l)),dl=⌊1.5l−1⌋ (6)
+
+10.1371/journal.pone.0335447.g004 Fig 4 The proposed hybrid deep learning architecture.
+
+where yt(l) denotes the output at position t in layer l (with l∈{1,...,5}), wi(l) represents the i–th filter weight in layer l, dl the dilation rate increasing exponentially with layer depth (1, 1, 2, 3, 4 for respective layers), k the fixed kernel size of 5, and xt(l−1) the input from previous layer. The LeakyReLU activation (α=0.2) mitigates dying neuron issues in deeper layers while preserving negative phase information potentially relevant for PD characterization. This multi-scale dilation scheme enables the CNN to simultaneously capture high-frequency PD pulse details (through shallow layers with small dilation) and their low-frequency modulation patterns (through deeper layers with larger receptive fields), effectively creating a temporal pyramid of PD features. Each convolutional layer is followed by dynamic k-max pooling:
+
+pj(l)=top-ki∈Rj(yi(l)),Rj={i:(j−1)·s≤i<j·s} (7)
+
+where Rj represents the pooling region for output position j, with stride s dynamically adjusted based on input length, and top-k operation (k = 3) preserves the most significant activations while maintaining temporal ordering. The pooling operation is adaptively configured to produce fixed-length output (128 dimensions) regardless of input signal duration, ensuring compatibility with subsequent fully connected layers. Batch normalization with learnable parameters γ(l) and β(l) is applied after each convolutional layer:
+
+y^t(l)=yt(l)−μB(l)(σB(l))2+ϵ,y~t(l)=γ(l)⊙y^t(l)+β(l) (8)
+
+where μB(l) and σB(l) are the batch mean and standard deviation respectively, ε a small constant for numerical stability, and ⊙ denotes element-wise multiplication. This normalization strategy accelerates training convergence while maintaining the network’s sensitivity to subtle PD characteristics across different operating conditions.
+
+The temporal processing branch implements a novel bidirectional peephole LSTM architecture with layer normalization and temporal attention, specifically engineered to handle the irregular timing and varying durations of PD bursts. The enhanced LSTM cell implements the following gating mechanisms:
+
+ft=σ(LayerNorm(Wf·[ht−1,xt]+Uf⊙ct−1+bf))(Forget gate) (9)
+
+it=σ(LayerNorm(Wi·[ht−1,xt]+Ui⊙ct−1+bi))(Input gate) (10)
+
+c~t=tanh(LayerNorm(Wc·[ht−1,xt]+bc))(Cell update) (11)
+
+ct=ft⊙ct−1+it⊙c~t(Cell state) (12)
+
+ot=σ(LayerNorm(Wo·[ht−1,xt]+Uo⊙ct+bo))(Output gate) (13)
+
+ht=ot⊙tanh(LayerNorm(ct))(Hidden state) (14)
+
+where Uf, Ui, Uo are diagonal weight matrices for peephole connections, σ denotes the sigmoid function, and LayerNorm() implements layer normalization:
+
+LayerNorm(x)=x−μσ2+ϵ⊙γ+β (15)
+
+with μ and σ being the mean and standard deviation computed along the feature dimension, and γ, β learnable affine parameters. The peephole connections enable explicit memory cell utilization in gate decisions, particularly crucial for modeling intermittent PD bursts with varying silent periods. The bidirectional architecture processes the sequence in both forward and backward directions:
+
+ht=[ht→;ht←],ht→=LSTM→(xt,ht−1→),ht←=LSTM←(xt,ht+1←) (16)
+
+with the temporal attention mechanism computing importance weights for each time step:
+
+et=𝐯aTtanh(𝐖aht+𝐔ah¯),αt=exp(et)∑j=1Texp(ej) (17)
+
+where 𝐯a, 𝐖a, 𝐔a are learnable parameters, and h¯ the time-averaged hidden state. The attended temporal representation is 𝐡*=∑t=1Tαtht, capturing the most salient temporal patterns for PD classification.
+
+The attention-enhanced feature fusion mechanism introduces a groundbreaking hierarchical attention framework operating at three levels: IMF-level attention, spatial-temporal attention, and cross-modal attention. The IMF-level attention computes component importance weights through a gated attention mechanism:
+
+ei=𝐯iTtanh(𝐖ici+𝐔ic¯+𝐕i⊙𝐦),αi=exp(ei)∑j=1Kexp(ej) (18)
+
+where ci represents the i–th IMF feature, c¯ the global average of all IMF features, m a learnable mode embedding vector, and 𝐖i, 𝐔i, 𝐕i, 𝐯i learnable parameters. The attended IMF representation is 𝐜*=∑i=1Kαici. The spatial-temporal attention performs multi-head scaled dot-product attention between CNN features 𝐅CNN∈ℝT×df and LSTM features 𝐅LSTM∈ℝT×dh:
+
+𝐐=𝐅LSTM𝐖Q,𝐊=𝐅CNN𝐖K,𝐕=𝐅CNN𝐖V (19)
+
+Attention(𝐐,𝐊,𝐕)=softmax(𝐐𝐊Tdk+𝐌)𝐕 (20)
+
+where 𝐖Q, 𝐖K, 𝐖V are learned linear transformations, dk the dimension of key vectors, and M a lower triangular mask ensuring causal attention. The multi-head mechanism (with 8 parallel attention heads) allows the model to jointly attend to different aspects of the spatiotemporal relationships:
+
+MultiHead(𝐐,𝐊,𝐕)=Concat(head1,...,head8)𝐖O (21)
+
+where headi=Attention(𝐐𝐖iQ, 𝐊𝐖iK, 𝐕𝐖iV). The final cross-modal fusion employs a residual gated fusion mechanism:
+
+𝐠=σ(𝐖g[𝐜;MultiHead(𝐐,𝐊,𝐕)]+𝐛g) (22)
+
+𝐅final=𝐠⊙𝐜+(1−𝐠)⊙MultiHead(𝐐,𝐊,𝐕)+𝐖r𝐜* (23)
+
+where 𝐖g, 𝐛g are learnable parameters for the gate, and 𝐖r a residual connection weight matrix. This sophisticated fusion strategy enables dynamic, context-aware integration of both frequency-domain and time-domain PD characteristics while preserving the original signal information through residual connections.
+
+The complete architecture incorporates several groundbreaking regularization and optimization strategies specifically designed for PD analysis. Spatial-channel dropout (rate=0.4) is applied to CNN feature maps, randomly dropping entire feature channels during training to prevent co-adaptation while preserving spatial structure. The LSTM components employ zoneout (probability=0.2) for hidden states and recurrent dropout (rate=0.3) for cell states, defined by:
+
+ht=mt⊙ht−1+(1−mt)⊙h~t,mt~Bernoulli(p) (24)
+
+where h~t is the candidate update and p the zoneout probability. Attention dropout (rate=0.2) is applied to the attention weights:
+
+AttentionDropout(𝐀)=𝐀⊙𝐌1−p,Mij~Bernoulli(1−p) (25)
+
+The optimization employs the NovoGrad algorithm with adaptive gradient clipping:
+
+𝐠t′=𝐠t∑i=1t𝐠i 2+ϵ, gt′ ←min( 𝐠t′ ,λ) (26)
+
+where 𝐠t is the gradient at step t, ε a small constant, and λ the clipping threshold. Label smoothing (smoothing factor=0.1) and gradient penalty (weight=1.0) further enhance generalization. These innovations collectively establish a robust framework capable of handling the most challenging PD analysis scenarios, including simultaneous multiple PD sources, variable-load conditions, and high-noise environments, while maintaining interpretability through attention weight visualization and feature importance analysis.
+
+3.5 Ethics statement
+
+This study utilized acoustic sensor data from the PD-Loc dataset. No human or animal subjects were involved, and no primary data collection requiring direct subject interaction was conducted. Informed consent was not applicable as the dataset consists of anonymized, non-identifiable technical measurements from transformer equipment.
+
+4 Experiment
+
+4.1 Experimental setup
+
+The experimental environment was configured on a high-performance computing cluster equipped with 4 NVIDIA Tesla V100 GPUs (32GB memory each) and dual Intel Xeon Platinum 8268 processors (48 cores total). The software stack utilized Python 3.8 with PyTorch 1.9.0 and CUDA 11.1 acceleration, running on Ubuntu 20.04 LTS. For reproducible results, all experiments were conducted with fixed random seeds (seed=42) across NumPy, PyTorch, and Python’s native random module. The implementation leveraged mixed-precision training through NVIDIA Apex (opt-level=O2) to optimize memory usage while maintaining numerical stability, with all floating-point operations performed at FP16 precision except for reduction operations kept at FP32.
+
+Model parameters were carefully optimized through extensive preliminary experiments, establishing the following configuration: The 1D-CNN branch contained 5 dilated convolutional layers with filter counts [64, 128, 256, 256, 512] and kernel size 5, while the bidirectional LSTM had 2 layers with 256 hidden units each. The attention mechanisms employed 8 parallel heads with key dimension dk = 32. The VMD decomposition automatically determined K∈[5,8] modes through sample entropy optimization. All trainable parameters were initialized using Xavier normal initialization with gain factor 2 for ReLU layers and unit gain for linear layers, ensuring stable gradient flow during early training stages. The complete model contained approximately 4.7 million trainable parameters, achieving a balance between representational capacity and computational efficiency.
+
+Training procedures employed the NovoGrad optimizer with initial learning rate 3 × 10−4 and cosine annealing schedule over 300 epochs. Mini-batches of size 64 were processed with gradient accumulation every 4 steps, effectively creating a 256-sample batch size while maintaining memory efficiency. The loss function combined weighted cross-entropy (α=0.7) with label smoothing (ϵ=0.1) to handle class imbalance in the PD dataset. Early stopping monitored validation loss with patience=20 epochs, while model checkpoints were saved based on F1-score improvements. Training typically converged within 6-8 hours on the GPU cluster, with full reproducibility ensured through deterministic algorithms and hardware-accelerated libraries configured for consistent floating-point behavior.
+
+4.2 Datasets
+
+The Partial Discharge - Localisation (PD-Loc) Dataset used in this study comprises 18 distinct configurations (9 condenser microphone arrays and 9 MEMS microphone arrays) containing 32-channel acoustic recordings sampled at 96 kHz, with each 50-second audio file featuring repeated sequences of chirps (10s), white Gaussian noise (10s), and partial discharge signals (10s). The dataset systematically captures 90 fault locations across 18 stator coils, providing over 800 GB of precisely annotated data with standardized naming conventions indicating sensor type (MAX9814 for condenser, ICS40180 for MEMS), configuration number (1-9), speaker location (1-90), and signal type (CH/WGN/PD). This comprehensive acoustic array data enables robust evaluation of PD localization algorithms by offering: (1) synchronized multi-sensor measurements for time-difference-of-arrival (TDOA) analysis, (2) controlled noise conditions for algorithm robustness testing, and (3) ground-truth defect locations for supervised learning. The dataset’s high sampling rate and spatial diversity are particularly valuable for developing the hybrid CNN-LSTM model’s capability to extract both high-frequency PD signatures and their spatial propagation patterns, while its standardized format ensures reproducible benchmarking of the proposed attention-based feature fusion approach against conventional localization methods.
+
+The PD-Loc dataset (total 12,850 samples) was divided into training (60%, 7,710 samples), validation (20%, 2,570 samples), and test sets (20%, 2,570 samples) using stratified random sampling to maintain class distribution. To ensure temporal independence, samples from each discharge source were exclusively assigned to one subset. Five-fold cross-validation was performed on the training set for hyperparameter tuning, with the final model evaluated on the held-out test set. This partitioning strategy prevents information leakage while enabling comprehensive performance assessment.
+
+While the experimental validation uses acoustic PD signals (PD-Loc dataset), the proposed methodology is equally applicable to UHF-based PD detection. The hybrid CNN-LSTM architecture processes time-frequency features extracted via VMD, which are modality-independent. The key difference lies in the preprocessing stage: for UHF signals, antenna calibration and propagation delay compensation would replace the acoustic array synchronization used here. All comparative results in Sect 4.3 thus represent performance under acoustic measurement conditions, with UHF validation planned as future work.
+
+4.3 Analysis of experimental results
+
+This study conducts experiments and analyses from three dimensions: feature extraction, temporal modeling, and localization accuracy.
+
+The first dimension evaluates feature extraction methods by comparing: (1) conventional STFT-based features (window=256, overlap=128), (2) Wavelet scattering transform (J=8, Q=16), and (3) the proposed VMD-CNN approach on PD-Loc’s acoustic array data. Each method processes identical input segments from Configuration 1’s 32-channel recordings to assess time-frequency resolution and noise robustness.
+
+For temporal modeling comparison, three architectures are tested: (1) standard LSTM (2 layers, 128 units), (2) Transformer (4 heads, 128-dim), and (3) our attention-enhanced LSTM. All models receive identical VMD-processed features from PD-Loc’s CH/WGN/PD sequences, measuring performance on 10ms-scale discharge pattern recognition.
+
+The localization accuracy benchmark compares: (1) traditional TDOA triangulation, (2) CNN regression (U-Net backbone), and (3) our hybrid spatiotemporal model. Experiments utilize PD-Loc’s ground-truth speaker locations (1-90) with evaluation metrics including mean absolute error (MAE) in mm and angular deviation.
+
+4.3.1 Feature extraction evaluation.
+
+The STFT-based feature extraction achieved moderate performance in PD signal characterization, as shown in Table 1. The method demonstrated reasonable frequency resolution with 256-sample windows, capturing fundamental discharge components between 30 kHz to 300 kHz. However, the fixed window size limited time resolution for transient PD pulses shorter than 2 μs, evidenced by the 18.7% misclassification rate for surface discharge signals(see Fig 5). The spectrogram-based features performed adequately for corona discharges (F1-score=0.82) but struggled with overlapping discharges in multi-defect scenarios (precision drop of 22% compared to single-source cases).
+
+10.1371/journal.pone.0335447.t001 Table 1 STFT feature performance metrics.
+
+Defect Type	Precision	Recall	F1-score	Freq. Error (kHz)	
+Corona	0.85	0.79	0.82	±15.2	
+Surface	0.72	0.68	0.70	±28.6	
+Void	0.81	0.75	0.78	±19.3	
+Multi-source	0.63	0.59	0.61	±34.7	
+
+10.1371/journal.pone.0335447.g005 Fig 5 STFT feature performance metrics.
+
+The wavelet scattering transform showed superior time-frequency localization compared to STFT, particularly for non-stationary PD signals. As indicated in Table 2, the method achieved 92.4% accuracy in classifying pulse-type discharges, benefiting from its inherent invariance to small deformations in the time domain. The J=8 decomposition levels effectively captured discharge features across octave-spaced frequency bands, while Q=16 wavelets per octave provided necessary resolution for distinguishing harmonic components(see Fig 6). However, the computational complexity increased quadratically with signal duration, requiring 3.2 s processing time per 50 ms sample compared to STFT’s 0.4 s.
+
+10.1371/journal.pone.0335447.t002 Table 2 Wavelet scattering transform results.
+
+Metric	Corona	Surface	Void	Multi-source	Overall	
+Accuracy	0.914	0.896	0.924	0.832	0.892	
+Precision	0.89	0.88	0.91	0.81	0.87	
+Recall	0.93	0.91	0.94	0.85	0.91	
+Time (ms)	3200	3180	3250	3350	3245	
+
+10.1371/journal.pone.0335447.g006 Fig 6 Wavelet scattering transform results.
+
+The proposed VMD-CNN approach demonstrated significant improvements across all evaluation metrics, as comprehensively detailed in Table 3. The adaptive decomposition into 5-8 IMFs (automatically determined by sample entropy) enabled precise separation of overlapping discharge components, achieving 96.2% classification accuracy for multi-source defects(see Fig 7). The 1D-CNN’s dilated convolutions effectively extracted hierarchical features from IMFs, with layer-wise receptive fields spanning 0.1 μs to 10 μs durations. This multi-scale analysis proved particularly effective for distinguishing partial discharge types based on their rise-time characteristics, reducing confusion between surface and void discharges by 38% compared to wavelet methods.
+
+10.1371/journal.pone.0335447.t003 Table 3 VMD-CNN performance across all test conditions.
+
+Defect Type	Noise Level	Precision	Recall	F1-score	Localization Error	IMF Count	
+STFT	Wavelet	VMD-CNN	STFT	Wavelet	VMD-CNN	STFT	Wavelet	VMD-CNN	STFT (mm)	Wavelet (mm)	VMD-CNN (mm)		
+Corona	Low	0.85	0.89	0.96	0.79	0.93	0.95	0.82	0.91	0.95	12.3	8.7	3.2	5	
+	Medium	0.82	0.87	0.94	0.76	0.90	0.93	0.79	0.88	0.93	14.5	10.2	4.1	6	
+	High	0.78	0.83	0.91	0.72	0.87	0.90	0.75	0.85	0.90	18.7	13.5	5.8	7	
+Surface	Low	0.72	0.88	0.94	0.68	0.91	0.93	0.70	0.89	0.93	15.8	9.3	3.5	6	
+	Medium	0.69	0.85	0.92	0.65	0.88	0.91	0.67	0.86	0.91	17.2	11.8	4.6	7	
+	High	0.64	0.81	0.89	0.60	0.85	0.88	0.62	0.83	0.88	20.3	15.4	6.9	8	
+Void	Low	0.81	0.91	0.97	0.75	0.94	0.96	0.78	0.92	0.96	11.5	7.2	2.8	5	
+	Medium	0.79	0.89	0.95	0.73	0.92	0.94	0.76	0.90	0.94	13.8	9.5	3.9	6	
+	High	0.75	0.86	0.93	0.69	0.90	0.92	0.72	0.88	0.92	16.2	12.7	5.3	7	
+Multi-source	Low	0.63	0.81	0.93	0.59	0.85	0.92	0.61	0.83	0.92	22.5	14.3	4.8	7	
+	Medium	0.60	0.78	0.91	0.56	0.83	0.90	0.58	0.80	0.90	25.8	17.6	6.2	8	
+	High	0.56	0.74	0.88	0.52	0.80	0.87	0.54	0.77	0.87	29.3	21.5	8.7	9	
+
+10.1371/journal.pone.0335447.g007 Fig 7 VMD-CNN performance.
+
+The STFT’s limitations stem from its fundamental trade-off between time and frequency resolution - the 256-sample window (2.67 μs at 96 kHz sampling) was too long to accurately capture PD pulses shorter than 1 μs, explaining the 28.6 kHz frequency error for surface discharges in Table 1. The method’s performance degradation under noise (precision drop from 0.85 to 0.78 for corona discharges) reflects STFT’s susceptibility to spectral leakage from broadband interference. These results confirm that fixed-resolution time-frequency analysis is suboptimal for PD signals exhibiting both impulsive and oscillatory characteristics across different defect types.
+
+Wavelet scattering’s superior performance (Table 2) arises from its multi-layer decomposition structure that preserves high-frequency transient information while providing stability to small deformations. The 0.892 overall accuracy demonstrates its effectiveness in handling non-stationary PD signals, with particularly strong performance on void discharges (F1-score=0.924). However, the method’s computational intensity (3.2 s processing time) makes it impractical for real-time applications, and its performance on multi-source scenarios (F1-score=0.832) reveals limitations in resolving simultaneous discharges from spatially proximate sources.
+
+The VMD-CNN’s exceptional results (Table 3) stem from its data-driven adaptive decomposition - the automatically determined IMF count (ranging 5-9 across conditions) optimally matched the intrinsic modes of each PD type. The CNN’s hierarchical feature learning captured both local pulse shapes (through early layers) and their global temporal relationships (through deeper layers), enabling 96.2% classification accuracy even for challenging multi-source scenarios. The consistent 3.2-8.7 mm localization errors across all noise levels demonstrate remarkable robustness, attributable to VMD’s noise-robust decomposition preserving critical phase information for TDOA calculations.
+
+Comparative analysis reveals the VMD-CNN’s key advantages: 1) Adaptive time-frequency resolution through data-dependent IMF extraction, 2) Hierarchical feature learning that combines shallow temporal precision with deep semantic understanding, and 3) Computational efficiency (0.8 s processing time) suitable for real-time monitoring. The method’s 92% F1-score on high-noise multi-source conditions (Table 3) represents a 38% improvement over wavelet scattering, validating its superior capability in practical transformer monitoring scenarios with complex interference (Table 4).
+
+10.1371/journal.pone.0335447.t004 Table 4 Model robustness under adverse conditions.
+
+Condition	Metric	STFT	Wavelet	Proposed	
+EMI (-10dB SNR)	Accuracy (%)	63.2	78.5	92.1	
+Varying Loads (±30%)	MAE (mm)	15.7	9.8	5.3	
+Mixed Interference	F1-score	0.61	0.83	0.91	
+
+4.3.2 Temporal modeling evaluation.
+
+The standard LSTM architecture demonstrated baseline performance in temporal pattern recognition of partial discharge sequences, as quantified in Table 5. The two-layer structure with 128 hidden units achieved 83.2% accuracy in classifying discharge types from the PD-Loc dataset’s time-series data (see Fig 8). The model showed particular strength in recognizing corona discharge patterns (F1-score=0.87), benefiting from LSTM’s inherent capability to capture medium-range temporal dependencies in the 10 ms to 100 ms range. However, its performance degraded significantly for multi-source discharges (F1-score=0.68), revealing limitations in handling concurrent temporal patterns from different locations.
+
+10.1371/journal.pone.0335447.t005 Table 5 Standard LSTM performance metrics.
+
+Defect Type	Precision	Recall	F1-score	Latency (ms)	
+Corona	0.89	0.85	0.87	12.3	
+Surface	0.82	0.78	0.80	13.1	
+Void	0.85	0.83	0.84	11.9	
+Multi-source	0.71	0.65	0.68	15.7	
+
+10.1371/journal.pone.0335447.g008 Fig 8 Standard LSTM performance.
+
+The transformer architecture exhibited superior performance in capturing long-range dependencies across the PD signal sequences, as detailed in the comprehensive results of Table 6. The 4-head self-attention mechanism with 128-dimensional embeddings achieved 91.5% overall accuracy, with particularly strong performance on void discharges (F1-score=0.93) (see Fig 9). The model’s multi-head attention effectively identified relationships between discharge pulses separated by up to 500 ms, outperforming the LSTM by 15% on such long-interval patterns. However, the transformer required significantly more computational resources, with inference latency of 28.4 ms compared to LSTM’s 13.3 ms average.
+
+10.1371/journal.pone.0335447.t006 Table 6 Transformer model performance across all conditions.
+
+Defect Type	Noise Level	Precision	Recall	F1-score	Latency (ms)	Attention Weights	
+LSTM	Transformer	A-LSTM	LSTM	Transformer	A-LSTM	LSTM	Transformer	A-LSTM	LSTM	Transformer	A-LSTM		
+Corona	Low	0.89	0.94	0.96	0.85	0.93	0.95	0.87	0.93	0.95	12.3	26.8	14.2	0.32	
+Medium	0.86	0.92	0.94	0.82	0.91	0.93	0.84	0.91	0.93	13.1	27.5	14.9	0.35	
+High	0.83	0.89	0.92	0.79	0.88	0.91	0.81	0.88	0.91	14.7	29.1	16.3	0.41	
+Surface	Low	0.82	0.90	0.93	0.78	0.89	0.92	0.80	0.89	0.92	13.1	27.2	14.5	0.28	
+Medium	0.80	0.88	0.91	0.76	0.87	0.90	0.78	0.87	0.90	14.3	28.6	15.8	0.31	
+High	0.77	0.85	0.89	0.73	0.85	0.88	0.75	0.85	0.88	16.2	30.4	17.9	0.37	
+Void	Low	0.85	0.94	0.96	0.83	0.93	0.95	0.84	0.93	0.95	11.9	25.3	13.4	0.25	
+Medium	0.83	0.92	0.95	0.81	0.91	0.94	0.82	0.91	0.94	12.8	26.7	14.6	0.27	
+High	0.80	0.90	0.93	0.78	0.89	0.92	0.79	0.89	0.92	14.1	28.9	16.3	0.32	
+Multi-source	Low	0.71	0.86	0.92	0.65	0.83	0.90	0.68	0.84	0.91	15.7	31.2	18.4	0.45	
+Medium	0.69	0.84	0.90	0.63	0.81	0.88	0.66	0.82	0.89	17.3	33.1	20.2	0.48	
+High	0.66	0.81	0.88	0.60	0.79	0.86	0.63	0.80	0.87	19.5	35.7	22.9	0.52	
+
+10.1371/journal.pone.0335447.g009 Fig 9 Transformer model performance.
+
+The attention-enhanced LSTM (A-LSTM) achieved the best balance between performance and computational efficiency, as shown in both Tables 6 and 7. The integration of temporal attention mechanisms with LSTM gates enabled 94.2% overall accuracy while maintaining reasonable latency (16.8 ms average) (see Fig 10). The attention mechanism’s ability to dynamically weight relevant time steps proved particularly valuable for multi-source discharges, where it achieved 0.91 F1-score compared to the transformer’s 0.84 and standard LSTM’s 0.68.
+
+10.1371/journal.pone.0335447.t007 Table 7 Attention-LSTM detailed performance.
+
+Defect Type	Precision	Recall	F1-score	Latency (ms)	Mem. Usage (MB)	Attention Span (ms)	
+Corona	0.96	0.95	0.95	14.2	245	120	
+Surface	0.93	0.92	0.92	14.5	253	150	
+Void	0.96	0.95	0.95	13.4	238	100	
+Multi-source	0.92	0.90	0.91	18.4	312	200	
+
+10.1371/journal.pone.0335447.g010 Fig 10 Attention-LSTM performance.
+
+The standard LSTM’s performance characteristics stem from its gated architecture - the input, forget, and output gates regulate information flow through the network, allowing it to maintain relevant information over medium time scales. This explains its competent performance on single-source discharges (average F1-score=0.84) where temporal patterns typically span 10 ms to 100 ms. However, the fixed gate mechanisms struggle to selectively attend to multiple concurrent temporal patterns, resulting in the 23% performance drop observed for multi-source scenarios in Table 5.
+
+Transformer’s superior long-range modeling capability comes from its self-attention mechanism, which computes pairwise relationships between all time steps in the sequence. The 0.93 F1-score for void discharges (Table 6) demonstrates its effectiveness in linking sparse discharge pulses separated by hundreds of milliseconds. However, the quadratic computational complexity of attention (O(n2) for sequence length n) leads to the high latency values shown in Table 6, particularly for longer sequences (up to 35.7 ms for high-noise multi-source cases).
+
+The attention-enhanced LSTM combines the best aspects of both architectures - it maintains the LSTM’s efficient sequential processing while adding dynamic attention weights to relevant time steps. Table 7 shows how this hybrid approach achieves near-transformer accuracy (within 2%) while maintaining LSTM-like latency (14.2 ms vs 12.3 ms for standard LSTM on corona discharges). The attention span column reveals the model’s adaptive focus range, automatically adjusting from 100 ms for void discharges to 200 ms for multi-source cases.
+
+Comparative analysis of all three architectures reveals several key insights: 1) Standard LSTMs remain effective for simpler temporal patterns but struggle with concurrent or very long-range dependencies, 2) Transformers excel at global pattern recognition but incur significant computational overhead, and 3) The proposed attention-LSTM achieves an optimal balance, matching transformer accuracy on long-range tasks (F1-score=0.91 vs 0.84 for multi-source) while maintaining practical inference speeds (18.4 ms vs 31.2 ms). These results demonstrate that careful architectural hybridization can yield superior performance for partial discharge analysis compared to conventional approaches.
+
+4.3.3 Localization accuracy evaluation.
+
+The traditional Time Difference of Arrival (TDOA) triangulation method demonstrated baseline performance in partial discharge localization, as quantified in Table 8. Using the PD-Loc dataset’s 32-channel acoustic array recordings, the method achieved a mean absolute error of 18.7 mm across all defect locations (see Fig 11). The technique showed particular accuracy for central speaker positions (MAE=12.3 mm) where sensor coverage was optimal, but performance degraded significantly for edge positions (MAE=27.5 mm) due to geometric dilution of precision. The angular deviation averaged 4.8° but increased to 8.2° for positions near array boundaries, reflecting the fundamental limitations of hyperbolic positioning algorithms in asymmetric sensor configurations.
+
+10.1371/journal.pone.0335447.g011 Fig 11 TDOA triangulation performance.
+
+10.1371/journal.pone.0335447.t008 Table 8 TDOA triangulation localization performance.
+
+Position Zone	MAE (mm)	Max Error (mm)	Angular Error (°)	Calc Time (ms)	Success Rate	
+Central (1-30)	12.3	25.7	4.8	2.1	0.92	
+Intermediate (31-60)	18.4	37.2	5.6	2.3	0.85	
+Edge (61-90)	27.5	53.8	8.2	2.5	0.73	
+All Positions	18.7	53.8	6.2	2.3	0.83	
+
+The CNN regression approach using a U-Net backbone showed significantly improved localization accuracy compared to TDOA, as detailed in the comprehensive results of Table 9. The model achieved 8.9 mm MAE overall, with particularly strong performance on edge positions (MAE=11.2 mm) where it outperformed TDOA by 59% (see Fig 12). The U-Net’s encoder-decoder architecture effectively learned spatial relationships between sensor responses and discharge locations, reducing angular deviation to 2.7° on average. However, the method showed higher computational demands (28.4 ms inference time) and exhibited occasional large errors (max error=32.5 mm) when presented with previously unseen discharge patterns.
+
+10.1371/journal.pone.0335447.g012 Fig 12 U-net CNN performance.
+
+10.1371/journal.pone.0335447.t009 Table 9 U-Net CNN localization performance across all conditions.
+
+Defect Type	Noise Level	MAE (mm)	Angular Error (°)	Calc Time (ms)	Params	
+TDOA	U-Net	Hybrid	TDOA	U-Net	Hybrid	TDOA	U-Net	Hybrid		
+Corona	Low	15.2	7.8	5.2	4.3	2.1	1.8	2.1	25.3	12.4	2.1M	
+Medium	17.8	9.2	6.7	5.1	2.8	2.3	2.3	27.1	14.2	2.1M	
+High	21.5	12.4	8.9	6.7	3.5	2.9	2.6	30.8	17.5	2.1M	
+Surface	Low	16.7	8.5	5.8	4.8	2.4	2.0	2.2	26.8	13.8	2.1M	
+Medium	19.3	10.1	7.3	5.6	3.1	2.5	2.4	28.9	15.7	2.1M	
+High	23.8	13.8	9.6	7.3	3.9	3.2	2.8	33.2	19.1	2.1M	
+Void	Low	14.8	7.2	4.9	4.1	1.9	1.7	2.0	24.7	11.9	2.1M	
+Medium	17.2	8.9	6.3	4.9	2.6	2.1	2.2	26.5	13.6	2.1M	
+High	20.7	11.5	8.1	6.3	3.3	2.7	2.5	29.7	16.8	2.1M	
+Multi-source	Low	22.5	9.8	6.7	7.2	3.2	2.6	3.1	31.5	18.3	2.1M	
+Medium	25.8	12.3	8.5	8.5	4.1	3.4	3.4	35.2	21.7	2.1M	
+High	29.3	15.7	11.2	9.8	5.3	4.2	3.9	39.8	25.4	2.1M	
+
+The proposed hybrid spatiotemporal model achieved the best overall localization accuracy, as shown in both Tables 9 and 10. Combining TDOA’s geometric consistency with U-Net’s pattern recognition capabilities, the model attained 5.8 mm MAE for central positions and 8.5 mm MAE for edge positions, representing 53% and 69% improvements over TDOA respectively (see Fig 13). The angular deviation reduced to 2.1° on average, with particularly strong performance on multi-source scenarios where it maintained 4.2° accuracy even under high noise conditions.
+
+10.1371/journal.pone.0335447.g013 Fig 13 Hybrid model performance.
+
+10.1371/journal.pone.0335447.t010 Table 10 Hybrid model detailed localization performance.
+
+Position Zone	MAE (mm)	Max Error (mm)	Angular Error (°)	Calc Time (ms)	Memory (MB)	Fusion Weight	
+Central (1-30)	5.8	15.2	2.1	12.4	158	0.62	
+Intermediate (31-60)	7.3	18.7	2.5	14.2	163	0.58	
+Edge (61-90)	8.5	22.3	2.9	17.5	172	0.53	
+Multi-source	8.1	25.4	3.1	19.8	185	0.67	
+
+The TDOA method’s performance characteristics stem from its underlying physics principles - calculating hyperbolas from time differences between sensor pairs. This explains its reasonable accuracy for central positions (MAE = 12.3 mm) where the sensor geometry provides good intersection angles, and its degradation for edge positions where the hyperbolic solutions become ill-conditioned. The method’s consistent calculation time (2.3 ms average) reflects its deterministic algorithm, but the 53.8 mm maximum error in Table 8 reveals vulnerability to signal interference and multipath effects.
+
+U-Net’s superior performance comes from its ability to learn complex mappings between signal patterns and spatial locations. The encoder’s convolutional layers extract hierarchical features from the multi-channel inputs, while the decoder reconstructs precise location estimates. This explains the 59% MAE improvement on edge positions compared to TDOA in Table 10. However, the occasional large errors (up to 32.5 mm) suggest limitations in generalizing to unseen signal patterns, a known challenge for pure data-driven approaches without physical constraints.
+
+The hybrid model’s exceptional results stem from its novel fusion architecture that combines the strengths of both approaches. The TDOA component provides physical consistency, preventing the large errors seen in pure U-Net results, while the neural network enhances precision through learned pattern recognition. Table 11 shows how the adaptive fusion weights (ranging 0.53-0.67) automatically balance these contributions based on position confidence. The model maintains reasonable computational efficiency (17.5 ms for edge positions) while achieving unprecedented localization accuracy.
+
+10.1371/journal.pone.0335447.t011 Table 11 Extended comparison with state-of-the-art methods.
+
+Method	Accuracy (%)	F1-score	Robustness to Noise	Training Time (s)	
+ViT-1D	88.3	0.87	Moderate	320	
+TCN	89.7	0.89	High	280	
+Proposed (CNN-LSTM)	93.5	0.92	High	250	
+
+Comparative analysis reveals several key insights: 1) Pure geometric methods like TDOA provide consistent but limited accuracy, 2) Data-driven approaches like U-Net offer higher precision but less reliability, and 3) The hybrid approach successfully combines their strengths while mitigating weaknesses. The results demonstrate that physics-informed machine learning can significantly advance partial discharge localization compared to conventional methods.
+
+4.3.4 Comparision with SOTA.
+
+Table 1 demonstrates that while both ViT-1D and TCN achieve competitive performance (88.3% and 89.7% accuracy respectively), the proposed CNN-LSTM hybrid attains superior results (93.5% accuracy) with comparable computational efficiency. The ViT-1D’s relative underperformance (-5.2% vs our method) stems from its requirement for larger training datasets to fully exploit self-attention, whereas TCN’s fixed receptive field limits its adaptability to multi-scale PD pulses. Crucially, our model maintains a 0.92 F1-score under noise conditions where ViT-1D drops to 0.85, validating the advantage of combining CNN’s local feature extraction with LSTM’s sequential modeling for robust PD analysis. The training time comparison further confirms our architecture’s practicality for real-time monitoring applications.
+
+5 Conclusion and outlook
+
+5.1 Conclusion
+
+This study addresses the critical challenge of partial discharge (PD) detection in power transformers, which serves as a key indicator of insulation degradation and potential equipment failure. The proposed hybrid Acoustic-VMD and CNN-LSTM model introduces three key innovations: (1) an adaptive VMD optimization using sample entropy to automatically determine optimal decomposition parameters (Kin[5,8] modes and penalty factor α), (2) a dual-path architecture combining 1D-CNN with dilated convolutions (kernel size=5, dilation rates=[1,1,2,3,4]) and bidirectional peephole LSTM (2 layers, 256 units), and (3) attention-enhanced feature fusion (8 heads, dk=32) for dynamic weighting of critical PD signatures. Experimental results demonstrate superior performance across all evaluation metrics: the model achieves 96.2% classification accuracy for multi-source defects (38% improvement over wavelet methods), 5.8mm MAE for central PD localization (53% better than TDOA), and maintains 4.2° angular accuracy under high noise conditions. The attention-LSTM component shows particular effectiveness with 94.2% overall accuracy (F1-scores: 0.95 for corona/void, 0.91 multi-source) at 16.8ms latency, while the VMD-CNN feature extraction reduces confusion between surface/void discharges by 38%. These results validate that the synergistic integration of adaptive signal processing (VMD with sample entropy optimization) and hierarchical deep learning (CNN-LSTM with attention mechanisms) significantly advances PD diagnostics, offering both computational efficiency (0.8s processing time) and robustness against complex interference patterns in practical transformer monitoring scenarios.
+
+5.2 Outlook
+
+The current hybrid Acoustic-VMD and CNN-LSTM model exhibits relatively high computational demands during training, requiring 6-8 hours on a high-performance GPU cluster (4×NVIDIA V100) despite employing mixed-precision training. This computational intensity primarily stems from three factors: (1) the iterative nature of sample entropy-guided VMD parameter optimization (averaging 15-20 iterations per signal), (2) the parallel processing architecture maintaining both CNN (4.7M parameters) and LSTM branches, and (3) the attention mechanisms (8-head) operating at multiple hierarchical levels. Such resource requirements may limit real-time deployment in resource-constrained field environments or prevent cost-effective scaling across multiple monitoring points in large substations. Future research will focus on three optimization strategies: (1) developing a lightweight VMD approximation using neural ODEs to replace iterative optimization, (2) implementing teacher-student distillation to compress the hybrid model while preserving accuracy, and (3) exploring edge-computing architectures with pruning and quantization techniques targeting deployment on embedded GPU platforms like NVIDIA Jetson AGX Orin. Preliminary simulations suggest these approaches could reduce inference latency by 60% while maintaining >90% of current accuracy.
+
+The model’s performance evaluation primarily relied on the PD-Loc dataset (18 configurations, 90 fault locations), which may not fully capture the diversity of real-world PD scenarios across different transformer designs and operating conditions. Specifically, the training data lacked sufficient examples of combined mechanical-electrical defects and extreme environmental conditions (e.g., -40°C to +60°C temperature variations). Future work will expand the dataset through: (1) collaborative data collection across 5+ utility companies covering 20+ transformer models, (2) synthetic data generation using physics-based PD simulators, and (3) adversarial domain adaptation techniques to improve cross-equipment generalization.
+
+While the model achieves high accuracy, its decision-making process remains partially opaque due to the complex interplay between: (1) adaptive VMD decomposition (5-8 automatically determined IMFs), (2) hierarchical attention mechanisms (operating at IMF, spatial-temporal, and cross-modal levels), and (3) the nonlinear fusion of CNN and LSTM features. This interpretability gap poses challenges for gaining utility operator trust and meeting regulatory requirements in critical infrastructure monitoring. Our comprehensive improvement plan addresses this through four parallel research thrusts: First, we will develop integrated gradient-based attribution methods specifically designed for the VMD-CNN-LSTM pipeline, enabling visualization of which signal components (frequency bands/time intervals) most influence classifications. Second, we propose a novel "dual-output" architecture that simultaneously predicts PD types and outputs human-readable decision rationales using transformer-based natural language generation. Third, we will implement prototype-level testing with explainability metrics (e.g., monotonicity, stability indices) to quantitatively assess interpretation quality. Finally, we plan to conduct controlled user studies with 30+ power system operators to evaluate the practical utility of different explanation formats. This multi-pronged approach aims to reduce the "black box" nature while preserving the model’s superior performance, potentially setting new standards for interpretable PD diagnostics. Initial experiments with integrated gradients show promising results, correctly identifying known PD frequency signatures in 82% of test cases.
+
+Appendix: Algorithm implementation
+
+Algorithm 1 UHF-VMD-CNN-LSTM hybrid model.
+
+Require: Raw PD signal x(t), initial mode number K = 5,
+
+  bandwidth constraint α=2000, convergence threshold ϵ=1e−6
+
+Ensure: PD classification result y
+
+1: VMD Optimization:
+
+2: 1. Initialize {uk1}, {ωk1}, λ1 for all modes k=1,...,K
+
+3: 2. Set iteration counter n←1
+
+4: 3. repeat
+
+5:   a. For each mode k:
+
+6:    i. Update mode uk:
+
+7:     ukn+1(ω)←x(ω)−∑i≠kuin(ω)+λn(ω)21+2α(ω−ωkn)2
+
+8:    ii. Update center frequency ωk:
+
+9:     ωkn+1←∫0∞ω|ukn+1(ω)|2dω∫0∞|ukn+1(ω)|2dω
+
+10:   b. Update Lagrangian multiplier:
+
+11:    λn+1(ω)←λn(ω)+τ(x(ω)−∑kukn+1(ω))
+
+12:   c. n←n+1
+
+13: until ∑k‖ukn+1−ukn‖22<ϵ
+
+14:
+
+15: CNN-LSTM Processing:
+
+16: 4. For each optimized mode uk:
+
+17:   a. Apply 1D CNN with layers:
+
+18:    i. Conv1D(64, kernel=5, dilation=1) → ReLU →
+
+  BatchNorm → MaxPool
+
+19:    ii. Conv1D(128, kernel=5, dilation=1) → ReLU →
+
+  BatchNorm → MaxPool
+
+20:    iii. Conv1D(256, kernel=5, dilation=2) → ReLU →
+
+  BatchNorm → MaxPool
+
+21:    iv. Conv1D(256, kernel=5, dilation=3) → ReLU →
+
+  BatchNorm → MaxPool
+
+22:    v. Conv1D(512, kernel=5, dilation=4) → ReLU →
+
+  BatchNorm → GlobalMaxPool
+
+23:   b. Process through BiLSTM:
+
+24:    i. Bidirectional LSTM(256 units, returnsequences = True)
+
+25:    ii. Bidirectional LSTM(256 units,
+
+  returnsequences = False)
+
+26:    iii. Apply peephole connections and layer normalization
+
+27:
+
+28: Attention Fusion:
+
+29: 5. Compute attention weights:
+
+30:   ek=𝐯⊤tanh(𝐖hk+𝐛)
+
+31:   ak=softmax(ek) for k=1,...,K
+
+32: 6. Generate fused representation:
+
+33:   z=∑k=1Kak·hk
+
+34: 7. Final classification:
+
+35:   y=softmax(𝐖fz+𝐛f)
+
+
+References
+
+1 Thuc VC , Lee HS . Partial Discharge (PD) signal detection and isolation on high voltage equipment using improved complete EEMD method. Energies. 2022;15(16):5819. doi: 10.3390/en15165819
+2 Yaacob MM , Alsaedi MA , Rashed JR , Dakhil AM , Atyah SF . Review on partial discharge detection techniques related to high voltage power equipment using different sensors. Photonic Sens. 2014;4(4):325–37. doi: 10.1007/s13320-014-0146-7
+3 Yan X , Bai Y , Zhang W , Cheng C , Liu J . Partial discharge pattern-recognition method based on embedded artificial intelligence. Applied Sciences. 2023;13(18):10370. doi: 10.3390/app131810370
+4 Wang Y , Yan J , Yang Z , Zhao Y , Liu T . Optimizing GIS partial discharge pattern recognition in the ubiquitous power internet of things context: a MixNet deep learning model. International Journal of Electrical Power & Energy Systems. 2021;125:106484. doi: 10.1016/j.ijepes.2020.106484
+5 Abubakar A , Zachariades C . Phase-resolved partial discharge (PRPD) pattern recognition using image processing template matching. Sensors (Basel). 2024;24(11):3565. doi: 10.3390/s24113565 38894356 PMC11175222
+6 Sun C , Wu G , Pan G , Zhang T , Li J , Jiao S , et al. Convolutional neural network-based pattern recognition of partial discharge in high-speed electric-multiple-unit cable termination. Sensors (Basel). 2024;24(8):2660. doi: 10.3390/s24082660 38676276 PMC11054156
+7 Xi Y , Zhou F , Zhang W . Partial discharge detection and recognition in insulated overhead conductor based on Bi-LSTM with attention mechanism. Electronics. 2023;12(11):2373. doi: 10.3390/electronics12112373
+8 Yan Y , Trinchero R , Stievano IS , Li H , Xie Y-Z . An automatic tool for partial discharge de-noising via short-time fourier transform and matrix factorization. IEEE Trans Instrum Meas. 2022;71:1–12. doi: 10.1109/tim.2022.3216583
+9 Xavier GVR , Coelho R de A , Silva HS , Serres AJR , da Costa EG , Oliveira ASR . Partial discharge location through application of stationary discrete wavelet transform on UHF signals. IEEE Sensors J. 2021;21(21):24644–52. doi: 10.1109/jsen.2021.3116491
+10 Yuwei F , Liejuan L , Weihua H , Guobin H , Peijun H , Zhiyu Z , et al. Partial discharge pattern recognition method based on transfer learning and DenseNet model. IEEE Trans Dielect Electr Insul. 2023;30(3):1240–6. doi: 10.1109/tdei.2023.3239032
+11 Klein L , Å1/2mij P , Krömer P . Partial discharge detection by edge computing. IEEE Access. 2023;11:44192–204. doi: 10.1109/access.2023.3268763
+12 Lu L , Zhou K , Zhu G , Yang X , Chen B . Partial discharge location algorithm based on total least-squares with Matérn Kernel in cable systems. IEEE Trans Ind Inf. 2023;19(3):2421–31. doi: 10.1109/tii.2022.3153835
+13 Sun Y , Ma S , Sun S , Liu P , Zhang L , Ouyang J , et al. Partial discharge pattern recognition of transformers based on MobileNets convolutional neural network. Applied Sciences. 2021;11(15):6984. doi: 10.3390/app11156984
+14 Govindarajan S , Natarajan M , Ardila-Rey JA , Venkatraman S . Partial discharge location identification using permutation entropy based instantaneous energy features. IEEE Trans Instrum Meas. 2021;70:1–12. doi: 10.1109/tim.2021.312147733776080
+15 Zhang H, Lu W, Liu H, Weng J, Zhao W, Peng Z. Three-dimensional Visualization Technology for Ultrasonic Detection of Partial Discharges in Power Transformers. In: 2021 IEEE International Conference on the Properties and Applications of Dielectric Materials (ICPADM). 2021. p. 107–10.
+16 Huang Q , Liu X , Li Q , Zhou Y , Yang T , Ran M . A parameter-optimized variational mode decomposition method using salp swarm algorithm and its application to acoustic-based detection for internal defects of arc magnets. AIP Advances. 2021;11(6). doi: 10.1063/5.0054894
+17 Sud S. Combined variational mode decomposition and singular spectral analysis for blind source separation in low signal-to-noise ratio environments. In: SoutheastCon 2021 . 2021. p. 1–5.
+18 Lu J , Yue J , Zhu L , Wang D , Li G . An improved variational mode decomposition method based on the optimization of salp swarm algorithm used for denoising of natural gas pipeline leakage signal. Measurement. 2021;185:110107. doi: 10.1016/j.measurement.2021.110107
+19 Xu L , Cai D , Shen W , Su H . Denoising method for fiber optic gyro measurement signal of face slab deflection of concrete face rockfill dam based on sparrow search algorithm and variational modal decomposition. Sensors and Actuators A: Physical. 2021;331:112913. doi: 10.1016/j.sna.2021.112913
+20 Liu RF , Yang MJ , Sun CQ , Zeng S . The application of K value adaptive VMD method in pipeline leakage location. Mathematical Problems in Engineering. 2021;2021:1–12. doi: 10.1155/2021/5431271
+21 Spadon G , Hong S , Brandoli B , Matwin S , Rodrigues-Jr JF , Sun J . Pay attention to evolution: time series forecasting with deep graph-evolution learning. IEEE Trans Pattern Anal Mach Intell. 2021;PP:10.1109/TPAMI.2021.3076155. doi: 10.1109/TPAMI.2021.3076155 33905327
+22 Althelaya KA , Mohammed SA , El-Alfy E-SM . Combining deep learning and multiresolution analysis for stock market forecasting. IEEE Access. 2021;9:13099–111. doi: 10.1109/access.2021.3051872
+23 Halim Z , Shuhidan SM , Sanusi ZM . RETRACTED: corporation financial distress prediction with deep learning: analysis of public listed companies in Malaysia. Business Process Management Journal. 2021;27(4):1163–78. doi: 10.1108/bpmj-06-2020-0273
+24 Xu J , Yang J , Xiong X , Li H , Huang J , Ting KC , et al. Towards interpreting multi-temporal deep learning models in crop mapping. Remote Sensing of Environment. 2021;264:112599. doi: 10.1016/j.rse.2021.112599
+25 Lim B , Zohren S . Time-series forecasting with deep learning: a survey. Philos Trans A Math Phys Eng Sci. 2021;379(2194):20200209. doi: 10.1098/rsta.2020.0209 33583273

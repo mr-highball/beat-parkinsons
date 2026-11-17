@@ -1,0 +1,3 @@
+# Orange frequency and bowel outcomes
+
+The 2012 older-adult survey provides a directional, unadjusted comparison for a binary constipation classification. Two Lima studies made public in 2025 report associations between orange frequency and Bristol stool categories. Each reports an omnibus test without the paired cells needed to see whether the association favors harder or softer stool. The 1,144-student study excluded diagnosed constipation and diarrhea. The studies leave raw orange intake and Parkinson constipation severity unresolved. [2012 survey](../../2010-2014/Food-Experiment-Food-Followup.md#reported-orange-intake-and-rome-iii-constipation-in-older-adults) · [Lima studies](../Food-Experiment-Orange-Stool-Form.md)

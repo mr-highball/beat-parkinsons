@@ -1,0 +1,7 @@
+# Almond oil in a randomized meal comparison
+
+## Solvent-extracted almond oil in a crossover meal
+
+Twenty healthy men completed a randomized crossover of three muffin-and-custard meals. Meals used almond oil with defatted almond flour, whole almond particles, or a sunflower blend. The oil and flour came from the same almond batch by commercial hexane extraction. The oil was filtered with minimal refining, without bleaching or deodorizing. The muffins were baked and frozen. Whole almond particles produced an incremental postmeal triacylglycerol area 74% lower than the almond-oil meal and 58% lower than the sunflower comparison (P < 0.001). The vascular augmentation differences were not significant. This was a separate cohort from the 2004 satiety study. It specifies solvent extraction and measures no Parkinson voice or facial-expression endpoint. [Original article and methods text](https://www.academia.edu/54165268/Manipulation_of_lipid_bioaccessibility_of_almond_seeds_influences_postprandial_lipemia_in_healthy_human_subjects1_3) · [Indexed citation and results](https://pubmed.ncbi.nlm.nih.gov/18842777/) · [Local factual text](Source-Text/2008-Berry-Almond-Oil-Meal.txt)
+
+The publisher article was indexed during review. Direct publisher-body retrieval gave HTTP 403 in the research pass. The methods were checked in the readable original article reproduction. [Publisher record](https://ajcn.nutrition.org/article/S0002-9165%2823%2923304-3/fulltext)

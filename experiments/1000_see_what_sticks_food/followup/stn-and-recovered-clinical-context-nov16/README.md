@@ -1,0 +1,5 @@
+# Recovered surgery report and symptom context
+
+The coauthor-uploaded original describes seven patients reliant on apomorphine who underwent subthalamic stimulation. Two developed postoperative visual hallucinations. The discussion reports less drooling and some relief of off-period pain in the two patients continuing infusion. These are clinical observations during surgery and medication care. No assigned fig or date exposure was studied. Three exact original pairs now have full-text context, and all three claims remain Unknown. [Original access](primary-access.md) · [Exact reviews](dispositions.tsv) · [Study assessments](assessment-batch.tsv) · [Updated rationales](verdict-updates.tsv)
+
+The chronological catalog now includes this report and two original papers recovered in the earlier page-scan pass. The 1991 autopsies preserve the ambiguity of the initial leg tremor description and the same-title correspondence distinction. The 1997 comparison records the original rigidity, bradykinesia and falls item scores and the limits of a cross-sectional rating. [Dated accessions](source-accessions.tsv) · [Verification](verification.txt)

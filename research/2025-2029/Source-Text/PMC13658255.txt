@@ -1,0 +1,460 @@
+Title: FA-MFMR: a multivariable functional Mendelian randomization method that accounts for correlated longitudinal exposures via factor augmentation
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC13658255/
+Text object: https://pmc-oa-opendata.s3.amazonaws.com/PMC13658255.1/PMC13658255.1.txt
+Data source: U.S. National Library of Medicine, PMC Cloud Service
+PMCID: PMC13658255
+PMID: 42847660
+DOI: 10.1093/bioinformatics/btag725
+Citation: Bioinformatics. 2026 Oct 8;42(10):btag725. doi: 10.1093/bioinformatics/btag725
+License: CC BY (article license statement below)
+Version: 1
+Retracted in PMC metadata: no
+Text coverage: article text
+Format: NLM plain-text extraction. This provenance header was added.
+
+
+JOURNAL INFORMATION
+==============================
+NLM Title Abbreviation: Bioinformatics
+Journal ID: Bioinformatics
+NLM Journal ID: 9808944
+Journal ID: bioinformatics
+
+Bioinformatics
+
+ISSN: 1367-4803
+EISSN: 1367-4811
+Publisher: Oxford University Press
+
+ARTICLE INFORMATION
+==============================
+PMCID: PMC13658255
+PMID: 42847660
+DOI: 10.1093/bioinformatics/btag725
+Article ID: btag725
+Article version: 1
+Subjects: Original Paper, Genome Analysis, AcademicSubjects/SCI01060
+
+FA-MFMR: a multivariable functional Mendelian randomization method that accounts for correlated longitudinal exposures via factor augmentation
+
+https://orcid.org/0009-0001-5224-3093 Chen Dong Data curation Formal analysis Methodology Project administration Software Validation Visualization Writing - original draft Writing - review & editing State Key Laboratory of Genetics and Development of Complex Phenotypes, Institute of Biostatistics, School of Life Sciences, Fudan University, Shanghai, Yangpu District 200438, China
+
+Deng Junrong Data curation Methodology Validation State Key Laboratory of Genetics and Development of Complex Phenotypes, Institute of Biostatistics, School of Life Sciences, Fudan University, Shanghai, Yangpu District 200438, China
+
+Shen Siyuan Data curation Formal analysis Software Validation State Key Laboratory of Genetics and Development of Complex Phenotypes, Institute of Biostatistics, School of Life Sciences, Fudan University, Shanghai, Yangpu District 200438, China
+
+Zhou Yuyang Data curation Software Visualization State Key Laboratory of Genetics and Development of Complex Phenotypes, Institute of Biostatistics, School of Life Sciences, Fudan University, Shanghai, Yangpu District 200438, China
+
+Cui Hanyu Data curation Software Visualization State Key Laboratory of Genetics and Development of Complex Phenotypes, Institute of Biostatistics, School of Life Sciences, Fudan University, Shanghai, Yangpu District 200438, China
+
+Qiu Yu Data curation Software Visualization State Key Laboratory of Genetics and Development of Complex Phenotypes, Institute of Biostatistics, School of Life Sciences, Fudan University, Shanghai, Yangpu District 200438, China
+
+Li Qiming Software Validation Visualization State Key Laboratory of Genetics and Development of Complex Phenotypes, Institute of Biostatistics, School of Life Sciences, Fudan University, Shanghai, Yangpu District 200438, China
+
+https://orcid.org/0000-0002-5730-0317 Hu Yue-Qing Conceptualization Funding acquisition Project administration Resources Validation Writing - original draft Writing - review & editing State Key Laboratory of Genetics and Development of Complex Phenotypes, Institute of Biostatistics, School of Life Sciences, Fudan University, Shanghai, Yangpu District 200438, China
+Shanghai Center for Mathematical Sciences, Fudan University, Shanghai, Yangpu District 200438, China
+
+Cowen Lenore Associate Editor
+Corresponding author. State Key Laboratory of Genetics and Development of Complex Phenotypes, Institute of Biostatistics, School of Life Sciences, Fudan University, Shanghai, Yangpu District 200438, China; Shanghai Center for Mathematical Sciences, Fudan University, Shanghai, Yangpu District 200438, China. E-mail: yuehu@fudan.edu.cn
+Publication date: 2026 Oct
+Electronic publication date: 2026 Oct 8
+Volume: 42
+Issue: 10
+Electronic Location ID: btag725
+Received 2026 May 19; Revised 2026 Sep 3; Accepted 2026 Sep 18; 2026 Oct 12
+Copyright: © The Author(s) 2026. Published by Oxford University Press.
+Copyright year: 2026
+License: This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Funding: National Key R&D Program of China 10.13039/501100012166 2023YFF1205101
+Page count: 16
+
+==============================
+Abstract
+
+Motivation
+
+Mendelian randomization (MR) is widely used for causal inference using genetic data, yet most existing MR methods treat exposures as static and have limited capacity to analyze longitudinal measurements. In many biomedical studies, multiple exposures evolve over time, are strongly correlated, and share unobserved temporal structure. Ignoring these features can lead to unstable estimation and reduced power.
+
+Results
+
+We propose factor-augmented multivariable functional Mendelian randomization (FA-MFMR) for estimating time-varying causal effects of multiple longitudinal exposures. FA-MFMR integrates genetic instruments with functional representations of exposure trajectories and a low-dimensional factor structure to capture shared temporal patterns. By separating common temporal variation from exposure-specific components, it mitigates multicollinearity, improves estimation stability, and accommodates sparse causal structures in which some exposures have no effect throughout the observation period. Simulations demonstrate lower estimation error and more efficient uncertainty quantification than competing approaches, particularly for highly correlated and sparsely observed longitudinal exposures. Applied to longitudinal biomarkers in a Parkinson’s disease cohort, FA-MFMR characterizes age-dependent patterns in the estimated trajectory-level coefficient functions while highlighting uncertainty in localized effects.
+
+Availability and implementation
+
+The developed R package and code to reproduce all the results are available at https://github.com/YQHuFD/FA-MFMR.
+
+1 Introduction
+
+Mendelian randomization (MR) uses genetic variants as instrumental variables for causal inference under appropriate identification assumptions (Smith and Ebrahim 2003, Schadt et al. 2005, Smith 2006, Lawlor et al. 2008, Burgess et al. 2013, Bowden et al. 2015, Morrison et al. 2020, Wang et al. 2021, Xue et al. 2021, Yao et al. 2026). The causal interpretation of an MR estimate depends on the target estimand and its identifying assumptions (Yao et al. 2026). Conventional MR typically represents an exposure by a scalar measurement or summary and therefore does not explicitly characterize temporal variation, although both exposure levels and genetic associations may vary across the life course (Labrecque and Swanson 2019, Richardson et al. 2020, Jiang et al. 2021, Shi et al. 2022).
+
+Longitudinal and functional MR methods use repeated exposure measurements to investigate time-varying or trajectory-level effects (Cao et al. 2016, Sanderson et al. 2022, Richardson et al. 2023, Tian and Burgess 2023, Michael et al. 2024, Tian et al. 2024, Wu et al. 2025), whereas multivariable MR jointly considers multiple genetically proxied exposures and their mutually adjusted effects (Rees et al. 2017, Grant and Burgess 2021, Sanderson et al. 2021, Lin et al. 2023). A broader overview of MR estimands, identification, and inference is provided by Yao et al. (2026). However, jointly modeling multiple correlated longitudinal exposure trajectories remains relatively underexplored.
+
+When extending MR to settings with multiple longitudinal exposures, several methodological challenges typically emerge (Power et al. 2024). First, multiple time-varying exposures are often correlated and may share latent temporal structures driven by unobserved biological processes or environmental factors (Ding et al. 2022, Palmer and Jensen 2022). Ignoring such dependence can lead to unstable estimation and inflated uncertainty in functional causal effect estimates. Second, in realistic settings, not all exposures exert causal effects on the outcome, and many time-varying effects are structurally zero over the entire follow-up period. Accurately identifying these zero-effect functions is essential for valid inference but remains difficult when exposures are high-dimensional, sparsely observed, and measured with error (Qu et al. 2018, Swanson et al. 2018). Third, conventional functional MR approaches typically estimate each exposure-specific effect separately or rely on marginal functional representations, limiting their ability to borrow information across exposures and to distinguish shared temporal patterns from exposure-specific causal signals.
+
+We propose Factor-Augmented Multivariable Functional Mendelian Randomization (FA-MFMR), which combines multivariable functional MR with low-rank factor augmentation to separate shared temporal structure from exposure-specific variation. By modeling shared temporal dependence through a low-dimensional factor structure and using the remaining instrument-supported variation to distinguish exposure-specific structural coefficients, FA-MFMR addresses the instability induced by strong cross-exposure dependence. At the same time, the factor-augmented representation enables efficient borrowing of information across exposures, improving estimation accuracy in high-dimensional and sparsely observed settings. Importantly, FA-MFMR naturally accommodates sparse causal architectures by allowing some exposure-specific time-varying effect functions to be identically zero, facilitating the identification of truly causal longitudinal exposures. Together, these features lead to more stable, efficient, and interpretable estimation of multivariate time-varying causal effects within the MR framework. We demonstrate its performance through extensive simulation studies. We further apply FA-MFMR to longitudinal Parkinson’s disease data, where it yields more stable and interpretable estimates of multivariate time-varying causal effects and reveals dynamic exposure–outcome relationships that are obscured by existing MR approaches. Together, these results illustrate the practical utility of FA-MFMR for causal inference with complex longitudinal exposures.
+
+2 Materials and methods
+
+2.1 Model
+
+We consider K time-varying exposures X(k)(t),k=1,…,K, each observed longitudinally over t∈[0,T]. The data consist of n independent individuals, indexed by i=1,…,n. Following the convention in time-varying instrumental variable analysis, we treat each exposure trajectory Xi(k)(t) as a realization of an underlying stochastic process indexed by continuous time, even though measurements are collected at discrete time points. The outcome Yi is measured at the terminal time T, ensuring that all exposure trajectories on [0,T] temporally precede the outcome. Let Zi denote a vector of J independent genetic variants, which serve as instrumental variables for the time-varying exposures.
+
+To make the longitudinal causal estimand explicit, let Xi(·)={Xi(1)(·),…,Xi(K)(·)} denote the collection of exposure trajectories for individual i, and let x(·)={x(1)(·),…,x(K)(·)} denote a fixed collection of admissible intervention trajectories in ∏k=1KL2[0,T]. We use Yi{x(·)} to denote the potential terminal outcome that would be observed if the longitudinal exposure histories are set to x(·). We assume consistency, no interference, and the following structural functional linear model:
+
+Yi{x(·)}=β0+∑k=1K∫0Tβ(k)(t)x(k)(t)dt+g(U→i,εi),
+
+where U→i={Ui(t):0≤t≤T} denotes an unmeasured confounder trajectory that may include both time-invariant background variables and time-varying stochastic processes affecting the longitudinal exposures and the outcome, and εi denotes idiosyncratic outcome noise. Under consistency, Yi=Yi{Xi(·)}, so that the observed-data structural model is
+
+(1) Yi=β0+∑k=1K∫0Tβ(k)(t)Xi(k)(t)dt+g(U→i,εi),
+
+To interpret β(k)(t), consider an admissible perturbation h(k)(·)∈L2[0,T] to the k-th exposure trajectory while holding the other exposure trajectories fixed. Under the structural model, the corresponding causal contrast is
+
+Δk{h(k);x}=Yi{x(1)(·),…,x(k)(·)+h(k)(·),…,x(K)(·)}−Yi{x(1)(·),…,x(k)(·),…,x(K)(·)}=∫0Tβ(k)(t)h(k)(t)dt.
+
+Thus, β(k)(t) defines the trajectory-level causal linear functional for exposure k. Because the time-invariant instruments generally perturb combinations of the exposure trajectory, β(k)(t) should not, without additional assumptions, be interpreted as the effect of changing the exposure only at time t.
+
+Figure 1A presents the causal structure assumed in our formulation, depicting the roles of the genetic variants, the longitudinal exposure processes, potential unmeasured confounders, and the outcome.
+
+Figure 1 Causal model and factor-augmented estimation framework for multivariate functional Mendelian randomization. (A) Schematic representation of the assumed causal structure, where multiple time-varying exposure trajectories X(k)(t),k=1,…,K, are influenced by genetic variants Z and potentially correlated through unmeasured confounders U. The outcome Y is measured at the terminal time T and depends on the entire exposure histories through their time-varying causal effect functions β(k)(t). (B) Directed acyclic graph illustrating the instrumental variable assumptions in the time-varying setting: genetic variants affect the outcome only through the exposure trajectories (relevance), are independent of unmeasured confounders (independence), and have no direct effect on the outcome beyond the exposure pathways (exclusion restriction); dashed paths indicate prohibited causal links. (C) Overview of the factor-augmented multivariate functional Mendelian randomization (FA-MFMR) estimation procedure. Each exposure trajectory is first represented using functional principal component analysis, with instrument-projected scores stacked across exposures. Factor analysis is then applied to extract shared latent temporal structure and exposure-specific components, which are subsequently used to reconstruct the time-varying causal effect functions β(k)(t).
+
+Three-panel illustration of the causal model and factor-augmented estimation framework for multivariate functional Mendelian randomization. Panel A depicts multiple time-varying exposure trajectories influenced by genetic variants and unmeasured confounders, with their cumulative effects on a terminal outcome. Panel B presents a directed acyclic graph illustrating the instrumental variable assumptions, with dashed arrows indicating prohibited causal pathways. Panel C shows the FA-MFMR estimation workflow, including functional principal component analysis, projection onto genetic instruments, factor analysis to separate shared and exposure-specific components, and reconstruction of time-varying causal effect functions.
+
+Within this framework, the instrumental variable approach requires that the genetic variants serving as instruments satisfy the standard IV assumptions in this time-varying setting:
+
+Relevance: each IV should be associated with at least one exposure trajectory.
+
+Independence: each IV should be independent of the unmeasured confounder trajectory U→i, including both time-invariant and time-varying factors that confound the longitudinal exposure-outcome relationships.
+
+Exclusion restriction: each IV should influence the outcome only through the exposure trajectories, with no direct effect on the outcome beyond the pathways encoded in Equation (1).
+
+These assumptions correspond to the arrows in Fig. 1B. Violations of independence or exclusion restriction, including direct SNP–outcome pathways due to horizontal pleiotropy, invalidate the IV exogeneity condition and may bias the estimated coefficient functions.
+
+2.2 Framework of FA-MFMR
+
+Motivated by the structural causal formulation, FA-MFMR provides a practical estimation framework for recovering the time-varying causal effect functions β(k)(t) from longitudinal exposures that may be sparsely measured, potentially correlated, and partly driven by latent temporal structure, as illustrated in Fig. 1C. The full estimation strategy consists of functional representation of the exposures, instrument-based prediction of functional features, latent-factor augmentation, and reconstruction of the causal effect functions.
+
+The sparsely and irregularly observed trajectories are treated as noisy evaluations of underlying square-integrable processes on [0,T]. After centering the exposure trajectories and outcome, we use the basis expansion
+
+(2) Xi(k)(t)=∑j=1mkaij(k)γj(k)(t)+ei(k)(t),
+
+where {γj(k)(t)}j=1mk are exposure-specific orthonormal basis functions, aij(k) are the associated subject-level scores, and ei(k)(t) is a mean-zero approximation error orthogonal to the span of the basis functions.
+
+We obtain this representation using FPCA with the Karhunen-Loève expansion (Yao et al. 2005), where γj(k)(t) is the j-th eigenfunction and aij(k)=∫0TXi(k)(t)γj(k)(t)dt is the corresponding score. In practice, PACE estimates the eigenfunctions and conditional-expectation scores from sparse or irregular measurements (Wang et al. 2016).
+
+With mk retained FPCA components, define Mk=span{γ1(k),…,γmk(k)} as the retained functional space for exposure k. The component of the causal coefficient function represented in this space is
+
+βmk(k)(t)=ΠMkβ(k)(t)=∑j=1mkηj(k)γj(k)(t),
+
+where ηj(k)=∫0Tβ(k)(t)γj(k)(t)dt. This representation has a direct connection to the trajectory-level causal estimand. Specifically, consider a perturbation of the k-th exposure trajectory that lies in the retained FPCA space, h(k)(t)=∑j=1mkcj(k)γj(k)(t). Its causal contrast is
+
+Δk{h(k)}=∫0Tβ(k)(t)h(k)(t)dt=∑j=1mkcj(k)ηj(k).
+
+Hence, η(k) gives the coordinates of the trajectory-level causal functional along the retained FPCA directions. With finite FPCA truncation, functional directions orthogonal to Mk are not represented in the subsequent finite-dimensional analysis. For notational simplicity, we continue to use β(k)(t) in the remainder of the main text to denote its approximation based on the retained FPCA representation.
+
+Let ai(k)=(ai1(k),…,aimk(k))⊤ denote the score vector for k-th exposure, and let p=∑k=1Kmk be the total number of basis coefficients across all exposures. Collecting all coefficients into the stacked vector ai=(ai(1)⊤,…,ai(K)⊤)⊤, and similarly defining H=(η(1)⊤,…,η(K)⊤)⊤, the structural model can be written in the retained FPCA representation as
+
+Yi=∑k=1K∑j=1mkaij(k)ηj(k)+ε˜i,
+
+or equivalently,
+
+(3) Yi=H⊤ai+ε˜i
+
+where ε˜i=∑k=1K∫0Tβ(k)(t)ei(k)(t)dt+g(U→i,εi).
+
+Identification of the retained functional coefficients is based on the population IV moment condition. For centered instruments, define ΓZa=E[Ziai⊤]∈RJ×p. We require E[Ziε˜i]=0 and rank(ΓZa)=p,σmin(ΓZa)≥cZ>0. The first condition is the functional-IV exogeneity condition, while the second requires sufficient instrument variation across the retained FPCA score directions. From Equation (3), E[ZiYi]=ΓZaH. Therefore, when ΓZa has full column rank, H is uniquely identified within the retained FPCA space. Thus, recoverable causal trajectory directions must be both represented by the retained FPCA scores and supported by instrument variation. If independence or the exclusion restriction is violated, then E[Ziε˜i]≠0, and the moment equation no longer identifies H without additional restrictions. Moreover, genetic relevance may differ across FPCA-score directions; weakly supported directions reduce σmin(ΓZa) and can lead to unstable or weak-instrument-biased estimation. This instability propagates to the reconstructed coefficient functions through β^(k)(t)=∑jη^j(k)γj(k)(t).
+
+As in traditional Mendelian randomization, the retained FPCA scores may be endogenous because the longitudinal exposure trajectories can depend on unmeasured factors that also affect the outcome. We therefore use the genetic instruments to extract the instrument-predictable variation in these retained scores. Let A=(a1,…,an)⊤∈Rn×p denote the matrix of retained FPCA scores and Z=(Z1,…,Zn)⊤∈Rn×J the instrument matrix. At the sample level, the fitted score matrix is obtained through the linear projection
+
+A^=PZA, PZ=Z(Z⊤Z)−1Z⊤.
+
+We denote by a^i the i-th row of A. Thus, a^i represents the component of the retained FPCA score vector for individual i that is linearly predictable from the genetic instruments.
+
+In multivariable Mendelian randomization settings involving multiple time-varying exposures, the underlying exposure processes X(k)(t),k=1,…,K,t∈[0,T], may exhibit complex and potentially unknown dependence structures. To accommodate the possibility of such unknown and potentially persistent latent structures among the adjusted exposure scores, and motivated by recent work on multivariate functional factor-augmented selection models (Ma et al. 2025), FA-MFMR introduces a latent factor representation for the matrix of estimated score vectors. The factor-augmented representation is given by
+
+(4) a^i=Λfi+ui,
+
+where fi∈Rr collects r latent factors summarizing the dominant modes of shared variation across the multivariate functional exposures, Λ∈Rp×r is the loading matrix, and ui∈Rp represents idiosyncratic, exposure-specific variation not explained by the latent structure. A low-dimensional factor representation is reasonable when the dependence among the instrument-predictable FPCA scores is largely driven by a small number of shared modes, so that a few dominant directions capture the major cross-exposure covariance while sufficient idiosyncratic variation remains. This setting is plausible when multiple longitudinal exposures are jointly influenced by a limited number of shared biological or environmental processes; the latent factors are statistical representations of common dependence and need not correspond one-to-one to specific biological mechanisms. In practice, the latent factors, loadings, and idiosyncratic components are unobserved and are estimated from A^, yielding the corresponding sample-level estimates Λ^, f^i and u^i.
+
+We estimate the loading matrix Λ^ and factors F^=(f^1,…,f^n)⊤∈Rn×r by principal component analysis of A^ (Bai 2003), and obtain U^=A^−F^Λ^⊤, where U^=(u^1,…,u^n)⊤∈Rn×p. More specifically, the columns of F^/n are the eigenvectors of A^A^⊤ corresponding to the top r eigenvalues, and Λ^=n−1A^⊤F^. We select the number of factors r using the eigenvalue-ratio criterion applied to the instrument-projected score matrix (Ahn and Horenstein 2013, Fan et al. 2020, Ma et al. 2025). Specifically, let λR(A^⊤A^) denote the R-th largest eigenvalue of A^⊤A^, Rmax be a prespecified upper bound for R, then r is determined by r^=argminR≤RmaxλR+1(A^⊤A^)λR(A^⊤A^) for a given Rmax. This criterion identifies the dimension preceding the largest relative drop in the eigenvalue sequence and therefore provides a data-driven estimate of the dominant shared factor dimension.
+
+After obtaining the factor decomposition, substituting it into the basis-coefficient form of the structural model yields
+
+(5) Y=F^Λ^⊤H+U^H+ε˜*,
+
+where Y=(Y1,…,Yn)⊤ and ε˜*=(ε˜1*,…,ε˜n*)⊤. Equation (5) is a factor-augmented representation of the same coefficient vector H appearing in Equation (3). Both the shared-factor component F^Λ^⊤H and the idiosyncratic component U^H therefore contribute to the structural effect represented by H.
+
+To distinguish the exposure-specific coefficients in the presence of strong shared dependence, we partial out the estimated common-factor space, yielding
+
+(6) (In−PF^)Y=(In−PF^)U^H+(In−PF^)ε˜*,
+
+where PF^=F^(F^⊤F^)−1F^⊤. Equation (6) shows that, although the shared-factor contribution remains part of the structural effect in Equation (5), estimation of the exposure-specific coordinates of H relies on the instrument-projected variation remaining after adjustment for the estimated common factors. Let S=supp(H). We require rank{(In−PF^)U^S}=|S| and λmin[1nU^S⊤(In−PF^)U^S]≥cU>0 with probability tending to one, together with ‖1nU^S⊤(In−PF^)ε˜*‖2=op(1). These conditions ensure that the active coefficient directions remain identifiable after factor adjustment.
+
+Under these conditions, factor residualization does not redefine H. The same coefficient vector appears in Equations (3) (5), and (6); Equation (6) changes the variation used to identify H, not its structural meaning. Thus, H retains its trajectory-level causal interpretation provided that the same structural coefficient vector applies to both the shared-factor and idiosyncratic components. If an active direction has insufficient residual variation after factor adjustment, however, that coordinate of H cannot be separately identified from Equation (6), although its contribution through F^Λ^⊤H remains part of the structural signal in Equation (5). In this case, the shared-factor component may identify only lower-dimensional combinations such as Λ^⊤H.
+
+Under the residual rank, relevance, and orthogonality conditions above, we estimate the same structural coefficient vector H from Equation (6) using SCAD regularization,
+
+(7) H^=argminH∈Rp{12n‖(In−PF^)(Y−U^H)‖22+Pλ(H)}.
+
+where Pλ(H) denotes a SCAD-type sparsity penalty, and λ is the tuning parameter. Then we reconstruct the causal effect functions for each exposure by mapping the estimated basis-level coefficients back to the functional domain. For exposure k, the estimated causal effect function is reconstructed as
+
+(8) β^(k)(t)=∑j=1mkη^j(k)γj(k)(t),
+
+which provides an estimator of the time-varying causal effect function.
+
+3 Results
+
+3.1 Simulation studies
+
+We conduct simulation studies under a variety of controlled settings with varying sample sizes, exposure dimensions and latent complexity. Each simulation involves n∈{500,1000,2000} independent individuals and K∈{5,10} longitudinal exposures defined on the domain t∈[0,50], which represents a simulated age range. For every exposure k, we use six cubic B-spline basis functions with equally spaced internal knots, leading to a total of p=6K basis coefficients. The latent structure comprises r∈{1,2,3} latent factors.
+
+The instrumental variables are generated to mimic genotype data. For each individual, we generate J=100 genetic instruments. Specifically, for each SNP j, an allele frequency pj is drawn from Unif(0.2,0.4) and genotypes are sampled as Zij∼Binomial(2,pj) after which the matrix Z is column-standardized. Conditional on these instruments, the latent factors and the idiosyncratic component are generated using F=ZΠF+EF, U=ZΠU+EU, where the loading matrices ΠF∈RJ×r and ΠU∈RJ×p have entries drawn from Unif(−2,2) and Unif(−1.5,1.5), respectively, and the noise matrices EF and EU contain i.i.d. N(0,0.12) and N(0,0.22) errors, respectively. The resulting F and U are standardized column-wise. The factor-augmented score matrix follows A=FΛ⊤+U, where Λ∈Rp×r has entries sampled from N(0,0.52). Let A=(A(1),…,A(K))∈Rn×p,p=6K, where each A(k)∈Rn×6 contains the six basis coefficients for exposure k.
+
+To incorporate heterogeneous stochastic variation and realistic subject-level dependence, each exposure trajectory is generated as
+
+Xi(k)(t)=∑j=16aij(k)γj(k)(t)+αbik(t)+(1−α)ci(t)+σXmik(t).
+
+Here, bik(t) and ci(t) are standardized exposure-specific and shared Brownian paths, respectively, combined as αbik(t)+(1−α)ci(t) with α=0.4. Independent standardized measurement noise is added with σX=0.1. Each subject has ni∼Unif{5,…,15} irregular visits, sampled more densely in the central 30% of the interval (probability 0.7) than near the boundaries (probability 0.3).
+
+We consider the outcome model
+
+Yi=∑k=1K∫050Xi(k)(t)β(k)(t)dt+∑k=1K(αbik(50)+(1−α)ci(50))+σYεY(50),
+
+where εY is an independent standardized Brownian-motion process, and scaled by σY=0.05. This construction explicitly introduces time-varying unmeasured confounding: the processes bik(t) and ci(t) evolve over time and contribute to both the longitudinal exposure trajectories and the outcome error. Consequently, the exposure trajectories are endogenous through shared subject-level temporal processes. The true exposure effect functions β(k)(t) for k=1,…,K are specified to include diverse temporal patterns:
+
+Linear effect: β(1)(t)=2(t−0.5);
+
+Quadratic effect: β(2)(t)=4(t−0.5)2;
+
+Sinusoidal effect: β(3)(t)=sin(2πt);
+
+Gaussian effect: β(4)(t)=exp(−(t−0.5)20.22).
+
+All four functions are centered over [0,1] and rescaled to [0,50] to ensure zero mean on the target domain. All remaining effect functions are set to zero. When K=10, only the first four exposures have nonzero time-varying effects, yielding a sparse causal structure.
+
+We repeat the simulation 100 times and evaluate FA-MFMR. Following Tian et al. (Tian et al. 2024), estimation accuracy is assessed at four interior time points (t=10,20,30,40) using the averaged squared error of the estimated effect functions. Coverage probabilities and average 95% confidence interval widths are evaluated at the same time points. Boundary regions (e.g., t=0,50) are excluded due to higher variability (Yao et al. 2005, Tian et al. 2024). Confidence intervals are constructed via bootstrap resampling within each replicate.
+
+To benchmark FA-MFMR, we compare it with five procedures: PACE + 2SFRI, which predicts the functional exposures using genetic instruments and includes first-stage residuals in the outcome model (Cao et al. 2016); MPCMR, a multi-exposure extension of the continuous-time MR/GMM approach (Tian et al. 2024); MFMR, an unpenalized two-stage least-squares estimator of the concatenated FPCA scores; pMFMR, which applies exposure-level group SCAD without factor adjustment; and oracle-FA-MFMR, which uses the true simulated factor number. Further implementation details are provided in the Supplementary Materials.
+
+We evaluate the methods across three design dimensions: sample size n, exposure dimension K, and latent-factor complexity r. To assess the impact of n, we vary n∈{500,1000,2000} while fixing K=10 and r=3. Figure 2 summarizes the distribution of the total error over 100 replicates, defined as
+
+Total Error={∑k=1K1|I|∑ti∈I(β^(k)(ti)−β(k)(ti))2}1/2,
+
+where I={10,20,30,40}. Across all sample sizes, FA-MFMR and oracle-FA-MFMR achieve the lowest Total Error, followed by pMFMR, while the remaining methods show larger errors. The close agreement between FA-MFMR and oracle-FA-MFMR suggests little additional loss from data-driven factor-number selection; exposure-specific results are provided in the Supplementary Materials.
+
+Figure 2 Total error of the estimated time-varying causal effect functions under the settings K=10 exposures and r=3 latent factors. Each panel corresponds to a different sample size n∈{500,1000,2000}, and each box summarizes the distribution across 100 simulation replicates.
+
+Three-panel boxplot comparison of the total estimation error for time-varying causal effect functions under a simulation setting with 10 exposures and three latent factors. The panels correspond to sample sizes of 500, 1,000, and 2,000, respectively. Each boxplot summarizes the distribution of total estimation errors across 100 simulation replicates, illustrating the variability in estimation performance across sample sizes.
+
+To examine the impact of latent-factor complexity, we vary r∈{1,2,3} while fixing n=1000 and K=10 (Fig. 3). FA-MFMR and oracle-FA-MFMR consistently achieve the lowest Total Error across r=1,2,3, followed by pMFMR, while the remaining methods show larger errors; exposure-specific results are provided in the Supplementary Materials.
+
+Figure 3 Total error of the estimated time-varying causal effect functions under the settings n=1000 and K=10 exposures. Each panel corresponds to a different latent-factor complexity r∈{1,2,3}, and each box summarizes the distribution across 100 simulation replicates.
+
+Three-panel boxplot comparison of the total estimation error for time-varying causal effect functions under a simulation setting with 1,000 observations and 10 exposures. The panels correspond to one, two, and three latent factors, respectively. Each boxplot summarizes the distribution of total estimation errors across 100 simulation replicates, illustrating the variability in estimation performance across different levels of latent-factor complexity.
+
+We further evaluate the effect of exposure dimension by comparing K∈{5,10} with n=1000 and r=3 (Fig. 4). As K increases, FA-MFMR and oracle-FA-MFMR maintain the lowest Total Error, followed by pMFMR, whereas MFMR, MPCMR, and PACE + 2SFRI show larger errors. Exposure-specific results are reported in the Supplementary Materials.
+
+Figure 4 Total error of the estimated time-varying causal effect functions under different exposure dimensions, with n=1000 and r=3 latent factors. Each panel corresponds to a different number of exposures K∈{5,10}, and each box summarizes the distribution across 100 simulation replicates.
+
+Two-panel boxplot comparison of the total estimation error for time-varying causal effect functions under a simulation setting with 1,000 observations and three latent factors. The panels correspond to 5 and 10 exposures, respectively. Each boxplot summarizes the distribution of total estimation errors across 100 simulation replicates, illustrating the variability in estimation performance across different exposure dimensions.
+
+Tables 1–3 assess uncertainty quantification for FA-MFMR, MFMR, MPCMR, and PACE + 2SFRI by reporting empirical coverage and average 95% confidence interval lengths for nonzero effect functions across varying n, r, and K.
+
+Table 1 Average coverage probabilities and 95% confidence interval lengths for the nonzero effect functions, averaged over t=10,20,30,40, across n∈{500,1000,2000}, with K=10, r=3, and 100 simulation replicates.
+
+n		MFMR	PACE + 2SFRI	MPCMR	FA-MFMR	
+		Coverage	CI length	Coverage	CI length	Coverage	CI length	Coverage	CI length	
+500	 β(1)	0.998	3.812	1.000	1.749	0.995	3.645	0.998	0.839	
+ β(2)	1.000	3.626	1.000	1.731	0.995	3.468	1.000	0.852	
+ β(3)	0.998	3.888	1.000	1.757	0.998	3.652	0.995	1.139	
+ β(4)	0.988	3.668	0.998	1.702	0.973	3.475	0.958	0.878	
+1000	 β(1)	0.998	3.569	1.000	1.550	0.995	3.486	0.985	0.733	
+ β(2)	1.000	3.581	1.000	1.641	1.000	3.489	0.993	0.795	
+ β(3)	0.990	3.611	1.000	1.551	0.990	3.540	0.988	0.990	
+ β(4)	0.990	3.628	0.998	1.598	0.995	3.507	0.955	0.779	
+2000	 β(1)	0.990	3.319	0.998	1.422	0.993	3.227	0.965	0.625	
+ β(2)	0.995	3.237	0.993	1.577	0.993	3.175	0.985	0.753	
+ β(3)	0.983	3.157	0.995	1.460	0.983	3.138	0.975	0.861	
+ β(4)	1.000	3.184	0.988	1.566	0.993	3.134	0.960	0.675	
+
+Table 2 Average coverage probabilities and 95% confidence interval lengths for the nonzero effect functions, averaged over t=10,20,30,40, across r∈{1,2,3}, with n=2000,K=10, and 100 simulation replicates.
+
+r		MFMR	PACE + 2SFRI	MPCMR	FA-MFMR	
+		Coverage	CI length	Coverage	CI length	Coverage	CI length	Coverage	CI length	
+1	 β(1)	0.998	3.452	0.998	1.561	0.998	3.377	0.985	0.593	
+ β(2)	0.990	3.439	1.000	1.674	0.990	3.359	0.985	0.704	
+ β(3)	0.978	3.483	0.998	1.585	0.983	3.404	0.975	0.765	
+ β(4)	0.975	3.423	0.995	1.644	0.985	3.345	0.960	0.686	
+2	 β(1)	0.990	3.528	0.995	1.483	0.995	3.400	0.978	0.598	
+ β(2)	0.993	3.463	0.995	1.662	0.998	3.390	0.985	0.740	
+ β(3)	0.983	3.514	0.995	1.512	0.988	3.426	0.975	0.831	
+ β(4)	0.990	3.535	0.995	1.556	0.993	3.440	0.958	0.687	
+3	 β(1)	0.990	3.319	0.998	1.422	0.993	3.227	0.965	0.625	
+ β(2)	0.995	3.237	0.993	1.577	0.993	3.175	0.985	0.753	
+ β(3)	0.983	3.157	0.995	1.460	0.983	3.138	0.975	0.861	
+ β(4)	1.000	3.184	0.988	1.566	0.993	3.134	0.960	0.675	
+
+Table 3 Average coverage probabilities and 95% confidence interval lengths for the nonzero effect functions, averaged over t=10,20,30,40, across K∈{5,10}, with n=2000,r=3, and 100 simulation replicates.
+
+K		MFMR	PACE + 2SFRI	MPCMR	FA-MFMR	
+		Coverage	CI length	Coverage	CI length	Coverage	CI length	Coverage	CI length	
+5	 β(1)	0.968	1.448	0.990	0.901	0.973	1.421	0.998	0.974	
+ β(2)	0.973	1.453	0.983	1.050	0.965	1.426	0.990	0.979	
+ β(3)	0.920	1.451	0.983	0.914	0.912	1.429	0.988	1.052	
+ β(4)	0.963	1.452	0.973	0.997	0.955	1.429	0.990	0.904	
+10	 β(1)	0.990	3.319	0.998	1.422	0.993	3.227	0.965	0.625	
+ β(2)	0.995	3.237	0.993	1.577	0.993	3.175	0.985	0.753	
+ β(3)	0.983	3.157	0.995	1.460	0.983	3.138	0.975	0.861	
+ β(4)	1.000	3.184	0.988	1.566	0.993	3.134	0.960	0.675	
+
+Across these settings, FA-MFMR attains near-nominal coverage with substantially shorter confidence intervals. MFMR and MPCMR show broadly comparable coverage but wider intervals, whereas PACE + 2SFRI tends to over-cover with inflated interval lengths. These patterns remain stable across n, r, and K, indicating more efficient uncertainty quantification with FA-MFMR.
+
+We further evaluate exposure-level support recovery using sensitivity, specificity, and false discovery rate (FDR). Let S0={k:‖β(k)‖L2>0} denote the true set of active exposures and S^ the estimated active set. Sensitivity is defined as TP/(TP + FN), specificity as TN/(TN + FP), and FDR as FP/max(TP + FP, 1). Because PACE + 2SFRI, MPCMR, and unpenalized MFMR do not explicitly perform sparse exposure selection, support-recovery metrics are reported for pMFMR, oracle-FA-MFMR, and FA-MFMR.
+
+Figure 5 shows that all three penalized methods achieve high specificity and low FDR across the considered settings. FA-MFMR and oracle-FA-MFMR generally attain sensitivity comparable to or slightly higher than pMFMR, with sensitivity approaching one as the sample size increases. The support-recovery performance is also stable across r=1,2,3, and FA-MFMR closely tracks the oracle-factor benchmark. Together with the lower estimation errors in Figs 2–4, these results indicate that factor augmentation improves estimation accuracy while retaining accurate exposure-level support recovery.
+
+Figure 5 Exposure-level support recovery under varying latent-factor complexity and sample sizes.
+
+Comparison of exposure-level support recovery performance across different latent-factor complexities and sample sizes. The figure illustrates how the ability to correctly identify relevant exposures varies with the number of latent factors and the sample size, providing an assessment of variable selection performance under different simulation settings.
+
+Additional simulations examine a range of departures from the baseline design, including alternative factor structures, instrument and first-stage perturbations, informative visit patterns, factor-number misspecification, and a PPMI-calibrated setting. FA-MFMR retains favorable performance in most settings, with reduced advantages under horizontal pleiotropy and when the causal signal is concentrated in the common-factor space; detailed results are provided in Supplementary Materials.
+
+3.2 Analysis of Parkinson’s disease progression in the PPMI cohort
+
+We apply FA-MFMR to the Parkinson’s Progression Markers Initiative (PPMI), a multi-center longitudinal cohort of PD patients and controls (Marek, 2011, 2018). Although the cohort spans a broad age range, observations are concentrated between ages 50 and 80 (Fig. 6), which defines the functional domain in our analysis. Chronological age serves as the functional time index in FA-MFMR. This differs from follow-up time, which denotes elapsed time since study entry, and from disease duration, which, where applicable, denotes elapsed time since PD onset or diagnosis. Neither follow-up time nor disease duration serves as the functional time index in the primary analysis.
+
+Figure 6 Empirical distribution of all recorded measurement ages in the full PPMI dataset.
+
+Empirical distribution of measurement ages across all recorded observations in the full Parkinson's Progression Markers Initiative (PPMI) dataset. The figure illustrates the frequency distribution of measurement ages, providing an overview of the age range and concentration of measurements within the study population.
+
+We analyze 13 longitudinal biomarkers covering metabolic, inflammatory, cardiovascular, autonomic, and physiological domains: serum uric acid, glucose, albumin, white blood cell count, neutrophils, lymphocytes, monocytes, eosinophils, basophils, supine systolic and diastolic blood pressure, supine heart rate, and BMI (Havelund et al. 2017, Seifar et al. 2022, Hepp et al. 2023, Qu et al. 2023, Li et al. 2024). Each biomarker typically has 5–13 observations within the first 4–5 years of follow-up. Consistent with this follow-up structure, the median within-person chronological-age span of the repeated biomarker measurements in the final analytic cohort is 5.1 years (IQR, 4.1–6.1 years), with a median of six distinct measurement ages per participant. Thus, the 50–80-year functional domain does not represent 30 years of within-person follow-up. Instead, it is supported by staggered longitudinal segments contributed by participants observed at different chronological ages and reconstructed through the sparse functional representation. Detailed age-coverage diagnostics are provided in Supplementary Materials.
+
+The outcome is the MDS-UPDRS Part III motor score (NP3TOT), a standard measure of motor impairment in PD (Goetz et al. 2008, 2009). For each participant, we use the available NP3TOT assessment closest to age 80 as the subject-specific terminal outcome, observed at chronological age Ti. Only biomarker measurements obtained before Ti are used as observed longitudinal exposure data for participant i. Thus, unlike the common terminal time assumed in the theoretical formulation, the PPMI application uses subject-specific terminal outcome ages. Because sparse functional reconstruction represents the latent biomarker trajectories over the common age domain of 50–80 years, reconstructed trajectory segments for t>Ti are model-based continuations informed by the participant’s available pre-outcome measurements and the estimated population-level functional structure. These reconstructed segments are not interpreted as observed pre-outcome exposure histories and are not assigned a subject-specific temporal causal interpretation. After restricting to participants aged 50–80 with an available NP3TOT assessment under this outcome definition, 1,450 individuals remain. In this final analytic cohort, the selected terminal NP3TOT ages have a median of 71.8 years (IQR, 66.0–76.9 years) and range from 51.0 to 81.4 years.
+
+Instrumental variables are derived from quality-controlled PPMI whole-genome sequencing data. Candidate instruments are selected from external GWAS to avoid winner’s curse (Zöllner and Pritchard 2007), LD- clumped, mapped to PPMI, and tested against the corresponding biomarker at visit V08 (P < 0.05), yielding 231 SNPs across 13 biomarkers. After aligning subjects with complete biomarker trajectories, NP3TOT outcomes, and genotype data, the final analytic dataset includes 703 individuals. According to the PPMI enrollment categories, these participants comprise 345 participants in the PD group, 68 in the genetic PD group, 151 healthy controls, 52 prodromal participants, 48 genetically unaffected participants, and 39 participants with SWEDD. These enrollment groups are combined in the primary analysis. To evaluate the sensitivity of the results to cohort composition, we additionally repeat FA-MFMR after restricting the analysis to the 413 participants enrolled in the PD or genetic PD groups. We further conduct an age-70 landmark analysis in which only biomarker measurements obtained before age 70 contribute to the exposure trajectories and the selected terminal NP3TOT assessment is required to occur after age 70. This landmark design provides a stricter temporal-ordering sensitivity analysis by ensuring that the analyzed exposure domain precedes the outcome assessment for every included participant. Detailed procedures are provided in the Supplementary Materials, available as supplementary data at Bioinformatics online.
+
+The analytic dataset contains correlated longitudinal exposures, irregular observation times, and high-dimensional genetic instruments. Figures 7 and 8 summarize the data-processing workflow and the sparse, heterogeneous structure of the final analytic dataset.
+
+Figure 7 Overview of the PPMI data processing pipeline from raw measurements and genomic data to the final analytic cohort.
+
+Flowchart illustrating the PPMI data processing pipeline, from raw clinical measurements and genomic data to the final analytic cohort. The diagram outlines the sequential steps of data preprocessing, integration, and cohort construction, showing how the original data sources are processed to obtain the dataset used for subsequent analyses.
+
+Figure 8 PPMI analytic-data summary: (A) NP3TOT distribution; (B) follow-up visits per subject; (C) retained SNPs per biomarker; and (D) longitudinal observation density by biomarker.
+
+Four-panel summary of the PPMI analytic dataset. Panel A displays the distribution of NP3TOT scores. Panel B illustrates the number of follow-up visits per subject, reflecting the longitudinal follow-up structure. Panel C shows the number of retained single nucleotide polymorphisms (SNPs) for each biomarker. Panel D presents the density of longitudinal observations across biomarkers, illustrating differences in measurement availability over time.
+
+We estimate exposure-specific time-varying coefficient functions using FA-MFMR to characterize age-dependent patterns in the effects of the biomarker trajectories on NP3TOT. Unlike the cross-sectional MR, FA-MFMR allows causal effects to vary smoothly over ages 50–80, enabling detection of age-dependent patterns. To assess robustness to potentially influential or invalid instruments, we additionally examine covariate-adjusted SNP–NP3TOT associations and instrument-level heterogeneity, perform leave-one-SNP and leave-one-biomarker analyses, and conduct an exploratory scalar multivariable MR analysis at visit V08. Because conditional instrument strength is very weak in the scalar analysis, its results are considered inconclusive and are not used to validate the longitudinal FA-MFMR findings. Detailed procedures are provided in the Supplementary Materials, available as supplementary data at Bioinformatics online.
+
+Figure 9 shows the estimated time-varying effects for all 13 biomarkers with pointwise 95% bootstrap confidence bands based on B=500 participant-level bootstrap resamples. The bootstrap refits rerun the major data-adaptive steps of the FA-MFMR pipeline, including PACE/FPCA estimation and truncation, IV projection, latent-factor estimation and factor number selection, and SCAD tuning and coefficient estimation. We further construct joint 95% simultaneous confidence bands over all 13 biomarkers and the full age domain and perform biomarker-level global curve tests with joint max- T multiplicity adjustment. Detailed procedures and results are provided in Supplementary Materials. The estimated curves vary substantially in shape and magnitude. Neutrophils show an upward trend, white blood cell count shows pronounced declines, and several other biomarkers remain near zero over much of the age range; some patterns are consistent with previous findings (Bartl et al. 2023, Hepp et al. 2023, Koros et al. 2023, Pike et al. 2024, He et al. 2025).
+
+Figure 9 Estimated time-varying trajectory-level causal coefficient functions for all thirteen biomarkers over ages 50–80. Each panel displays the estimated time-varying causal effect curve for one biomarker, accompanied by pointwise 95% bootstrap confidence bands. The summary panel reports the time-averaged effect size for each biomarker, providing an overall ranking of their cumulative influence across the 50–80 age window.
+
+Multi-panel visualization of estimated time-varying causal effects for 13 biomarkers across ages 50–80. Each biomarker-specific panel displays an estimated causal effect curve with pointwise 95% bootstrap confidence bands, illustrating how the estimated effect and its uncertainty vary with age. A summary panel presents the time-averaged causal effect size for each biomarker, allowing comparison and ranking of their overall effects across the age range.
+
+At the pointwise level, the confidence bands show localized departures from zero for albumin, basophils, neutrophils, and white blood cell count. Specifically, the pointwise bands exclude zero for albumin around ages 53–56 and 62–72, basophils around ages 56–65, neutrophils around ages 55–62 and 68–72, and white blood cell count around ages 54–56 and 60–68. However, these pointwise patterns do not account for multiplicity across biomarkers and the continuous age domain. In the joint analysis, the 95% simultaneous confidence bands include zero throughout ages 50–80 for all 13 biomarkers, and none of the biomarker-level global curve tests reaches statistical significance after joint max-T adjustment (all adjusted P≥0.855). We therefore interpret the localized departures identified by the pointwise analysis as exploratory age-dependent patterns rather than as confirmatory significant age windows.
+
+To complement the pointwise results, we summarize each biomarker’s overall contribution by integrating its estimated effect over ages 50–80. Figure 10A shows descriptive variation between positive and negative cumulative effect estimates. Neutrophils and white blood cell count show the largest positive and negative integrated estimates, respectively.
+
+Figure 10 Cumulative and distributional summaries of time-varying causal effects over ages 50–80. (A) Cumulative causal effects obtained by integrating each biomarker’s estimated effect curve across age 50–80. (B) Scatter plot of peak versus trough effect values for all biomarkers, summarizing the range of age-specific variation. (C) Proportion of ages at which each biomarker’s estimated effect is positive, indicating directional persistence over the analyzed age range of 50–80 years.
+
+Three-panel visualization summarizing the cumulative and distributional characteristics of estimated time-varying causal effects for biomarkers across ages 50–80. Panel A presents the cumulative causal effect for each biomarker, calculated by integrating its estimated effect curve over the age range. Panel B displays a scatter plot of peak versus trough causal effect values, illustrating the range of age-specific variation across biomarkers. Panel C shows the proportion of ages at which each biomarker exhibits a positive estimated causal effect, reflecting the persistence of positive effects over the analyzed age range.
+
+Because cumulative effects may mask temporal variation, we also examine the maximum and minimum values of each estimated curve (Fig. 10B). Basophils, neutrophils, BMI, serum uric acid, and white blood cell count show the widest age-dependent ranges.
+
+We further report the proportion of ages with positive estimated effects (Fig. 10C), which aligns with the cumulative patterns. Neutrophils show the highest proportion of positive estimates, whereas several predominantly negative biomarkers remain below 50%.
+
+To quantify uncertainty in these curve-level summaries, we additionally calculate 95% bootstrap confidence intervals for the integrated effect, the maximum and minimum effects, the ages at which the extrema occur, and the proportion of ages with positive estimated effects. The confidence intervals for the integrated effects include zero for all 13 biomarkers, while the intervals for the extrema, their locations, and the positive-age proportions are generally broad. In particular, the bootstrap intervals for the locations of the extrema frequently span a substantial part of the 50–80-year age domain. These results indicate considerable uncertainty in the scalar curve summaries and support their interpretation primarily as descriptive features of the estimated coefficient functions. Full results are reported in Supplementary Materials.
+
+Given the instrument-validity assumptions underlying MR and the sensitivity of selected coefficient functions to individual instruments and the composition of the multivariable biomarker set, these results are interpreted as age-localized patterns in the estimated trajectory-level coefficient functions rather than as independently identified causal effects at individual ages.
+
+4 Discussion
+
+In this study, we propose FA-MFMR for multiple correlated longitudinal exposures and a terminal outcome. FA-MFMR integrates ideas from longitudinal and multivariable MR to jointly model multiple correlated longitudinal exposures. It combines functional representation with factor augmentation to capture shared variation while identifying exposure-specific coefficient functions. Simulations show that factor augmentation improves estimation accuracy and yields more efficient uncertainty quantification, while maintaining accurate exposure-level support recovery across varying sample sizes and latent complexity.
+
+In the PPMI analysis, FA-MFMR identifies age-localized pointwise patterns in the estimated trajectory-level causal coefficient functions for albumin, basophils, neutrophils, and white blood cell count, highlighting temporal heterogeneity in the fitted functional effects. However, the joint simultaneous confidence bands and multiplicity-adjusted global curve tests do not provide confirmatory curve-level evidence for any of the 13 biomarkers. We therefore interpret these localized patterns as exploratory and hypothesis-generating. The cumulative and extrema-based summaries provide complementary descriptions of the estimated curves, but their bootstrap intervals indicate substantial uncertainty. These patterns reflect the temporal weighting of instrument-supported trajectory variation and should not be interpreted as independently identified interventions at individual ages. The landmark and PD-only sensitivity analyses show that the degree of departure from the primary coefficient-function system varies across biomarkers, with the largest discrepancies concentrated in white blood cell count and neutrophil count. The divergent patterns of total white blood cell count and neutrophil count may reflect both their distinct biological meanings and their strong dependence within the multivariable system. Total white blood cell count aggregates several leukocyte populations, whereas neutrophils represent a major innate immune component whose phenotype and function undergo age-related remodeling; such immune changes may be particularly relevant in the context of aging and PD. Because these correlated blood-cell measures are modeled jointly, their coefficient functions represent conditional rather than marginal patterns, which may also contribute to the observed directional differences. Intercurrent infection and time-varying medication use are not explicitly modeled and may also contribute to variation in peripheral blood-cell measures during follow-up.
+
+Several limitations warrant future work. First, causal validity depends on instrument strength and validity. Factor augmentation is designed to account for dependence among longitudinal exposure trajectories and does not itself address horizontal pleiotropy or protect against violations of the exclusion restriction. Thus, weak instruments and residual pleiotropy may persist despite external GWAS-based instrument selection. FPCA truncation may further exacerbate weak-instrument bias if retained components have weak genetic associations, motivating careful component selection and more robust estimators (Hansen et al. 1996, Seng et al. 2023, Ye et al. 2024, Zhang and Sun 2025). Second, although the IV formulation allows unmeasured confounding processes to vary over time under the stated instrument assumptions, more complex longitudinal mechanisms involving evolving disease states, treatment-related feedback, or attrition may require additional assumptions. Third, although we supplement the pointwise bands with joint simultaneous confidence bands and multiplicity-adjusted global curve tests, the resulting inference remains bootstrap-based and selection-aware rather than exact conditional post-selection inference. The wide simultaneous bands highlight the finite-sample uncertainty associated with the data-adaptive functional and penalized estimation steps. Developing more powerful formal selective-inference procedures for multivariable functional MR remains an important direction for future work. Fourth, the framework assumes linear SNP-exposure relationships, which may be restrictive; nonlinear first-stage models are a promising extension (Barber et al. 2017). Moreover, extending FA-MFMR to summary-data settings would broaden applicability. Finally, replication in independent cohorts is needed to confirm the observed age-indexed patterns in the estimated trajectory-level coefficient functions.
+
+Supplementary Material
+
+btag725_Supplementary_Data
+
+Author contributions
+
+Dong Chen (Data curation [Lead], Formal analysis [Lead], Methodology [Lead], Project administration [Supporting], Software [Lead], Validation [Supporting], Visualization [Lead], Writing—original draft [Lead], Writing—review & editing [Lead]), Junrong Deng (Data curation [Lead], Methodology [Supporting], Validation [Lead]), Siyuan Shen (Data curation [Supporting], Formal analysis [Supporting], Software [Supporting], Validation [Supporting]), Yuyang Zhou (Data curation [Supporting], Software [Supporting], Visualization [Supporting]), Hanyu Cui (Data curation [Supporting], Software [Supporting], Visualization [Supporting]), Yu Qiu (Data curation [Supporting], Software [Supporting], Visualization [Supporting]), Qiming Li (Software [Supporting], Validation [Supporting], Visualization [Supporting]), and Yue-Qing Hu (Conceptualization [Lead], Funding acquisition [Lead], Project administration [Lead], Resources [Lead], Validation [Lead], Writing—original draft [Supporting], Writing—review & editing [Supporting])
+
+Supplementary material
+
+Supplementary material is available at Bioinformatics online.
+
+Conflict of interests
+
+None declared.
+
+Funding
+
+This research was partially funded by the National Key R&D Program of China [2023YFF1205101]. Data used in the preparation of this article were obtained on 30 November 2025, from the Parkinson’s Progression Markers Initiative (PPMI) database (https://www.ppmi-info.org/).
+
+Data availability
+
+The data that support the findings of this study are available from PPMI. Restrictions apply to the availability of these data, which were used underlicense for this study. Data are available from https://www.ppmi-info.org/ with the permission of PPMI. The R codes used for the simulations and real analysis in this article are available from https://github.com/YQHuFD/FA-MFMR.
+
+
+References
+
+Ahn SC , HorensteinAR.  Eigenvalue ratio test for the number of factors. Econometrica  2013;81:1203–27. 10.3982/ECTA8968
+Bai J.  Inferential theory for factor models of large dimensions. Econometrica  2003;71:135–71. 10.1111/1468-0262.00392
+Barber RF , ReimherrM, SchillT.  The function-on-scalar LASSO with applications to longitudinal GWAS. Electron J Statist  2017;11:1351–89. 10.1214/17-EJS1260
+Bartl M , DaknaM, SchadeS  et al  Blood markers of inflammation, neurodegeneration, and cardiovascular risk in early Parkinson’s disease. Mov Disord  2023;38:68–81. 10.1002/mds.29257 36267007
+Bowden J , Davey SmithG, BurgessS.  Mendelian randomization with invalid instruments: effect estimation and bias detection through Egger regression. Int J Epidemiol  2015;44:512–25. 10.1093/ije/dyv080 PMC4469799 26050253
+Burgess S , ButterworthA, ThompsonSG.  Mendelian randomization analysis with multiple genetic variants using summarized data. Genet Epidemiol  2013;37:658–65. 10.1002/gepi.21758 PMC4377079 24114802
+Cao Y , RajanSS, WeiP.  Mendelian randomization analysis of a time-varying exposure for binary disease outcomes using functional data analysis methods. Genet Epidemiol  2016;40:744–55. 10.1002/gepi.22013 PMC5123677 27813215
+Ding E , WangY, LiuJ  et al  A review on the application of the exposome paradigm to unveil the environmental determinants of age-related diseases. Hum Genomics  2022;16:54. 10.1186/s40246-022-00428-6 PMC9644545 36348440
+Fan J , KeY, WangK.  Factor-adjusted regularized model selection. J Econom  2020;216:71–85. 10.1016/j.jeconom.2020.01.006 PMC7141573 32269406
+Goetz CG , TilleyBC, ShaftmanSR  et al  Movement Disorder Society-sponsored revision of the Unified Parkinson’s Disease Rating Scale (MDS-UPDRS): scale presentation and clinimetric testing results. Mov Disord  2008;23:2129–70. 10.1002/mds.22340 19025984
+Goetz CG , StebbinsGT, WolffD  et al  Testing objective measures of motor impairment in early Parkinson’s disease: feasibility study of an at-home testing device. Mov Disord  2009;24:551–6. 10.1002/mds.22379 PMC4161502 19086085
+Grant AJ , BurgessS.  Pleiotropy robust methods for multivariable Mendelian randomization. Stat Med  2021;40:5813–30. 10.1002/sim.9156 PMC7612169 34342032
+Hansen LP , HeatonJ, YaronA.  Finite-sample properties of some alternative GMM estimators. J Bus Econ Stat  1996;14:262–80. 10.1080/07350015.1996.10524656
+Havelund JF , HeegaardNHH, FærgemanNJK  et al  Biomarker research in Parkinson’s disease using metabolite profiling. Metabolites  2017;7:42. 10.3390/metabo7030042 PMC5618327 28800113
+He P , LiY, HuangZ  et al  Peripheral inflammation’s variable impact on cognitive and symptomatic outcomes in Parkinson’s disease: a longitudinal and cross-sectional analysis. NPJ Parkinsons Dis  2025;11:155. 10.1038/s41531-025-01019-7 PMC12145461 40483274
+Hepp DH , van WageningenTA, KuiperKL  et al  Inflammatory blood biomarkers are associated with long-term clinical disease severity in Parkinson’s disease. Int J Mol Sci  2023;24:14915. 10.3390/ijms241914915 PMC10573398 37834363
+Jiang X , HolmesC, McVeanG.  The impact of age on genetic risk for common diseases. PLoS Genet  2021;17:e1009723. 10.1371/journal.pgen.1009723 PMC8389405 34437535
+Koros C , SimitsiAM, PapagiannakisN  et al  Serum uric acid as a putative biomarker in Prodromal Parkinson’s disease: longitudinal data from the PPMI study. J Parkinsons Dis  2023;13:811–8. 10.3233/JPD-230007 PMC10473106 37424476
+Labrecque JA , SwansonSA.  Interpretation and potential biases of Mendelian randomization estimates with time-varying exposures. Am J Epidemiol  2019;188:231–8. 10.1093/aje/kwy204 30239571
+Lawlor DA , HarbordRM, SterneJA  et al  Mendelian randomization: using genes as instruments for making causal inferences in epidemiology. Stat Med  2008;27:1133–63. 10.1002/sim.3034 17886233
+Li F , WengG, ZhouH  et al  The neutrophil-to-lymphocyte ratio, lymphocyte-to-monocyte ratio, and neutrophil-tohigh-density-lipoprotein ratio are correlated with the severity of Parkinson’s disease. Front Neurol  2024;15:1322228. 10.3389/fneur.2024.1322228 PMC10844449 38322584
+Lin Z , XueH, PanW.  Robust multivariable Mendelian randomization based on constrained maximum likelihood. Am J Hum Genet  2023;110:592–605. 10.1016/j.ajhg.2023.02.014 PMC10119150 36948188
+Ma H , ShenZ, FengX  et al Sparsity learning via structured functional factor augmentation. arXiv preprint arXiv:2501.02244. 2025. 10.5705/ss.202025.0205
+Marek K , ChowdhuryS, SiderowfA  et al  The Parkinson’s progression markers initiative (PPMI)–establishing a PD biomarker cohort. Ann Clin Transl Neurol  2018;5:1460–77. 10.1002/acn3.644 PMC6292383 30564614
+Michael H , CuiY, LorchSA  et al  Instrumental variable estimation of marginal structural mean models for timevarying treatment. J Am Stat Assoc  2024;119:1240–51. 10.1080/01621459.2023.2183131 PMC13309177 42368411
+Morrison J , KnoblauchN, MarcusJH  et al  Mendelian randomization accounting for correlated and uncorrelated pleiotropic effects using genome-wide summary statistics. Nat Genet  2020;52:740–7. 10.1038/s41588-020-0631-4 PMC7343608 32451458
+Parkinson Progression Marker Initiative. The Parkinson progression marker initiative (PPMI). Prog Neurobiol  2011;95:629–35. 10.1016/j.pneurobio.2011.09.005 PMC9014725 21930184
+Palmer AK , JensenMD.  Metabolic changes in aging humans: current evidence and therapeutic strategies. J Clin Invest  2022;132:e158451. 10.1172/JCI158451 PMC9374375 35968789
+Pike SC , HavrdaM, GilliF  et al  Immunological shifts during early-stage Parkinson’s disease identified with DNA methylation data on longitudinally collected blood samples. NPJ Parkinsons Dis  2024;10:21. 10.1038/s41531-023-00626-6 PMC10784484 38212355
+Power GM , SandersonE, PagoniP  et al  Methodological approaches, challenges, and opportunities in the application of Mendelian randomisation to lifecourse epidemiology: a systematic literature review. Eur J Epidemiol  2024;39:501–20. 10.1007/s10654-023-01032-1 PMC7616129 37938447
+Qu L , SongX, SunL.  Identification of local sparsity and variable selection for varying coefficient additive hazards models. Comput Stat Data Anal  2018;125:119–35. 10.1016/j.csda.2018.04.003
+Qu Y , LiJ, QinQ  et al  A systematic review and metaanalysis of inflammatory biomarkers in Parkinson’s disease. NPJ Parkinsons Dis  2023;9:18. 10.1038/s41531-023-00449-5 PMC9899271 36739284
+Rees JM , WoodAM, BurgessS.  Extending the MR-Egger method for multivariable Mendelian randomization to correct for both measured and unmeasured pleiotropy. Stat Med  2017;36:4705–18. 10.1002/sim.7492 PMC5725762 28960498
+Richardson TG , SandersonE, ElsworthB  et al  Use of genetic variation to separate the effects of early and later life adiposity on disease risk: Mendelian randomisation study. BMJ  2020;369:m1203. 10.1136/bmj.m1203 PMC7201936 32376654
+Richardson TG , LeydenGM, SmithGD.  Time-varying and tissue-dependent effects of adiposity on leptin levels: a Mendelian randomization study. Elife  2023;12:e84646. 10.7554/eLife.84646 PMC10599655 37878001
+Sanderson E , SpillerW, BowdenJ.  Testing and correcting for weak and pleiotropic instruments in two-sample multivariable Mendelian randomization. Stat Med  2021;40:5434–52. 10.1002/sim.9133 PMC9479726 34338327
+Sanderson E , RichardsonTG, MorrisTT  et al  Estimation of causal effects of a time-varying exposure at multiple time points through multivariable Mendelian randomization. PLoS Genet  2022;18:e1010290. 10.1371/journal.pgen.1010290 PMC9348730 35849575
+Schadt EE , LambJ, YangX  et al  An integrative genomics approach to infer causal associations between gene expression and disease. Nat Genet  2005;37:710–7. 10.1038/ng1589 PMC2841396 15965475
+Seifar F , DinasarapuAR, JinnahH.  Uric acid in Parkinson’s disease: what is the connection?  Mov Disord  2022;37:2173–83. 10.1002/mds.29209 PMC9669180 36056888
+Seng LL , LiuCT, WangJ  et al  Instrumental variable model average with applications in Mendelian randomization. Stat Med  2023;42:3547–67. 10.1002/sim.9819 37476915
+Shi J , SwansonSA, KraftP  et al  Mendelian randomization with repeated measures of a time-varying exposure: an application of structural mean models. Epidemiology  2022;33:84–94. 10.1097/EDE.0000000000001417 PMC9067358 34847085
+Smith GD.  Randomised by (your) god: robust inference from an observational study design. J Epidemiol Community Health  2006;60:382–8. 10.1136/jech.2004.031880 PMC2563965 16614326
+Smith GD , EbrahimS.  ‘Mendelian randomization’: can genetic epidemiology contribute to understanding environmental determinants of disease?  Int J Epidemiol  2003;32:1–22. 10.1093/ije/dyg070 12689998
+Swanson SA , LabrecqueJ, HernánMA.  Causal null hypotheses of sustained treatment strategies: what can be tested with an instrumental variable?  Eur J Epidemiol  2018;33:723–8. 10.1007/s10654-018-0396-6 PMC6061140 29721747
+Tian H , BurgessS.  Estimation of time-varying causal effects with multivariable Mendelian randomization: some cautionary notes. Int J Epidemiol  2023;52:846–57. 10.1093/ije/dyac240 PMC10244034 36661066
+Tian H , PatelA, BurgessS.  Estimating time-varying exposure effects through continuous-time modelling in Mendelian randomization. Stat Med  2024;43:5166–81. 10.1002/sim.10222 PMC7616825 39370732
+Wang J , ZhaoQ, BowdenJ  et al  Causal inference for heritable phenotypic risk factors using heterogeneous genetic instruments. PLoS Genet  2021;17:e1009575. 10.1371/journal.pgen.1009575 PMC8301661 34157017
+Wang J-L , ChiouJ-M, MüllerH-G.  Functional data analysis. Annu Rev Stat Appl  2016;3:257–95. 10.1146/annurev-statistics-041715-033624
+Wu Z , LewisE, ZhaoQ  et al  Causal mediation analysis for time-varying heritable risk factors with Mendelian randomization. Nat Commun  2025;16:6945. 10.1038/s41467-025-61648-7 PMC12304142 40721519
+Xue H , ShenX, PanW.  Constrained maximum likelihoodbased Mendelian randomization robust to both correlated and uncorrelated pleiotropic effects. Am J Hum Genet  2021;108:1251–69. 10.1016/j.ajhg.2021.05.014 PMC8322939 34214446
+Yao F , MüllerHG, WangJL.  Functional data analysis for sparse longitudinal data. J Am Stat Assoc  2005;100:577–90. 10.1198/016214504000001745
+Yao M , WangA, LiX  et al  Mendelian randomization methods for causal inference: estimands, identification and inference. Stat Med  2026; 45: e70394. 10.1002/sim.70394 PMC12917735 41569765
+Ye T , LiuZ, SunB  et al  GENIUS-MAWII: for robust Mendelian randomization with many weak invalid instruments. J R Stat Soc Series B Stat Methodol  2024;86:1045–67. 10.1093/jrsssb/qkae024 PMC11398887 39279912
+Zhang D , SunB. Multi-task learning for high-dimensional regression with many weak instruments. arXiv preprint arXiv:2504.181072026.
+Zöllner S , PritchardJK.  Overcoming the winner’s curse: estimating penetrance parameters from case-control data. Am J Hum Genet  2007;80:605–15. 10.1086/512821 PMC1852705 17357068

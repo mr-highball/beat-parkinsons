@@ -1,0 +1,13 @@
+# Mango fruit, sleep and fatigue
+
+## Acute soluble mango leaf trials and the POMS fatigue domain
+
+The 2025 study randomized 119 healthy university students to acute sessions with 100 mg or 150 mg soluble Zynamite S mango leaf extract or placebo. Its abstract and reported domain comparisons describe tension, depression, confusion and total mood disturbance. The 2026 replication paper notes the earlier study did not find a fatigue change. In the 2026 crossover, 88 healthy students received a single 100 mg dose of soluble leaf extract standardized to 60% mangiferin or maltodextrin placebo. Section 2.3.4 reports lower secondary POMS fatigue scores at 30 minutes (−1.08, 95% CI −2.02 to −0.14) and five hours (−1.99, 95% CI −2.93 to −1.05). These were ratings of mood-related fatigue during repeated cognitive testing. The studies administered leaf extract rather than fruit pulp and did not measure Parkinson fatigue. [Initial randomized trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC12030201/) · [Replication randomized trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC13414551/) · [Initial trial local text](Source-Text/PMC12030201-Zynamite-Initial-POMS.txt) · [Replication local text](Source-Text/PMC13414551-Zynamite-Replication-POMS.txt)
+
+## Fresh mango pulp and exercise associated allergy case
+
+The 2026 report describes a 21-year-old who developed exercise-associated allergic symptoms after eating mango. The second episode followed fresh fruit and running. Skin testing was positive to fresh pulp and negative to canned mango under the authors' criteria. A medically supervised fresh pulp challenge without exercise was negative over the observation period. The case supports a preparation and context distinction in allergy work. It gives no insomnia, usual fatigue or Parkinson symptom assessment. [Primary allergy case](https://pmc.ncbi.nlm.nih.gov/articles/PMC13251668/) · [Local article text](Source-Text/PMC13251668-Mango-Pulp-Exercise-Anaphylaxis.txt)
+
+## Mango pulp puree in a training crossover
+
+Parklak and colleagues, first published February 4, 2026, studied 15 Thai male national beach-volleyball athletes in a randomized, single-blind crossover. The comparison used 600 g/day of peeled Nam Dok Mai mango pulp puree or a matched fruit-flavored beverage for four-week periods. The mango was blended, sieved and frozen at −20 °C, with heat treatment unspecified. They measured muscle damage and inflammatory biomarkers, immune cells and resting physiology. Fatigue severity was outside the reported outcomes, and the Discussion specifically says sleep was not assessed. [Original paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC12899351/) · [Local full text](Source-Text/PMC12899351.txt)

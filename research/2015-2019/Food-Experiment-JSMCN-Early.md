@@ -1,0 +1,13 @@
+# Early JSMCN reports on food and feeding in Parkinson’s
+
+## Postprandial hypotension during continuous jejunal feeding
+
+Sasaki and colleagues reported a 58-year-old with stage V Parkinson’s, severe underweight and jejunal feeding after subtotal gastrectomy. Before rehabilitation during continuous daytime feeding, blood pressure was 83/56 mm Hg and bed elevation beyond 20 degrees was difficult. Three days after switching to intermittent feeding, blood pressure was reported as 101/67 mm Hg and the patient was able to sit. Wheelchair use followed on day eight and oral intake on day nine. The abstract proposes a postprandial contribution to orthostatic symptoms and gives no standardized postural or meal-time series or formula ingredients. A separate abstract on the same page describes flaxseed and MCT oils in a younger patient with interstitial pneumonia. The printed supplement was issued on December 21, 2016, ahead of the January 2017 meeting. [P-046, PDF p300](https://eiyou.or.jp/gakujutsu/20th/pdf/jsmcn_Vol20.Supplement_vo.pdf#page=300) · [Colophon](https://eiyou.or.jp/gakujutsu/20th/pdf/jsmcn_Vol20.Supplement_vo.pdf#page=384)
+
+## Levodopa and liquid-barium swallowing in two early cases
+
+Two men with stage I Parkinson’s, aged 78 and 75, reported swallowing difficulty and had pharyngeal residue with a liquid barium test. The authors observed improvement after levodopa, reassessed on days nine and 17 respectively. An institutional publication list gives a 2015 presentation by the same team about a 78-year-old, likely a precursor. The adjacent abstract discusses tea, thickeners, gelatin and agar in a separate institutional diet project. The Parkinson abstract gives no other test food or dietary intervention. [2018 O-182, PDF p210](https://www.eiyou.or.jp/gakujutsu/21th/pdf/jsmcn_Vol21.Supplement_vo.pdf#page=210) · [Author’s publication record](https://rira.showa-u.ac.jp/profile/ja.605c09cd70a0a27b78de51574068730d.html)
+
+## Soft textures and home meals after cardiac surgery
+
+A 75-year-old man with Parkinson’s and postoperative hoarseness received texture and swallowing guidance after cardiac surgery. Early follow-up documented use of the suggested soft diet. He later resumed ordinary meals at home and had a weak cough with difficulty clearing sputum. Repeat endoscopy with his usual meal led the team to advise thin thickening, avoidance of dry foods, and continued posture and alternating swallows. The report supplies no ingredient-level details or confirmed obstruction. [2019 P-107, PDF p220](https://www.eiyou.or.jp/gakujutsu/22th/pdf/jsmcn_Vol22.Supplement_vo.pdf#page=220)

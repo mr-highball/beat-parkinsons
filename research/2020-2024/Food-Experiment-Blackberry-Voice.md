@@ -1,0 +1,22 @@
+# Blackberry and voice outcomes
+
+## Registered blackberry and xylitol chewing gum trial
+
+The ClinicalTrials.gov record NCT05133557 first appeared on 24 November 2021. It provides an actual 2012–2015 study schedule and enrollment of 50 adults. The gum contrast was xylitol versus xylitol plus blackberry extract, with salivary and enamel bacterial outcomes. The registry describes a 2 g gum piece with 1 g xylitol and, in the experimental arm, 100 mg extract. The journal abstract describes different quantities and uses the term freeze-dried powder. The available records do not resolve this formulation discrepancy. [ClinicalTrials.gov trial record](https://clinicaltrials.gov/study/NCT05133557) · [Local registry extract](Source-Text/NCT05133557-Blackberry-Chewing-Gum-Registry-Extract.txt)
+
+## Freeze dried blackberry powder gum and oral microbiota
+
+Miller and colleagues reported a randomized crossover trial online on 17 August 2022. Fifty volunteers chewed gum containing 700 mg xylitol with or without 50 mg freeze-dried blackberry powder, as the article abstract describes. Each session comprised four 20-minute periods spaced two hours apart. A week separated the two conditions. The abstract reports decreases in total bacterial load and the relative abundance of six of nine studied salivary bacteria after blackberry gum, with four taxa decreasing after control gum. The endpoint family was qPCR of saliva or bacteria on enamel. The published abstract and registry identify no laryngeal examination, speech task, or patient-reported or acoustic loudness. [Miller primary abstract](https://pubmed.ncbi.nlm.nih.gov/36037565/) · [University of Kentucky author record](https://scholars.uky.edu/en/publications/effect-of-chewing-gum-containing-xylitol-and-blackberry-powder-on/) · [Local factual extract](Source-Text/2022-Miller-Blackberry-Gum-Oral-Bacteria-Extract.txt)
+
+## Bologna field interviews on fruit jam and sore throat
+
+Chiocchio and colleagues published their ethnobotanical survey on 12 March 2024, based on interviews conducted in 2010–2016 with 1,172 informants in 22 municipalities. The entry for voucher BOLO0053719 identifies Rubus ulmifolius. It records eight hill-area mentions of the jam for cough, six for sore throat and one mountain-area mention of cooked brambles considered beneficial for the throat. Three hill-area mentions refer to root decoction for oral inflammation, a distinct plant part and preparation. The study defines mentions as records of reported use and allows multiple mentions by one person. It does not track symptom response, identify Parkinson disease or record speech loudness or freezing. [Chiocchio original field study](https://pmc.ncbi.nlm.nih.gov/articles/PMC10936038/) · [Local article text](Source-Text/PMC10936038-Chiocchio-Bologna-Ethnobotany.txt)
+
+## Registered adult boysenberry apple airway study
+
+The ANZCTR entry ACTRN12621000774820 was registered on 21 June 2021 and last updated on 28 October 2022. It describes a planned crossover using milled, freeze-dried boysenberry and apple in capsules. The entry lists lung function and respiratory symptom measurements. It gives a target of 80 participants and no actual enrollment or linked results. The registry and the 2025 report share investigators, product and study setting. The journal's abstract describes a 20-person intervention comparison. The entry alone cannot establish the dose or course those adults actually received. [ANZCTR adult airway protocol](https://anzctr.org.au/Trial/Registration/TrialReview.aspx?id=381761) · [Local registry extract](Source-Text/ACTRN12621000774820-Boysenberry-Apple-Airway-Registry-Extract.txt) · [Journal result note](../2025-2029/Food-Experiment-Blackberry-Voice.md#boysenberry-apple-powder-and-adult-throat-irritation)
+
+## Berry frequency and speech fields in the MVP cohort
+
+Fox and colleagues analyzed 1,205 respondents with parkinsonism in a 2022 cross-sectional study. Supplementary Table S1 identifies a self-rated Speech slider in PRO-PD. Table S3 pools berry types in a frequency question, and Table S4 relates that question to total PRO-PD, with a reported estimate of −119 points. The analysis did not estimate berry consumption against the speech slider. There were no separate frozen blackberry servings and no calibrated acoustic outcome in the public files. [Existing research note and official supplement](Food-Experiment-Clinical-Nutrition-Followup.md#non-oil-items-in-the-2022-mvp-diet-analysis) · [Local supplement text](Source-Text/2022-Fox-MIND-MEDI-Supplement.txt)
+

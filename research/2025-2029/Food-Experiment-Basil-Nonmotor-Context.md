@@ -1,0 +1,9 @@
+# Basil exposure boundaries in studies of sleep and apathy
+
+## Living basil in a depression gardening program
+
+The nursing study published February 21, 2026 included 62 men with depression. The intervention combined ten garden exercise, planting, meditation and play sessions. Basil and jasmine were examples actually used in the two gardening sessions. The study used six items from an insomnia subscale and a separate hopelessness scale. It selected the insomnia dimension from a scale that also has a narcolepsy dimension. It did not use the latter or report an Epworth or other daytime sleepiness score. The comparison measures a mixed program, without a basil ingestion group. [Primary study, Methods and Procedure](https://pmc.ncbi.nlm.nih.gov/articles/PMC12934053/) · [Local factual extract](Source-Text/2026-Gardening-Basil-Insomnia-Extract.txt)
+
+## Apathy and Epworth scores in the plant-rich Ketoflex trial
+
+The individualized Parkinson diet trial reports a significant time-by-group term for Starkstein apathy and inconsistent descriptions of the post-treatment arm comparison. Table 2 gives p = .333 for the latter. Table 2 also reports Epworth scores of 6.65 to 6.5 in controls and 6.55 to 6.7 on the diet, with a post-treatment arm p value of 1.000. Separate text reports Wilcoxon W = 37.0, p = .904 for the before-and-after Epworth analysis. Assessors did not publish an itemized menu or measured basil intake. The public registry describes a motor outcome, and the paper says that study data may be requested. The trial therefore informs the choice and interpretation of clinical scales while leaving the basil comparison open. [Primary study, Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC13347589/) · [Prior registry and apathy check](Food-Experiment-Soybean-Oil-Apathy-Clinical.md#2026--apathy-outcome-in-the-ketoflex-trial-and-registry)

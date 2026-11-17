@@ -1,0 +1,21 @@
+# Kefir Fatigue
+
+## Postexercise kefir and cancer survivor fatigue across two reports
+
+Smoak and colleagues followed 24 cancer survivors in a structured 12-week exercise program with kefir after three weekly sessions or exercise alone. The journal abstract reports fatigue improving 39.3% with p=.017, without identifying the exact statistical contrast or flavor. The institutional dissertation abstract describes closely matching methods and 19 participants, with a Piper fatigue group-by-time p=.002. The dissertation was created in 2019 and embargoed to December 2021. Overlapping authors and protocols suggest an earlier or overlapping cohort; it should not be counted as replication. A later review reports p=.030 for the journal cohort's interaction and p=.017 for pooled time, which remains unverified against the gated original tables. Nonrandomized assignment, exercise, lack of a sensory-matched placebo and no established plain formulation limit attribution. [Institutional dissertation record](https://digscholarship.unco.edu/dissertations/644/). [Original source](https://pubmed.ncbi.nlm.nih.gov/34519716/) · [Local factual text](Source-Text/2021-Smoak-Kefir-Cancer-Survivor-Fatigue.txt)
+
+## Registered exercise endurance comparison for formulated kefir
+
+First posted March 3, 2020. Trial records 16 healthy men assigned to two 28-day product periods plus washout and specifies treadmill endurance and blood response. Matching enrollment, crossover, five DSM strains and sponsor product strongly suggest the 2021 Lee report is the result publication, though the paper does not identify the NCT number. The registry says freeze-dried. Lee Methods describe heating, maltodextrin and spray drying. The trial gives 11.76 ± 1.92 versus 9.08 ± 1.92 minutes to exhaustion. The Results give p=.0048 for this comparison, while the abstract gives p=.0004. Neither report defines a separate patient-reported fatigue outcome or plain milk kefir intervention. [Original article](https://pmc.ncbi.nlm.nih.gov/articles/PMC7996501/). [Original source](https://clinicaltrials.gov/study/NCT04293666) · [Local factual text](Source-Text/2020-NCT04293666-SYNKEFIR-Endurance.txt)
+
+## Commercial kefir and planned myeloma fatigue measures
+
+First posted August 28, 2020. Roswell Park randomized 13 multiple myeloma participants to daily commercial kefir or usual diet for three months. The detailed plan names patient-reported fatigue and the EORTC QLQ-C30 and myeloma module. There were no posted registry results at the November 16, 2026 capture. Exact NCT, sponsor and intervention searches found secondary mentions without a verifiable primary results paper. No specified plain product or Parkinson population. [Original source](https://clinicaltrials.gov/study/NCT04530812) · [Local factual text](Source-Text/2020-NCT04530812-Kefir-Myeloma-Fatigue.txt)
+
+## Kefir powder and registered physical fatigue in healthy adults
+
+First disclosed November 18, 2022. Seventy-five healthy adults were planned for 12 weeks of 1.0 g or 0.4 g kefir powder or placebo. Physical fatigue visual analog rating is secondary and sleep quality is primary. The record updated November 21, 2025 lists the results as unpublished. Registered powder and the healthy population limit directness for plain liquid kefir and Parkinson fatigue. [Original source](https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000056148) · [Local factual text](Source-Text/2022-UMIN000049551-Kefir-Powder-Fatigue.txt)
+
+## Cow milk kefir registered during chemotherapy cycles
+
+First posted July 24, 2024. The 84-participant randomized study compares supplemental kefir after four chemotherapy cycles with usual care in breast or colorectal cancer. Symptom management and quality of life are registered. The thesis by the named investigator is consistent with the arms and sample and reports aggregate physical burden. The registry itself has no posted results as of November 16, 2026. [Thesis result text](../2025-2029/Food-Experiment-Kefir-Fatigue.md#chemotherapy-kefir-thesis-and-physical-symptom-burden). [Original source](https://clinicaltrials.gov/study/NCT06517420) · [Local factual text](Source-Text/2024-NCT06517420-Kefir-Chemotherapy-Protocol.txt)

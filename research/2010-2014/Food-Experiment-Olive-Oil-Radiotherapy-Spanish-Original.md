@@ -1,0 +1,5 @@
+# First report of topical olive oil and swallowing after radiotherapy source record
+
+## First report of topical olive oil and swallowing after radiotherapy
+
+Martín Martín, López and Cerezo’s Spanish report appeared in the May–June 2014 issue, DOI 10.4321/S0213-12852014000300010. This uncontrolled head and neck radiation series recruited 40 patients and retained 38 completers. Figure 3 presents improved difficulty swallowing attributed to oral dryness following the combined topical olive oil, betaine and xylitol regimen. The 2016 English paper reports matching authors, age and sex distributions, tumor and medication group counts, treatment, follow-up, and the same two distinctive withdrawals, including complete aphagia at baseline in one patient. These are two reports of one highly likely shared cohort. Patient-level identifiers were not reported. [2014 original, Results, Table 2 and Figure 3](https://scielo.isciii.es/pdf/odonto/v30n3/original8.pdf) · [2016 English report](https://pmc.ncbi.nlm.nih.gov/articles/PMC5126143/)

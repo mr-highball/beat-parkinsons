@@ -1,0 +1,13 @@
+# Kefir Fatigue
+
+## Chemotherapy kefir thesis and physical symptom burden
+
+The thesis bears a 2024 date. The earliest located institutional public file is dated in its path May 2025, with no earlier verified public release. Öztürk Çetin reports 84 chemotherapy patients divided evenly between usual care and kefir. The product uses pasteurized cow milk, lactase, B. lactis and kefir culture, with flavor unspecified. The intervention had more in-person visits and telephone reminders. The physical symptom domain includes one tiredness item, with no separate item outcome. Table 4.4 gives baseline means of 0.47 control and 0.50 kefir. At cycle four the means were 1.16 ± 0.48 and 0.53 ± 0.25, p=.002, with higher burden worse. Those values are for physical symptoms together. Table 4.3 prints an intervention total symptom mean of 1.16, whereas Table 4.4 gives 0.63 ± 0.34. The directly downloaded file returned HTTP 500 during verification, while the indexed PDF pages were accessible for the checks above. [Original source](https://acikerisim.sbu.edu.tr/yayinaea/yrd_20-05-2025__05-25_891992.pdf) · [Local factual text](Source-Text/2025-Ozturk-Cetin-Kefir-Chemotherapy-Thesis.txt)
+
+## Kefir milk and water after exercise in young athletes
+
+First published March 3, 2026. Sixteen young female athletes, mean age 14.2, completed high-intensity cycling followed by kefir, milk or water in a crossover. Perceived fatigue and soreness decreased during recovery with both water and kefir (reported within-condition p≤.024), while milk within-condition p≥.075. The authors judged perceptual recovery at least as favorable with water and attributed modest differences to subjective variability. The accessible abstract does not supply the precise kefir-versus-water fatigue estimate or kefir flavor. Full text route returned the publisher landing page. This is acute exercise recovery, distinct from persistent Parkinson fatigue. [Original source](https://pubs.rsc.org/en/content/articlelanding/2026/fo/d5fo05127d/unauth) · [Local factual text](Source-Text/2026-Pernigoni-Kefir-Perceived-Fatigue.txt)
+
+## Real world kefir consumption and planned global health fatigue item
+
+First posted August 27, 2026. The real-world study records two weeks of commercial Activia Kefir use in usual or new consumers and before-and-after digestive outcomes. PROMIS Global Health includes a fatigue question along with other domains. Recruitment was ongoing and no results were posted at November 16, 2026. The protocol lists neither a Parkinson cohort nor a controlled fatigue-specific comparison. [Original source](https://clinicaltrials.gov/study/NCT07790666) · [Local factual text](Source-Text/2026-NCT07790666-Kefir-PROMIS-Global-Health.txt)

@@ -1,0 +1,13 @@
+# Leafy vegetable and grain evidence, 2025–2029
+
+## Cooked waxy barley and mental health measures
+
+Honda and colleagues randomized 68 healthy Japanese students to rice cooked with either of two cultivars of waxy barley. Both arms received barley. The higher-fiber cultivar group improved on the SF-36 mental component summary within group (p = .011), with no distinct anxiety instrument or Parkinson subgroup. The study also measured depression, sleep and bowel outcomes. A comparison of cultivars and generic mental health cannot estimate whether boiled barley worsens Parkinson anxiety. [Primary report, Figures 5–7 and Table 5](https://pmc.ncbi.nlm.nih.gov/articles/PMC12057101/) · [Local CC BY text](Source-Text/PMC12057101.txt)
+
+## Tartary buckwheat sprout powder and cognitive task results
+
+NCT07245784 was first posted November 24, 2025, before study start. The registry specifies the PROMIS cognitive function measure as primary and gives no numerical results. White and colleagues posted version 1 on medRxiv November 4, 2026. Of 848 randomized participants with subjective cognitive difficulties, 662 were analyzed. The prespecified primary comparison was inconclusive (contrast 0.03, 95% CI −0.07 to 0.13, p = .59). In an exploratory subset, mean correct reaction times favored sprout powder for Flanker and Stroop, but interference and accuracy comparisons were inconclusive. The sustained-attention task showed a smaller reduction in reaction-time variability with buckwheat, with inconclusive overall variability, sensitivity and commission error results. The pattern supports further investigation of processing speed in this population. It cannot establish a clinical attention effect of toasted groats in Parkinson’s. [Official trial](https://clinicaltrials.gov/study/NCT07245784) · [Local registry fields](Source-Text/Trials/NCT07245784.txt) · [Primary preprint](https://doi.org/10.64898/2026.11.03.26367186) · [Local CC BY preprint](Source-Text/2026-White-Tartary-Buckwheat-CCBY.txt)
+
+## Pearl millet substitution and handgrip in athletes
+
+Saifi and colleagues randomized 60 young male athletes. Fifty-eight completed the 60-day comparison. The intervention replaced approximately one third of habitual cereals with pearl millet. The paper reports handgrip increasing from 35.3 to 42.8 kg in the millet arm and a favorable adjusted between-group grip difference. It gives inconclusive speed and agility contrasts. Grip force and fine hand dexterity are different endpoints, the individual cooking method was not isolated, and the sample did not include a Parkinson comparison. [Primary report, Methods and Table 5](https://pmc.ncbi.nlm.nih.gov/articles/PMC13443783/)

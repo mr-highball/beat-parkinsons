@@ -1,0 +1,417 @@
+Title: MRDPDA: A multi‐Laplacian regularized deepFM model for predicting piRNA‐disease associations
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC11371490/
+Text object: https://pmc-oa-opendata.s3.amazonaws.com/PMC11371490.1/PMC11371490.1.txt
+Data source: U.S. National Library of Medicine, PMC Cloud Service
+PMCID: PMC11371490
+PMID: 39228010
+DOI: 10.1111/jcmm.70046
+Citation: J Cell Mol Med. 2024 Sep 3;28(17):e70046. doi: 10.1111/jcmm.70046
+License: CC BY (article license statement below)
+Version: 1
+Retracted in PMC metadata: no
+Text coverage: article text
+Format: NLM plain-text extraction. This provenance header was added.
+
+
+JOURNAL INFORMATION
+==============================
+NLM Title Abbreviation: J Cell Mol Med
+Journal ID: J Cell Mol Med
+NLM Journal ID: 101083777
+Journal ID: JCMM
+
+Journal of Cellular and Molecular Medicine
+
+ISSN: 1582-1838
+EISSN: 1582-4934
+Publisher: Wiley
+
+ARTICLE INFORMATION
+==============================
+PMCID: PMC11371490
+PMID: 39228010
+DOI: 10.1111/jcmm.70046
+Article ID: JCMM70046
+Article ID: JCMM-03-2024-057.R1
+Article version: 1
+Subjects: Original Article, Original Article
+
+MRDPDA: A multi‐Laplacian regularized deepFM model for predicting piRNA‐disease associations
+
+Liu et al.
+
+Liu Yajun 1
+Zhang Fan 1
+Ding Yulian 2
+Fei Rong 1
+Li Junhuai 1
+Wu Fang‐Xiang https://orcid.org/0000-0002-4593-9332 3 faw341@mail.usask.ca
+
+1 Shaanxi Key Laboratory for Network Computing and Security Technology, School of Computer Science and Engineering Xi'an University of Technology Xi'an China
+2 Center for High Performance Computing Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences Shenzhen China
+3 Department of Computer Science, Biomedical Engineering and Mechanical Engineering University of Saskatchewan Saskatoon Saskatchewan Canada
+* Correspondence
+Fang‐Xiang Wu, Department of Computer Science, Biomedical Engineering and Mechanical Engineering, University of Saskatchewan, Saskatoon, SK, Canada.
+Email: faw341@mail.usask.ca
+
+Electronic publication date: 2024 Sep 3
+Publication date: 2024 Sep
+Volume: 28
+Issue: 17
+Electronic Location ID: e70046
+Revised 2024 Jul 15; Received 2024 Apr 18; Accepted 2024 Aug 16
+Copyright: © 2024 The Author(s). Journal of Cellular and Molecular Medicine published by Foundation for Cellular and Molecular Medicine and John Wiley & Sons Ltd.
+License: This is an open access article under the terms of the http://creativecommons.org/licenses/by/4.0/ License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Keywords: DeepFM, Laplacian regularized, piRNA, piRNA‐disease association
+Figure count: 5
+Table count: 3
+Page count: 13
+
+source-schema-version-number: 2.0
+cover-date: September 2024
+details-of-publishers-convertor: Converter:WILEY_ML3GV2_TO_JATSPMC version:6.4.8 mode:remove_FC converted:03.09.2024
+
+Liu Y , Zhang F , Ding Y , Fei R , Li J , Wu F‐X . MRDPDA: A multi‐Laplacian regularized deepFM model for predicting piRNA‐disease associations. J Cell Mol Med. 2024;28:e70046. doi:10.1111/jcmm.70046 39228010
+
+==============================
+Abstract
+
+PIWI‐interacting RNAs (piRNAs) are a typical class of small non‐coding RNAs, which are essential for gene regulation, genome stability and so on. Accumulating studies have revealed that piRNAs have significant potential as biomarkers and therapeutic targets for a variety of diseases. However current computational methods face the challenge in effectively capturing piRNA‐disease associations (PDAs) from limited data. In this study, we propose a novel method, MRDPDA, for predicting PDAs based on limited data from multiple sources. Specifically, MRDPDA integrates a deep factorization machine (deepFM) model with regularizations derived from multiple yet limited datasets, utilizing separate Laplacians instead of a simple average similarity network. Moreover, a unified objective function to combine embedding loss about similarities is proposed to ensure that the embedding is suitable for the prediction task. In addition, a balanced benchmark dataset based on piRPheno is constructed and a deep autoencoder is applied for creating reliable negative set from the unlabeled dataset. Compared with three latest methods, MRDPDA achieves the best performance on the pirpheno dataset in terms of the five‐fold cross validation test and independent test set, and case studies further demonstrate the effectiveness of MRDPDA.
+
+1 INTRODUCTION
+
+Identifying the biomolecule‐disease associations can uncover the pathogenesis of complex disease and thus greatly facilitate the diagnosis, treatment, prognosis and prevention of such diseases. 1 Biomolecules include proteins, ncRNAs and so on. The current methods for predicting ncRNA‐disease associations mainly focus on miRNA‐disease association (MDA), circRNA‐disease association (CDA) and lncRNA‐disease association (LDA). Methods for predicting piRNA‐disease association (PDA) have gradually attracted researchers' attention.
+
+miRNA is a typical class of ncRNA, which plays an important role in post transcriptional gene expression regulation. In 2007, Zhang et al. 2 use bioinformatics methods to analyse the relationship between miRNA and cancer, revealing the potential mechanism of miRNA in tumour occurrence and development, which starts the MDA computational research. With the continuous advancement of data accumulation and computing technology, scientists have built specialized databases to collect MDA data and developed various bioinformatics tools to predict MDA. Currently, 53,530 miRNA‐disease association entries which include 1896 miRNA and 2360 diseases are collected in HMDD v4.0. 3 Huang et al. 4 , 5 , 6 systematically evaluate 29 state‐of‐the‐art MDA prediction models, which utilize data and model fusion. They also speculate the trend about MDA works, such as MDA multiclass classification and so on.
+
+CircRNA and lncRNA are two important kinds of ncRNA, which have attracted widespread attention in gene regulation and disease research. More and more CDAs and LDAs have been identified by biological experiments. In recent 10 years, scientists have proposed a number of computational CDA and LDA models. Wang et al. 7 introduce 27 CDA models, which are divided into two categories, namely network algorithm‐based and machine learning‐based models. Meanwhile, these two classes of methods are also widely used in LDA studies. 8 Nowadays, deep learning techniques, particularly graph neural network (GNN), are becoming increasingly prevalent, such as graph auto‐encoder. 9 In summary, MDA, CDA and LDA studies have become matured after a long period and researchers have started to focus on PDA studies.
+
+piRNAs are the largest and most heterogeneous class of small non‐coding RNAs (sncRNAs) with 24‐32 nt and only discovered in animals. 10 Different from the above‐mentioned ncRNAs, piRNAs bind to PIWI protein to form RNA‐protein complexes, which are important players in the regulation of various biological processes, involving the silence of transposable elements (TEs), 11 , 12 the expression of mRNAs and lncRNAs 13 , 14 and so on. In the past decade, growing evidences show that piRNAs are expressed in cancer cells 15 and regulation of PIWI‐piRNA complexes is related to human complex diseases. Ding et al. 16 find piR‐823 induces cancer cell stemness in the luminal subtype of breast cancer cells by increasing the expression of gene called DNMTs. Amaar et al. 17 identify specific piRNAs that play oncogenic (piR‐34871 and piR‐52200) and tumour suppressor (piR‐35127 and piR‐46545) roles in lung cancer. In short, piRNAs are potential biomarkers and drug targets in diagnosis, prognosis and therapeutic efficacy of complex diseases.
+
+So far, many biological experimental techniques have been used to explore associations between piRNA and specific human diseases, like small RNA sequencing and ribosome experiments. Although these experiments can accurately identify genuine PDAs, they are time consuming and laborious. With the development of piRNA studies and accumulation of data, public databases about PDAs have been established, which makes it workable for detecting PDAs by computational methods.
+
+Current computational models for other ncRNAs are not completely applicable to PDA research for two reasons. Firstly, piRNA research started relatively late and PDA data is accumulating which is not as abundant as MDA data. Secondly, the length of piRNA is much shorter than circRNA and lncRNA length, which cause piRNA sequence with low information and weak noise resistance. Consequently, researchers have started to develop the specialized PDA method.
+
+To the best of our knowledge, the first PDA prediction model was proposed in 2020 and since then several machine‐learning algorithms have been developed. Eighteen existing PDA methods (before December 2023) are listed in Table 1, which are grouped into three categories: traditional machine learning methods, GNNs and other deep learning models.
+
+TABLE 1 prediction methods of piRNAs‐disease associations.
+
+ID	Name	Description	Dataset	Measurements	A	P	D	Performance	PD	CV	Case study	Ref.	ST	
+1	iPiDi‐PUL	A method via PU learning based on random forest	piRDisease	PSS, DSS, PGS, DGS	5002	4350	21	AUC = 0.854 ± 0.007	2020.5	5‐CV	AD, head and neck squamous cell carcinoma, breast cancer, gastric cancer	18	Web	
+2	SPRDA
+
+(2020)
+
+	A matrix completion approach based on the structural perturbation	piRDisease	PSS, PGS, DSS, DGS and gene‐disease association information from DisGeNET	1212	501	22	AUC = 0.9523	2020.7	5‐CV	‐	19	‐	
+3	iPiDA‐sHN	A method via two‐step PU learning strategy and CNN	piRDisease	PSS, DSS, PGS, DGS	5002	4350	21	AUC = 0.8867 ± 0.009	2020.10	5‐CV	AD, head and neck cancer	30	‐	
+4	APDA	A stacked autoencoder and random forest classifier is used	piRDisease	Comprehensive DSS, piRNA sequence descriptor of 3‐mer frequencies	5214	4503	27	AUC = 0.9088 ± 0.0126	2020.10	5‐CV	‐	31	‐	
+5	GAPDA	A method based on graph attention network (GAT)	piRDisease	PGS, DGS, comprehensive DSS, piRNA sequence descriptor of 3‐mer frequencies	1212	501	22	AUC = 0.9038 ± 0.0117
+
+	2020.10	5‐CV	‐	22	‐	
+6	DFL‐PiDA	A deep feature learning model based on the convolutional denoising auto‐encoder	piRDisease	DSS, PGS, DGS, piRNA sequence feature similarity	5002	4350	21	AUC = 0.9042	2021.12	5‐CV	‐	33	‐	
+7	iPiDA‐GBNN	A method via gradient‐boosting neural network	piRDisease, ncRPheno, MNDR	PSS, PGS, DGS, disease Jaccard similarity, DSS	8002	5184	33	AUC = 0.9130	2021.12	5‐CV	AD, parkinson Disease	32	‐	
+8	piRDA	A method using two‐step PU learning, CNN and SVM	piRDisease	One‐hot encoding	5002	4350	21	AUC = 0.9500 ± 0.001	2022.2	5‐CV	AD, Cardiovascular diseases, Renal cell carcinoma	34	Web	
+9	iPiDA‐LTR	A method based on information retrieval technology	piRDisease	PSS, DSS	5002	4350	21	AUC = 0.9543	2022.8	5‐CV	Diseases associated with piR‐hsa‐15023 and piR‐hsa‐23210	20	Web	
+10	MSRDA	A method based on multi‐source information and stacked autoencoder	piRDisease	piRNA sequence‐based descriptor, disease semantic‐based descriptor, PGS, DGS	1212	501	22	AUC = 0.9184 ± 0.0015	2022.10	5‐CV	‐	35	‐	
+ID	Name	Description	Dataset	Measurements	A	P	D	Performance	PD	CV	Case study	Ref.	ST	
+11	GAPDA‐ LGAT	A method based on line graph attention networks (LGAT)	piRDisease	PGS, DGS, piRNA sequence features, disease semantic features	1212	501	22	AUC = 0.9038	2022.10	5‐CV	‐	23	code	
+12	iPiDA‐GCN	A method based on graph convolutional networks (GCNs)	MNDR	PSS, PGS, DGS	11,981	10,149	19	AUC = 0.7149	2022.10	5‐CV	AD, cardiovascular disease, renal cell carcinoma, parkinson disease	24	Web, code	
+13	SPRDA
+
+(2022)
+
+	A model using the structural perturbation method	piRDisease	PSS, DGS, disease functional similarity	1212	501	22	AUC = 0.9524 ± 0.0085	2022.11	5‐CV	The top 20 scoring disease‐related piRNAs	21	Code	
+14	PDA‐PRGCN	A method based on subgraph projection and residual scaling‐based feature augmentation	MNDR	K‐mer similarity of piRNA sequences and DSS	3446	1478	24	AUC = 0.9464	2023.1	5‐CV	Breast neoplasm, renal cell carcinoma, head and neck neoplasms and AD	25	Code	
+15	PDA‐ GCN	A method based on 2‐layer GCN	MNDR	PSS and DSS	11,981	10,149	19	AUC = 0.7833	2023.4	5‐CV	Breast neoplasms, renal cell carcinoma, head and neck neoplasms
+
+and AD
+
+	28	‐	
+16	ETGPDA	A method based on the embedding transformation graph convolution network	piRDisease	PSS, PGS, DSS and DGS	5002	4350	21	AUC = 0.9603	2023.5	5‐CV	Head and neck squamous cell carcinoma and AD	26	Code	
+17	iPiDA
+
+‐SWGCN
+
+	A method based on supplementary weighted graph convolutional network	MNDR	PSS, DSS	11,981	10,149	19	AUC = 0.8178	2023.6	IT	Renal cell carcinoma, Parkinson's disease and Cardiovascular disease	27	Code	
+18	CLPiDA	A contrastive learning approach	MNDR	PGS, DGS	11,981	10,149	19	AUC = 0.8406	2023.12	5‐CV	AD and lung adenocarcinoma	29	Code	
+Abbreviations: A, associations; AD, Alzheimer's disease; CV, cross validation; D, diseases; DGS, disease GIP kernel similarity; DSS, disease semantic similarity; IT, independent test; P, piRNAs; PD, public date; PGS, piRNA GIP kernel similarity; PSS, piRNA sequence similarity; Ref, refence; ST, service type.
+
+In the early stage of PDA study, traditional machine learning methods were mainly used such as random forest, SVM, logistic regression and so on. iPiDi‐PUL 18 is a representative method, which is the first PDA predictor by positive unlabeled (PU) learning based on random forest and key features extracted by PCA. Additionally, this group also includes SPRDA (2020), 19 iPiDA‐LTR 20 and SPRDA (2022). 21 These methods are clear in theory, but the performance needs to be further improved and limited web services are available.
+
+Recently, deep learning models with excellent representation learning ability have been widely applied in PDA studies and GNN is the most popular technology. Methods include GAPDA, 22 GAPDA‐LGAT, 23 iPiDA‐GCN, 24 PDA‐PRGCN, 25 ETGPDA, 26 iPiDA‐SWGCN 27 , PDA‐GCN 28 and CLPiDA. 29 These studies treat PDA data as dichotomous networks or heterogeneous networks and use GNNs to study the PDA problem as the link prediction task to capture the nonlinear relationship between piRNA and disease. However, some of these methods achieve the good performance based on a tailored PDA dataset where degree of all piRNA nodes is greater than 1. Furthermore, methods based on GNN may cause a memory explosion problem due to the full graph training.
+
+In addition to GNN, other deep learning technologies are used in PDA studies, such as CNN, stacked autoencoder and so on. Methods are iPiDA‐sHN, 30 APDA, 31 iPiDA‐GBNN, 32 DFL‐PiDA, 33 piRDA 34 and MSRDA. 35 Although these methods have made contributions to the discovery of PDAs, the model's generalization ability needs to be strengthened and no code is available.
+
+Besides the limitations in existing PDA methods, the quality and quantity of PDA data should be paid attention. There are only three PDA specific databases (piRDisease 1.0, piRPheno 2.0 and MNDR 3.0) and just two of them (piRDisease 1.0 and MNDR 3.0) are used for constructing PDA dataset. Among them, the datasets based on piRDisease are popular. However, the number of samples in piRDisease are limited and it has not been updated for 5 years. In addition, due to experimental conditions and literature records, there are bias and uncertainty in these databases. The datasets are highly imbalanced and only a very small number of diseases are associated with piRNAs. It is worth noting that there are strong inclusion relations between diseases which do not appear in piRNAs.
+
+In this study, we design a novel method, MRDPDA, for predicting PDAs. Specifically, MRDPDA effectively integrates a deep factorization machine (FM) model with regularizations of several separate Laplacians calculated from multiple yet limited datasets. MRDPDA utilizes three types of piRNA information (piRNAs k‐mer, piRNA local alignment and Gaussian interaction profile (GIP) kernel information) and three types of disease information (diseases semantic information, diseases symptomatic information and GIP kernel information). Instead of simply calculating an average similarity network from these multiple similarities, 36 MRDPDA regularizes deep FM separately with each individual similarity to obtain the effective embedding features of diseases and piRNAs. Moreover, we propose a unified objective function to combine embedding loss about similarities to ensure that the embedding is suitable for the prediction task. In addition, a relatively balanced benchmark dataset is built from piRPheno, where a deep autoencoder is used to construct a reliable negative set from unlabeled samples. Experiments with the cross‐validation test, independent test and case studies fully demonstrated that MRDPDA outperforms the competing methods for predicting the potential PDAs. The major contributions of this study are enlisted as. Propose a novel method (MRDPDA) to predict PDAs, where a deepFM is regularized by multiple Laplacians.
+
+Construct a relatively balanced benchmark dataset based on piRPheno and build a reliable negative set by a deep autoencoder.
+
+Demonstrate that MRDPDA can effectively integrate multi‐source yet limited data.
+
+2 MATERIALS AND METHODS
+
+2.1 Benchmark dataset construction
+
+With the development of PDA studies, three PDA specific databases (piRDisease 1.0, piRPheno 2.0 and MNDR 3.0) with experimental validation have been created. Wei et al. 18 build the first PDA benchmark dataset based on piRDisease. It contains 5002 experimentally validated PDAs involving 4350 piRNAs but only 21 diseases. Zheng et al. 22 also construct a dataset from piRDisease, which only focuses on piRNAs with the degree greater than 1 in the PDA network. This dataset only contains 1212 PDAs involving 501 piRNAs and 22 diseases. Hou et al. 24 collect data from MNDR 3.0 and establish the latest PDA dataset which contains 11,981 PDAs including 10,149 piRNAs but only 19 diseases. piRPheno is a new manually curated database that provides experimentally supported PDA records. We create the first PAD dataset by removing duplicate associations in piRPheno. The resulted dataset contains 4417 experimentally validated PDAs containing 462 piRNAs and 102 diseases. This dataset includes the following two subsets: (1) Dall=DP∪DU
+
+Where Dall is the union of all piRNAs associated among all disease with the total samples, DP is the positive set and DU is the unlabeled set. The relationship of the mentioned three PDA datasets are represented by Venn diagram 37 as shown in Figure 1.
+
+FIGURE 1 Venn diagram of PDA datasets.
+
+In our study, PDA data is represented as a PDA matrix A. Specifically, if the i‐th piRNA is experimentally‐validated to be associated with the j‐th disease, the value of ai,j is equal to 1 and 0 otherwise.
+
+2.2 Similarity calculation
+
+To obtain both piRNA‐related and disease‐related information from comprehensive views, piRNA‐piRNA and disease‐disease similarities were calculated with various datasets, which are introduced as follows:
+
+2.2.1 piRNA‐piRNA similarity
+
+By mapping name, we collected piRNA sequence from piRBase V3.0 and calculate three piRNA similarities. These similarities are described in the sequel. piRNA sequence local alignment similarity
+
+The sequence information contains the attribute information of piRNAs and the Smith‐Waterman alignment algorithm can effectively capture the functional similarities among piRNAs. In our study, the piRNA sequence similarity PS1pipj between the i‐th and j‐th piRNAs is computed as: (2) PS1pipj=SWpipjSWpipi×SWpjpj
+
+Where the SWpipj is the sequence alignment score between the i‐th and j‐th piRNAs, which is calculated by the Smith‐Waterman alignment algorithm. piRNA sequence k‐mer similarity
+
+The k‐mer term frequency (TF) typically refers to the specific k‐gram frequency of nucleic acid or amino acid sequences which has been widely used to describe the components of biosequences. Inspired by natural language processing methods, we treat a piRNA sequence as a short text and a k‐mer sequence as a word. The word frequency refers to the times of a word which occurs in a corpus of texts. Therefore, we use a sliding window to get a k‐mer frequency vector of one piRNA as a word frequency vector. The cosine similarity is used to measure the piRNA sequence similarity between two vectors and is computed as: (3) PS2pipj=vpi∙vpjvpi×vpj
+
+Where vpi andvpj denote the k‐mer frequency vector of the i th and j th piRNAs. piRNA GIP kernel similarity
+
+The GIP kernel aims to measure the similarities of biological entities based on their interaction profile information and it has been successfully applied to PDA studies. We compute the GIP kernel similarity as follows: (4) PS3pi,pj=exp−λpAi,−Aj,2
+
+(5) λp=λp′/1m∑i=1mAi,2
+
+Where A is the association adjacency matrix between m piRNAs and n diseases, Ai, is the i‐th row of A representing the disease‐interaction profile of the i‐th piRNA and the parameter λp′ for controlling kernel bandwidth is set as 1.
+
+2.2.2 Disease‐disease similarity
+
+By collecting disease information from MeSH and Human symptoms‐disease network, we calculate three disease similarities, which are described in sequel. Disease symptom similarity
+
+The disease symptom similarity is downloaded from Human symptoms‐disease network data in Zhou et al. 38 Here, the weight DS1didj between the i‐th disease and j‐th disease quantifies the similarity of their respective symptoms. Disease semantic similarity
+
+Disease semantic similarity has successfully been used in various ncRNA‐disease association prediction studies. Using MeSH information, a directed acyclic graph (DAG) is constructed based on hierarchical descriptors, in which nodes represent disease terms and the edges represent the relationship between the current node and its ancestors. DAGdi=TdiEdi describes the structure of the i‐th disease di, where Tdi indicates the set of nodes including all ancestors of di as well as itself and Edi stands for the corresponding direct edges. Ddit denotes the semantic contribution of disease term t∈Tdi related to the i‐th disease and can be computed as follows: (6) Ddit=1ift=ithdiseasemax∆×Ddit′t′∈children oftotherwise
+
+where ∆ is the semantic contribution factor (∆ = 0.5 is the default in this study).
+
+The disease semantic similarity can be defined as follows: (7) DS2didj=∑t∈Tdi∩TdjDdit+Ddjt∑t∈TdiDdit+∑t∈TdjDdjt
+
+Disease GIP kernel similarity
+
+The disease GIP kernel is computed by the same way as piRNA GIP kernel similarity as follows: (8) DS3di,dj=exp−λdA,i−A,j2
+
+(9) λd=λd′/1m∑i=1mA,i2
+
+Where A,i is the i‐th column of A representing the piRNA‐interaction profile of the i‐th disease. The parameter λd′ for controlling kernel bandwidth is set as 1 too.
+
+2.3 Selection of reliable negative samples
+
+If negative samples are randomly selected from unlabeled samples, noise may be caused by the fact that not are all unlabeled samples negative samples. To building an accurate model, reliable negative samples are chosen with a deep autoencoder‐based negative sample selection model in this study.
+
+First, each row of PDA matrix A is used as the piRNA feature representation, while each column of matrix A is intended for the disease feature representation. A deep autoencoder is trained by learning the latent features of all PDA samples from DP. The i‐th piRNA‐disease sample is defined as xi=DdPp∈Rm+n, where Dd is feature representation of the disease in xi and Pp is the feature representation of the piRNA in xi. Using xi as input, the encoder extracts the features in a low‐dimensional latent space zi and the decoder reconstructs the input xi based on the latent representation zi from the encoder. The loss of the autoencoder is the average of the reconstruction errors of all the training samples, which describes as follows: (10) Lxixi′=−1Km+n∑i=1K∑j=1m+nxijlogxij′+1−xijlog1−xij′
+
+Where xi′ is the reconstruction of input xi, K is the total number of PDA samples in DP, m+n is the length of the representation vector of piRNA‐disease pair, xij is the j‐th factor of vector xi. All the parameters in the autoencoder are updated iteratively by minimizing the loss above.
+
+Finally, all the unknown PDAs are input into the well‐trained model and the reconstruction error is calculated for each unknown piRNA‐disease pair. The reconstruction error scores are sorted in descending order and the unlabeled samples divided into three clusters of nearly the same size according to the scores. The second cluster of unlabeled samples are considered as samples with minimum chance to the false negative. To keep the balance of negative and positive training samples, samples randomly selected from the second cluster with the same size as positive set are judged as reliable negative samples.
+
+2.4 Prediction model construction
+
+DeepFM is an end‐to‐end learning frame combining FM and Multi‐Layer Perceptron (MLP), which has the strong capability of automatic learning low‐ and high‐order feature interaction and was successfully used in Click Through Rate (CTR) prediction 39 and MDA prediction. 36 To further enhance the prediction performance, we present an improved DeepFM model, MRDPDA, which is regularized separately by each of multiple Laplacian instead of one Laplacian from simple superposition of multiple similarities about piRNAs and diseases.
+
+The proposed MRDPDA includes three parts, which are embedding layer, FM and MLP components. FM and MLP components share the same inputs from the embedding layer and final output is calculated according to the outputs of FM and MLP: (11) y^=sigmoidyFM+yMLP
+
+The proposed framework is shown in Figure 2 and details are described in the sequel.
+
+FIGURE 2 The framework of the DeepFM model on PDA prediction.
+
+2.4.1 Embedding layer
+
+Ding et al. 36 demonstrate the embedding layer plays an important role in DeepFM, so we aim to improve the embedding layer by Laplacian regularization of separate similarities. The structure of the embedding layer about similarity‐level data fusion is shown in Figure 3.
+
+FIGURE 3 The structure of the embedding layer about similarity‐level data fusion.
+
+Three types of piRNA similarities (piRNAs k‐mer, piRNA local alignment and GIP kernel) and three types of disease similarities (diseases semantics, diseases symptom and GIP kernel) are taken into consideration in this study. One‐hot encoding representations of a piRNA and a disease are utilized in the proposed model as inputs. Six Laplacian regularization of separate similarities are applied and Laplacian eigenmaps are used to initialize the weights for the embedding layer. As described previously, PSij1, PSij2 and PSij3 are local alignment, k‐mer and GIP kernel similarities of the i‐th and j‐th piRNAs, respectively. Qi1 and Qj1 are the column latent vectors of the i‐th and j‐th piRNAs about the piRNA sequence local alignment similarity. The Laplacian regularization for this similarity can be computed as a minimum R1 optimization problem as follows: R1=12∑i,j=1NQi1−Qj12PSij1
+
+=∑i=1NQi1TQi1Diip−2∑i,j=1NQi1TQj1PSij1
+
+(12) =TrQ1DpQ1T−TrQ1PS1Q1T=TrQ1Lp1Q1T
+
+where Dp is a diagonal matrix with Diip=∑j=1NPSij1, is the square of 2 norm, Tr is the matrix trace, Q1 is the latent feature matrix whose i th column is the corresponding latent vectors of the i‐th piRNA and Lp1=Dp−PS1 is the Laplacian matrix.
+
+In the same way, the Laplacian regularization for the k‐th piRNA similarity and the t‐th disease similarity can be represented as minimum Rk and Rt optimization problem as follows: (13) Rk=12∑i,j=1NQik−Qjk2PSijk=TrQkLpkQkTk=1,2,3
+
+(14) Rt=12∑i,j=1MUit−Ujt2DSijt=TrUtLdtUtTt=1,2,3
+
+Where Qik and Qjk are the column latent vectors of the i‐th and j‐th piRNA about the k‐th piRNA similarity,Uit and Ujt are the column latent vector of the i‐th and j‐th disease about the t‐th disease similarity, Qk is the latent feature matrix whose i‐th column is the corresponding latent vectors of the i‐th piRNA, Ut is that of the t‐th disease, Lpk and Ldt are the Laplacian matrixes.
+
+Suppose the loss function of MRDPDA is JQkUtO, where Qk and Ut are the latent feature matrices of piRNAs and diseases in the embedding layer, respectively.O is the set of all the rest parameters and J is the cross‐entropy loss function. We propose a unified and extended objective function FQkUtO, which combines the cross‐entropy loss and Laplacian regularizations as follows: minFQkUtO=minJQkUtO
+
++∑k=13pλkTrQkLpkQkT
+
+(15) +∑t=13dλtTrUtLdtUtT
+
+where pλkand dλt are the regularization parameters that are used to balance the MRDPDA loss term and regularization term.
+
+It is still noteworthy that sparse disease similarity matrix from MeSH cause the failure of Laplacian regularization. If a disease has no similarities information, a small perturbation of 0.001 is set in the column and row of this disease to ensure the regularization operation.
+
+Different view similarity values can reflect the associations from different criteria and latent vectors by individual regulation of each similarity are set for the associations between the nodes' weights in the different fields of embedding layer. The comprehensive embedding vectors about piRNA and disease are integrated by the average of the obtained embedding vectors.
+
+Following the precious study practices, 36 low dimensional feature representations from the Laplacian eigenmaps of each node is used for initializing node's corresponding weights in the dense embedding layer.
+
+2.4.2 FM and MLP components
+
+A standard FM and MLP components are used in our model and it is responsible for the interaction between low‐order features.
+
+As shown in Figure 2, the output of FM component is the sum of the addition unit and the inner product units. The addition unit reflects the linear interactions among features and the inner product represents the effect of order‐2 feature interactions. The output of FM is as follows: (16) yFM=w,x+∑j1=1d∑j2=j1+1dViVjxj1xj2
+
+Where x=xField_piRNA,xField_disease is the d‐dimensional vector which contains one‐hot raw feature vectors of a piRNA and a disease, w∈Rd is network parameters to measure impact of order‐1 features' interaction, Vi and Vj is the corresponding latent vectors of raw features xi and xj, respectively.
+
+MLP component is a feed‐forward multi‐layer neural network and used to learn high‐order feature interactions according to the embedding vectors. The comprehensive embedding vectors about piRNA and disease are denoted as ep and ed, respectively. The input of MLP component x0, the forward process xl+1 and the output of MLP yMLP are as follows: (17) x0=eped
+
+(18) xl+1=σWlxl+bll=0,…,H
+
+(19) yMLP=σWHxH+bH
+
+Where σ is the active function, Wl and bl are the weights and bias at the l‐th layer, WHand bH are that at the H hidden layers in MLP.
+
+3 RESULTS
+
+3.1 Evaluation methods and hyper‐parameters
+
+In our study, five‐fold cross‐validation and independent test are employed to evaluate the performance of models. All experiments are run on a computer with an NVIDIA GeForce RTX 4070 graphics card, i7‐10700KF CPU, 32GB of RAM and 4.5 TB of storage. The area under the receiver operating characteristics curve (AUC) and under the precision recall curve (AUPR) are used as performance metrics. The higher the AUC and AUPR values, the better the predictive performance of the model is.
+
+Many hyper‐parameters influence the prediction performance. These parameters were empirically selected or chose based on performance evaluation in this study. In the step of similarity calculation, the hyper‐parameter k denotes the length of k‐mer fragment. If the choice of k value is too small, k‐mer fragments will not fully reflect the characteristics of the piRNA sample and affect the prediction performance. If the choice of k value is too large, it will bring the large computational overhead. The predictive results with different number of k are illustrated in Figure 4. Taking into account both prediction performance and computational efficiency, the k value is empirically set to 3.
+
+FIGURE 4 The predictive results of various ranges of k.
+
+In the step of reliable negative samples selection, autoencoder model with a latent size of 32 are used. The hidden layer dimensions are 256, 64, 32, 64, 256 and input and output dimensions are 564. Mini‐batch gradient descent with the batch size of 64 and Adam optimizer are applied. In prediction model construction part, the embedding size embedding_size is the first key hyper‐parameter, which is searched from 5,10,15,…,55,60. The results on five‐fold CV show that the optimal embedding_size value is 20. The regularization coefficients pλk and dλt are set as 0.01. The hidden layer dimensions of MLP part are 64 and 32, the activation function is ReLU. The learning rate is 0.001, the batch size is 64 and the dropout rate was set to 0.5.
+
+3.2 Effectiveness of the improvements
+
+MLRDFM is an improved deepFM model which has successfully been used in MDA prediction. 36 MRDPDA improves MLRDFM performance on PDA by structural modification of the embedding layer and selection of reliable negative set. To illustrate the effectiveness of these two improvements, we respectively compare the proposed method with MLRDFM with random unlabeled samples and reliable negative samples. Five‐fold cross‐validation experiments are conducted and the benchmark dataset proposed in this paper are used.
+
+The AUC and AUPR of those three models' prediction results are shown in Figure 5, from which we can see the following: (1) Compared with the orange curves (MLRDFM with random unlabeled samples), the red curves (MLRDFM with reliable negative samples) achieve the better performance, indicating that selection of reliable negative set by learning from positive samples contributes to the progress; (2) Compared with the simply superimposition and random initialization, six Laplacian regularization of separate similarities and initialization of Laplacian eigenmaps in the embedding layer help increased performance; (3) Overall MRDPDA yielded the best identification performance with the AUC of 0.9533 and AUPR of 0.9483.
+
+FIGURE 5 The comparison of AUC and AUPR of the three models.
+
+3.3 Performance comparison with existing methods
+
+Various PDA methods have been proposed and the three PDA methods with public code (iPiDA‐GCN, 24 GAPDA‐LGAT 23 and ETGPDA 26 ) are chosen to compare. iPiDA‐GCN is a PDA predictor based on graph convolutional networks (GCN) for learning hidden association patterns in different biological networks. GAPDA‐LGAT is a PDA method based online graph attention networks by extending heterogeneous networks to replace dichotomous networks. ETGPDA is a method based on GCN with the embedding transformation, which coverts piRNA and disease embeddings into the same space.
+
+First, five‐fold cross validation (5‐CV) test on the benchmark dataset proposed in our paper are used and computation time of them are measured respectively. Furthermore, the independent test dataset was downloaded from Hou et al. 24 for performance comparison. Table 2 demonstrates the results of performance comparison.
+
+TABLE 2 The performance comparison of the four methods.
+
+	Methods	MRDPDA	iPiDA‐GCN	ETGPDA	GAPDA‐LGAT	
+5‐CV	AUC (%)	95.33	88.07	90.53	87.38	
+AUPR (%)	94.83	83.81	88.66	81.75	
+Run time (ms)	141,202	343,612	142,418	289,607	
+Independent test	AUC (%)	71.76	71.49	70.58	56.12	
+AUPR (%)	69.01	70.36	68.93	55.37	
+Note: Significance for bold values is the best performance.
+
+From the 5‐CV results, it can be seen that MRDPDA achieves the highest AUC (95.33%) and AUPR (94.83%). Additionally, our method takes141,202 ms, which is the fastest of four methods. It is slightly faster than ETGPDA (142,418 ms), is approximately twofold faster than GAPDA‐LGAT (289,607 ms) and iPiDA‐GCN (343,612 ms). This reveals our method is more effective and faster than the other three methods.
+
+From independent test results, AUC of MRDPDA is still the highest and its AUPR is slightly lower than that of iPiDA‐GCN. It is worth noting that GAPDA‐LGAT is constructed for limited dataset and only predict the piRNAs associated with 13 diseases in the independent test dataset, so the prediction result is evaluated by these associations.
+
+3.4 Case studies
+
+To evaluate the ability of MRDPDA for predicting associated piRNAs for new diseases, case studies of two important diseases ‘Alzheimer's disease’ and ‘Gastric cancer’ were reported. As in iPiDA‐sHN, 30 we remove the pairs related to Alzheimer's disease and re‐trained the model with the remaining samples. The trained model is used to identify the missing known associations of Alzheimer's disease. The top 10 piRNA associated with these two diseases are listed in Table 3. Six identified piRNAs associated with ‘Alzheimer's disease’ and eight identified associations of ‘Gastric cancer’ have been validated by literature mining. For examples, by high throughput technologies, the upregulation of piR‐hsa‐22564 and piR‐hsa‐14621, the downregulation of piR‐hsa‐14962 may be correlated with the increased risk of Alzheimer's disease. 40 piR‐hsa‐1282 dysregulation associated with gastric cancer was validated by RT‐PCR and the animal model experiments in vivo. 41 These prediction results demonstrate the effectiveness of the proposed method. The unverified piRNA‐disease relationships can be considered as candidates and investigated in the further research.
+
+TABLE 3 The top 10 piRNAs associated Alzheimer's disease (AD) and Gastric cancer (GC) predicted by our study.
+
+Rank	piRNAs	AD	Rank	piRNAs	GC	
+1	piR‐hsa‐22564	Yes	1	piR‐hsa‐1282	Yes	
+2	piR‐hsa‐14621	Yes	2	piR‐hsa‐1963	Yes	
+3	piR‐hsa‐14962	Yes	3	piR‐hsa‐7193	Yes	
+4	piR‐hsa‐1251	No	4	piR‐hsa‐27492	Yes	
+5	piR‐hsa‐25074	Yes	5	piR‐hsa‐5370	Yes	
+6	piR‐hsa‐28771	Yes	6	piR‐hsa‐26441	Yes	
+7	piR‐hsa‐4685	Yes	7	piR‐hsa‐20266	Yes	
+8	piR‐hsa‐5967	No	8	piR‐hsa‐17444	Yes	
+9	piR‐hsa‐26359	No	9	piR‐hsa‐27007	No	
+10	piR‐hsa‐32046	No	10	piR‐hsa‐15404	No	
+
+4 DISCUSS AND FUTURE DIRECTIONS
+
+Various association prediction tasks are common in bioinformatics studies, such as ligand‐receptor interactions, drug‐target interactions, biomolecule‐disease associations and so on. 42 , 43 , 44 Compared with the available MDA, CDA and LDA computational tools, PDA research is still in its initial phase. 45 Challenges remain in representation learning capacity, the quality and quantity of the benchmark set. In our study, we have developed a novel method, MRDPDA, for predicting PDAs based on limited data from multiple sources. This method effectively integrates a deepFM model with regularizations of several separate Laplacians calculated from multiple yet limited datasets, instead of simply calculating an average similarity network to regularize the deepFM.
+
+Moreover, a unified objective function is proposed to combine embedding loss about similarities to ensure that the embedding is suitable for the prediction task. In addition, we have constructed a relatively balanced benchmark from piRPheno with a deep autoencoder for selecting reliable negative samples. This method has achieved the best performance on 5‐CV and independent test among latest computing methods. Case studies have further demonstrated the effectiveness. Clearly, there is still some room for improvement in the future:
+
+4.1 Data perspective
+
+The quality and quantity of current PDA datasets still need to be improved. Because of the limited number and strong inclusion relations of diseases, we would try to design rationally merged method and build PDA data management platform. In addition, we would try to train a unified model based on three or more datasets in the setting of meta learning.
+
+4.2 Algorithm perspective
+
+Future PDA algorithm research can be considered from two ways. On the one hand, we would try to develop the new prediction model which is suitable for highly imbalanced PDA data. It is still noteworthy that PDA databases have highly abundant one‐to‐one associations. 88.62% and 86.13% piRNAs are associated with only one disease in piRDisease and MNDR, respectively. On the other hand, we will consider various learning strategies to improve the PDA prediction performance. For example, boosting models have obtained better performance in prediction of ligand‐receptor interactions 46 , 47 , 48 by combining multiple weak learners. Once the PDA data is sufficient, ensemble learning strategy will be applied.
+
+AUTHOR CONTRIBUTIONS
+
+Yajun Liu: Conceptualization (equal); formal analysis (equal); funding acquisition (equal); investigation (equal); methodology (equal); validation (equal); visualization (equal); writing – original draft (equal). Fan Zhang: Data curation (equal); visualization (equal). Yulian Ding: Investigation (equal); methodology (equal). Rong Fei: Investigation (equal); visualization (equal). Junhuai Li: Investigation (equal). Fang‐Xiang Wu: Conceptualization (equal); funding acquisition (lead); methodology (equal); project administration (lead); supervision (lead).
+
+FUNDING INFORMATION
+
+This work was supported by the Young Scientists Fund of the National Natural Science Foundation of China (Grant No. 62202374 and U22A2041), the Natural Science Basic Research Program of Shaanxi Province of China (Program No. 2024JC‐YBMS‐484), the China Postdoctoral Science Foundation (2021 M693887) and Natural Science and Engineering Research Council of Canada (NSERC).
+
+CONFLICT OF INTEREST STATEMENT
+
+The authors declare no potential conflict of interests.
+
+DATA AVAILABILITY STATEMENT
+
+The code and dataset of MLRDFM are freely available at https://github.com/liuyajun1007/PDA.
+
+
+REFERENCES
+
+1 Ding Y . Predicting Biomolecule‐Disease Associations Based on Machine Learning Approaches. University of Saskatchewan; 2022.
+2 Zhang B , Pan X , Cobb GP , Tajd A . microRNAs as oncogenes and tumor suppressors. Dev Biol. 2007;302(1):1‐12.16989803 10.1016/j.ydbio.2006.08.028
+3 Cui C , Zhong B , Fan R , Cui QJNAR . HMDD v4 0: A database for experimentally supported human microrna‐disease associations. Nucleic Acids Res. 2024;52(D1):D1327‐D1332.37650649 10.1093/nar/gkad717 PMC10767894
+4 Huang L , Zhang L , Xjb C . Updated review of advances in micrornas and complex diseases: taxonomy, trends and challenges of computational models. Brief Bioinform. 2022;23(5):bbac358.36056743 10.1093/bib/bbac358
+5 Huang L , Zhang L , Xjb C . Updated review of advances in micrornas and complex diseases: towards systematic evaluation of computational models. Brief Bioinform. 2022;23(6):bbac407.36151749 10.1093/bib/bbac407
+6 Huang L , Zhang L , Xjb C . Updated review of advances in micrornas and complex diseases: experimental results, databases, webservers and data fusion. Brief Bioinform. 2022;23(6):bbac397.36094095 10.1093/bib/bbac397
+7 Wang C‐C , Han C‐D , Zhao Q , Chen XJ . Circular RNAs and Complex Diseases: From Experimental Results to Computational Models. Brief Bioinform. 2021;22(6):bbab286.34329377 10.1093/bib/bbab286 PMC8575014
+8 Peng L , Ren M , Huang L . GEnDDn: An lncRNA–disease association identification framework based on dual‐net neural architecture and deep neural network. Interdiscip Sci. 2024;16:1‐21.38733474 10.1007/s12539-024-00619-w
+9 Peng L , Huang L , Su Q , Tian G , Chen M , Gjb H . LDA‐VGHB: identifying potential lncrna–disease associations with singular value decomposition, variational graph auto‐encoder and heterogeneous newton boosting machine. Brief Bioinform. 2024;25(1):bbad466.10.1093/bib/bbad466 PMC10734633 38127089
+10 Morceau F , Chateauvieux S , Gaigneaux A , Dicato M , Diederich M . Long and short non‐coding RNAs as regulators of hematopoietic differentiation. Int J Mol Sci. 2013;14(7):14744‐14770.23860209 10.3390/ijms140714744 PMC3742271
+11 Houwing S , Kamminga LM , Berezikov E , et al. A role for Piwi and piRNAs in germ cell maintenance and transposon silencing in zebrafish. Cell. 2007;129(1):69‐82.17418787 10.1016/j.cell.2007.03.026
+12 Ku H‐Y , Gangaraju VK , Qi H , Liu N , Lin H . Tudor‐SN interacts with Piwi antagonistically in regulating spermatogenesis but synergistically in silencing transposons in drosophila. PLoS Genet. 2016;12(1):e1005813.26808625 10.1371/journal.pgen.1005813 PMC4726654
+13 Watanabe T . Cheng E‐c, Zhong M, Lin H: retrotransposons and pseudogenes regulate mRNAs and IncRNAs via the piRNA pathway in the germline. Genome Res. 2015;25(3):368‐380.25480952 10.1101/gr.180802.114 PMC4352877
+14 Zhang D , Tu S , Stubna M , et al. The piRNA targeting rules and the resistance to piRNA silencing in endogenous genes. Science. 2018;359(6375):587‐592.29420292 10.1126/science.aao2840 PMC5939965
+15 Martinez VD , Vucic EA , Thu KL , et al. Unique somatic and malignant expression patterns implicate PIWI‐interacting RNAs in cancer‐type specific biology. Sci Rep‐Uk. 2015;5:10423.10.1038/srep10423 PMC4444957 26013764
+16 Ding X , Li Y , Lü J , et al. piRNA‐823 Is Involved in Cancer Stem Cell Regulation through Altering DNA Methylation in Association with Luminal Breast Cancer. Frontiers in Cell and Developmental Biology; 2021;513.10.3389/fcell.2021.641052 PMC8005588 33791297
+17 Amaar YG , Reeves MEJO . The Impact of the RASSF1C and PIWIL1 on DNA Methylation: The Identification of GMIP as a Tumor Suppressor. Oncotarget. 2020;11(45):4082.33227088 10.18632/oncotarget.27795 PMC7665232
+18 Wei H , Xu Y , Liu B . iPiDi‐PUL: identifying Piwi‐interacting RNA‐disease associations based on positive unlabeled learning. Brief Bioinform. 2021;22(3):10.10.1093/bib/bbaa058 32393982
+19 Zheng K , You Z‐H , Wang L , Wong L , Z‐hJb Z . SPRDA: A matrix completion approach based on the structural perturbation to infer disease‐associated piwi‐interacting rnas. bioRxiv. 2020. doi:10.1101/2020.07.02.185611 36445194
+20 Zhang W , Hou J , Liu B . iPiDA‐LTR: identifying piwi‐interacting RNA‐disease associations based on learning to rank. PLoS Comput Biol. 2022;18(8):e1010404.35969645 10.1371/journal.pcbi.1010404 PMC9410559
+21 Zheng K , Zhang X‐L , Wang L , et al. SPRDA: a link prediction approach based on the structural perturbation to infer disease‐associated Piwi‐interacting RNAs. Brief Bioinform. 2023;24(1):bbac498.36445194 10.1093/bib/bbac498
+22 Zheng K , You Z‐H , Wang L , Wong L , Chen Z‐H . Inferring disease‐associated Piwi‐interacting RNAs via graph attention networks. International Conference on Intelligent Computing. Springer; 2020:239‐250.
+23 Zheng K , Zhang X‐L , Wang L , You Z‐H , Zhan Z‐H , Li H‐Y . Line graph attention networks for predicting disease‐associated Piwi‐interacting RNAs. Brief Bioinform. 2022;23(6):bbac393.36198846 10.1093/bib/bbac393
+24 Hou J , Wei H . Ipida‐Gcn: identification of pirna‐disease associations based on graph convolutional network. PLoS Comput Biol. 2022;18(10):e1010671.36301998 10.1371/journal.pcbi.1010671 PMC9662734
+25 Zhang P , Sun W , Wei D , et al. PDA‐PRGCN: Identification of Piwi‐Interacting RNA‐Disease Associations through Subgraph Projection and Residual Scaling‐Based Feature Augmentation. BMC Bioinformatic. 2023;24(1):18.10.1186/s12859-022-05073-3 PMC9843905 36650439
+26 Meng X , Shang J , Ge D , Yang Y , Zhang T . ETGPDA: Identification of piRNA‐disease associations based on embedding transformation graph convolutional network. BMC Genomics. 2023;24(1):279.37226081 10.1186/s12864-023-09380-8 PMC10210294
+27 Hou J , Wei H . Ipida‐Swgcn: Identification of pirna‐disease associations based on supplementarily weighted graph convolutional network. PLoS Comput Biol. 2023;19(6):e1011242.37339125 10.1371/journal.pcbi.1011242 PMC10313042
+28 Su H , Gao H . PDA‐GCN: predicting Piwi‐interacting RNA‐disease associations based on graph convolution network. 2023 11th International Conference on Bioinformatics and Computational Biology (ICBCB). 2023;118‐122.
+29 Hu X , Zhang Y , Zhang J , Deng L . CLPiDA: a contrastive learning approach for predicting potential PiRNA‐disease associations. 2023 IEEE International Conference on Bioinformatics and Biomedicine (BIBM). 2023;159‐164.
+30 Wei H , Ding YX , Liu B . iPiDA‐sHN: identification of Piwi‐interacting RNA‐disease associations by selecting high quality negative samples. Comput Biol Chem. 2020;88:7.10.1016/j.compbiolchem.2020.107361 32916452
+31 Zheng K , You Z‐H , Wang L , Li H‐Y , Ji B‐Y . Predicting human disease‐associated pirnas based on multi‐source information and random forest. International Conference on Intelligent Computing. Springer; 2020:227‐238.
+32 Qian Y , He Q , Deng L . iPiDA‐GBNN: identification of Piwi‐interacting RNA‐disease associations based on gradient boosting neural network. 2021 IEEE International Conference on Bioinformatics and Biomedicine (BIBM): 2021. 1045‐1050.
+33 Ji B , Luo J , Pan L , Xie X , Peng S . DFL‐PiDA: prediction of Piwi‐interacting RNA‐disease associations based on deep feature learning. 2021 IEEE International Conference on Bioinformatics and Biomedicine (BIBM). 2021;406‐411.
+34 Ali SD , Tayara H , Chong KTJC , Journal SB . Identification of piRNA disease associations using deep learning. 2022;20:1208‐1217.10.1016/j.csbj.2022.02.026 PMC8908038 35317234
+35 Zheng K , Liang Y , Liu Y‐Y , Yasir M , Wang P . A decision support system based on multi‐sources information to predict piRNA–disease associations using stacked autoencoder. Soft Comput. 2022;26(20):11007‐11016.
+36 Ding Y , Lei X , Liao B , Wu F‐XJB . A multi‐view Laplacian regularized deepfm model for predicting mirna‐disease associations. Brief Bioinform. 2022;23(3):bbac079.35323901 10.1093/bib/bbac079
+37 Bardou P , Mariette J , Escudié F , Djemiel C , Klopp CJB . Jvenn: An interactive venn diagram viewer. 2014;15(1):1‐7.10.1186/1471-2105-15-293 PMC4261873 25176396
+38 Zhou X , Menche J , Barabási A‐L , Sharma A . Human symptoms–disease network. Nat Commun. 2014;5(1):4212.24967666 10.1038/ncomms5212
+39 Guo H , Tang R , Ye Y , Li Z . He XJapa: DeepFM: a Factorization‐Machine Based Neural Network for CTR Prediction. the 26th International Joint Conference on Artificial Intelligence; 2017:1725‐1731.
+40 Qiu W , Guo X , Lin X , et al. Transcriptome‐wide piRNA profiling in human brains of Alzheimer's disease. Neurobiol Aging. 2017;57:170‐177.28654860 10.1016/j.neurobiolaging.2017.05.020 PMC5542056
+41 Cheng J , Deng H , Xiao B , et al. piR‐823, a novel non‐coding small RNA, demonstrates in vitro and in vivo tumor suppressive activity in human gastric cancer cells. Cancer Lett. 2012;315(1):12‐17.22047710 10.1016/j.canlet.2011.10.004
+42 Peng L , Gao P , Xiong W , Li Z , Chen XJCB . Medicine: Identifying potential ligand–receptor interactions based on gradient boosted neural network and interpretable boosting machine for intercellular communication analysis. Comput Biol Med. 2024;171:108110.38367445 10.1016/j.compbiomed.2024.108110
+43 Peng L , He X , Peng X , Li Z . Medicine: Stgnnks: identifying cell types in spatial transcriptomics data based on graph neural network, denoising auto‐encoder, and k‐sums clustering. Comput Biol Med. 2023;166:107440.37738898 10.1016/j.compbiomed.2023.107440
+44 Feng B‐M , Zhang Y‐Y , Niu N‐W‐J , Zheng H‐Y , Wang J‐L , Feng W‐F . DeFuseDTI: Interpretable drug target interaction prediction model with dual‐branch encoder and multiview fusion. Future Gener Comput Syst. 2024;161:239‐247.
+45 Liu Y , Li R , Ding Y , Hei X , Wu F‐X . P4PC: A Portal for Bioinformatics Resources of piRNAs and circRNAs. Curr Protoc Bioinform. 2024;19(9):873‐878.
+46 Peng L , Xiong W , Han C , Li Z , Chen XJIJoB , Informatics H: CellDialog: A Computational Framework for Ligand‐Receptor‐Mediated Cell‐Cell Communication Analysis III. 2023.10.1109/JBHI.2023.3333828 37976192
+47 Peng L , Yuan R , Han C , et al. Cellenboost: A boosting‐based ligand‐receptor interaction identification model for cell‐to‐cell communication inference. IEEE Trans Nanobioscience. 2023;22(4):705‐715.37216267 10.1109/TNB.2023.3278685
+48 Peng L , Tan J , Xiong W , et al. Medicine: Deciphering Ligand–Receptor‐Mediated Intercellular Communication Based on Ensemble Deep Learning and the Joint Scoring Strategy from Single‐Cell Transcriptomic Data. Comput Biol Med. 2023;163:107137.37364528 10.1016/j.compbiomed.2023.107137

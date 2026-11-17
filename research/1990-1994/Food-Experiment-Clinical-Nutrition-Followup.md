@@ -1,0 +1,5 @@
+# Dietary fiber and Parkinson symptoms
+
+## Insoluble fiber and constipation
+
+Astarloa and colleagues reported an intervention in people with Parkinson’s and marked constipation in October 1992. Their abstract describes improved constipation and motor function with a high-insoluble-fiber diet, with larger plasma levodopa differences 30 and 60 minutes after dosing. The primary abstract gives no fiber ingredient list, preparation or individual food comparison. Later reviews describe a multicomponent supplement containing wheat bran, pectin and dimethylpolyoxylhexane. One gives a two-month intervention and another a three-month measurement interval. The primary full report remains unresolved, so the exact dose schedule and composition are secondary-source descriptions. [Primary abstract, PMID 1330307](https://pubmed.ncbi.nlm.nih.gov/1330307/) · [Later formulation account](https://scielo.isciii.es/scielo.php?lng=en&pid=S0212-16112010000400002&script=sci_arttext) · [2021 review, Table 5](https://pmc.ncbi.nlm.nih.gov/articles/PMC8634393/)

@@ -1,0 +1,7 @@
+# Curry leaf and Parkinson handwriting
+
+## Curry leaves listed in a mixed Parkinson diet
+
+[Hegelmaier et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC7072275/) (published 6 February 2020; PMID 32041265; DOI 10.3390/cells9020376) list “curry leaves” among many seasonings in Appendix A. Sixteen Parkinson participants undertook an ovo-lacto vegetarian diet for 14 days; ten also had bowel cleansing. The table does not verify *Murraya*/*Bergera* identity, a cooked recipe, the amount used, or individual ingestion. The paper reports UPDRS III composite motor scores, not a separate handwriting outcome, and the design does not isolate curry leaf. The initial UPDRS II aggregate in the descriptive table does not supply a post-intervention writing comparison. [Existing archived primary article and Appendix A](Source-Text/PMC7072275.txt).
+
+Laboratory studies in the existing archive supply context in both directions: the 2020 aqueous leaf extract in paraquat-exposed rats shortened bar-test immobility, while 2021 petroleum-ether and alkaloid fractions prolonged drug-induced catalepsy in mice under a different protocol. A 2025 mouse leaf-extract report used beam, pole and open-field tasks; full exact methods remain access-limited. None evaluates cooked culinary leaf or human handwriting. [2020 and 2021 primary summaries](Food-Experiment-Chives-Cilantro-Curry-Leaf.md#curry-leaf-aqueous-extract-in-paraquat-exposed-rats) · [2025 source and access limits](../2025-2029/Food-Experiment-Chives-Cilantro-Curry-Leaf.md#curry-leaf-extract-in-rotenone-exposed-mice).

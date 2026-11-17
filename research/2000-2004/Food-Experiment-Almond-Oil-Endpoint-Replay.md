@@ -1,0 +1,9 @@
+# Almond oil preparation and endpoint search
+
+## Oral almond oil and whole almonds in a dietary crossover
+
+Hyson and colleagues analyzed 22 healthy adults who completed both six-week crossover periods, after two withdrawals. Whole almonds or almond oil replaced part of the usual dietary fat. The oil and dry-roasted almonds came from the same California nonpareil almond lot. Mean oil provision was 35 ± 2 g/day, consumed in a beverage. Both periods produced similar measured plasma lipid changes and neither changed the study’s indices of LDL oxidation. The extraction grade is unreported. The authors identify a 1999 FASEB meeting abstract as a preliminary report from this same study family. The original abstract remains outstanding. Parkinson disease, medication response and the four target symptoms were outside the trial. [Primary indexed report](https://pubmed.ncbi.nlm.nih.gov/11925464/) · [Local factual extract](Source-Text/2002-Hyson-Oral-Almond-Oil-Dietary-Crossover.txt)
+
+## Chinese patent example uses almond oil in a mixed oral snoring spray
+
+Chinese patent application CN1535708A was published October 13, 2004. The later granted Chinese-language specification CN100364498C includes almond oil with olive, sunflower, mint and sesame oils in a worked oral spray formulation. It proposes lubricating the throat and tongue to reduce snoring noise. The accessible family specimen supplies no reported comparative human data on vocal loudness and no evidence of cold-pressed oil. Snoring during sleep, deliberate vocal sound production and consuming an isolated culinary oil are different exposures or endpoints. [Chinese patent specification and example](https://patents.google.com/patent/CN100364498C/zh) · [Local factual extract](Source-Text/2004-CN1535708A-Almond-Oil-Mixed-Snoring-Spray.txt)

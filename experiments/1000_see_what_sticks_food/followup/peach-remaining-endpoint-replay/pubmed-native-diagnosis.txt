@@ -1,0 +1,12 @@
+Native PubMed replay diagnosis, 2026-11-15
+
+The invoked executable was build/celery-spearmint/native/bin/foodexperiment.pubmed.exe, last modified 2026-11-13 01:44:54 local. Its arguments were build/peach-remaining-endpoint-replay/pubmed-input-queries.tsv, build/peach-remaining-endpoint-replay/epmc/ingredient_results.tsv, tools/pubmed-mesh.tsv, build/peach-remaining-endpoint-replay/pubmed-replay, PE001. The E001 row was made by relabelling the original peach-pd Europe PMC result query; its exact input was:
+(TITLE_ABS:peach OR TITLE_ABS:peaches OR TITLE_ABS:"Prunus persica") AND (TITLE_ABS:Parkinson OR TITLE_ABS:parkinsonism OR TITLE_ABS:levodopa)
+
+The historical binary emitted the following query BEFORE the provider search, as preserved in ../pubmed-replay/pubmed_partitions.tsv:
+("Parkinson Disease"[mh] OR "Parkinsonian Disorders"[mh:noexp] OR "Parkinson Disease, Secondary"[mh:noexp] OR parkinson*[tiab] OR "shaking palsy"[tiab] OR "paralysis agitans"[tiab]) AND (Parkinson[tiab] OR parkinsonism[tiab] OR levodopa[tiab])
+It contained no peach or Prunus term; the 178340-hit root search and partial partitions are not evidence about peach. It was manually interrupted. This loss occurred locally before transmission, not in provider processing. E001 does not occur in tools/pubmed-mesh.tsv; MeSH mapping did not remove an E001 peach term.
+
+The checked-in current tools/foodexperiment.pubmedquery.pas is later (2026-11-14 21:33:54 local) than the historical binary. A fresh FPC harness, ../pubmed-translation-check.lpr, compiled with fpc -B using the current tools sources and blank E001 MeSH, outputs:
+(peach[tiab] OR peaches[tiab] OR "Prunus persica"[tiab]) AND (Parkinson[tiab] OR parkinsonism[tiab] OR levodopa[tiab])
+Thus the concrete incident is a stale converter executable applied to a custom reversed-order expression outside its assumed input shape; the current source handles this exact input correctly. The internals of the older executable were not independently reconstructed, and no claim is made that its replacement rule is proven by source. Direct official PubMed search receipts pubmed-*-esearch.json and the nine new efetch records retain the successful exact search instead.

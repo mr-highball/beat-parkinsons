@@ -1,0 +1,5 @@
+# Bay Leaf Behavior
+
+## Oral bay leaf decoction and conflicting rat behavior results
+
+Elharas and Ouhssine separated decoctions of bay, lavender and Artemisia into individual drinking-water arms over 45 days in Wistar rats. In Table 4, forced-swim immobility was 43.87 ± 1.63 seconds in controls, 38.89 ± 7.42 with the lower bay concentration and 114.6 ± 9.77 with the higher concentration. Figure 4 marks the higher concentration comparison p<.001. The abstract instead summarizes decreased immobility across the plants. The lower bay concentration gave more open-field center returns and total visited tiles, and higher bay concentration gave an inconclusive open-arm time result. These behaviors can reflect movement and stress as well as other factors. The study did not measure reward effort, validated apathy or clinical change after consuming ground bay leaf. [Original source](https://malque.pub/ojs/index.php/jabb/article/download/343/276) · [Local factual text](Source-Text/2022-Elharas-Ouhssine-Bay-Leaf-Behavior.txt)

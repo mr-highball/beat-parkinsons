@@ -1,0 +1,3 @@
+# Peach in a vegetarian Parkinson menu
+
+Hegelmaier et al. (2020) studied a two-week vegetarian diet in 16 people with Parkinson disease; 10 also received bowel cleansing. Appendix A lists peach among permitted fruits in a broad multi-food menu. The article does not establish whether a given participant consumed peach, the quantity, its species, or raw preparation. UPDRS Part III encompasses finger taps, hand movements and postural stability, but the published outcome is the composite rather than peach-specific scores for these items. [Primary article](https://doi.org/10.3390/cells9020376) · [Local primary text](Source-Text/PMC7072275.txt)

@@ -1,0 +1,46 @@
+# Third masked existing-assessment group, November 15, 2026
+
+All 24 reviewed claims retained Unknown. The scoped review added 16 study assessments and 20 dated source annotations. Seven rationales were updated to reflect the closest original outcomes. The experiment totals are 23 Maybe True, 21 Maybe False and 956 Unknown.
+
+| Claims | Closest source results and remaining limits |
+| --- | --- |
+| 0147 raw broccoli and attention | Adjunct tablets in a schizophrenia trial gave an inconclusive attention and vigilance result. A pediatric methylphenidate adjunct trial favored sulforaphane on parent- and teacher-rated inattention. Older adults receiving glucoraphanin capsules showed a favorable symbol-search result and inconclusive coding and Stroop outcomes. Product and population differences leave the frozen claim open. The French pediatric trial is distinct from the Tehran result. |
+| 0051 minced lemongrass and balance | A figure shows shorter time to first fall and more falls after two doses of essential oil in healthy mice, while the prose says latency increased. An earlier oral essential-oil experiment was inconclusive for accumulated rod time. Human evidence uses mixed or external preparations and leaves clinical Parkinson balance open. |
+| 0098 black beans and sleepiness, 0041 parsley and dystonia | A black soybean extract is botanically distinct from boiled black common beans. The Parkinson survey pools beans. A parsley-root series records cramps and provides no dystonia comparison with fresh parsley. |
+| 0049 ground nutmeg and attention, 0099 black pepper and speech | The older nutmeg intoxication account includes attention lapses and a co-exposure. The controlled historical nutmeg paper remains an original access gap. In the piperine report, a mouth rinse was tested with pronunciation in a broad oral-symptom instrument. Listener-rated speech and culinary pepper remain unresolved. |
+| 0065 walnut oil and pain, 0031 coconut oil and lightheadedness, 0165 red cabbage and lightheadedness | The walnut analgesia work used solvent-extracted oil in animal pain assays. A cold-pressed walnut trial measured lipids. Coconut oil studies measured other vascular outcomes, and red cabbage microgreens and cooked mixed-vegetable studies leave mature raw cabbage and standing symptoms open. |
+| 0104 cooked spinach and hallucinations, 0068 lemongrass and voice, 0057 chervil and voice | Spinach reports concern contamination with another plant. The lemongrass beverage case records dysphonia after several exposures and a competing potato-allergy history. The chervil soup report concerns acute allergy. These records leave the frozen preparations and clinical outcomes open. |
+| 0078 grated nutmeg and fatigue, 0111 toasted cumin and swallowing | The original Vachadi Churna fatigue series names six plants and none is nutmeg. Cumin and ginger sprays were studied for salivary flow and dry mouth. A hemodialysis crossover found higher saliva flow with the mixture. Clinical swallowing and consumption of toasted cumin were unmeasured. |
+| 0071 soybean oil and walking, 0066 canola oil and fatigue | Soybean oil appears in animal comparator diets. All the ubiquinol fatigue formulations contained rapeseed oil, and the ketone pilot reported inconclusive physical fatigability versus a canola comparator. A separate frailty registration lists fatigue measures. These designs leave the oils' isolated effects open. |
+| 0188 raw fig and drooling, 0108 dried cherry and apathy | One raw fig exposure occurred in an acute allergic reaction. A pediatric combination-syrup trial gave drooling event counts in three arms without isolating fig. Cherry formulations were studied for mood and other endpoints. The original case of iron-deficiency anemia remains unresolved after a collection-identity discrepancy. |
+| 0089 rosemary and walking, 0062 cilantro and lightheadedness | Rosemary has animal motor-proxy and mixture leads. General gait retrieval also includes an author named Rosemary. Coriander constituents, seeds, oils and mixed seasonings have pressure and laboratory results. The dried leaf's standing symptom comparison remains open. |
+| 0079 toasted mustard seed and insomnia, 0137 Sichuan pepper and voice | The mustard-plus-hot-sauce crossover found shorter time asleep and lower sleep efficiency in six healthy adults. Parkinson self-experiments with combined broccoli seed and mustard report less broad sleep impairment. The Sichuan pepper extract work measures oral sensation or perceived effort, with acoustic loudness unresolved. |
+| 0084 macadamia oil and depression, 0073 rice bran oil and speech | The macadamia comparator registry reports termination and no results. An earlier military comparison gave inconclusive group mood differences. The rice bran oil comparator study reports aggregate Parkinson outcomes and leaves listener-rated speech and refining grade open. |
+
+[Broccoli and attention evidence](../../../../research/2020-2024/Food-Experiment-Broccoli-Attention.md) · [Lemongrass original outcomes](../../../../research/2025-2029/Food-Experiment-Lemongrass-Symptoms.md#lemongrass-essential-oil-and-separate-first-fall-latency-and-counts) · [Mustard and hot sauce sleep table](../../../../research/1990-1994/Food-Experiment-Nutmeg-Paprika.md#sleep-after-a-mixed-hot-sauce-and-mustard-meal) · [Cumin crossover](../../../../research/2025-2029/Food-Experiment-Cumin-Swallowing.md) · [Canola and fatigue](../../../../research/2020-2024/Food-Experiment-Canola-Fatigue.md) · [Macadamia comparator registration](../../../../research/2010-2014/Food-Experiment-Macadamia-Oil-Mood.md)
+
+## Search coverage
+
+Europe PMC and PubMed each completed the 24 recorded focused expressions and reached the reported per-query counts. The native verification reconciled 290 Europe PMC query–rank appearances and 234 PubMed appearances. Seven PubMed-only appearances received separate dispositions. These tables identify indexed review and primary review individually.
+
+The combined ClinicalTrials.gov expression returned all 904 registrations over 91 pages. The native protocol scan recorded exposure mentions in intervention and arm fields separately from narrative mentions and named outcome terms. The manual review checked all five same-claim arm and outcome keyword overlaps, the matching narrative and outcome intersections, and selected Parkinson and related clinical records. The remaining protocols retain their lexical flags for follow-through. The official comparison names, dosage descriptions and endpoints belong to named trials. No finding direction is inferred from the flags.
+
+The original search overlay still has a large raw-fig source queue. It includes well-documented figure label collisions from the earlier bare fig query. The primary assessment keeps botanical identity, exposure and clinical outcome separate. A focused exposure search used Ficus carica and fruit phrases. [Earlier figure-label audit](../fig-precision/README.md)
+
+[Focused expressions](expressions.tsv) · [Europe PMC query ledger](europe-pmc-queries.tsv) · [Europe PMC memberships](europe-pmc-memberships.tsv) · [Europe PMC dispositions](europe-pmc-screen.tsv) · [PubMed queries](pubmed_queries.tsv) · [PubMed-only results](pubmed-novel-screen.tsv) · [Registry query](registry-query.tsv) · [Registry inventory](registry-inventory.tsv) · [Official protocol keyword flags](registry-lexical-flags.tsv) · [Hand-checked registration context](registry-context-screen.tsv) · [Linked accessions](linked-registry-inventory.tsv) · [Open evidence trails](../open-trails.tsv) · [Native verification](verify.log)
+
+
+## Original-query source review
+
+The non-fig higher-priority pass reviewed 17 exact pairs. Fourteen full-text and two abstract decisions were imported. The iron-deficiency letter remains open after a mismatched collection identifier was verified. Another recovered full text measured apathy during imagery training and listed Cherry as an author's surname. In a separate GI review, a product table calls an ingredient cumin. The original preparation identifies caraway fruit. These source checks explain several misleading lexical matches.
+
+[Original-source dispositions](original-source-context.tsv) · [Unresolved original letter](pending-original-source.tsv) · [Original-query denominator by claim](original-context-by-claim.tsv) · [Prior group's recovered bodies](../masked-first-nov15/README.md#continuation-through-recovered-originals)
+
+The native registry screen records a row for all 904 official protocol accessions and checked five exact lexical intersections by hand. The separate context sheet contains 23 protocols, including accessible records reached by citation follow-through. Re-run the protocol flags with the native registry details export and the recorded ingredient and outcome terms.
+
+    foodexperiment.registryclaimscreen.exe registry-scope.tsv registry-study-details.tsv registry-lexical-flags.tsv
+
+[Scope terms](registry-scope.tsv) · [Protocol input fingerprint](registry-details-input-sha256.tsv) · [Registered canola pilot receipt](ketone-pilot-registry-inventory.tsv)
+
+
+The 24-claim scope retains 747 original pairs after these imports. The broad legacy fig query accounts for 561 of those pairs. The per-claim denominator preserves all remaining priorities.

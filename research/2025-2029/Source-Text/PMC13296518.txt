@@ -1,0 +1,267 @@
+Title: Implementation and Validation of Titratable Cysteine in GROMACS-Based Constant-pH Molecular Dynamics
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC13296518/
+Text object: https://pmc-oa-opendata.s3.amazonaws.com/PMC13296518.1/PMC13296518.1.txt
+Data source: U.S. National Library of Medicine, PMC Cloud Service
+PMCID: PMC13296518
+PMID: 42252694
+DOI: 10.1021/acs.jctc.6c00640
+Citation: J Chem Theory Comput. 2026 Jun 8;22(12):6128–36. doi: 10.1021/acs.jctc.6c00640
+License: CC BY (article license statement below)
+Version: 1
+Retracted in PMC metadata: no
+Text coverage: article text
+Format: NLM plain-text extraction. This provenance header was added.
+
+
+JOURNAL INFORMATION
+==============================
+NLM Title Abbreviation: J Chem Theory Comput
+Journal ID: J Chem Theory Comput
+NLM Journal ID: 101232704
+Journal ID: ct
+
+Journal of Chemical Theory and Computation
+
+ISSN: 1549-9618
+EISSN: 1549-9626
+pubs.acs.org/JCTC
+
+ARTICLE INFORMATION
+==============================
+PMCID: PMC13296518
+PMID: 42252694
+DOI: 10.1021/acs.jctc.6c00640
+Article version: 1
+Subjects: Article, Molecular Mechanics
+
+Implementation and Validation of Titratable Cysteine in GROMACS-Based Constant-pH Molecular Dynamics
+
+2801683 https://orcid.org/0000-0001-9522-3132 Capelli Riccardo
+Department of Biosciences , 9304 Università degli Studi di Milano , Via Celoria 26 , I-20133 Milan , Italy
+* Email: riccardo.capelli@unimi.it.
+Electronic publication date: 2026 Jun 8
+Publication date: 2026 Jun 23
+Volume: 22
+Issue: 12
+First page: 6128
+Last page: 6136
+Received 2026 Apr 1; Accepted 2026 Jun 2; Revised 2026 May 25; 2026 Jun 8
+Copyright: © 2026 The Author. Published by American Chemical Society
+Copyright year: 2026
+Copyright holder: The Author
+
+License: This article is licensed under CC-BY 4.0
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Funding: Universit? degli Studi di Milano 10.13039/100012352 NA
+document-id-old-9: ct6c00640
+document-id-new-14: ct6c00640
+production-flag-MathML-config-version: 3
+production-flag-journal-citation-display-style: acs-titles
+production-flag-journal-date-display-style: dates-used-rcd-rvd-acc
+production-flag-si-avail: yes
+document-id-alt-64: 53e96f6af0d77d09c409d6dee91e865cfa3608e35a240b46eb6ebcebbd07dc3f
+
+==============================
+Cysteine is a chemically versatile amino acid whose protonation state is central to catalysis, redox regulation, and covalent ligand recognition. Despite the growing availability of constant-pH molecular dynamics (CpHMD) methods, cysteine is not included among the standard titratable residues of the GROMACS-based λ-dynamics implementation developed by Aho, Buslaev, and co-workers. Here, we introduce a titratable cysteine residue, CYST, for this framework and integrate it into the phbuilder workflow. The implementation describes the thiol/thiolate equilibrium of reduced cysteines within a fixed redox topology, while disulfide-linked cysteines are retained as nontitratable covalent states defined a priori. The new residue was calibrated on an ALA-CYS-ALA (ACA) tripeptide by refining the correction potential required to remove the intrinsic force-field bias along the λ coordinate. The resulting model reproduces the expected sigmoidal titration behavior of the peptide and yields a pK a of 8.33, matching the target value adopted in the calibration procedure. Transferability to proteins was then assessed using two complementary benchmarks. First, six engineered single-cysteine mutants of acyl-coenzyme A binding protein (ACBP) were used as a set of noncatalytic cysteines spanning different local environments. The calculations reproduce the overall high-pK a regime of these residues, while also showing that quantitative accuracy depends sensitively on the local conformational ensemble sampled around the introduced cysteine. Second, the implementation was applied to the reactive Cys106 of DJ-1, placing its titration in the correct acidic regime. Overall, this work establishes a practical cysteine extension of the GROMACS CpHMD framework for biomolecular simulations.
+
+Introduction
+
+Cysteine is one of the most chemically versatile amino acids in proteins. Owing to its thiol side chain, it can participate in disulfide-bond formation, metal coordination, redox processes, and nucleophilic catalytic steps. − In many of these contexts, the relevant reactive species is the deprotonated thiolate, whose population is determined by the cysteine pK a and by the local electrostatic and hydrogen-bonding environment. , Accurate modeling of cysteine protonation is therefore important both for understanding enzymatic and regulatory mechanisms and for predicting reactive cysteines in covalent drug discovery. , At the same time, cysteine presents a unique challenge because, besides thiol/thiolate protonation equilibria, it can also form disulfide bridges, corresponding to a different covalent topology. ,
+
+Given the dynamic nature of cysteine protonation, the limitations of classical fixed-protonation representations of this amino acid are evident. A central development underlying constant-pH simulations was the introduction of λ-dynamics, in which an alchemical coordinate is treated as a dynamical variable and propagated together with the atomic degrees of freedom. This idea was later adapted to constant-pH molecular dynamics through continuous titration coordinates, and subsequently extended to include proton tautomerism in titratable residues such as histidine. The GROMACS implementation of Aho, Buslaev and co-workers , belongs to this continuous λ-dynamics family of CpHMD methods, resulting particularly attractive because the computational cost of the constant-pH treatment does not depend on the number of titratable sites in the system. In addition, the same framework is accompanied by phbuilder, a workflow for automated setup of CpHMD simulations and for the introduction of new titratable residues or molecules. This implementation has already been successfully applied to ion channels, , G-protein-coupled receptors, , and pH-dependent activity in enzymes.
+
+Despite the versatility of this approach, the residues currently available out of the box are Asp and Glu, Lys and Arg, and histidine with its three physiologically relevant protonation states, while cysteine is not included.
+
+Here, we parametrized cysteine in the modified CHARMM36 force field introduced in the original GROMACS CpHMD implementation. We show that this parametrization accurately describes the titration behavior of an ALA-CYS-ALA tripeptide (ACA). Next, we evaluate the predicted pK a values of six single-cysteine mutants of bovine acyl-coenzyme A binding protein (ACBP), chosen as a benchmark set of noncatalytic cysteines. Lastly, we target Parkinson disease protein 7 (DJ-1), which contains a reactive oxidation-sensitive cysteine with a known pK a shift.
+
+In the present implementation, we restrict the constant-pH treatment to reduced cysteines and retain disulfide bridges as fixed covalent bonds defined a priori from the prepared input structure. The presented model therefore targets protonation equilibria within a fixed redox topology and does not attempt to describe disulfide formation or cleavage during the simulation.
+
+Methods
+
+CpHMD and MD Simulations
+
+For all systems considered in this work, we employed GROMACS 2024.4 for standard MD simulations and the CpHMD-modified GROMACS 2021 version , for CpHMD simulations. Proteins were modeled with the CpHMD extension of the CHARMM36 force field (making all the Arg, Lys, His, Glu, Asp, and Cys in their titrable form for CpHMD runs), and water with the CHARMM36-compatible TIP3P model. Temperature and pressure were maintained using the velocity-rescale thermostat (coupling time 0.5 ps) and the cell-rescale barostat (isotropic coupling, coupling time 5 ps, compressibility 4.5 × 10–5 bar–1, reference pressure 1 bar), respectively. Bond lengths involving hydrogen atoms were constrained with the LINCS algorithm. Short-range electrostatic interactions were treated with the particle mesh Ewald method, using a real-space cutoff of 1.2 nm and a Fourier grid spacing of 0.14 nm. van der Waals interactions were truncated at 1.2 nm, with a force-switch modifier applied from 1.0 to 1.2 nm.
+
+ACA Tripeptide Setup and Cysteine Calibration
+
+We generated the ACA tripeptide using tleap from AmberTools25. ACA was then placed in a cubic box with side length 5.17 nm, corresponding to a minimum solute-box distance of 1.8 nm, and solvated with 4500 water molecules and two buffer particles which have a dynamic charge from −0.5 to 0.5 e, allowing to maintain box neutrality in case of protonation state change. The system was prepared for CpHMD simulations using phbuilder.
+
+In the present CYST model, following the original implementation of CpHMD, the Lennard-Jones parameters are not interpolated along the λ coordinate. The residue is based on the protonated thiol topology, and the CpHMD transformation acts only on the partial charges of the atoms included in the titratable group. Thus, the van der Waals parameters remain those assigned by the CHARMM36 cysteine topology, whereas the charges of CB, SG, and HG1 are interpolated between the thiol and thiolate states. This choice follows the fixed-topology parametrization strategy used in the GROMACS CpHMD/phbuilder framework.
+
+After steepest-descent energy minimization (tolerance 1000 kJ mol–1 nm–1), restrained NVT (1 ns) and NPT (10 ns) simulations were carried out with position restraints on all heavy atoms and cysteine in its thiol state.
+
+Calibration of the dvdl_1 correction potential for CYST was performed on ACA following the phbuilder parametrization workflow. Briefly, the system was simulated in 13 fixed-λ windows from −0.1 to 1.1 (step 0.1), and the resulting ⟨dV/dλ⟩λ values were fitted with a fifth-degree polynomial to obtain an initial estimate of the correction potential. The intrinsic reference pK a for cysteine was set to 8.33, following the free-cysteine/reference-table pK a scale used for the present CpHMD parametrization. We note that higher values, such as 8.55 ± 0.03, have been reported for blocked alanine peptide models of cysteine, and therefore reflect a different reference-state convention rather than an inconsistency in the parametrization. The resulting parametrization was then validated through ten independent 100 ns simulations at pH = pK a = 8.33.
+
+After calibration of the correction potential, we computed the full ACA titration curve by running a constant-pH simulation ladder from pH 1 to 14 in steps of 1 pH unit, covering the full titration range of the model cysteine. Each pH point was simulated at 300 K in triplicate, with 100 ns per replica, for a total sampling time of 4.2 μs.
+
+Analysis of Titration Curves
+
+The deprotonated fraction at each pH value was computed from the corresponding λ trajectories. For each replica, frames with λ < 0.2 were assigned to the protonated state and frames with λ > 0.8 to the deprotonated state, while intermediate values were excluded from the state counting. The deprotonated fraction at each pH was then obtained by pooling the end point populations over the replicas, removing the first 50% of the trajectory to minimize the nonequilibrium initial part of the trajectory. The resulting titration curve was then fitted to the Henderson–Hasselbalch equation and a bootstrap approach was implemented to estimate confidence intervals (see Supporting Information).
+
+Protein Systems
+
+ACBP Mutants
+
+Starting coordinates were taken from the NMR structure of bovine acyl-coenzyme A binding protein (PDB 1NTI, model 1 of 20). Single-cysteine mutants were generated by replacing the corresponding target residue with cysteine. All ACBP simulations were performed at 298 K and 50 mM NaCl, consistently with the experimental conditions used for the NMR titration measurements. To maintain charge neutrality, 40 buffer particles have been added in the simulation box.
+
+After steepest-descent energy minimization (tolerance 1000 kJ mol–1 nm–1), restrained NVT (1 ns) and NPT (10 ns) simulations were carried out, keeping the λ values fixed at their expected value at pH 7. For the nonrelaxed set of simulations, we performed the CpHMD preparation with phbuilder to the mutated systems and run a pH ladder from pH 6 to 12 in steps of 1 pH unit, all in triplicate for 100 ns per replica. To relax the initial conformation we performed a conventional MD run for 500 ns of the system with the protonation states chosen to represent pH 7 conditions. We underline that this step has to be considered as a structural prerelaxation step before CpHMD, rather than as part of the protonation-state sampling protocol. This step was intended to allow the local protein environment around the introduced cysteine residues to relax after mutation, especially for sites where the substitution altered side-chain polarity or packing. After this relaxation, we prepared the final conformation with phbuilder and performing the same pH ladder of the nonrelaxed conformation from pH 6 to 12 in steps of 1 pH unit, all in triplicate for 100 ns per replica.
+
+DJ-1
+
+The model of the DJ-1 dimer was based on its crystallographic structure (PDB 2OR3 ). We performed the CpHMD preparation with phbuilder to the dimer. We then performed steepest-descent energy minimization (tolerance 1000 kJ mol–1 nm–1), followed by restrained NVT (1 ns) and NPT (10 ns) simulations were carried out, keeping the λ values fixed at their expected value at pH 5. All DJ-1 simulations were performed at 298 K and 100 mM NaCl, consistently with the experimental conditions used for the UV titration measurements performed in the original work. To maintain charge neutrality, 100 buffer particles have been added in the simulation box.
+
+Finally, with the relaxed system we ran a pH ladder from pH 2 to 10 (with a step of 0.5 pH unit), and from 11 to 14 with a step of 1 pH unit; all the replicates ran for 200 ns per replica (6 replicates from 3.5 to 6, 3 replicates elsewhere), for a total of 16.2 μs.
+
+Results and Discussion
+
+Parametrization of Titratable Cysteine
+
+Cysteine represents a nontrivial extension of constant-pH molecular dynamics because it can populate chemically distinct states in proteins. On the one hand, a free cysteine can titrate between the neutral thiol and the anionic thiolate forms. On the other hand, pairs of cysteines may form disulfide bridges, corresponding to a different covalent topology. Since the GROMACS CpHMD framework considered here is based on a fixed-topology force field, protonation changes can be described continuously within the λ-dynamics formalism, whereas bond formation and bond cleavage cannot be treated explicitly.
+
+A first methodological choice is therefore required before introducing titratable cysteine into the workflow. In the present implementation, we restrict the constant-pH description to reduced cysteines, i.e., cysteines that remain within the thiol/thiolate form throughout the simulation. Conversely, disulfide-linked cysteines are defined a priori from the prepared input structure/topology and retained as standard covalent bonds during the simulation. These residues are therefore excluded from the titration scheme and treated as nontitratable disulfide-linked cysteines within the fixed bonding topology.
+
+This choice reflects the intended scope of the method. The present implementation is not designed to describe coupled protonation–redox processes or disulfide exchange, but rather to provide a constant-pH treatment of free cysteines within a predefined redox state of the system. Consequently, the appropriateness of the selected disulfide pattern depends on prior structural and biochemical knowledge of the system and remains under user control during model preparation.
+
+With this scope established, the next step is the introduction of a titratable cysteine residue in the modified CHARMM36 force field used by the GROMACS CpHMD implementation.
+
+To describe reduced cysteines within this framework, we introduced a new single-site titratable residue, CYST, representing the equilibrium between the neutral thiol and anionic thiolate states, CYS−SH⇌CYS−S−+H+
+
+The interpolation was restricted to the subset of atoms whose partial charges differ between the two protonation states, namely CB, SG, and HG1. The corresponding charge sets were taken directly from the standard CHARMM36 force field, thereby preserving the parent force-field description of cysteine and limiting the modification to the λ-dependent interpolation required by constant-pH dynamics. The intrinsic pK a of cysteine is generally considered to lie in the 8–9 range depending on the chemical environment. Here, the reference pK a of the model compound was set to 8.33, consistent with the commonly accepted solution value for the cysteine thiol.
+
+This construction localizes the protonation-state change on the sulfur-containing side chain, with the largest contribution arising from the sulfur atom itself, whose partial charge changes from −0.23 in the thiol to −0.80 in the thiolate state. This shift is accompanied by a redistribution on CB, from −0.11 to −0.38, and by the disappearance of the thiol proton charge on HG1, from 0.16 to 0.00. In this way, the protonation coordinate acts on a minimal set of atoms directly involved in the titration event, consistently with the general philosophy of the original GROMACS CpHMD implementation.
+
+Finally, the titratable definition was restricted so that only cysteines explicitly renamed as CYST during system preparation were included in the titration scheme. Standard cysteines retained as CYS, including those involved in disulfide bridges, were therefore automatically excluded from constant-pH sampling.
+
+After defining the two protonation states of CYST, the remaining ingredient required by the CpHMD formalism is the correction potential, represented in phbuilder by the polynomial coefficients of the dvdl_1 term. This term compensates for the intrinsic force-field bias along the λ coordinate and must be calibrated for every new titratable group. Following the phbuilder parametrization protocol, we carried out this procedure on a capped ALA-CYS-ALA (ACA) tripeptide, used as a model peptide environment for cysteine. Consistently with the setup requirements, the topology of CYST was defined in its most protonated state, while the thiol/thiolate conversion was introduced through the λ-dependent interpolation of the selected atomic charges.
+
+The ACA tripeptide (Figure A) was then prepared for CpHMD in calibration mode, with an initial dvdl_1 term set to zero. The system was minimized, equilibrated, and simulated at 13 fixed values of λ, from – 0.1 to 1.1 in steps of 0.1, for 1 ns each. The corresponding ⟨dV/dλ⟩λ values were fitted with a fifth-degree polynomial to obtain a first estimate of the correction potential compensating the intrinsic force-field bias. This potential was then applied in a second round of minimization and equilibration, followed by ten independent 100 ns simulations at pH = pK a = 8.33. Under these conditions, a correct correction potential should yield a uniform distribution of λ between 0 and 1. The first estimate still resulted in a nonflat λ distribution (Figure B), indicating residual bias. A subsequent refinement of the polynomial coefficients (the full implemented CYST is in the Supporting Information) led instead to a flat λ distribution, showing that the final correction potential successfully removed the underlying force-field preference for one protonation state over the other (Figure C).
+
+1 Parametrization of the CYST residue on the ACA tripeptide. (A) Structure of the ALA-CYS-ALA (ACA) tripeptide used as the model system for calibration of the cysteine correction potential. (B) Distribution of the λ coordinate obtained from ten independent 100 ns simulations at pH = pK a = 8.33 using the first estimate of the correction potential derived from the fixed-λ calibration runs. The nonuniform distribution indicates the presence of residual force-field bias along the titration coordinate. (C) Distribution of the λ coordinate after refinement of the polynomial coefficients defining the dvdl_1 correction potential. The resulting flat distribution for λ between 0 and 1 indicates that the final correction potential effectively compensates for the intrinsic force-field bias between the thiol and thiolate states.
+
+ACA Tripeptide Titration
+
+The final validation of the CYST parametrization on the model compound was performed by computing the full titration curve of the ACA tripeptide. To this end, we carried out a pH ladder from 1 to 14 with a spacing of 1 pH unit. Each pH value was simulated for 100 ns in triplicate, resulting in a total simulation time of 4.2 μs. The deprotonated fraction at each pH was obtained from the corresponding λ trajectories and averaged over the three independent replicas.
+
+The resulting titration curve is reported in Figure .
+
+2 Titration curve of the ACA tripeptide. Deprotonated fraction of the CYST residue as a function of pH, obtained from CpHMD simulations of ACA. The pH ladder spans values from 1 to 14 in steps of 1 pH unit, with three 100 ns replicas for each pH point. The solid line corresponds to the Henderson–Hasselbalch fit, yielding a pK a of 8.33.
+
+The deprotonated population increases smoothly from nearly zero at acidic pH to unity at strongly basic pH, showing the expected sigmoidal behavior for a single titratable site. The data were fitted to the Henderson–Hasselbalch equation fdeprot(pH)=11+10(pKa−pH)
+
+where f deprot is the deprotonated fraction at a given pH. The fit yields a pK a of 8.33 (CI 95% [8.30, 8.37]), matching the target value adopted in the calibration procedure. Therefore, the calibrated CYST residue accurately reproduces the acid–base properties of cysteine in the ACA tripeptide and confirms the consistency of the implemented correction potential.
+
+The end point populations remain well separated along the full pH ladder, with the protonated thiol state dominating at acidic pH and the deprotonated thiolate state becoming prevalent under basic conditions.
+
+ACBP Titration
+
+To test the capability of our titratable cysteine model to represent solvated residues, we focused our attention on the acyl coenzyme A binding protein (ACBP). In a previous work, this system has been studied by expressing multiple single-point mutants in cysteine and measuring the pK a of all these sites (Figure ).
+
+3 ACBP cartoon with the engineered cysteine sites (T17C, V36C, M46C, S65C, E78C, I86C) shown as spheres.
+
+This guarantees that none of the cysteines are involved in catalytic effects, and the main factor that can influence the pK a value is the solvent accessibility and the residues local interaction network. In other words, this benchmark tests whether the implementation can respond to differences in solvent exposure and local environment in the absence of catalytic ion-pair effects.
+
+We prepared all the single-point mutants starting from the Protein Data Bank structure 1NTI, obtaining the six initial conformations of the mutants. We prepared and equilibrated the systems (see Methods), and performed a pH ladder from 6 to 12 with step 1. Each pH condition was run for 100 ns in triplicate, for a total simulation time of 2.1 μs per mutant. As in the ACA tripeptide, we then computed the protonation state population for the CYST residue and fitted with the Henderson–Hasselbalch equation. To compute the confidence interval we performed a bootstrap (see SI for the error treatment). The comparison between the experimental and predicted pK a is in Figure A and in Table .
+
+4 CpHMD pK a benchmarking on ACBP single-cysteine mutants and rescue of the V36C outlier by structural relaxation. (A) Predicted CpHMD pK a plotted against the experimental pK a (RMSE 1.20); V36C deviates by >2 pH units when starting from the original (nonrelaxed) mutant structure. (B) Superposition of representative conformations of V36C at pH 10 (replica 1) from the original setup. (C) Recomputed CpHMD pK a values after relaxation show improved agreement with experiment (RMSE 0.83), consistent with removal of nonequilibrated starting-state bias that primarily affected V36C. (D) Superposition of representative conformations of V36C at pH 10 (replica 1) from the setup rebuilt after a 500 ns fixed-protonation MD relaxation at pH 7: relaxation markedly changes the sampled conformational space in the region surrounding residue 36, shifting V36C from a more buried to a more solvent-exposed environment, explaining the observed difference.
+
+1 Experimental pK a Values and Predictions with 95% Confidence Intervals for ACBP Mutants
+
+mutant	Exp pK a	CpHMD pK a (not relaxed)	CpHMD pK a (relaxed)	
+T17C	9.8 ± 0.1	9.26 [9.19, 9.32]	9.22 [9.09, 9.31]	
+V36C	9.5 ± 0.1	12.08 [10.86, 12.71]	9.25 [8.98, 9.74]	
+M46C	8.2 ± 0.1	7.90 [7.65, 8.19]	8.87 [8.47, 9.32]	
+S65C	9.0 ± 0.1	7.95 [7.88, 8.01]	8.21 [8.01, 8.35]	
+E78C	9.6 ± 0.1	8.89 [8.65, 9.11]	8.08 [8.04, 8.12]	
+I86C	9.9 ± 0.2	9.74 [9.49, 10.33]	9.27 [8.81, 9.95]	
+a From ref .
+
+CpHMD-based evaluation of pK a for this system yields a RMSE of 1.20 pH units, in line with the state-of-the-art in the MD-based prediction of pK a ,, (see Table S1 in the Supporting Information). A single mutant appears as an outlier: V36C, which has a predicted pK a which deviates ∼2.5 pH points from the experimental value. Observing the position of V36 (see Figure ), and taking into account that the mutation from valine to cysteine introduces a substantially more polar side chain, we considered the possibility that the model did not have the time to relax enough to have a realistic estimate of the pK a . This interpretation is consistent with the limited structural relaxation observed during the CpHMD simulations started from the original V36C model (Figure B), suggesting that the mutation remained trapped in a nonequilibrated local environment.
+
+We thus decided to perform a long relaxation run before the CpHMD protocol on all the mutants we prepared, allowing larger rearrangements of the portion of the protein close to the mutation site. Operatively, we set up a conventional (with the protonation states expected at pH 7) 500 ns long MD run to allow an initial equilibration of the mutants, taking the last frame as the initial frame of the CpHMD minimization-equilibration and run. This procedure reduces bias arising from nonequilibrated local environments in the starting mutant structures.
+
+After this relaxation, the evaluation of the pK a shows a dramatic improvement for V36C, and relatively small changes in all the other mutants (see Figure C and Table ), returning a final RMSE of 0.83. Considering V36C, the conformational space explored in this second run is substantially different (see Figure D), with a broader conformational ensemble sampled by the loop containing residue 36. Notably, while the relaxation protocol strongly improves V36C, it does not uniformly improve all mutants, indicating that the remaining deviations cannot be attributed solely to starting-structure bias. Furthermore, although the agreement improves substantially after relaxation, the relative ordering of the mutants is only partially reproduced, indicating that subtle local environmental differences remain challenging to capture quantitatively.
+
+To better characterize the physicochemical determinants that led to the change in pK a estimation, we computed the distribution of the solvent accessible surface area (SASA) for the CYST side chain during the simulations at all the pH values. Regarding T17C, E78C, and I86C mutants, we obtain negligible differences in the SASA histograms, while some shift is present in M46C and S65C (see Figure S8). In agreement with the qualitative observation of the movement of V36C, the resulting distribution of SASA appears completely different: narrow and peaked in the nonrelaxed case, while extremely broad in the simulations started from the relaxed structure. This observation supports the idea that, in V36C, the apparent pK a is controlled more by the breadth of the local conformational ensemble than by a single static solvent-exposure value, explaining why prior relaxation has such a strong effect on the predicted titration behavior. Regarding the other mutants we can observe a qualitative shift toward higher or lower SASA (S65C and M46C, respectively), while the others (T17C, E78C, and I86C) maintain the same SASA distribution. We thus cannot connect directly this observable to the pK a estimate.
+
+Overall, these results indicate that the CYST implementation reproduces the correct high-pK a regime of noncatalytic cysteines in protein environments, while also highlighting the importance of adequate local structural equilibration and sampling for quantitatively reliable predictions.
+
+DJ-1 Titration
+
+As a last test case, we want to verify the capability of the new cysteine model to correctly describe the titration curve of a catalytic cysteine. The test system is the Parkinson disease protein 7, also known as DJ-1, a homodimeric protein which contains a catalytic cysteine, Cys106 (Figure ). This cysteine shows a marked pK a shift, measured as 5.4 ± 0.1, due to the presence of a second residue, GLU18, which appears always protonated.
+
+5 Cartoon representation of the homodimeric DJ-1 protein, with chain A shown in blue and chain B in salmon. The two reactive cysteines, Cys106, are highlighted in yellow and indicated by arrows. Both copies of Cys106 were monitored in the CpHMD simulations and analyzed as chain-specific observations of the same reactive site.
+
+Here we verify the ability of the CYST implementation to describe properly the catalytic cysteine coordinated with the protonation state of connected acidic residues.
+
+Because DJ-1 is a symmetric homodimer, both Cys106 residues in chains A and B should in principle display the same titration behavior at convergence, providing an internal consistency check for the simulations.
+
+We prepared and equilibrated the model of DJ-1 (see Methods), and performed a pH ladder from 2 to 10 with step 0.5, and from 11 to 14 with step 1. Each pH condition was run for 200 ns in triplicate (and in sextuplicate for the Cys106 transition pH range, from 3.5 to 6.0), for a total simulation time of 16.2 μs. As in the previous cases, we then computed the protonation state population for the Cys106 residues in both chains and fitted them with the Henderson–Hasselbalch equation (details on the error treatment in the Supporting Information).
+
+As expected for a reactive cysteine, both Cys106 residues titrate in a markedly more acidic pH range than the model peptide and the noncatalytic ACBP mutants. The chain-specific Henderson–Hasselbalch fits yield apparent pK a values of 3.94 (95% CI: [3.67,4.19]) for chain A and 4.77 (95% CI: [4.30,5.20]) for chain B (Figure B), with the latter in reasonable agreement with the experimental value of 5.4 ± 0.1. Despite the protomer-specific asymmetry, the DJ-1 calculations place the titration of Cys106 in the correct acidic regime, suggesting that the CYST implementation captures strong acidification in DJ-1. We compare our results with the state-of-the-art in Table S2 in the Supporting Information.
+
+6 Protomer-specific titration behavior of Cys106 in DJ-1 and analysis of the chain asymmetry. (A) Representative structures after equilibration showing the local arrangement of Cys106 and Glu18 in chain A (blue) and chain B (salmon). Cys106 and Glu18 are shown as sticks. (B) Chain-specific titration curves of Cys106 obtained from CpHMD simulations and fitted to the Henderson–Hasselbalch equation, yielding apparent pK a values of 3.94 for chain A and 4.77 for chain B. While chain B is close to the experimental value, chain A remains shifted toward lower pK a . (C) Occupancy of short (<4 Å) Cys106-Glu18 contacts, pooled over the pH range spanning the titration transition (from 3.5 to 6.0), for chain A and chain B. Despite the difference in apparent pK a , the two chains display similar contact occupancies, indicating that the protomer asymmetry cannot be explained solely by a simple difference in Cys106-Glu18 proximity.
+
+At the same time, the two protomers do not converge to identical titration behavior within the present simulation time, even though they are symmetry-related in the experimental structure. Inspection of the equilibrated conformations shows that the local arrangement of Cys106 and Glu18 differs between the two chains (Figure A), suggesting a possible origin for the different apparent pK a values. To test this hypothesis more directly, we quantified the occupancy of short Cys106-Glu18 contacts over the pH range spanning the titration transition, pooling the data from pH 3.5 to 6.0. However, the resulting occupancies are very similar in the two chains (Figure C), indicating that the protomer-specific asymmetry cannot be explained solely by a simple difference in Cys106-Glu18 proximity.
+
+We also examined additional local descriptors of the Cys106 environment, including Glu18 protonation behavior (Figure S13), solvent exposure of Cys106 (Figure S11), side-chain conformational preferences (Figure S12), and Arg28/Arg48-anion minimum distance distribution (Figure S14), as suggested by experimental and computational works, but none of these quantities alone provided a clear explanation for the observed difference between the two protomers. Analyzing the titration behavior of Glu18, it remains protonated throughout the Cys106 titration range in both protomers, with a strongly shifted apparent pK a of 10.84 (CI 95% [10.52, 11.50]) for chain A and 10.34 (CI 95% [10.02, 10.53]) for chain B. This result is qualitatively consistent with previous experimental work, where Glu18 was considered protonated over the Cys106 titration range, and with computational work in which Glu18 was predicted to have a very high pK a (>14) when Cys106 is deprotonated. However, because Glu18 displays a high apparent pK a in both chains, its protonation behavior does not by itself explain the different apparent pK a values obtained for Cys106 in the two monomers. Similarly, solvent exposure and side chain conformational preferences did not provide a clear explanation for the observed difference between the two protomers. We therefore interpret the chain-specific shift in apparent pK a as arising either from subtler local electrostatic effects not captured by these simple observables or from residual finite-sampling effects. In this sense, DJ-1 represents a more demanding benchmark than ACA tripeptide or ACBP: it confirms that the present CYST implementation can reproduce the strongly shifted low-pK a regime of a reactive cysteine, while also showing that quantitative convergence and mechanistic resolution remain more challenging in coupled protein environments.
+
+Conclusions
+
+In this work, we implemented a titratable cysteine residue, CYST, within the GROMACS-based λ-dynamics constant-pH molecular dynamics framework and integrated it into the phbuilder workflow. The new residue describes the thiol/thiolate equilibrium of reduced cysteines within a fixed-topology force field, while disulfide-linked cysteines are retained as nontitratable covalent states defined a priori. This choice reflects the intended scope of the CYST implementation: to model cysteine protonation equilibria in a predefined redox topology, rather than coupled protonation-redox transitions.
+
+Calibration on the ACA tripeptide shows that the final correction potential successfully removes the intrinsic force-field bias along the λ coordinate and reproduces the target cysteine titration behavior, yielding a pK a of 8.33 for the model compound. The corresponding end point populations remain well separated across the full pH ladder, indicating that the implemented CYST residue correctly captures the intrinsic thiol/thiolate balance of cysteine in a peptide environment.
+
+Application to six engineered single-cysteine mutants of ACBP further shows that the implementation reproduces the correct high-pK a regime expected for noncatalytic protein cysteines. In this benchmark, the largest error was traced to a nonequilibrated local environment in the V36C mutant, and a preliminary conventional MD relaxation substantially improved the agreement with experiment. At the same time, the ACBP results also indicate that quantitative prediction remains sensitive to the underlying conformational ensemble and that local structural equilibration is an essential prerequisite for reliable protein pK a estimation.
+
+Finally, the DJ-1 test case demonstrates that the present implementation can capture the strongly shifted low-pK a regime of a reactive cysteine in a protein environment. Although the two protomers did not converge to identical titration behavior within the present simulation time, one copy of Cys106 yielded an apparent pK a close to the experimental value, placing the titration in the correct acidic regime overall. The remaining protomer-specific asymmetry could not be straightforwardly rationalized by simple geometric or solvent-exposure descriptors, suggesting that more subtle electrostatic effects or residual finite-sampling limitations are still at play in this more challenging benchmark.
+
+The present results also indicate where further methodological developments should be directed. In ACBP V36C and in DJ-1, the limiting factor is not only the sampling of the protonation coordinate, but also the sampling of the structural and electrostatic environment coupled to it. Enhanced sampling strategies could therefore be useful in future applications. Replica-exchange or REST2-like approaches could accelerate local side chain and loop rearrangements, whereas metadynamics or similar biased sampling schemes could target descriptors such as cysteine solvent exposure, Cys-acidic-residue distances, local hydration, or salt/ion occupancy. Such approaches may reduce the dependence on the initial conformational ensemble and improve convergence in coupled protein environments.
+
+Taken together, these results establish the present CYST implementation as a practical extension of the GROMACS CpHMD framework for the study of reduced cysteine protonation equilibria in peptides and proteins. More broadly, they provide a basis for future applications to reactive cysteines in catalytic sites, ligandable cysteines in covalent drug discovery, and pH-dependent cysteine chemistry in biomolecular systems. At the same time, the accuracy of cysteine pK a predictions is expected to remain limited by the underlying fixed-charge force field and by the treatment of the sulfur chemical environment. Cysteine pK a values are known to be particularly challenging to predict compared with more conventional titratable residues such as Asp, Glu, or Lys, in part because the polarizability and specific nonbonded interactions of the thiol/thiolate group are difficult to represent in standard additive force fields. Future developments should aim at improving sampling of coupled protonation/conformational states in protein environments and at refining the physical description of the cysteine side chain, for example through charge-scaling strategies, targeted nonbonded corrections such as NBFIX terms, or polarizable force-field formulations such as Drude models. Such developments would be complementary to the present implementation, which focuses on introducing a working fixed-charge titratable cysteine residue within the existing GROMACS CpHMD framework.
+
+Supplementary Material
+
+The author thanks Margherita Capelli and Giorgia Dito for continuous support. The author acknowledges CINECA for an award under the ISCRA initiative, for the availability of high-performance computing resources and support. R.C. was supported by Università degli Studi di Milano (Piano di supporto alla ricerca di ateneo Linea 2 2025-DBS Capelli).
+
+All input files required to reproduce these results, together with the trajectories of the runs shown here, are available on the Zenodo repository with the DOI 10.5281/zenodo.19339340. The modified phbuilder version which contains the CYST residue and the preparation script for cysteines is available at https://gitlab.com/riccardocapelli/phbuilder.
+
+The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acs.jctc.6c00640.CpHMD parameters for the CYST residue; extended description of end point-state assignment, bootstrap resampling, and confidence-interval calculation for pK a estimates; comparison of cysteine pK a predictions with external computational approaches; λ-coordinate distributions for the ACBP cysteine mutants before and after structural relaxation; time-dependent pK a convergence analysis for the ACBP mutants before and after relaxation; cysteine SASA distributions for relaxed and nonrelaxed ACBP mutants; deprotonated-fraction curves for DJ-1 Glu18 in chains A and B; time-dependent pK a convergence analysis for DJ-1 Cys106; Cys106 SASA distributions for DJ-1 chains A and B; Cys106 χ1 distributions for DJ-1 chains A and B; and chloride-arginine minimum-distance distributions for DJ-1 chains A and B (PDF)
+
+The author declares no competing financial interest.
+
+
+Giles N. M. Watts A. B. Giles G. I. Fry F. H. Littlechild J. A. Jacob C. Metal and Redox Modulation of Cysteine Protein Function Chem. Biol. 2003 10 677 693 10.1016/S1074-5521(03)00174-1 12954327
+Poole L. B. The basics of thiols and cysteines in redox biology and chemistry Free Radical Biol. Med. 2015 80 148 157 10.1016/j.freeradbiomed.2014.11.013 25433365 PMC4355186
+Paulsen C. E. Carroll K. S. Cysteine-Mediated Redox Signaling: Chemistry, Biology, and Tools for Discovery Chem. Rev. 2013 113 4633 4679 10.1021/cr300163e 23514336 PMC4303468
+Awoonor-Williams E. Rowley C. N. Evaluation of Methods for the Calculation of the pKa of Cysteine Residues in Proteins J. Chem. Theory Comput. 2016 12 4662 4673 10.1021/acs.jctc.6b00631 27541839
+Harris R. C. Liu R. Shen J. Predicting Reactive Cysteines with Implicit-Solvent-Based Continuous Constant pH Molecular Dynamics in Amber J. Chem. Theory Comput. 2020 16 3689 3698 10.1021/acs.jctc.0c00258 32330035 PMC7772776
+Awoonor-Williams E. Golosov A. A. Hornak V. Benchmarking In Silico Tools for Cysteine pKa Prediction J. Chem. Inf. Model. 2023 63 2170 2180 10.1021/acs.jcim.3c00004 36996330
+Kong X. Brooks C. L. λ-dynamics: A new approach to free energy calculations J. Chem. Phys. 1996 105 2414 2423 10.1063/1.472109
+Lee M. S. Salsbury F. R. Brooks C. L. Constant-pH molecular dynamics using continuous titration coordinates Proteins 2004 56 738 752 10.1002/prot.20128 15281127
+Khandogin J. Brooks C. L. Constant pH Molecular Dynamics with Proton Tautomerism Biophys. J. 2005 89 141 157 10.1529/biophysj.105.061341 15863480 PMC1366513
+Aho N. Buslaev P. Jansen A. Bauer P. Groenhof G. Hess B. Scalable Constant pH Molecular Dynamics in GROMACS J. Chem. Theory Comput. 2022 18 6148 6160 10.1021/acs.jctc.2c00516 36128977 PMC9558312
+Buslaev P. Aho N. Jansen A. Bauer P. Hess B. Groenhof G. Best Practices in Constant pH MD Simulations: Accuracy and Sampling J. Chem. Theory Comput. 2022 18 6134 6147 10.1021/acs.jctc.2c00517 36107791 PMC9558372
+Jansen A. Aho N. Groenhof G. Buslaev P. Hess B. phbuilder: A Tool for Efficiently Setting up Constant pH Molecular Dynamics Simulations in GROMACS J. Chem. Inf. Model. 2024 64 567 574 10.1021/acs.jcim.3c01313 38215282 PMC10865341
+Tavares-Neto E. Aguilella-Arzo M. Aguilella V. M. Predicting residue ionization of OmpF channel using Constant pH Molecular Dynamics as benchmark PLOS Computational Biology 2025 21 e1013628 10.1371/journal.pcbi.1013628 41129565 PMC12578334
+Karlsson, E. ; Ygland, I. ; Jansen, A. ; Plumley, J. ; Lindahl, E. ; Howard, R. J. ; Hess, B. Mechanism of Alkaline Gating in a Pentameric Ion Channel. 2026,.
+Howard M. K. Hoppe N. Huang X.-P. Mitrovic D. Billesbølle C. B. Macdonald C. B. Mehrotra E. Rockefeller Grimes P. Trinidad D. D. Delemotte L. English J. G. Coyote-Maestas W. Manglik A. Molecular basis of proton sensing by G protein-coupled receptors Cell 2025 188 671 687 10.1016/j.cell.2024.11.036 39753132 PMC11849372
+e20
+
+Ballabio F. Capelli R. Constant-pH Simulation of the Human β 2 Adrenergic Receptor Inactivation J. Chem. Inf. Model. 2025 65 10634 10645 10.1021/acs.jcim.5c01641 41021902 PMC12529767
+Liu, H. ; Henderson, M. ; Pang, Z. ; Zhang, Q. ; Lam, E. ; Liu, Q. Structural determinants for pH-dependent activation of a plant metacaspase. Nat. Commun. 2025, 16.10.1038/s41467-025-60253-y.PMC12122906 40442124
+Abraham M. J. Murtola T. Schulz R. Páll S. Smith J. C. Hess B. Lindahl E. GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers SoftwareX 2015 1–2 19 25 10.1016/j.softx.2015.06.001
+Bussi G. Donadio D. Parrinello M. Canonical sampling through velocity rescaling J. Chem. Phys. 2007 126 014101 10.1063/1.2408420 17212484
+Bernetti, M. ; Bussi, G. Pressure control using stochastic cell rescaling. J. Chem. Phys. 2020, 153.10.1063/5.0020514.32962386
+Hess B. Bekker H. Berendsen H. J. C. Fraaije J. G. E. M. LINCS: A linear constraint solver for molecular simulations J. Comput. Chem. 1997 18 1463 1472 10.1002/(SICI)1096-987X(199709)18:12<1463::AID-JCC4>3.0.CO;2-H
+Essmann U. Perera L. Berkowitz M. L. Darden T. Lee H. Pedersen L. G. A smooth particle mesh Ewald method J. Chem. Phys. 1995 103 8577 8593 10.1063/1.470117
+Case D. A. Aktulga H. M. Belfon K. Cerutti D. S. Cisneros G. A. Cruzeiro V. W. D. Forouzesh N. Giese T. J. Götz A. W. Gohlke H. Izadi S. Kasavajhala K. Kaymak M. C. King E. Kurtzman T. Lee T.-S. Li P. Liu J. Luchko T. Luo R. Manathunga M. Machado M. R. Nguyen H. M. O’Hearn K. A. Onufriev A. V. Pan F. Pantano S. Qi R. Rahnamoun A. Risheh A. Schott-Verdugo S. Shajan A. Swails J. Wang J. Wei H. Wu X. Wu Y. Zhang S. Zhao S. Zhu Q. Cheatham T. E. Roe D. R. Roitberg A. Simmerling C. York D. M. Nagan M. C. Merz K. M. AmberTools J. Chem. Inf. Model. 2023 63 6183 6191 10.1021/acs.jcim.3c01153 37805934 PMC10598796
+Thurlkill R. L. Grimsley G. R. Scholtz J. M. Pace C. N. pK values of the ionizable groups of proteins Protein Sci. 2006 15 1214 1218 10.1110/ps.051840806 16597822 PMC2242523
+Lerche, M. ; Kragelund, B. ; Redfield, C. ; Poulsen, F. RDC-refined NMR structure of bovine Acyl-coenzyme A Binding Protein, ACBP, 2004, 10.2210/pdb1NTI/pdb.
+Jensen K. S. Pedersen J. T. Winther J. R. Teilum K. The pKaValue and Accessibility of Cysteine Residues Are Key Determinants for Protein Substrate Discrimination by Glutaredoxin Biochemistry 2014 53 2533 2540 10.1021/bi4016633 24673564
+Witt A. C. Lakshminarasimhan M. Remington B. C. Hasim S. Pozharski E. Wilson M. A. Cysteine pKa Depression by a Protonated Glutamic Acid in Human DJ-1 Biochemistry 2008 47 7430 7440 10.1021/bi800282d 18570440 PMC2760839
+Dudev T. Lim C. Factors Governing the Protonation State of Cysteines in Proteins: An Ab Initio/CDM Study J. Am. Chem. Soc. 2002 124 6759 6766 10.1021/ja012620l 12047197
+Wilson C. J. Gapsys V. de Groot B. L. Improving pK a Predictions with Reparameterized Force Fields and Free Energy Calculations J. Chem. Theory Comput. 2025 21 4095 4106 10.1021/acs.jctc.5c00031 40173334 PMC12020373
+Wilson C. J. de Groot B. L. Gapsys V. Resolving coupled pH titrations using alchemical free energy calculations J. Comput. Chem. 2024 45 1444 1455 10.1002/jcc.27318 38471815
+Wilson C. J. Karttunen M. de Groot B. L. Gapsys V. Accurately Predicting Protein pK a Values Using Nonequilibrium Alchemy J. Chem. Theory Comput. 2023 19 7833 7845 10.1021/acs.jctc.3c00721 37820376 PMC10653114
+Lopes P. E. M. Huang J. Shim J. Luo Y. Li H. Roux B. MacKerell A. D. Polarizable Force Field for Peptides and Proteins Based on the Classical Drude Oscillator J. Chem. Theory Comput. 2013 9 5430 5449 10.1021/ct400781b 24459460 PMC3896220

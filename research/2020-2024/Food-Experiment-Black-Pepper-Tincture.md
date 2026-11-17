@@ -1,0 +1,3 @@
+# Black pepper in a registered multi-ingredient sleep tincture
+
+ClinicalTrials.gov first posted NCT06505694 on July 17, 2024. The protocol evaluates a multi-ingredient tincture containing organic black pepper fruit, other botanicals and L-theanine against a matched placebo in adults with stress and anxiety. It records sleep-quality questionnaires and Fitbit-derived sleep duration and stages, not dream-enactment counts or a Parkinson subgroup. The registry reports completion with 80 participants and no posted results as checked on November 15, 2026. The design does not isolate black pepper or establish its fruit was administered as ground culinary pepper. [Official registration](https://clinicaltrials.gov/study/NCT06505694)

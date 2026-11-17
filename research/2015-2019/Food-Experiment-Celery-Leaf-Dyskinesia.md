@@ -1,0 +1,5 @@
+# Celery-related compounds and movement outcomes
+
+## Pharmaceutical butylphthalide and locomotion in a mouse model
+
+Chen and colleagues first published this paper on December 20, 2017. They gave pharmaceutical DL-3-n-butylphthalide by gastric administration for 30 days to an LPS-induced Parkinson-like mouse model. The abstract calls the outcome “dyskinesia,” but the methods and Figures 1–2 specify rotarod balance and coordination, plus open-field line crossing, rearing and grooming. At 28 weeks the treatment attenuated the LPS-induced loss of activity and performance. The study did not give levodopa or score abnormal involuntary movements. The 2019 human trial also uses “dyskinesia” when discussing this mouse source. Its own clinical motor endpoint was off-medication UPDRS Part III. [Primary mouse study, Methods and Figures 1–2](https://www.spandidos-publications.com/10.3892/mmr.2017.8332) · [Local factual extract](Source-Text/2017-Chen-Butylphthalide-Mouse-Motor-Endpoints.txt) · [Local human trial note](Food-Experiment-Herb-Spice-Followup.md#pharmaceutical-butylphthalide-and-motor-symptoms)

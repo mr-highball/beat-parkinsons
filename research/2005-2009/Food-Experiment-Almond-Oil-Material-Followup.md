@@ -1,0 +1,5 @@
+# Almond oil and levodopa formulation follow-up
+
+## Sweet almond oil in a levodopa taste-titration formulation
+
+The US application US20090186935A1 was published July 23, 2009; US8137690B2 is the 2012 grant of the same application. Example 2 describes a levodopa suspension using sweet almond oil to make a final volume of 30 mL. Its stated initial concentration is 3.33 mg per drop, and the patent also reports 3, 6 and 12 mg per drop formulations. Example 3 describes administration to the tongue and refrigerated storage because levodopa oxidizes. Refrigeration of the finished preparation does not establish cold pressing of the oil. The patent contemplates Parkinson disease, but its identified case is alcohol and cocaine withdrawal with tremor; it reports combined 5-HTP and levodopa, without an almond-oil-only comparator or a Parkinson daily OFF diary. This is a formulation lead, not an observed effect of dietary almond oil on OFF time. [Original 2009 application, Examples 2–4](https://patents.google.com/patent/US20090186935A1/en) · [Factual extract](Source-Text/2009-Hitzig-Almond-Oil-Levodopa-Patent.txt)

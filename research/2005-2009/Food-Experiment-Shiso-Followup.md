@@ -1,0 +1,5 @@
+# Shiso and perilla follow-up
+
+## Multi-herb perilla formula and neurasthenia fatigue claims
+
+Published October 7, 2009. The Chinese application names perilla leaf among many extracts and claims relief of lassitude and weakness in neurasthenia. It provides no identifiable clinical result isolating perilla or measuring Parkinson fatigue. Europe PMC displays the 2008 filing date for this hit. [Original source](https://patents.google.com/patent/CN101549094A/zh) · [Local factual text](Source-Text/2009-CN101549094A-Perilla-Fatigue-Formula.txt)

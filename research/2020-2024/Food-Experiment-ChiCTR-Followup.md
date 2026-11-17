@@ -1,0 +1,21 @@
+# Chinese Clinical Trial Registry follow-up, 2020–2024
+
+## Congrong Shujing granules and daily function
+
+Chen and colleagues compared 12 weeks of Congrong Shujing granules plus conventional treatment with placebo plus conventional treatment. The April 2020 paper says 86 participants with Parkinson’s and a specified traditional-medicine diagnosis were selected and 72 completed the study, 35 with granules and 37 with placebo. The abstract reports lower post-treatment UPDRS Part II, PDQ-39, traditional-medicine symptom scores, and levodopa-equivalent dose in the granule group, each at p < 0.05. It gives no effect sizes or confidence intervals. The 2016 registration, ChiCTR-IOR-16008394, planned 144 participants. The observed contrast concerns a prepared formula added to conventional treatment. [Primary report, PMID 32291608](https://doi.org/10.1007/s11655-020-3080-0) · [2016 registration](../2015-2019/Food-Experiment-ChiCTR-Followup.md#registered-congrong-shujing-granules-trial)
+
+## Registered Congrong Shujing granules pilot
+
+ChiCTR2000034107 was prospectively registered on June 24, 2020. The investigator planned a randomized, triple-masked comparison of granules or placebo alongside conventional medicine, with 30 participants per arm. The primary measure was MDS-UPDRS. Secondary measures included magnetic resonance spectroscopy and electrophysiology. This identifier follows the publication of the earlier 2016-registered trial. A 2024 spectroscopy paper by the research group is a plausible outcome lead, but its public citation does not establish an exact registration link. [Primary registry record](https://www.chictr.org.cn/showproj.html?proj=55306) · [2024 report DOI](https://doi.org/10.7661/j.cjim.20240131.010)
+
+## Harbin ketogenic diet registrations
+
+ChiCTR2100045245 was first registered on April 9, 2021. Registry version 1.6 lists 30 participants with Parkinson’s in each of two parallel groups, ketogenic diet and usual diet. The listed outcomes include Parkinson’s symptom scales, intestinal microbiota, and inflammatory markers. The ethics approval ends in `-03`. A publication explicitly linked to this identifier was not located. [Official institution results](https://www.chictr.org.cn/searchproj.html?country=%E4%B8%AD%E5%9B%BD+&createyear=&institution=%E5%93%88%E5%B0%94%E6%BB%A8%E5%8C%BB%E7%A7%91%E5%A4%A7%E5%AD%A6%E7%AC%AC%E5%9B%9B%E9%99%84%E5%B1%9E%E5%8C%BB%E9%99%A2) · [Registry version 1.6](https://www.chictr.org.cn/hvshowproject.html?id=111189&v=1.6)
+
+ChiCTR2100045394 was first registered on April 14, 2021. It lists 30 participants with Parkinson’s for a before-and-after ketogenic diet comparison and 30 healthy controls for a microbiota comparison. The ethics approval ends in `-04`. Luo and colleagues cite this identifier in their 2026 report and describe the healthy group as a microbiota reference. The two Harbin records have different comparator designs and ethics approvals. [Primary registry record](https://www.chictr.org.cn/showproj.html?proj=125064) · [2026 outcomes](../2025-2029/Food-Experiment-ChiCTR-Followup.md#ketogenic-diet-and-pre-post-symptom-scores)
+
+## Registered probiotic and prebiotic studies
+
+ChiCTR2400080434 was prospectively registered on January 29, 2024. The Nanjing team planned 46 participants per arm for a double-masked combined probiotic and prebiotic intervention versus placebo in people at high risk of prodromal Parkinson’s. The listed primary clinical outcome is MDS-UPDRS Part III. The protocol includes microbiome and imaging assessments. The public records reviewed supplied no linked group outcomes. [Primary registry record](https://www.chictr.org.cn/showprojEN.html?proj=210596)
+
+ChiCTR2400087265 was retrospectively registered on July 23, 2024. The Jiujiang trial lists 35 people with Parkinson’s and constipation per arm for two weeks of live *Bacillus coagulans* tablets, powder, or control. It names complete spontaneous bowel movements, stool form, constipation scores, and quality of life among the primary outcomes. The registry calls the trial single-masked and describes no intervention for the control group. The public record marks calculated results as private. No primary outcome report linked to the registration was located. [Primary registry record](https://www.chictr.org.cn/showproj.html?proj=218675)

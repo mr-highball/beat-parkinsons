@@ -1,0 +1,5 @@
+# Perilla and isolated compounds in mouse swim tests
+
+## Perilla extract and isolated acids in 2002 mouse models
+
+One Takeda report used leaf extract and fractions of Perilla frutescens var. acuta and also tested isolated rosmarinic acid. Its author abstract reports reduced forced-swim immobility. A separate report used rosmarinic acid and caffeic acid and describes reduced immobility with no clear spontaneous motor activity change at its active doses. Neither abstract establishes a fresh rosemary exposure or a clinically measured depressive symptom. The papers share investigators, assays and compound exposure. The reports are distinct publications and animal-level overlap remains unverified. [Perilla author abstract](https://pubmed.ncbi.nlm.nih.gov/11917505/) · [Separate isolated-compound report](https://pubmed.ncbi.nlm.nih.gov/12167468/) · [Perilla factual text](Source-Text/2002-Takeda-Perilla-and-Swim-Test.txt) · [Isolated-compound factual text](Source-Text/2002-Takeda-Isolated-Acids-and-Swim-Test.txt)

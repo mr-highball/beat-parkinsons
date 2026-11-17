@@ -1,0 +1,3 @@
+# Fifth masked group priority-six follow-up
+
+Four of the 76 original priority-six pairs were resolved using original bodies. Seventy-two exact pairs remain open. Watermelon in a Parkinson paper was a smell-test stimulus. Geraniol in lesioned mice and self-reported chewing after unspecified mushroom intake are adjacent observations with different exposures or outcomes. The UEG poster describes poisoning. The shared PMC11231130 accession returned metadata only from NLM and an error from Europe PMC. The specific 0204 cucumber context in the UEG collection remains unresolved. [Original receipts](original-source-context.tsv) · [Open pairs](priority-six-current-open.tsv)

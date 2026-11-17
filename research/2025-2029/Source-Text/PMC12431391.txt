@@ -1,0 +1,298 @@
+Title: Assessing the Generalizability of Foundation Models for the Recognition of Motor Examinations in Parkinson’s Disease
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12431391/
+Text object: https://pmc-oa-opendata.s3.amazonaws.com/PMC12431391.1/PMC12431391.1.txt
+Data source: U.S. National Library of Medicine, PMC Cloud Service
+PMCID: PMC12431391
+PMID: 40942952
+DOI: 10.3390/s25175523
+Citation: Sensors (Basel). 2025 Sep 4;25(17):5523. doi: 10.3390/s25175523
+License: CC BY (article license statement below)
+Version: 1
+Retracted in PMC metadata: no
+Text coverage: article text
+Format: NLM plain-text extraction. This provenance header was added.
+
+
+JOURNAL INFORMATION
+==============================
+NLM Title Abbreviation: Sensors (Basel)
+Journal ID: Sensors (Basel)
+NLM Journal ID: 101204366
+Journal ID: sensors
+
+Sensors (Basel, Switzerland)
+
+EISSN: 1424-8220
+Publisher: Multidisciplinary Digital Publishing Institute (MDPI)
+
+ARTICLE INFORMATION
+==============================
+PMCID: PMC12431391
+PMID: 40942952
+DOI: 10.3390/s25175523
+Article ID: sensors-25-05523
+Article version: 1
+Subjects: Article
+
+Assessing the Generalizability of Foundation Models for the Recognition of Motor Examinations in Parkinson’s Disease
+
+https://orcid.org/0000-0001-9301-8872 Gundler Christopher Conceptualization Methodology Validation Formal analysis Investigation Resources Writing – original draft Writing – review & editing Supervision Project administration 1 *
+https://orcid.org/0009-0005-1987-9427 Wiederhold Alexander Johannes Conceptualization Methodology Resources Data curation Writing – review & editing 1
+https://orcid.org/0000-0001-7680-2147 Pötter-Nerger Monika Conceptualization Methodology Writing – review & editing Visualization 2
+Cheng Hsin-Yi Kathy Academic Editor
+1 Institute for Applied Medical Informatics, University Medical Center Hamburg-Eppendorf, Martinistr. 52, 20246 Hamburg, Germany
+2 Department of Neurology, University Medical Center Hamburg-Eppendorf, Martinistr. 52, 20246 Hamburg, Germany
+* Correspondence: c.gundler@uke.de
+Electronic publication date: 2025 Sep 4
+Publication date: 2025 Sep
+Volume: 25
+Issue: 17
+Electronic Location ID: 5523
+Received 2025 Jul 8; Revised 2025 Aug 29; Accepted 2025 Sep 1
+Copyright: © 2025 by the authors.
+Copyright year: 2025
+License: Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Keywords: Parkinson’s disease, movement data, self-supervised learning, foundation model, generalizability, human activity recognition
+
+Funding: The authors received no financial support for the research, authorship, and/or publication of this article. The Apple Watches used for data acquisition were provided free of charge by Apple Inc. Apple was not involved in the design of the research, nor was it involved in the collection, analysis, or interpretation of the research data, or the content of this or any related publication.
+
+==============================
+Current machine learning approaches focusing on motor symptoms in Parkinson’s disease are commonly trained on small datasets and often lack generalizability from developmental setups to clinical applications. Foundation models using large, unlabeled datasets of healthy participants through self-supervised learning appear attractive for such setups with limited samples, despite the potential impact of motoric symptoms. Acting as an exemplar, this study aims to evaluate the robustness of fine-tuned models in recognizing movements related to motor examinations across datasets and recording setups. Accelerometer data of 51 participants with Parkinson’s disease in three different training and fine-tuning setups were used to tailor the general model to the disease. Training the model on pre-trained weights, both partially (F1 = 0.70) and fully (F1 = 0.69), statistically significantly outperformed training the model from scratch (F1 = 0.55) in a nested cross-validation. For evaluation, the model’s ability to process data recorded from 24 patients in clinic was tested. The models achieved lower mean F1 scores of 0.33 (train from scratch), 0.43 for full, and 0.48 for partial fine-tuning, but demonstrated improved generalizability and robustness regarding the orientation of sensors compared to training from scratch. Utilizing foundation models for accelerometer data trained on healthy participants and fine-tuned for clinical applications in movement disorders appears as an effective strategy for optimized generalizability with small datasets.
+
+1. Introduction
+
+Parkinson’s disease (PD) is the most rapidly growing neurological disease with a doubling of its prevalence from 1990 to 2016 [1]. This progressive, neurodegenerative disorder is characterized by specific motor symptoms such as bradykinesia, muscle rigidity, tremor, and postural instability as well as various non-motor symptoms [2]. The disease progresses with a consecutive change in symptom load, urging a need for thorough clinical reassessment and constant therapy adjustments for effective management [3]. Consequently, for adequate adjustment of therapy, long-term monitoring is advisable. In clinical routine, the physician usually assesses the patient in the outpatient clinic every 3–6 months and receives only a single moment impression, but no objective measures over the last weeks. Using movement data from smartphones, wearables, and related devices for motor assessments in PD could fill that information gap. Additionally, increasing research activities focus on on-demand, closed-loop stimulation systems to improve PD symptoms such as deep brain stimulation or biochemical sensing for pharmacological analytics [4,5] on a moment-to-moment basis. There, external wearables appear attractive as a biomarker of the motor state, e.g., to detect freezing of gait episodes [6]. Accordingly, device-aided movement tracking has become widespread in research and discussed with its challenges and opportunities [7].
+
+Optimized for activity recognition, sensor data from accelerometers, gyroscopes, and magnetometers are commonly used in related studies [8]. Some studies focus on experimental setups in which patients perform specific tasks designed to elicit symptoms, and these tasks are then assessed automatically [9,10]. Other authors try to derive disease-relevant indicators for monitoring sensor assessments in real-world settings, capturing a more naturalistic representation of daily activities but without rater-based matching [11,12]. In both cases, the continuous sensor signal must often be segmented into different parts of activity, depending on the research question of interest. For example, detecting freezing of gait only makes sense when a patient is moving, and assessing some items of the Movement Disorder Society Unified Parkinson’s Disease Rating Scale (MDS-UPDRS) only makes sense when the related movement is performed. These segmentations themselves may have different origins; physicians, scientists, or even patients often annotate them manually during studies. In real-world data, extracting those segments automatically for healthy participants is possible and is still improved in current research under the name of human activity recognition. In case of research regarding PD, related work is more limited; for example, Yue et al. [13] describe a similar setup. Some authors utilize their own data, while others use existing models trained on public data and assume they will still perform for patients despite their characteristic motoric symptoms [14].
+
+The Issue of Generalization into Clinical Reality
+
+The limited methodical considerations regarding the precise method for obtaining the associated activities appear amplified given the requirements regarding the robustness and generalizability of the approaches. This challenge is multifaceted. Firstly, the overall data volume is constrained. Although efforts have been made to consolidate diverse data sources for larger cohorts, the available data remains comparatively limited, particularly when compared to tasks such as general activity recognition. The problem becomes even worse as the available samples differ significantly between cohorts. Often, observational studies with multitudes of measurements recorded in home setups are based upon self-reported outcomes [15]. Mixing these unsupervised real-world data with samples recorded and annotated by experienced clinicians will likely increase the included variance significantly. Lastly, the missing standardization of sensors, their placements on the body, temporal resolutions, preprocessing methodologies applied to raw data, and similar technical factors represent a considerable challenge. Designing data-driven algorithms capable of accommodating these multifaceted challenges and establishing them in clinical reality represents a substantial hurdle [16].
+
+Challenges regarding the amount or quality of labeled data are not limited to the clinical domain and require methods that can transfer knowledge from larger, sometimes healthier, populations and datasets. Transfer learning and, more recently, self-supervised learning [17] allow models to learn generic representations from vast pools of unlabeled data, which can then be re-used for specialized tasks with limited labeled data—an approach that has shown promise in the biomedical domain [17,18,19]. In the context of Parkinson’s research with its limited amount of data, some related work has assessed the methodology for numerous sensory modalities suitable for the symptoms. Based on videos, the technology has been used to obtain general gait patterns to assess the gait of patients with PD [18]. For the same objective, the technology has shown benefits for electroencephalography data [19], voice data [20], brain scans [21], or given extracted skeletons [22]. Focused on movement data, the technology proved its use for assessing disease prognosis [23], for assessing specific motor examinations [24], or for detecting anomalies of walking and freezing of gait [23,25].
+
+Recently, Yuan et al. [26] demonstrated that self-supervised foundation models pre-trained on accelerometer data could be fine-tuned to achieve significant improvement in activity recognition with a limited number of labels. Unlike similar work (i.e., [27]), they assessed the generalizability of the knowledge not only for healthy patients. While not the primarily focus of their work, they reported up to 135% performance gain when they fine-tuned the model instead of training it from scratch on a single dataset with accelerometer data of PD patients. However, the authors did not address generalizability across multiple PD datasets with varying recording conditions, sensor placements, and labeling procedures. Such cross-dataset robustness is critical for real-world clinical deployment, wherein models must cope with substantial between-dataset heterogeneity. Based upon their seminal findings, the aim was to empirically test two interconnected research hypotheses as follows:1. Fine-tuned foundation models trained through self-supervised learning on accelerometer data of healthy participants enhance the recognition of activities associated with motor examinations conducted by PD patients across datasets and recording paradigms;
+
+2. The fine-tuned models show increased robustness to varying recording conditions and different data preprocessing commonly observed between studies.
+
+Through the corresponding findings, the study contributes insights into the potential usage of “general” representations of accelerometer data for use in PD research and increase robustness regarding the usage of similar systems in clinical reality.
+
+2. Materials and Methods
+
+2.1. Data
+
+2.1.1. Datasets
+
+To evaluate the potential of pre-existing knowledge regarding accelerometer data derived from healthy participants for the recognition of motor examinations in PD patients, three datasets were employed. Two publicly available datasets, namely the Clinician Input Study (CIS-PD) [28] and the Levodopa Response Trial [29], were utilized as instances of observational studies conducted mostly in an ambulant setting [28,30,31,32]. The third study includes data of motor disturbances from PD patients in the Parkinson’s Clinical Movement Assessment (PACMAN) study, which was conducted by the Neurology Department at the University Medical Center Hamburg-Eppendorf [33].
+
+Data from 24 participants of the CIS-PD study were included with their clinical assessments and recorded ambulatory long-term measurements with hospital visits (4 study sites in the United States), mainly at the beginning and the end of the trial. While not being at a study site, participants performed self-assessed ratings via a mobile phone application. Patients wore an Apple Watch Series 2 and only tri-axial accelerometer data were recorded and transferred to a mobile phone application, where a low-pass filter and summation of absolute acceleration in 5 and 30 s window intervals were performed [28].
+
+The Levodopa Response Trial [29] was conducted on four consecutive days with selected items of the third part of the UPDRS on the first and the last day of the study. Participants repeated the tasks 6 to 8 times. The participants wore at least three devices: their smartphone, GeneActiv and Pebble. All of these devices were worn throughout the entire study period, while recording daily activities during the second and third days at the participants’ homes. The annotated accelerometer data of the GeneActiv device (ActivInsights Ltd., Kimbolton, United Kingdom [34]), worn on the most affected hand of the patients (upper limb), were included in the study. The data of these 27 participants were collected on two study sites in the United States. Further information regarding the devices and study setup could be found in the original publication [30].
+
+As an example of data recorded in an entire clinical setup, sensor recordings of the PACMAN study originally collected for assessing methods of motor disturbances at the University Medical Center Hamburg-Eppendorf, Department of Neurology, Germany, were utilized [33]. In a configuration striving for similarities to clinical routine, a physician handed out an Apple Watch Series 6 to hospitalized patients with PD and conducted up to three assessments of seven selected items (3.3 rigidity, 3.4 finger tapping, 3.5 hand movements (tight fist), 3.6 rotation of hands, 3.9 arising from chair, 3.10 walking (gait), 3.17 rest tremor amplitude) of the UPDRS’s third part per day. Those procedures were repeated while the therapy of the patients was adjusted for a maximum of two weeks. A total of 24 of these participants available during conduction of this study were included [33]. All procedures performed in the PACMAN study were in accordance with the ethical standards of the institutional research committee and with the 1964 Helsinki Declaration and its later amendments or comparable ethical standards. The collection of measurements from the patients was approved by the Ethics Commission of the Ärztekammer Hamburg with the ID 2022-100846-BO-ff. Informed consent was obtained from all individual participants included in the PACMAN study.
+
+The study encompassed 24, 27, and 24 participants of the CIS-PD, Levodopa Response Trial, and the PACMAN study, respectively. Table 1 provides an overview of the participants and available samples for each activity class, revealing a notable variation in the number of labels across datasets. Particularly, the ambulant observational studies (CIS-PD and Levodopa Response) amassed up to 17,000 samples for specific labels through self-assessments. In contrast, the clinic-based study at UKE, involving assessments by a physician, yielded considerably fewer samples.
+
+2.1.2. Data Preprocessing
+
+The datasets represent a collection of the typical paradigms that could be found in research regarding motor symptoms of PD. To ensure interoperability at least regarding the format and labels of the accelerometer data, we utilized a unified data structure to map all datasets to a common database structure [35]. None of the datasets were specifically designed for recognizing activities belonging to motor examinations. To obtain measurements for the different classes of activity, the raw signal was segmented into areas according to the given activity class labels. We split these areas containing only one kind of movement into segments of 10 s with a maximum overlap of 50%. This choice was guided by compatibility with the previous work and to reduce information loss at segment boundaries. No further preprocessing was conducted to maintain a representative sample of the measurements recorded in varying recording setups.
+
+In collaboration with an experienced neurologist, we selected four different classes of activity that are useful for assessing motor symptoms of PD. Besides classical human activities like standing, sitting, and walking, we included the rotation of hands, as it is part 3.6 of the UPDRS. All the individual classes of labels between the different datasets were mapped to these “dataset-independent” classes. Whenever a dataset included a mixture of tasks, like moving from sitting to standing, we excluded those. The remaining activities that were of limited interest or unavailable within the other datasets were mapped to the class “other” and contained mostly a mixture of daily activities like drinking or writing. The set of those classes represented the foundation for the subsequent analysis.
+
+2.2. Model
+
+2.2.1. Foundation Model
+
+As a recent example of a foundation model for accelerometer data trained through self-supervised learning, the publicly available model by Yuan et al., based on roughly 700,000 days of movement data from more than 100,000 healthy participants, was chosen for comparison [26]. This model employs a ResNet-V2 architecture with 18 layers and one-dimensional convolutions, which processes temporal windows of 10 s at a sampling rate of 30 samples per second. The model is designed to accept tri-axis accelerometer data as input, without the necessity for supplementary contextual information. To ensure direct comparability of results, our study replicated the experimental paradigm reported by the original authors. After the “embedding layer” with 1024 neurons, a dense layer with 512 neurons and the final output layer with five neurons, each corresponding to a target class, was added. The Softmax activation function was then applied to obtain class probabilities.
+
+2.2.2. Fine-Tuning the Foundation Model
+
+Depending on the three setups for evaluation, the foundation model underwent training or fine-tuning within a nested cross-validation framework, utilizing combined data from the CIS-PD and the Levodopa Response Trial. This process involved five outer test folds paired with eight inner validation folds, allocating 70% of the dataset for training, 10% for validation, and 20% for testing. The stratification of folds ensured that no participant’s data was included in multiple folds, thus preserving the integrity of the evaluation. The training sessions explored three distinct learning rates (0.01, 0.001, and 0.0001), covering a range of reasonable defaults with a fixed batch size of 1024 determined by the used GPU resources, prototypical for clinical workstations. An early stopping criterion was employed to halt training if no improvement was observed in the validation set over 50 epochs. To reduce the complexity of hyperparameter analysis, advanced learning rate adaptation strategies were not implemented. The Adam optimizer facilitated the optimization process, utilizing cross-entropy loss to reduce the discrepancy between predicted logits and five target classes.
+
+For evaluation, the multiclass F1 score, defined as the average harmonic mean of precision and recall across all classes was used. This metric was chosen because it is compatible with the work by Yuan et al. [26]. This metric ranges from 0 to 1, with the latter indicating optimal classifier performance. The F1 score on the validation set served as the basis for early stopping and as the criterion for selecting the best model weights during training. During the testing phase, the weights from that point were used to calculate the F1 score on the test set.
+
+The training was conducted using a single consumer-grade NVIDIA A100 graphics processing unit, highlighting the model’s potential for straightforward replication and application in clinical settings, even with limited computational resources.
+
+2.3. Evaluation
+
+The evaluation was conducted in two consecutive steps guided by the research hypotheses. For the first question, the training of an algorithm was simulated as it would be conducted in a scientific routine. Given the CIS-PD and the Levodopa Response Trial, the nested cross-validation was used both to obtain a suitable model for the task and an estimate of the performance on unseen data as a measure of generalizability through the incorporation of the test sets. For the sake of assessing the influence of learned representations, the training was run in three paradigms (Figure 1):Training from scratch: The first evaluation was based on training the network from scratch. In this setup, the pre-trained weights of the self-supervised model were not used at all. Instead, a random initialization of the network according to the utilized PyTorch library (version 1.13) took place. Accordingly, the deep-learning architecture is trained as it would be if other data besides the data in the training set were unavailable. This condition represents the baseline and could be used to study effects such as the appropriateness of the model structure. However, the risk of overfitting is high.
+
+Partial fine-tuning: The second training paradigm, partial fine-tuning, was based on training only the last layers of the network for predicting the presence of motor examination. The remaining layers with their pre-trained weights serve as feature extractors and were frozen. While the number of parameters requiring training is the fewest and the risk of overfitting is reduced accordingly, the other layers may not account for a changed distribution in the input data, given the non-healthy study population.
+
+Full fine-tuning: The third evaluation, the full fine-tuning, consisted of training the full network while using the existing weights of the foundation model as a starting point. While the model may fully adapt to the changed input data, previously extracted representations of movements could be reused. However, overfitting might affect the performance on unseen data, given the size of the network and the few training samples.
+
+For all the paradigms, we assessed the potential positive impact of utilizing the learned representations for the chosen task of recognizing the motor examinations.
+
+The second hypothesis was tested regarding increased robustness to varying recording conditions by testing the model against the clinical data (PACMAN). As one would expect given the heterogeneous datasets, the dataset did not contain measurements for the label “standing”. Subsequently, the obtained performance was compared to those estimates derived through the test folds in the previous analysis. Instead of relying on additional metrics besides the F1 score, the resulting confusion matrices were analyzed directly.
+
+Besides this testing for generalizability between the recording environment, the impact of the recording setup, like the orientation of the sensor or scale of the data, was investigated. This was inspired by typical incompatibilities previously identified [35]. For that, the clinical PACMAN dataset was deliberately modified to generate two additional modified datasets. Through a simple linear transformation, the reported recordings according to the standardized SI unit and the common “g unit” (scaled dataset) were simulated. Additionally, the measurements from different cohorts were aligned, given the axis explaining most variance during the walking tasks, calculated through a principal component analysis [36] (rotated dataset) for measuring the impact of the orientation of the device.
+
+2.4. Statistical Analysis
+
+A classical t-test, with Welch’s modification to account for potential changes in variances, was employed to test for significant performance differences between different models. Results are presented as mean ± standard deviation, and a threshold of statistical significance was set at p  <  0.001 to ensure robustness of the findings.
+
+3. Results
+
+3.1. Impact of Training Procedures for Fine-Tuning
+
+The trained models, when evaluated on the test folds during the nested cross-validation, exhibited average F1 scores of 0.55 ± 0.06 when trained from scratch, 0.70 ± 0.02 when partially fine-tuned, and 0.69 ± 0.09 when fully fine-tuned, respectively (mean ± standard deviation). Across all experiments, models trained from scratch converged in an average of 144 ± 66 epochs, while partially and fully fine-tuned models required 128 ± 47 and 137 ± 62 epochs, respectively. Supporting the first hypothesis, training the model on pre-trained weights, both partially and fully, statistically significantly outperformed training the model from scratch.
+
+3.2. Influence of Learning Rate for Fine-Tuning
+
+The impact of learning rates during evaluation differs significantly (Table 2). When comparing learning rates of 0.0001, 0.001, and 0.01, training from scratch resulted in average F1 scores from 0.52 to 0.59. The peak performances on the test folds were obtained during full fine-tuning with scores above 0.58. In this case, the smallest learning rate was significantly better suited than the other cases. In partial fine-tuning, the effect of the learning rate was effectively mitigated and the performances were highly comparable (Figure 2). The frozen weights in the latter setup appear to let most of the models reliably converge to slightly sub-optimal values.
+
+3.3. Assessing the Robustness and Generalizability of the Clinical Dataset
+
+In the literature regarding motor symptoms, the obtained test score within (nested) cross-fold validation is commonly treated as an indicator of the proposed method’s generalizability. To assess the effects of representations encoded within the foundation model for generalization in clinical setups more realistically, the models were applied to the PACMAN dataset. There was a considerable drop in absolute performance compared to the test folds’ performances. The trained models achieved mean F1 scores of 0.33 ± 0.06 when they were trained from scratch on the observational data, 0.43 ±  0.09 after being fully fine-tuned, and 0.48 ± 0.04 after partial fine-tuning (Figure 3).
+
+In terms of relative performance difference, the fine-tuned models demonstrated considerably better generalization capabilities compared to the model trained de novo. Building upon representations learned from healthy participants resulted in statistically significantly better performance, commonly between 15 and 25%. Depending on the chosen fine-tuning paradigm, the learning rate had varying influence; a learning rate too large, when all weights could be modified, appeared to overwrite the previously learned representations completely, leading to similar performance as models only trained on the original data. When overfitting was not possible due to freezing most of the weights, the learning rate did not make a significant difference.
+
+For a more comprehensive understanding than afforded by singular evaluation metrics, Figure 4 provides a visual depiction of the confusion matrices on the clinical dataset. For each training paradigm, the model with the highest score on the test folds of the observational dataset was chosen and applied to the data from the clinic.
+
+While the sample size of the data recorded in a clinical context might be small compared to other similar datasets, some differences are observable. When considering the three distinct training paradigms, movements inherently present in the foundation model, such as walking, were consistently well recognized in the fine-tuned models. For movements not explicitly familiar to the model, such as hand rotation, the selected models exhibited no discernible advantages. While the dataset did not contain any samples of standing to mirror the differences in available labels across related datasets, this did not contribute to a large fraction of the wrongly classified activities.
+
+3.4. Evaluating the Robustness According to Recording Setups
+
+To assess the models’ robustness regarding technical changes in recording setups beyond the nature of the study, the test sets were modified as described in the Section 2 to simulate measurement data in different units and rotated sensors. The results are provided in Figure 5.
+
+All training paradigms exhibited significantly lower performance compared to the original data when confronted with the linearly scaled dataset, a simulation mirroring the discrepancy between the “g unit” and the SI unit for accelerometer data. However, the fine-tuned models showed similar (or sometimes even slightly better) performance when the data was rotated to simulate a sensor with a different orientation. The only exception to this was the fully fine-tuned model optimized with a high learning rate, which apparently overfitted the data and lost its advantages of the learned representations in comparison to a model trained from scratch.
+
+4. Discussion
+
+The limited amount of data and the disparate recording setups between studies focusing on motor symptoms of PD pose significant challenges for the sustainable development of the area of research. Enhancing the generalizability of proposed approaches is crucial for transitioning solutions from laboratories to clinical settings. The goal of this study was not to differentiate movements of PD patients from those of healthy controls, but rather to recognize specific motor examination activities in PD patients, benefitting from robust, generalizable movement representations learned on large healthy cohorts across different datasets.
+
+4.1. Benefits of Utilizing Data from Healthy Participants for Movement Disorder Research
+
+In line with the previous research by Yuan et al. [26], fine-tuning foundation models previously trained on accelerometer data originally collected from healthy participants significantly improved the classification of movements associated with tasks performed by PD patients. Despite the inherent differences in movement patterns between both populations, employing pre-trained weights within the deep learning framework resulted in performance improvements on test folds of up to 25% compared to training models solely on disease-specific datasets. However, this improvement over multiple training and validation datasets is significantly lower than the reported performance in the case of a single dataset. This finding highlights the danger of overfitting to the specific recording conditions and is evident in the choice of the hyperparameters, too. While the best performance was observed in the entirely fine-tuned model, the training process and its associated hyperparameters, like the learning rate, must be tightly observed to not “overwrite” the previous knowledge and overfit. Forcing the model only to adopt the parts responsible for classification efficiently reduced the danger of overfitting; however, it did not result in the best possible performance. The finding that the choice of learning rate critically affected performance, especially in full fine-tuning, likely reflects the interplay between step size and convergence landscape. Larger learning rates may have caused the optimization to miss global minima or become trapped in local minima, particularly given the limited data and early stopping strategy.
+
+Given the computational efficiency of this approach, the additional complexity of the training setup does not pose a significant barrier for adoption in clinics. Even considering the resource-intensive nature of the meta-analyses in this study due to nested cross-validation, the process of fine-tuning a single network is manageable with a consumer-grade GPU, making it accessible and feasible for widespread use for related problems in hospitals.
+
+4.2. Evidence for Increased Robustness Regarding Recording Setups
+
+This study’s findings suggest that the increased robustness not only holds during cross-validation but also when tested on a dataset recorded within the clinic. The observed degradation in performance was even larger than anticipated given the results on the test folds, prompting caution when interpreting results from nested cross-validation as accurate estimates of generalizability. Despite this, the generalized representations provided by fine-tuned models yielded significantly better results than models trained solely on disease-specific data. Specifically, the fine-tuned models demonstrated a 15–20% improvement over the scratch-trained models. The findings suggest that the performance “scales” between different setups. The relative differences between training paradigms and learning rates remained relatively consistent, indicating that optimization on the validation set could translate effectively to better results even across different datasets. This property is highly advantageous, suggesting that effective cross-validation can guide better model tuning even across varying data conditions.
+
+The model’s robustness to artificially induced sensor rotations is encouraging, suggesting that representations learned by the foundation model may encode invariant features across axis permutations and device placements, a desirable property for real-world wearable deployments. By contrast, performance degradation during testing unit scaling (simulating changes from “g unit” to SI unit) likely indicates sensitivity to absolute input magnitude distribution. Accordingly, improved interoperability remains necessary. When models are trained from scratch, they do not exhibit this robust behavior, further providing evidence for fine-tuned models’ capability to generalize under varied recording setups. However, it must be noted that orientation robustness was assessed using mathematically simulated data, which may not fully replicate the complexity of human-worn sensor placements in uncontrolled environments. Future studies should consider explicitly collecting datasets with known, systematically varied sensor orientations.
+
+4.3. Utility of the Proposed Model for Recognizing Motor Examinations
+
+To reduce the number of possible confounders for the analysis, a rather simple approach towards recognizing motor examinations was chosen. Despite the challenges of classifying specific movements such as hand rotation, which were not familiar to the model, the classification of movements like walking and sitting—prevalent in the data by the healthy participants used for training the model—was more successful despite the associated motor symptoms. This supports the use of large-scale pre-training for developing more reliable clinical monitoring tools. The absolute performance obtained through fully fine-tuning the model and testing it on the clinical data is certainly a valid starting point, but further improvements must be considered before applying such a model in the clinical context. Naturally, the obtained labels extracted from small windows should be aggregated given a meaningful temporal context, i.e., through the usage of attention mechanism. The selection of suitable targets remains important given the apparent challenges for complex movements resulting in the higher misclassification rates for the class “other”, as reflected in the off-diagonal elements of Figure 4′s confusion matrices. Overall, the utilization of data from healthy participants led to significantly better results and should likely be utilized in similar challenges.
+
+4.4. Limitations and Future Work
+
+Given the obtained insights within this study, we are certain that re-using the representation of accelerometer data will be more often used for tasks related to motor symptoms of PD. However, in the context of generalizability being the special focus of this work, some limitations should be considered in future work.
+
+Firstly, the investigation focused on a single foundation model for accelerometer data chosen for its technical soundness, state-of-the-art performance, and computational efficiency. Future research could explore a variety of foundation models to further improve generalizability and performance. The large search space for optimizing hyperparameters, such as learning rates, batch sizes, and optimizers, poses a challenge. Optimization of the model architecture should be considered, too. While only two layers were trained in the partial fine-tuning setup to minimize overfitting, adding more layers may yield further improvements. Advanced transfer learning strategies, such as gradual unfreezing, adapter layers, or per-layer learning rates, should also be considered. Although this study addressed learning rates specifically due to their significant impact, future studies with greater computational resources might explore a broader range of hyperparameter configurations. Existing literature may already provide the first hints for such an optimized implementation [37].
+
+Furthermore, this study concentrated on accelerometer data, a representative yet not exclusive modality for analyzing movement disorders. Incorporating additional sensor modalities, such as gyroscopes or magnetometers, in a multimodal framework, may further enhance performance. Additionally, considering temporal segments beyond fixed lengths could offer better real-world applicability, potentially combining multiple predictions into a unified score through additional post-processing steps.
+
+5. Conclusions
+
+In summary, the use of foundation models for accelerometer data holds the potential to significantly improve the performance on movement-related tasks in PD across recording setups. In the specific example of recognition of motor examinations under study, the additional knowledge embedded through self-supervised learning always led to significantly better results despite the presence of motor symptoms. The technology significantly improved the robustness of the approach despite discrepancies between observational and clinical datasets and recording variations. While it cannot entirely resolve all generalizability issues, it provides a meaningful step towards more robust, clinically applicable models. Continued research and development, focusing on broader datasets and diverse model architectures, will be essential for bridging the remaining gaps in research regarding motor symptoms and bringing these advancements into clinical routine.
+
+Acknowledgments
+
+The authors express their gratitude to the Michael J. Fox Foundation for Parkinson’s Research for generously making the datasets related to the Levodopa Response Study and the Clinician Input Study available to the scientific community. We acknowledge financial support from the Open Access Publication Fund of UKE - Universitätsklinikum Hamburg-Eppendorf. During preparation of this manuscript, the authors used (generative) AI-powered tools like DeepL Translator, Grammarly, and ChatGPT 4o to improve the language and style of some parts of the paper. These tools were not used to generate any content of the paper itself.
+
+Author Contributions
+
+Conceptualization, C.G., A.J.W. and M.P.-N.; methodology, C.G., A.J.W. and M.P.-N.; validation, C.G.; formal analysis, C.G.; investigation, C.G.; resources, C.G. and A.J.W.; data curation, A.J.W.; writing—original draft preparation, C.G.; writing—review and editing, C.G., A.J.W. and M.P.-N.; visualization, M.P.-N.; supervision, C.G.; project administration, C.G. All authors have read and agreed to the published version of the manuscript.
+
+Institutional Review Board Statement
+
+All procedures performed in the PACMAN study were in accordance with the ethical standards of the institutional research committee and with the 1964 Helsinki Declaration and its later amendments or comparable ethical standards. The collection of measurements from the patients was approved by the Ethics Commission of the Ärztekammer Hamburg with the ID 2022-100846-BO-ff.
+
+Informed Consent Statement
+
+Informed consent was obtained from all individual participants included in the PACMAN study.
+
+Data Availability Statement
+
+All the model weights trained during the analysis and the code required for replicating the study on own data are publicly available on GitHub (https://github.com/UKEIAM/de.uke.iam.parkinson.activity [accessed on 31 August 2025]) and the scientific data repository of the University of Hamburg (http://doi.org/10.25592/uhhfdm.13995 [accessed on 31 August 2025]).
+
+Conflicts of Interest
+
+The authors declare no conflicts of interest.
+
+Abbreviations
+
+The following abbreviations are used in this manuscript: CIS-PD	Clinician Input Study	
+PACMAN	Parkinson’s Clinical Movement Assessment	
+PD	Parkinson’s disease	
+MDS-UPDRS	Movement Disorder Society unified Parkinson’s Disease Rating Scale	
+
+Figure 1 Overview of the evaluation procedure to test for the impact of different fine-tuning paradigms. PACMAN, Parkinson’s Clinical Movement Assessment.
+
+Figure 2 The impact of the learning rate on the two observational studies combined across the different training paradigms. When trained from scratch, the model failed to achieve a reasonable performance on the validation set. For the fine-tuning paradigms, the influence of the learning rate was higher (in full fine-tuning) or lower (in partial fine-tuning). F1 = 1 corresponds to the optimal performance. The dotted lines indicate the quantiles of the data.
+
+Figure 3 The performance of the models trained on cohort studies when applied to PACMAN as the test dataset for different learning rates and training paradigms. Despite the learning rate, the fine-tuned models show significantly better results than the models trained from scratch. F1 = 1 corresponds to the optimal performance. The dotted lines indicate the quantiles of the data.
+
+Figure 4 Confusion matrices of the best-performing models on the test folds from the three different training setups. The classes of the ground truth specify the correct class, while those below correspond to the prediction. Accordingly, an optimal classifier would only have values on the diagonal.
+
+Figure 5 The performance of the models trained on the cohort studies when applied to the PACMAN as the test set for different learning rates and training paradigms. While all models show a considerable drop in accelerometer data of a different unit, the fine-tuned models show significantly better results when the sensor is artificially rotated. F1 = 1 corresponds to the optimal performance. The dotted lines indicate the quantiles of the data.
+
+sensors-25-05523-t001_Table 1 Table 1 Patient characteristics and absolute number of annotated tasks available for every type of movement across the different cohorts. The first two studies contain far more measurements while the third dataset from the clinical domain contains far fewer variables. On the clinical set recorded at UKE, no tasks were selected while the patient was standing.
+
+	Levodopa Response Trial	Clinician Input Study	PACMAN Study	
+Participants	27	24	24	
+Age range	50–84 years	36–75 years	49–79 years	
+Average age (SD)	67 (±9) years	63 (±10) years	65 (±8) years	
+Rotating hands (UPDRS 3.6)	4912	908	23	
+Other movements	15,172	3012	36	
+Sitting	2077	436	66	
+Standing	2077	418	0	
+Walking (UPDRS 3.10)	7010	950	135	
+UPDRS, Movement Disorder Society Unified Parkinson’s Disease Rating Scale; PACMAN, Parkinson’s Clinical Movement Assessment.
+
+sensors-25-05523-t002_Table 2 Table 2 F1 scores for the three learning rates on the two observational studies combined across the different training paradigms.
+
+Learning Rate	F1 Score (±SD)	
+	From scratch	Full fine-tuning	Partial fine-tuning	
+0.0001	0.52 ± 0.04	0.78 ± 0.02	0.70 ± 0.02	
+0.001	0.59 ± 0.04	0.70 ± 0.04	0.71 ± 0.02	
+0.01	0.54 ± 0.06	0.58 ± 0.07	0.70 ± 0.02	
+F1 = 1 corresponds to the optimal performance.
+
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
+
+
+References
+
+1. Dorsey E.R. Elbaz A. Nichols E. Abbasi N. Abd-Allah F. Abdelalim A. Adsuar J.C. Ansha M.G. Brayne C. Choi J.-Y.J. Global, Regional, and National Burden of Parkinson’s Disease, 1990–2016: A Systematic Analysis for the Global Burden of Disease Study 2016 Lancet Neurol. 2018 17 939 953 10.1016/S1474-4422(18)30295-3 30287051 PMC6191528
+2. Postuma R.B. Berg D. Stern M. Poewe W. Olanow C.W. Oertel W. Obeso J. Marek K. Litvan I. Lang A.E. MDS Clinical Diagnostic Criteria for Parkinson’s Disease Mov. Disord. 2015 30 1591 1601 10.1002/mds.26424 26474316
+3. Monje M.H.G. Foffani G. Obeso J. Sánchez-Ferro Á. New Sensor and Wearable Technologies to Aid in the Diagnosis and Treatment Monitoring of Parkinson’s Disease Annu. Rev. Biomed. Eng. 2019 21 111 143 10.1146/annurev-bioeng-062117-121036 31167102
+4. Di Biase L. Tinkhauser G. Martin Moraud E. Caminiti M.L. Pecoraro P.M. Di Lazzaro V. Adaptive, Personalized Closed-Loop Therapy for Parkinson’s Disease: Biochemical, Neurophysiological, and Wearable Sensing Systems Expert Rev. Neurother. 2021 21 1371 1388 10.1080/14737175.2021.2000392 34736368
+5. Oliveira A.M. Coelho L. Carvalho E. Ferreira-Pinto M.J. Vaz R. Aguiar P. Machine Learning for Adaptive Deep Brain Stimulation in Parkinson’s Disease: Closing the Loop J. Neurol. 2023 270 5313 5326 10.1007/s00415-023-11873-1 37530789 PMC10576725
+6. Giannakopoulou K.-M. Roussaki I. Demestichas K. Internet of Things Technologies and Machine Learning Methods for Parkinson’s Disease Diagnosis, Monitoring and Management: A Systematic Review Sensors 2022 22 1799 10.3390/s22051799 35270944 PMC8915040
+7. Espay A.J. Bonato P. Nahab F. Maetzler W. Dean J.M. Klucken J. Eskofier B.M. Merola A. Horak F. Lang A.E. Technology in Parkinson Disease: Challenges and Opportunities Mov. Disord. 2016 31 1272 1282 10.1002/mds.26642 27125836 PMC5014594
+8. Sigcha L. Borzì L. Amato F. Rechichi I. Ramos-Romero C. Cárdenas A. Gascó L. Olmo G. Deep Learning and Wearable Sensors for the Diagnosis and Monitoring of Parkinson’s Disease: A Systematic Review Expert Syst. Appl. 2023 229 120541 10.1016/j.eswa.2023.120541
+9. Hill E.J. Mangleburg C.G. Alfradique-Dunham I. Ripperger B. Stillwell A. Saade H. Rao S. Fagbongbe O. Von Coelln R. Tarakad A. Quantitative Mobility Measures Complement the MDS-UPDRS for Characterization of Parkinson’s Disease Heterogeneity Park. Relat. Disord. 2021 84 105 111 10.1016/j.parkreldis.2021.02.006 PMC7987213 33607526
+10. Safarpour D. Dale M.L. Shah V.V. Talman L. Carlson-Kuhta P. Horak F.B. Mancini M. Surrogates for Rigidity and PIGD MDS-UPDRS Subscores Using Wearable Sensors Gait Posture 2022 91 186 191 10.1016/j.gaitpost.2021.10.029 34736096 PMC8671321
+11. Silva De Lima A.L. Smits T. Darweesh S.K.L. Valenti G. Milosevic M. Pijl M. Baldus H. De Vries N.M. Meinders M.J. Bloem B.R. Home-Based Monitoring of Falls Using Wearable Sensors in Parkinson’s Disease Mov. Disord. 2020 35 109 115 10.1002/mds.27830 31449705 PMC7003816
+12. Morgan C. Rolinski M. McNaney R. Jones B. Rochester L. Maetzler W. Craddock I. Whone A.L. Systematic Review Looking at the Use of Technology to Measure Free-Living Symptom and Activity Outcomes in Parkinson’s Disease in the Home or a Home-like Environment J. Park. Dis. 2020 10 429 454 10.3233/JPD-191781 PMC7242826 32250314
+13. Yue P. Wang X. Yang Y. Qi J. Yang P. Up-Sampling Active Learning: An Activity Recognition Method for Parkinson’s Disease Patients Proceedings of the Pervasive Computing Technologies for Healthcare Tsanas A. Triantafyllidis A. Springer Nature Cham, Switzerland 2023 229 246
+14. Cheng W.-Y. Scotland A. Lipsmeier F. Kilchenmann T. Jin L. Schjodt-Eriksen J. Wolf D. Zhang-Schaerer Y.-P. Garcia I.F. Siebourg-Polster J. Human Activity Recognition from Sensor-Based Large-Scale Continuous Monitoring of Parkinson’s Disease Patients Proceedings of the 2017 IEEE/ACM International Conference on Connected Health: Applications, Systems and Engineering Technologies (CHASE) Philadelphia, PA, USA 17–19 July 2017 249 250
+15. Denk D. Herman T. Zoetewei D. Ginis P. Brozgol M. Cornejo Thumm P. Decaluwe E. Ganz N. Palmerini L. Giladi N. Daily-Living Freezing of Gait as Quantified Using Wearables in People With Parkinson Disease: Comparison with Self-Report and Provocation Tests Phys. Ther. 2022 102 pzac129 10.1093/ptj/pzac129 36179090 PMC10071496
+16. Shawen N. O’Brien M.K. Venkatesan S. Lonini L. Simuni T. Hamilton J.L. Ghaffari R. Rogers J.A. Jayaraman A. Role of Data Measurement Characteristics in the Accurate Detection of Parkinson’s Disease Symptoms Using Wearable Sensors J. Neuroeng. Rehabil. 2020 17 52 10.1186/s12984-020-00684-4 32312287 PMC7168958
+17. Liang Y. Wen H. Nie Y. Jiang Y. Jin M. Song D. Pan S. Wen Q. Foundation Models for Time Series Analysis: A Tutorial and Survey Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining Barcelona, Spain 25–29 August 2024 6555 6565
+18. Sabo A. Mehdizadeh S. Iaboni A. Taati B. Estimating Parkinsonism Severity in Natural Gait Videos of Older Adults with Dementia IEEE J. Biomed. Health Inform. 2022 26 2288 2298 10.1109/JBHI.2022.3144917 35077373
+19. Guo Y. Huang D. Zhang W. Wang L. Li Y. Olmo G. Wang Q. Meng F. Chan P. High-Accuracy Wearable Detection of Freezing of Gait in Parkinson’s Disease Based on Pseudo-Multimodal Features Comput. Biol. Med. 2022 146 105629 10.1016/j.compbiomed.2022.105629 35659119
+20. Rahman W. Lee S. Islam M.S. Antony V.N. Ratnu H. Ali M.R. Mamun A.A. Wagner E. Jensen-Roberts S. Waddell E. Detecting Parkinson Disease Using a Web-Based Speech Task: Observational Study J. Med. Internet Res. 2021 23 e26305 10.2196/26305 34665148 PMC8564663
+21. Zhang Y. Lei H. Huang Z. Li Z. Liu C.-M. Lei B. Parkinson’s Disease Classification with Self-Supervised Learning and Attention Mechanism Proceedings of the 2022 26th International Conference on Pattern Recognition (ICPR) Montreal, QC, Canada 21–25 August 2022 4601 4607
+22. Endo M. Poston K.L. Sullivan E.V. Li F.-F. Pohl K.M. Adeli E. GaitForeMer: Self-Supervised Pre-Training of Transformers via Human Motion Forecasting for Few-Shot Gait Impairment Severity Estimation Proceedings of the Medical Image Computing and Computer Assisted Intervention—MICCAI 2022, Resorts World Sentosa Singapore 18–22 September 2022 Wang L. Dou Q. Fletcher P.T. Speidel S. Li S. Springer Nature Cham, Switzerland 2022 130 139 10.1007/978-3-031-16452-1_13 PMC9635991 36342887
+23. Jiang H. Bryan Lim W.Y. Shyuan Ng J. Wang Y. Chi Y. Miao C. Towards Parkinson’s Disease Prognosis Using Self-Supervised Learning and Anomaly Detection Proceedings of the ICASSP 2021—2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) Toronto, ON, Canada 6–11 June 2021 3960 3964
+24. Sánchez-Fernández L.P. Garza-Rodríguez A. Sánchez-Pérez L.A. Martínez-Hernández J.M. A Computer Method for Pronation-Supination Assessment in Parkinson’s Disease Based on Latent Space Representations of Biomechanical Indicators Bioengineering 2023 10 588 10.3390/bioengineering10050588 37237657 PMC10215681
+25. Xia Y. Sun H. Zhang B. Xu Y. Ye Q. Prediction of Freezing of Gait Based on Self-Supervised Pretraining via Contrastive Learning Biomed. Signal Process. Control. 2024 89 105765 10.1016/j.bspc.2023.105765
+26. Yuan H. Chan S. Creagh A.P. Tong C. Clifton D.A. Doherty A. Self-Supervised Learning for Human Activity Recognition Using 700,000 Person-Days of Wearable Data npj Digit. Med. 2023 7 91 10.1038/s41746-024-01062-3 PMC11015005 38609437
+27. Zhang Y. Ayush K. Qiao S. Heydari A.A. Narayanswamy G. Xu M.A. Metwally A.A. Xu S. Garrison J. Xu X. SensorLM: Learning the Language of Wearable Sensors arXiv 2025 2506.09108 10.48550/arXiv.2506.09108
+28. Elm J.J. Daeschler M. Bataille L. Schneider R. Amara A. Espay A.J. Afek M. Admati C. Teklehaimanot A. Simuni T. Feasibility and Utility of a Clinician Dashboard from Wearable and Mobile Application Parkinson’s Disease Data NPJ Digit. Med. 2019 2 95 10.1038/s41746-019-0169-y 31583283 PMC6761168
+29. Synapse.org. MJFF Levodopa Response Study Available online: https://www.synapse.org/Synapse:syn20681023/wiki/594678 (accessed on 31 August 2025)
+30. Daneault J.-F. Vergara-Diaz G. Parisi F. Admati C. Alfonso C. Bertoli M. Bonizzoni E. Carvalho G.F. Costante G. Fabara E.E. Accelerometer Data Collected with a Minimum Set of Wearable Sensors from Subjects with Parkinson’s Disease Sci. Data 2021 8 48 10.1038/s41597-021-00830-0 33547309 PMC7865022
+31. Vergara-Diaz G. Daneault J.-F. Parisi F. Admati C. Alfonso C. Bertoli M. Bonizzoni E. Carvalho G.F. Costante G. Fabara E.E. Limb and Trunk Accelerometer Data Collected with Wearable Sensors from Subjects with Parkinson’s Disease Sci. Data 2021 8 47 10.1038/s41597-021-00831-z 33547317 PMC7864964
+32. Sieberts S.K. Schaff J. Duda M. Pataki B.Á. Sun M. Snyder P. Daneault J.-F. Parisi F. Costante G. Rubin U. Crowdsourcing Digital Health Measures to Predict Parkinson’s Disease Severity: The Parkinson’s Disease Digital Biomarker DREAM Challenge NPJ Digit. Med. 2021 4 53 10.1038/s41746-021-00414-7 33742069 PMC7979931
+33. Wiederhold A.J. Zhu Q.R. Spiegel S. Dadkhah A. Pötter-Nerger M. Langebrake C. Ückert F. Gundler C. Opportunities and Limitations of Wrist-Worn Devices for Dyskinesia Detection in Parkinson’s Disease Sensors 2025 25 4514 10.3390/s25144514 40732642 PMC12299354
+34. Activeinsights. GENEActiv with Software: Instructions for Use Available online: https://activinsights.com/wp-content/uploads/2024/09/GENEActiv-1.2-IFU-rev-6.pdf (accessed on 26 August 2025)
+35. Gundler C. Zhu Q.R. Trübe L. Dadkhah A. Gutowski T. Rosch M. Langebrake C. Nürnberg S. Baehr M. Ückert F. A Unified Data Architecture for Assessing Motor Symptoms in Parkinson’s Disease Stud. Health Technol. Inform. 2023 307 22 30 10.3233/SHTI230689 37697834
+36. Subramanian R. Sarkar S. Evaluation of Algorithms for Orientation Invariant Inertial Gait Matching IEEE Trans. Inf. Forensics Secur. 2019 14 304 318 10.1109/TIFS.2018.2850032
+37. An S. Bhat G. Gumussoy S. Ogras U. Transfer Learning for Human Activity Recognition Using Representational Analysis of Neural Networks ACM Trans. Comput. Healthc. 2023 4 1 21 10.1145/3563948

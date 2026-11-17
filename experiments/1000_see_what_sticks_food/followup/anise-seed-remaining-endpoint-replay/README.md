@@ -1,0 +1,5 @@
+# Ground anise seed and Parkinson handwriting or dream behavior
+
+The Tlemcen thesis describes anise in a multi-ingredient honey preparation. It does not connect anise ingestion to measured handwriting or to dream enactment. The 2021 and 2026 diagnostic studies use anise-labeled odor stimuli. Their people with REM sleep behavior disorder took smell tests. The labels establish neither botanical origin nor treatment with ground seed. [Tlemcen primary context](../../../../research/2020-2024/Food-Experiment-Herb-Spice-Followup.md#marjoram-and-seeds-in-a-tlemcen-honey-mixture) · [Diagnostic cohorts and anise odor](../../../../research/2025-2029/Food-Experiment-Anise-Odor-RBD.md)
+
+The native Europe PMC search returned all 41 appearances for the captured expressions. A PubMed replay returned seven distinct identifiers. Its regional translation dropped an Arabic expression, and the companion registry route left regional terms open. Conference abstracts still require presentation-level screening. The two frozen verdicts remain Unknown. [Europe PMC queries](epmc/ingredient_queries.tsv)

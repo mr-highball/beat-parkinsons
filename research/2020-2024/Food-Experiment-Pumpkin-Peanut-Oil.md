@@ -1,0 +1,57 @@
+# Pumpkin seed oil and peanut oil clinical and laboratory comparisons
+
+## Pumpkin seed oil in a Parkinson diet menu
+
+Hegelmaier and colleagues’ February 2020 pilot included pumpkin seed oil in Appendix A of a two-week diet offered to all 16 participants with Parkinson’s. Six received the diet alone and ten also received bowel cleansing. At one year the composite UPDRS III score decreased from baseline in both arms. Appendix A does not specify the oil’s preparation, quantity or individual consumption. The publication gives no oil-only comparison, separately reported rigidity or facial expression item, or instrumented stride estimate. Walnut, sesame and olive oils also appear in the same menu. [Local primary article, Appendix A and Figure 4](Source-Text/PMC7072275.txt) · [Publisher](https://www.mdpi.com/2073-4409/9/2/376)
+
+## Peanut oil based comparator and mood in healthy adults
+
+The ARISTOTLE study was first registered March 27, 2020, after its recorded November 2019 start. Parilli-Moser and colleagues’ September 2021 report analyzed 63 of 90 enrolled healthy young adults. The control group consumed a manufactured peanut oil-based butter with similar energy and described as free of phenolic compounds and fiber. The paper does not specify cold pressing or refinement. Table 3 gives no clear within-control anxiety change (p = .241) and lower anxiety after skin-roasted peanuts versus the oil-based comparator (adjusted p = .001). Depression scores fell in all three arms, including the oil-based control (within-arm p = .032). Neither depression contrast against control was clear (p = .639 and .403), and no oil-free control was included. The findings do not isolate an oil effect or establish anxiety or depression effects in Parkinson’s. [Official registration](https://clinicaltrials.gov/study/NCT04324749) · [University of Barcelona publication and CC BY record](https://hdl.handle.net/2445/183049) · [Local repository plain-text extraction](Source-Text/2021-Parilli-Moser-ARISTOTLE.txt)
+
+## Pumpkin seed oil and experimental nociception
+
+Yahya’s 2020 study extracted oil from ground seeds with petroleum ether, then administered it orally in an emulsion to mice. In Table 1, hot-plate response latency was 4.13 to 9.75 seconds with the oil versus 3.25 seconds with vehicle. The diclofenac group averaged 18.15 seconds. Acetic acid writhing also decreased. These assays measure evoked nociceptive behavior outside Parkinson’s and the source oil was solvent-extracted. A separate 2021 article by Wahid and colleagues used an ethanol seed extract and likewise reported favorable heat-evoked responses, without a culinary oil arm. [Yahya primary report, Table 1 and Figure 1](https://jcoagri.uobaghdad.edu.iq/index.php/intro/article/download/998/735/1820) · [Butt primary report](https://pmc.ncbi.nlm.nih.gov/articles/PMC8325025/)
+
+## Cold extracted pumpkin seed oil and blood pressure
+
+Majid and colleagues gave 63 participants with cardiometabolic conditions cold-extracted pumpkin seed oil capsules alongside diet and lifestyle advice and compared them with 64 people receiving advice alone. Mean diastolic pressure went from 84.381 to 81.048 mmHg in the oil arm and from 84.28 to 83.64 in controls. Tables 3 and 4 use independent-sample tests within each arm across time and do not establish an adjusted between-arm change. The article did not evaluate standing blood pressure or lightheadedness. [Primary report, May 2020, Tables 3–4](https://doi.org/10.1590/fst.03720)
+
+## Pumpkin seed oil and behavior in chronic stress rats
+
+Two reports from the same six investigators tested pumpkin seed oil in six-week chronic mild stress rat models. The 2022 cortical study included a zinc branch and describes improved forced-swim and novel-cage behavior in the abstract. Exact arm-level data remain behind the publisher and institutional access routes. The hippocampal article first published October 2, 2024, then appeared in a 2025 issue. It reports improved sucrose preference and shorter tail-suspension immobility with pumpkin seed oil in stressed rats. Table 1 reports open-field immobility or freezing of 44.2 ± 1.9 seconds with oil versus 173.0 ± 6.4 seconds for stressed controls. The test measures stress behavior and provides no Parkinson gait-freezing assessment. The abstract and tables describe six arms while one methods sentence says eight. The paper gives no cold-press specification. The two reports share investigators, stress duration and oil dose but use different behavioral tests and brain regions. Cohort overlap remains unverified and the experiment ledger counts them as one research program pending clarification. [2022 primary abstract and institutional access](https://www.research.asu.edu.eg/handle/123456789/188365) · [2024 original paper, Figures 1–2 and Table 1](https://journals.ekb.eg/article_383385_7bebfd79b506abddd5e677cd7d01996a.pdf) · [Institutional publication date](https://research.asu.edu.eg/handle/123456789/214674)
+
+## Pumpkin seed oil in an oral mucositis registration
+
+NCT04303312 first posted March 11, 2020. It compares a topical oral spray combining solcoseryl and pumpkin seed oil with benzydamine for cancer-treatment mucositis. The primary grade incorporates painful mucosa and ability to eat. The registry is currently of unknown recruitment status and has no posted results. The recovered 2024 article is a strong study-family match, with differences in registered and delivered formulation and duration. [Original trial results](#combined-cold-pressed-oil-and-solcoseryl-in-oral-mucositis) The oil is part of a spray with another active ingredient. [Official registry](https://clinicaltrials.gov/study/NCT04303312)
+
+## Cold pressed seed oils in cell free assays
+
+Fratianni and colleagues tested several cold-pressed commercial seed oils in cell-free experiments. The pumpkin seed oil acetylcholinesterase IC50 was 17.72 ± 1.72 µg in Table 2. Assays included butyrylcholinesterase and tyrosinase inhibition. No attention performance, patient exposure or symptom outcome was assessed. [Local full text](Source-Text/PMC10160382.txt) · [Primary report](https://doi.org/10.3389/fnut.2023.1171766)
+
+## Peanut oil carrier in a primate dyskinesia study
+
+Herrero and colleagues administered 7-nitroindazole dissolved in peanut oil by subcutaneous injection to three of six levodopa-treated MPTP monkeys. Figure 2 gives lower dyskinesia intensity and duration after the drug in oil. The three paired dyskinesia scores averaged over the time course fell from 9 to 4, 7 to 1 and 6 to 3 on a 21-point scale. The experiment had no matched peanut-oil-only arm, and tremor and freezing were part of a broader motor scale without separate oil-specific outcomes. The signal cannot be attributed to consuming refined oil. [Local primary paper, Methods and Figure 2](Source-Text/PMC10188238.txt) · [PubMed](https://pubmed.ncbi.nlm.nih.gov/37192671/)
+
+## APOLLO smell trial registration and protocol
+
+The ISRCTN API assigns ISRCTN13142505 on August 10, 2021. The 2023 protocol reports a February 23, 2021 date, alongside the local identifier 39523. The current registry narrative describes a no-treatment comparison, whereas the 2023 protocol and 2026 final article both describe intranasal peanut oil as the comparator. The final study enrolled postinfectious olfactory-loss patients and reports psychophysical testing. [Official registry](https://www.isrctn.com/ISRCTN13142505) · [Local protocol](Source-Text/PMC10568902.txt) · [2026 outcomes](../2025-2029/Food-Experiment-Pumpkin-Peanut-Oil.md#intranasal-peanut-oil-and-post-covid-smell-outcomes)
+
+## Adulterated product misidentified as pumpkin seed oil
+
+Pers and colleagues’ forensic report described hypotension and other severe symptoms after ingestion of a product sold as pumpkin seed oil. Chemical analysis detected no fatty acids and identified glycerin and diethylene glycol. This is evidence about a falsely labeled product. It supplies no oil effect on orthostatic lightheadedness. [Primary forensic conference report](https://www.em-consulte.com/it/article/1535461/article/two-deaths-after-ingestion-of-a-falsified-pumpkin-)
+
+## Pumpkin seed oil and dizziness in a prostate trial
+
+Zerafatjou and colleagues first published October 19, 2021. Eighty men with benign prostatic hyperplasia were randomized to pumpkin seed oil capsules or tamsulosin. Of the 73 analyzed, none of 39 oil participants reported side effects and 2 of 34 tamsulosin participants reported dizziness. The source does not specify standing onset or measure symptom severity or pressing grade. Its comparator is an active drug and the trial enrolled no Parkinson cohort. [Original article and Methods](https://pmc.ncbi.nlm.nih.gov/articles/PMC8527717/) · [Local full text](Source-Text/PMC8527717.txt)
+
+## Peanut oil vehicle and fatigue during post-COVID follow-up
+
+Fernandes and colleagues followed a randomized vitamin D trial in which both groups received the same oral peanut oil solution. In the oil-only arm 63/73 reported fatigue at baseline and 28/73 at both six and twelve months. The vitamin D plus oil arm had 60/71, 23/71 and 30/71. The unadjusted group-by-time p-value was .46. This was binary symptom presence during recovery, and there was no oil-free arm, identified pressing grade or Parkinson cohort. [Local source text](Source-Text/PMC9513442.txt) · [Original source](https://pmc.ncbi.nlm.nih.gov/articles/PMC9513442/)
+
+## Peanut oil placebo and planned falls in TEMPUS FUGIT
+
+Published September 26, 2023. The TEMPUS-FUGIT protocol incorporates randomized ENHANce sarcopenia participants into its longitudinal gut–muscle follow-up. It describes a 1 g peanut-oil omega-3 placebo and recording of falls and healthcare use. The 2026 family feasibility report and its publisher Supplementary Materials 3, 4, 6 and 10–12 address physical performance, safety and sarcopenia outcomes without a verified falls contrast. This is one trial family. Refinement was unreported and the feasibility report lists Parkinson disease among screening exclusions. [Primary nested trial protocol](https://pmc.ncbi.nlm.nih.gov/articles/PMC10523729/) · [Local text](Source-Text/2023-Lapauw-Peanut-Oil-Falls-Protocol-Extract.txt)
+
+## Combined cold-pressed oil and Solcoseryl in oral mucositis
+
+Zaki et al., issue posting September 28, 2024. Forty participants with cancer-treatment mucositis were randomized to a topical formula with 10% cold-pressed pumpkin seed oil, 10% Solcoseryl and paraffin or to benzydamine, 17 analyzed per group. The paper does not print NCT04303312, but the unique title, investigator, setting and endpoints strongly indicate the same trial. Its formulation, two-week duration and actual enrollment differ from several registered fields. PROMS means for combination were 81.76, 46.59 and 24.29 versus 72.06, 77.29 and 82.35, with follow-up comparisons p=.0003 and p<.0001. Three combination participants died of leukemia-associated internal hemorrhage, without reported assignment of causality, and three controls withdrew with burning. PROMS includes mouth pain and speaking restriction, without a verified item estimate. The topical multi-component intervention does not test a toasted culinary oil effect on Parkinson speech intelligibility. [Publisher primary report, pp. 1123–1129](https://www.jidmr.com/journal/wp-content/uploads/2024/09/27-D24_3129_Ghada_M_Ahmad_Egypt-Clin.pdf) · [Local text](Source-Text/2024-Zaki-Pumpkin-Oil-PROMS-Primary-Extract.txt)

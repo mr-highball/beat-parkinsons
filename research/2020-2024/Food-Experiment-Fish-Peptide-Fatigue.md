@@ -1,0 +1,5 @@
+# Journal follow-up for fish-meat peptides and fatigue
+
+## Published fish peptide study and ingredient identity gap
+
+The Japanese bibliographic record identifies Sakai and colleagues' 2020 article *Effects of Fish Meat-derived Peptides on Fatigue*, volume 48, issue 8, pages 1393–1399. The publisher body was inaccessible. The sponsor links this report with a matching 12-week, 39-person tablet comparison and describes enzymatically hydrolyzed fish surimi. The 2018 UMIN record and 2019 results give neither species nor numeric effect estimates. The sponsor record and a secondary filing copy reverse the reported ages by group. The population and processed ingredient leave canned-sardine Parkinson fatigue unresolved. [Publisher record](https://www.pieronline.jp/content/article/0386-3603/48080/1393) · [JST bibliographic record](https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202002241749351109) · [Dated registry results](../2015-2019/Food-Experiment-Fish-Peptide-Fatigue.md) · [Local factual extract](Source-Text/2020-Sakai-Fish-Peptide-Fatigue-Identity-Extract.txt)

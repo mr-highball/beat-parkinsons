@@ -1,0 +1,29 @@
+# Sichuan pepper follow-up
+
+## Rectal sensation and abdominal pain in a placebo-controlled IBS trial
+
+In a randomized double-blind study first available in 2015, Acosta and colleagues assigned 40 women with irritable bowel syndrome to oral daikenchuto or placebo for 14–16 days. The trial measured pain ratings during rectal balloon distension and average and worst abdominal pain scores. No significant treatment effect was detected for abdominal pain or rectal sensation. The mixed formula and the pain context differ from 0983. [Primary report](https://doi.org/10.5056/jnm15120) · [Recruitment and endpoints, NCT01890837](https://clinicaltrials.gov/study/NCT01890837)
+
+## Pepper oil capsule and dry-mouth outcomes
+
+Ryo and colleagues reported a nine-person single-arm study in 2019. All participants were women with xerostomia. The oral capsules contained oil from *Zanthoxylum bungeanum*, sesame oil, menthol and Sicilian lemon oil. Stimulated saliva volume rose by an average of 39.4% after the single ingestion, with smaller observed increases at weeks two and four. The study reports initial improvements in interview ratings for oral pain and discomfort, difficulty swallowing saliva and difficulty conversing. There was no placebo, and no acoustic or Parkinson’s assessment. These are closely adjacent oral measures for 0137 and a separate pain context for 0983. [Primary local full text, Sections 2 and 3](Source-Text/PMC6392883.txt) · [Primary report](https://doi.org/10.1002/cre2.149) · [Trial registration first made public May 26, 2017](Source-Text/Trials/UMIN000027493.txt)
+
+## Rabbit aortic response to Nepalese pepper fruit extract
+
+In July 2019, Alam and Shah reported that crude *Zanthoxylum armatum* fruit extract relaxed phenylephrine-contracted isolated rabbit aortic rings. The EC50 was 0.8 mg/mL with a reported interval of 0.5–1.1 and five preparations. High-potassium-induced contraction was only partially inhibited. The experiment measured isolated vascular tissue response without oral administration, standing blood pressure or lightheadedness. This is mechanistic context for 0216. [Primary local full text, vascular smooth muscle section](Source-Text/PMC6647253.txt) · [Primary report](https://doi.org/10.1186/s12906-019-2597-2)
+
+## Chinese patent experiment on oral pepper decoction and pole performance
+
+The September 27, 2019 publication CN110279768A disclosed an MPTP mouse experiment using orally administered aqueous *Zanthoxylum bungeanum* fruit decoction. Example 1, Table 1 reports shorter pole-test times for each of three decoction groups than for the model control on days five and ten, with stated P < .05. This is a patent experiment. The pole outcome captures a general motor task. Freezing episode frequency, rigidity, levodopa-induced dyskinesia and human consumption of toasted pepper are outside the experiment. This is the closest species-specific Parkinson’s motor model found in the pass, pertinent to 0038. [Original Chinese patent application, Example 1](https://patents.google.com/patent/CN110279768A/zh)
+
+## Extract and cognitive-task fatigue in healthy adults
+
+Kennedy and colleagues’ December 10, 2019 randomized double-blind trial reported a final sample of 82 healthy adults aged 30–55. The intervention was a standardized *Zanthoxylum armatum* extract in medium-chain triglyceride oil, corresponding to 80 mg extract per day, compared with sunflower-oil placebo. The acute Speed of Attention score favored extract (P = .039), and false alarms on a rapid visual information processing task were lower (P = .025). Name-to-face accuracy was lower (P = .040) and delayed word-recall errors were fewer at one hour. On day 56 the mental fatigue rating from the cognitive task battery favored extract (P = .006). Pretreatment mental fatigue and false alarms were already higher in the extract group. The registered primary endpoint was chronic secondary memory, with attention among secondary measures. Task-induced fatigue and cognitive-test scores in healthy volunteers leave 0117 and 0836 unresolved in Parkinson’s. [Primary local full text, Sections 2.3 and 3.1](Source-Text/PMC6950039.txt) · [Primary report](https://doi.org/10.3390/nu11123022) · [Trial registration first posted September 17, 2018](Source-Text/Trials/NCT03673930.txt)
+
+## Dry-fried huajiao volatile oils and evoked mouse pain
+
+2019. Bian and colleagues compared orally administered volatile fractions from raw and dry-fried huajiao in groups of ten mice. Mean counts of acetic-acid-evoked writhes over 20 minutes were 19.50 and 27.20 for the raw fractions, 18.40 and 21.10 for dry-fried fractions, and 49.60 for vehicle. The abstract reports differences from vehicle but supplies no verified fried-versus-raw contrast or species voucher. It identifies a processed aromatic fraction and an evoked animal outcome, rather than measuring pain after consumption of whole toasted pepper. [Original Chinese journal abstract](https://ccj.pku.edu.cn/article/info?aid=230485909) · [Local source text](Source-Text/2019-Bian-Huajiao-Pain-Factual-Extract.txt)
+
+## Nepalese pepper extract and Bond Lader mood
+
+The December 2019 double-blind trial included 82 healthy adults in its reported sample. It compared standardized Nepalese pepper extract in MCT oil with sunflower-oil placebo. The acute contentment interaction yielded no clear between-arm contrast at any individual timepoint, and the paper gives no clear chronic effect on mood factors or state anxiety over 56 days. The prospective registration includes alertness, contentment and calmness and has no posted results tables. The species, oil extract and mood proxies leave Parkinson depressive symptoms after toasted Sichuan pepper unresolved. [Original Methods and Results](https://www.mdpi.com/2072-6643/11/12/3022) · [Local primary text](Source-Text/PMC6950039.txt) · [2018 registry](Source-Text/Trials/NCT03673930.txt)

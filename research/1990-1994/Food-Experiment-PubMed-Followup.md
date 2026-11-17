@@ -1,0 +1,5 @@
+# Food experiment PubMed follow-up
+
+## Caffeine and postprandial hypotension
+
+Nakajima and colleagues reported postprandial hypotension in 10 of 15 people with Parkinson’s disease in an ambulatory blood-pressure study. Three people with marked postprandial hypotension were tested with caffeine and showed partial improvement. The letter illustrates the response to 250 mg of caffeine in a woman with Parkinson’s disease who had a systolic fall of up to 60 mm Hg after a glucose challenge. In a separate challenge in that patient, the reduction was more complete with a somatostatin analogue. The figure and discussion describe a partial caffeine response. The letter reports blood pressure after a meal or glucose challenge. Its caffeine dose and endpoint supply indirect context for frozen claim `0121`, which concerns fatigue severity after brewed coffee. [Primary letter, PMID 1361098](https://pubmed.ncbi.nlm.nih.gov/1361098/) · [Accessible copy of the letter and figures](https://www.academia.edu/30908293/Ambulatory_blood_pressure_and_postprandial_hypotension)

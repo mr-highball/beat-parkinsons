@@ -1,0 +1,9 @@
+# Laval dietary models, 2005–2009
+
+## 2007 mixed dietary oils and omega-3 powder in MPTP mice
+
+Bousquet and colleagues first published online on November 21, 2007, before the April 2008 issue. Thirty-eight mice received one of two diets from two to 12 months of age before an MPTP or saline challenge. Table 1 compares control and high-omega-3 formulas with 25 and 9 g/kg corn oil, 25 and 0 g/kg safflower, 0 and 15 g/kg canola oil, and 0 and 40 g/kg microencapsulated MEG-3 powder, respectively. The high-omega-3 formula preserved striatal dopamine and some nigral cell measures after MPTP. Striatal dopaminergic terminal measures did not show the same protection. The outcomes were tissue markers. The oil grades and individual oil effects remain unknown. [Journal first publication and primary report](https://doi.org/10.1096/fj.07-9677com) · [First author’s thesis, chapter 2 and Table 2-1](https://www.collectionscanada.gc.ca/obj/thesescanada/vol2/QQLA/TC-QQLA-28860.pdf)
+
+The later Fat-1 paper used this feeding experiment as a historical comparator. Its new experiment varied genotype while maintaining a shared diet. [2010 Fat-1 experiment](../2010-2014/Food-Experiment-Laval-Dietary-Models.md#2010-fat-1-mice-on-a-shared-corn-and-safflower-diet)
+
+Bousquet and colleagues’ 2009 companion reports brain-derived neurotrophic factor and its receptor measurements. The first author’s thesis describes the same 38-mouse design and marks the dopamine, fatty-acid and terminal results in Table 3-1 as previously published. The companion adds tissue measures and should be read with the earlier feeding experiment. It reports higher striatal BDNF messenger RNA and regional BDNF staining differences without a measured motor symptom. [2009 primary report, PMID 19632286](https://pubmed.ncbi.nlm.nih.gov/19632286/) · [Author’s thesis, chapter 3 and Table 3-1](https://corpus.ulaval.ca/bitstreams/fdc0f3c6-ed48-4386-a98c-77ef2c59796b/download#page=135)

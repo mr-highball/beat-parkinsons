@@ -1,0 +1,17 @@
+# Original conference collections
+
+## GSA 2021
+
+NIH’s public PMC Open Data inventory lists the PDF at 8,851,357 bytes. Its JSON names PMC8679246, PMID 34926835 and DOI 10.1093/geroni/igab046. It supplies MD5 `8f18b4eb6cffca97b95b652146543f90`, independently matched to the official download. SHA-256 of the original PDF is `6ae92475a36dfe3cb014ee7ef94493a1c27fc5d0e2b8c03fbda39f5164a4a1b3`. The PDF has 1,112 pages. The JATS-only route at this accession exposes front matter, which explains the earlier access record. The publisher correction concerns author order for affected abstracts. [Official PDF](https://pmc-oa-opendata.s3.amazonaws.com/PMC8679246.1/PMC8679246.1.pdf) · [Archive metadata](https://pmc-oa-opendata.s3.amazonaws.com/PMC8679246.1/PMC8679246.1.json) · [Publisher correction](https://pmc.ncbi.nlm.nih.gov/articles/PMC8982022/)
+
+Extract the PDF with `pypdfium2_cli extract-text` in UTF-8 to preserve its numbered page markers. The archived receipt for the text used here is SHA-256 `c42af4c9312920a314ad83b06bd83674be5c6f01d908ff1a85d73b23b923cb4d`. Free Pascal validated all 1,112 page boundaries and mapped 76 terms to 144 term–page memberships across the book. Compile [the native matcher](gsa-candidates.lpr) with the experiment tools on the Free Pascal unit search path and output under the ignored build directory. Give it the extracted text, alias TSV and an output TSV path. Page membership is candidate discovery. Interpret each match in its actual abstract because extraction can miss or join characters at lines and columns. No matching aliases were found for lemon balm. [Alias list](gsa-ingredient-aliases.tsv) · [Candidate pages](gsa-candidate-pages.tsv)
+
+Examples include the CHEERS beans-or-lentils food-box program, usual egg intake and cognitive scores in Rancho Bernardo, coffee and perceived stress in older immigrants, the Framingham berry and depression analysis, and laboratory thymol experiments. The Parkinson dietary-interview presentation describes motivations, diets and protein timing without a preparation-specific symptom estimate. [Framingham original abstract](https://pmc.ncbi.nlm.nih.gov/articles/PMC8681797/) · [Parkinson dietary-interview member](https://pmc.ncbi.nlm.nih.gov/articles/PMC8682295/)
+
+## SGIM 2020
+
+The official PMC collection at PMID 32725471, PMCID PMC7385936 contains 779 PDF pages. The text pass verified all numbered pages and used food and botanical aliases followed by broader diet and symptom searches. Member reading retained cases with nearby exposures, including an obesity meal-preference study, carotenemia after a mixed smoothie, and abdominal illness after cured salmon and raw tuna. ROCKET, Cape Cod and figure references accounted for some lexical matches. The full report scoped 43 exact exclusions to the checked member content. Machine extraction limits apply. [Official proceedings PDF](https://pmc-oa-opendata.s3.amazonaws.com/PMC7385936.1/PMC7385936.1.pdf) · [All exact source decisions](dispositions.tsv)
+
+## Journal review bodies
+
+PMID 40115248 contributes 18 decisions, including food preservation, metabolic, and compound mechanisms. PMID 37513820 contributes 17, including Parkinson cell models involving tea compounds. Responses to an isolated compound, food-processing use and food-source lists do not establish the corresponding culinary claim. [Phytochemicals review](https://pmc.ncbi.nlm.nih.gov/articles/PMC11922683/) · [Natural antioxidants review](https://pmc.ncbi.nlm.nih.gov/articles/PMC10385773/)

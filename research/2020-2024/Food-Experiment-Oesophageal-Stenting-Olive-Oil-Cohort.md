@@ -1,0 +1,5 @@
+# Oesophageal stenting and swallowing grades with bundled olive oil care source record
+
+## Oesophageal stenting and swallowing grades with bundled olive oil care
+
+Lupu-Petria and colleagues published March 9, 2023. They analyzed 63 of 72 patients presenting with advanced oesophageal carcinoma from 2015 through 2020 at one hospital. Section 2.4 describes unspecified olive oil before meals and cola after meals during transition to a semi-solid diet. The Ogilvie distribution changed from grades 3 and 4 in 25 and 38 patients to grades 0 and 1 in 51 and 12 patients after stenting. Table 1 therefore reports 12 of 63 with grade 1 (19.0%). The abstract gives 16.6%, corresponding to the initial 72 denominator. The comparison includes the procedure and bundled postoperative care. An oil-free comparator, oil grade and a Parkinson subgroup are absent. The related technical report has uncertain patient overlap and is retained for procedure provenance. [Primary Methods and Table 1](https://www.mdpi.com/2227-9032/11/6/815) · [2018 procedure report](../2015-2019/Food-Experiment-Oesophageal-Stenting-Olive-Oil-Technique.md)

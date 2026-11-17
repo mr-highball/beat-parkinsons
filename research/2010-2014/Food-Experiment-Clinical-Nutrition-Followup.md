@@ -1,0 +1,9 @@
+# Nutritional support during Parkinson care
+
+## Neuroleptic malignant-like syndrome after a tube-feed change
+
+Bonnici and colleagues published a separate case on July 13, 2010. A 63-year-old patient with Parkinson’s, diabetes and multiple traumatic injuries received dopaminergic medicines and nutrition via a nasogastric tube. Protein increased from 0.88 to 1.8 g/kg/day of ideal body weight when the formula changed for glycemic management. Within 24 hours he developed altered mental status and fever up to 40.5 °C, with creatine kinase elevation and acute renal impairment. Clinical improvement followed reduction to 1.0 g/kg/day and the addition of bromocriptine. The authors attributed the episode to a probable levodopa–feeding interaction. The publisher abstract leaves formula identity and ingredient composition unresolved. Trauma, concurrent treatment and the two changes during recovery limit attribution. [Publisher abstract, PMID 20628041](https://journals.sagepub.com/doi/10.1345/aph.1P242) · [Earlier Cooper case](../2005-2009/Food-Experiment-Clinical-Nutrition-Followup.md#tube-feeding-and-rigidity-during-levodopa-treatment)
+
+## Individualized dietetic support and quality of life
+
+Sheard and colleagues published an assessment of nutritional status and a small randomized nutrition intervention on November 18, 2014. Nineteen participants entered the 12-week comparison of individualized dietetic advice and weekly follow-up versus standard nutritional information. Median PDQ-39 total scores changed by −4 in the intervention group and −1.5 in standard care (between-group p = .356). There was no significant between-group change in UPDRS Part III. Individualized counseling supplied no fixed menu or separate ingredient contrast. [Primary report, Tables 3–4](https://pmc.ncbi.nlm.nih.gov/articles/PMC4237731/) · [Local full text](Source-Text/PMC4237731.txt)

@@ -1,0 +1,19 @@
+# Ginger constipation and shared-source follow-through
+
+Reviewed November 16, 2026 UTC for the original frozen experiment.
+
+## Ginger and constipation
+
+Claim 0581 stays Maybe False at 51. A separate 15-person dry ginger powder arm in a small IBS-C trial reported lower day-20 constipation severity than the 15-person placebo group. The study excluded Parkinson disease and did not adjust for the starting group difference. A different randomized pilot found inconclusive group differences on a composite IBS measure and did not publish a separate constipation result. They are independent trials with different endpoints and populations. The rhinitis trial gave adverse-event counts against an active antihistamine, the perilla series pooled constipation and diarrhea, and both arms of the Lax-Asab trial received ginger. The last study therefore cannot attribute the improvement to ginger. [Study additions](assessment-additions.tsv) · [Dated sources](source-accessions.tsv)
+
+The WHO ICTRP entry for CTRI/2026/05/110493 names a randomized ginger, fennel and combination comparison. It leaves doses, detailed formulations and results blank. The recruitment status in the June 1 WHO snapshot conflicts with a secondary mirror. The separate official Iranian Parkinson registration compares standardized ginger powder tablets with placebo and specifies total MDS-UPDRS, with no named constipation measure or posted results. Cambridge Ginger-PD registers gastrointestinal measures, including the GIDS-PD, and has no posted results. Both Cambridge arms receive extract. [WHO registry](https://trialsearch.who.int/Trial2.aspx?TrialID=CTRI%2F2026%2F05%2F110493) · [Iranian registration](https://irct.ir/trial/87235) · [Cambridge registry API](https://clinicaltrials.gov/api/v2/studies/NCT07882108)
+
+## Search coverage and access
+
+Europe PMC reconciled hit and retrieval counts for all five focused expressions. The 25 ranked appearances include seven original-body reviews and 18 abstract reviews. G02 returned zero results despite known primary Parkinson blend studies found through other routes. Keep that result as a search-coverage record. The appearance ledger preserves patents, unverified formulations and original numerical outcomes for follow-up. [Query receipts](focused-queries.tsv) · [Claim mapping](focused-claim-map.tsv) · [Ranked dispositions](focused-dispositions.tsv)
+
+For PMID 42459041, the already archived publisher supplement identifies the Foshati randomized multiple-sclerosis ginger trial. This corroborates study identity without adding an independent result. The main review body is still restricted and the newer direct supplement request returned 403. For claim 0271, Wood's public abstract mentions ginger for nausea and dyskinesia separately. For claim 0937, Simon's public abstract reports passive diffusion of isolated ginger constituents across an assay membrane. Both source bodies remain open and both claims retain Unknown. [Existing supplement evidence](../../../research/2025-2029/Food-Experiment-Ginger-Bowel.md#ginger-trial-identity-in-the-published-constipation-review-supplement) · [Ginger source access](ginger-source-access.tsv)
+
+## Shared original source
+
+PMID 34054540 gave 47 exact primary-body screening decisions across its queued pairs. Eleven retain related ingredient or constituent context and 36 were excluded for the mapped preparation and symptom. Forty-one other pairs remain open because the original source keys for Sellitto's anemia case and Horgan's microarray methods paper point to articles distinct from two attached conference collections. The new access checks confirm the identity mismatch and do not establish any clinical ingredient comparison. [Pinned source scope](pinned-scope.tsv) · [Exact dispositions](dispositions.tsv) · [Open original pairs](misjoined-open-pairs.tsv) · [Primary citation trails](primary-citation-trails.md) · [Native validation](verification.txt)

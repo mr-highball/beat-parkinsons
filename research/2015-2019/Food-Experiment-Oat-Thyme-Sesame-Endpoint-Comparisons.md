@@ -1,0 +1,13 @@
+# Oat allergy, thyme motor coordination and sesame attention measures
+
+## Acute dysphonia after oat milk
+
+Prados-Castaño and colleagues, 2016 (PMID 27012025), describe a 70-year-old with vomiting, dysphonia, throat and chest oppression, and hypotension ten minutes after 200 mL of oat milk. It documents acute allergy-associated voice change. It gives no acoustic loudness measurement, rolled-oat meal, Parkinson population or comparator. The dysphonia outcome in the caustic ingestion series (PMID 12853988) is further removed. The latter listed oatmeal among diluents, with no attribution of dysphonia to oatmeal. Claim 0501 remains open. [Original allergy case](https://www.jiaci.org/issues/vol26issue1/7-17.pdf) · [Caustic ingestion case series](https://pubmed.ncbi.nlm.nih.gov/12853988/) · [Same patient first reported in 2013](../2010-2014/Food-Experiment-Oat-Milk-Allergy-Conference.md) · [Separate 2020 case](../2020-2024/Food-Experiment-Oat-Voice-and-Fermented-Milk-Mobility.md#independent-2020-oat-milk-dysphonia-case)
+
+## Injected thyme extract and balance after ischemia
+
+Setorki M, Mirzapoor S. Zahedan J Res Med Sci. 2017;19(5):e9216. First online May 31, 2017. DOI `10.5812/zjrms.9216`. The transient global cerebral ischemia study used six groups of seven rats. The original Methods describe daily intraperitoneal thyme extract. Results section 3.2 reports longer rotarod retention at 100 and 200 mg/kg relative to untreated ischemia. The endpoint represents balance with a motor coordination demand in this model. The preparation, route and disorder differ from oral dried thyme and Parkinson postural instability in claim 0421. [Original study](https://brieflands.com/journals/zjrms/articles/9216)
+
+## Astaxanthin and sesamin mixture with attention measures
+
+Ito N, Saito H, Seki S, Ueda F, Asada T. J Alzheimers Dis. 2018;62(4):1767–1775. DOI `10.3233/JAD-170969`, PMID 29614679. The double-blind pilot recruited 21 individuals with mild cognitive impairment and used a per-protocol analysis after assignment to an astaxanthin-sesamin supplement or placebo. The reported statistically distinguishable changes at 12 weeks were in processing speed and psychomotor speed. Table 2 reported complex attention from 102.9 to 106.4 in the supplement group and 99.3 to 109.1 in placebo. Simple attention changed from 101.7 to 98.9 and from 102.9 to 104.3, respectively. These descriptive group means give no reported between-group inferential attention finding. The combination cannot isolate sesamin, toasted sesame oil or a Parkinson-specific clinical effect. [Original full article, Table 2 and Figure 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC5900571/)

@@ -1,0 +1,23 @@
+# Basil in Parkinson diets and adjacent studies of hallucinations or sleepiness
+
+## Fresh basil in the 2018 Parkinson diet menus
+
+The low-fat meal plan lists chopped fresh basil and adds it after cooking to the vegetable and bean soup. The ketogenic plan specifies fresh basil blended with olive oil for a caprese salad. The low-fat plan also lists a vial of basil separately from fresh leaves, but does not identify its contents as dried leaves. Participants ticked completed meals. The report does not publish individual basil intake or a comparison by basil exposure. [Low-fat original supplement](https://pmc-oa-opendata.s3.amazonaws.com/PMC6175383.1/MDS-33-1306-s002.pdf) · [Ketogenic original supplement](https://pmc-oa-opendata.s3.amazonaws.com/PMC6175383.1/MDS-33-1306-s003.pdf)
+
+The eight-week randomized diet trial reports a 0.45-point greater reduction in the MDS-UPDRS daytime sleepiness item with the ketogenic group. This item change is described in the Results narrative. An individual ketogenic participant had visual hallucinations that resolved after pramipexole was reduced. The report supplies no individual basil exposure for that participant and no hallucination frequency by study arm. The Part I score is a composite and gives no separately reported apathy change. [Primary report, Results and Adverse Effects](https://pmc.ncbi.nlm.nih.gov/articles/PMC6175383/) · [Local results and menu extract](Source-Text/2018-Phillips-Basil-Menu-Outcome-Extract.txt)
+
+## Reported basil infusion in two Serbian psychiatric surveys
+
+The February 2017 nonpsychotic outpatient survey contains one basil infusion user, recorded for anxiety. The February 2018 survey interviewed 106 outpatients whose psychotic disorders were in remission. Table 5 lists one sweet basil user, with A indicating anxiety. Table 6 describes an infusion, and Table 7 records self-reported decreased symptoms and no adverse effects for the single co-user of sweet basil and standard medication. The authors list other herbs for psychotic symptoms. Neither survey reports change in visual hallucination frequency among basil users or a Parkinson cohort. [2017 original survey](https://pmc.ncbi.nlm.nih.gov/articles/PMC5605899/) · [2018 original survey, Tables 5–7](https://pmc.ncbi.nlm.nih.gov/articles/PMC5856938/) · [Local factual extract](Source-Text/2017-2018-Serbian-Basil-Infusion-Extract.txt)
+
+## Headspace from living basil in a mouse activity experiment
+
+Hirai and Ito first published on October 20, 2018. The primary abstract describes inhaled headspace from living hydroponic sweet basil plants and a separate essential-oil inhalation experiment. The open-field system recorded reduced mouse locomotion with air from the chamber containing nine plants. The outcome was activity, and the route was inhalation. The published abstract gives no daytime sleepiness score, ingestion exposure, or Parkinson population. [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/30343352/)
+
+## Hallucinations during use of several supplements
+
+A case first published January 14, 2016 reports several months of auditory and visual hallucinations in an adult without reported Parkinson disease. The patient began taking five dietary supplements around symptom onset. The ingredient table lists holy basil extract in one blend. The report describes improvement after stopping the supplements and starting psychiatric treatment. It does not isolate the contribution of any one product or ingredient. The product label identifies holy basil extract, with no fresh sweet basil ingestion or separate visual hallucination count. [Primary case and ingredient table](https://www.psychiatrist.com/pcc/five-supplements-and-multiple-psychotic-symptoms/) · [Local factual extract](Source-Text/2016-Multiple-Supplements-Hallucination-Extract.txt)
+
+## Injected basil extracts, locomotion and drug-induced sleep
+
+Rabbani and colleagues reported reduced mouse locomotion after intraperitoneal administration of a sweet basil hydroalcoholic extract or essential oil in 2015. Their maze outcomes concern anxiety-like behavior. Askari and colleagues published a separate 2016 mouse comparison using injected hydroalcoholic extract and fractions before pentobarbital. The original report found longer drug-induced sleeping intervals and shorter sleep latency under selected extract conditions. These studies use drug or extract routes and an animal activity or hypnotic assay. They supply no Parkinson daytime sleepiness score after fresh culinary leaves. [2015 primary article](https://pmc.ncbi.nlm.nih.gov/articles/PMC4698864/) · [2016 primary article](https://pmc.ncbi.nlm.nih.gov/articles/PMC5020426/) · [Local factual extracts](Source-Text/2015-2016-Injected-Basil-Activity-Sleep-Extract.txt)

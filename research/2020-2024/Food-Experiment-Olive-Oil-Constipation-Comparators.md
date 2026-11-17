@@ -1,0 +1,9 @@
+# Olive Oil Constipation Comparators
+
+## Registered comparison of extra virgin and ordinary olive oils
+
+IRCT20080901001155N33 was first registered March 1, 2021, with 150 planned participants. The registration compares polyphenol-rich and ordinary olive oils for four weeks in adults with chronic constipation. Rome III symptom scoring is planned at baseline and week four and Bristol stool assessments are planned weekly. The May 7, 2021 registry version changes both arms from a written 4 mL/L per day to 20 mL/day. The parenthetical about two tablespoons appears in both versions. The 2025 report describes two tablespoons of oil consumed raw daily and analyzes 140 across the two groups. The registry and article use the same trial and ethics identifiers. The trial excludes neurological causes of constipation and contains no no-oil comparator. [Original registry version](https://en.irct.ir/trial/54490?revision=173199) · [May revision](https://en.irct.ir/trial/54490?revision=181530) · [Primary result paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC12694839/) [Original source](https://en.irct.ir/trial/54490) · [Local factual text](Source-Text/2021-03-01-IRCT20080901001155N33-Olive-Oil-Constipation.txt)
+
+## Abdominal massage with extra virgin olive oil and constipation
+
+The single-blind trial randomized 54 older nursing-home residents to abdominal massage with extra-virgin olive oil, massage with water, or no added massage. Table 2 mean Constipation Assessment Scale scores were 5.62 to 2.06 for oil massage, 5.05 to 3.11 for water massage and 4.44 to 5.22 for control, with a post-treatment three-group p ≤ .001. The oil was applied to the abdomen and the treatment included massage. It supplies no estimate for oral extra-virgin olive oil or a Parkinson-specific effect. [Original source](https://pmc.ncbi.nlm.nih.gov/articles/PMC8479287/) · [Local factual text](Source-Text/2021-10-Faghihi-Olive-Oil-Massage-Constipation.txt)

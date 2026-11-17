@@ -1,0 +1,5 @@
+# Clove Pain Comparators
+
+## Ground clove powder and mouse hot-water pain response
+
+The Central Council for Research in Ayurveda and Siddha annual report for 1997–1998 describes a Lavang clove-powder experiment in mice. The powder failed to show an analgesic effect in a hot-water test compared with aspirin. The report prints 1 mg/kg for powder in the pain test and 600 mg/kg orally for aspirin. Its neighboring anti-inflammatory result gives 1 g/kg oral powder and 40 mg/kg oral hydrocortisone. The report does not resolve the large powder-dose difference or explicitly state the powder route for the hot-water result. It gives no animal counts, latency values or uncertainty. The nearby acetic-acid writhing experiment is under a different plant, Jatamansi. The report period is 1997–1998 and a separate original issue date was not recovered. [Original source](https://ccras.nic.in/wp-content/uploads/2024/06/Annual-Reports-1997-1998.pdf) · [Local factual text](Source-Text/1997-1998-CCRAS-Lavang-Clove-Hot-Water.txt)

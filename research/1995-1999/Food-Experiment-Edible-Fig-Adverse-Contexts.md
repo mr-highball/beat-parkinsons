@@ -1,0 +1,5 @@
+# Edible fig allergy case
+
+## Recurrent allergy after fresh and dried fig
+
+Díez-Gómez and colleagues describe a 36-year-old patient with exposure to ornamental weeping fig and a clinical history of oral itching, angioedema and dizziness after fresh edible fig. The case narrative describes similar symptoms after kiwi and a later dried-fig episode. This history and laboratory sensitization investigations document an allergy context. They leave visual hallucination frequency, Parkinson status and population risk unresolved for `0175`. The publicly indexed case body has interleaved columns; the publisher abstract confirms the overall case identity and angioedema with fig and kiwi. [Publisher record](https://www.sciencedirect.com/science/article/pii/S1081120610629341) · [Indexed case body, pp. 24–25](https://www.academia.edu/110803502/Asthma_Caused_by_Ficus_benjamina_Latex_Evidence_of_Cross_Reactivity_with_Fig_Fruit_and_Papain) · [Local factual text](Source-Text/1998-Diez-Gomez-Edible-Fig-Allergy.txt)

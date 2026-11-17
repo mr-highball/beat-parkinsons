@@ -1,0 +1,37 @@
+# Black pepper and clinical outcomes
+
+Review completed on 2026-11-14 (US Eastern).
+
+## Oral pepper leaves tea and primary insomnia
+
+Jarukitsakul and colleagues published their single-blind pilot trial on 2025-05-31 and identify registration TCTR20241101001. Thirty adults with primary insomnia were randomized to tea prepared with 2 g of dried *Piper nigrum* leaves or 2 g of chamomile. The teabags were steeped in 120 mL of hot water for 5 minutes and the tea was consumed once nightly for 14 days. Mean baseline and day-14 Insomnia Severity Index scores were 13.60 and 5.33 with pepper leaves and 15.13 and 5.60 with chamomile. Day-14 between-group p=.81. Within-arm improvement in both groups and the lack of a statistically significant difference do not establish equivalence or size of effect versus no tea. One leaf-tea participant reported nausea and dizziness on day 13. The plant part was leaf, and the article did not study PD or dream enactment. [Jarukitsakul insomnia article](https://tjnpr.org/index.php/home/article/view/6399), [local text](Source-Text/Jarukitsakul-Pepper-Leaves-Insomnia-Extract.txt).
+
+## Oral ground black pepper added to turmeric for chronic pain
+
+Durham and colleagues published the journal outcome report on 2026-01-10. The trial randomized the order of two one-week exposures separated by a washout week. The 29 analyzed adults with chronic pain took the same assigned commercial ground turmeric dose in both active weeks (300 mg, 1 g or 3 g) and added encapsulated commercial pure ground black pepper 300 mg/day in one week only. Cracked peppercorns were not identified. Participants recorded 0–10 pain three times daily. The added pepper term was inconclusive (p=.157), as was treatment-by-period (p=.5508). Relative to baseline, mean changes in week 1 were −2.21 with pepper plus turmeric and −1.55 with turmeric alone. By week 3 the sequences had switched exposures. The changes from baseline during week 3 were −2.74 among participants then taking both spices and −3.05 among those then taking turmeric alone. Within-group improvement across the full study cannot isolate a pepper effect. There was no identified Parkinson subgroup. One participant withdrew after one day with gastrointestinal discomfort and the paper does not identify the allocation for this event. [Durham chronic pain article](https://pmc.ncbi.nlm.nih.gov/articles/PMC12844896/), [local text](Source-Text/PMC12844896-Durham-Ground-Black-Pepper-Pain.txt).
+
+## A black pepper fruit-containing formula for chronic insomnia
+
+In the open-label randomized 60-person trial published on 2026-01-17, Suk-Sai-Yat contained *Piper nigrum* fruit alongside eleven other botanicals, including *P. retrofractum* and cannabis. The oral formula, separate cannabis oil and lorazepam were each given to 20 adults with chronic insomnia. Table 2 gives mean PSQI 12.25 to 6.60 with Suk-Sai-Yat, 13.61 to 5.10 with cannabis oil and 14.35 to 5.80 with lorazepam after four weeks. Post-treatment groups had p=.27. The abstract's final cannabis-oil value of 3.68 is its baseline SD in Table 2 and differs from the table and results text. The trial cannot isolate the black pepper component and does not identify a PD or dream-enactment endpoint. The authors state the trial was unregistered. [Suk-Sai-Yat insomnia article](https://pmc.ncbi.nlm.nih.gov/articles/PMC12856596/), [local text](Source-Text/PMC12856596-Suk-Sai-Yat-Insomnia.txt).
+
+The formulation also lists ginger, nutmeg and nigella, in reported ratios of 10, 7 and 5 parts, respectively. These ingredients were administered together with the other nine botanicals. Table 2 reports mean PSQI falling from 12.25 to 6.60 in the formula group, with p = .27 for the post-treatment comparison across three active arms. Table 5 groups palpitations and muscle pain under two affected participants in the formula arm. It gives no separate pain count or severity. [Primary report, formula, Table 2 and Table 5](Source-Text/PMC12856596-Suk-Sai-Yat-Insomnia.txt)
+
+## Topical piperine rinse in burning mouth syndrome
+
+Varoni and colleagues published this case series on 2026-05-14. Seventeen adults with burning mouth syndrome enrolled and 14 completed an 8-week course. Participants rinsed for one minute twice daily with a preparation providing 10 mg piperine in 20 mL water and expelled the rinse. Mean pain scores were 5.10 (SD 1.81) at baseline and 3.21 (SD 2.12) afterwards. The reported paired reduction is 1.93 (95% CI 0.88 to 2.98, p=.0016) and eight participants attained a reduction of at least 2 points. The study lacks a concurrent control.
+
+The OHIP-14 two-item domain combines difficulty pronouncing words with worsened taste and changed from 1.8 to 1.0 (p=.001). The article does not report those items individually or include a tested speech intelligibility measure. The Epworth scale assesses daytime sleepiness, and there is no insomnia or dream-enactment measure. The trial used a topical isolated compound in an oral pain cohort with no identified PD subgroup. [Varoni topical piperine article](https://pmc.ncbi.nlm.nih.gov/articles/PMC13207175/), [local text](Source-Text/PMC13207175-Topical-Piperine-Oral-Pain.txt).
+
+Dysphagia was recorded as present or absent in the oral piperine series. Four of 17 reported dysphagia at baseline and three of 14 reported it at follow-up. These totals have different denominators. The published report gives no paired transition counts or swallowing severity scale. The protocol used mucosal exposure followed by expectoration. [Primary report, secondary outcomes and Figure 1](Source-Text/PMC13207175-Topical-Piperine-Oral-Pain.txt)
+
+## Plasma piperine and the motor endpoint in Parkinson
+
+The [previously cataloged PPMI primary paper](Food-Experiment-Herb-Spice-Followup.md#plasma-piperine-and-motor-scores-in-ppmi) relates measured blood piperine to total MDS-UPDRS Part III in a selected 13-person double-variant subgroup (r=−.466, p=.108). The paper does not document consumed food, handling or grind. Total Part III covers several body systems and the report gives no isolated dexterity result. PPMI plasma-profiling publications that compare cases and controls share earlier sample frames and do not furnish a separate pepper meal or hand-dexterity contrast. [Dong PPMI paper](https://doi.org/10.3390/ijms27010016).
+
+## Oral Thai herbal blend and massage for low-back pain
+
+Manjit and colleagues’ November 25, 2025 first online report randomized 66 adults equally to oral YTPS, Thai massage or both. At day 7, mean pain scores were 4.32, 3.27 and 1.59, respectively, from baseline means around 9.4–9.5. The dried-herb formulation includes both black and long pepper among many components. The text and schedule give inconsistent daily amounts. There was no placebo or separate pepper arm. [Original](<https://doi.org/10.1515/jcim-2025-0212>) · [Local factual text](Source-Text/2025-Manjit-Thai-Herbal-Blend-and-Back-Pain.txt)
+
+## Isolated piperine and chemotherapy-related mouse sensory thresholds
+
+The journal dates first release to January 14, 2025, although the issue is labeled 2024. In a paclitaxel mouse model, all three piperine groups had longer thermal response latency. Mechanical withdrawal thresholds were higher at the two higher doses, with an inconclusive low-dose comparison. The two tests measure distinct experimental sensory responses. [Original paper](https://ane.pl/index.php/ane/article/download/2590/2500/5023) · [Local factual text](Source-Text/2025-Sahranavard-Piperine-and-Experimental-Neuropathy.txt)

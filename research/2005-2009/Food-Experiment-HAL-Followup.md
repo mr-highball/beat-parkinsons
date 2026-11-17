@@ -1,0 +1,7 @@
+# HAL and French-language dietary research
+
+## 2009 levodopa and swallowing across bolus consistencies
+
+Sert, Baudo and colleagues reported ten people with Parkinson’s, six with symptomatic dysphagia and four without reported dysphagia. The paired videofluoroscopic assessments compared medication OFF with ON after an acute levodopa dose. The modified barium swallow used liquid, semiliquid and solid test boluses. The abstract reports improved scores on the 14-item dysphagia assessment across consistencies and in the oral preparation, oral transport and pharyngeal transport phases. Mean motor UPDRS scores were 42 OFF and 14 ON. The abstract gives no named foods or ingredient-specific treatment effects. [Primary proceedings, abstract Th-263, p. S364](https://researchmgt.monash.edu/ws/portalfiles/portal/402923430/Movement_Disorders_2009_Abstracts_of_The_Movement_Disorder_Society_s_Thirteenth_International_Congress_of_Parkinson.pdf#page=364)
+
+Crossref records May 27, 2009 for the online supplement and January 2009 as its print metadata, without a confirmed print release day. The associated Paris congress took place in June. The later conference records share investigators and methods, and exact participant overlap is unresolved. [Proceedings publication metadata](https://api.crossref.org/works/10.1002/mds.22628) · [Indexed supplement, PMID 21157843](https://pubmed.ncbi.nlm.nih.gov/21157843/) · [2010 and 2011 reports](../2010-2014/Food-Experiment-HAL-Followup.md#2010-and-2011-levodopa-videofluoroscopy-reports)

@@ -1,0 +1,5 @@
+# Spinach in attention and cognition comparisons
+
+## Optional spinach intake and measured postpartum attention
+
+Colombage’s September 2025 thesis explicitly links Chapter 5 to NCT05890014. Table 9 records 28 and 102 spinach entries in the low- and high-flavonoid group food diaries, respectively. Section 5.3.10 reports a condition-by-visit interaction for combined Modified Attention Network Task accuracy (p = .006), with improvements over baseline in the high-flavonoid arm and a later improvement in the lower arm. The offer included many foods and the outcome analysis did not isolate spinach or its preparation. The times and counts describe postpartum attention, not Parkinson symptom change. [original thesis Chapter 5, Table 9 and section 5.3.10](https://centaur.reading.ac.uk/127657/1/COLOMBAGE_Thesis_Rebecca%20Colombage.pdf) · [Local text](Source-Text/2025-Colombage-Optional-Spinach-MANT-Extract.txt)

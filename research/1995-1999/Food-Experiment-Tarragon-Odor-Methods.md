@@ -1,0 +1,5 @@
+# Tarragon odor methods follow-up
+
+## Tarragon odor labeling in experienced and novice panels
+
+Lesschaeve and Issanchou studied 17 experienced sensory panelists and 33 people without sensory-panel experience. They presented tarragon essential oil in coded flasks as one of 32 stimuli. During a session one week after encoding, subjects smelled both the previously presented and distractor sets and described the odors. Figure 3 and the Results describe tarragon as an exception to trained subjects’ usual labeling advantage. Novices judged it more familiar and labeled it consistently. Some subjects confused tarragon and anethole. The procedure assessed recognition memory and labels at selected stimulus strengths, with no detection-threshold protocol, tarragon intervention or Parkinson group. [December 1996 primary paper](https://doi.org/10.1093/chemse/21.6.699) · [Author-uploaded article](https://www.researchgate.net/publication/14221727_Effects_of_Panel_Experience_on_Olfactory_Memory_Performance_Influence_of_Stimuli_Familiarity_and_Labeling_Ability_of_Subjects) · [Local factual extract](Source-Text/PMID8985598-panel-extract.txt)

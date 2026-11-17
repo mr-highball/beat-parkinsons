@@ -1,0 +1,9 @@
+# Meal-related hypotension and other clinical contexts
+
+## After-meal coma following subarachnoid hemorrhage in Parkinson disease
+
+Watanabe and colleagues reported a woman aged 79 with a history of Parkinson disease who had undergone clipping following a subarachnoid hemorrhage. During postoperative days seven through nine, she developed hypotension and impaired consciousness after meals. The authors observed that midodrine administration accompanied relief of the hypotension and that the post-meal coma ceased. They considered a combination of Parkinson autonomic dysfunction and altered cerebral autoregulation during vasospasm. The indexed abstract does not identify individual menu items, posture at symptom onset, a standing challenge or standing lightheadedness severity. [Watanabe primary abstract](https://pubmed.ncbi.nlm.nih.gov/26884093/) · [Local factual extract](Source-Text/2016-Watanabe-Parkinson-Postprandial-Coma-Extract.txt)
+
+## Meal-associated dizziness and separate tilt testing in dementia with Lewy bodies
+
+Saito, Ishikawa and Harada described a woman aged 78 who developed after-meal dizziness or faintness following an ischemic stroke. The original reports dementia with Lewy bodies based on the diagnostic workup, and specifically notes the absence of parkinsonism. Systolic blood pressure fell from 143 to 77 mmHg at 30 minutes after meals in the monitoring example and from 160 to 120 mmHg during a separate head-up tilt. The clinical team also used a 75 g glucose challenge and reported response to sitagliptin. The recipe of the everyday meals and the severity of dizziness during a standing challenge are unavailable. [Saito primary report](https://pmc.ncbi.nlm.nih.gov/articles/PMC5127632/) · [Local factual extract](Source-Text/2016-Saito-Lewy-Body-Dizziness-Pressure-Extract.txt)

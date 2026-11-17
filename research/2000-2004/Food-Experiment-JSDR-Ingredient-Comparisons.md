@@ -1,0 +1,5 @@
+# Ingredient and texture comparisons in early Japanese swallowing proceedings
+
+## Thickened catechin green tea in the 2003 program
+
+Sato and colleagues' title for presentation II-P1-3 lists a thickened catechin green tea for older adults with eating and swallowing difficulties. The authors include Showa University and Kewpie research staff. The MedicalOnline record leads to a member login. Searches for the exact Japanese phrase, first author, and institution did not yield a public original with methods or results. The title leaves the catechin source, thickener, underlying diagnoses, comparator and outcomes unspecified. A later Kewpie announcement describes a green tea jelly product, with no documented connection to the 2003 participants. [Original issue TOC](https://mol.medicalonline.jp/archive/search?issue=2&jo=cb5dvsph&vo=7&ye=2003) · [Item access](https://mol.medicalonline.jp/journal/abstract?GoodsID=cb5dvsph/2003/000702/226&name=0225-0225j) · [2009 manufacturer announcement](https://www.kewpie.com/newsrelease/archive/2009/13.html)

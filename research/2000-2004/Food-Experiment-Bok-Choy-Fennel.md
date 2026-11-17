@@ -1,0 +1,5 @@
+# Bok choy and fennel seed evidence
+
+## Ground fennel tea contaminated with thorn apple
+
+On February 2, 2001, the Czech Agriculture and Food Inspection Authority reported that a marketed tea contained ground fennel and seeds of the toxic weed *Datura stramonium*. The 2001 annual report recorded eight noncompliant fennel tea samples and confirmed Datura alkaloids by mass spectrometry. Plackova and colleagues reported 35 calls and 15 symptomatic people to a Slovak poison centre in 2002. They listed blurred vision, somnolence and lethargy among the observed effects without symptom-specific counts or a report of visual hallucinations. Botanical examination confirmed Datura seeds in the tea. The contaminating species is a separate exposure. [Official recall notice](https://www.szpi.gov.cz/en/article/cafia-has-imposed-a-ban-on-the-sale-of-fennel-tea-with-the-admixture-of-thorn-apple-seeds.aspx) · [Official 2001 report](https://www.szpi.gov.cz/en/article/annual-report-2001.aspx?q=Y2hudW09OA%3D%3D) · [Poison centre congress report, abstract 95](https://www.tandfonline.com/doi/full/10.1081/CLT-120005494)

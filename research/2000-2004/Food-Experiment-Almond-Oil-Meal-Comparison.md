@@ -1,0 +1,7 @@
+# Almond oil in a randomized meal comparison
+
+## Almond-oil muffin and postmeal satiety
+
+Fifteen adults, eight men and seven women, each received three breakfast meals in a randomized crossover with at least one week between visits. The test arm baked almond oil into a muffin. Table 1 records 110 g of muffin for men and 75 g for women, and provides no extraction method for the almond oil. Other arms used whole almonds or a corn and safflower oil comparison. Researchers recorded appetite ratings and blood measures over six hours. The cholecystokinin response differed by meal and sex (interaction P = 0.02). Women had higher cholecystokinin and greater satiety after the oil meals than after whole almonds. The cohort and outcomes did not measure Parkinson voice volume or facial expressiveness. [Original article and methods text](https://www.academia.edu/32075608/Interaction_of_fat_availability_and_sex_on_postprandial_satiety_and_cholecystokinin_after_mixed_food_meals) · [Indexed citation and results](https://pubmed.ncbi.nlm.nih.gov/15531667/) · [Local factual text](Source-Text/2004-Burton-Freeman-Almond-Oil-Meal.txt)
+
+The publisher article was indexed during review. Direct publisher-body retrieval gave HTTP 403 in the research pass. The methods were checked in the readable original article reproduction. [Publisher record](https://ajcn.nutrition.org/article/S0002-9165%2822%2903678-4/fulltext)

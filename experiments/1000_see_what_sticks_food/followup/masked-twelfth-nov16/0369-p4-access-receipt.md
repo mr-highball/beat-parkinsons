@@ -1,0 +1,5 @@
+# 0369 priority-4 original access checkpoint
+
+2026-11-15. Ten exact current queue pairs examined. Seven original bodies sufficiently assessed for exclusion, three original bodies remain pending; metadata and abstracts alone are not treated as body closure. Two Australian exercise papers use the same trial, ACTRN12608000303347. No lemon-balm/freezing treatment candidate was found among the inspected primary contexts.
+
+Web access is variable: PMC sometimes presents reCAPTCHA on later attempts, but the source text for PMC3251710, PMC4335992, PMC5762253, PMC8672430 and PMC12569761 was returned in prior indexed/full content; original exercise-adherence paper also fully viewable on publisher Wiley; the 2018 DBS case is a stable local full text. European PMC fullTextXML attempts for PMC3251710, PMC4335992, PMC6178659 and PMC8672430 returned HTTP 500; PMC5762253 timed out after 20 seconds. See exact TSV for three remaining actual full-body barriers and alternative repository leads. Do not claim all-publisher-body exhaustion.

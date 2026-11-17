@@ -1,0 +1,5 @@
+# Allspice in a variable Caribbean herbal drink
+
+## Tifey survey distinguishes allspice and jimsonweed
+
+Volpato, Godínez and Beyra’s ethnobotanical study, first published online December 13, 2008, records Haitian-Cuban reports of tifey, a variable mixture of plants macerated in rum or aguardiente. Its plant table names *Pimenta dioica* fruit as an ingredient with a reported stomachic use. A separate row identifies flowers of *Datura stramonium* as hallucinogenic; the narrative says those flowers were sometimes added to a ritual preparation intended to encourage trance. The source does not establish that these plants occurred together in an identified consumed batch, document a clinical hallucination episode, or estimate an effect of ground allspice in Parkinson’s. The named plants and attributed uses must remain separate. [Original field study, Table 1 and preparation section](https://link.springer.com/article/10.1007/s10745-008-9211-4) · [Local factual extract](Source-Text/2008-Volpato-Tifey-Allspice-Datura.txt)

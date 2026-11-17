@@ -1,0 +1,30 @@
+# Edible oil evidence follow-up, 2015–2019
+
+## Safflower and olive oil in the MVP cohort
+
+The 2017 MVP analysis included 1,053 participants with self-reported idiopathic Parkinson’s disease. In Table 2, each step of reported safflower oil frequency corresponded to +6.8 points (95% CI −6.8 to +20.5, p = .325) on the total PRO-PD score in the model adjusted for age, gender, years since diagnosis and income. The estimate for olive oil was −31.4 points (95% CI −44.7 to −18.1). The food-frequency items used teaspoon units. The report modeled baseline composite symptom burden and does not give a constipation estimate or specify refined safflower oil or extra-virgin olive oil for `0973` and `0072`. [Primary report, Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC5610862/) · [Local full text](Source-Text/PMC5610862.txt#L221)
+
+## Isolated sesamin with levodopa in a mouse study
+
+Zhao and colleagues first reported online on October 24, 2016 that isolated (−)-sesamin improved rotarod retention and open-field distance in MPTP mice treated with levodopa. The report also describes better performance in memory tasks. The study used an isolated constituent and motor and memory proxies, without a sesame oil treatment arm. [Primary report, PMID 27789382](https://pubmed.ncbi.nlm.nih.gov/27789382/)
+
+## Isolated sesamin in 6-OHDA rats
+
+Baluchnejadmojarad and colleagues first published online on January 31, 2017. Pretreatment with isolated sesamin improved narrow-beam balance in 6-OHDA-lesioned rats at the higher tested dose. A later review links this work to depression, but the accessible primary report describes motor balance and tissue assays without a depressive-behavior endpoint. The intervention provides no whole sesame oil estimate. [Primary report, PMID 28157651](https://pubmed.ncbi.nlm.nih.gov/28157651/) · [Local review passage](../2020-2024/Source-Text/PMC8818889.txt#L175)
+
+## Olive oil phenolic mixtures in neuronal cell assays
+
+Lambert de Malezieu and colleagues published two linked experiments. The October 9, 2019 paper tested mixtures of isolated olive oil phenols in chemical assays and SK-N-SH cells challenged with hydrogen peroxide or paraquat. The equimolar mixture containing oleuropein, tyrosol and p-coumaric acid improved cell survival at the tested concentrations of 0.1 and 1 µM. The November 28 paper studied electrochemical oxidation products. Oxidized oleuropein and the oxidized mixture increased survival in hydrogen peroxide-challenged SK-N-SH cells under the reported conditions. These are cell survival and biochemical outcomes. The experiments provide no whole olive oil exposure or motor, mood or bowel measurements in people. [October paper, PMID 31595838](https://pubmed.ncbi.nlm.nih.gov/31595838/) · [November paper, PMID 31795228](https://pubmed.ncbi.nlm.nih.gov/31795228/) · [Licensed November article text](Source-Text/PMC6995624.txt) · [Thesis deposit and study linkage](../2020-2024/Food-Experiment-HAL-Followup.md#2020-public-deposit-of-the-rennes-olive-phenol-thesis)
+
+## Interim results of the Colorado open-label cannabidiol study
+
+Leehey and colleagues’ June 8, 2017 MDS abstract 1356 describes six interim participants with idiopathic Parkinson’s disease receiving Epidiolex. Four reported fatigue and two abdominal pain. Their expanded conference report, published March 26, 2019, describes 13 treated and 10 completing the open-label study. Both reports belong to NCT02818777. The later full paper identifies sesame oil as the vehicle and describes the lack of a control arm. [Original 2017 MDS abstract](https://www.mdsabstracts.org/abstract/open-label-study-of-cannabidiol-in-parkinson-disease/) · [Original 2019 symposium proceedings, Preliminary findings of the use of cannabis in Parkinson disease](https://doi.org/10.1002/mds.27654) · [Local registry text](Source-Text/Trials/NCT02818777.txt) · [2020 full report summary](../2020-2024/Food-Experiment-Oil-Followup.md#sesame-oil-in-the-earlier-colorado-open-label-cannabidiol-trial)
+## Soybean, coconut, corn and fish oil blends in a rotenone model
+
+Perez-Pardo and colleagues published a six-arm mouse experiment on March 20, 2017. The three isocaloric feeds supplied 5 g fat per 100 g of diet. Table 2 lists control, Diet 1 and Diet 2 amounts of 0.9, 0.1 and 0.2 g coconut oil and 2.2, 1.7 and 1.2 g corn oil per 100 g, respectively. Soy oil was listed at 1.9 g in the control alone. Fish oil was listed at 3.2 and 3.6 g in Diets 1 and 2. Both alternate feeds added uridine. Diet 2 additionally changed prebiotic fiber, vitamins and other ingredients. [Primary paper, Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC5357625/) · [Local licensed text](Source-Text/PMC5357625.txt#L107)
+
+Both feeds increased rotarod retention and forelimb grip relative to rotenone with control feed. Diet 2 had the stronger results and improved the 30-minute intestinal dye-distance endpoint in Figure 4. Spatial recognition improved in Diet 2 at day 70. The study compares the full feed formulas. It reports no single-oil effect, refining grade, or human constipation or gait outcome. [Local results, Figures 1–4](Source-Text/PMC5357625.txt#L174)
+
+## Rice-bran constituent and locomotor tests in rotenone flies
+
+Araujo and colleagues reported four groups of 50 flies in 2015. The seven-day diet combined isolated gamma-oryzanol or its control condition with rotenone or its control. The paper reports less loss of climbing ability and open-field mobility time when gamma-oryzanol accompanied rotenone. The 2016 UNIPAMPA thesis explicitly embeds the 2015 article as its results and discusses the same experiment. The test material was a mixture of ferulate esters associated with rice bran oil. Neither the study nor the thesis gives a refined rice bran oil feeding comparison or walking slowness in people with Parkinson disease. [Primary journal article](https://doi.org/10.1016/j.neuro.2015.09.003) · [Primary abstract and publication year](https://pubmed.ncbi.nlm.nih.gov/26366809/) · [Thesis, article and conclusions, printed pp. 40–51](https://dspace.unipampa.edu.br/bitstream/riu/313/1/St%C3%ADfani%20Machado%20Araujo.pdf)

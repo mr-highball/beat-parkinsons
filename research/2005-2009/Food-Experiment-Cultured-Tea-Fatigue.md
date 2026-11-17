@@ -1,0 +1,5 @@
+# Cultured green tea and laboratory fatigue
+
+## Fermented tea extract during a laboratory fatigue task
+
+December 25, 2007. Mori, Kyoko Watanabe and Isono studied 16 healthy adults in a one-week crossover after a brief arithmetic stress task. The methods describe two groups and a crossover, with allocation method unspecified. The test drink contains fermented green-tea extract and the comparator contains the corresponding unfermented extract. Table 1 reports 109.7 versus 1.1 mg GABA per 100 g. Figure 3 marks total mood disturbance at a p < .1 threshold, while the individual POMS fatigue bar has no significance mark or precise effect estimate. Figure 4 separates subjective symptom trajectories. Salivary chromogranin A and alpha-amylase showed no clear condition contrast. Product formulation and an acute stress task in healthy adults limit transfer to brewed green tea and Parkinson fatigue. [Original source](https://dl.ndl.go.jp/view/prepareDownload?contentNo=1&itemId=info%3Andljp%2Fpid%2F10516116) · [Local factual text](Source-Text/2007-Mori-Cultured-Green-Tea-Fatigue-Extract.txt)

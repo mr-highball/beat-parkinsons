@@ -1,0 +1,5 @@
+# Sunflower Oil Cognition
+
+## Replacement of several dietary oils and cognitive outcomes
+
+Mazza and colleagues first published January 19, 2018. The experimental Mediterranean diet replaced multiple oils, including high-oleic sunflower, with extra-virgin olive oil. The control received Mediterranean diet guidance. Table 5 adjusted ADAS-Cog changes were −3.0 and −1.6 points, respectively (p=.024). Final verbal-fluency scores were 25 in each arm, with SD 6 and 7 and p=.78. The manuscript reports 180 randomized and 110 completers, while Figure 1 prints 144 and 60 allocated and identifies 36 who declined before baseline in the first arm. The allocation totals do not reconcile with 180. The authors report 53% overall dropout in the Discussion. The trial does not isolate sunflower oil, prove its pressing method or report a Parkinson-specific comparison. [Original flow diagram](https://link.springer.com/article/10.1186/s12967-018-1386-x/figures/1) [Original source](https://link.springer.com/article/10.1186/s12967-018-1386-x) · [Local factual text](Source-Text/2018-Mazza-Dietary-Oil-Replacement-Cognition.txt)

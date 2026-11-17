@@ -1,0 +1,5 @@
+# Isolated clove constituent and experimental pain
+
+## Oral eugenol and distinct thermal and mechanical responses
+
+Guénette and colleagues published this experiment online on February 1, 2007. Six rats per group with a sciatic nerve cuff received isolated eugenol by oral gavage or saline for five days. The thermal withdrawal latency on day five was 11.4 ± 1.23 seconds with eugenol and 6.1 ± 0.53 with saline (p < .01). The group difference was reported as significant only on that day. The mechanical comparison was inconclusive, and the authors state that mechanical allodynia did not develop in the model. The eugenol solution contained excipients not present in the reported saline control. This study did not administer ground clove or measure clinical Parkinson pain. [Primary PubMed record](https://pubmed.ncbi.nlm.nih.gov/17321520/) · [Original article copy, Methods and Figures 3–4](https://www.academia.edu/6158642/Pharmacokinetics_of_eugenol_and_its_effects_on_thermal_hypersensitivity_in_rats) · [Local factual text](Source-Text/2007-Guenette-Eugenol-Pain-Extract.txt)

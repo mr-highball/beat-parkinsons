@@ -1,0 +1,9 @@
+# Milk and speech follow-up, 2015–2019
+
+## Milk in a mixed diet during progressive speech apraxia
+
+Tetzloff and colleagues reported in 2018 a decade-long clinical course of one person with progressive apraxia of speech and autopsy-confirmed corticobasal degeneration. In 2010 his speech intelligibility was compromised. At a later assessment he was essentially mute, had parkinsonism, and his fixed mixed diet included milk alongside other foods. The report does not identify the milk species, pasteurization, dose or an exposure contrast, and the pathology was corticobasal degeneration rather than confirmed idiopathic Parkinson disease. The 2010 intelligibility statement and the later dietary description are separate time points; they cannot estimate the effect of milk. [Primary case and longitudinal speech table](https://pmc.ncbi.nlm.nih.gov/articles/PMC6095655/) · [Factual extract](Source-Text/2018-Tetzloff-Milk-Speech-Apraxia.txt)
+
+## Blinded dairy supplement and self-reported nasal mucus
+
+Frosh and colleagues’ randomized, double-blind ENT study first published September 4, 2018. It studied 108 people reporting persistent nasopharyngeal mucus and compared dairy with nondairy supplementation following dairy avoidance. The abstract reports a day-4-to-7 increase in the dairy arm’s subjective secretion score and a nonsignificant reduction in the nondairy arm; these within-arm tests are not themselves a between-arm contrast. The assessed outcome was perceived nasopharyngeal secretion, not speech intelligibility. The supplement formulation attachment and full report were access-blocked, so product composition and pasteurization remain unverified. [Primary indexed abstract](https://pubmed.ncbi.nlm.nih.gov/30178886/) · [Factual extract](Source-Text/2018-Frosh-Dairy-Mucus-Study.txt)

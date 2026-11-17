@@ -1,0 +1,33 @@
+# Almond and avocado oil studies, 2020–2024
+
+## Oral almond oil in older adults with functional constipation
+
+Faghihi and colleagues analyzed 79 of 90 randomized participants. Mean Constipation Assessment Scale scores changed from 7.81 to 1.15 with oral sweet almond oil, 8.00 to 2.26 with abdominal massage using oil, and 7.73 to 6.00 with no additional treatment. Routine medications continued. The paper reports lower constipation-related quality-of-life burden, with baseline imbalances for the total score and its anxiety domain. The anxiety domain measures bowel-related worries and concerns. This report gives no Parkinson subgroup or clinical depression measure. The oil brand and license are stated and the pressing method is unspecified. [Local primary report, Tables 2 and 5](Source-Text/PMC9239810.txt)
+
+## Separate Fasa registration for oral almond oil and massage
+
+IRCT20190917044802N9 was first posted August 25, 2023. The registry describes a three-arm Fasa trial of oral sweet almond oil, oil massage and control, with no blinding, target enrollment 90, and planned constipation and pain outcomes. Its ethics code is IR.FUMS.REC.1402.062. The 2022 Shiraz report gives a different ethics code, recruitment period and design details. The Fasa record reports completed recruitment without posted outcome data. No outcome publication could be verified by accession, ethics code or investigator. [Official registration](https://irct.ir/trial/72228) · [Local registry summary](Source-Text/IRCT20190917044802N9.txt)
+
+## Cold-pressed avocado oil and recognition memory in obese mice
+
+De Oliveira Marques and colleagues gave cold-pressed avocado oil by mouth. Oil-fed obese mice preferentially explored a novel object, while the untreated obese group did not. Figure 3A tests recognition within groups. It does not report a direct oil-versus-control difference in recognition index. The oil comparison also yielded no clear change in plus-maze open-arm time or entries. Figure 3B flags obesity versus normal control for crossings and does not mark a significant direct oil effect. Figure 3C is rearings, although the narrative calls it crossings. These were recognition, locomotor and exploratory tasks in an obesity model. [Local primary article, Section 3.2 and Figure 3](Source-Text/PMC9319255.txt)
+
+## Extra-virgin avocado oil and spatial memory in rats
+
+Massop Wamba Ndé and colleagues’ September 2022 preprint and September 2024 article report matching nine groups, 54 rats, a 70-day regimen, and D-galactose plus ovariectomy. The oil groups performed better on novel-object recognition and the Y-maze and water-maze tests than the affected control. The tests assess spatial and recognition memory under a model of Alzheimer’s-related changes. The later meeting report described a separate aluminum-plus-D-galactose regimen from the same group. [2022 preprint](https://doi.org/10.21203/rs.3.rs-2036318/v1) · [2024 primary report](https://link.springer.com/article/10.1007/s11756-024-01779-2) · [2025 second model](../2025-2029/Food-Experiment-Almond-Avocado-Oils.md#extra-virgin-avocado-oil-in-a-second-memory-model)
+
+## Avocado oil and rat turning in a 2022 conference report
+
+The October 2022 Mexican Society of Biochemistry proceedings report about 89% fewer ipsilateral turns after an avocado oil diet in quinolinic-acid lesioned rats. The authors, model, 20-day dietary regimen and endpoints overlap with the 2025 journal article. The match supports treating the reports as one study family. These lesion-induced rotations are distinct from gait speed or dystonia. [Proceedings, p. 802](https://smb.org.mx/wp-content/uploads/2022/11/2022_11_24-Memorias_SBM.pdf#page=802) · [2025 article](../2025-2029/Food-Experiment-Almond-Avocado-Oils.md#avocado-oil-diet-and-rotational-behavior)
+
+## Avocado oil and resting pressure across animal and human comparisons
+
+The 2021 Mexican study reported reduced systolic and diastolic pressure after avocado oil in chemically hypertensive rats and no clear change in normotensive rats. ReBEC registered a distinct human trial on March 7, 2023. Its results summary says 33 of 44 participants completed the trial and reports no clear blood-pressure change with avocado oil versus soybean oil in adults with metabolic syndrome. The 2023 article and registry agree on setting, comparison, analyzed count and ethics approval. The article gives differing treatment durations and reverses the arm counts between the text and flowchart. Its outcome tables concern metabolic and oxidative measures. A 2022 dissertation record and a 2023 lipid analysis with 31 analyzed participants describe the same research program. The latter shares the ethics approval and intervention. Neither provides a verified numeric blood pressure comparison. The registry supplies the blood pressure summary, with no postural reading, lightheadedness assessment or verified refined-oil designation. [Local 2021 rat study, Figure 1](Source-Text/PMC8625956.txt) · [ReBEC record and outcomes](https://ensaiosclinicos.gov.br/rg/RBR-99ydjm8) · [Local registry text](Source-Text/RBR-99ydjm8.txt) · [Dissertation record](https://repositorio.ufjf.br/jspui/handle/ufjf/15025) · [Companion lipid analysis](https://www.e-publicacoes.uerj.br/demetra/article/download/70457/45242/258630) · [2023 clinical report](https://clinical-nutrition.imedpub.com/articles/effects-of-the-avocado-oil-supplementation-on-oxidative-and-insulin-resistance-parameters-in-a-doubleblind-and-randomized-clinical.pdf)
+
+## Avocado oil in cortisol and rotenone cell studies
+
+Motta and colleagues exposed cultured SH-SY5Y cells to cortisol and reported changes in cell survival and BDNF-related measures with avocado oil. Queiroz Junior and colleagues tested oil and extract in rotenone-exposed Vero kidney epithelial cells. This rotenone result concerns cellular responses, without an animal motor test or Parkinson outcome. [Cortisol study](https://pubmed.ncbi.nlm.nih.gov/33480081/) · [Rotenone study](https://pubmed.ncbi.nlm.nih.gov/34256683/)
+
+## Inhaled essential-oil blend and mouse gait in a patent
+
+The December 27, 2024 application CN119185479A describes an inhaled seven-oil blend containing rosemary, lavender, lemon, peppermint, magnolia, *Alpinia oxyphylla* and calamus oils. It reports changes in rotarod and CatWalk gait measures in model mice. The rotarod narrative switches from MPTP to SNCA-AAV in its comparison descriptions. The application cites a 2013 almond-carrier patent, but its blend has no almond oil and the experiments do not isolate any ingredient. [Original Chinese patent, Figures 3–7](https://patents.google.com/patent/CN119185479A/zh)

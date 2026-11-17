@@ -1,0 +1,5 @@
+# Sage and summer savory symptom studies
+
+## Sage tolerability and urinary urgency in a 1938 account
+
+Gerhard Madaus describes a tolerability test of a fresh-sage triturate standardized to 50% plant material. People described as having difficulty sweating experienced a strong urge to urinate and increased urine output. The account gives no participant count, duration, baseline diary or Parkinson diagnosis. It reports an acute sensation and a change in urine output. Claim 0593 concerns the frequency of urgency in Parkinson disease after consuming ground sage. The EMA assessment supplies a later English account but reverses which sweating subgroup experienced the urinary change compared with the German text. [Madaus, 1938, tolerability section](https://www.henriettes-herb.com/eclectic/madaus/salvia.html) · [EMA assessment, secretion-promoting effects](https://www.ema.europa.eu/en/documents/herbal-report/final-assessment-report-salvia-officinalis-l-folium-and-salvia-officinalis-l-aetheroleum-revision-1_en.pdf)

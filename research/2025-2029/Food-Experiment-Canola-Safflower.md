@@ -1,0 +1,5 @@
+# Canola and safflower oil evidence
+
+## Canola versus coconut oil meals and selective attention
+
+Diekmann and colleagues first published November 11, 2025. Twenty-nine adults at elevated cardiometabolic risk ate randomized, isocaloric meals varying canola versus coconut oil and amount of fat. The canola–coconut contrast in the Frankfurt Attention Inventory score was −3 points (95% CI −14 to 9, p = .632). Higher-fat meals had lower scores across oils (−12, 95% CI −25 to −0.6, p = .039), and their carbohydrate and fiber contents also differed. Both papers from this cohort name Brölio canola oil. A 2023 supplier sheet identifies a refined one-liter Brölio product, but the papers provide no barcode or batch to verify a match. The study evaluated acute attention in a cardiometabolic population. [Primary attention report](Source-Text/PMC12881678.txt) · [Companion metabolic report](Source-Text/PMC12490190.txt) · [Official trial record](https://clinicaltrials.gov/study/NCT05208346) · [Product sheet](https://www.igro24.de/media/products/Artikelpass4000351109106.pdf)

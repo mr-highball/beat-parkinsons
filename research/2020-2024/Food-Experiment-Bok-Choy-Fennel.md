@@ -1,0 +1,21 @@
+# Bok choy and fennel seed evidence
+
+## Fennel seed powder and menopause symptom scores
+
+Ghaffari and colleagues reported the trial in 2020 and identify IRCT2016022125566N4. They randomized 80 postmenopausal women to encapsulated fennel seed powder or starch for eight weeks, and 71 completed the study. Mean total Kupperman symptom score decreased from 30.8 to 19.0 with fennel and from 31.2 to 26.4 with placebo (group-by-time p = .001). The composite includes frailty, and the article gives no separate fatigue score. The authors give the farms and powder preparation without reporting roasting. Four fennel and five placebo recipients withdrew for combined reasons that included skin reactions, stomach pain, adherence and relocation. The paper does not give adverse event counts by reason and arm. [Original PubMed record](https://pubmed.ncbi.nlm.nih.gov/33110044/) · [Primary author copy, Table 3](https://www.academia.edu/130159649/The_effect_of_Fennel_seed_powder_on_estradiol_levels_menopausal_symptoms_and_sexual_desire_in_postmenopausal_women)
+
+## Steamed bok choy in a controlled rice meal
+
+A 2021 randomized crossover meal study in 31 women included bok choy steamed for 25 minutes and puréed with rice. The study measured postprandial glucose and found no clear mean glycemic difference between the bok choy and rice conditions. It did not test standing blood pressure, falls, gait or postural instability. This study documents the cooked ingredient used in a human meal, with no balance outcome. [Publisher methods and results](https://onlinelibrary.wiley.com/doi/full/10.1002/mnfr.202000923) · [University primary publication record](https://abdn.elsevierpure.com/en/publications/inter-individual-variation-in-postprandial-glycaemic-responses-in/)
+
+## Aqueous fennel fruit extract in an MPTP model
+
+Koppula and colleagues reported a conference abstract in the September 2023 Pharmacy Education supplement. The original abstract reports that aqueous fennel fruit extract ameliorated MPTP-associated changes in rotarod, open-field and passive-avoidance tests. It gives a range of p values across results without endpoint estimates, animal counts or extract route. Rotarod and open-field behavior give animal measures of coordination and locomotion. Passive avoidance measures learned avoidance and offers no separate attention assessment. The intervention was an aqueous extract and no clinical Parkinson symptoms were measured. [Original conference abstract, p. 60](https://pharmacyeducation.fip.org/pharmacyeducation/article/download/2476/1621#page=9) · [Supplement and publication date](https://pharmacyeducation.fip.org/pharmacyeducation/issue/view/82)
+
+## Fennel extract in a separate mouse neuroinflammation experiment
+
+Koppula and colleagues published the LPS experiment in 2024. Male Swiss albino mice received oral gavage of dried fennel fruit extract for 21 days, beginning before the first LPS exposure. Figure 5A shows no clear rotarod benefit on day 4. On day 20, the LPS group retained the rotarod for 59 ± 8 seconds and the three extract groups for 93 ± 5, 112 ± 7 and 132 ± 10 seconds. The in vivo challenge and extract dose groups differ from those in the 2023 MPTP abstract. The reports share authors, fingerprint constituents and closely related cell experiments. This study used a model of neuroinflammation and measured coordination without a Parkinson postural examination or a culinary seed exposure. [Original report](https://journals.muhn.edu.cn/apjtb/article/abstract/20240104) · [Primary PDF, Figure 5A and §3.8](https://journals.muhn.edu.cn/apjtb/article/pdf/20240104)
+
+## Fennel seed extract in chow after a peripheral nerve injury
+
+Maqbool and colleagues first published December 13, 2020. Twelve mice with sciatic nerve compression received regular chow or chow containing a methanolic fennel seed extract, starting on the injury day. Figure 2 reports improved hind-paw grip and sciatic functional index at several follow-up times. The functional index came from walking footprints after a peripheral injury, and the study did not assess freezing episodes or postural responses in Parkinson’s. [Original Figure 2 and Methods](https://pmc.ncbi.nlm.nih.gov/articles/PMC7866564/) · [Local licensed source text](Source-Text/PMC7866564.txt)

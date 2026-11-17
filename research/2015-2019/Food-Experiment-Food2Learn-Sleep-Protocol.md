@@ -1,0 +1,5 @@
+# A mixed corn-oil placebo and registered sleep outcomes
+
+## Food2Learn mixed-oil comparator and planned sleep substudy
+
+Van der Wurff and colleagues published the randomized trial protocol on July 8, 2016. It links NCT02240264 and NTR4082. The placebo contains olive, corn and palm oils and medium-chain triglycerides in a 4:4:9:3 ratio. The 64-participant sleep substudy planned seven days of activity monitoring and diaries and the Adolescent Sleep-Wake and Sleep Hygiene scales before and after the intervention. The protocol supplies no sleep results or oil refining grade. The author's 2018 dissertation reproduces the protocol in chapter 4 and reports cognition and mood in later chapters. Its accessible text did not supply sleep outcome estimates by treatment arm. This is a mixed placebo control in adolescents, with numerical sleep results still open. [Original protocol](https://pmc.ncbi.nlm.nih.gov/articles/PMC4947785/) · [Primary dissertation](https://research.ou.nl/ws/files/9099314/E_book_Dissertatie_Inge_van_der_Wurff.pdf) · [Local factual text](Source-Text/2016-Food2Learn-Sleep-Protocol.txt)

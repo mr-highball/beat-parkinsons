@@ -1,0 +1,5 @@
+# Dried parsley as the placebo in a migraine crossover
+
+## Dried parsley as the placebo in a migraine crossover
+
+Palevitch, Earon and Carasso reported a 57-person crossover in the November 1997 issue. The publisher marks its web release December 4, 1998. Participants first took feverfew for 60 days. The primary abstract reports increased pain on transition from feverfew to placebo and decreased pain with the reverse transition. EMA identifies the placebo as dried powdered parsley leaves. The original abstract gives neither placebo composition nor headache scores. The design jointly changed feverfew and parsley exposure and had no independent parsley-free placebo group. [Local factual text](Source-Text/1997-Palevitch-Parsley-Crossover-Factual-Extract.txt) · [Primary abstract and EMA preparation record](https://onlinelibrary.wiley.com/doi/10.1002/%28SICI%291099-1573%28199711%2911%3A7%3C508%3A%3AAID-PTR153%3E3.0.CO%3B2-H/abstract) · [EMA preparation and comparison](https://www.ema.europa.eu/en/documents/herbal-report/superseded-final-assessment-report-tanacetum-parthenium-l-schulz-bip-herba-first-version_en.pdf)

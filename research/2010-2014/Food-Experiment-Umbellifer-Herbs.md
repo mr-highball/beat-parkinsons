@@ -1,0 +1,13 @@
+# Coriander and dill in comparator studies
+
+## Coriander with exercise-associated swallowing symptoms
+
+- **2013-03-20. Chen and colleagues, case A.** The patient described difficulty swallowing while running after eating a mixed meal and subsequently developed throat tightness and hives. Skin testing was positive to fresh coriander and tomato. The patient reported tolerating each food without exercise. The report leaves the amount and plant part of coriander in the meal unresolved. The time course concerns an exercise-associated allergic reaction in a patient outside the Parkinson population. See the [separate fresh leaf challenge](../2020-2024/Food-Experiment-Umbellifer-Herbs.md#fresh-cilantro-oral-challenge) for a case with known plant part and different symptoms. [Original report](https://doi.org/10.1186/1710-1492-9-11) · [Local source text](Source-Text/PMC3608993.txt).
+
+## Fresh coriander leaves in mouse memory tests
+
+- **2010-09-17, online. Mani and colleagues.** The investigators mixed fresh *Coriandrum sativum* leaves into mouse diets for 45 days and tested memory in young and aged mice and mice exposed to scopolamine or diazepam. The abstract reports improvement in memory measures with increasing dietary leaf content. The study used fresh leaves, memory tasks and mouse models outside Parkinson disease. The frozen attention claim specifies dried cilantro and Parkinson attention impairment. [Original report indexed in PubMed](https://pubmed.ncbi.nlm.nih.gov/20848667/).
+
+## Coriander aerial-part extract and motor performance in a Korean dissertation
+
+- **2014-08. Gunhyuk Park, Kyung Hee University, supervised by Myung Sook Oh.** The dissertation tested an orally administered ethanol extract made from fresh coriander aerial parts in MPTP-exposed mice. Section 3.4.4 reports pole turn time of 153.10 ± 30.47% of control with MPTP alone and 111.99 ± 11.28% with extract. Pole descent time was 178.44 ± 15.09% and 102.58 ± 6.30%, respectively. Rotarod retention time was 29.68 ± 7.49% and 84.84 ± 8.63%, respectively. Figures 17–18 identify the errors as SEM and mark the extract versus MPTP comparisons. These are motor-task measures in an animal model. The later patent reports the same dosing schedule and corresponding motor results with an additional ropinirole bar. Treat these records as one experiment. [Original dissertation, section 3.4.4, printed pages 48–50](https://khu.dcollection.net/srch/srchDetail/200000166968) · [RISS thesis record](https://www.riss.kr/link?id=T14972337) · [2016 patent disclosure](../2015-2019/Food-Experiment-Umbellifer-Herbs.md#coriander-aerial-part-extract-in-a-korean-patent).

@@ -1,0 +1,5 @@
+# Cardamom preparation and two Parkinson outcomes
+
+An international patent describes finely powdered cardamom fruit in a multiherb depression capsule with a reported randomized withdrawal phase. The material lacks an individual cardamom effect or clinical Parkinson apathy outcome. Injected cineole aggravated a drug-induced posture measure in one mouse study. Oral complexed cineole had a different result in a separate model. The compounds, routes and protocols differ and the models supply no clinical dystonia result after ground cardamom. [1989 patent](../../../../research/1985-1989/Food-Experiment-Cardamom-Endpoint-Replay.md) · [2019 primary abstract](../../../../research/2015-2019/Food-Experiment-Cardamom-Endpoint-Replay.md) · [2026 model](../../../../research/2025-2029/Food-Experiment-Sumac-Cardamom.md)
+
+The native replay retrieved all 25 reported appearances. Full tables for the 2019 catalepsy report remain unresolved. The separate cardamom entry in the 2020 Parkinson menu comes with no isolated apathy or dystonia estimate. Both frozen verdicts remain Unknown. [Europe PMC queries](epmc/ingredient_queries.tsv) · [Source key screen](source-key-screen.tsv)

@@ -1,0 +1,7 @@
+# Cooked green peas and fall frequency · 0719
+
+The 2018 Parkinson low-fat meal plan includes frozen green peas cooked in multi-ingredient recipes. A report of ongoing falls in a participant with pre-existing postural hypotension prompted a midodrine increase. The trial gives no count or incidence rate and no evidence of that participant eating a pea-containing meal. The 1997 food recall concerns Parkinson case status and premarital food use. [Original trial and factual text](../../../../research/2015-2019/Food-Experiment-Green-Peas-Falls.md) · [Earlier food recall context](../../../../research/1995-1999/Food-Experiment-Multilingual-Followup.md)
+
+All 16 original source keys are tracked in the dictionary. Eight received original-body context screens, including a conference volume with 33 pages without extractable text. Eight still need primary-body access. Five heart-disease reports use pea names in dietary groups and use PEA for pulseless electrical activity. The reports do not estimate falls after cooked green pea intake in Parkinson disease. [Original source dispositions and access](original-source-dictionary.tsv)
+
+The complete native expressions returned 221 Europe PMC appearances and 122 distinct PubMed PMIDs. Beyond the primary cases and selected source keys, broader abstracts and original bodies remain open. [Europe PMC retrieval](europe-pmc-queries.tsv) · [PubMed retrieval and translations](pubmed-queries.tsv)

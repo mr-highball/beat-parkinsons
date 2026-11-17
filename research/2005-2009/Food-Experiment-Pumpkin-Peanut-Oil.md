@@ -1,0 +1,9 @@
+# Pumpkin and peanut oils in rat neurotoxicity studies
+
+## Oral pumpkin seed oil in a rotenone rat model
+
+Ahmed and colleagues’ June 2009 study separated pumpkin seed oil and ginkgo into distinct arms, with and without rotenone. The commercial pumpkin seed oil was administered orally beginning before rotenone exposure. The report gives no pressing or toasting specification. Table 1 lists day-70 striatal dopamine of 1,604.5 ± 49.7 ng/g for oil plus rotenone, 1,411.3 ± 26.3 for rotenone alone and 1,795.6 ± 28.3 for untreated controls. The significance footnote in the available copy prints a greater-than sign despite describing significant changes. The measured endpoints were tissue catecholamines, oxidative or biochemical measures and striatal histology. No treatment comparison of stride, muscle tone, dyskinesia or other frozen clinical motor outcomes was reported. [June 2009 original report, Table 1](https://www.researchgate.net/publication/266731928_Protective_Effect_of_Ginkgo_Biloba_Extract_and_Pumpkin_Seed_Oil_Against_Neurotoxicity_of_Rotenone_in_Adult_Male_Rats) · [Later rotenone seed extract study](../2025-2029/Food-Experiment-Pumpkin-Peanut-Oil.md#pumpkin-seed-extract-and-motor-tests-in-rotenone-exposed-mice)
+
+## Injected peanut oil in an iron neurotoxicity experiment
+
+Bostanci and Bağirici compared an injected peanut-oil vehicle arm, iron exposure alone, and drug and control groups. They reported no clear difference in hippocampal neuron counts between iron-plus-oil and iron alone. The study did not measure symptoms and did not test oral oil. This was one of two peanut-oil records returned by the Parkinson-indexed PubMed and Europe PMC queries. The other was a chocolate review. [2007 primary report and Figures 1–2](https://pmc.ncbi.nlm.nih.gov/articles/PMC11517157/)

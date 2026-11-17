@@ -1,0 +1,6 @@
+# Focused Europe PMC screen receipt
+
+- Source: `europe-pmc-queries.tsv`; 24 queries, all status Retrieved, 18 with zero hits, no reported hit/retrieved mismatch.
+- Screen: `europe-pmc-screen.tsv`; 14 appearances, 14 distinct source keys, 8 related, 3 excluded, 3 pending. Pending rows identify the subscription-limited celery review and two patent claim abstracts; no unscreened result is silently excluded.
+- Native verification: `D:/beat-parkinsons/experiments/1000_see_what_sticks_food/build/food-off-time-fatigue-nov15/validate_binky.exe` invoked with this directory as current working directory. Output: `PASS exact query_id/rank/source_key set; unique appearances: 14`; exit 0. It checks tuple set equality and duplicates, not the clinical rationale.
+- Further context: celery review PMID42489905 publisher preview is subscription-limited; references include [Zhou 2019 primary](https://doi.org/10.3892/etm.2019.7397), a Parkinson trial of dl-3-n-butylphthalide, a synthesized compound originally isolated from celery seed, not consumed fresh leaf. The particular review's full-text mapping and dyskinesia analysis remain unverified. [Jawarish Shahi primary](https://pmc.ncbi.nlm.nih.gov/articles/PMC9618389/) confirms cardamom seed as one ingredient in an uncontrolled polyherbal IBS study. Its symptom claims cannot be attributed to cardamom alone.

@@ -1,0 +1,5 @@
+# Bundled Oil Symptoms
+
+## Anxiety in the stratified self-management comparison
+
+First published April 24, 2025. This is the results report for the earlier ChiCTR2200061991 registry and protocol. The publisher preview indicates 34 assigned to each arm and 64 available after 12 weeks. The authors report a favorable anxiety result on the Zung Self-Rating Anxiety Scale in the bundled support comparison. Exact anxiety estimates by arm, the depression result, and actual participant oil purchases or intake could not be verified from the accessible material. The population had type 2 diabetes and mild cognitive impairment. The estimate cannot isolate olive, peanut or walnut oil. [Earlier registry and protocol](../2020-2024/Food-Experiment-Bundled-Oil-Symptoms.md) · [Publisher preview](https://www.sciencedirect.com/science/article/abs/pii/S0197457225001429). [Original source](https://pubmed.ncbi.nlm.nih.gov/40279960/) · [Local factual text](Source-Text/2025-Stratified-Diabetes-Self-Management-Results.txt)

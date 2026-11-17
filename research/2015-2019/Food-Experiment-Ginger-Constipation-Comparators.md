@@ -1,0 +1,9 @@
+# Ginger constipation comparators, 2015-2019
+
+## Ginger powder arm in constipation-predominant irritable bowel syndrome
+
+Al-Jassim assigned 45 adults with IBS-C, 15 per arm, to 1 g/day of encapsulated dry ginger root powder, brewer's yeast or brown-sugar placebo for 20 days. The ginger and yeast arms were separate. The protocol excluded Parkinson disease. Mean 0–100 constipation severity was 70.66, 55.26 and 49.13 in the ginger arm at baseline, day 10 and day 20, versus 75.60, 66.93 and 65.86 for placebo. Table 1 gives p<.05 for the between-arm differences at both follow-ups. It reports no baseline-adjusted change estimate. The prose reverses yeast time points, so the numbers here come from the table. The small trial used dry powder in capsules and measured self-rated severity rather than observed stool counts. A public registration was not located. [Original source](https://www.journals.innovareacademics.in/index.php/ajpcr/article/download/30716/19480) · [Local factual text](Source-Text/2019-Al-Jassim-Ginger-Powder-Constipation.txt)
+
+## Ginger in both arms of a senna-containing constipation trial
+
+Somi and colleagues randomized 48 adults with chronic constipation and analyzed 40 completers. Both groups received dried ginger, peppermint and licorice. Only the Lax-Asab product also contained senna. Mean weekly defecations changed from 1.8 to 4.8 with Lax-Asab and 1.7 to 2.2 with the comparator over four weeks (time-by-treatment p<.0001). The original Methods identify ginger in the product and its comparison mixture. The group contrast cannot establish a ginger effect, and the study did not test fresh grated ginger or enroll a Parkinson cohort. [Original source](https://pmc.ncbi.nlm.nih.gov/articles/PMC4488565/) · [Local factual text](Source-Text/2015-Somi-Lax-Asab-Ginger-In-Both-Arms.txt)

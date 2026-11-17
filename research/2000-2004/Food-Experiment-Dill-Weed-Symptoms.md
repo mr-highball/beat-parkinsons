@@ -1,0 +1,6 @@
+# Dill weed symptom evidence
+
+## Anethum tablets and reported malaise
+
+The five-arm double-blind study enrolled 201 people and 114 completed two months. Six Anethum tablets daily were used in the relevant arm. The abstract lists malaise or tiredness among common complaints in the Anethum group. It provides no denominator for that complaint, grading, comparative fatigue estimate, or verified plant part. A separate paper in the issue describes a marketed Anethum mixture, but formulation equivalence across trials was not established. The study population had elevated cholesterol, and Parkinson fatigue was not assessed. [Magiran author abstract](https://www.magiran.com/paper/534133/comparison-of-therapeutic-and-short-term-side-effects-of-anethum-with-nicotinic-acid-cholestyramine-the-combination-of-the-two-and-placebo-for-isolated-hypercholesterolemia-a-double-blind-randomized-clinical-trial?lang=en).
+

@@ -1,0 +1,5 @@
+# Ushaq capsule and lumbar radicular pain
+
+## Ushaq capsule and lumbar radicular pain
+
+The publisher gives first public availability October 26, 2026, ahead of the December issue. Mardi and colleagues randomized 68 participants with lumbar radiculopathy to Ushaq capsules or cellulose placebo, with rescue diclofenac allowed. The abstract reports lower pain VAS at six weeks (p=.003) and an inconclusive between-group disability result (p=.218). It cites IRCT20200418047124N1. Pimpinella anisum is indexed as a keyword and appears in cited literature. The recorded abstract does not establish its presence in the administered capsule or its formulation. The full ingredient and dose table and the official registry posting remain open. [Local factual text](Source-Text/2026-Mardi-Ushaq-Radiculopathy-Abstract-Extract.txt) · [Publisher first-public date and original abstract](https://onlinelibrary.wiley.com/doi/abs/10.1002/msc.70284)

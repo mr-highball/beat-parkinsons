@@ -1,0 +1,5 @@
+# Cayenne Followup
+
+## Rocoto extract and anxiety ratings in medical students
+
+Valencia Mercado’s Peruvian thesis randomized 70 students to hydroalcoholic Capsicum pubescens extract in ketchup or ketchup and water for ten days. Reported anxiety within-arm Friedman p-values were .779 and .967. In Table 3, extract-arm category counts sum to 39, 38 and 39, exceeding printed visit totals of 35, 32 and 32. Most extract respondents identified assignment. The within-arm tests and inconsistent table do not support a between-arm effect. Rocoto is a separate species from the frozen grounded cayenne exposure. Repository publication year is 2016. [Local factual text](Source-Text/2016-Valencia-Rocoto-Anxiety-Thesis.txt) · [Primary source](https://repositorio.ucsm.edu.pe/server/api/core/bitstreams/2cff5d65-2c9d-4820-9aa0-c14d09e042cb/content)

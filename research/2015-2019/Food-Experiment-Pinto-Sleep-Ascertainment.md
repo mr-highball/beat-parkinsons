@@ -1,0 +1,5 @@
+# Pinto and common-bean studies with sleep ascertainment
+
+## PROMED registration and prespecified outcomes
+
+June 5, 2019. This pilot compares a culturally tailored Mediterranean-like diet with standard advice. The official record was first posted June 5, 2019 and most recently posted July 23, 2021. It registers cardiometabolic risk, dietary quality and satisfaction measures. The current public record marks the study completed and has no posted results or separate sleep outcome in its registered module. The later design paper independently describes sleep questions. Treat the registration, design and results abstract as the same study family. [Original source](https://clinicaltrials.gov/study/NCT03975556) · [Local factual text](Source-Text/2019-NCT03975556-PROMED-Registry-Extract.txt)

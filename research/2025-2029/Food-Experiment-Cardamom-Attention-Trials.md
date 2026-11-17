@@ -1,0 +1,5 @@
+# Black cardamom extract and attention trials
+
+## Four-arm black cardamom extract trial with timed attention outcomes
+
+The September 29, 2026 report describes a 14-day randomized trial of black cardamom fruit extract, caffeine, their combination and placebo in 96 healthy adults. The original abstract reports better performance on selected early post-dose Shifting Attention, Symbol Digit and Stroop measures with extract, with some later contrasts favoring the combination. The tested Amomum subulatum extract differs botanically from green Elettaria cardamomum and from ground culinary seed. The acute and 14-day reports both identify CTRI/2024/09/074472 and describe the same 96-person allocation to four groups. Treat them as one registration family. The longer report analyzed 85 participants and presents repeated cognitive-task measurements. Neither report measures daytime sleepiness severity or a Parkinson symptom outcome. [original article and shared registration with the acute report](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2026.1879347/full) · [Local text](Source-Text/2026-Black-Cardamom-14-Day-Attention-Abstract-Extract.txt)

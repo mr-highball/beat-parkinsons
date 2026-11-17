@@ -1,0 +1,17 @@
+# Individual symptoms in Parkinson and related balance or olfaction outcomes
+
+## Balance in a multiple sclerosis combination trial
+
+Cuerda-Ballester et al. randomized 51 people with multiple sclerosis to a dietary intervention with 60 mL/day extra-virgin coconut oil and 800 mg/day EGCG, or a diet with other fats and placebo capsules. Figure 2 gives mean Berg balance scores of 49 to 52 in the active arm and 43 to 43 in the comparator. The reported significance tests compare baseline and final values separately within each arm. The paper gives no between-arm change estimate from these tests. Balance confidence did not show a clear change. Coconut oil grade differs from claim 0110, co-interventions are bundled and the population has multiple sclerosis. The registered EGCG dose was 600 mg/day. [Original Methods and Figure 2](https://pubs.rsc.org/en/content/articlehtml/2023/fo/d2fo02207a) · [Local factual extract](Source-Text/2023-Cuerda-Ballester-Coconut-Balance-Extract.txt) · [Dated registration](../2015-2019/Food-Experiment-Falls-Rigidity-and-Pain.md#trial-registration-for-coconut-oil-and-epigallocatechin-gallate)
+
+## Ground black pepper as a discrimination stimulus
+
+Cormiea and Fischer enrolled 94 young adults and excluded two participants from the group analysis. Participants smelled varying mixtures of commercial ground black peppercorn and brown sugar. The experiment compares labeling conditions on odor discrimination in participants screened for olfactory dysfunction. It gives no clinical change after eating ground pepper. [Original methods and Figure 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC9889793/) · [Local article text](Source-Text/PMC9889793.txt)
+
+## Coconut oil, oatmeal and turkey on individual Parkinson symptom measures
+
+The December 2024 public MVP summary includes the same unadjusted baseline PD-only correlation heatmap at printed pages 63 and 64. Comparison of the tile centers to the signed legend puts coconut oil frequency against self-rated balance problems on the small inverse side. Oatmeal frequency against dyskinesia is very close to zero on the inverse side. The turkey column against general tremor is very close to zero on the positive side. A color reading supplies qualitative signs. The original report gives no numeric coefficient, per-pair sample size, confidence interval or adjusted estimate for those three cells. Oil refinement, baking, rest tremor and the exact cooked-oats item remain unresolved. The graph uses the oatmeal column and the survey documents a separate cooked-oats field. The two printed plots duplicate the same baseline analysis. [Investigator report, PDF page 64](https://img1.wsimg.com/blobby/go/14919326-8cbc-4a3e-88d4-0f609019e178/MVP%20Study%2010-Year%20Summary-c634e33.pdf#page=64) · [Local factual figure extract](Source-Text/2024-MVP-Food-Symptom-Tile-Extract.txt)
+
+## Coconut oil review and underlying cohort
+
+This review went online in October 2022. Its original discussion cites the earlier MVP composite analysis and discusses testimony from an uncontrolled lifestyle program that allowed coconut oil. The original Null report separates its two Parkinson testimonials from a multiple sclerosis testimonial and does not verify individual oil intake. The clinical citations add no independently measured balance result or refined oil contrast. [Primary survey](https://pubmed.ncbi.nlm.nih.gov/29081890/) · [Local review context receipt](Source-Text/2022-deepika-source-context.txt)

@@ -1,0 +1,21 @@
+# Almond oil comparators in delirium, balance and joint stiffness studies
+
+## Sweet almond oil massage after open-heart surgery
+
+Askarkafi and colleagues randomized 150 postoperative cardiac patients to routine care, head massage with sweet almond oil, or the same massage with rose oil in a sweet almond oil base. The 2020 article reports mean NEECHAM scores of 26.70, 27.22 and 27.62 on days 1–3 in the almond-only massage arm and 26.20, 26.94 and 27.18 with routine care. The three-arm daily comparisons gave p=.39, .66 and .06. These are total delirium scale scores. The paper does not report an almond effect on patient-level hallucinations, an attention subscore or an oral oil effect. [Primary paper, Tables 2 and 3](https://pmc.ncbi.nlm.nih.gov/articles/PMC7647695/)
+
+## Sweet almond oil patch during Thai balance exercise
+
+Areeudomwong and colleagues first published June 23, 2023. The 56-participant trial compared two groups of older adults at risk of falling. Both groups completed Thai boxing balance exercises. One group wore a sweet almond oil patch on clothing and the other wore a *Zanthoxylum limonella* essential-oil patch. The article reports improvement in multiple balance measures in both groups. Eyes-closed static sway favored the *Zanthoxylum* group for sway area (p=.04) and center-of-pressure velocity (p=.001) in the reported analysis. Fear-of-falling scores had no clear group-by-time interaction (p=.32). Actual fall frequency, almond ingestion and Parkinson outcomes were outside this comparison. The article identifies the registration as TCTR20211114002. [Local primary text](Source-Text/2023-Areeudomwong-Almond-Balance.txt) · [Publisher PDF, Table 2](https://www.e-agmr.org/upload/pdf/agmr-23-0008.pdf)
+
+## Whole-almond sleep trial registration
+
+CTRI/2023/02/049727 was registered February 15, 2023. The protocol planned to randomize 208 adults to 60 grams of whole raw almonds daily or calorie-matched millet or pulse snacks for six months. It prespecified polysomnographic REM latency and REM percentage and excluded parasomnias and major neurological disorders. It listed no dream enactment outcome. The report published in 2026 used five months, with 175 participants in the analysis. Both records describe the same study. [Local registry text](Source-Text/Trials/CTRI-2023-02-049727.txt) · [Clinical Trials Registry–India](https://ctri.nic.in/Clinicaltrials/showallp.php?mid1=80395&EncHid=&userName=Almond) · [2026 results](../2025-2029/Food-Experiment-Almond-Oil-Followup.md#whole-almonds-and-polysomnography-in-adults-with-poor-sleep)
+
+## Sweet almond oil massage and knee osteoarthritis stiffness
+
+Döner and colleagues first published May 23, 2024. Sixty postmenopausal participants received physiotherapy, physiotherapy with sweet almond oil massage, or physiotherapy with bergamot-oil massage. WOMAC stiffness fell within all three groups. The sweet almond massage group had a reported change interval of −1.04 to −0.36. The between-group comparison on stiffness was inconclusive (p=.707). The trial assessed knee stiffness in osteoarthritis rather than examination-rated Parkinson rigidity. Its oil was applied to skin. [University primary PDF, Tables 3 and 4](https://acikerisim.karatay.edu.tr/yayinaea/1s20s1550830724000934main_66cdc96e78566.pdf) · [Indexed primary report](https://pubmed.ncbi.nlm.nih.gov/38845299/)
+
+## Interim whole-almond sleep report at the 2024 ERS Congress
+
+Pinto, Desai and colleagues reported 64 completers in a 20-week study comparing daily raw almonds with an isocaloric snack. They recorded baseline and end-of-trial polysomnography, PSQI and Epworth scores. Mean PSQI in the almond group fell from 7.14 to 5.00, and the abstract describes improvements in subjective and objective measures. It does not give dream enactment, REM without atonia or arm-specific REM results. The shared investigators, exposure, comparator and timing are consistent with the later Desai trial. Retain one study family pending explicit registry linkage for the abstract. [Primary congress abstract PA859](https://publications.ersnet.org/lookup/doi/10.1183/13993003.congress-2024.PA859) · [Registration](#whole-almond-sleep-trial-registration) · [2026 result](../2025-2029/Food-Experiment-Almond-Oil-Followup.md#whole-almonds-and-polysomnography-in-adults-with-poor-sleep)

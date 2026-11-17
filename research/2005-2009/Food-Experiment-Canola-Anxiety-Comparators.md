@@ -1,0 +1,5 @@
+# Canola and rapeseed oil anxiety comparator studies
+
+## Rapeseed placebo and anxiety events in a depression trial
+
+Jazayeri and colleagues randomized 60 adults with major depression to three arms. The eight-week fluoxetine arm also received two rapeseed-oil and vitamin E placebo capsules daily. Table 4 reports anxiety in 9 of 16 analyzed participants in that arm, 1 of 16 with EPA alone and 3 of 16 with EPA plus fluoxetine (overall Fisher p = .009). Anxiety events were concentrated in the first weeks. Oil pressing was unreported. EPA and fluoxetine varied between groups, and there was no matched fluoxetine plus oil-free placebo arm. The events therefore cannot be attributed to the oil or applied directly to Parkinson anxiety severity. [original Methods and Table 4](https://www.vetproplus.com/_files/ugd/0de77a_fdd53ec3d2cb49b7b99982bace70c678.pdf) · [Local text](Source-Text/2008-Jazayeri-Rapeseed-Anxiety-Extract.txt)

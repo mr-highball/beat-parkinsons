@@ -1,0 +1,5 @@
+# Marjoram Attention
+
+## Brief marjoram aroma EEG before during and after inhalation
+
+Hanna Jung and Hyun Ju Choi grouped young men using baseline Pittsburgh sleep quality, with 11 good-sleep and 6 poor-sleep participants. They recorded EEG for three minutes before, during and after a marjoram scent exposure. Several theta-band measures increased, and right temporal beta power increased only in the good-sleep group. The study did not include a separate no-odor group or a behavioral attention test. The authors infer a sleep-promoting state from electrophysiology and subjective tension measures. This brief inhalation study did not measure nocturnal sleep or dream enactment and supplied no attention effect after eating fresh marjoram. [Original source](https://www.e-ajbc.org/upload/pdf/7.%20%EC%A0%95%ED%95%9C%EB%82%98%2C%EC%B5%9C%ED%98%84%EC%A3%BC.pdf) · [Local factual text](Source-Text/2013-Jung-Choi-Marjoram-Aroma-EEG.txt)

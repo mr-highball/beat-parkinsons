@@ -1,0 +1,5 @@
+# Article-level search of the 2010 allergy poster supplement
+
+The conference result PMC7159487 is *Poster Sessions*, Allergy 2010, volume 65 supplement 92, pages 209–682, DOI 10.1111/j.1398-9995.2010.02393.x. NCBI lists the body as PDF only. Crossref verifies publisher and date metadata. Attempts through the provider PDF routes, Europe PMC full-text XML and BioC did not return item-level full text. [Primary metadata](https://pmc.ncbi.nlm.nih.gov/articles/PMC7159487/?report=xml) · [Publisher DOI](https://doi.org/10.1111/j.1398-9995.2010.02393.x)
+
+A native Free Pascal Europe PMC pass completed 26 identifier-restricted expressions. The aggregate index matched “hazelnut oil”, “orthostatic hypotension” and “analgesia” individually. The remaining phrases, including “visual hallucinations”, “hallucinations”, “urinary urgency” and “pain severity”, returned zero for this identifier. The aggregate results give no within-poster relationship between the three terms. They do not establish an oil effect or a direction for the Parkinson claims. [Native query receipt](europe-pmc-conference-term-queries.tsv)

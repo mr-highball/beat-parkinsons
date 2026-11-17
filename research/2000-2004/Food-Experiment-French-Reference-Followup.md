@@ -1,0 +1,7 @@
+# Primary studies traced through French bibliographies, 2000–2004
+
+## Water swallowing and esophageal transit in the Warsaw reports
+
+The 2013 French nutrition review cites the 2003 Warsaw report by Potulska and colleagues. The 2003 primary abstract reports 18 people with Parkinson disease and 22 healthy controls. The mean maximum amount of water swallowed at once was 6.23 mL (SD 3.67) in Parkinson disease and above 20 mL in controls. Esophageal transit averaged 14.46 versus 7.45 seconds (p < .001). Instrumental impairment was reported in all 18 patients, and 13 reported difficulty. [2003 primary abstract](https://pubmed.ncbi.nlm.nih.gov/12853234/) · [French citation](https://doi.org/10.1016/j.nupar.2013.04.001)
+
+The same Warsaw group published a Polish-language paper in 2002 with 11 patients and nine controls. It reports a 4.5 mL mean water limit (SD 0.86) in Parkinson disease and 20 mL or more in controls. Eight of 11 patients reported difficulty. The studies share investigators and instruments but report different sample sizes and results. Participant overlap is unverified. The original abstracts verify water as the limit test. They do not give a baked-potato or other named solid-food comparison. [2002 primary abstract](https://pubmed.ncbi.nlm.nih.gov/12185801/) · [Polish institutional bibliography](https://ppm.edu.pl/resultList.seam?aq=mesh%3AMeSH-Q000150+MeSH-D010300&cid=1352916&lang=pl&pn=1&ps=100&r=publication&showRel=false&t=simple)

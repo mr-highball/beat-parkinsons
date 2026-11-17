@@ -1,0 +1,414 @@
+Title: Mining Relational Paths in Integrated Biomedical Data
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC3232205/
+Text object: https://pmc-oa-opendata.s3.amazonaws.com/PMC3232205.1/PMC3232205.1.txt
+Data source: U.S. National Library of Medicine, PMC Cloud Service
+PMCID: PMC3232205
+PMID: 22162991
+DOI: 10.1371/journal.pone.0027506
+Citation: PLoS One. 2011 Dec 6;6(12):e27506. doi: 10.1371/journal.pone.0027506
+License: CC BY (article license statement below)
+Version: 1
+Retracted in PMC metadata: no
+Text coverage: article text
+Format: NLM plain-text extraction. This provenance header was added.
+
+
+JOURNAL INFORMATION
+==============================
+NLM Title Abbreviation: PLoS One
+Journal ID: PLoS ONE
+NLM Journal ID: 101285081
+Journal ID: plos
+
+PLoS ONE
+
+EISSN: 1932-6203
+Publisher: PLOS
+
+ARTICLE INFORMATION
+==============================
+PMCID: PMC3232205
+PMID: 22162991
+DOI: 10.1371/journal.pone.0027506
+Article ID: PONE-D-11-10771
+Article version: 1
+Subjects: Research Article, Biology, Computational Biology, Biological Data Management, Genomics, Genome Databases, Proteomics, Proteomic Databases, Systems Biology, Chemistry, Chemical Biology, Computer Science, Algorithms, Computer Applications, Web-Based Applications, Information Technology, Databases, Mathematics, Applied Mathematics, Algorithms
+
+Mining Relational Paths in Integrated Biomedical Data
+
+Mining Relational Paths in Biomedical Data
+
+He Bing 1
+Tang Jie 3
+Ding Ying 1
+Wang Huijun 2
+Sun Yuyin 1
+Shin Jae Hong 2
+Chen Bin 2
+Moorthy Ganesh 4
+Qiu Judy 2
+Desai Pankaj 4
+Wild David J. 2 *
+1 School of Library and Information Science, Indiana University, Bloomington, Indiana, United States of America
+2 School of Computing and Informatics, Indiana University, Bloomington, Indiana, United States of America
+3 Department of Computer Science and Technology, Tsinghua University, Beijing, China
+4 School of Pharmacy, University of Cincinnati, Cincinnati, Ohio, United States of America
+Uddin Monica Editor
+Wayne State University, United States of America
+* E-mail: djwild@indiana.eduConceived and designed the experiments: DW BH JT YD YS JS BC JQ. Performed the experiments: BH HW YS JS BC. Analyzed the data: GM PD DW. Wrote the paper: BH DW YD.
+
+Publication date: 2011
+Electronic publication date: 2011 Dec 6
+Volume: 6
+Issue: 12
+Electronic Location ID: e27506
+Received 2011 Jun 14; Accepted 2011 Oct 18
+Copyright: He et al.
+Copyright year: 2011
+License: This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are properly credited.
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Page count: 14
+
+==============================
+Much life science and biology research requires an understanding of complex relationships between biological entities (genes, compounds, pathways, diseases, and so on). There is a wealth of data on such relationships in publicly available datasets and publications, but these sources are overlapped and distributed so that finding pertinent relational data is increasingly difficult. Whilst most public datasets have associated tools for searching, there is a lack of searching methods that can cross data sources and that in particular search not only based on the biological entities themselves but also on the relationships between them. In this paper, we demonstrate how graph-theoretic algorithms for mining relational paths can be used together with a previous integrative data resource we developed called Chem2Bio2RDF to extract new biological insights about the relationships between such entities. In particular, we use these methods to investigate the genetic basis of side-effects of thiazolinedione drugs, and in particular make a hypothesis for the recently discovered cardiac side-effects of Rosiglitazone (Avandia) and a prediction for Pioglitazone which is backed up by recent clinical studies.
+
+Introduction
+
+The emerging fields of chemogenomics [1] and systems chemical biology [2] require examination of critical associations between individual entities (genes, compounds, etc). Identification of semantic associations can utilize many of the methods of graph theory, such as finding shortest paths between entities, and along with Semantic Web methods forms the basis of our work here. However, the complex structure of the ontologies involved, the heterogeneity of the data sources, and sheer size of some of the datasets make this a non-trivial problem: one requires a highly efficient and scalable framework to identify semantic associations in the biomedical field. Additionally, there are usually many linked paths between two instances; thus providing contextual evaluation of those different linked paths is also a critical problem.
+
+The Semantic Web provides machine-understandable semantics for resources, establishing a common platform to integrate heterogeneous data sources, and tools for searching and data mining these sources in an integrative fashion. Semantic Web methods have been adopted in various areas of life sciences, healthcare, and drug discovery [3]–[4], through various projects including Chem2Bio2RDF (developed in our labs) [5], Bio2RDF [6], Linking Open Drug Data (LODD) project [7], and Linked Life Data, which convert data to a common syntax and specify the meaning of the data through formal, logic-based ontologies or schemas. In particular, discovering and ranking complex links and relationships between resources are critical steps toward knowledge discovery. In the biomedical domain, there is a vital need for cross-domain data mining. Recent technological and experimental advances in genomics, compound screening in particular have resulted in an explosion of public data of chemical compounds, drugs, genomes, biological molecules, and in scholarly publications that pertain to these entities. Consequently, new informatics-based integrative domains have emerged, including cheminformatics [8], chemogenomics [1] and systems chemical biology [2]. Cheminformatics pertains to the large-scale analysis of chemical structures and their relationships to biological entities; chemogenomics to the relationships between chemical compounds and genes or protein targets, and systems chemical biology to the system-wide application of these techniques (where the system is a cell or organism as a whole).
+
+In this paper, we first describe an algorithm for tackling this: a scalable path finding algorithm that works on RDF (the basis on describing relationships in the Semantic Web) and an algorithm based on LDA [9] which we call Bio-LDA, that extracts topics from large quantities of biomedical literature and gives the probabilistic distribution of biological terms (e.g., compounds, diseases, and genes) among different topics, so as to provide contextual information for those identified semantic associations. Through the integration of the path finding algorithm and a Bio-LDA algorithm we have developed for ranking paths using literature associations [10] with our prior work to develop an integrated RDF systems chemical biology resource [5], we demonstrate how important semantic and literature-contextualized paths can be identified and evaluated. We discuss this process using two biomedical case studies.
+
+In the context of Semantic Web as a whole, the problem of discovering and reasoning complex relationships between resources has been studied by many researchers, most of which studied a specific subset of such relationships, or relationships that bear certain properties. Anyanwu et al. [11]–[13] originally formalized an important subset of complex relationships called Semantic Associations that are mainly based on undirected or directed paths. Anyanwu et al. [11], [13] define three types of complex relationships based on Property Sequence (PS) that is a finite sequence of properties defined in RDFS: ρ – Path association capturing the connectivity feature between two resource; ρ – Join association indicating that resources r1 and r2 relate to the same resource; ρ – ISO association identifying the similarity between r1 and r2. A following-up work [13] formalized the definition of semantic associations and presented outlines of two implementations of ρ – operator. The first approach is to build a separate ρ – query processing layer from a storage system. The ρ – query processing layer maintains an index called PathGuide that keeps the path information among classes extracted from schema. However, this is not very scalable when a large index size and number of queries for validation is needed. The second approach is to use graph algorithms on memory-resident RDF graphs. However, the RDF graphs are usually too large to fit into memory. Sheth et al. [14] combined novel academic research and commercialized semantic web technology to provide capabilities of semantic association identification. Faloutsos et al. proposed an algorithm to identify an informative subgraph between two nodes [15]. Mulla et al. proposed three heuristics to calculate weights of edges and assigned weights to edges of the RDF graph [16] and applied the algorithm proposed in [15]. Perry et al. introduced a system for computing Semantic Associations over distributed RDF data stores in a peer-to-peer setting [17]. For semantic association finding in the biomedical domain, Dong et al. described a prototype system for mining the semantic associations in ontology structure and search for instances that belong to the nodes and edges along the identified path through SPARQL [18].
+
+Another approach to the discovery of semantic association is to use a query language that supports semantic association queries. Kochut and Janik [19] present SPARQLeR, a novel extension of the SPARQL query language which adds the support for semantic path queries. The proposed extension fits seamlessly within the overall syntax and semantics of SPARQL and allows easy and natural formulation of queries involving a wide variety of regular path patterns in RDF graphs. SPARQLeR's path patterns can capture many low-level details of the queried associations. Other similar studies include SPARQ2L, PSPARQL (path RDF query language) [20].
+
+In the field of topic identification and text mining, since Blei et al. [9] introduced the LDA model, various extended LDA models have been used in automatic topic extraction from text corpora. LDA and its extended models have been broadly used in many areas including the biomedical domain. Zheng et al. [21] applied the classic LDA model to protein-related MEDLINE titles and abstracts and extracted 300 major topics. They further mapped those topics to Gene Ontology (GO) terms. Blei et al. [22] examined 5,225 free-text items in the Caenorhabditis Genetic Center (CGC) Bibliography using the classic LDA model. They found that the LDA model had better predictive performance than two standard models (unigram and mixture of unigrams) trained using the same data. Bundschus et al. [23] presented a Topic-Concept model, which extends the basic LDA framework to reflect the generative process of indexing a PubMed abstract with terminological concepts from an ontology.
+
+In this paper, we propose a scalable path finding algorithm that can not only detect paths between instances belonging to different classes but also between instances belonging to the same class. In addition, we complement the algorithm with a Bio-LDA model which extracts contextual information on topics of bio-terms, which helps to evaluate and interpret the semantic associations. This paper is organized as follows: Section 2 describes the materials and methods; Section 3 presents the results, including two case studies; section 4 presents a discussion of the results.
+
+Materials and Methods
+
+2.1 Datasets
+
+The work reported in this paper uses the Chem2Bio2RDF resource [5]. Chem2Bio2RDF covers 25 biomedical datasets, grouped into 6 domains, namely chemical (PubChem Compound, ChEBI, PDB Ligand), chemogenomics (KEGG Ligand, CTD Chemical, BindingDB, MATADOR, PubChem BioAssay, QSAR, TTD, DrugBank, ChEMBL, Binding MOAD, PDSP, PharmGKB), biological (UNIPROT, HGNC, PDB, GI), systems (KEGG Pathway, Reactome, PPI, DIP), phenotype (OMIM, Diseasome, SIDER, CTD diseases) and literature (MEDLINE/PubMed). At the time of writing, the numbers of triples (i.e. relationships encoded) is about 78 million. Provenance information has been added and the data has been linked to LODD and Bio2RDF [6] using owl:sameAs constructs.
+
+Additionally, biological terms that are found in these datasets (compounds, drugs, genes, diseases and side-effects; collectively we call these BioTerms) are identified in scholarly journal abstracts in PubMed, and these terms are used to link Publications (as identified by a PubMed ID) with entries in Chem2Bio2RDF datasets. The BioTerm PubMed-dataset relationships are converted to RDF triples and integrated with Chem2Bio2RDF. Table 1 gives some statistics on the extracted BioTerms. The data schema used in our system is designed based on the category of bio-terms (compound, drug, gene, disease, side effect, pathway) and DTD (Document Type Definition) provided by National Library of Medicine (NLM). Bio-term dictionaries are generated from the following data sources listed in Chem2Bio2RDF: the compound dictionary is generated from PubChem Synonym with the PubChem Compound identifier (CID); the drug dictionary is generated from DrugBank and used DBID as the identifier; the gene dictionary is generated from the HGNC and used UniprotID as the identifier; the disease dictionary is generated from the CTD (the comparative toxicogenomics database) and used MeshID as the identifier; the side effect dictionary is generated from the Sider and used UMLSID as the identifier; the pathway dictionary is generated from the KEGG pathway and used KeggID as the identifier. We parsed the XML file and extracted the terms based on the pre-generated dictionaries.
+
+10.1371/journal.pone.0027506.t001 Table 1 Statistics of the bio-terms extraction.
+
+Bio-Terms	# of unique terms	# of term-citation pairs	# of unique citations	
+Compound	56,383	11,775,891	5,856,084	
+Drug	2,820	5,624,529	3,427,067	
+Gene	13,022	5,252,844	3,735,517	
+Disease	3,848	12,612,636	7,066,084	
+Side Effect	1,363	10,489,676	6,310,741	
+Pathway	180	916,754	838,090	
+
+2.2 Algorithm for Pathfinding in RDF data
+
+We have developed a scalable and efficient path finding algorithm that is designed to find all of the paths between any two entities in the RDF network. In the area of network analysis, the task of association search can be formalized as a task of path search in the graph. Algorithms for shortest path [24]–[25], efficient shortest paths in sparse networks [26], top-k shortest paths [27]–[28], and near-shortest paths [29] have been proposed. See [30]–[32] for overviews. See also [33]. The algorithms for shortest path have been applied to, for instance, find the best routines of vehicles or messages, find optimal flows in networks (treated for example in [34]) and traffic-light networks [35], and find the k most likely state sequences from the HMM graph given the observed acoustic data [36].
+
+We are given a semantic network (e.g., Chem2Bio2RDF), which can be represented as a graph G = (V, E), where v∈V represents an entity in the network; erij∈E represents a relationship with property r (e.g., drug interaction) between entities vi and vj; the relationship can be directional or bi-directional; the goal of association is to find relationship sequences from vi to vj. The association here is defined as: Given a network G = (V, E), the association α(vi, vj) is a sequence of relationships {eri 1, er 12, …, erlj} satisfying erm (m+1)∈E for m = 1, 2, …, l−1, where vi and vj are the source entity and the target entity, respectively.
+
+We assume that no entity will appear on a given association more than one time. We define the process of association search from one entity to the other as: Given an association query (vi, vj), where vi denotes the source entity and vj denotes the target entity. Association search is to find possible associations {αk(vi, vj)} from vi to vj.
+
+In this paper, we formalize the association search problem as that of near-shortest associations. We use a two-stage approach for finding the near-shortest associations. The input is an association query (vi, vj). The objective is to find list of associations A(vi, vj) = {αk(vi, vj)}.
+
+By combining the initialization step and the output step, our approach consists of four steps:
+
+Initialization. We formalize the network as a directed graph. We view each entity as a node and each relationship as an edge in the directed graph. We create an index for the directed graph and load the index into memory for the following steps.
+
+Shortest association finding. It aims at finding the shortest associations from all entities v∈V\vj in the network to the target entity vj (including the shortest association from vi to vj with length Lmin). In a graph, the shortest path between two nodes can be found using the state-of-the-art algorithms, for example, Dijkstra algorithm. However, we are dealing with a large-scale network, where the conventional Dijkstra algorithm results in a high time complexity of O(n 2). We propose using a heap-based Dijkstra algorithm to quickly find the shortest associations that can achieve a complexity of O(nlogn).
+
+Near-shortest associations finding. Based on the length of shortest association Lmin found in Step 2 and a pre-defined parameter β, the algorithm requires enumeration of all associations that are less than (1+β)Lmin by a depth-first search. We constrain the length of an association to be less than a pre-defined threshold. This length restriction can reduce the computational cost.
+
+The correctness of the approach follows from the obvious dynamic programming interpretation of Step 2 and Step 3. Figure 1 summarizes the proposed algorithm. In the rest of the section, we will explain the two main stages (Step 2 and Step 3).
+
+10.1371/journal.pone.0027506.g001 Figure 1 Shortest path algorithm.
+
+The pseudo code for the shortest path finding algorithm.
+
+2.2.1 Algorithm for Shortest Association Finding
+
+In the second step of the approach, we try to find the shortest associations from all entities (v∈V\vj) to the target entity vj. The step is necessary a_s all of the found shortest associations d′(vi) will be used to guide the search process in Step 3. Dijkstra is the traditional approach for the shortest path search in a graph; however, the conventional Dijkstra algorithm has a complexity of O(n 2), making it inefficient for a large graph. We use a heap-based Dijkstra algorithm (heap-Dijkstra) which has a complexity of O(nlog(n)). The heap-Dijkstra is summarized in Figure 2.
+
+10.1371/journal.pone.0027506.g002 Figure 2 Heap-Dijkstra algorithm.
+
+In the heap-Dijkstra algorithm, we firstly create a minimal heap. Then, in each iteration of the algorithm, we use the heap to find the minimal value. The function is in heap() in line 14 is to determine whether the node u has been inserted into the heap or not. The operations “moveUp” and “insert” are respectively used to resort the heap and to insert a node into the heap. This focuses on finding the shortest path from each node to a specified target node. This is different from the traditional use of the Dijkstra algorithm where the objective is usually to find the shortest path from a specified source node to each of the other nodes. We conducted complexity analysis of the algorithm. As all nodes may be inserted into heap, the complexity of the loop from line 5 is O(n). In the loop, the algorithm requires enumerating all edges E(vmin) pointing to the selected node vmin. Usually, we have |E(vmin)|≪|V|, where |E(vmin)| is the number of edges pointing to the node vmin and |V| is the number of nodes in graph G. In our research network, the average number of edges pointing to a node is about 5. Hence, we view the complexity of the loop in line 9 as O(1). The running time of the operation “moveUp” in line 15 is log(n), necessitating the operation “insert” in line 17. Therefore, the final complexity of the algorithm is O(nlog(n)).
+
+More intuitively, search processes starts at the starting node and ending note at the same time. The process systematically explores all the neighboring nodes in sequence; then for each of those nearest neighboring nodes, it visits their unexplored neighbor nodes and records/updates all those stretching-out paths. The two processes end when they first explored the same node in the graph. Thus the shortest path is identified by combining the recorded path between the staring node and the coincidental node and between the coincidental node and the ending node. An example showing how the algorithm runs on Chem2Bio2RDF data are shown in Figure 3.
+
+10.1371/journal.pone.0027506.g003 Figure 3 An intuitive example of the path finding algorithm.
+
+In the above example, we want to find the path between node 1 and node 26 (Figure 3-a):
+
+Breadth First Search (BFS) explores the nearest neighbor of node 1 and it reaches node 3, 4, 6, 7, 10 (Figure 3-b);
+
+Meanwhile, another BFS explores the nearest neighbor of node 26 similarly and it reaches node 19, 21, 23, 24, 25 (Figure 3-c);
+
+Explore all the nearest neighbors of node 3, 4, 6, 7, 10, and it reaches 2, 5, 8, 9, 11, 14, 18 (Figure 3-d);
+
+Meanwhile, explore all the nearest neighbors of node 19, 21, 22, 23, 24, 25, and it reaches 15, 16, 18, 22 (Figure 3-e);
+
+One node (i.e., node 18) first gets visited by both BFS processes; algorithm ends. The shortest path between node 1 and node 26 is 1–10–18–21–26 (marked in red in Figure 3-f).
+
+2.2.2 Near-Shortest Association Finding
+
+In the previous step, we obtain the shortest association from each source entity to the target entity vj, including the shortest association with the length Lmin from the source entity vi to the target entity vj. In this step, based on the depth-first search, we try to find the near-shortest associations. The algorithm runs a straightforward vi-vj association enumeration algorithm (depth-first search). The depth-first search itself has an exponential complexity. We apply several strategies to reduce the computational cost. First we use an indicator c(v) to avoid loop in the association. Next we utilize the shortest associations d′(vi) found in Step 2 to prune the search space. Specifically, we extend an vi-s association to u along the relationship e = (s, u) if and only if d(s)+1+d′(u)<(1+β)Lmin, where d(s) is the length the current vi-s association and d′(u) is the shortest association from the entity u to the target entity vj (cf. line 11 in Figure 1).
+
+Whenever an association α(vi, vj) is found using the above method, we calculate the length of the association d(α(vi, vj)) and add the association with its length to the association set A. The search terminates when no more association can be found. Then we rank all α(vi, vj)∈A with the lowest d(α(vi, vj)) on the top. Finally, we return the ranked associations. It is not easy to accurately analyze the complexity of the algorithm in this step. Depth-first search itself has an exponential complexity. However, in our algorithm we utilized several strategies to heuristically guide the search. The number of search steps is greatly reduced. An empirical analysis of the experimental results on the researcher network (with half million nodes and 2 millions edges) shows that the average search steps in this sub-process is 14,418 and the average time cost in this step is 0.34s which takes only 16.49% of the total time cost (about 3 seconds on average).
+
+2.3 Bio-LDA
+
+Natural language processing (NLP) has been widely used to mine literatures in biomedical domain [37] , [38] . Compared to traditional NLP techniques, which bases on linguistic rules of the documents, modern probabilistic models focus on the topical features of the documents. For example, LDA, a hierarchical Bayesian model, and its assorted variations, can [39] , [40] capture groups of words that tend to be used to discuss the same topics. Applications of LDA in the biomedical domain have already produced promising results [22] , [41], [42] . However, few of those applications take bio-terms (including genes, compounds, diseases, etc.) into a customized LDA model as the hidden variables. The Bio-LDA model used in this paper not only uncover the topical feature of common words, but more importantly, also the bio-terms. The similarity of bio-terms are then measured using KL-divergence, which, compared to the co-occurrence-based methods, is more helpful for identifying hidden associations [43] , [44] .
+
+The Bio-LDA model extracts latent topics of bio-terms from biomedical literature, and which further provides semantically contextual evaluation for those associations identified by the path finding algorithm.
+
+Our Bio-LDA model extends the ACT model proposed by [45] as shown in Figure 4. Based on the results of Bio-LDA, we calculate entropy and KL divergence for any given two RDF nodes in the RDF graph to identity their semantic association.
+
+10.1371/journal.pone.0027506.g004 Figure 4 Graphical representation of the Bio-LDA.
+
+are the Dirichlet priors for the distribution of bio-terms over topics, topic over words, and journals over topics. B is the total set of bio-terms. T denotes the total set of topics. D is the overall set of documents. Nd is the set of words in a given document d.
+
+The journal information is viewed as a stamp associated with each word in a paper. Intuitively, the co-occurrence of bio-terms in a document determines topics in this document and each topic then generates the words. which are the Dirichlet priors for the distribution of bio-terms over topics, topic over words, and journals over topics. B is the total set of bio-terms. T denotes the total set of topics. D is the overall set of documents. Nd is the set of words in a given document d.
+
+The generative process can be summarized as follows:
+
+For each topic z, draw φz and ψz respectively from Dirichlet priors βz and μz;
+
+For each word in paper d:
+
+draw a bio-term from b d uniformly;
+
+draw a topic from a multinomial distribution
+
+specific to bio-term , where is generated from a Dirichlet prior ;
+
+draw a word from multinomial ;
+
+draw a journal stamp from multinomial .
+
+In our model, Gibbs sampling is chosen for inference. As for the hyperparameters α, β, and μ, we take a fixed value (i.e., α = 50 = T, β = 0.01, and μ = 0.1). In the Gibbs sampling procedure, we first estimate the posterior distribution on just x and z and then use the results to infer θ,φ, and ψ. The posterior probability is calculated by the following equation:(1)
+
+where the superscript −di denotes a quantity, excluding the current instance (e.g., the di-th word token in the d-th paper). After Gibbs sampling, the probability of a word given a topic φ, the probability of a journal given a topic ψ, and the probability of a topic given a bio-term θ can be estimated as follows:(2)
+
+(3)
+
+(4)
+
+Bio-term Entropy over Topics
+
+In information theory, entropy is a measure of the uncertainty associated with a random variable. It is also a measure of the average information content one is missing when one does not know the value of random variable. In our Bio-LDA model, we can compute the bio-term entropies over topics as shown in equation 5, which indicates that bio-terms tend to address a single topic or cover multiple topics. The higher the entropy is, the more diverse the bio-term is over topics.(5)
+
+Semantic Association
+
+Kullback-Leibler divergence (KL divergence) is a non-symmetric measure of the difference between two probability distributions. In our Bio-LDA model, we used the KL divergence as the non-symmetric distance measure for two bio-terms over topics, as shown in equation 6.(6)
+
+The symmetric distance measure of two bio-terms over topics is the sum of two non-symmetric distances, as shown in equation 7.(7)
+
+sKL divergence measures the similarity between two probability distributions. In our Bio-LDA model, each bio-term is represented by a probability distribution which designates the strength of the semantic association between the bio-terms and a set of topics (or research issues). Thus sKL divergence is used to calculate the similarity between a pair of bio-terms by means of measuring the similarity between the two probability distributions associated with each bio-term of the pair. The smaller the sKL score is, the more semantically relevant the two bio-terms are in terms of their involvements with a set of research issues. This association score can combined with the pre-knowledge of bio-terms (i.e. Chem2Bio2Rdf) for novel knowledge discovery. The score of a given directed semantic association is simply given by the accumulated distance between bio-terms on a path, as shown in equation 8. The score of an undirected path is given by the accumulated symmetric distance between bio-terms, as shown in equation 9. In this study, we do not evaluate the direction of the associations, focusing only on the association score calculated by the symmetric distances. The association search in Bio-LDA model is finding the associations with the smallest score.
+
+Results
+
+We implemented the path finding algorithm described in section 2.2 using C++ and created a tool called associationsearch which will find paths of given length between any two items in our Chem2bio2rdf dataset. These items can be compounds, drugs, genes, pathways, diseases, or side-effects. These paths are then ranked (i.e., evaluated) by the Bio-LDA model described in section 2.3, and the user can select a maximum number of paths to return. The paths are then visualized using a flash interface within a browser.
+
+We present two case studies that apply this method to address biological research problems.
+
+3.1 Finding gene associations between thiazolinediones and cardiac side-effects
+
+Insulin-sensitizing drugs from the thiozalinedione class have revolutionized the treatment of insulin-dependent diabetes yet have been beset by rare but serious side effects. The drugs Troglitazone, Rosiglitazone and Pioglitazone are thought to work by binding to the PPAR-gamma receptor, one of several nuclear receptors involved in fatty acid and glucose uptake. However, these receptors are also known to be involved in much larger scale regulation and metabolic processes including metabolism of xenobiotics (foreign substances in the body). Interference of some of these processes may be responsible for the side effects that have caused these drugs to “fall from grace”: Troglitazone was withdrawn from the U.S. market in 2000 due to adverse liver side effects; Rosiglitazone was until recently believed to be safe as it does not appear to have the hepatic side effects of Trogitazone, however it was restricted in the U.S. in 2011 and removed from the European market entirely in September 2010 due to increased risk of myocardial infarction in patients. Pioglitazone is currently under review.
+
+We used our algorithms to examine ranked associations between Rosiglitazone and myocardial infarction, and Troglitazone and myocardial infarction, to see if we could identify gene associations that may account for the cardiac effects of Rosiglitazone. The association graphs for these two drugs are shown in Fig. 5. The red-outlined box is the starting node and ending node, that is, the bio-terms associations that we are searching for. Yellow-outlined boxes are the intermediate bio-terms. Other boxes indicate the types of the connection between the two intermediate bio-terms that it is connected to, which gives a hint on which database this connection is originated from. Note that Fig. 5 and Fig. 6 are screenshots of the visualization provided by our application in which users can interactively moving the nodes and clicking the nodes to obtain more information about the node. The graphs show that there is a strong ranked association between Rosiglitazone and myocardial infarction which is not present for Troglitazone, particularly involving four genes: SAA2 (Serum Amyloid A 2), APOE (Apolipoprotein E), ADIPOQ (Adiponectin) and CYP2C8 (Cytochrome P450 2C8). Examination of these genes indicates that all are involved in cardiovascular lipid metabolic processes. In particular, activation of ADIPOQ results in increased HDL (“good” cholesterol) and activation of APOE results in increased LDL levels (“bad” cholesterol), a potential mechanism that would account for Rosiglitazone's cardiac side effects as has recently been reported in the literature [46]. The next obvious question is whether Pioglitazone interacts with these genes. Association graphs between Pioglitazone and myocardial infarction (and Pioglitazone and Rosiglitazone) show strong associations between Pioglitazone and ADIPOQ, but not with APOE, indicating that Pioglitazone should increase HDLs but not LDLs. This is confirmed clinically by recent literature [45].
+
+10.1371/journal.pone.0027506.g005 Figure 5 Ranked association graphs between myocardial infarction and Rosiglitazone (top) or Troglitazone (bottom) identify SAA2, APOE, ADIPOQ, and CYP2C8 genes as significant for Rosiglitazone.
+
+The red-outlined box is the starting node and ending node, that is, the bio-terms associations that we are searching for. Yellow-outlined boxes are the intermediate bio-terms. Other boxes indicate the types of the connection between the two intermediate bio-terms that it is connected to, which gives a hint on which database this connection is originated from.
+
+10.1371/journal.pone.0027506.g006 Figure 6 Ranked association graphs between Ibuprofen and Parkinson Disease (top) as well as Aspirin and Parkinson Disease.
+
+The red-outlined box is the starting node and ending node, that is, the bio-terms associations that we are searching for. Yellow-outlined boxes are the intermediate bio-terms. Other boxes indicate the types of the connection between the two intermediate bio-terms that it is connected to, which gives a hint on which database this connection is originated from.
+
+We further evaluated these relationships by directly examining the ranked paths from the BioLDA algorithm. Table 2 and 3 shows the symmetric KL divergence for semantic associations for the two pairs of bio-terms.
+
+10.1371/journal.pone.0027506.t002 Table 2 Symmetric KL divergence for paths between Troglitazone and Myocardial infarction.
+
+Path	sKL divergence	
+Troglitazone∼SLC29A1∼Dipyridamole∼Myocardial-infarction	16.151	
+Troglitazone∼Edema∼Iodixanol∼Myocardial-infarction	23.105	
+Troglitazone∼Edema∼Dipyridamole∼Myocardial-infarction	24.086	
+Troglitazone∼Congestive-heart-failure∼Bisoprolol∼Myocardial-infarction	24.151	
+Troglitazone∼Edema∼Bisoprolol∼Myocardial-infarction	24.744	
+Troglitazone∼PPARG∼Rosiglitazone∼Myocardial-infarction	25.454	
+Troglitazone∼Diabetes-Mellitus,-Type∼Benazepril∼Myocardial-infarction	25.732	
+Troglitazone∼Syncope∼Dipyridamole∼Myocardial-infarction	26.176	
+Troglitazone∼Hyperglycemia∼Rosiglitazone∼Myocardial-infarction	26.835	
+Troglitazone∼Syncope∼Bisoprolol∼Myocardial-infarction	26.953	
+Troglitazone∼Hyperglycemia∼Pioglitazone∼Myocardial-infarction	27.491	
+Troglitazone∼PPARG∼Pioglitazone∼Myocardial-infarction	28.126	
+Troglitazone∼Edema∼Nicardipine∼Myocardial-infarction	28.175	
+Troglitazone∼Edema∼Betaxolol∼Myocardial-infarction	28.564	
+Troglitazone∼Weight-gain∼Bisoprolol∼Myocardial-infarction	28.804	
+Troglitazone∼Edema∼Fosinopril∼Myocardial-infarction	29.052	
+Troglitazone∼Edema∼Amoxapine∼Myocardial-infarction	29.147	
+Troglitazone∼Edema∼Oxaprozin∼Myocardial-infarction	29.222	
+Troglitazone∼Malaise∼Betaxolol∼Myocardial-infarction	29.315	
+Troglitazone∼Edema∼Cilazapril∼Myocardial-infarction	29.361	
+
+10.1371/journal.pone.0027506.t003 Table 3 Symmetric KL divergence for paths of Rosiglitazone and Myocardial infarction.
+
+Path	sKL divergence	
+Rosiglitazone∼Myocardial-infarction	17.231	
+Rosiglitazone∼Congestive-heart-failure∼Bisoprolol∼Myocardial-infarction	21.085	
+Rosiglitazone∼Heart-failure∼Bisoprolol∼Myocardial-infarction	22.067	
+Rosiglitazone∼Hyperglycemia∼Pioglitazone∼Myocardial-infarction	22.411	
+Rosiglitazone∼Hyperglycemia∼Cilazapril∼Myocardial-infarction	24.814	
+Rosiglitazone∼Hyperglycemia∼Betaxolol∼Myocardial-infarction	24.892	
+Rosiglitazone∼Hypoglycemia∼Bisoprolol∼Myocardial-infarction	25.269	
+Rosiglitazone∼Hyperglycemia∼Oxaprozin∼Myocardial-infarction	25.494	
+Rosiglitazone∼Hyperglycemia∼Diazoxide∼Myocardial-infarction	25.767	
+Rosiglitazone∼Bilirubinemia∼Eletriptan∼Myocardial-infarction	26.273	
+Rosiglitazone∼Bilirubinemia∼Dolasetron∼Myocardial-infarction	26.439	
+Rosiglitazone∼Diabetes-Mellitus,-Type∼Benazepril∼Myocardial-infarction	26.634	
+Rosiglitazone∼Hyperglycemia∼Bosentan∼Myocardial-infarction	26.683	
+Rosiglitazone∼Hyperglycemia∼Candesartan∼Myocardial-infarction	26.688	
+Rosiglitazone∼Hyperglycemia∼Quinapril∼Myocardial-infarction	27.381	
+Rosiglitazone∼Diabetes-Mellitus∼Pioglitazone∼Myocardial-infarction	27.821	
+Rosiglitazone∼Hypoglycemia∼Betaxolol∼Myocardial-infarction	27.832	
+Rosiglitazone∼Hypoglycemia∼Pioglitazone∼Myocardial-infarction	28.316	
+Rosiglitazone∼Dizziness∼Bisoprolol∼Myocardial-infarction	28.681	
+Rosiglitazone∼Nasopharyngitis∼Bosentan∼Myocardial-infarction	28.699	
+
+3.2 Associations between non-steroidal anti-inflammatory drugs (NSAIDs), inflammation and Parkinson Disease
+
+Recent research [47] has shown that use of Ibuprofen, a non-steroidal anti-inflammatory drug, is clinically associated with reduced risk of Parkinson Disease. This effect is not found with other painkillers, such as Aspirin and Acetaminophen (Paracetamol). It is speculated that this effect may be due to the anti-inflammatory effects of Ibuprofen on neuroinflammation. We performed searches to (i) identify paths containing genes linking Ibuprofen, inflammation and Parkinson Disease (through three searches – Ibuprofen-Parkinson Disease, Ibuprofen-inflammation and inflammation-Parkinson Disease) and (ii) identify genes associated with Ibuprofen but not with the other NSAIDS (in case this could be used to account for the differential activity with Aspirin, etc). Our searching identified 70 genes that are associated with Ibuprofen, inflammation and Parkinson Disease, 9 of which are known to be linked to inflammation: IL1A, IL1B, IL1RN, IL6, LTA, NFKB1, NFKBIA, PTGS2 and TNF.
+
+Of particular note, these searches identified a clear direct connection between the primary target of Ibuprofen (PTGS2, or Cox2 – Ibuprofen is a nonspecific inhibitor that also targets Cox1), and Parkinson Disease. This link maps to experimental data in the CTD dataset. The Cox2 link is supported by a variety of recent research [48]–[52] which indicates that neuroinflammation is implicated in Parkinson's Disease, and that the Cox2 gene is implicated in this inflammation process. Indeed, selective and nonselective Cox2 inhibitors have been examined for their effect in this inflammatory process [52]. Selective Cox2 inhibitors may be of particular interest.
+
+In our second search, we found a single gene, AMBP, which is differentially associated with Ibuprofen (and not with other NSAIDS), and which is associated with Parkinson disease (but not inflammation), based on a 1996 study which showed the potential of AMBP as a biomarker for the disease [53]. Several of the results searches are shown in Figure 6. The red-outlined box is the starting node and ending node, that is, the bio-terms associations that we are searching for. Yellow-outlined boxes are the intermediate bio-terms. Other boxes indicate the types of the connection between the two intermediate bio-terms that it is connected to, which gives a hint on which database this connection is originated from.
+
+We further evaluated these relationships by directly examining the ranked paths from the BioLDA algorithm. Table 4 and 5 shows the symmetric KL divergence for semantic associations for the two pairs of bio-terms. The smaller the KL divergence is, the more thematically similar the bioterms along the path are in the literature. In Table 4, the path Ibuprofen-PTGS2-PD ranks high. Teismann et al. [54] studied the relationship between COX-2(PTGS2) and Parkinson Disease by MPTP (1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine) model. MPTP induces Parkinson Disease and COX-2. The authors claimed that COX-2 inhibitors may be therapies for Parkinson Disease if the inhibitors have ability to penetrate the blood brain barrier. Many paths that connect Ibuprofen and Parkinson Disease through Hemorrhage and other genes have shown small KL divergence. Several studies have shown that Ibuprofen is helpful in preventing or decreasing susceptibility to different types of hemorrhage [55]–[58].
+
+10.1371/journal.pone.0027506.t004 Table 4 Symmetric KL divergence for paths between Ibuprofen and Parkinson Disease.
+
+Paths	KL	
+Ibuprofen PharmGKB CYP2C9 HPRD POR CTD Parkinson-Disease	28.077	
+Ibuprofen Drugbank PTGS2 CTD-HUGE_Genopedia-HUGE_Phenopedia Parkinson-Disease	33.049	
+Ibuprofen PharmGKB Hemorrhage HUGE_Phenopedia HSPA1L HUGE_Genopedia-HUGE_Phenopedia Parkinson-Disease	36.573	
+Ibuprofen PharmGKB CYP2C9 PharmGKB Haloperidol PharmGKB Parkinson-Disease	37.339	
+Ibuprofen PharmGKB Hemorrhage CTD GABRR1 CTD Parkinson-Disease	37.791	
+Ibuprofen PharmGKB Hemorrhage HUGE_Phenopedia HSPA4 CTD Parkinson-Disease	37.842	
+Ibuprofen PharmGKB Hemorrhage CTD HRH1 HUGE_Genopedia-HUGE_Phenopedia Parkinson-Disease	38.153	
+Ibuprofen PharmGKB Hemorrhage CTD RARG CTD Parkinson-Disease	38.558	
+Ibuprofen PharmGKB Hemorrhage CTD MAP2K2 CTD Parkinson-Disease	38.858	
+Ibuprofen PharmGKB Hemorrhage CTD HSPA5 CTD-HUGE_Genopedia-HUGE_Phenopedia Parkinson-Disease	39.055	
+Ibuprofen PharmGKB Hemorrhage HUGE_Phenopedia MMP8 CTD Parkinson-Disease	39.668	
+Ibuprofen PharmGKB Hemorrhage HUGE_Phenopedia SCNN1A CTD Parkinson-Disease	39.783	
+Ibuprofen PharmGKB Hemorrhage CTD GOT1 CTD Parkinson-Disease	39.896	
+Ibuprofen PharmGKB Hemorrhage HUGE_Phenopedia HSPA1A CTD-HUGE_Genopedia-HUGE_Phenopedia Parkinson-Disease	40.331	
+Ibuprofen PharmGKB Hemorrhage CTD HSP90B1 CTD Parkinson-Disease	40.886	
+Ibuprofen PharmGKB Hemorrhage HUGE_Phenopedia IL1A HUGE_Genopedia-HUGE_Phenopedia Parkinson-Disease	41.056	
+Ibuprofen PharmGKB Hemorrhage HUGE_Phenopedia MMP12 CTD Parkinson-Disease	41.127	
+Ibuprofen PharmGKB Hemorrhage HUGE_Genopedia-HUGE_Phenopedia SELP CTD Parkinson-Disease	41.278	
+Ibuprofen PharmGKB Hemorrhage CTD RARB CTD Parkinson-Disease	41.455	
+Ibuprofen PharmGKB Hemorrhage HUGE_Phenopedia SCGB1A1 CTD Parkinson-Disease	41.47	
+
+10.1371/journal.pone.0027506.t005 Table 5 Symmetric KL divergence for paths between Aspirin and Parkinson Disease.
+
+Paths	KL	
+Aspirin PharmGKB Colorectal-Neoplasms CTD-HUGE_Genopedia-HUGE_Phenopedia CHEK1 CTD Parkinson-Disease	25.682	
+Aspirin PharmGKB UGT1A6 CTD Parkinson-Disease	26.031	
+Aspirin PharmGKB Colorectal-Neoplasms CTD-HUGE_Genopedia-HUGE_Phenopedia CASP9 CTD Parkinson-Disease	26.771	
+Aspirin PharmGKB Colorectal-Neoplasms CTD IKBKB CTD Parkinson-Disease	27.084	
+Aspirin PharmGKB Colorectal-Neoplasms CTD-HUGE_Genopedia-HUGE_Phenopedia NFKB1 CTD-HUGE_Genopedia-HUGE_Phenopedia Parkinson-Disease	27.437	
+Aspirin PharmGKB LTC4S HPRD MGST1 CTD Parkinson-Disease	27.678	
+Aspirin PharmGKB Colorectal-Neoplasms CTD DDIT3 CTD Parkinson-Disease	27.919	
+Aspirin PharmGKB Colorectal-Neoplasms CTD CCNB2 CTD Parkinson-Disease	27.979	
+Aspirin PharmGKB Colorectal-Neoplasms CTD-HUGE_Genopedia-HUGE_Phenopedia TFRC CTD Parkinson-Disease	28.226	
+Aspirin PharmGKB Colorectal-Neoplasms CTD-HUGE_Genopedia-HUGE_Phenopedia GSTA4 CTD-HUGE_Genopedia-HUGE_Phenopedia Parkinson-Disease	28.416	
+Aspirin PharmGKB Colorectal-Neoplasms c2b2r-CTD-HUGE_Genopedia-HUGE_Phenopedia-PharmGKB MTR CTD-HUGE_Genopedia-HUGE_Phenopedia Parkinson-Disease	29.2	
+Aspirin PharmGKB Colorectal-Neoplasms CTD-HUGE_Genopedia-HUGE_Phenopedia NFE2L2 CTD Parkinson-Disease	29.642	
+Aspirin PharmGKB Colorectal-Neoplasms CTD CCNA2 CTD Parkinson-Disease	29.669	
+Aspirin PharmGKB Colorectal-Neoplasms CTD RRM2 CTD Parkinson-Disease	30.126	
+Aspirin PharmGKB Colorectal-Neoplasms CTD-HUGE_Genopedia-HUGE_Phenopedia TGFB1 CTD Parkinson-Disease	30.249	
+Aspirin PharmGKB Colorectal-Neoplasms CTD-HUGE_Genopedia-HUGE_Phenopedia BCL2L1 CTD Parkinson-Disease	30.357	
+Aspirin PharmGKB Colorectal-Neoplasms CTD GCLM CTD Parkinson-Disease	30.386	
+Aspirin PharmGKB Colorectal-Neoplasms CTD MAPK8 CTD Parkinson-Disease	30.58	
+Aspirin PharmGKB Colorectal-Neoplasms CTD-HUGE_Genopedia-HUGE_Phenopedia HIF1A CTD Parkinson-Disease	30.805	
+Aspirin PharmGKB Colorectal-Neoplasms CTD-HUGE_Genopedia-HUGE_Phenopedia CHEK1 CTD Parkinson-Disease	25.682	
+
+Discussion
+
+In this paper, we propose a scalable path finding algorithm and a topic model called Bio-LDA so as to mine semantic associations in integrated platform of various biomedical databases. The path finding algorithm can identify semantic paths between any two classes or instances in the linked open data in the biomedical domain. The Bio-LDA model extracts distributions of topics for bio-entities, which can provide topic-sensitive ranking of identified semantic associations. The two use cases presented in the paper demonstrate the rich possibilities that the proposed algorithm and model can contribute to crucial issues in biomedical domain, including Polypharmacology, drugs related to inhibition of a certain gene involved in diseases, and drug-like compounds. The application discussed in this paper is made available through http://cheminfov.informatics.indiana.edu:8080/yuysun/hychembiospace.html.
+
+Our path finding algorithm can be readily applied to an extensible network of linked open data both in the biomedical domain and other domains. In addition, based on the Bio-LDA model, we calculate the entropy and KL divergence for genes, compounds and diseases in the paths. The entropy shows to what extent the bio-terms are involved in multiple topics among biomedical literature; the KL divergence indicates the similarity between two bio-terms involved with different topics. Values extracted from another knowledge base (Medline) can be further integrated with user preferences to assign weight to semantic associations or to rank semantic associations. We also adopt expert and literature investigation to assess the result and value of the proposed algorithm, which indicates the algorithm can help discover invisible knowledge and identify potential research issues by obtaining and integrating existing knowledge.
+
+For future work, we plan to further explore the potential of using the knowledge extracted through topic mining model to rank semantic associations. Moreover, we plan to design a parallel implementation of Bio-LDA and semantic association finding algorithm on MPI and MapReduce, which smoothes out storage and computation bottlenecks. Meanwhile, we would also like to establish an interactive searching system for semantic associations based on Chem2Bio2RDF database and extend our algorithm to incorporate heuristics from user preferences, context, or domain-specific rules.
+
+Competing Interests: The authors have declared that no competing interests exist.
+
+Funding: The authors have no funding or support to declare.
+
+
+References
+
+1 Bredel M Jacoby E 2004 Chemogenomics: an emerging strategy for rapid target and drug discovery. Nature Review Genetics 5 4 262 275 10.1038/nrg1317 15131650
+2 Oprea TI Tropsha A Faulon J Rintoul MD 2007 Systems chemical biology. Nature Chemical Biology 3 447 450 17637771 10.1038/nchembio0807-447 PMC2734506
+3 RxPath Specification Proposal. Available: http://rx4rdf.liminalzone.org/RxPathSpec/. Accessed 2010 Oct 10
+4 SPARQL Query Language for RDF. Available: http://www.w3.org/TR/rdf-sparql-query/ Accessed 2010 Oct 10
+5 Chen B Dong X Jiao D Wang H Zhu Q 2010 Chem2Bio2RDF: a semantic framework for linking and data mining chemogenomic and systems chemical biology data. BMC Bioinformatics 11 1 255 20478034 10.1186/1471-2105-11-255 PMC2881087
+6 Belleau F Nolin M-A Tourigny N Rigault P Morissette J 2008 Bio2RDF: Towards a mashup to build bioinformatics knowledge systems. Journal of Biomedical Informatics 41 5 706 716 18472304 10.1016/j.jbi.2008.03.004
+7 Jentzsch A Zhao J Hassanzadeh O Cheung K Samwald K 2009 Linking open drug data. In Proceedings of the International Conference on Semantic Systems (I-SEMANTICS'09), Graz, Austria
+8 Olsson T Oprea T 2001 Cheminformatics: A tool for decision-making in drug discovery. Current Opinion in Drug Discovery & Development 4 3 308 313 11560063
+9 Blei DM Ng AY Jordan MI 2008 Latent Dirichlet allocation. Journal of Machine Learning Research 3 993 1022
+10 Wang H Ding Y Tang J Dong X He B 2011 Finding Complex Biological Relationships in Recent PubMed Articles Using Bio-LDA. PLoS ONE 6 3 e17243 21448266 10.1371/journal.pone.0017243 PMC3063155
+11 Anyanwu K Sheth A 2003 The ρ-operator: Discovering and ranking on the semantic web. SIGMOD Rec 42 47
+12 Anyanwu K Sheth A 2003 ρ-queries: enabling querying for semantic associations on the semantic web. In Proceedings of the 12th international conference on World Wide Web (WWW '03), pp 690–699, New York, NY, USA
+13 Anyanwu K Maduko A Sheth A 2007 Sparq2l: towards support for subgraph extraction queries in RDF databases. In Proceedings of the 16th international conference on World Wide Web (WWW '07): 797–806, New York, NY, USA
+14 Sheth A Aleman-Meza B Arpinar IB Halaschek C Ramakrishnan C 2005 Semantic Association Identification and Knowledge Discovery for National Security Applications. Journal of Database Management 16 33 53
+15 Faloutsos C McCurley KS Tomkins A 2004 Fast discovery of connection subgraphs. In KDD '04: Proceedings of the 10th ACM SIGKDD international conference on Knowledge discovery and data mining, 118–127, New York, NY
+16 Mulla A LeRoux C Solito E Buckingham J 2005 Correlation between the Antiinflammatory Protein Annexin 1 (Lipocortin 1) and Serum Cortisol in Subjects with Normal and Dysregulated Adrenal Function. The Journal of Clinical Endocrinology 90 1 557 62 10.1210/jc.2004-1230 15509636
+17 Perry M Janik M Ramakrishnan C Iba nez C Arpinar IB 2005 Peer-to-peer discovery of semantic associations. In Proceedings of the International Workshop on Peer-to-Peer Knowledge Management
+18 Dong X Ding Y Wang H Chen B Wild D 2010 Chem2Bio2RDF Dashboard: Ranking semantic associations in systems chemical biology space. Workshop of the Future of the Web for collaborative science, The 19th World Wide Web Conference
+19 Kochut K Janik M 2007 SPARQLeR: Extended Sparql for Semantic Association Discovery. Franconi E Kifer M May W The Semantic Web: Research and Applications (Vol. 4519, pp. 145–159) Springer Berlin/Heidelberg
+20 Alkhateeb F Baget JF Euzenat J 2008 Constrained regular expressions in sparql. 91 99, 2008 In International Conference on Semantic Web and Web Services (SWWS'08)
+21 Zheng B Mclean DC Lu X 2006 Identifying biological concepts from a protein-related corpus with a probabilistic topic model. BMC Bioinformatics 7 58 16466569 10.1186/1471-2105-7-58 PMC1420333
+22 Blei DM Franks K Jordan MI Mian IS 2006 Statistical modeling of biomedical corpora: mining the caenorhabditis genetic center bibliography for genes related to life span. BMC Bioinformatics 7 1 250 16681860 10.1186/1471-2105-7-250 PMC1533868
+23 Bundschus M Dejori M Yu S Tresp V Kriegel HP 2008 Statistical modeling of medical indexing processes for biomedical knowledge information discovery from text. Paper presented in BIOKDD'08: ACM SIGKDD International Workshop on Data Mining in Bioinformatics
+24 Dijkstra E 1959 A note on two problems in connexion with graphs. Numerische Mathematik 1 269 271
+25 Floyd RW 1962 Algorithm 97: Shortest path. Communications of the ACM 5 6 345 348
+26 Johnson DB Efficient algorithms for shortest paths in sparse networks. J ACM 1977 1 13
+27 Eppstein D 1998 Finding the k shortest paths. SIAM J Comput 652 673
+28 Hershberger J Maxel M Suri S 2003 Finding the k shortest simple paths: a new algorithm and its implementation. 26 36 In Proc. of 5th Workshop on Algorithm Engineering and Experiments
+29 Carlyle WM Wood RK 2005 Near-shortest and k-shortest simple paths. Networks 46 2 98 109
+30 Brander A Sinclair M 1995 A comparative study of K-shortest path algorithms. 370 379 In Proceedings of 11th UK Performance Engineering Workshop
+31 Hadjiconstantinou E Christofides N 1999 An efficient implementation of an algorithm for finding k-shortest simple paths. Networks 88 101
+32 Lawler E 1976 Combinational optimization, networks and matroids New York Holt, Rinehert and Winston, 1976
+33 Byers TH Waterman MS 1984 Determining all optimal and near-optimal solutions when solving shortest path problems by dynamic programming. Operations Research 32 1381 1384
+34 Ford LR Fulkerson DR 1999 Flows in networks. Princeton U Press, Princeton, N. J., 1962
+35 Yang HH Chen YL 2005 Finding k shortest looping paths in a traffic-light network. 571 581 Computers & OR
+36 Nilsson D Goldberger J 2001 Sequentially finding the n-best list in Hidden Markov Models. 1280 1285 In Proceedings of THE 7th International Joint Conference on Artificial Intelligence (IJCAI'2001)
+37 Cohen KB Hunter L 2004 Natural language processing and systems biology. Artificial intelligence and systems biology 147 174
+38 Feldman R Regev Y Hurvitz E Finkelstein-Landau M 2003 Mining the biomedical literature using semantic analysis and natural language processing techniques. 1 69 80
+39 Blei D Ng A Jordan M 2003 Latent Dirichlet Allocation. Journal of Machine Learning Research 3 993 1022
+40 Rosen-Zvi M Griffiths T Steyvers M Smyth P 2004 The author-topic model for authors and documents Banff, Canada AUAI Press 487 494
+41 Zheng B McLean D Lu X 2006 Identifying biological concepts from a proteinrelated corpus with a probabilistic topic model. BMC Bioinformatics 7 58 58 16466569 10.1186/1471-2105-7-58 PMC1420333
+42 Mörchen F Dejori Mu Fradkin D Etienne J Wachmann B 2008 Anticipating annotations and emerging trends in biomedical literature LasVegas, Nevada, USA ACM 954 962
+43 Alako B Veldhoven A van Baal S Jelier R Verhoeven S 2005 CoPub Mapper: mining MEDLINE based on search term co-publication. BMC Bioinformatics 6 51 15760478 10.1186/1471-2105-6-51 PMC1274248
+44 Frijters R van Vugt M Smeets R van Schaik R de Vlieg J 2010 Literature Mining for the Discovery of Hidden Connections between Drugs, Genes and Diseases. PLoS Comput Biol 6 e1000943 20885778 10.1371/journal.pcbi.1000943 PMC2944780
+45 Nissen SE Wolski K 2007 Effect of Rosiglitazone on the Risk of Myocardial Infarction and Death from Cardiovascular Causes. New England Journal of Medicine 356 24 2457 2471 17517853 10.1056/NEJMoa072761
+46 Bennet AM Angelantonio E Ye Z Wensley F Dahlin A 2007 Association of apolipoprotein e genotypes with lipid levels and coronary risk. JAMA 1300 1311 17878422 10.1001/jama.298.11.1300
+47 Gao X Chen H Schwarzschild MA Ascherio A 2011 Use of Ibuprofen and rusk of Parkinson disease. Neurology 76 10 863 869 21368281 10.1212/WNL.0b013e31820f2d79 PMC3059148
+48 Bartels AL Leenders KL 2010 Cyclooxygenase and Neuroinflammation in Parkinson's Disease Neurodegeneration. Current Neuropharmacology 8 62 68 20808546 10.2174/157015910790909485 PMC2866462
+49 Williams CS Mann M DuBois RN 1999 The role of cyclooxygenases in inflammation, cancer, and development. Oncogene 18 7908 10630643 10.1038/sj.onc.1203286
+50 Klegeris A McGeer EG McGeer PL 2007 Therapeutic approaches to inflammation in neurodegenerative disease. Current Opinion in Neurology 20 3 351 357 17495632 10.1097/WCO.0b013e3280adc943
+51 Wilms H Zecca L Rosenstiel P Sievers J Deuschl G 2007 Inflammation in Parkinson's Diseases and Other Neurodegenerative Diseases: Cause and Therapeutic Implications. Current Pharmaceutical Design 13 1925 1928 17584117 10.2174/138161207780858429
+52 Moghaddam HF Hemmati A Nazari Z Mehrab H Abid KM 2007 Effects of aspirin and celecoxib on rigidity in a rat model of Parkinson's disease. Pak J Biol Sci 10 21 3853 8 19090241 10.3923/pjbs.2007.3853.3858
+53 Inagaki T Shikimi T Matsubara K Kobayashi S Ishino H 1996 Non-existence of a positive correlation between urinary levels of alpha-1-microglobulin and ulinastatin in patients with Parkinson's disease. Psychiatry Clin Neurosci 50 231 3 9201781 10.1111/j.1440-1819.1996.tb02747.x
+54 Teismann P Tieu K Choi DK Wu DC Naini A 2003 Cyclooxygenase-2 is instrumental in Parkinson's disease neurodegeneration. Proc Natl Acad Sci USA 100 9 5473 5478 12702778 10.1073/pnas.0837397100 PMC154369
+55 Ertel W Morrison MH Meldrum DR Ayala A Chaudry IH 1992 Ibuprofen restores cellular immunity and decreases susceptibility to sepsis following hemorrhage. Journal of Surgical Research 53 55 61 1405592 10.1016/0022-4804(92)90013-p
+56 Frazier JL Pradilla G Wang PP Tamargo RJ 2004 Inhibition of cerebral vasospasm by intracranial delivery of ibuprofen from a controlled-release polymer in a rabbit model of subarachnoid hemorrhage. Journal of Neurosurgery 101 93 98 15255257 10.3171/jns.2004.101.1.0093
+57 Dani C Bertini G Pezzati M Poggi C Guerrini P 2005 Prophylactic Ibuprofen for the Prevention of Intraventricular Hemorrhage Among Preterm Infants: A Multicenter, Randomized Study. Pediatrics 115 1529 1535 15930213 10.1542/peds.2004-1178
+58 Pradilla G Thai Q-A Legnani FG Clatterbuck RE Gailloud P 2005 Local Delivery of Ibuprofen via Controlled-release Polymers Prevents Angiographic Vasospasm in a Monkey Model of Subarachnoid Hemorrhage. Neurosurgery 57 184 190 15987587 10.1227/01.neu.0000163604.52273.28

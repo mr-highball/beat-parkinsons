@@ -1,0 +1,5 @@
+# Nutmeg reports and tremor phenotyping
+
+## California nutmeg cohort in the original meeting proceedings
+
+2009. Carstairs and Cantrell reported 119 single-substance California poison-center exposures from 1997–2008, including 86 intentional and 33 unintentional. The table lists 113 oral exposures and other routes for six. Movement at rest was outside the reported symptom detail. The authors, dates and counts link this abstract to the later 2011 paper. Do not count it as a second cohort. [Original source](https://www.e-lactancia.org/media/papers/Abstracts_of_the_2009_North_American_Congress_of_Clinical_Toxicology_2009.pdf) · [Local factual text](Source-Text/2009-Carstairs-Cantrell-Nutmeg-Meeting-Extract.txt)

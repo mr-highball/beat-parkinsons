@@ -1,0 +1,5 @@
+# Saffron Depression Comparators
+
+## Shiraz registry for saffron adjunct to fluoxetine
+
+The registry records December 25, 2013 registration while recruiting, with 40 planned participants at Hafez clinic in Shiraz. Both groups were to receive 20 mg fluoxetine. The saffron arm was to take one 15 mg capsule twice daily for six weeks and the control used starch. The Beck Depression Inventory was planned at baseline, four weeks and six weeks, and lipid profiles were secondary. The record supplies no posted results or actual recruitment dates. The 2015 and 2018 papers use the same registration and report four-week depression results. [Original source](https://en.irct.ir/trial/14609) · [Local factual text](Source-Text/IRCT2013110915334N1-Saffron-Fluoxetine.txt)

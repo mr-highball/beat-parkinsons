@@ -1,0 +1,5 @@
+# Priority-five screening receipt, 2026-11-15
+
+Current 24 IDs yielded 1,032 exact priority-five pairs: 0559 fig/rest tremor 1,024, 0399 one, 0456 one, 0535 two, 0561 four. current-priority-five.tsv has eight source-specific rows for the non-fig group: six full bodies, one indexed original body excerpt, one author abstract. EPMC returned HTTP 200 for six primary XML objects staged under p5; PMC3529349 timed out, PMC7727483 HTTP 500. For PMC11430219 body impression no chicken food exposure was found in inspected paragraph nodes; lexical trigger unresolved and references not exhaustively analyzed.
+
+All 1,024 fig pairs remain unreviewed and pending; many local paths exist but the frequent fig. figure-label collision cannot be used as a blanket source disposition. An exact keyed pending manifest is staged separately for follow-up. 907 have archive text joins, 117 do not; body scope, genuine fruit, citation or figure abbreviation must be checked per source. No recommendation to change verdicts. No canonical edits.

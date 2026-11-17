@@ -1,0 +1,5 @@
+# Planned clinical motor outcomes during butylphthalide treatment
+
+## Registered motor complications assessment in the cognition trial
+
+ChiCTR1800017084 was registered July 11, 2018. It lists a multicenter, randomized comparison of 48 weeks of oral butylphthalide soft capsules and matching placebo in people with Parkinson’s and mild cognitive impairment including a post-DBS group. The registered primary outcomes were MMSE and MoCA. MDS-UPDRS Parts III and IV were registered secondary outcomes. The record gives no dyskinesia-specific item estimate. The 2024 Han and colleagues congress abstract appears to report this study based on design, clinical eligibility, duration and the matching senior investigator. A confirmed registry ID in the congress abstract was unavailable. [Official ChiCTR record](https://www.chictr.org.cn/showproj.html?proj=28922) · [Local registry extract](Source-Text/ChiCTR1800017084.txt) · [2024 conference result](../2020-2024/Food-Experiment-Celery-Leaf-Bioavailability-and-Clinical-Endpoints.md#conference-results-from-the-likely-matching-cognition-trial)

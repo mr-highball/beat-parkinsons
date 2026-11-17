@@ -1,0 +1,5 @@
+# Sesame oil administration and dystonia in 1980s reports
+
+## Cannabidiol case series and the sesame vehicle attribution
+
+The 1986 Consroe original abstract describes five dystonia patients treated open label with cannabidiol. It reports variable improvement in dystonia and worsened tremor or hypokinesia at higher drug doses in two patients with coexisting parkinsonian features. A readable unofficial transcription with matching authors, journal and abstract names sesame oil in the Methods as the vehicle. Its cited tables are absent. The publisher PDF remains inaccessible, and a companion letter identifies oral cannabidiol without naming the carrier. Case overlap between reports remains uncertain. There was no standalone sesame intervention, toasted grade or controlled Parkinson dystonia estimate. [Original abstract](https://pubmed.ncbi.nlm.nih.gov/3793381/) · [Unofficial transcription](https://web.acsalaska.net/~warmgun/es017.html) · [Companion letter](https://pubmed.ncbi.nlm.nih.gov/3749389/) · [Local result and provenance](Source-Text/1986-Consroe-Dystonia-Abstract-Extract.txt)

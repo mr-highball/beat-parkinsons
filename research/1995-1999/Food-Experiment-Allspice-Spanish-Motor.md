@@ -1,0 +1,5 @@
+# Allspice-related animal motor observations
+
+## Oral alcoholic leaf extract and mouse toxicology
+
+Benítez López and colleagues tested a fluid *Pimenta dioica* preparation made from authenticated leaves, not culinary fruit. The accessible Spanish full-text transcription reports oral acute-toxicity observations in mice, including sedation and motor incoordination; it does not provide a dose-specific comparison for those signs. The extract used a 70% alcoholic solvent and retained 50.19% alcohol. The authors considered alcohol a substantial contributor to toxicity. The experiment does not measure handwriting, Parkinson motor signs or ground allspice consumption. The journal-hosted full text timed out, and some numeric tables in the indexed transcription are incomplete. [Indexed full-text transcription](https://www.studocu.com/pe/document/universidad-maria-auxiliadora/farmacologia/actividad-analgesica-y-antipiretica-de-u/119096151) · [Original journal index and abstract](https://www.imbiomed.com.mx/articulo.php?id=20401) · [Local factual extract](Source-Text/1998-Benitez-Pimenta-Leaf-Toxicology.txt)

@@ -1,0 +1,9 @@
+# Grapeseed and flaxseed oil evidence
+
+## Isolated alpha-linolenic acid and motor behavior in two Parkinson models
+
+Mahnoor and colleagues first published April 24, 2025. In an LPS mouse model they measured pole, rotarod and open-field behavior and report partial improvement in motor deficits with isolated alpha-linolenic acid. The primary abstract does not give task-specific contrasts or the administration route. The publisher points to supporting information, which was inaccessible in this search. Sun and colleagues separately reported significant behavioral improvement after oral alpha-linolenic acid in MPTP mice. Their Methods specify isolated compound above 98% purity obtained from black pepper, with no flaxseed oil. Their public preview does not give task-level estimates. Both studies inform a component hypothesis with no comparison of cold-pressed flaxseed oil in people with Parkinson’s. [Mahnoor primary abstract](https://onlinelibrary.wiley.com/doi/10.1111/1440-1681.70043) · [Sun primary preview](https://www.sciencedirect.com/science/article/pii/S0014299925009082)
+
+## Flaxseed oil versus fish oil in a mouse behavior comparison
+
+Yadav and colleagues first published October 21, 2026. Thirty mice were assigned to five groups including flaxseed oil and fish oil after induction of a polycystic ovary syndrome model. The open field, elevated plus maze, forced swim, Morris water maze and actophotometer measured exploratory, affective, spatial-learning and locomotor outcomes. The authors report fish-oil improvements in selected immobility and locomotor outcomes, with moderate benefits overall for flaxseed oil. The primary abstract gives no individual flaxseed-oil effect sizes or processing details. The exposure and disease model leave the exact Parkinson claims open. [Primary report](https://pubmed.ncbi.nlm.nih.gov/42906733/)

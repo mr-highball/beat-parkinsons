@@ -1,0 +1,5 @@
+# Food experiment swallowing evidence
+
+## Video-recorded meals in Parkinson’s disease
+
+Elsy Athlin’s 1988 Umeå University dissertation reports video observations of eating in 24 older people with Parkinson’s disease. The same sample size and description appear in Athlin and colleagues’ February 1989 journal report, which specifies 14 people without dementia and 10 with dementia. Both summaries distinguish difficulties handling food on a plate, transporting it to the mouth, manipulating it in the mouth and swallowing. The Swedish Society for Clinical Nutrition provides a scan of the dissertation abstract on printed p. 5. The National Library record identifies a 47-page summary and seven papers. The available abstracts give no meal menus, test food preparations or food-specific swallowing results. [1988 dissertation abstract scan](https://www.sfkn.se/_files/ugd/69a2cc_caa63662f3c44c7d85af9a3ac10aa7b3.pdf) · [National Library record](https://libris.kb.se/tb4176z50kmf844) · [1989 primary journal abstract, PMID 2522233](https://pubmed.ncbi.nlm.nih.gov/2522233/)

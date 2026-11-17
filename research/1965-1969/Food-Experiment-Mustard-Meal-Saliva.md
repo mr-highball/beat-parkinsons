@@ -1,0 +1,11 @@
+# Mustard rice and acute human saliva secretion
+
+## Repeated saliva collection during mustard rice meals
+
+Blumberger W, Glatzel H. Wirkungen von Riech- und Schmeckstoffen der Nahrung auf die Speichelsekretion. Nahrung. 1967;11(7–8):767–776. DOI `10.1002/food.19670110727`. Access is to the original German author abstract reproduced online. The journal body and numerical tables were unavailable through the DOI and abstract page during this pass. [Study accession](https://doi.org/10.1002/food.19670110727) · [Reproduced author abstract](https://www.researchgate.net/publication/247995765_Wirkungen_von_Riech-_und_Schmeckstoffen_der_Nahrung_auf_die_Speichelsekretion_Untersuchungen_uber_Wirkungsdauer_und_Sekretmenge)
+
+Five healthy participants supplied repeated whole-saliva samples before and during a 14-minute meal. The reported secretion was about threefold fasting levels during unspiced rice and about fourfold during mustard rice. The abstract reports a higher value in each participant during the mustard meal than during unspiced rice. These are approximate fasting-baseline ratios. No uncertainty interval or significance test is given in the abstract. The mustard species, preparation and dose remain unverified. The experiment did not measure spilled saliva, swallowing clearance, chronic effects or Parkinson disease.
+
+A 1963 paper by the same authors also discusses mustard with a rice meal. Its bibliographic record has no abstract. A contemporary abstracting record describes a secretion increase with the spiced meals. The two publications may share methodology or participants. Until the original tables are recovered they should not be counted as independent corroboration. [1963 bibliographic record](https://pubmed.ncbi.nlm.nih.gov/14117840/) · [1963 indexed synopsis](https://corp.eurekamag.com/research/013/996/013996052.php)
+
+Claim 0420 asks about ground mustard and Parkinson drooling. The effect on transient secretion in healthy people does not resolve that outcome. A 1999 Parkinson comparison reported lower resting flow versus age- and sex-matched controls even though hypersialorrhea was the complaint being investigated. [Parkinson saliva comparison](../1995-1999/Food-Experiment-Parkinson-Saliva-and-Rice-Bran-Injection.md#unstimulated-flow-in-parkinson-disease)

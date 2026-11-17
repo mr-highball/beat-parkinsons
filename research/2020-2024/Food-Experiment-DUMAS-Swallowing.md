@@ -1,0 +1,21 @@
+# Parkinson swallowing studies and food textures
+
+## 2020 swallowing by food consistency under dual-task conditions
+
+Labeit and colleagues tested 30 people with Parkinson’s using endoscopic swallowing assessments. The foods were 8 mL green jelly, 5 mL blue-dyed liquid and white bread measuring about 3 × 3 × 0.5 cm. Participants performed baseline and motor dual-task assessments, and 22 completed the cognitive dual-task assessment. Table 4 and the Results report more premature spillage with green jelly (p = .001) and liquid (p = .003) than with bread. Bread produced more pharyngeal residue than either of the other boluses. Overall swallowing scores (p = .053) and penetration or aspiration scores (p = .587) did not differ significantly by consistency. The study tested no potato preparation. [Primary report, Methods, Tables 3–4 and Figure 2](https://onlinelibrary.wiley.com/doi/10.1111/ene.14603)
+
+Wiley lists October 21, 2020 as first publication. Crossref records December 2, 2020 for the version of record under CC BY-NC-ND 4.0. The issue is dated March 2021. [Publisher record](https://onlinelibrary.wiley.com/doi/10.1111/ene.14603) · [Crossref version and license metadata](https://api.crossref.org/works/10.1111/ene.14603)
+
+## 2021 expiratory muscle training and endoscopic swallowing
+
+Claus and colleagues first published the randomized trial results on March 2, 2021. Fifty people with Parkinson’s and pharyngeal dysphagia completed four weeks of active or sham expiratory muscle strength training. Forty-five completed the three-month visit. Endoscopic assessments administered three boluses each of unnamed purée, blue-dyed liquid and white bread. The total and endpoint scores were summed across boluses. Active training improved overall scores and residue (both p < .001 for intervention effects), with no significant intervention effect on premature spillage (p = .23) or penetration or aspiration (p = .68). The discussion describes the residue reduction as particularly evident with the solid bolus. The main analysis provides no separate treatment estimate by food. The paper’s supplement listing describes Table S2 as scores by group and visit. Its downloadable file was unavailable during verification. No potato preparation was specified. [Primary report, §§2.2.1, 3.3 and 4.1](https://movementdisorders.onlinelibrary.wiley.com/doi/10.1002/mds.28552)
+
+The protocol was first registered on June 3, 2015 and has no posted registry results. The journal version is CC BY-NC-ND 4.0. [Trial record](https://clinicaltrials.gov/study/NCT02461082) · [Crossref license metadata](https://api.crossref.org/works/10.1002/mds.28552)
+
+## 2021 French review of expiratory muscle training
+
+Sacha Attar’s Aix-Marseille Université thesis is dated June 2021. DUMAS records public release on September 27, 2021. The review included five reports on expiratory muscle strength training and collected no new patient data. Section 3.3.1.2 and Table 11 summarize the Claus trial’s swallowing scores by treatment group and visit. The thesis adds no food-specific swallowing comparison. Its cover displays HAL Authorization without a Creative Commons license. [Thesis, Table 11](https://dumas.ccsd.cnrs.fr/dumas-03353837/document#page=34) · [HAL release metadata](https://api.archives-ouvertes.fr/search/?q=halId_s:dumas-03353837)
+
+## 2024 French survey of medication swallowing practices
+
+Margaux Périchon and Clémence Pignon’s Université de Bretagne Occidentale thesis is dated June 27, 2024. DUMAS records public release on October 3, 2024. The survey analyzed 178 speech-language therapist and 103 community pharmacist responses. In Table 11, 53% of speech-language therapists and 33% of pharmacists said they felt equipped to offer solutions to a patient with medication dysphagia. The thesis mentions using food as a pill-swallowing aid in its background. Its survey gives no patient-level measurement of a specific food or swallowing outcome. The cover specifies CC BY-NC-ND 4.0. [Thesis, methods and Tables 11–12](https://dumas.ccsd.cnrs.fr/dumas-04718119/document#page=16) · [HAL release metadata](https://api.archives-ouvertes.fr/search/?q=halId_s:dumas-04718119) · [Later conference abstract](../2025-2029/Food-Experiment-DUMAS-Swallowing.md#2025-conference-abstract-of-the-french-medication-swallowing-survey)

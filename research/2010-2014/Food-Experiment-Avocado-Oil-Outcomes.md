@@ -1,0 +1,7 @@
+# Avocado oil preparation and Parkinson symptom outcomes
+
+## Brazilian congress report on prostate histology
+
+Tavares, Abboud and Chagas reported four groups of seven rats at the XXVI Brazilian Congress of Anatomy, held September 29 to October 2, 2014 in Curitiba. Groups included a casein-based control diet and an avocado oil diet, each with or without testosterone-induced prostatic hyperplasia. At 20 weeks, group mean epithelial thickness was 22.08 µm in controls, 19.44 µm in unlesioned oil-fed rats, 27.02 µm in the induced control, and 19.42 µm in the induced oil group. The abstract gives p=.0002 without specifying each comparison. It reports prostate histology and gives no voiding outcome or oil processing grade. [Original proceedings reproduced online, abstract 142](https://ptdocz.com/doc/186657/curitiba---paran%C3%A1---xxvi-congresso-brasileiro-de-anatomia) · [Host university event dates](https://ufpr.br/ufpr-participa-do-xxvi-congresso-de-anatomia-que-comeca-segunda-feira-29/)
+
+The 2023 paper from the same university has overlapping investigators, the same four-by-seven design, the same induced-control mean of 27.02 µm and a similar induced oil mean. Its abstract gives 19.44 µm and 12 weeks. The 2014 and later report may share animals, and group labels or timelines cannot be pooled from the published summaries. [2020 and 2023 study family](../2020-2024/Food-Experiment-Avocado-Oil-Outcomes.md#cold-pressed-avocado-oil-and-prostate-histology-in-rats)

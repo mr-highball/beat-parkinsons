@@ -1,0 +1,17 @@
+# Oat case families and Horgan original access
+
+Checked 2026-11-15; primary material only unless identified below. No canonical writes.
+
+## EAACI/WAO 2013 abstract 1615 and Prados-Castaño 2016
+
+Original poster proceedings, Allergy 68 supplement 97, p.572, https://cefic-lri.org/wp-content/uploads/2014/03/Allergy_abstracts_EAACI_2013.pdf, abstract 1615, “Anaphylaxis due to oat milk ingestion,” Piñero-Saavedra, Prados Castaño, Bartolomé, Leguisamo, Quiralte. It describes a 70-year-old man with hypertension and rheumatoid arthritis who experienced symptoms 10 minutes after 200 mL oat milk. The abstract describes generalized rash, itch, nausea/vomiting, chest and laryngeal tightness and hypotension; does not list dysphonia. Nonreducing immunoblot reported a 45-kDa IgE band.
+
+Prados-Castaño et al. PMID27012025, DOI 10.18176/jiaci.0016, J Investig Allergol Clin Immunol 26(1):68–69, original https://www.jiaci.org/issues/vol26issue1/7-17.pdf, same 70-year-old man, medical history, oat milk quantity, timing and symptom cluster. It explicitly adds dysphonia and describes 48-kDa oat seed/milk IgE band with serpin identified as probable antigen; 2013 reported 45-kDa seed band, a difference in reporting, not a second patient. At p.69, “Previous Presentation,” authors explicitly state the case was a 2013 EAACI & WAO Milan poster. This confirms same case family beyond circumstantial match, not an independent replication. Neither report is a Parkinson patient, cooked oats or quantified speech loudness.
+
+## 2020 independent oat case series
+
+Tomás-Pérez, Iglesias-Souto, Bartolomé, PMID31932273 DOI 10.18176/jiaci.0477, 2020, 30(3):199–201, https://www.jiaci.org/revistas/vol30issue3_5-5.pdf . A 14-year-old boy had immediate itch and facial erythema after oat milk; the second patient, 62-year-old man with ischemic heart disease, developed within five minutes oropharyngeal itch, dysphonia and dyspnea followed by generalized urticaria after oat milk. His skin testing and IgE support sensitization; no NSAID/exercise or alternative trigger reported. This is distinct from 2013/2016 70-year-old man; 2020 discussion cites Prados as prior case. Shared Bartolomé coauthorship does not make patients identical. Again oat drink and acute anaphylaxis, not cooked oats, Parkinson or measured speech loudness.
+
+## 0526 original PMID15896867 access
+
+Horgan, “Optimising two-dye microarray designs for estimating associations with a quantitative trait,” J Biotechnol 118(1):1–8, 2005, DOI 10.1016/j.jbiotec.2005.02.016, PII S0168-1656(05)00137-9. PubMed https://pubmed.ncbi.nlm.nih.gov/15896867/ identifies paper and original abstract concerning array design, not a kefir or falls trial. Publisher exact PII https://www.sciencedirect.com/science/article/abs/pii/S0168165605001379 returned HTTP 403 via web; DOI direct web route unavailable. Author institutional listing https://www.bioss.ac.uk/documents/1633 gives truncated title/year and category but no linked body or manuscript. ResearchGate https://www.researchgate.net/publication/7844402_Optimising_two-dye_microarray_designs_for_estimating_associations_with_a_quantitative_trait indexes abstract but states no full text; no contact attempted. Despite official NLM linkage, PMC7134330 is the 2005 ECB12 conference collection DOI 10.1016/j.jbiotec.2005.06.005, not Horgan’s article. Original body and source-specific kefir trigger remain pending; do not treat author abstract or wrong collection as exact full-text screen.

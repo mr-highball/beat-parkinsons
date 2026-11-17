@@ -1,0 +1,13 @@
+# Pumpkin seed oil in early clinical blood-pressure and menopause studies
+
+## Pumpkin seed oil and menopausal mood pain and blood pressure
+
+Gossell-Williams and colleagues randomized 35 postmenopausal women to pumpkin seed oil capsules or wheat germ oil for 12 weeks. The extraction method was unreported. In Table 3, the oil arm’s median depression item stayed at zero (within-arm p = .364), while the comparator median rose from zero to one. The endpoint difference had p = .046. Median joint pain fell from two to one in the pumpkin arm (p = .030), with no clear endpoint difference from wheat germ oil (p = .663). The single-item scores were exploratory and the report does not adjust for the 18 symptom items. The paper also reports a decrease in resting diastolic pressure within the oil arm from 81.1 to 75.67 mmHg. It did not measure standing blood pressure change, orthostatic symptoms or Parkinson’s. [Primary article, Tables 2–3](https://citeseerx.ist.psu.edu/document?doi=d5cd5e8f2629f9463c6cf9a92731ecf39fcbbb2c&repid=rep1&type=pdf) · [PubMed record and publication date](https://pubmed.ncbi.nlm.nih.gov/21545273/)
+
+## Premenopausal blood pressure registration
+
+NCT02119429 first posted April 21, 2014 and records 50 enrolled premenopausal participants in a completed comparison of pumpkin seed oil versus wheat germ oil capsules. It lists systolic and diastolic blood pressure changes at 12 weeks. It gives no posted results or named orthostatic symptom measure. The registered investigator was Samantha Caudill. Searches by accession, investigator and title did not identify a primary outcome publication. [Official registry](https://clinicaltrials.gov/study/NCT02119429)
+
+## Peanut oil vehicle in Parkinson animal experiments
+
+Yuste and colleagues used injected peanut oil as the vehicle in sham and 6-OHDA-lesioned rats while investigating 7-nitroindazole and striatal dopamine signaling. The comparison does not isolate oral peanut oil. In a separate King’s College London dissertation, Tamara Hirsch’s marmoset priming experiment used subcutaneous peanut oil as the vehicle for the first four weeks, alongside oral levodopa. The investigators switched to saline and another inhibitor in weeks five to eight after injection-site sores developed. The study measured dyskinesia and composite motor disability. The sequential vehicle and drug changes prevent attribution of the observed outcomes to peanut oil itself. [2012 Yuste report](https://repositori.uji.es/bitstreams/9d1e4c54-a16b-4e48-ab95-f564cc833b90/download) · [2012 Hirsch dissertation, Chapter 5](https://kclpure.kcl.ac.uk/portal/files/12640333/Studentthesis-Tamara_Hirsch_2012.pdf)

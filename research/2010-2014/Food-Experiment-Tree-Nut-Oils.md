@@ -1,0 +1,9 @@
+# Macadamia oil and upper gut transit
+
+## Healthy volunteer macadamia and olive oil transit trial
+
+NCT01510223 first posted on January 16, 2012 and lists 24 healthy participants enrolled in 2010–2011. The macadamia arm used a daily high-fat milkshake with 15.18 g macadamia nut oil and 74.82 g olive oil. The alternative high-fat arms used olive oil alone or olive oil with fish powder. The protocol measured gastric emptying and mouth-to-caecum transit with breath tests after the dietary periods. Registry results are absent. Chapter 6 of Markey's dissertation now supplies the arm-specific measurements, with no significant trial-by-group interaction and no Parkinson constipation outcome. Markey and Shafat’s September 2011 conference title covers adaptation and deadaptation. A different 2011 Cambridge abstract analyzes dietary fatty acids using weighed food records. [Official registration](https://clinicaltrials.gov/study/NCT01510223?viewType=Table) · [Conference title](https://www.researchgate.net/publication/259439854_High_Fat_Diets_Accelerate_Gastric_Emptying_but_Deadaptation_Depends_on_Fatty_Acid_Composition) · [Recovered dissertation results](Food-Experiment-Macadamia-Hazelnut-Followup.md#markey-dissertation-results-for-the-macadamia-oil-arm) · [Separate observational abstract](https://doi.org/10.1017/S0029665111001753)
+
+## Osaka macadamia oil insulin sensitivity registration
+
+UMIN000013142 first posted on February 12, 2014 and lists an anticipated start in November 2011 and last follow-up in November 2013. The completed study registered insulin sensitivity and circulating fatty acids. The record reports results as unpublished. This registration verifies human macadamia oil investigation outside Parkinson's with no constipation, movement or other frozen symptom outcome listed. [Original UMIN record](https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000015322)

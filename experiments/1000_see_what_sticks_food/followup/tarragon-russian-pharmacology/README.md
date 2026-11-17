@@ -1,0 +1,5 @@
+# Russian tarragon primary reports and access
+
+The 2005 proceedings confirm oral tincture and state that earlier drug-induced sleep studies guided dose selection. The proceedings name pentobarbital and the accessible dissertation contents name thiopental. Neither public route supplied tarragon-specific sleep durations. The Russian State Library catalog verified the dissertation and separate author synopsis holdings, and the public issue index confirmed the pages of the 2006 report. [Exact holdings](rsl-exacts.tsv) · [Access dispositions](access-dispositions.tsv) · [Regional search](regional-web-screen.tsv)
+
+The 2006 author synopsis includes separate behavioral and nociception results. Its description of lower aggression differs from the later monograph, which reports slightly higher scores. The matching test descriptions and numerical results in other assays support a shared research lineage. The new notes distinguish acute chemical nociception, open-field activity, forced-swim observations, and the inaccessible induced-sleep results. [Dated primary evidence](../../../../research/2005-2009/Food-Experiment-Tarragon-Russian-Pharmacology.md)

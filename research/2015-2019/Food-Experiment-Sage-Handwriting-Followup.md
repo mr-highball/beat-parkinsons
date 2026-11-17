@@ -1,0 +1,7 @@
+# Common sage trial and handwriting
+
+## The 2019 Newcastle grant results attachment
+
+The trial was registered as EudraCT 2007-002899-34 for people with Parkinson disease and mild cognitive impairment. The five-page results attachment posted in 2019 states that the study assigned encapsulated dried common sage leaves or vitamin E for six weeks. The report describes computerized cognition and salivation. The referenced secondary-outcome timetable is absent, and the pages contain no handwriting or timed hand-task result. The vitamin E comparator differs from an inert placebo, although the attachment describes a placebo-controlled study. The publicly available pages cannot establish a fresh sage effect on handwriting severity. [Original registration](https://www.clinicaltrialsregister.eu/ctr-search/trial/2007-002899-34/GB) · [Original grant attachment](https://www.clinicaltrialsregister.eu/ctr-search/rest/download/result/attachment/2007-002899-34/1/26590) · [Local factual extract](Source-Text/2019-Newcastle-Sage-Grant-Factual-Extract.txt)
+
+A second reading of all five pages checked sleep outcomes and adverse-event reporting. The report contains no sleep outcome or insomnia adverse-event estimate. Its safety summary lacks a comprehensive adverse-event table. The regulator results page dates the publication to March 24, 2019. [Results version](https://www.clinicaltrialsregister.eu/ctr-search/trial/2007-002899-34/results)

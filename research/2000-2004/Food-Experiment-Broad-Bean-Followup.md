@@ -1,0 +1,5 @@
+# Cooked broad beans and motor fluctuations in Parkinson’s disease
+
+Apaydin and colleagues enrolled eight people with Parkinson’s who had already reported a favorable motor response to cooked broad beans and continued to experience motor fluctuations while on medication. Three kept usable diaries, and the paper reports those cases. All three recorded more daily ON time and less OFF time during the one-to-three-month bean period compared with their baseline diaries. One reduced his carbidopa/levodopa intake during follow-up. The open-label design, selection for prior benefit, missing diaries for five participants, concurrent medication, and differing schedules limit inference. [Primary report, PMID 10634260](https://pubmed.ncbi.nlm.nih.gov/10634260/) · [University-hosted full article](https://nek.istanbul.edu.tr/ekos/MAKALE/M7168.pdf)
+
+The exposure was *Vicia faba*. The food experiment’s frozen bean claims concern other species or preparations. The case series extends the earlier observations on acute responses to broad beans. [Earlier feeding and seedling studies](../1990-1994/Food-Experiment-Food-Followup.md)

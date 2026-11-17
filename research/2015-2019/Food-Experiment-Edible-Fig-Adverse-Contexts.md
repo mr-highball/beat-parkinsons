@@ -1,0 +1,5 @@
+# Dried fig in a rheumatoid arthritis trial
+
+## Dried edible fig, olives and olive oil
+
+Bahadori and colleagues added an olive-and-dried-fig mixture to usual rheumatoid arthritis therapy. Of 72 entrants, 29 treatment and 27 control participants completed the 16-week study. The metabolic report analyzes fasting glucose and lipid measures and records a withdrawal after severe hiccups. It specifies dried edible fig in the mixture but gives no separate fig arm or hallucination outcome. It identifies the participants as the same people reported in its earlier global-health article. The 2014 IRCT record preserves different target enrollment and dosing schedules. [Primary registry comparison](../2010-2014/Food-Experiment-Edible-Fig-Adverse-Contexts.md#iranian-registration-for-fig-and-olive-adjunct-therapy) [Original 2016 article](https://brieflands.com/journals/ijpr/articles/125228.pdf) · [Earlier outcomes, PMID 27980590](https://pubmed.ncbi.nlm.nih.gov/27980590/) · [Local factual text](Source-Text/2016-Bahadori-Fig-Olive-and-Adverse-Outcomes.txt)

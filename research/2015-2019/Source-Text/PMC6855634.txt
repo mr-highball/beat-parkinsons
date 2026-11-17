@@ -1,0 +1,639 @@
+Title: Quantifying normal and parkinsonian gait features from home movies: Practical application of a deep learning–based 2D pose estimator
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC6855634/
+Text object: https://pmc-oa-opendata.s3.amazonaws.com/PMC6855634.1/PMC6855634.1.txt
+Data source: U.S. National Library of Medicine, PMC Cloud Service
+PMCID: PMC6855634
+PMID: 31725754
+DOI: 10.1371/journal.pone.0223549
+Citation: PLoS One. 2019 Nov 14;14(11):e0223549. doi: 10.1371/journal.pone.0223549
+License: CC BY (article license statement below)
+Version: 1
+Retracted in PMC metadata: no
+Text coverage: article text
+Format: NLM plain-text extraction. This provenance header was added.
+
+
+JOURNAL INFORMATION
+==============================
+NLM Title Abbreviation: PLoS One
+Journal ID: PLoS ONE
+NLM Journal ID: 101285081
+Journal ID: plos
+
+PLoS ONE
+
+EISSN: 1932-6203
+Publisher: PLOS
+
+ARTICLE INFORMATION
+==============================
+PMCID: PMC6855634
+PMID: 31725754
+DOI: 10.1371/journal.pone.0223549
+Article ID: PONE-D-19-26601
+Article version: 1
+Subjects: Research Article, Biology and Life Sciences, Physiology, Biological Locomotion, Gait Analysis, Medicine and Health Sciences, Physiology, Biological Locomotion, Gait Analysis, Biology and Life Sciences, Physiology, Biological Locomotion, Walking, Medicine and Health Sciences, Physiology, Biological Locomotion, Walking, Engineering and Technology, Equipment, Optical Equipment, Cameras, Computer and Information Sciences, Computing Methods, Control Sequences, Biology and Life Sciences, Anatomy, Musculoskeletal System, Body Limbs, Legs, Feet, Medicine and Health Sciences, Anatomy, Musculoskeletal System, Body Limbs, Legs, Feet, Computer and Information Sciences, Information Technology, Data Processing, Medicine and Health Sciences, Neurology, Neurodegenerative Diseases, Movement Disorders, Parkinson Disease, Research and Analysis Methods, Database and Informatics Methods, Bioinformatics, Sequence Analysis
+
+Quantifying normal and parkinsonian gait features from home movies: Practical application of a deep learning–based 2D pose estimator
+
+Analyzing parkinsonian gait home videos using deep learning–based pose estimator
+
+Sato Kenichiro Conceptualization Data curation Formal analysis Investigation Methodology Project administration Software Writing – original draft Writing – review & editing *
+Nagashima Yu Conceptualization Investigation Validation
+Mano Tatsuo Supervision Writing – review & editing
+http://orcid.org/0000-0001-7308-5314 Iwata Atsushi Supervision Writing – review & editing *
+Toda Tatsushi Supervision
+Department of Neurology, Graduate School of Medicine, University of Tokyo, Hongo, Bunkyo-ku, Tokyo, Japan
+Arai Ken Editor
+Massachusetts General Hospital/Harvard Medical School, UNITED STATES
+Competing Interests: The authors have declared that no competing interests exist.
+
+* E-mail: kenisatou-tky@umin.ac.jp (KS); iwata@m.u-tokyo.ac.jp (AI)
+Electronic publication date: 2019 Nov 14
+Publication date: 2019
+Volume: 14
+Issue: 11
+Electronic Location ID: e0223549
+Received 2019 Sep 21; Accepted 2019 Oct 28
+Copyright: © 2019 Sato et al
+Copyright year: 2019
+Copyright holder: Sato et al
+License: This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+10.1371/journal.pone.0223549
+10.1371/journal.pone.0223549
+
+Funding: The authors received no specific funding for this work.
+
+Figure count: 6
+Table count: 1
+Page count: 15
+Data Availability: The main data used in this study is distributed from CASIA database (http://www.cbsr.ia.ac.cn/english/Gait%20Databases.asp), which is not owned or collected by the authors. The authors did not receive special access privileges to the data.
+
+Data Availability
+
+The main data used in this study is distributed from CASIA database (http://www.cbsr.ia.ac.cn/english/Gait%20Databases.asp), which is not owned or collected by the authors. The authors did not receive special access privileges to the data.
+
+==============================
+Objective
+
+Gait movies recorded in daily clinical practice are usually not filmed with specific devices, which prevents neurologists benefitting from leveraging gait analysis technologies. Here we propose a novel unsupervised approach to quantifying gait features and to extract cadence from normal and parkinsonian gait movies recorded with a home video camera by applying OpenPose, a deep learning–based 2D-pose estimator that can obtain joint coordinates from pictures or videos recorded with a monocular camera.
+
+Methods
+
+Our proposed method consisted of two distinct phases: obtaining sequential gait features from movies by extracting body joint coordinates with OpenPose; and estimating cadence of periodic gait steps from the sequential gait features using the short-time pitch detection approach.
+
+Results
+
+The cadence estimation of gait in its coronal plane (frontally viewed gait) as is frequently filmed in the daily clinical setting was successfully conducted in normal gait movies using the short-time autocorrelation function (ST-ACF). In cases of parkinsonian gait with prominent freezing of gait and involuntary oscillations, using ACF-based statistical distance metrics, we quantified the periodicity of each gait sequence; this metric clearly corresponded with the subjects’ baseline disease statuses.
+
+Conclusion
+
+The proposed method allows us to analyze gait movies that have been underutilized to date in a completely data-driven manner, and might broaden the range of movies for which gait analyses can be conducted.
+
+Introduction
+
+Gait abnormality is one of the chief abnormal findings in chronic neurological diseases such as Parkinson’s disease (PD); therefore, it is important for physicians and neurologists to examine parkinsonian gait, which is characterized by small steps, a reduced walking speed, insufficient foot elevation/progression [1,2], a forward-bent posture, freezing of gait (FOG), and festination [3] in the diagnosis and follow-up of PD.
+
+In the daily clinical inpatient or outpatient setting, a gait evaluation consists of qualitative or semiquantitative assessment by neurologists or is based on patients’ subjective complaints but not on quantified gait parameters such as cadence (= steps per minute) [4,5], step length [2], or foot clearance [1]. This is because a quantitative gait analysis requires specific devices such as a 3D motion capture system, accelerometer, or force plate [6,7], which are time-, labor-, space-, and cost-consuming to use daily. Moreover, while clinicians may routinely film their patients’ gait in daily clinical settings (e.g. crowded and straightforward hallway in the hospital) and use a home video for later neurological assessment, these recorded clinical 2D movies without any annotations are practically unavailable for gait analyses. Thus, our daily clinical practice does not currently benefit from gait analysis technologies: the lack of quantitative metrics can eventually result in the potential bias of inter-patient comparison of gait with minor differences or atypical complex underlying pathophysiology.
+
+To overcome these bottlenecks, it would be helpful if we could reliably quantify gait parameters without the need for specific devices. Here we propose use of OpenPose [8,9], a deep learning–based 2D-keypoint estimator that estimates the joint coordinates of persons in the pictures or videos obtained using a monocular camera, as it does not require external scales or markers. Using this estimator, we can automatically obtain the joint coordinates of persons in each picture/movie recorded, e.g. in a hospital hallway by a home video camera without specific equipment, thereby enabling the calculation of joint angles or other spatial parameters as processed in a conventional 3D motion capture system.
+
+Here we aimed to investigate a method to quantify gait features in a data-driven manner, especially focusing on gait cadence, using the OpenPose application onto the daily clinical movies recorded from the frontal angle. First, we used OpenPose to convert normal gait movies to sequential joint coordinate data. Then, using the short-time autocorrelation function (ACF) [10,11], an applied form of a short-time Fourier Transform (STFT) [12,13], we conducted gait frequency detection. Next, we applied the same processing scheme to the pathological gait movies of our PD patient with prominent FOG. Since effective gait steps cannot always be easily determined for patients with significant FOG, especially those in movies recorded by a home video camera in which no accurate step annotation is available, we used the statistical distance–based approach that examined the timing at which temporal gait was relatively close to a normal one. Such an approach allows us to quantify the periodic step distribution during the gait sequences and obtain simple metrics to quantify the periodicity of each sequence. Our attempts might be the first step in shedding light on monocular home videos to quantify gait.
+
+Methods
+
+Sample data and preprocessing
+
+This study was approved by the University of Tokyo Graduate School of Medicine institutional ethics committee (ID: 2339-(3)). The overall data processing flow is shown in Fig 1. The movie data used and the patient’s demographics are summarized in Table 1. For video data of normal control gait, we obtained movies from the database provided by the Institute of Automation, Chinese Academy of Sciences (CASIA Dataset-B) under permission [14]. We also obtained pathological gait videos from PD patients who were admitted to our hospital.
+
+10.1371/journal.pone.0223549.g001 Fig 1 Data processing flow.
+
+Our proposed method consists of two distinct steps: upper line (A to E), deriving sequential gait feature data from movies via body joint coordinate extraction using OpenPose; lower line, estimating cadence from the sequential data using the short-time autocorrelation function and the subsequent analysis (F to I).
+
+10.1371/journal.pone.0223549.t001 Table 1 Video data and subjects’ characteristics.
+
+data source	CASIA dataset-B	our hospital	
+participants	n = 117	n = 2 (Pt.1 & Pt.2)	
+disease status	healthy control	Pt.1: PD Yahr 3	
+Pt.2: PD Yahr 4	
+recorded plane of gait	sagittal (laterally viewed)	frontal (frontally viewed)	
+frontal (frontally viewed)	
+distance between camera and the gait start point	not available	approximately 5 m	
+used video model	Fametec 318SC	Everio GZ-HD40	
+movie fps	25	30	
+sequence used from each participant	n = 1	Pt.1: n = 2 (before and after DBS)	
+Pt.2: n = 3	
+age of participants	mostly in their 20's	Pt.1: 60's	
+Pt.2: 70's	
+sex of participants	male:female = 2:1	both female	
+
+The CASIA database videos (Dataset-B) are videos of participants’ walking recorded with a frame size of 320 × 240 and a frame rate of 25 frames per second (fps). Each participant has one gait sequence of 2–4 gait cycles recorded from the laterally viewed angle (i.e. seeing sagittal plane of gait) (Fig 2A-1) and frontally viewed angle (i.e. coronal plane of gait) (Fig 2B-1). Since the original video frequency was 25 fps, these videos were converted to serial png images at a sampling frequency of 50 or more (= 100 fps by default) [13] by using ffmpeg software [15] (Fig 1B).
+
+10.1371/journal.pone.0223549.g002 Fig 2 Detailed feature extraction process using the OpenPose application.
+
+The detailed process corresponds to the upper line in Fig 1. CASIA Dataset-B contains gait sequences of the same gait recorded from different angles simultaneously: (A) laterally viewed angle; and (B) frontally viewed angle. Flow (A-1) to (A-4) shows the process for laterally viewed movies, while flow (B-1) to (B-4) shows that for frontally viewed movies. After estimating keypoints (A-2, B-2), joint coordinate data of each frame are converted to gait features: leg angle (A-3) and difference in bilateral leg-length ratio (B-3). Then sequential waveform data are obtained (A-4, B-4) to calculate gait cycle frequency in the subsequent steps. Note that 1 cycle in the sequential LRdiff (B-3) corresponds to 2 walked steps (= 1 gait cycle), while 1 cycle in the sequential LRang (A-3) corresponds to 1 walked step (= half of 1 gait cycle), so the raw frequency of sequential LRang in laterally viewed movies is multiplied by 0.5 before being converted to a gait frequency.
+
+2D keypoint estimation with OpenPose
+
+Then 2D real-time 18-keypoint body/foot estimation was performed on each image by running one of the OpenPose distributions [9] on macOS Mojave version 10.14.3. As shown in the S1 Fig, the keypoints roughly correspond to body parts/joints as follows: 0 = nose, 1 = heart, 2 = right shoulder, 3 = right elbow, 4 = right wrist, 5 = left shoulder, 6 = left elbow, 7 = left wrist, 8 = right hip, 9 = right knee, 10 = right ankle, 11 = left hip, 12 = left knee, 13 = left ankle, 14 = right eye, 15 = right ear, 16 = left eye, and 17 = left ear. In S1 Fig, the keypoints on eyes/ears (nos. 14–17) are omitted from labeling for simplicity. The sequential keypoint coordinate data are thus obtained for each gait sequence (Figs 1C, 2A-2 and 2B-2).
+
+Feature extraction
+
+As one of the basic gait parameters, here we focused on cadence, which is defined as the number of steps per minute (steps/min). We also use gait frequency (Hz), which is defined as the number of gait cycles–one pair of steps–per second; therefore, a 1-Hz gait frequency is equal to the cadence of 120 steps/min. This focus on cadence is mainly due to the reasons derived from the specification of OpenPose: 2D estimation and unavailability of actual distance information. An earlier spatiotemporal gait analysis in PD versus control showed that parkinsonian gait–associated findings including shorter gait step length, lower cadence (steps/min), shorter stride duration, lower toe clearance and insufficient foot elevation, or more insufficient flexion of the hip and knee joints [16,17]. These features are usually extracted from the 3D motion capture recordings, among which the sagittal plane data are essential. However, the gait videos recorded in the daily clinical setting (e.g. crowded and straightforward hospital hallway) are often filmed from the frontally viewed angle (i.e. coronal plane of gait) but not from the laterally viewed angle (i.e. sagittal plane of gait). The recordings from the frontally viewed angle would be less informative for identifying the temporal change of joint angles (e.g. knee, hip, ankle), foot progression, foot clearance, or foot contact timing. In addition, since OpenPose does not require scales or calibrations as input, we in turn cannot directly measure the actual distance between the detected keypoints. This means that it is impossible to obtain many spatial gait parameters such as gait speed (m/sec), step length (m), step width (m), or foot clearance (cm) without additional external calibrations.
+
+Originally, the CASIA dataset-B contains gait sequences of n = 124 identical participants, whose age was mostly in their 20s and sex ratio (male:female) was approximately 3:1, and each of whom completes a total of 6 different gait sequences: for each gait sequence, the laterally viewed movie and the frontally viewed movie are recorded simultaneously (but not synchronously). Among them, we used n = 117 pairs of laterally and frontally viewed videos from the identical participants’ gait sequences (Table 1) after excluding gait sequence pairs in which there is an apparent discrepancy in the replay speed between laterally and frontally viewed movies. The median length of the frontally viewed movie was 3.8 seconds (interquartile range, 3.3–4.3 sec) and the length of laterally viewed movie was median 3.0 seconds (interquartile range, 2.8–3.2 sec).
+
+As the first step in calculating gait cadence, gait-related features were extracted (Fig 1D). In the laterally viewed movie, we used the time-series data of angle degree between the legs (LRang; Fig 2A-3 and 2A-4) calculated by the following equation: LRang=cos-1(P8P10→∙P11P13→(|P8P10→|∙|P11P13→|)) (0° ≤ LRang ≤ 180°, where Pk denotes the 2D positional vector of the kth keypoint in S1 Fig: k = 1,2, … 16). In the frontally viewed movie, we used time-series data of the difference in the left-to-right leg length ratio subtracted from the right-to-left leg length ratio (LRdiff: Fig 2B-3 and 2B-4) calculated by the following equation: LRdiff=(|P11P13→||P8P10→|-|P8P10→||P11P13→|). These data are obtained as the time-series waveform data (Fig 2A-4 and 2B-4, respectively). In reference to the gait cycle [18], during the normal-speed gait displayed by healthy control subjects, LRang would become 0° during the midstance or mid-swing period and would peak at around the terminal stance or terminal swing period. LRdiff would become 0° at around the midstance or mid-swing period and reach the maximum/minimum value at around the pre-swing or loading-response period. These raw data are band-pass filtered at the range of 0.1–7 Hz (Fig 1E) in reference to an earlier gait analysis study [19].
+
+Calculating cadence in normal gait movies
+
+Calculating cadence in each gait sequence now can be considered the problem of pitch detection from the sequential LRdiff waveform data in frontally viewed movies (Fig 2B-4) and from the sequential LRang waveform data in laterally viewed movies (Fig 2A-2). Note that 1 cycle in the sequential LRdiff (Fig 2B-3) corresponds to 2 walked steps (= 1 gait cycle), while the 1 cycle in the sequential LRang (Fig 2A-3) corresponds to 1 walked step (= half of 1 gait cycle), so the raw frequency of sequential LRang in laterally viewed movies is multiplied by 0.5 before being converted to gait frequency.
+
+Then, for the purpose of pitch detection, we used the short-time ACF (ST-ACF) [10, 11], an applied form of STFT [12,13], for normal gait movies from CASIA Dataset-B. Note that we do not use STFT for frequency detection as in acoustic analysis because of the suspected inaccuracy of calculated gait hertz at the bandwidth of the gait analysis. Since the frequency resolution in STFT is the reciprocal of the window length (sec) and the window length would be less than 10 seconds at most in the normal gait movies recorded at actual clinical settings, the frequency resolution in STFT shall be lower than that in ST-ACF at any rate used here. Actually, the median length of the CASIA dataset movies was approximately 3 seconds; therefore, the frequency resolution would be insufficient (e.g. 0.33–0.5 Hz). The window length was 2.0 seconds for normal control gait sequences and 3.0 seconds for pathological gait sequences to include at least 2–3 steps within the short-time window and secure sufficient frequency resolution while balancing with the temporal resolution [11] and the limited length of each movie. The shift length was 0.01 second, which is equal to the reciprocal of frame fps (= 100 here). A Hann function was applied to each window to smooth the bilateral margins [12] (Fig 1F and 1G). Then, we chose the lag at which the autocorrelation value took the largest value in the secondary-positive phase after the initial negative phase (e.g. white arrow in Fig 3D); the reciprocal of the chosen lag time (0.01 sec/lag) corresponds to the representative gait frequency. This is the general criteria we used here to derive cadence using ACF.
+
+10.1371/journal.pone.0223549.g003 Fig 3 Short-time ACF used to calculate cadence of a normal gait sequence from CASIA Dataset-B.
+
+(A) The filtered LRdiff sequence of control gait movies from CASIA Dataset-B. For these normal gait movies, we applied ST-ACF with a window length of 2 seconds and a shift-length of 0.01 second (A). In ST-ACF (D), the reciprocal of the lag at the peak of the second positive phase after the initial negative peak (white arrow in D) was selected as the representative frequency. When the sequential ST-ACF matrix is plotted on a heatmap (E), the selected lag is seen as the second from the top and most red horizontal line (white arrow in E). STFT (B, C) is shown as a corresponding example to the ST-ACF: sequential STFT is plotted as a heatmap (C), where the minimum value is white and the maximum color is most-red. The selected frequency just corresponds to the height of the horizontal most-red line (filled arrow in C).
+
+The calculated cadence (= 120 × gait frequency) on the same gait sequence was then compared between frontally viewed and laterally viewed movies, and we confirmed their computational consistency using the determinant coefficient (R2), root mean square error (RMSE), and mean absolute error (MAE).
+
+Calculating cadence in shuffling gait movies
+
+We conducted the same data processing as described above of frontally viewed movies of our two PD patients (Pt. 1 and Pt. 2 in Table 1). These movies were recorded based on the written informed consent obtained from these patients. These movies were at 30 fps with a resolution of 960 × 540. Since their gait movies were recorded from the frontally viewed angle only, we used the LRdiff as the key gait feature in the following analysis.
+
+For the case (Pt. 2) of abnormal gait with irregular gait rhythm, involuntary leg oscillations, or prominent freezing, the pitch detection framework by ACF as used in normal gait movies sometimes did not work well (we describe this point in the Results section), so we newly introduced metrices to quantify statistical distances between the ST-ACF at each moment and the typical ST-ACF using a dynamic time-warping (DTW) algorithm (package dtw in R) [20] (Fig 1H and 1I) and k-nearest neighbor (kNN)–based anomaly detection algorithm (package FNN in R) [21,22].
+
+Note that we have not applied the same similarity-based clustering for the raw sequential LRdiff data itself because of the temporal characteristic of the LRdiff waveform. In the gait movies recorded from the frontally viewed angle, the amplitude of the sequential LRdiff gradually increased along with the subjects walking to the camera (Fig 3A; a case without zoom-out); thus, such a skewed waveform pattern as reference can have an undesired influence. The zoom status and height of the video camera can also influence the basic waveform sequence, as vulnerability to these factors will lessen the practical applicability of the currently proposed method. In contrast, the cyclic information converted to ST-ACF would be less vulnerable to such temporal changes or other factors related to filming condition.
+
+As a metric for periodicity, the distribution in DTW- or kNN-based distances is comparable between different gait sequences as long as the same reference and preprocessing configurations are used. We conducted one-way analysis of variance (ANOVA) for the distance metric distribution between different disease status groups (e.g. healthy control for CASIA sequences, mild PD for sequences from Pt. 1, and severe PD with FOG for sequences from Pt. 2). In addition, a ROC analysis for discriminating disease status was also performed using the pROC package in R [23].
+
+Statistical analysis
+
+The data processing/analysis except for the 2D keypoint estimation by OpenPose was performed using R version 3.5.1.
+
+Ethical
+
+The participants in this manuscript have given written informed consent for this study. This work was conducted in accordance with the ethical standards laid down in the 1964 Helsinki declaration. This study was approved by our hospital’s institutional ethics committee (ID: 2339-(3)).
+
+Results
+
+Cadence estimation from movies of normal gait
+
+Fig 3 shows the applied results of frequency detection by ST-ACF (Fig 3D and 3E) for normal gait movies from CASIA Dataset-B compared with the corresponding method by STFT (Fig 3B and 3C). The raw sequence (LRdiff or LRang) is plotted as shown in Fig 3A. The window length was determined to be 2.0 seconds for normal control gait sequences (Figs 3 and 4) and 3.0 seconds for pathological gait sequences (Figs 4–6) to include at least 2–3 steps within the short-time window and secure sufficient frequency resolution while balancing the temporal resolution [11] and the limited length of each movie. As on the STFT time-frequency spectrogram (Fig 3C), the derived sequential ST-ACF was plotted on a time-frequency 2D heatmap (blue, minimum value; red, maximum value) (Fig 3E). The selected representative frequency can be found on the heatmap as the height value of the second-top horizontal red band (white arrow in Fig 3E).
+
+10.1371/journal.pone.0223549.g004 Fig 4 Applied result of cadence calculation for gait sequences of a mildly affected PD patient.
+
+(A) and (B) show the graphical summary of the sequential ST-ACF obtained from the gait sequences of the same PD patient (Pt. 1) recorded in our hospital’s hallway before (A, 5.5 sec) and after (C, 3.8 sec) DBS treatment (frontally viewed movies only). Representative gait frequency is calculated as the reciprocal of the median lag at the second positive peak in each moment ST-ACF (= most red color on the heatmaps) (arrowheads in A, B). The calculated gait cadence was 140.5 steps/min before DBS and 134.1 steps/min after DBS.
+
+10.1371/journal.pone.0223549.g005 Fig 5 Example of cadence calculation for a significantly abnormal gait sequence.
+
+(A) Filtered sequential ‘LRdiff’ of gait sequence of our PD patient’s (Pt. 2), whose gait mixed with significant FOG and small steps. The movie is 14 seconds long, the time she took to walk less than 2 m. Many instances of freezing and involuntary oscillations were observed during the gait. The sequential ST-ACF of 11 seconds’ duration (subtracting window length of 3 seconds from the raw movie length) obtained from (A) is shown as (B). (C)–(F) show the ST-ACF at the corresponding tC − tF timings in (A, B). (C)–(F) demonstrate examples in which accurate gait frequency detection is confirmed (D, E) or doubtful (C, F) when applying the same procedure used for the normal gait movies as shown in Fig 3.
+
+10.1371/journal.pone.0223549.g006 Fig 6 Example of identifying periodic gait steps among the mixed FOG and metrics comparison between different gait sequences.
+
+(A) Data obtained from the same patient (Pt. 2) as in Fig 5. In reference to the ST-ACF of control gait that is randomly selected from CASIA Dataset-B sequences, the similarity of ST-ACF at each moment to that of normal gait is measured in terms of DTW-based distance (second from bottom row in A) or kNN-based anomaly (bottom row in A). As long as the same reference and preprocessing configurations are used, the DTW- or kNN-based distance are comparable between different gait sequences as summarized in boxplots (B) for DTW and in boxplots (C) for kNN. In (B) and (C), there was a significant difference in statistical distance/anomaly value among the 3 subgroups: control gait, affected gait from Pt. 1 (Fig 4), and severely affected gait from Pt. 2 (one-way analysis of variance; p < 2.2e-16). Regarding the difference between control gait sequence and gait from Pt. 1 (Fig 6D), discrimination performance was better for DTW (area under the curve [AUC], 0.957) than for kNN (AUC, 0.754) (p < 2.2e-16 for DeLong’s test). Meanwhile, when comparing gait sequences before versus after DBS treatment from Pt. 1 (Fig 4A and 4C), discrimination performance was better for kNN-based distance (AUC, 0.980) than for DTW-based distance (AUC, 0.572) (p < 2.2e-16 on DeLong’s test) (Fig 6E).
+
+We then compared consistency of the cadence between the laterally viewed movie and the frontally viewed movie of the same gait. The result is plotted in Fig 3F, which shows good consistency between them: R2 = 0.754, RMSE = 7.24, and MAE = 6.05 (steps/min).
+
+Cadence estimation from movies of mildly affected gait from our PD patients
+
+Next, we applied the same procedure to actual clinical movies of our PD patients recorded in the frontally viewed angle filmed in our hospital’s hallway (Pt. 1 and Pt. 2 in Table 1): one patient (Pt. 1) was a female PD patient in her 60s who showed a clear On-Off phenomenon and corresponds to Yahr 3 during the Off state. She was recorded for her gait with mild small steps before deep brain stimulation (DBS) implementation; after DBS, her gait had improved. The other patient (Pt. 2) was a female PD Yahr 4 patient in her 70s who was suffering from prominent FOG in daily life with a high total FOG questionnaire score (17 or higher). She was filmed to capture her significantly shuffling gait.
+
+Fig 4A shows the sequential ST-ACF heatmap as of Fig 3E for gait sequences of Pt. 1 during On period before DBS treatment, recorded in our hospital’s hallway (movie length: 5.5 sec). She showed mild small steps with a cadence of 140.5 steps/min (Fig 4A). After DBS treatment (movie length: 3.8 sec), her gait became almost normal with an improved foot clearance and a cadence that had decreased slightly to 134.1 steps/min (Fig 4B).
+
+Cadence estimation from movies of severely affected gait from our PD patients
+
+Unlike in the case of Pt. 1, whose gait was generally periodic, in Pt. 2, the gait was clearly abnormal and the pitch detection framework by ACF as used in normal gait movies (Figs 3 and 4) did not always work well. We explain this problem in Fig 5, which shows a graphical summary of one of the gait sequences of Pt. 2 in which she took 14 seconds to walk less than 2 m (unfortunately, we cannot provide the gait movie itself due to the limitation posed by the patient’s informed consent). She had a small step and small arm swing with a forward-bent posture and froze frequently while walking. Fig 5A shows the sequential ‘LRdiff’ of the gait, while its sequential ST-ACF with a shift length of 3.0 seconds is shown in the heatmap in Fig 5B. The transient periodic steps are observed on the movie at around the timing tD, and the gait frequency at that moment is calculated in Fig 5D as the reciprocal of the lag at a black arrowhead, although the height of the second positive peak after the initial negative phase was barely over the 95% confidential interval level. However, at timing tC or tF at ST-ACF (Fig 5C and 5F), the highest peak of the second positive phase (shown with white arrowheads) after the initial negative peak had insufficient height (less than 95% confidence interval as shown with a dotted line), making it impossible to recognize the original short-time LRdiff sequence as having significant periodicity. In addition, at timing tE at ST-ACF (Fig 5E), there is another peak candidate (white arrowhead) next to the peak of the second positive phase, and there is some room to select the lag at the latter peak as such in expected cases where the latter peak is significantly higher than the former one. In other words, it can sometimes be annoying to determine a single lag value for a frequency calculation.
+
+These uncertainties in determining a single representative frequency are ultimately inevitable limitations in this short-time window approach, so instead of trying to determine a single lag to calculate gait frequency within each short-time window, we handled the ACF distribution from the point of the sequential ST-ACF matrix. Since the ST-ACF is the summary of sequential information in terms of periodicity, it is possible to interpret the ST-ACF as the representation for the degree of rhythmic gait within the selected window period. If we can parameterize to what degree the ST-ACF pattern at each timing is close to that of a normal gait, it is expected that we can identify periodic gait steps–whether a normal gait or periodic small step gait–even in the midst of plenty of noise due to irregular leg movements. This is why we used a DTW or kNN algorithm to quantify statistical distances between the ST-ACF at each moment and the typical ST-ACF. The DTW is a time-series clustering algorithm that calculates the statistically significant distance of two waveforms’ sequential patterns (= 0 between the same sequences) and has advantage over other types of sequential clustering methods in that it can compare two waveform data of which sequential length or sequential phases are significantly different. Therefore, use of the DTW is appropriate when measuring similarity in the sequential pattern of ST-ACF with varying sequential lengths or varying lags at the second positive peak. By using the normal control gait from CASIA dataset as the ST-ACF waveform reference, we can identify the timing at which temporal gait is similar to the control gait. In addition, kNN-based anomaly detection is a simple and frequently used algorithm for sequential anomaly events such as paroxysmal arrhythmia on electrocardiography [22].
+
+An applied result of DTW- or kNN-based distances is shown in Fig 6A, in which the gait sequence differs from that in Fig 5 but is obtained from the same patient (Pt. 2). In this gait sequence, the patient took as long as 23 seconds to walk less than 5 m. The plot on the second-bottom row in Fig 6A is a serial DTW-based distance in reference to the randomly selected control gait sequence from CASIA Dataset-B with a window length of 3 sec. The bottom-most row plots the serial kNN-based distance. The cadence of the gait sequence shall be calculated reliably for the timings at which the DTW and/or kNN distance reaches the outstanding negative peak as shown with a vertical dotted line (t1, t2, and t3). The calculated cadences were 179.1 steps/min at t1, 118.8 steps/min at t2, and 104.3 steps/min at t3 (Fig 6A).
+
+These sequential distances were then summarized to compare the different gait sequences. As shown in boxplots for DTW distance (Fig 6B) and kNN distance (Fig 6C), there was a significant difference in their distance distribution among the 3 subgroups of gait sequences: control gait (from CASIA dataset), mildly to moderately affected gait by PD (from Pt. 1; Fig 4), and severely affected gait by FOG from Pt. 2 (one-way ANOVA; p < 2.2e-16). The difference in values between the severely affected gait (from Pt. 2) and the other gait sequences (from control or Pt. 1) is apparent. When discriminating gait sequence of the control subjects from that of Pt. 1, discrimination performance was better in the DTW-based distance (area under the ROC curve [AUC], 0.957) than in kNN-based distance (AUC, 0.754) (p < 2.2e-16 on DeLong’s test) (Fig 6D). Meanwhile, when comparing gait sequences from Pt. 1 before and after DBS treatment (Fig 4A and 4B), discrimination performance was better in the kNN-based distance (AUC, 0.980) than in the DTW-based distance (AUC, 0.572) (p < 2.2e-16 on DeLong’s test) (Fig 6E).
+
+Discussion
+
+Gait movies are occasionally recorded in daily clinical practice of patients with neurological diseases, but there is a barrier for these movies to be quantitatively analyzed because of the requirement for specific gait analysis devices. To overcome this barrier, here we used OpenPose to extract gait parameters from gait movies recorded by a monocular home video camera filmed from the frontally viewed angle. As a result, we calculated the gait cadences of normal gait sequences with fair computational consistency between the laterally and frontally viewed movies using the short-time pitch-detection approach. Furthermore, we also demonstrated an example of PD patient movies filmed in actual in-hospital clinical settings as well as how to identify periodic gait steps among abnormal gait sequences with prominent FOG and extract their cadence using DTW- and kNN-based distance from the ACF pattern of a normal gait. Our proposed method shows that gait cadence and its time-serial change can be visualized and parameterized with fair reproducibility, even from gait videos recorded with a monocular home video camera.
+
+Our proposed method consists of two major characteristics: first, extracting sequential gait features (e.g. LRdiff in the frontally viewed movie and LRang in the laterally viewed movie) via body joint coordinates estimation using OpenPose to calculate cadence; and second, quantifying gait steps’ periodicity to improve the reliability of the calculated cadence. Regarding the first characteristic, the current OpenPose-based gait analysis has great potential due to its wide applicability regardless of some possible limitations: for example, as mentioned in the Methods, the OpenPose only estimates 2D joint coordinates in each frame and depth information is not available, so the accurate step progression or foot clearance are not obtainable due to parallax error in laterally viewed movies [24] or perspective error in frontally viewed movies [25], which is one of the major reasons why a 3D but not a 2D video capture system is now widely used. In addition, gait parameters including actual length measurements (e.g. step width or gait speed) are not available. Despite these limitations, as long as we focus on the gait periodicity including cadence to extract as gait features, the proposed OpenPose-based method works effectively even for gait movies recorded in clinical settings at hospital, mostly from the frontally viewed angle.
+
+Regarding the second major characteristic of the current study, we used ST-ACF instead of STFT to detect periodic gait steps because the latter has poor frequency resolution at the bandwidth of gait analysis (maximum 10 Hz here). By quantifying the sequential ST-ACF pattern in reference to that of normal gait in a data-driven manner, we could identify the timing at which gait steps were distinguishable from the concurrent FOG and involuntary leg oscillations. Since it is sometimes difficult to accurately annotate step timing for the gait sequence with severe small steps mixed with prominent FOG or involuntary leg oscillations, our data-driven approach can complement such difficulties. In addition, our approach could visualize the temporal distribution of gait steps with varying degrees of periodicity.
+
+The summarized sequential distance metrics (Fig 6B and 6C) showed a clear proportion to the subjects’ disease status. Compared to the apparently large statistical distance in gait sequence from PD with severe FOG, the difference in the sequential statistical distance between the gait of mild PD and the control gait was relatively small. Such a difference seemed to coincide with the difference in their gait by visual appearance. Although the DTW-based distance showed better ability than the kNN-based distance to discriminate control gait from mild PD gait, it should be evaluated with larger samples to determine which distance algorithm better represents the regular periodicity of gait sequence.
+
+In the field of acoustic analysis, in which one separates the source from the mixed sound or voice, the application of nonnegative matrix factorization (NMF) to the STFT spectrogram is frequently used [26]; however, we did not use NMF in this study to quantify or classify ST-ACF patterns. While the factorized basis matrix can be considered the representative ACF pattern and the activation matrix can be considered the sequential distribution of each principle basic ACF pattern, the applicability of NMF to ST-ACF seems doubtful. In other words, it is uncertain whether we can assume that ACF waveform is linearly additive. This is why we used DTW- or kNN-based quantification of ST-ACF patterns at each moment instead of NMF.
+
+Our study has some additional limitations that require consideration. First, there is currently no clear cut-off threshold for DTW- or kNN-based distance, and our results depend on the kind of gait movies used as reference. Second, it was not ascertained whether the summarized sequential statistical distance metrics reflect the features of pathological gait. Thus, the standardization of ACF pattern measurements would be essential for the practical use of this approach. Third, the number of patients, and their PD clinical stages, and the included movies are very small in this study, making the results statistically less robust ones and lessening the generalizability of our methods.
+
+Furthermore, the current ACF pattern–based gait quantification may not always be robust; in the current data-driven manner alone, a mere rhythmic step on the start line without a walking start cannot be distinguished from the small step gait at a similar step speed. In other words, our current approach can only identify periodic gait steps, not foot progression itself. The length of ACF window is another source of limitation. We used 3 seconds of window for movies from our PD patient as a result of trade-off between the number of eligible video sequences and the temporal/frequency resolution in the pitch detection; however, this window length may actually be insufficient for progressed PD patients with slower gait speed to include 2–3 of gait steps within the window, which may eventually lead to the decreased frequency resolution.
+
+In addition, the applicability of the proposed metric for disordered gait due to other neurological diseases with gait disturbances such as spinocerebellar ataxia, normal pressure hydrocephalus, progressive supranuclear palsy, spastic paraparesis, or stroke sequelae, was not proven. Developing other metrics to complement these weak points is required to increase the applicability of our method to more complex gait situations. Metrics representing horizontal hip swing, or left-to-right difference in the distribution of ankle/knee/hip joints’ 2D velocity vector after adjustment with the suspected deviation in the direction between the camera and gait, may be potential candidates to characterize the features of abnormal gait in these neurological diseases.
+
+Future studies are needed to secure gait movies of sufficient sample size and movie length in which gait status is largely varied. There may be a limit to parameterizing salient and robust gait features that can be applied to any types of gait movies under the assumption of extracting them using OpenPose. It may be helpful to use sequential deep learning to discriminate gait status without clearly defining gait features. Furthermore, if we can obtain spatiotemporal parameters by simultaneously using an accelerometer or force plate while recording gait movies, spatiotemporal parameter values may conversely regress.
+
+In conclusion, here we demonstrated how to identify an effective gait and calculate its cadence in normal and pathological gaits from 2D movies recorded with a home video camera. The proposed method may broaden the range of movies for which gait analyses can be conducted.
+
+Supporting information
+
+S1 Fig Scheme of 2D keypoint coordinates.
+
+The 16 keypoints’ coordinates are estimated independently by OpenPose for each frame. The keypoints represented are as follows: 0 = nose, 1 = heart, 2 = right shoulder, 3 = right elbow, 4 = right wrist, 5 = left shoulder, 6 = left elbow, 7 = left wrist, 8 = right hip, 9 = right knee, 10 = right ankle, 11 = left hip, 12 = left knee, 13 = left ankle, 14 = right eye, 15 = right ear, 16 = left eye, and 17 = left ear. The keypoints on eyes or ears (nos. 14–17) are omitted from the labeling for simplicity.
+
+(TIFF)
+
+Click here for additional data file.
+
+DOI: 10.1371/journal.pone.0223549.r001
+
+Decision Letter 0
+
+Arai Ken Academic Editor
+Copyright: © 2019 Ken Arai
+Copyright year: 2019
+Copyright holder: Ken Arai
+License: This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.
+License URL: http://creativecommons.org/licenses/by/4.0/
+
+Submission Version: 0
+
+17 Oct 2019
+
+PONE-D-19-26601
+
+Quantifying normal and parkinsonian gait features from home movies: Practical application of a deep learning–based 2D pose estimator
+
+PLOS ONE
+
+Dear Dr. Iwata,
+
+Thank you for submitting your manuscript to PLOS ONE. After careful consideration, we feel that it has merit but does not fully meet PLOS ONE’s publication criteria as it currently stands. Therefore, we invite you to submit a revised version of the manuscript that addresses the points raised during the review process.
+
+We would appreciate receiving your revised manuscript by Dec 01 2019 11:59PM. When you are ready to submit your revision, log on to https://www.editorialmanager.com/pone/ and select the 'Submissions Needing Revision' folder to locate your manuscript file.
+
+If you would like to make changes to your financial disclosure, please include your updated statement in your cover letter.
+
+To enhance the reproducibility of your results, we recommend that if applicable you deposit your laboratory protocols in protocols.io, where a protocol can be assigned its own identifier (DOI) such that it can be cited independently in the future. For instructions see: http://journals.plos.org/plosone/s/submission-guidelines#loc-laboratory-protocols
+
+Please include the following items when submitting your revised manuscript:
+
+A rebuttal letter that responds to each point raised by the academic editor and reviewer(s). This letter should be uploaded as separate file and labeled 'Response to Reviewers'.
+
+A marked-up copy of your manuscript that highlights changes made to the original version. This file should be uploaded as separate file and labeled 'Revised Manuscript with Track Changes'.
+
+An unmarked version of your revised paper without tracked changes. This file should be uploaded as separate file and labeled 'Manuscript'.
+
+Please note while forming your response, if your article is accepted, you may have the opportunity to make the peer review history publicly available. The record will include editor decision letters (with reviews) and your responses to reviewer comments. If eligible, we will contact you to opt in or out.
+
+We look forward to receiving your revised manuscript.
+
+Kind regards,
+
+Ken Arai
+
+Academic Editor
+
+PLOS ONE
+
+Journal Requirements:
+
+1. When submitting your revision, we need you to address these additional requirements.
+
+Please ensure that your manuscript meets PLOS ONE's style requirements, including those for file naming. The PLOS ONE style templates can be found at
+
+http://www.journals.plos.org/plosone/s/file?id=wjVg/PLOSOne_formatting_sample_main_body.pdf and http://www.journals.plos.org/plosone/s/file?id=ba62/PLOSOne_formatting_sample_title_authors_affiliations.pdf
+
+2. Please provide additional details regarding participant consent. In the ethics statement in the Methods and online submission information, please ensure that you have specified (1) whether consent was informed and (2) what type you obtained (for instance, written or verbal, and if verbal, how it was documented and witnessed). If the need for consent was waived by the ethics committee, please include this information.
+
+3. We note that Figures 2, 4 and 6 includes an image of a [patient / participant / in the study]. 
+
+As per the PLOS ONE policy (http://journals.plos.org/plosone/s/submission-guidelines#loc-human-subjects-research) on papers that include identifying, or potentially identifying, information, the individual(s) or parent(s)/guardian(s) must be informed of the terms of the PLOS open-access (CC-BY) license and provide specific permission for publication of these details under the terms of this license. Please download the Consent Form for Publication in a PLOS Journal (http://journals.plos.org/plosone/s/file?id=8ce6/plos-consent-form-english.pdf). The signed consent form should not be submitted with the manuscript, but should be securely filed in the individual's case notes. Please amend the methods section and ethics statement of the manuscript to explicitly state that the patient/participant has provided consent for publication: “The individual in this manuscript has given written informed consent (as outlined in PLOS consent form) to publish these case details”.
+
+If you are unable to obtain consent from the subject of the photograph, you will need to remove the figure and any other textual identifying information or case descriptions for this individual.
+
+[Note: HTML markup is below. Please do not edit.]
+
+Reviewers' comments:
+
+Reviewer's Responses to Questions
+
+Comments to the Author
+
+1. Is the manuscript technically sound, and do the data support the conclusions?
+
+The manuscript must describe a technically sound piece of scientific research with data that supports the conclusions. Experiments must have been conducted rigorously, with appropriate controls, replication, and sample sizes. The conclusions must be drawn appropriately based on the data presented.
+
+Reviewer #1: Yes
+
+Reviewer #2: Yes
+
+**********
+
+2. Has the statistical analysis been performed appropriately and rigorously?
+
+Reviewer #1: Yes
+
+Reviewer #2: I Don't Know
+
+**********
+
+3. Have the authors made all data underlying the findings in their manuscript fully available?
+
+The PLOS Data policy requires authors to make all data underlying the findings described in their manuscript fully available without restriction, with rare exception (please refer to the Data Availability Statement in the manuscript PDF file). The data should be provided as part of the manuscript or its supporting information, or deposited to a public repository. For example, in addition to summary statistics, the data points behind means, medians and variance measures should be available. If there are restrictions on publicly sharing data—e.g. participant privacy or use of data from a third party—those must be specified.
+
+Reviewer #1: Yes
+
+Reviewer #2: Yes
+
+**********
+
+4. Is the manuscript presented in an intelligible fashion and written in standard English?
+
+PLOS ONE does not copyedit accepted manuscripts, so the language in submitted articles must be clear, correct, and unambiguous. Any typographical or grammatical errors should be corrected at revision, so please note any specific errors here.
+
+Reviewer #1: Yes
+
+Reviewer #2: Yes
+
+**********
+
+5. Review Comments to the Author
+
+Please use the space provided to explain your answers to the questions above. You may also include additional comments for the author, including concerns about dual publication, research ethics, or publication ethics. (Please upload your review as an attachment if it exceeds 20,000 characters)
+
+Reviewer #1: Sato and his colleagues present an important work using OpenPose. This is an interesting study that may become a standard method for evaluating the gait disturbance. I have noted several minor corrections as below. I would be glad if my comments could help your manuscript.
+
+1. This study assessed patients with PD. I think this method can be widely applicable other neurological patients who show the gait disturbance, not only cerebella ataxia, but also normal pressure hydrocephalus, spastic paraparesis, and more. If you can show the future prospects, please describe.
+
+2. About the recorded plane of gait, CASIA evaluated sagittal view. If you evaluated sagittal view in patients with PD, please provide.
+
+3. Please show the annotation of the horizontal axis in Figure 4 (B) and (D).
+
+Reviewer #2: The manuscript by Sato et al entitled ‘Quantifying normal and parkinsonian gait features from home movies: Practical application of a deep learning–based 2D pose estimator’ proposed the utility of 2D movies recorded by home video camera for identification of normal and pathological gaits. The authors obtained gait features of normal control (from CASIA database) and PD patients in their hospital by using OpenPose, and estimated cadence of gait steps from the sequential gait features. Their analyzes showed that the quantified periodicity of each gait sequence corresponded with disease status. Thus, they concluded that their method might be useful to analyze gait movies, which have been underutilized.
+
+Their data seems to be preliminary, however, the concept is very interesting and has a good point to make. Following points can be considered to be added.
+
+1) As the authors already addressed in Page12 in Method section, the window length of gait movies is insufficient especially for PD patients. This point should be expanded/discussed with presumable drawbacks, and addressed in the limitation part in Discussion section.
+
+2) Other filming conditions, such as distance between the patient and camera or focal length etc, should be listed.
+
+3) Limited number and severity range (Yahr scale) of PD patients were analyzed in this study.
+
+**********
+
+6. PLOS authors have the option to publish the peer review history of their article (what does this mean?). If published, this will include your full peer review and any attached files.
+
+If you choose “no”, your identity will remain anonymous but your review may still be made public.
+
+Do you want your identity to be public for this peer review? For information about this choice, including consent withdrawal, please see our Privacy Policy.
+
+Reviewer #1: No
+
+Reviewer #2: No
+
+[NOTE: If reviewer comments were submitted as an attachment file, they will be attached to this email and accessible via the submission site. Please log into your account, locate the manuscript record, and check for the action link "View Attachments". If this link does not appear, there are no attachment files to be viewed.]
+
+While revising your submission, please upload your figure files to the Preflight Analysis and Conversion Engine (PACE) digital diagnostic tool, https://pacev2.apexcovantage.com/. PACE helps ensure that figures meet PLOS requirements. To use PACE, you must first register as a user. Registration is free. Then, login and navigate to the UPLOAD tab, where you will find detailed instructions on how to use the tool. If you encounter any issues or have any questions when using PACE, please email us at figures@plos.org. Please note that Supporting Information files do not need this step.
+
+DOI: 10.1371/journal.pone.0223549.r002
+
+Author response to Decision Letter 0
+
+Submission Version: 1
+
+24 Oct 2019
+
+Journal requirements:
+
+2. Please provide additional details regarding participant consent.
+
+(Reply) As per your comment, we described that we have obtained written informed consent to record films, analyze, and report as the research articles.
+
+3. We note that Figures 2, 4 and 6 includes an image of a [patient / participant / in the study]. As per the PLOS ONE policy (http://journals.plos.org/plosone/s/submission-guidelines#loc-human-subjects-research) on papers that include identifying, or potentially identifying, information, the individual(s) or parent(s)/guardian(s) must be informed of the terms of the PLOS open-access (CC-BY) license and provide specific permission for publication of these details under the terms of this license. Please download the Consent Form for Publication in a PLOS Journal (http://journals.plos.org/plosone/s/file?id=8ce6/plos-consent-form-english.pdf). The signed consent form should not be submitted with the manuscript, but should be securely filed in the individual's case notes. Please amend the methods section and ethics statement of the manuscript to explicitly state that the patient/participant has provided consent for publication: “The individual in this manuscript has given written informed consent (as outlined in PLOS consent form) to publish these case details”.
+
+(Reply)
+
+Instead of obtaining the “signed informed consent as outlined in PLOS form”, we deleted the patients’ images on Figure 4 and Figure 5, and we also revised the manuscript and figure legends. Other patients’ information such as decade-in-age or their disease stage are not detailed information and therefore they are not identifiable data.
+
+As to the Figure 2, the images were obtained from the CASIA database which is an open database available from their website by anyone, and in its strict sense they are not the actual participants of our study. The database terms of use do not prohibit the present way of including images into a research article as in our Figure 2. By these reasons, we believe the Figure 2 would be allowed as it is, without need to remove it.
+
+REVIEWER 1
+
+1. This study assessed patients with PD. I think this method can be widely applicable other neurological patients who show the gait disturbance, not only cerebella ataxia, but also normal pressure hydrocephalus, spastic paraparesis, and more. If you can show the future prospects, please describe.
+
+(Reply) We thank for your important comment. As per your comment, we additionally described about other diseases this study is potentially applicable, and the potential future solutions to parameterize the gait abnormalities seen in these diseases as follows:
+
+• In addition, the applicability of the proposed metric for disordered gait due to other neurological diseases with gait disturbances such as spinocerebellar ataxia, normal pressure hydrocephalus, progressive supranuclear palsy, spastic paraparesis, or stroke sequelae, was not proven. Developing other metrics to complement these weak points is required to increase the applicability of our method to more complex gait situations. Metrics representing horizontal hip swing, or left-to-right difference in the distribution of ankle/knee/hip joints’ 2D velocity vector after adjustment with the suspected deviation in the direction between the camera and gait, may be potential candidates to characterize the features of abnormal gait in these neurological diseases. (Line 12-19 on Page 27)
+
+2. About the recorded plane of gait, CASIA evaluated sagittal view. If you evaluated sagittal view in patients with PD, please provide.
+
+(Reply) We thank for your comment. Unfortunately, we have no laterally-viewed movie for our patients. This is because the movies in our hospital are recorded in the narrow hallways.
+
+3. Please show the annotation of the horizontal axis in Figure 4 (B) and (D).
+
+(Reply) As per your comment, we added the annotation on Figure 4.
+
+REVIEWER 2
+
+1) As the authors already addressed in Page12 in Method section, the window length of gait movies is insufficient especially for PD patients. This point should be expanded/discussed with presumable drawbacks, and addressed in the limitation part in Discussion section.
+
+(Reply) As you indicate, the window length we applied for movies from PD patients were 3 seconds, being relatively short to assure 2-3 steps included within that window. This was trade-off between the number of eligible video sequences and the temporal resolution in the cadence estimation.
+
+As per your comment, we described the discussion as to this point the Discussion section, as follows:
+
+• Furthermore, the current ACF pattern–based gait quantification may not always be robust; in the current data-driven manner alone, a mere rhythmic step on the start line without a walking start cannot be distinguished from the small step gait at a similar step speed. In other words, our current approach can only identify periodic gait steps, not foot progression itself. The length of ACF window is another source of limitation. We used 3 seconds of window for movies from our PD patient as a result of trade-off between the number of eligible video sequences and the temporal/frequency resolution in the pitch detection; however, this window length may actually be insufficient for progressed PD patients with slower gait speed to include 2-3 of gait steps within the window, which may eventually lead to the decreased frequency resolution. (Line 3-11 on Page 27)
+
+2) Other filming conditions, such as distance between the patient and camera or focal length etc, should be listed.
+
+(Reply) As per your comment, we additionally described other recording conditions on the Table 1 as far as we know, including the used video model and the distance between the participants and camera. We could not obtain information about the focal length from both of movies of CASIA dataset and our patients, and the former is due to the data missing, and the latter is due to the use of zoom-in/out during recording.
+
+3) Limited number and severity range (Yahr scale) of PD patients were analyzed in this study.
+
+(Reply) As you point out, this is actually the limitation of this study. We mentioned about this point as one of the limitations in the Discussion section, as follows:
+
+• Our study has some additional limitations that require consideration. First, there is currently no clear cut-off threshold for DTW- or kNN-based distance, and our results depend on the kind of gait movies used as reference. Second, it was not ascertained whether the summarized sequential statistical distance metrics reflect the features of pathological gait. Thus, the standardization of ACF pattern measurements would be essential for the practical use of this approach. Third, the number of patients, and their PD clinical stages, and the included movies are very small in this study, making the results statistically less robust ones and lessening the generalizability of our methods. (Line 15-19 of Page 26, and Line 1-2 of Page 27)
+
+Attachment Submitted filename: Response to Reviewers.docx
+
+Click here for additional data file.
+
+DOI: 10.1371/journal.pone.0223549.r003
+
+Decision Letter 1
+
+Arai Ken Academic Editor
+Copyright: © 2019 Ken Arai
+Copyright year: 2019
+Copyright holder: Ken Arai
+License: This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.
+License URL: http://creativecommons.org/licenses/by/4.0/
+
+Submission Version: 1
+
+30 Oct 2019
+
+Quantifying normal and parkinsonian gait features from home movies: Practical application of a deep learning–based 2D pose estimator
+
+PONE-D-19-26601R1
+
+Dear Dr. Iwata,
+
+We are pleased to inform you that your manuscript has been judged scientifically suitable for publication and will be formally accepted for publication once it complies with all outstanding technical requirements.
+
+Within one week, you will receive an e-mail containing information on the amendments required prior to publication. When all required modifications have been addressed, you will receive a formal acceptance letter and your manuscript will proceed to our production department and be scheduled for publication.
+
+Shortly after the formal acceptance letter is sent, an invoice for payment will follow. To ensure an efficient production and billing process, please log into Editorial Manager at https://www.editorialmanager.com/pone/, click the "Update My Information" link at the top of the page, and update your user information. If you have any billing related questions, please contact our Author Billing department directly at authorbilling@plos.org.
+
+If your institution or institutions have a press office, please notify them about your upcoming paper to enable them to help maximize its impact. If they will be preparing press materials for this manuscript, you must inform our press team as soon as possible and no later than 48 hours after receiving the formal acceptance. Your manuscript will remain under strict press embargo until 2 pm Eastern Time on the date of publication. For more information, please contact onepress@plos.org.
+
+With kind regards,
+
+Ken Arai
+
+Academic Editor
+
+PLOS ONE
+
+Additional Editor Comments (optional):
+
+Reviewers' comments:
+
+Reviewer's Responses to Questions
+
+Comments to the Author
+
+1. If the authors have adequately addressed your comments raised in a previous round of review and you feel that this manuscript is now acceptable for publication, you may indicate that here to bypass the “Comments to the Author” section, enter your conflict of interest statement in the “Confidential to Editor” section, and submit your "Accept" recommendation.
+
+Reviewer #1: All comments have been addressed
+
+Reviewer #2: All comments have been addressed
+
+**********
+
+2. Is the manuscript technically sound, and do the data support the conclusions?
+
+The manuscript must describe a technically sound piece of scientific research with data that supports the conclusions. Experiments must have been conducted rigorously, with appropriate controls, replication, and sample sizes. The conclusions must be drawn appropriately based on the data presented.
+
+Reviewer #1: Yes
+
+Reviewer #2: Yes
+
+**********
+
+3. Has the statistical analysis been performed appropriately and rigorously?
+
+Reviewer #1: (No Response)
+
+Reviewer #2: I Don't Know
+
+**********
+
+4. Have the authors made all data underlying the findings in their manuscript fully available?
+
+The PLOS Data policy requires authors to make all data underlying the findings described in their manuscript fully available without restriction, with rare exception (please refer to the Data Availability Statement in the manuscript PDF file). The data should be provided as part of the manuscript or its supporting information, or deposited to a public repository. For example, in addition to summary statistics, the data points behind means, medians and variance measures should be available. If there are restrictions on publicly sharing data—e.g. participant privacy or use of data from a third party—those must be specified.
+
+Reviewer #1: Yes
+
+Reviewer #2: Yes
+
+**********
+
+5. Is the manuscript presented in an intelligible fashion and written in standard English?
+
+PLOS ONE does not copyedit accepted manuscripts, so the language in submitted articles must be clear, correct, and unambiguous. Any typographical or grammatical errors should be corrected at revision, so please note any specific errors here.
+
+Reviewer #1: Yes
+
+Reviewer #2: Yes
+
+**********
+
+6. Review Comments to the Author
+
+Please use the space provided to explain your answers to the questions above. You may also include additional comments for the author, including concerns about dual publication, research ethics, or publication ethics. (Please upload your review as an attachment if it exceeds 20,000 characters)
+
+Reviewer #1: (No Response)
+
+Reviewer #2: In this revised version of the manuscript entitled ‘Quantifying normal and parkinsonian gait features from home movies: Practical application of a deep learning–based 2D pose estimator’, all required comments and discussions are sufficiently addressed.
+
+**********
+
+7. PLOS authors have the option to publish the peer review history of their article (what does this mean?). If published, this will include your full peer review and any attached files.
+
+If you choose “no”, your identity will remain anonymous but your review may still be made public.
+
+Do you want your identity to be public for this peer review? For information about this choice, including consent withdrawal, please see our Privacy Policy.
+
+Reviewer #1: No
+
+Reviewer #2: No
+
+DOI: 10.1371/journal.pone.0223549.r004
+
+Acceptance letter
+
+Arai Ken Academic Editor
+Copyright: © 2019 Ken Arai
+Copyright year: 2019
+Copyright holder: Ken Arai
+License: This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.
+License URL: http://creativecommons.org/licenses/by/4.0/
+
+6 Nov 2019
+
+PONE-D-19-26601R1
+
+Quantifying normal and parkinsonian gait features from home movies: Practical application of a deep learning–based 2D pose estimator
+
+Dear Dr. Iwata:
+
+I am pleased to inform you that your manuscript has been deemed suitable for publication in PLOS ONE. Congratulations! Your manuscript is now with our production department.
+
+If your institution or institutions have a press office, please notify them about your upcoming paper at this point, to enable them to help maximize its impact. If they will be preparing press materials for this manuscript, please inform our press team within the next 48 hours. Your manuscript will remain under strict press embargo until 2 pm Eastern Time on the date of publication. For more information please contact onepress@plos.org.
+
+For any other questions or concerns, please email plosone@plos.org.
+
+Thank you for submitting your work to PLOS ONE.
+
+With kind regards,
+
+PLOS ONE Editorial Office Staff
+
+on behalf of
+
+Dr. Ken Arai
+
+Academic Editor
+
+PLOS ONE
+
+
+References
+
+1 Alcock L , Galna B , Lord S , Rochester L . Characterisation of foot clearance during gait in people with early Parkinson׳s disease: Deficits associated with a dual task. J Biomech. 2016 9 6;49(13):2763–2769. 10.1016/j.jbiomech.2016.06.007 27363617
+2 Alcock L , Galna B , Perkins R , Lord S , Rochester L . Step length determines minimum toe clearance in older adults and people with Parkinson’s disease. J Biomech. 2018 4 11; 71: 30–36. 10.1016/j.jbiomech.2017.12.002 29429622 PMC5887869
+3 Nutt JG , Bloem BR , Giladi N , Hallett M , Horak FB , Nieuwboer A . Freezing of gait: moving forward on a mysterious clinical phenomenon. Lancet Neurol. 2011 8;10(8):734–44. 10.1016/S1474-4422(11)70143-0 21777828 PMC7293393
+4 Morris M , Iansek R , Matyas T , Summers J . Abnormalities in the stride length-cadence relation in parkinsonian gait. Mov Disord. 1998 1;13(1):61–9. 10.1002/mds.870130115 9452328
+5 Hausdorff JM . Gait dynamics in Parkinson’s disease: common and distinct behavior among stride length, gait variability, and fractal-like scaling. Chaos. 2009 6;19(2):026113 10.1063/1.3147408 19566273 PMC2719464
+6 Yang CC , Hsu YL . A review of accelerometry-based wearable motion detectors for physical activity monitoring. Sensors (Basel). 2010;10(8):7772–88.22163626 10.3390/s100807772 PMC3231187
+7 Muro-de-la-Herran A , Garcia-Zapirain B , Mendez-Zorrilla A . Gait analysis methods: an overview of wearable and non-wearable systems, highlighting clinical applications. Sensors (Basel). 2014 2 19;14(2):3362–94.24556672 10.3390/s140203362 PMC3958266
+8 Cao Z, Simon T, Wei S, Sheikh Y. Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields. In CVPR, 2017. arXiv:1611.0805010.1109/TPAMI.2019.2929257 31331883
+9 Chainer version of Realtime Multi-Person Pose Estiamtion (https://github.com/DeNA/chainer_Realtime_Multi-Person_Pose_Estimation) (accessed by authors on February 2019)
+10 Keenan DB , Wilhelm FH . Classification of locomotor activity by acceleration measurement: validation in Parkinson disease. Biomed Sci Instrum. 2005;41:329–34. 15850127
+11 Yang CC , Hsu YL , Shih KS , Lu JM . Real-time gait cycle parameter recognition using a wearable accelerometry system. Sensors (Basel). 2011;11(8):7314–26.22164019 10.3390/s110807314 PMC3231731
+12 Harris FJ . On the use of Windows for Harmonic Analysis with the Discrete Fourier Transform. Proceedings of the IEEE. 66 (1): 51–83. 10.1109/PROC.1978.10837
+13 Bennett TR , Wu J , Kehtarnavaz N , Jafari R . Inertial Measurement Unit-Based Wearable Computers for Assisted Living Applications: A signal processing perspective. IEEE Signal Processing Magazine. 2016, vol. 33, no.2, pp. 28–35. 10.1109/MSP.2015.2499314
+14 Yu S, Tan D, Tan T. A Framework for Evaluating the Effect of View Angle, Clothing and Carrying Condition on Gait Recognition. 18th International Conference on Pattern Recognition (ICPR'06). 2006.
+15 FFmpeg Developers. (2016). ffmpeg tool (Version be1d324) [Software]. (http://ffmpeg.org/)
+16 Sofuwa O , Nieuwboer A , Desloovere K , Willems AM , Chavret F , Jonkers I . Quantitative gait analysis in Parkinson’s disease: comparison with a healthy control group. Arch Phys Med Rehabil. 2005 5;86(5):1007–13. 10.1016/j.apmr.2004.08.012 15895349
+17 Pistacchi M , Gioulis M , Sanson F , De Giovannini E , Filippi G , Rossetto F , et al Gait analysis and clinical correlations in early Parkinson’s disease. Funct Neurol. 2017 Jan-Mar;32(1):28–34. 10.11138/FNeur/2017.32.1.028 28380321 PMC5505527
+18 Kharb A , Saini V , Jain YK , Dhiman S . A review of gait cycle and its parameters. IJCEM International Journal of Computational Engineering & Management, Vol. 13, 2011.
+19 Schreven S , Beek PJ , Smeets JB . Optimising filtering parameters for a 3D motion analysis system. J Electromyogr Kinesiol. 2015 10;25(5):808–14. 10.1016/j.jelekin.2015.06.004 26159504
+20 Giorgino T (2009). “Computing and Visualizing Dynamic Time Warping Alignments in R: The dtw Package”. Journal of Statistical Software, 31(7), 1–24. http://www.jstatsoft.org/v31/i07/.
+21 FNN: Fast Nearest Neighbor Search Algorithms and Applications. (https://cran.r-project.org/web/packages/FNN/index.html)
+22 Saini I , Singh D , Khosla A . QRS detection using K-Nearest Neighbor algorithm (KNN) and evaluation on standard ECG databases. J Adv Res. 2013 7;4(4):331–44. 10.1016/j.jare.2012.05.007 25685438 PMC4293876
+23 Robin X , Turck N , Hainard A , Tiberti N , Lisacek F , Sanchez J , et al (2011). pROC: an open-source package for R and S+ to analyze and compare ROC curves. BMC Bioinformatics, 12, p. 77 10.1186/1471-2105-12-77 21414208 PMC3068975
+24 Sih BL , Hubbard M , Williams KR . Correcting out-of-plane errors in two-dimensional imaging using nonimage-related information. J Biomech. 2001 2;34(2):257–60. 10.1016/s0021-9290(00)00185-8 11165291
+25 Mannon K , Anderson T , Cheetham P , Cornwall MW , McPoil TG . A comparison of two motion analysis systems for the measurement of two-dimensional rearfoot motion during walking. Foot Ankle Int. 1997 7;18(7):427–31. 10.1177/107110079701800710 9252813
+26 Fu SW , Li PC , Lai YH , Yang CC , Hsieh LC , Tsao Y . Joint Dictionary Learning-Based Non-Negative Matrix Factorization for Voice Conversion to Improve Speech Intelligibility After Oral Surgery. IEEE Trans Biomed Eng. 2017 11;64(11):2584–2594. 10.1109/TBME.2016.2644258 28026747

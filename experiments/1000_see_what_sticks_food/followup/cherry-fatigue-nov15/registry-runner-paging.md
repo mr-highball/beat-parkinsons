@@ -1,0 +1,7 @@
+# ClinicalTrials.gov page-size and completion checks
+
+The native runner requests up to 10 studies per page in both its Parkinson inventory and its expression mode. Earlier 100-record requests for broad cherry and cherry fatigue exceeded the shared 8 MiB response guard. The current runner follows continuation tokens through the final page and reconciles unique trial IDs with the provider total. It removes the previous completion receipt before replacing the inventories when an output directory is reused. [Native source](../../tools/foodexperiment.registry.lpr) · [Official API specification](https://clinicaltrials.gov/api/oas/v2)
+
+A live build from the revised source retrieved all 97 cherry-fatigue studies across 10 pages. Its inventory and exposure-candidate tables were byte-identical to the earlier successful replay. Native fixtures verified both entry points, same-token retries after HTTP 503 and 429, an empty intermediate page and a final-page candidate. Count mismatch, repeated token, byte-limit and terminal HTTP 400 fixtures exited without a completion receipt. The byte-limit test began with a prior success receipt in the reused directory and verified its removal. [Live production receipt](registry-fatigue-production-replay.tsv)
+
+The smaller page size increases request counts on broad scans. A very large page can still hit the response guard, in which case the registry run remains incomplete.

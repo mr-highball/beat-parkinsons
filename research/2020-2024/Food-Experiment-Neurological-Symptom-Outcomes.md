@@ -1,0 +1,5 @@
+# Parkinson and related neurological symptom outcomes
+
+## Retraction of the amino acid medication case report
+
+December 16, 2020. The journal retracted its 2011 Parkinson amino acid case, DOI 10.2147/IJGM.S16621. Its investigation did not obtain requested ethics and consent information, study protocols, raw data or supporting records. The journal also noted competing-interest and verification concerns. This notice and original case belong to one study history. [Original source](https://pmc.ncbi.nlm.nih.gov/articles/PMC7751832/) · [Local factual text](Source-Text/2020-Hinz-Amino-Acid-Case-Retraction.txt)

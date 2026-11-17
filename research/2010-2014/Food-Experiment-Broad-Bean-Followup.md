@@ -1,0 +1,7 @@
+# Broad bean reactions in Parkinson’s, 2010–2014
+
+## Severe dyskinesia after raw and stewed broad beans
+
+Ramírez-Moreno and colleagues first published this letter on December 12, 2013. A person with Parkinson’s and mild baseline ON dyskinesia developed severe involuntary movements, cervical dystonia, sweating, nausea and anxiety about two hours after lunch. The measured blood pressure in the emergency department was 90/55 mm Hg. The family reported no medication change or extra dose and estimated that he had eaten 300–400 g of freshly harvested broad beans across two preparations, raw with the pod and stewed. Symptoms abated after several interventions and a temporary pause in antiparkinsonian treatment. He returned to baseline by 48 hours. The report gives no bean assay, plasma levodopa measurement, separate exposure by preparation, or rechallenge. [Primary letter in Spanish, July–August 2015 issue](https://www.elsevier.es/es-revista-neurologia-295-articulo-consumo-habas-vicia-faba-enfermedad-S0213485313002399) · [First online publication date, PMID 24332774](https://pubmed.ncbi.nlm.nih.gov/24332774/)
+
+The raw and stewed exposures were *Vicia faba*, an ingredient outside the frozen claim set. The clinical history adds a separate adverse case alongside the later fresh sautéed bean report. [1992 acute feeding trial](../1990-1994/Food-Experiment-Food-Followup.md#cooked-broad-beans-and-acute-motor-response) · [Later case](../2020-2024/Food-Experiment-Broad-Bean-Followup.md)

@@ -1,0 +1,17 @@
+# Oral ginger preparations and measured pain
+
+## 2010 repeated ground rhizome and exercise pain
+
+Black et al. first published on 24 April 2010. The article reports two double-blind randomized experiments and separate placebos. Campus volunteers took capsules with 2 g/day of ground, unheated rhizome or ground and heat-treated rhizome for 11 days. Sample sizes analyzed were 34 and 40, respectively. The 24-hour eccentric-exercise arm-pain ratings were 25.3% lower with unheated rhizome (p=.041) and 22.5% lower with heated rhizome (p=.049), relative to each study’s own placebo. Capsules differed between experiments and the study did not randomize a head-to-head raw-versus-heated comparison. The McCormick Science Institute supported the work, supplied characterized ginger and made the capsules. The study excluded an unheated-trial placebo participant after inadequate exercise-induced injury. This is the closest located whole-rhizome result, with a capsule preparation, experimentally induced pain and a non-Parkinson sample. The original PDF is available through the funder and carries American Pain Society copyright. [NLM record](https://pubmed.ncbi.nlm.nih.gov/20418184/) · [Original full PDF](https://www.mccormickscienceinstitute.com/content/msi/assets/Black%20J%20Pain%20118942010.pdf). [Local factual text](Source-Text/2010-Black-Repeated-Ginger-Pain-Extract.txt)
+
+## 2010 single dose after eccentric exercise
+
+Black and O’Connor first published this separate crossover report on 28 October 2010. In 27 volunteers, a single 2-g ginger dose or placebo at 24 and 48 hours after induced elbow-flexor injury gave no overall pain difference at 45 minutes post-dose. A subset taking ginger first showed lower pain the following day. This timing-specific subset result does not override the overall acute result and is distinct from 11-day preloading. The reports differ in dose schedule, randomization and exercise protocol. Individual participant overlap has not been verified. The publisher abstract and explicit early online date are accessible. [Original publisher record](https://onlinelibrary.wiley.com/doi/abs/10.1002/ptr.3148). [Local factual text](Source-Text/2010-Black-Acute-Ginger-Pain-Extract.txt)
+
+## Powdered ginger and knee osteoarthritis
+
+Niempoog and colleagues randomized 60 participants with knee osteoarthritis to dry powdered ginger or placebo for eight weeks. Forty-nine completed, 26 and 23 by group. The original report found no clear treatment advantage on KOOS pain. Separate numerical group values were unavailable in the reviewed extract. This provides an inconclusive controlled comparison on knee pain, with distinct disease and a dried capsule preparation. [Local factual extract](Source-Text/2012-Niempoog-Ginger-Knee-Pain-Factual-Extract.txt) · [Original report](https://thaiscience.info/Journals/Article/JMAT/10971310.pdf) · [Indexed primary abstract](https://pubmed.ncbi.nlm.nih.gov/23964445/)
+
+## Ginger rhizome powder and menstrual pain
+
+Rahnama and colleagues' 2012 placebo-controlled study measured visual analogue pain in primary dysmenorrhea. Its original abstract reports a favorable powder comparison for two administration schedules, with p = .015 and .029 for severity. Menstrual pain, a capsule preparation, and coexisting timing effects constrain interpretation for grated ginger in Parkinson disease. [Local primary abstract extract](Source-Text/2012-Rahnama-Ginger-Dysmenorrhea-Factual-Extract.txt) · [Original article](https://doi.org/10.1186/1472-6882-12-92)

@@ -1,0 +1,3 @@
+# Orange preparations and constipation measures
+
+The Leão series measured constipation after a combined physical therapy program and fruit drink in people with Chagas megacolon. The Nesello survey in the same period associates reported orange consumption with a binary Rome III classification. Both leave the role of orange in Parkinson constipation open. The series gives a time course but no comparison separating the orange from the other ingredients or therapy. [Mixed intervention](../Food-Experiment-Orange-Papaya-Constipation.md) · [Orange frequency survey](../Food-Experiment-Food-Followup.md#reported-orange-intake-and-rome-iii-constipation-in-older-adults)

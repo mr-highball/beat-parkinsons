@@ -1,0 +1,5 @@
+# Cold-pressed walnut oil in experimental autoimmune encephalomyelitis
+
+## Walnut oil and mouse neurological disease scores
+
+Ganji and colleagues published this experiment online on September 11, 2017. They assigned eight female mice to each of three groups: healthy controls, induced experimental autoimmune encephalomyelitis (EAE) with phosphate-buffered saline, and induced EAE with cold-pressed *Juglans regia* walnut oil. The oil group received 5 mL/kg by gavage daily from symptom onset for 21 days. The reported average disease scores were 2.38 ± 0.56 with oil and 3.00 ± 0.69 with saline (p < .05). The score tracked tail and limb weakness or paralysis and death. The article does not clearly state whether the average is over the observation period or at one time point. This mouse demyelination model did not measure Parkinson dystonia. [Publisher record](https://doi.org/10.1080/1028415X.2017.1371389) · [Author-posted original](https://www.researchgate.net/publication/319631111_Therapeutic_effects_of_walnut_oil_on_the_animal_model_of_multiple_sclerosis) · [Local factual text](Source-Text/2017-Ganji-Walnut-Oil-EAE.txt)

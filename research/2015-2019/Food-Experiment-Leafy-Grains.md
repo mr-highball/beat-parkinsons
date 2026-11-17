@@ -1,0 +1,20 @@
+# Leafy vegetable and grain evidence, 2015–2019
+
+## Rye kernel bread and next-morning cognitive testing
+
+A 38-person crossover in healthy adults compared baked rye bread made with rye kernels and flour plus resistant starch against white wheat bread. ClinicalTrials.gov first posted the registration September 8, 2017, after the study began. The 2018 results found no clear between-meal effects on cognitive tests including selective attention and verbal working memory. Mood valence and activation favored the rye formulation. Voice volume, freezing episodes and Parkinson status were outside the study. The comparison establishes a documented rye exposure for future clinical follow-up. [Primary article and Table 3](https://pmc.ncbi.nlm.nih.gov/articles/PMC6220522/) · [Local CC BY text](Source-Text/PMC6220522.txt) · [Official registration](https://clinicaltrials.gov/study/NCT03275948) · [Local registry fields](Source-Text/Trials/NCT03275948.txt)
+
+## Pearl millet cultivars and reaction time
+
+Scott and colleagues compared iron-biofortified and conventional pearl millet for six months in 140 adolescents. Simple reaction time improved by 123 versus 63 milliseconds, Go/No-Go reaction time by 67 versus 30 milliseconds, and the double-cue Attentional Network Task by 74 versus 32 milliseconds. These comparisons tested response speed and attention with the two millet varieties. They do not establish a change in manual dexterity, pain or dyskinesia. [Primary article](https://doi.org/10.1093/jn/nxy113) · [Earlier registry](../2010-2014/Food-Experiment-Leafy-Grains.md#registration-for-biofortified-pearl-millet-feeding)
+
+## Spinach and silverbeet in vegetable groups
+
+In an older Australian women’s cohort, Sim and colleagues pooled lettuce and other salad greens with celery, silverbeet and spinach in a leafy vegetable exposure. There was no separately reported silverbeet, spinach preparation or Parkinson balance estimate. The related dietary-diversity report studied the same women and the same hospitalizations. A separate Rush cohort included spinach in its green leafy food group and found slower overall cognitive decline in higher consumers. Its pooled observational exposure and global cognitive outcome do not estimate the effect of cooked spinach on attention. [Australian intake report](https://doi.org/10.1017/S0007114518002155) · [Related Australian study and scope](Food-Experiment-Food-Followup.md) · [Rush primary study](https://pmc.ncbi.nlm.nih.gov/articles/PMC5772164/)
+
+## Cooked barley flour and anxiety in a crossover
+
+Alhassani’s 2018 dissertation record and 2019 proceedings abstract describe the same 23 adults. The breakfast intervention contained cooked whole-grain barley flour and the comparison contained rice flour. The intervention and comparison periods had different durations. The proceedings report no clear between-phase difference on HADS anxiety, HADS depression, perceived stress or mood. The thesis full text is restricted. Cooked flour and boiled whole barley differ in preparation, and no participant group with Parkinson’s was reported. [2018 dissertation record](https://digitalcommons.wayne.edu/oa_dissertations/2087/) · [2019 original proceedings abstract](https://pmc.ncbi.nlm.nih.gov/articles/PMC6818840/)
+## Dissertation record for the cooked barley flour crossover
+
+Alhassani’s Wayne State dissertation was awarded in January 2018. Its primary institutional abstract describes 30 g of organic hulled whole-grain barley flour cooked in 240 mL of water. It reports improvement in anxiety regardless of which flour was given during the crossover. The 2019 conference abstract reports the same 23 participants, with no clear difference versus rice flour in anxiety outcomes. The full dissertation is restricted to institutional users, and the numerical tables remain unavailable. [Institutional abstract](https://digitalcommons.wayne.edu/oa_dissertations/2087/) · [Original conference abstract](https://pmc.ncbi.nlm.nih.gov/articles/PMC6818840/) · [Local dissertation abstract extract](Source-Text/2018-Alhassani-Talbina-Dissertation-Abstract-Extract.txt)

@@ -1,0 +1,5 @@
+# Japanese diet and oral-function measurements
+
+## Oral rehydration solution in the VALID-PD protocol
+
+Kawasaki Medical School’s observational registration UMIN000061749 identifies May 31, 2026 as the registry entry date and August 15, 2026 as the public disclosure date. The target is 80 participants across two populations. In the manometry population without clinically evident upper esophageal sphincter dysfunction, the primary comparison uses 5 mL of OS-1 oral rehydration solution to compare manometry and neck-ultrasound measurements. In a separate Parkinson cohort, the registry specifies ultrasound only and compares participants with mild swallowing discomfort and those without symptoms, all without manifest dysphagia. The source specifies no dietary contrast and no published results. Its displayed recruitment status is preinitiation and its anticipated follow-up end is June 30, 2028. [UMIN primary registration](https://center6.umin.ac.jp/cgi-open-bin/ctr/ctr_view.cgi?recptno=R000070663) · [Ministry registry mirror](https://rctportal.mhlw.go.jp/detail/um?trial_id=UMIN000061749) · [Local registration summary](Source-Text/Trials/UMIN000061749.txt)

@@ -1,0 +1,5 @@
+# Green tea compounds and motor models
+
+## Isolated EGCG and motor behavior in PINK1 flies
+
+Jiang and colleagues first published online September 24, 2026. In PINK1 mutant flies, the author abstract reports that isolated EGCG affected glial glycolysis and inflammatory markers alongside changes in climbing and locomotor activity. The abstract mentions tea for fatigue as background. The investigators did not report a brewed beverage or clinical fatigue measurement. The publisher offers only a gated body and the abstract supplies no dose-specific effect table. [Original source](https://pubmed.ncbi.nlm.nih.gov/42785532/) · [Local factual text](Source-Text/2026-Jiang-EGCG-PINK1-Glycolysis-Abstract-Extract.txt)

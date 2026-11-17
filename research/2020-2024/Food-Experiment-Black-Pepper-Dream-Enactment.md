@@ -1,0 +1,8 @@
+# Black pepper extract and EEG sleep stages in mice
+
+Yoon and colleagues published May 27, 2022. In a caffeine-disruption experiment, mice received a 70% ethanol extract of Piper nigrum, which was concentrated and freeze-dried, orally rather than as ground culinary pepper. A sleep-architecture experiment used caffeine 25 mg/kg and pepper extract 500 mg/kg, with EEG and neck EMG to classify wake, non-REM and REM stages; figure groups contained 7–8 mice. The authors report no significant group difference in REM sleep duration. These were non-Parkinson mouse models, and REM-stage duration or number of REM bouts is not a count of dream-enactment episodes. A separate pentobarbital assay used different mice and measured loss and recovery of the righting reflex. [Primary paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC9183155/)
+
+
+## Black pepper essential oil in an adult sleep comparator
+
+Duroux and colleagues first published on January 11, 2024. Thirty-two adults used each of three facial creams for one bedtime week. The pepper cream contained 0.0025% Piper nigrum essential oil. Pepper and tea-tree weeks were counterbalanced and the unscented control was always week two. Noncontact sleep staging gave mean REM duration of 75.8 minutes versus 72.4 with unscented cream. The paper reports no significant pepper-to-unscented sleep change and gives no exact REM p-value for that comparison. It measured no dream-enactment episodes or REM without atonia and used a different route from culinary pepper. [original sleep Methods and Table 5](https://onlinelibrary.wiley.com/doi/10.1111/jocd.16179) · [Local text](Source-Text/2024-Duroux-Black-Pepper-REM-Extract.txt)

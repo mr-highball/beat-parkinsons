@@ -1,0 +1,40 @@
+# Pantry expansion round: mandatory agent instructions
+
+## Scope and state
+- The assigned hypotheses and immutable freeze have passed native verification. Evidence review is queued. Continue only after the preceding round passes its evidence and coverage audit. See the [series evidence sequence](../1000_see_what_sticks_food_round_2/series-work.md).
+- Work only in D:\beat-parkinsons. Keep all build, cache, temporary and output paths on D:. Do not recreate the moved project or outputs on C:.
+- Read ../../AGENTS.md for the project team and ../tools/vendor/athena/README.md#standards-map for standards. Use native Free Pascal for future generation, evidence ledgers and validation. Do not change or interrupt the original experiment or its running follow-up work.
+- This round uses the original 142-entry vocabulary INCLUDING beetroot, plus all 68 approved additional named culinary exposures: 210 entries and the original 33 symptom labels. Whole nuts/seeds and their oils, or leaves and seeds, are distinct exposures, not necessarily distinct species. No new aliases, synonyms, preparations, species subdivisions, mixtures or supplements may be used to inflate the count.
+
+## Non-negotiable global duplicate prohibition
+- A duplicate means the SAME CANONICAL INGREDIENT + SAME CANONICAL SYMPTOM, regardless of preparation, direction (reduces/worsens), wording, category, case, punctuation, ID or folder.
+- Resolve names through ingredients.tsv and symptoms.tsv, including aliases, before comparison. Trim and normalize Unicode/case/whitespace for matching; persist the exact canonical vocabulary values. Ambiguous aliases or unknown names are a hard error, never grounds to silently create a new ingredient or symptom. Do not collapse explicitly distinct food matrices such as walnut versus walnut oil.
+- Exclude every pair in ../1000_see_what_sticks_food/freeze.tsv and every pair reserved or frozen in ANY other round of this series. Earlier rounds include those prepared but not yet researched. A direction reversal or different cooking method DOES NOT make a new pair.
+- Before generation, inspect all sibling experiments for already generated/frozen pairs, not only completed studies. Reconcile any relevant prior pair records; do not silently skip a conflict, alter an existing freeze, or silently shrink/pad a batch. Stop and report inconsistencies.
+- The original freeze must hash to 0f1e21eac0ab9d28d12cac82656fe6bc9dda037f658631369c6a76747eda242f (SHA-256). If changed, stop and reconcile before generating any new round.
+
+## Exhaustive partition before any new claims
+- The series exhausts INGREDIENT-SYMPTOM PAIRS, not every preparation/direction combination and not all possible pantry ingredients.
+- Build one deterministic global plan BEFORE writing any statements. Use only vocabulary and frozen pair fields; do not consult research outcomes to choose pairs or directions.
+- Enumerate the Cartesian product of all 210 canonical ingredients and all 33 canonical symptoms (6,930 pairs). Subtract the original 1,000 frozen unique pairs. Expected remainder: 5,930.
+- Sort the remaining canonical ingredient/symptom tuples using explicit case-insensitive ordinal ordering (ASCII canonical names here; document exact comparator), ingredient first then symptom. Do not rely on OS locale or filesystem enumeration order.
+- Assign consecutive non-overlapping slices of 1,000 pairs to round_2 through round_6 and the last 930 to round_7. README.md gives this round's 1-based slice. No random re-sampling per round. Never pad the final round with duplicate pairs or unapproved ingredients.
+- Persist the complete reservation plan as ../1000_see_what_sticks_food_round_2/series-pairs.tsv with round, pair_id, category, ingredient, symptom columns and a SHA-256 file. Each folder gets its corresponding assigned-pairs.tsv. Validate these saved reservations and hashes before evidence application.
+- Use a single coordinator to create the plan atomically. Do not let concurrent round agents independently allocate pairs. Other agents must wait for a validated completed global plan. Once reserved, a pair remains owned by its round even if that round has not run. If a plan already exists, verify and reuse it, never overwrite it.
+- Verify input hashes match across all six round folders. Validate exact counts, canonical identities, no duplicate keys within or between rounds, zero intersection with the original freeze, and exact union equality with the 5,930-pair remainder. Save a readable validation report before claiming readiness.
+- DO NOT run the old unmodified generator. Its 250-per-category quotas, 1,000-only count and within-run uniqueness do not meet this request. Future Codex must implement/adapt generation and verification to consume the reserved pair plan, honor global exclusions, and accept the 930-row final batch, without changing the original experiment.
+- Category counts follow exhaustive pair coverage, not 250 each and not the earlier tentative 700/150/100/50 proposal. Report actual category counts per round; raw cross-round verdict percentages are not directly comparable without category/ingredient standardization.
+
+## Future generation and freeze
+- Use exactly the assigned pairs, one claim per pair, with one compatible ordinary culinary preparation from ingredients.tsv. These inputs are culinary vocabulary, not dosing or treatment recommendations. No extracts, essential oils, supplements or unsafe non-food substitutions.
+- Choose directions without evidence-driven selection, with 50/50 reduces/worsens across each round (500/500 for 1,000; 465/465 for 930). Do not duplicate a pair to satisfy direction or category balancing. Record the seed and deterministic allocation algorithm.
+- Use fixed-width local IDs plus the round name as the global claim identifier. Verify generated fields agree exactly with assigned-pairs.tsv, then freeze ordered claim fields, input hashes, reservation-plan hash and seed before evidence research. Never rewrite frozen wording/directions based on evidence.
+
+## Evidence and completion after the preceding round passes
+
+- Start with the earlier rounds as an evidence index for the assigned ingredients and symptoms. Trace applicable entries to the original sources and carry their provenance, review depth, conflicting evidence and access flags into the new claim ledger.
+- Follow the original experiment's evidence assessment and follow-up rigor (../1000_see_what_sticks_food/AGENTS.md), but not its generation quotas or 1,000-only completion count. Use the target count in this folder's README.md.
+- Search both directions, deduplicate reports of the same study, and distinguish human Parkinson's evidence from indirect constituents, preparations, populations, endpoints, combined interventions and nonhuman work. Assigned directions are arbitrary hypotheses, NOT demonstrated benefit or harm.
+- Log local catalog coverage, extraction/access failures and targeted external searches. Save relevant sources under research/YYYY-YYYY by first public date and maintain resolvable citations and resumable coverage records. Preserve conflicting evidence.
+- Use the project's original verdict/confidence rules; lack of evidence does not establish an opposite effect. Do not invent findings or claim clinical validation. Preserve the first experiment's immutable artifacts.
+- Before publishing, revalidate the original freeze, this round's freeze, every cross-round pair reservation and completed freeze, target counts, source links and coverage. Publish verdict totals, limitations, category composition and unresolved evidence trails.

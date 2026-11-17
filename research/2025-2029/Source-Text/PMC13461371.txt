@@ -1,0 +1,364 @@
+Title: Spatial-spectral fusion enables drug repositioning by capturing indirect and long-range associations in biological networks
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC13461371/
+Text object: https://pmc-oa-opendata.s3.amazonaws.com/PMC13461371.1/PMC13461371.1.txt
+Data source: U.S. National Library of Medicine, PMC Cloud Service
+PMCID: PMC13461371
+PMID: 42573507
+DOI: 10.1093/bioinformatics/btag553
+Citation: Bioinformatics. 2026 Aug 10;42(8):btag553. doi: 10.1093/bioinformatics/btag553
+License: CC BY (article license statement below)
+Version: 1
+Retracted in PMC metadata: no
+Text coverage: article text
+Format: NLM plain-text extraction. This provenance header was added.
+
+
+JOURNAL INFORMATION
+==============================
+NLM Title Abbreviation: Bioinformatics
+Journal ID: Bioinformatics
+NLM Journal ID: 9808944
+Journal ID: bioinformatics
+
+Bioinformatics
+
+ISSN: 1367-4803
+EISSN: 1367-4811
+Publisher: Oxford University Press
+
+ARTICLE INFORMATION
+==============================
+PMCID: PMC13461371
+PMID: 42573507
+DOI: 10.1093/bioinformatics/btag553
+Article ID: btag553
+Article version: 1
+Subjects: Original Paper, Systems Biology, AcademicSubjects/SCI01060
+
+Spatial-spectral fusion enables drug repositioning by capturing indirect and long-range associations in biological networks
+
+Zhu Xiaobo Conceptualization Data curation Formal analysis Methodology Writing - review & editing Xinjiang Technical Institute of Physics and Chemistry, Chinese Academy of Sciences, Urumqi 810011, China
+
+https://orcid.org/0000-0003-0184-307X Wang Lei Data curation Investigation Validation Writing - original draft China University of Mining and Technology, Xuzhou, China
+
+Tang Runzhou Investigation Software Writing - original draft Xinjiang Technical Institute of Physics and Chemistry, Chinese Academy of Sciences, Urumqi 810011, China
+
+https://orcid.org/0000-0001-9974-148X Huang Zhi-An Conceptualization Formal analysis Validation Research Office, City University of Hong Kong (Dongguan), Dongguan 523000, China
+
+Huang Yu-an Conceptualization Data curation Supervision School of Computing, Northwestern Polytechnical University, Xi’an 710129, China
+
+Tan Feng Formal analysis Resources Validation AI and Quantum Lab, Darmstadt, Germany
+
+https://orcid.org/0000-0002-1591-8549 Hu Lun Conceptualization Formal analysis Methodology Xinjiang Technical Institute of Physics and Chemistry, Chinese Academy of Sciences, Urumqi 810011, China
+
+You Zhuhong Conceptualization Formal analysis Methodology Supervision School of Computing, Northwestern Polytechnical University, Xi’an 710129, China
+
+https://orcid.org/0000-0001-5974-7932 Hu Pengwei Conceptualization Formal analysis Funding acquisition Project administration Xinjiang Technical Institute of Physics and Chemistry, Chinese Academy of Sciences, Urumqi 810011, China
+
+Kihara Daisuke Associate Editor
+Corresponding author. Xinjiang Technical Institute of Physics and Chemistry, Chinese Academy of Sciences, Urumqi 810011, China. E-mail: hpw@ms.xjb.ac.cn
+Publication date: 2026 Aug
+Electronic publication date: 2026 Aug 10
+Volume: 42
+Issue: 8
+Electronic Location ID: btag553
+Received 2026 May 17; Revised 2026 Jul 6; Accepted 2026 Jul 15; 2026 Aug 12
+Copyright: © The Author(s) 2026. Published by Oxford University Press.
+Copyright year: 2026
+License: This is an Open Access article distributed under the terms of the Creative Commons Attribution License (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction in any medium, provided the original work is properly cited.
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Funding: the National Natural Science Foundation of China 62302495 62373348 the Natural Science Foundation of Xinjiang Uygur Autonomous Region 2023D01E15 the Xinjiang Tianchi Talents Program E33B9401 the Tianshan Talent Training Program 2023TSYCLJ0021
+Page count: 10
+
+==============================
+Abstract
+
+Motivation
+
+Drug repositioning accelerates clinical translation by identifying new therapeutic indications for approved drugs. However, therapeutic associations in biomolecular networks often exist indirectly, through transitive chains and long-range mechanisms, rather than as directly observed links. Shallow methods are confined to direct similarity and miss such indirect associations, whereas deep graph neural networks suffer from over-smoothing and lose discriminative power in highly connected networks.
+
+Results
+
+We propose a spatial-spectral collaborative framework. In the spatial domain, a wave-evolution process propagates similarity from local to global, capturing multi-hop transitive associations while preserving discriminative representations. In the spectral domain, network-specific spectral transforms model global connectivity for long-range dependencies over homogeneous similarity and heterogeneous drug-protein-disease networks, with the two views aligned by contrastive learning. On three benchmarks the method outperforms state-of-the-art baselines on most evaluation metrics; case studies on Alzheimer’s and Parkinson’s disease and molecular docking confirm its ability to recover non-explicit therapeutic associations.
+
+Availability
+
+The source code and data are available at https://github.com/Juniper-cola/BIO_SSF.
+
+Graphical Abstract
+
+For graphical abstract description, please refer to the textual abstract.
+
+1 Introduction
+
+Drug repositioning reduces development cycles and clinical risks by predicting new therapeutic indications for approved drugs (Huang et al. 2024a, Zhang et al. 2025b). High-throughput biotechnology has generated massive biomedical data for computational approaches (Wong et al. 2023, He et al. 2024, Liao et al. 2025, Zheng et al. 2025). However, a core challenge remains overlooked: therapeutic associations often exist indirectly rather than being directly observable. In similarity networks, potential therapeutic opportunities arise through transitive relationships rather than direct similarity (Song et al. 2024). This pattern of indirect associations is pervasive in biological networks and represents a critical clue for discovering non-explicit therapeutic relationships. Moreover, drug mechanisms typically operate via complex long-range pathways. In drug-protein-disease heterogeneous networks, drugs target proteins (Zhang et al. 2025a, 2025c) that regulate signaling pathways and biological processes, ultimately affecting disease phenotypes. These mechanisms manifest as long-range paths spanning multiple node types, making identification of such mechanistic associations crucial for predicting new indications.
+
+Existing methods face fundamental limitations in identifying indirect therapeutic associations. Shallow network-based methods such as DTINet (Luo et al. 2017) and DeepDR (Zeng et al. 2019) are confined to direct similarity relationships. Deep GNN-based methods, including LAGCN (Yu et al. 2021), HDGAT (Huang et al. 2024b), DRHGCN (Cai et al. 2021), DRWBNCF (Meng et al. 2022), and AMDGT (Liu et al. 2024a), expand receptive fields through multi-layer stacking, but cause representations to become homogeneous in highly connected networks (Fu et al. 2022, Sun et al. 2024), losing discriminative power (Cai et al. 2021, Liu et al. 2024a). This over-smoothing fundamentally undermines models when exploring indirect associations. Heterogeneous GNN-based methods such as HINGRL (Zhao et al. 2022), RLFDDA (Zhang et al. 2022), and SFRLDDA (Zhao et al. 2023) propagate information through local neighborhood aggregation, expanding receptive fields by only one hop per layer. Graph contrastive learning methods, including SADR (Jin et al. 2024), SGCD (Yu et al. 2025), DRGCL (Jia et al. 2025), MICLE (Cui et al. 2025), and DRMAHGC (Liu et al. 2024b), alleviate data sparsity through self-supervised signals but still inherit locality limitations. This layer-by-layer propagation paradigm fundamentally limits direct capture of distant drug-protein-disease action chains.
+
+To overcome these limitations, we propose a spatial-spectral collaborative modeling framework for identifying complex drug-disease therapeutic associations. In the spatial domain, we model similarity propagation as a wave evolution process. The second-order wave equation enables oscillatory information propagation, capturing similarity information from local to global while maintaining discriminative representations. In the spectral domain, we leverage spectral decomposition to transform network signals to spectral space, directly modeling global association patterns between nodes at arbitrary distances. Low-frequency components encode global structure, enabling capture of long-range mechanisms. The framework constructs a dual-view representation space where the homogeneous similarity view captures therapeutic patterns through transitive associations and the heterogeneous semantic view extracts mechanisms through molecular action chains. A detailed review of related computational drug repositioning, spectral graph methods, and graph contrastive learning is provided in Supplementary Appendix A, available as supplementary data at Bioinformatics online. The main contributions are summarized as follows:
+
+We propose a wave equation-based method that captures transitive associations from local to global through oscillatory propagation, effectively identifying indirect drug-disease associations while avoiding over-smoothing.
+
+We develop a spectral transformation method that directly models associations between distant nodes in both homogeneous and heterogeneous networks, enabling effective capture of long-range mechanisms without locality constraints.
+
+The proposed spatial-spectral framework integrates wave-based propagation with spectral modeling, unifying multi-scale network information from local to global for drug repositioning.
+
+2 Methodology
+
+The proposed spatial-spectral collaborative modeling framework integrates similarity network construction with wave evolution-based feature enhancement, dual-view spectral graph encoding, and contrastive learning for association prediction (Fig. 1). Homogeneous similarity networks are constructed from molecular features, with wave evolution applied for multi-scale similarity modeling to capture transitive association signals. Dual spectral views are then constructed where the homogeneous view models drug-drug and disease-disease networks while the heterogeneous view encodes drug-protein-disease pathways. Contrastive learning integrates both views, fusing structural similarity and biological mechanism reasoning for unified predictions.
+
+Figure 1 Overall architecture of the proposed model. Wave evolution learning captures multi-scale similarity patterns, dual-view spectral encoding models both homogeneous similarity networks and heterogeneous Drug-Protein-Disease networks, and contrastive learning aligns representations from both views. Finally, the fused representations are fed into a predictor to output association probabilities.
+
+For image description, please refer to the figure legend and surrounding text.
+
+2.1 Wave evolution learning
+
+Wave evolution is employed to model feature propagation in drug-drug and disease-disease similarity networks, capturing multi-scale transitive associations while maintaining discriminative node representations. For entities i and j, pairwise similarity is computed using cosine similarity:
+
+(1) S(i,j)=X(i,:)·X(j,:)T‖X(i,:)‖‖X(j,:)‖
+
+Where X denotes the entity feature matrix. Similarity matrices Sr∈RNr×Nr, Sd∈RNd×Nd, and Sp∈RNp×Np are computed for drugs, diseases, and proteins respectively. Sparse topological structures are constructed through a Knn nearest neighbor strategy that retains only the Knn most similar neighbors for each node: A(i,j)=1 when j∈TopKnn(S(i,:)) or i=j, otherwise A(i,j)=0.
+
+The wave evolution equation for similarity propagation is defined as (Yue et al. 2025):
+
+(2) ∂2H(t)∂t2=−LH(t)
+
+Where H(t) represents node features at time t, and L=I−D−1/2AD−1/2 is the normalized graph Laplacian. Multi-scale similarity aggregation is obtained through recursive computation by discretizing the wave equation:
+
+(3) H(t+Δt)=2H(t)−H(t−Δt)−Δt2LH(t)
+
+The initial conditions are set as H(0)=XW0 and H(−Δt)=H(0)−Δt·XW1 where W0,W1 are learnable transformations. Setting total evolution time as T and time step as Δt, the iteration count is n=⌈T/Δt⌉.
+
+Original features are first projected to a unified hidden dimension: Hr(0)=ELU(XrWrproj), Hd(0)=ELU(XdWdproj), Hp(0)=ELU(XpWpproj) where Wrproj∈Rdr×dh, Wdproj∈Rdd×dh, Wpproj∈Rdp×dh are projection matrices. Wave evolution is then applied: H˜r=WEL(Hr(0),Ar), H˜d=WEL(Hd(0),Ad), H˜p=WEL(Hp(0),Ap), yielding enhanced representations integrating multi-scale similarity information.
+
+2.2 Spectral domain modeling
+
+Spectral encoding transforms network signals from spatial to spectral domain through graph spectral decomposition, enabling direct modeling of associations between nodes at arbitrary distances. Customized modules are designed for homogeneous similarity networks and heterogeneous biological networks.
+
+Given the normalized graph Laplacian L=I−D−1/2AD−1/2, spectral decomposition yields a Fourier basis U=[u1,…,uN]. The first K eigenvectors are retained as spectral basis UK=[u1,…,uK] where K∈[Kmin,Kmax] is dynamically determined. Node features are projected into spectral space:
+
+(4) Hfreq=UKTH
+
+Where Hfreq∈RK×d is the spectral representation. Multi-head attention is computed in spectral space for each head h:
+
+(5) Qhfreq=HfreqWhQ, Khfreq=HfreqWhK,Vhfreq=HfreqWhV
+
+(6) Attnhfreq=softmax(Qhfreq(Khfreq)Tdh)Vhfreq
+
+Where WhQ,WhK,WhV∈Rd×dh are learnable parameters, and dh=d/H denotes the dimensionality of each attention head, d is the hidden dimension, and H is the number of attention heads. Outputs from Nh attention heads are concatenated and projected:
+
+(7) Houtfreq=[Attn1freq‖Attn2freq‖⋯‖AttnNhfreq]WO
+
+Where WO∈RNhdh×d. The spectral output is transformed back to spatial domain: Hspatial=UKHoutfreq. Spectral and original features are integrated through weighted fusion:
+
+(8) Henhanced=(1−β)H+βHspatial
+
+Where β∈[0,1] controls spectral enhancement. Residual connections, layer normalization, and feed-forward networks are applied: H′=LayerNorm(H+Henhanced), Hout=LayerNorm(H′+FFN(H′)).
+
+Independent spectral encoding modules are applied to drug and disease similarity networks: Zrsim=FreqEncor(H˜r,Ar), Zdsim=FreqEncod(H˜d,Ad) where Zrsim∈RNr×dout and Zdsim∈RNd×dout are final representations in the homogeneous similarity view.
+
+For the heterogeneous network G=(V,E,TV,TE) where V=R∪D∪P, network connectivity is enhanced through a meta-path augmentation strategy based on graphon estimation (Zhou et al. 2023). Features of different node types are concatenated as Hheter=[H˜r;H˜d;H˜p]∈R(Nr+Nd+Np)×dh, and the heterogeneous graph is mapped to homogenized representation Ghomo. The spectral encoding process is applied with K dynamically determined. Drug and disease representations in the heterogeneous semantic view are extracted as Zrsem=FreqHenco(H˜r,H˜d,H˜p,G)[1:Nr,:] and Zdsem=FreqHenco(H˜r,H˜d,H˜p,G)[Nr+1:Nr+Nd,:], capturing long-range semantic associations spanning multiple biomolecules.
+
+2.3 Feature alignment learning
+
+Representations across homogeneous similarity and heterogeneous semantic views are aligned through a contrastive learning framework, fusing similarity-based and mechanism-based reasoning. Positive sample pair matrices Pr∈{0,1}Nr×Nr and Pd∈{0,1}Nd×Nd are constructed based on meta-path reachability and feature similarity.
+
+The cross-view contrastive loss aligns representations of the same entity across both views. For drugs:
+
+(9) Lrcross=−1Nr∑i=1Nr log  ∑j=1NrPr(i,j)· exp (sim(Zrsem(i),Zrsim(j))/τcross)∑j=1Nr exp (sim(Zrsem(i),Zrsim(j))/τcross) 
+
+Where sim(·,·) is cosine similarity and τcross is temperature. The disease cross-view loss Ldcross follows the same form. Total cross-view loss is Lcross=λcrossLrcross+(1−λcross)Ldcross.
+
+The intra-view contrastive loss enhances consistency within each view. For drugs:
+
+(10) Lrintra=−1Nr∑i=1Nr log  ∑j=1NrPr(i,j)· exp (sim(Zrsim(i),Zrsim(j))/τintra)∑j=1Nr exp (sim(Zrsim(i),Zrsim(j))/τintra) 
+
+The disease intra-view loss Ldintra follows the same form. Total intra-view loss is Lintra=λintraLrintra+(1−λintra)Ldintra. The final contrastive learning loss is:
+
+(11) Lcontrast=Lcross+Lintra
+
+2.4 Drug-disease association prediction
+
+Representations from semantic and similarity views are concatenated and passed through linear layers with ReLU activation to obtain fused representations Zr∈RNr×dout and Zd∈RNd×dout. Positive samples are derived from known associations, while negative samples are generated through hard negative mining by selecting nodes within 2-hop distance. For each drug-disease pair (ri,dj), the interaction representation is computed as hij=Zr(i,:)⊙Zd(j,:). The MLP outputs two logits oij, and pij=softmax(oij). The classification loss is:
+
+(12) Lcls=−1|S|∑(i,j)∈S log pij,yij,
+
+Where S is the training sample set, yij∈{0,1} is the ground-truth label, and pij,yij is the predicted probability of the true class. The final training objective is:
+
+(13) L=αLcontrast+(1−α)Lcls
+
+Where α∈[0,1] balances both components. The simplified overall training procedure for the spatial-spectral framework is presented in Supplementary Appendix H, available as supplementary data at Bioinformatics online.
+
+3 Experiments
+
+3.1 Datasets and baseline methods
+
+We evaluate the proposed method on three benchmark datasets with varying scale and sparsity (0.93%–11.45%), including B-dataset (Zhang et al. 2018), C-dataset (Luo et al. 2016), and F-dataset (Gottlieb et al. 2011), and compare against eight state-of-the-art baselines spanning GNN-based methods DRHGCN (Cai et al. 2021), DRWBNCF (Meng et al. 2022), and AMDGT (Liu et al. 2024a), and GCL-based methods SADR (Jin et al. 2024), SGCD (Yu et al. 2025), DRGCL (Jia et al. 2025), MICLE (Cui et al. 2025), and DRMAHGC (Liu et al. 2024b). Detailed dataset statistics and baseline descriptions are provided in Supplementary Appendices B and C, available as supplementary data at Bioinformatics online, respectively.
+
+3.2 Implementation details
+
+Experiments are conducted using 10-fold cross-validation on three benchmark datasets. The ratio of positive to negative samples is set to 1:1; imbalance experiments are provided in Supplementary Appendix I, available as supplementary data at Bioinformatics online, and cold-start/inductive validations are provided in Supplementary Appendix J, available as supplementary data at Bioinformatics online. For spectral encoding, the enhancement ratio β is selected from [0.1, 1.0], and the retained frequency number K is adaptively determined by graph size and bounded by Kmin and Kmax, with detailed settings provided in Supplementary Appendix E, available as supplementary data at Bioinformatics online. Wave evolution learning parameters include time parameter T selected from {0.5,0.8,1.0,1.5,2.0} and time step Δt selected from {0.2,0.4,0.6,0.8,1.0}. The heterogeneous semantic encoder uses 1 layer with 4 attention heads, while the homogeneous similarity encoder uses 2 layers with 4 attention heads, both with output dimension 64. The MLP predictor consists of 4 layers with dimensions [64, 1024, 1024, 256, 2] and a dropout rate of 0.4. Training employs the Adam optimizer with learning rate 1×10−3, weight decay 1×10−5, and 200 epochs. The loss balancing coefficient α is selected from {0.3,0.5,0.7}, temperature parameters τcross, τintra from {0.5,0.8,1.0}, and contrastive loss weights λcross, λintra from {0.3,0.5,0.7}. The dropout rate for all encoders is set to 0.2.
+
+3.3 Drug-disease link prediction
+
+To evaluate the effectiveness of the proposed method for drug repositioning, we conduct drug-disease association prediction experiments on three public benchmark datasets using 10-fold cross-validation, comparing against eight representative baseline methods. Table 1 presents the performance comparison results. The proposed method achieves the highest AUC, AUPR, recall, accuracy, and F1 scores on all three datasets, while remaining competitive in precision. On B-dataset, AUC and AUPR reach 0.9953 and 0.9940, respectively, representing improvements of 2.05 and 2.18 percentage points over the second-best method DRMAHGC (0.9748 and 0.9722). Similar advantages are maintained on C-dataset and F-dataset, with AUC exceeding 0.994 on both. Notably, recall approaches or exceeds 0.99 across all datasets, indicating that the model can effectively identify nearly all potential therapeutic associations, which is crucial for discovering new repositioning opportunities. Compared to spatial graph neural networks (DRGCL, SGCD), spectral global modeling more effectively captures long-range transitive associations and multi-step action mechanisms. Compared to heterogeneous graph methods (DRHGCN, MICLE), wave evolution maintains discriminative ability among drug candidates while mining indirect associations, avoiding over-smoothing. The method maintains consistently excellent performance across datasets of different scales and characteristics, with standard deviations generally below 0.01, demonstrating robustness and generalization capability. This validates the effectiveness of the spatial-spectral collaborative framework, where multi-scale similarity propagation captured by wave evolution and long-range biological mechanisms captured spectrally provide complementary evidence for drug repositioning prediction. Additional score-distribution analysis and a fold-wise graphon-augmentation audit are provided in Supplementary Appendix K, available as supplementary data at Bioinformatics online.
+
+Table 1 Drug-disease link prediction results on B-dataset, C-dataset, and F-dataset.
+
+Dataset	Model	AUC	AUPR	Recall	Precision	Accuracy	F1	
+B-dataset	SADR	0.9211±0.004	0.9209±0.003	0.8559±0.004	0.8512±0.003	0.8525±0.005	0.8548±0.003	
+DRGCL	0.9247±0.003	0.9230±0.005	0.8626±0.007	0.8544±0.008	0.8546±0.006	0.8582±0.006	
+SGCD	0.9235±0.003	0.9224±0.002	0.8631±0.003	0.8458±0.005	0.8506±0.004	0.8536±0.003	
+AMDGT	0.9317±0.002	0.9302±0.003	0.8619±0.002	0.8619±0.002	0.8593±0.002	0.8616±0.003	
+DRHGCN	0.9092±0.002	0.9106±0.002	0.7711±0.001	0.8678±0.001	0.8368±0.002	0.8166±0.001	
+DRWBNCF	0.9004±0.001	0.9018±0.002	0.2021±0.004	0.9810 ± 0.002	0.5991±0.002	0.3352±0.003	
+MICLE	0.9306±0.003	0.9300±0.003	0.8686 ± 0.007	0.8537±0.005	0.8599±0.005	0.8611±0.005	
+DRMAHGC	0.9748 ± 0.003	0.9722 ± 0.004	0.8653±0.005	0.9166±0.018	0.8933 ± 0.011	0.8902 ± 0.009	
+Ours	0.9953 ± 0.002	0.9940 ± 0.003	0.9972 ± 0.003	0.9374 ± 0.015	0.9652 ± 0.008	0.9663 ± 0.008	
+C-dataset	SADR	0.9550±0.005	0.9584±0.003	0.8853±0.004	0.8768±0.003	0.8994±0.005	0.8806±0.004	
+DRGCL	0.9606±0.003	0.9619±0.004	0.9045±0.006	0.8988±0.005	0.9041±0.006	0.9013±0.008	
+SGCD	0.9564±0.004	0.9555±0.006	0.8717±0.003	0.8658±0.005	0.8974±0.003	0.8695±0.003	
+AMDGT	0.9672±0.003	0.9696±0.003	0.9250±0.004	0.8768±0.003	0.9052±0.003	0.9078±0.003	
+DRHGCN	0.9324±0.003	0.9427±0.004	0.8008±0.002	0.9192±0.001	0.8652±0.002	0.8559±0.002	
+DRWBNCF	0.9234±0.004	0.9419±0.004	0.8370±0.004	0.8984±0.002	0.8663±0.004	0.8612±0.004	
+MICLE	0.9607±0.008	0.9668±0.007	0.9210±0.020	0.9086±0.010	0.9141±0.010	0.9146±0.010	
+DRMAHGC	0.9827 ± 0.007	0.9812 ± 0.008	0.9505 ± 0.017	0.9460 ± 0.018	0.9480 ± 0.013	0.9481 ± 0.013	
+Ours	0.9952 ± 0.003	0.9942 ± 0.004	0.9964 ± 0.003	0.9253 ± 0.020	0.9578 ± 0.011	0.9595 ± 0.011	
+F-dataset	SADR	0.9504±0.006	0.9578±0.005	0.9123±0.004	0.8719±0.005	0.8914±0.003	0.8916±0.005	
+DRGCL	0.9525±0.005	0.9602±0.004	0.9152±0.006	0.8879±0.008	0.8985±0.007	0.9005±0.008	
+SGCD	0.9496±0.003	0.9550±0.004	0.9175 ± 0.005	0.8663±0.005	0.8940±0.004	0.8894±0.004	
+AMDGT	0.9584±0.005	0.9607±0.003	0.9146±0.003	0.8730±0.003	0.8908±0.003	0.8928±0.005	
+DRHGCN	0.9207±0.004	0.9375±0.002	0.7739±0.002	0.9309 ± 0.001	0.8583±0.001	0.8452±0.002	
+DRWBNCF	0.8958±0.005	0.9200±0.004	0.8237±0.004	0.8752±0.003	0.8296±0.002	0.8341±0.004	
+MICLE	0.9544±0.010	0.9591±0.012	0.9066±0.013	0.9003±0.015	0.9066±0.013	0.9074±0.013	
+DRMAHGC	0.9787 ± 0.008	0.9782 ± 0.009	0.9150±0.033	0.9511 ± 0.022	0.9336 ± 0.019	0.9322 ± 0.020	
+Ours	0.9945 ± 0.003	0.9928 ± 0.005	0.9927 ± 0.008	0.9284±0.021	0.9578 ± 0.010	0.9593 ± 0.009	
+Best Results Are in Bold, Second-Best Are Underlined.
+
+3.4 Ablation study
+
+To verify the effectiveness of each component in the proposed framework, we conduct ablation experiments. Specifically, “w/o WEL” removes the wave evolution module, “w/o FreqEnco” removes spectral encoding of homogeneous similarity networks, “w/o FreqHenco” removes spectral encoding of heterogeneous biological networks, and “All” represents the complete model. Experiments are evaluated using 10-fold cross-validation on three datasets.
+
+The ablation results (Fig. 2) demonstrate that removing spectral encoding of homogeneous similarity networks (w/o FreqEnco) leads to a sharp performance decline, with AUC dropping from approximately 99% to around 80% and recall plummeting from 99% to 40%–50%, validating the critical role of spectral global modeling in capturing long-range transitive associations. Removing spectral encoding of heterogeneous networks (w/o FreqHenco) similarly results in significant performance degradation, indicating that biological mechanism reasoning based on drug-protein-disease networks provides necessary complementary information for association prediction. Removing wave evolution (w/o WEL) causes slight performance decline but still maintains relatively high levels, demonstrating that wave evolution effectively enhances feature representations by capturing multi-scale similarity propagation in the spatial domain and avoids the over-smoothing problem in deep graph neural networks. The experimental results validate the necessity and effectiveness of each component in the spatial-spectral collaborative modeling framework. The spectral encoding modules capture long-range associations difficult to identify by spatial methods through global modeling capability, while wave evolution provides discriminative multi-scale feature representations. The synergistic interaction of these components collectively supports the model’s superior performance in drug repositioning tasks. Complete ablation results on all three datasets and all six evaluation metrics are provided in Supplementary Appendix D, available as supplementary data at Bioinformatics online.
+
+Figure 2 Ablation experiment results on F-Dataset.
+
+For image description, please refer to the figure legend and surrounding text.
+
+3.5 Hyperparameter sensitivity analysis
+
+To evaluate the impact of key hyperparameters on model performance, we systematically investigate the sensitivity of wave evolution time step Δt and total evolution time T, spectral enhancement ratio β, and learning rate across three datasets.
+
+The experimental results (Figs. 3 and 4) demonstrate that the model exhibits robust performance with respect to hyperparameters while presenting clear optimal configuration ranges. For wave evolution parameters, time step Δt achieves optimal performance in the range of 0.4–0.6, and total evolution time T reaches the best balance at 0.8–1.0, indicating that moderate evolution depth can effectively capture multi-scale similarity propagation without introducing excessive noise. Experiments on spectral enhancement ratio β show that as β increases from 0.1 to 0.9, performance across all three datasets exhibits an upward trend, reaching stable high-performance levels at β≥0.7, validating the critical role of spectral global association modeling in identifying long-range indirect associations. Learning rate experiments indicate that 10−3 is the optimal choice, achieving a good balance between convergence speed and training stability. Complete hyperparameter sensitivity results on all three datasets and all six evaluation metrics are provided in Supplementary Appendix E, available as supplementary data at Bioinformatics online.
+
+Figure 3 Hyperparameter sensitivity analysis on F-dataset.
+
+For image description, please refer to the figure legend and surrounding text.
+
+Figure 4 Hyperparameter sensitivity analysis on F-dataset.
+
+For image description, please refer to the figure legend and surrounding text.
+
+3.6 Case study
+
+To evaluate the model’s therapeutic candidate discovery ability, we conducted case studies on Alzheimer’s disease and Parkinson’s disease. Representative predicted candidates were manually validated using PubMed-indexed literature and reordered according to evidence strength. Table 2 presents the curated results. Using a broad validation criterion covering clinical, preclinical, cellular, pathway-level, and computational evidence, most Alzheimer’s disease candidates and several Parkinson’s disease candidates were supported by published evidence. For Alzheimer’s disease, Dronabinol showed clinical benefit for agitation, while Meloxicam, Hydralazine, Metformin, and Leucovorin were supported by disease-model or mechanistic studies. Theophylline, Budesonide, Isotretinoin, Azelaic acid, and Dorzolamide were supported by AChE-related, cellular, retinoid-related, neurocognitive, or computational pathway-level evidence. For Parkinson’s disease, Cabergoline had direct clinical relevance, whereas Dexamethasone, Captopril, and Tizanidine showed clinical or model-based evidence. Fluoxetine and Ofloxacin were supported by indirect clinical or broader neurodegenerative evidence, while Amrinone, Adenosine phosphate, Alanine, and Spironolactone lacked acceptable drug-specific Parkinson’s disease evidence. These results demonstrate the model’s ability to recover literature-supported associations and generate biologically plausible candidates requiring further validation.
+
+Table 2 Curated drug candidate results for Alzheimer’s disease and Parkinson’s disease.
+
+Alzheimer’s disease	
+Rank	Drug name	DrugBank ID	PMID	
+1	Dronabinol	DB00470	41350162	
+2	Meloxicam	DB00814	36279100	
+3	Hydralazine	DB01275	37661037	
+4	Metformin	DB00331	29253574	
+5	Leucovorin	DB00650	39582067	
+6	Theophylline	DB00277	38634273	
+7	Budesonide	DB01222	15854773	
+8	Isotretinoin	DB00982	15897158	
+9	Azelaic acid	DB00548	39688203	
+10	Dorzolamide	DB00869	38002524	
+Parkinson’s Disease	
+Rank	Drug name	DrugBank ID	PMID	
+1	Cabergoline	DB00248	9040722	
+2	Dexamethasone	DB01234	39672994	
+3	Captopril	DB01197	24184050	
+4	Tizanidine	DB00697	18602099	
+5	Fluoxetine	DB00472	23424961	
+6	Ofloxacin	DB01165	33132905	
+7	Amrinone	DB01427	–	
+8	Adenosine phosphate	DB00131	–	
+9	Alanine	DB00160	–	
+10	Spironolactone	DB00421	–	
+PMID indicates representative clinical, preclinical, cellular, pathway-level, or computational evidence where available.
+
+3.7 Molecular docking experiments
+
+Molecular docking experiments are performed on Isotretinoin and Leucovorin, two predicted Alzheimer’s disease candidates selected for structural validation, with key target proteins 4EY5 and 4XXS using AutoDock. Fig. 5 shows Isotretinoin-4EY5 docking, revealing a plausible binding pose at the active site with hydrogen bond interactions through multiple residues. Additional docking configurations, including Leucovorin-4EY5, Isotretinoin-4XXS, and Leucovorin-4XXS, are provided in Supplementary Appendix F, available as supplementary data at Bioinformatics online. All four drug-target pairs yielded negative docking scores, suggesting energetically favourable predicted binding poses. These results provide structural-level support for the predicted associations, indicating that candidates with limited direct clinical evidence may still interact with Alzheimer’s disease-related targets. The findings demonstrate the model’s ability to discover non-explicit therapeutic associations and provide a molecular basis for further validation, highlighting computational methods’ value in guiding drug repositioning research.
+
+Figure 5 Molecular docking experiment results.
+
+For image description, please refer to the figure legend and surrounding text.
+
+4 Conclusion
+
+In this study, we proposed a spatial-spectral collaborative framework for drug repositioning that jointly captures multi-scale similarity propagation and long-range heterogeneous biological associations. Experimental results on three benchmark datasets and case studies demonstrate its effectiveness in identifying potential therapeutic associations. The ablation analysis further shows that spectral encoding, especially the homogeneous similarity spectral encoder, plays a central role in capturing global association patterns, while wave evolution provides complementary multi-scale discrimination. Nevertheless, the model may be less informative for completely unseen drugs or diseases when association-derived similarity features are unavailable, and spectral decomposition may introduce additional computational cost on very large graphs. Future work will focus on improving inductive generalization and developing more scalable spectral modeling strategies.
+
+Supplementary Material
+
+btag553_Supplementary_Data
+
+Author contributions
+
+Xiaobo Zhu (Conceptualization [Lead], Data curation [Equal], Formal analysis [Lead], Methodology [Lead], Writing—review & editing [Equal]), Lei Wang (Data curation [Equal], Investigation [Lead], Validation [Lead], Writing—original draft [Equal]), Runzhou Tang (Investigation [Lead], Software [Lead], Writing—original draft [Equal]), Zhi-An Huang (Conceptualization [Equal], Formal analysis [Equal], Validation [Lead]), Yu-An Huang (Conceptualization [Equal], Data curation [Equal], Supervision [Lead]), Feng Tan (Formal analysis [Equal], Resources [Lead], Validation [Equal]), Lun Hu (Conceptualization [Equal], Formal analysis [Equal], Methodology [Equal]), Zhuhong You (Conceptualization [Equal], Formal analysis [Equal], Methodology [Equal], Supervision [Equal]), and Pengwei Hu (Conceptualization [Equal], Formal analysis [Equal], Funding acquisition [Lead], Project administration [Lead])
+
+Supplementary material
+
+Supplementary material is available at Bioinformatics online.
+
+Conflicts of interest
+
+None declared.
+
+Funding
+
+This work was supported in part by the National Natural Science Foundation of China [62302495 and 62373348], the Natural Science Foundation of Xinjiang Uygur Autonomous Region [2023D01E15], the Xinjiang Tianchi Talents Program [E33B9401] and the Tianshan Talent Training Program [2023TSYCLJ0021].
+
+Data availability
+
+The source code and datasets used in this study are available at https://github.com/Juniper-cola/BIO_SSF.
+
+
+References
+
+Cai L , LuC, XuJ  et al  Drug repositioning based on the heterogeneous information fusion graph convolutional network. Brief Bioinform  2021;22:bbab319.34378011 10.1093/bib/bbab319
+Cui H , BiH, DuanM  et al  Multi-view contrastive learning for drug repositioning on heterogeneous biological networks. IEEE J Biomed Health Inform  2025;29:6902–14.40208759 10.1109/JBHI.2025.3559570
+Fu H , HuangF, LiuX  et al  MVGCN: data integration through multi-view graph convolutional network for predicting links in biomedical bipartite networks. Bioinformatics  2022;38:426–34.34499148 10.1093/bioinformatics/btab651
+Gottlieb A , SteinGY, RuppinE  et al  PREDICT: a method for inferring novel drug indications with application to personalized medicine. Mol Syst Biol  2011;7:496.21654673 10.1038/msb.2011.26 PMC3159979
+He S-H , YunL, YiH-C.  Accurate prediction of drug combination risk levels based on relational graph convolutional network and multi-head attention. J Transl Med  2024;22:572.38880914 10.1186/s12967-024-05372-8 PMC11180398
+Huang K , ChandakP, WangQ  et al  A foundation model for clinician-centered drug repurposing. Nat Med  2024a;30:3601–13.39322717 10.1038/s41591-024-03233-x PMC11645266
+Huang S , WangM, ZhengX  et al  Hierarchical and dynamic graph attention network for drug-disease association prediction. IEEE J Biomed Health Inform  2024b;PP:2416–27.10.1109/JBHI.2024.3363080 38319783
+Jia X , SunX, WangK  et al  DRGCL: drug repositioning via semantic-enriched graph contrastive learning. IEEE J Biomed Health Inform  2025;29:1656–67.38437145 10.1109/JBHI.2024.3372527
+Jin S , ZhangY, YuH  et al  SADR: self-supervised graph learning with adaptive denoising for drug repositioning. IEEE/ACM Trans Comput Biol Bioinform  2024;21:265–77.38190661 10.1109/TCBB.2024.3351079
+Liao Q , ZhangY, ChuY  et al  Application of artificial intelligence in drug-target interactions prediction: a review. NPJ Biomed Innov  2025;2:1.42032010 10.1038/s44385-024-00003-9 PMC13055101
+Liu J , GuanS, ZouQ  et al  AMDGT: attention aware multi-modal fusion using a dual graph transformer for drug–disease associations prediction. Knowl Based Syst  2024a;284:111329.
+Liu J , HuF, ZouQ  et al  Drug repositioning by multi-aspect heterogeneous graph contrastive learning and positive-fusion negative sampling strategy. Information Fusion  2024b;112:102563.
+Luo H , WangJ, LiM  et al  Drug repositioning based on comprehensive similarity measures and bi-random walk algorithm. Bioinformatics  2016;32:2664–71.27153662 10.1093/bioinformatics/btw228
+Luo Y , ZhaoX, ZhouJ  et al  A network integration approach for drug-target interaction prediction and computational drug repositioning from heterogeneous information. Nat Commun  2017;8:573.28924171 10.1038/s41467-017-00680-8 PMC5603535
+Meng Y , LuC, JinM  et al  A weighted bilinear neural collaborative filtering approach for drug repositioning. Brief Bioinform  2022;23:bbab581.35039838 10.1093/bib/bbab581
+Song W , XuL, HanC  et al  Drug–target interaction predictions with multi-view similarity network fusion strategy and deep interactive attention mechanism. Bioinformatics  2024;40:btae346.38837345 10.1093/bioinformatics/btae346 PMC11164831
+Sun X , JiaX, LuZ  et al  Drug repositioning with adaptive graph convolutional networks. Bioinformatics  2024;40:btad748.38070161 10.1093/bioinformatics/btad748 PMC10761094
+Wong L , WangL, YouZ-H  et al  GKLOMLI: a link prediction model for inferring miRNA–lncRNA interactions by using Gaussian kernel-based method on network profile and linear optimization algorithm. BMC Bioinformatics  2023;24:188.37158823 10.1186/s12859-023-05309-w PMC10169329
+Yu H , LuM, LiZ  et al  Semantic-enhanced graph contrastive learning with adaptive denoising for drug repositioning. IEEE J Biomed Health Inform  2025;29:1635–43.38109249 10.1109/JBHI.2023.3344031
+Yu Z , HuangF, ZhaoX  et al  Predicting drug–disease associations through layer attention graph convolutional network. Brief Bioinform  2021;22:bbaa243.33078832 10.1093/bib/bbaa243
+Yue J , LiH, ShengJ  et al Graph wave networks. In: Proceedings of the ACM Web Conference 2025(WWW ’25), pp.1365–79. New York, NY, USA: Association for Computing Machinery, 2025.
+Zeng X , ZhuS, LiuX  et al  DeepDR: a network-based deep learning approach to in silico drug repositioning. Bioinformatics  2019;35:5191–8.31116390 10.1093/bioinformatics/btz418 PMC6954645
+Zhang F , ZhaoX, WeiJ  et al  PathSynergy: a deep learning model for predicting drug synergy in liver cancer. Brief Bioinform  2025a;26:bbaf192.40273429 10.1093/bib/bbaf192 PMC12021016
+Zhang K , YangX, WangY  et al  Artificial intelligence in drug development. Nat Med  2025b;31:45–59.39833407 10.1038/s41591-024-03434-4
+Zhang M-L , ZhaoB-W, SuX-R  et al  RLFDDA: a meta-path based graph representation learning model for drug–disease association prediction. BMC Bioinformatics  2022;23:516.36456957 10.1186/s12859-022-05069-z PMC9713188
+Zhang W , YueX, LinW  et al  Predicting drug-disease associations by using similarity constrained matrix factorization. BMC Bioinformatics  2018;19:233.29914348 10.1186/s12859-018-2220-4 PMC6006580
+Zhang Y , YuanC, WangL  et al  The structure-preserving spectral graph neural network for dual kinase inhibitors and synergy scoring in gastric cancer. NPJ Digit Med  2025c;9:1.41422356 10.1038/s41746-025-02240-7 PMC12764931
+Zhao B-W , HuL, YouZ-H  et al  HINGRL: predicting drug–disease associations with graph representation learning on heterogeneous information networks. Brief Bioinform  2022;23:bbab515.34891172 10.1093/bib/bbab515
+Zhao B-W , SuX-R, YangY  et al  Drug-disease association prediction using semantic graph and function similarity representation learning over heterogeneous information networks. Methods  2023;220:106–14.37972913 10.1016/j.ymeth.2023.10.014
+Zheng J , YiH-C, YouZ-H.  Equivariant 3D-conditional diffusion model for de novo drug design. IEEE J Biomed Health Inform  2025;29:1805–16.39495691 10.1109/JBHI.2024.3491318
+Zhou Y , CaoY, LiuY  et al Multi-aspect heterogeneous graph augmentation. In: Proceedings of the ACM Web Conference 2023 (WWW ’23). pp. 39–48. New York, NY, USA: Association for Computing Machinery, 2023.

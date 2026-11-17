@@ -1,0 +1,5 @@
+# Food experiment evidence for soybean and rice bran oil
+
+## Soybean oil as a drug vehicle in essential tremor registrations
+
+NCT00102596 first posted January 31, 2005. It compared two oral formulations of the same drug, 1-octanol, one in a soybean oil soft gel and the other adsorbed to cellulose and silica. NCT00848172 first posted February 20, 2009 and tested the metabolite octanoic acid against a matching placebo. The later journal methods describe the active capsule as octanoic acid in soybean oil with lemon oil and cellulose. Both studies recruited adults with alcohol-responsive essential tremor, and give no separate Parkinson rest tremor or culinary soybean oil contrast. [NCT00102596 registration](https://clinicaltrials.gov/study/NCT00102596) · [Local registry snapshot](Source-Text/Trials/NCT00102596.txt) · [NCT00848172 registration](https://clinicaltrials.gov/study/NCT00848172) · [Local registry snapshot](Source-Text/Trials/NCT00848172.txt) · [Dated clinical results](../2010-2014/Food-Experiment-Soybean-Rice-Bran-Oils.md#essential-tremor-under-two-octanol-formulations)

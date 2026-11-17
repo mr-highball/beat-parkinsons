@@ -1,0 +1,7 @@
+# Tomato and stride follow-up
+
+## Isolated lycopene and narrow beam crossing in MPTP mice
+
+Prema and colleagues, May 14, 2015. Three doses of isolated oral lycopene, 5, 10 and 20 mg/kg/day, were compared with model and other control groups. Approximate Fig. 1 crossing times were 2.5 s in the untreated control, 8.1 s in the MPTP group and 6.2, 4.8 and 5.1 s with the three lycopene doses. The 10 and 20 mg/kg model arms share the letter d. Foot-slip errors are named in the publisher's section excerpt, while the recovered image quantifies beam crossing time. The report gives no gait-cycle stride or footprint measure. [Primary abstract, PMID 25980996](https://pubmed.ncbi.nlm.nih.gov/25980996/) · [Primary Fig. 1](https://ars.els-cdn.com/content/image/1-s2.0-S030439401500381X-gr1.jpg) · [Local factual extract](Source-Text/PMID25980996-lycopene-beam-extract.txt)
+
+Figure 2 shows shorter hang time in the MPTP group than the control, approximately 75 versus 300 s, and greater hang time with lycopene co-administration. That direction differs from the wording in the publisher section excerpt. Figure 3 measures open-field square crossings, grooming and rearing. These behavioral results describe locomotion and coordination after isolated lycopene. [Primary Fig. 2](https://ars.els-cdn.com/content/image/1-s2.0-S030439401500381X-gr2.jpg) · [Primary Fig. 3](https://ars.els-cdn.com/content/image/1-s2.0-S030439401500381X-gr3.jpg) · [Publisher excerpt](https://www.sciencedirect.com/science/article/abs/pii/S030439401500381X)

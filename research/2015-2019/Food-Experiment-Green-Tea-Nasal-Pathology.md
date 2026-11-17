@@ -1,0 +1,5 @@
+# Green Tea Nasal Pathology
+
+## Two year concentrated green tea extract and olfactory histopathology
+
+The April 2016 National Toxicology Program report lists two-year male mouse olfactory nerve atrophy of 0/50, 26/49, 49/50 and 50/50 in Table 17 at graded gavage exposure from zero through 300 mg/kg standardized green-tea extract. Epithelial atrophy counts were 4/50, 24/49, 28/50 and 3/50. Fibrosis was 0/50, 4/49, 37/50 and 43/50. The report says progression to fibrosis could account for the lower atrophy count at the highest exposure. The body includes short-term results from the same toxicology program, which should not be added to the corresponding Chan report as a second study. The two-year animals were separate. These outcomes measure tissue pathology without behavioral testing, Parkinson disease or brewed beverage exposure. [Original source](https://ntp.niehs.nih.gov/sites/default/files/ntp/htdocs/lt_rpts/tr585_508.pdf) · [Local factual text](Source-Text/2016-04-NTP-TR585-Green-Tea-Olfactory-Pathology.txt)

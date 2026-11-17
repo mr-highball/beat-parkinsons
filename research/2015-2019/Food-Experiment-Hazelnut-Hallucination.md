@@ -1,0 +1,9 @@
+# Hazelnut oil and visual hallucination follow-up
+
+## 2017 Hazelnut oil capsules in women without Parkinson disease
+
+Lima et al. published 13 October 2017 (PMID 29046732, PMCID PMC5640916, DOI 10.1186/s13148-017-0407-6). Forty overweight or obese women were randomized into four groups of ten for eight weeks: two received hazelnut oil capsules together with diets differing in folate, one received a placebo capsule with the higher-folate diet, and one maintained usual diet. Reported measures were methylation, anthropometry, lipid profile and oxidative stress; visual hallucination frequency was not reported. The paper describes the oil as 68% monounsaturated fat but does not specify cold pressing. The methods text states a 25 g capsule; do not treat this unusual quantity as independently verified. [Full original](https://pmc.ncbi.nlm.nih.gov/articles/PMC5640916/) · [Trial registration](https://clinicaltrials.gov/study/NCT02846025)
+
+## 2018 repository thesis and capsule dose conflict
+
+The thesis describes the same 40-woman, four-arm, eight-week trial as the 2017 journal report. It carries 2017 on the cover. Repository metadata gives a September 26, 2018 issue date and November 8, 2018 availability. Printed page 78 (PDF page 80) lists 25 mg of hazelnut oil per daily capsule for both oil groups. Printed page 81 (PDF page 83) gives 25 g for the same intervention, matching the article methods. It names a compounding pharmacy and says that a quality certificate was supplied. The conflicting stated quantities and unverified source certificate leave the dose, lot and pressing process open. Visual hallucination frequency was not measured. [Original source](https://repositorio.ufpb.br/jspui/bitstream/123456789/12263/1/Arquivototal.pdf) · [Local factual text](Source-Text/2018-Lima-Hazelnut-Oil-Thesis-Factual-Extract.txt) · [Institutional repository chronology](https://repositorio.ufpb.br/jspui/handle/123456789/12263?mode=full)

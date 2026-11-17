@@ -1,0 +1,5 @@
+# Topical olive oil combination and Sjogren swallowing ratings source record
+
+## Topical olive oil combination and Sjogren swallowing ratings
+
+López-Pintor and colleagues published first online December 17, 2018. They randomized 28 patients with primary Sjögren syndrome and analyzed 24 completers, 13 active and 11 control. Toothpaste and rinse contained olive fruit and parsley seed oils, betaine, xylitol and other ingredients. Table 2 reports mean 0–10 cm dryness-related swallowing difficulty of 4.46 to 4.38 active and 4.73 to 4.46 control, with between-change p = .57. This comparison was inconclusive. It did not test dietary oil or Parkinson disease. The paper identifies NCT03611283, first posted August 2, 2018 after the recorded November 30, 2017 completion. Registry outcome descriptions refer to aggregate xerostomia and oral-health scores and have no posted results. [Institutional original, Methods and Table 2](https://docta.ucm.es/bitstreams/ef26cef7-0aa8-4c53-bd41-9dec71ba445e/download) · [Publisher](https://onlinelibrary.wiley.com/doi/abs/10.1111/odi.13019) · [Official registration](https://clinicaltrials.gov/study/NCT03611283)

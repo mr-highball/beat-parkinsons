@@ -1,0 +1,5 @@
+# Strawberry and fisetin follow-up, 2025–2029
+
+## Strawberry leaf extract and motor tests in rotenone mice
+
+Ueda and colleagues published on September 7, 2026. The study prepared an ethanolic extract from freeze-dried garden strawberry (`Fragaria × ananassa`) leaves. Twenty-eight male C57BL/6J mice were assigned to four groups of seven. The experimental diets contained 0.07% or 0.13% leaf extract during the 35-day rotenone study. The 0.13% group had a longer rotarod latency on day 28 and a shorter pole-turn time relative to rotenone alone. The wire-hang result was a nonsignificant tendency. The paper characterizes total polyphenols, with no compound-level quantification of fisetin. Claim `0349` concerns raw fruit and micrographia in people with Parkinson’s disease. This study reports extract effects on rodent coordination and bradykinesia-related tasks. [Primary report, PMID 42769219](https://pmc.ncbi.nlm.nih.gov/articles/PMC13590712/) · [Local CC BY article text and Figure 10 caption](Source-Text/PMC13590712.txt#L359)

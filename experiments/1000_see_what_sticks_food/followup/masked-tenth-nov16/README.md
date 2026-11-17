@@ -1,0 +1,38 @@
+# Tenth masked existing-assessment group, November 16, 2026 UTC
+
+Claim 0340 moved to Maybe False at 51%. The other 23 claims in this group retain Unknown. This pass added 20 study assessments and 18 dated source-text records. It also revisited extra-virgin olive oil and swallowing from the preceding group.
+
+## Toasted cumin and attention
+
+Ito and colleagues randomized 43 cognitively healthy older adults to distilled cumin essential oil or a matched medium-chain triglyceride comparator for 12 weeks. Nineteen per arm were analyzed. Complex attention scores, where lower is better, changed 26.5 to 18.5 with cumin oil and 16.5 to 22.2 with comparator (interaction p = .062). Simple attention changed 29.0 to 36.9 and 37.0 to 30.9, respectively (p = .057). Separate psychomotor speed and reaction-time interactions were p = .012 and .022. The attention comparisons had substantial variance and baseline differences, and the article assessed multiple domains. Public registry disclosure followed the intervention.
+
+The two objective attention changes provide a minimal lean against the frozen worsening direction. A food-chemistry analysis detects cuminaldehyde after dry roasting. A separate conventional roasting comparison found lower retention of characteristic aldehydes than microwave treatment. Neither food experiment measures absorbed exposure. Concentrated essential oil, toasted seed, and an older-adult cohort without Parkinson disease each limit transfer. The 1998 synthetic odor study measures EEG theta without a behavioral attention comparison after ingestion.
+
+[Primary pilot, Table 4](https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1784027/full) · [Local attention outcomes](../../../../research/2025-2029/Food-Experiment-Cumin-Oil-Attention-Pilot.md) · [Toasting and regulator record](../../../../research/2020-2024/Food-Experiment-Cumin-Volatiles-and-Clinical-Registration.md) · [Earlier chemical comparison](../../../../research/2000-2004/Food-Experiment-Cumin-Roasting-Volatiles.md)
+
+## Other primary outcomes and source status
+
+- The mustard comparison randomized 105 participants with subthreshold depression. Reported PHQ-9 differences favored both active formulas. The patches were topical and combined mustard, curcuma and evodia. The original numerical table and culinary oral effect are unverified. [Original study abstract](../../../../research/2025-2029/Food-Experiment-Mustard-Patch-and-Depression.md)
+- The Brussels sprout steaming analysis measures sulforaphane, while the modeled dyskinesia thesis concerns injected compound and is available only through an indexed abstract. The assay of nematode thrashing measures overall movement. The official Parkinson sulforaphane protocol has no posted results or separate dyskinesia measure. [Food composition and mouse lead](../../../../research/2020-2024/Food-Experiment-Steamed-Brussels-Sprout-Sulforaphane.md) · [Official trial recheck](../../../../research/2020-2024/Food-Experiment-Food-Followup.md#sulforaphane-registration)
+- The Swedish fatty-fish cohort found associations in opposite directions at intermediate and high intakes against a broad psychotic-like symptom score. The exposure pools several species. Separately, the Parkinson menu case did not identify grilled-salmon intake and the hallucinations resolved after medication adjustment. [Fatty fish cohort](../../../../research/2010-2014/Food-Experiment-Fatty-Fish-Psychotic-Like-Symptoms.md) · [Parkinson menu](../../../../research/2015-2019/Food-Experiment-Salmon-Hallucination-Followup.md)
+- The sumac and pomegranate trial measures dizziness during an acute illness and reports trends in both arms. The table includes denominator and percentage discrepancies, and it gives no standing trigger or isolated sumac effect. [Original dizziness table](../../../../research/2020-2024/Food-Experiment-Sumac-Outcomes.md#generic-dizziness-in-the-combined-sumac-and-pomegranate-trial)
+- One new corn-oil comparator registration includes Epworth sleepiness. Its linked publication was retracted, and the official registry contains no posted results. The Parkinson CBD trial placed corn oil in both arms. A separate corn-oil ester comparator supplies no isolated clinical oil effect. [Registry and retraction](../../../../research/2025-2029/Food-Experiment-Corn-Oil-Sleep-Registry-Retraction.md)
+- The oil-based oral-care reports for 0326 distinguish the dry-mouth aggregate from a swallowing item, and preserve the uncontrolled post-radiotherapy swallowing result. A separate randomized extra-virgin olive oil and lycopene spray trial compared swallowing difficulty ratings in the spray and water groups. Its reported comparison was inconclusive at p = .26, with higher baseline symptoms in the active arm. [Original comparison](../../../../research/2015-2019/Food-Experiment-EVOO-Lycopene-Swallowing-Comparison.md) Their topical multi-ingredient interventions give no dietary extra-virgin oil comparison. [Exact outcome review](0326-topical-olive-oil-swallowing.md)
+
+## Search scopes and open exact sources
+
+Both bibliographic providers completed the 24 focused expressions. Europe PMC returned 99 appearances. PubMed returned 86, including seven without Europe PMC PMID overlap. The official registry returned 18 protocols and three paired lexical leads. Several indexed records concern generic uses of “attention,” black cumin as a different botanical, or scent identification. Original clinical follow-through includes sources missed by title and abstract matching.
+
+The tenth group resolved nine of 18 higher-priority original pairs. The seven pending priority-four and two pending priority-five bodies have article-specific access receipts. All nine pertain to the salmon hallucination candidate set. The remaining tenth-group queue also contains 154 priority-six pairs.
+
+Concurrent work resolved 172 of the ninth group's 239 original gaps, including 169 at body depth and three using original author abstracts. Of the remaining 67, fifteen have verified PDF signatures awaiting identity and context review, 48 have publisher or PMC markup for article or presentation review, one has an NLM XML body candidate, and three have identifier conflicts. The recovered microarray abstract rules out a participant shrimp study at abstract depth, with its separately identified full body still open.
+
+The eighth group's continued physiology proceedings review resolved one more potato pair. The listed sweet-potato extract and rat glucose project is a separate presentation from Parkinson and dysphagia items in the proceedings. Eighteen original pairs remain from that group.
+
+[Current P4 access](current-p4-body-pending.tsv) · [Current P5 access](original-source-pending.tsv) · [Ninth continuation routes](ninth-resume-open-by-pair.tsv) · [Ninth native reconciliation](final-intake-validation.txt) · [Earlier potato receipt](eighth-resume-physiology2019-source-context.tsv) · [Eighth remaining exact pairs](eighth-resume-open-by-pair.tsv)
+
+[Expressions](expressions.tsv) · [Europe PMC dispositions](europe-pmc-screen.tsv) · [PubMed-only appearances](pubmed-novel-screen.tsv) · [Official registry screen](registry-screen.tsv) · [Original-source receipts](original-source-context.tsv) · [Claim denominators](original-context-by-claim.tsv) · [Verification](verify.log)
+
+[First eight claims](focused-first-eight.md) · [Middle eight claims](focused-middle-eight.md) · [Last eight claims](focused-last-eight.md)
+
+The eleventh checkpoint rechecked the nine higher-priority salmon sources and continued the ninth-group exact source queue. [Later source access](../masked-eleventh-nov16/README.md#search-and-exact-source-access)

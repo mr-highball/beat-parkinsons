@@ -1,0 +1,9 @@
+# Strawberry diet and attention follow-up
+
+## Strawberry options and cognitive item in a Parkinson diet trial
+
+Phillips et al. published their eight-week randomized low-fat versus ketogenic Parkinson pilot in 2018. The low-fat plan includes a strawberry–mango smoothie with one cup strawberries, while the ketogenic plan permits two-thirds cup strawberry halves as one of several weekend fruit alternatives. The menus allow fresh or frozen berries. Ticked meal completion is not a participant-level strawberry diary. The trial reports a 0.27-point greater reduction in the broad MDS-UPDRS Part I cognitive impairment item in the ketogenic group, not a separately measured attention result. The report mentions a low-fat participant with pre-existing hypotension and falls who needed midodrine adjustment; it does not report a between-arm fall-frequency outcome. Multiple foods differed simultaneously. No strawberry-specific causal contrast or individual intake can be inferred. [Primary report](https://pmc.ncbi.nlm.nih.gov/articles/PMC6175383/) · [Low-fat plan p. 57](https://pmc-oa-opendata.s3.amazonaws.com/PMC6175383.1/MDS-33-1306-s002.pdf#page=57) · [Ketogenic plan p. 100](https://pmc-oa-opendata.s3.amazonaws.com/PMC6175383.1/MDS-33-1306-s003.pdf#page=100) · [Source extract](Source-Text/2018-Phillips-Strawberry-Menu-Cognition-Falls.txt)
+
+## Separate strawberry supplementation and gait registration
+
+2017-05-22. NCT03162913 enrolled 47 older adults with overweight or obesity. The randomized comparison assigned freeze-dried strawberry powder or control over 90 days and registered preferred gait speed. Recent falls and fall-risk conditions were among eligibility restrictions. The completed record lists no posted results or fall-incidence outcome. It is distinct from NCT02051140, which reported fear of falling. [Official trial registration](https://clinicaltrials.gov/study/NCT03162913) · [Local source text](Source-Text/Trials/NCT03162913.txt)

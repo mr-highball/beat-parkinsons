@@ -1,0 +1,9 @@
+# Oral red pepper and gastrointestinal pain
+
+## Five-week red pepper trial in functional dyspepsia
+
+In a double-blind randomized comparison in 30 adults with functional dyspepsia, Bortolotti and colleagues assigned 15 per arm to placebo capsules or 2.5 g/day of red pepper powder in capsules before meals for five weeks. The authors describe ground Capsicum annuum with 0.7 mg capsaicin per gram in their earlier letter about the same experiment. Participant diaries recorded epigastric pain, and by week three the pain score was lower with red pepper. Week-five epigastric pain was 1.15 ± 0.5 versus 2.32 ± 0.6 (mean ± SD). Two of 15 active patients discontinued for epigastric pain and one of 15 placebo patients discontinued for another reason. The participants had functional dyspepsia and the powder was not identified by cayenne cultivar. [Primary trial](https://onlinelibrary.wiley.com/doi/10.1046/j.1365-2036.2002.01280.x) · [Authors' preceding report, PMID11907302](https://www.nejm.org/doi/full/10.1056/NEJM200203213461219) · [Local factual extract](Source-Text/PMID12030948-Pain-Extract.txt)
+
+## Single-arm pilot of gastroresistant red pepper in IBS
+
+In a 2003 conference report, Bortolotti and colleagues gave 10 adults with IBS 2.5 g/day of red pepper powder in five gastroresistant pills for five weeks. The main endpoint was daily abdominal pain severity on a 1–5 scale. The mean fell from 3.08 ± 0.6 at baseline to 1.71 ± 0.5 at week five (p<.05 within group). The study used the week before the intervention for comparison and had no concurrent placebo group. The number of participants, daily powder exposure, and trial design differ from the separate 2010 abstract and 2011 article. [Primary conference abstract S1298](https://www.gastrojournal.org/article/S0016508503809538/pdf) · [Local factual extract](Source-Text/Bortolotti-2003-S1298-Pain-Extract.txt)

@@ -1,0 +1,13 @@
+# Rosemary leaf preparations and neurobehavioral assays
+
+## Rosemary polyphenols and a mouse tail-suspension endpoint
+
+Sasaki and colleagues’ article first appeared online on October 17, 2012, ahead of its 2013 issue. The author abstract describes rosemary polyphenols in an ICR mouse tail-suspension model and PC12 cells. It reports lower immobility and changes in neurotransmitter and protein expression. The abstract lists specific constituent experiments, with separation of cellular and animal results limited by access to the Methods and figures. No validated human depressive-symptom outcome or culinary fresh leaf comparison is reported. [Author abstract and electronic date](https://pubmed.ncbi.nlm.nih.gov/23085339/) · [Japanese resource record](https://rrc.nbrp.jp/references/6484?lang=en) · [Local factual text](Source-Text/2012-Sasaki-Rosemary-Polyphenols-and-Behavior.txt)
+
+## Rosmarinic acid in stressed rats and astrocytes
+
+Jin and colleagues’ June 2013 paper reports reversed depressive-like behavior and restored hippocampal biomarkers in the isolated-acid arm of a chronic stress rat model. Its separately reported astrocyte experiments are cellular outcomes. The abstract gives no evidence of fresh rosemary consumption or clinical depressive symptoms. [Publisher author abstract](https://link.springer.com/article/10.1007/s11064-013-1088-y) · [Local factual text](Source-Text/2013-Jin-Rosmarinic-Acid-and-Rat-Stress.txt) · [Earlier isolated substance mouse experiments](../2005-2009/Food-Experiment-Clinical-Outcome-Boundaries.md#isolated-rosmarinic-acid-and-mouse-swim-behavior)
+
+## Rosemary extract and grooming after olfactory bulbectomy
+
+The June 2012 online Machado report used an oral Brazilian hydroalcoholic rosemary stem-and-leaf extract and an olfactory-bulbectomy model. The extract and fluoxetine arms both shortened grooming latency and increased grooming time relative to the operated animals receiving vehicle. The treatment-by-surgery interactions were p < .05 for latency and p < .01 for grooming time, and the latency treatment main effect was p = .10. This grooming assay is an indirect reward-related behavior. The same plant voucher and similar extraction method link the preparation to the authors’ 2009 paper, while the model, schedule comparisons and outcomes differ. [Original author abstract](https://pubmed.ncbi.nlm.nih.gov/22721880/) · [Original full-body rendering](https://www.academia.edu/14085235/Rosmarinus_officinalis_L_hydroalcoholic_extract_similar_to_fluoxetine_reverses_depressive_like_behavior_without_altering_learning_deficit_in_olfactory_bulbectomized_mice) · [Local factual text](Source-Text/2012-Machado-Rosemary-Extract-and-Grooming.txt)

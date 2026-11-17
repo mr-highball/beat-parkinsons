@@ -1,0 +1,5 @@
+# Food coadministration with levodopa in Japanese clinical reports
+
+## Lemon juice with levodopa in low gastric acid
+
+In March 1994, Yazawa and colleagues reported measuring fasting gastric juice in 38 Parkinson patients with inadequate levodopa response. Twenty-two had decreased acid secretion. Ten of those received 30 mL lemon juice with each levodopa administration for two weeks. The primary abstract reports higher levodopa concentrations at 60 and 180 minutes and improvement in rigidity, akinesia and short-stepped gait in nine of the ten participants. Tremor improvement was described as less marked. The accessible abstract gives no concurrent control group, individual symptom scores, quantitative effect sizes, or lemon juice processing details. The 2011 vinegar capsule case cites this work. [Primary abstract, PMID 8200147](https://pubmed.ncbi.nlm.nih.gov/8200147/) · [2011 vinegar case](../2010-2014/Food-Experiment-JSN-Food-Abstracts.md#fragrant-vinegar-capsules-with-levodopa-after-gastrectomy)

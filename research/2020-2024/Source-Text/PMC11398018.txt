@@ -1,0 +1,429 @@
+Title: Analyzing Wav2Vec 1.0 Embeddings for Cross-Database Parkinson’s Disease Detection and Speech Features Extraction
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC11398018/
+Text object: https://pmc-oa-opendata.s3.amazonaws.com/PMC11398018.1/PMC11398018.1.txt
+Data source: U.S. National Library of Medicine, PMC Cloud Service
+PMCID: PMC11398018
+PMID: 39275431
+DOI: 10.3390/s24175520
+Citation: Sensors (Basel). 2024 Aug 26;24(17):5520. doi: 10.3390/s24175520
+License: CC BY (article license statement below)
+Version: 1
+Retracted in PMC metadata: no
+Text coverage: article text
+Format: NLM plain-text extraction. This provenance header was added.
+
+
+JOURNAL INFORMATION
+==============================
+NLM Title Abbreviation: Sensors (Basel)
+Journal ID: Sensors (Basel)
+NLM Journal ID: 101204366
+Journal ID: sensors
+
+Sensors (Basel, Switzerland)
+
+EISSN: 1424-8220
+Publisher: Multidisciplinary Digital Publishing Institute (MDPI)
+
+ARTICLE INFORMATION
+==============================
+PMCID: PMC11398018
+PMID: 39275431
+DOI: 10.3390/s24175520
+Article ID: sensors-24-05520
+Article version: 1
+Subjects: Article
+
+Analyzing Wav2Vec 1.0 Embeddings for Cross-Database Parkinson’s Disease Detection and Speech Features Extraction
+
+https://orcid.org/0000-0003-0773-5360 Klempíř Ondřej Conceptualization Methodology Software Validation Formal analysis Writing – original draft Writing – review & editing
+https://orcid.org/0000-0002-0280-215X Krupička Radim Methodology Validation Formal analysis Writing – review & editing Supervision Project administration *
+Im Chang-Hwan Academic Editor
+Department of Biomedical Informatics, Faculty of Biomedical Engineering, Czech Technical University in Prague, 16000 Prague, Czech Republic; klempond@fbmi.cvut.cz
+* Correspondence: krupicka@fbmi.cvut.cz
+Electronic publication date: 2024 Aug 26
+Publication date: 2024 Sep
+Volume: 24
+Issue: 17
+Electronic Location ID: 5520
+Received 2024 Jul 24; Revised 2024 Aug 22; Accepted 2024 Aug 24
+Copyright: © 2024 by the authors.
+Copyright year: 2024
+License: Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Keywords: wav2vec, cross-database, classification, regression, feature importance, Parkinson’s disease
+
+Funding: European Union – Next Generation EU LX22NPO5107 This work was supported by the project of the National Institute for Neurological Research (Programme EXCELES, ID Project No. LX22NPO5107)—funded by the European Union—Next Generation EU.
+
+==============================
+Advancements in deep learning speech representations have facilitated the effective use of extensive unlabeled speech datasets for Parkinson’s disease (PD) modeling with minimal annotated data. This study employs the non-fine-tuned wav2vec 1.0 architecture to develop machine learning models for PD speech diagnosis tasks, such as cross-database classification and regression to predict demographic and articulation characteristics. The primary aim is to analyze overlapping components within the embeddings on both classification and regression tasks, investigating whether latent speech representations in PD are shared across models, particularly for related tasks. Firstly, evaluation using three multi-language PD datasets showed that wav2vec accurately detected PD based on speech, outperforming feature extraction using mel-frequency cepstral coefficients in the proposed cross-database classification scenarios. In cross-database scenarios using Italian and English-read texts, wav2vec demonstrated performance comparable to intra-dataset evaluations. We also compared our cross-database findings against those of other related studies. Secondly, wav2vec proved effective in regression, modeling various quantitative speech characteristics related to articulation and aging. Ultimately, subsequent analysis of important features examined the presence of significant overlaps between classification and regression models. The feature importance experiments discovered shared features across trained models, with increased sharing for related tasks, further suggesting that wav2vec contributes to improved generalizability. The study proposes wav2vec embeddings as a next promising step toward a speech-based universal model to assist in the evaluation of PD.
+
+1. Introduction
+
+In recent years, the application of deep neural networks has revolutionized the field of medical research, offering innovative solutions to complex machine-learning challenges [1]. These networks have demonstrated state-of-the-art advancements across various medical domains [2,3]. The integration of deep learning (DL) models and wearable technology has emerged as a promising solution for the diagnosis and subsequent monitoring in medical contexts, particularly for Parkinson’s disease (PD) [4,5,6]. DL has proliferated in speech processing and language understanding. In addition to traditional methods based on calculating features from audio recordings [7], highly performing speech representations like wav2vec [8,9] have emerged, leading to improved performance in various tasks such as automatic speech recognition (ASR) [10] or emotion analysis from voice [11]. In the case of speech disorders, this includes specific applications for dysarthric speech classification [12]. An advanced application involves attempts to decode speech from brain activity [13]. While wav2vec has proven its capability to generalize across languages [14], an open question persists concerning PD, i.e., the determination of whether a particular subset of wav2vec features exhibits generalization across various diagnostic speech tasks.
+
+PD stands as the second most prevalent degenerative disorder of the central nervous system, following Alzheimer’s disease. It affects about 1 in 100 people 65 years of age or older [15]. When someone under the age of 50 receives a diagnosis of PD, it is referred to as early-onset PD [16]. Its etiology is closely linked to the degeneration of dopamine-forming nerve cells within the substantia nigra, a critical component of the basal ganglia complex [17]. Speech, an integral indicator of motor functions and movement coordination, has proven to be exceptionally sensitive to central nervous system involvement [18]. Major movement symptoms of PD, including tremor, stiffness, slowing, and disturbances in posture and gait, only manifest when a substantial portion of brain cells are affected. In contrast, alterations in speech can occur significantly earlier, up to a decade prior to a formal diagnosis [19]. Recognizing speech impairment in the early stages of PD is crucial for a timely prognosis and the implementation of appropriate therapeutic measures [20]. The integration of advanced machine learning techniques with voice analysis, validated across three diverse datasets, has shown significant potential for enhancing early detection of PD [21].
+
+This paper focuses on analyzing the feature importance of wav2vec 1.0 in PD speech and investigates whether the latent speech representations are shared across tasks, with increased sharing for related tasks. The study explores sets of features contributing across various datasets (participants rhythmically repeat syllable /pa/, Italian dataset and English dataset) and models, specifically in the context of healthy controls (HC) vs. PD classification, and regression tasks to predict demographic and articulation characteristics. Our study serves as a continuation of our prior work introduced in Klempir et al. [22], which analyzed wav2vec for classification. This paper incorporates additional cross-database, regression, and feature importance experiments.
+
+The main contributions of this work are:Evaluation of wav2vec 1.0 embeddings for various inter-dataset HC vs. PD classification scenarios (also known as cross-db). There is still limited knowledge about high-performing methods for inter-dataset applications in PD detection based on speech. Research in this area is especially important for advancing federated learning.
+
+Current studies typically focus on diadochokinetic tasks or vowels. To address this gap, we demonstrate cross-db relevance using repeated syllables as well as read text.
+
+Providing evidence that wav2vec 1.0 embeddings can be used in various clinically relevant tasks related to PD, including regression. Our efforts focus on constructing models to predict quantitative targets such as age, loud region duration, and other articulation characteristics. Speech features like reading duration, pause detection, and speech instability are typically assessed through manual inspection and annotation of sound files using specialized software.
+
+To our knowledge, this paper is the first to investigate overlapping components in wav2vec 1.0 embeddings between classification and regression models, examining the presence of significant overlaps. Understanding the (dis)similarities between speech representations is essential for developing new corpus-independent models and for recommending standardized tasks that can be applied across different datasets.
+
+This work prioritizes wav2vec 1.0 over wav2vec 2.0, extensively examining its embeddings generated from its output layer. Despite its non-transformer-based design, wav2vec 1.0 has shown high performance, even comparable to other transformer-based embeddings.
+
+The remainder of this paper is structured as follows: Section 2 reviews related work and further introduces the present problem. Section 3 details the methods used in this study, including the datasets and machine learning approaches applied. Section 4 presents the results and provides an analysis of the different experiments conducted. Section 5 offers a discussion of these results, and Section 6 concludes the paper with final remarks.
+
+2. Related Work
+
+The speech and voice characteristics of individuals with PD exhibit variations influenced by age and gender [23]. Early-onset PD, occurring before the age of 50, introduces an additional layer of complexity in the understanding of these nuances [16]. The precise prediction of both chronological and biological age in PD constitutes a clinically significant task. Recent machine learning studies have leveraged extensive datasets, such as the UK Biobank brain imaging data, to construct brain-age models and investigate various aging-related hypotheses [24,25]. One approach involves calculating the brain-age delta by subtracting chronological age from the estimated brain age [26]. In the context of PD, Eickhoff et al. conducted a comprehensive analysis on two PD cohorts (de novo and chronic), revealing a substantial increase in biological age—of approximately three years—compared to chronological age, a phenomenon evident even in de-novo patients. This age discrepancy significantly correlates with disease duration, as well as heightened cognitive and motor impairment [27]. The prediction of age based on speech features typically employs neural networks, demonstrating an efficient level of accuracy in classifying individuals into age groups. For instance, studies have reported testing accuracies as high as 85.7% [28], and classification errors by age group of less than 20% [29].
+
+DL methods have exhibited their efficacy in extracting valuable features from voice and speech, particularly in the classification between those with neurological disorders and HC [30]. Convolutional neural networks (CNNs) stand out as a class of DL methods that surpass classical machine learning approaches in terms of performance. CNNs have achieved remarkable accuracy rates, often exceeding 99% [31,32]. Various CNN architectures are commonly employed in these applications, with data typically transformed into the time-frequency domain to retain both temporal and frequency information. This transformation can involve a spectrogram-based short-time Fourier transform (STFT), as observed in the analysis of PD vowel signals [32]. Additionally, CNNs can operate on mel-scale spectrograms of hyperkinetic dysphonia recordings [31] or utilize continuous wavelet transform to model articulation impairments in patients with PD [33]. Furthermore, research by Vásquez-Correa et al. demonstrated that fine-tuning CNNs through transfer learning contributes to enhanced accuracy in classifying patients with PD across different languages [34].
+
+Recently, representation learning (RL) technology has facilitated the transformation of raw biomedical data into compact and low-dimensional vectors, commonly referred to as embeddings [35]. These embedding methods have gained widespread adoption across various biomedical domains, including natural language processing (NLP), where they are utilized to represent clinical concepts derived from unstructured clinical notes, such as symptoms and lab test results [36]. Compression algorithms, similar to DL autoencoders, have demonstrated efficacy in constructing embedding vectors for classification tasks, particularly in out-of-distribution domains [37]. Furthermore, NLP embedding techniques have been used to generate concise and scalable features for virome data, offering insights into the importance of each sequence position in the resulting supervised model outputs [38]. In RL for speech, embeddings serve as fixed-size acoustic representations for speech sequences of varying lengths [39]. The application of speech self-supervised learning (SSL) has enabled the utilization of large datasets containing unlabeled speech signals, achieving remarkable performance on speech-related tasks with minimal annotated data. These SSL embeddings systems have been comprehensively benchmarked, considering factors such as model parameters and accuracy across various tasks [40]. For accessibility, pre-trained ASR embeddings models are readily available through the Hugging Face repository [41].
+
+Speech pre-trained embeddings relevant to the automatic assessment of PD include x-vectors [42], TRILLsson [43], HuBERT [44], and wav2vec [8,9]. In a comparative study by Favaro et al., the aforementioned architectures were evaluated for PD detection in multi-lingual scenarios, marking the initial application of TRILLsson and HuBERT in experiments related to PD speech recognition [45]. There are existing studies that show the capability of x-vectors for analyzing PD speech [46,47]. The method of wav2vec embeddings, which is available in two versions (wav2vec 1.0 [8] and the transformer-based wav2vec 2.0 [9]), represents a class of DL designed for self-supervised, high-performance speech processing. Fine-tuned wav2vec has proven efficient across various speech recognition tasks and languages [14]. The recent application of the transformer-based wav2vec 2.0 showcased its utility in developing speech-based age and gender prediction models, including cross-corpus evaluation, with significant improvements in recall compared to a classic modeling approach based on hand-crafted features [48]. Additionally, wav2vec 2.0 representations of speech were found to be more effective in distinguishing between PD and HC subjects compared to language representations, including word-embedding models [49]. As a pre-trained model, wav2vec shares the advantage with TRILLsson and x-vectors of being directly applicable without the need for further training, addressing the data-hungry nature common to many neural networks in the field.
+
+Since 2023, the exploration of cross-database classification between HC and individuals with PD has attracted considerable attention [22,50]. Hires et al. conducted a study on the inter-dataset generalizability of both deep learning and shallow learning approaches, specifically focusing on sustained vowel phonation recordings. Their findings showed excellent performance during model validation on the same dataset, with a drop in accuracy during external validation [50]. Our previous study focused on the application of wav2vec 1.0 to reading speech, which presented a leave-one-group-out classification between Italian and English languages, with a relatively minor drop in performance observed [22]. The relevance of cross-database classification was emphasized by Javanmardi et al. [12], who investigated individual wav2vec layers for dysarthria detection. Their conclusions highlighted the need for further research to explore the generalizability of wav2vec features, particularly in cross-database scenarios. Furthermore, the study [50] found that distinct sets of features contribute differently across various datasets, and the same set of features is not universally shared across models for individual datasets. In 2024, Javanmardi et al. advanced the field of inter-dataset dysarthric speech detection by exploring fine-tuned wav2vec 2.0 across three dysarthria datasets with a layer-wise analysis [51]. The same research group also conducted a systematic comparison between conventional features and pre-trained embeddings for dysarthria detection, demonstrating that intra-dataset pre-trained embeddings outperformed conventional features [52].
+
+The International Journal of Medical Informatics has introduced a comprehensive checklist for the (self)-assessment of medical artificial intelligence (AI) studies [53], emphasizing the utmost significance of feature importance and interpretability when introducing new methods for real-world applications. In the domain of speech recognition, mel-frequency cepstral coefficients (MFCCs) are emerging as key features for assessing speech impairments in neurological diseases; however, their interpretability remains limited [54]. First, experiments have been conducted to explain MFCCs and move closer to achieving interpretable MFCC speech biomarkers [55]. The study by Favaro et al. highlights another relevant finding: models based on non-interpretable features (DL embedding methods) outperformed interpretable ones [45]. Interpretable feature-based models offer valuable insights into speech and language deterioration, while non-interpretable feature-based models can achieve higher detection accuracy.
+
+The remote assessment of (patho)physiological parameters, encompassing variables such as body temperature, blood oxygenation, heart rate, movement, and speech, holds significant relevance in scenarios where direct contact is impractical or must be avoided for various reasons. The collection of speech data, accessible to virtually anyone with an audio-enabled device, presents an opportunity to remotely screen for PD, thereby promoting inclusivity and accessibility in neurological care [23]. In contemporary biomedical AI systems, particularly multimodal ones, an abundance of distinctive features or signals is embedded within the dataset [56]. Speech and voice play an important role in numerous instances [57]. To get the full potential of these complex datasets, advanced AI techniques can be employed to align multimodal features onto a shared latent space. This approach enhances the precision of phenotype prediction for highly heterogeneous data spanning various modalities [58]. We anticipate that the mentioned AI systems can be improved by incorporating speech representations like wav2vec. However, it is essential to conduct an investigation into the wav2vec component, examining its capabilities to generalize across different datasets and tasks.
+
+3. Methods
+
+3.1. Datasets
+
+The study utilized recordings and metadata from three distinct datasets for classification and regression experiments: a rhythmic syllable repetition dataset (used for classification) and both Italian and English datasets (used for classification and regression in the case of Italian and classification for English).
+
+3.1.1. Participants Rhythmically Repeat Syllables /pa/
+
+This dataset involved 30 male PD patients and 30 male age-matched HC Czech participants rhythmically repeating the syllable /pa/ [7]. The data, consisting of audio signals with a sampling frequency of 48 kHz, focused primarily on evaluating “pa” recordings, a standardized speech examination in PD. This dataset was used for training classification models, with a total sample size of 60 subjects (30 HC vs. 30 PD).
+
+3.1.2. Italian Study by Dimauro et al. [59]
+
+This dataset, used for both classification and regression tasks, stems from a study assessing speech intelligibility in PD conducted at the Università degli Studi di Bari, Italy [59]. The dataset used for HC vs. PD classification included 50 subjects (elderly HC: n = 22, PD: n = 28), with measurements of text readings (44.1 kHz) available for each individual. For the regression experiments, we also included a young HC group (young HC: n = 15), along with metadata for regression tasks such as age and the estimated number of characters read per second (age, characters per second). In the HC group, individuals aged 60–77 years were included, consisting of 10 men and 12 women. None of these individuals reported any particular speech or language disorders. Regarding the PD group, patients aged 40–80 years were included, consisting of 19 men and 9 women. In the young group, individuals aged 19–29 years were included, consisting of 13 men and 2 women.
+
+In total, this dataset included 50 subjects for classification (22 HC vs. 28 PD). For regression tasks, which involved modeling age and articulation characteristics, the inclusion of young, healthy controls increased the total number of subjects to 65.
+
+3.1.3. English Dataset
+
+Chosen for classification experiments, the English dataset “Mobile Device Voice Recordings at King’s College London (MDVR-KCL)” [60] comprised 21 HC and 16 PD subjects who read aloud “The North Wind and the Sun”. Measurements of text readings were available for each participant, with a sampling frequency of 44.1 kHz. There is no available information regarding the distribution of gender and age. This dataset was used for training classification models, with a total sample size of 37 subjects (21 HC vs. 16 PD).
+
+3.2. Signal Processing and Feature Extraction
+
+3.2.1. Naive Loud Regions Segmentation
+
+We derived an additional parameter for the purposes of regression tasks, which we refer to as loud region duration. Loud region duration is a parameter that can be approximated from raw signals and is directly associated with reading duration. Speech characteristics such as reading duration, pause determination, and speech instability are important factors in PD and are typically correlated with clinical scales as markers of motor impairment [61]. These parameters are typically calculated through manual inspection and annotation of sound files using the Praat software (current release, version 6.4.18).
+
+The preprocessing phase involved segmenting the signals into binary loud regions. As a basic baseline approach, the raw audio signal was segmented using a straightforward formula, creating a binary vector representing quiet and loud regions. Each data point in the series was encoded as 1 if its absolute value exceeded the mean absolute value of the signal and 0 otherwise. Subsequently, the binary vector underwent averaging through a 10,000-sample window rolling average and was summed to generate a single numerical value for each recording.
+
+3.2.2. MFCCs Features Calculation
+
+To establish baseline comparisons, we calculated the audio features for the recordings stored in WAV files using the Librosa Python library [62]. The recordings were resampled at 16 kHz. Subsequently, the waveform underwent processing with Librosa (version 0.10.2) to compute 50 MFCCs, with each coefficient averaged over time (MFCC-mean). This computation resulted in a vector comprising 50 values.
+
+3.2.3. Wav2Vec Embedding and Features Calculation
+
+To assess the generalization capability across databases and minimize the need for feature engineering, we employed wav2vec 1.0 [8], a speech model that accepts a float array corresponding to the raw waveform of the speech signal. All recordings were resampled at 16 kHz, a prerequisite for the wav2vec embedding used for feature extraction. In contrast to traditional signal processing methods, wav2vec is capable of learning a suitable representation of an audio signal directly from data, avoiding the necessity of manual feature extraction [22].
+
+For our experiments, we utilized pretrained components of the wav2vec model, which maps raw audio to a latent feature representation. This model is pretrained in an unsupervised manner and has demonstrated advanced performance in speech recognition tasks with minimal fine-tuning. Specifically, we obtained a publicly available wav2vec-large model trained with the LibriSpeech training corpus, which contained 960 h of 16 kHz English speech [63].
+
+Due to the dynamic representation of the wav2vec embedding over time [22], we computed a derived 1D static feature vector of 512 dimensions for each recording based on three different statistics (mean: wav2vec-mean, standard deviation: wav2vec-std, sum: wav2vec-sum) along the time axis. The output of this method served as the input for machine learning models for classification and regression. Similar approaches exist in the literature to aggregate specific DL audio embeddings, as seen in TRILLsson and wav2vec 2.0 [45]. Since feature extraction from long recordings requires relatively complex computation in [45], the authors divided long recordings into 10-s segments. However, with wav2vec for this research, we found this segmentation to be unnecessary, allowing us to process the entire signal without the need to split it into sections.
+
+In an extension of our previous research [22], this study enriches the previous results by incorporating wav2vec-std. Additionally, a derived feature vector of length 20 is calculated, incorporating 10 principal component analysis (PCA) components of wav2vec context (wav2vec-mean) and 10 PCA components of spectral MFCC characteristics (MFCC-mean) combined into a single vector. Ten components were selected to capture a minimum of 90% of the original variance (cumulative sum of explained variance) across datasets for both wav2vec-mean and MFCC-mean. We aim for a compact resulting vector length with an equal number of components for both input vectors.
+
+3.3. Modeling and Statistical Methods
+
+A high-level overview of the proposed machine learning methodology is illustrated in Figure 1.
+
+3.3.1. Cross-Database Classification Experiments
+
+To assess the generalizability of wav2vec and MFCCs features across multiple PD detection datasets, we conducted a series of classification experiments (categorizing HC as negative and all PD cases as positive). This experimental setup is entirely unique in this version of the paper compared to our prior publication [22]. Following a similar approach as recently presented in [50], we adopted combo scenarios. Specifically, we assessed performance on individual datasets, and more importantly, we implemented additional scenarios: one that utilizes a combination of multiple datasets for training and evaluates a completely unseen remaining dataset, and vice versa. For binary classification modeling, we employed an ensemble random forest classifier (with default settings, n_estimators = 100 and criterion = ‘gini’) from the Python scikit-learn library [64,65]. For selected cross-database results, we implemented a binary classifier using XGBoost, configured with the parameters “softmax” and eval_metric = [‘merror’, ‘mlogloss’] [66]. Model evaluation was conducted using 5-fold cross-validation with 5 repeated fits to measure the performance of the classification models. The interpretation of the classification results involved comparing the model output with the ground truth using a receiver operating characteristic (ROC), where the area under the curve (AUC) was employed to quantify the level of accuracy. In this study, the primary evaluation metric for model performance was the area under the ROC curve (AUROC).
+
+3.3.2. Regression Experiments
+
+We utilized wav2vec features in regression modeling tasks for modeling age and parameters associated with articulation rate. In the modeling phase, we employed the lasso with alpha = 0.01 (least absolute shrinkage and selection operator) model from the Python scikit-learn library [64,67] and conducted model evaluations using 5-fold cross-validation. Lasso employs regularization through a geometric sequence of Lambda values. Its primary advantage lies in the suppression of redundant features, contributing to improved model generalization. This characteristic proved particularly beneficial when dealing with a limited number of observations and a substantial number of features. To measure the performance of our model, the following metrics were computed: Spearman correlation coefficient (rho) [68], r-squared (r2) metric [69], and mean absolute error (MAE) [70].
+
+3.3.3. Strategy to Evaluate Overlapping Components across Models
+
+To explore the hypothesis of a potential link between classification and regression models, we investigated the feature importance of the wav2vec embedding as an important aspect of interpretability. While wav2vec exhibits promising potential for applications in speech processing for neurological diseases, it is essential to grasp its behavior across various models and tasks. The goal was to identify features that exhibit common features across models and evaluate their (dis)similarity. Approaches that involve models designed to handle irrelevant and unrelated features of the modeled variable can lead to enhanced model explainability. Such examples are linear regression, where coefficients can be set to zero, or decision trees, which do not use irrelevant features in tree splitting criteria. The model choice not only improves model interpretability but also reduces computational requirements for training and model utilization. Our objective was to analyze global feature importance, which refers to the overall significance of a feature across all instances within the dataset. It is essential to note that there is no universally superior method for determining global feature importance, as each method provides estimates based on distinct assumptions.
+
+In the initial step, we identified the top 30 most contributing wav2vec features for each model considered. For classification, logistic regression, known for its feature importance computation built-in functionalities [71], was employed. For regression, we utilized the random forest regressor, followed by the SHAP explainability method [72]. SHAP values were extracted from the best-fitting model for all individuals. In cases of more complex models, Shapley values are approximated through Monte Carlo sampling. The top features were obtained based on the importance of each factor, ranked from most to least important according to feature importance values. The calculation of feature importances for both built-in scikit-learn tools and SHAP typically involves utilizing the training set.
+
+In the subsequent step, the resulting top 30 most important features for each model were then subjected to statistical testing to assess the significant coverage of common features shared between models. The Fisher exact test was used to compute p-values. The computation considered the number of (non)-overlapping features and the total number of features. P-values below 0.05 were considered statistically significant. Visualization using Venn diagrams was used to illustrate the unique/common sets of features observed among the models. As an alternative approach to evaluating significance, we conducted a simulation experiment to identify the minimum number of shared features considered significant. In 10,000 runs, two sets of 30 features were randomly generated from a pool of 512 total features, and their intersection was calculated. The mean number of shared features was 1.76, with 5 shared features (99th percentile) demonstrating statistical significance (associated with a p-value of 0.01). To address potential concerns related to multiple comparisons, we applied the Bonferroni correction to establish the corrected threshold for significance. A significance threshold was maintained, with a minimum of 6 shared features remaining statistically significant after correction. This corresponded to a p-value of 0.013, obtained by multiplying the base p-value of 0.004 by a factor of 3 (reflecting the number of independent tests for each presented Venn diagram).
+
+4. Results
+
+The overall distributions of the recording durations for the three datasets are visualized in Figure 2. All three datasets were utilized for classification tasks (i.e., HC vs. PD). Additionally, the Italian dataset was employed for regression experiments. Young Healthy Controls (yHC) from the Italian dataset were excluded from the binary classification experiments due to their significantly different age distribution.
+
+4.1. Intra- and Inter-Dataset Classification for Detection of PD
+
+This section presents the outcomes of the four primary classification scenarios detailed in Table 1. The table reports the AUROC scores achieved by the respective models on individual datasets (intra-dataset classification) and on combined datasets with external evaluation (inter-dataset classification). A subset of the results discussed here was previously addressed in [22], and these results are appropriately marked in Table 1.
+
+The first scenario involved models trained on individual datasets and evaluated on the same datasets, covering three cases—/pa/, Italian, and English datasets separately. For /pa/, the top-performing model was achieved with 10 PCA MFCC-mean, slightly outperforming the wav2vec-sum. The combination of wav2vec and MFCC features did not enhance overall performance. Remarkably, an excellent performance was observed across all models for the Italian dataset. In the case of the English dataset, AUROCs varied, with 0.74 for the MFCC-mean model and the best-performing model reaching 0.80 for wav2vec-std.
+
+The second scenario examined the performance of the three models on combined datasets, where two datasets were mixed to create a larger dataset. The aim was to increase the volume of training data, potentially enhancing model performance. When combining the Italian and English datasets, overall, wav2vec yielded superior results compared to MFCCs. It is noteworthy that the mixing of wav2vec and MFCC PCA components elevated the AUROC to 0.88, surpassing the individual AUROC values of 0.83 for wav2vec-mean and 0.81 for MFCC-mean. Conversely, in the case of merging Italian and /pa/ datasets, MFCCs outperformed wav2vec parameters. Additionally, for the mixed case of English and /pa/ datasets, the 10 PCA MFCC-mean exhibited a higher AUROC (by 5–10%) compared to other models.
+
+Scenario 3 comprised the most extensive set of results. A total of six models were trained to assess cross-database generalizability. When trained on /pa/, wav2vec features failed to accurately classify HC vs. PD in both the Italian and English datasets. Some non-random generalizability signals (AUROC = 0.68) were observed in the cases of MFCC-mean and 10 PCA wav2vec-mean in the Italian dataset. The same AUROC was achieved for the English dataset in the case of 10 PCA MFCC-mean. When trained on Italian data, the combination of PCA components of wav2vec and MFCC features proved to be the most effective when evaluating /pa/. Evaluating the Italian model on the English dataset revealed that wav2vec, previously shown to be promising in detecting HC vs. PD, outperformed the newly introduced MFCC-based features. A similar trend was observed in the reverse case, i.e., training on English and evaluating on Italian. Lastly, evaluating the English model on /pa/ resulted in decreased accuracy.
+
+In Scenario 4, all wav2vec models trained on mixed English and /pa/ datasets achieved an AUROC higher than 0.8. The minimum was 0.8 for wav2vec-sum, and the maximum was 0.88 for wav2vec-std. Otherwise, we noticed analogous trends as those observed in Scenario 3.
+
+The selected cross-database results obtained on individual datasets were highly satisfactory, indicating a non-random level of generalizability in language-independent models for discriminating between PD and HC (Figure 3, Figure 4 and Figure 5).
+
+4.2. Regression Models to Predict Age and Articulation
+
+The next section provides an examination of the results obtained for patient characteristics from the Italian dataset (yHC, HC, PD; N = 65). Initially, we explored paired correlations among age, characters per second, and duration parameters with naive loud region segmentation (Figure 6A). Subsequently, we utilized wav2vec-mean, and the features were reduced to two dimensions using PCA. The PCA visualizations (Figure 6B) of the wav2vec-mean embedding illustrated the correlation structure with the parameters from Figure 6A. Individual PCA plots, color coded with the respective parameter values, revealed patterns where similar values clustered closer to each other, confirming that capturing the age and articulation parameters based on wav2vec is highly likely. Furthermore, we visually examined the impact of gender on age prediction by previewing 2 PCA components of the wav2vec-mean (Figure 7).
+
+The trained wav2vec-mean regression models demonstrated correlations with age (Spearman R = 0.56), characters per second (Spearman R = 0.74), and loud region duration (Spearman R = 0.84). Additional metrics and the reported performance of the trained lasso regression models are presented in Figure 8.
+
+4.3. Exploration of Overlapping Important Features across Models
+
+Feature importance assessments were conducted for various classification and regression models utilizing wav2vec-mean features. We focused on the top 30 impactful features, ranked from the most influential to the least, out of the complete set of 512 features. The connections between classification and regression model profiles are presented in Figure 9A and Figure 9B, respectively. Overall, the Fisher exact tests indicated a significant number of common features in all model pairs (p < 0.05). In the binary classification models (Figure 9A), the strongest association was identified between the Italian and English speech datasets (11 shared features). For regression (Figure 9B), the overlap between the model explaining loud region duration and the model explaining characters per second was more pronounced (10 shared features) than with the model explaining age (5 shared features). The increased number of shared features between loud region duration and characters per second aligns with the observed correlation coefficients between loud region duration vs. characters per second (Spearman R = −0.76), compared to the correlation between loud region duration vs. age (Spearman R = 0.53), as shown in Figure 6A. Taking into account the stringent Bonferroni corrected comparisons, certain pairs that had shown significance using the Fisher exact test were no longer significant (i.e., had fewer than 6 shared features). This applied specifically to the classification comparison between /pa/ and English, as well as both articulation rate models versus age.
+
+Furthermore, we investigated the potential overlap between classification and regression tasks in the context of a binary age classification model versus three regression tasks (Figure 10). The parameter age was considered in two distinct forms: firstly, as a binary class (young vs. elderly), and secondly, as a quantitative regression model predicting age. Concurrently, two additional models, addressing entirely different aspects, were examined and tested against the important features derived from the age classification model. The association between the number of features in age:classification vs. age:regression model was found to be significant, indicating shared features between the tasks. In contrast, other cases were not found to be statistically significant or over-represented.
+
+To compare wav2vec-mean features with MFCC and to explore the effect of using a different classifier (random forest classifier) instead of logistic regression, we conducted two additional experiments. These experiments were performed for both wav2vec-mean (Table 2) and MFCC-mean (Table 3) features.
+
+5. Discussion
+
+This paper introduces a study on using wav2vec 1.0 embeddings and MFCCs to detect Parkinson’s disease from speech, focusing on cross-corpora classification and regression tasks. It demonstrates wav2vec’s performance in PD detection over traditional methods and explores its generalizability across languages and tasks.
+
+In addressing the primary hypothesis concerning the exploration of shared common features, our study focuses on the feasibility of achieving satisfactory results through cross-database classification. The main component is covered by machine learning, where we aimed to discern patterns and features that exhibited consistency across diverse databases. We constructed multiple models through various train–test combinations to evaluate the efficacy of wav2vec as a robust speech representation for PD detection. In the combined training approach, we did not account for the heterogeneity in recording conditions, speech tasks, and participant demographics across the datasets—specifically, the rhythmic repetition of syllables in the first dataset, text readings in the Italian and English datasets, and variations in age and gender distribution. We consider this a possible example of corpus-dependent clustering, as defined in [73].
+
+The main classification findings in Table 1 revealed that external validation did not result in a significant decrease in the AUROC metric for specific scenarios, particularly, when training on English and evaluating on Italian (AUROC > 0.90). This marked improvement stands in contrast to the baseline MFCC features (AUROC = 0.51). Additionally, other new findings were observed. Due to the high correlation among the wav2vec embedding features, we performed a calculation of 10 PCA. This approach demonstrated superior results in some cases, outperforming models trained on the full list of features, especially in conjunction with baseline MFCCs and /pa/ dataset. We observed that wav2vec-mean excelled in the classification of read text, whereas a wav2vec-MFCC combination proved partially effective for tasks involving repeating syllables (/pa/). This behavior suggests that wav2vec is well suited for external validation of complex speech tasks, while the combination of wav2vec and MFCCs performs better in simpler voice tasks. In conclusion, our classification experiments underscore the utility of wav2vec in cross-database PD detection.
+
+In connection with existing peer-reviewed publications, our findings share relevance with the study conducted by Hires et al. [50]. The paper investigated the inter-dataset generalization of traditional and CNN machine learning approaches for PD detection based on voice recordings, specifically focusing on vowels. In their study, external validation demonstrated a decline in accuracy, with the highest AUC surpassing 0.7 in certain instances. Our research adopts a similar validation strategy, but we did not perform any hyperparameter tuning. In a recent study [45], the assessment of PD using wav2vec 2.0 and other DL embeddings in a cross-lingual context was explored. The investigation compared interpretable and non-interpretable features. Relevant to our results, the study’s cross-lingual experiments revealed significant performance variations based on the target language, emphasizing that DL embeddings can achieve an AUC exceeding 0.9 in cross-language validation. This finding supports our results obtained from wav2vec 1.0 and suggests possible alignment with other DL embeddings, such as TRILLsson. Although comparing results accurately is challenging due to differences within the datasets, we evaluated our best-obtained results against previous works that developed HC vs. dysarthria models for inter-dataset (i.e., cross-database) scenarios. The findings from this comparison are summarized in Table 4.
+
+In a few scenarios presented in Hires et al. [50], they utilize the same Italian dataset [59] as in this study, along with the Czech Parkinsonian dataset (not the one used here), for both intra- and inter-dataset classification. The results are comparable and consistent with our findings in terms of demonstrating very high accuracy for intra-dataset discrimination. Regarding other similar studies that have addressed classification using the same datasets (only intra-dataset), for the Italian dataset, we refer to the work by Malekroodi et al. [75]. The authors published a table comparing the accuracy results obtained from six approaches across five studies, all of which achieved an accuracy exceeding 95%. For the English dataset, we reference Cesare et al. [76], who compared multiple signal representations and classifiers, consistently obtaining accuracies close to or exceeding 90% in intra-dataset scenarios.
+
+The analysis of overlapping components within the embeddings across datasets revealed that there is not a universally identical set of features shared across models for individual datasets. This variability is expected, especially when dealing with hundreds of features. Given the substantial number of features within wav2vec (the same applies to other DL embeddings as well), our focus was on the most impactful ones, extracting the top 30 features for each model. Ranking the top 30 or top 50 features (e.g., out of hundreds of features in total) based on feature importance, followed by the use of statistical methods to evaluate overlaps or differences between conditions, is a well-established approach in biomedical research studies [77,78,79]. A strong cross-language signal pattern was observed between Italian and English speech classification models, indicating an enhanced level of generalizability across languages, specifically in the classification of PD versus healthy control—a trend consistent with our observed cross-database classification results. This finding aligns with existing research [80], demonstrating that unsupervised pretraining effectively transfers across languages.
+
+Emphasizing the variability of embedding features depending on the training data, the additional experiments involved exploring the number of overlapping sets of features across 30 runs, each with varying numbers of top features. The analysis indicated that a portion of overlaps initially identified using logistic regression lost their significance when re-evaluated with the random forest classifier. Nevertheless, the wav2vec-mean features continued to detect significant overlaps between the Italian and English models. Taken together, there was a greater overlap between sets of features when comparing wav2vec with MFCC, with wav2vec showing more prominent overlaps. Furthermore, a higher number of overlaps was observed in regression tasks where models were created within a single dataset.
+
+Identifying the most important features in DL embeddings holds the potential to interpret DL model outcomes by exploring cross-task relationships, enhance model performance, streamline model complexity by removing less critical features, mitigate overfitting, and further improve the generalization of PD detection from speech. However, given that the embedding as a whole constitutes the feature, interpreting individual neurons within an embedding by means of feature importances can be challenging. The results presented here should be considered preliminary, and we recommend further research to conduct a more detailed disentangled analysis to better understand the significance and interpretability of these embeddings. In addition, in the context of our research, where we utilized MFCC analysis as a baseline, Rahman et al. conducted a feature importance analysis on MFCCs [23]. Their investigation revealed that features that had an impact on the model’s performance were typically spectral features.
+
+The findings of this study hold potential implications for broader applications in diverse contexts. As DL in PD continues to advance, overcoming technical and methodological challenges is crucial for widespread technology adoption. Sigcha et al. have highlighted the importance of large unsupervised data collection and the use of semi-supervised deep learning approaches to enhance PD symptom detection and severity estimation, ultimately improving the generalization capability of developed solutions [4]. The deployment of the wav2vec in a multimodal system, either separately as a single component or in combination with MFCCs, offers opportunities for external validation and performance enhancement. For instance, incorporating Mel spectrograms for the audio component, as demonstrated in [57], can contribute to the development of multimodal biomedical AI. Additionally, the results obtained in remote speech PD, combined with a remote system like finger tapping [81], open possibilities for diverse applications at home. Moreover, utilizing federated learning for PD detection, locally extracted using the wav2vec 2.0 model, encourages further exploration of techniques for the generalization of models from databases of the same pathology, in different languages, without the need for sharing information between other institutions [82].
+
+This paper has some limitations. First, our exploration solely focused on one wav2vec architecture, disregarding newer embeddings like wav2vec 2.0, which has demonstrated a slight improvement (2–3% in average recall) over wav2vec 1.0 in emotion recognition [11]. Although the difference between wav2vec versions is not substantial, there is potential for enhancement. Secondly, it is important to note that caution should be exercised in interpreting wav2vec representations in specific cases, such as slow or fast speakers, where model predictions may be less accurate. Further investigation and error analysis, involving additional datasets, are warranted for confirmation. Finally, the regression model for the age parameter in the Italian dataset reveals an apparent gap between young and elderly individuals, leaving some age ranges uncovered. This gap could introduce bias in the accuracy of the trained model, potentially leading to failures in predicting unseen data. Retraining the model separately for young and elderly groups might be necessary to address this limitation.
+
+For future work, we can consider the implications of training the wav2vec model exclusively on English data and whether experiments with a multilingual version could offer additional insights. Extending our experiments to include testing generalizability in other out-of-domain datasets, such as snoring [83], would be beneficial. Additionally, we anticipate further enhancements by incorporating proper augmentation techniques, such as audio-specific methods like noise addition or volume control, to introduce variability to the recordings and perturb the models. Initial attempts related to wav2vec augmentation have been explored in [84], and a recent study has provided a comparison of data augmentation methods in voice pathology detection [85]. Furthermore, the role of augmentation in wav2vec model training itself (wav2vec-aug) has demonstrated a substantial improvement in accuracy [86].
+
+6. Conclusions
+
+Based on the experimental results, this study showed the suitability of wav2vec for accurate intra-dataset classification and satisfactory performance in inter-dataset classification. It has proven effective in diverse regression tasks, such as modeling age and articulation characteristics like characters per second or loud region duration. Of utmost significance, the analysis of global feature importances reveals shared features among classification datasets, regression models, and statistically significant links between classification and regression tasks. While it cannot be definitively concluded that only a small subset of the 512 wav2vec features would universally solve any classification or regression task, the observed pattern suggests that similar tasks share common features. Transferability was more pronounced for similar speech tasks, such as reading or spoken text, as evident in both shared feature importances and cross-database classification. The concluding insights emphasize the importance of feature importance methods in interpreting the generalization capability of developed deep learning solutions. The study proposes wav2vec embeddings as a next promising step toward a speech-based universal model to assist in PD evaluation.
+
+In our future research, we aim to address some of the limitations reported in this study. Specifically, we plan to validate our findings on more extensive datasets and further explore strategies for analyzing overlapping components between models and tasks. We will continue evaluating pretrained embeddings (such as wav2vec 1.0, wav2vec 2.0, and HuBERT) as universal representations that can accurately solve various problems in PD. Additionally, we intend to conduct a systematic comparison of different classification and regression techniques, followed by hyperparameter optimization.
+
+Acknowledgments
+
+We thank David Prihoda for the stimulating discussions about the wav2vec method and for his comments on earlier versions of the manuscript.
+
+Author Contributions
+
+Conceptualization, O.K.; methodology, O.K. and R.K.; software, O.K.; validation, O.K. and R.K.; formal analysis, O.K. and R.K.; writing—original draft preparation, O.K.; writing—review and editing, O.K. and R.K.; supervision, R.K.; project administration, R.K. All authors have read and agreed to the published version of the manuscript.
+
+Institutional Review Board Statement
+
+This was a retrospective study using non-institutional public data. Ethical review and approval were waived for this reason.
+
+Informed Consent Statement
+
+Patient consent was waived due to the use of open data. The study used openly available human data. The dataset comprised of participants rhythmically repeating the syllable /pa/ was openly available as a training dataset for the international competition Biosignal Challenge 2018 at the Czech Technical University in Prague.
+
+Data Availability Statement
+
+The Italian and English datasets analyzed during the current study are publicly available [59,60]. Italian data [59] are available at the following URL: https://ieee-dataport.org/open-access/italian-parkinsons-voice-and-speech (accessed on 22 July 2024). English data [60] are available at the following URL: https://zenodo.org/records/2867216 (accessed on 22 July 2024). The dataset comprised of participants rhythmically repeating the syllable /pa/ is not openly available at this moment and is available from the corresponding author upon reasonable request.
+
+Conflicts of Interest
+
+The authors declare no conflicts of interest.
+
+Figure 1 Illustrative diagram of the proposed signal processing and experiments.
+
+Figure 2 Distributions of the recording durations (left) and loud region durations (right) across the datasets used in the study.
+
+Figure 3 TRAIN-Eng/TEST-Italian: AUROC curves for the two speech representations and two classifiers. The plot on the left shows that wav2vec outperformed MFCC when trained on English data and tested on Italian data. XGBoost further improved the performance observed with random forest. Detailed classification results for each classifier are presented in the corresponding confusion matrix on the right. In this plot, the results were not cross-validated; instead, the classifier was trained on the entire dataset #1 and tested on the entire dataset #2.
+
+Figure 4 TRAIN-Italian/TEST-Eng: AUROC curves for the two speech representations and two classifiers. The plot on the left shows that wav2vec outperformed MFCC when trained on Italian data and tested on English data. Similar to the observations in Figure 3, XGBoost demonstrated improved performance compared to the random forest classifier. Detailed classification results for each classifier are presented in the corresponding confusion matrix on the right. In this plot, the results were not cross-validated; instead, the classifier was trained on the entire dataset #1 and tested on the entire dataset #2.
+
+Figure 5 AUROC curves for the /pa/ dataset and the read text from the Italian dataset. The left plot shows that wav2vec failed in this prediction task when trained on /pa/ data and tested on the Italian data, and vice versa, as shown on the right. On the left, MFCC performed slightly better compared to wav2vec; /pa/ dataset is not very similar to the other two datasets, and it contributed little to the cross-db classification. The results were not cross-validated; the classifiers were trained on the entire dataset #1 and tested on the entire dataset #2.
+
+Figure 6 (A) Correlations between the features from the Italian dataset and the calculated duration of loud regions. (B) PCA plots depicting the relationship between wav2vec-mean features. The close grouping of similar colors suggests a nonrandom signal across all wav2vec-mean features. Each data point corresponds to one subject.
+
+Figure 7 Boxplots illustrating 2 PCA components of wav2vec-mean, organized into distinct classes based on age and presented in separate panels for each component. The plots emphasize gender-related differences.
+
+Figure 8 Performances of audio-wav2vec-based regression models on both training and testing data. Each distinct color in the plot corresponds to an individual run of cross-validation, specifically: (A) modeling age, (B) modeling characters per second, and (C) modeling loud region duration.
+
+Figure 9 Venn diagrams illustrating shared features among multiple models: (A) classification and (B) regression.
+
+Figure 10 Comparative analysis of important features identified by the binary age classification model vs. top features derived from three regression models: (A) age:classification vs. age:regression, (B) age:classification vs. characters per second:regression, (C) age:classification vs. loud region duration:regression.
+
+sensors-24-05520-t001_Table 1 Table 1 The AUROC scores represent the classification performance of the respective models in distinguishing between HC and individuals with PD across four scenarios, including intra-dataset and inter-dataset comparisons; wav2vec is abbreviated to w2v.
+
+#	TRAIN	TEST	w2v-Mean	w2v-Sum	w2v-std	MFCC-Mean	10 PCA w2v-Mean	10 PCA MFCC-Mean	MFCC-Mean + w2v-Mean **	
+1	pa	pa	0.61 *	0.82 *	0.70	0.78	0.58	0.84	0.81	
+Italian	Italian	0.98 *	0.97 *	0.98	0.98	0.98	0.99	0.99	
+Eng	Eng	0.80	0.71	0.80	0.74	0.65	0.79	0.77	
+2	Italian, Eng	Italian, Eng	0.94	0.90	0.93	0.89	0.83	0.81	0.88	
+Italian, pa	Italian, pa	0.87	0.89	0.86	0.92	0.81	0.89	0.91	
+Eng, pa	Eng, pa	0.72	0.75	0.71	0.71	0.58	0.81	0.78	
+3	pa	Italian	0.46	0.50	0.50	0.68	0.68	0.40	0.57	
+pa	Eng	0.40	0.50	0.51	0.49	0.34	0.68	0.55	
+Italian	pa	0.48	0.43	0.46	0.49	0.61	0.63	0.68	
+Italian	Eng	0.72 *	0.56	0.67	0.47	0.56	0.42	0.51	
+Eng	Italian	0.90 *	0.78	0.77	0.51	0.73	0.34	0.47	
+Eng	pa	0.46	0.53	0.48	0.44	0.48	0.60	0.60	
+4	Italian, Eng	pa	0.49	0.43	0.52	0.55	0.53	0.63	0.64	
+Italian, pa	Eng	0.72	0.61	0.61	0.56	0.46	0.46	0.51	
+Eng, pa	Italian	0.86	0.80	0.88	0.56	0.75	0.50	0.64	
+* Results presented and discussed in [22]. ** 10 PCA from w2v-mean + 10 PCA from MFCC-mean.
+
+sensors-24-05520-t002_Table 2 Table 2 Analysis of overlapping wav2vec-mean components, experiment using 30 repeats. The values in the table represent the number of features that overlapped within the model under the given scenario (presented as mean (std)). The column values indicate the number of top features with overlap determined as the minimum threshold for significance. The maximum number of features for wav2vec was 512. The absolute values of the feature importances were not zero. Abbreviations used: CHPS: characters per second, LRD: loud region duration.
+
+Task	Scenario	TOP10 (min. 2)	TOP20 (min. 3)	TOP30 (min. 5)	TOP50 (min. 9)	
+Random Forest Classifier	pa vs. Italian	0.1 (±0.3)	0.4 (±0.7)	1.2 (±1.0)	3.9 (±1.8)	
+pa vs. Eng	0.0 (±0.2)	0.4 (±0.6)	1.0 (±0.9)	4.5 (±1.8)	
+Italian vs. Eng	0.8 (±0.8)	1.8 (±1.0)	* 3.9 (±1.2)	* 7.6 (±1.8)	
+Random Forest Regressor	Age vs. CHPS	** 2.1 (±0.7)	** 4.7 (±1.4)	** 7.6 (±1.5)	** 11.4 (±2.0)	
+Age vs. LRD	0.5 (±0.5)	* 2.1 (±1.0)	* 4.5 (±1.4)	* 7.1 (±2.5)	
+CHPS vs. LRD	0.8 (±0.7)	** 3.8 (±1.3)	** 8.5 (±1.7)	** 16.4 (±2.2)	
+* Indicates that significant overlap was achieved at least once by the threshold mean + 1σ. ** Indicates that significant overlap was achieved on average.
+
+sensors-24-05520-t003_Table 3 Table 3 Analysis of overlapping MFCC-mean components, experiment using 30 repeats. The values in the table represent the number of features that overlapped within the model under the given scenario (presented as mean (std)). The column values indicate the number of top features with overlap determined as the minimum threshold for significance. The maximum number of features for MFCC was 50. The absolute values of the feature importances were not zero. Abbreviations used: CHPS: characters per second, LRD: loud region duration.
+
+Task	Scenario	TOP5 (min. 3)	TOP10 (min. 4)	TOP15 (min. 7)	TOP20 (min. 10)	
+Random Forest Classifier	pa vs. Italian	0.5 (±0.6)	1.5 (±0.8)	3.6 (±0.9)	6.7 (±1.5)	
+pa vs. Eng	0.2 (±0.4)	0.8 (±0.7)	2.8 (±1.2)	5.1 (±1.1)	
+Italian vs. Eng	0.0 (±0.1)	1.0 (±0.8)	3.2 (±1.0)	7.5 (±1.3)	
+Random Forest Regressor	Age vs. CHPS	1.2 (±0.4)	2.5 (±0.7)	5.4 (±1.0)	* 9.2 (±0.9)	
+Age vs. LRD	1.0 (±0.0)	2.0 (±0.7)	4.6 (±1.0)	7.9 (±1.1)	
+CHPS vs. LRD	2.1 (±0.3)	** 4.7 (±0.9)	** 8.7 (±0.8)	** 10.9 (±1.3)	
+* Indicates that significant overlap was achieved at least once by the threshold mean + 1σ. ** Indicates that significant overlap was achieved on average.
+
+sensors-24-05520-t004_Table 4 Table 4 Comparison of the selected literature-reported cross-db classification results obtained on dysarthria vs. HC datasets, relevant to the results obtained in this study.
+
+Study	Features	Method	Acoustic Material (TRAIN)	Acoustic Material (TEST)	Metric 1	Drop 2	
+Hires et al., 2023 [50]	Traditional approach	XGBoost	CzechPD
+vowel /a/	RMIT-PD
+vowel /a/	AUC = 0.74	~7%	
+Hires et al., 2023 [50]	STFT	CNN	ITA 3
+vowel /a/	RMIT-PD
+vowel /a/	AUC = 0.70	~25%	
+Ibarra et al., 2023 [73]	Mel-scale spectrograms	1D-CNN with DA 4	mixed four vowel /a/ datasets	PD-Neurovoz vowel /a/	Acc = 72%	0% 5	
+Ibarra et al., 2023 [73]	Mel-scale spectrograms	1D-CNN with DA 4	mixed four /pa-ta-ka/ datasets	PD-Neurovoz /pa-ta-ka/	Acc = 83%	3% 5	
+Tirronen et al., 2023 [74]	wav2vec 2.0	SVM	HUPA
+vowels /a/	SVD
+vowels /a/	Acc = 58%	~11%	
+Favaro et al., 2023 [45]	TRILLsson	PLDA + PCA	Cross-lingual SS/RP/TDU 6	CzechPD
+SS/RP/TDU 6	AUC was close to 1	0%	
+Javanmardi et al., 2024 [51]	Fine-tuned wav2vec 2.0-XLSR	SVM	EasyCall	TORGO	Acc = 70.3%	~1%	
+This paper	wav2vec 1.0	Random Forest	MDVR-KCL
+read text	ITA 3
+read text	AUC = 0.90	8%	
+This paper	wav2vec 1.0	XGBoost	MDVR-KCL
+read text	ITA 3
+read text	AUC = 0.98	0%	
+This paper	wav2vec 1.0	Random Forest	ITA 3
+read text	MDVR-KCL
+read text	AUC = 0.72	8%	
+This paper	wav2vec 1.0	XGBoost	ITA 3
+read text	MDVR-KCL
+read text	AUC = 0.78	2%	
+1 Achieved cross-db result under the specified setup. 2 When compared to intra-dataset classification. 3 Italian dataset [59], by Dimauro et al. 4 DA: domain adaptation; domain adversarial training. 5 Based on the presentation of results in the paper, we expect the target dataset was included as part of the mixed datasets used for training. 6 Spontaneous speech (SS) (e.g., monologue, picture description), reading passage (RP), and text-dependent utterances (TDUs).
+
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
+
+
+References
+
+1. Topol E.J. High-Performance Medicine: The Convergence of Human and Artificial Intelligence Nat. Med. 2019 25 44 56 10.1038/s41591-018-0300-7 30617339
+2. Ching T. Himmelstein D.S. Beaulieu-Jones B.K. Kalinin A.A. Do B.T. Way G.P. Ferrero E. Agapow P.-M. Zietz M. Hoffman M.M. Opportunities and Obstacles for Deep Learning in Biology and Medicine J. R. Soc. Interface 2018 15 20170387 10.1098/rsif.2017.0387 29618526 PMC5938574
+3. Shehab M. Abualigah L. Shambour Q. Abu-Hashem M.A. Shambour M.K.Y. Alsalibi A.I. Gandomi A.H. Machine Learning in Medical Applications: A Review of State-of-the-Art Methods Comput. Biol. Med. 2022 145 105458 10.1016/j.compbiomed.2022.105458 35364311
+4. Sigcha L. Borzì L. Amato F. Rechichi I. Ramos-Romero C. Cárdenas A. Gascó L. Olmo G. Deep Learning and Wearable Sensors for the Diagnosis and Monitoring of Parkinson’s Disease: A Systematic Review Expert Syst. Appl. 2023 229 120541 10.1016/j.eswa.2023.120541
+5. Shaban M. Deep Learning for Parkinson’s Disease Diagnosis: A Short Survey Computers 2023 12 58 10.3390/computers12030058
+6. Dixit S. Bohre K. Singh Y. Himeur Y. Mansoor W. Atalla S. Srinivasan K. A Comprehensive Review on AI-Enabled Models for Parkinson’s Disease Diagnosis Electronics 2023 12 783 10.3390/electronics12040783
+7. Klempíř O. Krupička R. Machine Learning Using Speech Utterances for Parkinson Disease Detection Clin. Technol. 2018 48 66 71
+8. Schneider S. Baevski A. Collobert R. Auli M. Wav2vec: Unsupervised Pre-Training for Speech Recognition Proceedings of the Interspeech 2019 Graz, Austria 15 September 2019 ISCA Singapore 2019 3465 3469
+9. Baevski A. Zhou H. Mohamed A. Auli M. Wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations arXiv 2020 2006.11477
+10. Baevski A. Mohamed A. Effectiveness of Self-Supervised Pre-Training for ASR Proceedings of the ICASSP 2020—2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) Barcelona, Spain 4–8 May 2020 IEEE Piscataway, NJ, USA 2020 7694 7698
+11. Pepino L. Riera P. Ferrer L. Emotion Recognition from Speech Using Wav2vec 2.0 Embeddings Proceedings of the Interspeech 2021 Brno, Czech Republic 30 August 2021 ISCA Singapore 2021 3400 3404
+12. Javanmardi F. Tirronen S. Kodali M. Kadiri S.R. Alku P. Wav2vec-Based Detection and Severity Level Classification of Dysarthria From Speech Proceedings of the ICASSP 2023—2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) Rhodes Island, Greece 4 June 2023 IEEE Piscataway, NJ, USA 2023 1 5
+13. Défossez A. Caucheteux C. Rapin J. Kabeli O. King J.-R. Decoding Speech Perception from Non-Invasive Brain Recordings Nat. Mach. Intell. 2023 5 1097 1107 10.1038/s42256-023-00714-5
+14. Conneau A. Baevski A. Collobert R. Mohamed A. Auli M. Unsupervised Cross-Lingual Representation Learning for Speech Recognition Proceedings of the Interspeech 2021 Brno, Czech Republic 30 August 2021 ISCA Singapore 2021 2426 2430
+15. Morris M.E. Movement Disorders in People With Parkinson Disease: A Model for Physical Therapy Phys. Ther. 2000 80 578 597 10.1093/ptj/80.6.578 10842411
+16. Riboldi G.M. Frattini E. Monfrini E. Frucht S.J. Di Fonzo A. A Practical Approach to Early-Onset Parkinsonism JPD 2022 12 1 26 10.3233/JPD-212815 34569973 PMC8842790
+17. Poewe W. Seppi K. Tanner C.M. Halliday G.M. Brundin P. Volkmann J. Schrag A.-E. Lang A.E. Parkinson Disease Nat. Rev. Dis. Primers 2017 3 17013 10.1038/nrdp.2017.13 28332488
+18. Skodda S. Grönheit W. Mancinelli N. Schlegel U. Progression of Voice and Speech Impairment in the Course of Parkinson’s Disease: A Longitudinal Study Parkinson’s Dis. 2013 2013 389195 10.1155/2013/389195 24386590 PMC3872441
+19. Postuma R.B. Lang A.E. Gagnon J.F. Pelletier A. Montplaisir J.Y. How Does Parkinsonism Start? Prodromal Parkinsonism Motor Changes in Idiopathic REM Sleep Behaviour Disorder Brain 2012 135 1860 1870 10.1093/brain/aws093 22561644
+20. Rusz J. Tykalová T. Novotný M. Zogala D. Růžička E. Dušek P. Automated Speech Analysis in Early Untreated Parkinson’s Disease: Relation to Gender and Dopaminergic Transporter Imaging Eur. J. Neurol. 2022 29 81 90 10.1111/ene.15099 34498329
+21. Neto O.P. Harnessing Voice Analysis and Machine Learning for Early Diagnosis of Parkinson’s Disease: A Comparative Study Across Three Datasets J. Voice 2024 S0892199724001395 10.1016/j.jvoice.2024.04.020 38740529
+22. Klempíř O. Příhoda D. Krupička R. Evaluating the Performance of Wav2vec Embedding for Parkinson’s Disease Detection Meas. Sci. Rev. 2023 23 260 267 10.2478/msr-2023-0033
+23. Rahman W. Lee S. Islam M.S. Antony V.N. Ratnu H. Ali M.R. Mamun A.A. Wagner E. Jensen-Roberts S. Waddell E. Detecting Parkinson Disease Using a Web-Based Speech Task: Observational Study J. Med. Internet Res. 2021 23 e26305 10.2196/26305 34665148 PMC8564663
+24. Cumplido-Mayoral I. García-Prat M. Operto G. Falcon C. Shekari M. Cacciaglia R. Milà-Alomà M. Lorenzini L. Ingala S. Meije Wink A. Biological Brain Age Prediction Using Machine Learning on Structural Neuroimaging Data: Multi-Cohort Validation against Biomarkers of Alzheimer’s Disease and Neurodegeneration Stratified by Sex eLife 2023 12 e81067 10.7554/eLife.81067 37067031 PMC10181824
+25. Cole J.H. Multimodality Neuroimaging Brain-Age in UK Biobank: Relationship to Biomedical, Lifestyle, and Cognitive Factors Neurobiol. Aging 2020 92 34 42 10.1016/j.neurobiolaging.2020.03.014 32380363 PMC7280786
+26. Smith S.M. Vidaurre D. Alfaro-Almagro F. Nichols T.E. Miller K.L. Estimation of Brain Age Delta from Brain Imaging NeuroImage 2019 200 528 539 10.1016/j.neuroimage.2019.06.017 31201988 PMC6711452
+27. Eickhoff C.R. Hoffstaedter F. Caspers J. Reetz K. Mathys C. Dogan I. Amunts K. Schnitzler A. Eickhoff S.B. Advanced Brain Ageing in Parkinson’s Disease Is Related to Disease Duration and Individual Impairment Brain Commun. 2021 3 fcab191 10.1093/braincomms/fcab191 34541531 PMC8445399
+28. Ravishankar S. Kumar M.K.P. Patage V.V. Tiwari S. Goyal S. Prediction of Age from Speech Features Using a Multi-Layer Perceptron Model Proceedings of the 2020 11th International Conference on Computing, Communication and Networking Technologies (ICCCNT) Kharagpur, India 1–3 July 2020 IEEE Piscataway, NJ, USA 2020 1 6
+29. Sánchez-Hevia H.A. Gil-Pita R. Utrilla-Manso M. Rosa-Zurera M. Age Group Classification and Gender Recognition from Speech with Temporal Convolutional Neural Networks Multimed. Tools Appl. 2022 81 3535 3552 10.1007/s11042-021-11614-4
+30. Islam R. Abdel-Raheem E. Tarique M. Voice Pathology Detection Using Convolutional Neural Networks with Electroglottographic (EGG) and Speech Signals Comput. Methods Programs Biomed. Update 2022 2 100074 10.1016/j.cmpbup.2022.100074 PMC9404230 36039092
+31. Peng X. Xu H. Liu J. Wang J. He C. Voice Disorder Classification Using Convolutional Neural Network Based on Deep Transfer Learning Sci. Rep. 2023 13 7264 10.1038/s41598-023-34461-9 37142759 PMC10160111
+32. Hireš M. Gazda M. Drotár P. Pah N.D. Motin M.A. Kumar D.K. Convolutional Neural Network Ensemble for Parkinson’s Disease Detection from Voice Recordings Comput. Biol. Med. 2022 141 105021 10.1016/j.compbiomed.2021.105021 34799077
+33. Vásquez-Correa J.C. Orozco-Arroyave J.R. Nöth E. Convolutional Neural Network to Model Articulation Impairments in Patients with Parkinson’s Disease Proceedings of the Interspeech 2017 Stockholm, Sweden 20 August 2017 ISCA Singapore 2017 314 318
+34. Vásquez-Correa J.C. Rios-Urrego C.D. Arias-Vergara T. Schuster M. Rusz J. Nöth E. Orozco-Arroyave J.R. Transfer Learning Helps to Improve the Accuracy to Classify Patients with Different Speech Disorders in Different Languages Pattern Recognit. Lett. 2021 150 272 279 10.1016/j.patrec.2021.04.011
+35. Liu X. Wang H. He T. Liao Y. Jian C. Recent Advances in Representation Learning for Electronic Health Records: A Systematic Review J. Phys. Conf. Ser. 2022 2188 012007 10.1088/1742-6596/2188/1/012007
+36. Wang L. Wang Q. Bai H. Liu C. Liu W. Zhang Y. Jiang L. Xu H. Wang K. Zhou Y. EHR2Vec: Representation Learning of Medical Concepts From Temporal Patterns of Clinical Notes Based on Self-Attention Mechanism Front. Genet. 2020 11 630 10.3389/fgene.2020.00630 32714371 PMC7344186
+37. Jiang Z. Yang M. Tsirlin M. Tang R. Dai Y. Lin J. “Low-Resource” Text Classification: A Parameter-Free Classification Method with Compressors Proceedings of the Findings of the Association for Computational Linguistics: ACL 2023 Toronto, ON, Canada 9–14 July 2023 Association for Computational Linguistics Stroudsburg, PA, USA 2023 6810 6828
+38. Ali S. Chourasia P. Tayebi Z. Bello B. Patterson M. ViralVectors: Compact and Scalable Alignment-Free Virome Feature Generation Med. Biol. Eng. Comput. 2023 61 2607 2626 10.1007/s11517-023-02837-8 37395885
+39. Algayres R. Zaiem M.S. Sagot B. Dupoux E. Evaluating the Reliability of Acoustic Speech Embeddings Proceedings of the Interspeech 2020 Shanghai, China 25 October 2020 ISCA Singapore 2020 4621 4625
+40. Zaiem S. Kemiche Y. Parcollet T. Essid S. Ravanelli M. Speech Self-Supervised Representation Benchmarking: Are We Doing It Right? Proceedings of the Interspeech 2023 Dublin, Ireland 20 August 2023 ISCA Singapore 2023 2873 2877
+41. Hugging Face–The AI Community Building the Future Available online: https://huggingface.co/ (accessed on 24 July 2024)
+42. Snyder D. Garcia-Romero D. Sell G. Povey D. Khudanpur S. X-Vectors: Robust DNN Embeddings for Speaker Recognition Proceedings of the 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) Calgary, AB, Canada 15–20 April 2018 IEEE Piscataway, NJ, USA 2018 5329 5333
+43. Shor J. Venugopalan S. TRILLsson: Distilled Universal Paralinguistic Speech Representations Proceedings of the Interspeech 2022 Incheon, Republic of Korea 18 September 2022 ISCA Singapore 2022 356 360
+44. Hsu W.-N. Bolte B. Tsai Y.-H.H. Lakhotia K. Salakhutdinov R. Mohamed A. HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units IEEE/ACM Trans. Audio Speech Lang. Process. 2021 29 3451 3460 10.1109/TASLP.2021.3122291
+45. Favaro A. Tsai Y.-T. Butala A. Thebaud T. Villalba J. Dehak N. Moro-Velázquez L. Interpretable Speech Features vs. DNN Embeddings: What to Use in the Automatic Assessment of Parkinson’s Disease in Multi-Lingual Scenarios Comput. Biol. Med. 2023 166 107559 10.1016/j.compbiomed.2023.107559 37852107
+46. Moro-Velazquez L. Villalba J. Dehak N. Using X-Vectors to Automatically Detect Parkinson’s Disease from Speech Proceedings of the ICASSP 2020—2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) Barcelona, Spain 4–8 May 2020 IEEE Piscataway, NJ, USA 2020 1155 1159
+47. Jeancolas L. Petrovska-Delacrétaz D. Mangone G. Benkelfat B.-E. Corvol J.-C. Vidailhet M. Lehéricy S. Benali H. X-Vectors: New Quantitative Biomarkers for Early Parkinson’s Disease Detection From Speech Front. Neuroinform. 2021 15 578369 10.3389/fninf.2021.578369 33679361 PMC7935511
+48. Burkhardt F. Wagner J. Wierstorf H. Eyben F. Schuller B. Speech-Based Age and Gender Prediction with Transformers arXiv 2023 2306.16962
+49. Escobar-Grisales D. Ríos-Urrego C.D. Orozco-Arroyave J.R. Deep Learning and Artificial Intelligence Applied to Model Speech and Language in Parkinson’s Disease Diagnostics 2023 13 2163 10.3390/diagnostics13132163 37443557 PMC10340628
+50. Hireš M. Drotár P. Pah N.D. Ngo Q.C. Kumar D.K. On the Inter-Dataset Generalization of Machine Learning Approaches to Parkinson’s Disease Detection from Voice Int. J. Med. Inform. 2023 179 105237 10.1016/j.ijmedinf.2023.105237 37801807
+51. Javanmardi F. Kadiri S.R. Alku P. Exploring the Impact of Fine-Tuning the Wav2vec2 Model in Database-Independent Detection of Dysarthric Speech IEEE J. Biomed. Health Inform. 2024 28 4951 4962 10.1109/JBHI.2024.3392829 38669173
+52. Javanmardi F. Kadiri S.R. Alku P. Pre-Trained Models for Detection and Severity Level Classification of Dysarthria from Speech Speech Commun. 2024 158 103047 10.1016/j.specom.2024.103047
+53. Cabitza F. Campagner A. The Need to Separate the Wheat from the Chaff in Medical Informatics Int. J. Med. Inform. 2021 153 104510 10.1016/j.ijmedinf.2021.104510 34108105
+54. Illner V. Krýže P. Švihlík J. Sousa M. Krack P. Tripoliti E. Jech R. Rusz J. Which Aspects of Motor Speech Disorder Are Captured by Mel Frequency Cepstral Coefficients? Evidence from the Change in STN-DBS Conditions in Parkinson’s Disease Proceedings of the Interspeech 2023 Dublin, Ireland 20 August 2023 ISCA Singapore 2023 5027 5031
+55. Tracey B. Volfson D. Glass J. Haulcy R. Kostrzebski M. Adams J. Kangarloo T. Brodtmann A. Dorsey E.R. Vogel A. Towards Interpretable Speech Biomarkers: Exploring MFCCs Sci. Rep. 2023 13 22787 10.1038/s41598-023-49352-2 38123603 PMC10733367
+56. Acosta J.N. Falcone G.J. Rajpurkar P. Topol E.J. Multimodal Biomedical AI Nat. Med. 2022 28 1773 1784 10.1038/s41591-022-01981-2 36109635
+57. Dogan G. Akbulut F.P. Multi-Modal Fusion Learning through Biosignal, Audio, and Visual Content for Detection of Mental Stress Neural Comput. Appl. 2023 35 24435 24454 10.1007/s00521-023-09036-4
+58. Nguyen N.D. Huang J. Wang D. A Deep Manifold-Regularized Learning Model for Improving Phenotype Prediction from Multi-Modal Data Nat. Comput. Sci. 2022 2 38 46 10.1038/s43588-021-00185-x 35480297 PMC9038085
+59. Dimauro G. Di Nicola V. Bevilacqua V. Caivano D. Girardi F. Assessment of Speech Intelligibility in Parkinson’s Disease Using a Speech-To-Text System IEEE Access 2017 5 22199 22208 10.1109/ACCESS.2017.2762475
+60. Jaeger H. Trivedi D. Stadtschnitzer M. Mobile Device Voice Recordings at King’s College London (MDVR-KCL) from Both Early and Advanced Parkinson’s Disease Patients and Healthy Controls 2019 Available online: https://data.niaid.nih.gov/resources?id=zenodo_2867215 (accessed on 22 July 2024)
+61. Hähnel T. Nemitz A. Schimming K. Berger L. Vogel A. Gruber D. Schnalke N. Bräuer S. Falkenburger B.H. Gandor F. Speech Differences between Multiple System Atrophy and Parkinson’s Disease: A Multicenter Study medRxiv 2024 10.1101/2024.02.23.24303241 PMC12481427 40317624
+62. McFee B. Raffel C. Liang D. Ellis D. McVicar M. Battenberg E. Nieto O. Librosa: Audio and Music Signal Analysis in Python Proceedings of the SciPy 2015 14th Python in Science Conference Austin, TX, USA 6–12 July 2015 18 24
+63. Wav2vec Large Available online: https://dl.fbaipublicfiles.com/fairseq/wav2vec/wav2vec_large.pt (accessed on 24 July 2024)
+64. Scikit-Learn: Machine Learning in Python—Scikit-Learn 1.5.1 Documentation Available online: https://scikit-learn.org/ (accessed on 16 August 2024)
+65. RandomForestClassifier Available online: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html (accessed on 16 August 2024)
+66. XGBoost Documentation—Xgboost 2.1.1 Documentation Available online: https://xgboost.readthedocs.io (accessed on 16 August 2024)
+67. Lasso Available online: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html (accessed on 16 August 2024)
+68. Spearmanr—SciPy v1.14.0 Manual Available online: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html (accessed on 16 August 2024)
+69. R2_Score Available online: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html (accessed on 16 August 2024)
+70. Mean_Absolute_Error Available online: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_error.html (accessed on 16 August 2024)
+71. LogisticRegression Available online: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html (accessed on 16 August 2024)
+72. Lundberg S. Lee S.-I. A Unified Approach to Interpreting Model Predictions arXiv 2017 1705.07874
+73. Ibarra E.J. Arias-Londoño J.D. Zañartu M. Godino-Llorente J.I. Towards a Corpus (and Language)-Independent Screening of Parkinson’s Disease from Voice and Speech through Domain Adaptation Bioengineering 2023 10 1316 10.3390/bioengineering10111316 38002440 PMC10669342
+74. Tirronen S. Javanmardi F. Kodali M. Reddy Kadiri S. Alku P. Utilizing Wav2Vec In Database-Independent Voice Disorder Detection Proceedings of the ICASSP 2023—2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) Rhodes Island, Greece 4 June 2023 IEEE Piscataway, NJ, USA 2023 1 5
+75. Malekroodi H.S. Madusanka N. Lee B. Yi M. Leveraging Deep Learning for Fine-Grained Categorization of Parkinson’s Disease Progression Levels through Analysis of Vocal Acoustic Patterns Bioengineering 2024 11 295 10.3390/bioengineering11030295 38534569 PMC10968564
+76. Di Cesare M.G. Perpetuini D. Cardone D. Merla A. Machine Learning-Assisted Speech Analysis for Early Detection of Parkinson’s Disease: A Study on Speaker Diarization and Classification Techniques Sensors 2024 24 1499 10.3390/s24051499 38475034 PMC10934449
+77. Bisgin H. Bera T. Ding H. Semey H.G. Wu L. Liu Z. Barnes A.E. Langley D.A. Pava-Ripoll M. Vyas H.J. Comparing SVM and ANN Based Machine Learning Methods for Species Identification of Food Contaminating Beetles Sci. Rep. 2018 8 6532 10.1038/s41598-018-24926-7 29695741 PMC5917025
+78. Bhadra T. Mallik S. Hasan N. Zhao Z. Comparison of Five Supervised Feature Selection Algorithms Leading to Top Features and Gene Signatures from Multi-Omics Data in Cancer BMC Bioinform. 2022 23 153 10.1186/s12859-022-04678-y PMC9052461 35484501
+79. Joudaki A. Takeda J. Masuda A. Ode R. Fujiwara K. Ohno K. FexSplice: A LightGBM-Based Model for Predicting the Splicing Effect of a Single Nucleotide Variant Affecting the First Nucleotide G of an Exon Genes 2023 14 1765 10.3390/genes14091765 37761905 PMC10531444
+80. Riviere M. Joulin A. Mazare P.-E. Dupoux E. Unsupervised Pretraining Transfers Well Across Languages Proceedings of the ICASSP 2020—2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) Barcelona, Spain 4–8 May 2020 IEEE Piscataway, NJ, USA 2020 7414 7418
+81. Islam M.S. Rahman W. Abdelkader A. Lee S. Yang P.T. Purks J.L. Adams J.L. Schneider R.B. Dorsey E.R. Hoque E. Using AI to Measure Parkinson’s Disease Severity at Home NPJ Digit. Med. 2023 6 156 10.1038/s41746-023-00905-9 37608206 PMC10444879
+82. Tayebi Arasteh S. Ríos-Urrego C.D. Nöth E. Maier A. Yang S.H. Rusz J. Orozco-Arroyave J.R. Federated Learning for Secure Development of AI Models for Parkinson’s Disease Detection Using Speech from Different Languages Proceedings of the Interspeech 2023 Dublin, Ireland 20 August 2023 ISCA Singapore 2023 5003 5007
+83. Xie J. Fonseca P. Van Dijk J. Overeem S. Long X. Assessment of Obstructive Sleep Apnea Severity Using Audio-Based Snoring Features Biomed. Signal Process. Control 2023 86 104942 10.1016/j.bspc.2023.104942
+84. Chronowski M. Klaczynski M. Dec-Cwiek M. Porebska K. Parkinson’s Disease Diagnostics Using AI and Natural Language Knowledge Transfer arXiv 2022 2204.12559 10.29354/diag/176931
+85. Javanmardi F. Kadiri S.R. Alku P. A Comparison of Data Augmentation Methods in Voice Pathology Detection Comput. Speech Lang. 2024 83 101552 10.1016/j.csl.2023.101552
+86. Sriram A. Auli M. Baevski A. Wav2Vec-Aug: Improved Self-Supervised Training with Limited Data Proceedings of the Interspeech 2022 Incheon, Republic of Korea 18 September 2022 ISCA Singapore 2022 4950 4954

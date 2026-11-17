@@ -1,0 +1,5 @@
+# Black Pepper Attention
+
+## Combined black pepper and Bunium persicum for Alzheimer symptoms
+
+The randomized trial used capsules containing a 1:1 Bunium persicum and Piper nigrum preparation for six months in people with mild to moderate Alzheimer disease. The author abstract reports 63 completers, 33 in the active group, and improved impaired concentration within the active group. The accessible material provides no concentration scale, numerical change or between-arm estimate. The trial combined powdered botanicals and included no separate pepper-only comparison, cracked-pepper preparation or Parkinson attention outcome. The abstract reports no adverse reactions, while the results preview mentions headache and rash withdrawals. Their attribution remains unverified. [Original source](https://www.sciencedirect.com/science/article/abs/pii/S2210803324001325) · [Local factual text](Source-Text/2024-Rajaee-Black-Pepper-Bunium-Concentration-Extract.txt)

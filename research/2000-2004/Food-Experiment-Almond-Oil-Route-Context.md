@@ -1,0 +1,7 @@
+# Almond oil in proposed Parkinson drug preparations
+
+## Proposed nonaqueous carbidopa and levodopa suspension
+
+The May/June 2002 International Journal of Pharmaceutical Compounding, volume 6, issue 3, page 202, describes an aqueous option and a separate nonaqueous suspension with almond oil as the vehicle. The publisher index attributes the formula to Loyd V. Allen Jr. It gives a levodopa concentration in the title that differs from the issue body on page 202 and the 2010 handbook's Table 14.2. The index and actual formula page are distinct records, and the mismatch is retained in the source extract.
+
+This pharmacy formula gives no controlled exposure to cold-pressed almond oil, participant motor data, or daily OFF duration. The 2010 handbook reproduces it as a suggested recipe and explicitly says the claimed storage stability lacks validating data. Its description of Allwood's tested suspension instead names a cellulose-gum preparation. The later [Hitzig patent](../2005-2009/Food-Experiment-Almond-Oil-Material-Followup.md) is a separate preparation. [Official IJPC entry](https://ijpc.com/Abstracts/Abstract.cfm?ABS=1035) · [Issue body, page 202](https://www.scribd.com/document/159086403/International-J-Pharm-Cmpd-g-May-June-2002) · [2010 handbook, Table 14.2](https://www.imc.3jpharmainc.com/wp-content/uploads/2021/06/Handbook-of-extemporaneous-preparation-a-guide-to-pharmaceutical-compounding.pdf#page=179) · [Local factual extract](Source-Text/2002-Almond-Oil-Levodopa-Compounding-Extract.txt)

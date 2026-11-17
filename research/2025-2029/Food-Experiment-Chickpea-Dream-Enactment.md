@@ -1,0 +1,9 @@
+# Chickpeas and dream enactment
+
+## 2026 Legume frequency and isolated REM sleep behavior disorder
+
+Xie and colleagues, first published 2026-10-16, PMID 42888868, DOI 10.1002/mds.70562, studied 287 Hong Kong adults with video-polysomnography-confirmed isolated RBD and 208 controls, followed prospectively for neurodegenerative diagnoses. A 33-item food-frequency questionnaire asked about the previous year using seven frequency choices from never to at least four times daily for food items; items were grouped into 20 food categories. The main article names a generic legume category, but it does not specify chickpea, canned form, or participant-specific chickpea consumption.
+
+In Table 2, the reported mean legume frequency was 0.56 (SD 0.57) in controls and 0.52 (SD 0.58) in iRBD, with adjusted group difference beta -0.02 (95% CI -0.14 to 0.10), p=0.74. The generalized linear model adjusted for age, sex, physical inactivity, major depressive disorder, bowel-movement frequency and smoking. This cross-sectional comparison concerns the presence of isolated RBD versus controls and does not quantify frequency of dream enactment; the confidence interval leaves a range of differences possible.
+
+Over median 4.2 years, 26 people developed parkinsonism first (including three suspected multiple-system atrophy), and 19 developed dementia first. These are clinical conversion outcomes, not change in RBD episode frequency and not a chickpea exposure result. Supplemental Table S1 defines food items and S12 reports food-frequency conversion models; publisher supplement downloads returned HTTP 403, so their content and any chickpea-specific data remain unverified. The main article was available for reading through the publisher indexed text. Existing note research/2025-2029/Food-Experiment-Tea-Followup.md describes this same study for coffee and tea; this note adds legume and endpoint context, not a separate study.

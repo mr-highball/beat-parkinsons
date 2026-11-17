@@ -1,0 +1,5 @@
+# Saffron Depression Comparators
+
+## Ethanol-extracted stigma and depression in adults
+
+Akhondzadeh and colleagues randomized 40 adults with major depression to saffron capsules or placebo for six weeks. The publisher records first online publication on April 25, 2005, for its February 2005 issue. The investigators milled dried stigma and extracted it with 80% ethanol, then evaporated the solvent. Each capsule supplied 15 mg dried extract, taken twice daily for 30 mg extract daily. The Hamilton depression comparison favored the extract (F = 18.89, p < .001). This establishes an extract comparison in major depression. Transfer to whole ground saffron or Parkinson disease remains unresolved. [Primary report PDF](https://www.cbd-vital.de/media/solwin/productattachment/attachment/file/a/k/akondzadeh_et_al_2005.pdf) [Original source](https://onlinelibrary.wiley.com/doi/10.1002/ptr.1647) · [Local factual text](Source-Text/PMID15852492-Saffron-Extract-Depression.txt)

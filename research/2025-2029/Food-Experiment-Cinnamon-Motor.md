@@ -1,0 +1,5 @@
+# Cinnamon-related motor outcome checks
+
+## Modified Zhigancao Tang alongside Parkinson medication
+
+Wei and colleagues' primary journal summary describes a 60-person Parkinson trial with 30 participants per arm. The comparison provided the same routine medication in both groups, with modified Zhigancao Tang added in one. After 12 weeks, the abstract reports lower UPDRS total, II and III scores for the added formula (p < .05). The supplement is a multicomponent preparation. A later review lists cinnamon twig among the formula ingredients, while the public abstract omits the formula components, separate rigidity scores and arm magnitudes. The original journal labels six tables behind its access prompt. The article page was updated January 16, 2025. The 2024 DOI registration date is a separate metadata event. [Journal abstract](https://zsfx.publish.founderss.cn/cn/issue/2025/4) · [Publisher article record](https://www.syfjxzz.com/en/article/doi/10.13422/j.cnki.syfjx.20241525) · [Local factual extract](Source-Text/2025-Wei-Zhigancao-Parkinson-Motor-Extract.txt)

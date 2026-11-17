@@ -1,0 +1,5 @@
+# Shared DOI and exact publication audit
+
+PubMed verifies 33 exact source-key records across 14 shared DOIs. It supplies 31 distinct PMCIDs. Each joint DOI retains its ambiguity for automatic joins. Reading independently signed letters and a publisher-paginated review allowed 26 full-text exclusions and one abstract exclusion for the dried-date pain claim. One Dutch review PDF matches a single PMID and pagination. The other similarly titled Dutch record is excluded only at abstract depth; its exact body still needs verification. [Primary publication checks](source-checks.md) · [Per-PMID resume ledger](resume.tsv)
+
+Six other records still need exact primary-body access. Four concern distinct February BMJ letters and two are JNNP publications. The author-signed letters and article page ranges give directions for further source retrieval. The isolated native test changed only the 27 exact review rows, preserved all 61,252 pairs and all 33 ambiguous links, and rejected a DOI-only review fixture. [Access and title triage](title-index-triage.tsv) · [Native verification](native-verification.txt) · [Active exact review ledger](../exact-reviews.tsv)

@@ -1,0 +1,5 @@
+# Orange Parkinson Prescriptions
+
+## Medicinal citrus in Parkinson initial visit prescriptions
+
+Lyu and colleagues first published this retrospective electronic-record analysis May 2, 2024. Initial encounters with a primary Parkinson diagnosis code include patients with confirmed, suspected, or unclear diagnosis status. Constipation was recorded in 1,022 of 3,206 initial encounters, including 748 with confirmed diagnosis. Among 1,764 decoction prescriptions, zhi qiao or zhi shi (Aurantii Fructus) occurred 557 times and chen pi (Citri Reticulatae Pericarpium) 501 times. The authors standardize both entries to Citrus aurantium in their table. These are recorded medicinal ingredients in mixed decoctions. The analysis gives prescription and symptom frequencies at initial visits. It does not establish whether people consumed a prescription, consumed raw sweet orange, or experienced a change in constipation after treatment. [Original source](https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2024.1362948/full) · [Local factual text](Source-Text/2024-Lyu-Citrus-Parkinson-Prescription-Extract.txt)

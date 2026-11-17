@@ -1,0 +1,13 @@
+# Clinical caraway allergy and absorption records
+
+## Caraway allergy in a clinical spice case registry
+
+Moneret-Vautrin and colleagues examined the CICBAA databank’s 589 food-allergy cases. Only part of the databank had received testing for spices. The abstract lists two caraway allergies within ten mugwort–celery–spice cases. The manuscript body calls case 283 “cumin (caraway)” and reports oral symptoms after cumin, with positive caraway skin testing and negative caraway RAST. Case 77 involved celery and a sausage said to contain cumin, with positive caraway basophil testing. Repeat celery ingestion confirmed the shock trigger. Neither case gives an oral challenge specific to verified Carum carvi, a confirmed ground preparation or a measured speech outcome. [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/12078423/) · [Local factual extract](Source-Text/2002-Moneret-Vautrin-Caraway-Allergy-Registry-Extract.txt) · [Primary manuscript, Cases 283 and 77 and Table 3](https://www.researchgate.net/publication/11297522_Food_allergy_and_IgE_sensitization_caused_by_spices_CICBAA_data_based_on_589_cases_of_food_allergy)
+
+## Plasma carvone after oral peppermint and caraway oil capsules
+
+Mascher and colleagues randomized the treatment order for 16 healthy men in a two-period crossover of enteric-coated and immediate-release capsules. Both formulations supplied equal quantities of peppermint oil and caraway oil. The report gives a carvone exposure confidence interval of 79–119%, just outside its stated bioequivalence bounds at the lower end. Carvone reached the same mean peak concentration later in the enteric-coated period. The formulation trial measured uptake of the oil’s own constituents, with neither concurrent Parkinson medication nor a symptom outcome. [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/12244893/) · [Local factual abstract extract](Source-Text/2002-Mascher-Peppermint-Caraway-Oil-Plasma-Extract.txt)
+
+## Carvone inhalation and ratings of alertness and mood
+
+In an A–A–B within-session inhalation experiment with 20 healthy adults, Heuberger and colleagues detected no significant change in subjective alertness, calmness or mood for the (+)-carvone enantiomer associated with caraway. Blood pressure rose during its inhalation. The alertness result is separate from the effect observed with (−)-carvone in specific comparisons. The trial evaluated an odor and short-term visual analog ratings, with no clinical apathy outcome. [Original article, Figures 5–8](https://academic.oup.com/chemse/article-pdf/26/3/281/9754053/260281.pdf) · [Local factual extract](Source-Text/2001-Heuberger-Carvone-Ratings-Extract.txt)

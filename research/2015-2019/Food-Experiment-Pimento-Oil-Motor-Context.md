@@ -1,0 +1,5 @@
+# Pimento oil in a rat arthritis experiment
+
+## Sedation observations in the 2015 proceedings
+
+Shelly-Campbell and Oswald presented OC-52 in September 2015. Rats with experimentally induced monoarthritis received pimento oil, corn oil or the separately tested constituents eugenol and methyleugenol. The authors report sedation associated with dose and supply no standardized motor instrument, onset, affected-animal counts, administration route or plant part in the abstract. Their discussion mentions possible oral formulations, which does not identify the study administration. The earlier 2006 and 2014 meeting abstracts share a model and related intervention program. Individual cohort overlap is unverified. This is a different design from the 1997 and 1998 leaf-extract experiments and gives no handwriting, Parkinson or ground-fruit comparison. [Publisher original OC-52, p. S75](https://jppres.com/jppres/oc-52-the-toxicological-profiles-of-pimenta-dioica-pimento-and-two-of-its-constituents/) · [Local factual text](Source-Text/2015-Pimento-Oil-OC52-Extract.txt)

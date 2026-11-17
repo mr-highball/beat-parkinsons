@@ -1,0 +1,14 @@
+# Four original collections accessed from PMC and the publisher
+
+The four titles and identities match the original provider records for 0794. Screening used the relevant original presentation text. The collection files contain unrelated abstracts, and further screening on other claim memberships remains open.
+
+| Original key and result | First publication | Reviewed contexts |
+| --- | --- | --- |
+| PMCID:PMC10462807 · 0794-2 rank 7 | 2023 | AB-749-AT used potato tissue to model cardiac ablation. AB-772-CIED-ICD and AB-765-GEN concerned heart failure and sleep apnoea. Separate Wolff–Parkinson–White mentions refer to cardiac conduction. [Original proceedings](https://pmc.ncbi.nlm.nih.gov/articles/PMC10462807/) |
+| PMCID:PMC6265811 · 0794-1 rank 2 | 2018 | P20-066 aggregated boiled, baked and mashed potatoes in a mortality study. P20-020 measured Parkinson incidence by dietary fat in the Swedish cohort. P20-110 evaluated alcohol and sleep measurements in participants free of Parkinson at baseline. [Original proceedings](https://pmc.ncbi.nlm.nih.gov/articles/PMC6265811/) · [Dated Parkinson conference note](../../../../research/2015-2019/Food-Experiment-Swedish-Dietary-Fat-Incidence.md) |
+| PMID:29804106 · 0794-2 rank 10 | 2018 | The potato-fiber crossover (T1P158, Thorning et al., p. 85) tested appetite and fecal fat in healthy men. A different presentation also prints T1P158. T2P221 examined Parkinson incidence by metabolic syndrome. T4P88 measured Epworth sleepiness in postmenopausal women in a sleep-apnoea study. [Original proceedings](https://pmc.ncbi.nlm.nih.gov/articles/PMC7019188/) |
+| PMCID:PMC13439031 · 0794-1 rank 1 | 2026 | Cambridge collection body: OAP63_03 assessed potato preparations and weight. EPO5_340 and EPO5_660 measured sleepiness for breakfast or a diet pattern. EPO6_127 proposed a niacin and Parkinson incidence cohort. These are separate presentations. [Original Cambridge PDF](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/C51F3C05B11BD8180F05A3C37B4292A0/S2048679026101268a.pdf/special-collection-abstracts-from-iuns-icn-paris-2025.pdf) · [Niacin proposal extract](../../../../research/2025-2029/Food-Experiment-Norwegian-Niacin-Incidence-Proposal.md) |
+
+The Cambridge PDF was downloaded November 15, 2026. SHA-256 252f82878dfc300cd7b6ed761b3058ab7e3b7baa7ba981a9ca9ed788d387a93f. The 2025 congress proceedings were published July 23, 2026. [Cambridge publication record](https://www.cambridge.org/core/journals/journal-of-nutritional-science/article/special-collection-abstracts-from-iunsicn-paris-2025/C51F3C05B11BD8180F05A3C37B4292A0)
+
+The contextual findings apply to each indicated claim membership. Other collection memberships and inaccessible original articles retain their own review status. Verified November 15, 2026. [Original dictionary](original-source-dictionary.tsv)

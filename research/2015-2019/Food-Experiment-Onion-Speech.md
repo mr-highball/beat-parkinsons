@@ -1,0 +1,9 @@
+# Onion exposure and speech intelligibility
+
+## Cooked onion exposure and acute dysphonia in a food allergy case
+
+Albanesi and colleagues described a 35-year-old man with dysphonia, dyspnea, urticaria, pruritus and malaise within minutes of eating cooked onion. His history required emergency treatment. The clinical report does not specify the meal's cooking method or dose. The team separately performed skin prick tests using raw and microwaved onion. The skin index was 7.25 for raw and 0.91 for microwaved onion. The lower but positive response after heat relates to the test material and cannot establish the dose or preparation of his triggering meal. The authors discuss a heat-stable allergen as a possibility. There was no oral rechallenge, Parkinson diagnosis, speech recording or listener assessment. [Albanesi primary report](https://www.termedia.pl/doi_ft/10.5114/ada.2019.82829) · [Local factual extract](Source-Text/2019-Albanesi-Cooked-Onion-Dysphonia-Allergy-Extract.txt)
+
+## Italian Parkinson food frequency and neurological assessments
+
+Barichella and colleagues collected diet histories with a 66-item FFQ and used a 24-hour food recall for portion checks and protein redistribution. The Methods report UPDRS I–IV in patients, with the published food and neurological analyses focusing on diet composition, constipation, levodopa dose, dyskinesia and OFF periods. The accessible postprint does not expose a named onion item, cooking status or endpoint-level speech result. It establishes a potential source of more granular diet and clinical data without establishing that the required exposure or endpoint was recorded separately. [University of Bologna author postprint](https://cris.unibo.it/retrieve/handle/11585/585569/e1dcb339-52d0-7715-e053-1705fe0a6cc9/BarichellaM_ClinNutr_2017_postprint.pdf) · [Local factual extract](Source-Text/2016-Barichella-Parkinson-Diet-Neurological-Assessment-Extract.txt)

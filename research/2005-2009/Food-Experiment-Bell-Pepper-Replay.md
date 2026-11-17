@@ -1,0 +1,9 @@
+# Bell pepper source follow-through
+
+## Thawed California Wonder and two comparator cultivars
+
+Hachiya et al. first published this human experiment on March 7, 2007. Twelve healthy Japanese volunteers, five men and seven women, chewed thawed pepper fruit from three cultivars. The paper describes California Wonder as a nonpungent red cultivar without detected capsinoids or capsaicinoids, CH-19 Sweet as nonpungent with capsinoids, and Cayenne Long Slim as pungent with capsaicinoids. Fruit was defrosted in running water and consumed uncooked at 0.1 g/kg. The study recorded cardiac autonomic responses, temperature, blood pressure and heart rate. CH-19 Sweet and cayenne activated sympathetic responses and increased thermogenesis. Cayenne transiently increased systolic pressure and heart rate. The California Wonder exposure is a whole uncooked bell pepper comparator, and the study gives no handwriting endpoint or Parkinson sample. [Primary advance article](https://www.jstage.jst.go.jp/article/bbb/advpub/0/advpub_60359/_pdf)
+
+## Dihydrocapsiate metabolic trial registration
+
+ClinicalTrials.gov gives an estimated first public posting of October 21, 2009 for the Pennington Biomedical Research Center randomized, double-blind metabolic trial. The record gives 79 actual enrollees and lists 0, 3 and 9 mg/day dihydrocapsiate capsule arms. Its only registered outcome was resting energy expenditure and fat oxidation at four weeks. There are no posted results or adverse-event tables. The paper describes 78 randomized participants, and the released records do not explain the one-person difference. [Official registry](https://clinicaltrials.gov/study/NCT00999297) · [Local registry extract](Source-Text/Trials/NCT00999297.txt) · [2010 article](../2010-2014/Food-Experiment-Bell-Pepper-Replay.md#dihydrocapsiate-symptom-checklists-in-a-four-week-trial)

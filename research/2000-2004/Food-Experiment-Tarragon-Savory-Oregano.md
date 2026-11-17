@@ -1,0 +1,19 @@
+# Tarragon, summer savory and oregano
+
+## Summer savory preparations in rodent pain assays
+
+Hajhashemi and colleagues tested oral hydroalcoholic extract, a polyphenolic fraction and essential oil prepared from aerial parts of summer savory (*Satureja hortensis*). The preparations reduced nociceptive behavior in the formalin test. The higher dose of the extract or oil also reduced acetic acid-induced writhing. All three preparations had negative results in the tail-flick test. The experiments measured chemically or thermally evoked behavior in rodents and provide indirect evidence for claim 0659 about fresh summer savory and pain in Parkinson’s. [October 2002 primary abstract, PMID 12241981](https://pubmed.ncbi.nlm.nih.gov/12241981/)
+
+## Tarragon and formalin responses in diabetic rats
+
+Roghani and colleagues presented a controlled study of 43 male Wistar rats, including streptozotocin-diabetic groups, at the May 2004 FAONS and Iranian neuroscience congress. After one month of oral *Artemisia dracunculus*, the diabetic group had lower formalin pain scores in both test phases. A sodium salicylate comparator had a reduction in the late phase only. The abstract leaves the equivalence of the preparation to fresh culinary leaves unresolved. The 2006 article uses a matching study design and overlapping authors and reports 40 rats. These are treated as potentially overlapping reports for claim 0285. [2004 primary conference abstract, printed A119](https://brieflands.com/articles/ijpr-129139.pdf) · [2006 primary article](../2005-2009/Food-Experiment-Tarragon-Savory-Oregano.md#tarragon-in-a-diabetic-rat-pain-model)
+
+## Tarragon essential oil and acute motor performance
+
+Sayyah and colleagues tested concentrated essential oil of aerial parts of *Artemisia dracunculus* in mice. In seizure models the oil raised the pentylenetetrazole threshold and suppressed tonic convulsions in the maximal electroshock test. Some anticonvulsant doses were associated with sedation and motor impairment in rotarod testing. These are indirect safety signals for claims 0018 and 0563. The experiments did not measure postural instability or daytime sleepiness in people who ate fresh tarragon. [2004 primary abstract, PMID 15325732](https://pubmed.ncbi.nlm.nih.gov/15325732/)
+
+The full paper identifies hydrodistilled fresh aerial-part oil injected intraperitoneally into male NMRI mice using sesame oil vehicle. Methods §2.8 lists four groups of 10 mice and oil doses of 0.4, 0.8 and 1.0 mL/kg for the rotarod. Figure 3 examines retention 30 minutes after injection and marks differences at p < .001. The §3.3 prose gives 0.1 mL/kg and higher. The rotarod dose threshold remains unresolved. Sedation and reduced coordination offer related observations for manual motor (0504) and insomnia (0927). Rotarod coordination, induced tonic/clonic seizures and overt sedation leave Parkinson hand dexterity, freezing, dystonia and unprovoked sleep unresolved. [October 2004 full-text paper §§2.8 and 3.3, Figure 3](https://www.academia.edu/28296804/Anticonvulsant_activity_and_chemical_composition_of_Artemisia_dracunculus_L_essential_oil) · [Publisher DOI](https://doi.org/10.1016/j.jep.2004.05.021) · [Local factual extract](Source-Text/PMID15325732-motor-study-extract.txt)
+
+## Oregano extract and L-DOPA in sprouting fava
+
+Randhir and colleagues treated *Vicia faba* seeds with an oregano extract before germination. Their abstract reports about 20% higher L-DOPA in the hypocotyl compared with untreated sprouts. L-DOPA later declined as germination progressed. The study measured a constituent of the resulting sprouts. It supplies no evidence for a change in daily OFF time after eating oregano (0854). [2002 primary paper](https://www.sciencedirect.com/science/article/abs/pii/S0032959202000067) · [Public author paper](https://citeseerx.ist.psu.edu/document?doi=0bcd7814895c681f248b037f2274d9c10e8f4c47&repid=rep1&type=pdf)

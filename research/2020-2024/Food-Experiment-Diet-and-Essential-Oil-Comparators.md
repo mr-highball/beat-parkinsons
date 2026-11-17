@@ -1,0 +1,5 @@
+# Diet and essential oil comparators, 2020-2024
+
+## Lavender inhalation, sleep and fatigue in multiple sclerosis
+
+Kavuran and Yurttaş randomized 66 people with multiple sclerosis to nightly inhaled lavender essential oil or no treatment and analyzed 63. The Fatigue Severity Scale means at the final visit were 4.42 in the inhalation group and 5.87 in the comparison group in Table 2. The Results prose agrees with 4.42, while the abstract gives 3.42. The table prints control means above seven on intermediate visits despite the scale's stated seven-point maximum for the mean item score. Final sleep quality scores were 6.68 and 9.21, respectively. These reporting discrepancies and the unblinded comparison limit interpretation. The intervention did not study culinary food ingestion or Parkinson disease. [Original source](https://www.researchgate.net/publication/380996556_The_Effect_of_Aromatherapy_with_Lavender_Essential_Oil_on_the_Sleep_and_Fatigue_Level_of_Patients_with_Multiple_Sclerosis_in_Turkey_A_Randomized_Controlled_Trial) · [Local factual text](Source-Text/2024-kavuran-Diet-Essential-Oil-Extract.txt)

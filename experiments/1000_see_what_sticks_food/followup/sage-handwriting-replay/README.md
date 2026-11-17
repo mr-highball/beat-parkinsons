@@ -1,0 +1,5 @@
+# Fresh sage and small handwriting severity · 0840
+
+The primary Newcastle attachment describes encapsulated dried sage in Parkinson disease. Its five scanned pages give cognition and salivation outcomes. They supply no handwriting result, and the referenced secondary timetable is unavailable. Fresh dietary leaves and micrographia remain an open comparison. [Dated Newcastle results review](../../../../research/2015-2019/Food-Experiment-Sage-Handwriting-Followup.md)
+
+Twenty-five of 35 original source keys received body-context checks. Many occurrences refer to a publisher, corporate or laboratory name, a method acronym, or a contributor's surname. Ten original bodies remain access-pending. Native exact and complementary searches retrieved all their reported pages. PubMed omitted some quoted foreign terms and an initial less constrained expression was corrected. The broader regional corpus remains incompletely screened. [Source-by-source decisions](original-source-dictionary.tsv) · [Europe PMC](europe-pmc-queries.tsv) · [PubMed](pubmed-queries.tsv)

@@ -1,0 +1,5 @@
+# Grapeseed oil carrier and measured sleep
+
+## Grapeseed carrier and related sleep difficulty
+
+Inagaki and colleagues first published on June 28, 2022. Forty-two nurses were randomly assigned after a night shift to a 15-minute neck and shoulder massage with rose essential oil in grapeseed carrier (20) or the same grapeseed oil alone (22). The authors name Neal's Yard Remedies Vitis vinifera grapeseed oil. Figure 5 reports Japanese Pittsburgh Sleep Quality Index sleep-difficulty change of −0.60 ± 0.1 versus −0.23 ± 0.1 (mean ± SE, p < .05). The questionnaire was repeated the next morning with largely overlapping prior-month recall windows. The between-arm contrast concerns the rose additive. Both arms had grapeseed exposure and massage, so neither the within-arm change nor the contrast isolates an oil effect. Processing and oral exposure were unreported. Parkinson disease, dream enactment and nightmare counts were unmeasured. [Publisher full report, Methods and Figure 5](https://www.jstage.jst.go.jp/article/sujms/34/2/34_95/_pdf) · [Local factual text](Source-Text/2022-Inagaki-Grapeseed-Carrier-Sleep-Extract.txt)

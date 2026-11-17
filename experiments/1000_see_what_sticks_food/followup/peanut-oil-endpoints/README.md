@@ -1,0 +1,22 @@
+# Peanut oil symptom follow-up
+
+This pass revisited nine frozen claims that lacked any claim-specific assessment. It searched for the oil under English, French, Spanish, Chinese and Russian names, checked the distinction between cold-pressed and refined products, and used symptom wording and nearby measured outcomes to locate studies beyond Parkinson indexing. The earlier [pumpkin seed and peanut oil audit](../pumpkin-peanut-oil/README.md) records the original ingredient-level search and clinical follow-up.
+
+| Search route | Retrieved scope |
+| --- | --- |
+| Europe PMC | Seven expressions, all 30 pages, 2,649 appearances and 1,934 distinct source keys. Full result screening and the archived body join remain open. |
+| PubMed | A complementary disease and exposure title/abstract search, with 12 appearances for two PMIDs. The refined/cold-pressed alias-only expression returned zero. Input for this tool uses a built-in disease block, so the repeated alias results count once as a search route. An initial input orientation misplaced the oil terms and was excluded. |
+| ClinicalTrials.gov | 12 of 12 records for the broad three-alias query and zero for the Parkinson/parkinsonism intersection. |
+| Europe PMC references and citations | All 16 endpoints across eight starting reports, with 654 edge appearances. Candidate routing is lexical and has no verdict function. |
+
+The two PubMed results were a dark-chocolate review and a rat hippocampal injury paper that tested 7-nitroindazole. Neither measured an isolated oral oil exposure and a frozen symptom. The registered ENHANce study was the nearest clinical comparator in the broad trial inventory. Its original protocol identifies peanut-oil placebo capsules, and the published report has a small sarcopenia feasibility cohort outside Parkinson disease. It already has two separate assessments under NCT03649698. The KEEPS hit is an ancillary mammographic density study. Other broad registry hits concern malnutrition, vitamin absorption, inflammatory bowel disease, gestational diabetes, allergies, lipids or preterm delivery.
+
+| Claims | Checked result and open comparison |
+| --- | --- |
+| 0155, 0834 | [Original allergy challenge and Table 2](../../../../research/1995-1999/Food-Experiment-Pumpkin-Peanut-Oil.md#crude-and-refined-peanut-oil-challenges) and [earlier controlled challenge](../../../../research/1980-1984/Food-Experiment-Peanut-Oil-Endpoints.md#peanut-and-olive-oil-in-a-blinded-allergy-challenge). Check vocal intensity, intelligibility and preparation in a neurological cohort. |
+| 0573 | [Original fatigue study and later capsule label](../../../../research/1995-1999/Food-Experiment-Pumpkin-Peanut-Oil.md#functional-fatigue-and-the-pharmaton-capsule-formulation). Recover the 1996 trial formulation and look for fatigue after a known oil exposure. |
+| 0612 | [Skilled reaching in a Parkinson model](../../../../research/2005-2009/Food-Experiment-Peanut-Oil-Endpoints.md#skilled-reaching-with-a-corticosterone-mixture-containing-peanut-oil). Seek handwriting size or sustained writing trajectories with an independent oil contrast. |
+| 0628, 0632 | [Individual primate rigidity and dystonia observations](../../../../research/2020-2024/Food-Experiment-Peanut-Oil-Endpoints.md#rigidity-and-dystonic-postures-in-levodopa-treated-primates). Seek post-treatment symptom scores and an oil-isolating arm. |
+| 0759 | [Original thermal assay](../../../../research/1985-1989/Food-Experiment-Peanut-Oil-Endpoints.md#hot-plate-responses-with-peanut-oil-and-saline-vehicles) and [visceral pain behavior](../../../../research/2015-2019/Food-Experiment-Peanut-Oil-Endpoints.md#rectal-vehicle-in-a-visceral-pain-behavior-experiment). Follow the historic antinociception and central nervous system carrier reports as well as refined dietary exposure. |
+| 0804 | [REM without atonia in PS19 mice](../../../../research/2020-2024/Food-Experiment-Peanut-Oil-Endpoints.md#oral-peanut-oil-vehicle-and-rem-sleep-without-atonia) and [REM duration in 5XFAD mice](../../../../research/2025-2029/Food-Experiment-Peanut-Oil-Endpoints.md#diphenhydramine-carrier-and-sleep-stage-duration). Seek human dream-enactment outcomes with known cold-pressed oil. |
+| 0929 | Visual hallucination frequency was absent in the Parkinson comparator appraisal and primary sleep reports. Continue with preparation-specific dietary data and human psychosis study methods. |

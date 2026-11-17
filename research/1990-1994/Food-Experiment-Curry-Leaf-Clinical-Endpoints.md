@@ -1,0 +1,5 @@
+# Curry leaf preparation and measured outcomes
+
+## Ferrous sulfate and clinical response to levodopa
+
+In nine patients with Parkinson disease, taking ferrous sulfate together with carbidopa–levodopa lowered levodopa AUC by 30% and carbidopa AUC by more than 75%. Change in levodopa exposure correlated with change in therapeutic response (r = .83, p < .01). The average clinical response comparison was inconclusive (p = .055). This experiment used an iron tablet and supplied no daily OFF-time diary or curry leaf test. [Original source](https://pubmed.ncbi.nlm.nih.gov/2291872/) · [Local text extract](Source-Text/1990-Campbell-Levodopa-Iron-Abstract-Extract.txt)

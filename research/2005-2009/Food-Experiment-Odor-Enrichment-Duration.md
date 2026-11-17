@@ -1,0 +1,5 @@
+# Duration of olfactory enrichment effects
+
+## Recognition after withdrawal of odor enrichment
+
+Rochefort and Lledo first published this experiment on 25 November 2005. The authors tracked BrdU-labeled cells and short-term smell memory in adult mice following withdrawal from an odor-rich environment. Survivorship of newly labeled cells was higher when enrichment ended and returned to the control level a month later. The abstract reports a short-term odor-memory advantage lasting less than a month. The publicly inspected abstract gives the temporal result and leaves the exact exposure list, test stimuli, group sizes and effect estimates open. The authors participated in a separate 2002 study with tarragon recorded among its enrichment odors. The identity of the 2005 stimuli remains unverified. [Original result](https://doi.org/10.1111/j.1460-9568.2005.04486.x) · [Local factual extract](Source-Text/PMID16324121-odor-decay-extract.txt) · [Earlier verified exposure](../2000-2004/Food-Experiment-Tarragon-Endpoint-Followup.md#tarragon-in-rotated-odor-enrichment-and-olfactory-memory)

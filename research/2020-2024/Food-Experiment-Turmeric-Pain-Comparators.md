@@ -1,0 +1,7 @@
+# Turmeric powder add-on and pain severity
+
+## Turmeric powder with naproxen in primary dysmenorrhea
+
+Okuyan and colleagues assigned participants by drawing covered papers and analyzed 149. They compared naproxen alone with naproxen plus oral turmeric powder. The reported visual-analogue pain decrease was 5.6 points with naproxen alone and 7.0 with the add-on (p < .001). The powder was unblinded and there was no powder placebo. One spread statistic in Table 1 is not plausible for a 0–10 scale. These findings concern menstrual pain and cannot quantify the effect in Parkinson disease. The article's abbreviation PD refers to primary dysmenorrhea. [Local factual extract](Source-Text/2021-Okuyan-Turmeric-Powder-Pain-Factual-Extract.txt) · [Original article, Tables 1–2](https://jsurgmed.com/article/download/828571/5938) · [Official registration](https://clinicaltrials.gov/study/NCT04183556)
+
+The article names NCT04183556 and describes a two-group design with 149 analyzed. The official record lists 90 actual participants and a randomized crossover. The linked sources do not explain the discrepancy in design or enrollment. Table 2 also reports percent pain decreases of 61.7% and 76.8% (p < .001). Those are results of the reported paper comparison. The public registry has no posted results. [Original report](https://jsurgmed.com/article/download/828571/5938) · [Official registration](https://clinicaltrials.gov/study/NCT04183556)

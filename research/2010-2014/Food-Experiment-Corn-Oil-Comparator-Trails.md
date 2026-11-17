@@ -1,0 +1,7 @@
+# Oral maize oil and olfactory testing
+
+## Maize oil and odor detection in a canine crossover
+
+Angle and colleagues published the randomized 3 × 3 Latin-square crossover on October 13, 2014. Seventeen certified detection dogs consumed a low-fat maintenance formulation, the same formulation with added maize oil, and another more concentrated high-fat formulation in 12-week periods. Adding maize oil changed the relative nutrient contributions, including the proportion of calories from protein. The adjusted near-threshold detection odds for the maize-oil diet versus the distinct high-fat food were 1.42 (95% CI 1.08–1.87, abstract p=.009). No statistically clear contrast emerged between the maize-oil and low-fat maintenance formulas (results p>.123), and measured thresholds did not differ across diets for the three odorants. Odds of successful alerts and lowest detectable concentration are distinct measures.
+
+This canine result provides an opposite-direction comparative olfactory lead for claim 0823. The formulation, detection task, and species limit transfer, and oil grade remains unspecified. The publication builds on a separate 2003 canine experiment. [Primary article, Tables 1–2](https://doi.org/10.1017/jns.2014.35) · [Local full text](Source-Text/PMC4473149.txt) · [2003 study note](../2000-2004/Food-Experiment-Corn-Oil-Comparator-Trails.md#corn-oil-and-canine-odor-thresholds-in-altom)

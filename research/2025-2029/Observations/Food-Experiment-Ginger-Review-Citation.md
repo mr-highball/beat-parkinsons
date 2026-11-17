@@ -1,0 +1,3 @@
+# Ginger evidence across neurological conditions
+
+The earlier Foshati trial randomized people with relapsing-remitting multiple sclerosis to standardized ginger tablets or placebo and reported a constipation severity contrast. The later neurodegenerative constipation review cites that trial, while the accessible abstract groups results across conditions. The Parkinson ginger registration has a separate population and preparation and no posted results. Establishing the review's inclusion details would clarify its source lineage. [Earlier ginger trial](../../2020-2024/Food-Experiment-Ginger-Cinnamon-Bowel.md#standardized-ginger-tablets-in-relapsing-remitting-multiple-sclerosis) · [Newer review and registry](../Food-Experiment-Ginger-Bowel.md)

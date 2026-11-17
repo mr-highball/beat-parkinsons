@@ -1,0 +1,5 @@
+# Corn oil in a topical placebo and sleep quality
+
+## Corn oil in a topical placebo and sleep quality
+
+Zhu and colleagues first published this trial on January 5, 2026. Of 134 randomized participants with postherpetic neuralgia, 57 in the active arm and 60 in the comparison arm completed treatment. Corn oil appears in the comparison group's topical mustard substitute, alongside flour, cocoa powder and a portion of the active mustard powder. Table 5 gives mean global PSQI scores of 7.83 to 6.25 in the comparison group and 7.88 to 4.35 under the active formulation, with an adjusted treatment–comparison difference of −1.95 points (95% CI −3.18 to −0.72). The narrative gives p = .002, while the table uses p < .002. The multiple topical ingredients, application route, outcome and disease do not isolate a dietary corn-oil effect or estimate Parkinson insomnia severity. [Original article](https://pmc.ncbi.nlm.nih.gov/articles/PMC12813113/) · [Local factual text](Source-Text/2026-Zhu-Topical-Corn-Oil-PSQI.txt)

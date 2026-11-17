@@ -1,0 +1,5 @@
+# Lemon balm and motor outcomes adjacent to dystonia
+
+## Lemon balm tincture and temporal muscle activity in sleep bruxism
+
+Bortoletto and colleagues published their randomized trial March 31, 2016. It compared oral lemon balm tincture with placebo in 24 children with sleep bruxism. Baseline muscle activity categories 2 and 3 contained five and seven participants in each arm. After 30 days, categories 1, 2 and 3 contained one, seven and four participants on tincture, and one, five and six on placebo. The post-treatment comparison gave p = .551. The instrument recorded nighttime temporal muscle contractions. It provides neither a dystonia measure nor an effect estimate for culinary fresh leaf. The institutional dissertation describes the same comparison. [Original Table 2](https://www.jstage.jst.go.jp/article/jpts/28/3/28_jpts-2015-726/_pdf) · [Institutional dissertation](https://bibliotecatede.uninove.br/handle/tede/1823) · [Local factual extract](Source-Text/2016-Bortoletto-Lemon-Balm-Bruxism-Extract.txt)

@@ -1,0 +1,5 @@
+# Portuguese-language Parkinson swallowing studies, 2025–2029
+
+## IDDSI level 7 solid swallowing in a four-person therapy pilot
+
+The Universidade do Estado do Rio de Janeiro lists Alessandra dos Santos Faria's Parkinson dysphagia thesis with a June 12, 2026 date. Its institutional abstract reports a four-person pilot of high-definition transcranial direct current stimulation combined with swallowing therapy. The three people with mild to moderate dysphagia improved by one point on the Dysphagia Outcome and Severity Scale for an IDDSI level 7 solid. The fourth participant entered with functional swallowing and remained at the same DOSS level. The abstract identifies the texture category and supplies no solid ingredient, preparation, choking count or by-food comparison. The full thesis and exact first online date remain unverified. [Primary institutional thesis listing and abstract](https://www.pgcm.uerj.br/administracao/src/view/action/CarregarAlunosAction.php?action=carregarListaDissertacoesTeses&lSlc=EN&mSlc=00022_00004&sSlc=SGPG)

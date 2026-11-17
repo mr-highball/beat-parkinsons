@@ -1,0 +1,7 @@
+# Basil and four open Parkinson outcomes
+
+This pass checked dried basil and daily OFF hours (0266), fresh basil and hallucination frequency (0385), fresh basil and daytime sleepiness (0402), and dried basil and apathy (0980). There are two related model assessments for 0266. All four verdicts remain Unknown.
+
+The December 2023 and June 2024 Behera reports match on authors, plant collection, extraction quantities and reported data, so they are treated as one experiment. Gayakwad’s five displayed groups omit an extract plus levodopa group named in the abstract, and the text and tables conflict on low-dose significance. Neither model tests culinary dried basil or measures daily OFF duration in people. [Chronological Behera note](../../../../research/2020-2024/Food-Experiment-Basil-Off-Replay.md) · [Gayakwad methods and results](../../../../research/2025-2029/Food-Experiment-Basil-Off-Replay.md)
+
+The native identifier replay returned all 38 historical 0980-2 records. The last 18 have individual title or abstract dispositions, with 17 missing abstracts. Several original conference sources or full texts remain inaccessible. The native registry replay retrieved all 65 records for its recorded sweet-basil expression. The indexed fields provided no applicable Parkinson endpoint result. Foreign-name and full-text trails in the earlier herb review remain open. [Identifier dispositions](receipts/0980-2-ranks-21-38.tsv) · [Registry query receipt](receipts/registry-query.tsv) · [Earlier basil and parsley search](../basil-parsley/README.md)

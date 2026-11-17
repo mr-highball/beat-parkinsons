@@ -1,0 +1,5 @@
+# Cinnamon among therapies for postoperative dysphonia
+
+## Cinnamon among therapies for postoperative dysphonia
+
+A postoperative vocal nodule case used the multicomponent Vyoshadi Vati preparation, listing Cinnamomum zeylanicum, alongside gargles and other interventions. The report describes patient-reported voice clarity after treatment. It provides no acoustic volume measure, independent ingredient contrast, ground culinary bark specification or Parkinson diagnosis. [Local factual text](Source-Text/2025-Cinnamon-Containing-Dysphonia-Case-Factual-Extract.txt) · [Original postoperative case report](https://www.jchr.org/index.php/JCHR/article/download/10650/5873)

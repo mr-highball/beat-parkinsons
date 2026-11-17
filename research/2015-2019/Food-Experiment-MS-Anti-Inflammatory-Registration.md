@@ -1,0 +1,5 @@
+# Registered anti-inflammatory diet and fatigue in multiple sclerosis
+
+## Registered diet and modified fatigue impact scale
+
+The Iranian Registry of Clinical Trials posted IRCT20171217037916N2 on September 5, 2018, while recruiting. Its unblinded block-randomized design targeted 120 participants with relapsing-remitting multiple sclerosis. One arm received an anti-inflammatory diet based on a food pyramid, and the other received healthy-diet advice. The registry specifies the Modified Fatigue Impact Scale before treatment and at 12 weeks. It does not identify oil grade, tea preparation, cinnamon, or participant-level doses. The public record shows recruitment complete, with actual recruitment dates and trial completion date blank. The later trial article and NICE extraction describe the same study. [Official registration](https://irct.ir/trial/31423) · [Local registry fields](Source-Text/IRCT20171217037916N2.txt) · [Published outcomes](../2020-2024/Food-Experiment-MS-Anti-Inflammatory-Fatigue.md)

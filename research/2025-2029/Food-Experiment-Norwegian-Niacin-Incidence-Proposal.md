@@ -1,0 +1,9 @@
+# Norwegian dietary niacin and incident Parkinson disease proposal
+
+## Niacin, tryptophan and foods rich in niacin
+
+Warz and colleagues described a planned observational cohort of 4,000 using a food-frequency questionnaire and Norwegian prescription records. The proposed analysis uses first prescription of selected Parkinson medications as a proxy for diagnosis. The investigators planned to analyze nutrient intakes and foods rich in niacin. The poster reports its hypothesis and expected timing without measured results. Symptom change after diagnosis is outside the stated endpoint. The presentation appeared at the 2025 congress and in the proceedings published July 23, 2026. [Cambridge collection, EPO6_127, p. 1257](https://www.cambridge.org/core/journals/journal-of-nutritional-science/article/special-collection-abstracts-from-iunsicn-paris-2025/C51F3C05B11BD8180F05A3C37B4292A0) · [Local factual text](Source-Text/2026-Warz-Norwegian-Niacin-EPO6-127.txt)
+
+## EPIC4ND preprint in a separate cohort
+
+Warz and colleagues posted this multinational cohort analysis on May 11, 2026. EPIC4ND included 130,622 participants and 494 incident Parkinson diagnoses. Across the full cohort, neither niacin nor tryptophan was statistically associated with incidence in the adjusted continuous or quartile analyses. Men in the lowest niacin quartile had a higher adjusted hazard than men in the highest quartile (HR 1.52, 95% CI 1.04–2.24). The quartiles did not show a dose response, and the estimate was sensitive to the censoring window. This preprint uses a separate population and diagnostic procedure from the proposed Norwegian prescription-register cohort. [Research Square preprint](https://assets-eu.researchsquare.com/files/rs-9436550/v1/58b32f43-8920-4867-b8e1-692aa0f3beb9.pdf) · [Local factual text](Source-Text/2026-Warz-EPIC4ND-Niacin-Factual-Extract.txt)

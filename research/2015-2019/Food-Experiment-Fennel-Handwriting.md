@@ -1,0 +1,5 @@
+# Fennel seed and handwriting
+
+## 2019 Crude fennel seed after peripheral nerve injury
+
+Imran et al., 2019, PMID 31489666, DOI 10.1111/jfbc.12983: the primary abstract describes 14 mice, seven per group, fed ordinary chow or 500 mg/kg crude Foeniculum vulgare seed after sciatic nerve injury. It reports faster sensory and motor recovery but prints the internally inconsistent phrase significant p > .05; do not assume the intended probability. The related 2020 paper by overlapping authors describes the earlier preparation as crude seed powder. Original full methods, individual dose formulation and raw results were not recovered. A peripheral hind-limb nerve injury in mice and generalized sensorimotor recovery are not Parkinson micrographia or human handwriting.

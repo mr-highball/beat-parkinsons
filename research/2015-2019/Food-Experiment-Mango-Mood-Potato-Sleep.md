@@ -1,0 +1,5 @@
+# Potato preparation and self-reported sleep duration
+
+## Boiled or mashed potatoes in the UK Women’s Cohort Study
+
+Noorwali and colleagues used a baseline food-frequency questionnaire and later self-reported average weekday and weekend sleep duration. In Table 2, boiled or mashed potatoes gave an adjusted estimate of 0.9 additional minutes of sleep per day for each 80 g/day of potatoes (99% CI −0.6 to +2, p = .1, n = 12,692). The unadjusted estimate was +0.3 minutes (99% CI −1 to +1, p = .5, n = 13,330). The categories do not include roasted potato, and the study used reported sleep duration, without measuring insomnia severity or providing a Parkinson subgroup result. The first author’s 2019 thesis reproduces the same item and values, so it does not count as an independent cohort. [Local primary article, Table 2](Source-Text/PMC6266198-Noorwali-Fruit-Sleep-Duration.txt#L371) · [Primary publication record](https://pubmed.ncbi.nlm.nih.gov/30463296/) · [Author thesis, Table 3.2](https://etheses.whiterose.ac.uk/id/eprint/25283/1/Noorwali_EAA_Food%20Science%20and%20Nutrition_PhD_2019.pdf)

@@ -1,0 +1,5 @@
+# ENHANce falls follow-through
+
+The original 2018 registration and 2023 TEMPUS-FUGIT protocol specify falls and a peanut-oil placebo. The 2026 feasibility report names peanut oil in four arms and analyzes mobility, strength, retention and safety. Its report and supplemental tables give no arm-level fall counts. The 2025 conference reports on sarcopenia, cognition and physical performance concern the same trial.
+
+The publisher supplement returned HTTP 200 with 6,161,657 bytes and SHA-256 ee62bb434116b4bf373a69279b6973989c61d1d70ce5cdff217e63b71ba44788. Native extraction yielded 654 populated Word paragraphs. Supplementary materials 3–4 describe visits and measurements. Materials 6 and 10–12 give completion, mobility and strength results. Falls appear in preventive-exercise context. The registered falls outcome remains open. [Original protocol](https://pmc.ncbi.nlm.nih.gov/articles/PMC10523729/) · [Primary report](https://pmc.ncbi.nlm.nih.gov/articles/PMC12887399/) · [Publisher supplement](https://ars.els-cdn.com/content/image/1-s2.0-S2260134125001227-mmc1.docx)

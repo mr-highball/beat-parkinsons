@@ -1,0 +1,5 @@
+# Shrimp poisoning context
+
+## Cooked bait shrimp with boric acid
+
+Huang and colleagues’ 2010 report describes a fisherman who ate cooked frozen bait shrimp and rice, then developed vomiting, diarrhoea, erythema and nonspecific central nervous system irritation. Vomitus DNA analysis identified the shrimp as *Parapenaeus fissuroides*, and chemical testing detected boric acid in the vomitus and sampled bait-store shrimp; the authors considered the preservative the likely cause. The report does not identify grilling, Parkinson’s disease or hallucinations in this patient. Its later discussion lists delirium as a possible effect of boric-acid poisoning generally, not as a recorded patient symptom. [Primary article and tables](https://www.researchgate.net/publication/49741350_Identification_of_Causative_Agents_and_Species_in_Shrimp_Implicated_in_a_Food_Poisoning_Case_in_Taiwan) · [PubMed record](https://pubmed.ncbi.nlm.nih.gov/21219744/) · [Local factual extract](Source-Text/2010-Huang-Bait-Shrimp-Boric-Acid.txt)

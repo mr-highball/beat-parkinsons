@@ -1,0 +1,3 @@
+# Bean identity and daytime sleep outcomes
+
+The earlier Clark dissertation and later journal article represent one boiled common-bean vascular study. The Parkinson dietary cohort covers daytime sleepiness through a whole diet pattern and groups beans. The black soybean crossover and three-arm patent have different preparations and sleep measures. The crossover patent and the 2021 report likely describe one trial, pending original verification. The three-arm patent reports no significant between-group sleep factor difference. [Common bean sources](../Food-Experiment-Black-Bean-Endpoint-Replay.md) · [Soybean sources](../Food-Experiment-Black-Soybean-Sleep.md)

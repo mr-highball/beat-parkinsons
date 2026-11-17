@@ -1,0 +1,5 @@
+# Black cumin oil and sleep endpoints
+
+## Nigella oil crossover and measured daytime sleepiness
+
+Harshith and colleagues reported a 24-person randomized active-controlled crossover of a Nigella sativa oil extract and melatonin in non-restorative sleep, with seven nights per condition. Table 5 reports an Epworth Sleepiness Scale treatment effect favoring the extract (p < .001). Sequence and period effects also reached p < .001. In the subgroup of nine with baseline scores above 11, the authors give an estimated difference of −0.944 points (95% CI −1.509 to −0.380). The comparator was melatonin and the participants did not have Parkinson’s. Nigella is distinct from the Cuminum cyminum in the toasted-cumin hypothesis. The article links CTRI/2024/11/077454 and reports a November 28, 2024 registration date. The independent registry page timed out during this review. [original Methods and Table 5](https://www.frontiersin.org/journals/sleep/articles/10.3389/frsle.2026.1879110/full) · [Local text](Source-Text/2026-Harshith-Nigella-Epworth-Extract.txt)

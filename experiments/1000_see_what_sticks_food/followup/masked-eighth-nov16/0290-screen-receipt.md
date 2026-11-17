@@ -1,0 +1,9 @@
+# 0290 focused indexed screen, 2026-11-15
+
+Native Europe PMC input ingredient_results.tsv, exact query 0290-FOCUSED: 47 returned appearances, 47 distinct query/rank/source triples screened, 22 contextual, 24 excluded, one pending. Duplicate ranked 2 and 3 are AGR and MED versions of the same gel paper. No inference of exhaustive literature coverage beyond this returned set.
+
+- Fagerberg 2020 original https://pmc.ncbi.nlm.nih.gov/articles/PMC7400863/ Methods 2.6 and Results: PD vs control standardized mixed meal including potato salad; separate 3-ounce water and pasty/crumbly swallow examination. Advanced PD consumed less salad. Cross-sectional, no randomization of potato or baked exposure, hence no ingredient-specific direction.
+- PMID33521981 https://pubmed.ncbi.nlm.nih.gov/33521981/: potato starch versus gum in broccoli soup; PD participants rated sensory properties. Does not quantify swallowing efficacy.
+- PMID39759694 original https://pmc.ncbi.nlm.nih.gov/articles/PMC11700680/ case describes potato heated in microwave and laryngeal thermal burn in toddler. Not a Parkinson food intervention.
+- PMID40620545 https://pubmed.ncbi.nlm.nih.gov/40620545/ age 16 esophageal perforation and dysphagia after hot potato bolus; indexed record does not identify cooking method. PMC full page returned browser reCAPTCHA in this retrieval; do not assert baked or baseline PD outcome.
+- Pending PMID23574681, DOI 10.1111/crj.12021: https://pubmed.ncbi.nlm.nih.gov/23574681/ says chronic food aspiration and potato starch without recipe or clinical details. Wiley issue https://onlinelibrary.wiley.com/toc/1752699x/2013/7/4 lists first publication 11 April 2013, pp.416–418; https://www.researchgate.net/publication/236191201_%27A_clear_case_of_chronic_aspiration_of_starch_potato%27 says full text request required. Check legitimate full body for food form, causal circumstances and patient diagnosis before closure.

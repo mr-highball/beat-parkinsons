@@ -1,0 +1,5 @@
+# Saffron-containing preparations in a neurological comparator population
+
+## Saffron and three other botanicals for depression in multiple sclerosis
+
+Adalat et al. randomized 52 people with multiple sclerosis and depressive symptoms to a Persian formulation or placebo alongside stable treatment. Forty-six completed the four-week trial. The formulation combined extracts of saffron, St. John’s wort, cinnamon and grape. Table 2 reports mean Beck Depression Inventory changes of −13.9 points (SD 8.6) with the blend and −3.9 (SD 4.3) with placebo. The adjusted time-by-treatment result is p = .001. The paper’s aim statement mentions fatigue and sleep, while its Methods and Results describe depression as the measured outcome and give no separate fatigue or sleep results. The combined exposure and different diagnosis limit relevance to `0063` and `0485`. The journal’s electronic publication date is January 1, 2019. [Primary report, Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC8343653/) · [Local CC BY source text](Source-Text/PMC8343653.txt)

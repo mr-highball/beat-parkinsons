@@ -1,0 +1,13 @@
+# Cumin motor-model evidence and a clinical OFF diary comparison
+
+## Cumin aqueous extract and climbing in a rotenone fly model
+
+Rao and colleagues used separately administered aqueous extracts of *Cuminum cyminum* seed and cinnamon bark in the feeding medium of adult male *Drosophila*. During seven days of rotenone co-exposure, higher cumin-extract groups showed better climbing performance than rotenone alone in Figure 1B. The dose series for isolated cuminaldehyde and cinnamaldehyde was a separate experiment (Figure 1D). The reference for the later human cinnamon and honey ON/OFF case describes a separate intervention. The cumin experiment measured survival, negative geotaxis and biochemical endpoints, with no levodopa dosing or diary-defined OFF state. [Institution’s primary record](https://ir.cftri.res.in/13250/) · [Accessible author-posted full paper](https://www.researchgate.net/publication/334083149_Neuromodulatory_Potential_of_Aqueous_Extracts_of_Cumin_Cinnamon_Evidence_from_Rotenone_Model_in_Drosophila_Implications_to_Parkinson%27s_Disease_International_Journal_of_Neurology_Research) · [Local factual extract](Source-Text/2016-Rao-Cumin-Fly-Motor-Model.txt)
+
+## Pharmaceutical gastric motility trial measured Parkinson OFF time by diary
+
+Marrinan and colleagues randomized 58 people with Parkinson’s and delayed gastric emptying to pharmaceutical camicinal or placebo for 7–9 days while continuing individualized levodopa-based treatment. Patients kept a daily motor symptom diary. The 2017 online publication reports an adjusted OFF-time difference of −2.31 hours/day (95% CI −3.71 to −0.90, 36 drug and 17 placebo diaries analyzed). Changes in total levodopa exposure, maximum concentration, the between-arm time-to-peak analysis, and the gastric emptying half-time estimate did not clearly establish a group difference. The diary measures awake hours in medication-response states, separate from the study’s Part III motor scores and the animal transit outcomes. Its intervention supplies no ground-cumin effect estimate. [Primary report, Methods and Table 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC5838770/) · [Local full text](Source-Text/PMC5838770.txt) · [Registration and posted study record](https://clinicaltrials.gov/study/NCT01602549)
+
+## Cumin extract and glyburide in diabetic rats
+
+The rat study tested ethanolic cumin seed extract and the diabetes drug glyburide. The combination and glyburide-only groups used different glyburide doses. It supplies an interaction lead without a levodopa or OFF estimate. [Original source](https://pubmed.ncbi.nlm.nih.gov/31348760/) · [Local factual text](Source-Text/2019-Kaur-Cumin-and-Glyburide-Comparison.txt)

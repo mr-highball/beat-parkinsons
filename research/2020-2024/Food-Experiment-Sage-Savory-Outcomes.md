@@ -1,0 +1,21 @@
+# Sage and summer savory symptom studies
+
+## Dry sage extract and sleep symptoms after menopause
+
+Zeidabadi and colleagues first published February 28, 2020. In the randomized comparison, 59 of 66 assigned women completed 12 weeks. The sage arm's mean Pittsburgh Sleep Quality Index fell from 9.4 to 5.6. The authors reported a lower final sleep score with extract than with placebo. The study used dry sage extract tablets and did not select a Parkinson or primary-insomnia population. [Primary report, Methods and Table 3](https://pmc.ncbi.nlm.nih.gov/articles/PMC7114003/) · [Local factual text](Source-Text/2020-02-28-Zeidabadi-Sage-Extract-Sleep.txt) · [Earlier exhaustion assessment and registered trial linkage](Food-Experiment-Herb-Spice-Followup.md#sage-extract-and-exhaustion-in-a-registered-menopause-trial)
+
+## Fresh sage tip extract and dream recall after menopause
+
+Dimpfel and colleagues published February 10, 2021. In the double-blind Menosan trial, 78 postmenopausal women were included in the intention-to-treat population. Over four weeks, the extract group had better questionnaire ratings for sleep quality and psychosomatic problems during sleep. The authors report no clear difference in dream recall or sleep–wake regulation. The menopausal scale's sleep item showed a trend, and the urogenital subscale had no clear difference. The report gives neither dream enactment counts nor an isolated urinary urgency estimate. [Primary paper, Results 3.2](https://pmc.ncbi.nlm.nih.gov/articles/PMC7881233/) · [Local factual text](Source-Text/2021-02-10-Dimpfel-Menosan-Sage-Extract-Sleep.txt) · [Earlier fatigue assessment](Food-Experiment-Herb-Spice-Followup.md#fresh-sage-tip-extract-and-menopausal-fatigue)
+
+## Summer savory essential oil and rotarod balance after lead exposure
+
+Aboubaker and colleagues first published December 16, 2024. Oral summer savory oil improved rotarod retention at both reported doses compared with untreated lead-exposed rats. The same Results paragraph and Figure 1 give no clear improvement for open-field movements, grooming or rearing. The broad abstract description of improved locomotor and psychological measures needs the individual test results. There was no oil-only group, and the study did not use a Parkinson model or count gait freezes, falls or dystonia. [Primary paper, Methods and Figure 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC11732139/) · [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/39811400/)
+
+## Common sage tea and sleep quality in students
+
+Rigi and Shahnavazi reported a double-blind comparison of 128 dormitory students, 64 per group, with allocation using room numbers. Over one month students brewed nightly tea bags containing 10 g of sage and 3 g of brown sugar, or 13 g of brown sugar as the control. The original does not explicitly establish the sage drying method. Table 2 gives mean PSQI 9.93 ± 2.72 to 8.21 ± 2.17 for sage and 9.89 ± 2.74 to 10.60 ± 2.88 for control. The prose instead gives 9.39 for the sage baseline. Either reading gives lower change scores for sage, with crude differences of −2.43 or −1.89 points. The follow-up Mann–Whitney result is printed .00 and the authors describe it as significant. A separate .003 Wilcoxon value cannot be assigned to the between-group contrast. The table gives no room-adjusted estimate or confidence interval. The PDF supplies IRCT20141125020082N2 and prints conflicting DOI prefixes 10.22034 and 10.32592. Taste, unequal sugar and transfer from young students and global sleep quality limit the Parkinson insomnia inference. [Original source](https://cmja.arakmu.ac.ir/article-1-1008-en.pdf) · [Local factual text](Source-Text/2024-Rigi-Dried-Sage-Tea-Student-Sleep.txt)
+
+## Sage tea and sleep quality trial registration
+
+The November 2021 prospective record describes allocation by dormitory room, compares 10 g sage tea with 10 g brown-sugar tea and identifies PSQI as primary. Calendar and preparation details differ in the 2024 results paper. The original registry preserves these distinctions. [Official registry](https://en.irct.ir/trial/59723) · [Local registry text](Source-Text/2021-11-07-IRCT20141125020082N2-Sage-Tea-Sleep.txt) · [Publication comparison](#common-sage-tea-and-sleep-quality-in-students)

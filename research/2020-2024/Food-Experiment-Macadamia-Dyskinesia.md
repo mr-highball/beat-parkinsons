@@ -1,0 +1,7 @@
+# Macadamia oil and Parkinson-related pharmacology
+
+## Macadamia oil diet during an SCD inhibitor rat experiment
+
+[Tardiff et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC9015998/) first published January 20, 2022 (PMID 35060064, DOI 10.1007/s12035-021-02695-1). In a pharmacology experiment concerning the investigational stearoyl-CoA desaturase inhibitor YTX-7739, male rats were given access to custom chow containing 0.21 g macadamia nut oil and 0.029 g soybean oil per gram of food. Animals received the diet for 14 days and then the drug or vehicle alongside the diets for 15 days. The drug vehicle was methylcellulose; the macadamia oil was a dietary ingredient used to enrich palmitoleic acid, not the drug vehicle. The paper does not specify cold pressing or individual oil consumption.
+
+The study measured fatty-acid profiles and the drug-associated C16 desaturation index in plasma, brain and skin. In the results section, the macadamia diet mitigated the 10 mg/kg drug response by 89%, 61% and 74%, respectively, relative to standard-diet animals. At 30 mg/kg, the reported peripheral mitigation was about 50%, with no significant brain difference. These are biochemical readouts in rats, not a clinical Parkinson group, levodopa-induced dyskinesia or an involuntary-movement score. The Figure 5 abbreviation “PD response” refers to pharmacodynamic response. [Existing local primary article](Source-Text/PMC9015998.txt) · [Factual extract](Source-Text/2022-YTX-Macadamia-Chow-Extract.txt).

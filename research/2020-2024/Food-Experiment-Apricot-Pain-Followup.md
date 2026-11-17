@@ -1,0 +1,17 @@
+# Apricot and pain follow-up, 2020–2024
+
+## Apricot intake on migraine and headache-free days
+
+Abdou and colleagues’ 2020 prospective diary study analyzed 222 recorded days from 29 fasting adults with migraine. Apricot was reported on 9 of 148 headache days and 11 of 74 headache-free days. The paper reports an unadjusted odds ratio of 0.371 (95% CI 0.146–0.943, p = .031) for headache occurrence. This is a day-level observational association with repeated days per person; preparation and amount are unspecified, and the table does not estimate pain severity by apricot consumption. Other meal, sleep, fluid and behavior variables differed, and the cohort was not a Parkinson cohort. It cannot show an apricot treatment effect. [Original study and Tables 2 and 5](https://www.scholarsliterature.com/journals/neurological-sciences-and-neurosurgery/fulltext/factors-associated-with-migraine-occurrence-in-ramadan-a-prospective-survey-from-a-tertiary-headache-clinic) · [Factual extract](Source-Text/2020-Abdou-Apricot-Migraine-Diary.txt)
+
+## Reported apricot triggers in a headache survey
+
+Akgor and colleagues’ 2023 cross-sectional online survey of 1,118 respondents asked about consumption, headache or abdominal pain triggers and 125 foods and additives. The authors identify apricot among self-reported triggers associated with medication-overuse headache (p = .001 for the reported group relationship). No raw-fruit preparation, apricot challenge, Parkinson diagnosis or apricot-specific pain severity estimate was established. The finding is a recalled perceived trigger, not a measured causal effect. [Primary report](https://pmc.ncbi.nlm.nih.gov/articles/PMC10607881/) · [Factual extract](Source-Text/2023-Akgor-Apricot-Headache-Trigger.txt)
+
+## Apricot kernels in a drug-induced rat model
+
+Saleem and colleagues’ 2022 report sourced fresh apricot kernels, dried them for one month and prepared a methanolic extract. Rats received this extract orally in a haloperidol-induced parkinsonism model; outcomes were motor behavior and biochemical measures, not pain severity. This is kernel extract rather than raw fruit flesh. A separate 2024 rat nerve-injury study used oral apricot kernel oil and nociceptive tests. Neither is a human raw-apricot Parkinson pain experiment. The 2022 article was first published September 29. Its highest tested kernel extract group showed shorter catalepsy latency than the disease controls in the bar test (Figure 1, p < .001). The original also reports beam and open-field performance, with no daily Parkinson OFF-time diary. [Local primary article text, Methods and Figure 1](Source-Text/PMC9536922.txt) · [2022 Methods](https://pmc.ncbi.nlm.nih.gov/articles/PMC9536922/) · [2024 kernel oil study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11336353/) · [Factual extract](Source-Text/2022-2024-Apricot-Kernel-Model-Boundaries.txt)
+
+## Raw apricot reaction and separate celery-associated pain
+
+De Rose and colleagues described two children with pollen-related food allergy in 2021. One reported throat itching after several foods including raw apricot; testing included fresh apricot peel and pulp. In the same case, abdominal pain followed a separate raw celery food challenge. The article does not attribute that pain episode to apricot and does not report Parkinson disease or apricot-related pain severity. [Primary case history and Table 1](https://www.all-imm.com/index.php/aei/article/view/28/6) · [Factual extract](Source-Text/2021-DeRose-Apricot-Allergy-Celery-Pain.txt)

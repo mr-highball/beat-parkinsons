@@ -1,0 +1,11 @@
+# Swallowing sources from Crossref citations, 2005–2009
+
+## Viscosity in two neurogenic dysphagia studies
+
+Clavé and colleagues' 2006 videofluoroscopy study used mineral water and Gastrografin, with Resource ThickenUp to make the nectar and pudding viscosities. It enrolled 46 people with brain damage, 46 with ALS, multiple sclerosis or myopathies, and eight healthy volunteers. In the neurodegenerative group, reported aspiration declined from 16.2% with the liquid contrast to 8.3% at nectar viscosity and 2.9% at pudding viscosity. The named diagnoses exclude Parkinson disease. [Publisher abstract](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2036.2006.03118.x) · [Primary full report, Methods and Figure 2](https://www.academia.edu/21104878/The_effect_of_bolus_viscosity_on_swallowing_function_in_neurogenic_dysphagia)
+
+The team's 2008 diagnostic study included 85 people with oropharyngeal dysphagia, including two with Parkinson disease, and 12 healthy volunteers. The bedside test used mineral water, with or without Resource ThickenUp, and the imaging test added Gastrografin. Each used liquid, nectar and pudding textures at 5, 10 and 20 mL. The analyses pool patient diagnoses. Twenty-five patients aspirated during imaging. The paper supplies no Parkinson-specific result and no solid food challenge. [Primary article, Methods and Tables 1–3](https://www.academia.edu/21104904/Accuracy_of_the_volume_viscosity_swallow_test_for_clinical_screening_of_oropharyngeal_dysphagia_and_aspiration) · [Publisher record](https://www.sciencedirect.com/science/article/pii/S0261561408001209)
+
+## Nocturnal airway obstruction reported as recurrent choking
+
+The April 2009 case report describes a 77-year-old man with longstanding idiopathic Parkinson disease whose partner reported choking episodes during sleep. The team observed nocturnal stridor followed by airway obstruction. Laryngoscopy during symptoms showed paradoxical vocal-fold movement. The report gives no food ingestion, obstructing food bolus or mealtime association. It clarifies that this title does not supply evidence on choking with a baked potato. [Primary case, pp. 110–113](https://citeseerx.ist.psu.edu/document?doi=a1d4082bc96459915d541b82834ab77c07dd3e2b&repid=rep1&type=pdf) · [Publisher record](https://pn.bmj.com/content/9/2/110)

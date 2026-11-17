@@ -1,0 +1,33 @@
+# Summer savory and oregano
+
+## Topical tarragon and sweet almond oil registration
+
+IRCT20211203053264N1 first registered December 11, 2021. The registry describes 90 adults with knee osteoarthritis in the 3% tarragon oil extract, sweet almond oil and routine-care arms. It reports an enrollment date of December 18, 2021 and labels the registration prospective. The article dates the trial to 2020, also reflected in the registry title’s Iranian year 1399. The registry’s primary outcome lists the one- and three-week assessments, although the intervention description also lists the immediate time point. The article reports the clearest difference at that immediate time point. The registry describes a three-card draw, daily topical application and participant blinding. The article instead reports block randomization, alternate-day application and no participant blinding because of the scent. The matching accession, arms, site and ethics reference identify one study. [Official IRCT registration](https://irct.ir/trial/60390) · [Local registry summary](Source-Text/IRCT20211203053264N1.txt) · [2026 outcome report](../2025-2029/Food-Experiment-Tarragon-Savory-Oregano.md#topical-tarragon-oil-extract-and-osteoarthritis-pain)
+
+## Separate topical tarragon and sesame oil registration
+
+IRCT20220403054396N1 registered prospectively on March 24, 2023, with April 4 listed as enrollment start. Shafiee and Yonesi’s registration targets 90 adults with chronic knee osteoarthritis and compares topical tarragon oil, topical sesame oil and a control arm. It registers WOMAC pain, stiffness and function at baseline, immediately after treatment and at follow-up. A different comparator, primary contact and ethics approval (IR.BUMS.REC.1401.350) distinguish this protocol from the almond-oil trial (IR.BUMS.REC.1399.164). The registry reports completed recruitment. Searches by registration, ethics code, title and investigators yielded no verified outcome report. [Official IRCT registration](https://irct.ir/trial/65857) · [Local registry summary](Source-Text/IRCT20220403054396N1.txt)
+
+## Summer savory extract and tail suspension after cisplatin
+
+Kumburovic and colleagues report that cisplatin delayed first immobility and reduced immobility counts and total time in rat tail suspension. The intermediate dose of oral methanolic summer savory extract attenuated all three changes. The high dose affected total immobility only, and the low dose had no clear effect. The authors warn that this pattern can reflect anxiety and motor activity and complicates the assay’s usual interpretation. The paper and the 2019 publication use matching groups and dosing. They provide indirect evidence for claim 0539 with no unambiguous direction for clinical depressive symptoms. The publisher and Crossref date the issue to September 2021 and the online publication to December 2021. The 2019 date in OpenAlex coincides with Crossref’s record creation. [Primary paper](https://reference-global.com/article/10.2478/sjecr-2019-0029?tab=article) · [Crossref record](https://api.crossref.org/works/10.2478/sjecr-2019-0029) · [Related 2019 report](../2015-2019/Food-Experiment-Tarragon-Savory-Oregano.md#summer-savory-extract-and-behavior-after-cisplatin)
+
+## Infusion from dried summer savory and awake rat activity
+
+Shanaida and colleagues dried flowering *Satureja hortensis* herb, brewed an aqueous infusion and administered it intragastrically. On day seven the six rats in the savory arm crossed 24.0 ± 1.14 squares in an open field, versus 30.67 ± 1.33 in controls. The difference was not clear on the earlier tests. The open-field test measures activity while awake. It provides indirect context for daytime sleepiness (0248) and insomnia (0666). The experiment measured neither sleep nor Parkinson-specific symptoms. [2021 primary paper, Methods and Table 1](https://pharmacologyonline.silae.it/files/archives/2021/vol3/PhOL_2021_3_A142_Shanaida.pdf)
+
+## Oral oregano extract and stress-related behavior in rats
+
+Mohseni-Moghaddam and colleagues gave an oral hydroalcoholic *Origanum vulgare* extract to male rats under chronic unpredictable stress. The 200 and 400 mg/kg doses improved open-arm exploration and central-zone exploration relative to measurements made during the stress protocol. The same experiment reported better performance on a spatial learning task. These are behavioral observations from a stress model, with a direction opposite to worsening anxiety in claim 0634. The paper does not measure anxiety after culinary dried oregano in people with Parkinson’s. [July 2022 primary article, Figures 2–3](https://pmc.ncbi.nlm.nih.gov/articles/PMC9392516/) · [Local article text](Source-Text/PMC9392516.txt)
+
+## Oral oregano leaf extract in experimental hepatic encephalopathy
+
+Abdelghffar and colleagues administered an oral hexane extract of *Origanum vulgare* leaves in rats given thioacetamide to induce hepatic encephalopathy. They used seven groups of seven rats, including vehicle, toxicant, extract-only and silymarin comparator arms. The extract mitigated changes on anxiety-like and depressive-like behavioral tasks in the toxicant model. The anxiety findings are indirect and run opposite to the direction in claim 0634. The animal disease, solvent extract and behavioral endpoints differ from eating dried oregano and anxiety in Parkinson’s. [October 2022 primary article](https://www.nature.com/articles/s41598-022-20412-3) · [Local article text](Source-Text/PMC9596437.txt)
+
+## Clinical study of a different Origanum species
+
+A 2021 randomized Parkinson pilot trial tested *Origanum majorana* tea. It reported improvement on depression and composite nonmotor scales and an inconclusive UPDRS III result. The species is marjoram and the intervention is an infusion. The available report supplies no separately attributable anxiety, sleepiness, stride length, dystonia, drooling or daily OFF time result for *O. vulgare*. [Existing marjoram trial annotation](Food-Experiment-Evidence.md#marjoram-tea-and-motor-and-nonmotor-symptoms)
+
+## Dried oregano as a smell-test stimulus
+
+Baert and colleagues presented dried oregano by smell in an odor test involving 34 people with Parkinson’s and 53 healthy controls. In Figure 2 the groups showed no clear difference in recognizing oregano. Oregano was also among the three least recognized spices by controls. This is a diagnostic task, with no ingestion or any of the six frozen oregano symptom endpoints. [Existing odor-test annotation](Food-Experiment-Evidence.md#spices-in-odor-identification-tests) · [Local article text, Figure 2](Source-Text/PMC9072051.txt)

@@ -1,0 +1,17 @@
+# Nigella saliva output, roasting and approach behavior
+
+## Nigella oil and measured salivary output after radiation
+
+Evans and colleagues first presented this 40-mouse experiment in the 2022 AAO-HNSF proceedings. Its design, sample, arms and team match the 2023 Luff report. The conference abstract says all irradiated oil-treated mice survived to day 60. The full paper reports 83% survival in that arm and 75% with irradiated water gavage. The full report used pilocarpine to stimulate saliva before collection. At day 3, the irradiated oil group produced 0.1217 g compared with 0.02 g for the irradiated water group (p < .001). The sham water control produced 0.143 g. By day 60, all surviving groups had comparable salivary output. The exposure was oral oil gavage and the disease model was radiation-induced gland injury. The study did not measure loss of saliva from the mouth. [2022 primary conference abstract](https://journals.sagepub.com/doi/10.1177/01945998221107672d) · [2023 primary report and Figure 2D](https://pmc.ncbi.nlm.nih.gov/articles/PMC10446306/) · [Local factual comparison](Source-Text/2022-2023-Evans-Luff-Nigella-Oil-Salivary-Output-Extract.txt)
+
+## Roasting method and measured thymoquinone in nigella seeds
+
+Veeriah and colleagues compared untreated *Nigella sativa* seeds, convection heating and superheated-steam roasting before chemical analysis. The seed sample and oil measurements differed, and the thymoquinone signal depended on the heating conditions. Table 4 retains a thymoquinone signal under all tested steam conditions, while the highest-temperature, longest convection condition had no detectable signal. Their processing comparisons provide no measured clinical or salivary outcome. [Primary food-processing study](https://pmc.ncbi.nlm.nih.gov/articles/PMC10630797/) · [Local factual extract](Source-Text/2023-Veeriah-Nigella-Roasting-Extract.txt)
+
+## Cold pressed nigella oil and sucrose consumption in rats
+
+After four weeks on feed enriched with commercial cold-pressed *Nigella sativa* oil, naïve male and female rats consumed more sucrose than their control groups (p = .001 and .0002). The three-chamber sociability index was higher in males (p = .036), with no clear female result and no difference in novelty preference in either sex. Open-field locomotion before the amphetamine challenge was comparable. These are reward consumption and social approach measures in animals without Parkinson disease. [Primary report, Figures 2 and 3](https://pmc.ncbi.nlm.nih.gov/articles/PMC10855852/) · [Local factual extract](Source-Text/2024-Nigella-Oil-Sucrose-Sociability-Extract.txt)
+
+## Black seed oil and social approach after antibiotic exposure
+
+In a distinct 2024 mouse study, Adedokun and colleagues measured time near a stranger in a three-chamber test after ampicillin with or without *Nigella sativa* oil exposure. Figure 3 displays lower sociability for the antibiotic-only group and higher indices for both concurrent and subsequent oil groups (reported p < .0001 versus antibiotic alone). The sociability caption labels Figure 3 and gives five per group. The Methods describe 40 mice assigned to five groups. The text instead refers to Figure 4, whose caption describes oxidative outcomes. The p value is the authors The publication has no effort-based reward task, apathy scale, Parkinson model or ground seed. [Primary report and Figure 3](https://pmc.ncbi.nlm.nih.gov/articles/PMC10876594/) · [Local factual extract](Source-Text/2024-Adedokun-Nigella-Oil-Social-Approach-Extract.txt)

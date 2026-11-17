@@ -1,0 +1,9 @@
+# Kale meal options and glucoraphanin seed extract
+
+The Phillips Parkinson pilot assigned ketogenic and low-fat diets. The low-fat recipe offers raw kale or spinach in a smoothie, and the ketogenic recipe offers kale or spinach sautéed. No record verifies individual selection. The ketogenic group had a 0.70-point greater decline on the broad urinary-problems item, with no reported item-level confidence interval or p value. That comparison pertains to the complete diets. [Primary report and meal-plan audit](../../../../research/2015-2019/Food-Experiment-Kale-Replay.md)
+
+NCT07360977 assigns bioactivated glucoraphanin in its Parkinson arm. The companion laboratory article traces the preparation to Tuscan black kale seeds and white mustard seeds. This is a processed seed-derived preparation. On the identifier replay the registry had no posted results or verified participant consumption. The registry and cell paper have separate first-public dates in the same period. [Registration, cell study and recipe details](../../../../research/2025-2029/Food-Experiment-Kale-Replay.md) · [Registry replay receipt](registry-query.tsv)
+
+The four frozen directions remain Unknown. Historical 0793-2 rank 9 reused PMC13439031 from 0793-1 rank 1. Conference abstracts available for PMC12945384, PMC5112782, PMC10637580, PMC4768436, PMC10917318 and PMC13310587 contained author surnames or neighboring material. Other collections exposed browser challenges, wrapper pages or incomplete indexed text. Their relevant presentation bodies remain open when accessible. [Original query audit](../claim-query-audit.tsv)
+
+The later source replay distinguishes roasted-leaf aroma, thawed-leaf sampling, optional kale in a rehabilitation program, and recorded clinical smell outcomes. It resolved five additional original search records and preserves two 1991 access gaps. [Original evidence and provider receipts](../kale-olfaction-and-collection-nov15/README.md)

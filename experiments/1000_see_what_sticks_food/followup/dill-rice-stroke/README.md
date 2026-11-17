@@ -1,0 +1,5 @@
+# Dill and rice extract after stroke
+
+The primary 2019 reports share the investigators, protocol and exposure details. Their open-field and composite stroke results are filed together with possible animal overlap. The report measuring open-field behavior found unchanged total crossings and more center entries at selected doses and time points. The composite neurological score improved in the related report. [2019 evidence and cohort comparison](../../../../research/2015-2019/Food-Experiment-Dill-Rice-Stroke.md)
+
+The 2024 clinical study reported one favorable high-dose comparison on total NIHSS at week one. Its discussion places that comparison at two weeks and the Thai trial export registers NIHSS at six weeks. The published six-week differences were inconclusive. The intervention combined dried dill extract and black sticky rice extract in people treated for stroke or TIA. [Official lookup](tctr-lookup.tsv) · [Clinical paper and registration](../../../../research/2020-2024/Food-Experiment-Dill-Rice-Stroke.md)

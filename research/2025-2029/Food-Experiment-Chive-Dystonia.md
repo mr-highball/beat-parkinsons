@@ -1,0 +1,13 @@
+# Chives, related Allium species and dystonia
+
+## 2025 — Mixed dried onion, garlic and wild-rice extracts in MPTP mice
+
+Hong and Ro studied Hwang Chan Go, a 7:2:1 mixture of separate hot-water-extracted dried onion (*Allium cepa*), garlic (*Allium sativum*) and wild rice (*Zizania latifolia*) powders. The preparation did not specify organs. Groups of eight mice received oral mixture for ten days after MPTP. Figure 2A shows longer rotarod retention at 300 mg/kg compared with MPTP alone. In Figure 2B, MPTP alone gave 34 ± 14 seconds in the imposed bar posture, versus 6 ± 5 seconds in untreated controls. The mixture shortened duration numerically without a significant comparison against MPTP alone. Figure 2C similarly showed no significant treatment effect on pole descent. Dystonia or separately measured muscle tone was not among the outcomes. [Original report, Methods and Results](https://e-fsbh.org/DOIx.php?id=10.52361%2Ffsbh.2025.5.e2) · [Original Figure 2](https://e-fsbh.org/ViewImage.php?Type=F&afn=9983_FSBH_5_1_e2&aid=834944&fn=fsbh-5-e2-g002_9983FSBH&id=F2)
+
+## 2025 — Conference abstract on onion and garlic extracts in lesion-model rats
+
+Kumar and colleagues reported a 6-OHDA Wistar study at the Manipal Pharmaceutical Conference. The sourced powders were onion (*Allium cepa*) and garlic (*Allium sativum*) extracts, with plant organ and extraction methods unspecified. The authors reported better motor coordination and less anxiety-like behavior against the model. The proceeding gives neither the named motor test and group estimates nor a dystonia outcome. Searches by title and authors reached the proceeding and accepted-abstract list. [Original proceedings, abstract PCO-PM-006, page 203](https://conference.manipal.edu/mpcon/docs/MPCON%2025%20proceedings.pdf)
+
+## 2025 — Vesicles isolated from fresh Chinese leek in a muscle-wasting model
+
+Qi and colleagues used locally purchased fresh material described as Chinese leek with flat leaves. Methods identify the source by common name, without a scientific name or voucher for that purchase. They homogenized plant material and purified extracellular vesicles, which were administered orally to mice in a dexamethasone muscle-wasting model. The high-dose group had greater grip strength than the dexamethasone controls, with a residual gap to unchallenged mice in Figure 7D. Figure 7E reports changes in gait and gait variability. Strength and treadmill stepping in a muscle-wasting model do not provide a dystonia measure or test consumption of intact chives. [Original report, Methods and Figure 7](https://link.springer.com/article/10.1186/s12951-025-03764-6)

@@ -1,0 +1,5 @@
+# Medium-chain triglycerides in a perioperative fatigue study
+
+## Fatigue measurement in a colorectal surgery conference abstract
+
+Presentation OAP17_06 in the IUNS collection, published July 23, 2026, reports a 120-person randomized comparison of medium-chain triglyceride plus carbohydrate solution with carbohydrate solution. In the colorectal surgery cohort, fatigue was a secondary visual analog scale outcome. The abstract reports lower fatigue in the combination arm without a numerical contrast or uncertainty. No botanical origin or virgin coconut oil grade was specified. The rodent experiment in the same abstract gives separate laboratory outcomes. The clinical study is indirect context for claim 0229 and leaves fatigue after virgin coconut oil in Parkinson disease unresolved. [Original Cambridge PDF, printed page 670](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/C51F3C05B11BD8180F05A3C37B4292A0/S2048679026101268a.pdf/special-collection-abstracts-from-iuns-icn-paris-2025.pdf) · [Local factual text](Source-Text/2026-IUNS-OAP17-06-MCT-Fatigue-Factual-Extract.txt)

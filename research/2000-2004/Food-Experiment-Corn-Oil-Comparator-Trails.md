@@ -1,0 +1,15 @@
+# Corn oil comparisons for salivation, fatigue and olfaction
+
+## Sjögren trial with oral corn oil and salivary flow
+
+Theander and colleagues enrolled 90 patients with primary Sjögren’s syndrome in a six-month, randomized, double-blind trial of high-dose gamma-linolenic acid from evening primrose oil or corn oil. Fatigue was the primary outcome. The report assessed fatigue with a visual analogue scale and sleep or rest time over 24 hours. It also measured mouth dryness, muscle and joint pain and unstimulated whole sialometry. The primary abstract reports no statistically clear group differences for fatigue, mouth dryness or pain, and no significant change in unstimulated whole sialometry.
+
+This comparator supplies human secretion and fatigue measures for claims 0091 and 0694. The oil grade, corn-arm change estimates and complete tables are absent from the accessible abstract. The measured endpoints concern autoimmune hyposalivation and associated fatigue. Parkinson drooling severity also depends on saliva handling and swallowing. The allocation estimates a contrast with gamma-linolenic acid. [Primary report](https://doi.org/10.1080/03009740252937577) · [PubMed](https://pubmed.ncbi.nlm.nih.gov/12109650/) · [Investigator institution abstract](https://www.lunduniversity.lu.se/publication/7bf983e8-d155-44cf-bcb1-d1a1434da82d)
+
+## Corn oil and canine odor thresholds in Altom
+
+Altom and colleagues allotted 18 English Pointers to three diets and exercise conditioning or no conditioning. A 12% fat beef-tallow base was compared with 16% fat diets supplemented with either corn or coconut oil. The methods give 4% corn oil applied to the diet after extrusion. Behavioral olfactometry measured the lowest detectable odorant concentration around repeated treadmill tests. The reported diet-by-treatment interaction used p<.10 and the text highlights a deterioration between weeks 4 and 12 in the unconditioned coconut group. Exercise conditioning also affected post-exercise olfactory performance. The article supplies a whole-diet context for 0823. The corn oil group did not provide a demonstrated worsening on the tested thresholds, and the article specifies no refining grade. [Primary paper](https://doi.org/10.1016/S0034-5288(03)00071-7) · [Accessible primary PDF, Tables 4–5](https://www.pawsoflife.org/Library/Health/Alton_2003.pdf)
+
+## Corn oil preference in mice with induced smell loss
+
+Published July 6, 2001. Takeda and colleagues compared corn-oil preference in mice with normal or experimentally blocked olfaction. Both groups showed conditioned preference for a place associated with undiluted corn oil. In a two-bottle test, normal mice preferred concentrations from 1% to 10%, while 1% and 3% were not preferred in the model group. Smell loss preceded the oil-choice test. The study measured food preference and does not test whether eating a refined oil changes the severity of smell loss. The author abstract leaves arm denominators and processing method open. [Original abstract](https://pubmed.ncbi.nlm.nih.gov/11487096/) · [Local factual text](Source-Text/2001-Takeda-Corn-Oil-Preference-and-Anosmia.txt)

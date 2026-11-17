@@ -1,0 +1,5 @@
+# Pinto bean sleep and nutmeg motor source context
+
+## Injected nutmeg extract and mouse locomotion
+
+1984, Veterinary and Human Toxicology 26 supplement 2, pages 17–20. Messiha and Zaki report moderately lower spontaneous locomotor activity in mice after repeated intraperitoneal nutmeg extract. In separate activity comparisons, pretreatment amplified ethanol-associated locomotor depression and reduced amphetamine-associated locomotor stimulation. These are locomotion observations from the author abstract. They do not establish a separate rest-tremor outcome, Parkinson model or ground-nutmeg meal. The complete original methods, figures and case boundaries remain inaccessible through the checked public routes. [Original source](https://pubmed.ncbi.nlm.nih.gov/6543064/) · [Local factual text](Source-Text/1984-Messiha-Nutmeg-Locomotor-Abstract.txt)

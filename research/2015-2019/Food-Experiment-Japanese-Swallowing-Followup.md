@@ -1,0 +1,17 @@
+# Japanese primary swallowing evidence for the food thought experiment
+
+## Rice cracker puree and porridge in the same Parkinson case
+
+Shinsuke Hori and colleagues reported a man in his 50s with a diagnosis of young-onset Parkinson’s disease. Before admission, rice porridge with chopped foods coincided with difficulty opening the mouth while eating, short chewing movements, oral residue and coughing or choking. After the hospital changed his meals to a puréed diet, the coughing or choking diminished and mouth-opening difficulty persisted. The clinicians observed good mouth opening and chewing with a senbei rice cracker in the therapy room. They did not publish repeated within-meal comparisons, a cracker-specific aspiration test, or a baked-potato observation. The food, texture and setting changed together. [September 16, 2017 presentation program, O55-1](https://www.cs-oto.com/jsdr2017/doc/program.pdf) · [Primary abstract, p. S294](https://www.jsdr.or.jp/wp-content/uploads/file/meeting/annual_meeting_no23_abstracts.pdf#page=295)
+
+The 2017 Japanese Society of Neurological Therapeutics abstract has the same lead author, age range, clinical timeline, imaging and food observations. It adds dystonia as a possible explanation for the mouth-opening difficulty. Treat the two abstracts as reports of one case. [Companion abstract, M1–6–02, PDF p. 45](https://www.jstage.jst.go.jp/article/jsnt/34/6/34_S187/_pdf#page=45)
+
+## Jelly and return to oral intake after aspiration
+
+At the same 2017 swallowing meeting, Ishikawa and colleagues described one person with stage 5 Parkinson’s, nasogastric feeding and aspiration seen on videofluoroscopy. A team used modified texture, oral care, swallowing practice and other management to maintain limited oral intake including an unnamed jelly. The authors report no signs of aspiration pneumonia by the time of reporting. The case gives no ingredient, standalone jelly comparison or repeat aspiration count. [Primary abstract, P31-7, p. S175](https://www.jsdr.or.jp/wp-content/uploads/file/meeting/annual_meeting_no23_abstracts.pdf#page=176)
+
+Watanabe and colleagues reviewed 37 Parkinson cases hospitalized for aspiration pneumonia who had previously eaten three oral meals daily and could no longer do so when speech therapy began. Seventeen regained three oral meals, and 20 did not. Swallowing-level improvement and motor FIM efficiency were correlated (Spearman r = .59). The comparison addressed recovery and recorded no ingredient-specific response. [Primary abstract, O55-2, p. S295](https://www.jsdr.or.jp/wp-content/uploads/file/meeting/annual_meeting_no23_abstracts.pdf#page=296)
+
+## Potato preparation in a separate eldercare recipe evaluation
+
+Nakahigashi’s 2017 presentation tested eight recipes adapted from commercial texture-modified foods with 21 nursing-home residents and 12 staff. The recipes included a potato oyaki patty and a separate Peruvian-style simmered tuber dish whose tuber species is unspecified in the abstract. The latter and then the patty rated highest on reported ease of eating. The report gives no separate resident and staff values, no Parkinson subgroup, and no aspiration or swallowing-severity measure. The other presentations at the meeting provide no evidence that any Parkinson participant ate these recipes. [Primary abstract, O8-3, p. S91](https://www.jsdr.or.jp/wp-content/uploads/file/meeting/annual_meeting_no23_abstracts.pdf#page=92)

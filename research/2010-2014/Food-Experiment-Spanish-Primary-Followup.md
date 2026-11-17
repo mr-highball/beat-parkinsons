@@ -1,0 +1,15 @@
+# Spanish-language dietary research follow-up
+
+## 2011 Cuban recommendations for food consistency
+
+Marcos Plasencia and Padrón Sánchez’s Medisur article proposes Parkinson nutrition care. The preparation section lists purées, blended foods, ground meats, and eggs as examples of softer preparations, and proposes cornstarch as a thickener for soups, broths, and milk. The authors provide recommendations and no measured exposure or patient outcomes. The same authors presented a related protocol in the November 2009 Havana course and published it as Annex 2 in the proceedings. It includes a nutrition-assessment and caregiver-education plan. [2011 original article, printed pp. 11–12](https://www.redalyc.org/pdf/1800/180022370001.pdf) · [2009 proceedings, Annex 2](../2005-2009/Food-Experiment-Spanish-Primary-Followup.md#2009-havana-proposal-for-parkinson-nutrition-care)
+
+## 2011 Dysphapark questionnaire and food examples
+
+Bayés-Rusiñol and colleagues reported on 470 people with Parkinson’s who completed a self-administered swallowing questionnaire. The December 1, 2011 paper groups meat and chicken in a question about chewing solid food, yogurt and flan in a question about coughing with semisolids, and bread, crackers and nuts in a question about coughing with dry foods. Its analyses evaluate the questionnaire items and swallowing domains. Participants were not given these foods, and the responses do not distinguish which food prompted a symptom. The questionnaire includes no potato preparation. The archive publisher reports CC BY-NC-ND for the earlier journal issues. [Primary report, Figures 2–3 and Table II](https://storage.imrpress.com/journal/RN/53/11/10.33588/rn.5311.2011126/pdf/81b9f2c68e89ab9d28d501a174d38aae.pdf) · [Publisher and license](https://www.imrpress.com/journal/rn/53/11/10.33588/rn.5311.2011126) · [PubMed record](https://pubmed.ncbi.nlm.nih.gov/22086428/)
+
+## 2011 Los Montalvos thickened-water swallowing pilot
+
+García Aparicio et al. report 23 clinical swallowing tests from 627 hospital admissions in Salamanca. One tested inpatient had Parkinson’s disease, seven had cerebrovascular disease and 15 had dementia. The team used neutral Resource thickener and water to make pudding-, honey- and nectar-consistency test boluses. Those labels denote viscosity. The test used water alone at the thinnest step. The thinnest tolerated consistency was pudding for 11 of 23, honey for four, nectar for three and liquid for five. The report pools these findings and does not identify the Parkinson participant’s tolerated consistency. [Primary report, methods and Table I](https://scielo.isciii.es/pdf/nh/v26n5/02_original_01.pdf#page=3) · [PubMed record, PMID 22072334](https://pubmed.ncbi.nlm.nih.gov/22072334/)
+
+Of 134 medication interventions, 55 used a small amount of food as a vehicle and 79 used water with thickener. The report lists five choking events across all interventions, with no specific vehicle or diagnosis linked to those events. The study gives no result for baked potato or actual honey. [Primary report, Tables I–II and results](https://scielo.isciii.es/pdf/nh/v26n5/02_original_01.pdf#page=4)

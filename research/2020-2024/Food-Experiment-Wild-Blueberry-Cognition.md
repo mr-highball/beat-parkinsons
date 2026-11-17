@@ -1,0 +1,5 @@
+# Wild blueberry powder and measured cognition
+
+## Mixed cognitive results in the BluFlow randomized trial
+
+Wood and colleagues first published BluFlow on March 25, 2023. The trial compared 26 g/day of freeze-dried wild blueberry powder in water with placebo for 12 weeks in healthy adults aged 65–80. The paper reports 66 randomized and 54 analyzed at week 12. The earlier registry reports 53 enrolled, and the difference remains open. Immediate word recall favored blueberry, while the Results and Figure 2 show greater delayed recall with placebo (p = .029). The Discussion says delayed recall did not differ. Task-switching accuracy favored blueberry, with p = .029 in Results and p = .026 in the figure caption. The study tests freeze-dried powder, healthy older adults and discrete cognitive tasks. [Original article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10315404/) · [Local factual text](Source-Text/2023-Wood-BluFlow-Cognition-Extract.txt) · [Dated registration](../2015-2019/Food-Experiment-Wild-Blueberry-Cognition.md)

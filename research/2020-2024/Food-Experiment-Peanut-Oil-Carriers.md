@@ -1,0 +1,9 @@
+# Peanut Oil Carriers
+
+## Peanut oil vehicle in dopamine nanoparticle treatment
+
+The October 27, 2021 original used peanut oil as the oily phase in a dopamine and soy-lecithin nanoparticle preparation in a reserpine rat model. Treatment arms received formulated dopamine, bee venom or levodopa separately. The design did not assign a peanut-oil-only symptom comparison or specify refining or cold pressing. Fatigue and pain occur in introductory clinical background. The reported experimental outcomes are laboratory measures without a peanut-oil-specific fatigue or pain result. [Local original Methods](Source-Text/PMC8551202.txt#L101) [Original source](https://pmc.ncbi.nlm.nih.gov/articles/PMC8551202/) · [Local factual text](Source-Text/2021-Ahmed-Farid-Peanut-Oil-Dopamine-Vehicle.txt)
+
+## Topical peanut comparator in the clary sage report
+
+The July 20, 2020 journal abstract describes clary sage diluted in peanut oil and peanut oil control in a 30-person dermal comparison, with a separate inhalation experiment. The abstract supplies no clinical anxiety or depression score and no oral peanut oil comparison. A related Vienna thesis dated January 2013 reports acute mood dimensions after two dermal sessions. Its Table 8 mood difference across conditions gives p=.458 and calm-versus-restless difference p=.934. Neither compares peanut oil against no oil. Body site and inhalation duration differ across the thesis, symposium and journal descriptions. Cohort overlap is plausible and unverified. The primary journal body and the first public release date of the thesis remain unresolved. [Related university thesis](https://services.phaidra.univie.ac.at/api/object/o%3A1295523/download). [Original source](https://pubmed.ncbi.nlm.nih.gov/32688401/) · [Local factual text](Source-Text/2020-Mitic-Clary-Sage-Peanut-Oil-Abstract.txt)

@@ -1,0 +1,5 @@
+# Thyme Attention Models
+
+## Isolated thymol in a juvenile glutamate model
+
+Abu-Elfotuh and colleagues first published in October 2022. Forty male rat pups were allocated to five groups including a monosodium glutamate model, oral isolated thymol, isolated thymoquinone and a combination. The author abstract reports improvements on attention-related and other behaviors. It omits task-specific numerical responses and verified group denominators. A [2023 correction](https://pubmed.ncbi.nlm.nih.gov/37088669/) identifies the same paper but its changed content was not available from the retrieved records. The original body and correction detail remain open. This preparation and animal model do not provide a direct fresh-thyme comparison in Parkinson disease. [Original source](https://pubmed.ncbi.nlm.nih.gov/36271575/) · [Local factual text](Source-Text/2022-Abu-Elfotuh-Thymol-Glutamate-Abstract-Extract.txt)

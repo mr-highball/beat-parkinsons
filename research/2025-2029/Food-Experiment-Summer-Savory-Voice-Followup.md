@@ -1,0 +1,9 @@
+# Summer savory voice follow-up, 2025–2029
+
+## Transylvanian descriptions of summer savory and sore throat
+
+Papp and colleagues’ ethnobotanical survey, published online June 11, 2026, documents interviews across 20 Transylvanian settlements from 2007 to 2025. The source table lists *Satureja hortensis* aerial parts in infusions and syrup for respiratory indications including sore throat. This is a report of traditional preparations and indications, not a trial, an established fresh-leaf meal, or a quantitative observation of vocal loudness or listener intelligibility in Parkinson disease. The full article's indexed table and Methods were accessible in search output; direct DOI resolution returned HTTP 500 in this pass, and its supplementary document was not recovered. [Primary indexed report](https://pubmed.ncbi.nlm.nih.gov/42276175/) · [Publisher DOI](https://doi.org/10.1016/j.ejps.2026.107581) · [Local factual extract](Source-Text/2026-Papp-Savory-Respiratory-Survey.txt)
+
+## Preparation definitions in the respiratory survey supplement
+
+The original supplement recovered on November 15, 2026 contains a general preparation glossary. It allows fresh or dried material in infusions and describes syrup as heating herbal material with sugar and water. The species-level aerial-part and preparation list belongs to the main article, published June 11, 2026. The glossary supplies no plant-specific freshness, measured outcome or interview-level pairing. This supplement belongs to the existing Papp survey. The earlier 2011 sore-throat interview report is already cataloged and possible participant overlap remains unresolved. [Papp et al. official supplementary glossary](https://ars.els-cdn.com/content/image/1-s2.0-S0928098726001557-mmc1.docx) · [Local factual text](Source-Text/2026-Papp-Respiratory-Preparation-Supplement-Extract.txt)

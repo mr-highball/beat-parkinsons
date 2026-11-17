@@ -1,0 +1,3 @@
+# Allspice and two unresolved Parkinson outcomes
+
+The native replay returned 32 appearances and 32 distinct source keys across its captured expressions. The hallucination lead concerns Boophane poisoning with other compounds and supplies no Pimenta dioica effect. The allspice-containing meal publications describe one mixed-spice cohort registered as NCT03926442 and measured metabolic outcomes. Neither visual hallucination frequency nor small handwriting after ground allspice has a matched estimate. [Per-source screen](source-key-screen.tsv) · [Earlier allspice outcome review](../allspice-gap-replay/README.md)

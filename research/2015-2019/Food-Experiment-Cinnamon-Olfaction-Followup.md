@@ -1,0 +1,9 @@
+# Cinnamon and olfactory testing, 2015–2019
+
+## Cinnamon odor recognition in Shanghai
+
+Huang and colleagues first released the item-level data on July 20, 2016 and published the article on August 2. The primary workbook confirms correct cinnamon identification in 17 of 54 people with Parkinson’s, 16 of 54 with idiopathic REM sleep behavior disorder, and 25 of 54 healthy controls. The paper’s overall three-group p value was .154. Cinnamon was excluded from the five-odor version tested in the separate validation sample. The released data contain odor responses and clinical characteristics. They give no cinnamon intake or change in olfactory impairment after consumption for claim `0979`. [Primary report and local Table 1](Source-Text/PMC4970766.txt#L165) · [Primary journal article](https://doi.org/10.1371/journal.pone.0160199) · [Public workbook, first test](https://doi.org/10.6084/m9.figshare.3493145)
+
+## Self-reported cinnamon use and odor recognition outside Parkinson’s
+
+Knaapila and colleagues first published on November 21, 2016. Their cross-sectional study tested 126 adult volunteers and recorded use of specific spices in a separate questionnaire. In Table 1, correct identification of dried cinnamon odor was 98.0% among 102 self-reported users and 93.3% among 15 nonusers. The difference was nonsignificant. This paper describes the protocol later adapted by Baert for Parkinson’s smell testing. The use comparison did not quantify a ground cinnamon dose, measure a change in olfaction, or include a Parkinson cohort. [Primary article, PMID 27884762](https://pubmed.ncbi.nlm.nih.gov/27884762/) · [Institutional manuscript, Table 1](https://helda.helsinki.fi/server/api/core/bitstreams/4549f2bf-0663-4e7a-b8cf-f88b3010040b/content) · [Later Parkinson’s study](../2020-2024/Food-Experiment-Cinnamon-Olfaction-Followup.md#dried-cinnamon-and-a-synthetic-cinnamon-odor-in-the-same-study)

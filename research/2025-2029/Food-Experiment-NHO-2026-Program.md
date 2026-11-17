@@ -1,0 +1,23 @@
+# Nutrition and feeding leads in the 2026 NHO program
+
+The 80th Japanese Society of National Medical Services met in Yokohama on November 6–7, 2026. The organizer posted the abstract PDF on October 16 and announced MICEnavi on November 2. Both abstract routes require the attendee password. The public program and MICEnavi session listings identify presentation codes, titles and presenting authors. Two pages with empty text extraction were blank when rendered. [Official meeting notice](https://www.congre.co.jp/80nms/) · [Public program](https://www.congre.co.jp/80nms/program.html) · [Organizer's MICEnavi access notice](https://www.congre.co.jp/80nms/awa.html)
+
+## Meal effects on levodopa pharmacokinetics
+
+Masayuki Kohsaka of NHO Utano Hospital presented P1-48-5 on meals, levodopa pharmacokinetics and clinical response in Parkinson’s. The public listings provide no meals or ingredients, administration route, cohort, comparator, symptom measure or result. Kohsaka’s accessible 2023 report at the same hospital studied afternoon motor worsening and levodopa metabolites during intestinal gel infusion. It did not describe a measured meal exposure. The later abstract body is needed to establish whether the studies share participants. [2026 program P1-48-5](https://www.congre.co.jp/80nms/files/programday1.pdf#page=76) · [MICEnavi presentation 789](https://www.micenavi.jp/nms2026/search/detail_program/id:789) · [2023 primary abstract P1-107-4](https://nho.hosp.go.jp/files/000204087.pdf#page=430)
+
+## Oral frailty and motor function
+
+Shinta Ueno of the NHO Kumamoto Saishun Medical Center Nutrition Management Division presented O1-13-5 on oral frailty and motor function in Parkinson’s. A 2025 ethics record by the same researcher and hospital describes a nutrition project using a Food Intake Diversity Score and oral frailty checklist. The February 2026 GLIM report from the same team did not publish dietary diversity or oral frailty items. The November title does not establish whether those items were measured, whether the sample overlaps, or which motor outcomes were recorded. [2026 program O1-13-5](https://www.congre.co.jp/80nms/files/programday1.pdf#page=25) · [MICEnavi presentation 222](https://www.micenavi.jp/nms2026/search/detail_program/id:222) · [Public oral session](https://www.micenavi.jp/nms2026/search/detail_session/id:11480) · [Earlier protocol and results](Food-Experiment-NHO-Later.md#2025-diet-diversity-protocol-and-2026-glim-results)
+
+## Oral medication timing and meal intake
+
+Futaba Inui of NHO Shigaraki Hospital presented P1-71-2. The title reports improved meal intake after adjusting oral medication timing to coincide with symptom onset in a Parkinson patient. The public record gives no drug name, foods, symptom scale, intake measurements or clinical comparison. The next poster concerns a separate postgastrectomy case. [2026 program P1-71-2](https://www.congre.co.jp/80nms/files/programday1.pdf#page=93) · [MICEnavi presentation 993](https://www.micenavi.jp/nms2026/search/detail_program/id:993)
+
+## Lipids and BMI comparison
+
+Yuko Aizu of NHO Sendai Nishitaga Hospital presented O1-13-6 on lipids and BMI compared with a control group. Aizu’s 2025 report at the same hospital compared 113 people with Parkinson’s and 100 orthopedic inpatients with no neurological disease. In both sexes the Parkinson group had lower BMI and triglycerides (P < .01). The 2025 abstract discusses decreased food intake and dyskinesia as possible contributors, without measuring individual foods or testing those explanations. The 2026 title has no methods or result data to establish participant overlap or changes in the analysis. [2026 program O1-13-6](https://www.congre.co.jp/80nms/files/programday1.pdf#page=26) · [MICEnavi presentation 223](https://www.micenavi.jp/nms2026/search/detail_program/id:223) · [2025 primary abstract O1-13-1](https://nho.hosp.go.jp/files/000252185.pdf#page=274)
+
+## Related swallowing titles
+
+Ayumu Tsuchida of NHO Asahikawa Medical Center presented P1-76-10 on recovery of oral feeding in one patient using complete lateral positioning. The title does not identify the diagnosis or food. The previous poster explicitly concerns bulbar-onset ALS. Shunsuke Tsukinari of NHO Okinawa Hospital presented P2-129-6 on laryngeal position and swallow screening in neuromuscular disease, without a diagnosis breakdown or bolus details in the public title. The Parkinson case on that program page concerns voice-volume regulation and belongs to a separate presentation. [Day 1 program P1-76-10](https://www.congre.co.jp/80nms/files/programday1.pdf#page=97) · [Day 2 program P2-129-6](https://www.congre.co.jp/80nms/files/programday2.pdf#page=67)

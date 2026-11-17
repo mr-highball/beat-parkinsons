@@ -1,0 +1,9 @@
+# Tarragon odor follow-up
+
+## Tarragon and garlic odor with transient olfactory bulb changes
+
+Néant-Fery and colleagues exposed mice to a suspended tea ball containing commercial garlic and tarragon or an empty tea ball. Olfactory-bulb synaptosomal CaMKIIα mRNA localization increased 3.4-fold after 30 minutes, with no increase at 15 minutes and baseline levels at 60 minutes. The 30-minute synaptosomal protein increase was 1.5-fold (n = 4, p < .05). The paper separately tested detection and discrimination by habituation using pentanol and carvone and associative learning using limonene versus mineral oil. Both genetic groups detected and discriminated those stimuli. The conditioning comparison favored wild-type over CaMKIIα 3′UTR-mutant mice. Neither behavioral test estimated the effect of smelling the spice blend. The enrichment result concerns an acute molecular response to mixed odors. [29 June 2012 primary article, Figures 3 and 5](https://pmc.ncbi.nlm.nih.gov/articles/PMC3387027/) · [Verified local article text](Source-Text/PMC3387027.txt)
+
+## Tarragon in a human odor recognition test
+
+Royet and colleagues used tarragon as one of 50 previously presented target odors in a 100-item fMRI recognition test among healthy young and older adults. Participants first reported detecting odors, then judged whether each odor was familiar from the earlier session. Target and distractor sets were diluted in mineral oil and results were pooled into hits, misses, correct rejections and false alarms. The article’s Table 1 verifies the tarragon stimulus. No tarragon-specific detection or recognition estimate, treatment comparison or dietary intervention was reported. [21 July 2011 primary paper, Table 1](https://doi.org/10.3389/fnhum.2011.00065) · [Local factual extract](Source-Text/PMID21811450-recognition-extract.txt)

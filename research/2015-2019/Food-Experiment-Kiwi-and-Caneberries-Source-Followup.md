@@ -1,0 +1,13 @@
+# Food experiment source follow-up
+
+## BerryCare registration and physical function
+
+ClinicalTrials.gov first posted NCT03477305 on March 26, 2018. The University of Kentucky single-group project enrolled 38 adults across five listed Kentucky sites. The intervention involved fresh homegrown blackberries, recipe demonstrations and community gardening education. Physical function was a secondary outcome assessed at baseline and at six, 12 and 18 months. The registry displays completed status, no results and no plan to share individual data. The later paper reports data from one senior center and measured eight-foot gait speed. [Official registry](https://clinicaltrials.gov/study/NCT03477305) · [Local registry text](Source-Text/Trials/NCT03477305.txt) · [Senior-center paper](../2020-2024/Food-Experiment-Kiwi-and-Caneberries-Source-Followup.md#berrycare-gait-speed-and-fresh-blackberries)
+
+## Raspberry and blackberry in angiotensin II-treated mice
+
+Feresin and colleagues published a June 13, 2019 conference abstract on two separate 10% freeze-dried berry diets in angiotensin II-treated mice. Mean systolic pressure was 185 ± 4 mmHg in the untreated angiotensin II arm, 143 ± 7 after blackberry and 137 ± 4 after raspberry (both p < .0001 versus angiotensin II alone). The separate rat abstracts published in 2022 and 2024 used a different species and funding. The 2019 experiment did not measure orthostatic symptoms. [2019 primary abstract](https://pmc.ncbi.nlm.nih.gov/articles/PMC6576202/) · [Later rat reports](../2020-2024/Food-Experiment-Kiwi-and-Caneberries-Source-Followup.md#raspberry-and-blackberry-in-angiotensin-ii-treated-rats)
+
+## Freeze-dried red raspberry and cognition in high-fat-fed mice
+
+Carey and colleagues first published July 20, 2019. Their experiment fed eight-week-old mice a high-fat or control diet with or without 4% freeze-dried red raspberry. At 12 weeks, mice fed the unsupplemented high-fat or control diet had impaired novel object recognition, while both raspberry-supplemented arms did not. At approximately 20 weeks, high-fat-fed mice supplemented with raspberry took less time to find the Barnes maze escape hole than unsupplemented high-fat-fed mice. The related 2022 APP/PS-1 experiment used a different mouse model and showed no clear memory improvement. These behavioral results provide two different contexts for the executive dysfunction premise in claim 0949. A redistributable full text or underlying dataset was not located for the Carey study. [Carey primary abstract](https://pubmed.ncbi.nlm.nih.gov/31328696/) · [2022 APP/PS-1 experiment](../2020-2024/Food-Experiment-Kiwi-and-Caneberries.md#red-and-yellow-raspberry-in-a-mouse-dementia-model)

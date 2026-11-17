@@ -1,0 +1,9 @@
+# Almond oil in a memory-care sleep comparison
+
+## Almond oil comparison in a memory-care crossover
+
+Hanson and colleagues enrolled 22 memory-care residents in a randomized crossover with a week of topical and diffuser exposure to almond oil and a week of lavender oil. Their July 2013 primary abstract reports 408 ± 86 minutes of actigraphic sleep per night during almond oil and 41 minutes more during lavender exposure (p=.01). The reported confidence interval bounds appear in reversed order. The conference abstract provides no dream enactment, REM staging, hallucination result or oral exposure. The investigator’s poster is the same trial family. [Primary meeting abstract P3–272](https://doi.org/10.1016/j.jalz.2013.05.1346) · [Investigator repository poster record](https://www.healthpartners.com/knowledgeexchange/display/document-rn17719)
+
+## Recovered memory-care poster regression table
+
+The investigator poster reports 22 enrolled and 21 completing the crossover, with 11 complete datasets. Its regression table labels modeled almond and lavender sleep estimates as 371.37 and 413.83 minutes, a difference of 42.46 minutes (SE 15.69, p=.0084). Its adjusted percentage of time asleep increased by 6.31 points with lavender (SE 2.10, p=.004). Total Neuropsychiatric Inventory (NPI) scores were 7.97 during almond exposure and 8.68 during lavender exposure, a difference of +0.71 (SE .23, p=.0022). The 408-minute value in the conference abstract is reported separately from the modeled estimates. The poster gives no hallucination-specific counts, REM staging or dream enactment. Almond oil was used topically and in a diffuser. Both reports describe one study. [Original poster deposited by a coauthor](https://www.academia.edu/95545646/P3_272_Lavender_essential_oil_improves_sleep_in_residents_of_a_memory_care_assisted_living_facility)

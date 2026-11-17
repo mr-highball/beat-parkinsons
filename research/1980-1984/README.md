@@ -1,0 +1,45 @@
+# 1980-1984
+
+January 1, 1980 through December 31, 1984.
+
+## Annotated research
+
+- [Injected lemongrass oil and barbiturate sleep in rats](Food-Experiment-Lemongrass-Barbiturate-Sleep.md)
+
+- [Recovered original symptom reports](Food-Experiment-Legacy-Symptom-Measures.md)
+- [Boiled curry leaves and traditional hoarseness use](Food-Experiment-Curry-Leaf-Voice-History.md)
+- [Paprika preparation and motor outcomes](Food-Experiment-Paprika-Gap-Replay.md)
+
+- [Caraway outcome follow-up](Food-Experiment-Caraway-Replay.md)
+
+- [Peanut oil and symptom outcomes](Food-Experiment-Peanut-Oil-Endpoints.md)
+- [Safflower oil and symptom outcomes](Food-Experiment-Safflower-Oil-Endpoints.md)
+- [Squash, zucchini, button mushroom and eggplant evidence](Food-Experiment-Squash-Mushroom-Eggplant.md)
+- [Lentil and kidney bean evidence](Food-Experiment-Lentil-Kidney-Bean.md)
+- [Clinical and diagnosis](Clinical-and-Diagnosis.md)
+- [Mechanisms and models](Mechanisms-and-Models.md)
+- [Drugs and remedies](Drugs-and-Remedies.md)
+- [Food and nutrition](Food-and-Nutrition.md)
+- [Bay leaf foreign bodies and acute drooling](Food-Experiment-Bay-Leaf.md)
+- [Movement and rehabilitation](Movement-and-Rehabilitation.md)
+- [Risk and prevention](Risk-and-Prevention.md)
+- [Nonmotor and daily life](Nonmotor-and-Daily-Life.md)
+- [History and context](History-and-Context.md)
+
+[Observations and comparison with the previous period](Observations/README.md)
+- [Peanut oil PubMed replay evidence](Food-Experiment-Peanut-Oil-PubMed.md)
+
+## Local source text
+
+- [Sources cited in the notes](Source-Text/Annotated-Sources.tsv)
+- [Text availability for indexed literature](Source-Text/Literature-Catalog.tsv)
+- [Local text for registered studies](Source-Text/Registered-Studies.tsv)
+
+## Search indexes
+
+- [Literature index](Literature-Index.tsv)
+- [Study registry](Study-Registry.tsv)
+
+[All periods and collection method](../README.md)
+
+- [Recovered Parkinson Clinical Context](Food-Experiment-Recovered-Parkinson-Clinical-Context.md)

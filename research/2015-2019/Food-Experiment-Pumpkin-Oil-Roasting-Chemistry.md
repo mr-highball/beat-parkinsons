@@ -1,0 +1,5 @@
+# Phenolic compounds measured in oil from roasted pumpkin seeds
+
+## Phenolic compounds measured after roasting and pressing
+
+Van Hoed and colleagues, European Journal of Lipid Science and Technology, 2017. DOI 10.1002/ejlt.201700110. Original Tables 1 and 5 identify controlled seed roast conditions before pressing. At the 130 °C condition the oil contained p-coumaric and ferulic acids at 0.5 and 1.8 micrograms per gram, respectively. At 150 °C they were 0.6 and 0.9 micrograms per gram. The authors describe substantial variability and possible incomplete transfer of hydrophilic compounds. Their turbid cold-pressed oil was filtered before the assay, so HPLC non-detection there does not establish absence. These are composition measurements without gait testing. They are evidence of limited transfer of some constituents from seeds to oil, without equivalence between food and experimental extract doses. [Primary source](https://orbi.uliege.be/bitstream/2268/213890/1/Hoed_et_al-2017-European_Journal_of_Lipid_Science_and_Technology.pdf)

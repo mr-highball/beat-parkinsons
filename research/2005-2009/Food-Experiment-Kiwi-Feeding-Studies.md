@@ -1,0 +1,5 @@
+# Kiwi feeding studies
+
+## Gold kiwi extract and muscle fatigue in isolated tissue
+
+The 2007 New Zealand proceedings report an isolated mouse soleus preparation in an organ bath. Pretreatment with gold kiwifruit extract preceded electrical stimulation, and the investigators report greater peak force and delayed fatigue in the isolated muscle. A separate feeding experiment used kiwi puree and measured immune response in immunized mice. This report supplies preclinical muscle and immune outcomes. Cognitive attention, oral fresh fruit in people and Parkinson disease were outside its experimental scope. [Original source](https://assets.nutritionsociety.ac.nz/Downloads/ProceedingsNSNZ_2007Vol32.pdf) · [Local factual text](Source-Text/2007-Skinner-Gold-Kiwi-Muscle-Context.txt)

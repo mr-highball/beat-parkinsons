@@ -1,0 +1,5 @@
+# Spearmint extract and measured L-DOPA
+
+## Spearmint extract and L-DOPA in a cell assay
+
+The January 2022 original used voucher-documented Mentha spicata subsp. spicata (GA-20-001). The investigators used dried aerial portions and an acetone and water extract. Figure 6 measured L-DOPA in oxidatively challenged rat-cell culture supernatant and reported no clear effect on that measure. The assay does not measure levodopa content in fresh leaves, Parkinson medication response or daily OFF time. [Original source](https://pmc.ncbi.nlm.nih.gov/articles/PMC8779166/) · [Local factual text](Source-Text/2022-Spearmint-Cell-LDOPA-Extract.txt)

@@ -1,0 +1,9 @@
+# Olive Oil Attention
+
+## Olive oil control in a two-year older adult cognitive trial
+
+Dangour and colleagues first published April 21, 2010. The OPAL trial randomized 867 older people without cognitive impairment to long-chain omega-3 supplements or olive oil. Seven hundred forty-eight completed the two-year assessment. Table 5 shows mean letter-cancellation accuracy changing from 78.9% to 79.2% in the olive-oil arm. Simple reaction time changed from 0.31 to 0.29 seconds and choice reaction time from 0.72 to 0.68 seconds. The adjusted secondary cognitive comparisons between arms did not reach statistical significance. Without an oil-free arm or stated olive-oil grade, the measured changes do not identify a refined-olive-oil effect. [Original manuscript PDF](https://citeseerx.ist.psu.edu/document?doi=94cdff8760486493825e867d6040f3e6c22013a3&repid=rep1&type=pdf) [Original source](https://pubmed.ncbi.nlm.nih.gov/20410089/) · [Local factual text](Source-Text/2010-Dangour-OPAL-Olive-Control-Attention-Factual-Extract.txt)
+
+## Olive oil control and complex reaction time in soccer players
+
+Guzman and colleagues published June 1, 2011. Twenty-four female soccer players received 3.5 g daily of DHA-rich fish oil or olive oil over four weeks, 12 in each arm. Table 1 gives complex reaction time in the olive-oil comparator as 0.682 (SD 1.132) before and 0.715 (SD 0.159) after. It reports a group-by-time interaction p=.004. The abstract labels the approximate 0.7 values as milliseconds. Both the unusual unit and baseline spread appear in the original and require clarification. Oil processing grade, an oil-free comparison and a clinical Parkinson attention outcome were unavailable. [Original source](https://www.jssm.org/volume10/iss2/cap/jssm-10-301.pdf) · [Local factual text](Source-Text/2011-Guzman-Olive-Control-Complex-Reaction-Factual-Extract.txt)

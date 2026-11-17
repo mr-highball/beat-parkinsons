@@ -1,0 +1,5 @@
+# Peanut oil in a stimulated muscle fatigue experiment
+
+## Oral peanut oil vehicle and fatigue of stimulated muscle responses
+
+Durham and Ecobichon followed domestic hens after a single oral peanut oil vehicle or toxicant exposure. The publisher-deposited abstract supplies results beyond the truncated PubMed abstract. During the two-hour nerve stimulation experiment, posttetanic potentiation was stable or slightly higher in the oil vehicle group and declined gradually and variably after the toxicant. The decline did not track ataxia severity, and the average reduction at separate post-exposure assessments was not statistically distinguishable from vehicle. The experiment compared toxicant exposure with its vehicle. It gives no independent oil estimate, processing grade or patient-experienced fatigue endpoint. The full report remains an access gap. [Local factual extract](Source-Text/1984-Durham-Peanut-Oil-Potentiation-Abstract-Extract.txt) · [Publisher-deposited full abstract](https://api.crossref.org/works/10.1139/y84-212) · [PubMed record and October 1984 issue](https://pubmed.ncbi.nlm.nih.gov/6509374/)

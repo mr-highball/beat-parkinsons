@@ -1,0 +1,19 @@
+# Tree nut oil comparisons and behavioral outcomes
+
+## Walnut oil and learned fear extinction
+
+Miller and colleagues compared chocolate milkshakes containing walnut oil, equicaloric cream or no added fat in healthy young adults. The 2018 article abstract reports similar acquisition and generalization across groups and faster extinction of a learned fear-based prediction after walnut oil. Extinction performance is a laboratory learning outcome. A later systematic review extracting this article reports a nonsignificant comparison of total Profile of Mood States disturbance for walnut oil versus no added fat, with no separate verified anxiety or depression subscale estimates in the public abstract. The 2015 conference program reports the protocol using 30 mL walnut oil and 85 mL cream. These are treated as one study family pending access to the 2018 methods and mood tables. The processing of the administered walnut oil is unverified. [Primary journal abstract](https://pubmed.ncbi.nlm.nih.gov/29634989/) · [Author institution record](https://lirias.kuleuven.be/1648891) · [2015 conference program](https://arph.nl/wp-content/uploads/2020/12/arph-conference-2015.pdf) · [Secondary extraction of total mood](https://pmc.ncbi.nlm.nih.gov/articles/PMC8211141/)
+
+## Solvent extracted walnut oil and evoked pain in mice
+
+Raafat (2018) separated the hexane Soxhlet kernel oil from a distinct ethyl acetate extract and from isolated linoleic acid. Oral gavage of walnut oil increased the paw-pressure threshold in carrageenan-treated mice by 34.3% to 60.0% across tested levels versus vehicle. The paper reports effects on additional thermal and mechanical nociception measures in diabetic mice. These are evoked animal outcomes. The oil was solvent-extracted, and the experiments did not test clinical pain or cold-pressed oil. [Primary report, Figures 2 and 10–12](https://www.scielo.br/j/rbfar/a/bYXnPfQ8WyjTWdsskvGqQ5d/?lang=en)
+
+## Walnut oil and spatial memory in developing rats
+
+Zhang and colleagues published the rat study in November 2018. They gave prepubertal rats walnut oil or carboxymethyl cellulose vehicle for 30 days. Figure 1 reports shorter escape latencies at higher tested levels and no clear baseline swim-speed difference. This is hippocampal spatial learning in developing rats. The experiment did not measure a clinical executive-function outcome. [Local primary text, Figure 1](Source-Text/PMC6341134.txt#L160) · [Primary article](https://pmc.ncbi.nlm.nih.gov/articles/PMC6341134/)
+
+## RRIPP-3 macadamia oil comparator protocol
+
+NCT02908932 first posted on September 21, 2016. The trial compared concentrated krill oil with matched macadamia nut oil capsules during Infantry Basic Officer Leader Course training. The 2019 protocol verifies the actual control capsule composition and prespecified cognition, anxiety, fatigue, and sleep-related endpoints. Both trial arms received oil and no group received an inert or no-oil comparator. The 2021 results are a later report from this trial. [Official registration](https://clinicaltrials.gov/study/NCT02908932) · [Protocol](https://pmc.ncbi.nlm.nih.gov/articles/PMC6503132/) · [Dated results](../2020-2024/Food-Experiment-Tree-Nut-Oils.md#macadamia-oil-as-the-rripp-3-active-comparator)
+
+A primary whole-walnut crossover showed inconclusive anxiety scores. An analytical comparison directly measured alpha-linolenic acid in cold-pressed walnut oil. Exposure plausibility can be compared with the oil trial, whose primary anxiety subscale and original pressing method remain unavailable. [Whole walnut scores](Food-Experiment-Walnut-Bread-Tension-Comparisons.md) · [Cold-press composition](Food-Experiment-Walnut-Oil-Extraction-ALA.md)

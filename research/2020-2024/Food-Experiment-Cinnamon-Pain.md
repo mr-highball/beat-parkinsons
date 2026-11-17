@@ -1,0 +1,11 @@
+# Oral cinnamon and pain in headache and multiple sclerosis
+
+The migraine registry specifies pain severity as a primary outcome and was posted after actual recruitment and completion. Its enrollment field is 44, while the paper reports 50 randomized and 43 completers. The prospectively registered multiple-sclerosis trial lists pain as a secondary outcome measured by the Pain Quality Assessment Scale. The publication reports VAS pain. [Migraine registry IRCT20121216011763N36](https://irct.ir/trial/35715) · [Multiple-sclerosis registry IRCT2016072529041N1](https://irct.ir/trial/23434)
+
+## Cinnamon bark powder and migraine pain severity
+
+Zareie and colleagues reported 50 randomized adults with migraine in July 2020, with 43 completers. The assigned preparation was *Cinnamomum zeylanicum* bark powder in capsules, compared with starch for 60 days. Table 3 reports mean VAS severity 7.61 to 3.33 in the 21 cinnamon completers and 7.54 to 6.77 in the 22 placebo completers, with p < .001 for the adjusted comparison. These were migraine symptoms in a population without the Parkinson-specific pain outcome. The study identifiers and participant counts connect the later disability article to the same cohort. The earlier 2019 conference report appears to describe that cohort, although it gives a different placebo starch amount. [Original Table 3](https://magistralbr.caldic.com/storage/product-files/1379707584.pdf) · [Earlier conference abstract](https://doi.org/10.1016/j.jns.2019.10.1768) · [Later report](https://pmc.ncbi.nlm.nih.gov/articles/PMC11210698/) · [Local 2024 article](Source-Text/PMC11210698.txt)
+
+## Cinnamon bark and multiple sclerosis pain severity
+
+Delaviz and colleagues reported 60 randomized adults with progressive-relapsing multiple sclerosis in January 2021. Forty-one were analyzed at eight weeks. The Methods describe macerating *C. zeylanicum* bark and the Discussion describes powder. The processing is unresolved. The rendered Table 4 gives mean pain 54.28 to 24.76 in the cinnamon group and 41.50 to 43.25 in the wheat-flour placebo group. The reported between-group p value is .003. The attrition, baseline pain imbalance, and unclear adjustment limit interpretation. [Original Table 4](https://brieflands.com/articles/jjnpp-14505.pdf)

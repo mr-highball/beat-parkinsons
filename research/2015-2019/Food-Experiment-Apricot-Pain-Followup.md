@@ -1,0 +1,6 @@
+# Apricot and pain follow-up, 2015–2019
+
+## Optional raw apricot and pain item in a mixed Parkinson diet trial
+
+The 2018 Phillips randomized Parkinson pilot compared eight weeks of low-fat and ketogenic diets. Both published plans allow a weekend serving of two apricots, sliced as needed and served with cream, as one of eight fruit options; another low-fat recipe uses canned apricots. The trial used meal-completion checklists rather than participant-level ingredient diaries, so no individual raw apricot consumption was verified. The ketogenic diet had a 0.64-point greater reduction in the broad MDS-UPDRS Part I pain-and-other-sensations item than the low-fat diet. This is a between-arm difference in change, not an isolated pain severity comparison or apricot effect; the paper reports no item-level confidence interval or p value. Multiple diet components differed. [Primary report](https://pmc.ncbi.nlm.nih.gov/articles/PMC6175383/) · [Low-fat menu p.93](https://pmc-oa-opendata.s3.amazonaws.com/PMC6175383.1/MDS-33-1306-s002.pdf#page=93) · [Ketogenic menu p.100](https://pmc-oa-opendata.s3.amazonaws.com/PMC6175383.1/MDS-33-1306-s003.pdf#page=100) · [Factual extract](Source-Text/2018-Phillips-Apricot-Pain-Menu.txt)
+

@@ -1,0 +1,5 @@
+# Ranked originals and thyme evidence audit
+
+Sixty exact claim–source pairs across 20 disjoint source groups reached original body depth. The papers describe a clinical hallucination and sialorrhea timeline, an auditory gait-feedback intervention and exploratory pain and apathy measures, and symptom correlations from a Turkish Parkinson cohort. The screened records also include publication dates, figure references and journal names that matched food terms. [Original reviews](dispositions.tsv) · [Original access](ranked-source-access.tsv) · [Native verification](verification.txt)
+
+Seven study assessments add context from thyme, Nigella, anise and berry reports. The dried-thyme comparison for claim 0362 was checked against the two original anxiety tables and its official registration. The favorable descriptive counts remain visible with incompatible dispersion, overlapping categories and different enrollment and masking labels. Its confidence moved from 52 to 51 within Maybe True. [Study assessments](assessment-batch.tsv) · [Thyme assessment revision](assessment-revisions.tsv) · [Rationale updates](verdict-updates.tsv) · [Dated texts](source-accessions.tsv)

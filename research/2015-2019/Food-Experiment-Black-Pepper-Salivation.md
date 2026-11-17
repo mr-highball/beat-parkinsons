@@ -1,0 +1,5 @@
+# Black Pepper Salivation
+
+## Black pepper oil odor and salivary flow in healthy students
+
+Noh, Im and Kim randomized 60 college students, 20 per arm, to black pepper oil odor, lavender oil odor or distilled water. The investigators collected whole saliva before and after stimulation at 14 visits over four weeks. The abstract reports a larger immediate gain after black pepper oil (p<.05), an increase after lavender and no significant change with distilled water. It describes increases during the early interval, a nonsignificant comparison of the two odors in the middle and a sustained increase starting at visit 12. Absolute flow values, precise contrasts and detailed procedures are unavailable from the abstract and first-page preview. The study measured secretion after odor exposure in a healthy sample. It provides no clinical drooling outcome, Parkinson subgroup or ingested cracked pepper test. [Original source](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002266695) · [Local factual text](Source-Text/2017-Noh-Im-Kim-Black-Pepper-Salivary-Flow-Factual-Extract.txt)

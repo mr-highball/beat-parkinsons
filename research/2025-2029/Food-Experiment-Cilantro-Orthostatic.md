@@ -1,0 +1,5 @@
+# Cilantro, blood pressure and orthostatic symptoms
+
+## 2026 — Coriander in the nested postprandial meal challenge
+
+The NCT03063320 meal challenge shares participants with the four-week NCT03064932 diet study. Its 43 cardiometabolic-risk participants consumed chicken tikka masala and yogurt after each diet period. Table 1 lists coriander at 0.116, 0.698 and 1.397 g per meal among nine seasonings. The primary analysis used brachial flow-mediated dilation before and 120 and 240 minutes after the meal. The report gives fasting brachial pressure as a baseline characteristic, without a serial post-meal pressure outcome, standing protocol or lightheadedness measure. The three meals all contained coriander. The postprandial flow-mediated-dilation interaction did not reach statistical significance. The report provides no cilantro leaf-specific estimate. [Local licensed primary report, Methods and Tables 1–2](Source-Text/PMC13475433.txt) · [Official registry](https://clinicaltrials.gov/study/NCT03063320) · [Local parent and acute meal comparisons](../2020-2024/Food-Experiment-Cilantro-Orthostatic.md)

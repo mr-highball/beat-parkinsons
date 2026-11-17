@@ -1,0 +1,9 @@
+# Sesame oil and measured pain
+
+## 2017 topical acute limb trauma
+
+Wei et al.’s sesame review, cited by the 2023 honey review as ref 50, traces human trauma-pain and chemotherapy phlebitis trials in its therapeutic-use section. The acute-trauma original (PMID 28619303) randomized 40 patients to topical sesame-oil or placebo massage and reports lower pain scores in the sesame group. The preparation grade is unresolved at the primary-abstract level. The 2019 colorectal chemotherapy phlebitis trial (PMID 31003690) is another topical exposure in a distinct condition. These studies clarify why 0144 is a related citation route. The topical rat burn study measured wounds and histology. [Sesame review](https://www.mdpi.com/2072-6643/14/19/4079) · [Trauma trial](https://pubmed.ncbi.nlm.nih.gov/28619303/) · [Phlebitis trial](https://pubmed.ncbi.nlm.nih.gov/31003690/). [Local factual text](Source-Text/2017-Sesame-Trauma-Pain-Extract.txt)
+
+## Original cinnamon and sesame dyspepsia registration
+
+IRCT first lists this registration on December 29, 2017. Its timing field labels it registered while recruiting and the expected first enrollment is December 22, 2017. The actual start field is blank. The later report dates conduct to April 2018–May 2019. The registry plans 68 adults with functional dyspepsia, cinnamon-oil or sesame-oil capsules three times daily for six weeks, and bloating rated on the gastrointestinal symptom scale at baseline and weeks 2, 4 and 8. The secondary outcomes field is empty. The journal report describes the symptom total as primary and lists individual symptoms as secondary. The observed trial enrollment date remains unverified. [Later results](../2020-2024/Food-Experiment-Sesame-Oil-Pain-Origins.md#cinnamon-macerate-and-sesame-oil-for-dyspepsia) [Original IRCT20170802035460N2 trial registration](https://en.irct.ir/trial/27767) · [Local factual text](Source-Text/2017-IRCT20170802035460N2-Cinnamon-Sesame-Dyspepsia.txt)

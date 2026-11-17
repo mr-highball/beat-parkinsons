@@ -1,0 +1,9 @@
+# Lemongrass preparation and symptom evidence
+
+## Leaf infusion and recorded void frequency in healthy adults
+
+One hundred five normotensive adults, 55 men and 50 women, received 2, 4 or 8 g of powdered Cymbopogon citratus leaves in approximately 150 mL hot water once daily. The paper compares baseline with day 10 and day 30 without a separate untreated comparison. The trial recorded 24-hour urination frequency on charts and 12-hour collected urine volume. Figure 1 shows increased void frequency compared with baseline for every dose at day 10 and the 4 and 8 g groups at day 30. The dose cohorts and timing closely match the 2014 online renal function, 2016 blood pressure and 2018 acid-base papers. These reports should not be counted as independent replications without participant linkage. No urge sensation, inability to defer voiding or Parkinson cohort was assessed. [2014 primary article rendering](https://www.academia.edu/83649592/Phytoconstituents_and_diuretic_activity_of_Cymbopogon_citratus_leaf_infusions_in_humans) · [Local factual extract](Source-Text/2014-Ekpenyong-Lemongrass-Infusion-Diuresis-Extract.txt)
+
+## Renal filtration analysis in the same leaf tea design
+
+The primary report gives 105 healthy adults (55 men and 50 women), randomized across three dose groups taking 2, 4 or 8 g leaf powder infusion daily for 30 days. A separate no-tea group is absent. Serum and urine indices were compared with baseline on days 10 and 30. Estimated filtration and creatinine clearance fell by day 30 in all three dose groups. Participants, sex counts, ages, timing and doses closely match the companion diuresis report. Filtration estimates do not measure urinary urgency. [Renal function primary abstract](https://pubmed.ncbi.nlm.nih.gov/25440110/) · [Local factual extract](Source-Text/2014-Ekpenyong-Lemongrass-Tea-Renal-Function-Extract.txt)

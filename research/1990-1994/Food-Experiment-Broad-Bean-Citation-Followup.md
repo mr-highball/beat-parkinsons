@@ -1,0 +1,11 @@
+# Primary records for broad bean motor responses
+
+## 1993 cooked broad bean pod mixture, Table 1 and Figure 1
+
+Kempster and colleagues studied six people with Parkinson’s and moderate to severe motor fluctuations during long-term levodopa treatment. They separated fresh broad beans (*Vicia faba*) from their pods, microwaved the pods for ten minutes, and froze and blended the pods before testing. Table 1 lists 100–200 g of the pod mixture and 0–50 mg of carbidopa per patient after overnight fasting. It lists zero carbidopa for one participant, although the methods describe coadministration of 25–50 mg. The comparison was one of each participant’s usual doses of levodopa plus carbidopa or benserazide. [Journal-hosted report, pp. 85–87 and Table 1](https://apjcn.qdu.edu.cn/2_2_6.pdf) · [Primary report, PMID 24352104](https://pubmed.ncbi.nlm.nih.gov/24352104/)
+
+Five of six participants had an unequivocal motor response. Among responders, mean modified Webster score improvement was 15 points for the pod mixture and 16 points for conventional treatment. Onset and duration averaged 39 and 104 minutes with the pods. The study measured hand tapping, a timed rise-and-walk task, and tremor and dyskinesia scores. Figure 1 provides serial measurements for one participant, whose ON response lasted 285 minutes with the pod mixture and 75 minutes with the tablet on successive mornings. The authors observed a similar dyskinesia pattern and severity with both preparations. They recovered 0.25% levodopa by weight from one pod mixture sample. The small single-dose study supplies no long-term effect estimate. [Journal-hosted report, pp. 86–88 and Figure 1](https://apjcn.qdu.edu.cn/2_2_6.pdf)
+
+The preparation and species differ from the green, black, kidney, and pinto beans in the frozen experiment. For the early cooked-seed study, the follow-up from the same investigators, and the separate seedling study, see the [broad bean feeding and bioavailability summaries](Food-Experiment-Food-Followup.md#cooked-broad-beans-and-acute-motor-response).
+
+Kempster also cites an earlier conference presentation whose original abstract remains unavailable. [1988 conference trail](../1985-1989/Food-Experiment-Broad-Bean-Citation-Followup.md)

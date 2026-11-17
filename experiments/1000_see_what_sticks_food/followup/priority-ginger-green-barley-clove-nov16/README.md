@@ -1,0 +1,12 @@
+# Ginger, green tea, barley and clove evidence review, November 16, 2026 UTC
+
+Fifty original claim–source pairs were checked. Forty-eight reached original body depth, with eight related and 40 excluded for these specific claim pairs. Two author abstracts retain open body routes. Twelve completed Europe PMC expressions returned 16 appearances. Two initial transport failures were recovered with the same expressions. Nine dated source texts were filed, and the study ledger gained nine rows plus a clarification of existing green-tea evidence. [Pinned scope](pinned-scope.tsv) · [Exact decisions](dispositions.tsv) · [Open originals](open-cluster-pairs.tsv) · [Queries](focused-queries.tsv) · [Transport retries](focused-query-retries.tsv) · [All appearances](focused-dispositions.tsv) · [Dated texts](source-accessions.tsv)
+
+| Claim | Evidence and current judgment |
+| --- | --- |
+| [0937, grated ginger and anxiety reduction](../../statements/0937.txt) | Unknown at 50. Aqueous and ethanolic extract studies reported favorable rodent maze behavior. The closest human ginger studies give mixed or inconclusive anxiety results. The Parkinson extract trial has no posted results. |
+| [0948, brewed green tea and fatigue worsening](../../statements/0948.txt) | Maybe True at 51. In the uncontrolled Parkinson cohort the mean FSS rose 3.7 points. The same-cohort dissertation appendix gives no participant-level fatigue data or paired variance. A postoperative brewed-tea trial found a favorable fatigue comparison in a different setting. |
+| [0953, boiled barley and anxiety worsening](../../statements/0953.txt) | Unknown at 50. A barley-flour and rice-flour crossover did not show a clear between-period anxiety difference. A separate prepared talbinah trial reported lower tension–anxiety within the intervention period and an inconclusive DASS anxiety result. These comparisons do not isolate boiled barley in Parkinson disease. |
+| [0956, ground clove and pain reduction](../../statements/0956.txt) | Unknown at 50. A ground-powder mouse report found no analgesia in a hot-water test with sparse methods. Topical ground clove and extracted eugenol show favorable local dental outcomes. Injected oil and oral aqueous extract studies report favorable animal nociception results. |
+
+[Source access and comparison details](source-trails.md) · [New assessments](assessment-batch.tsv) · [Study clarification](revised-assessments.tsv) · [Signed evidence](adjudications.tsv) · [Verification](verification.txt)

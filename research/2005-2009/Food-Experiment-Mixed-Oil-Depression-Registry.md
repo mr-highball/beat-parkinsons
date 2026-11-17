@@ -1,0 +1,5 @@
+# Mixed soybean and corn oil in a registered depression trial
+
+## Coronary rehabilitation trial and mixed-oil placebo registration
+
+ClinicalTrials.gov first posted NCT00981383 on September 22, 2009; its current record lists the study as completed with 92 participants and no posted results section. The randomized study compared omega-3 capsules with three daily placebo capsules containing a 50:50 soybean/corn oil blend. It specified Hamilton depression scores as the primary outcome and Beck Depression Inventory II as a secondary outcome. Eligibility excluded Parkinson disease and other neurological conditions. The registry does not specify oil refining or pressing, and the mixture has no separate soybean, corn, or oil-free arm. The 2016 article is the registered trial result, not an independent study. [Official registry](https://clinicaltrials.gov/api/v2/studies/NCT00981383) · [Local registry extract](Source-Text/Trials/NCT00981383.txt) · [2016 results](../2015-2019/Food-Experiment-Mixed-Oil-Depression.md#mixed-oil-placebo-and-depression-scores-during-coronary-rehabilitation)

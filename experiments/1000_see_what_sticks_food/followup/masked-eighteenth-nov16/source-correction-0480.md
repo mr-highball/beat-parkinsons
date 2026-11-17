@@ -1,0 +1,3 @@
+# Source update for 0480
+
+The Zaki report is a strong inferred match to NCT04303312 based on title, investigator, intervention and comparator. Formulation, duration and enrollment differ. The report gives aggregate PROMS results for the 10% cold-pressed pumpkin-oil and Solcoseryl topical combination. It gives no separate mouth-pain item. Other pumpkin-oil evidence differs by route, preparation and clinical condition. This source supports a related assessment and 0480 remains Unknown at 50. [Earlier review](../masked-fifteenth-nov16/README.md) · [Dated source](../../../../research/2020-2024/Food-Experiment-Pumpkin-Peanut-Oil.md#combined-cold-pressed-oil-and-solcoseryl-in-oral-mucositis)

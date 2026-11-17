@@ -1,0 +1,5 @@
+# Food experiment evidence for cod, pineapple, plum, and cantaloupe
+
+## Current plum preference and fish intake in Parkinson
+
+Vieregge, von Maravic and Friedrich interviewed 71 people with idiopathic Parkinson and 103 controls in May 1992. More cases reported a current preference for plums (p ≤ .05), whereas the groups did not clearly differ in fish intake or in preparing and eating self-caught fish. The study found no correlation between type of first symptom and the recorded current food preferences. It reports a different time period from the early-adult plum survey and supplies no poached plum, dyskinesia, cod species, cooking form, fatigue, smell or handwriting estimate. [Full primary report](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/4FF492979A07503EB3A3DA7215DFF769/S0317167100042219a.pdf/div-class-title-life-style-and-dietary-factors-early-and-late-in-parkinson-s-disease-div.pdf) · [Earlier plum preference study](../1985-1989/Food-Experiment-Cod-Fruit.md#early-adult-plum-preference-and-parkinson-case-status)

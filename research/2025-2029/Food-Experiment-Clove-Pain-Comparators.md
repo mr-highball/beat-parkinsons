@@ -1,0 +1,9 @@
+# Clove Pain Comparators
+
+## Topical extracted clove eugenol and acute toothache
+
+Razzaq, Nasir and Al-Salihi first published April 7, 2025. Fifty-one volunteers with acute toothache received 2% extracted eugenol in gel, vehicle gel or 10% benzocaine, with 17 per arm. Participants applied the product to the painful area or cavity and sent modified McGill questionnaire feedback. At five minutes 14/17 eugenol recipients, 0/17 vehicle recipients and 15/17 benzocaine recipients reported relief. At 72 hours 13/17, 0/17 and 12/17, respectively, reported relief lasting that long. The Discussion calls the study randomized, but the Methods do not describe allocation or blinding, and the tables give descriptive counts without comparative uncertainty. The product was topical clove-derived eugenol. [Original source](https://kstom.ru/ks/article/download/0113-13/pdf) · [Local factual text](Source-Text/2025-Razzaq-Clove-Eugenol-Toothache.txt)
+
+## Oral aqueous clove extract and experimental nociception
+
+Oladele and colleagues published February 24, 2026. The publisher abstract describes oral aqueous clove extract at 100, 200 and 400 mg/kg versus water and indomethacin in writhing, hot-plate and tail-flick assays. It reports an overall favorable dose-related result (p < .05), without per-assay means or numerical comparisons in the abstract. The article download returned HTTP 404 in the checked route. The abstract initially identifies mice for the analgesic assays but later refers to rat reaction time. The primary full body remains needed to check the species, plant part and individual results. The preparation and assays are indirect for ground clove and Parkinson pain. [Original source](https://rsisinternational.org/journals/ijrsi/view/evaluation-of-anti-inflammatory-and-analgesic-effects-of-aqueous-extract-of-syzygium-aromaticum-l-merr-and-l-m-perry-using-four-different-models) · [Local factual text](Source-Text/2026-Oladele-Aqueous-Clove-Nociception.txt)

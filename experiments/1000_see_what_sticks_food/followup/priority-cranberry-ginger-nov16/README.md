@@ -1,0 +1,12 @@
+# Saffron, cranberry, ginger and turmeric source review, November 16, 2026 UTC
+
+The pinned scope contains 64 original pairs. Sixty-one received full-body decisions, including 23 related and 38 excluded. The remaining three original bodies are recorded at author-abstract depth. The catalog gained 17 dated factual texts. The study ledger gained 16 claim–study assessments and two clarifications. [Pinned scope](pinned-scope.tsv) · [Exact decisions](dispositions.tsv) · [Open originals](open-cluster-pairs.tsv) · [Dated texts](source-accessions.tsv)
+
+| Claim | Evidence and current judgment |
+| --- | --- |
+| [0485, dried saffron and fatigue worsening](../../statements/0485.txt) | Maybe False at 53. The Isfahan powder-tablet trial reports fatigue 9.20 points lower (95% CI 4.65 to 13.76 points lower). The standalone fatigue scale first appears in an archived registration revision after the outcomes manuscript was received. The added review bodies supply no independent fatigue comparison. |
+| [0722, dried cranberry and depression worsening](../../statements/0722.txt) | Unknown at 50. CranMood's juice result was inconclusive. The COMBAT powder protocol scheduled PHQ-9, and its full paper and supplement have no reported comparison. The two study populations differ from Parkinson disease. |
+| [0725, grated ginger and pain reduction](../../statements/0725.txt) | Maybe True at 51. Parkinson interview reports and whole-rhizome comparisons supply the minimal favorable lean. Extract reports include favorable perineal and abdominal pain results, inconclusive joint and uterine comparisons, and conflicting exercise and menstrual pain reporting. Those methods and populations limit transfer. |
+| [0812, ground turmeric and pain reduction](../../statements/0812.txt) | Maybe True at 51. The unblinded turmeric-powder add-on study reports a favorable menstrual pain contrast, with design and enrollment discrepancies against its registry. The blinded hand pilot gives an inconclusive primary comparison and favorable within-arm estimates. Isolated compound animal tests give preparation-mismatched context. |
+
+[Focused expressions](focused-queries.tsv) · [All 32 returned appearances](focused-dispositions.tsv) · [Primary access and search trails](source-trails.md) · [New assessments](assessment-batch.tsv) · [Assessment clarifications](revised-assessments.tsv) · [Signed evidence](adjudications.tsv) · [Verification](verification.txt)

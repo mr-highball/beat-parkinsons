@@ -1,0 +1,5 @@
+# Lentil and kidney bean evidence
+
+## Japanese foodborne illness after briefly toasted white beans
+
+The Japanese health ministry's May 22, 2006 bulletin counted 158 patients across 38 municipalities, with 30 hospitalized. Most cases reported nausea, vomiting or diarrhea, generally beginning two to four hours after consumption. The preparation advertised on television involved briefly toasting then powdering dry white beans. Most patients reported this preparation, and 106 could not identify the exact variety. The labels recorded as *shirohana-mame* and *tebō-mame* were grouped under a common name by the bulletin, so the case count cannot be assigned wholly to one cultivar. Patient leftovers tested for hemagglutination showed activity comparable with unheated beans. The 2014 Ogawa and Date chapter later reported on this same outbreak. Neither report measured hallucination frequency or Parkinson drooling after ordinary cooking or canning. [Primary Japanese government investigation and table](https://www.mhlw.go.jp/houdou/2006/05/h0522-4.html) · [Later chapter, PMID 25117222](https://pubmed.ncbi.nlm.nih.gov/25117222/)

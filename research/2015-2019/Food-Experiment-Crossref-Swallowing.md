@@ -1,0 +1,5 @@
+# Swallowing sources from Crossref citations, 2015–2019
+
+## Biscuit and barium textures in Korean Parkinson imaging
+
+Kim and colleagues' November 9, 2015 study assessed 56 people with Parkinson disease without dementia. The videofluoroscopy protocol included 3 mL thin liquid, 3 mL thick liquid barium and a piece of biscuit. Investigators scored mastication and pharyngeal residue using the biscuit images. The methods assign oral residue, tongue base retraction and lingual transport to the thick liquid and the other measures to the thin liquid. Bradykinesia correlated with oral residue (p < .01). Cognitive test performance correlated with several oral-phase measures. The article does not identify the biscuit recipe and does not measure a baked-potato or biscuit-specific choking outcome. [Primary report, Methods and Tables 1–3](https://www.cambridge.org/core/journals/canadian-journal-of-neurological-sciences/article/cognitive-and-motor-aspects-of-parkinsons-disease-associated-with-dysphagia/78190D9E44A20409C60B721456A39EDB)

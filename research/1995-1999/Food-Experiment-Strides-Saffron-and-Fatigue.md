@@ -1,0 +1,5 @@
+# Stride, saffron and fatigue follow-up
+
+## Meal timing and controlled-release levodopa
+
+Published June 1998. In a randomized crossover of eight people with Parkinson disease, a standard meal 30 minutes before controlled-release levodopa/carbidopa delayed absorption compared with a meal two hours after dosing. The six-hour area under the plasma concentration curve was about 24% smaller in the fed condition. Two participants peaked at five hours, limiting the window. The abstract does not identify soybean oil and does not supply an all-day OFF estimate. [Original abstract](https://pubmed.ncbi.nlm.nih.gov/9696954/) · [Local text](Source-Text/1998-Contin-Meal-Timing-Levodopa.txt)

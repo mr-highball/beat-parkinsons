@@ -1,0 +1,25 @@
+# Japan Chronic Phase Medicine meeting reports on feeding in Parkinson’s
+
+## Agar-solidified gastrostomy formula
+
+Chihiro Morita reported two people with leakage around their gastrostomy sites at the 2020 meeting. One was a woman in her eighties with Parkinson’s disease and a history of hiatal hernia. Her case used a commercial concentrated formula prepared with powdered agar and warm water and administered through the gastrostomy. The authors reported less leakage, reflux, nausea and vomiting, alongside weight gain and pressure injury improvement, for the case series. Outcomes were neither quantified nor broken out by patient. This is evidence about a combined enteral preparation in two clinical cases. [Original abstract 22-15, PDF page 15](https://site2.convention.co.jp/jamcf28/program/22.pdf#page=15)
+
+## Black pepper aroma in five inpatients
+
+Michiko Kawamoto reported five inpatients with recurrent fever and sputum. Gauze containing black pepper was suspended near the head of each bed. Before and during exposure, pooled suction counts were 1,931 and 1,915, sputum scores were 3,936 and 3,515, and fevers of at least 38 °C numbered 13 and five. The report gives no patient diagnoses, parallel control, pepper preparation, or measured swallowing or aspiration outcome. It describes exposure to aroma. [2020 original abstract 19-6, PDF page 6](https://site2.convention.co.jp/jamcf28/program/19.pdf#page=6)
+
+## Jelly selected after videofluoroscopy
+
+Sumiko Matsukawa and colleagues described five selected dysphagia cases from 15 inpatients assessed by videofluoroscopy in April–June 2020. In case III, an 84-year-old woman with Parkinson’s disease and Alzheimer’s disease underwent assessment for unexplained coughing or choking. The team judged that a small amount of jelly was feasible, began offering it, and later increased the amount. The authors describe the period of oral intake as short and give no jelly ingredients, amounts, or comparative aspiration score for this patient. [Original abstract 19-12, PDF page 12](https://site2.convention.co.jp/jamcf28/program/19.pdf#page=12)
+
+## Green tea and lemon-water gargling
+
+Kimiyo Tanaka and colleagues reported ten oral feeders from a mixed rehabilitation population at the November 2022 meeting. The eligibility description includes Parkinson’s disease, previous aspiration pneumonia and disuse syndrome. The abstract gives no diagnostic counts. Participants gargled with water, green tea and lemon water for three days each. Compared with water, the Saxon saliva test showed increases immediately and two hours later for six and six participants with lemon water and six and eight with green tea. Oral odor readings were higher than with water for seven and five participants with lemon water and three and one with green tea at those times. The report gives no absolute saliva amounts, gargle concentrations, subjective dryness, aspiration events, or Parkinson subgroup outcomes. The two archived volumes reproduce the same report. [2022 original abstract 8-3-2, main PDF page 293](https://web.archive.org/web/20231209225557id_/https://site2.convention.co.jp/jamcf30/files/jamcf30_syoroku.pdf#page=293) · [General volume, PDF page 194](https://web.archive.org/web/20231209222911id_/https://site2.convention.co.jp/jamcf30/files/jamcf30_prg_ippanall_syoroku.pdf#page=194) · [Publisher index](https://mol.medicalonline.jp/archive/search?issue=suppl&jo=ej7aaomc&vo=&ye=2022)
+
+## Swallowing rehabilitation with texture adjustment
+
+Hiroki Mitsumoto and colleagues reported an 80s woman with Parkinson’s disease and a gastrostomy who ate part of one meal daily with full assistance. The team adjusted texture during rehabilitation, from code 3 to code 2 after food was suctioned, and back to code 3 after repeat videofluoroscopy. Treatment included suprahyoid exercises, tongue training and time out of bed. At day 180, videofluoroscopy showed improved bolus transfer and epiglottic inversion. She ate nearly all of lunch independently and maximum tongue pressure rose from 20 to 27 kPa. The abstract gives texture codes and no ingredient identities. [2024 original abstract 99-5, PDF page 669](https://www.gakkai.co.jp/jamcf32/files/abstarcts_full.pdf#page=669)
+
+## Rice porridge during tube-feed weaning
+
+Kotomi Kobayashi and colleagues reported a woman in her seventies with Hoehn and Yahr stage V Parkinson’s disease, aspiration pneumonia in her prior admission and marked undernutrition. The team adjusted tube and oral feeding, starting with about 70 g of jelly and introducing half portions of puréed rice porridge and puréed food about three weeks later. She subsequently met an oral nutrition goal of 1,500 kcal/day using full rice porridge, soft foods and a supplemental drink, and discontinued tube feeding. Weight rose from 25.1 to 27.5 kg and MNA-SF from 2 to 9. Constipation and continual involuntary movements were recorded at baseline. The abstract gives no follow-up values for either symptom or a food-specific swallowing comparison. [2024 original abstract 109-1, PDF page 723](https://www.gakkai.co.jp/jamcf32/files/abstarcts_full.pdf#page=723)
