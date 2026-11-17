@@ -4,6 +4,7 @@ January 1, 2015 through December 31, 2019.
 
 ## Annotated research
 
+- [Licorice extract trial and unspecific tremor outcome in the original abstract](Source-Text/2019-PMID31574343-Licorice-Parkinson-Abstract-Extract.txt)
 - [Japanese gastric pH and levodopa pharmacokinetics registration](Source-Text/Trials/UMIN000036494.txt)
 
 - [Tendon thickness and measured Parkinson thumb rest tremor](Source-Text/2016-PMID28352760-Hand-Tremor-Extract.txt)

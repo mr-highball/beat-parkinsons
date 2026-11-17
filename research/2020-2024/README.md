@@ -4,6 +4,7 @@ January 1, 2020 through December 31, 2024.
 
 ## Annotated research
 
+- [Separately scored resting tremor in a trial with shared sesame oil](Source-Text/2024-PMID38487964-Sesame-Carrier-Rest-Tremor-Extract.txt)
 - [Faroe essential-tremor dietary and cooking-practice comparison](Source-Text/2020-PMID32864189-Faroe-Meat-Essential-Tremor-Extract.txt)
 
 - [Dutch BrAIN diet initial registration](Source-Text/Trials/NL-OMON20827.txt)

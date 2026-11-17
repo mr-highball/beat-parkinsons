@@ -4,6 +4,7 @@ January 1, 2025 through November 11, 2026 (partial period).
 
 ## Annotated research
 
+- [Transient tremor after dermal capsaicinoid gel in rats](Source-Text/2026-PMID41674738-Capsaicinoid-Gel-Extract.txt)
 - [Dutch Parkinson diet protocols and posted motor results](Food-Experiment-Dutch-Diet-Trials.md)
 - [BrAIN diet protocol and food-choice tables](Source-Text/2026-Scheurink-No-Guts-No-Glory-Protocol.txt)
 - [BrAIN diet posted Dutch registry results](Source-Text/Trials/2026-NL-OMON52339-Results.txt)

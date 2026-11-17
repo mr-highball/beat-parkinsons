@@ -4,6 +4,7 @@ January 1, 1995 through December 31, 1999.
 
 ## Annotated research
 
+- [Wild-lettuce extract case report and the separately cited tremor case](Source-Text/1998-PMID9778767-Wild-Lettuce-Case-Extract.txt)
 - [Rosemary preparations and mood outcomes](Food-Experiment-Rosemary-Preparation-and-Mood.md)
 - [Allergy after fresh and dried edible fig](Food-Experiment-Edible-Fig-Adverse-Contexts.md)
 - [Clinical symptom measures and case boundaries](Food-Experiment-Ranked-Symptom-and-Case-Context.md)

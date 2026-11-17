@@ -4,6 +4,8 @@ January 1, 2005 through December 31, 2009.
 
 ## Annotated research
 
+- [Wild lettuce, ataxia and acute toxicity in eight cases](Source-Text/2009-PMID21686920-Wild-Lettuce-Case-Extract.txt)
+- [Corn oil carrier in an open-label Parkinson psychosis trial](Source-Text/2008-PMID18801821-Corn-Oil-Carrier-Extract.txt)
 - [Essential-tremor blood harmane and reported animal protein](Source-Text/2005-PMID16087903-Protein-Harmane-Extract.txt)
 - [Meat intake and action tremor in an essential-tremor cohort](Source-Text/2008-PMID18382115-Meat-Essential-Tremor-Extract.txt)
 

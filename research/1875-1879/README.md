@@ -4,6 +4,7 @@ January 1, 1875 through December 31, 1879.
 
 ## Annotated research
 
+- [Original 1876 wild-lettuce case and later reprints](Source-Text/1876-Boe-Wild-Lettuce-Case-Extract.txt)
 - [Drugs and remedies](Drugs-and-Remedies.md)
 - [Procedures and devices](Procedures-and-Devices.md)
 - [Nonmotor and daily life](Nonmotor-and-Daily-Life.md)
