@@ -29,3 +29,7 @@ Ishigaki and colleagues published their spice screen on August 26, 2013. Ethanol
 ## Salvinorin A and animal pain assays
 
 The 2011 review traces isolated salvinorin A to *Salvia divinorum*. Its animal pain evidence varies by assay and administration route. It supplies no result for fresh common sage leaf ingestion or Parkinson pain. [Original review, section V.B.1](https://pmc.ncbi.nlm.nih.gov/articles/PMC3082450/) · [Local original factual extract](Source-Text/2011-Cunningham-Salvinorin-A-Factual-Extract.txt)
+
+## Two additional sage extract comparisons in animals
+
+Two original abstracts describe lower evoked pain behaviors after sage leaf extracts. The 2010 report compared aqueous and butanol preparations in mice and rats. The report first available in 2011 describes a hydroalcoholic preparation in mice. The original full bodies remain open for group estimates. [2010 original abstract summary](Source-Text/2010-PMID20860437.txt) · [2011 original abstract summary](Source-Text/2011-PMID22154965.txt)
