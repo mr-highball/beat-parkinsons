@@ -52,3 +52,7 @@ Zainuddin and colleagues reported 52 adults with allergic rhinitis, 26 per group
 ## Coconut oil and gut outcomes in a rat poster
 
 UEG Week 2017 poster P0632 compared a control diet with diets containing coconut or evening primrose oil in male Wistar rats. The authors did not report a clear difference in gut transit or visceral pain responses. The poster does not specify oil grade or a fatigue measure. Nearby P0631 reports fatigue in an independent human low-FODMAP pilot. These are different studies. [Original 2017 proceedings, poster P0632](https://pmc.ncbi.nlm.nih.gov/articles/PMC7672678/)
+
+## Suspected aspiration of coconut oil applied for mouth dryness
+
+Manocha, Snipelisky and Schiavo reported a 2016 SGIM case (abstract 2462117, printed pp. S619–S620). A tube-fed adult used coconut oil to coat the mouth for dryness. The clinicians suspected aspiration based on the history and worsening dependent ground-glass opacities on CT. They reported improvement on subsequent imaging after oil use stopped. This uncontrolled case supplies a route-specific safety observation without confirmed grade, a dietary comparison, a Parkinson diagnosis or a fatigue measurement. [Original conference abstract](https://link.springer.com/content/pdf/10.1007/s11606-016-3657-7.pdf#page=535)

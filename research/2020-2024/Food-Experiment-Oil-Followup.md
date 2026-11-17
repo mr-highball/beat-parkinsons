@@ -1,5 +1,9 @@
 # Edible oil evidence follow-up, 2020–2024
 
+## Registered ketogenic crossover metabolic report and supplement schema
+
+Iacovides and colleagues published a metabolic and thyroid report on June 3, 2022 (PMID 35658056, DOI 10.1371/journal.pone.0269440). The PACTR identifier, randomized diet sequences and 11-person completion sample link it to the 2019 report on cognition, sleep and mood. The 2022 original provides thyroid and metabolic outcomes. Its separate ethics protocol supplement refers to fatigue in background about an earlier study and names sleep, mood and exercise among the planned daily measures. The raw data archive contains two workbooks. A schema and string check found sleep quality, morning vigilance and mood headings, with no visible named coconut or fatigue field. It did not assess unpublished diaries or establish that a food was consumed. [2022 primary paper](https://doi.org/10.1371/journal.pone.0269440) · [Ethics protocol supplement](https://doi.org/10.1371/journal.pone.0269440.s004) · [Supporting data listing](https://doi.org/10.1371/journal.pone.0269440.s005) · [2019 cognitive outcomes](../2015-2019/Food-Experiment-Coconut-Ketogenic-Crossover.md)
+
 ## Registration for the coconut-oil vehicle in the PPI-1011 safety study
 
 NCT05969977 first posted August 1, 2023. It describes a first-in-human, randomized healthy-volunteer drug tolerability study. The record was completed and had no posted results when checked November 17, 2026. The 2025 original publication provides the vehicle and fatigue adverse-event details, with coconut oil used in both assigned groups. [Official registration](https://clinicaltrials.gov/study/NCT05969977) · [Dated primary results](../2025-2029/Food-Experiment-Oil-Followup.md#coconut-oil-vehicle-and-reported-fatigue-in-healthy-volunteers)

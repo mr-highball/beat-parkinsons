@@ -99,6 +99,7 @@ January 1, 2015 through December 31, 2019.
 - [Oregano exposures and primary study context](Food-Experiment-Oregano-Exposure-Context.md)
 
 - [Earlier coconut-oil food-frequency results](Food-Experiment-Coconut-Exact-Recovery.md)
+- [Optional coconut oil in a healthy-adult ketogenic crossover](Food-Experiment-Coconut-Ketogenic-Crossover.md)
 
 - [Nutmeg and individual speech and facial outcomes](Food-Experiment-Nutmeg-Remaining.md)
 
