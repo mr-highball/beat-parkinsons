@@ -4,6 +4,8 @@ January 1, 2015 through December 31, 2019.
 
 ## Annotated research
 
+- [Japanese gastric pH and levodopa pharmacokinetics registration](Source-Text/Trials/UMIN000036494.txt)
+
 - [Tendon thickness and measured Parkinson thumb rest tremor](Source-Text/2016-PMID28352760-Hand-Tremor-Extract.txt)
 - [Flaxseed oil trial registration history](Source-Text/2017-IRCT2017061234497N1-Registration-History.txt)
 - [Parkinson iPhone exercise study](Source-Text/2019-PMID30998100-Exercise-App-Extract.txt)

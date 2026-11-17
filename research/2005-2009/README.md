@@ -4,6 +4,9 @@ January 1, 2005 through December 31, 2009.
 
 ## Annotated research
 
+- [Essential-tremor blood harmane and reported animal protein](Source-Text/2005-PMID16087903-Protein-Harmane-Extract.txt)
+- [Meat intake and action tremor in an essential-tremor cohort](Source-Text/2008-PMID18382115-Meat-Essential-Tremor-Extract.txt)
+
 - [Black-tea intake and Parkinson incidence in Singapore](Source-Text/2007-PMID18156141-Singapore-Black-Tea-Incidence.txt)
 - [Black tea as an optional beverage in breath testing](Source-Text/2009-PMID19941660-Tea-Breath-Test-Extract.txt)
 - [Olive oil and resting tremor in separate neuroscience encyclopedia entries](Source-Text/2009-Neuroscience-Encyclopedia-C-Olive-Oil-Extract.txt)

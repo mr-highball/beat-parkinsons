@@ -4,6 +4,8 @@ January 1, 1990 through December 31, 1994.
 
 ## Annotated research
 
+- [Lemon juice coadministered with levodopa in a Japanese report](Source-Text/1994-PMID8200147-Lemon-Levodopa-Abstract-Extract.txt)
+
 - [Terpene and lovage primary sources](Food-Experiment-Terpene-and-Lovage-Primary-Sources.md)
 
 - [Recovered original symptom reports](Food-Experiment-Legacy-Symptom-Measures.md)
