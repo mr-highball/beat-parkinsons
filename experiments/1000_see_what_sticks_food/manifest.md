@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The third rest-tremor checkpoint screened 91 PubMed appearances, including the four alias retries, closed 28 original raw-fig pairs and added nine study assessments. The olive oil crossover, gluten withdrawal cases and broad dietary survey leave their individual rest-tremor effects unresolved. Verdicts remained unchanged. There are 4,417 original rest-tremor pairs still open within the 50,530-pair queue. [PubMed results and original source audit](followup/tremor-priority-nov17-03/README.md)
+
 The second rest-tremor checkpoint screened 53 U.S. registry appearances across all 26 claims, closed 23 original-source pairs and added nine assessments. The original overdose and tea studies sharpen the distinction between exam-rated rest tremor and composite, historical or toxicology outcomes. Brewed black tea remains Maybe True at 51 and the other 25 claims remain Unknown. There are 4,445 original rest-tremor pairs open within the 50,558-pair original queue. [Registry screening and source reviews](followup/tremor-priority-nov17-02/README.md)
 
 The first rest-tremor checkpoint screened 198 appearances across 52 expressions for all 26 frozen rest-tremor claims. It closed 44 original-source pairs, added nine assessments and identified an inconsistent clinical tremor subtotal above its stated scoring range. The mixed diet, drug exposure and poison-center findings did not change a verdict. The rest-tremor queue holds 4,468 original pairs within the 50,581 original pairs still queued. [Tremor source evidence and exact coverage](followup/tremor-priority-nov17-01/README.md)
