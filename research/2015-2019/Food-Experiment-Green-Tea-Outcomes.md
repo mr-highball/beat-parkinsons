@@ -1,5 +1,9 @@
 # Green tea fatigue comparisons and isolated caffeine in Parkinson disease
 
+## Registered matcha capsules for cognitive decline and sleep
+
+**UMIN000035658** first posted on January 24, 2019. The randomized double-blind design assigned nine powdered-matcha capsules or nine placebo capsules daily for twelve months in Japanese adults aged 60–85 with mild or subjective cognitive decline. The registered primary endpoints were the Japanese Montreal Cognitive Assessment and an activities-of-daily-living scale. The Pittsburgh Sleep Quality Index was secondary. The public registration lists no Parkinson cohort or dedicated fatigue measure. The linked 2024 paper analyzes the same trial. [Official registry history](https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_his_list.cgi?recptno=R000040592) · [Registered design](https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000040592) · [2024 outcomes](../2020-2024/Food-Experiment-Green-Tea-Outcomes.md#twelve-month-matcha-capsule-trial-in-older-adults)
+
 ## Handwriting within Parkinson motor outcome assessments
 
 The Chen brewed green tea pilot used the original UPDRS at baseline and follow-up. Table 1 reports a part II daily-living mean of 9.2 at baseline and 9.9 at three months in those with data. The handwriting item of part II and objective letter size were not reported separately. The broader motor trial of concentrated green tea polyphenols also published no accessible handwriting estimate. [Chen methods and Table 1](Source-Text/2015-Chen-Brewed-Green-Tea.txt#L164) · [Concentrated-polyphenol trial](../2005-2009/Food-Experiment-Tea-Followup.md)
