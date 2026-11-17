@@ -4,6 +4,8 @@ January 1, 2010 through December 31, 2014.
 
 ## Annotated research
 
+- [Beverage coadministration and induced tremor](Food-Experiment-Beverages-and-Seizure-Tremor.md)
+
 - [Neurobehavior reviews and clinical symptom context](Food-Experiment-Neurobehavior-Review-Context.md)
 - [Registered pumpkin capsule hair study and endpoint gaps](Food-Experiment-Pumpkin-Hair-Registry.md)
 
