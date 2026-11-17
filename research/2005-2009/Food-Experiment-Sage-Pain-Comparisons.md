@@ -1,5 +1,13 @@
 # Common sage and pain outcomes
 
+## Oral sage-leaf product in a postoperative pain protocol
+
+EudraCT 2005-000958-71 records its first database entry on June 7, 2005. The earliest public display date is unavailable. The title describes a randomized parallel placebo-controlled postoperative pain study with a planned sample of 45. The registry separately lists oral freeze-dried *Salvia officinalis* leaf extract granules and *Helichrysum italicum* flowering-top granules. It does not specify whether the products were assigned separately, coadministered or compared in another arrangement. The recorded primary endpoint field is blank and no results or matching publication were located. The dated protocol supplies no isolated sage effect or fresh-leaf Parkinson comparison. [Official Italian EudraCT protocol](https://www.clinicaltrialsregister.eu/ctr-search/trial/2005-000958-71/IT)
+
 ## Common sage spray and acute throat pain
 
 Hubbert and colleagues’ January 31, 2006 report describes 286 patients randomized in two phases. After testing three concentrations, the selected second phase randomized 164 patients to 15% common-sage leaf ethanol extract spray or a solvent-matched spray containing 0.3% sage. The primary two-hour spontaneous throat pain area under the curve favored the concentrated spray (p = .0021). Mean pain reductions were approximately 44% versus 34%. Clinically referenced 50% relief did not clearly differ. The local spray on an inflamed throat differs from eating fresh sage leaves and from Parkinson-related pain. [Primary trial PDF](https://daignet.de/media/filer_public/0f/6a/0f6a5d05-8fad-4163-a528-8e86ae454d80/hubbert_kopie.pdf) · [Local factual extract](Source-Text/2006-Hubbert-Sage-Throat-Pain-Factual-Extract.txt) · [Earlier surgical active comparison](../2000-2004/Food-Experiment-Sage-Pain-Comparisons.md)
+
+## Echinacea and sage spray compared with a local anesthetic combination
+
+The NCT00707902 registration first posted July 1, 2008. The associated 2009 trial by Schapowal and colleagues randomized 154 people with acute sore throats to an echinacea and sage spray or a chlorhexidine and lidocaine spray, using matched dummy sprays. The paper reports day-three composite response rates of 63.8% and 57.8%, respectively. This response concerns a reduction in a tonsillopharyngitis score across multiple symptoms. The groups both received active local treatment. The design cannot estimate the contribution of fresh culinary sage or a Parkinson pain effect. [Official registry](https://clinicaltrials.gov/study/NCT00707902) · [Primary paper, outcome and formulation](https://link.springer.com/content/pdf/10.1186/2047-783X-14-9-406.pdf)

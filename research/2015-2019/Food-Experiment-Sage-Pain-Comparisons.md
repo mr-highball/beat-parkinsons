@@ -1,0 +1,5 @@
+# Common sage and pain-related outcomes, 2015–2019
+
+## Oral sage extract and a premenstrual symptom composite
+
+Abdnezhad and colleagues reported a randomized triple-blind placebo comparison with 90 students, first published online in December 2018 (PMID 30572339, DOI 10.1159/000490104). The capsule contained 500 mg of *Salvia officinalis* extract. The accessible author abstract reports a favorable composite premenstrual symptom comparison and describes physical and psychological scores. It does not supply individual pain outcomes, an arm-level pain estimate or the original full result tables. A 2017 report of emotional symptoms describes the same authors, sample, dosage and setting, so it remains a likely companion until participant overlap is established. The combined questionnaire outcome does not establish a pain response to fresh sage in Parkinson disease. [Publisher author abstract](https://karger.com/cmr/article-abstract/26/1/39/67803/Salvia-officinalis-Reduces-the-Severity-of-the) · [2017 related publication](https://doi.org/10.22038/ijogi.2017.10160)

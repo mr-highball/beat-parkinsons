@@ -1,5 +1,9 @@
 # Herb and spice evidence follow-up, 2010–2014
 
+## Daikenchuto conference report and possible cohort overlap
+
+The 2011 Japanese Society of Internal Medicine meeting report by Sakakibara and colleagues describes six people with Parkinson disease, four with multiple system atrophy, 15 g/day of Daikenchuto, and three months of observation. These match the earlier article's core design. The abstract describes eight men and two women, whereas the article describes ten men. The reported significance threshold for rectosigmoid transit also differs. The records may share a cohort, so the conference report is held as a possible companion. [Original conference abstract](https://www.jstage.jst.go.jp/article/naika/100/Suppl/100_113a/_pdf/-char/ja) · [Earlier full report and verified subgroup table](../2000-2004/Food-Experiment-Herb-Spice-Followup.md#dai-kenchu-to-and-constipation)
+
 ## Sage and lemon balm infusion in a menstrual-pain study
 
 IRCT2013012612278N1 was retrospectively registered November 30, 2013. The official record describes an unblinded, single-group design with no placebo and a target of 120. Its narrative identifies 50 selected participants who continued the two-herb intervention through follow-up. Kalvandi and colleagues’ summer 2014 paper reports mean menstrual-pain ratings of 6.30 before treatment and 3.94 and 3.24 in the first and second treatment cycles. The English abstract mentions sage alone in one methods sentence, while the official record, Persian report and article conclusion identify both sage and lemon balm. The comparison gives no sage-only estimate and concerns menstrual pain outside Parkinson’s. [Primary IRCT record](https://irct.ir/trial/12370) · [Journal record and full paper](https://sjh.umsha.ac.ir/article-1-89-en.html)
