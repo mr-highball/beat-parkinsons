@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The next lemon balm source pass verifies 53 original pairs and screens 28 PubMed appearances. A dialysis study supplies an inconclusive sadness item after inhaled essential oil. The Echium syrup abstract leaves ingredient attribution open. Claim 0133 stays Maybe True 51, with 609 original source pairs queued. The global original queue totals 48,886. [Original and complementary search coverage](followup/lemon-balm-depression-nov17-02/README.md)
+
 The resumed lemon balm review screened 121 literature appearances and 137 ClinicalTrials.gov registrations. The Solberg add-on comparison was inconclusive and the Heidari postoperative capsule result has conflicting randomization and test reporting. The Hester blend and the Pavia cortisol subgroup do not count as additional isolates or independent overlapping outcomes. Claim 0133 remains Maybe True 51. The original context queue now holds 48,939 pairs across all claims, including 662 for lemon balm and depressive symptoms. [Source comparisons and completed searches](followup/lemon-balm-depression-nov17/README.md)
 
 The fifteenth rest-tremor checkpoint verifies 100 raw fig original main bodies and nine conference claim–source pairs. The fresh apple abstract measures laboratory endpoints in healthy volunteers. MENASA tea-history and tremor results remain pending. The original queue holds 48,988 pairs, including 2,875 rest-tremor pairs. Verdicts remained unchanged. [Original source audit and remaining holds](followup/tremor-priority-nov17-15/README.md)

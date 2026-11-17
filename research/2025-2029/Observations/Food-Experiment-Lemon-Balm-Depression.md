@@ -1,3 +1,5 @@
 # Lemon balm formulations and repeated study reports
 
 The Hester journal paper and earlier Major abstract likely describe the same capsule experiment, with differences in masking, formulation wording and placebo outcome. Mazzola explicitly identifies the parent high-dose group for its cortisol analysis. The cited registry describes a different plan. Count each clinical family once and retain its outcome and preparation limits. [Earlier conference abstract](../../2020-2024/Source-Text/2024-Major-P25-009-24-Lemon-Balm-Blend-Abstract-Extract.txt) · [Hester journal paper](../Source-Text/2025-Hester-Lemon-Balm-Magnolia-Theanine-Extract.txt) · [Mazzola subgroup](../Source-Text/2026-PMID42232738-Mazzola-Melissa-Cortisol-Extract.txt)
+
+The inhaled Melissa trial in dialysis separately measures a sadness item. Its post-treatment prevalence and severity comparisons are inconclusive. This result adds detail to the earlier anxiety and dry-mouth report from the same 68-person study. [Original item extract](../Source-Text/2025-PMID40082838-Pasyar-Lemon-Balm-Dialysis-Extract.txt)

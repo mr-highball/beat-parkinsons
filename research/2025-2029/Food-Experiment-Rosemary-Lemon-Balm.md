@@ -4,6 +4,8 @@
 
 Pasyar and colleagues published March 13, 2025. Sixty-eight hemodialysis patients were randomized to inhaled lemon balm essential oil or refined sweet almond oil. The paper reports a lower post-treatment prevalence of dry mouth with lemon balm and an inconclusive difference in the total Dialysis Symptom Index (p = .16). The dry-mouth item was a self-report of a separate symptom, and the trial measured neither salivary flow nor drooling. [Original report and tables](https://doi.org/10.1186/s12906-025-04840-y)
 
+The same trial also reports a single sadness item. At follow-up, 22 of 34 essential-oil participants and 21 of 34 controls reported sadness (p=.80). Severity means were 2.02 and 2.14 (p=.84); baseline means differed. These separate items provide no isolated oral, brewed-leaf or Parkinson depression comparison. [Original Tables 3 and 4 extract](Source-Text/2025-PMID40082838-Pasyar-Lemon-Balm-Dialysis-Extract.txt)
+
 ## Rosemary infusion and blood pressure
 
 The March 2025 Tunisian pilot enrolled 18 healthy adults and 35 adults with grade 1 hypertension. Both groups drank an infusion prepared from powdered rosemary leaves for 45 days. Blood pressure declined in the hypertensive group in the reported pre–post comparison. With both groups exposed and no placebo group, the change is observational. The study did not test a Parkinson population or use an orthostatic symptom endpoint. [Original article](https://doi.org/10.1016/j.phyplu.2025.100783)
