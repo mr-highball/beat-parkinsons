@@ -1,0 +1,5 @@
+# 2018 European Stroke Organisation proceedings
+
+The 584-page Florence institutional PDF matches the 2018 volume, title and DOI 10.1177/2396987318770127. The publisher reader lists S3–S204 in its metadata but includes members printed later in that PDF. Exact reader and PDF cross-checks found AS16-001 (printed p. 337) on fatigue after TIA or minor stroke, AS18-047 (p. 409) on Mediterranean diet preferences in Kyrgyz participants and AS23-010 (p. 485) on apathy and imaging in cerebral small-vessel disease. These are separate participants and outcomes. The 2019 apathy journal article reports the same 331-person cohort. [Institutional original PDF](https://flore.unifi.it/bitstream/2158/1149605/1/ESJ.pdf) · [Official PMC reader](https://pmc.ncbi.nlm.nih.gov/articles/PMC6453219/) · [Original 2019 article](https://www.neurology.org/doi/10.1212/WNL.0000000000007095)
+
+The exact collection and these three members are verified. Member-version and two-column boundaries remain unchecked for the rest of the scope. Keep each of the 31 frozen pairs in the original queue and use the institutionally preserved PDF for the next pass. [Exact pending scope](stroke-open-pairs.tsv)
