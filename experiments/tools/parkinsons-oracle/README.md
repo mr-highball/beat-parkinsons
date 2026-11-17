@@ -5,7 +5,7 @@ The oracle is a local Free Pascal MCP server for the Parkinson’s research cata
 ## How the lookup works
 
 - Symptom and ingredient postings narrow a request to candidate claims. Each experiment supplies canonical words and aliases. The oracle verifies each round’s freeze hash and reads claims and assessments from one Git commit.
-- WFC evaluates independent identity, hypothesis and evidence passes. The final pass selects exactly the rows that satisfy all three. Every row has one valid decision, so the solver's seed cannot determine a finding. The engine produces an empty options array when the constraints have no match.
+- The claim index solves the WFC identity, hypothesis and evidence passes once for all eight input combinations. Each lookup evaluates the three inputs for its candidates and applies the solved decision table. Every combination has one valid decision, independent of seed. The same decisions determine evidence scopes in the static model.
 - SQLite FTS5 keeps a separate inverted index of local Markdown, text and TSV files under `research/`. Its matches are document leads. It returns short local locators with the index snapshot and coverage.
 - Direction filters the original hypothesis wording. A Maybe verdict preserves the recorded weak lean and rationale. A False verdict challenges that hypothesis and carries no automatic claim for the reverse effect.
 

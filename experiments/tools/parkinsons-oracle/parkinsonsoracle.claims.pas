@@ -49,6 +49,9 @@ type
       AAssessmentLimit: Integer = -1): TJSONObject;
   end;
 
+  TClaimDecision = (cdInclude, cdIdentityExcluded, cdPremiseExcluded, cdEvidenceExcluded);
+  TClaimDecisions = array[0..7] of TClaimDecision;
+
   TClaimIndex = class
   private
     FRoot: String;
@@ -62,6 +65,7 @@ type
     FSourceRows: Integer;
     FDirectional: Integer;
     FUnknown: Integer;
+    FDecisions: TClaimDecisions;
     function Git(const AArguments: array of String): String;
     function ReadBlob(AProcess: TProcess; const APath: String): String;
     procedure LoadRound(ARound: Integer; AProcess: TProcess; APublishedTables: TStrings);
@@ -88,6 +92,9 @@ const
   CVerdictPath = '/verdicts.tsv';
   CEvidencePath = '/followup/assessments.tsv';
   CCoveragePath = '/followup/context-coverage/coverage-by-claim.tsv';
+  CIdentityBit = 4;
+  CPremiseBit = 2;
+  CEvidenceBit = 1;
   CFreezeHeader = 'id'#9'category'#9'ingredient'#9'preparation'#9'symptom'#9'direction'#9'statement';
   CVerdictHeader = 'id'#9'verdict'#9'confidence'#9'rationale'#9'local_references'#9'search_record'#9 +
     'local_verdict';
@@ -259,6 +266,89 @@ begin
   end;
 end;
 
+function ClaimDecisionIndex(AIdentity, APremise, AEvidence: Boolean): Integer; inline;
+begin
+  Result := (Ord(AIdentity) * CIdentityBit) or (Ord(APremise) * CPremiseBit) or
+    (Ord(AEvidence) * CEvidenceBit);
+end;
+
+function CompileClaimDecisions: TClaimDecisions;
+var
+  LGraph: TGraph;
+  LReport: TGraphSolveReport;
+  LIndex: Integer;
+  LPass: Integer;
+  LDecision: Integer;
+begin
+  // Only the three local pass results affect a decision. Solve all combinations once.
+  LGraph := TGraph.Create;
+  try
+    LGraph.Seed := 0;
+    LGraph.Reshape(Length(Result), 1, 1);
+    LGraph.WrapNeighbors := False;
+    LGraph.CurrentPass := 'identity';
+    LGraph.PassMode := gpmOverlay;
+    LGraph.AddValue('match');
+    LGraph.AddValue('other');
+    for LIndex := Low(Result) to High(Result) do
+    begin
+      if (LIndex and CIdentityBit) <> 0 then
+        LGraph.Entry[LIndex, 0, 0].Value := 'match'
+      else
+        LGraph.Entry[LIndex, 0, 0].Value := 'other';
+    end;
+    LGraph.SwitchToPass('premise');
+    LGraph.PassMode := gpmOverlay;
+    LGraph.AddValue('match');
+    LGraph.AddValue('other');
+    for LIndex := Low(Result) to High(Result) do
+    begin
+      if (LIndex and CPremiseBit) <> 0 then
+        LGraph.Entry[LIndex, 0, 0].Value := 'match'
+      else
+        LGraph.Entry[LIndex, 0, 0].Value := 'other';
+    end;
+    LGraph.SwitchToPass('evidence');
+    LGraph.PassMode := gpmOverlay;
+    LGraph.AddValue('eligible');
+    LGraph.AddValue('ineligible');
+    for LIndex := Low(Result) to High(Result) do
+    begin
+      if (LIndex and CEvidenceBit) <> 0 then
+        LGraph.Entry[LIndex, 0, 0].Value := 'eligible'
+      else
+        LGraph.Entry[LIndex, 0, 0].Value := 'ineligible';
+    end;
+    LGraph.SwitchToPass('decision', LPass);
+    LGraph.PassMode := gpmOverlay;
+
+    // These branches are disjoint. Each combination has one decision, independent of seed.
+    LGraph.AddValue('include').RequireFromPass('identity', 'match')
+      .RequireFromPass('premise', 'match').RequireFromPass('evidence', 'eligible');
+    LGraph.AddValue('identity_excluded').RequireFromPass('identity', 'other');
+    LGraph.AddValue('premise_excluded').RequireFromPass('identity', 'match')
+      .RequireFromPass('premise', 'other');
+    LGraph.AddValue('evidence_excluded').RequireFromPass('identity', 'match')
+      .RequireFromPass('premise', 'match').RequireFromPass('evidence', 'ineligible');
+    if not LGraph.TrySolve(DefaultGraphSolveOptions, LReport) then
+    begin
+      raise EConvertError.CreateFmt('Constraint graph failed at pass %d.', [LReport.FailedPassIndex]);
+    end;
+    for LIndex := Low(Result) to High(Result) do
+    begin
+      LDecision := IndexStr(LGraph.PassGraph[LPass].Entry[LIndex, 0, 0].Value,
+        ['include', 'identity_excluded', 'premise_excluded', 'evidence_excluded']);
+      if LDecision < 0 then
+      begin
+        raise EConvertError.Create('Constraint graph returned an unknown decision.');
+      end;
+      Result[LIndex] := TClaimDecision(LDecision);
+    end;
+  finally
+    LGraph.Free;
+  end;
+end;
+
 constructor TClaimIndex.Create(const ARepoRoot: String);
 const
   CTreeArguments = 5;
@@ -329,6 +419,7 @@ begin
   AddAlias(FSymptomAliases, 'tremor', 'rest tremor severity');
   AddAlias(FSymptomAliases, 'tremors', 'rest tremor severity');
   AddAlias(FSymptomAliases, 'attention', 'attention impairment');
+  FDecisions := CompileClaimDecisions;
 end;
 
 destructor TClaimIndex.Destroy;
@@ -715,88 +806,39 @@ type
     Options: TJSONArray;
   end;
 
-function ResolveRows(ACandidates: TList<TClaim>; const AQuery: TClaimQuery): TQueryResolution;
+function ResolveRows(ACandidates: TList<TClaim>; const AQuery: TClaimQuery;
+  const ADecisions: TClaimDecisions): TQueryResolution;
 var
-  LGraph: TGraph;
-  LReport: TGraphSolveReport;
-  LIndex: Integer;
   LClaim: TClaim;
-  LDecision: Integer;
+  LIdentityMatches: Boolean;
+  LPremiseMatches: Boolean;
+  LEvidenceMatches: Boolean;
+  LCombination: Integer;
 begin
   Result := Default(TQueryResolution);
   Result.Options := TJSONArray.Create;
   try
-    if ACandidates.Count > 0 then
+    for LClaim in ACandidates do
     begin
-      LGraph := TGraph.Create;
-      try
-        LGraph.Seed := 0;
-        LGraph.Reshape(ACandidates.Count, 1, 1);
-        LGraph.WrapNeighbors := False;
-        LGraph.CurrentPass := 'identity';
-        LGraph.PassMode := gpmOverlay;
-        LGraph.AddValue('match');
-        LGraph.AddValue('other');
-        for LIndex := 0 to ACandidates.Count - 1 do
-        begin
-          LClaim := ACandidates[LIndex];
-          if ((AQuery.Symptom = '') or SameText(AQuery.Symptom, LClaim.Symptom)) and
-            ((AQuery.Ingredient = '') or SameText(AQuery.Ingredient, LClaim.Ingredient)) and
-            ((AQuery.Preparation = '') or SameText(AQuery.Preparation, LClaim.Preparation)) and
-            ((AQuery.Round = 0) or (AQuery.Round = LClaim.Round)) then
-            LGraph.Entry[LIndex, 0, 0].Value := 'match'
-          else
-            LGraph.Entry[LIndex, 0, 0].Value := 'other';
-        end;
-        LGraph.SwitchToPass('premise');
-        LGraph.PassMode := gpmOverlay;
-        LGraph.AddValue('match');
-        LGraph.AddValue('other');
-        for LIndex := 0 to ACandidates.Count - 1 do
-          if (AQuery.Direction = '') or (AQuery.Direction = ACandidates[LIndex].Direction) then
-            LGraph.Entry[LIndex, 0, 0].Value := 'match'
-          else
-            LGraph.Entry[LIndex, 0, 0].Value := 'other';
-        LGraph.SwitchToPass('evidence');
-        LGraph.PassMode := gpmOverlay;
-        LGraph.AddValue('eligible');
-        LGraph.AddValue('ineligible');
-        for LIndex := 0 to ACandidates.Count - 1 do
-          if EvidenceAllowed(ACandidates[LIndex], AQuery) then
-            LGraph.Entry[LIndex, 0, 0].Value := 'eligible'
-          else
-            LGraph.Entry[LIndex, 0, 0].Value := 'ineligible';
-        LGraph.SwitchToPass('decision', LDecision);
-        LGraph.PassMode := gpmOverlay;
-
-        // These branches are disjoint. Each row has one valid decision, independent of seed.
-        LGraph.AddValue('include').RequireFromPass('identity', 'match')
-          .RequireFromPass('premise', 'match').RequireFromPass('evidence', 'eligible');
-        LGraph.AddValue('identity_excluded').RequireFromPass('identity', 'other');
-        LGraph.AddValue('premise_excluded').RequireFromPass('identity', 'match')
-          .RequireFromPass('premise', 'other');
-        LGraph.AddValue('evidence_excluded').RequireFromPass('identity', 'match')
-          .RequireFromPass('premise', 'match').RequireFromPass('evidence', 'ineligible');
-        if not LGraph.TrySolve(DefaultGraphSolveOptions, LReport) then
-          raise EConvertError.CreateFmt('Constraint graph failed at pass %d.', [LReport.FailedPassIndex]);
-        for LIndex := 0 to ACandidates.Count - 1 do
-          case IndexStr(LGraph.PassGraph[LDecision].Entry[LIndex, 0, 0].Value,
-            ['include', 'identity_excluded', 'premise_excluded', 'evidence_excluded']) of
-            0:
-              begin
-                if (Result.Selected >= AQuery.Offset) and
-                  (Result.Options.Count < AQuery.Limit) then
-                  Result.Options.Add(ACandidates[LIndex].View(False));
-                Inc(Result.Selected);
-              end;
-            1: Inc(Result.IdentityExcluded);
-            2: Inc(Result.PremiseExcluded);
-            3: Inc(Result.EvidenceExcluded);
-          else
-            raise EConvertError.Create('Constraint graph returned an unknown decision.');
+      LIdentityMatches := ((AQuery.Symptom = '') or SameText(AQuery.Symptom, LClaim.Symptom)) and
+        ((AQuery.Ingredient = '') or SameText(AQuery.Ingredient, LClaim.Ingredient)) and
+        ((AQuery.Preparation = '') or SameText(AQuery.Preparation, LClaim.Preparation)) and
+        ((AQuery.Round = 0) or (AQuery.Round = LClaim.Round));
+      LPremiseMatches := (AQuery.Direction = '') or (AQuery.Direction = LClaim.Direction);
+      LEvidenceMatches := EvidenceAllowed(LClaim, AQuery);
+      LCombination := ClaimDecisionIndex(LIdentityMatches, LPremiseMatches, LEvidenceMatches);
+      case ADecisions[LCombination] of
+        cdInclude:
+          begin
+            if (Result.Selected >= AQuery.Offset) and (Result.Options.Count < AQuery.Limit) then
+            begin
+              Result.Options.Add(LClaim.View(False));
+            end;
+            Inc(Result.Selected);
           end;
-      finally
-        LGraph.Free;
+        cdIdentityExcluded: Inc(Result.IdentityExcluded);
+        cdPremiseExcluded: Inc(Result.PremiseExcluded);
+        cdEvidenceExcluded: Inc(Result.EvidenceExcluded);
       end;
     end;
   except
@@ -852,7 +894,7 @@ begin
   else
     LCandidates := LByIngredient;
   try
-    LResolved := ResolveRows(LCandidates, LQuery);
+    LResolved := ResolveRows(LCandidates, LQuery, FDecisions);
     try
       Result := TJSONObject.Create(['revision', FRevision, 'scope', LQuery.Scope,
         'symptom', LQuery.Symptom, 'ingredient', LQuery.Ingredient,
@@ -910,7 +952,7 @@ begin
     for LScope in CScopes do
     begin
       LQuery.Scope := LScope;
-      LResolved := ResolveRows(FClaims, LQuery);
+      LResolved := ResolveRows(FClaims, LQuery, FDecisions);
       try
         for LIndex := 0 to LResolved.Options.Count - 1 do
         begin
