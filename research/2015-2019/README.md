@@ -4,6 +4,8 @@ January 1, 2015 through December 31, 2019.
 
 ## Annotated research
 
+- [Oat foods, formulations and sleep](Food-Experiment-Oats-Insomnia.md)
+
 - [Mucuna preparation and acute Parkinson ON duration](Source-Text/2017-Cilia-Mucuna-ON-Time-Crossover.txt)
 - [Bottled oolong sips and retronasal sensory ratings](Source-Text/2018-Gotow-Oolong-Retronasal-Aroma.txt)
 - [PENSA registration for an isolated EGCG comparison with exploratory smell testing](Source-Text/Trials/NCT03978052.txt)

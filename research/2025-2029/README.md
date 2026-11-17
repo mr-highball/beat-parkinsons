@@ -4,6 +4,8 @@ January 1, 2025 through November 11, 2026 (partial period).
 
 ## Annotated research
 
+- [Oat foods, formulations and sleep](Food-Experiment-Oats-Insomnia.md)
+
 - [Green-tea aroma, odor cards and odor memory](Food-Experiment-Tea-Odor-Tests.md)
 - [PENSA supplementary smell result for isolated EGCG](Source-Text/2025-PENSA-EGCG-Olfaction.txt)
 - [OCEAN randomized trial of Parkinson fluctuation-related pain](Source-Text/2026-OCEAN-Parkinson-Fluctuation-Pain.txt)

@@ -4,6 +4,8 @@ January 1, 2020 through December 31, 2024.
 
 ## Annotated research
 
+- [Oat foods, formulations and sleep](Food-Experiment-Oats-Insomnia.md)
+
 - [Cumin-containing Anuloma DS and functional constipation](Food-Experiment-Anuloma-Constipation.md)
 - [Electroacupuncture versus waitlist for Parkinson constipation](Source-Text/2023-Li-Electroacupuncture-Constipation.txt)
 - [Olfactory training with a multiscent dispenser](Source-Text/2021-Aromastics-Green-Tea-Scent-Training.txt)
