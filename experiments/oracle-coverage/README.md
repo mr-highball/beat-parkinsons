@@ -57,3 +57,14 @@ Use `oracle_status` to record the claim and catalog revisions. Use
 research passages and the assessments needed to check evidence and conflicts.
 Continue through relevant result pages and source trails when the question
 requires it.
+
+If the launcher stalls and the local oracle web server is already running,
+use its loopback adapter for the same read-only lookup. Record the transport
+failure separately from the catalog result so a successful fallback counts
+only once.
+
+```powershell
+$Body = @{ name = 'oracle_search_catalog'; arguments = @{ terms = '3762195'; limit = 3 } } |
+    ConvertTo-Json -Depth 4 -Compress
+Invoke-RestMethod 'http://127.0.0.1:8795/api/oracle' -Method Post -ContentType 'application/json' -Body $Body
+```
