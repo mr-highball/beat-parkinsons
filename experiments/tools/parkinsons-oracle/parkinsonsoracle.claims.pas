@@ -66,6 +66,16 @@ type
     FDirectional: Integer;
     FUnknown: Integer;
     FDecisions: TClaimDecisions;
+    {$IFDEF WINDOWS}
+    FMayPinLooseHead: Boolean;
+    FHeadRef: String;
+    FHeadBytes: RawByteString;
+    FHeadRefBytes: RawByteString;
+    FConfigBytes: RawByteString;
+    procedure LoadGitRevision(out ASimpleLayout: Boolean);
+    procedure PinLooseHead;
+    function LooseHeadIsCurrent: Boolean;
+    {$ENDIF}
     function Git(const AArguments: array of String): String;
     function ReadBlob(AProcess: TProcess; const APath: String): String;
     procedure LoadRound(ARound: Integer; AProcess: TProcess; APublishedTables: TStrings);
@@ -83,8 +93,8 @@ type
 
 implementation
 
-uses StrUtils, FPSHA256, foodexperiment.externaldata, parkinsonsoracle.trend,
-  wfc;
+uses {$IFDEF WINDOWS}Windows,{$ENDIF} StrUtils, FPSHA256, foodexperiment.externaldata,
+  parkinsonsoracle.trend, wfc;
 
 const
   CBase = 'experiments/1000_see_what_sticks_food';
@@ -349,6 +359,159 @@ begin
   end;
 end;
 
+{$IFDEF WINDOWS}
+function RegularGitDirectory(const APath: String): Boolean;
+var
+  LAttributes: DWORD;
+begin
+  LAttributes := GetFileAttributesW(PWideChar(UTF8Decode(APath)));
+  Result := (LAttributes <> INVALID_FILE_ATTRIBUTES) and
+    ((LAttributes and (FILE_ATTRIBUTE_DIRECTORY or FILE_ATTRIBUTE_REPARSE_POINT)) =
+      FILE_ATTRIBUTE_DIRECTORY);
+end;
+
+function SimpleGitLayout(const ADirectory: String): Boolean;
+begin
+  Result := RegularGitDirectory(ExcludeTrailingPathDelimiter(ADirectory)) and
+    RegularGitDirectory(ADirectory + 'objects') and RegularGitDirectory(ADirectory + 'refs') and
+    RegularGitDirectory(ADirectory + 'refs/heads') and
+    (GetFileAttributesW(PWideChar(UTF8Decode(ADirectory + 'commondir'))) = INVALID_FILE_ATTRIBUTES) and
+    (GetLastError = ERROR_FILE_NOT_FOUND);
+end;
+
+function ReadGitMetadata(const APath: String; out AData: RawByteString): Boolean;
+const
+  CMaxMetadataBytes = 8192;
+  COpenReparsePoint = $00200000;
+var
+  LHandle: THandle;
+  LInfo: TByHandleFileInformation;
+  LBytes: DWORD;
+begin
+  Result := False;
+  // Share deletes and close promptly so Git can replace a loose ref.
+  LHandle := CreateFileW(PWideChar(UTF8Decode(APath)), GENERIC_READ,
+    FILE_SHARE_READ or FILE_SHARE_WRITE or FILE_SHARE_DELETE, nil, OPEN_EXISTING,
+    COpenReparsePoint, 0);
+  if LHandle = INVALID_HANDLE_VALUE then
+  begin
+    Exit;
+  end;
+  try
+    if (GetFileType(LHandle) <> FILE_TYPE_DISK) or
+      not GetFileInformationByHandle(LHandle, LInfo) or
+      ((LInfo.dwFileAttributes and (FILE_ATTRIBUTE_REPARSE_POINT or FILE_ATTRIBUTE_DIRECTORY)) <> 0) or
+      (LInfo.nFileSizeHigh <> 0) or (LInfo.nFileSizeLow > CMaxMetadataBytes) then
+    begin
+      Exit;
+    end;
+    SetLength(AData, LInfo.nFileSizeLow + 1);
+    if ReadFile(LHandle, AData[1], Length(AData), LBytes, nil) and (LBytes = LInfo.nFileSizeLow) then
+    begin
+      SetLength(AData, LBytes);
+      Result := True;
+    end;
+  finally
+    CloseHandle(LHandle);
+  end;
+end;
+
+procedure TClaimIndex.LoadGitRevision(out ASimpleLayout: Boolean);
+var
+  LLayout: TStringList;
+  LGitResult: String;
+begin
+  ASimpleLayout := False;
+  if RunCommandIndir(FRoot, 'git', ['rev-parse', '--git-dir', '--git-common-dir',
+    '--verify', 'HEAD'], LGitResult, [], swoHide) then
+  begin
+    LLayout := TStringList.Create;
+    try
+      LLayout.Text := LGitResult;
+      if LLayout.Count = 3 then
+      begin
+        FRevision := Trim(LLayout[2]);
+        ASimpleLayout := (LLayout[0] = '.git') and (LLayout[1] = '.git');
+        Exit;
+      end;
+    finally
+      LLayout.Free;
+    end;
+  end;
+  FRevision := Trim(Git(['rev-parse', '--verify', 'HEAD']));
+end;
+
+procedure TClaimIndex.PinLooseHead;
+const
+  CBranchPrefix = 'ref: refs/heads/';
+var
+  LGitDir: String;
+  LBranch: String;
+  LRef: String;
+  LChar: AnsiChar;
+  LHead: RawByteString;
+  LValue: RawByteString;
+  LConfig: RawByteString;
+  LVerifiedConfig: RawByteString;
+  LGitResult: String;
+begin
+  LGitDir := FRoot + '.git' + PathDelim;
+  if (SysUtils.GetEnvironmentVariable('GIT_NAMESPACE') <> '') or
+    (SysUtils.GetEnvironmentVariable('GIT_OBJECT_DIRECTORY') <> '') or
+    (SysUtils.GetEnvironmentVariable('GIT_CONFIG') <> '') or
+    (SysUtils.GetEnvironmentVariable('GIT_CONFIG_COUNT') <> '') or
+    (SysUtils.GetEnvironmentVariable('GIT_CONFIG_PARAMETERS') <> '') or
+    not SimpleGitLayout(LGitDir) or not ReadGitMetadata(LGitDir + 'HEAD', LHead) or
+    not StartsStr(CBranchPrefix, LHead) then
+  begin
+    Exit;
+  end;
+  LBranch := Trim(Copy(LHead, Length(CBranchPrefix) + 1, MaxInt));
+  if (LBranch = '') or (LBranch[1] = '.') or (Pos('..', LBranch) <> 0) then
+  begin
+    Exit;
+  end;
+  for LChar in LBranch do
+  begin
+    if not (LChar in ['a'..'z', 'A'..'Z', '0'..'9', '_', '-', '.']) then
+    begin
+      Exit;
+    end;
+  end;
+  LRef := 'refs/heads/' + LBranch;
+  if not ReadGitMetadata(LGitDir + LRef, LValue) or (Trim(LValue) <> FRevision) or
+    not ReadGitMetadata(LGitDir + 'config', LConfig) then
+  begin
+    Exit;
+  end;
+  // Let Git confirm the traditional files backend and exclude configuration includes.
+  if not RunCommandIndir(FRoot, 'git', ['config', '--local', '--get-regexp',
+    '^(core\.repositoryformatversion|extensions\.|include)'], LGitResult, [], swoHide) or
+    (Trim(LGitResult) <> 'core.repositoryformatversion 0') or
+    not ReadGitMetadata(LGitDir + 'config', LVerifiedConfig) or (LVerifiedConfig <> LConfig) then
+  begin
+    Exit;
+  end;
+  FHeadBytes := LHead;
+  FHeadRefBytes := LValue;
+  FConfigBytes := LConfig;
+  FHeadRef := LRef;
+end;
+
+function TClaimIndex.LooseHeadIsCurrent: Boolean;
+var
+  LGitDir: String;
+  LData: RawByteString;
+begin
+  LGitDir := FRoot + '.git' + PathDelim;
+  Result := SimpleGitLayout(LGitDir) and
+    ReadGitMetadata(LGitDir + 'config', LData) and (LData = FConfigBytes) and
+    ReadGitMetadata(LGitDir + 'HEAD', LData) and (LData = FHeadBytes) and
+    ReadGitMetadata(LGitDir + FHeadRef, LData) and (LData = FHeadRefBytes) and
+    ReadGitMetadata(LGitDir + 'HEAD', LData) and (LData = FHeadBytes);
+end;
+{$ENDIF}
+
 constructor TClaimIndex.Create(const ARepoRoot: String);
 const
   CTreeArguments = 5;
@@ -369,7 +532,11 @@ begin
   FByIngredient := TObjectDictionary<String, TList<TClaim>>.Create([doOwnsValues]);
   FSymptomAliases := TDictionary<String, String>.Create;
   FIngredientAliases := TDictionary<String, String>.Create;
+  {$IFDEF WINDOWS}
+  LoadGitRevision(FMayPinLooseHead);
+  {$ELSE}
   FRevision := Trim(Git(['rev-parse', '--verify', 'HEAD']));
+  {$ENDIF}
   // A batch "missing" response also covers unreadable objects. Check the
   // pinned tree once so a damaged published table cannot pass as absent.
   SetLength(LArguments, CTreeArguments + CRoundCount * Length(COptionalPaths));
@@ -644,6 +811,22 @@ end;
 
 function TClaimIndex.IsCurrent: Boolean;
 begin
+  {$IFDEF WINDOWS}
+  if FMayPinLooseHead then
+  begin
+    // One-shot callers do not pay for validating the shortcut.
+    FMayPinLooseHead := False;
+    PinLooseHead;
+  end;
+  if FHeadRef <> '' then
+  begin
+    if LooseHeadIsCurrent then
+    begin
+      Exit(True);
+    end;
+    FHeadRef := '';
+  end;
+  {$ENDIF}
   Result := Trim(Git(['rev-parse', '--verify', 'HEAD'])) = FRevision;
 end;
 

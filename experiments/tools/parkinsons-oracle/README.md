@@ -54,6 +54,8 @@ The server reloads claim data when the repository’s committed revision changes
 
 Each reload resolves the committed revision, checks which evidence tables exist and reads the round files with one Git batch process. Required files and tracked evidence tables must be readable. The loader hashes the exact committed freeze bytes for every round.
 
+On Windows, repeat claim lookups can confirm an ordinary loose branch by comparing its current HEAD, ref and repository configuration bytes with a Git-verified snapshot. Changed files, packed-only refs, detached HEADs and linked worktrees use a fresh Git revision check. The shortcut has no time-based freshness window.
+
 Refresh the text index after adding local research. This reuses the existing index and checks the local inventory for changes:
 
 ```powershell
