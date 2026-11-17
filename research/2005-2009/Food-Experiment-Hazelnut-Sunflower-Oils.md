@@ -10,7 +10,11 @@ In September 2008, van de Rest and colleagues reported a 26-week blinded trial i
 
 ## Sunflower oil blend in a midlife distress trial
 
-Lucas and colleagues enrolled 120 women aged 40–55 with psychological distress. The 61-person comparator arm took 500 mg sunflower-oil capsules three times daily for eight weeks. The author methods specify 0.2% fish oil for masking and leave refining grade unspecified. The adjusted EPA-minus-comparator changes were −0.08 for HSCL-D-20 (95% CI −0.27 to 0.12) and −1.5 for HAM-D-21 (95% CI −3.7 to 0.7). Both groups improved on symptom scales. The trial used an active oil blend and did not recruit for Parkinson disease. Registry ISRCTN69617477 identifies this study family. The later ISRCTN47431149 trial used a different cohort and formulation. [Original source](https://www.collectionscanada.gc.ca/obj/thesescanada/vol1/QQLA/TC-QQLA-25538.pdf) · [Local factual text](Source-Text/2008-Lucas-Sunflower-Blend-Depression-Extract.txt)
+Lucas and colleagues enrolled 120 women aged 40–55 with psychological distress. The 61-person comparator arm took 500 mg sunflower-oil capsules three times daily for eight weeks. The author methods specify 0.2% fish oil for masking and leave refining grade unspecified. The adjusted EPA-minus-comparator changes were −0.08 for HSCL-D-20 (95% CI −0.27 to 0.12) and −1.5 for HAM-D-21 (95% CI −3.7 to 0.7). Both groups improved on symptom scales. The trial used an active oil blend and did not recruit for Parkinson disease. ISRCTN69617477 was posted February 13, 2007, after enrollment began. The separate ISRCTN47431149 study used a different cohort and formulation. [Original source](https://www.collectionscanada.gc.ca/obj/thesescanada/vol1/QQLA/TC-QQLA-25538.pdf) · [Local factual text](Source-Text/2008-Lucas-Sunflower-Blend-Depression-Extract.txt) · [Official registration summary](Source-Text/Trials/ISRCTN69617477.txt)
+
+## Mineral oil comparator in the Parkinson depression pilot
+
+Da Silva and colleagues enrolled 31 people with Parkinson disease and major depression. Fish oil favored lower MADRS and CGI scores at three months, while the Beck comparison gave p=.26. The groups completing the comparison received fish oil or mineral oil, with stratification by antidepressant use. The original Methods identify the comparator. [Original trial and exact outcomes](Source-Text/2008-Da-Silva-Parkinson-Depression-Extract.txt)
 
 ## Verified oil identity in the Nemets childhood depression trial
 

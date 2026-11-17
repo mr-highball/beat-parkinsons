@@ -16,6 +16,10 @@ Kien and colleagues published in 2013. The high-oleic arm used a fat supplement 
 
 ANZCTR first posted ACTRN12610000710022 on August 26, 2010. The protocol planned 90 adults with major depression, an eight-week randomized comparison of DHA, EPA and 2 g/day sunflower oil tablets, and a Hamilton Depression Rating Scale change outcome. The current official record still shows its historical recruitment status and lacks actual enrollment or results. The oil grade and a Parkinson subgroup are unspecified. [Official registration](https://anzctr.org.au/Trial/Registration/TrialReview.aspx?id=335873) · [Local registry fields](Source-Text/Trials/ACTRN12610000710022.txt)
 
+## Corn oil comparator in a Parkinson depression trial
+
+Pomponi and colleagues studied 24 people with mild to moderate Parkinson disease. At six months, the original abstract reports that 75% of patients on DHA plus EPA and 25% on the corn-oil comparison achieved a 50% or greater reduction on the Hamilton depression scale. The authors identify corn oil as the matched comparison. Arm-level means and analyzed denominators remain open at the available access depth. [Original comparison and limits](Source-Text/2014-Pomponi-Parkinson-Depression-Corn-Oil-Extract.txt)
+
 ## Registered high-oleic sunflower comparator and cognitive battery
 
 The 2010 ANZCTR record ACTRN12610000212055 registered oral high-oleic sunflower oil as a comparator for DHA with cognitive measurements including working memory, Stroop and digit vigilance. Listed sunflower oil exposure was 2.25 g/day in capsules. Pressing grade was unspecified. The registration and Stonehouse 2013 publication describe one cohort. [Local factual text](Source-Text/Trials/ACTRN12610000212055.txt) · [Primary source](https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id=335243)

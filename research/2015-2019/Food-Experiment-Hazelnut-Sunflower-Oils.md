@@ -43,3 +43,7 @@ ISRCTN first posted ISRCTN81655012 on October 19, 2016, after the recorded start
 ## Sunflower carrier in the registered lavender inhalation trial
 
 ReBEC registered the study on December 27, 2019, after first enrollment on April 24, 2018. The record names Laszlo sunflower oil in both randomized kits. The lavender kit added lavender essential oil. Participants used the vial by inhalation and placed its remaining contents on cotton near the pillow. The registration specifies the Hospital Anxiety and Depression Scale and reports a within-lavender depression change without an arm-specific estimate. The formulation record leaves the sunflower oil batch and refining grade unidentified. Both arms received the same sunflower carrier. [Original source](https://ensaiosclinicos.gov.br/rg/RBR-5q5t5z) · [Local factual text](Source-Text/2019-RBR-5q5t5z-Lavender-Sunflower-Inhalation-Extract.txt)
+
+## Registered sunflower comparator after prostate cancer recurrence
+
+The official record first posted November 27, 2018. It plans HADS depression and PHQ-9 alongside a primary PSA doubling-time outcome, comparing EPA with high-oleic sunflower oil. The record shows 39 enrolled and no posted results. It is distinct from the presurgery comparison NCT02333435. Participant-level overlap and refining grade remain unverified. [Official registration summary](Source-Text/Trials/NCT03753334.txt)

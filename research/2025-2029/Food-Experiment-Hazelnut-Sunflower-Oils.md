@@ -19,3 +19,7 @@ Ramos and colleagues first published June 25, 2026. The sunflower-oil vehicle gr
 ## Sunflower oil excipient in the Ginger PD registration
 
 ClinicalTrials.gov posted Ginger-PD, NCT07882108, October 20, 2026. The Parkinson, REM sleep behavior disorder and control groups receive one of two doses of the same ginger capsule formula, whose ingredient list includes sunflower seed oil. The study plans ghrelin and gut outcomes and exploratory MDS-UPDRS I–IV, MoCA and semantic fluency measurements. It reports neither the amount or grade of the excipient nor an oil-specific comparison. The trial was recruiting without posted results. [Official registration](https://clinicaltrials.gov/study/NCT07882108) · [Local registry text](Source-Text/Trials/NCT07882108.txt)
+
+## Registered sunflower oil and depression item in multiple sclerosis
+
+The January 16, 2026 registration compares sunflower oil with DHA, with and without exercise. It describes a binary depression item in the multiple sclerosis quality-of-life instrument. The registry gives conflicting narrative and structured dates and contains no posted results. The population, binary item and unspecified grade limit application to Parkinson symptom severity. [Official registration summary](Source-Text/Trials/NCT07346703.txt)
