@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The ginger follow-through closed 54 exact original pairs and added six assessments. A recovered 2018 trial table showed a more favorable constipation-domain endpoint with ginger capsules in adults with IBS. Claim 0581 remains Maybe False and reviewer confidence increased from 51 to 52. Fresh grated ginger and Parkinson constipation remain unresolved. The other grades and all verdict totals are unchanged. The original Europe PMC queue holds 51,612 pairs. [Primary studies, registration records and exact review](followup/oracle-ginger-constipation-and-context-nov17/README.md)
+
 The Italian Neurology review closed 33 original pairs, and the military diet, historical cycling and Moli-sani follow-through added three study assessments. The military trial found lower fatigue during extended wakefulness on the ketogenic diet, with similar fatigue during adaptation and no individual coconut-oil intake. The cyclists’ perceived-exertion comparison was inconclusive. Moli-sani reports Parkinson incidence, with no fatigue result in the accessible sources. Verdicts are unchanged. The original Europe PMC queue holds 51,666 pairs. [Original studies, scope and access limits](followup/oracle-henderson-and-sin-nov17/README.md)
 
 The stroke and exposure checkpoint closed 131 original pairs, including all 31 previously held pairs in the 2018 stroke supplement, and added four study assessments. The healthy-adult ketogenic crossover gives whole-diet mood, alertness and executive results without individual coconut-oil intake. A later flaxseed animal poster reports an anxiety-like result for a combined exposure and leaves the oil-alone outcome unestablished. The Parkinson verdicts are unchanged. The original Europe PMC queue holds 51,699 pairs. [Member-specific reviews and dated research](followup/oracle-stroke-and-exposure-nov17/README.md)
@@ -721,7 +723,7 @@ The published verdicts are 997 Unknown and three Maybe False. [Open trails](foll
 - [0485](statements/0485.txt) **Maybe False** (53%) Consuming dried saffron worsens fatigue severity in people with Parkinson's disease.
 - [0513](statements/0513.txt) **Maybe False** (51%) Consuming virgin coconut oil worsens daytime sleepiness severity in people with Parkinson's disease.
 - [0560](statements/0560.txt) **Maybe True** (51%) Consuming ground cumin reduces constipation severity in people with Parkinson's disease.
-- [0581](statements/0581.txt) **Maybe False** (51%) Consuming grated ginger worsens constipation severity in people with Parkinson's disease.
+- [0581](statements/0581.txt) **Maybe False** (52%) Consuming grated ginger worsens constipation severity in people with Parkinson's disease.
 - [0629](statements/0629.txt) **Maybe True** (51%) Consuming cold-pressed olive oil reduces bradykinesia severity in people with Parkinson's disease.
 - [0639](statements/0639.txt) **Maybe True** (51%) Consuming cold-pressed flaxseed oil reduces pain severity in people with Parkinson's disease.
 - [0642](statements/0642.txt) **Maybe False** (51%) Consuming grated turmeric worsens walking slowness in people with Parkinson's disease.

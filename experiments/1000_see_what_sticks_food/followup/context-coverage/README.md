@@ -4,15 +4,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 9,277 |
+| Local body or other primary-source context | 9,331 |
 | Exact assessment with basis unspecified | 127 |
 | Abstract context | 182 |
 | Title or index | 187 |
 | Pending or access-only disposition | 201 |
-| No imported exact review | 51,278 |
+| No imported exact review | 51,224 |
 | **Total** | **61,252** |
 
-The native replay keeps 51,666 pairs queued across 32,013 sources. That includes 187 title/index reviews, 201 pending pairs and 51,278 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Priority scope open pairs](../protocols-and-source-bodies-nov17/priority-three-scope.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
+The native replay keeps 51,612 pairs queued across 31,995 sources. That includes 187 title/index reviews, 201 pending pairs and 51,224 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Priority scope open pairs](../protocols-and-source-bodies-nov17/priority-three-scope.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
 
 ## Intake for exact source reviews
 
@@ -21,6 +21,8 @@ Compile [the Free Pascal intake](../../tools/foodexperiment.contextintake.lpr) u
 The program rejects duplicate and out-of-queue pairs or a downgrade of an existing review before writing. The packet retains all reviewed keys and unresolved rows. Existing pending rows that reach greater depth replace their canonical entry. Unchanged pending depth preserves the old ledger row and the new receipt remains available in the packet. Verify the staged rows and rerun the native context replay after publishing the canonical ledger.
 
 ## Contextual reviews
+
+Eighteen archived originals supplied 54 exact full-text decisions. A recovered 2018 original trial separately gives constipation-domain results for ginger capsules in IBS. [Original scope, dispositions and study outcomes](../oracle-ginger-constipation-and-context-nov17/README.md)
 
 The 2022 Italian Neurology proceedings supplied 33 original member-level decisions, including the Moli-sani coffee cohort subsequently published with incidence estimates. The separate 2025 ESOC and 2014 FEBS collections remain open. [Original scope, dispositions and study linkage](../oracle-henderson-and-sin-nov17/README.md)
 
