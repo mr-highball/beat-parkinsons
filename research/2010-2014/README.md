@@ -142,6 +142,7 @@ January 1, 2010 through December 31, 2014.
 - [Food experiment pomegranate follow-up](Food-Experiment-Pomegranate.md)
 - [Almond and avocado oil evidence](Food-Experiment-Almond-Avocado-Oils.md)
 - [Pumpkin seed oil and peanut oil evidence](Food-Experiment-Pumpkin-Peanut-Oil.md)
+- [Pulse foods and cognitive outcomes](Food-Experiment-Pea-Protein-Cognition.md)
 - [Macadamia, hazelnut and walnut oil evidence](Food-Experiment-Tree-Nut-Oils.md)
 - [Mustard seed and caraway evidence](Food-Experiment-Mustard-Seed-Caraway.md)
 - [Clinical and diagnosis](Clinical-and-Diagnosis.md)
