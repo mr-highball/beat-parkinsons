@@ -13,15 +13,17 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 945 |
+| Unknown | 1000 | 944 |
 | Maybe True | 0 | 26 |
-| Maybe False | 0 | 29 |
+| Maybe False | 0 | 30 |
 | True | 0 | 0 |
 | False | 0 | 0 |
 
 ## Findings and limits
 
-Two conference collections and five clinical articles supplied 99 exact full-text decisions. The sage, olive oil and broccoli follow-up added three study assessments and verified a sage registry design and chronology discrepancy. All 11 sage search appearances received a recorded disposition. No verdict changed. The original Europe PMC queue holds 52,189 pairs. [Source access, findings and verification](followup/oracle-review-clusters-nov17/README.md)
+The barley and neurobehavior follow-up added 74 full-text decisions, including ten from two complete Parkinson reviews recovered through PMC Open Data. Four focused searches reconciled all six returned appearances. Claim 0953 moved to Maybe False at 51 after a randomized trial in healthy adults reported a more favorable tension–anxiety change with boiled barley than white rice. Final medians were equal, and Parkinson anxiety remains untested. Claim 1000 stays Unknown. The original Europe PMC queue now holds 52,115 pairs. [Review scope and findings](followup/oracle-neurobehavior-context-nov17/README.md) · [Dated barley trial and registry](../../research/2020-2024/Food-Experiment-Leafy-Grains.md#boiled-waxy-barley-and-tensionanxiety-in-healthy-adults)
+
+Two conference collections and five clinical articles supplied 99 exact full-text decisions. The sage, olive oil and broccoli follow-up added three study assessments and verified a sage registry design and chronology discrepancy. All 11 sage search appearances received a recorded disposition. No verdict changed. The original Europe PMC queue held 52,189 pairs at this checkpoint. [Source access, findings and verification](followup/oracle-review-clusters-nov17/README.md)
 
 The rosemary and chicken follow-up verified detailed primary results, linked reports from the same student-study registration and catalogued one whole-chicken registry. Two assessments were added and one was revised. Rosemary remains Maybe False at 51 and chicken remains Unknown at 50. The 44 FEBS supplement pairs remain open. [Primary evidence and continuing trails](followup/oracle-rosemary-and-chicken-nov17/README.md)
 
@@ -121,7 +123,7 @@ The orange and MEDI-PD review reached 48 original bodies. The new citrus finding
 
 In the black bean and cinnamon follow-up, the cooked common-bean crossover measured vascular responses. Soybean extracts addressed task-day and waking sleep outcomes. Cinnamon was a diagnostic smell cue in two Parkinson cohorts, and an oral crossover measured meal-smell pleasantness in diabetes. Fifty-seven original pairs reached full text. Two claim rationales were updated. At that checkpoint the original-source queue held 54,747 pairs. [Study findings and verification](followup/olfaction-sleepiness-nov16/README.md)
 
-All 945 Unknown claims have completed first-pass searches, at least one study assessment and a current review for weak directional evidence. Zero have completed exhaustive review. In the original Europe PMC inventory, 414 have 44,447 claim–source pairs still queued, 320 had zero original matches and 211 had matches with no original pairs left queued. All three groups remain in the exhaustive follow-up across providers and citation trails. [Per-claim queue and depth](followup/context-coverage/coverage-by-claim.tsv) · [Directional adjudication coverage](followup/unknown-direction-review/prior-review-status.tsv)
+All 944 Unknown claims have completed first-pass searches, at least one study assessment and a current review for weak directional evidence. Zero have completed exhaustive review. In the original Europe PMC inventory, 413 have 44,237 claim–source pairs still queued, 320 had zero original matches and 211 had matches with no original pairs left queued. All three groups remain in the exhaustive follow-up across providers and citation trails. [Per-claim queue and depth](followup/context-coverage/coverage-by-claim.tsv) · [Directional adjudication coverage](followup/unknown-direction-review/prior-review-status.tsv)
 
 The community source review added 25 original-body decisions. New assessments broaden the evidence for allspice walking, sardine speech, pinto insomnia and cinnamon olfaction. No grade or score changed. At that checkpoint the original-source queue held 54,804 pairs. [Community and claim evidence](followup/claim-audit-integration-nov16/README.md)
 
@@ -725,3 +727,4 @@ The published verdicts are 997 Unknown and three Maybe False. [Open trails](foll
 - [0913](statements/0913.txt) **Maybe True** (51%) Consuming cold-pressed flaxseed oil reduces bradykinesia severity in people with Parkinson's disease.
 - [0948](statements/0948.txt) **Maybe True** (51%) Consuming brewed green tea worsens fatigue severity in people with Parkinson's disease.
 - [0949](statements/0949.txt) **Maybe False** (51%) Consuming frozen raspberry worsens executive function impairment in people with Parkinson's disease.
+- [0953](statements/0953.txt) **Maybe False** (51%) Consuming boiled barley worsens anxiety severity in people with Parkinson's disease.
