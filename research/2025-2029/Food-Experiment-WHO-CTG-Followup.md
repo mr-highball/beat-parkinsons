@@ -2,7 +2,7 @@
 
 ## Ketoflex trial registration and linked outcomes
 
-NCT06892418 first posted on March 24, 2025, after the registry's reported 2024 completion. The February 2026 article identifies the registration explicitly. It compares a personalized plant-rich, time-restricted diet plus conventional care with conventional care, with no assigned single culinary ingredient. [Official registry](https://clinicaltrials.gov/study/NCT06892418) [Primary report, PMID 41666212](https://pmc.ncbi.nlm.nih.gov/articles/PMC13347589/) [Local outcome assessment](Food-and-Nutrition.md#2026--personalized-plant-rich-and-time-restricted-intervention)
+NCT06892418 first posted on March 24, 2025, after the registry's reported 2024 completion. The February 2026 article identifies the registration explicitly. It compares a personalized plant-rich, time-restricted diet plus conventional care with conventional care. The paper does not assign steamed broccoli or report a separate fall-frequency outcome. [Official registry](https://clinicaltrials.gov/study/NCT06892418) [Primary report, PMID 41666212](https://pmc.ncbi.nlm.nih.gov/articles/PMC13347589/) [Local outcome assessment](Food-and-Nutrition.md#2026--personalized-plant-rich-and-time-restricted-intervention)
 
 ## Mediterranean diet program registrations
 
