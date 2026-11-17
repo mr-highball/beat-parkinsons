@@ -4,6 +4,8 @@ January 1, 2025 through November 11, 2026 (partial period).
 
 ## Annotated research
 
+- [Mixed-spice capsules and a planned pain questionnaire](Food-Experiment-Sage-Mixed-Spice-Pain.md)
+
 - [Oat foods, formulations and sleep](Food-Experiment-Oats-Insomnia.md)
 
 - [Green-tea aroma, odor cards and odor memory](Food-Experiment-Tea-Odor-Tests.md)

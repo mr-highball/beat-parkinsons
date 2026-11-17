@@ -1,0 +1,3 @@
+# Mixed-spice capsules and a planned pain questionnaire
+
+ClinicalTrials.gov first posted NCT06889961 on March 21, 2025. The protocol includes sage in capsules with turmeric, cinnamon, oregano, black pepper and thyme versus maltodextrin. The SF-36 pain domain is listed as a secondary six-month outcome, with memory primary. The structured field labels allocation N/A while the narrative describes random assignment. The specific sage species and preparation are unlisted. The recruiting record had no posted results at the November 17, 2026 check. An eventual pain estimate would describe the mixture. [Official registration](https://clinicaltrials.gov/study/NCT06889961) · [Existing official-record text](Source-Text/Trials/NCT06889961.txt)

@@ -4,6 +4,8 @@ January 1, 2015 through December 31, 2019.
 
 ## Annotated research
 
+- [Sage-containing teas in controlled trial records](Food-Experiment-Sage-Tea-Trial-Records.md)
+
 - [Oat foods, formulations and sleep](Food-Experiment-Oats-Insomnia.md)
 
 - [Mucuna preparation and acute Parkinson ON duration](Source-Text/2017-Cilia-Mucuna-ON-Time-Crossover.txt)
