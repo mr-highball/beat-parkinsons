@@ -6,6 +6,9 @@ unit foodexperiment.archiveidentity;
 
 interface
 
+const
+  ArchiveHeaderBytes = 8192;
+
 type
   TArchiveIdentity = record
     Pmcid: String;
@@ -15,6 +18,10 @@ type
   end;
 
 function ReadArchiveIdentity(const APath: String): TArchiveIdentity;
+function ParseArchiveIdentity(const AText: RawByteString): TArchiveIdentity;
+function ParseTrialArchiveIdentifier(const AText: RawByteString;
+  const AExpected: String): String;
+function NormalizeArchiveIdentifier(const AValue: String): String;
 function ArchiveIdentityConflicts(const AExpected, AArchive: TArchiveIdentity): String;
 function SameTitledArchive(const AExpected, AArchive: TArchiveIdentity): Boolean;
 
@@ -37,9 +44,12 @@ end;
 
 function NormalizeDoi(const AValue: String): String;
 const
-  Prefixes: array[0..2] of String = ('https://doi.org/', 'http://dx.doi.org/', 'doi:');
+  Prefixes: array[0..4] of String = ('https://doi.org/', 'http://doi.org/', 'https://dx.doi.org/',
+    'http://dx.doi.org/', 'doi:');
 var
   LPrefix: String;
+  LSlash: Integer;
+  LIndex: Integer;
 begin
   Result := LowerCase(Trim(AValue));
   for LPrefix in Prefixes do
@@ -49,31 +59,130 @@ begin
       Break;
     end;
   Result := Trim(Result);
-  if not AnsiStartsStr('10.', Result) or (Pos('/', Result) <= 3) or
-    (Pos(' ', Result) > 0) then
-    Result := '';
+  LSlash := Pos('/', Result);
+  if not AnsiStartsStr('10.', Result) or (LSlash < 5) or (LSlash = Length(Result)) or
+    (Pos(' ', Result) > 0) or (Pos(#0, Result) > 0) or (Pos(#9, Result) > 0) or
+    (Pos(#10, Result) > 0) or (Pos(#13, Result) > 0) then
+    Exit('');
+  for LIndex := 4 to LSlash - 1 do
+  begin
+    if (Result[LIndex] = '.') and (Result[LIndex - 1] in ['0'..'9']) and
+      (Result[LIndex + 1] in ['0'..'9']) then
+      Continue;
+    if not (Result[LIndex] in ['0'..'9']) then
+      Exit('');
+  end;
+end;
+
+function NormalizeArchiveIdentifier(const AValue: String): String;
+var
+  LValue: String;
+  LDoi: String;
+begin
+  LValue := UpperCase(Trim(AValue));
+  if AnsiStartsStr('PMID:', LValue) then
+  begin
+    LValue := Trim(Copy(LValue, 6, MaxInt));
+    if DigitsOnly(LValue) then
+      Exit('PMID:' + LValue);
+    Exit('');
+  end;
+  if DigitsOnly(LValue) then
+    Exit('PMID:' + LValue);
+  if AnsiStartsStr('PMCID:', LValue) then
+  begin
+    LValue := Trim(Copy(LValue, 7, MaxInt));
+    if not (AnsiStartsStr('PMC', LValue) and DigitsOnly(Copy(LValue, 4, MaxInt))) then
+      Exit('');
+  end;
+  if AnsiStartsStr('PMC', LValue) and DigitsOnly(Copy(LValue, 4, MaxInt)) then
+    Exit('PMCID:' + LValue);
+  if AnsiStartsStr('NCT', LValue) and (Length(LValue) = 11) and
+    DigitsOnly(Copy(LValue, 4, MaxInt)) then
+    Exit(LValue);
+  LDoi := NormalizeDoi(AValue);
+  if LDoi <> '' then
+    Exit('DOI:' + LDoi);
+  Result := '';
 end;
 
 function ReadArchiveIdentity(const APath: String): TArchiveIdentity;
-const
-  CHeaderBytes = 8192;
 var
   LFile: TFileStream;
   LText: RawByteString;
-  LLine, LValue: String;
-  LInHeader, LWrapped: Boolean;
-  LStart, LEnd, LSplit: Integer;
 begin
-  Result := Default(TArchiveIdentity);
   if not FileExists(APath) then
-    Exit;
+    Exit(Default(TArchiveIdentity));
   LFile := TFileStream.Create(APath, fmOpenRead or fmShareDenyNone);
   try
-    SetLength(LText, CHeaderBytes);
-    SetLength(LText, LFile.Read(LText[1], CHeaderBytes));
+    SetLength(LText, ArchiveHeaderBytes);
+    SetLength(LText, LFile.Read(LText[1], ArchiveHeaderBytes));
   finally
     LFile.Free;
   end;
+  Result := ParseArchiveIdentity(LText);
+end;
+
+function ParseTrialArchiveIdentifier(const AText: RawByteString;
+  const AExpected: String): String;
+const
+  CSource = 'Source: https://clinicaltrials.gov/study/';
+  CIdentity = 'NCT ID: ';
+  CRegistryHeaderBytes = 1024;
+var
+  LText: RawByteString;
+  LStart: Integer;
+  LEnd: Integer;
+  LSuffix: Integer;
+  LLine: String;
+  LSource: String;
+begin
+  Result := '';
+  if not AnsiStartsStr('NCT', AExpected) then
+    Exit;
+  LText := Copy(AText, 1, CRegistryHeaderBytes);
+  LSource := '';
+  LStart := 1;
+  while LStart <= Length(LText) do
+  begin
+    LEnd := PosEx(#10, LText, LStart);
+    if LEnd = 0 then
+      Exit;
+    LLine := Trim(Copy(LText, LStart, LEnd - LStart));
+    LStart := LEnd + 1;
+    if AnsiStartsStr(CSource, LLine) then
+    begin
+      LSuffix := Pos('?', LLine);
+      if LSuffix <> 0 then
+        SetLength(LLine, LSuffix - 1);
+      LSuffix := Pos('#', LLine);
+      if LSuffix <> 0 then
+        SetLength(LLine, LSuffix - 1);
+      LSource := NormalizeArchiveIdentifier(Copy(LLine, Length(CSource) + 1, MaxInt));
+    end
+    else if AnsiStartsStr(CIdentity, LLine) then
+    begin
+      if (LSource = AExpected) and
+        (LSource = NormalizeArchiveIdentifier(Copy(LLine, Length(CIdentity) + 1, MaxInt))) then
+        Result := LSource;
+      Exit;
+    end;
+  end;
+end;
+
+function ParseArchiveIdentity(const AText: RawByteString): TArchiveIdentity;
+var
+  LText: RawByteString;
+  LLine: String;
+  LValue: String;
+  LInHeader: Boolean;
+  LWrapped: Boolean;
+  LStart: Integer;
+  LEnd: Integer;
+  LSplit: Integer;
+begin
+  Result := Default(TArchiveIdentity);
+  LText := Copy(AText, 1, ArchiveHeaderBytes);
   if Copy(LText, 1, 3) = #$EF#$BB#$BF then
     Delete(LText, 1, 3);
   LWrapped := AnsiStartsStr('Title:', LText);

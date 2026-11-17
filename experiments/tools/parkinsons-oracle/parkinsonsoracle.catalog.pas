@@ -43,6 +43,7 @@ type
     procedure Refresh;
     procedure ExportSearch(const AOutputDirectory: String);
     function Search(const ATerms, APeriod: String; AOffset, ALimit: Integer): TJSONObject;
+    function FindSources(AIdentifiers: TJSONArray): TJSONObject;
     function ReadSource(const APath: String; AOffset: Int64): TJSONObject;
     function Status(AIncludeDiagnostics: Boolean = True): TJSONObject;
   end;
@@ -50,13 +51,15 @@ type
 implementation
 
 uses
-  BufStream, Classes, Generics.Collections, JwaNative, JwaWinternl, Math, Windows;
+  BufStream, Classes, Generics.Collections, JwaNative, JwaWinternl, Math, Windows,
+  foodexperiment.archiveidentity;
 
 const
   CatalogApplicationId = $504F5243;
   CatalogSchemaVersion = 1;
   MaximumPageSize = 100;
   MaximumTermsBytes = 512;
+  MaximumIdentifiers = 100;
   ErrorExampleLimit = 10;
   SourcePageBytes = 16384;
   ResearchPathPrefix = 'research/';
@@ -219,6 +222,30 @@ begin
   end;
 end;
 
+function AddSearchSnapshot(ADatabase: PSQLite3; AResult: TJSONObject;
+  const ALastRefreshError: String): Int64;
+var
+  LState: TSqlStatement;
+begin
+  LState := TSqlStatement.Create(ADatabase, 'SELECT revision,refreshed_at,' +
+    ' skipped_reparse_points,(SELECT count(*) FROM documents WHERE read_error<>'''')' +
+    ' FROM catalog_state');
+  try
+    if not LState.Next or (LState.Number(0) = 0) then
+    begin
+      raise Exception.Create('Catalog has not completed a refresh');
+    end;
+    Result := LState.Number(0);
+    AResult.Add('revision', Result);
+    AResult.Add('refreshed_at_utc', LState.Text(1));
+    AResult.Add('skipped_reparse_points', LState.Number(2));
+    AResult.Add('read_errors', LState.Number(3));
+    AResult.Add('last_refresh_error', UTF8String(ALastRefreshError));
+  finally
+    LState.Free;
+  end;
+end;
+
 function FileSystemPath(const APath: UnicodeString): UnicodeString;
 begin
   if Copy(APath, 1, 4) = '\\?\' then
@@ -371,10 +398,12 @@ begin
   inherited Destroy;
 end;
 
-function CheckedBody(const APath: UnicodeString; ABytes, AMTime: Int64): UTF8String;
+function CheckedBody(const APath: UnicodeString; ABytes, AMTime: Int64;
+  APrefixBytes: Integer = 0): UTF8String;
 var
   LHandle: THandle;
   LInfo: TByHandleFileInformation;
+  LReadBytes: Integer;
   LStream: THandleStream;
 begin
   if (ABytes < 0) or (ABytes > High(Integer) - 1) then
@@ -404,10 +433,15 @@ begin
     end;
     LStream := THandleStream.Create(LHandle);
     try
-      SetLength(Result, SizeInt(ABytes));
-      if ABytes > 0 then
+      LReadBytes := ABytes;
+      if APrefixBytes > 0 then
       begin
-        LStream.ReadBuffer(Result[1], SizeInt(ABytes));
+        LReadBytes := Math.Min(LReadBytes, APrefixBytes);
+      end;
+      SetLength(Result, LReadBytes);
+      if LReadBytes > 0 then
+      begin
+        LStream.ReadBuffer(Result[1], LReadBytes);
       end;
     finally
       LStream.Free;
@@ -427,7 +461,8 @@ begin
   begin
     raise ECatalogReadError.Create('Embedded NUL in a research text file');
   end;
-  if Result <> '' then
+  // An unchanged body was already validated. Its prefix can end mid-character.
+  if (APrefixBytes = 0) and (Result <> '') then
   begin
     Utf8ToUnicode(nil, 0, PAnsiChar(Result), Length(Result), False);
   end;
@@ -753,20 +788,74 @@ var
   LDelete: TSqlStatement;
   LStore: TSqlStatement;
   LIndex: TSqlStatement;
+  LDeleteIdentifiers: TSqlStatement;
+  LStoreIdentifier: TSqlStatement;
   LFinish: TSqlStatement;
+  LRebuildIdentifiers: Boolean;
   LChanged: Boolean;
   LReparseCount: Int64;
   LRootAttributes: DWORD;
+
+  procedure IndexSourceIdentifiers(ADocumentId: Int64; const ARelative, APeriod, ABody: UTF8String);
+  const
+    CTrialFolder = '/Source-Text/Trials/';
+  var
+    LIdentity: TArchiveIdentity;
+    LStart: Integer;
+    LTrialId: String;
+    LTrialName: UTF8String;
+
+    procedure Store(const AIdentifier: String);
+    begin
+      LStoreIdentifier.Reset;
+      LStoreIdentifier.BindNumber(1, ADocumentId);
+      LStoreIdentifier.BindText(2, UTF8String(AIdentifier));
+      LStoreIdentifier.Execute;
+    end;
+
+  begin
+    LIdentity := ParseArchiveIdentity(ABody);
+    if LIdentity.Pmid <> '' then
+    begin
+      Store('PMID:' + LIdentity.Pmid);
+    end;
+    if LIdentity.Pmcid <> '' then
+    begin
+      Store('PMCID:' + LIdentity.Pmcid);
+    end;
+    if LIdentity.Doi <> '' then
+    begin
+      Store('DOI:' + LIdentity.Doi);
+    end;
+    LStart := Length(ResearchPathPrefix) + Length(APeriod) + 1;
+    if Copy(ARelative, LStart, Length(CTrialFolder) + 3) = CTrialFolder + 'NCT' then
+    begin
+      LTrialName := Copy(ARelative, LStart + Length(CTrialFolder), MaxInt);
+      if (Length(LTrialName) <= 11) or not (LTrialName[12] in ['.', '-']) or
+        (Pos('/', LTrialName) <> 0) then
+      begin
+        Exit;
+      end;
+      LTrialId := NormalizeArchiveIdentifier(Copy(LTrialName, 1, 11));
+      LTrialId := ParseTrialArchiveIdentifier(ABody, LTrialId);
+      if LTrialId <> '' then
+      begin
+        Store(LTrialId);
+      end;
+    end;
+  end;
 
   procedure InventoryFile(const APath: UnicodeString; const ARelative, APeriod: UTF8String;
     ABytes, AMTime: Int64);
   var
     LId: Int64;
     LHadBody: Boolean;
+    LArchivedSource: Boolean;
     LSameMetadata: Boolean;
     LOldError: UTF8String;
     LError: UTF8String;
     LBody: UTF8String;
+    LPrefixBytes: Integer;
   begin
     LSeen.Reset;
     LSeen.BindText(1, ARelative);
@@ -785,14 +874,22 @@ var
     end;
     LFind.Reset;
     LHadBody := (LId <> 0) and (LOldError = '');
-    if LHadBody and LSameMetadata then
+    LArchivedSource := (APeriod <> '') and
+      (Pos('/Source-Text/', ARelative) = Length(ResearchPathPrefix) + Length(APeriod) + 1) and
+      (ExtractFileExt(LowerCase(String(ARelative))) = '.txt');
+    if LHadBody and LSameMetadata and not (LArchivedSource and LRebuildIdentifiers) then
     begin
       Exit;
     end;
 
     LError := '';
+    LPrefixBytes := 0;
+    if LHadBody and LSameMetadata then
+    begin
+      LPrefixBytes := ArchiveHeaderBytes;
+    end;
     try
-      LBody := CheckedBody(APath, ABytes, AMTime);
+      LBody := CheckedBody(APath, ABytes, AMTime, LPrefixBytes);
     except
       on LFailure: EOSError do
       begin
@@ -813,6 +910,10 @@ var
     end;
     if (LId <> 0) and LSameMetadata and (LError = LOldError) then
     begin
+      if LArchivedSource and LRebuildIdentifiers and (LError = '') then
+      begin
+        IndexSourceIdentifiers(LId, ARelative, APeriod, LBody);
+      end;
       Exit;
     end;
     LChanged := True;
@@ -821,6 +922,12 @@ var
       LDelete.Reset;
       LDelete.BindNumber(1, LId);
       LDelete.Execute;
+      if LArchivedSource then
+      begin
+        LDeleteIdentifiers.Reset;
+        LDeleteIdentifiers.BindNumber(1, LId);
+        LDeleteIdentifiers.Execute;
+      end;
     end;
     LStore.Reset;
     LStore.BindText(1, ARelative);
@@ -841,6 +948,10 @@ var
       LIndex.BindText(2, LBody);
       LIndex.Execute;
       LIndex.Reset;
+      if LArchivedSource then
+      begin
+        IndexSourceIdentifiers(LId, ARelative, APeriod, LBody);
+      end;
     end;
   end;
 
@@ -919,6 +1030,8 @@ begin
   LDelete := nil;
   LStore := nil;
   LIndex := nil;
+  LDeleteIdentifiers := nil;
+  LStoreIdentifier := nil;
   LFinish := nil;
   LChanged := False;
   LReparseCount := 0;
@@ -934,6 +1047,21 @@ begin
       ExecuteSql(FDatabase, 'BEGIN IMMEDIATE');
       ExecuteSql(FDatabase, 'CREATE INDEX IF NOT EXISTS documents_read_errors' +
         ' ON documents(path) WHERE read_error<>''''');
+      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_identifiers (' +
+        ' identifier TEXT NOT NULL, document_id INTEGER NOT NULL,' +
+        ' PRIMARY KEY(identifier, document_id)) WITHOUT ROWID');
+      ExecuteSql(FDatabase, 'CREATE INDEX IF NOT EXISTS source_identifiers_document' +
+        ' ON source_identifiers(document_id)');
+      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_identifier_state (' +
+        ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
+      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_identifier_state VALUES (1,-1)');
+      LRebuildIdentifiers := Scalar(FDatabase, 'SELECT source_identifier_state.revision' +
+        ' <> catalog_state.revision FROM source_identifier_state, catalog_state') <> 0;
+      if LRebuildIdentifiers then
+      begin
+        // Also recover when an older executable has refreshed the text catalog.
+        ExecuteSql(FDatabase, 'DELETE FROM source_identifiers');
+      end;
       ExecuteSql(FDatabase, 'CREATE TEMP TABLE IF NOT EXISTS seen (' +
         ' path TEXT PRIMARY KEY) WITHOUT ROWID');
       ExecuteSql(FDatabase, 'DELETE FROM seen');
@@ -948,10 +1076,16 @@ begin
         ' mtime=excluded.mtime,read_error=excluded.read_error RETURNING id');
       LIndex := TSqlStatement.Create(FDatabase,
         'INSERT INTO document_fts(rowid,body) VALUES (?1,?2)');
+      LDeleteIdentifiers := TSqlStatement.Create(FDatabase,
+        'DELETE FROM source_identifiers WHERE document_id=?1');
+      LStoreIdentifier := TSqlStatement.Create(FDatabase,
+        'INSERT INTO source_identifiers(identifier,document_id) VALUES (?2,?1)');
 
       Walk(FResearchRoot, 'research', '');
       ExecuteSql(FDatabase, 'DELETE FROM document_fts WHERE rowid IN (' +
         ' SELECT id FROM documents WHERE read_error='''' AND path NOT IN (SELECT path FROM seen))');
+      ExecuteSql(FDatabase, 'DELETE FROM source_identifiers WHERE document_id IN (' +
+        ' SELECT id FROM documents WHERE path NOT IN (SELECT path FROM seen))');
       ExecuteSql(FDatabase, 'DELETE FROM documents WHERE path NOT IN (SELECT path FROM seen)');
       LChanged := LChanged or (TWinSqliteDbCode(Pointer(@sqlite3_changes))(FDatabase) > 0);
 
@@ -962,6 +1096,8 @@ begin
       LFinish.BindNumber(1, Ord(LChanged));
       LFinish.BindNumber(2, LReparseCount);
       LFinish.Execute;
+      ExecuteSql(FDatabase, 'UPDATE source_identifier_state' +
+        ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
       ExecuteSql(FDatabase, 'COMMIT');
       FLastRefreshError := '';
     except
@@ -974,6 +1110,8 @@ begin
     end;
   finally
     LFinish.Free;
+    LStoreIdentifier.Free;
+    LDeleteIdentifiers.Free;
     LIndex.Free;
     LStore.Free;
     LDelete.Free;
@@ -1022,7 +1160,6 @@ var
   LPeriod: UTF8String;
   LCountFrom: AnsiString;
   LPageFrom: AnsiString;
-  LState: TSqlStatement;
   LCount: TSqlStatement;
   LMatches: TSqlStatement;
   LRows: TJSONArray;
@@ -1060,27 +1197,13 @@ begin
     LPageFrom := LPageFrom + ' AND documents.period=?2';
     LCountFrom := LPageFrom;
   end;
-  LState := nil;
   LCount := nil;
   LMatches := nil;
   LResult := TJSONObject.Create;
   try
     ExecuteSql(FDatabase, 'BEGIN');
     try
-      LState := TSqlStatement.Create(FDatabase, 'SELECT revision,refreshed_at,' +
-        ' skipped_reparse_points,(SELECT count(*) FROM documents WHERE read_error<>'''')' +
-        ' FROM catalog_state');
-      if not LState.Next or (LState.Number(0) = 0) then
-      begin
-        raise Exception.Create('Catalog has not completed a refresh');
-      end;
-      LRevision := LState.Number(0);
-      LResult.Add('revision', LRevision);
-      LResult.Add('refreshed_at_utc', LState.Text(1));
-      LResult.Add('skipped_reparse_points', LState.Number(2));
-      LResult.Add('read_errors', LState.Number(3));
-      LResult.Add('last_refresh_error', UTF8String(FLastRefreshError));
-      LState.Reset;
+      LRevision := AddSearchSnapshot(FDatabase, LResult, FLastRefreshError);
 
       // The same read transaction pins the revision, totals and ranks.
       LCachedIndex := -1;
@@ -1188,7 +1311,80 @@ begin
   finally
     LMatches.Free;
     LCount.Free;
-    LState.Free;
+    LResult.Free;
+  end;
+end;
+
+function TResearchCatalog.FindSources(AIdentifiers: TJSONArray): TJSONObject;
+var
+  LIdentifiers: array of String;
+  LIndex: Integer;
+  LInput: TJSONData;
+  LRevision: Int64;
+  LQuery: TSqlStatement;
+  LResults: TJSONArray;
+  LMatches: TJSONArray;
+  LResult: TJSONObject;
+begin
+  if (AIdentifiers.Count < 1) or (AIdentifiers.Count > MaximumIdentifiers) then
+  begin
+    raise EConvertError.CreateFmt('Provide from 1 to %d source identifiers.', [MaximumIdentifiers]);
+  end;
+  SetLength(LIdentifiers, AIdentifiers.Count);
+  for LIndex := 0 to High(LIdentifiers) do
+  begin
+    LInput := AIdentifiers.Items[LIndex];
+    if (LInput.JSONType <> jtString) or (Length(LInput.AsString) > MaximumTermsBytes) or
+      (Pos(#0, LInput.AsString) <> 0) then
+    begin
+      raise EConvertError.CreateFmt('Invalid source identifier at position %d.', [LIndex + 1]);
+    end;
+    LIdentifiers[LIndex] := NormalizeArchiveIdentifier(LInput.AsString);
+    if LIdentifiers[LIndex] = '' then
+    begin
+      raise EConvertError.CreateFmt('Expected a PMID, PMCID, DOI or NCT ID at position %d.',
+        [LIndex + 1]);
+    end;
+  end;
+
+  LQuery := nil;
+  LResult := TJSONObject.Create;
+  try
+    ExecuteSql(FDatabase, 'BEGIN');
+    try
+      LRevision := AddSearchSnapshot(FDatabase, LResult, FLastRefreshError);
+      if (Scalar(FDatabase, 'SELECT count(*) FROM sqlite_schema' +
+        ' WHERE type=''table'' AND name=''source_identifier_state''') = 0) or
+        (Scalar(FDatabase, 'SELECT revision FROM source_identifier_state WHERE id=1') <>
+          LRevision) then
+      begin
+        raise Exception.Create('Source identifiers need a catalog refresh');
+      end;
+      LResults := TJSONArray.Create;
+      LResult.Add('results', LResults);
+      LQuery := TSqlStatement.Create(FDatabase, 'SELECT documents.path,documents.period' +
+        ' FROM source_identifiers JOIN documents ON documents.id=source_identifiers.document_id' +
+        ' WHERE source_identifiers.identifier=?1 ORDER BY documents.path COLLATE BINARY');
+      for LIndex := 0 to High(LIdentifiers) do
+      begin
+        LMatches := TJSONArray.Create;
+        LResults.Add(TJSONObject.Create(['identifier', LIdentifiers[LIndex], 'matches', LMatches]));
+        LQuery.BindText(1, UTF8String(LIdentifiers[LIndex]));
+        while LQuery.Next do
+        begin
+          LMatches.Add(TJSONObject.Create(['path', LQuery.Text(0), 'period', LQuery.Text(1)]));
+        end;
+        LQuery.Reset;
+      end;
+      ExecuteSql(FDatabase, 'COMMIT');
+    except
+      TWinSqliteExec(Pointer(@sqlite3_exec))(FDatabase, 'ROLLBACK', nil, nil, nil);
+      raise;
+    end;
+    Result := LResult;
+    LResult := nil;
+  finally
+    LQuery.Free;
     LResult.Free;
   end;
 end;

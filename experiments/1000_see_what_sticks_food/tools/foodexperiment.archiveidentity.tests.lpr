@@ -69,6 +69,29 @@ begin
     Assert(ArchiveIdentityConflicts(LExpected, LArchive) = '',
       'An indexed collection can join its own archive body');
 
+    Assert(ParseTrialArchiveIdentifier('Archived trial' + LineEnding + LineEnding +
+      'Source: https://clinicaltrials.gov/study/NCT04986982' + LineEnding +
+      'Source credit: ClinicalTrials.gov' + LineEnding +
+      'NCT ID: NCT04986982' + LineEnding, 'NCT04986982') = 'NCT04986982',
+      'The registry provenance identifies the record');
+    Assert(ParseTrialArchiveIdentifier('Title: Archived results' + LineEnding +
+      'Source: https://clinicaltrials.gov/study/NCT04986982?tab=results' + LineEnding +
+      'NCT ID: NCT04986982' + LineEnding, 'NCT04986982') = 'NCT04986982',
+      'A separate official results file can match the same registration');
+    Assert(ParseTrialArchiveIdentifier('Archived trial' + LineEnding + LineEnding +
+      'Source: https://clinicaltrials.gov/study/NCT04986982' + LineEnding +
+      'NCT ID: NCT05719142' + LineEnding, 'NCT04986982') = '',
+      'Conflicting registry provenance cannot identify a source');
+    Assert(NormalizeArchiveIdentifier('Pmid: 20532731') = 'PMID:20532731');
+    Assert(NormalizeArchiveIdentifier('pmcid: pmc7103256') = 'PMCID:PMC7103256');
+    Assert(NormalizeArchiveIdentifier('https://doi.org/10.1007/BF00301247') =
+      'DOI:10.1007/bf00301247');
+    Assert(NormalizeArchiveIdentifier('nct04986982') = 'NCT04986982');
+    Assert(NormalizeArchiveIdentifier('PMID:PMC7103256') = '');
+    Assert(NormalizeArchiveIdentifier('NCT0498698') = '');
+    Assert(NormalizeArchiveIdentifier('10.bad/') = '');
+    Assert(NormalizeArchiveIdentifier('Parkinson tremor') = '');
+
     LExpected.Pmcid := 'PMC7100645';
     LExpected.Pmid := '8183379';
     LExpected.Doi := '';

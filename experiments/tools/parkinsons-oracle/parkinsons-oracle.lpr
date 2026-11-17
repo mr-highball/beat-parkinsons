@@ -45,6 +45,12 @@ const
       '"additionalProperties":false,"required":["terms"],"properties":{"terms":{"type":"string"},' +
       '"period":{"type":"string","pattern":"^[0-9]{4}-[0-9]{4}$"},' +
       '"offset":{"type":"integer","minimum":0},"limit":{"type":"integer","minimum":1,"maximum":100}}}},' +
+    '{"name":"oracle_find_sources","description":"Find archived source documents by PMID, PMCID, ' +
+      'DOI or NCT ID. Matches come from source metadata. Use oracle_search_catalog for citation ' +
+      'mentions and other catalog notes.",' +
+      '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
+      '"additionalProperties":false,"required":["identifiers"],"properties":{"identifiers":{' +
+      '"type":"array","minItems":1,"maxItems":100,"items":{"type":"string","minLength":1}}}}},' +
     '{"name":"oracle_status","description":"Check the pinned claim revision, evidence counts and ' +
       'the local research text index coverage and freshness.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},' +
@@ -192,9 +198,10 @@ var
   LAssessmentOffset: Integer;
   LAssessmentLimit: Integer;
   LAssessmentStudy: String;
+  LIdentifiers: TJSONData;
 begin
   case IndexStr(AName, ['oracle_query', 'oracle_claim', 'oracle_search_catalog',
-    'oracle_status', 'oracle_filter_options']) of
+    'oracle_status', 'oracle_filter_options', 'oracle_find_sources']) of
     0:
       begin
         RequireFields(AArguments, ['symptom', 'ingredient', 'preparation', 'direction',
@@ -266,6 +273,16 @@ begin
       begin
         RequireFields(AArguments, []);
         Result := Index.FilterOptions;
+      end;
+    5:
+      begin
+        RequireFields(AArguments, ['identifiers']);
+        LIdentifiers := AArguments.Find('identifiers');
+        if not (LIdentifiers is TJSONArray) then
+        begin
+          raise EConvertError.Create('Provide an array of source identifiers.');
+        end;
+        Result := Catalog.FindSources(TJSONArray(LIdentifiers));
       end;
   else
     raise EConvertError.Create('Unknown tool: ' + AName);

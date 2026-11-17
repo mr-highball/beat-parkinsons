@@ -17,6 +17,7 @@ The oracle is a local Free Pascal MCP server for the Parkinson’s research cata
 | `oracle_claim` | `{"round":1,"id":"0904","assessment_limit":8}` | Frozen statement, verdict and rationale, citations, queue counts, and a page of assessments |
 | `oracle_claim` with a study key | `{"round":1,"id":"0121","assessment_study":"PMID:37294324"}` | Assessments for that exact study key and the same claim-wide metadata |
 | `oracle_search_catalog` | `{"terms":"black tea tremor","period":"2010-2014","limit":8}` | Ranked local documents containing the requested words |
+| `oracle_find_sources` | `{"identifiers":["PMID:40647065","NCT04986982"]}` | Every archived document whose source metadata matches each supplied identifier |
 | `oracle_status` | `{}` | Published claim revision, assessed and unreviewed counts, and the text index’s coverage and refresh record |
 | `oracle_filter_options` | `{}` | Canonical symptom, ingredient, and preparation choices, with their aliases |
 
@@ -25,6 +26,16 @@ Query scope defaults to `directional`, which requires a True, False, Maybe True 
 Use `{"symptom":"tremors","trend":"eases"}` to look up evidence that may point toward relief. Set `trend` to `worsens` for evidence of worsening. The trend uses the card arrows, which require support for the claim being tested. Evidence against a claim leaves the opposite effect open. The `direction` filter applies to the original hypothesis wording.
 
 Use `oracle_claim` for the relevant study outcomes and access gaps. If the claim search is empty or the evidence is unresolved, search the text catalog with alternate spellings, preparation names or endpoint terminology. A lexical hit needs source-level review. A gap in the indexed catalog is a reason to continue discovery, with the index timestamp and its read errors in view.
+
+For known identifiers, send up to 100 PMIDs, PMCIDs, DOIs or ClinicalTrials.gov
+NCT IDs to `oracle_find_sources`. Bare numeric identifiers are PMIDs. Each
+result includes the normalized identifier and matching paths in sorted order.
+Results follow the input order, including identifiers with zero archive matches.
+The tool indexes leading publication metadata from `Source-Text` text files and
+matching registry provenance from `Source-Text/Trials` exports. A match can be
+a curated extraction or collection, so confirm the actual article and its depth.
+Use full-text search for mentions in references, narrative notes and archives
+without structured headers.
 
 For a known study, send `assessment_study` with its case-sensitive ledger key and omit the paging arguments. The result reports `matching_assessments` and returns all rows for that key in ledger order. A found claim can have zero matches. The rationale, citations, verdict and coverage counts still apply to the whole claim.
 
@@ -67,6 +78,10 @@ Refresh the text index after adding local research. This reuses the existing ind
 
 The catalog refresh records its own timestamp and failed reads. Check `oracle_status` before treating the index as current.
 Refresh also installs the read-error index in existing catalogs. This avoids scanning every indexed document for the diagnostic count on each search.
+The first refresh after adding `oracle_find_sources` builds the source identifier
+index. Later refreshes update identifiers from changed documents in the same
+transaction as the full-text index. If a legacy executable refreshes the catalog,
+run `index` with the current build before using `oracle_find_sources` again.
 
 The local server retains up to four recent catalog searches, each with its total and up to 100 ranked rows. Return to a result page after checking citations and the server can reuse those rows if the search expression, period and catalog revision agree. A new catalog revision invalidates both ranked results and empty searches. The server reads current catalog diagnostics on every lookup.
 
@@ -93,6 +108,15 @@ covers nine warm local MCP calls against the same snapshot. The compared tool
 replies were byte-identical. A separate refresh fixture checked ranking, a
 previously empty search and live read-error diagnostics. These timings measure
 local lookup latency. Response size is identical across the two versions.
+
+On catalog revision 23, a ten-PMID original-source batch took ten full-text
+searches at three results per page. Those calls returned 4,139 UTF-8 bytes of
+decoded tool text and 18 lexical matches. The exact archive batch took one call
+and returned 930 bytes with three source paths. Across 11 warm local MCP runs,
+the median batch time fell from 9.07 ms to 0.73 ms. The existing full-text tool
+returned byte-identical results on the same snapshot. A separate migration
+fixture verified that citation mentions do not qualify as archive IDs and that
+running servers see changes, deletions and read errors after refresh.
 
 ## Browser interface
 
