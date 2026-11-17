@@ -11,6 +11,8 @@ uses
 
 const
   CProtocol = '2025-11-25';
+  DefaultAssessmentPageSize = 8;
+  MaximumAssessmentPageSize = 100;
   CToolsJSON =
     '{"tools":[' +
     '{"name":"oracle_query","description":"Find frozen local claims with the requested symptom, ' +
@@ -24,12 +26,15 @@ const
       '"verdict":{"enum":["True","False","Maybe True","Maybe False","Unknown","Unreviewed"]},' +
       '"round":{"type":"integer","minimum":1,"maximum":7},"offset":{"type":"integer","minimum":0},' +
       '"limit":{"type":"integer","minimum":1,"maximum":100}}}},' +
-    '{"name":"oracle_claim","description":"Read one frozen claim with its rationale, all recorded ' +
-      'study assessments, conflicting or pending evidence, local citations and known queue counts.",' +
+    '{"name":"oracle_claim","description":"Read one frozen claim with its rationale, study ' +
+      'assessments, citations and queue counts. Use assessment_limit for a smaller first reply ' +
+      'and next_assessment_offset to continue. Omitting pagination returns all assessments.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
       '"additionalProperties":false,"required":["round","id"],"properties":{' +
       '"round":{"type":"integer","minimum":1,"maximum":7},' +
-      '"id":{"type":"string","pattern":"^[0-9]{4}$"}}}},' +
+      '"id":{"type":"string","pattern":"^[0-9]{4}$"},' +
+      '"assessment_offset":{"type":"integer","minimum":0},' +
+      '"assessment_limit":{"type":"integer","minimum":1,"maximum":100}}}},' +
     '{"name":"oracle_search_catalog","description":"Search the local research text index with ' +
       'literal terms. Word matches are discovery leads and carry no evidence or direction grade.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
@@ -180,6 +185,8 @@ var
   LPeriod: String;
   LIndex: Integer;
   LTerms: String;
+  LAssessmentOffset: Integer;
+  LAssessmentLimit: Integer;
 begin
   case IndexStr(AName, ['oracle_query', 'oracle_claim', 'oracle_search_catalog',
     'oracle_status', 'oracle_filter_options']) of
@@ -202,7 +209,7 @@ begin
       end;
     1:
       begin
-        RequireFields(AArguments, ['round', 'id']);
+        RequireFields(AArguments, ['round', 'id', 'assessment_offset', 'assessment_limit']);
         LId := ReadString(AArguments, 'id', '');
         LIndex := ReadInteger(AArguments, 'round', 0, 1, 7);
         if (Length(LId) <> 4) or (LIndex = 0) then
@@ -210,7 +217,14 @@ begin
         for LDigit in LId do
           if not (LDigit in ['0'..'9']) then
             raise EConvertError.Create('Provide a four-digit claim ID.');
-        Result := Index.Claim(LIndex, LId);
+        LAssessmentOffset := ReadInteger(AArguments, 'assessment_offset', 0, 0, MaxInt);
+        LAssessmentLimit := ReadInteger(AArguments, 'assessment_limit', -1, 1,
+          MaximumAssessmentPageSize);
+        if (LAssessmentLimit = -1) and (AArguments.Find('assessment_offset') <> nil) then
+        begin
+          LAssessmentLimit := DefaultAssessmentPageSize;
+        end;
+        Result := Index.Claim(LIndex, LId, LAssessmentOffset, LAssessmentLimit);
       end;
     2:
       begin

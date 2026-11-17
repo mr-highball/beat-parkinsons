@@ -45,7 +45,8 @@ type
     constructor Create;
     destructor Destroy; override;
     function IsDirectional: Boolean;
-    function View(ADetailed: Boolean): TJSONObject;
+    function View(ADetailed: Boolean; AAssessmentOffset: Integer = 0;
+      AAssessmentLimit: Integer = -1): TJSONObject;
   end;
 
   TClaimIndex = class
@@ -70,7 +71,8 @@ type
     function IsCurrent: Boolean;
     function Status: TJSONObject;
     function Query(const AQuery: TClaimQuery): TJSONObject;
-    function Claim(ARound: Integer; const AId: String): TJSONObject;
+    function Claim(ARound: Integer; const AId: String; AAssessmentOffset: Integer;
+      AAssessmentLimit: Integer): TJSONObject;
     function FilterOptions: TJSONObject;
     function StaticModel(const ARepository: String): TJSONObject;
   end;
@@ -201,30 +203,60 @@ begin
   Result := IndexStr(Verdict, ['True', 'False', 'Maybe True', 'Maybe False']) >= 0;
 end;
 
-function TClaim.View(ADetailed: Boolean): TJSONObject;
+function TClaim.View(ADetailed: Boolean; AAssessmentOffset, AAssessmentLimit: Integer): TJSONObject;
+var
+  LPage: TJSONArray;
+  LStop: Integer;
+  LIndex: Integer;
 begin
   Result := TJSONObject.Create([
     'round', Round, 'claim_id', Id, 'category', Category, 'ingredient', Ingredient,
     'preparation', Preparation, 'symptom', Symptom, 'hypothesis_direction', Direction,
     'verdict', Verdict, 'assessment_rows', AssessedRows + PendingRows,
     'nonpending_assessments', AssessedRows, 'pending_assessments', PendingRows]);
-  if Confidence >= 0 then
-    Result.Add('confidence', Confidence);
-  if QueuedPairs >= 0 then
-  begin
-    Result.Add('original_europe_pmc_pairs', OriginalPairs);
-    Result.Add('queued_original_pairs', QueuedPairs);
+  try
+    if Confidence >= 0 then
+      Result.Add('confidence', Confidence);
+    if QueuedPairs >= 0 then
+    begin
+      Result.Add('original_europe_pmc_pairs', OriginalPairs);
+      Result.Add('queued_original_pairs', QueuedPairs);
+    end;
+    Result.Add('statement', Statement);
+    if Rationale <> '' then
+      Result.Add('rationale', Rationale);
+    if ADetailed then
+    begin
+      Result.Add('local_references', References.Clone);
+      if AAssessmentLimit < 0 then
+      begin
+        Result.Add('assessments', Evidence.Clone);
+        Exit;
+      end;
+      LPage := TJSONArray.Create;
+      Result.Add('assessments', LPage);
+      Result.Add('assessment_offset', AAssessmentOffset);
+      LStop := Evidence.Count;
+      // Bound the addition by the available rows, including for an offset past the end.
+      if (AAssessmentOffset < LStop) and (AAssessmentLimit < LStop - AAssessmentOffset) then
+      begin
+        LStop := AAssessmentOffset + AAssessmentLimit;
+      end;
+      for LIndex := AAssessmentOffset to LStop - 1 do
+      begin
+        LPage.Add(Evidence.Items[LIndex].Clone);
+      end;
+      if LStop < Evidence.Count then
+        Result.Add('next_assessment_offset', LStop)
+      else
+        Result.Add('next_assessment_offset', TJSONNull.Create);
+    end
+    else if References.Count > 0 then
+      Result.Add('first_local_reference', References.Strings[0]);
+  except
+    Result.Free;
+    raise;
   end;
-  Result.Add('statement', Statement);
-  if Rationale <> '' then
-    Result.Add('rationale', Rationale);
-  if ADetailed then
-  begin
-    Result.Add('local_references', References.Clone);
-    Result.Add('assessments', Evidence.Clone);
-  end
-  else if References.Count > 0 then
-    Result.Add('first_local_reference', References.Strings[0]);
 end;
 
 constructor TClaimIndex.Create(const ARepoRoot: String);
@@ -531,13 +563,14 @@ begin
     'unreviewed_claims', FClaims.Count - FDirectional - FUnknown, 'assessment_rows', FSourceRows]);
 end;
 
-function TClaimIndex.Claim(ARound: Integer; const AId: String): TJSONObject;
+function TClaimIndex.Claim(ARound: Integer; const AId: String;
+  AAssessmentOffset, AAssessmentLimit: Integer): TJSONObject;
 var
   LClaim: TClaim;
 begin
   if not FIdentities.TryGetValue(Key(ARound, AId), LClaim) then
     Exit(TJSONObject.Create(['revision', FRevision, 'found', False]));
-  Result := LClaim.View(True);
+  Result := LClaim.View(True, AAssessmentOffset, AAssessmentLimit);
   Result.Add('revision', FRevision);
   Result.Add('found', True);
 end;

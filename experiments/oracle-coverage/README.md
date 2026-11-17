@@ -61,8 +61,11 @@ $Reply.result.content[0].text | ConvertFrom-Json
 Use `oracle_status` to record the claim and catalog revisions. Use
 `oracle_search_catalog` for identifiers and alternate terms. Open specific
 research passages and the assessments needed to check evidence and conflicts.
-Continue through relevant result pages and source trails when the question
-requires it.
+When triaging an evidence-heavy claim, start with `oracle_claim` and
+`assessment_limit: 8`. Pass each returned `next_assessment_offset` as
+`assessment_offset` to continue on the same revision. Restart from the first
+page if the revision changes. The first page follows ledger order. Use the full
+response when reviewing all assessments and continue related source trails.
 
 When the workspace is opened through a filesystem link, launch the script from
 the checkout that owns the index. A catalog binding error can occur if the
