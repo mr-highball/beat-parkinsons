@@ -1,5 +1,11 @@
 # Edible oil evidence follow-up, 2005–2009
 
+## Virgin and refined coconut oil in elite cyclists
+
+The Food and Nutrition Research Institute of the Philippines summarizes a randomized three-condition crossover in its 2007 annual report. The 15 healthy male elite cyclists received a pre-event meal with two tablespoons of virgin coconut oil, the same amount of refined bleached deodorized coconut oil, or no added study oil, with a two-day washout. The institute describes the design as double blind. How the untreated condition was masked is unclear. Its summary describes a longer mean time to exhaustion in the virgin-oil condition with an inconclusive comparison across the three conditions. Perceived exertion after warming up and when the test ended was also inconclusive across conditions. The summary supplies no numerical endurance estimates or measures of chronic fatigue. [Institute annual report reproduction, research accomplishments](https://studylib.net/doc/8785202/under-executive-order-no)
+
+The institute independently lists the same study title in its 34th Seminars Series. The online index was posted on April 7, 2014. The contemporaneous annual report supplies the earlier historical placement, with exact release day unverified. The linked seminar abstract and a full original numerical report remain unavailable. This acute exercise study leaves fatigue severity in Parkinson disease unresolved. [Official FNRI seminar index, item 3](https://www.fnri.dost.gov.ph/index.php/services/proficiency-testing-laboratory/21-publications?start=11)
+
 ## Sesamin and olive oil vehicle in a rotenone rat study
 
 Fujikawa and colleagues reported in January 2005 that oral isolated sesamin and a separate *Acanthopanax senticosus* bark extract reduced pole-test delays and catalepsy in rotenone-treated rats. Sesamin was dissolved in a water and olive oil mixture also given to its control groups. The Methods describe motor and tissue measures. The paper refers to depressive behavior in its framing but does not describe a separate depression test. The design gives no isolated dietary olive oil or sesame oil estimate. [Primary report, Methods and Figures 1–3](https://www.jstage.jst.go.jp/article/bpb/28/1/28_1_169/_pdf)
