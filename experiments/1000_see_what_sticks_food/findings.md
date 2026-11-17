@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The ninth rest-tremor checkpoint verified 79 original claim–source pairs in full text, including 50 fig papers and 29 apple papers. A further apple paper was held at replay for publisher access. The original queue totals 50,227 pairs and retains 4,114 rest-tremor pairs. No verdict changed. [Original source review and oil carrier follow-up](followup/tremor-priority-nov17-09/README.md)
+
 The eighth rest-tremor checkpoint reviewed 55 original fig pairs at full-text depth, screened 85 PubMed appearances for the cooked-meat and harmane question, and added five assessments. The Parkinson blood study and distinct essential-tremor dietary comparisons give no baked-turkey or separate Parkinson resting-tremor estimate. The 50,306-pair original queue retains 4,193 rest-tremor pairs. No verdict changed. [Original bodies, PubMed and related clinical evidence](followup/tremor-priority-nov17-08/README.md)
 
 The seventh rest-tremor checkpoint reviewed 78 original pairs at body depth, added six assessments and refined four. A shared Parkinson diet included figs, while the supplement and one-year follow-up give only total motor scores. Verified tea results concern incidence, isolated caffeine or mixed endpoints. The 50,361-pair original queue retains 4,248 rest-tremor pairs. No verdict changed. [Fig menu, primary outcomes and original access](followup/tremor-priority-nov17-07/README.md)
