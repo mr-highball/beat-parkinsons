@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The oracle-first follow-through recovered three original study bodies and added three indirect assessments across claims 0357 and 0796. Both remain Unknown. Partial FEBS member access left all 44 supplement pairs open. The original Europe PMC queue remains at 52,304 pairs. [Source recovery and remaining gaps](followup/oracle-body-recovery-nov17/README.md)
+
 Complete SGIM 2016 proceedings supplied 40 body-level decisions, including the restricted-diet scurvy case. All 290 pepper search appearances received an item-level disposition. The 44 FEBS Journal supplement pairs remain queued at access-only depth. Three study assessments were added and the verdicts remained unchanged. The original Europe PMC queue held 52,304 pairs at this checkpoint. [Exact reviews and outstanding bodies](followup/pepper-screen-and-sgim-nov17/README.md)
 
 Two original conference collections supplied 84 body-level claim–source decisions. A separate poster collection added 43 documented access gaps still in the queue. Four publications and three registrations supplied six study assessments for brewed lemongrass and cracked black pepper. No verdict changed. The original Europe PMC queue holds 52,344 pairs. [Original collections and focused searches](followup/unmatched-clinical-leads-nov17/README.md)
