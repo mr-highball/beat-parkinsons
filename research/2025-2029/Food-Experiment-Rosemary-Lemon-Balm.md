@@ -19,3 +19,7 @@ Sá Filho and colleagues published September 30, 2026. They tested hydrodistille
 ## Phospholipid lemon balm dose comparison and overlapping pilot
 
 Rondanelli and colleagues used open-label chronological allocation of 32 adults to two extract doses for three weeks. DASS-21 depression changed by −6.1% at 200 mg and −26.4% at 400 mg. The high-dose within-group comparison had p < .0001. There was no placebo. The authors describe this as an extension of their 2024 pilot with shared ethics identifier 1267/21092023. The 12-person salivary cortisol subgroup also overlaps. Original report: https://foodandnutritionresearch.net/index.php/fnr/article/download/13729/20830/. [Local factual text](Source-Text/2026-Rondanelli-Lemon-Balm-Dose.txt) · [Archived article text](Source-Text/PMC12952214.txt) · [Primary source](https://doi.org/10.29219/fnr.v70.13729)
+
+### Cortisol subgroup and registry identity
+
+The May 2026 report specifies 12 existing participants from the January report's 400 mg arm. It gives a baseline DASS-21 depression mean of 21.58 (SD 3.00) and describes improvement across psychometric measures without a separate depression change estimate at that location. It adds no independent clinical comparison. The cited registry instead describes a planned single arm, 40 participants and conduct beginning in June 2026. The registry and paper designs remain unresolved as a protocol match. [Original subgroup extract](Source-Text/2026-PMID42232738-Mazzola-Melissa-Cortisol-Extract.txt) · [Official registration](Source-Text/Trials/NCT06942897.txt)

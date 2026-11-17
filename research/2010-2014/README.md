@@ -340,3 +340,4 @@ January 1, 2010 through December 31, 2014.
 - [Potato intake and Parkinson motor fluctuations](Food-Experiment-Potato-Off-Time.md)
 
 - [Kiwi feeding studies](Food-Experiment-Kiwi-Feeding-Studies.md)
+- [Egg isolate with and without lemon balm in depression](Source-Text/2011-PMID21631360-Solberg-YTE-Melissa-Extract.txt)

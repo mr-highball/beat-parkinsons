@@ -1,0 +1,3 @@
+# Lemon balm extracts and planned depression outcomes
+
+The preceding period includes a short postoperative comparison of dried leaf against starch. Newer studies use water extracts, phospholipid carriers and mixtures. The completed aqueous capsule registration specifies DASS-21 depression, but its public original abstract gives no estimate. Major's report gives a favorable Hamilton change under a multi-ingredient capsule and leaves the amount attributable to lemon balm unresolved. [Earlier dried-leaf comparison](../../2015-2019/Source-Text/2016-Heidari-Melissa-CABG-Depression-Extract.txt) · [Aqueous capsule registration](../Source-Text/Trials/NCT05422599.txt) · [Original 2024 abstract](../Source-Text/2024-Major-P25-009-24-Lemon-Balm-Blend-Abstract-Extract.txt)

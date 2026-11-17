@@ -1,0 +1,3 @@
+# Mixed products and lemon balm attribution
+
+The 2009 Ze 185 study reported better depression outcomes with two herbal mixtures. Both active arms contained lemon balm and varied butterbur. The 2011 egg-isolate trial changes the lemon balm component while keeping the egg isolate dose the same. It reports no clear difference between active groups. Neither capsule comparison uses brewed leaf or Parkinson participants. [2009 older trial](../../2005-2009/Source-Text/2009-PMID19274698-Melzer-Ze185-Extract.txt) · [2011 add-on comparison](../Source-Text/2011-PMID21631360-Solberg-YTE-Melissa-Extract.txt)

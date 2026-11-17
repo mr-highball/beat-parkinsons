@@ -493,3 +493,5 @@ January 1, 2015 through December 31, 2019.
 - [Mixed soybean and corn oil and depression outcomes](Food-Experiment-Mixed-Oil-Depression.md)
 - [Injected piperine and dose-specific rat memory findings](Food-Experiment-Isolated-Piperine-Memory.md)
 - [Fresh apple feeding abstract in healthy volunteers](Source-Text/2017-ACBICON-P140-Fresh-Apple-Volunteers.txt)
+- [Dried Melissa leaf capsules and postoperative HADS depression](Source-Text/2016-Heidari-Melissa-CABG-Depression-Extract.txt)
+- [Official CABG dried lemon balm and HADS depression registration](Source-Text/Trials/IRCT2014071918531N1.txt)

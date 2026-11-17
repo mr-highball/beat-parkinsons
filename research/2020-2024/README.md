@@ -534,3 +534,7 @@ January 1, 2020 through December 31, 2024.
 - [Lemongrass oil in a topical sleep product](Food-Experiment-Lemongrass-Topical-Sleep-Registry.md)
 
 - [Mango bark blend and exercise performance](Food-Experiment-Mango-Bark-Exercise.md)
+- [Major conference abstract on extract combination and depressive symptoms](Source-Text/2024-Major-P25-009-24-Lemon-Balm-Blend-Abstract-Extract.txt)
+- [Stress supplement and Hamilton depression outcomes](Source-Text/Trials/NCT06672965.txt)
+- [Aqueous extract sleep study with secondary depression scale](Source-Text/Trials/NCT05422599.txt)
+- [PanTrek combination intervention and Hamilton depression endpoint](Source-Text/Trials/NCT05841173.txt)

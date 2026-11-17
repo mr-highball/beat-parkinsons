@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The resumed lemon balm review screened 121 literature appearances and 137 ClinicalTrials.gov registrations. The Solberg add-on comparison was inconclusive and the Heidari postoperative capsule result has conflicting randomization and test reporting. The Hester blend and the Pavia cortisol subgroup do not count as additional isolates or independent overlapping outcomes. Claim 0133 remains Maybe True 51. The original context queue now holds 48,939 pairs across all claims, including 662 for lemon balm and depressive symptoms. [Source comparisons and completed searches](followup/lemon-balm-depression-nov17/README.md)
+
 The fifteenth rest-tremor checkpoint verifies 100 raw fig original main bodies and nine conference claim–source pairs. The fresh apple abstract measures laboratory endpoints in healthy volunteers. MENASA tea-history and tremor results remain pending. The original queue holds 48,988 pairs, including 2,875 rest-tremor pairs. Verdicts remained unchanged. [Original source audit and remaining holds](followup/tremor-priority-nov17-15/README.md)
 
 The fourteenth rest-tremor checkpoint verifies 503 original main texts and finishes all 968 positions in the fixed local fig archive. The celery follow-up screens 75 PubMed appearances and adds three related assessments. Identical human leaf plasma results with inconsistent sample counts remain one evidence lineage. The original queue holds 49,097 pairs, including 2,984 rest-tremor pairs. Verdicts remained unchanged. [Archive, study provenance and exact disposition](followup/tremor-priority-nov17-14/README.md)
@@ -741,7 +743,7 @@ The published counts remain 997 Unknown and three Maybe False. [Manifest](manife
 - The Tabriz Parkinson trial used oral soybean oil as the comparator. The matched registry puts physical activity measurement at baseline, and the accessible report presents biomarker outcomes. The two records reverse the labelled EPA and DHA amounts in the active capsule while reporting the same combined amount. The oil grade and symptom effects remain unresolved. [Registration and report](../../research/2020-2024/Food-Experiment-Soybean-Clinical-Trails.md)
 - Three tarragon odor-enrichment studies measured discrimination or recognition with tarragon among multiple fragrances. The oral tarragon extract study found weaker forelimb grip in female rats at two doses, while a patent example reports stronger grip under a blend in a different disease model. The chive constituent studies show that time in the light or dark compartment, open-arm behavior and locomotion need separate interpretation. [Tarragon follow-up](followup/tarragon-gap-eight/README.md) · [Chive anxiety measures](followup/chive-anxiety-trails/README.md)
 
-The published verdicts are 997 Unknown and three Maybe False. [Open trails](followup/open-trails.tsv)
+The initial published verdicts were 997 Unknown and three Maybe False. [Open trails](followup/open-trails.tsv)
 
 ### First-pass search coverage
 

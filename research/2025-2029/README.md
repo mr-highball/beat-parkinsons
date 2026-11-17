@@ -431,3 +431,6 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Cranberry Depression Followup](Food-Experiment-Cranberry-Depression-Followup.md)
 
 - [Kiwifruit and raspberry study lineages and outcomes](Food-Experiment-Kiwi-and-Raspberry-Lineage.md)
+- [Hester combined extract trial and Hamilton depression scores](Source-Text/2025-Hester-Lemon-Balm-Magnolia-Theanine-Extract.txt)
+- [Registered phospholipid lemon balm pilot and protocol discrepancy](Source-Text/Trials/NCT06942897.txt)
+- [Mazzola high-dose subgroup and depression measurements](Source-Text/2026-PMID42232738-Mazzola-Melissa-Cortisol-Extract.txt)

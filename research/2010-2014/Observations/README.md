@@ -427,3 +427,5 @@ The earlier primate report used an oil in medical apparatus. The clary-sage meet
 ### Observed abnormal movement in a project report
 
 The official project report specifies abnormal hind-limb extension as the observed motor sign. That source detail limits comparisons with later studies that include a beam or gait task. [Government report and journal relationship](../Food-Experiment-Spice-Followup.md#project-report-on-eugenol-and-abnormal-movement)
+
+- [Mixed products and lemon balm attribution](Food-Experiment-Lemon-Balm-Depression.md)
