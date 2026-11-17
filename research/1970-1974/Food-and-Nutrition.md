@@ -4,6 +4,8 @@
 
 Garfinkel described a levodopa-treated patient who vomited dark material after swallowing a banana with the tablet. The author separately mixed powdered levodopa with banana, grape, and plum and observed darkening. These observations identify a food–drug compatibility lead. The letter gives no drug concentrations, comparative motor outcomes, or dyskinesia rating. [Primary letter, January 29, 1972, p. 312](https://www.bmj.com/content/bmj/1/5795/311.3.full.pdf) · [2005 rat pharmacokinetics](../2005-2009/Food-Experiment-Food-Followup.md#banana-juice-and-levodopa-exposure-in-rats)
 
+The letter cites a May 22, 1971 Lancet report, *Black vomit after levodopa*, PMID 4103016, DOI `10.1016/S0140-6736(71)91653-9`. The catalog has verified the 1971 citation. Its complete text is still needed to establish banana exposure and whether the two reports describe the same person. [1971 PubMed record](https://pubmed.ncbi.nlm.nih.gov/4103016/)
+
 ### 1973 — Early dietary protein and levodopa study
 
 An original study in the Journal of the American Dietetic Association examined how dietary protein related to levodopa treatment. The indexed article and publisher preview establish the dietary intervention question. The full report is needed to extract design details, direction of effects and subgroup results. [Source](https://pubmed.ncbi.nlm.nih.gov/4572702/)
