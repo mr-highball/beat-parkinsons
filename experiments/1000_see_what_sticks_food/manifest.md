@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The rosemary and chicken follow-up verified detailed primary results, linked reports from the same student-study registration and catalogued one whole-chicken registry. Two assessments were added and one was revised. Rosemary remains Maybe False at 51 and chicken remains Unknown at 50. The 44 FEBS supplement pairs remain open. [Primary evidence and continuing trails](followup/oracle-rosemary-and-chicken-nov17/README.md)
+
 Eight archived clinical sources supplied 16 exact body-level reviews without changing any verdict. The priority-three review leaves all 13 assigned original pairs open. The newly retrieved full report of the 2020 saffron syrup study documents an unexplained fatigue scale discrepancy. The original Europe PMC queue holds 52,288 pairs. [Oracle checkpoint and access receipts](followup/oracle-clinical-context-nov17/README.md)
 
 The oracle-first follow-through recovered three original study bodies and added three indirect assessments across claims 0357 and 0796. Both remain Unknown. Partial FEBS member access left all 44 supplement pairs open. The original Europe PMC queue remains at 52,304 pairs. [Source recovery and remaining gaps](followup/oracle-body-recovery-nov17/README.md)
