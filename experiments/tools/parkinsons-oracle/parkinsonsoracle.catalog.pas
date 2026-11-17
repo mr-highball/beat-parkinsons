@@ -792,7 +792,7 @@ var
   LStoreIdentifier: TSqlStatement;
   LFinish: TSqlStatement;
   LRebuildIdentifiers: Boolean;
-  LRefreshOtherRegistries: Boolean;
+  LRefreshRegistries: Boolean;
   LChanged: Boolean;
   LReparseCount: Int64;
   LRootAttributes: DWORD;
@@ -805,14 +805,9 @@ var
     LStoreIdentifier.Execute;
   end;
 
-  procedure IndexSourceIdentifiers(ADocumentId: Int64; const ARelative, APeriod, ABody: UTF8String);
-  const
-    CTrialFolder = '/Source-Text/Trials/';
+  procedure IndexSourceIdentifiers(ADocumentId: Int64; const ABody: UTF8String);
   var
     LIdentity: TArchiveIdentity;
-    LStart: Integer;
-    LTrialId: String;
-    LTrialName: UTF8String;
   begin
     LIdentity := ParseArchiveIdentity(ABody);
     if LIdentity.Pmid <> '' then
@@ -827,21 +822,25 @@ var
     begin
       StoreIdentifier(ADocumentId, 'DOI:' + LIdentity.Doi);
     end;
-    LStart := Length(ResearchPathPrefix) + Length(APeriod) + 1;
-    if Copy(ARelative, LStart, Length(CTrialFolder) + 3) = CTrialFolder + 'NCT' then
+  end;
+
+  procedure IndexRegistryIdentifier(ADocumentId: Int64; const ARegistryId: String;
+    const ABody: UTF8String);
+  begin
+    if ARegistryId = '' then
     begin
-      LTrialName := Copy(ARelative, LStart + Length(CTrialFolder), MaxInt);
-      if (Length(LTrialName) <= 11) or not (LTrialName[12] in ['.', '-']) or
-        (Pos('/', LTrialName) <> 0) then
+      Exit;
+    end;
+    if Copy(ARegistryId, 1, 3) = 'NCT' then
+    begin
+      if ParseTrialArchiveIdentifier(ABody, ARegistryId) = ARegistryId then
       begin
-        Exit;
+        StoreIdentifier(ADocumentId, ARegistryId);
       end;
-      LTrialId := NormalizeArchiveIdentifier(Copy(LTrialName, 1, 11));
-      LTrialId := ParseTrialArchiveIdentifier(ABody, LTrialId);
-      if LTrialId <> '' then
-      begin
-        StoreIdentifier(ADocumentId, LTrialId);
-      end;
+    end
+    else if OtherRegistryHeaderMatches(ABody, ARegistryId) then
+    begin
+      StoreIdentifier(ADocumentId, ARegistryId);
     end;
   end;
 
@@ -856,7 +855,7 @@ var
     LError: UTF8String;
     LBody: UTF8String;
     LPrefixBytes: Integer;
-    LOtherRegistryId: String;
+    LRegistryId: String;
   begin
     LSeen.Reset;
     LSeen.BindText(1, ARelative);
@@ -878,13 +877,13 @@ var
     LArchivedSource := (APeriod <> '') and
       (Pos('/Source-Text/', ARelative) = Length(ResearchPathPrefix) + Length(APeriod) + 1) and
       (ExtractFileExt(LowerCase(String(ARelative))) = '.txt');
-    LOtherRegistryId := '';
-    if LArchivedSource and (LRefreshOtherRegistries or not (LHadBody and LSameMetadata)) then
+    LRegistryId := '';
+    if LArchivedSource and (LRefreshRegistries or not (LHadBody and LSameMetadata)) then
     begin
-      LOtherRegistryId := OtherRegistryFileIdentifier(ExtractFileName(String(ARelative)));
+      LRegistryId := RegistryArchiveFileIdentifier(ExtractFileName(String(ARelative)));
     end;
     if LHadBody and LSameMetadata and not ((LArchivedSource and LRebuildIdentifiers) or
-      (LOtherRegistryId <> '')) then
+      (LRegistryId <> '')) then
     begin
       Exit;
     end;
@@ -919,12 +918,11 @@ var
     begin
       if LArchivedSource and LRebuildIdentifiers and (LError = '') then
       begin
-        IndexSourceIdentifiers(LId, ARelative, APeriod, LBody);
+        IndexSourceIdentifiers(LId, LBody);
       end;
-      if (LError = '') and (LOtherRegistryId <> '') and
-        OtherRegistryHeaderMatches(LBody, LOtherRegistryId) then
+      if LError = '' then
       begin
-        StoreIdentifier(LId, LOtherRegistryId);
+        IndexRegistryIdentifier(LId, LRegistryId, LBody);
       end;
       Exit;
     end;
@@ -962,12 +960,9 @@ var
       LIndex.Reset;
       if LArchivedSource then
       begin
-        IndexSourceIdentifiers(LId, ARelative, APeriod, LBody);
+        IndexSourceIdentifiers(LId, LBody);
       end;
-      if (LOtherRegistryId <> '') and OtherRegistryHeaderMatches(LBody, LOtherRegistryId) then
-      begin
-        StoreIdentifier(LId, LOtherRegistryId);
-      end;
+      IndexRegistryIdentifier(LId, LRegistryId, LBody);
     end;
   end;
 
@@ -1073,18 +1068,22 @@ begin
       ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_identifier_state VALUES (1,-1)');
       LRebuildIdentifiers := Scalar(FDatabase, 'SELECT source_identifier_state.revision' +
         ' <> catalog_state.revision FROM source_identifier_state, catalog_state') <> 0;
-      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_registry_v2_state (' +
+      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_registry_v3_state (' +
         ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
-      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_registry_v2_state VALUES (1,-1)');
-      LRefreshOtherRegistries := LRebuildIdentifiers or
-        (Scalar(FDatabase, 'SELECT source_registry_v2_state.revision <> catalog_state.revision' +
-          ' FROM source_registry_v2_state, catalog_state') <> 0);
+      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_registry_v3_state VALUES (1,-1)');
+      LRefreshRegistries := LRebuildIdentifiers or
+        (Scalar(FDatabase, 'SELECT source_registry_v3_state.revision <> catalog_state.revision' +
+          ' FROM source_registry_v3_state, catalog_state') <> 0);
       // An identifier backfill changes the results even when document bytes match.
-      LChanged := LChanged or LRefreshOtherRegistries;
+      LChanged := LChanged or LRefreshRegistries;
       if LRebuildIdentifiers then
       begin
         // Also recover when an older executable has refreshed the text catalog.
         ExecuteSql(FDatabase, 'DELETE FROM source_identifiers');
+      end
+      else if LRefreshRegistries then
+      begin
+        ExecuteSql(FDatabase, 'DELETE FROM source_identifiers WHERE identifier GLOB ''NCT[0-9]*''');
       end;
       ExecuteSql(FDatabase, 'CREATE TEMP TABLE IF NOT EXISTS seen (' +
         ' path TEXT PRIMARY KEY) WITHOUT ROWID');
@@ -1122,7 +1121,7 @@ begin
       LFinish.Execute;
       ExecuteSql(FDatabase, 'UPDATE source_identifier_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
-      ExecuteSql(FDatabase, 'UPDATE source_registry_v2_state' +
+      ExecuteSql(FDatabase, 'UPDATE source_registry_v3_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
       ExecuteSql(FDatabase, 'COMMIT');
       FLastRefreshError := '';
@@ -1347,7 +1346,7 @@ var
   LIndex: Integer;
   LInput: TJSONData;
   LRevision: Int64;
-  LNeedsOtherRegistries: Boolean;
+  LNeedsRegistries: Boolean;
   LQuery: TSqlStatement;
   LResults: TJSONArray;
   LMatches: TJSONArray;
@@ -1358,7 +1357,7 @@ begin
     raise EConvertError.CreateFmt('Provide from 1 to %d source identifiers.', [MaximumIdentifiers]);
   end;
   SetLength(LIdentifiers, AIdentifiers.Count);
-  LNeedsOtherRegistries := False;
+  LNeedsRegistries := False;
   for LIndex := 0 to High(LIdentifiers) do
   begin
     LInput := AIdentifiers.Items[LIndex];
@@ -1373,7 +1372,8 @@ begin
       raise EConvertError.CreateFmt('Expected a PMID, PMCID, DOI or supported registry ID at position %d.',
         [LIndex + 1]);
     end;
-    LNeedsOtherRegistries := LNeedsOtherRegistries or
+    LNeedsRegistries := LNeedsRegistries or
+      (Copy(LIdentifiers[LIndex], 1, 3) = 'NCT') or
       (OtherRegistryIdentifier(LIdentifiers[LIndex]) <> '');
   end;
 
@@ -1390,10 +1390,10 @@ begin
       begin
         raise Exception.Create('Source identifiers need a catalog refresh');
       end;
-      if LNeedsOtherRegistries and
+      if LNeedsRegistries and
         ((Scalar(FDatabase, 'SELECT count(*) FROM sqlite_schema' +
-          ' WHERE type=''table'' AND name=''source_registry_v2_state''') = 0) or
-        (Scalar(FDatabase, 'SELECT revision FROM source_registry_v2_state WHERE id=1') <> LRevision)) then
+          ' WHERE type=''table'' AND name=''source_registry_v3_state''') = 0) or
+        (Scalar(FDatabase, 'SELECT revision FROM source_registry_v3_state WHERE id=1') <> LRevision)) then
       begin
         raise Exception.Create('Source registry identifiers need a catalog refresh');
       end;

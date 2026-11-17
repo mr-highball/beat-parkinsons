@@ -82,6 +82,25 @@ begin
       'Source: https://clinicaltrials.gov/study/NCT04986982' + LineEnding +
       'NCT ID: NCT05719142' + LineEnding, 'NCT04986982') = '',
       'Conflicting registry provenance cannot identify a source');
+    Assert(RegistryArchiveFileIdentifier('2026-NCT07655219-Registry-Extract.txt') = 'NCT07655219');
+    Assert(RegistryArchiveFileIdentifier('2014-02-20-NCT02067572-Sage-Mouth-Rinse.txt') = 'NCT02067572');
+    Assert(RegistryArchiveFileIdentifier('memo-NCT07655219.txt') = '');
+    Assert(RegistryArchiveFileIdentifier('NCT076552190-results.txt') = '');
+    Assert(ParseTrialArchiveIdentifier('Registration: NCT07655219' + LineEnding +
+      'Source: https://clinicaltrials.gov/study/NCT07655219', 'NCT07655219') = 'NCT07655219',
+      'The official source and the registration field can appear in either order');
+    Assert(ParseTrialArchiveIdentifier('https://clinicaltrials.gov/api/v2/studies/NCT07655219' +
+      LineEnding, 'NCT07655219') = 'NCT07655219');
+    Assert(ParseTrialArchiveIdentifier('Registration: NCT07655219' + LineEnding +
+      'See https://clinicaltrials.gov/study/NCT07655219' + LineEnding, 'NCT07655219') = '',
+      'A citation in prose does not supply registry provenance');
+    Assert(ParseTrialArchiveIdentifier('Source: https://clinicaltrials.gov/study/NCT07655219' +
+      LineEnding + 'Registry ID: NCT05719142' + LineEnding, 'NCT07655219') = '');
+    Assert(ParseTrialArchiveIdentifier('Source: https://clinicaltrials.gov/study/NCT07655219' +
+      LineEnding + 'Source: https://clinicaltrials.gov/study/NCT05719142' + LineEnding,
+      'NCT07655219') = '');
+    Assert(ParseTrialArchiveIdentifier('Source: https://clinicaltrials.gov.example/study/NCT07655219' +
+      LineEnding, 'NCT07655219') = '');
     Assert(NormalizeArchiveIdentifier('Pmid: 20532731') = 'PMID:20532731');
     Assert(NormalizeArchiveIdentifier('pmcid: pmc7103256') = 'PMCID:PMC7103256');
     Assert(NormalizeArchiveIdentifier('https://doi.org/10.1007/BF00301247') =
@@ -93,7 +112,7 @@ begin
     Assert(NormalizeArchiveIdentifier('Parkinson tremor') = '');
     Assert(NormalizeArchiveIdentifier('drks00012459') = 'DRKS00012459');
     Assert(NormalizeArchiveIdentifier('DRKS0001245') = '');
-    Assert(OtherRegistryFileIdentifier('2018-DRKS00012459-update.txt') = 'DRKS00012459');
+    Assert(RegistryArchiveFileIdentifier('2018-DRKS00012459-update.txt') = 'DRKS00012459');
     Assert(OtherRegistryHeaderMatches(
       'Source: https://drks.de/search/en/trial/DRKS00012459' + LineEnding, 'DRKS00012459'),
       'The official DRKS path authenticates an older extract without a separate ID field');

@@ -22,7 +22,7 @@ function ParseArchiveIdentity(const AText: RawByteString): TArchiveIdentity;
 function ParseTrialArchiveIdentifier(const AText: RawByteString;
   const AExpected: String): String;
 function OtherRegistryIdentifier(const AValue: String): String;
-function OtherRegistryFileIdentifier(const AFileName: String): String;
+function RegistryArchiveFileIdentifier(const AFileName: String): String;
 function OtherRegistryHeaderMatches(const AText: RawByteString;
   const AExpected: String): Boolean;
 function NormalizeArchiveIdentifier(const AValue: String): String;
@@ -153,7 +153,7 @@ begin
   Result := ParseArchiveIdentity(LText);
 end;
 
-function OtherRegistryFileIdentifier(const AFileName: String): String;
+function RegistryArchiveFileIdentifier(const AFileName: String): String;
 var
   LName: String;
   LStart: Integer;
@@ -166,7 +166,11 @@ begin
   LEnd := PosEx('-', LName, LStart);
   if LEnd = 0 then
     LEnd := Length(LName) + 1;
-  Result := OtherRegistryIdentifier(Copy(LName, LStart, LEnd - LStart));
+  LName := Copy(LName, LStart, LEnd - LStart);
+  if AnsiStartsStr('NCT', LName) then
+    Result := NormalizeArchiveIdentifier(LName)
+  else
+    Result := OtherRegistryIdentifier(LName);
 end;
 
 function OtherRegistryHeaderMatches(const AText: RawByteString;
@@ -247,48 +251,67 @@ end;
 function ParseTrialArchiveIdentifier(const AText: RawByteString;
   const AExpected: String): String;
 const
-  CSource = 'Source: https://clinicaltrials.gov/study/';
-  CIdentity = 'NCT ID: ';
   CRegistryHeaderBytes = 1024;
+  SourcePrefixes: array[0..1] of String = (
+    'https://clinicaltrials.gov/study/', 'https://clinicaltrials.gov/api/v2/studies/');
 var
   LText: RawByteString;
   LStart: Integer;
   LEnd: Integer;
-  LSuffix: Integer;
+  LSeparator: Integer;
   LLine: String;
-  LSource: String;
+  LPrefix: String;
+  LHasSource: Boolean;
 begin
   Result := '';
-  if not AnsiStartsStr('NCT', AExpected) then
+  if not AnsiStartsStr('NCT', AExpected) or (NormalizeArchiveIdentifier(AExpected) <> AExpected) then
     Exit;
   LText := Copy(AText, 1, CRegistryHeaderBytes);
-  LSource := '';
+  if Copy(LText, 1, 3) = #$EF#$BB#$BF then
+    Delete(LText, 1, 3);
+  LHasSource := False;
   LStart := 1;
   while LStart <= Length(LText) do
   begin
     LEnd := PosEx(#10, LText, LStart);
     if LEnd = 0 then
-      Exit;
+    begin
+      if Length(AText) > CRegistryHeaderBytes then
+        Break;
+      LEnd := Length(LText) + 1;
+    end;
     LLine := Trim(Copy(LText, LStart, LEnd - LStart));
     LStart := LEnd + 1;
-    if AnsiStartsStr(CSource, LLine) then
+    LSeparator := Pos(':', LLine);
+    if LSeparator > 0 then
     begin
-      LSuffix := Pos('?', LLine);
-      if LSuffix <> 0 then
-        SetLength(LLine, LSuffix - 1);
-      LSuffix := Pos('#', LLine);
-      if LSuffix <> 0 then
-        SetLength(LLine, LSuffix - 1);
-      LSource := NormalizeArchiveIdentifier(Copy(LLine, Length(CSource) + 1, MaxInt));
-    end
-    else if AnsiStartsStr(CIdentity, LLine) then
-    begin
-      if (LSource = AExpected) and
-        (LSource = NormalizeArchiveIdentifier(Copy(LLine, Length(CIdentity) + 1, MaxInt))) then
-        Result := LSource;
-      Exit;
+      case IndexText(Copy(LLine, 1, LSeparator - 1),
+        ['NCT ID', 'Registration', 'Registry ID', 'Registry identifier', 'Source']) of
+        0..3:
+          if NormalizeArchiveIdentifier(Copy(LLine, LSeparator + 1, MaxInt)) <> AExpected then
+            Exit;
+        4:
+          LLine := Trim(Copy(LLine, LSeparator + 1, MaxInt));
+      end;
     end;
+    for LPrefix in SourcePrefixes do
+      if AnsiStartsText(LPrefix, LLine) then
+      begin
+        Delete(LLine, 1, Length(LPrefix));
+        LSeparator := Pos('?', LLine);
+        if LSeparator > 0 then
+          SetLength(LLine, LSeparator - 1);
+        LSeparator := Pos('#', LLine);
+        if LSeparator > 0 then
+          SetLength(LLine, LSeparator - 1);
+        if NormalizeArchiveIdentifier(LLine) <> AExpected then
+          Exit;
+        LHasSource := True;
+        Break;
+      end;
   end;
+  if LHasSource then
+    Result := AExpected;
 end;
 
 function ParseArchiveIdentity(const AText: RawByteString): TArchiveIdentity;

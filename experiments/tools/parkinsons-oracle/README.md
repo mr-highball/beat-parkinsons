@@ -89,7 +89,7 @@ Refresh also installs the read-error index in existing catalogs. This avoids sca
 The first refresh after adding `oracle_find_sources` builds the source identifier
 index. Later refreshes update identifiers from changed documents in the same
 transaction as the full-text index. If a legacy executable refreshes the catalog,
-run `index` with the current build before using `oracle_find_sources` again. The first refresh with DRKS support backfills existing official registry extracts.
+run `index` with the current build before using `oracle_find_sources` again. The first refresh with the current registry parser also backfills verified ClinicalTrials.gov extracts with older header formats.
 
 The local server retains up to four recent catalog searches, each with its total and up to 100 ranked rows. Return to a result page after checking citations and the server can reuse those rows if the search expression, period and catalog revision agree. A new catalog revision invalidates both ranked results and empty searches. The server reads current catalog diagnostics on every lookup.
 
@@ -125,6 +125,13 @@ the median batch time fell from 9.07 ms to 0.73 ms. The existing full-text tool
 returned byte-identical results on the same snapshot. A separate migration
 fixture verified that citation mentions do not qualify as archive IDs and that
 running servers see changes, deletions and read errors after refresh.
+
+Across catalog revisions 34 and 35, an exact registry lookup with a text-search
+fallback was replaced by one exact batch. Both builds used the same 34,790
+documents. The four-ID fixture fell from 1,318 to 761 UTF-8 bytes of decoded
+tool text. The median of 11 warm runs fell from 2.03 to 0.70 ms. A sweep of
+5,400 NCT-named candidates found 5,297 exact paths, up from 5,099. It recovered
+106 of 140 older-format candidates and retained every previously returned path.
 
 ## Browser interface
 
