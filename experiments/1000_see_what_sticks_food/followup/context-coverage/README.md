@@ -4,15 +4,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 11,845 |
+| Local body or other primary-source context | 11,954 |
 | Exact assessment with basis unspecified | 128 |
 | Abstract context | 182 |
 | Title or index | 141 |
 | Pending or access-only disposition | 201 |
-| No imported exact review | 48,755 |
+| No imported exact review | 48,646 |
 | **Total** | **61,252** |
 
-The native replay keeps 49,097 pairs queued across 30,176 sources. That includes 141 title/index reviews, 201 pending pairs and 48,755 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
+The native replay keeps 48,988 pairs queued across 30,076 sources. That includes 141 title/index reviews, 201 pending pairs and 48,646 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
 
 ## Intake for exact source reviews
 
@@ -21,6 +21,8 @@ Compile [the Free Pascal intake](../../tools/foodexperiment.contextintake.lpr) u
 The program rejects duplicate and out-of-queue pairs or a downgrade of an existing review before writing. The packet retains all reviewed keys and unresolved rows. Existing pending rows that reach greater depth replace their canonical entry. Unchanged pending depth preserves the old ledger row and the new receipt remains available in the packet. Verify the staged rows and rerun the native context replay after publishing the canonical ledger.
 
 ## Contextual reviews
+
+The fifteenth tremor checkpoint verifies 109 additional original main bodies and preserves 19 assigned apple holds. The original MENASA result trail remains open. [Original document checks](../tremor-priority-nov17-15/README.md)
 
 The fourteenth tremor checkpoint verifies 503 original main bodies and completes the 968-key fixed local fig archive. Twelve access holds stay open. A separate human exposure review identifies reused celery-leaf plasma results and records the food-form limitations. [Exact scope and celery findings](../tremor-priority-nov17-14/README.md)
 

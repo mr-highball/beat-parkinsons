@@ -1,0 +1,7 @@
+# MENASA black-tea outcome follow-up
+
+Official Movement Disorder Society abstract searches returned three links for MENASA and seven for Consortium for Global Diversity. Both recovered the known development abstract. It reports study setup and does not pair recorded tea intake with resting tremor. Neither search displayed pagination. The searches cover those terms and may miss reports that omit them. [MENASA search](https://www.mdsabstracts.org/?s=MENASA) · [Consortium search](https://www.mdsabstracts.org/?s=Consortium+for+Global+Diversity) · [2021 original abstract](https://www.mdsabstracts.org/abstract/development-of-the-consortium-for-global-diversity-in-parkinsons-disease-cdg-pd-patient-database/)
+
+The publisher PDF for the 7th World Parkinson Congress contains the abstracts on pages 5–540 and yielded 22,478 lines of searchable text. The strings MENASA, Consortium for Global Diversity, black tea, Bajwa and Khalil were absent. The source was available as a PDF even though the PMC reader route presented a challenge. [Official abstract book](https://journals.sagepub.com/doi/pdf/10.1177/1877718X261451755)
+
+The MENASA questionnaire records tea history and whether rest tremor ever occurred since diagnosis. The original pair stays queued. An outcome report linking black tea with Parkinson rest tremor or a separate severity measure is unresolved. [Primary protocol](https://doi.org/10.3389/ijph.2025.1608016) · [Original questionnaire](https://pmc-oa-opendata.s3.amazonaws.com/PMC12264538.1/DataSheet1.docx)
