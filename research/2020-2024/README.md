@@ -4,6 +4,7 @@ January 1, 2020 through December 31, 2024.
 
 ## Annotated research
 
+- [Human apigenin metabolites across parsley and chamomile matrices](Source-Text/2022-PMID35452808-Borges-Apigenin-Food-Matrices-Extract.txt)
 - [Filbertone and animal rotarod and treadmill measures](Source-Text/2023-PMID36958418-Filbertone-Motor-Model-Extract.txt)
 - [Filbertone and neurotrophic markers in cell and mouse models](Source-Text/2024-PMID39636503-Filbertone-Neurotrophic-Extract.txt)
 - [Separately scored resting tremor in a trial with shared sesame oil](Source-Text/2024-PMID38487964-Sesame-Carrier-Rest-Tremor-Extract.txt)

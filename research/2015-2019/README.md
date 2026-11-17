@@ -4,6 +4,7 @@ January 1, 2015 through December 31, 2019.
 
 ## Annotated research
 
+- [Registration for the human apigenin food-matrix study](Source-Text/Trials/NCT03526081.txt)
 - [Liu butylphthalide Parkinson dementia group and total UPDRS](Source-Text/2016-Liu-Butylphthalide-Parkinson-Dementia-Extract.txt)
 - [Dai butylphthalide Parkinson dementia abstract and total UPDRS](Source-Text/2018-Dai-Butylphthalide-Parkinson-Dementia-Abstract-Extract.txt)
 - [Li butylphthalide Parkinson dementia composite outcome](Source-Text/2019-Li-Butylphthalide-Parkinson-Dementia-Abstract-Extract.txt)

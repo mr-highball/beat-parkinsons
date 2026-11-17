@@ -277,3 +277,5 @@ The primate study measured posture, balance and bradykinesia around a medical in
 ### Historical seafood exposure and neurological examination
 
 The early Minamata survey described sensory and ataxia findings after historical methylmercury exposure. Its accessible abstract does not resolve specific seafood preparation or report the dysarthria table recovered from the later reanalysis. [Original and cohort lineage](../Food-Experiment-Seafood-Exposure-Speech.md#original-minamata-survey-and-later-cohort-reuse)
+
+- [Celery leaf and human apigenin](Food-Experiment-Celery-Apigenin.md)

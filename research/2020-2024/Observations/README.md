@@ -668,3 +668,5 @@ The Veranópolis protocol uses cinnamon and orange to test smell. The later loca
 ### Meal odor preference after ground cinnamon
 
 The oral crossover contains precisely identified ground cinnamon and rates meal smell pleasantness. Separate smell-test studies identify the odor of cinnamon itself. These endpoints do not measure the same response. [Oral crossover](../Food-Experiment-Cinnamon-Olfaction-Followup.md#oral-ground-cinnamon-and-ratings-of-meal-smell)
+
+- [Herbal flavone preparations and absorption](Food-Experiment-Herbal-Flavone-Matrices.md)

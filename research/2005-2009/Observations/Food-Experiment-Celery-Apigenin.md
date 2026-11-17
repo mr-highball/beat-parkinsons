@@ -1,0 +1,5 @@
+# Celery leaf and human apigenin
+
+The 2008 and 2009 celery-leaf reports reproduce all 35 displayed time-point values. The tables label their cohorts as 10 and 20 participants. They also agree on reported mean peak time, area under the curve and detection limit. Count the plasma profile once and retain both reports to document the denominator discrepancy. [Zhao 2008 Table 1](../Source-Text/2008-Zhao-Celery-Leaf-Apigenin.txt) · [Cao 2009 Table 3](../Source-Text/2009-PMID19747418-Cao-Celery-Leaf-Apigenin-Extract.txt)
+
+The period also includes a small human blanched-parsley exposure measurement and fresh celery-petiole chemistry. Those records establish separate food and material measurements. The celery-leaf plasma analysis hydrolyzed samples before measuring apigenin. This prevents direct comparison with free concentrations in the blood or brain. These studies did not measure Parkinson's symptoms. [Parsley author abstract](../Source-Text/2006-PMID16407641-Parsley-Apigenin-Abstract-Extract.txt) · [Petiole flavones](../Source-Text/2007-Vina-Chaves-Fresh-Celery-Petiole-Flavones-Extract.txt)

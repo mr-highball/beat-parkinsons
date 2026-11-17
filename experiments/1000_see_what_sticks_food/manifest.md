@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The fourteenth rest-tremor checkpoint verifies 503 original main texts and finishes all 968 positions in the fixed local fig archive. The celery follow-up screens 75 PubMed appearances and adds three related assessments. Identical human leaf plasma results with inconsistent sample counts remain one evidence lineage. The original queue holds 49,097 pairs, including 2,984 rest-tremor pairs. Verdicts remained unchanged. [Archive, study provenance and exact disposition](followup/tremor-priority-nov17-14/README.md)
+
 The thirteenth rest-tremor checkpoint closed 394 original pairs and added four assessments. The verified main bodies include 300 fig records and 40 apple records. Clinical apple-chewing, celery formulation and historical peanut-carrier sources leave their isolated resting-tremor effects unresolved. The original queue totals 49,600 pairs, including 3,487 rest-tremor pairs. [Evidence and source verification](followup/tremor-priority-nov17-13/README.md)
 
 The twelfth rest-tremor checkpoint closed 111 original pairs, reconciled 97 PubMed appearances including the retained-term retry, and added eight assessments. The source follow-through distinguishes cold-pressed oil chemistry, Parkinson occurrence, motor tasks and combined clinical scores. The original queue totals 49,994 pairs, including 3,881 rest-tremor pairs. [Evidence and exact decisions](followup/tremor-priority-nov17-12/README.md)
