@@ -1,5 +1,11 @@
 # Hazelnut and walnut oil outcome follow-up
 
+## Corrected mixed-nut and frontal cognition outcomes
+
+Valls-Pedret and colleagues first published the PREDIMED Barcelona cognition substudy May 11, 2015 (PMID **25961184**, DOI **10.1001/jamainternmed.2015.1668**). The journal published the reanalysis and correction November 5, 2018 after trial allocation deviations were identified. Of 447 participants, 334 completed repeat cognitive testing at a median 4.1 years. The mixed-nut group received 15 g whole walnuts, 7.5 g almonds and 7.5 g hazelnuts daily within a Mediterranean diet.
+
+Corrected Table 4 gives adjusted frontal composite changes of +0.23 (95% CI +0.03 to +0.43) for the olive-oil diet, +0.03 (−0.25 to +0.31) for the mixed-nut diet and −0.33 (−0.57 to −0.09) for low-fat advice. The overall comparison was p=.004. Figure 2 shows a clear olive-oil diet comparison against low-fat advice and an inconclusive mixed-nut frontal comparison. The table's rounding differs slightly from the abstract. This multifactorial, non-Parkinson comparison includes no assigned walnut oil. [Corrected original Table 4 and Figure 2](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2293082) · [Reanalysis notice](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2712556) · [Parent trial registry](../2005-2009/Food-Experiment-Hazelnut-Walnut-Gap-Followup.md#registered-predimed-mixed-nut-dietary-comparison)
+
 ## Hazelnut oil in a registered urinary biomarker study
 
 DRKS00013219 was entered retrospectively October 25, 2017. The German Federal Institute for Risk Assessment registered a nonrandomized, open-label crossover of hazelnut oil and palm fat in 12 adults. Urinary contaminant biomarkers after exposure and their pre-exposure excretion were the registered outcomes. The registry links two resulting reports. Its ethics number EA4/139/17 differs from EA4/130/17 given in the first article. Matching investigators, exposures, dates and linked publications support the study match. This registration does not supply urinary urgency results for 0397. [Official German registry](https://drks.de/search/en/trial/DRKS00013219) · [Local registry text](Source-Text/Trials/DRKS00013219.txt) · [First primary results](../2020-2024/Food-Experiment-Hazelnut-Walnut-Gap-Followup.md#oral-hazelnut-oil-and-timed-urine-collection)

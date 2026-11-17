@@ -1,5 +1,9 @@
 # Hazelnut and walnut oil outcome follow-up
 
+## Registered PREDIMED mixed-nut dietary comparison
+
+The WHO registry mirror lists **ISRCTN35739639** as registered on October 5, 2005, after the listed October 1, 2003 enrollment start. The parent cardiovascular prevention trial compared Mediterranean diets supplemented with extra-virgin olive oil or mixed whole nuts against advice to reduce dietary fat. The nut arm provided walnuts, almonds and hazelnuts together. Published analyses of incident depression and the Barcelona cognition subgroup belong to this trial. [Official WHO registry mirror](https://trialsearch.who.int/Trial2.aspx?TrialID=ISRCTN35739639) · [Incident depression outcomes](../2010-2014/Food-Experiment-Tree-Nut-Oils.md#mixed-nut-mediterranean-diet-and-new-depression-diagnoses) · [Corrected cognition outcomes](../2015-2019/Food-Experiment-Hazelnut-Walnut-Gap-Followup.md#corrected-mixed-nut-and-frontal-cognition-outcomes)
+
 ## Whole walnut diets and latency to fall in aged rats
 
 Willis and colleagues first published September 9, 2008. Aged Fischer 344 rats received standard feed or feed with 2%, 6%, or 9% whole walnuts for eight weeks. Figure 1 reports longer latency to fall on the rod with 2% relative to control and 9%, longer latency on the medium plank with 6% relative to the other groups, and shorter latency on the large plank with 9% relative to control and 6% (reported p < .05 in each set of comparisons). Wire suspension, rotarod, inclined screen and small plank tests showed no clear group differences. These are challenge-specific latency measures and a preparation comparator for 0859. They do not estimate free-living falls or walnut oil in Parkinson’s. [Primary article, Methods and Figure 1](https://www.cambridge.org/core/journals/british-journal-of-nutrition/article/dosedependent-effects-of-walnuts-on-motor-and-cognitive-function-in-aged-rats/2E97D7C0EBA2A9FAFEE7E8FC45778E19)
