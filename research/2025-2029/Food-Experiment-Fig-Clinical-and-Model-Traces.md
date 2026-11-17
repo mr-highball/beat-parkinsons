@@ -7,3 +7,7 @@ Mohammadi Kenari et al. randomized children aged 6–14 with ADHD to commercial 
 ## Sweet almond syrup and parent rated attention
 
 The same 2025 Mohammadi Kenari trial gives baseline-to-week-12 cognitive problems and inattention means of 11.57 to 6.20 for sweet-almond syrup and 8.05 to 8.10 for placebo. All children received methylphenidate. The almond-versus-placebo Tukey p values were .003 at baseline and .011 at follow-up. The Methods mention ANCOVA and Table 2 prints the raw visits with no clearly identified adjusted treatment estimate for this contrast. The preparation contained sweet almonds and raisins. The report gives no cold-pressed almond oil or Parkinson subgroup. [Original Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC13097199/) · [Local trial text with both outcomes](Source-Text/2025-Mohammadi-Kenari-Fig-Almond-Drooling.txt)
+
+## FIG4 and rest tremor in a genetic clinical letter
+
+A 2025 original case describes resting tremor and a biallelic FIG4 variant in a person with Parkinson disease. The reported medication course and sequencing establish the context for the term FIG4. The case gives no dietary fig exposure. [Original case](https://pmc.ncbi.nlm.nih.gov/articles/PMC12911447/) · [Local factual text](Source-Text/2025-PMID40884084-FIG4-Parkinson-Case-Extract.txt)
