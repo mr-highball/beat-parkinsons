@@ -1,5 +1,9 @@
 # Food and Nutrition
 
+### 2010 and 2012 — Rice-containing meals in two Korean pressure studies
+
+Son and Lee's August 2010 crossover included 25 older adults with a pressure decline in an earlier study and compared water before eating with the meal alone. The meals included a mean 163.7 g of rice. The systolic time-by-intervention p value was below .001. The assigned contrast varies water. A December 2012 report by Son monitored seated pressure around meals in 26 older hypertensive, 25 older normotensive and 26 young adults. Mean reported rice portions ranged from 241.1 to 276.9 g across groups and the portion comparison gave p = .086. Postprandial hypotension was reported in 73.1%, 24% and 0% respectively. Neither study compares rice grades or provides standing lightheadedness after a particular rice preparation. Participant overlap with the 2015 rice-serving crossover was not verified. [2010 original Tables 1–3](https://j.kafn.or.kr/upload/pdf/jkafn-17-3-304.pdf) · [2012 original and tables](https://www.kais99.org/jkais/journal/v13n12/27/46yw/46yw.pdf)
+
 ### 2011 — Nutrient intake and smell identification at diagnosis
 
 Ådén and colleagues compared 87 people with newly diagnosed Parkinson’s and 28 age- and sex-matched controls. The study used three-day dietary records and 24-hour recalls, with the Brief Smell Identification Test. The published abstract associates lower protein intake as a proportion of energy and lower folate, magnesium and phosphorus density with lower smell scores in the combined sample. The Parkinson group performed worse on the smell test. The accessible results do not estimate smell changes by cinnamon, tea, or any individual food. [Primary report, PMID 21535918](https://pubmed.ncbi.nlm.nih.gov/21535918/)

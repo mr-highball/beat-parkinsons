@@ -1,5 +1,9 @@
 # Food and Nutrition
 
+### 2015 — Rice serving size and postmeal pressure
+
+Son and Lee's randomized within-person study (PMID 26094950) compared a full rice serving with half a serving on separate days in 39 nursing-home residents. Blood pressure and heart rate were measured at 15-minute intervals over two hours. The author abstract reports different systolic and diastolic pressure time courses and less frequent postprandial hypotension after the half serving. Heart rate did not clearly differ. The accessible author and institutional abstracts give no arm estimates, rice grade, preparation, posture-specific testing or lightheadedness score. Publication first appeared June 10, 2015. The original tables and methods remain open. [Original author abstract](https://pubmed.ncbi.nlm.nih.gov/26094950/) · [Institutional record](https://research.knu.ac.kr/en/publications/effects-of-the-amount-of-rice-in-meals-on-postprandial-blood-pres/)
+
 ### 2016 — Glucose challenges and post-meal blood pressure
 
 Trahair and colleagues studied 21 people with mild-to-moderate Parkinson’s disease after a standardized glucose drink. Eight met the study’s postprandial hypotension definition. The blood pressure response had no clear association with the measured gastric emptying rate. In a separate report on untreated Parkinson’s disease, Umehara and colleagues found that blood pressure drops after glucose were associated with pre-existing orthostatic hypotension and other clinical findings. Both reports give physiological context for meal-associated hypotension. They provide no estimate for steamed brown rice or orthostatic lightheadedness severity. [Trahair primary full text, May 2016](https://pmc.ncbi.nlm.nih.gov/articles/PMC4873878/) · [Umehara primary report, 2016](https://pubmed.ncbi.nlm.nih.gov/27393383/)

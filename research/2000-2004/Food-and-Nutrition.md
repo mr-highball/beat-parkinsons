@@ -1,5 +1,9 @@
 # Food and Nutrition for 2000–2004
 
+### 2001 — Carbohydrate load and seated meal symptoms
+
+Vloet and colleagues (PMID 11723147) tested 25, 65 and 125 g carbohydrate as glucose-syrup drinks of equal volume in randomized crossover order in 12 geriatric patients with postprandial hypotension. They remained seated. Maximum mean systolic changes were −28, −39 and −40 mm Hg (standard errors 5, 7 and 5). Mean duration of the pressure drops was 18, 37 and 43 minutes, with the lowest condition shorter than the other two (p = .003 and .002). Dizziness occurred with the higher loads and excessive sleepiness was more common at the highest load. Symptoms were marked absent to severe during the seated tests. The study supplies no rice test, standing symptom comparison or Parkinson subgroup result. The chapter reproduces this article's original cohort. [Journal record](https://pubmed.ncbi.nlm.nih.gov/11723147/) · [Author dissertation reproduction, Chapter 6, Tables 1–2 and Figure 2](https://proefschriftenverpleegkunde.nl/wp-content/uploads/gravity_forms/6-e9dc63308c2d8e347e8c9e1a28bb67ce/2023/09/Proefschrift-Vloet-L.pdf?TB_iframe=true)
+
 ### 2004 — Correspondence on a mostly plant-based diet in Parkinson’s
 
 Roberta H. Schwartz published a one-page letter in 2004 commenting on McCarty’s dietary risk hypothesis. The indexed record supplies no abstract. Perea-Sasiaín and Hanfling Schwartz identify it as the earlier report for the male case in their 2014 publication, which describes a near-vegan dietary change during levodopa treatment. The 2004 publisher body was restricted during review, so the earlier observations and any differences from the expanded account remain unverified. [Primary 2004 bibliographic record](https://pubmed.ncbi.nlm.nih.gov/15193373/) · [Publisher DOI](https://doi.org/10.1016/j.mehy.2004.01.016) · [Expanded 2014 account](../2010-2014/Food-Experiment-Food-Followup.md#two-dietary-case-histories-from-colombia)

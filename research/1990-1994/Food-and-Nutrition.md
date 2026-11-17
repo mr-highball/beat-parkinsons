@@ -1,5 +1,9 @@
 # Food and Nutrition for 1990–1994
 
+### 1991 — Supine and erect pressure after a carbohydrate-rich meal
+
+Haigh and colleagues randomized eight older adults with untreated hypertension to a high-carbohydrate meal and a no-meal session in crossover order. The author abstract reports greater falls in supine and erect systolic pressure after the meal (p = .006 and .03), with orthostatic control reported as maintained. Maximum mean supine fall was 24 mm Hg at 60 minutes. The public abstract supplies no recipe, rice variety, lightheadedness rating or Parkinson cohort. [Original article abstract](https://pubmed.ncbi.nlm.nih.gov/2072371/)
+
 ### 1990 — Follow-up survey of vitamin E-rich foods and early-life exposures
 
 Golbe and colleagues surveyed 106 people with Parkinson’s disease and their spouses. Some comparisons reproduced inverse associations with recalled intake of vitamin E-rich foods, including peanuts or peanut butter and salad dressing. Cases also recalled more rural experience and pesticide application. Recall, choice of spouse controls, and multiple comparisons limited interpretation. [Original publication via PubMed](https://pubmed.ncbi.nlm.nih.gov/2296261/)

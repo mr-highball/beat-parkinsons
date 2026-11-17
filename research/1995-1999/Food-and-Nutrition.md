@@ -4,6 +4,10 @@
 
 Loew and colleagues compared 10 older people with Parkinson’s disease and 10 age-matched controls. After a meal, supine systolic blood pressure fell by 27 mm Hg in the Parkinson group and 8 mm Hg in controls. On a separate day, standing and head-up tilt tests found a smaller orthostatic blood pressure fall after lunch. The public abstract gives no food-specific contrast or lightheadedness rating. [Primary abstract, November 1995](https://pubmed.ncbi.nlm.nih.gov/8984127/) · [Author institution record](https://archive-ouverte.unige.ch/unige:28141)
 
+### 1996 — Rice cake and alcohol in an unresolved syncope case
+
+Hattori and colleagues' neurological case report (PMID 8951900) describes rice cake and alcohol before sudden chest discomfort and loss of consciousness in one person with parkinsonism. The preceding assessment recorded no orthostatic hypotension, and there is no event pressure measurement or rice-only contrast. Autopsy favored striatonigral degeneration, and the cause of death remained undetermined. The publisher dates the issue November 1, 1996, while the English abstract dates the event to January 1997. The first issue date governs this entry and the chronology discrepancy remains open. [Publisher metadata and first-page preview](https://webview.isho.jp/journal/detail/pdf/10.11477/mf.1406901033) · [Primary abstract](https://pubmed.ncbi.nlm.nih.gov/8951900/)
+
 ### 1997 — Post-meal presyncope and aggregate motor scores
 
 Chaudhuri and colleagues compared 20 people with idiopathic Parkinson’s disease and 16 age-matched controls after a standard liquid meal. The abstract reports post-meal supine hypotension, postural intolerance with presyncopal symptoms, and worsening on a combined tremor, rigidity, bradykinesia, posture and gait score in the Parkinson group. The meal preparation and endpoint differ from steamed brown rice and orthostatic lightheadedness severity. [Primary abstract, November 1997](https://pubmed.ncbi.nlm.nih.gov/9399210/) · [Author institution record](https://kclpure.kcl.ac.uk/portal/en/publications/postprandial-hypotension-and-parkinsonian-state-in-parkinsons-dis/)

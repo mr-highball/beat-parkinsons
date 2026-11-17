@@ -1,5 +1,15 @@
 # Food and Nutrition
 
+### 2020 — White rice meal and syncope in diabetic neuropathy
+
+Furukawa and colleagues published this case online February 28, 2020 (PMID 32115439). The tested meal included white rice and induced syncope with systolic pressure below 40 mm Hg. A second meal test added caffeine and attenuated the decline. A separate tilt test had identified marked orthostatic hypotension. This single patient had diabetic autonomic neuropathy. The test does not vary rice intake or record a comparative effect on standing lightheadedness. [Original full text, Methods and Results](https://www.jstage.jst.go.jp/article/endocrj/67/6/67_EJ19-0370/_html/-char/en)
+
+### 2024 — Premeal exercise and seated pressure in Parkinson’s
+
+Odate and colleagues' review, first made public October 21, 2024, includes the authors' analysis of nine inpatients with Parkinson's disease. Figure 5 records seated blood pressure during the minute before standing in the test rather than values during the standing phase. After premeal exercise, premeal versus postmeal mean pressures were 127.8 versus 111.5 mm Hg systolic (p = .004) and 75.4 versus 66.6 mm Hg diastolic (p = .003). The figure has no no-exercise comparison, standing-phase measurements, meal composition or lightheadedness ratings. The paper's own analysis is retained under DOI 10.57270/jgts.2024_002_RA. [Original publication](https://www.jstage.jst.go.jp/article/jgts/3/0/3_2024_002_RA/_article/-char/ja/) · [Figure 5 and adjacent text](https://www.jstage.jst.go.jp/article/jgts/3/0/3_2024_002_RA/_pdf/-char/ja#page=6)
+
+The same first author's 2022 meeting abstract MSP-01-2, publicly posted October 15, reports five participants. Systolic changes with and without premeal exercise were −3.0 and −6.6 mm Hg. The abstract gives no between-period p value, test posture or meal composition. A university index identifies a related master's project, with no accessible body recovered. Participant overlap across the reports is unresolved. [Original meeting abstract, p. S395](https://www.jstage.jst.go.jp/article/clinicalneurol/62/Supplement/62_62_supplement_S394/_pdf/-char/ja#page=2) · [Thesis index](https://lib.nuhw.ac.jp/wp-content/uploads/2024/07/gakui_title.pdf)
+
 ### 2020 — Coffee and tea history in the Bamako case-control study
 
 Koné and colleagues compared 43 Parkinson cases and 86 age- and sex-matched controls. Table II gives crude case-status odds ratios of 0.33 for coffee (95% CI 0.15–0.76) and 0.38 for tea (95% CI 0.18–0.84). The adjusted results table uses those exposures as covariates and does not give adjusted beverage estimates. Clinical variables included sleep problems and motor signs, without a symptom severity comparison by coffee or tea intake. The publisher posted the article July 24, 2020. The institutional thesis has matching recruitment and results. [Primary article and date](https://www.revues.ml/index.php/msp/article/view/1658) · [Full paper, Tables II–IV](https://www.revues.ml/index.php/msp/article/download/1658/1172) · [University thesis](https://www.bibliosante.ml/handle/123456789/6176)
