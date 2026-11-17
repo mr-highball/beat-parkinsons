@@ -79,6 +79,7 @@ January 1, 2005 through December 31, 2009.
 - [Green beans, pinto beans, tempeh and garlic](Food-Experiment-Green-Pinto-Tempeh-Garlic.md)
 - [Hazelnut and sunflower oil evidence](Food-Experiment-Hazelnut-Sunflower-Oils.md)
 - [Celery leaf and spearmint evidence](Food-Experiment-Celery-Spearmint.md)
+- [Medication context for the celery-root case](Food-Experiment-Celery-Leaf-Hallucination.md)
 - [Soybean and rice bran oil evidence](Food-Experiment-Soybean-Rice-Bran-Oils.md)
 - [Thyme and clove evidence](Food-Experiment-Thyme-Clove.md)
 

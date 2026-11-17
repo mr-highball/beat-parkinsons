@@ -2,7 +2,11 @@
 
 ## 2016 Celery root extract and mania with venlafaxine and St Johns wort
 
-Khalid et al. 2016, Postgraduate Medicine 128:682–683, PMID 27467225, DOI 10.1080/00325481.2016.1218263. Publisher abstract reports a woman stabilized on venlafaxine and St John's wort who developed mania after starting celery root extract for menopause; elevated venlafaxine was reported. The proposed interaction is a hypothesis. Full original case details were not accessible. The exposure is root extract, not dried leaf; the accessible abstract does not report hallucination modality or frequency.
+Khalid and colleagues report mania with elevated venlafaxine after a patient began celery-root extract while taking venlafaxine and St John's wort. Their proposed interaction is a hypothesis. The 2016 primary abstract and 2022 review describe one patient. The primary full case remains inaccessible. A separate 2009 venlafaxine case documented transient visual hallucinations without reported celery exposure. [2016 original and source lineage](Source-Text/2016-Khalid-Celery-Root-Mania-Extract.txt) · [2009 medication context](../2005-2009/Food-Experiment-Celery-Leaf-Hallucination.md)
+
+## Pharmaceutical butylphthalide and the PDQ-39 combined item
+
+Zhou and colleagues used aggregate PDQ-39 scores in their 2019 Parkinson trial. Item 33 groups distressing dreams and hallucinations in one ordinal question. The paper provides neither that individual result nor a separate visual-hallucination outcome. Its independently reported adverse events have no hallucination category. The article identifies ChiCTR1800018892, and the official registry fields remain unavailable. [Original trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC6447885/) · [Oxford questionnaire sample](https://innovation.ox.ac.uk/wp-content/uploads/2014/07/Final_PDQ-39_English_UK_SAMPLE.pdf)
 
 ## Dried celery leaf powder in a thyroid case report
 

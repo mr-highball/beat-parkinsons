@@ -1,0 +1,3 @@
+# Medication context for the celery-root case
+
+Tripp and Golden reported transient visual hallucinations after initiation of venlafaxine. Symptoms resolved while the dose continued. The authors considered recent alcohol withdrawal and biochemical findings. This independent case provides context for attributing symptoms in the later celery-root case with concurrent venlafaxine and St John's wort. [Original letter](Source-Text/2009-Tripp-Golden-Visual-Hallucinations-Extract.txt) · [2016 celery-root case](../2015-2019/Food-Experiment-Celery-Leaf-Hallucination.md#2016-celery-root-extract-and-mania-with-venlafaxine-and-st-johns-wort)
