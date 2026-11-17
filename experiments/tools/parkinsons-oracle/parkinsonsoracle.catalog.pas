@@ -1071,12 +1071,12 @@ begin
       ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_identifier_state VALUES (1,-1)');
       LRebuildIdentifiers := Scalar(FDatabase, 'SELECT source_identifier_state.revision' +
         ' <> catalog_state.revision FROM source_identifier_state, catalog_state') <> 0;
-      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_registry_v3_state (' +
+      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_registry_v4_state (' +
         ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
-      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_registry_v3_state VALUES (1,-1)');
+      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_registry_v4_state VALUES (1,-1)');
       LRefreshRegistries := LRebuildIdentifiers or
-        (Scalar(FDatabase, 'SELECT source_registry_v3_state.revision <> catalog_state.revision' +
-          ' FROM source_registry_v3_state, catalog_state') <> 0);
+        (Scalar(FDatabase, 'SELECT source_registry_v4_state.revision <> catalog_state.revision' +
+          ' FROM source_registry_v4_state, catalog_state') <> 0);
       ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_tctr_state (' +
         ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
       ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_tctr_state VALUES (1,-1)');
@@ -1134,8 +1134,15 @@ begin
       LFinish.Execute;
       ExecuteSql(FDatabase, 'UPDATE source_identifier_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
-      ExecuteSql(FDatabase, 'UPDATE source_registry_v3_state' +
+      ExecuteSql(FDatabase, 'UPDATE source_registry_v4_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
+      // A running reader from before the backfill can use the same updated keys.
+      if Scalar(FDatabase, 'SELECT count(*) FROM sqlite_schema' +
+        ' WHERE type=''table'' AND name=''source_registry_v3_state''') <> 0 then
+      begin
+        ExecuteSql(FDatabase, 'UPDATE source_registry_v3_state' +
+          ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
+      end;
       ExecuteSql(FDatabase, 'UPDATE source_tctr_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
       ExecuteSql(FDatabase, 'COMMIT');
@@ -1410,8 +1417,8 @@ begin
       end;
       if LNeedsRegistries and
         ((Scalar(FDatabase, 'SELECT count(*) FROM sqlite_schema' +
-          ' WHERE type=''table'' AND name=''source_registry_v3_state''') = 0) or
-        (Scalar(FDatabase, 'SELECT revision FROM source_registry_v3_state WHERE id=1') <> LRevision)) then
+          ' WHERE type=''table'' AND name=''source_registry_v4_state''') = 0) or
+        (Scalar(FDatabase, 'SELECT revision FROM source_registry_v4_state WHERE id=1') <> LRevision)) then
       begin
         raise Exception.Create('Source registry identifiers need a catalog refresh');
       end;

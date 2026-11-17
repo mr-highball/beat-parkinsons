@@ -355,11 +355,12 @@ begin
     if LSeparator > 0 then
     begin
       case IndexText(Copy(LLine, 1, LSeparator - 1),
-        ['NCT ID', 'Registration', 'Registry ID', 'Registry identifier', 'Source']) of
+        ['NCT ID', 'Registration', 'Registry ID', 'Registry identifier', 'Source',
+          'URL', 'Official API']) of
         0..3:
           if NormalizeArchiveIdentifier(Copy(LLine, LSeparator + 1, MaxInt)) <> AExpected then
             Exit;
-        4:
+        4..6:
           LLine := Trim(Copy(LLine, LSeparator + 1, MaxInt));
       end;
     end;

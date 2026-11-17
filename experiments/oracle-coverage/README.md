@@ -36,6 +36,10 @@ new sources into their chronological buckets, refresh the index and verify
 retrieval. Use batch summaries to identify the gaps that motivate that work.
 Record only research identifiers and relative source paths.
 
+## Exact ClinicalTrials.gov lookups
+
+A November 17 inventory found two canonical NCT records with matching official URLs under labeled header fields that revision 55 did not recognize. The native parser now reads those fields and requires the same official host, path and matching identifier as the other recognized source formats. Conflicting IDs are rejected. The registry identifier refresh backfills unchanged files. At revision 56 both records and five sampled existing matches returned their canonical paths through the same exact requests. A repeated refresh retained the revision. The reproduced index failure is recorded as unavailable in the first-pass rate. [NCT03532789](../../research/2015-2019/Source-Text/Trials/NCT03532789.txt) · [NCT05602688](../../research/2020-2024/Source-Text/Trials/NCT05602688.txt)
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the

@@ -91,6 +91,22 @@ begin
       'The official source and the registration field can appear in either order');
     Assert(ParseTrialArchiveIdentifier('https://clinicaltrials.gov/api/v2/studies/NCT07655219' +
       LineEnding, 'NCT07655219') = 'NCT07655219');
+    Assert(ParseTrialArchiveIdentifier('Title: Archived registry fields' + LineEnding +
+      'Source: ClinicalTrials.gov' + LineEnding +
+      'URL: https://clinicaltrials.gov/study/NCT05602688' + LineEnding +
+      'Official API: https://clinicaltrials.gov/api/v2/studies/NCT05602688' + LineEnding +
+      'Registry ID: NCT05602688' + LineEnding, 'NCT05602688') = 'NCT05602688',
+      'Named official URLs identify the matching registry source');
+    Assert(ParseTrialArchiveIdentifier('Registry ID: NCT05602688' + LineEnding +
+      'Official API: https://clinicaltrials.gov/api/v2/studies/NCT05602688' + LineEnding,
+      'NCT05602688') = 'NCT05602688', 'An official API URL is sufficient provenance');
+    Assert(ParseTrialArchiveIdentifier('Registry ID: NCT05602688' + LineEnding +
+      'URL: https://clinicaltrials.gov.example/study/NCT05602688' + LineEnding,
+      'NCT05602688') = '', 'An unrelated domain does not identify the source');
+    Assert(ParseTrialArchiveIdentifier(
+      'URL: https://clinicaltrials.gov/study/NCT05602688' + LineEnding +
+      'Official API: https://clinicaltrials.gov/api/v2/studies/NCT07655219' + LineEnding,
+      'NCT05602688') = '', 'Conflicting URL and API identities are rejected');
     Assert(ParseTrialArchiveIdentifier('Registration: NCT07655219' + LineEnding +
       'See https://clinicaltrials.gov/study/NCT07655219' + LineEnding, 'NCT07655219') = '',
       'A citation in prose does not supply registry provenance');
