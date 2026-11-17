@@ -44,3 +44,11 @@ Cohen and colleagues randomized women with ovarian or endometrial cancer to a ke
 ## Extra-virgin coconut oil and exertion in runners
 
 The July 2019 randomized crossover enrolled 13 recreational runners (PMID 31330804, DOI 10.3390/nu11071661). Methods §2.2 distinguishes water, decaffeinated coffee with supplemental caffeine, the same coffee and caffeine with refined soybean oil, and the same coffee and caffeine with extra-virgin coconut oil. Every coconut-oil serving therefore contained caffeine, despite the broader title wording. The reported four-condition p-values were .93 for 1,600 m time and .99 for post-run Borg perceived exertion. The same-caffeine contrasts concern acute exercise, with no Parkinson fatigue outcome. [Original Methods §2.2 and Results §3](https://www.mdpi.com/2072-6643/11/7/1661)
+
+## Virgin coconut oil with loratadine in allergic rhinitis
+
+Zainuddin and colleagues reported 52 adults with allergic rhinitis, 26 per group, in 2016. Participants took loratadine with or without oral virgin coconut oil for 28 days. The paper also discusses concomitant topical steroid use. Mean sneezing score change was −1.65 with oil versus −2.69 without oil (reported p=.033). Other nasal and nonnasal symptom comparisons were inconclusive. About 58% of the oil group reported side effects, mostly gastrointestinal. Fatigue was not separately measured. The result concerns a non-Parkinson group and the tested oil batches. [Original paper, pp. 22–28](https://ir.uitm.edu.my/id/eprint/14932/1/AJ_NAZLI%20ZAINUDDIN%20JCHS%2016.pdf) · [Earlier reports from the same study](../2010-2014/Food-Experiment-Coconut-Rhinitis.md)
+
+## Coconut oil and gut outcomes in a rat poster
+
+UEG Week 2017 poster P0632 compared a control diet with diets containing coconut or evening primrose oil in male Wistar rats. The authors did not report a clear difference in gut transit or visceral pain responses. The poster does not specify oil grade or a fatigue measure. Nearby P0631 reports fatigue in an independent human low-FODMAP pilot. These are different studies. [Original 2017 proceedings, poster P0632](https://pmc.ncbi.nlm.nih.gov/articles/PMC7672678/)

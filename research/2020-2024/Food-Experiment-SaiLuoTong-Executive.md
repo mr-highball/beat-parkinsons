@@ -1,0 +1,9 @@
+# SaiLuoTong, executive testing and mood
+
+## Executive outcomes and secondary depression measure
+
+Steiner-Lim and colleagues first published the 12-week randomized mild cognitive impairment trial on October 11, 2023 (PMID 37830013, PMC10565903, DOI 10.1002/trc2.12420). It randomized 78 participants. The completer analysis included 33 in the active group and 32 in placebo. The oral intervention combined standardized ginseng, ginkgo and saffron extracts. No arm received saffron alone.
+
+Table 2 reports D-KEFS Trail Making Test Condition 4 switching change of +1.00 versus −0.42 points, with a between-group difference of +1.42 (95% CI −0.15 to 2.99, one-tailed p=.038). The contrast-score difference was +1.56 (95% CI −0.09 to 3.20, one-tailed p=.032). The analysis section states directional, one-tailed tests for these outcomes. Both published intervals span zero. The secondary DASS-21 depression difference was −0.08 points (95% CI −1.36 to 1.19, p=.552). These results concern the formula in mild cognitive impairment. They leave dried culinary saffron and executive function, as well as ground saffron and depression in Parkinson disease, unresolved. [Original Methods and Table 2](https://doi.org/10.1002/trc2.12420) · [Open publisher PDF at the university](https://research-management.mq.edu.au/ws/portalfiles/portal/303886190/Publisher_version_open_access_.pdf)
+
+Conference member P03.14LB in the 2024 International Congress on Integrative Medicine and Health gives the same sample, intervention, duration and endpoints. The conference abstract, published protocol, registry and journal results belong to one study. [Original P03.14LB](https://pmc.ncbi.nlm.nih.gov/articles/PMC11047233/#sec384-27536130241242891) · [Dated trial registration](../2015-2019/Food-Experiment-SaiLuoTong-Registration.md)

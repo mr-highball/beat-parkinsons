@@ -39,6 +39,7 @@ January 1, 2010 through December 31, 2014.
 - [Registered macadamia oil comparator](Food-Experiment-Macadamia-ADHD-Registry.md)
 - [Curcumin formulation and rheumatoid arthritis pain](Food-Experiment-Curcumin-RA-Pain.md)
 - [Saffron capsules after coronary intervention](Food-Experiment-Saffron-PCI-Depression.md)
+- [Virgin coconut oil in an allergic-rhinitis thesis](Food-Experiment-Coconut-Rhinitis.md)
 - [Allspice oil pediatric exposure reports](Food-Experiment-Allspice-Poison-Center-Context.md)
 - [Pomegranate-related case source trails](Food-Experiment-Pomegranate-Hallucination-Context.md)
 - [Oral ginger preparations and measured pain](Food-Experiment-Ginger-Pain-Origins.md)

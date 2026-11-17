@@ -106,6 +106,8 @@ January 1, 2020 through December 31, 2024.
 - [Rosemary and postoperative voice outcomes](Food-Experiment-Rosemary-Voice.md)
 
 - [Coconut oil in sleep and speech follow-up](Food-Experiment-Coconut-Remaining.md)
+- [Virgin coconut oil in conference and clinical studies](Food-Experiment-Coconut-Conference-Followup.md)
+- [SaiLuoTong executive and depression outcomes](Food-Experiment-SaiLuoTong-Executive.md)
 
 - [Black bean preparation and study outcomes](Food-Experiment-Black-Bean-Endpoint-Replay.md)
 - [Saffron registrations and individual outcomes](Food-Experiment-Saffron-Clinical-Endpoints.md)

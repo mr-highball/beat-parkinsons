@@ -42,6 +42,7 @@ January 1, 2015 through December 31, 2019.
 - [Oat allergy, thyme motor coordination and sesame attention measures](Food-Experiment-Oat-Thyme-Sesame-Endpoint-Comparisons.md)
 - [Tart cherry preparations and exercise fatigue](Food-Experiment-Cherry-Exercise-Fatigue.md)
 - [Saffron and curcumin in major depression](Food-Experiment-Saffron-Curcumin-Depression.md)
+- [SaiLuoTong pilot registration and protocol](Food-Experiment-SaiLuoTong-Registration.md)
 - [Pomegranate trial and hallucination timing](Food-Experiment-Pomegranate-Hallucination-Context.md)
 - [Pimento oil and rat motor observations](Food-Experiment-Pimento-Oil-Motor-Context.md)
 - [Grapeseed oil and measured sleep](Food-Experiment-Grapeseed-Sleep-Context.md)
