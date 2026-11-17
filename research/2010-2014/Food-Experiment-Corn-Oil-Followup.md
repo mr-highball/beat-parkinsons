@@ -1,5 +1,9 @@
 # Corn oil and Parkinson’s symptom follow-up
 
+## Corn oil shared across the CBD motor comparison
+
+In Chagas’s 2014 six-week trial (PMID 25237116), Table 2 gives baseline-minus-final UPDRS Part III changes of 2.17 ± 8.23 for corn-oil placebo, 3.85 ± 5.37 for lower-dose CBD and 3.00 ± 5.16 for higher-dose CBD (omnibus p=.675). All participants took capsules containing corn oil. The trial reports the aggregate motor score and does not give a separate rigidity item or oil refinement grade. These group differences estimate the addition of CBD under shared oil exposure. [Original report and Table 2](https://www.researchgate.net/publication/265863783_Effects_of_cannabidiol_in_the_treatment_of_patients_with_Parkinson%27s_disease_An_exploratory_double_blind_trial) · [Publisher DOI](https://doi.org/10.1177/0269881114550355)
+
 ## Parkinson cognition communication and mobility during the 2014 CBD trial
 
 Chagas and colleagues randomized 21 people with Parkinson’s to two doses of cannabidiol or placebo for six weeks. Corn oil carried the active CBD and was also the oral placebo. Refinement grade and an oil-free allocation were absent from the methods. In Table 2, baseline-minus-end Parkinson’s Disease Questionnaire communication changes were 0.00, 0.00 and 9.52 for placebo, CBD 75 mg and CBD 300 mg, with omnibus p=.531. Cognition changes were 13.57, 14.29 and 7.14, with p=.332. Mobility changes were 4.17, 5.71 and 19.64, with p=.106. Unified Parkinson’s Disease Rating Scale parts I and II were reported only as totals in the treatment table.

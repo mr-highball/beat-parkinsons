@@ -1,5 +1,9 @@
 # Edible oil evidence follow-up, 2020–2024
 
+## Registration for the coconut-oil vehicle in the PPI-1011 safety study
+
+NCT05969977 first posted August 1, 2023. It describes a first-in-human, randomized healthy-volunteer drug tolerability study. The record was completed and had no posted results when checked November 17, 2026. The 2025 original publication provides the vehicle and fatigue adverse-event details, with coconut oil used in both assigned groups. [Official registration](https://clinicaltrials.gov/study/NCT05969977) · [Dated primary results](../2025-2029/Food-Experiment-Oil-Followup.md#coconut-oil-vehicle-and-reported-fatigue-in-healthy-volunteers)
+
 ## Oral olive oil alone in a MPTP mouse study
 
 The 2023 study of orally administered fullerene dissolved in olive oil included a separate group of MPTP mice given olive oil alone by gavage. In the coadministration experiment, the olive-oil-only group showed no clear change on the pole or rotarod comparisons with the MPTP model control, whose saline was administered intraperitoneally. The study used ten mice per group and did not specify the oil's processing grade. These motor proxies and unequal administration routes limit its relevance to cold-pressed olive oil and Parkinson’s bradykinesia (`0629`). [Primary report, Figures 4 and S5](https://pmc.ncbi.nlm.nih.gov/articles/PMC10526674/)
@@ -99,3 +103,7 @@ The March 6, 2023 author protocol gives the dietary guidance planned for the KIM
 ## KIM conference abstract on trial progress
 
 The February 9, 2024 conference supplement includes the numbered child abstract 88 on NCT05469997. It describes the two eight-week randomized-order Mediterranean-ketogenic phases, washout, planned microbial and clinical measures, and trial status. The child reports that recruitment or study conduct was ongoing after an April 2023 start. It does not give clinical outcome estimates or a processing grade, dose or intake for olive oil. The PMCID and DOI identify the whole supplement, while the child number identifies the KIM report. [Original source](https://pmc.ncbi.nlm.nih.gov/articles/PMC10854369/) · [Local factual text](Source-Text/2024-Tosefsky-KIM-Abstract-88.txt)
+
+## Coconut and MCT options in a multiple sclerosis diet trial
+
+Lee and colleagues first reported this 12-week randomized pilot in 2020. Fifteen people with multiple sclerosis were assigned to a modified Paleolithic diet (6), an MCT-based ketogenic diet (5), or usual diet (4); one ketogenic participant lacked sufficient data and 14 were analyzed. Ketogenic guidance allowed coconut oil, MCT oil, coconut milk or combinations; the preparation grade and individual coconut-oil dose were not established. The 21-item Modified Fatigue Impact Scale showed a within-group improvement for the Paleolithic group (p = .02), but not for the ketogenic or control groups (p ≥ .10); the paper reports no 12-week between-group differences. This small trial assessed entire diet patterns in multiple sclerosis, with exploratory alpha of .10 and no multiplicity correction. It does not identify an isolated virgin coconut oil effect on Parkinson fatigue. [Original article, Figure 3 and Table 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC11833548/) · [Trial registration](https://clinicaltrials.gov/study/NCT01915433)

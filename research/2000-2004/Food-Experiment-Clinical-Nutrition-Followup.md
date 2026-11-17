@@ -1,0 +1,7 @@
+# Enteral formulation comparisons, 2000–2004
+
+## Sequential feeding-product case with separately reported motor signs
+
+Sato and colleagues published this Japanese report on November 18, 2001 (DOI 10.2490/jjrm1963.38.932). One patient with Parkinson disease receiving levodopa was observed across enteral nutrition formulas. Compared with Ensure Liquid, Fibren YH and Elental were associated with worse rabbit syndrome and standing balance. The initial Fibren YH switch also coincided with more rest tremor, drooling and longer OFF periods. Symptoms returned to their prior state after resumption of Ensure. The subsequent comparisons were sequential and unblinded. [Original report and PDF](https://www.jstage.jst.go.jp/article/jjrm1964/38/11/38_11_932/_article/-char/en)
+
+Table 1 gives total UPDRS scores of 77 for Ensure Liquid, 93 for Elental, and 74 each for L3 Fibers and Isocal-RTU. It supplies no score for Fibren YH or separate rigidity item. The composition table lists protein, fiber and other nutrients without specifying the oil ingredient or processing grade. The proposed amino-acid and fiber explanations were not tested as separate components or with measured levodopa absorption. The case provides no isolated refined corn oil estimate. [Original Tables 1–2](https://www.jstage.jst.go.jp/article/jjrm1964/38/11/38_11_932/_pdf) · [Separate 2008 rigidity case](../2005-2009/Food-Experiment-Clinical-Nutrition-Followup.md#tube-feeding-and-rigidity-during-levodopa-treatment)
