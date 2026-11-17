@@ -58,6 +58,11 @@ research passages and the assessments needed to check evidence and conflicts.
 Continue through relevant result pages and source trails when the question
 requires it.
 
+When the workspace is opened through a filesystem link, launch the script from
+the checkout that owns the index. A catalog binding error can occur if the
+launcher is called through a different path to that checkout. Use
+`oracle_status` to verify the catalog before recording a source miss.
+
 If the launcher stalls and the local oracle web server is already running,
 use its loopback adapter for the same read-only lookup. Record the transport
 failure separately from the catalog result so a successful fallback counts
