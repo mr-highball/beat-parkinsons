@@ -97,6 +97,11 @@ begin
   begin
     Exit(AValue);
   end;
+  if AnsiStartsStr('UMIN', AValue) and (Length(AValue) = 13) and
+    DigitsOnly(Copy(AValue, 5, MaxInt)) then
+  begin
+    Exit(AValue);
+  end;
   if AnsiStartsStr('IRCT', AValue) then
   begin
     LSeparator := Pos('N', AValue);
@@ -238,6 +243,114 @@ begin
   end;
 end;
 
+function UminRegistryHeaderMatches(const AText: RawByteString;
+  const AExpected: String): Boolean;
+const
+  CHeaderBytes = 1024;
+  CViewPrefixes: array[0..3] of String = (
+    'https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=',
+    'https://center6.umin.ac.jp/cgi-open-bin/ctr/ctr_view.cgi?recptno=',
+    'https://center6.umin.ac.jp/cgi-open-bin/icdr_e/ctr_view.cgi?recptno=',
+    'https://center6.umin.ac.jp/cgi-open-bin/icdr/ctr_view.cgi?recptno=');
+var
+  LHeader: String;
+  LLine: String;
+  LField: String;
+  LValue: String;
+  LIdentity: String;
+  LPrefix: String;
+  LReceipt: String;
+  LSourceReceipt: String;
+  LStart: Integer;
+  LEnd: Integer;
+  LSeparator: Integer;
+  LHasIdentity: Boolean;
+  LHasProvider: Boolean;
+begin
+  LHeader := Copy(AText, 1, CHeaderBytes);
+  if Copy(LHeader, 1, 3) = #$EF#$BB#$BF then
+  begin
+    Delete(LHeader, 1, 3);
+  end;
+  LStart := 1;
+  LHasIdentity := False;
+  LHasProvider := False;
+  LSourceReceipt := '';
+  while LStart <= Length(LHeader) do
+  begin
+    LEnd := PosEx(#10, LHeader, LStart);
+    if LEnd = 0 then
+    begin
+      LEnd := Length(LHeader) + 1;
+    end;
+    LLine := Trim(Copy(LHeader, LStart, LEnd - LStart));
+    LStart := LEnd + 1;
+    LField := '';
+    LValue := LLine;
+    LSeparator := Pos(':', LLine);
+    if (LSeparator > 0) and not AnsiStartsText('https://', LLine) then
+    begin
+      LField := Trim(Copy(LLine, 1, LSeparator - 1));
+      LValue := Trim(Copy(LLine, LSeparator + 1, MaxInt));
+    end;
+    LIdentity := '';
+    if OtherRegistryIdentifier(UpperCase(Copy(LLine, 1, 13))) <> '' then
+    begin
+      LIdentity := LLine;
+    end
+    else if AnsiStartsText('Official study UMIN', LLine) then
+    begin
+      LIdentity := Copy(LLine, Length('Official study ') + 1, MaxInt);
+    end
+    else if IndexText(LField, ['registry', 'identifier', 'trial id', 'record',
+      'registration', 'registration number', 'registry id', 'registry identifier']) >= 0 then
+    begin
+      LIdentity := LValue;
+    end
+    else if AnsiStartsText('Source: UMIN Clinical Trials Registry', LLine) then
+    begin
+      LIdentity := Trim(Copy(LValue, Length('UMIN Clinical Trials Registry') + 1, MaxInt));
+      if AnsiStartsStr(',', LIdentity) then
+      begin
+        LIdentity := Trim(Copy(LIdentity, 2, MaxInt));
+      end;
+    end;
+    if AnsiStartsText('UMIN', LIdentity) and (Length(LIdentity) >= 13) and
+      ((Length(LIdentity) = 13) or not (LIdentity[14] in ['a'..'z', 'A'..'Z', '0'..'9'])) then
+    begin
+      LIdentity := OtherRegistryIdentifier(UpperCase(Copy(LIdentity, 1, 13)));
+      if LIdentity <> AExpected then
+      begin
+        Exit(False);
+      end;
+      LHasIdentity := True;
+    end;
+    // Receipt numbers and UMIN trial numbers are separate namespaces.
+    if (LField = '') or (IndexText(LField, ['source', 'url', 'official record',
+      'official registry', 'official source', 'source url', 'japanese source']) >= 0) then
+    begin
+      for LPrefix in CViewPrefixes do
+      begin
+        if AnsiStartsStr(LPrefix, LValue) then
+        begin
+          LReceipt := Copy(LValue, Length(LPrefix) + 1, MaxInt);
+          if (Length(LReceipt) = 10) and (LReceipt[1] = 'R') and
+            DigitsOnly(Copy(LReceipt, 2, MaxInt)) then
+          begin
+            if (LSourceReceipt <> '') and (LSourceReceipt <> LReceipt) then
+            begin
+              Exit(False);
+            end;
+            LSourceReceipt := LReceipt;
+            LHasProvider := True;
+          end;
+        end;
+      end;
+    end;
+  end;
+  Result := LHasIdentity and LHasProvider;
+end;
+
 function OtherRegistryHeaderMatches(const AText: RawByteString;
   const AExpected: String): Boolean;
 const
@@ -259,6 +372,10 @@ begin
   if AnsiStartsStr('TCTR', AExpected) then
   begin
     Exit(TctrRegistryHeaderMatches(AText, AExpected));
+  end;
+  if AnsiStartsStr('UMIN', AExpected) then
+  begin
+    Exit(UminRegistryHeaderMatches(AText, AExpected));
   end;
   LHeader := Copy(AText, 1, CHeaderBytes);
   LStart := 1;

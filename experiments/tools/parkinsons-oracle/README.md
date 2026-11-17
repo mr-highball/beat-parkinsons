@@ -32,7 +32,7 @@ visual hallucination frequency, the outcome in the frozen claims. The
 response gives the canonical outcome. Use catalog search for other modalities.
 
 For known identifiers, send up to 100 PMIDs, PMCIDs, DOIs, NCT IDs or trial IDs
-from ANZCTR (ACTRN), ISRCTN, IRCT, DRKS and the Thai Clinical Trials Registry
+from ANZCTR (ACTRN), ISRCTN, IRCT, DRKS, UMIN and the Thai Clinical Trials Registry
 (TCTR) to `oracle_find_sources`. Bare numeric identifiers are PMIDs. Each result
 includes the normalized identifier and matching paths in sorted order.
 Results follow the input order, including identifiers with zero archive matches.
@@ -44,6 +44,12 @@ matching registry provenance from `Source-Text/Trials` exports. A match can be
 a curated extraction or collection, so confirm the actual article and its depth.
 Use full-text search for mentions in references, narrative notes and archives
 without structured headers.
+
+UMIN extracts require the matching nine-digit UMIN identifier in recognized leading
+provenance and an official UMIN record URL. Receipt numbers beginning with `R` are
+separate from the trial ID. A filename and receipt URL alone leave identity open.
+Results and status companion extracts return under the same identifier. Each path
+retains its own publication period and coverage.
 
 For a known study, send `assessment_study` with its case-sensitive ledger key and omit the paging arguments. The result reports `matching_assessments` and returns all rows for that key in ledger order. A found claim can have zero matches. The rationale, citations, verdict and coverage counts still apply to the whole claim.
 

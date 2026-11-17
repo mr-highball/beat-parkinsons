@@ -46,6 +46,10 @@ Two canonical ACTRN records use the WHO-linked ANZCTR short form with the entire
 
 The IRCT older-women record uses its official Persian page as the source and its official English page as the `URL` field. Exact lookup returned zero matches at revision 59 and one at revision 60 after the header update. Seven other exact lookups retained their paths, including both ANZCTR records. The Persian and English intervention wording differs. [Bilingual registry record](../../research/2020-2024/Source-Text/Trials/IRCT20150519022320N32.txt)
 
+## Exact UMIN trial lookup
+
+The UMIN crossover lookup returned an unsupported-identifier error. Lexical search found the archived protocol and left outcomes open. The native parser now recognizes exact UMIN identities in leading registry provenance together with an official view URL. Receipt numbers have a separate namespace. The index returned 35 paths for 31 trial IDs at revision 62, including four later companion records. Four other filename IDs still lack sufficient header identity and return zero paths. Eight sampled non-UMIN responses retained their complete paths and order. A repeat refresh kept revision 62 and zero read errors. The source-index extension preserves each extract’s stated depth. [Brewed lemon balm crossover](../../research/2020-2024/Source-Text/Trials/UMIN000055134.txt)
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the

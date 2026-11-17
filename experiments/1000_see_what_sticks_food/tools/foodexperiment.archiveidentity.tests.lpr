@@ -139,6 +139,51 @@ begin
       'URL: https://anzctr.org.au.example/ACTRN12626001145392.aspx' + LineEnding,
       'ACTRN12626001145392'), 'A lookalike host must not authenticate a trial');
     Assert(NormalizeArchiveIdentifier('drks00012459') = 'DRKS00012459');
+    Assert(NormalizeArchiveIdentifier('umin000055134') = 'UMIN000055134');
+    Assert(NormalizeArchiveIdentifier('UMIN00005513') = '');
+    Assert(NormalizeArchiveIdentifier('UMIN0000551340') = '');
+    Assert(NormalizeArchiveIdentifier('UMIN00005513X') = '');
+    Assert(RegistryArchiveFileIdentifier('UMIN000050721-results.txt') = 'UMIN000050721');
+    Assert(RegistryArchiveFileIdentifier('note-UMIN000050721.txt') = '');
+    Assert(OtherRegistryHeaderMatches('Registry ID: UMIN000055134' + LineEnding +
+      'Source: https://center6.umin.ac.jp/cgi-open-bin/icdr_e/ctr_view.cgi?recptno=R000062988' +
+      LineEnding, 'UMIN000055134'));
+    Assert(OtherRegistryHeaderMatches('Brewed lemon balm registration' + LineEnding +
+      'Source: https://center6.umin.ac.jp/cgi-open-bin/icdr_e/ctr_view.cgi?recptno=R000062988' +
+      LineEnding + LineEnding + 'Official study UMIN000055134, first public 2024-08-02.',
+      'UMIN000055134'), 'The specific legacy provenance sentence can follow a blank line');
+    Assert(OtherRegistryHeaderMatches('Swallowing results' + LineEnding + LineEnding +
+      'Source: UMIN Clinical Trials Registry, UMIN000050721, receipt R000057788' + LineEnding +
+      'Official record: https://center6.umin.ac.jp/cgi-open-bin/icdr_e/ctr_view.cgi?recptno=R000057788' +
+      LineEnding, 'UMIN000050721'));
+    Assert(OtherRegistryHeaderMatches('UMIN Clinical Trials Registry, selected public fields' +
+      LineEnding + 'Registration: UMIN000032451' + LineEnding +
+      'Official source: https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000037005' +
+      LineEnding + 'Japanese source: https://center6.umin.ac.jp/cgi-open-bin/ctr/ctr_view.cgi?recptno=R000037005',
+      'UMIN000032451'));
+    Assert(OtherRegistryHeaderMatches('UMIN000055115: Selected results' + LineEnding +
+      'Record: R000062960' + LineEnding +
+      'Source: https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000062960',
+      'UMIN000055115'), 'The receipt is separate from the UMIN trial identity');
+    Assert(not OtherRegistryHeaderMatches('Registry ID: UMIN000055134' + LineEnding +
+      'Registration: UMIN000055115' + LineEnding +
+      'Source: https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000062988',
+      'UMIN000055134'), 'Conflicting explicit trial identities are rejected');
+    Assert(not OtherRegistryHeaderMatches('Registry ID: UMIN000055134' + LineEnding +
+      'Source: https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000062988' +
+      LineEnding + 'Japanese source: https://center6.umin.ac.jp/cgi-open-bin/ctr/ctr_view.cgi?recptno=R000062960',
+      'UMIN000055134'), 'Conflicting receipt numbers are rejected');
+    Assert(not OtherRegistryHeaderMatches('Registry ID: UMIN000055134' + LineEnding +
+      'Source: https://center6.umin.ac.jp.example/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000062988',
+      'UMIN000055134'), 'Lookalike hosts cannot authenticate a registry source');
+    Assert(not OtherRegistryHeaderMatches('Registry ID: UMIN000055134' + LineEnding +
+      'Source: https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R00006298',
+      'UMIN000055134'), 'Malformed receipt IDs are rejected');
+    Assert(not OtherRegistryHeaderMatches('Source: https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000062988' +
+      LineEnding + 'The discussion cites UMIN000055134 as a separate study.',
+      'UMIN000055134'), 'An ordinary narrative mention cannot identify the archive');
+    Assert(not OtherRegistryHeaderMatches('Source: https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000062988' +
+      LineEnding, 'UMIN000055134'), 'The filename and receipt alone cannot identify the trial');
     Assert(NormalizeArchiveIdentifier('DRKS0001245') = '');
     Assert(RegistryArchiveFileIdentifier('2018-DRKS00012459-update.txt') = 'DRKS00012459');
     Assert(OtherRegistryHeaderMatches(
