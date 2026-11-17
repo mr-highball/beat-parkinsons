@@ -30,6 +30,7 @@
 ## Completion
 
 - Verify the frozen hash and all 1,000 immutable claim fields. Validate the verdict count, references, and required search coverage before publishing the manifest.
+- Record narrative checkpoints and coverage limits in `findings.md`. Regenerate `manifest.md` with the native review `summary` command and verify that it includes the current findings.
 - Report all five verdict totals, coverage limits, and the strongest unexpected supported improvements, worsening effects, and reversals. Link any highlighted result to its claim and source.
 - Give future experiments their own folder-local `AGENTS.md` covering generation, freeze, evidence, and completion. Adapt the topic and rules to that experiment.
 
