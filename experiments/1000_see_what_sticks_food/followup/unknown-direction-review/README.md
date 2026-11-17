@@ -10,7 +10,7 @@ The November 17, 2026 UTC snapshot includes all 943 Unknown claims. The first qu
 | No nonpending assessment | 0 |
 | Prior weak-direction review with unchanged recorded evidence | 943 |
 
-Comparison wording and archive coverage prioritize reading. They can miss pertinent sources or flag comparators, preparations or symptoms that do not fit. The 3,352 assessment pointers are a separate reading aid. The prior review ledger records 1,000 adjudications, with 57 claims now graded Maybe. Of those records, 991 have a recorded SHA-256 fingerprint of the reviewed assessment rows. The nine earlier reviews continue to use their saved row count until a reviewed snapshot or fresh check can support a fingerprint.
+Comparison wording and archive coverage prioritize reading. They can miss pertinent sources or flag comparators, preparations or symptoms that do not fit. The 3,355 assessment pointers are a separate reading aid. The prior review ledger records 1,000 adjudications, with 57 claims now graded Maybe. Of those records, 991 have a recorded SHA-256 fingerprint of the reviewed assessment rows. The nine earlier reviews continue to use their saved row count until a reviewed snapshot or fresh check can support a fingerprint.
 
 A changed row count or a changed fingerprint returns a previously reviewed Unknown to the ordinary priority lanes. The fingerprint uses the study key, role, fit, local locator and finding without depending on row order. Catalog or primary-source changes that leave these ledger fields untouched still require a recheck. The fingerprint supplies no evidence direction or strength. The queue preserves claims in every lane.
 
