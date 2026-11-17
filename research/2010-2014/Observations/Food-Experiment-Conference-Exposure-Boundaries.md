@@ -1,0 +1,3 @@
+# Preparations and shared comparators
+
+The original collections distinguish mixed-product laboratory effects from the tested culinary hypotheses. Lemon balm can affect a cell marker while leaving another isolated preparation response unchanged. Olive-oil placebo improvement leaves the oil's causal contribution unresolved. These sources add context beyond earlier broad botanical claims while preserving species, preparation and endpoint differences. [UEG 2014 members](../Source-Text/2014-PMC4212306-UEG-Culinary-Herbal-Members-Extract.txt) · [Youth oil comparison](../Source-Text/2014-PMC4261147-M176-Fish-Olive-Oil-Youth-Abstract-Extract.txt) · [Mixed rodent diet](../Source-Text/2014-PMC4261148-T38-Mixed-Rat-Diet-Abstract-Extract.txt)

@@ -343,3 +343,10 @@ January 1, 2010 through December 31, 2014.
 - [Egg isolate with and without lemon balm in depression](Source-Text/2011-PMID21631360-Solberg-YTE-Melissa-Extract.txt)
 - [Burn-patient brewed lemon balm and black tea registry](Source-Text/Trials/IRCT201205198177N4.txt)
 - [Integrative group visits for pain and depression registry](Source-Text/Trials/NCT02262377.txt)
+
+- [Retrospective PMS capsule and education registration](Source-Text/Trials/IRCT2014060717998N1.txt)
+
+- [UEG 2014 culinary and herbal original members](Source-Text/2014-PMC4212306-UEG-Culinary-Herbal-Members-Extract.txt)
+- [Fish oil versus olive-oil placebo in depressed youth, original M176](Source-Text/2014-PMC4261147-M176-Fish-Olive-Oil-Youth-Abstract-Extract.txt)
+- [Mixed rat diet and striatal outcomes, original T38](Source-Text/2014-PMC4261148-T38-Mixed-Rat-Diet-Abstract-Extract.txt)
+- [Observations on conference preparation and comparator limits](Observations/Food-Experiment-Conference-Exposure-Boundaries.md)

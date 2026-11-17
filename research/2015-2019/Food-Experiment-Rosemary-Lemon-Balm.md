@@ -26,7 +26,9 @@ Alijaniha and colleagues randomized 71 adults with benign palpitations to a free
 
 ## Lemon balm capsule trial in adolescents with premenstrual symptoms
 
-Heydari and colleagues randomized 100 adolescent participants to lemon balm capsules or placebo over three cycles. The abstract concludes depression improved, yet the numerical comparisons listed concern psychosomatic symptoms, anxiety and sleep, and social function. The depression instrument row, exact preparation and effect remain unverified from the original tables. [Local factual text](Source-Text/2018-Heydari-Lemon-Balm-PMS.txt) · [Primary source](https://doi.org/10.1515/ijamh-2017-0015)
+Heydari's original proof Table 2 reports lower post-treatment GHQ depression under capsules, 10.72 versus 12.50. Baseline psychological means are unavailable and the reported p=.001 does not reconcile with the ordinary t-test implied by 50 per arm and the printed SDs. The preparation and population differ from brewed tea in Parkinson disease. [Original-table factual extract](Source-Text/2018-Heydari-Lemon-Balm-PMS.txt) · [Primary source](https://doi.org/10.1515/ijamh-2017-0015)
+
+The [2015 PSST report](Source-Text/2015-PMID26339667-Akbarzadeh-Melissa-PMS-Extract.txt) and [2017-online four-arm report](Source-Text/2017-Akbarzadeh-Melissa-Education-PMS-Extract.txt) share all active and placebo total-score trajectories, registry and thesis. Domain tables conflict on baseline and timing. All three papers share the [retrospective registration](../2010-2014/Source-Text/Trials/IRCT2014060717998N1.txt); individual membership of the GHQ analysis remains unverified. The related reports contribute one overlapping family, with distinct questionnaires and unresolved reporting discrepancies.
 
 ## Lemon balm and Nepeta blend in insomnia with depressive symptoms
 

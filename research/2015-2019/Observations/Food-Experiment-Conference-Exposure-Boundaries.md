@@ -1,0 +1,3 @@
+# Related ingredients and inconclusive mixtures
+
+Following the preceding period's laboratory and shared-comparator findings, the 2015 mixed ginger/cinnamon pilot reports an inconclusive response comparison. Egg elimination, soup imaging and injected oil remain different exposures from the individual culinary claims. These are retained as leads without attributing a mixture's findings to one food. [Earlier collection](../../2010-2014/Source-Text/2014-PMC4212306-UEG-Culinary-Herbal-Members-Extract.txt) · [2015 original members](../Source-Text/2015-PMC4669991-UEG-Culinary-Herbal-Members-Extract.txt)

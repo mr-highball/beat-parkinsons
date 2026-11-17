@@ -499,3 +499,11 @@ January 1, 2015 through December 31, 2019.
 - [Dry lemon balm capsules and postpartum depression scores](Source-Text/2019-Beihaghi-Melissa-Postpartum-Blues-Extract.txt)
 - [Araj-Khodaei lemon balm, lavender and fluoxetine registration](Source-Text/Trials/IRCT2014061718126N1.txt)
 - [Integrative group visits and the chronic pain and depression outcomes](Source-Text/2019-PMID31851666-Gardiner-Group-Visits-Pain-Depression-Extract.txt)
+
+- [Adolescent GHQ depression table and overlapping PMS family](Source-Text/2018-Heydari-Lemon-Balm-PMS.txt)
+- [Original 2015 PMS capsule report](Source-Text/2015-PMID26339667-Akbarzadeh-Melissa-PMS-Extract.txt)
+- [2017-online four-arm PMS companion](Source-Text/2017-Akbarzadeh-Melissa-Education-PMS-Extract.txt)
+- [Publisher burn-tea depression original](Source-Text/2016-Chehroudi-Melissa-Burn-Depression-Extract.txt)
+
+- [UEG 2015 culinary and herbal original members](Source-Text/2015-PMC4669991-UEG-Culinary-Herbal-Members-Extract.txt)
+- [Observations on mixed-product and culinary boundaries](Observations/Food-Experiment-Conference-Exposure-Boundaries.md)
