@@ -4,15 +4,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 12,528 |
+| Local body or other primary-source context | 12,680 |
 | Exact assessment with basis unspecified | 128 |
 | Abstract context | 182 |
 | Title or index | 139 |
 | Pending or access-only disposition | 201 |
-| No imported exact review | 48,074 |
+| No imported exact review | 47,922 |
 | **Total** | **61,252** |
 
-The native replay keeps 48,414 pairs queued across 29,951 sources. That includes 139 title/index reviews, 201 pending pairs and 48,074 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
+The native replay keeps 48,262 pairs queued across 29,940 sources. That includes 139 title/index reviews, 201 pending pairs and 47,922 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
 
 ## Intake for exact source reviews
 
@@ -21,6 +21,8 @@ Compile [the Free Pascal intake](../../tools/foodexperiment.contextintake.lpr) u
 The program rejects duplicate and out-of-queue pairs or a downgrade of an existing review before writing. The packet retains all reviewed keys and unresolved rows. Existing pending rows that reach greater depth replace their canonical entry. Unchanged pending depth preserves the old ledger row and the new receipt remains available in the packet. Verify the staged rows and rerun the native context replay after publishing the canonical ledger.
 
 ## Contextual reviews
+
+The eighth lemon balm checkpoint verifies 152 original pairs, including 11 for 0133 and 141 independently reviewed shared-source pairs. One assigned ACTS collection remains held. Primary formula reconciliation separates Carmint from GJS, and the STW5 originals preserve distinct gastrointestinal, biochemical and psychiatric endpoints. [Source identity and original outcomes](../lemon-balm-depression-nov17-08/README.md)
 
 The seventh lemon balm checkpoint verifies 131 original pairs, including 15 for 0133 and 116 independently reviewed shared-source pairs, with nine assigned access or collection-completeness holds. The recovered GHQ depression table has a favorable post-treatment contrast and unreconciled statistics. Shared registry and aggregate trajectories constrain the PMS reports to one overlapping family. [Original tables and source coverage](../lemon-balm-depression-nov17-07/README.md)
 

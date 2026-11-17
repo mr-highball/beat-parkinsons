@@ -548,3 +548,8 @@ January 1, 2020 through December 31, 2024.
 - [Separate lemon balm and lavender nasal sprays with Hamilton depression](Source-Text/Trials/IRCT20140617018126N7.txt)
 - [Lemon balm, anise and rose capsule trial registration in IBS](Source-Text/Trials/IRCT20150927024228N4.txt)
 - [Lemcog acute extract, calmness and cognitive task registration](Source-Text/Trials/NCT06183372.txt)
+
+- [STW5 original brain-gut abstract and preview limits](Source-Text/2021-PMID34817922-Gamal-STW5-Brain-Gut-Abstract-Extract.txt)
+- [Observations on regional serotonin endpoints](Observations/Food-Experiment-STW5-Endpoints.md)
+
+- [STW5 P27 meeting abstract and unresolved paper linkage](Source-Text/2022-Khayyal-STW5-Brain-Gut-P27-Abstract-Extract.txt)

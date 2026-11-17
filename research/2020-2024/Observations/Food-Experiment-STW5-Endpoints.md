@@ -1,0 +1,3 @@
+# Brain and colon signaling remain separate endpoints
+
+Compared with the earlier gastric-response model, the later abstract includes brain and colon serotonin and fecal output. Opposite regional serotonin changes do not establish a mood benefit or harm. Numerical results and complete behavioral scope remain unavailable. The intervening study-family and formulation links need source verification. [Earlier model](../../2015-2019/Source-Text/2015-PMID25981926-Abdel-Aziz-STW5-Stress-Gastric-Extract.txt) · [Later original abstract](../Source-Text/2021-PMID34817922-Gamal-STW5-Brain-Gut-Abstract-Extract.txt)

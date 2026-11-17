@@ -240,3 +240,6 @@ January 1, 2005 through December 31, 2009.
 - [Mixed soybean and corn oil in a registered depression trial](Food-Experiment-Mixed-Oil-Depression-Registry.md)
 - [Isolated oral piperine and rat memory](Food-Experiment-Isolated-Piperine-Memory.md)
 - [Ze 185 depression outcomes and shared lemon-balm ingredient](Source-Text/2009-PMID19274698-Melzer-Ze185-Extract.txt)
+
+- [STW5 original dyspepsia placebo comparison](Source-Text/2007-PMID17531013-von-Arnim-STW5-Dyspepsia-Extract.txt)
+- [Observations on mixed-product endpoint limits](Observations/Food-Experiment-STW5-Endpoints.md)

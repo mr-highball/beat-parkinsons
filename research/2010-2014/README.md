@@ -350,3 +350,10 @@ January 1, 2010 through December 31, 2014.
 - [Fish oil versus olive-oil placebo in depressed youth, original M176](Source-Text/2014-PMC4261147-M176-Fish-Olive-Oil-Youth-Abstract-Extract.txt)
 - [Mixed rat diet and striatal outcomes, original T38](Source-Text/2014-PMC4261148-T38-Mixed-Rat-Diet-Abstract-Extract.txt)
 - [Observations on conference preparation and comparator limits](Observations/Food-Experiment-Conference-Exposure-Boundaries.md)
+
+- [Original GJS protocol and composition](Source-Text/2011-PMID21978382-Ko-GJS-Protocol-Extract.txt)
+- [GJS IBS outcome report](Source-Text/2013-PMID24381638-Ko-GJS-IBS-Extract.txt)
+- [Official GJS/probiotic registration](Source-Text/Trials/NCT01342718.txt)
+- [Carmint and GJS identity reconciliation](Food-Experiment-GJS-Carmint-Identity.md)
+- [Observations on formula attribution](Observations/Food-Experiment-GJS-Carmint-Identity.md)
+- [Retrospective Parkinson coffee presentation](Source-Text/2013-PMC5619206-Caprara-Coffee-Parkinson-Abstract-Extract.txt)

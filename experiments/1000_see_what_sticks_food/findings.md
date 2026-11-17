@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The eighth lemon balm checkpoint verifies 152 original pairs, including 11 for 0133, and preserves one assigned collection hold. Primary sources distinguish the Carmint trio from GJS and retain mixed STW5 gastrointestinal findings and incomplete brain-gut methods. The original queue holds 48,262 pairs, including 537 for 0133. Claim 0133 remains Maybe True 51. [Product identity, original outcomes and source coverage](followup/lemon-balm-depression-nov17-08/README.md)
+
 The seventh lemon balm checkpoint verifies 131 original pairs, 15 for 0133, and preserves nine assigned source holds. The recovered adolescent GHQ table favors capsules after treatment but its reported p-value remains unreconciled. The PMS reports share a trial family and conflicting domain tables. The global original queue holds 48,414 pairs, including 548 for 0133. Claim 0133 remains Maybe True 51. [Tables, report families and verified source coverage](followup/lemon-balm-depression-nov17-07/README.md)
 
 The next original-source checkpoint verifies 57 pairs, including seven for brewed lemon balm and depression. The acute Lemcog extract trial has a null overall calmness result and no separate depression score. The UMIN tea crossover still lists unpublished results. Claim 0133 stays Maybe True 51 with 563 original pairs queued. The global original queue totals 48,545. [Original and clinical verification](followup/lemon-balm-depression-nov17-06/README.md)

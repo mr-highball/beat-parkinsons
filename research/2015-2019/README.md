@@ -507,3 +507,12 @@ January 1, 2015 through December 31, 2019.
 
 - [UEG 2015 culinary and herbal original members](Source-Text/2015-PMC4669991-UEG-Culinary-Herbal-Members-Extract.txt)
 - [Observations on mixed-product and culinary boundaries](Observations/Food-Experiment-Conference-Exposure-Boundaries.md)
+
+- [STW5 gastric stress original](Source-Text/2015-PMID25981926-Abdel-Aziz-STW5-Stress-Gastric-Extract.txt)
+- [UEG 2016 culinary and herbal members](Source-Text/2016-PMC5391000-UEG-Culinary-Herbal-Members-Extract.txt)
+- [Integrative 2017 original members and formula caveat](Source-Text/2017-PMC5498867-Integrative-Culinary-Herbal-Members-Extract.txt)
+- [Veterinary egg-yolk supplement context](Source-Text/2016-PMC5260423-Veterinary-Egg-Yolk-Abstract-Extract.txt)
+- [SIRS sesame vehicle and gluten challenge](Source-Text/2018-PMC5905517-SIRS-Sesame-Gluten-Abstracts-Extract.txt)
+- [ISEV grape-vesicle comparator](Source-Text/2018-PMC5933288-ISEV-Grape-Vesicle-Abstract-Extract.txt)
+- [Observations on gastric versus mood endpoints](Observations/Food-Experiment-STW5-Endpoints.md)
+- [Observations on review identity and route](Observations/Food-Experiment-Review-Identity-and-Route.md)
