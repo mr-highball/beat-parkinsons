@@ -1,5 +1,9 @@
 # Ginger constipation comparators, 2020-2024
 
+## Registered ginger and Zataria comparison in irritable bowel syndrome
+
+WHO ICTRP identifies IRCT20240609062057N3 as an IBS trial from Khomein Faculty of Medical Sciences. It first registered on December 31, 2024 and lists first enrollment on December 10. The target field is 66 and the narrative mentions 96. One intervention field describes the two herbs together, while the registry’s outcome field and eventual publication identify separate ginger and Zataria groups and placebo. The later report gives a composite gastrointestinal result and leaves the item-level constipation estimate unverified. [WHO ICTRP registration](https://trialsearch.who.int/Trial2.aspx?TrialID=IRCT20240609062057N3) · [Later primary results](../2025-2029/Food-Experiment-Ginger-Constipation-Comparators.md#ginger-and-zataria-ibs-trial-and-registration)
+
 ## Constipation adverse events in a ginger extract versus loratadine trial
 
 Yamprasert and colleagues randomized 80 people with allergic rhinitis to ginger extract or loratadine. Six-week Table 6 lists constipation in 0 of 36 ginger and 3 of 36 loratadine participants. Eructation was reported in 26 and 6, respectively. No inactive arm or constipation severity endpoint was included. This is a comparison of reported adverse events in rhinitis. The separate official NCT02576808 registry first posted October 15, 2015, lists the study complete and has no registry results. The journal article supplies the observed outcomes. [Original source](https://pmc.ncbi.nlm.nih.gov/articles/PMC7171779/) · [Local factual text](Source-Text/2020-Yamprasert-Ginger-Extract-Rhinitis-Adverse-Events.txt)

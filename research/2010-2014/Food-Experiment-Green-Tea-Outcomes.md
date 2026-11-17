@@ -1,5 +1,9 @@
 # Green tea formulation and fatigue follow-up
 
+## Brewed Sagara and shaded white-leaf tea during mental tasks
+
+Yoto and colleagues reported a single-blind randomized crossover on July 17, 2014 (PMID 25034805, PMC4118660, DOI 10.1186/1880-6805-33-20). Eighteen healthy students received 250 mL of water, brewed Sagara green tea, or brewed shaded white-leaf green tea on separate days seven days apart, followed by arithmetic tasks. Both teas come from the Yabukita plant, with different growing and brewing methods. Table 1 reports 87.47 mg caffeine per Sagara serving and 191.60 mg per shaded white serving. The Methods specify fatigue on a visual analog scale and the Profile of Mood States fatigue-inertia subscale. The Results report no significant beverage effect across changes in the POMS subscales or the VAS mood items. There is no fatigue-specific effect size, confidence interval or p value. The shaded-tea change in total mood disturbance and the salivary chromogranin A effects are separate outcomes. The short experiment leaves chronic fatigue in Parkinson disease unresolved. [Original report, Methods, Table 1 and Results](https://pmc.ncbi.nlm.nih.gov/articles/PMC4118660/)
+
 ## Fatigue in a Danish green tea with lemon case
 
 Rohde and colleagues first published online on June 7, 2010. A 55-year-old with treated hypothyroidism consulted her doctor after several weeks of fatigue and malaise. Tests and liver biopsy supported a toxic or drug-related liver injury. Her history included four to six cups per day of supermarket green tea with lemon for about six months. Liver tests were nearly normal after two weeks of supportive treatment and tea cessation, and normal at three months. The report gives neither a quantified fatigue change nor a Parkinson diagnosis. [Original Danish report and first-online date](https://ugeskriftet.dk/videnskab/toksisk-hepatitis-udlost-af-gron-te) · [2011 issue record](https://pubmed.ncbi.nlm.nih.gov/21241631/)

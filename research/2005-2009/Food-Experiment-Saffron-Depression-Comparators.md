@@ -1,5 +1,9 @@
 # Saffron Depression Comparators
 
+## Crocus flower petals and depression in adults
+
+Moshiri and colleagues published their placebo-controlled comparison of Crocus sativus flower-petal capsules online on September 18, 2006 (PMID 16979327, DOI 10.1016/j.phymed.2006.08.006). The author abstract describes random assignment of 40 adults with mild-to-moderate major depression and a 30 mg/day regimen for six weeks. The Hamilton depression result favored the petal preparation (F = 16.87, p < .001). The abstract reports no significant difference in observed side effects. The complete trial body was unavailable, leaving the analyzed sample, formulation details and absolute between-arm difference unverified. The trial used petals and enrolled adults with major depression. [Primary author abstract](https://pubmed.ncbi.nlm.nih.gov/16979327/) · [Journal publication](https://doi.org/10.1016/j.phymed.2006.08.006)
+
 ## Ethanol-extracted stigma and depression in adults
 
 Akhondzadeh and colleagues randomized 40 adults with major depression to saffron capsules or placebo for six weeks. The publisher records first online publication on April 25, 2005, for its February 2005 issue. The investigators milled dried stigma and extracted it with 80% ethanol, then evaporated the solvent. Each capsule supplied 15 mg dried extract, taken twice daily for 30 mg extract daily. The Hamilton depression comparison favored the extract (F = 18.89, p < .001). This establishes an extract comparison in major depression. Transfer to whole ground saffron or Parkinson disease remains unresolved. [Primary report PDF](https://www.cbd-vital.de/media/solwin/productattachment/attachment/file/a/k/akondzadeh_et_al_2005.pdf) [Original source](https://onlinelibrary.wiley.com/doi/10.1002/ptr.1647) · [Local factual text](Source-Text/PMID15852492-Saffron-Extract-Depression.txt)
