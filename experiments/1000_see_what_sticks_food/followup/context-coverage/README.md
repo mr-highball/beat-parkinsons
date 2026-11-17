@@ -4,15 +4,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 8,599 |
+| Local body or other primary-source context | 8,639 |
 | Exact assessment with basis unspecified | 127 |
 | Abstract context | 182 |
 | Title or index | 188 |
-| Pending or access-only disposition | 156 |
-| No imported exact review | 52,000 |
+| Pending or access-only disposition | 200 |
+| No imported exact review | 51,916 |
 | **Total** | **61,252** |
 
-The native replay keeps 52,344 pairs queued across 32,101 sources. That includes 188 title/index reviews, 156 pending pairs and 52,000 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Priority scope open pairs](../protocols-and-source-bodies-nov17/priority-three-scope.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
+The native replay keeps 52,304 pairs queued across 32,100 sources. That includes 188 title/index reviews, 200 pending pairs and 51,916 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Priority scope open pairs](../protocols-and-source-bodies-nov17/priority-three-scope.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
 
 ## Intake for exact source reviews
 
@@ -21,6 +21,8 @@ Compile [the Free Pascal intake](../../tools/foodexperiment.contextintake.lpr) u
 The program rejects duplicate and out-of-queue pairs or a downgrade of an existing review before writing. The packet retains all reviewed keys and unresolved rows. Existing pending rows that reach greater depth replace their canonical entry. Unchanged pending depth preserves the old ledger row and the new receipt remains available in the packet. Verify the staged rows and rerun the native context replay after publishing the canonical ledger.
 
 ## Contextual reviews
+
+The full SGIM 2016 proceedings supplied 40 exact body-level decisions. The 44 FEBS Journal supplement pairs were checked at access-only depth and remain queued. [Collection scope and verification](../pepper-screen-and-sgim-nov17/README.md#original-collections)
 
 Full text for 2 source keys supplied 84 exact decisions. The SGIM 2014 and Global Advances 2018 collections were reviewed at individual presentation boundaries. The 2021 FEBS Open Bio poster collection still has 43 access-only pairs. [Source access and scope](../unmatched-clinical-leads-nov17/collection-access.md)
 

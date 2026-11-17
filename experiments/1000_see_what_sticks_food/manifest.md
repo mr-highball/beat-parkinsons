@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+Complete SGIM 2016 proceedings supplied 40 body-level decisions, including the restricted-diet scurvy case. All 290 pepper search appearances received an item-level disposition. The 44 FEBS Journal supplement pairs remain queued at access-only depth. Three study assessments were added and the verdicts remained unchanged. The original Europe PMC queue held 52,304 pairs at this checkpoint. [Exact reviews and outstanding bodies](followup/pepper-screen-and-sgim-nov17/README.md)
+
 Two original conference collections supplied 84 body-level claim–source decisions. A separate poster collection added 43 documented access gaps still in the queue. Four publications and three registrations supplied six study assessments for brewed lemongrass and cracked black pepper. No verdict changed. The original Europe PMC queue holds 52,344 pairs. [Original collections and focused searches](followup/unmatched-clinical-leads-nov17/README.md)
 
 Three original conference collections supplied 144 exact claim–source decisions. Six dated records detail celery and pumpkin seed exposures, including a likely registration-to-publication link and a regulator-reported hypotension event type. Five study assessments were added. No verdict changed. The original Europe PMC queue held 52,428 pairs at that checkpoint. [Original sources and complementary searches](followup/complementary-sources-nov17/README.md)
