@@ -294,7 +294,9 @@ begin
       LHasProvider := LHasProvider or
         AnsiStartsStr('https://anzctr.org.au/trial/registration/trialreview.aspx?id=', LUrl) or
         AnsiStartsStr('https://www.anzctr.org.au/trial/registration/trialreview.aspx?id=', LUrl) or
-        (Pos(' https://anzctr.org.au/trial/registration/trialreview.aspx?id=', LUrl) > 0)
+        (Pos(' https://anzctr.org.au/trial/registration/trialreview.aspx?id=', LUrl) > 0) or
+        (LUrl = 'https://anzctr.org.au/' + LowerCase(AExpected) + '.aspx') or
+        (LUrl = 'https://www.anzctr.org.au/' + LowerCase(AExpected) + '.aspx')
     else if AnsiStartsStr('DRKS', AExpected) then
     begin
       if (LUrl = 'https://drks.de/search/en/trial/' + LowerCase(AExpected)) or

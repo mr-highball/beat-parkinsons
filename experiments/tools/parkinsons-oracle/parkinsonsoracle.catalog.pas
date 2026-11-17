@@ -782,6 +782,9 @@ begin
 end;
 
 procedure TResearchCatalog.Refresh;
+const
+  LegacyRegistryStates: array[0..1] of string =
+    ('source_registry_v3_state', 'source_registry_v4_state');
 var
   LSeen: TSqlStatement;
   LFind: TSqlStatement;
@@ -797,6 +800,7 @@ var
   LChanged: Boolean;
   LReparseCount: Int64;
   LRootAttributes: DWORD;
+  LLegacyRegistryState: string;
 
   procedure StoreIdentifier(ADocumentId: Int64; const AIdentifier: String);
   begin
@@ -1071,12 +1075,12 @@ begin
       ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_identifier_state VALUES (1,-1)');
       LRebuildIdentifiers := Scalar(FDatabase, 'SELECT source_identifier_state.revision' +
         ' <> catalog_state.revision FROM source_identifier_state, catalog_state') <> 0;
-      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_registry_v4_state (' +
+      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_registry_v5_state (' +
         ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
-      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_registry_v4_state VALUES (1,-1)');
+      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_registry_v5_state VALUES (1,-1)');
       LRefreshRegistries := LRebuildIdentifiers or
-        (Scalar(FDatabase, 'SELECT source_registry_v4_state.revision <> catalog_state.revision' +
-          ' FROM source_registry_v4_state, catalog_state') <> 0);
+        (Scalar(FDatabase, 'SELECT source_registry_v5_state.revision <> catalog_state.revision' +
+          ' FROM source_registry_v5_state, catalog_state') <> 0);
       ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_tctr_state (' +
         ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
       ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_tctr_state VALUES (1,-1)');
@@ -1092,7 +1096,8 @@ begin
       end
       else if LRefreshRegistries then
       begin
-        ExecuteSql(FDatabase, 'DELETE FROM source_identifiers WHERE identifier GLOB ''NCT[0-9]*''');
+        ExecuteSql(FDatabase, 'DELETE FROM source_identifiers WHERE identifier GLOB ''NCT[0-9]*''' +
+          ' OR identifier GLOB ''ACTRN[0-9]*''');
       end;
       if LRefreshTctr and not LRebuildIdentifiers then
       begin
@@ -1134,14 +1139,17 @@ begin
       LFinish.Execute;
       ExecuteSql(FDatabase, 'UPDATE source_identifier_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
-      ExecuteSql(FDatabase, 'UPDATE source_registry_v4_state' +
+      ExecuteSql(FDatabase, 'UPDATE source_registry_v5_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
       // A running reader from before the backfill can use the same updated keys.
-      if Scalar(FDatabase, 'SELECT count(*) FROM sqlite_schema' +
-        ' WHERE type=''table'' AND name=''source_registry_v3_state''') <> 0 then
+      for LLegacyRegistryState in LegacyRegistryStates do
       begin
-        ExecuteSql(FDatabase, 'UPDATE source_registry_v3_state' +
-          ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
+        if Scalar(FDatabase, 'SELECT count(*) FROM sqlite_schema' +
+          ' WHERE type=''table'' AND name=''' + UTF8String(LLegacyRegistryState) + '''') <> 0 then
+        begin
+          ExecuteSql(FDatabase, 'UPDATE ' + UTF8String(LLegacyRegistryState) +
+            ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
+        end;
       end;
       ExecuteSql(FDatabase, 'UPDATE source_tctr_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
@@ -1417,8 +1425,8 @@ begin
       end;
       if LNeedsRegistries and
         ((Scalar(FDatabase, 'SELECT count(*) FROM sqlite_schema' +
-          ' WHERE type=''table'' AND name=''source_registry_v4_state''') = 0) or
-        (Scalar(FDatabase, 'SELECT revision FROM source_registry_v4_state WHERE id=1') <> LRevision)) then
+          ' WHERE type=''table'' AND name=''source_registry_v5_state''') = 0) or
+        (Scalar(FDatabase, 'SELECT revision FROM source_registry_v5_state WHERE id=1') <> LRevision)) then
       begin
         raise Exception.Create('Source registry identifiers need a catalog refresh');
       end;

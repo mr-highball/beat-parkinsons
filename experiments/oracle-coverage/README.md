@@ -40,6 +40,10 @@ Record only research identifiers and relative source paths.
 
 A November 17 inventory found two canonical NCT records with matching official URLs under labeled header fields that revision 55 did not recognize. The native parser now reads those fields and requires the same official host, path and matching identifier as the other recognized source formats. Conflicting IDs are rejected. The registry identifier refresh backfills unchanged files. At revision 56 both records and five sampled existing matches returned their canonical paths through the same exact requests. A repeated refresh retained the revision. The reproduced index failure is recorded as unavailable in the first-pass rate. [NCT03532789](../../research/2015-2019/Source-Text/Trials/NCT03532789.txt) · [NCT05602688](../../research/2020-2024/Source-Text/Trials/NCT05602688.txt)
 
+## Exact ANZCTR short links
+
+Two canonical ACTRN records use the WHO-linked ANZCTR short form with the entire registry ID in the path. Revision 58 missed both. The parser also accepts that official short form when its ID matches the record header and filename. It rejects another ID and lookalike hosts. The upgraded index returned both exact records at revision 59 and preserved four sampled ClinicalTrials.gov, IRCT and ISRCTN controls. The result for the lemon balm pilot points to a WHO/government bridge extract. Direct ANZCTR body access remains unresolved. [Teenagers trial](../../research/2025-2029/Source-Text/Trials/ACTRN12625000047493.txt) · [Lemon balm pilot](../../research/2025-2029/Source-Text/Trials/ACTRN12626001145392.txt)
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the

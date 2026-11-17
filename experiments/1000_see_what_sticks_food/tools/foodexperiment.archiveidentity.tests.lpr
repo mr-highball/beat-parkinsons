@@ -126,6 +126,18 @@ begin
     Assert(NormalizeArchiveIdentifier('NCT0498698') = '');
     Assert(NormalizeArchiveIdentifier('10.bad/') = '');
     Assert(NormalizeArchiveIdentifier('Parkinson tremor') = '');
+    Assert(OtherRegistryHeaderMatches('Record: ACTRN12625000047493' + LineEnding +
+      'Source: https://anzctr.org.au/ACTRN12625000047493.aspx' + LineEnding,
+      'ACTRN12625000047493'), 'The exact ANZCTR short link authenticates the matching ID');
+    Assert(OtherRegistryHeaderMatches('Registry ID: ACTRN12626001145392' + LineEnding +
+      'URL: https://www.anzctr.org.au/ACTRN12626001145392.aspx' + LineEnding,
+      'ACTRN12626001145392'), 'The official www host is also supported');
+    Assert(not OtherRegistryHeaderMatches('Registry ID: ACTRN12626001145392' + LineEnding +
+      'URL: https://anzctr.org.au/ACTRN12625000047493.aspx' + LineEnding,
+      'ACTRN12626001145392'), 'A short link for a different trial must not match');
+    Assert(not OtherRegistryHeaderMatches('Registry ID: ACTRN12626001145392' + LineEnding +
+      'URL: https://anzctr.org.au.example/ACTRN12626001145392.aspx' + LineEnding,
+      'ACTRN12626001145392'), 'A lookalike host must not authenticate a trial');
     Assert(NormalizeArchiveIdentifier('drks00012459') = 'DRKS00012459');
     Assert(NormalizeArchiveIdentifier('DRKS0001245') = '');
     Assert(RegistryArchiveFileIdentifier('2018-DRKS00012459-update.txt') = 'DRKS00012459');
