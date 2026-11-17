@@ -41,3 +41,7 @@ The NCT05009199 registration first posted August 17, 2021. The completed phase I
 ## Brazilian counseling registry dates and masking
 
 The first public registration records September 21, 2024 and lists February 5, 2024 as first enrollment. It describes a cross-sectional screening phase and a later randomized phase, so the dates do not establish when randomization started. The registry describes a double-blind crossover. The published methods describe a parallel, delayed-start comparison with blinded outcome assessors and analysts. Participants and counselors knew the allocation. The 2026 ReBEC results are from the same cohort as the preprint and journal report. [Latest registry results](https://ensaiosclinicos.gov.br/rg/RBR-36q469s). [Original source](https://ensaiosclinicos.gov.br/rg/RBR-36q469s/1) · [Local factual text](Source-Text/Trials/RBR-36q469s.txt)
+
+## German pilot registration follow-through and outcome scope
+
+The first and latest posting is June 27, 2024. The official record distinguishes 22 enrolled from a target sample value of 100. The motor outcome is UPDRS III alongside gastrointestinal measures, with no rest-tremor item specified. Both groups underwent the diet and differed in lactulose use. The official results field remains empty. [Original registry](https://drks.de/search/en/trial/DRKS00034528/details) · [Local factual text](Source-Text/Trials/DRKS00034528.txt)
