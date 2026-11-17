@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The next original-source checkpoint verifies 57 pairs, including seven for brewed lemon balm and depression. The acute Lemcog extract trial has a null overall calmness result and no separate depression score. The UMIN tea crossover still lists unpublished results. Claim 0133 stays Maybe True 51 with 563 original pairs queued. The global original queue totals 48,545. [Original and clinical verification](followup/lemon-balm-depression-nov17-06/README.md)
+
 The next original-source checkpoint verifies 108 pairs, including 13 for brewed lemon balm and depression. The full Fatali paper confirms its registration and reports anxiety, while its separate depression result remains open. The cinnamon dietary abstract supplies no isolated symptom comparison. Claim 0133 stays Maybe True 51 with 570 original pairs queued. The global original queue totals 48,602. [Full study and source checks](followup/lemon-balm-depression-nov17-05/README.md)
 
 The next original-source checkpoint verifies 87 pairs, including 14 for brewed lemon balm and depression. The ECT report identifies its trial and measures cognition without a separate depression scale. The original Persian older-women protocol supports lemon balm as the intended capsule ingredient despite its English translation. Depression results remain open. Claim 0133 stays Maybe True 51 with 583 original pairs queued. The global original queue totals 48,710 pairs. [Verified originals and trial context](followup/lemon-balm-depression-nov17-04/README.md)
