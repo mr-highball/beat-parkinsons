@@ -4,15 +4,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 10,078 |
+| Local body or other primary-source context | 10,154 |
 | Exact assessment with basis unspecified | 127 |
 | Abstract context | 182 |
-| Title or index | 157 |
+| Title or index | 154 |
 | Pending or access-only disposition | 201 |
-| No imported exact review | 50,507 |
+| No imported exact review | 50,434 |
 | **Total** | **61,252** |
 
-The native replay keeps 50,865 pairs queued across 31,551 sources. That includes 157 title/index reviews, 201 pending pairs and 50,507 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
+The native replay keeps 50,789 pairs queued across 31,485 sources. That includes 154 title/index reviews, 201 pending pairs and 50,434 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
 
 ## Intake for exact source reviews
 
@@ -21,6 +21,8 @@ Compile [the Free Pascal intake](../../tools/foodexperiment.contextintake.lpr) u
 The program rejects duplicate and out-of-queue pairs or a downgrade of an existing review before writing. The packet retains all reviewed keys and unresolved rows. Existing pending rows that reach greater depth replace their canonical entry. Unchanged pending depth preserves the old ledger row and the new receipt remains available in the packet. Verify the staged rows and rerun the native context replay after publishing the canonical ledger.
 
 ## Contextual reviews
+
+Sixty-six authenticated main texts supplied 76 pair-level decisions. Publisher, institutional and NLM archival routes recovered six previously inaccessible papers. The fresh-shiso follow-through checked original patent tables and specific registry-to-protocol ingredient conflicts. [Source scope and outcomes](../oracle-shiso-constipation-and-originals-nov17/README.md)
 
 Seventy-one original main texts supplied 84 exact decisions. The boxing methods and discussion were accessible, while two pairs remain pending at the complete-results depth. The clinical follow-through distinguished 24-hour and clinic pressure from standing lightheadedness. [Original review and search scope](../oracle-red-cabbage-orthostasis-and-originals-nov17/README.md)
 
