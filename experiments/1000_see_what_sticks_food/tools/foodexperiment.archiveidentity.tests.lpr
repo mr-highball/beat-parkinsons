@@ -91,6 +91,26 @@ begin
     Assert(NormalizeArchiveIdentifier('NCT0498698') = '');
     Assert(NormalizeArchiveIdentifier('10.bad/') = '');
     Assert(NormalizeArchiveIdentifier('Parkinson tremor') = '');
+    Assert(NormalizeArchiveIdentifier('drks00012459') = 'DRKS00012459');
+    Assert(NormalizeArchiveIdentifier('DRKS0001245') = '');
+    Assert(OtherRegistryFileIdentifier('2018-DRKS00012459-update.txt') = 'DRKS00012459');
+    Assert(OtherRegistryHeaderMatches(
+      'Source: https://drks.de/search/en/trial/DRKS00012459' + LineEnding, 'DRKS00012459'),
+      'The official DRKS path authenticates an older extract without a separate ID field');
+    Assert(OtherRegistryHeaderMatches(
+      'Registry identifier: DRKS00012459' + LineEnding +
+      'Source: https://drks.de/search/de/trial/DRKS00012459/details' + LineEnding, 'DRKS00012459'));
+    Assert(not OtherRegistryHeaderMatches(
+      'Registry identifier: DRKS00012459' + LineEnding +
+      'Source: https://drks.de/search/en/trial/DRKS00013219' + LineEnding, 'DRKS00012459'),
+      'DRKS provenance must identify the same trial as the filename');
+    Assert(not OtherRegistryHeaderMatches(
+      'Source: https://drks.de/search/en/trial/DRKS00012459-copy' + LineEnding, 'DRKS00012459'),
+      'A lookalike path is not the official record');
+    Assert(not OtherRegistryHeaderMatches(
+      'Source: https://drks.de/search/en/trial/DRKS00012459' + LineEnding +
+      'Registry identifier: DRKS00013219' + LineEnding, 'DRKS00012459'),
+      'Conflicting registry metadata invalidates a DRKS match');
 
     LExpected.Pmcid := 'PMC7100645';
     LExpected.Pmid := '8183379';

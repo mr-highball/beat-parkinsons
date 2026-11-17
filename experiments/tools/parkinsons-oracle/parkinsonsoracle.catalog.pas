@@ -1073,12 +1073,14 @@ begin
       ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_identifier_state VALUES (1,-1)');
       LRebuildIdentifiers := Scalar(FDatabase, 'SELECT source_identifier_state.revision' +
         ' <> catalog_state.revision FROM source_identifier_state, catalog_state') <> 0;
-      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_registry_state (' +
+      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_registry_v2_state (' +
         ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
-      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_registry_state VALUES (1,-1)');
+      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_registry_v2_state VALUES (1,-1)');
       LRefreshOtherRegistries := LRebuildIdentifiers or
-        (Scalar(FDatabase, 'SELECT source_registry_state.revision <> catalog_state.revision' +
-          ' FROM source_registry_state, catalog_state') <> 0);
+        (Scalar(FDatabase, 'SELECT source_registry_v2_state.revision <> catalog_state.revision' +
+          ' FROM source_registry_v2_state, catalog_state') <> 0);
+      // An identifier backfill changes the results even when document bytes match.
+      LChanged := LChanged or LRefreshOtherRegistries;
       if LRebuildIdentifiers then
       begin
         // Also recover when an older executable has refreshed the text catalog.
@@ -1120,7 +1122,7 @@ begin
       LFinish.Execute;
       ExecuteSql(FDatabase, 'UPDATE source_identifier_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
-      ExecuteSql(FDatabase, 'UPDATE source_registry_state' +
+      ExecuteSql(FDatabase, 'UPDATE source_registry_v2_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
       ExecuteSql(FDatabase, 'COMMIT');
       FLastRefreshError := '';
@@ -1390,8 +1392,8 @@ begin
       end;
       if LNeedsOtherRegistries and
         ((Scalar(FDatabase, 'SELECT count(*) FROM sqlite_schema' +
-          ' WHERE type=''table'' AND name=''source_registry_state''') = 0) or
-        (Scalar(FDatabase, 'SELECT revision FROM source_registry_state WHERE id=1') <> LRevision)) then
+          ' WHERE type=''table'' AND name=''source_registry_v2_state''') = 0) or
+        (Scalar(FDatabase, 'SELECT revision FROM source_registry_v2_state WHERE id=1') <> LRevision)) then
       begin
         raise Exception.Create('Source registry identifiers need a catalog refresh');
       end;

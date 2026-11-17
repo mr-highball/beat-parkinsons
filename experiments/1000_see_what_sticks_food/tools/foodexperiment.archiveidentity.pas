@@ -89,6 +89,9 @@ begin
   if AnsiStartsStr('ISRCTN', AValue) and (Length(AValue) = 14) and
     DigitsOnly(Copy(AValue, 7, MaxInt)) then
     Exit(AValue);
+  if AnsiStartsStr('DRKS', AValue) and (Length(AValue) = 12) and
+    DigitsOnly(Copy(AValue, 5, MaxInt)) then
+    Exit(AValue);
   if AnsiStartsStr('IRCT', AValue) then
   begin
     LSeparator := Pos('N', AValue);
@@ -198,8 +201,8 @@ begin
     LSplit := Pos(':', LLine);
     if LSplit > 0 then
       case IndexText(Copy(LLine, 1, LSplit - 1),
-        ['record', 'registration', 'registration number', 'registry id']) of
-        0..3:
+        ['record', 'registration', 'registration number', 'registry id', 'registry identifier']) of
+        0..4:
           begin
             LIdentity := OtherRegistryIdentifier(UpperCase(Trim(Copy(LLine,
               LSplit + 1, MaxInt))));
@@ -219,6 +222,18 @@ begin
         AnsiStartsStr('https://anzctr.org.au/trial/registration/trialreview.aspx?id=', LUrl) or
         AnsiStartsStr('https://www.anzctr.org.au/trial/registration/trialreview.aspx?id=', LUrl) or
         (Pos(' https://anzctr.org.au/trial/registration/trialreview.aspx?id=', LUrl) > 0)
+    else if AnsiStartsStr('DRKS', AExpected) then
+    begin
+      if (LUrl = 'https://drks.de/search/en/trial/' + LowerCase(AExpected)) or
+        (LUrl = 'https://drks.de/search/en/trial/' + LowerCase(AExpected) + '/details') or
+        (LUrl = 'https://drks.de/search/de/trial/' + LowerCase(AExpected)) or
+        (LUrl = 'https://drks.de/search/de/trial/' + LowerCase(AExpected) + '/details') then
+      begin
+        // The official path carries the record identity in older extracts.
+        LHasProvider := True;
+        LHasIdentity := True;
+      end;
+    end
     else if AnsiStartsStr('IRCT', AExpected) then
       LHasProvider := LHasProvider or AnsiStartsStr('https://irct.ir/trial/', LUrl) or
         AnsiStartsStr('https://en.irct.ir/trial/', LUrl)
