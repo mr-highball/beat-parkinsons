@@ -35,7 +35,7 @@ type
     FResearchRoot: UnicodeString;
     FSQLiteLoaded: Boolean;
     FLastRefreshError: String;
-    FSearchWindow: TSearchWindow;
+    FSearchWindows: array[0..3] of TSearchWindow;
     function ReadStatus(AIncludeDiagnostics: Boolean): TJSONObject;
   public
     constructor Create(const ARepoRoot, ADatabasePath: String);
@@ -1029,7 +1029,8 @@ var
   LRow: TJSONObject;
   LResult: TJSONObject;
   LRevision: Int64;
-  LSameSearch: Boolean;
+  LCachedIndex: Integer;
+  LWindowIndex: Integer;
   LWindow: TSearchWindow;
   LTotal: Int64;
   LPageSize: Integer;
@@ -1082,13 +1083,20 @@ begin
       LState.Reset;
 
       // The same read transaction pins the revision, totals and ranks.
-      LSameSearch := (FSearchWindow.Revision = LRevision) and
-        (FSearchWindow.Expression = LMatch) and (FSearchWindow.Period = LPeriod);
-      if LSameSearch then
+      LCachedIndex := -1;
+      LWindow := Default(TSearchWindow);
+      for LWindowIndex := Low(FSearchWindows) to High(FSearchWindows) do
       begin
-        LTotal := FSearchWindow.Total;
-      end
-      else
+        if (FSearchWindows[LWindowIndex].Revision = LRevision) and
+          (FSearchWindows[LWindowIndex].Expression = LMatch) and
+          (FSearchWindows[LWindowIndex].Period = LPeriod) then
+        begin
+          LCachedIndex := LWindowIndex;
+          LWindow := FSearchWindows[LCachedIndex];
+          Break;
+        end;
+      end;
+      if LCachedIndex < 0 then
       begin
         LCount := TSqlStatement.Create(FDatabase, 'SELECT count(*)' + LCountFrom);
         LCount.BindText(1, LMatch);
@@ -1100,28 +1108,25 @@ begin
         begin
           raise Exception.Create('Catalog search yielded no count');
         end;
-        LTotal := LCount.Number(0);
+        LWindow.Revision := LRevision;
+        LWindow.Expression := LMatch;
+        LWindow.Period := LPeriod;
+        LWindow.Total := LCount.Number(0);
         LCount.Reset;
+        LCachedIndex := High(FSearchWindows);
       end;
+      LTotal := LWindow.Total;
 
-      LWindow := Default(TSearchWindow);
       LRows := TJSONArray.Create;
       LResult.Add('matches', LRows);
       if AOffset < LTotal then
       begin
         LPageSize := Math.Min(Int64(ALimit), LTotal - AOffset);
-        if LSameSearch and (AOffset >= FSearchWindow.Offset) and
-          (Int64(AOffset) + LPageSize <= Int64(FSearchWindow.Offset) + Length(FSearchWindow.Rows)) then
+        if (AOffset < LWindow.Offset) or
+          (Int64(AOffset) + LPageSize > Int64(LWindow.Offset) + Length(LWindow.Rows)) then
         begin
-          LWindow := FSearchWindow;
-        end;
-        if Length(LWindow.Rows) = 0 then
-        begin
-          LWindow.Revision := LRevision;
-          LWindow.Expression := LMatch;
-          LWindow.Period := LPeriod;
-          LWindow.Total := LTotal;
           LWindow.Offset := AOffset;
+          LWindow.Rows := nil;
           SetLength(LWindow.Rows, Math.Min(Int64(MaximumPageSize), LTotal - AOffset));
           LMatches := TSqlStatement.Create(FDatabase, 'SELECT documents.path,documents.period' +
             LPageFrom + ' ORDER BY bm25(document_fts),documents.path COLLATE BINARY' +
@@ -1168,10 +1173,12 @@ begin
         LResult.Add('next_offset', TJSONNull.Create);
       end;
       ExecuteSql(FDatabase, 'COMMIT');
-      if Length(LWindow.Rows) > 0 then
+      // Keep a few recently used searches so citation checks do not evict the current page.
+      for LWindowIndex := LCachedIndex downto 1 do
       begin
-        FSearchWindow := LWindow;
+        FSearchWindows[LWindowIndex] := FSearchWindows[LWindowIndex - 1];
       end;
+      FSearchWindows[0] := LWindow;
     except
       TWinSqliteExec(Pointer(@sqlite3_exec))(FDatabase, 'ROLLBACK', nil, nil, nil);
       raise;

@@ -68,7 +68,7 @@ Refresh the text index after adding local research. This reuses the existing ind
 The catalog refresh records its own timestamp and failed reads. Check `oracle_status` before treating the index as current.
 Refresh also installs the read-error index in existing catalogs. This avoids scanning every indexed document for the diagnostic count on each search.
 
-The local server keeps at most 100 ranked rows from its latest catalog result window. Subsequent pages can reuse that window when the search expression, period and catalog revision agree. The server reads current catalog diagnostics and preserves the exact result total and order.
+The local server retains up to four recent catalog searches, each with its total and up to 100 ranked rows. Return to a result page after checking citations and the server can reuse those rows if the search expression, period and catalog revision agree. A new catalog revision invalidates both ranked results and empty searches. The server reads current catalog diagnostics on every lookup.
 
 ### Local performance checks
 
@@ -84,6 +84,15 @@ from 104.2 to 4.4 ms across nine repetitions. The initial page took about
 104 ms before and 102 ms after. The timed runs used the same index and compared
 the returned text, including total and next offset. A separate refresh check
 confirmed that already-running servers observed changed results after a new revision.
+
+On catalog revision 20, the `Parkinson` search matched 32,413 documents. After
+three intervening searches (`31211448`, `black tea` and `PMC8345445`), returning
+to the next eight results took a median of 96.46 ms with one retained search and
+0.52 ms with four. The 2020–2024 search fell from 88.42 to 0.96 ms. Each median
+covers nine warm local MCP calls against the same snapshot. The compared tool
+replies were byte-identical. A separate refresh fixture checked ranking, a
+previously empty search and live read-error diagnostics. These timings measure
+local lookup latency. Response size is identical across the two versions.
 
 ## Browser interface
 
