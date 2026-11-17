@@ -57,6 +57,7 @@ Refresh the text index after adding local research. This reuses the existing ind
 ```
 
 The catalog refresh records its own timestamp and failed reads. Check `oracle_status` before treating the index as current.
+Refresh also installs the read-error index in existing catalogs. This avoids scanning every indexed document for the diagnostic count on each search.
 
 ## Browser interface
 

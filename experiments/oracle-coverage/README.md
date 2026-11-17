@@ -19,6 +19,12 @@ belong to the same question and do not add denominator rows.
 Strict hit rate is `hits / (hits + partials + misses)`. Lead rate also counts
 partials in the numerator. Record both with their counts. Keep unavailable
 questions visible outside the rate and investigate those failures independently.
+When an oracle lookup repeatedly stalls, use the same queries against the
+native server and the affected transport to locate the delay. Compare source
+identifiers, broader terms and paged results on the same catalog snapshot.
+Address measured bottlenecks and verify result order, totals and coverage
+diagnostics before recording an improvement.
+
 Compare matching workstream and question types, then inspect exposure and symptom
 groups. A declining rate calls for review of the underlying gaps and sample size.
 When comparable batches keep declining, move recurring catalog gaps up the

@@ -45,8 +45,9 @@ const
   SourcePageBytes = 16384;
   ResearchPathPrefix = 'research/';
   OpenReparsePoint = $00200000;
+  MatchCondition = ' WHERE document_fts MATCH ?1';
   MatchFrom = ' FROM document_fts JOIN documents ON documents.id=document_fts.rowid' +
-    ' WHERE document_fts MATCH ?1 AND (?2='''' OR documents.period=?2)';
+    MatchCondition;
 
 type
   ECatalogReadError = class(Exception);
@@ -915,6 +916,8 @@ begin
         raise Exception.Create('Cannot inventory a missing, inaccessible or linked research root');
       end;
       ExecuteSql(FDatabase, 'BEGIN IMMEDIATE');
+      ExecuteSql(FDatabase, 'CREATE INDEX IF NOT EXISTS documents_read_errors' +
+        ' ON documents(path) WHERE read_error<>''''');
       ExecuteSql(FDatabase, 'CREATE TEMP TABLE IF NOT EXISTS seen (' +
         ' path TEXT PRIMARY KEY) WITHOUT ROWID');
       ExecuteSql(FDatabase, 'DELETE FROM seen');
@@ -1001,6 +1004,8 @@ function TResearchCatalog.Search(const ATerms, APeriod: String;
 var
   LMatch: UTF8String;
   LPeriod: UTF8String;
+  LCountFrom: AnsiString;
+  LPageFrom: AnsiString;
   LState: TSqlStatement;
   LCount: TSqlStatement;
   LMatches: TSqlStatement;
@@ -1020,6 +1025,17 @@ begin
     (Pos('/', LPeriod) <> 0) or (Pos('\', LPeriod) <> 0) then
   begin
     raise Exception.Create('Expected an exact catalog period name or an empty period');
+  end;
+  LPageFrom := MatchFrom;
+  if LPeriod = '' then
+  begin
+    // Refresh keeps FTS rows and document IDs in the same transaction.
+    LCountFrom := ' FROM document_fts' + MatchCondition;
+  end
+  else
+  begin
+    LPageFrom := LPageFrom + ' AND documents.period=?2';
+    LCountFrom := LPageFrom;
   end;
   LState := nil;
   LCount := nil;
@@ -1042,9 +1058,12 @@ begin
       LResult.Add('last_refresh_error', UTF8String(FLastRefreshError));
       LState.Reset;
 
-      LCount := TSqlStatement.Create(FDatabase, 'SELECT count(*)' + MatchFrom);
+      LCount := TSqlStatement.Create(FDatabase, 'SELECT count(*)' + LCountFrom);
       LCount.BindText(1, LMatch);
-      LCount.BindText(2, LPeriod);
+      if LPeriod <> '' then
+      begin
+        LCount.BindText(2, LPeriod);
+      end;
       if not LCount.Next then
       begin
         raise Exception.Create('Catalog search yielded no count');
@@ -1057,9 +1076,12 @@ begin
       if AOffset < LTotal then
       begin
         LMatches := TSqlStatement.Create(FDatabase, 'SELECT documents.path,documents.period' +
-          MatchFrom + ' ORDER BY bm25(document_fts),documents.path COLLATE BINARY LIMIT ?3 OFFSET ?4');
+          LPageFrom + ' ORDER BY bm25(document_fts),documents.path COLLATE BINARY LIMIT ?3 OFFSET ?4');
         LMatches.BindText(1, LMatch);
-        LMatches.BindText(2, LPeriod);
+        if LPeriod <> '' then
+        begin
+          LMatches.BindText(2, LPeriod);
+        end;
         LMatches.BindNumber(3, ALimit);
         LMatches.BindNumber(4, AOffset);
         while LMatches.Next do
