@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The eleventh rest-tremor checkpoint closed 71 original pairs, including all 46 individual olive-oil records, and preserved 70 assigned access gaps. The original queue totals 50,105 pairs, with 3,992 rest-tremor pairs. Five olive-oil conference collections remain open. Results retain the previously recorded grades. [Four-claim source review](followup/tremor-priority-nov17-11/README.md)
+
 The tenth rest-tremor checkpoint closed 51 original pairs, screened all 59 PubMed appearances and added 11 study assessments. Pharmaceutical motor sums, wild species, rearing and acute toxicity do not supply isolated culinary rest-tremor effects. The original queue totals 50,176 pairs including 4,063 rest-tremor pairs. No verdict changed. [Source distinctions and exact coverage](followup/tremor-priority-nov17-10/README.md)
 
 The ninth rest-tremor checkpoint verified 79 original claim–source pairs in full text, including 50 fig papers and 29 apple papers. A further apple paper was held at replay for publisher access. The original queue totals 50,227 pairs and retains 4,114 rest-tremor pairs. No verdict changed. [Original source review and oil carrier follow-up](followup/tremor-priority-nov17-09/README.md)
