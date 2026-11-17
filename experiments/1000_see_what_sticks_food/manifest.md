@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The next original-source checkpoint verifies 87 pairs, including 14 for brewed lemon balm and depression. The ECT report identifies its trial and measures cognition without a separate depression scale. The original Persian older-women protocol supports lemon balm as the intended capsule ingredient despite its English translation. Depression results remain open. Claim 0133 stays Maybe True 51 with 583 original pairs queued. The global original queue totals 48,710 pairs. [Verified originals and trial context](followup/lemon-balm-depression-nov17-04/README.md)
+
 The registry and shared-source checkpoint verifies 89 original pairs. Direct official trial records identify two brewed tea studies with separate depression measures in non-Parkinson populations, both awaiting a verified result. Postpartum capsule evidence is favorable for a smaller score increase, with unclear attrition handling. Claim 0133 remains Maybe True 51 with 597 original pairs queued. The global original queue totals 48,797. [Registry and exact review coverage](followup/lemon-balm-depression-nov17-03/README.md)
 
 The next lemon balm source pass verifies 53 original pairs and screens 28 PubMed appearances. A dialysis study supplies an inconclusive sadness item after inhaled essential oil. The Echium syrup abstract leaves ingredient attribution open. Claim 0133 stays Maybe True 51, with 609 original source pairs queued. The global original queue totals 48,886. [Original and complementary search coverage](followup/lemon-balm-depression-nov17-02/README.md)

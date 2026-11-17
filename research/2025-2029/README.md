@@ -436,3 +436,6 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Mazzola high-dose subgroup and depression measurements](Source-Text/2026-PMID42232738-Mazzola-Melissa-Cortisol-Extract.txt)
 - [Inhaled lemon balm and the dialysis sadness item](Source-Text/2025-PMID40082838-Pasyar-Lemon-Balm-Dialysis-Extract.txt)
 - [Lemon balm tea versus rooibos with a shared program](Source-Text/Trials/ACTRN12626001145392.txt)
+- [Mixed intranasal intervention, insomnia and secondary Beck depression](Source-Text/Trials/IRCT20250606066088N1.txt)
+- [Lemon balm and separate cognitive outcomes during ECT](Source-Text/2025-Nikfarjam-Melissa-ECT-Cognition-Extract.txt)
+- [Likely rose and tea companion report with anxiety scores](Source-Text/2025-Fatali-Rose-Tea-Anxiety-Abstract-Extract.txt)
