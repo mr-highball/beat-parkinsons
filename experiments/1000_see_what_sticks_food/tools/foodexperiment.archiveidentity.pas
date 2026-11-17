@@ -92,6 +92,11 @@ begin
   if AnsiStartsStr('DRKS', AValue) and (Length(AValue) = 12) and
     DigitsOnly(Copy(AValue, 5, MaxInt)) then
     Exit(AValue);
+  if AnsiStartsStr('TCTR', AValue) and (Length(AValue) = 15) and
+    DigitsOnly(Copy(AValue, 5, MaxInt)) then
+  begin
+    Exit(AValue);
+  end;
   if AnsiStartsStr('IRCT', AValue) then
   begin
     LSeparator := Pos('N', AValue);
@@ -173,6 +178,66 @@ begin
     Result := OtherRegistryIdentifier(LName);
 end;
 
+function TctrRegistryHeaderMatches(const AText: RawByteString; const AExpected: String): Boolean;
+const
+  COfficialHost = 'https://www.thaiclinicaltrials.org';
+var
+  LLine: String;
+  LField: String;
+  LValue: String;
+  LStart: Integer;
+  LEnd: Integer;
+  LSeparator: Integer;
+begin
+  Result := False;
+  LStart := 1;
+  if Copy(AText, 1, 3) = #$EF#$BB#$BF then
+  begin
+    LStart := 4;
+  end;
+  while LStart <= Length(AText) do
+  begin
+    LEnd := PosEx(#10, AText, LStart);
+    if LEnd = 0 then
+    begin
+      LEnd := Length(AText) + 1;
+    end;
+    LLine := Trim(Copy(AText, LStart, LEnd - LStart));
+    LStart := LEnd + 1;
+    // The local extracts place their provenance before the first blank line.
+    if LLine = '' then
+    begin
+      Break;
+    end;
+    LSeparator := Pos(':', LLine);
+    if LSeparator = 0 then
+    begin
+      Continue;
+    end;
+    LField := Trim(Copy(LLine, 1, LSeparator - 1));
+    LValue := Trim(Copy(LLine, LSeparator + 1, MaxInt));
+    case IndexText(LField, ['registry', 'identifier', 'trial id', 'record', 'registration',
+      'registration number', 'registry id', 'registry identifier', 'source', 'official source',
+      'official record', 'official xml']) of
+      0..7:
+        if not ((UpperCase(LValue) = AExpected) or
+          (SameText(LField, 'registry') and SameText(LValue, 'Thai Clinical Trials Registry'))) then
+        begin
+          Exit(False);
+        end;
+      8..11:
+        begin
+          if (LValue <> COfficialHost + '/show/' + AExpected) and
+            (LValue <> COfficialHost + '/export/xml/' + AExpected) then
+          begin
+            Exit(False);
+          end;
+          Result := True;
+        end;
+    end;
+  end;
+end;
+
 function OtherRegistryHeaderMatches(const AText: RawByteString;
   const AExpected: String): Boolean;
 const
@@ -191,6 +256,10 @@ begin
   Result := False;
   if OtherRegistryIdentifier(AExpected) = '' then
     Exit;
+  if AnsiStartsStr('TCTR', AExpected) then
+  begin
+    Exit(TctrRegistryHeaderMatches(AText, AExpected));
+  end;
   LHeader := Copy(AText, 1, CHeaderBytes);
   LStart := 1;
   LHasIdentity := False;

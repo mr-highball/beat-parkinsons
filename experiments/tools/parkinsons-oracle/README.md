@@ -32,9 +32,9 @@ visual hallucination frequency, the outcome in the frozen claims. The
 response gives the canonical outcome. Use catalog search for other modalities.
 
 For known identifiers, send up to 100 PMIDs, PMCIDs, DOIs, NCT IDs or trial IDs
-from ANZCTR (ACTRN), ISRCTN, IRCT and DRKS to `oracle_find_sources`. Bare numeric
-identifiers are PMIDs. Each
-result includes the normalized identifier and matching paths in sorted order.
+from ANZCTR (ACTRN), ISRCTN, IRCT, DRKS and the Thai Clinical Trials Registry
+(TCTR) to `oracle_find_sources`. Bare numeric identifiers are PMIDs. Each result
+includes the normalized identifier and matching paths in sorted order.
 Results follow the input order, including identifiers with zero archive matches.
 The three additional registries require a matching source filename, an exact
 registration field or leading ID, and the official registry address in the
@@ -89,7 +89,11 @@ Refresh also installs the read-error index in existing catalogs. This avoids sca
 The first refresh after adding `oracle_find_sources` builds the source identifier
 index. Later refreshes update identifiers from changed documents in the same
 transaction as the full-text index. If a legacy executable refreshes the catalog,
-run `index` with the current build before using `oracle_find_sources` again. The first refresh with the current registry parser also backfills verified ClinicalTrials.gov extracts with older header formats.
+run `index` with the current build before using `oracle_find_sources` again.
+A refresh backfills verified ClinicalTrials.gov extracts with older header
+formats. The first refresh with TCTR support also indexes Thai trial extracts
+whose leading metadata identifies the same trial as their filename using a
+direct official record or XML URL.
 
 The local server retains up to four recent catalog searches, each with its total and up to 100 ranked rows. Return to a result page after checking citations and the server can reuse those rows if the search expression, period and catalog revision agree. A new catalog revision invalidates both ranked results and empty searches. The server reads current catalog diagnostics on every lookup.
 

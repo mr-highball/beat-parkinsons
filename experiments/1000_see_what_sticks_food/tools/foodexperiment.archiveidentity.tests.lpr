@@ -19,7 +19,7 @@ begin
   LExpected.Doi := 'https://doi.org/10.1007/s11739-010-0412-7';
   LExpected.Title := 'A subtle case of iron-deficiency anemia';
 
-  LPath := GetTempFileName;
+  LPath := GetTempFileName(ExtractFilePath(ParamStr(0)), 'arc');
   LHeader := TStringList.Create;
   try
     LHeader.Add('Title: Posters');
@@ -130,6 +130,54 @@ begin
       'Source: https://drks.de/search/en/trial/DRKS00012459' + LineEnding +
       'Registry identifier: DRKS00013219' + LineEnding, 'DRKS00012459'),
       'Conflicting registry metadata invalidates a DRKS match');
+
+    Assert(NormalizeArchiveIdentifier('tctr20241101001') = 'TCTR20241101001');
+    Assert(NormalizeArchiveIdentifier('TCTR2024110100') = '');
+    Assert(NormalizeArchiveIdentifier('TCTR202411010010') = '');
+    Assert(NormalizeArchiveIdentifier('TCTR2024110100O') = '');
+    Assert(RegistryArchiveFileIdentifier('TCTR20241101001.txt') = 'TCTR20241101001');
+    Assert(RegistryArchiveFileIdentifier('memo-TCTR20241101001.txt') = '');
+    Assert(OtherRegistryHeaderMatches('Title: Archived trial' + LineEnding +
+      'Registry: TCTR20241101001' + LineEnding +
+      'Official source: https://www.thaiclinicaltrials.org/show/TCTR20241101001' + LineEnding +
+      'Official XML: https://www.thaiclinicaltrials.org/export/xml/TCTR20241101001' + LineEnding,
+      'TCTR20241101001'), 'A matching show and XML record identifies the archived trial');
+    Assert(OtherRegistryHeaderMatches('Trial ID: TCTR20241101001' + LineEnding +
+      'Source: https://www.thaiclinicaltrials.org/export/xml/TCTR20241101001',
+      'TCTR20241101001'), 'An official XML source line can end at EOF');
+    Assert(OtherRegistryHeaderMatches('Registry: Thai Clinical Trials Registry' + LineEnding +
+      'Identifier: TCTR20241101001' + LineEnding +
+      'Official record: https://www.thaiclinicaltrials.org/show/TCTR20241101001' + LineEnding,
+      'TCTR20241101001'), 'Recognize the registry name and separately labeled identifier');
+    Assert(not OtherRegistryHeaderMatches('Registry: TCTR20241101001' + LineEnding +
+      'Official source: https://www.thaiclinicaltrials.org/show/TCTR20241101002' + LineEnding,
+      'TCTR20241101001'), 'The official URL must identify the same trial');
+    Assert(not OtherRegistryHeaderMatches('Registry: TCTR20241101001' + LineEnding +
+      'Trial ID: TCTR20241101002' + LineEnding +
+      'Official source: https://www.thaiclinicaltrials.org/show/TCTR20241101001' + LineEnding,
+      'TCTR20241101001'), 'A matching official URL cannot override a conflicting metadata ID');
+    Assert(not OtherRegistryHeaderMatches(
+      'Official source: https://www.thaiclinicaltrials.org/show/TCTR20241101001' + LineEnding +
+      'Official XML: https://www.thaiclinicaltrials.org/export/xml/TCTR20241101002' + LineEnding,
+      'TCTR20241101001'), 'Conflicting official paths invalidate the provenance');
+    Assert(not OtherRegistryHeaderMatches('Registry: TCTR20241101001' + LineEnding +
+      'Official source: https://www.thaiclinicaltrials.org.example/show/TCTR20241101001' +
+      LineEnding, 'TCTR20241101001'), 'A lookalike host is never the official registry');
+    Assert(not OtherRegistryHeaderMatches('Registry: TCTR20241101001' + LineEnding +
+      'Official source: https://www.thaiclinicaltrials.org/show/TCTR20241101001-copy' +
+      LineEnding, 'TCTR20241101001'), 'A lookalike path is never an exact source');
+    Assert(not OtherRegistryHeaderMatches('Title: A paper citing the protocol' + LineEnding +
+      LineEnding + 'Registry: TCTR20241101001' + LineEnding +
+      'Official source: https://www.thaiclinicaltrials.org/show/TCTR20241101001' + LineEnding,
+      'TCTR20241101001'), 'A body citation cannot authenticate the document');
+    Assert(not OtherRegistryHeaderMatches('Registry: TCTR20241101001' + LineEnding +
+      'See https://www.thaiclinicaltrials.org/show/TCTR20241101001' + LineEnding,
+      'TCTR20241101001'), 'A prose URL cannot authenticate the document');
+
+    Assert(not OtherRegistryHeaderMatches(
+      'Official source: https://www.thaiclinicaltrials.org/show/TCTR20241101001' + LineEnding +
+      'Title: ' + StringOfChar('a', 1100) + LineEnding + 'Registry: TCTR20241101002',
+      'TCTR20241101001'), 'A long leading header cannot hide conflicting metadata');
 
     LExpected.Pmcid := 'PMC7100645';
     LExpected.Pmid := '8183379';

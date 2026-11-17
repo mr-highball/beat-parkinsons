@@ -793,6 +793,7 @@ var
   LFinish: TSqlStatement;
   LRebuildIdentifiers: Boolean;
   LRefreshRegistries: Boolean;
+  LRefreshTctr: Boolean;
   LChanged: Boolean;
   LReparseCount: Int64;
   LRootAttributes: DWORD;
@@ -878,12 +879,14 @@ var
       (Pos('/Source-Text/', ARelative) = Length(ResearchPathPrefix) + Length(APeriod) + 1) and
       (ExtractFileExt(LowerCase(String(ARelative))) = '.txt');
     LRegistryId := '';
-    if LArchivedSource and (LRefreshRegistries or not (LHadBody and LSameMetadata)) then
+    if LArchivedSource and (LRefreshRegistries or LRefreshTctr or
+      not (LHadBody and LSameMetadata)) then
     begin
       LRegistryId := RegistryArchiveFileIdentifier(ExtractFileName(String(ARelative)));
     end;
     if LHadBody and LSameMetadata and not ((LArchivedSource and LRebuildIdentifiers) or
-      (LRegistryId <> '')) then
+      ((LRegistryId <> '') and (LRefreshRegistries or
+      (LRefreshTctr and (Copy(LRegistryId, 1, 4) = 'TCTR'))))) then
     begin
       Exit;
     end;
@@ -1074,8 +1077,14 @@ begin
       LRefreshRegistries := LRebuildIdentifiers or
         (Scalar(FDatabase, 'SELECT source_registry_v3_state.revision <> catalog_state.revision' +
           ' FROM source_registry_v3_state, catalog_state') <> 0);
+      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_tctr_state (' +
+        ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
+      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_tctr_state VALUES (1,-1)');
+      LRefreshTctr := LRebuildIdentifiers or
+        (Scalar(FDatabase, 'SELECT source_tctr_state.revision <> catalog_state.revision' +
+          ' FROM source_tctr_state, catalog_state') <> 0);
       // An identifier backfill changes the results even when document bytes match.
-      LChanged := LChanged or LRefreshRegistries;
+      LChanged := LChanged or LRefreshRegistries or LRefreshTctr;
       if LRebuildIdentifiers then
       begin
         // Also recover when an older executable has refreshed the text catalog.
@@ -1084,6 +1093,10 @@ begin
       else if LRefreshRegistries then
       begin
         ExecuteSql(FDatabase, 'DELETE FROM source_identifiers WHERE identifier GLOB ''NCT[0-9]*''');
+      end;
+      if LRefreshTctr and not LRebuildIdentifiers then
+      begin
+        ExecuteSql(FDatabase, 'DELETE FROM source_identifiers WHERE identifier GLOB ''TCTR[0-9]*''');
       end;
       ExecuteSql(FDatabase, 'CREATE TEMP TABLE IF NOT EXISTS seen (' +
         ' path TEXT PRIMARY KEY) WITHOUT ROWID');
@@ -1122,6 +1135,8 @@ begin
       ExecuteSql(FDatabase, 'UPDATE source_identifier_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
       ExecuteSql(FDatabase, 'UPDATE source_registry_v3_state' +
+        ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
+      ExecuteSql(FDatabase, 'UPDATE source_tctr_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
       ExecuteSql(FDatabase, 'COMMIT');
       FLastRefreshError := '';
@@ -1347,6 +1362,7 @@ var
   LInput: TJSONData;
   LRevision: Int64;
   LNeedsRegistries: Boolean;
+  LNeedsTctr: Boolean;
   LQuery: TSqlStatement;
   LResults: TJSONArray;
   LMatches: TJSONArray;
@@ -1358,6 +1374,7 @@ begin
   end;
   SetLength(LIdentifiers, AIdentifiers.Count);
   LNeedsRegistries := False;
+  LNeedsTctr := False;
   for LIndex := 0 to High(LIdentifiers) do
   begin
     LInput := AIdentifiers.Items[LIndex];
@@ -1375,6 +1392,7 @@ begin
     LNeedsRegistries := LNeedsRegistries or
       (Copy(LIdentifiers[LIndex], 1, 3) = 'NCT') or
       (OtherRegistryIdentifier(LIdentifiers[LIndex]) <> '');
+    LNeedsTctr := LNeedsTctr or (Copy(LIdentifiers[LIndex], 1, 4) = 'TCTR');
   end;
 
   LQuery := nil;
@@ -1396,6 +1414,13 @@ begin
         (Scalar(FDatabase, 'SELECT revision FROM source_registry_v3_state WHERE id=1') <> LRevision)) then
       begin
         raise Exception.Create('Source registry identifiers need a catalog refresh');
+      end;
+      if LNeedsTctr and
+        ((Scalar(FDatabase, 'SELECT count(*) FROM sqlite_schema' +
+          ' WHERE type=''table'' AND name=''source_tctr_state''') = 0) or
+          (Scalar(FDatabase, 'SELECT revision FROM source_tctr_state WHERE id=1') <> LRevision)) then
+      begin
+        raise Exception.Create('Thai trial identifiers need a catalog refresh');
       end;
       LResults := TJSONArray.Create;
       LResult.Add('results', LResults);
