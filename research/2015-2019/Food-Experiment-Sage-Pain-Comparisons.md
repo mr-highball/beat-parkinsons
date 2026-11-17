@@ -1,5 +1,13 @@
 # Common sage and pain-related outcomes, 2015–2019
 
+## Sage and bitter-orange aroma for post-cesarean pain
+
+Sharifipour and colleagues published in 2017, volume 20(2), pp. 41–49 (DOI **10.22038/ijogi.2017.8713**). The accessible author abstract reports that both inhaled aromas yielded lower pain than saline at four post-cesarean assessments (reported p<.001). The abstract reports no clear difference between the two active aromas. The original tables remain unverified, and the accessible extraction has inconsistent inequality text for the active comparison. The registry confirms the sage species as *Salvia officinalis*. This evidence concerns inhaled essential oil for surgical pain. [Author abstract in the original issue](https://www.magiran.com/volume/118334) · [Published DOI](https://doi.org/10.22038/ijogi.2017.8713) · [2014 registry](../2010-2014/Food-Experiment-Sage-Savory-Outcomes.md#registered-sage-inhalation-trials-for-obstetric-pain)
+
+## Oral sage extract and evoked pain after peripheral nerve injury
+
+El Gabbas and colleagues first published June 24, 2019 (PMID **31341489**, DOI **10.1155/2019/1702378**). In mouse groups of six, the oral sage leaf extract comparisons after sciatic constriction favored higher mechanical withdrawal thresholds on days 7, 14 and 21 versus injured controls (reported p<.001). The paper also reports attenuation of cold and thermal hypersensitivity. These are evoked nociceptive responses in peripheral injury. The walking-track result belongs to the same experiment and measures recovery on a separate sciatic functional index. [Original Figures 3–6](https://pmc.ncbi.nlm.nih.gov/articles/PMC6613031/) · [Local original body](Source-Text/PMC6613031.txt)
+
 ## Oral sage extract and a premenstrual symptom composite
 
 Abdnezhad and colleagues reported a randomized triple-blind placebo comparison with 90 students, first published online in December 2018 (PMID 30572339, DOI 10.1159/000490104). The capsule contained 500 mg of *Salvia officinalis* extract. The accessible author abstract reports a favorable composite premenstrual symptom comparison and describes physical and psychological scores. It does not supply individual pain outcomes, an arm-level pain estimate or the original full result tables. A 2017 report of emotional symptoms describes the same authors, sample, dosage and setting, so it remains a likely companion until participant overlap is established. The combined questionnaire outcome does not establish a pain response to fresh sage in Parkinson disease. [Publisher author abstract](https://karger.com/cmr/article-abstract/26/1/39/67803/Salvia-officinalis-Reduces-the-Severity-of-the) · [2017 related publication](https://doi.org/10.22038/ijogi.2017.10160)

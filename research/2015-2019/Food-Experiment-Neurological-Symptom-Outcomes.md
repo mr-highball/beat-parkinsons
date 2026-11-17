@@ -1,5 +1,9 @@
 # Parkinson and related neurological symptom outcomes
 
+## EASE LID 3 dyskinesia and adverse-event outcomes
+
+Oertel and colleagues first published EASE LID 3 on August 21, 2017 (PMID **28833562**, DOI **10.1002/mds.27131**). The registered Parkinson trial randomized extended-release amantadine against placebo. At week 12, the adjusted dyskinesia score change difference was −14.4 points (95% CI −20.4 to −8.3). Table 3 gives insomnia in 4/37 active and 0/38 placebo recipients, and falls in 3/37 and 2/38. These entries count participants reporting an adverse event. They do not give insomnia severity or rates of recurrent fall events. The trial intervention was a medication and assigns no culinary sage exposure. [Primary Tables 2–3](https://pmc.ncbi.nlm.nih.gov/articles/PMC5763269/) · [2014 registry accession](../2010-2014/Source-Text/Trials/NCT02274766.txt)
+
 ## Pain attributed to perceived insects in a Parkinson case
 
 Abe and colleagues reported this stage IV Parkinson case in the January–February 2016 issue of *Clinical Neuropharmacology* (PMID 26757314, DOI 10.1097/WNF.0000000000000122). The patient experienced visual hallucinations of insects and described them as the cause of his pain. The author abstract reports resolution of pain and hallucinations after gabapentin in one patient. It gives no controlled comparison, assigned food exposure, pain score or hallucination event count. The complete original body remained unavailable. This case documents how one symptom report can be attributed to another in an individual clinical history. [Original author abstract](https://pubmed.ncbi.nlm.nih.gov/26757314/)
