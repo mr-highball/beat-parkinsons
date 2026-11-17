@@ -46,7 +46,7 @@ type
     destructor Destroy; override;
     function IsDirectional: Boolean;
     function View(ADetailed: Boolean; AAssessmentOffset: Integer = 0;
-      AAssessmentLimit: Integer = -1): TJSONObject;
+      AAssessmentLimit: Integer = -1; const AAssessmentStudy: String = ''): TJSONObject;
   end;
 
   TClaimDecision = (cdInclude, cdIdentityExcluded, cdPremiseExcluded, cdEvidenceExcluded);
@@ -86,7 +86,7 @@ type
     function Status: TJSONObject;
     function Query(const AQuery: TClaimQuery): TJSONObject;
     function Claim(ARound: Integer; const AId: String; AAssessmentOffset: Integer;
-      AAssessmentLimit: Integer): TJSONObject;
+      AAssessmentLimit: Integer; const AAssessmentStudy: String): TJSONObject;
     function FilterOptions: TJSONObject;
     function StaticModel(const ARepository: String): TJSONObject;
   end;
@@ -220,11 +220,13 @@ begin
   Result := IndexStr(Verdict, ['True', 'False', 'Maybe True', 'Maybe False']) >= 0;
 end;
 
-function TClaim.View(ADetailed: Boolean; AAssessmentOffset, AAssessmentLimit: Integer): TJSONObject;
+function TClaim.View(ADetailed: Boolean; AAssessmentOffset, AAssessmentLimit: Integer;
+  const AAssessmentStudy: String): TJSONObject;
 var
   LPage: TJSONArray;
   LStop: Integer;
   LIndex: Integer;
+  LAssessment: TJSONObject;
 begin
   Result := TJSONObject.Create([
     'round', Round, 'claim_id', Id, 'category', Category, 'ingredient', Ingredient,
@@ -245,13 +247,27 @@ begin
     if ADetailed then
     begin
       Result.Add('local_references', References.Clone);
-      if AAssessmentLimit < 0 then
+      if (AAssessmentStudy = '') and (AAssessmentLimit < 0) then
       begin
         Result.Add('assessments', Evidence.Clone);
         Exit;
       end;
       LPage := TJSONArray.Create;
       Result.Add('assessments', LPage);
+      if AAssessmentStudy <> '' then
+      begin
+        for LIndex := 0 to Evidence.Count - 1 do
+        begin
+          LAssessment := Evidence.Objects[LIndex];
+          if LAssessment.Strings['study'] = AAssessmentStudy then
+          begin
+            LPage.Add(LAssessment.Clone);
+          end;
+        end;
+        Result.Add('assessment_study', AAssessmentStudy);
+        Result.Add('matching_assessments', LPage.Count);
+        Exit;
+      end;
       Result.Add('assessment_offset', AAssessmentOffset);
       LStop := Evidence.Count;
       // Bound the addition by the available rows, including for an offset past the end.
@@ -838,13 +854,13 @@ begin
 end;
 
 function TClaimIndex.Claim(ARound: Integer; const AId: String;
-  AAssessmentOffset, AAssessmentLimit: Integer): TJSONObject;
+  AAssessmentOffset, AAssessmentLimit: Integer; const AAssessmentStudy: String): TJSONObject;
 var
   LClaim: TClaim;
 begin
   if not FIdentities.TryGetValue(Key(ARound, AId), LClaim) then
     Exit(TJSONObject.Create(['revision', FRevision, 'found', False]));
-  Result := LClaim.View(True, AAssessmentOffset, AAssessmentLimit);
+  Result := LClaim.View(True, AAssessmentOffset, AAssessmentLimit, AAssessmentStudy);
   Result.Add('revision', FRevision);
   Result.Add('found', True);
 end;

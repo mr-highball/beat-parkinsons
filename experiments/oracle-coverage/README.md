@@ -61,6 +61,11 @@ $Reply.result.content[0].text | ConvertFrom-Json
 Use `oracle_status` to record the claim and catalog revisions. Use
 `oracle_search_catalog` for identifiers and alternate terms. Open specific
 research passages and the assessments needed to check evidence and conflicts.
+If a focused follow-up already identifies a study in the claim ledger, pass
+its exact `assessment_study` key to `oracle_claim` without paging. The result
+includes every row for that key and the claim-wide verdict and coverage.
+Zero matching rows means the key is absent from that claim's ledger at the
+returned revision. Use the catalog and source checks for the underlying study.
 When triaging an evidence-heavy claim, start with `oracle_claim` and
 `assessment_limit: 8`. Pass each returned `next_assessment_offset` as
 `assessment_offset` to continue on the same revision. Restart from the first

@@ -14,12 +14,28 @@ type
   ESourceReadError = class(EConvertError);
 
   TResearchCatalog = class
+  strict private type
+    TSearchDocument = record
+      Path: UTF8String;
+      Period: UTF8String;
+    end;
+
+    TSearchWindow = record
+      Revision: Int64;
+      Expression: UTF8String;
+      Period: UTF8String;
+      Total: Int64;
+      Offset: Integer;
+      Rows: array of TSearchDocument;
+    end;
+
   private
     FDatabase: PSQLite3;
     FRepoRoot: UnicodeString;
     FResearchRoot: UnicodeString;
     FSQLiteLoaded: Boolean;
     FLastRefreshError: String;
+    FSearchWindow: TSearchWindow;
     function ReadStatus(AIncludeDiagnostics: Boolean): TJSONObject;
   public
     constructor Create(const ARepoRoot, ADatabasePath: String);
@@ -34,7 +50,7 @@ type
 implementation
 
 uses
-  BufStream, Classes, Generics.Collections, JwaNative, JwaWinternl, Windows;
+  BufStream, Classes, Generics.Collections, JwaNative, JwaWinternl, Math, Windows;
 
 const
   CatalogApplicationId = $504F5243;
@@ -1012,7 +1028,13 @@ var
   LRows: TJSONArray;
   LRow: TJSONObject;
   LResult: TJSONObject;
+  LRevision: Int64;
+  LSameSearch: Boolean;
+  LWindow: TSearchWindow;
   LTotal: Int64;
+  LPageSize: Integer;
+  LRowIndex: Integer;
+  LStart: Integer;
   LNextOffset: Int64;
 begin
   if (AOffset < 0) or (ALimit < 1) or (ALimit > MaximumPageSize) then
@@ -1051,45 +1073,84 @@ begin
       begin
         raise Exception.Create('Catalog has not completed a refresh');
       end;
-      LResult.Add('revision', LState.Number(0));
+      LRevision := LState.Number(0);
+      LResult.Add('revision', LRevision);
       LResult.Add('refreshed_at_utc', LState.Text(1));
       LResult.Add('skipped_reparse_points', LState.Number(2));
       LResult.Add('read_errors', LState.Number(3));
       LResult.Add('last_refresh_error', UTF8String(FLastRefreshError));
       LState.Reset;
 
-      LCount := TSqlStatement.Create(FDatabase, 'SELECT count(*)' + LCountFrom);
-      LCount.BindText(1, LMatch);
-      if LPeriod <> '' then
+      // The same read transaction pins the revision, totals and ranks.
+      LSameSearch := (FSearchWindow.Revision = LRevision) and
+        (FSearchWindow.Expression = LMatch) and (FSearchWindow.Period = LPeriod);
+      if LSameSearch then
       begin
-        LCount.BindText(2, LPeriod);
-      end;
-      if not LCount.Next then
+        LTotal := FSearchWindow.Total;
+      end
+      else
       begin
-        raise Exception.Create('Catalog search yielded no count');
+        LCount := TSqlStatement.Create(FDatabase, 'SELECT count(*)' + LCountFrom);
+        LCount.BindText(1, LMatch);
+        if LPeriod <> '' then
+        begin
+          LCount.BindText(2, LPeriod);
+        end;
+        if not LCount.Next then
+        begin
+          raise Exception.Create('Catalog search yielded no count');
+        end;
+        LTotal := LCount.Number(0);
+        LCount.Reset;
       end;
-      LTotal := LCount.Number(0);
-      LCount.Reset;
 
+      LWindow := Default(TSearchWindow);
       LRows := TJSONArray.Create;
       LResult.Add('matches', LRows);
       if AOffset < LTotal then
       begin
-        LMatches := TSqlStatement.Create(FDatabase, 'SELECT documents.path,documents.period' +
-          LPageFrom + ' ORDER BY bm25(document_fts),documents.path COLLATE BINARY LIMIT ?3 OFFSET ?4');
-        LMatches.BindText(1, LMatch);
-        if LPeriod <> '' then
+        LPageSize := Math.Min(Int64(ALimit), LTotal - AOffset);
+        if LSameSearch and (AOffset >= FSearchWindow.Offset) and
+          (Int64(AOffset) + LPageSize <= Int64(FSearchWindow.Offset) + Length(FSearchWindow.Rows)) then
         begin
-          LMatches.BindText(2, LPeriod);
+          LWindow := FSearchWindow;
         end;
-        LMatches.BindNumber(3, ALimit);
-        LMatches.BindNumber(4, AOffset);
-        while LMatches.Next do
+        if Length(LWindow.Rows) = 0 then
+        begin
+          LWindow.Revision := LRevision;
+          LWindow.Expression := LMatch;
+          LWindow.Period := LPeriod;
+          LWindow.Total := LTotal;
+          LWindow.Offset := AOffset;
+          SetLength(LWindow.Rows, Math.Min(Int64(MaximumPageSize), LTotal - AOffset));
+          LMatches := TSqlStatement.Create(FDatabase, 'SELECT documents.path,documents.period' +
+            LPageFrom + ' ORDER BY bm25(document_fts),documents.path COLLATE BINARY' +
+            ' LIMIT ?3 OFFSET ?4');
+          LMatches.BindText(1, LMatch);
+          if LPeriod <> '' then
+          begin
+            LMatches.BindText(2, LPeriod);
+          end;
+          LMatches.BindNumber(3, Length(LWindow.Rows));
+          LMatches.BindNumber(4, AOffset);
+          for LRowIndex := 0 to High(LWindow.Rows) do
+          begin
+            if not LMatches.Next then
+            begin
+              raise Exception.Create('Catalog search yielded fewer results than counted');
+            end;
+            LWindow.Rows[LRowIndex].Path := LMatches.Text(0);
+            LWindow.Rows[LRowIndex].Period := LMatches.Text(1);
+          end;
+          LMatches.Reset;
+        end;
+        LStart := AOffset - LWindow.Offset;
+        for LRowIndex := LStart to LStart + LPageSize - 1 do
         begin
           LRow := TJSONObject.Create;
           LRows.Add(LRow);
-          LRow.Add('path', LMatches.Text(0));
-          LRow.Add('period', LMatches.Text(1));
+          LRow.Add('path', LWindow.Rows[LRowIndex].Path);
+          LRow.Add('period', LWindow.Rows[LRowIndex].Period);
         end;
       end;
       LResult.Add('terms', UTF8String(ATerms));
@@ -1107,6 +1168,10 @@ begin
         LResult.Add('next_offset', TJSONNull.Create);
       end;
       ExecuteSql(FDatabase, 'COMMIT');
+      if Length(LWindow.Rows) > 0 then
+      begin
+        FSearchWindow := LWindow;
+      end;
     except
       TWinSqliteExec(Pointer(@sqlite3_exec))(FDatabase, 'ROLLBACK', nil, nil, nil);
       raise;

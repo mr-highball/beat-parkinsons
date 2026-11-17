@@ -15,6 +15,7 @@ The oracle is a local Free Pascal MCP server for the Parkinson’s research cata
 | --- | --- | --- |
 | `oracle_query` | `{"symptom":"tremors"}` | Directional local matches, candidate count, assessment counts and a first citation |
 | `oracle_claim` | `{"round":1,"id":"0904","assessment_limit":8}` | Frozen statement, verdict and rationale, citations, queue counts, and a page of assessments |
+| `oracle_claim` with a study key | `{"round":1,"id":"0121","assessment_study":"PMID:37294324"}` | Assessments for that exact study key and the same claim-wide metadata |
 | `oracle_search_catalog` | `{"terms":"black tea tremor","period":"2010-2014","limit":8}` | Ranked local documents containing the requested words |
 | `oracle_status` | `{}` | Published claim revision, assessed and unreviewed counts, and the text index’s coverage and refresh record |
 | `oracle_filter_options` | `{}` | Canonical symptom, ingredient, and preparation choices, with their aliases |
@@ -25,7 +26,9 @@ Use `{"symptom":"tremors","trend":"eases"}` to look up evidence that may point t
 
 Use `oracle_claim` for the relevant study outcomes and access gaps. If the claim search is empty or the evidence is unresolved, search the text catalog with alternate spellings, preparation names or endpoint terminology. A lexical hit needs source-level review. A gap in the indexed catalog is a reason to continue discovery, with the index timestamp and its read errors in view.
 
-Omit both assessment paging arguments to return the full evidence list in one reply. With paging, `assessment_limit` accepts 1–100 rows and defaults to 8 when only `assessment_offset` is supplied. Results keep ledger order and include the full claim rationale, verdict references, assessment counts and queue counts. Pass `next_assessment_offset` as the next `assessment_offset` until it is null. If the claim revision changes, start again at offset 0. Check all relevant pages for supporting, opposing and pending evidence.
+For a known study, send `assessment_study` with its case-sensitive ledger key and omit the paging arguments. The result reports `matching_assessments` and returns all rows for that key in ledger order. A found claim can have zero matches. The rationale, citations, verdict and coverage counts still apply to the whole claim.
+
+Omit the study key and both assessment paging arguments to return the full evidence list in one reply. With paging, `assessment_limit` accepts 1–100 rows and defaults to 8 when only `assessment_offset` is supplied. Results keep ledger order and include the full claim rationale, verdict references, assessment counts and queue counts. Pass `next_assessment_offset` as the next `assessment_offset` until it is null. If the claim revision changes, start again at offset 0. Check all relevant pages for supporting, opposing and pending evidence.
 
 ## Build and connect
 
@@ -64,6 +67,23 @@ Refresh the text index after adding local research. This reuses the existing ind
 
 The catalog refresh records its own timestamp and failed reads. Check `oracle_status` before treating the index as current.
 Refresh also installs the read-error index in existing catalogs. This avoids scanning every indexed document for the diagnostic count on each search.
+
+The local server keeps at most 100 ranked rows from its latest catalog result window. Subsequent pages can reuse that window when the search expression, period and catalog revision agree. The server reads current catalog diagnostics and preserves the exact result total and order.
+
+### Local performance checks
+
+On catalog revision 17 and the claim snapshot at `465998da`, round 1 claim 0290 had
+142 assessments. Selecting its `Yamamoto JSMCN 2024 O-244` row reduced MCP tool
+text from 67,547 to 3,062 UTF-8 bytes. The selected response kept the claim-wide
+verdict, citations and counts. Measure the decoded tool text when comparing
+payloads. These sizes do not measure model tokens.
+
+On the same catalog, the unfiltered term `Parkinson` matched 32,411 documents.
+At eight results per page, the warm median for the first adjacent page fell
+from 104.2 to 4.4 ms across nine repetitions. The initial page took about
+104 ms before and 102 ms after. The timed runs used the same index and compared
+the returned text, including total and next offset. A separate refresh check
+confirmed that already-running servers observed changed results after a new revision.
 
 ## Browser interface
 

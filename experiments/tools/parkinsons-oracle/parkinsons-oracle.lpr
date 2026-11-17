@@ -28,13 +28,17 @@ const
       '"limit":{"type":"integer","minimum":1,"maximum":100}}}},' +
     '{"name":"oracle_claim","description":"Read one frozen claim with its rationale, study ' +
       'assessments, citations and queue counts. Use assessment_limit for a smaller first reply ' +
-      'and next_assessment_offset to continue. Omitting pagination returns all assessments.",' +
+      'and next_assessment_offset to continue. Use assessment_study in place of pagination ' +
+      'to select one exact case-sensitive ledger key. With neither, all assessments are returned.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
       '"additionalProperties":false,"required":["round","id"],"properties":{' +
       '"round":{"type":"integer","minimum":1,"maximum":7},' +
       '"id":{"type":"string","pattern":"^[0-9]{4}$"},' +
       '"assessment_offset":{"type":"integer","minimum":0},' +
-      '"assessment_limit":{"type":"integer","minimum":1,"maximum":100}}}},' +
+      '"assessment_limit":{"type":"integer","minimum":1,"maximum":100},' +
+      '"assessment_study":{"type":"string","minLength":1}},' +
+      '"not":{"anyOf":[{"required":["assessment_study","assessment_offset"]},' +
+      '{"required":["assessment_study","assessment_limit"]}]}}},' +
     '{"name":"oracle_search_catalog","description":"Search the local research text index with ' +
       'literal terms. Word matches are discovery leads and carry no evidence or direction grade.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
@@ -187,6 +191,7 @@ var
   LTerms: String;
   LAssessmentOffset: Integer;
   LAssessmentLimit: Integer;
+  LAssessmentStudy: String;
 begin
   case IndexStr(AName, ['oracle_query', 'oracle_claim', 'oracle_search_catalog',
     'oracle_status', 'oracle_filter_options']) of
@@ -209,7 +214,8 @@ begin
       end;
     1:
       begin
-        RequireFields(AArguments, ['round', 'id', 'assessment_offset', 'assessment_limit']);
+        RequireFields(AArguments, ['round', 'id', 'assessment_offset', 'assessment_limit',
+          'assessment_study']);
         LId := ReadString(AArguments, 'id', '');
         LIndex := ReadInteger(AArguments, 'round', 0, 1, 7);
         if (Length(LId) <> 4) or (LIndex = 0) then
@@ -217,6 +223,19 @@ begin
         for LDigit in LId do
           if not (LDigit in ['0'..'9']) then
             raise EConvertError.Create('Provide a four-digit claim ID.');
+        LAssessmentStudy := ReadString(AArguments, 'assessment_study', '');
+        if AArguments.Find('assessment_study') <> nil then
+        begin
+          if (Trim(LAssessmentStudy) = '') or (Pos(#0, LAssessmentStudy) <> 0) then
+          begin
+            raise EConvertError.Create('Provide a nonempty assessment study key.');
+          end;
+          if (AArguments.Find('assessment_offset') <> nil) or
+            (AArguments.Find('assessment_limit') <> nil) then
+          begin
+            raise EConvertError.Create('Use assessment_study without assessment paging.');
+          end;
+        end;
         LAssessmentOffset := ReadInteger(AArguments, 'assessment_offset', 0, 0, MaxInt);
         LAssessmentLimit := ReadInteger(AArguments, 'assessment_limit', -1, 1,
           MaximumAssessmentPageSize);
@@ -224,7 +243,8 @@ begin
         begin
           LAssessmentLimit := DefaultAssessmentPageSize;
         end;
-        Result := Index.Claim(LIndex, LId, LAssessmentOffset, LAssessmentLimit);
+        Result := Index.Claim(LIndex, LId, LAssessmentOffset, LAssessmentLimit,
+          LAssessmentStudy);
       end;
     2:
       begin
