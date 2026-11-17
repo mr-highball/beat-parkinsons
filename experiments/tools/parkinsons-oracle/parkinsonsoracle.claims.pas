@@ -602,6 +602,9 @@ begin
   AddAlias(FSymptomAliases, 'tremor', 'rest tremor severity');
   AddAlias(FSymptomAliases, 'tremors', 'rest tremor severity');
   AddAlias(FSymptomAliases, 'attention', 'attention impairment');
+  AddAlias(FSymptomAliases, 'hallucination', 'visual hallucination frequency');
+  AddAlias(FSymptomAliases, 'hallucinations', 'visual hallucination frequency');
+  AddAlias(FSymptomAliases, 'seeing things', 'visual hallucination frequency');
   FDecisions := CompileClaimDecisions;
 end;
 

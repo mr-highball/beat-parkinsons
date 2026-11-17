@@ -27,6 +27,10 @@ Use `{"symptom":"tremors","trend":"eases"}` to look up evidence that may point t
 
 Use `oracle_claim` for the relevant study outcomes and access gaps. If the claim search is empty or the evidence is unresolved, search the text catalog with alternate spellings, preparation names or endpoint terminology. A lexical hit needs source-level review. A gap in the indexed catalog is a reason to continue discovery, with the index timestamp and its read errors in view.
 
+The shortcuts `hallucination`, `hallucinations` and `seeing things` select
+visual hallucination frequency, the outcome in the frozen claims. The
+response gives the canonical outcome. Use catalog search for other modalities.
+
 For known identifiers, send up to 100 PMIDs, PMCIDs, DOIs, NCT IDs or trial IDs
 from ANZCTR (ACTRN), ISRCTN and IRCT to `oracle_find_sources`. Bare numeric
 identifiers are PMIDs. Each
