@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The fifth rest-tremor checkpoint closed 37 original-source pairs and added three assessments. The Dutch BrAIN trial registry reports no significant effect on the MDS-UPDRS Part III total. Its mixed diet lists apples and olive oil but supplies no isolated food or rest-tremor result. The original queue holds 50,443 pairs, including 4,330 for rest tremor. No verdict changed. [Registry findings and original texts](followup/tremor-priority-nov17-05/README.md)
+
 The fourth rest-tremor checkpoint screened 56 appearances across two sets of 26 Europe PMC Methods expressions. Expanding the motor-score spelling recovered the same high-fiber pilot for apple and olive oil, with an overall motor outcome. It closed 49 original pairs at body depth and one at exact-assessment depth, retained nine assigned access holds, added four assessments and refined three. Verdicts remained unchanged. The 50,480-pair original queue retains 4,367 rest-tremor pairs. [Search repair and primary-source review](followup/tremor-priority-nov17-04/README.md)
 
 The third rest-tremor checkpoint screened 91 PubMed appearances, including the four alias retries, closed 28 original raw-fig pairs and added nine study assessments. The olive oil crossover, gluten withdrawal cases and broad dietary survey leave their individual rest-tremor effects unresolved. Verdicts remained unchanged. There are 4,417 original rest-tremor pairs still open within the 50,530-pair queue. [PubMed results and original source audit](followup/tremor-priority-nov17-03/README.md)
