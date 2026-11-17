@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The brown-rice follow-through closed 60 original pairs, reconciled 27 literature appearances and eight registry records, and added five assessments. The rice-serving trial measured post-meal pressure. The Japanese Parkinson inpatient report plots seated pressure before standing and leaves symptoms and meal composition open. Claim 0760 remains Unknown. The original Europe PMC queue holds 51,263 pairs. [Studies, recorded searches and remaining evidence gaps](followup/oracle-brown-rice-and-originals-nov17/README.md)
+
 The pea and paprika follow-through closed 56 original pairs and reconciled all 64 records in the focused ClinicalTrials.gov screen and both literature appearances. Reading comparison arms recovered a pea-protein trial the earlier screen missed. The paprika evidence separates exercise physiology, sleep diaries and executive tests from everyday fatigue. Three assessments were added and five revised. The six affected claims remain Unknown. The original Europe PMC queue holds 51,323 pairs. [Research, corrected screening and open access](followup/oracle-pea-paprika-and-originals-nov17/README.md)
 
 The original-source follow-through closed 34 exact pairs across 17 authenticated bodies. Five hard-access publications account for another 47 open pairs. The pumpkin seed oil review cataloged an earlier lipid report and verified the 2011 exploratory depression item and later registry scope. Claim 0074 remains Unknown. The original Europe PMC queue holds 51,379 pairs. [Primary bodies, registry screening and open access](followup/oracle-2019-originals-nov17/README.md)
