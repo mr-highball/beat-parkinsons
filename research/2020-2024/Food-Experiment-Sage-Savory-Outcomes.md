@@ -23,3 +23,7 @@ Rigi and Shahnavazi reported a double-blind comparison of 128 dormitory students
 ## Sage tea and sleep quality trial registration
 
 The November 2021 prospective record describes allocation by dormitory room, compares 10 g sage tea with 10 g brown-sugar tea and identifies PSQI as primary. Calendar and preparation details differ in the 2024 results paper. The original registry preserves these distinctions. [Official registry](https://en.irct.ir/trial/59723) · [Local registry text](Source-Text/2021-11-07-IRCT20141125020082N2-Sage-Tea-Sleep.txt) · [Publication comparison](#common-sage-tea-and-sleep-quality-in-students)
+
+## Inhaled essential-oil mixture and registered sleep measurements
+
+NCT06208800 combines morning and evening essential-oil preparations. The current article uses two names for clary sage as one ingredient, while the registry text lists clary and musk sage in separate words. The registry reports no posted results. The 2026 article is the linked result of this study. [Dated official registry summary](Source-Text/2024-NCT06208800.txt) · [Dated results](../2025-2029/Source-Text/2026-PMID42011111.txt)

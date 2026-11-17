@@ -11,3 +11,7 @@ Moghaddam and Asl Rousta reported six groups of eight rats in the Mehr 1395 issu
 ## Summer savory extract and locomotion after cisplatin
 
 The July 29, 2019 Kumburovic paper reports separate open-field and elevated-plus-maze movement measures in the previously cataloged cisplatin rat study. The middle dose attenuated the decline in distance moved and time moving. The lower and higher doses generally left activity below control values, and the extract-only group had no clear difference from control. Five rats were analyzed per group. These tests measure activity while awake and provide no sleep, fatigue, freezing, rigidity, falls or dystonia result. [Primary paper, Results 3.1 and Figures 1–2](https://pmc.ncbi.nlm.nih.gov/articles/PMC6701305/) · [Local article text](Source-Text/PMC6701305.txt) · [Earlier study-family assessment](Food-Experiment-Tarragon-Savory-Oregano.md#summer-savory-extract-and-behavior-after-cisplatin)
+
+## Sleep duration in a rat morphine-dependence model
+
+The original Hasanein abstract reports longer sleep duration during an extract sedation assessment in a morphine-related model. The full methods, arm estimates and transfer to ordinary dried sage or clinical insomnia remain unverified. [Original abstract summary](Source-Text/2015-PMID26337199.txt)
