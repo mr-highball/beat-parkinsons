@@ -4,6 +4,8 @@ January 1, 2015 through December 31, 2019.
 
 ## Annotated research
 
+- [Bottled oolong sips and retronasal sensory ratings](Source-Text/2018-Gotow-Oolong-Retronasal-Aroma.txt)
+- [PENSA registration for an isolated EGCG comparison with exploratory smell testing](Source-Text/Trials/NCT03978052.txt)
 - [Fatigue and scurvy with a restricted fried chicken and pasta diet](Food-Experiment-Restrictive-Diet-Scurvy.md)
 - [Bombax leaf extract in the scopolamine comparator study](Food-Experiment-Bombax-Leaf-Memory.md)
 - [Food2Learn mixed-oil comparator and planned sleep substudy](Food-Experiment-Food2Learn-Sleep-Protocol.md)

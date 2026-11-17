@@ -4,6 +4,9 @@ January 1, 2025 through November 11, 2026 (partial period).
 
 ## Annotated research
 
+- [Green-tea aroma, odor cards and odor memory](Food-Experiment-Tea-Odor-Tests.md)
+- [PENSA supplementary smell result for isolated EGCG](Source-Text/2025-PENSA-EGCG-Olfaction.txt)
+- [OCEAN randomized trial of Parkinson fluctuation-related pain](Source-Text/2026-OCEAN-Parkinson-Fluctuation-Pain.txt)
 - [MENASA Parkinson questionnaire and separate tea and symptom fields](Food-Experiment-MENASA-Questionnaire.md)
 - [Registered turmeric and pepper blend with timed cognitive tests](Food-Experiment-Turmeric-Pepper-Multidomain-Registry.md)
 - [Registered pepper extract blend and numeric working memory](Food-Experiment-Piperine-Oroxylum-Attention-Registry.md)

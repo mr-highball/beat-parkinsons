@@ -4,6 +4,11 @@ January 1, 2020 through December 31, 2024.
 
 ## Annotated research
 
+- [Olfactory training with a multiscent dispenser](Source-Text/2021-Aromastics-Green-Tea-Scent-Training.txt)
+- [Postinfectious parosmia and multiscent training](Source-Text/2022-Altundag-Green-Tea-Scent-Parosmia.txt)
+- [Odor familiarity and changes to the identification test](Source-Text/2023-Zhang-Odor-Familiarity-Test-Design.txt)
+- [Mind Your Nose odor-memory registration](Source-Text/Trials/ACTRN12622000116729.txt)
+- [Perioperative multiscent training registration](Source-Text/Trials/NCT06488807.txt)
 - [Mixed spice and honey preparation in a hypothyroid rat memory model](Food-Experiment-Pepper-Saffron-Thyroid-Memory.md)
 - [Cold-pressed black pepper oil and comparator provenance](Food-Experiment-Black-Pepper-Oil-Memory.md)
 - [Sleep registry and the flavored comparison beverage](Food-Experiment-Lemongrass-Flavor-Registry.md)
