@@ -5,6 +5,8 @@ January 1, 2015 through December 31, 2019.
 ## Annotated research
 
 - [Licorice extract trial and unspecific tremor outcome in the original abstract](Source-Text/2019-PMID31574343-Licorice-Parkinson-Abstract-Extract.txt)
+- [Capsicum extract and rearing behavior in a rat model](Source-Text/2019-PMID31440456-Capsicum-Rearing-Extract.txt)
+- [2016 butylphthalide registration and combined motor outcome](Source-Text/2016-ChiCTR-IPR-16009395-Butylphthalide-Registry-Extract.txt)
 - [Japanese gastric pH and levodopa pharmacokinetics registration](Source-Text/Trials/UMIN000036494.txt)
 
 - [Tendon thickness and measured Parkinson thumb rest tremor](Source-Text/2016-PMID28352760-Hand-Tremor-Extract.txt)
