@@ -32,6 +32,8 @@ The pooled saffron extract comparison favors an insomnia score and a separate pi
 
 [Previous period’s observations](../../2020-2024/Observations/README.md)
 
+- The newer PENSA supplement adds a direct odor-identification measure for isolated EGCG and gives an inconclusive contrast. The preceding period's green-tea scent study measured change under a self-selected multiscent program. Both add olfaction measurements, and neither establishes the effect of drinking brewed tea in Parkinson’s. [PENSA Table 6](../Source-Text/2025-PENSA-EGCG-Olfaction.txt) · [Earlier scent study](../../2020-2024/Source-Text/2022-Altundag-Green-Tea-Scent-Parosmia.txt)
+
 - The blinded asparagus extract crossover registered in 2023 reported a favorable sleepiness-on-rising score in 2025. It measured a different construct from the prior period's occupational fatigue rating, so the results do not independently establish a fatigue effect. [2023 registration](../../2020-2024/Food-Experiment-Food-Followup.md#asparagus-extract-and-sleep-trial-registration) · [2025 report](../Food-Experiment-Food-Followup.md#asparagus-stem-extract-and-awakening-symptoms)
 
 - The 2026 Keio study found that dysphagia and autonomic symptom scores tracked chronic drooling after adjustment. The earlier Korean claims study tracked aspiration pneumonia diagnoses. The two studies characterize different outcomes of swallowing impairment. [Keio study](../Nonmotor-and-Daily-Life.md#drooling-dysphagia-and-autonomic-symptoms) · [Prior period](../../2020-2024/Observations/README.md)
