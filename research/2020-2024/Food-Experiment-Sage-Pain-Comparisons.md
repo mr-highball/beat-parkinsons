@@ -25,3 +25,11 @@ The 2023 analysis used archived oral fungal samples from 45 of the 88 OralHAC pa
 ## Symptom reporting when an item is named or volunteered
 
 The 2024 report uses different cohorts from 2013 and 2017 within the OralHAC project. When the form specifically listed a symptom, dry mouth, constipation, and sleep problems were reported more often than when they had to be volunteered in a single optional space. The observed rates depend on the instruments and cohort. This questionnaire comparison provides no food or rinse effect. [Original source](https://link.springer.com/article/10.1186/s12904-024-01405-7) · [Local factual text](Source-Text/2024-03-16-Monsen-ESAS-Symptom-Reporting.txt)
+
+## Pain categories in a mixed-sage cognitive trial
+
+The 2021 Wightman study gives nine pooled pain or injury events in the combination-extract trial. Total possibly related events are available by arm across all categories, but the article gives no treatment-specific counts for pain and no pain severity measure. [Local original-source summary](Source-Text/2021-PMID33466627.txt)
+
+## Abdominal pain after reported high intake of common sage
+
+The 2023 Rapino case recorded abdominal pain of 6/10 after reportedly consuming a large quantity of common-sage plant material. The specific preparation is unknown. The presentation and concurrent treatments leave causal attribution uncertain. A single unusual exposure cannot establish the effect of normal culinary amounts in Parkinson disease. [Local original-source summary](Source-Text/2023-PMID38314208.txt)
