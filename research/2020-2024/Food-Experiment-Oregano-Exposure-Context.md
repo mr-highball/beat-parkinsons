@@ -6,7 +6,7 @@ Hegelmaier and colleagues list oregano among spices in the two-week diet, which 
 
 ## Oregano softgel and a registered drug interaction comparison
 
-The registry first posted November 19, 2024. The planned comparison uses a 180 mg oregano oil softgel and a cocktail of caffeine, dextromethorphan, losartan, midazolam and omeprazole, with a target enrollment of 16. Its primary outcome is a midazolam exposure ratio. Levodopa and the frozen Parkinson outcomes are outside the registered comparison. The record was recruiting with no results posted in the checked API snapshot. [Primary record](https://clinicaltrials.gov/study/NCT06693960) · [Local source text](Source-Text/NCT06693960-Oregano-Drug-Cocktail-Registry.txt)
+The registry first posted November 19, 2024. The planned comparison uses a 180 mg oregano oil softgel and a cocktail of caffeine, dextromethorphan, losartan, midazolam and omeprazole, with a target enrollment of 16. Its primary outcome is a midazolam exposure ratio. Levodopa and the frozen Parkinson outcomes are outside the registered comparison. The record was recruiting with no results posted in the checked API snapshot. [Primary record](https://clinicaltrials.gov/study/NCT06693960) · [Earlier local snapshot](Source-Text/NCT06693960-Oregano-Drug-Cocktail-Registry.txt) · [June 2026 official update](Source-Text/Trials/NCT06693960.txt)
 
 ## Registered oregano mouthwash and odor outcomes
 
