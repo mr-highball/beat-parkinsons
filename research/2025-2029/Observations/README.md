@@ -32,6 +32,8 @@ The pooled saffron extract comparison favors an insomnia score and a separate pi
 
 [Previous period’s observations](../../2020-2024/Observations/README.md)
 
+- A later Parkinson case included Anuloma DS and levodopa-containing *Mucuna* in the same regimen. Earlier Anuloma DS reports measured functional constipation, and the separate *Mucuna* crossover measured acute ON duration. The case's ordinal OFF score stayed at 2 while the printed percentage declined. The separate studies do not assign the case’s change to cumin. [Parkinson case](../Food-Experiment-Ground-Cumin-OFF-Time.md) · [Earlier bowel studies](../../2020-2024/Food-Experiment-Anuloma-Constipation.md) · [Acute crossover](../../2015-2019/Source-Text/2017-Cilia-Mucuna-ON-Time-Crossover.txt)
+
 - The newer PENSA supplement adds a direct odor-identification measure for isolated EGCG and gives an inconclusive contrast. The preceding period's green-tea scent study measured change under a self-selected multiscent program. Both add olfaction measurements, and neither establishes the effect of drinking brewed tea in Parkinson’s. [PENSA Table 6](../Source-Text/2025-PENSA-EGCG-Olfaction.txt) · [Earlier scent study](../../2020-2024/Source-Text/2022-Altundag-Green-Tea-Scent-Parosmia.txt)
 
 - The blinded asparagus extract crossover registered in 2023 reported a favorable sleepiness-on-rising score in 2025. It measured a different construct from the prior period's occupational fatigue rating, so the results do not independently establish a fatigue effect. [2023 registration](../../2020-2024/Food-Experiment-Food-Followup.md#asparagus-extract-and-sleep-trial-registration) · [2025 report](../Food-Experiment-Food-Followup.md#asparagus-stem-extract-and-awakening-symptoms)

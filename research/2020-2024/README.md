@@ -4,6 +4,8 @@ January 1, 2020 through December 31, 2024.
 
 ## Annotated research
 
+- [Cumin-containing Anuloma DS and functional constipation](Food-Experiment-Anuloma-Constipation.md)
+- [Electroacupuncture versus waitlist for Parkinson constipation](Source-Text/2023-Li-Electroacupuncture-Constipation.txt)
 - [Olfactory training with a multiscent dispenser](Source-Text/2021-Aromastics-Green-Tea-Scent-Training.txt)
 - [Postinfectious parosmia and multiscent training](Source-Text/2022-Altundag-Green-Tea-Scent-Parosmia.txt)
 - [Odor familiarity and changes to the identification test](Source-Text/2023-Zhang-Odor-Familiarity-Test-Design.txt)
