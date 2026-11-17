@@ -119,9 +119,89 @@ begin
   AElement.addEventListener(AEventName, AHandler);
 end;
 
-procedure Request(const ATool: String; AArguments: TJSObject; AReply: TOracleReply);
+procedure RequestLocal(const ABody: String; AReply: TOracleReply; ACanRetry: Boolean);
 var
   LRequest: TJSXMLHttpRequest;
+  LCompleted: Boolean;
+
+  procedure Fail(const AError: String; ATransient: Boolean);
+  begin
+    if LCompleted then
+      Exit;
+    LCompleted := True;
+    if ATransient and ACanRetry then
+    begin
+      window.setTimeout(
+        procedure
+        begin
+          RequestLocal(ABody, AReply, False);
+        end, 500);
+    end
+    else
+      AReply(nil, AError);
+  end;
+
+  function ConnectionFailed(AEvent: TJSProgressEvent): Boolean;
+  begin
+    Fail('The connection was interrupted. Please try again.', True);
+    Result := False;
+  end;
+
+begin
+  LCompleted := False;
+  LRequest := TJSXMLHttpRequest.new;
+  LRequest.onerror := @ConnectionFailed;
+  LRequest.onabort := @ConnectionFailed;
+  LRequest.ontimeout :=
+    function(AEvent: TJSProgressEvent): Boolean
+    begin
+      Fail('The request took too long. Please try again.', True);
+      Result := False;
+    end;
+  LRequest.onload :=
+    function(AEvent: TJSProgressEvent): Boolean
+    var
+      LValue: JSValue;
+      LError: String;
+    begin
+      Result := False;
+      if LCompleted then
+        Exit;
+      if (LRequest.Status = 0) or (LRequest.Status = 502) or
+        (LRequest.Status = 503) or (LRequest.Status = 504) then
+      begin
+        Fail('The connection was interrupted. Please try again.', True);
+        Exit;
+      end;
+      LCompleted := True;
+      try
+        LValue := TJSJSON.parse(LRequest.responseText);
+      except
+        AReply(nil, 'The oracle returned an unreadable response.');
+        Exit;
+      end;
+      if isNull(LValue) or (jsTypeOf(LValue) <> 'object') or TJSArray.isArray(LValue) then
+      begin
+        AReply(nil, 'The oracle returned an unreadable response.');
+        Exit;
+      end;
+      LError := TextOf(TJSObject(LValue), 'error');
+      if (LError = '') and (LRequest.Status >= 400) then
+        LError := 'The oracle reported HTTP ' + IntToStr(LRequest.Status) + '.';
+      AReply(TJSObject(LValue), LError);
+    end;
+  try
+    LRequest.open('POST', '/api/oracle', True);
+    LRequest.setRequestHeader('Content-Type', 'application/json');
+    LRequest.timeout := 25000;
+    LRequest.send(ABody);
+  except
+    Fail('The request could not start. Please try again.', False);
+  end;
+end;
+
+procedure Request(const ATool: String; AArguments: TJSObject; AReply: TOracleReply);
+var
   LBody: TJSObject;
 begin
   if GStaticOracle <> nil then
@@ -132,35 +212,7 @@ begin
   LBody := TJSObject.new;
   LBody['name'] := ATool;
   LBody['arguments'] := AArguments;
-  LRequest := TJSXMLHttpRequest.new;
-  LRequest.open('POST', '/api/oracle', True);
-  LRequest.setRequestHeader('Content-Type', 'application/json');
-  LRequest.timeout := 25000;
-  LRequest.onreadystatechange :=
-    procedure
-    var
-      LValue: JSValue;
-      LError: String;
-    begin
-      if LRequest.readyState <> TJSXMLHttpRequest.DONE then
-        Exit;
-      if LRequest.Status = 0 then
-      begin
-        AReply(nil, 'The local oracle could not be reached.');
-        Exit;
-      end;
-      try
-        LValue := TJSJSON.parse(LRequest.responseText);
-      except
-        AReply(nil, 'The oracle returned an unreadable response.');
-        Exit;
-      end;
-      LError := TextOf(TJSObject(LValue), 'error');
-      if (LError = '') and (LRequest.Status >= 400) then
-        LError := 'The oracle reported HTTP ' + IntToStr(LRequest.Status) + '.';
-      AReply(TJSObject(LValue), LError);
-    end;
-  LRequest.send(TJSJSON.stringify(LBody));
+  RequestLocal(TJSJSON.stringify(LBody), AReply, True);
 end;
 
 procedure PublishResults(ADocument: TNyxDocument; APage: TNyxNode);
