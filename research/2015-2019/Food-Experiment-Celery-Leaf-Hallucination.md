@@ -6,7 +6,7 @@ Khalid and colleagues report mania with elevated venlafaxine after a patient beg
 
 ## Pharmaceutical butylphthalide and the PDQ-39 combined item
 
-Zhou and colleagues used aggregate PDQ-39 scores in their 2019 Parkinson trial. Item 33 groups distressing dreams and hallucinations in one ordinal question. The paper provides neither that individual result nor a separate visual-hallucination outcome. Its independently reported adverse events have no hallucination category. The article identifies ChiCTR1800018892, and the official registry fields remain unavailable. [Original trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC6447885/) · [Oxford questionnaire sample](https://innovation.ox.ac.uk/wp-content/uploads/2014/07/Final_PDQ-39_English_UK_SAMPLE.pdf)
+Zhou and colleagues used aggregate PDQ-39 scores in their 2019 Parkinson trial. Item 33 groups distressing dreams and hallucinations in one ordinal question. The paper provides neither that individual result nor a separate visual-hallucination outcome. Its independently reported adverse events have no hallucination category. The article identifies ChiCTR1800018892, and the official registry fields remain unavailable. [Original trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC6447885/) · [AMP-PD questionnaire data dictionary](https://amp-pdrd.org/pdq-39)
 
 ## Dried celery leaf powder in a thyroid case report
 

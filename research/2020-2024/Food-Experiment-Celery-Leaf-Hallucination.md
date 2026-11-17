@@ -6,4 +6,4 @@ Le and colleagues describe mania and hallucinations within 48 hours of celery-ro
 
 ## Registered dried stalk-and-leaf comparison in diabetes
 
-IRCT first registered the Mohsenpour trial March 1, 2021. The official record specifies stalk-and-leaf powder and metabolic outcomes. Its approved publication reports general weekly safety calls and 36 participants analyzed. The current registry entry leaves actual first enrollment blank, and the authors describe retrospective registration. [Official registry summary](Source-Text/Trials/IRCT20100223003408N8.txt) · [Original trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC10494649/)
+IRCT first registered the Mohsenpour trial March 1, 2021. The official record specifies stalk-and-leaf powder and metabolic outcomes. The original publication reports general weekly safety calls and 36 participants analyzed. The current registry entry leaves actual first enrollment blank, and the authors describe retrospective registration. [Official registry summary](Source-Text/Trials/IRCT20100223003408N8.txt) · [Original trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC10494649/)
