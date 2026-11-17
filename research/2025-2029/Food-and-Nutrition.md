@@ -26,7 +26,7 @@ A six-month randomized trial of 40 people with Parkinson’s reported a larger i
 
 ### 2026 — Prebiotic and short-chain fatty acids for constipation
 
-A six-month randomized study compared three active regimens. Constipation scores improved with a prebiotic and the combination regimen, with the strongest reported changes in the combination group. There was no inactive control, and trial registration was retrospective. [Primary source](https://pubmed.ncbi.nlm.nih.gov/42315784/) · [German Clinical Trials Register](https://drks.de/search/en/trial/DRKS00027061/details)
+The 2026 bowel report is a secondary analysis of the same three-arm cohort reported in 2025. Figure 1 describes within-group constipation-score improvements with 2-fucosyllactose at six months and with the combined regimen at three and six months. Its legends list 24, 23 and 24 participants. The main text gives no numerical outcome table or inactive control. The retrospective registry describes allocation as nonrandomized and lists 80 final participants, in contrast with the published randomized design and 72 assigned. No shiso exposure is reported. [Primary report, Figures 1–3](https://doi.org/10.1007/s40120-026-00972-6) · [Local official registration fields](../2020-2024/Source-Text/Trials/DRKS00027061.txt)
 
 ### 2026 — Mediterranean diet counseling for constipation
 

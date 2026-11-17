@@ -1,5 +1,8 @@
 # Shiso and perilla follow-up
 
+## 2020 Constipation counts in a pediatric mixed-herb comparison
+
+The accessible abstract reports 11 versus 14 constipation cases after one week. The formula included perilla leaf and changed separately for participants with dry stools. The reported p value does not reconcile with an independent comparison assuming all 60 participants per group were assessed. The exact analysis denominator, outcome definition and test remain unavailable. [Primary abstract and conditional check](Source-Text/2020-Wang-Perilla-Mixture-Bowel-Abstract.txt)
 ## Dried leaf powder and home blood pressure
 
 Hashimoto and colleagues published their randomized placebo-controlled study on April 30, 2020. Sixty healthy Japanese adults received dried perilla leaf powder or pectin for six months. Complete serial home blood-pressure measurements were available in 30 participants. The overall analysis showed no clear difference. A subgroup with home systolic pressure at least 120 mmHg at month six had lower changes in morning and bedtime systolic pressure on leaf powder. The subgroup used an end-of-study pressure measure to classify participants. The study did not assess a pressure drop on standing, lightheadedness or fresh shiso consumption in Parkinson’s. [Primary report, Figure 1 and Table 3](https://pmc.ncbi.nlm.nih.gov/articles/PMC7248687/) · [Local full text](Source-Text/PMC7248687.txt)
@@ -18,7 +21,7 @@ Rotenone-exposed mice eating the two higher cold-pressed perilla seed oil diets 
 
 ## Acute leaf extract crossover registration
 
-ClinicalTrials.gov first posted NCT05603416 on November 2, 2022. The randomized crossover compared a proprietary perilla leaf extract with placebo in healthy adults after an experimentally large meal. The planned primary outcome was acute gastrointestinal discomfort over 90 minutes. The registry reports actual enrollment of 30 and displays no posted results. [Official registration](https://clinicaltrials.gov/study/NCT05603416) · [Later primary reports](../2025-2029/Food-Experiment-Shiso-Followup.md#acute-leaf-extract-crossover-and-bowel-movements)
+ClinicalTrials.gov first posted NCT05603416 on November 2, 2022. The randomized crossover compared a proprietary perilla leaf extract with placebo in healthy adults after an experimentally large meal. The planned primary outcome was acute gastrointestinal discomfort over 90 minutes. The registry reports actual enrollment of 30 and displays no posted results. [Official registration](https://clinicaltrials.gov/study/NCT05603416) · [Local official registry fields](Source-Text/Trials/NCT05603416.txt) · [Later primary reports](../2025-2029/Food-Experiment-Shiso-Followup.md#acute-leaf-extract-crossover-and-bowel-movements)
 
 ## Japanese registration for shiso as a food odor
 
@@ -30,7 +33,7 @@ Lee and colleagues’ 2022 protocol for a randomized waitlist comparison of Banh
 
 ## Perilla seed oil and constipation ratings in athletes and sedentary adults
 
-The 2022 first-online Kawamura trial randomized 36 female athletes to perilla seed-oil jelly or placebo. In the analysis using each participant’s lowest treatment-period score, the constipation contrast favored 9 g/day versus placebo (p = .020), with a less clear 3 g/day comparison (p = .073). The groups received unequal jelly schedules. Fresh shiso leaf and Parkinson constipation were untested. [Local factual text](Source-Text/2022-Kawamura-Perilla-Oil-Athlete-Constipation.txt) · [Primary source](https://doi.org/10.1017/S0007114522001805)
+The 2022 first-online Kawamura trial randomized 36 female athletes to perilla seed-oil jelly or placebo. In the analysis using each participant’s lowest treatment-period score, the constipation contrast favored 9 g/day versus placebo (p = .020), with a less clear 3 g/day comparison (p = .073). The groups received unequal jelly schedules. Figure 4 shows negative changes with the lower constipation scores, while the Methods wording describes subtracting the minimum score from baseline. The named UMIN record lists four arms including olive oil and 40 enrolled. The paper reports three arms and 36 randomized, without an olive-oil result. The register gives public disclosure in 2024 and its own earlier 2021 registration and result dates. Fresh shiso and Parkinson constipation were untested. [Official registry fields](Source-Text/Trials/UMIN000044882.txt) [Local factual text](Source-Text/2022-Kawamura-Perilla-Oil-Athlete-Constipation.txt) · [Primary source](https://doi.org/10.1017/S0007114522001805)
 
 ## Perilla seed oil in a fixed-order constipation pilot
 

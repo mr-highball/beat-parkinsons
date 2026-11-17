@@ -1,5 +1,17 @@
 # Shiso and perilla follow-up
 
+## 2017 Masked plant powder trial resolved to bamboo
+
+UMIN000029430 describes two weeks of an unspecified plant powder versus placebo with bowel-movement frequency as primary. Nishihira and colleagues' 2019 report names the same identifier and identifies Kumaizasa bamboo leaves. It also identifies the predecessor UMIN000024504 as a study of the same bamboo ingredient. Neither tests shiso. [Official record](Source-Text/Trials/UMIN000029430.txt) · [Original linked study](https://doi.org/10.31989/ffhd.v9i5.603)
+
+## 2017 Hou Gu Mi Xi registry formulation conflicts
+
+Two related food-mixture trials have separate registrations and primary protocols. In the nonorganic gastrointestinal disorders study, NCT03019042, registry prose mentions adding perilla leaf, while its treatment-arm ingredient list and the 2018 protocol Table 1 omit perilla and retain Platycodon. The protocol includes bowel items inside a composite and the completed record has no posted results. [2017 official registration](Source-Text/Trials/NCT03019042.txt) · [2018 primary protocol](https://pmc.ncbi.nlm.nih.gov/articles/PMC6304527/)
+
+The separate post-gastrectomy study, NCT03025152, has similar inconsistent perilla descriptions. Its 2019 protocol Table 1 retains Platycodon and omits perilla. It measures a composite with a defecation item and the registry reports termination for attrition. The recorded and planned amounts also differ. Neither trial supplies an ingredient-specific outcome or verifies what perilla exposure participants received. [2017 official registration](Source-Text/Trials/NCT03025152.txt) · [2019 primary protocol](https://doi.org/10.1186/s13063-019-3429-x)
+## 2017 Parkinson constipation and a different multi-herb formula
+
+The trial of Jiawei-Liujunzi Tang reported an inconclusive primary MDS-UPDRS Part I contrast and a favorable post-hoc constipation item at week 16. Its original Supplementary Table 1 lists 11 ingredients with no Perilla leaf or seed. The formula is distinct from Jia-Wei-Ji-Chuan-Jian. [Original outcomes and formula check](Source-Text/2017-Chua-JLT-Constipation-Supplement-Extract.txt) · [Official supplement](https://pmc-oa-opendata.s3.amazonaws.com/PMC5463168.1/1902708.f1.docx)
 ## Perilla leaf extract in an induced constipation model
 
 The 2017 *Biomedical Research* paper tested *Perilla frutescens* var. *japonica* leaf extract separately from perilla fruit and mallow in mice with activated-carbon-induced constipation. Figure 6 reports intestinal transit of 64.2% and 79.3% at the lower and higher leaf-extract levels, respectively, compared with 28.9% in induced controls. The study tests an extract in an induced gastrointestinal model. The 2021 Book Publisher International chapter uses the same protocol and is not counted as a separate experiment. The earlier placebo-controlled human trial found no clear constipation difference for another leaf extract. [Primary paper, Figure 6](https://www.alliedacademies.org/download.php?download=articles%2Fpreventive-effects-of-malvae-verticilate-and-perilla-frutescens-var-japonica-leaf-on-activated-carbon-induced-constipation-in-icr-.pdf) · [Later chapter](https://stm.bookpi.org/SBFDHP/article/view/2711) · [Earlier human comparison](../2010-2014/Food-Experiment-Shiso-Followup.md#dried-leaf-extract-and-constipation-measures-in-adults)

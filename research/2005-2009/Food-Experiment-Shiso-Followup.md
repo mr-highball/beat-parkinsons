@@ -1,5 +1,18 @@
 # Shiso and perilla follow-up
 
+## 2007 Korean mixed-formula bowel ratings
+
+The applicant reports a one-week comparison with four healthy women per product. Two formulas containing perilla leaf plus other added extracts have bowel-condition means of 4.50 and 4.75. The base herbal mixture had 4.25 and the brown-rice comparison 3.25. Each formulation differs in several ingredients. The application gives no isolated perilla contrast or measures of precision. [Original human example and Table 5](https://patents.google.com/patent/KR20070090485A/en) · [Local factual text](Source-Text/2007-KR20070090485A-Bowel-Comparison-Extract.txt)
+
+## 2008 Japanese green-shiso tablet and bowel ratings
+
+A Japanese application reports a one-week subjective comparison in 10 women with constipation. The green-shiso tablet also contains young barley leaf, piperine and resistant dextrin. The comparator uses young barley leaf. Both products have a bowel score of 2.8 on the applicant's three-point scale. The table conflicts with the narrative claim of improvement. [Original Study 2](https://patents.google.com/patent/JP2008048673A/ja) · [Original Table 3](https://patentimages.storage.googleapis.com/68/ae/f5/67b59f5adf3653/2008048673-4.png) · [Local factual text](Source-Text/2008-JP2008048673A-Green-Shiso-Bowel-Extract.txt)
+
+## 2006–2009 Perilla plant parts in bowel-related patent examples
+
+The 2006 applications CN1879739A and CN1748554A report multi-ingredient oral preparations made with perilla seed. The latter food is a cooked medicinal rice gruel. Both rely on uncontrolled applicant reports. In 2008, CN101095759A applied a topical preparation containing stem to the navel, and CN101301433A used white perilla seed in an uncontrolled atonic-constipation series. CN101259263A discusses constipation among several symptoms in an obesity formulation and does not identify the perilla plant part. [CN1879739A](https://patents.google.com/patent/CN1879739A/zh) · [CN1748554A](https://patents.google.com/patent/CN1748554A/zh) · [CN101095759A](https://patents.google.com/patent/CN101095759A/zh) · [CN101301433A](https://patents.google.com/patent/CN101301433A/zh) · [CN101259263A](https://patents.google.com/patent/CN101259263A/zh)
+
+The 2008 KR20080045770A rice-cake example includes perilla leaf in a cooked mixture and gives no comparative bowel data. In the 2009 group, CN101391058A contains perilla leaf in a large formulation, lists constipation among indications, and reports other symptoms in its cases. CN101513472A and CN101524486A propose seed mixtures without identified comparative clinical bowel results. CN101554432A uses a seed-containing external wash for hemorrhoids. CN101607073A includes leaf in a multicomponent proposed product and makes general constipation claims without a clinical comparison. [KR20080045770A](https://patents.google.com/patent/KR20080045770A/en) · [CN101391058A](https://patents.google.com/patent/CN101391058A/zh) · [CN101513472A](https://patents.google.com/patent/CN101513472A/zh) · [CN101524486A](https://patents.google.com/patent/CN101524486A/zh) · [CN101554432A](https://patents.google.com/patent/CN101554432A/zh) · [CN101607073A](https://patents.google.com/patent/CN101607073A/zh)
 ## Multi-herb perilla formula and neurasthenia fatigue claims
 
 Published October 7, 2009. The Chinese application names perilla leaf among many extracts and claims relief of lassitude and weakness in neurasthenia. It provides no identifiable clinical result isolating perilla or measuring Parkinson fatigue. Europe PMC displays the 2008 filing date for this hit. [Original source](https://patents.google.com/patent/CN101549094A/zh) · [Local factual text](Source-Text/2009-CN101549094A-Perilla-Fatigue-Formula.txt)
