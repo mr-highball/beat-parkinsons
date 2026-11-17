@@ -11,3 +11,11 @@ September 19, 2019. Of 31 Marseille poison-center exposure reports, 22 had suffi
 ## General discussion versus direct clinical observations
 
 The January 2015 report lists tremor when discussing prior toxicity literature. Its own case records no abnormality in the subsequent neurological examination. The Swiss poison-center report subsequently groups myoclonus with other clinical signs in moderate cases. Those are separate source observations and neither verifies a Parkinson rest-tremor outcome. [2015 original report](Source-Text/2015-PMID26219944.txt) · [Swiss primary report summary](../2025-2029/Food-Experiment-Nutmeg-Paprika.md)
+
+## Possible overlap between two intention tremor reports
+
+The 2017 full report and 2018 society abstract describe a patient of the same age treated at the same hospital after excess powdered nutmeg, both with hand intention tremor and recovery during observation. Two authors overlap. The reports differ in recorded intake, co-ingestion, chronic medication and urine toxicology. A shared patient identifier could not be verified, so the two reports are kept as potentially overlapping observations. The 2017 report cites the 2014 Ostabal Artigas letter, which describes a different presentation. [Original 2017 case](https://www.revista-portalesmedicos.com/revista-medica/intoxicacion-nuez-moscada/) · [Original 2018 proceedings, p. 400](https://www.samfyc.es/wp-content/uploads/2019/06/V19n1s2.pdf) · [2014 letter summary](../2010-2014/Source-Text/2014-Ostabal-Powdered-Nutmeg-Case-Extract.txt)
+
+## Beckerman and Persaud overdose abstract
+
+The authors describe psychiatric and neurological symptoms after a nutmeg overdose. The abstract does not itemize the observed motor signs. The main case text remains an open route for phenotype verification. [Local abstract summary](Source-Text/2019-Beckerman-Persaud-Nutmeg-Abstract-Extract.txt) · [Author abstract](https://pubmed.ncbi.nlm.nih.gov/31519286/)

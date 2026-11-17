@@ -7,3 +7,7 @@
 ## Dutch poison-center abstract and exposure forms
 
 2011. Van Riel and colleagues described 48 exposures in 37 people. Ground powder predominated, there were also whole-seed and coexposure cases, and three reports involved unexpectedly excess spice in food. The complete original abstract characterizes the overall course and leaves the individual tremor counts and posture unspecified. This is the Dutch series shown in the conference collection; its DOI identifies the collection and 133 the member abstract. [Original source](https://toxikonconsortium.org/FSDSD/Toolbox_files/EuropeanAbstracts2011.pdf) · [Local factual text](Source-Text/2011-Van-Riel-Dutch-Nutmeg-Abstract-Extract.txt)
+
+## Severe powdered nutmeg intoxication and seizure
+
+Ostabal Artigas's original 2014 letter reports hallucinations and status epilepticus after excessive powdered nutmeg intake. It gives no tremor phenotype or Parkinson diagnosis. Its age, hospital and clinical course differ from the later Axarquía intention-tremor case descriptions. [Published case summary](Source-Text/2014-Ostabal-Powdered-Nutmeg-Case-Extract.txt) · [Original letter](https://www.medintensiva.org/en-download-pdf-S0210569114001363)
