@@ -4,6 +4,8 @@ January 1, 2010 through December 31, 2014.
 
 ## Annotated research
 
+- [PREDIMED-Plus registration with shared extra-virgin olive oil](Source-Text/Trials/ISRCTN89898870.txt)
+
 - [Beverage coadministration and induced tremor](Food-Experiment-Beverages-and-Seizure-Tremor.md)
 
 - [Neurobehavior reviews and clinical symptom context](Food-Experiment-Neurobehavior-Review-Context.md)

@@ -4,6 +4,13 @@ January 1, 2025 through November 11, 2026 (partial period).
 
 ## Annotated research
 
+- [Dutch Parkinson diet protocols and posted motor results](Food-Experiment-Dutch-Diet-Trials.md)
+- [BrAIN diet protocol and food-choice tables](Source-Text/2026-Scheurink-No-Guts-No-Glory-Protocol.txt)
+- [BrAIN diet posted Dutch registry results](Source-Text/Trials/2026-NL-OMON52339-Results.txt)
+- [Contralateral tremor spread and verified preprint version](Source-Text/2025-PPMI-Contralateral-Tremor-Preprint-Extract.txt)
+- [FBXO7 clinical and neuroimaging observations](Source-Text/2025-PMID40740144-FBXO7-Neuroimaging-Extract.txt)
+- [Isolated cardamonin and mouse motor tests](Source-Text/2026-PMID42975774-Cardamonin-Abstract-Extract.txt)
+
 - [Mixed-spice capsules and a planned pain questionnaire](Food-Experiment-Sage-Mixed-Spice-Pain.md)
 
 - [Oat foods, formulations and sleep](Food-Experiment-Oats-Insomnia.md)

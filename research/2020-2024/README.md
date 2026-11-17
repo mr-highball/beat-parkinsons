@@ -4,6 +4,12 @@ January 1, 2020 through December 31, 2024.
 
 ## Annotated research
 
+- [Dutch BrAIN diet initial registration](Source-Text/Trials/NL-OMON20827.txt)
+- [Clinical examination after excess ground nutmeg](Source-Text/2022-Gavroy-Ground-Nutmeg-Clinical-Extract.txt)
+- [Curry leaf iron extract registration](Source-Text/Trials/NCT06096103.txt)
+- [Caffeine and total motor response in an Indonesian trial](Source-Text/2024-PMID39280310-Caffeine-Motor-Extract.txt)
+- [German high-fiber and lactulose registry](Source-Text/Trials/DRKS00034528.txt)
+
 - [Oat foods, formulations and sleep](Food-Experiment-Oats-Insomnia.md)
 
 - [Cumin-containing Anuloma DS and functional constipation](Food-Experiment-Anuloma-Constipation.md)

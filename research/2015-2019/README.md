@@ -4,6 +4,11 @@ January 1, 2015 through December 31, 2019.
 
 ## Annotated research
 
+- [Tendon thickness and measured Parkinson thumb rest tremor](Source-Text/2016-PMID28352760-Hand-Tremor-Extract.txt)
+- [Flaxseed oil trial registration history](Source-Text/2017-IRCT2017061234497N1-Registration-History.txt)
+- [Parkinson iPhone exercise study](Source-Text/2019-PMID30998100-Exercise-App-Extract.txt)
+- [Italian poison-center abstract on excess nutmeg](Source-Text/2019-Sabatini-Nutmeg-Poison-Center-Abstract-Extract.txt)
+
 - [Parkinson motor scores, tremor subtype and culinary exposure](Food-Experiment-Tremor-Primary-Studies.md)
 
 - [Sage-containing teas in controlled trial records](Food-Experiment-Sage-Tea-Trial-Records.md)

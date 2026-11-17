@@ -1,5 +1,9 @@
 # Fig fruit exposure and symptom outcomes, 2020–2024
 
+## Figs among foods in the Hegelmaier Parkinson intervention
+
+Hegelmaier and colleagues listed figs among the ingredients in the 14-day ovo-lacto vegetarian diet given to 16 people with Parkinson disease. Ten also received bowel cleansing and six received the diet alone. Food preparation and consumption were unreported for figs, and both groups received the mixed diet. The methods describe scoring rest tremor as one component of the original UPDRS Part III. Figure 4 gives before-to-one-year changes in the total, and supplementary Figure S2 plots individual totals immediately after the 14-day intervention. The immediate plot includes downward, flat and upward traces. The paper supplies no separate rest-tremor estimate or fig-specific contrast at either time. [Primary Methods and Table 3](Source-Text/PMC7072275.txt#L289) · [Original publication](https://www.mdpi.com/2073-4409/9/2/376) · [Supplementary Figure S2, p. 2](https://pmc-oa-opendata.s3.amazonaws.com/PMC7072275.1/cells-09-00376-s001.pdf)
+
 ## Fresh fig and drooling during an acute oral reaction
 
 Aruanno et al. reported a ten-year-old who developed immediate drooling, oral symptoms, urticaria, facial and lip swelling, and difficulty breathing after eating a fresh fig. Fig-specific IgE was 1.08 U/mL, and skin testing with raw and cooked fig peel and pulp was positive. The child declined a controlled oral challenge. The authors proposed possible cross-reactivity with dust mite protease Der p 1, which they did not establish experimentally in this patient. The case captures consumption followed by drooling in a likely allergic reaction. It provides no Parkinson sialorrhea severity contrast and cannot resolve claim `0188`. [Primary case](https://pmc.ncbi.nlm.nih.gov/articles/PMC7271553/) · [Local licensed report](Source-Text/PMC7271553.txt)

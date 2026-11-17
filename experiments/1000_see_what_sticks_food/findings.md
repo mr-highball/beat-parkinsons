@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The seventh rest-tremor checkpoint reviewed 78 original pairs at body depth, added six assessments and refined four. A shared Parkinson diet included figs, while the supplement and one-year follow-up give only total motor scores. Verified tea results concern incidence, isolated caffeine or mixed endpoints. The 50,361-pair original queue retains 4,248 rest-tremor pairs. No verdict changed. [Fig menu, primary outcomes and original access](followup/tremor-priority-nov17-07/README.md)
+
 The sixth rest-tremor checkpoint authenticated four public originals and added two related spice assessments. Official archive routes resolved a smartphone, two geographic matches and a preprint that measures resting tremor without a food comparison. Verdicts remained unchanged. The 50,439-pair original queue retains 4,326 rest-tremor pairs. [Recovered originals and registry limits](followup/tremor-priority-nov17-06/README.md)
 
 The fifth rest-tremor checkpoint closed 37 original-source pairs and added three assessments. The Dutch BrAIN trial registry reports no significant effect on the MDS-UPDRS Part III total. Its mixed diet lists apples and olive oil but supplies no isolated food or rest-tremor result. The original queue holds 50,443 pairs, including 4,330 for rest tremor. No verdict changed. [Registry findings and original texts](followup/tremor-priority-nov17-05/README.md)

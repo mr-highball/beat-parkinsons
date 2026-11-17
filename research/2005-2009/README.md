@@ -4,6 +4,10 @@ January 1, 2005 through December 31, 2009.
 
 ## Annotated research
 
+- [Black-tea intake and Parkinson incidence in Singapore](Source-Text/2007-PMID18156141-Singapore-Black-Tea-Incidence.txt)
+- [Black tea as an optional beverage in breath testing](Source-Text/2009-PMID19941660-Tea-Breath-Test-Extract.txt)
+- [Olive oil and resting tremor in separate neuroscience encyclopedia entries](Source-Text/2009-Neuroscience-Encyclopedia-C-Olive-Oil-Extract.txt)
+
 - [Oral eugenol and distinct thermal and mechanical responses](Food-Experiment-Clove-Neuropathic-Pain.md)
 
 - [Terpene and lovage primary sources](Food-Experiment-Terpene-and-Lovage-Primary-Sources.md)

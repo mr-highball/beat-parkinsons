@@ -19,3 +19,9 @@ The 2017 full report and 2018 society abstract describe a patient of the same ag
 ## Beckerman and Persaud overdose abstract
 
 The authors describe psychiatric and neurological symptoms after a nutmeg overdose. The abstract does not itemize the observed motor signs. The main case text remains an open route for phenotype verification. [Local abstract summary](Source-Text/2019-Beckerman-Persaud-Nutmeg-Abstract-Extract.txt) · [Author abstract](https://pubmed.ncbi.nlm.nih.gov/31519286/)
+
+The original publisher's accessible case snippet gives an adolescent with no relevant history or regular medication. It does not describe a rest-tremor examination. The later conference listing repeats the same author abstract. The publishable clinical evidence remains at abstract and snippet depth. [Publisher case page](https://www.sciencedirect.com/science/article/pii/S0965229919305540) · [Conference duplicate](https://www.clintox.org/wp-content/uploads/2019/10/HDS-Abstracts-Sept-2019.pdf)
+
+## Separate Italian poison-center abstract
+
+Sabatini and colleagues' original conference abstract records an adolescent with intentional nutmeg exposure followed by emesis, abdominal pain and headache. It gives no neurological examination or tremor assessment. Absence of a recorded sign in an abstract does not establish an examination result. [Abstract 21, p. 433](Source-Text/2019-Sabatini-Nutmeg-Poison-Center-Abstract-Extract.txt)
