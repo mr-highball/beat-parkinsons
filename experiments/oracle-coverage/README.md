@@ -104,10 +104,12 @@ When triaging an evidence-heavy claim, start with `oracle_claim` and
 page if the revision changes. The first page follows ledger order. Use the full
 response when reviewing all assessments and continue related source trails.
 
-When the workspace is opened through a filesystem link, launch the script from
-the checkout that owns the index. A catalog binding error can occur if the
-launcher is called through a different path to that checkout. Use
-`oracle_status` to verify the catalog before recording a source miss.
+When a compatibility checkout links its Git metadata and build directory to the
+moved checkout, the launcher resolves the Git junction's physical repository
+before starting a fresh server. Already-running MCP processes keep their original
+arguments until relaunched. For other filesystem aliases, launch from the
+checkout that owns the index. Use `oracle_status` before recording a source miss:
+a catalog binding failure is unavailable, not evidence missing from the catalog.
 
 If the launcher stalls and the local oracle web server is already running,
 use its loopback adapter for the same read-only lookup. Record the transport

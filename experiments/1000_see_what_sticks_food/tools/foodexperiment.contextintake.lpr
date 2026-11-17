@@ -28,9 +28,28 @@ begin
   Result.CaseSensitive := True;
 end;
 
+function CanonicalBasis(const ABasis: String): String;
+begin
+  if ABasis = 'title' then
+  begin
+    Result := 'title_and_index'
+  end
+  else
+  begin
+    Result := ABasis;
+  end;
+end;
+
 function Depth(const ABasis: String): Integer;
 begin
-  Result := IndexStr(ABasis, ['access_only', 'title', 'abstract', 'full_text']);
+  Result := IndexStr(CanonicalBasis(ABasis),
+    ['access_only', 'title_and_index', 'abstract', 'full_text']);
+end;
+
+function ReviewLine(const AFields: TFields): String;
+begin
+  Result := AFields[0] + #9 + AFields[1] + #9 + AFields[2] + #9 + AFields[3] +
+    #9 + AFields[4] + #9 + AFields[5];
 end;
 
 function SourceAvailable(const AReference: String): Boolean;
@@ -47,7 +66,8 @@ var
   LQueue, LCurrent, LProposals, LOpen, LSelected, LResidue, LExisting: TStringList;
   LFields, LPrior: TFields;
   LKey, LLocator, LReplacement: String;
-  LIndex, LPosition, LQueuedRow, LPriorRow, LDepth, LNew, LUpgraded, LRetained: Integer;
+  LIndex, LPosition, LQueuedRow, LPriorRow, LDepth, LPriorDepth,
+    LNew, LUpgraded, LRetained: Integer;
 begin
   LQueue := TStringList.Create;
   LCurrent := TStringList.Create;
@@ -96,6 +116,11 @@ begin
         'Missing evidence depth, locator or rationale for ' + LKey);
       Require(IndexStr(LFields[2], ['related', 'excluded', 'pending']) >= 0,
         'Unsupported review disposition for ' + LKey);
+      Require((LFields[3] <> 'access_only') or (LFields[2] = 'pending'),
+        'An access-only receipt requires pending role for ' + LKey);
+      LFields[3] := CanonicalBasis(LFields[3]);
+      // Normalize the emitted copy, never the caller's original proposal file.
+      LProposals[LIndex] := ReviewLine(LFields);
       if (LFields[2] = 'pending') or (LDepth < Depth('abstract')) then
       begin
         LResidue.Add(LQueue[LQueuedRow]);
@@ -112,15 +137,24 @@ begin
 
       LPriorRow := PtrInt(LExisting.Objects[LPosition]);
       LPrior := SplitFields(LCurrent[LPriorRow], #9);
-      Require((LPrior[2] = 'pending') and (LDepth >= Depth(LPrior[3])),
+      LPriorDepth := Depth(LPrior[3]);
+      Require((LPriorDepth >= 0) and
+        (((LPrior[2] = 'pending') and (LDepth >= LPriorDepth)) or
+        ((IndexStr(LPrior[2], ['related', 'excluded']) >= 0) and
+        (LPriorDepth = Depth('title_and_index')) and (LDepth >= Depth('abstract')))),
         'Intake does not replace settled or deeper reviews for ' + LKey);
-      if (LDepth > Depth(LPrior[3])) or (LFields[2] <> LPrior[2]) then
+      if (LDepth > LPriorDepth) or (LFields[2] <> LPrior[2]) then
       begin
         LCurrent[LPriorRow] := LReplacement;
         Inc(LUpgraded);
       end
       else
       begin
+        if LPrior[3] <> CanonicalBasis(LPrior[3]) then
+        begin
+          LPrior[3] := CanonicalBasis(LPrior[3]);
+          LCurrent[LPriorRow] := ReviewLine(LPrior);
+        end;
         Inc(LRetained);
       end;
     end;
