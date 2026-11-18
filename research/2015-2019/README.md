@@ -549,3 +549,8 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Observations on coffee and tremor in public conversations](Observations/Conversations-Coffee-and-Tremor.md).
 - [Odor detection after intranasal oxytocin and the earlier clove comparison](Source-Text/2015-PMID25637811-Woolley-Olfaction-Study-Family.txt).
 - [Strawberry-flavored milk as a common reward in a mouse learning experiment](Source-Text/2017-PMID28143767-Higa-Strawberry-Flavor-Reinforcement.txt).
+- [Registered lemon balm, chamomile and black tea postoperative comparison](Source-Text/Trials/IRCT20170122032101N2.txt).
+- [Traditional lemon balm use reported by Shahrekord practitioners](Cultural-and-Experiential/Traditional-Practices/2019-Teimouri-Shahrekord-Lemon-Balm-Traditional-Use.txt).
+- [UEG Week 2017 ingredient-specific exposure and preparation contexts](Source-Text/2017-PMC7672678-UEG-Food-Context-Extracts.txt).
+- [Aubert conference companion on the fixed blend and stress-related intestinal measures](Source-Text/2017-Aubert-STW5-Bowel-Transit-and-Stress.txt).
+- [British Neuroscience Association corn-oil and flavored milk source members](Source-Text/2019-PMC8842476-Corn-Oil-and-Reward-Preference.txt).

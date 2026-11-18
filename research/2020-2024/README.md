@@ -580,3 +580,10 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Reserpine, lemon-balm extract and a botanical combination in mice](Source-Text/2022-PMID35470926-Talebi-Lemon-Balm-Reserpine-Abstract-Extract.txt).
 - [Observations on lemon-balm preparations and public discussions](Observations/Lemon-Balm-Preparation-and-Conversations.md).
 - [Injected Prunus cerasoides stem and leaf extract in a mouse stroke model](Source-Text/2021-PMID35052603-Kim-Prunus-Cerasoides-Ischemia-Extract.txt).
+- [Postoperative lemon balm tea and repeated pain measurements](Source-Text/2020-Saidi-Postoperative-Lemon-Balm-Tea-Pain.txt).
+- [Preoperative lemon balm leaf extract and state anxiety](Source-Text/2022-Melissa-Leaf-Extract-Before-Orthopedic-Surgery.txt).
+- [Postoperative state anxiety in the same registered tea trial as the 2020 pain report](Source-Text/2023-Saidi-Postoperative-Lemon-Balm-Tea-State-Anxiety.txt).
+- [Orange juice nanovesicles in an obesity-related gut model](Source-Text/2020-PMID32953937-Berger-Orange-Nanovesicle-Gut-Study.txt).
+- [GSA 2020 observational tea and prediabetes egg trial members](Source-Text/2020-PMC7741497-GSA-Tea-and-Egg-Trials.txt).
+- [SGIM 2022 supplement, restricted-diet and environmental exposure cases](Source-Text/2022-PMC9205280-SGIM-Food-Case-Contexts.txt).
+- [Preparation and outcome differences in the orthopedic lemon balm study family](Observations/Lemon-Balm-Tea-Orthopedic-Trial-Family.md).

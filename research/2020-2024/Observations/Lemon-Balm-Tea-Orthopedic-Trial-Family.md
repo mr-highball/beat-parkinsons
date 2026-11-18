@@ -1,0 +1,7 @@
+# Lemon balm tea outcomes in the registered orthopedic trial
+
+The 2018 registration planned separate lemon balm, chamomile and black tea groups and specified pain, state anxiety and satisfaction. The 2020 and 2023 papers share the registration, ethics code, site, three arms and sample size. The later anxiety result is a separate outcome report from that study. [Registry](../../2015-2019/Source-Text/Trials/IRCT20170122032101N2.txt) · [Pain report](../Source-Text/2020-Saidi-Postoperative-Lemon-Balm-Tea-Pain.txt) · [State anxiety report](../Source-Text/2023-Saidi-Postoperative-Lemon-Balm-Tea-State-Anxiety.txt)
+
+Pain favored lemon balm tea through the first six comparisons and was inconclusive at the last three. The state-anxiety report gives a mean change of −1.64 versus −0.25 points for lemon balm and black tea at the second measurement. All arms improved over time and the tea preparations were distinguishable. The reports cover separate instruments and no depression result.
+
+The earlier Shahrekord ethnobotanical survey groups anxiety and depression as intended uses of the plant's aerial parts, with preparation unspecified. The separate preoperative capsule study compares a leaf extract with starch rather than the three teas used after surgery. [Traditional use record](../../2015-2019/Cultural-and-Experiential/Traditional-Practices/2019-Teimouri-Shahrekord-Lemon-Balm-Traditional-Use.txt) · [Separate capsule trial](../Source-Text/2022-Melissa-Leaf-Extract-Before-Orthopedic-Surgery.txt)
