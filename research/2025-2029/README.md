@@ -455,3 +455,5 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [2026 walnut-oil chemometrics abstract and access limits](Source-Text/2026-PMID42982915-Qian-Walnut-Oil-Chemometrics-Abstract-Extract.txt)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+- [Self-reported lemon balm use among Wrocław students](Cultural-and-Experiential/Personal-Reports/2026-PMID41584153-Wroclaw-Lemon-Balm-Survey.txt)

@@ -565,3 +565,5 @@ January 1, 2020 through December 31, 2024.
 The Singapore total-diet papers and original supplement preserve measured black-pepper concentration, eater-only modeled exposure and shared-program identity. They do not measure a Parkinson symptom. [2023 original and supplement](Source-Text/2023-PMID37628020-Yu-Singapore-Acrylamide-Extract.txt) · [2024 methods](Source-Text/2024-PMID38397488-Lim-Singapore-Total-Diet-Methods-Extract.txt) · [Observations across periods](Observations/Food-Experiment-Pepper-Acrylamide.md).
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+- [Ethanolic lemon balm extract in stimulated BV2 cells](Source-Text/2024-PMID39467696-Choi-Lemon-Balm-Microglia-Extract.txt)

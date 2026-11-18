@@ -374,3 +374,6 @@ Walnut-fraction methods identify solvent-extracted oil, and the two Iranian oil 
 Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinary treatment. [2011 original presentation](Source-Text/2011-PMC6863370-Clove-Odor-Stimulus-Abstract-Extract.txt).
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+- [Hot-water lemon balm and tissue oxidation in a mouse manganese model](Source-Text/2011-PMID22020131-Martins-Lemon-Balm-Manganese-Extract.txt)
+- [ADAGIO post hoc depression-item comparison and exact direction](Source-Text/2014-PMID25420207-Smith-ADAGIO-Depression-Extract.txt)

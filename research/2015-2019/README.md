@@ -537,3 +537,6 @@ Recovered conference contexts distinguish genuine foods, laboratory derivatives 
 The contaminant trail includes an original total-diet abstract, without a measured Parkinson symptom outcome. [2017 Korean acrylamide and furan](Source-Text/2017-Kim-Lee-Korean-Acrylamide-Furan-Abstract-Extract.txt).
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+- [Agreement between a Parkinson self-report screen and clinician depression item](Source-Text/2017-PMID28535723-Lachner-Depression-Screen-Abstract-Extract.txt)
+- [Functional neurological symptoms in Parkinson disease and depression versus anxiety measure labels](Source-Text/2018-PMID29549192-Wissel-Functional-Mood-Extract.txt)

@@ -147,3 +147,5 @@ January 1, 2000 through December 31, 2004.
 The walnut-oil lipid trial is archived at author-abstract depth, with processing and between-group details still open. [2003 original abstract](Source-Text/2003-PMID12934760-Zibaeenezhad-Walnut-Oil-Lipids-Abstract-Extract.txt).
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+- [Acute standardized extract, calmness and reduced alertness in healthy volunteers](Source-Text/2004-PMID15272110-Kennedy-Stress-Abstract-Extract.txt)
