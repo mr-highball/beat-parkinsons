@@ -463,3 +463,5 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Public caregiver discussion and a lemon-balm extract suggestion](Cultural-and-Experiential/Conversations/2025-Reddit-Lemon-Balm-Extract-Sleep-Suggestion.txt).
 - [Acute aqueous lemon-balm concentrate and opposing mouse behavior results](Source-Text/2026-Abbaszadeh-Lemon-Balm-Immobility-Extract.txt).
 - [Observations on lemon-balm preparations and public discussions](Observations/Lemon-Balm-Preparation-and-Conversations.md).
+- [Safflower-oil mixed meals, APOE genotype and lipoprotein outcomes](Source-Text/2025-BrainPET-0262-Safflower-Oil-Meal-Comparator.txt).
+- [Prunus cerasoides extract and prunetin in two cerebrovascular model abstracts](Source-Text/2025-BrainPET-Prunus-Cerasoides-Prunetin-Comparators.txt).

@@ -149,3 +149,4 @@ The walnut-oil lipid trial is archived at author-abstract depth, with processing
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 - [Acute standardized extract, calmness and reduced alertness in healthy volunteers](Source-Text/2004-PMID15272110-Kennedy-Stress-Abstract-Extract.txt)
+- [Coffee intake and glioma incidence in a managed-care cohort](Source-Text/2004-PMID15174522-Efird-Coffee-and-Glioma-Cohort-Abstract.txt).
