@@ -1,0 +1,5 @@
+# Lemon balm, acute mood and Parkinson depression
+
+The [2009 registration](../../2005-2009/Source-Text/Trials/ACTRN12609000864224.txt) is the prior period record. The [2014 publication](../Source-Text/2014-PMID25360512-Scholey-Lemon-Balm-Foods-Extract.txt) added drink and yoghurt results and left the planned fruit-bar arm unresolved. In the drink comparison, the direction varied with formulation, and the Results and Discussion gave different times for higher anxiety. Preserve the two product matrices and the comparator sweeteners when reusing this record.
+
+The [2002 capsule experiment](../../2000-2004/Source-Text/2002-PMID12062586-Kennedy-Lemon-Balm-Mood-Extract.txt) similarly found an acute change in calmness together with lower alertness at some doses. These laboratory mood changes differ from depression severity measured over weeks. The [2010 withdrawal study](../Source-Text/2010-PMID20065130-Rabinak-Withdrawal-Extract.txt) illustrates a separate medication-related source of depressive symptoms in Parkinson disease. Its herb-query appearance came from an author name.

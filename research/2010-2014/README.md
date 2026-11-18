@@ -12,6 +12,10 @@ January 1, 2010 through December 31, 2014.
 
 ## Annotated research
 
+- [Depression among reported symptoms during dopamine agonist withdrawal](Source-Text/2010-PMID20065130-Rabinak-Withdrawal-Extract.txt)
+- [Lemon balm extract in a drink and yoghurt, including unfavorable anxiety and fatigue results](Source-Text/2014-PMID25360512-Scholey-Lemon-Balm-Foods-Extract.txt)
+- [Observations comparing the 2009 registry, acute mood findings and Parkinson depression](Observations/Lemon-Balm-Mood-and-Exposure.md)
+
 - [Cantaloupe in grouped cucumber and squash intake and Parkinson occurrence](Source-Text/2014-PMID24122934-Cucurbit-Intake-Reply-Extract.txt)
 - [Measured filbertone signal by cold-pressed hazelnut preparation](Source-Text/2014-Bendini-Cold-Pressed-Hazelnut-Filbertone-Extract.txt)
 - [Parkinson blood harmane and clinical tremor subtypes](Source-Text/2013-PMID24300779-Parkinson-Harmane-Extract.txt)

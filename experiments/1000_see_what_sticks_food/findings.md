@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The eleventh lemon balm checkpoint reviewed five original pairs to body or author-abstract depth. It records author-name collisions, preserves the outstanding full-text routes and adds two indirect assessments of acute capsule and food-matrix outcomes. The 2009 registration and 2014 food study differ in stated formulations and matrices, and the paper gives conflicting times for the unfavorable anxiety comparison. Claim 0133 remains Maybe True at 51/100. The original queue holds 48,098 pairs, including 511 for that claim. [Originals, registration and replay verification](followup/lemon-balm-depression-nov18-11/README.md)
+
 The fourth cultural checkpoint adds four chronological records on care, stigma, prayer and patient experience. The collection has twenty records. The preliminary prayer comparison carries its original timing and control-data limitations, and the qualitative sources preserve cohort overlap and conflicting experiences. The food verdicts and original source queue are unchanged. [Sources and remaining questions](followup/tremor-cultural-nov18-04/README.md)
 
 The third cultural checkpoint adds five records and accurately dated historical buckets, while retaining manuscript, transcript and supplementary-access limits. The cultural collection has sixteen records; clinical grades remain 27 Maybe True, 32 Maybe False and 941 Unknown, with zero True/False. [Evidence and remaining scope](followup/tremor-cultural-nov18-03/README.md)

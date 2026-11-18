@@ -10,6 +10,8 @@ January 1, 2000 through December 31, 2004.
 
 ## Annotated research
 
+- [Acute lemon balm extract, calmness and alertness in healthy adults](Source-Text/2002-PMID12062586-Kennedy-Lemon-Balm-Mood-Extract.txt)
+
 - [Filbertone in roasted and unroasted hazelnut oils](Food-Experiment-Hazelnut-Filbertone.md)
 - [Enteral formula comparison and separately reported motor signs](Food-Experiment-Clinical-Nutrition-Followup.md)
 - [Pumpkin seed extract in prostate surveillance](Food-Experiment-Pumpkin-Extract-Surveillance.md)
