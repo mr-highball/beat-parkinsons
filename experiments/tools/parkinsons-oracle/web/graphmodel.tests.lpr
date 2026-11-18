@@ -49,6 +49,7 @@ var
   LRest: Boolean;
   LFatigue: Boolean;
   LReference: Boolean;
+  LOpposingSaffron: Integer;
 begin
   Check(HostDigest(EmbeddedGraphJSON) = EmbeddedGraphDigest,
     'Every embedded UTF-8 byte matches the native model before parsing.');
@@ -89,6 +90,20 @@ begin
     end;
     Check(LRest and LFatigue, 'Shared registry connects only its recorded symptom assessments.');
     Check(LReference, 'Clickable assessment source has an exact document node.');
+    LRows := LModel.Neighbors('study:PMID41439298');
+    LOpposingSaffron := 0;
+    for LIndex := 0 to LRows.Length - 1 do
+    begin
+      LEdge := TJSObject(LRows[LIndex]);
+      if (GraphText(LEdge, 'kind') = 'outcome') and
+        (GraphText(TJSObject(LEdge['assessment']), 'role') = 'opposes') then
+      begin
+        Check((GraphText(LEdge, 'label') = 'Challenges hypothesis') and
+          (GraphText(LEdge, 'trend') = ''), 'Real opposing assessments retain their role.');
+        Inc(LOpposingSaffron);
+      end;
+    end;
+    Check(LOpposingSaffron >= 2, 'Saffron depression and fatigue opposition is present.');
     Check(LModel.Neighbors('symptom:rest tremor severity').Length = 210,
       'Sorting a detached neighbor view cannot mutate the graph.');
     Check(LModel.Node('symptom:invented condition') = nil, 'No inferred condition is fabricated.');

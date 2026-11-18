@@ -36,7 +36,7 @@ end;
 function GraphAssessmentTrend(const ARole, ADirection: String): String;
 begin
   Result := '';
-  if ARole = 'support' then
+  if ARole = 'supports' then
   begin
     Result := ClaimTrend('Maybe True', ADirection);
   end;
@@ -55,7 +55,7 @@ begin
   begin
     Exit('Supports worsening hypothesis');
   end;
-  if ARole = 'oppose' then
+  if ARole = 'opposes' then
   begin
     Exit('Challenges hypothesis');
   end;

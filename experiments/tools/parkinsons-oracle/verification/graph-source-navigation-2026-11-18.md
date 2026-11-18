@@ -19,3 +19,5 @@ Qualified easing/worsening judgments produce green/red claim links. A supporting
 - Compiler, include, model and test outputs are under ignored build directories. Frozen claims, evidence judgments and research files were not modified by this interface change.
 
 Browser input, touch gestures, visual layout and mobile source-return interaction remain unverified under the existing browser-access guard. No visual acceptance or public deployment is claimed. These checks distinguish compiled UI wiring, executed model semantics, readable API sources and actual browser interaction.
+
+The follow-up audit found that the initial direction fixtures used `support` and `oppose`, while ledger rows use `supports` and `opposes`. The graph now matches the actual schema. Both real saffron assessment links labeled `opposes` show “Challenges hypothesis” without implying an inverse effect. The revised native and transpiled direction fixtures pass 15 checks each, and the real-model fixture passes 18 checks.

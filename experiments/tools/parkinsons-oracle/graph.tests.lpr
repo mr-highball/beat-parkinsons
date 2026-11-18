@@ -27,9 +27,11 @@ begin
   Check(GraphAssessmentTrend('related', 'worsens') = '', 'Related green tea context is not red.');
   Check(GraphAssessmentTrend('pending', 'reduces') = '', 'Pending evidence has no trend.');
   Check(GraphAssessmentTrend('inconclusive', 'worsens') = '', 'Inconclusive evidence has no trend.');
-  Check(GraphAssessmentTrend('oppose', 'worsens') = '', 'Opposition cannot reverse an effect.');
-  Check(GraphAssessmentTrend('support', 'reduces') = 'eases', 'Support retains the tested direction.');
-  Check(GraphAssessmentTrend('support', 'worsens') = 'worsens', 'Support can describe harm.');
+  Check(GraphAssessmentTrend('opposes', 'worsens') = '', 'Opposition cannot reverse an effect.');
+  Check(GraphAssessmentLabel('opposes', 'worsens') = 'Challenges hypothesis',
+    'An opposing study retains its actual ledger role.');
+  Check(GraphAssessmentTrend('supports', 'reduces') = 'eases', 'Support retains the tested direction.');
+  Check(GraphAssessmentTrend('supports', 'worsens') = 'worsens', 'Support can describe harm.');
   Check(GraphAssessmentLabel('pending', 'reduces') = 'Awaiting evidence', 'Access gaps remain visible.');
   Check(GraphAssessmentLabel('inconclusive', 'reduces') = 'Inconclusive', 'Keep uncertainty explicit.');
   WriteLn(GChecks, ' graph evidence-direction checks passed.');
