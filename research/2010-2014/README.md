@@ -377,3 +377,6 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 
 - [Hot-water lemon balm and tissue oxidation in a mouse manganese model](Source-Text/2011-PMID22020131-Martins-Lemon-Balm-Manganese-Extract.txt)
 - [ADAGIO post hoc depression-item comparison and exact direction](Source-Text/2014-PMID25420207-Smith-ADAGIO-Depression-Extract.txt)
+
+- [Single and repeated ethanolic lemon balm in rat behavior tests](Source-Text/2012-PMID22529473-Taiwo-Lemon-Balm-Behavior-Extract.txt)
+- [STACCATO drug-group abstract and unresolved participant counts](Source-Text/2014-PMID25314256-Panisset-STACCATO-Abstract-Extract.txt)

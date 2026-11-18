@@ -8,3 +8,6 @@
 Collect traditional practices, ceremonial accounts, public personal reports and local knowledge here, separately from formal studies. An empty category does not establish that a practice or source is absent.
 
 Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experiential.md). Create the applicable subcategory when adding records, and cross-link prior research without duplicating studies.
+
+- [Non-psychotic psychiatric interviews on lemon-balm infusion](Personal-Reports/2017-PMID28951674-Serbia-Lemon-Balm-Infusion-Interviews.txt).
+- [Psychotic outpatient interviews on lemon-balm infusion](Personal-Reports/2018-PMID29556124-Serbia-Lemon-Balm-Psychiatric-Interviews.txt).

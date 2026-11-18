@@ -540,3 +540,8 @@ The contaminant trail includes an original total-diet abstract, without a measur
 
 - [Agreement between a Parkinson self-report screen and clinician depression item](Source-Text/2017-PMID28535723-Lachner-Depression-Screen-Abstract-Extract.txt)
 - [Functional neurological symptoms in Parkinson disease and depression versus anxiety measure labels](Source-Text/2018-PMID29549192-Wissel-Functional-Mood-Extract.txt)
+
+- [Concentrated-water lemon balm and separate rosmarinic acid in the rat swim test](Source-Text/2015-PMID26408043-Lin-Lemon-Balm-Water-Extract.txt)
+- [Chronic stress, single lemon-balm extract and separate blends](Source-Text/2017-PMID29668446-Kandilarov-Lemon-Balm-Stress-Extract.txt)
+- [Non-psychotic psychiatric interviews on lemon-balm infusion](Cultural-and-Experiential/Personal-Reports/2017-PMID28951674-Serbia-Lemon-Balm-Infusion-Interviews.txt)
+- [Psychotic outpatient interviews on lemon-balm infusion](Cultural-and-Experiential/Personal-Reports/2018-PMID29556124-Serbia-Lemon-Balm-Psychiatric-Interviews.txt)

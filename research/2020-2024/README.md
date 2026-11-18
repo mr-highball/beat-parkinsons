@@ -567,3 +567,9 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 - [Ethanolic lemon balm extract in stimulated BV2 cells](Source-Text/2024-PMID39467696-Choi-Lemon-Balm-Microglia-Extract.txt)
+
+- [Hydroalcoholic lemon balm and conflicting dose labels in restraint-stressed mice](Source-Text/2020-PMID32003913-Ghazizadeh-Lemon-Balm-Restraint-Extract.txt)
+- [Antistress mixtures, single Melissa and serum cytokines](Source-Text/2023-PMID37687297-Kandilarov-Antistress-Cytokines-Extract.txt)
+- [Diet-specific differences in sucrose preference after injected extract](Source-Text/2024-PMID40255947-Hatami-Lemon-Balm-Diet-Extract.txt)
+- [Niš ethnobotanical record of dried-leaf lemon-balm tea](Cultural-and-Experiential/Traditional-Practices/2024-Nis-Lemon-Balm-Leaf-Tea-Survey.txt)
+- [Observations on lemon-balm preparations and behavioral measures](Observations/Food-Experiment-Lemon-Balm-Comparator-Crosscheck.md)
