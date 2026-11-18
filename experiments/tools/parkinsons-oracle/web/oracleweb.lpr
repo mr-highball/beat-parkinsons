@@ -146,8 +146,9 @@ procedure SetExternalLink(const ANodeId: String);
 var
   LLink: TJSHTMLElement;
 begin
-  LLink := GResultsRenderer.ElementFor(ANodeId);
-  if (LLink <> nil) and LLink.hasAttribute('href') then
+  LLink := TJSHTMLElement(GRenderer.ElementFor('results-frame').querySelector(
+    'a[data-node="' + ANodeId + '"]'));
+  if LLink <> nil then
   begin
     LLink.setAttribute('target', '_blank');
     LLink.setAttribute('rel', 'noopener');
