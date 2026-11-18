@@ -1,5 +1,7 @@
 # Food thought experiment follow-up
 
+- [Original historical and cultural source checkpoint](tremor-cultural-nov18-03/README.md): five records, historical date validation and preserved access limits; clinical grades unchanged.
+
 - [Second inclusive tremor checkpoint](tremor-cultural-nov17-02/README.md): five more cultural records, existing-trial reporting audit, five Oracle partials and preserved clinical grades.
 
 The [inclusive tremor and cultural checkpoint](tremor-cultural-nov17-01/README.md) adds separately classified practice and personal records, preserves differing experiences, and makes unresolved and unreviewed material visible by default. The clinical verdict totals remain unchanged.

@@ -131,6 +131,12 @@ var
   LYear: Integer;
   LLastBucket: Integer;
   LPeriods: Integer;
+  LHistoricalPeriods: Integer;
+  LYears: TStringList;
+  LYearIndex: Integer;
+  LSearch: TSearchRec;
+  LStartYear: Integer;
+  LEndYear: Integer;
   LCreated: Integer;
   LLinked: Integer;
 begin
@@ -152,12 +158,54 @@ begin
   end;
   LCreated := 0;
   LLinked := 0;
+  LHistoricalPeriods := 0;
   LLines := TStringList.Create;
+  LYears := TStringList.Create;
   GRecordsVerified := 0;
   try
     LYear := 1865;
     while LYear <= LLastBucket do
     begin
+      LYears.Add(IntToStr(LYear));
+      Inc(LYear, 5);
+    end;
+    // Admit only explicitly existing historical collections; never pad missing centuries.
+    if FindFirst(LResearch + '*', faAnyFile, LSearch) = 0 then
+    begin
+      try
+        repeat
+          if ((LSearch.Attr and faDirectory) = 0) or
+            not TryStrToInt(Copy(LSearch.Name, 1, 4), LStartYear) or
+            (LStartYear >= 1865) then
+          begin
+            Continue;
+          end;
+          LDirectory := LResearch + LSearch.Name + DirectorySeparator +
+            'Cultural-and-Experiential';
+          if not DirectoryExists(LDirectory) then
+          begin
+            Continue;
+          end;
+          Require((LSearch.Attr and faSymLink) = 0,
+            'Linked historical period is not supported: ' + LSearch.Name);
+          Require((Length(LSearch.Name) = 9) and (LSearch.Name[5] = '-') and
+            (LStartYear >= 1000) and ((LStartYear mod 5) = 0) and
+            TryStrToInt(Copy(LSearch.Name, 6, 4), LEndYear) and
+            (LEndYear = LStartYear + 4),
+            'Invalid historical five-year period: ' + LSearch.Name);
+          Require(FileExists(LResearch + LSearch.Name + DirectorySeparator + 'README.md'),
+            'Missing historical period index: ' + LSearch.Name);
+          LYears.Add(IntToStr(LStartYear));
+          Inc(LHistoricalPeriods);
+        until FindNext(LSearch) <> 0;
+      finally
+        FindClose(LSearch);
+      end;
+    end;
+    LYears.Sort;
+    for LYearIndex := 0 to LYears.Count - 1 do
+    begin
+      LYear := StrToInt(LYears[LYearIndex]);
       LPeriod := IntToStr(LYear) + '-' + IntToStr(LYear + 4);
       LDirectory := LResearch + LPeriod + DirectorySeparator + 'Cultural-and-Experiential';
       Require(ForceDirectories(LDirectory), 'Cannot create period category.');
@@ -183,13 +231,13 @@ begin
         SaveText(LIndex, LLines.Text);
         Inc(LLinked);
       end;
-      Inc(LYear, 5);
     end;
   finally
+    LYears.Free;
     LLines.Free;
   end;
   WriteLn('periods=', LPeriods, ' category_readmes_created=', LCreated,
-    ' index_links_added=', LLinked);
+    ' index_links_added=', LLinked, ' historical_periods=', LHistoricalPeriods);
   WriteLn('cultural_records_verified=', GRecordsVerified,
     ' collection_metadata_dates_provenance_and_reused_accessions=PASS');
 end;

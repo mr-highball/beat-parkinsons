@@ -1,5 +1,7 @@
 # Parkinson’s research archive
 
+Original cultural-source context before 1865 is accessioned in inspected periods only: [1595–1599](1595-1599/README.md) and [1660–1664](1660-1664/README.md). These do not imply complete intervening coverage or verified historical Parkinson diagnoses. The original continuous 1865-onward series is preserved.
+
 The initial collection snapshot is **November 11, 2026**. Collection and evidence review continue in the [experiment work record](../experiments/1000_see_what_sticks_food/WORK.md). Each period covers five calendar years; the active [2025–2029 bucket](2025-2029/README.md) is partial.
 
 The November 11 snapshot contains **430 annotated entries** across 33 periods, including 59 food and nutrition entries. The search indexes contain 133,596 Europe PMC literature records, 187 archival PubMed records with one overlap, and 5,075 ClinicalTrials.gov registrations.

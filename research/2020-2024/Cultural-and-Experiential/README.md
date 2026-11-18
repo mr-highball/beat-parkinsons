@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2020-2024
 
+- [Contemporary Kampavata practitioner case context](Traditional-Practices/2024-Kampavata-Mixed-Practitioner-Course.txt).
+
 - [Skullcap and blue vervain in a practitioner tremor chart](Traditional-Practices/2023-Skullcap-Vervain-Practitioner-Tremor-Use.txt).
 
 - [2020 variable perceived Mucuna benefit and adverse experiences](Personal-Reports/2020-Mucuna-Variable-Benefit-and-Adverse-Experience.txt).

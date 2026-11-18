@@ -1,5 +1,7 @@
 # 2015-2019
 
+- [Lumbee cultural context and supplementary access gap](Cultural-and-Experiential/Local-Knowledge/2017-Lumbee-Calming-Tea-Context.txt), linked to the existing factual extract.
+
 - [Broad-bean belief and practitioner opinion](Cultural-and-Experiential/Traditional-Practices/2015-Broad-Bean-Belief-and-Practitioner-Concern.txt).
 - [Public sprouted-fava resting-tremor account](Cultural-and-Experiential/Personal-Reports/2019-Sprouted-Fava-Perceived-Rest-Tremor-Relief.txt).
 - [Cultural-source comparison with the preceding period](Observations/Cultural-and-Experiential-Tremor.md).

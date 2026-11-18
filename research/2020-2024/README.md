@@ -1,5 +1,7 @@
 # 2020-2024
 
+- [Combined Kampavata case extract](Source-Text/2024-Sharma-Kampavata-Case-Extract.txt) and [practitioner context](Cultural-and-Experiential/Traditional-Practices/2024-Kampavata-Mixed-Practitioner-Course.txt).
+
 - [Practitioner skullcap–vervain tremor-use chart](Cultural-and-Experiential/Traditional-Practices/2023-Skullcap-Vervain-Practitioner-Tremor-Use.txt).
 
 [Mucuna personal reports](Cultural-and-Experiential/README.md) preserve both perceived benefit and no-benefit/adverse experiences. [Observations and interpretation](Observations/Cultural-and-Experiential-Tremor.md).

@@ -30,6 +30,8 @@ Record these fields explicitly:
 
 Use the actual source publication date for the bucket, not an unsupported ancient attribution. A modern edition of a historical text belongs with that edition and records the older attribution separately. For an undated public source, use the first documented capture's period and label `Date basis: first documented capture; publication date unknown`; this is an archival placement, not a fabricated publication date.
 
+Original documents earlier than 1865 belong in their actual five-year period, such as `1595-1599`, as historical context. Create only a period with an inspected source, its index and Observations; do not pad intervening centuries. Keep the original continuous 1865-onward series intact. Record corrected title-page dates, replacement leaves, edition uncertainty and transcript-only access. An early shaking or palsy recommendation does not establish a historical Parkinson diagnosis or centuries of verified benefit.
+
 Traditional and personal accounts carry lower evidential weight for treatment effects than controlled human studies. A structured survey is observational research, not a randomized intervention. A laboratory mechanism, a repeated testimonial and an authentic traditional text also answer different questions. Do not attach arbitrary numerical weights or count repeated accounts as independent replications. Any experimental verdict still needs a source-level rationale, preparation and symptom fit, contrary evidence and the established confidence rules.
 
 Cross-link formal studies already stored under `Source-Text/` instead of duplicating cohorts. A cultural record can point to a formal trial without inheriting its result for a different recipe, ceremony, dose or diagnosis. Sources outside the frozen experiment vocabulary remain valid catalog leads.
@@ -46,4 +48,4 @@ fpc -B -Mdelphi -Sa -Cr -Co -Ci -gl -FUbuild/cultural-catalog/units -FEbuild/cul
 & ./build/cultural-catalog/bin/research.culture.exe (Get-Location).Path 2025
 ```
 
-The final argument is the last bucket's starting year. The tool preserves existing category text and links, checks required source fields and chronological placement, and verifies reused accession paths. File and metadata validation does not establish factual or clinical validity.
+The final argument is the last bucket's starting year. The tool preserves existing category text and links, checks required source fields and chronological placement, and verifies reused accession paths. It also verifies existing pre-1865 cultural periods with a period index, rejecting malformed or shifted ranges; it does not create missing historical periods. File and metadata validation does not establish factual or clinical validity.

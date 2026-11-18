@@ -1,5 +1,7 @@
 # 2010-2014
 
+- [Mixed-herb exposure case extract](Source-Text/2011-Carrasco-Herbs-Lorazepam-Case-Extract.txt) and [experiential context](Cultural-and-Experiential/Personal-Reports/2011-Mixed-Herb-Lorazepam-Adverse-Account.txt); related 2009 report is the same case.
+
 - [Public broad-bean arm-tremor account](Cultural-and-Experiential/Personal-Reports/2014-Broad-Bean-Arm-Tremor-No-Noticed-Change.txt).
 
 The [2010 practitioner handbook record](Cultural-and-Experiential/Traditional-Practices/2010-CCRAS-Kampavata-Herbal-Practice.txt) preserves a documented traditional-use claim separately from clinical outcomes. [Observations](Observations/Cultural-and-Experiential-Tremor.md).

@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2010-2014
 
+- [Mixed-herb and lorazepam adverse account](Personal-Reports/2011-Mixed-Herb-Lorazepam-Adverse-Account.txt), reusing the linked primary case.
+
 - [Seasonal broad beans: no noticed arm-tremor change](Personal-Reports/2014-Broad-Bean-Arm-Tremor-No-Noticed-Change.txt).
 
 - [Kapikacchu and ashwagandha in the 2010 practitioner handbook](Traditional-Practices/2010-CCRAS-Kampavata-Herbal-Practice.txt).
