@@ -7,6 +7,10 @@ interface
 
 uses SysUtils, JS;
 
+const
+  GraphKinds: array[0..3] of String = ('symptom', 'ingredient', 'study', 'source');
+  GraphGroupNames: array[0..3] of String = ('Symptoms', 'Ingredients', 'Studies', 'Saved sources');
+
 { An indexed, read-only projection of the committed oracle model. References
   retain the original claim and assessment objects; no text inference creates edges. }
 type
@@ -20,10 +24,10 @@ type
     procedure AddNode(const AKey, AKind, ALabel, AValue: String);
     procedure AddEdge(const AKey, AFrom, ATo, AKind, ALabel, ATrend: String;
       AClaim, AAssessment: TJSObject);
-    function Eligible(AEdge: TJSObject; const ANode: String): Boolean;
   public
     constructor Create(AModel: TJSObject);
     function Node(const AKey: String): TJSObject;
+    function Other(AEdge: TJSObject; const ANode: String): String;
     function Neighbors(const AKey: String): TJSArray;
     function Revision: String;
     property NodeCount: Integer read FNodeCount;
@@ -34,6 +38,8 @@ function GraphText(AObject: TJSObject; const AKey: String): String;
 function GraphRows(AObject: TJSObject; const AKey: String): TJSArray;
 function GraphKey(const AKind, AValue: String): String;
 function ReferenceFile(const APath: String): String;
+function GraphKindIndex(const AKind: String): Integer;
+function GraphEdgeTone(AEdge: TJSObject): String;
 
 implementation
 
@@ -62,6 +68,46 @@ end;
 function GraphKey(const AKind, AValue: String): String;
 begin
   Result := AKind + ':' + AValue;
+end;
+
+function GraphKindIndex(const AKind: String): Integer;
+var
+  LIndex: Integer;
+begin
+  for LIndex := Low(GraphKinds) to High(GraphKinds) do
+  begin
+    if GraphKinds[LIndex] = AKind then
+    begin
+      Exit(LIndex);
+    end;
+  end;
+  raise Exception.Create('Unrecognized graph node kind: ' + AKind);
+end;
+
+function GraphEdgeTone(AEdge: TJSObject): String;
+var
+  LKind: String;
+  LVerdict: String;
+begin
+  Result := GraphText(AEdge, 'trend');
+  if Result <> '' then
+  begin
+    Exit;
+  end;
+  LKind := GraphText(AEdge, 'kind');
+  if LKind = 'claim' then
+  begin
+    LVerdict := GraphText(TJSObject(AEdge['claim']), 'verdict');
+    if (LVerdict = 'False') or (LVerdict = 'Maybe False') then
+    begin
+      Result := 'challenged';
+    end;
+  end
+  else if (LKind <> 'reference') and
+    (GraphText(TJSObject(AEdge['assessment']), 'role') = 'opposes') then
+  begin
+    Result := 'challenged';
+  end;
 end;
 
 function ReferenceFile(const APath: String): String;
@@ -192,16 +238,13 @@ begin
   end;
 end;
 
-function TOracleGraphModel.Eligible(AEdge: TJSObject; const ANode: String): Boolean;
-var
-  LKind: String;
+function TOracleGraphModel.Other(AEdge: TJSObject; const ANode: String): String;
 begin
-  LKind := GraphText(Node(ANode), 'kind');
-  if LKind = 'source' then
+  Result := GraphText(AEdge, 'to');
+  if Result = ANode then
   begin
-    Exit(GraphText(AEdge, 'kind') = 'reference');
+    Result := GraphText(AEdge, 'from');
   end;
-  Result := GraphText(AEdge, 'from') = ANode;
 end;
 
 function EdgeRank(AEdge: TJSObject): Integer;
@@ -210,18 +253,26 @@ begin
   begin
     Exit(0);
   end;
+  if GraphEdgeTone(AEdge) = 'challenged' then
+  begin
+    Exit(1);
+  end;
   if (GraphText(AEdge, 'kind') = 'claim') and
     (GraphText(TJSObject(AEdge['claim']), 'evidence_scope') = 'frozen') then
   begin
-    Exit(2);
+    Exit(3);
   end;
-  Result := 1;
+  Result := 2;
 end;
 
 function TOracleGraphModel.Neighbors(const AKey: String): TJSArray;
 var
   LRows: TJSArray;
+  LGroups: array[0..3] of TJSArray;
+  LGroup: TJSArray;
   LIndex: Integer;
+  LGroupIndex: Integer;
+  LLongest: Integer;
   LEdge: TJSObject;
   LCompare: TJSArrayCompareCallBack;
 begin
@@ -231,14 +282,6 @@ begin
     Exit;
   end;
   LRows := TJSArray(FAdjacent[AKey]);
-  for LIndex := 0 to LRows.Length - 1 do
-  begin
-    LEdge := TJSObject(LRows[LIndex]);
-    if Eligible(LEdge, AKey) then
-    begin
-      Result.push(LEdge);
-    end;
-  end;
   LCompare :=
     function(ALeft, ARight: JSValue): NativeInt
     begin
@@ -248,7 +291,37 @@ begin
         Result := CompareStr(GraphText(TJSObject(ALeft), 'key'), GraphText(TJSObject(ARight), 'key'));
       end;
     end;
-  Result.sort(LCompare);
+  for LGroupIndex := Low(LGroups) to High(LGroups) do
+  begin
+    LGroups[LGroupIndex] := TJSArray.new;
+  end;
+  for LIndex := 0 to LRows.Length - 1 do
+  begin
+    LEdge := TJSObject(LRows[LIndex]);
+    LGroupIndex := GraphKindIndex(GraphText(Node(Other(LEdge, AKey)), 'kind'));
+    LGroups[LGroupIndex].push(LEdge);
+  end;
+  LLongest := 0;
+  for LGroup in LGroups do
+  begin
+    LGroup.sort(LCompare);
+    if LGroup.Length > LLongest then
+    begin
+      LLongest := LGroup.Length;
+    end;
+  end;
+  { Give each connected entity type space in the first expansion, even when
+    one type has hundreds of hypotheses. Each group stays ranked by evidence. }
+  for LIndex := 0 to LLongest - 1 do
+  begin
+    for LGroup in LGroups do
+    begin
+      if LIndex < LGroup.Length then
+      begin
+        Result.push(LGroup[LIndex]);
+      end;
+    end;
+  end;
 end;
 
 function TOracleGraphModel.Revision: String;

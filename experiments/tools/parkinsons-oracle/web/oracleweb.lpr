@@ -8,7 +8,8 @@ program OracleWeb;
 uses
   SysUtils, StrUtils, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
   oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation,
-  parkinsonsoracle.selection, oraclemulti, oraclegraph, oraclegraphdata, oraclegraphmodel;
+  parkinsonsoracle.selection, parkinsonsoracle.graph, oraclemulti, oraclegraph,
+  oraclegraphdata, oraclegraphmodel;
 
 type
   TOracleView = (ovClaims, ovCatalog);
@@ -51,6 +52,8 @@ var
   GGraph: TOracleGraphExplorer;
   GGraphSymptoms: TStringValues;
   GGraphIngredient: String;
+  GGraphStartNode: String;
+  GGraphReturn: TPickerAction;
 
 function JSValueText(AValue: JSValue): String; external name 'String';
 
@@ -266,7 +269,8 @@ procedure SwitchView(AView: TOracleView); forward;
 procedure BindReference(const ANodeId, APath: String; ARound: Integer;
   const AClaimId: String); forward;
 procedure ShowGraph(AReset: Boolean); forward;
-procedure StartGraph(const ASymptoms: TStringValues; const AIngredient: String); forward;
+procedure StartGraph(const ASymptoms: TStringValues; const AIngredient: String;
+  const AStartNode: String = ''; AReturn: TPickerAction = nil); forward;
 
 procedure ResetRelatedSources;
 var
@@ -380,6 +384,18 @@ begin
     Result.Add(Caption(nkBadge, LEffectId + AId, LEffect));
     if LVerdict = 'Maybe True' then
       LEvidence := 'Limited evidence';
+  end;
+  if (LVerdict = 'False') or (LVerdict = 'Maybe False') then
+  begin
+    if TextOf(AClaim, 'hypothesis_direction') = 'worsens' then
+      LEffect := 'Worsening challenged'
+    else
+      LEffect := 'Easing challenged';
+    Result.Add(Caption(nkBadge, 'effect-challenged-' + AId, LEffect));
+    if LVerdict = 'Maybe False' then
+      LEvidence := 'Limited evidence'
+    else
+      LEvidence := 'Evidence against the claim';
   end;
   if LEffect = '' then
     Result.Add(Caption(nkBadge, 'grade-unclear-' + AId, LEvidence))
@@ -548,11 +564,39 @@ begin
     end);
 end;
 
+function EvidenceGroup(const ARole: String): Integer;
+begin
+  if ARole = 'related' then
+    Exit(1);
+  if ARole = 'pending' then
+    Exit(2);
+  Result := 0;
+end;
+
 function Inspect(ARound: Integer; const AId: String): Boolean;
+const
+  CEvidenceGroups: array[0..2] of String = ('Evaluated the claim', 'Related studies',
+    'Awaiting evidence');
 var
   LArgs: TJSObject;
   LSequence: Integer;
   LReturn: TPickerAction;
+
+  procedure BindStudyConnections(const ATag, AStudy: String);
+  begin
+    BindEvent(GResultsRenderer.ElementFor('study-connections-' + ATag), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        StartGraph(nil, '', GraphKey('study', AStudy),
+          procedure
+          begin
+            GDetailReturn := LReturn;
+            Inspect(ARound, AId);
+          end);
+        Result := True;
+      end);
+  end;
+
 begin
   Inc(GSequence);
   LSequence := GSequence;
@@ -567,10 +611,16 @@ begin
       LDocument: TNyxDocument;
       LPage: TNyxNode;
       LCard: TNyxNode;
+      LActions: TNyxNode;
+      LGroups: array[0..2] of TNyxNode;
+      LCounts: array[0..2] of Integer;
+      LGroup: Integer;
       LItems: TJSArray;
       LRow: TJSObject;
       LIndex: Integer;
       LTag: String;
+      LRole: String;
+      LDirection: String;
     begin
       if LSequence <> GSequence then
         Exit;
@@ -588,9 +638,13 @@ begin
       LDocument := TNyxDocument.Create;
       LPage := Section(nkPage, 'result-page');
       LDocument.AddPage(LPage);
-      LPage.Add(Button('back-results', '‹ Back to results', nvSecondary));
-      LPage.Add(Button('open-graph', 'Explore graph', nvSecondary));
+      LActions := Section(nkRow, 'detail-actions');
+      LActions.Add(Button('back-results', '‹ Back', nvSecondary));
+      if not Assigned(LReturn) then
+        LActions.Add(Button('open-graph', 'Explore ingredient connections', nvSecondary));
+      LPage.Add(LActions);
       LPage.Add(Caption(nkHeading, 'result-heading', Capitalized(TextOf(AData, 'ingredient'))));
+      LPage.Add(Caption(nkLabel, 'claim-symptom', FriendlySymptom(TextOf(AData, 'symptom'))));
       LPage.Add(ClaimIndicators(AData, 'detail'));
       LPage.Add(Caption(nkLabel, 'claim-question', ResearchQuestion(AData)));
       if TextOf(AData, 'confidence') <> '' then
@@ -607,20 +661,39 @@ begin
           TextOf(AData, 'queued_original_pairs') + ' original Europe PMC pairs still queued'));
 
       LItems := ItemsOf(AData, 'assessments');
+      LDirection := TextOf(AData, 'hypothesis_direction');
       LPage.Add(Caption(nkHeading, 'evidence-heading', 'What the studies looked at'));
       if LItems.Length = 0 then
         LPage.Add(Caption(nkLabel, 'result-message', 'This claim is awaiting study review.'));
       for LIndex := 0 to LItems.Length - 1 do
       begin
+        LGroup := EvidenceGroup(TextOf(TJSObject(LItems[LIndex]), 'role'));
+        Inc(LCounts[LGroup]);
+      end;
+      for LGroup := Low(LGroups) to High(LGroups) do
+      begin
+        if LCounts[LGroup] = 0 then
+          Continue;
+        LTag := IntToStr(LGroup);
+        LGroups[LGroup] := Section(nkColumn, 'evidence-group-' + LTag);
+        LGroups[LGroup].Add(Caption(nkHeading, 'evidence-group-heading-' + LTag,
+          CEvidenceGroups[LGroup] + ' · ' + IntToStr(LCounts[LGroup])));
+        LPage.Add(LGroups[LGroup]);
+      end;
+      for LIndex := 0 to LItems.Length - 1 do
+      begin
         LRow := TJSObject(LItems[LIndex]);
+        LRole := TextOf(LRow, 'role');
         LTag := IntToStr(LIndex);
         LCard := Section(nkCard, 'evidence-' + LTag);
-        LCard.Add(Caption(nkBadge, 'role-' + LTag, TextOf(LRow, 'role')));
+        LCard.Add(Caption(nkBadge, 'role-' + LTag, GraphAssessmentLabel(LRole, LDirection)));
         LCard.Add(Button('study-' + LTag, 'Open study: ' + TextOf(LRow, 'study'), nvSecondary));
         LCard.Add(Caption(nkLabel, 'fit-' + LTag, TextOf(LRow, 'fit')));
         LCard.Add(Caption(nkLabel, 'analysis-' + LTag, TextOf(LRow, 'assessment')));
         LCard.Add(SourceLink('ref-' + LTag, TextOf(LRow, 'local_reference')));
-        LPage.Add(LCard);
+        if (TextOf(LRow, 'study') <> '') and not Assigned(LReturn) then
+          LCard.Add(Button('study-connections-' + LTag, 'See study connections', nvSecondary));
+        LGroups[EvidenceGroup(LRole)].Add(LCard);
       end;
       LItems := ItemsOf(AData, 'local_references');
       if LItems.Length > 0 then
@@ -632,20 +705,28 @@ begin
 
       PublishResults(LDocument, LPage);
       FocusResults;
-      BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
+      if not Assigned(LReturn) then
+        BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
         function(AEvent: TEventListenerEvent): Boolean
         var
           LSymptoms: TStringValues;
         begin
           LSymptoms := nil;
           LSymptoms := AddSelection(LSymptoms, TextOf(AData, 'symptom'));
-          StartGraph(LSymptoms, TextOf(AData, 'ingredient'));
+          StartGraph(LSymptoms, TextOf(AData, 'ingredient'), '',
+            procedure
+            begin
+              GDetailReturn := LReturn;
+              Inspect(ARound, AId);
+            end);
           Result := True;
         end);
       LItems := ItemsOf(AData, 'assessments');
       for LIndex := 0 to LItems.Length - 1 do
       begin
         LRow := TJSObject(LItems[LIndex]);
+        if (TextOf(LRow, 'study') <> '') and not Assigned(LReturn) then
+          BindStudyConnections(IntToStr(LIndex), TextOf(LRow, 'study'));
         BindReference('study-' + IntToStr(LIndex), TextOf(LRow, 'local_reference'), ARound, AId);
         if GStaticOracle = nil then
         begin
@@ -712,6 +793,7 @@ begin
       LText: String;
       LHasPrevious: Boolean;
       LHasNext: Boolean;
+      LCanExplore: Boolean;
     begin
       if LSequence <> GSequence then
         Exit;
@@ -729,13 +811,16 @@ begin
       LNext := CountOf(AData, 'next_offset');
       LHasPrevious := (AError = '') and (Length(AOffsets) > 1);
       LHasNext := (AError = '') and (LNext > LOffset);
+      LText := TextOf(AData, 'text');
+      LCanExplore := (AError = '') and (LText <> '') and not Assigned(LReturn);
       if AError <> '' then
         LPage.Add(Caption(nkLabel, 'result-message', AError))
       else
       begin
         if LHasPrevious or LHasNext then
           LPage.Add(Caption(nkLabel, 'source-part', 'Part ' + IntToStr(Length(AOffsets))));
-        LText := TextOf(AData, 'text');
+        if LCanExplore then
+          LPage.Add(Button('source-connections', 'Explore source connections', nvSecondary));
         if LText <> '' then
           LPage.Add(Caption(nkCode, 'source-body', LText))
         else
@@ -752,6 +837,18 @@ begin
       end;
       PublishResults(LDocument, LPage);
       FocusResults;
+      if LCanExplore then
+        BindEvent(GResultsRenderer.ElementFor('source-connections'), 'click',
+          function(AEvent: TEventListenerEvent): Boolean
+          begin
+            StartGraph(nil, '', GraphKey('source', APath),
+              procedure
+              begin
+                GSourceReturn := nil;
+                OpenSource(APath, ATag, AOffsets);
+              end);
+            Result := True;
+          end);
       BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
         function(AEvent: TEventListenerEvent): Boolean
         begin
@@ -846,21 +943,28 @@ var
   var
     LDocument: TNyxDocument;
     LPage: TNyxNode;
+    LBackLabel: String;
   begin
     LDocument := TNyxDocument.Create;
     LPage := Section(nkPage, 'result-page');
     LDocument.AddPage(LPage);
-    LPage.Add(Button('back-results', '‹ Back to results', nvSecondary));
-    LPage.Add(Caption(nkHeading, 'result-heading', 'Explore the research web'));
+    LBackLabel := '‹ Back to results';
+    if Assigned(GGraphReturn) then
+      LBackLabel := '‹ Back to previous view';
+    LPage.Add(Button('back-results', LBackLabel, nvSecondary));
+    LPage.Add(Caption(nkHeading, 'result-heading', 'Research connections'));
     LPage.Add(Caption(nkLabel, 'graph-scope',
-      'Connections come from frozen claims and recorded assessments. Sources can lead to other documented symptoms; a mention alone does not establish an effect. The graph includes open questions beyond your list filters.'));
+      'Follow recorded links among symptoms, ingredients, studies and saved sources. Open questions are included. A challenged claim leaves the opposite effect uncertain.'));
     LPage.Add(Caption(nkLabel, 'graph-freshness', 'Checking the model snapshot…'));
     LPage.Add(Section(nkPanel, 'graph-host'));
     PublishResults(LDocument, LPage);
     BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
       function(AEvent: TEventListenerEvent): Boolean
       begin
-        ShowList(GResults);
+        if Assigned(GGraphReturn) then
+          GGraphReturn()
+        else
+          ShowList(GResults);
         Result := True;
       end);
     GGraph.Attach(GResultsRenderer.ElementFor('graph-host'));
@@ -924,7 +1028,7 @@ var
             ShowGraph(False);
           end;
         Inspect(ARound, AId);
-      end);
+      end, GGraphStartNode);
     RenderGraph;
   end;
 
@@ -951,16 +1055,49 @@ begin
   end;
 end;
 
-procedure StartGraph(const ASymptoms: TStringValues; const AIngredient: String);
+procedure StartGraph(const ASymptoms: TStringValues; const AIngredient: String;
+  const AStartNode: String; AReturn: TPickerAction);
 begin
-  if (Length(ASymptoms) = 0) and (AIngredient = '') then
+  if (Length(ASymptoms) = 0) and (AIngredient = '') and (AStartNode = '') then
   begin
     MessageView('Choose a starting point', 'Choose a symptom or ingredient before opening the graph.');
     Exit;
   end;
   GGraphSymptoms := ASymptoms;
   GGraphIngredient := AIngredient;
+  GGraphStartNode := AStartNode;
+  GGraphReturn := AReturn;
   ShowGraph(True);
+end;
+
+procedure BindClaimGraph(const ATag, ASymptom, AIngredient: String);
+begin
+  BindEvent(GResultsRenderer.ElementFor('claim-graph-' + ATag), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    var
+      LSymptoms: TStringValues;
+    begin
+      LSymptoms := nil;
+      StartGraph(AddSelection(LSymptoms, ASymptom), AIngredient);
+      Result := True;
+    end);
+end;
+
+procedure AddCatalogPreview(ACard: TNyxNode; const ATag, APath, APeriod: String);
+var
+  LKind: String;
+begin
+  LKind := 'Research source';
+  if IsCulturalSource(APath) then
+    LKind := 'Culture & experience';
+  ACard.Add(Caption(nkBadge, 'source-kind-' + ATag, LKind));
+  ACard.Add(Caption(nkHeading, 'source-title-' + ATag, ExtractFileName(APath)));
+  ACard.Add(Caption(nkLabel, 'source-period-' + ATag, APeriod));
+  if GStaticOracle = nil then
+    ACard.Add(Button('open-source-' + ATag, 'Read source', nvSecondary)
+      .Configure.AccessibleName('Read source ' + ExtractFileName(APath)).Done)
+  else
+    ACard.Add(SourceLink('path-' + ATag, APath));
 end;
 
 procedure ShowList(AResults: TJSObject; AFocus: Boolean);
@@ -969,6 +1106,8 @@ var
   LPage: TNyxNode;
   LRow: TJSObject;
   LCard: TNyxNode;
+  LCardActions: TNyxNode;
+  LResultActions: TNyxNode;
   LPaging: TNyxNode;
   LRecords: TJSArray;
   LRelatedRecords: TJSArray;
@@ -1013,7 +1152,11 @@ begin
     else if TextOf(AResults, 'symptom') <> '' then
       LMessage := 'Research on ' + LowerCase(FriendlySymptom(TextOf(AResults, 'symptom')));
     LPage.Add(Caption(nkHeading, 'result-heading', LMessage));
-    LPage.Add(Button('open-graph', 'Graph view', nvSecondary));
+    LResultActions := Section(nkRow, 'result-actions');
+    LResultActions.Add(Button('open-graph', 'Graph view', nvSecondary));
+    if (GRelatedTerms <> '') and (GResearchKind <> SourceKindCulture) then
+      LResultActions.Add(Button('jump-to-sources', 'Jump to sources', nvSecondary));
+    LPage.Add(LResultActions);
     LKindTabs := Section(nkRow, 'research-kind-tabs');
     LKindTabs.Add(Button('research-kind-all', 'All research', nvSecondary));
     LKindTabs.Add(Button('research-kind-studies', 'Studies & analyses', nvSecondary));
@@ -1035,9 +1178,13 @@ begin
   if (GView = ovClaims) and (GResearchKind = SourceKindCulture) then
     LPage.Add(Caption(nkLabel, 'result-count', 'Cultural and experiential source collection'))
   else if LRecords.Length > 0 then
+  begin
+    if GView = ovClaims then
+      LPage.Add(Caption(nkHeading, 'claim-results-heading', 'Ingredient and symptom claims'));
     LPage.Add(Caption(nkLabel, 'result-count',
       IntToStr(LOffset + 1) + '–' + IntToStr(LOffset + LRecords.Length) +
-      ' of ' + IntToStr(LTotal)))
+      ' of ' + IntToStr(LTotal)));
+  end
   else
   begin
     if LCanShowAnyTrend then
@@ -1064,28 +1211,32 @@ begin
   begin
     LTag := IntToStr(LIndex);
     LRow := TJSObject(LRecords[LIndex]);
-    LCard := Section(nkCard, 'match-' + LTag);
     if GView = ovClaims then
     begin
+      LCard := Section(nkCard, 'match-' + LTag);
       LCard.Add(ClaimIndicators(LRow, LTag));
       LCard.Add(Caption(nkHeading, 'ingredient-' + LTag, Capitalized(TextOf(LRow, 'ingredient'))));
+      if Length(LSymptoms) <> 1 then
+        LCard.Add(Caption(nkLabel, 'claim-symptom-' + LTag, FriendlySymptom(TextOf(LRow, 'symptom'))));
       LCard.Add(Caption(nkLabel, 'hypothesis-' + LTag, ResearchQuestion(LRow)));
       if TextOf(LRow, 'rationale') <> '' then
         LCard.Add(Caption(nkLabel, 'rationale-' + LTag, TextOf(LRow, 'rationale')))
       else
         LCard.Add(Caption(nkLabel, 'rationale-' + LTag,
           'An open hypothesis awaiting evidence review. Its assigned direction is not a finding.'));
-      LCard.Add(Button('inspect-' + LTag, 'See studies and references', nvSecondary));
+      LCardActions := Section(nkRow, 'claim-actions-' + LTag);
+      LCardActions.Add(Button('inspect-' + LTag, 'See studies and references', nvSecondary));
+      LCardActions.Add(Button('claim-graph-' + LTag, 'See connections', nvSecondary));
+      LCard.Add(LCardActions);
     end
     else
     begin
-      LCard.Add(Caption(nkLabel, 'period-' + LTag, TextOf(LRow, 'period')));
       LPath := TextOf(LRow, 'path');
-      if GStaticOracle = nil then
-        LCard.Add(Button('open-source-' + LTag, 'Open source' + #10 + LPath, nvSecondary)
-          .Configure.AccessibleName('Open source ' + ExtractFileName(LPath)).Done)
+      if IsCulturalSource(LPath) then
+        LCard := Section(nkCard, 'source-cultural-' + LTag)
       else
-        LCard.Add(SourceLink('path-' + LTag, LPath));
+        LCard := Section(nkCard, 'source-study-' + LTag);
+      AddCatalogPreview(LCard, LTag, LPath, TextOf(LRow, 'period'));
     end;
     LPage.Add(LCard);
   end;
@@ -1131,21 +1282,10 @@ begin
         LRow := TJSObject(LRelatedRecords[LIndex]);
         LPath := TextOf(LRow, 'path');
         if IsCulturalSource(LPath) then
-        begin
-          LCard := Section(nkCard, 'source-cultural-' + LTag);
-          LMessage := 'Cultural collection source'
-        end
+          LCard := Section(nkCard, 'source-cultural-' + LTag)
         else
-        begin
           LCard := Section(nkCard, 'source-study-' + LTag);
-          LMessage := 'Catalog source';
-        end;
-        LCard.Add(Caption(nkBadge, 'source-kind-' + LTag, LMessage));
-        LCard.Add(Caption(nkLabel, 'source-period-' + LTag, TextOf(LRow, 'period')));
-        if GStaticOracle = nil then
-          LCard.Add(Button('open-source-' + LTag, 'Open source' + #10 + LPath, nvSecondary))
-        else
-          LCard.Add(SourceLink('path-' + LTag, LPath));
+        AddCatalogPreview(LCard, LTag, LPath, TextOf(LRow, 'period'));
         LPage.Add(LCard);
       end;
       LPaging := Section(nkRow, 'source-pagination');
@@ -1168,6 +1308,18 @@ begin
         StartGraph(ArgumentSymptoms(GResults), TextOf(GArguments, 'ingredient'));
         Result := True;
       end);
+    if (GRelatedTerms <> '') and (GResearchKind <> SourceKindCulture) then
+      BindEvent(GResultsRenderer.ElementFor('jump-to-sources'), 'click',
+        function(AEvent: TEventListenerEvent): Boolean
+        var
+          LHeading: TJSHTMLElement;
+        begin
+          LHeading := GResultsRenderer.ElementFor('related-heading');
+          LHeading.setAttribute('tabindex', '-1');
+          LHeading.focus;
+          LHeading.scrollIntoView;
+          Result := True;
+        end);
   end;
   if AFocus then
     FocusResults;
@@ -1258,7 +1410,10 @@ begin
   begin
     LRow := TJSObject(LRecords[LIndex]);
     if GView = ovClaims then
+    begin
       BindDetail(IntToStr(LIndex), CountOf(LRow, 'round'), TextOf(LRow, 'claim_id'));
+      BindClaimGraph(IntToStr(LIndex), TextOf(LRow, 'symptom'), TextOf(LRow, 'ingredient'));
+    end;
     if (GView = ovCatalog) and (GStaticOracle = nil) then
       BindSource(IntToStr(LIndex), TextOf(LRow, 'path'));
   end;
@@ -1563,6 +1718,8 @@ begin
     'Each result starts with a question the research team is investigating.'));
   LHelp.Add(Caption(nkLabel, 'guide-direction',
     'A down arrow means the evidence points toward easing the symptom. An up arrow points toward worsening it.'));
+  LHelp.Add(Caption(nkLabel, 'guide-challenged',
+    'The amber question mark means evidence challenges the effect proposed in the claim. The opposite effect remains uncertain.'));
   LHelp.Add(Caption(nkLabel, 'guide-limited',
     'Limited evidence means the findings lean one way. The studies may have tested a different preparation, symptom, or group of people.'));
   LHelp.Add(Caption(nkLabel, 'guide-unclear',

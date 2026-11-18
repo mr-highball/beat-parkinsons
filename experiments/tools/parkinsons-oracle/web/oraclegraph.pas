@@ -15,6 +15,12 @@ type
   TGraphOpenSource = reference to procedure(const APath: String);
   TGraphOpenClaim = reference to procedure(ARound: Integer; const AId: String);
 
+  TGraphLinkBadge = record
+    Position: TNyxCanvasPoint;
+    Text: String;
+    Tone: String;
+  end;
+
   { An application-owned graph workspace. Detach revokes native DOM/canvas
     listeners before the host or document retires; the explored web stays in memory. }
   TOracleGraphExplorer = class
@@ -25,7 +31,7 @@ type
     FEdges: TJSArray;
     FEdgeKeys: TJSSet;
     FExpanded: TJSObject;
-    FRows: array[0..3] of Integer;
+    FLanes: array[0..3] of TJSSet;
     FSelected: String;
     FHost: TJSHTMLElement;
     FDocument: TNyxDocument;
@@ -41,6 +47,8 @@ type
     FOpenSource: TGraphOpenSource;
     FOpenClaim: TGraphOpenClaim;
     procedure AddVisible(const AKey: String; ALevel: Integer);
+    procedure AddConnection(AEdge: TJSObject);
+    procedure ResetBranch;
     procedure Expand(AAmount: Integer);
     procedure Select(const AKey: String);
     procedure FocusBranch;
@@ -48,7 +56,6 @@ type
     procedure BindNeighbor(const AId, AKey: String);
     procedure BindEvidence(const AId: String; AEdge: TJSObject; ASource: Boolean);
     function LevelFor(const AKey: String): Integer;
-    function Other(AEdge: TJSObject; const AKey: String): String;
     function ExpandedCount: Integer;
     function NodeAt(ATarget: TJSNode): String;
     function PositionOf(const AKey: String): TNyxCanvasPoint;
@@ -59,7 +66,8 @@ type
     function OnCanvasHome(AEvent: TEventListenerEvent): Boolean;
   public
     constructor Create(AModel: TJSObject; const ASymptoms: TStringValues;
-      const AIngredient: String; AOpenSource: TGraphOpenSource; AOpenClaim: TGraphOpenClaim);
+      const AIngredient: String; AOpenSource: TGraphOpenSource; AOpenClaim: TGraphOpenClaim;
+      const AStartNode: String = '');
     destructor Destroy; override;
     procedure Attach(AHost: TJSHTMLElement);
     procedure Detach;
@@ -74,11 +82,12 @@ const
   CExpandPage = 12;
   CNodeWidth = 220;
   CNodeHeight = 80;
-  CColumnStep = 490;
+  CColumnStep = 340;
   CRowStep = 145;
   CCompactWidth = 550;
   CCompactNodeStep = 258;
-  CCompactLevelStep = 160;
+  CCompactLevelStep = 128;
+  CDrawingMargin = 84;
   CTouchEvents: array[0..4] of String = ('pointerdown', 'pointermove', 'pointerup',
     'pointercancel', 'lostpointercapture');
 
@@ -103,59 +112,105 @@ begin
   end;
 end;
 
-function LinkColor(const ATrend: String): TNyxRGBColor;
+function LinkColor(const ATone: String; AFocused: Boolean): TNyxRGBColor;
 begin
-  if ATrend = 'eases' then
+  if ATone = 'eases' then
   begin
     Exit(NyxRGB(20, 112, 78));
   end;
-  if ATrend = 'worsens' then
+  if ATone = 'worsens' then
   begin
     Exit(NyxRGB(176, 49, 49));
   end;
-  Result := NyxRGB(104, 113, 122);
+  if ATone = 'challenged' then
+    Exit(NyxRGB(137, 86, 20));
+  if AFocused then
+    Exit(NyxRGB(113, 127, 120));
+  Result := NyxRGB(185, 199, 191);
+end;
+
+function LinkBadge(const ATone: String): String;
+begin
+  if ATone = 'eases' then
+    Exit('↓ May ease');
+  if ATone = 'worsens' then
+    Exit('↑ May worsen');
+  Result := '? Claim challenged';
+end;
+
+function LinkBadgeFill(const ATone: String): TNyxDrawingPaint;
+begin
+  if ATone = 'eases' then
+    Exit(NyxDrawingPaint(NyxRGB(231, 247, 237)));
+  if ATone = 'worsens' then
+    Exit(NyxDrawingPaint(NyxRGB(255, 237, 233)));
+  Result := NyxDrawingPaint(NyxRGB(255, 245, 221));
 end;
 
 constructor TOracleGraphExplorer.Create(AModel: TJSObject; const ASymptoms: TStringValues;
-  const AIngredient: String; AOpenSource: TGraphOpenSource; AOpenClaim: TGraphOpenClaim);
+  const AIngredient: String; AOpenSource: TGraphOpenSource; AOpenClaim: TGraphOpenClaim;
+  const AStartNode: String);
 var
   LSymptom: String;
   LKey: String;
+  LStart: String;
+  LNeighbors: TJSArray;
+  LIndex: Integer;
+  LEdge: TJSObject;
 begin
   FModel := TOracleGraphModel.Create(AModel);
-  FVisible := TJSArray.new;
-  FPositions := TJSObject.new;
-  FEdges := TJSArray.new;
-  FEdgeKeys := TJSSet.new;
-  FExpanded := TJSObject.new;
+  ResetBranch;
   FOpenSource := AOpenSource;
   FOpenClaim := AOpenClaim;
   FCamera := NyxCanvasCamera(800, 520, NyxCanvasPoint(300, 180));
   FRecenter := True;
+  if AStartNode <> '' then
+  begin
+    if FModel.Node(AStartNode) <> nil then
+    begin
+      AddVisible(AStartNode, LevelFor(AStartNode));
+      FSelected := AStartNode;
+      Expand(CExpandPage);
+    end;
+    Exit;
+  end;
+  for LSymptom in ASymptoms do
+  begin
+    LKey := GraphKey('symptom', LSymptom);
+    if FModel.Node(LKey) <> nil then
+      AddVisible(LKey, 0);
+  end;
+  LStart := '';
+  if FVisible.Length > 0 then
+    LStart := String(FVisible[0]);
+  if AIngredient <> '' then
+  begin
+    LKey := GraphKey('ingredient', AIngredient);
+    if FModel.Node(LKey) <> nil then
+    begin
+      AddVisible(LKey, 1);
+      LNeighbors := FModel.Neighbors(LKey);
+      for LIndex := 0 to LNeighbors.Length - 1 do
+      begin
+        LEdge := TJSObject(LNeighbors[LIndex]);
+        if isDefined(FPositions[FModel.Other(LEdge, LKey)]) then
+          AddConnection(LEdge);
+      end;
+      LStart := LKey;
+    end;
+  end;
   for LSymptom in ASymptoms do
   begin
     LKey := GraphKey('symptom', LSymptom);
     if FModel.Node(LKey) <> nil then
     begin
-      AddVisible(LKey, 0);
       FSelected := LKey;
       Expand(CExpandPage);
     end;
   end;
-  if (FVisible.Length = 0) and (AIngredient <> '') then
-  begin
-    LKey := GraphKey('ingredient', AIngredient);
-    if FModel.Node(LKey) <> nil then
-    begin
-      AddVisible(LKey, 0);
-      FSelected := LKey;
-      Expand(CExpandPage);
-    end;
-  end;
-  if FVisible.Length > 0 then
-  begin
-    FSelected := String(FVisible[0]);
-  end;
+  FSelected := LStart;
+  if (FSelected <> '') and (ExpandedCount = 0) then
+    Expand(CExpandPage);
 end;
 
 destructor TOracleGraphExplorer.Destroy;
@@ -166,24 +221,14 @@ begin
 end;
 
 function TOracleGraphExplorer.LevelFor(const AKey: String): Integer;
-var
-  LKind: String;
 begin
-  LKind := GraphText(FModel.Node(AKey), 'kind');
-  if LKind = 'ingredient' then
-  begin
-    Exit(1);
-  end;
-  if LKind = 'study' then
-  begin
-    Exit(2);
-  end;
-  Result := 3;
+  Result := GraphKindIndex(GraphText(FModel.Node(AKey), 'kind'));
 end;
 
 procedure TOracleGraphExplorer.AddVisible(const AKey: String; ALevel: Integer);
 var
   LPosition: TJSObject;
+  LLane: Integer;
 begin
   if isDefined(FPositions[AKey]) then
   begin
@@ -191,18 +236,26 @@ begin
   end;
   LPosition := TJSObject.new;
   LPosition['level'] := ALevel;
-  LPosition['row'] := FRows[ALevel];
-  Inc(FRows[ALevel]);
+  LLane := 0;
+  if (FSelected <> '') and isDefined(FPositions[FSelected]) then
+    LLane := Integer(TJSObject(FPositions[FSelected])['row']);
+  while FLanes[ALevel].has(LLane) do
+    Inc(LLane);
+  FLanes[ALevel].add(LLane);
+  LPosition['row'] := LLane;
   FPositions[AKey] := LPosition;
   FVisible.push(AKey);
 end;
 
-function TOracleGraphExplorer.Other(AEdge: TJSObject; const AKey: String): String;
+procedure TOracleGraphExplorer.AddConnection(AEdge: TJSObject);
+var
+  LKey: String;
 begin
-  Result := GraphText(AEdge, 'to');
-  if Result = AKey then
+  LKey := GraphText(AEdge, 'key');
+  if not FEdgeKeys.has(LKey) then
   begin
-    Result := GraphText(AEdge, 'from');
+    FEdgeKeys.add(LKey);
+    FEdges.push(AEdge);
   end;
 end;
 
@@ -224,13 +277,9 @@ begin
   for LIndex := ExpandedCount to LEnd - 1 do
   begin
     LEdge := TJSObject(LNeighbors[LIndex]);
-    LKey := Other(LEdge, FSelected);
+    LKey := FModel.Other(LEdge, FSelected);
     AddVisible(LKey, LevelFor(LKey));
-    if not FEdgeKeys.has(GraphText(LEdge, 'key')) then
-    begin
-      FEdgeKeys.add(GraphText(LEdge, 'key'));
-      FEdges.push(LEdge);
-    end;
+    AddConnection(LEdge);
   end;
   FExpanded[FSelected] := LEnd;
 end;
@@ -271,26 +320,25 @@ begin
   FHost := nil;
 end;
 
-procedure TOracleGraphExplorer.FocusBranch;
+procedure TOracleGraphExplorer.ResetBranch;
 var
   LIndex: Integer;
-  LLevel: Integer;
 begin
   FVisible := TJSArray.new;
   FPositions := TJSObject.new;
   FEdges := TJSArray.new;
   FEdgeKeys := TJSSet.new;
   FExpanded := TJSObject.new;
-  for LIndex := 0 to High(FRows) do
+  for LIndex := Low(FLanes) to High(FLanes) do
   begin
-    FRows[LIndex] := 0;
+    FLanes[LIndex] := TJSSet.new;
   end;
-  LLevel := LevelFor(FSelected);
-  if GraphText(FModel.Node(FSelected), 'kind') = 'symptom' then
-  begin
-    LLevel := 0;
-  end;
-  AddVisible(FSelected, LLevel);
+end;
+
+procedure TOracleGraphExplorer.FocusBranch;
+begin
+  ResetBranch;
+  AddVisible(FSelected, LevelFor(FSelected));
   Expand(CExpandPage);
   FRecenter := True;
   Render;
@@ -380,18 +428,27 @@ end;
 function TOracleGraphExplorer.SelectedCenter: TNyxCanvasPoint;
 var
   LPoint: TNyxCanvasPoint;
+  LOffset: Double;
+  LLevel: Integer;
 begin
   if FSelected = '' then
   begin
     Exit(NyxCanvasPoint(0, 0));
   end;
   LPoint := PositionOf(FSelected);
+  LLevel := LevelFor(FSelected);
+  LOffset := 0;
+  if LLevel = Low(GraphKinds) then
+    LOffset := 0.5
+  else if LLevel = High(GraphKinds) then
+    LOffset := -0.5;
   if FCompact then
   begin
-    Exit(NyxCanvasPoint(LPoint.X + CNodeWidth / 2, LPoint.Y + CCompactLevelStep / 2 +
-      CNodeHeight / 2));
+    Exit(NyxCanvasPoint(LPoint.X + CNodeWidth / 2,
+      LPoint.Y + CNodeHeight / 2 + LOffset * CCompactLevelStep));
   end;
-  Result := NyxCanvasPoint(LPoint.X + 300, LPoint.Y + 100);
+  Result := NyxCanvasPoint(LPoint.X + CNodeWidth / 2 + LOffset * CColumnStep,
+    LPoint.Y + CNodeHeight / 2);
 end;
 
 function TOracleGraphExplorer.OnCanvasClick(AEvent: TEventListenerEvent): Boolean;
@@ -512,6 +569,12 @@ var
   LHome: TJSHTMLElement;
   LPage: TNyxNode;
   LInspector: TNyxNode;
+  LLegend: TNyxNode;
+  LGroups: array[0..3] of TNyxNode;
+  LGroupMembers: array[0..3] of TJSSet;
+  LGroupIndex: Integer;
+  LNeighborsShown: TJSSet;
+  LNeighborButtons: TJSSet;
   LCard: TNyxNode;
   LScene: INyxCanvasScene;
   LWorkspace: INyxCanvasWorkspace;
@@ -537,14 +600,26 @@ var
   LX2: Double;
   LY2: Double;
   LMiddle: Double;
+  LGutter: Double;
+  LStroke: Double;
   LDirection: Integer;
   LArrow: TNyxDrawingPath;
   LLabelPoint: TNyxCanvasPoint;
+  LDrawnRoutes: TJSSet;
+  LBadges: array of TGraphLinkBadge;
+  LBadgeCount: Integer;
+  LBadgeWidth: Integer;
+  LBadgeKey: String;
   LPath: TNyxDrawingPath;
   LPaint: TNyxDrawingPaint;
+  LFocused: Boolean;
+  LFrom: String;
+  LTo: String;
+  LTone: String;
   LClick: TJSEventHandler;
   LName: String;
   LCompact: Boolean;
+  LVariant: TNyxVariant;
 begin
   if FHost = nil then
   begin
@@ -558,9 +633,20 @@ begin
   LPage := Control(nkPage, 'graph-workspace', '');
   FDocument.AddPage(LPage);
   LPage.Add(Control(nkLabel, 'graph-guide',
-    'Tap a node to explore. Drag to move and pinch inside the graph to zoom. Fit content shows the whole branch.'));
-  LPage.Add(Control(nkLabel, 'graph-legend',
-    'Green: may ease · Red: may worsen · Gray: open, related or inconclusive. Study support remains hypothesis evidence, not proven treatment.'));
+    'Tap a node to follow its connections. Drag to move or pinch to zoom.'));
+  LLegend := Control(nkRow, 'graph-legend', '');
+  LLegend.Add(Control(nkBadge, 'effect-relief-graph-key', 'May ease'));
+  LLegend.Add(Control(nkBadge, 'effect-worse-graph-key', 'May worsen'));
+  LLegend.Add(Control(nkBadge, 'effect-challenged-graph-key', 'Claim challenged'));
+  LLegend.Add(Control(nkBadge, 'grade-unclear-graph-key', 'Open or related'));
+  LPage.Add(LLegend);
+  if FSelected = '' then
+  begin
+    LPage.Add(Control(nkLabel, 'graph-empty',
+      'This item has no recorded connections in the graph yet.'));
+    FRenderer.Render(FDocument, LPage, FHost);
+    Exit;
+  end;
   LPage.Add(Control(nkLabel, 'graph-snapshot', 'Model snapshot ' + Copy(Revision, 1, 12)));
   LPage.Add(Control(nkPanel, 'graph-canvas', 'Research relationships'));
   LInspector := Control(nkColumn, 'graph-inspector', '');
@@ -575,20 +661,46 @@ begin
   end;
   LNeighbors := FModel.Neighbors(FSelected);
   LInspector.Add(Control(nkLabel, 'graph-connection-count', IntToStr(ExpandedCount) + ' of ' +
-    IntToStr(LNeighbors.Length) + ' recorded connections shown. All open hypotheses remain available.'));
+    IntToStr(LNeighbors.Length) + ' recorded connections shown'));
   if ExpandedCount < LNeighbors.Length then
   begin
     LInspector.Add(Control(nkButton, 'graph-expand', 'Show next connections'));
   end;
+  for LGroupIndex := Low(LGroupMembers) to High(LGroupMembers) do
+    LGroupMembers[LGroupIndex] := TJSSet.new;
+  for LIndex := 0 to LNeighbors.Length - 1 do
+  begin
+    LOther := FModel.Other(TJSObject(LNeighbors[LIndex]), FSelected);
+    LGroupMembers[LevelFor(LOther)].add(LOther);
+  end;
+  for LGroupIndex := Low(LGroups) to High(LGroups) do
+  begin
+    if LGroupMembers[LGroupIndex].size = 0 then
+      Continue;
+    LGroups[LGroupIndex] := Control(nkColumn, 'graph-group-' + GraphKinds[LGroupIndex], '');
+    LGroups[LGroupIndex].Add(Control(nkHeading, 'graph-group-heading-' + GraphKinds[LGroupIndex],
+      GraphGroupNames[LGroupIndex] + ' · ' + IntToStr(LGroupMembers[LGroupIndex].size)));
+    LInspector.Add(LGroups[LGroupIndex]);
+  end;
+  LNeighborsShown := TJSSet.new;
+  LNeighborButtons := TJSSet.new;
   for LIndex := 0 to ExpandedCount - 1 do
   begin
     LEdge := TJSObject(LNeighbors[LIndex]);
-    LOther := Other(LEdge, FSelected);
+    LOther := FModel.Other(LEdge, FSelected);
     LClaim := TJSObject(LEdge['claim']);
     LAssessment := TJSObject(LEdge['assessment']);
     LCard := Control(nkCard, 'graph-connection-' + IntToStr(LIndex), '');
-    LCard.Add(Control(nkButton, 'graph-neighbor-' + IntToStr(LIndex),
-      GraphText(FModel.Node(LOther), 'label')));
+    if not LNeighborsShown.has(LOther) then
+    begin
+      LNeighborsShown.add(LOther);
+      LNeighborButtons.add(LIndex);
+      LCard.Add(Control(nkButton, 'graph-neighbor-' + IntToStr(LIndex),
+        GraphText(FModel.Node(LOther), 'label')));
+    end
+    else
+      LCard.Add(Control(nkLabel, 'graph-repeated-neighbor-' + IntToStr(LIndex),
+        GraphText(FModel.Node(LOther), 'label')));
     LCard.Add(Control(nkLabel, 'graph-relation-' + IntToStr(LIndex), GraphText(LEdge, 'label')));
     LCard.Add(Control(nkLabel, 'graph-context-' + IntToStr(LIndex),
       FriendlySymptom(GraphText(LClaim, 'symptom')) + ' · ' + GraphText(LClaim, 'preparation') +
@@ -604,7 +716,7 @@ begin
       end;
     end;
     LCard.Add(Control(nkButton, 'graph-claim-' + IntToStr(LIndex), 'Open claim and evidence'));
-    LInspector.Add(LCard);
+    LGroups[LevelFor(LOther)].Add(LCard);
   end;
   FRenderer.Render(FDocument, LPage, FHost);
   LCanvasHost := FRenderer.ElementFor('graph-canvas');
@@ -626,13 +738,65 @@ begin
     LWidth := Max(LWidth, LPosition.X + CNodeWidth);
     LHeight := Max(LHeight, LPosition.Y + CNodeHeight);
   end;
-  LDrawing := NewNyxDrawingPlan(NyxCanvasBounds(-20, -20, LWidth + 40, LHeight + 40));
+  LDrawing := NewNyxDrawingPlan(NyxCanvasBounds(-CDrawingMargin, -CDrawingMargin,
+    LWidth + 2 * CDrawingMargin, LHeight + 2 * CDrawingMargin));
+  SetLength(LBadges, FEdges.Length);
+  LBadgeCount := 0;
+  LDrawnRoutes := TJSSet.new;
   for LIndex := 0 to FEdges.Length - 1 do
   begin
     LEdge := TJSObject(FEdges[LIndex]);
-    LStart := PositionOf(GraphText(LEdge, 'from'));
-    LEnd := PositionOf(GraphText(LEdge, 'to'));
-    if FCompact then
+    LFrom := GraphText(LEdge, 'from');
+    LTo := GraphText(LEdge, 'to');
+    LStart := PositionOf(LFrom);
+    LEnd := PositionOf(LTo);
+    LFocused := (LFrom = FSelected) or (LTo = FSelected);
+    LTone := GraphEdgeTone(LEdge);
+    LBadgeKey := LFrom + '|' + LTo + '|' + LTone;
+    if LDrawnRoutes.has(LBadgeKey) then
+      Continue;
+    LDrawnRoutes.add(LBadgeKey);
+    if FCompact and (LStart.X = LEnd.X) and
+      (Abs(LStart.Y - LEnd.Y) > CCompactLevelStep) then
+    begin
+      { Route past the side of any intervening card in this lane. A line
+        through the card would make it appear to be part of the relationship. }
+      LX1 := LStart.X + CNodeWidth;
+      LX2 := LX1;
+      LY1 := LStart.Y + CNodeHeight / 2;
+      LY2 := LEnd.Y + CNodeHeight / 2;
+      LDirection := Sign(LY2 - LY1);
+      LGutter := LX1 + 20;
+      LPath := NyxDrawingPath(NyxCanvasPoint(LX1, LY1))
+        .CurveTo(NyxCanvasPoint(LX1 + 12, LY1), NyxCanvasPoint(LGutter, LY1 + 12 * LDirection),
+          NyxCanvasPoint(LGutter, LY1 + 24 * LDirection))
+        .LineTo(NyxCanvasPoint(LGutter, LY2 - 24 * LDirection))
+        .CurveTo(NyxCanvasPoint(LGutter, LY2 - 12 * LDirection), NyxCanvasPoint(LX2 + 12, LY2),
+          NyxCanvasPoint(LX2, LY2));
+      LArrow := NyxDrawingPath(NyxCanvasPoint(LX2 + 8, LY2 - 5))
+        .LineTo(NyxCanvasPoint(LX2, LY2)).LineTo(NyxCanvasPoint(LX2 + 8, LY2 + 5));
+      LLabelPoint := NyxCanvasPoint(LGutter, (LY1 + LY2) / 2);
+    end
+    else if (not FCompact) and (LStart.Y = LEnd.Y) and
+      (Abs(LStart.X - LEnd.X) > CColumnStep) then
+    begin
+      LX1 := LStart.X + CNodeWidth / 2;
+      LX2 := LEnd.X + CNodeWidth / 2;
+      LY1 := LStart.Y + CNodeHeight;
+      LY2 := LY1;
+      LDirection := Sign(LX2 - LX1);
+      LGutter := LY1 + 20;
+      LPath := NyxDrawingPath(NyxCanvasPoint(LX1, LY1))
+        .CurveTo(NyxCanvasPoint(LX1, LY1 + 12), NyxCanvasPoint(LX1 + 12 * LDirection, LGutter),
+          NyxCanvasPoint(LX1 + 24 * LDirection, LGutter))
+        .LineTo(NyxCanvasPoint(LX2 - 24 * LDirection, LGutter))
+        .CurveTo(NyxCanvasPoint(LX2 - 12 * LDirection, LGutter), NyxCanvasPoint(LX2, LY2 + 12),
+          NyxCanvasPoint(LX2, LY2));
+      LArrow := NyxDrawingPath(NyxCanvasPoint(LX2 - 5, LY2 + 8))
+        .LineTo(NyxCanvasPoint(LX2, LY2)).LineTo(NyxCanvasPoint(LX2 + 5, LY2 + 8));
+      LLabelPoint := NyxCanvasPoint((LX1 + LX2) / 2, LGutter);
+    end
+    else if FCompact then
     begin
       LDirection := 1;
       if LEnd.Y < LStart.Y then
@@ -649,7 +813,10 @@ begin
           NyxCanvasPoint(LX2, LY2));
       LArrow := NyxDrawingPath(NyxCanvasPoint(LX2 - 5, LY2 - LDirection * 8))
         .LineTo(NyxCanvasPoint(LX2, LY2)).LineTo(NyxCanvasPoint(LX2 + 5, LY2 - LDirection * 8));
-      LLabelPoint := NyxCanvasPoint((LX1 + LX2) / 2 + 12, LMiddle - 5);
+      if LTo = FSelected then
+        LLabelPoint := NyxCanvasPoint(LX1, LY1 + LDirection * 23)
+      else
+        LLabelPoint := NyxCanvasPoint(LX2, LY2 - LDirection * 23);
     end
     else
     begin
@@ -668,16 +835,46 @@ begin
           NyxCanvasPoint(LX2, LY2));
       LArrow := NyxDrawingPath(NyxCanvasPoint(LX2 - LDirection * 8, LY2 - 5))
         .LineTo(NyxCanvasPoint(LX2, LY2)).LineTo(NyxCanvasPoint(LX2 - LDirection * 8, LY2 + 5));
-      LLabelPoint := NyxCanvasPoint(LMiddle, (LY1 + LY2) / 2 - 8);
+      if LTo = FSelected then
+        LLabelPoint := NyxCanvasPoint(0.65 * LX1 + 0.35 * LX2, LY1)
+      else
+        LLabelPoint := NyxCanvasPoint(0.35 * LX1 + 0.65 * LX2, LY2);
     end;
-    LPaint := NyxDrawingPaint(LinkColor(GraphText(LEdge, 'trend')));
-    LDrawing.Path(LPath, NyxDrawingStyle.Stroke(LPaint, 2.5));
-    LDrawing.Path(LArrow, NyxDrawingStyle.Stroke(LPaint, 2.5));
-    LDrawing.Text(GraphText(LEdge, 'label'), LLabelPoint, LPaint, 13, ndtaCenter, True);
+    LPaint := NyxDrawingPaint(LinkColor(LTone, LFocused));
+    LStroke := 1.25;
+    if LTone <> '' then
+      LStroke := 3
+    else if LFocused then
+      LStroke := 1.75;
+    LDrawing.Path(LPath, NyxDrawingStyle.Stroke(LPaint, LStroke));
+    if LFocused or (LTone <> '') then
+      LDrawing.Path(LArrow, NyxDrawingStyle.Stroke(LPaint, LStroke));
+    if LFocused and (LTone <> '') then
+    begin
+      LBadges[LBadgeCount].Position := LLabelPoint;
+      LBadges[LBadgeCount].Tone := LTone;
+      LBadges[LBadgeCount].Text := LinkBadge(LTone);
+      if (GraphText(LEdge, 'kind') <> 'claim') and (LTone <> 'challenged') then
+        LBadges[LBadgeCount].Text := GraphText(LEdge, 'label');
+      Inc(LBadgeCount);
+    end;
+  end;
+  for LIndex := 0 to LBadgeCount - 1 do
+  begin
+    LLabelPoint := LBadges[LIndex].Position;
+    LTone := LBadges[LIndex].Tone;
+    LBadgeWidth := 16 + 7 * Length(LBadges[LIndex].Text);
+    LPaint := NyxDrawingPaint(LinkColor(LTone, True));
+    LDrawing.Path(NyxDrawingRectangle(NyxCanvasBounds(LLabelPoint.X - LBadgeWidth / 2,
+      LLabelPoint.Y - 11, LBadgeWidth, 24)),
+      NyxDrawingStyle.Fill(LinkBadgeFill(LTone)).Stroke(LPaint, 1));
+    LDrawing.Text(LBadges[LIndex].Text, NyxCanvasPoint(LLabelPoint.X, LLabelPoint.Y - 8),
+      LPaint, 13, ndtaCenter, True);
   end;
   LScene.AddControl(NyxCanvasItem('Connections'),
     NyxCanvasPlacement(NyxCanvasLayer('Links'),
-      NyxCanvasBounds(-20, -20, LWidth + 40, LHeight + 40)).Pickable(False),
+      NyxCanvasBounds(-CDrawingMargin, -CDrawingMargin,
+        LWidth + 2 * CDrawingMargin, LHeight + 2 * CDrawingMargin)).Pickable(False),
     NewNyxDrawing('graph-links').WithPlan(LDrawing.Build));
   for LIndex := 0 to FVisible.Length - 1 do
   begin
@@ -687,9 +884,12 @@ begin
     LLeft := LPosition.X;
     LTop := LPosition.Y;
     LNodeControl := NewNyxButton('graph-node-' + IntToStr(LIndex));
+    LVariant := nvSecondary;
+    if LKey = FSelected then
+      LVariant := nvPrimary;
     LNodeControl.Configure.Text(Capitalized(GraphText(LNode, 'kind')) + #10 +
       GraphText(LNode, 'label')).AccessibleName(GraphText(LNode, 'kind') + ': ' +
-      GraphText(LNode, 'label') + '. Explore connections.').Variant(nvSecondary).Done;
+      GraphText(LNode, 'label') + '. Explore connections.').Variant(LVariant).Done;
     LScene.AddControl(NyxCanvasItem('Node ' + IntToStr(LIndex)),
       NyxCanvasPlacement(NyxCanvasLayer('Nodes'),
         NyxCanvasBounds(LLeft, LTop, CNodeWidth, CNodeHeight)), LNodeControl);
@@ -747,8 +947,9 @@ begin
   begin
     LEdge := TJSObject(LNeighbors[LIndex]);
     FRenderer.ElementFor('graph-connection-' + IntToStr(LIndex)).setAttribute('data-trend',
-      GraphText(LEdge, 'trend'));
-    BindNeighbor('graph-neighbor-' + IntToStr(LIndex), Other(LEdge, FSelected));
+      GraphEdgeTone(LEdge));
+    if LNeighborButtons.has(LIndex) then
+      BindNeighbor('graph-neighbor-' + IntToStr(LIndex), FModel.Other(LEdge, FSelected));
     BindEvidence('graph-claim-' + IntToStr(LIndex), LEdge, False);
     if (LEdge['assessment'] <> nil) and
       (GraphText(TJSObject(LEdge['assessment']), 'local_reference') <> '') then

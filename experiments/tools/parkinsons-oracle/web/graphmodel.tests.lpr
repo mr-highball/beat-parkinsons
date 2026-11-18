@@ -39,6 +39,18 @@ begin
   end;
 end;
 
+function CountKind(ARows: TJSArray; const AKind: String): Integer;
+var
+  LIndex: Integer;
+begin
+  Result := 0;
+  for LIndex := 0 to ARows.Length - 1 do
+  begin
+    if GraphText(TJSObject(ARows[LIndex]), 'kind') = AKind then
+      Inc(Result);
+  end;
+end;
+
 procedure Run;
 var
   LData: TJSObject;
@@ -59,12 +71,19 @@ begin
   try
     Check(LModel.Revision = GraphText(LData, 'revision'), 'Graph revision matches model.');
     LRows := LModel.Neighbors('symptom:rest tremor severity');
-    Check(LRows.Length = 210, 'All tremor hypotheses are available without a hidden cap.');
+    Check(CountKind(LRows, 'claim') = 210, 'All tremor hypotheses are available without a hidden cap.');
+    Check(CountKind(LRows, 'outcome') > 0, 'A symptom links back to studies that assessed it.');
     LEdge := FindEdge(LRows, 'claim:1/0904');
     Check((LEdge <> nil) and (GraphText(LEdge, 'to') = 'ingredient:black tea'),
       'Rest tremor connects to actual black tea claim.');
     Check((GraphText(LEdge, 'label') = 'May ease') and (GraphText(LEdge, 'trend') = 'eases'),
       'Recorded weak relief has a green, qualified label.');
+    Check((GraphEdgeTone(LEdge) = 'eases') and
+      (GraphText(TJSObject(LRows[0]), 'key') = 'claim:1/0904') and
+      (GraphText(TJSObject(LRows[1]), 'kind') = 'outcome'),
+      'The first expansion interleaves claims and studies without burying the directional claim.');
+    Check(FindEdge(LModel.Neighbors('ingredient:black tea'), 'claim:1/0904') = LEdge,
+      'The same directional claim is reachable from the ingredient.');
     Check(GraphText(TJSObject(LEdge['claim']), 'preparation') = 'brewed', 'Preparation is retained.');
     Check(GraphText(TJSObject(LEdge['claim']), 'statement') =
       'Consuming brewed black tea reduces rest tremor severity in people with Parkinson''s disease.',
@@ -90,6 +109,9 @@ begin
     end;
     Check(LRest and LFatigue, 'Shared registry connects only its recorded symptom assessments.');
     Check(LReference, 'Clickable assessment source has an exact document node.');
+    Check(CountKind(LRows, 'assessment') > 0, 'A study connects back to its ingredients.');
+    Check(CountKind(LModel.Neighbors('source:research/2005-2009/Food-Experiment-Tea-Followup.md'),
+      'reference') > 0, 'A saved source connects back to studies recorded in the ledger.');
     LRows := LModel.Neighbors('study:PMID41439298');
     LOpposingSaffron := 0;
     for LIndex := 0 to LRows.Length - 1 do
@@ -99,12 +121,13 @@ begin
         (GraphText(TJSObject(LEdge['assessment']), 'role') = 'opposes') then
       begin
         Check((GraphText(LEdge, 'label') = 'Challenges hypothesis') and
-          (GraphText(LEdge, 'trend') = ''), 'Real opposing assessments retain their role.');
+          (GraphText(LEdge, 'trend') = '') and (GraphEdgeTone(LEdge) = 'challenged'),
+          'Real opposing assessments get a challenge marker and no inverse effect.');
         Inc(LOpposingSaffron);
       end;
     end;
     Check(LOpposingSaffron >= 2, 'Saffron depression and fatigue opposition is present.');
-    Check(LModel.Neighbors('symptom:rest tremor severity').Length = 210,
+    Check(CountKind(LModel.Neighbors('symptom:rest tremor severity'), 'claim') = 210,
       'Sorting a detached neighbor view cannot mutate the graph.');
     Check(LModel.Node('symptom:invented condition') = nil, 'No inferred condition is fabricated.');
     Check(ReferenceFile('research/2010-2014/Food-Experiment-Black-Tea-Motor.md#section') =
