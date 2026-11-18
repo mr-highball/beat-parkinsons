@@ -21,3 +21,10 @@ Qualified easing/worsening judgments produce green/red claim links. A supporting
 Browser input, touch gestures, visual layout and mobile source-return interaction remain unverified under the existing browser-access guard. No visual acceptance or public deployment is claimed. These checks distinguish compiled UI wiring, executed model semantics, readable API sources and actual browser interaction.
 
 The follow-up audit found that the initial direction fixtures used `support` and `oppose`, while ledger rows use `supports` and `opposes`. The graph now matches the actual schema. Both real saffron assessment links labeled `opposes` show “Challenges hypothesis” without implying an inverse effect. The revised native and transpiled direction fixtures pass 15 checks each, and the real-model fixture passes 18 checks.
+
+The mobile follow-up limits touch handling to the graph surface. Pinch and drag use the Nyx camera. A short stationary touch selects a node. The layout has vertical connectors on narrow screens, a wrapping toolbar and a Home action centered on the selected node. Capture-phase activation allows the native node button to open a branch even when its component consumes the bubbling click.
+
+- Native and transpiled touch state fixtures pass 23 checks each. They cover anchor-preserving pinch, drag, tap jitter, capture cancellation and transitioning from pinch to one-finger drag.
+- The live browser at a 390 CSS pixel viewport opened Tremors and Black tea together in the 322-pixel-wide canvas. The first node grew from 220 to 275 pixels with Zoom in and returned to 220 pixels with Home. Browser viewport scale stayed at 1. Computed touch action was `none` on the graph and its nodes and `auto` on the page.
+- In that browser, activating the actual Black tea node opened its studies. PMID22855866 exposed recorded outcomes, and its source opened and returned to the same study view. The viewport override was restored after the check.
+- Physical two-finger pinch on a phone remains unverified. The browser-scale receipt above uses the graph's button, while the two-contact camera behavior is checked by the native and transpiled fixtures.
