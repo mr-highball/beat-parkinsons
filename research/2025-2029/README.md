@@ -467,3 +467,4 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Prunus cerasoides extract and prunetin in two cerebrovascular model abstracts](Source-Text/2025-BrainPET-Prunus-Cerasoides-Prunetin-Comparators.txt).
 - [Oral Prunus cerasoides extract and prunetin in a mouse vascular dementia model](Source-Text/2026-Jeong-Prunus-Cerasoides-Prunetin-Vascular-Dementia.txt).
 - [Prunus cerasoides uses in Nepal and preparations across the study family](Observations/Prunus-Species-Preparation-and-Outcomes.md).
+- [DIGPD falls and walking-aid incidence with depression and freezing predictors](Source-Text/2026-PMID41612959-Mariani-DIGPD-Falls-and-Walking-Aid.txt).

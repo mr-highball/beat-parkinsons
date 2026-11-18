@@ -598,3 +598,4 @@ The new retrospective registration asks about smell changes as adverse symptoms 
 
 - [Lemon balm formulations and repeated study reports](Food-Experiment-Lemon-Balm-Depression.md)
 - [Prunus species, oral and injected preparations, and outcome differences](Prunus-Species-Preparation-and-Outcomes.md)
+- The new DIGPD analysis distinguishes falls from walking-aid use and reports depression and freezing as predictors. The earlier registry establishes the observational design, while the public article abstract leaves coefficients and full adjustment methods open. [2026 cohort analysis](../Source-Text/2026-PMID41612959-Mariani-DIGPD-Falls-and-Walking-Aid.txt) · [Cohort registration](../../2010-2014/Source-Text/Trials/NCT01564992.txt)

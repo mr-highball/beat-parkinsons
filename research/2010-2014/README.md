@@ -380,3 +380,9 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 
 - [Single and repeated ethanolic lemon balm in rat behavior tests](Source-Text/2012-PMID22529473-Taiwo-Lemon-Balm-Behavior-Extract.txt)
 - [STACCATO drug-group abstract and unresolved participant counts](Source-Text/2014-PMID25314256-Panisset-STACCATO-Abstract-Extract.txt)
+- [Banana-flavored reinforcement and orange scent in separate 2011 abstracts](Source-Text/2011-PMC6863369-Banana-Reward-and-Orange-Cue.txt).
+- [Clove detection and strawberry milkshake reward in separate 2012 abstracts](Source-Text/2012-PMC6863383-Clove-Odor-and-Strawberry-Reward.txt).
+- [Banana-flavored food comparator in cocaine self-administration](Source-Text/2012-PMID23072835-Mello-Banana-Flavor-Cocaine-Comparator.txt).
+- [Banana-flavored pellets in nicotine and nicotine–cocaine research](Source-Text/2013-PMID23337868-Mello-Banana-Flavor-Nicotine-Comparator.txt).
+- [Orange scent conditioned to alcohol availability](Source-Text/2013-PMID23761908-Thorsell-Orange-Odor-Cue.txt).
+- [Role of food flavors and odors across the related reports](Observations/Food-Flavors-and-Odor-Stimuli.md).
