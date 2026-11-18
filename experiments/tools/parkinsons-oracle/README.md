@@ -18,6 +18,7 @@ The oracle is a local Free Pascal MCP server for the Parkinson’s research cata
 | `oracle_claim` with a study key | `{"round":1,"id":"0121","assessment_study":"PMID:37294324"}` | Assessments for that exact study key and the same claim-wide metadata |
 | `oracle_search_catalog` | `{"terms":"black tea tremor","period":"2010-2014","limit":8}` | Ranked local documents containing the requested words |
 | `oracle_find_sources` | `{"identifiers":["PMID:40647065","NCT04986982"]}` | Every archived document whose source metadata matches each supplied identifier |
+| `oracle_read_source` | `{"path":"research/2025-2029/Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt"}` | Indexed UTF-8 source text, with a byte cursor for longer documents |
 | `oracle_status` | `{}` | Published claim revision, assessed and unreviewed counts, and the text index’s coverage and refresh record |
 | `oracle_filter_options` | `{}` | Canonical symptom, ingredient, and preparation choices, with their aliases |
 
@@ -72,7 +73,9 @@ Use `oracle_search_catalog` before broader file searches or web discovery. Searc
 
 Search for tremor-related cultural records with `{"terms":"tremor","source_kind":"cultural","limit":20}`. To find 2025–2029 conversations about coffee and tremor, use `{"terms":"coffee tremor","source_kind":"conversations","period":"2025-2029","limit":20}`. Category follows the dated catalog path. Period, totals and pagination apply within the selected category. Searches across all categories also include collection indexes and observations.
 
-Results give the local text path and period. Open the file and check its source, date basis, reported outcome and limits. Continue with the original sources or external discovery for unresolved questions. Keep the initial lookup and later retries under one evidence question in the [coverage ledger](../../oracle-coverage/README.md). If an existing MCP session still advertises the previous schema, relaunch the server. Catalog matches carry no claim verdict.
+Results give the local text path and period. Pass the exact `path` to `oracle_read_source` to check the source, date basis, reported outcome and limits. The reader returns up to 16 KiB of UTF-8 text at a time. Pass the returned `next_offset` as `offset` until there is no next cursor or you have the relevant passage. The reader requires an indexed research path and detects files changed since indexing. Refresh the catalog before retrying a changed source.
+
+Continue with the original sources or external discovery for unresolved questions. Catalog matches carry no claim verdict. Keep the initial lookup and later retries under one evidence question in the [coverage ledger](../../oracle-coverage/README.md). Use its [local launcher](../../oracle-coverage/README.md#local-launcher) when the session’s cached tool schema lacks the category filter or source reader. A fresh MCP connection advertises both.
 
 The [native catalog fixtures](catalog.sourcekinds.tests.lpr) cover every category, period and page filters, and the effect of a refresh on cached results. Run the compiled fixture with a fresh directory under the ignored build output.
 

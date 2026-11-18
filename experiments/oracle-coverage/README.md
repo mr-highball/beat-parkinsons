@@ -94,8 +94,9 @@ $Reply.result.content[0].text | ConvertFrom-Json
 Use `oracle_status` to record the claim and catalog revisions. For a batch of
 known study identifiers, call `oracle_find_sources` with, for example,
 `identifiers: ["PMID:40647065", "NCT04986982", "ACTRN12610000710022"]`.
-Exact lookup also accepts ISRCTN, IRCT and DRKS IDs. Open the returned source
-passages to verify identity, eligibility and depth. When archive matches are
+Exact lookup also accepts ISRCTN, IRCT and DRKS IDs. Use `oracle_read_source`
+with the returned `path` to verify identity, eligibility and depth. Pass each
+`next_offset` as `offset` when you need more of a long source. When archive matches are
 empty, use `oracle_search_catalog` to find citations and catalog notes before
 classifying a question. Use the text search for alternate terms, then review the
 assessments needed to check evidence and conflicts.
@@ -113,7 +114,9 @@ response when reviewing all assessments and continue related source trails.
 When a compatibility checkout links its Git metadata and build directory to the
 moved checkout, the launcher resolves the Git junction's physical repository
 before starting a fresh server. Already-running MCP processes keep their original
-arguments until relaunched. For other filesystem aliases, launch from the
+arguments and tool schema until relaunched. If the connected tools lack
+`source_kind` or `oracle_read_source`, use a fresh local launcher process with
+the same request pattern above. For other filesystem aliases, launch from the
 checkout that owns the index. Use `oracle_status` before recording a source miss:
 a catalog binding failure is unavailable, not evidence missing from the catalog.
 

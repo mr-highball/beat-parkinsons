@@ -47,7 +47,7 @@ Cross-link formal studies already stored under `Source-Text/` instead of duplica
 
 Keep personal identifiers out of curated public records. Summarize public individual experiences without copying participant names, handles, contact details or other unnecessary identifying information. Retain a suitable public source locator and paraphrase within source rights; raw working downloads belong in ignored build folders.
 
-The Oracle text catalog and public model include these records. Search the Oracle MCP first using the [source category filters](../experiments/tools/parkinsons-oracle/README.md#cultural-and-conversational-lookup). After adding a record, refresh the index and verify that MCP returns the dated local path under the appropriate category. The browser presents source leads alongside experiment claims and labels unresolved claims and unreviewed questions. Catalog matches supply leads for source review.
+The Oracle text catalog and public model include these records. Search the Oracle MCP first using the [source category filters](../experiments/tools/parkinsons-oracle/README.md#cultural-and-conversational-lookup). After adding a record, refresh the index and verify that MCP returns the dated local path under the appropriate category. Open the indexed record with `oracle_read_source` to inspect the account and its limits. The browser presents source leads alongside experiment claims and labels unresolved claims and unreviewed questions. Catalog matches supply leads for source review.
 
 Initialize the existing periods and verify every cultural text record with the native tool, from the repository root:
 

@@ -54,6 +54,11 @@ const
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
       '"additionalProperties":false,"required":["identifiers"],"properties":{"identifiers":{' +
       '"type":"array","minItems":1,"maxItems":100,"items":{"type":"string","minLength":1}}}}},' +
+    '{"name":"oracle_read_source","description":"Read a page of UTF-8 text from an exact indexed ' +
+      'research path returned by the catalog. Pass next_offset as offset to continue.",' +
+      '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
+      '"additionalProperties":false,"required":["path"],"properties":{' +
+      '"path":{"type":"string","minLength":1},"offset":{"type":"integer","minimum":0}}}},' +
     '{"name":"oracle_status","description":"Check the pinned claim revision, evidence counts and ' +
       'the local research text index coverage and freshness.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},' +
@@ -72,12 +77,12 @@ type
     function Index: TClaimIndex;
     function Catalog: TResearchCatalog;
     function Status: TJSONObject;
+    function ReadSource(AArguments: TJSONObject): TJSONObject;
   public
     constructor Create(const ARepoRoot: String);
     destructor Destroy; override;
     procedure RefreshCatalog;
     function Invoke(const AName: String; AArguments: TJSONObject): TJSONObject;
-    function InvokeWeb(const AName: String; AArguments: TJSONObject): TJSONObject;
   end;
 
 function ReadString(AArguments: TJSONObject; const AName, ADefault: String): String;
@@ -204,7 +209,7 @@ var
   LIdentifiers: TJSONData;
 begin
   case IndexStr(AName, ['oracle_query', 'oracle_claim', 'oracle_search_catalog',
-    'oracle_status', 'oracle_filter_options', 'oracle_find_sources']) of
+    'oracle_status', 'oracle_filter_options', 'oracle_find_sources', 'oracle_read_source']) of
     0:
       begin
         RequireFields(AArguments, ['symptom', 'ingredient', 'preparation', 'direction',
@@ -288,20 +293,20 @@ begin
         end;
         Result := Catalog.FindSources(TJSONArray(LIdentifiers));
       end;
+    6:
+      begin
+        Result := ReadSource(AArguments);
+      end;
   else
     raise EConvertError.Create('Unknown tool: ' + AName);
   end;
 end;
 
-function TOracle.InvokeWeb(const AName: String; AArguments: TJSONObject): TJSONObject;
+function TOracle.ReadSource(AArguments: TJSONObject): TJSONObject;
 var
   LPath: String;
   LOffset: Integer;
 begin
-  if AName <> 'oracle_read_source' then
-  begin
-    Exit(Invoke(AName, AArguments));
-  end;
   RequireFields(AArguments, ['path', 'offset']);
   LPath := ReadString(AArguments, 'path', '');
   LOffset := ReadInteger(AArguments, 'offset', 0, 0, MaxInt);
@@ -531,7 +536,7 @@ begin
             LLanBinding := ParamStr(4);
           if ParamCount > 4 then
             raise EArgumentException.Create('Use web <repo> [port] [private-ipv4/prefix].');
-          ServeOracleWeb(LWebRoot, LPort, LOracle.InvokeWeb, LLanBinding);
+          ServeOracleWeb(LWebRoot, LPort, LOracle.Invoke, LLanBinding);
         end;
       4:
         begin
