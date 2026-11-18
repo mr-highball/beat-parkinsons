@@ -1,0 +1,5 @@
+# Lemon balm suggestions and an acute extract comparison
+
+A caregiver discussion generated a suggestion to try an extract for sleep or relaxation. It contains no reported outcome for that extract. The prior period includes a firsthand tincture account. It describes sleep maintenance after a different preparation. [Current discussion](../Cultural-and-Experiential/Conversations/2025-Reddit-Lemon-Balm-Extract-Sleep-Suggestion.txt) · [Prior period observations](../../2020-2024/Observations/Lemon-Balm-Preparation-and-Conversations.md)
+
+The acute pharmacologic comparison in mice found a favorable immobility signal at one tested dose. A lower group showed increased forced-swim immobility, and higher doses attenuated the favorable pattern. The researchers cite the earlier extraction method, but the acute design differs from the prior pretreatment-plus-reserpine study and its combination result. Neither mouse assay supplies a clinical mood estimate. [Acute report](../Source-Text/2026-Abbaszadeh-Lemon-Balm-Immobility-Extract.txt) · [Prior reserpine comparison](../../2020-2024/Source-Text/2022-PMID35470926-Talebi-Lemon-Balm-Reserpine-Abstract-Extract.txt)

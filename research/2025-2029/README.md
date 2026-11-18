@@ -460,3 +460,6 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Reddit discussion about coffee, tea, energy and tremor](Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt).
 - [Reddit discussion about levodopa, caffeinated drinks and tremor](Cultural-and-Experiential/Conversations/2025-Reddit-Levodopa-Caffeine-and-Tremor.txt).
 - [Observations on coffee and tremor in public conversations](Observations/Conversations-Coffee-and-Tremor.md).
+- [Public caregiver discussion and a lemon-balm extract suggestion](Cultural-and-Experiential/Conversations/2025-Reddit-Lemon-Balm-Extract-Sleep-Suggestion.txt).
+- [Acute aqueous lemon-balm concentrate and opposing mouse behavior results](Source-Text/2026-Abbaszadeh-Lemon-Balm-Immobility-Extract.txt).
+- [Observations on lemon-balm preparations and public discussions](Observations/Lemon-Balm-Preparation-and-Conversations.md).

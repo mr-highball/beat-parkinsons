@@ -32,7 +32,7 @@
 
 ## Evidence and completion after the preceding round passes
 
-- Start with the earlier rounds as an evidence index for the assigned ingredients and symptoms. Trace applicable entries to the original sources and carry their provenance, review depth, conflicting evidence and access flags into the new claim ledger.
+- Start each post-freeze evidence question with the [Oracle-first workflow](../oracle-coverage/README.md). Use assessed claims and original sources from earlier rounds as an evidence index for the assigned ingredients and symptoms. Start cultural and forum questions with the [MCP catalog lookup](../tools/parkinsons-oracle/README.md#cultural-and-conversational-lookup). Trace applicable entries to the original sources and carry their provenance, review depth, conflicting evidence and access flags into the new claim ledger.
 - Follow the original experiment's evidence assessment and follow-up rigor (../1000_see_what_sticks_food/AGENTS.md), but not its generation quotas or 1,000-only completion count. Use the target count in this folder's README.md.
 - Search both directions, deduplicate reports of the same study, and distinguish human Parkinson's evidence from indirect constituents, preparations, populations, endpoints, combined interventions and nonhuman work. Assigned directions are arbitrary hypotheses, NOT demonstrated benefit or harm.
 - Log local catalog coverage, extraction/access failures and targeted external searches. Save relevant sources under research/YYYY-YYYY by first public date and maintain resolvable citations and resumable coverage records. Preserve conflicting evidence.

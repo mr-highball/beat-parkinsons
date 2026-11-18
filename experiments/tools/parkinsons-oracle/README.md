@@ -55,6 +55,12 @@ For a known study, send `assessment_study` with its case-sensitive ledger key an
 
 Omit the study key and both assessment paging arguments to return the full evidence list in one reply. With paging, `assessment_limit` accepts 1–100 rows and defaults to 8 when only `assessment_offset` is supplied. Results keep ledger order and include the full claim rationale, verdict references, assessment counts and queue counts. Pass `next_assessment_offset` as the next `assessment_offset` until it is null. If the claim revision changes, start again at offset 0. Check all relevant pages for supporting, opposing and pending evidence.
 
+### Cultural and conversational lookup
+
+Use `oracle_search_catalog` first when investigating a cultural practice, traditional preparation, personal account or public discussion. The catalog indexes the UTF-8 records in each period's `Cultural-and-Experiential/` folder, including `Conversations/`. Search the broader collection with `{"terms":"tremor cultural experiential","limit":20}`. For archived Reddit and forum accounts, add `conversation`, for example `{"terms":"conversation coffee tremor","period":"2025-2029","limit":20}`.
+
+Results give the local text path and period. Open the file and check its source, date basis, reported outcome and limits. Search without the collection words when checking for relevant material in other sections. Continue with original sources or external discovery for unresolved questions. Keep the initial lookup and later retries under one evidence question in the [coverage ledger](../../oracle-coverage/README.md). Catalog mentions carry no claim verdict.
+
 ## Build and connect
 
 From the repository root in PowerShell:

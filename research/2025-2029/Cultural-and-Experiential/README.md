@@ -11,3 +11,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Reddit discussion about coffee, tea, energy and tremor](Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt).
 - [Reddit discussion about levodopa, caffeinated drinks and tremor](Conversations/2025-Reddit-Levodopa-Caffeine-and-Tremor.txt).
 - [Observations on coffee and tremor in public conversations](../Observations/Conversations-Coffee-and-Tremor.md).
+- [Public caregiver discussion and a lemon-balm extract suggestion](Conversations/2025-Reddit-Lemon-Balm-Extract-Sleep-Suggestion.txt).
+- [Observations on lemon-balm preparations and public discussions](../Observations/Lemon-Balm-Preparation-and-Conversations.md).

@@ -11,6 +11,7 @@
 ## Evidence assessment
 
 - Start each post-freeze question with the project's [oracle-first workflow](../oracle-coverage/README.md). Record the first local outcome, then continue every required catalog and external evidence check. Use the tracked gaps to prioritize additions to the appropriate research period.
+- Start cultural and forum source searches with the [MCP catalog lookup](../tools/parkinsons-oracle/README.md#cultural-and-conversational-lookup). Refresh the index after publication and verify the new source paths through the same tool.
 
 - Scan the entire local research catalog after the freeze. Log file coverage, unavailable full text, and any read or extraction failures. Search both directions and deduplicate reports of the same study.
 - Evaluate human Parkinson’s evidence against the named ingredient, preparation, and symptom. Record related preparations, isolated constituents, combined interventions, other endpoints, and nonhuman studies as indirect leads.

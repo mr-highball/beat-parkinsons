@@ -36,6 +36,8 @@ new sources into their chronological buckets, refresh the index and verify
 retrieval. Use batch summaries to identify the gaps that motivate that work.
 Record only research identifiers and relative source paths.
 
+For cultural or forum source questions, use [Oracle catalog search](../tools/parkinsons-oracle/README.md#cultural-and-conversational-lookup) before external discovery. A matching discussion can verify that an account was reported. Preparation, diagnosis, and symptom mismatches still matter when judging a frozen ingredient claim. Verify new chronological entries through MCP after refresh without counting the verification as another first pass.
+
 ## Validate a coverage append
 
 The native [coverage merger](../tools/parkinsons-oracle/oraclecoverage.merge.lpr) validates the old and proposed question and aggregate tables before writing distinct staged outputs under `build/`. It rejects duplicate question identities, duplicate aggregate keys, malformed rows, orphan groups, invalid outcomes, count/rate mismatches and input overwrite. Existing table bytes and order remain exact prefixes. An aggregate key includes batch, workstream and lookup kind; a question key includes batch and question. Unavailable lookups stay outside rate denominators.
