@@ -56,8 +56,16 @@ var
   LData: TJSObject;
   LModel: TOracleGraphModel;
   LRows: TJSArray;
+  LConnections: TJSArray;
+  LConnection: TJSObject;
   LEdge: TJSObject;
+  LNodes: TJSSet;
   LIndex: Integer;
+  LLinkCount: Integer;
+  LClaims: TJSArray;
+  LClaim: TJSObject;
+  LKey: String;
+  LCitation: TJSObject;
   LRest: Boolean;
   LFatigue: Boolean;
   LReference: Boolean;
@@ -73,6 +81,21 @@ begin
     LRows := LModel.Neighbors('symptom:rest tremor severity');
     Check(CountKind(LRows, 'claim') = 210, 'All tremor hypotheses are available without a hidden cap.');
     Check(CountKind(LRows, 'outcome') > 0, 'A symptom links back to studies that assessed it.');
+    LConnections := LModel.Connections('symptom:rest tremor severity');
+    LNodes := TJSSet.new;
+    LLinkCount := 0;
+    for LIndex := 0 to LConnections.Length - 1 do
+    begin
+      LConnection := TJSObject(LConnections[LIndex]);
+      LNodes.add(GraphText(LConnection, 'node'));
+      Inc(LLinkCount, GraphRows(LConnection, 'edges').Length);
+    end;
+    Check((LNodes.size = LConnections.Length) and (LLinkCount = LRows.Length),
+      'Each neighbor consumes one slot and its group keeps all recorded edges.');
+    Check(GraphText(TJSObject(LConnections[0]), 'node') = 'ingredient:black tea',
+      'The grouped projection keeps the qualified evidence visible first.');
+    Check(Pos('study:', GraphText(TJSObject(LConnections[1]), 'node')) = 1,
+      'Studies appear in the first group rotation.');
     LEdge := FindEdge(LRows, 'claim:1/0904');
     Check((LEdge <> nil) and (GraphText(LEdge, 'to') = 'ingredient:black tea'),
       'Rest tremor connects to actual black tea claim.');
@@ -130,6 +153,26 @@ begin
     Check(CountKind(LModel.Neighbors('symptom:rest tremor severity'), 'claim') = 210,
       'Sorting a detached neighbor view cannot mutate the graph.');
     Check(LModel.Node('symptom:invented condition') = nil, 'No inferred condition is fabricated.');
+    LClaims := GraphRows(LData, 'claims');
+    LCitation := nil;
+    for LIndex := 0 to LClaims.Length - 1 do
+    begin
+      LClaim := TJSObject(LClaims[LIndex]);
+      if GraphRows(LClaim, 'local_references').Length = 0 then
+        Continue;
+      LKey := GraphKey('ingredient', GraphText(LClaim, 'ingredient'));
+      LRows := LModel.Neighbors(LKey);
+      LCitation := FindEdge(LRows, GraphText(LClaim, 'round') + '/' +
+        GraphText(LClaim, 'claim_id') + '/citation:0/ingredient');
+      if LCitation <> nil then
+        Break;
+    end;
+    Check((LCitation <> nil) and (GraphEdgeTone(LCitation) = '') and
+      (GraphText(LCitation, 'label') = 'Cited in claim'),
+      'A real claim-only citation appears as a neutral saved-source link.');
+    LRows := LModel.Neighbors(GraphText(LCitation, 'to'));
+    Check(FindEdge(LRows, GraphText(LCitation, 'key')) = LCitation,
+      'A claim-only source can be followed back to the actual ingredient.');
     Check(ReferenceFile('research/2010-2014/Food-Experiment-Black-Tea-Motor.md#section') =
       'research/2010-2014/Food-Experiment-Black-Tea-Motor.md', 'Reader paths exclude anchors.');
     WriteLn(GChecks, ' real-model graph checks passed; nodes=', LModel.NodeCount,

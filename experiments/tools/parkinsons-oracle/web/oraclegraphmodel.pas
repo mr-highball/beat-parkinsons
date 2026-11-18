@@ -29,6 +29,7 @@ type
     function Node(const AKey: String): TJSObject;
     function Other(AEdge: TJSObject; const ANode: String): String;
     function Neighbors(const AKey: String): TJSArray;
+    function Connections(const AKey: String): TJSArray;
     function Revision: String;
     property NodeCount: Integer read FNodeCount;
     property EdgeCount: Integer read FEdgeCount;
@@ -38,6 +39,7 @@ function GraphText(AObject: TJSObject; const AKey: String): String;
 function GraphRows(AObject: TJSObject; const AKey: String): TJSArray;
 function GraphKey(const AKind, AValue: String): String;
 function ReferenceFile(const APath: String): String;
+function SavedSourceTitle(const APath: String): String;
 function GraphKindIndex(const AKind: String): Integer;
 function GraphEdgeTone(AEdge: TJSObject): String;
 
@@ -103,7 +105,7 @@ begin
       Result := 'challenged';
     end;
   end
-  else if (LKind <> 'reference') and
+  else if ((LKind = 'assessment') or (LKind = 'outcome')) and
     (GraphText(TJSObject(AEdge['assessment']), 'role') = 'opposes') then
   begin
     Result := 'challenged';
@@ -120,6 +122,18 @@ begin
   begin
     Result := Copy(APath, 1, LHash - 1);
   end;
+end;
+
+function SavedSourceTitle(const APath: String): String;
+var
+  LFile: String;
+begin
+  LFile := ReferenceFile(APath);
+  Result := ChangeFileExt(ExtractFileName(LFile), '');
+  if SameText(Result, 'README') then
+    Result := ExtractFileName(ExtractFileDir(LFile)) + ' overview';
+  Result := StringReplace(Result, '-', ' ', [rfReplaceAll]);
+  Result := StringReplace(Result, '_', ' ', [rfReplaceAll]);
 end;
 
 procedure TOracleGraphModel.AddNode(const AKey, AKind, ALabel, AValue: String);
@@ -169,6 +183,8 @@ var
   LAssessments: TJSArray;
   LClaim: TJSObject;
   LAssessment: TJSObject;
+  LReferences: TJSArray;
+  LCitedPaths: TJSSet;
   LIndex: Integer;
   LAssessmentIndex: Integer;
   LSymptom: String;
@@ -199,6 +215,7 @@ begin
     AddEdge('claim:' + LClaimKey, LSymptom, LIngredient, 'claim',
       GraphClaimLabel(GraphText(LClaim, 'verdict'), LDirection),
       ClaimTrend(GraphText(LClaim, 'verdict'), LDirection), LClaim, nil);
+    LCitedPaths := TJSSet.new;
     LAssessments := GraphRows(LClaim, 'assessments');
     for LAssessmentIndex := 0 to LAssessments.Length - 1 do
     begin
@@ -220,11 +237,27 @@ begin
       LPath := ReferenceFile(GraphText(LAssessment, 'local_reference'));
       if LPath <> '' then
       begin
+        LCitedPaths.add(LPath);
         LSource := GraphKey('source', LPath);
-        AddNode(LSource, 'source', ExtractFileName(LPath), LPath);
+        AddNode(LSource, 'source', SavedSourceTitle(LPath), LPath);
         AddEdge(LEdgeKey + '/source', LStudy, LSource, 'reference',
           'Read saved source', '', LClaim, LAssessment);
       end;
+    end;
+    LReferences := GraphRows(LClaim, 'local_references');
+    for LAssessmentIndex := 0 to LReferences.Length - 1 do
+    begin
+      LPath := ReferenceFile(String(LReferences[LAssessmentIndex]));
+      if (Copy(LPath, 1, 9) <> 'research/') or LCitedPaths.has(LPath) then
+        Continue;
+      LCitedPaths.add(LPath);
+      LSource := GraphKey('source', LPath);
+      AddNode(LSource, 'source', SavedSourceTitle(LPath), LPath);
+      LEdgeKey := LClaimKey + '/citation:' + IntToStr(LAssessmentIndex);
+      AddEdge(LEdgeKey + '/ingredient', LIngredient, LSource, 'citation',
+        'Cited in claim', '', LClaim, nil);
+      AddEdge(LEdgeKey + '/symptom', LSymptom, LSource, 'citation',
+        'Cited in claim', '', LClaim, nil);
     end;
   end;
 end;
@@ -322,6 +355,47 @@ begin
       end;
     end;
   end;
+end;
+
+function TOracleGraphModel.Connections(const AKey: String): TJSArray;
+var
+  LRows: TJSArray;
+  LGroups: array[0..3] of TJSArray;
+  LGroup: TJSArray;
+  LByNode: TJSObject;
+  LConnection: TJSObject;
+  LEdge: TJSObject;
+  LOther: String;
+  LIndex: Integer;
+  LLongest: Integer;
+begin
+  LRows := Neighbors(AKey);
+  LByNode := TJSObject.new;
+  for LIndex := Low(LGroups) to High(LGroups) do
+    LGroups[LIndex] := TJSArray.new;
+  for LIndex := 0 to LRows.Length - 1 do
+  begin
+    LEdge := TJSObject(LRows[LIndex]);
+    LOther := Other(LEdge, AKey);
+    if not isDefined(LByNode[LOther]) then
+    begin
+      LConnection := TJSObject.new;
+      LConnection['node'] := LOther;
+      LConnection['edges'] := TJSArray.new;
+      LByNode[LOther] := LConnection;
+      LGroups[GraphKindIndex(GraphText(Node(LOther), 'kind'))].push(LConnection);
+    end;
+    TJSArray(TJSObject(LByNode[LOther])['edges']).push(LEdge);
+  end;
+  LLongest := 0;
+  for LGroup in LGroups do
+    if LGroup.Length > LLongest then
+      LLongest := LGroup.Length;
+  Result := TJSArray.new;
+  for LIndex := 0 to LLongest - 1 do
+    for LGroup in LGroups do
+      if LIndex < LGroup.Length then
+        Result.push(LGroup[LIndex]);
 end;
 
 function TOracleGraphModel.Revision: String;

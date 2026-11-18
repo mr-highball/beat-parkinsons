@@ -47,15 +47,12 @@ var
   GSymptom: TOraclePicker;
   GIngredient: TOraclePicker;
   GPreparation: TOraclePicker;
-  GSourceReturn: TPickerAction;
-  GDetailReturn: TPickerAction;
   GGraph: TOracleGraphExplorer;
-  GGraphSymptoms: TStringValues;
-  GGraphIngredient: String;
-  GGraphStartNode: String;
-  GGraphReturn: TPickerAction;
+  GGraphModel: TOracleGraphModel;
+  GGraphStack: array of TOracleGraphExplorer;
 
 function JSValueText(AValue: JSValue): String; external name 'String';
+function OpenWindow(const AURL, ATarget, AFeatures: String): TJSWindow; external name 'window.open';
 
 function TextOf(AObject: TJSObject; const AKey: String): String;
 var
@@ -92,17 +89,22 @@ begin
   Result := Section(AKind, AId).Configure.Text(AValue).Done;
 end;
 
-function SourceLink(const AId, APath: String): TNyxNode;
+function SourceLink(const AId, APath: String; const ALabel: String = ''): TNyxNode;
 var
   LURL: String;
+  LLabel: String;
 begin
+  LLabel := ALabel;
+  if LLabel = '' then
+    LLabel := 'Read source' + #10 + APath;
   if GStaticOracle <> nil then
   begin
     LURL := GStaticOracle.ReferenceURL(APath);
     if LURL <> '' then
-      Exit(Section(nkLink, AId).Configure.Text(APath).LinkTo(LURL).Done);
+      Exit(Section(nkLink, AId).Configure.Text(LLabel).LinkTo(LURL).Done);
+    Exit(Caption(nkCode, AId, APath));
   end;
-  Result := Section(nkButton, AId).Configure.Text('Open source' + #10 + APath)
+  Result := Section(nkButton, AId).Configure.Text(LLabel)
     .AccessibleName('Open source ' + APath).Variant(nvSecondary).Done;
 end;
 
@@ -138,6 +140,18 @@ end;
 procedure BindEvent(AElement: TJSHTMLElement; const AEventName: String; AHandler: TJSEventHandler);
 begin
   AElement.addEventListener(AEventName, AHandler);
+end;
+
+procedure SetExternalLink(const ANodeId: String);
+var
+  LLink: TJSHTMLElement;
+begin
+  LLink := GResultsRenderer.ElementFor(ANodeId);
+  if (LLink <> nil) and LLink.hasAttribute('href') then
+  begin
+    LLink.setAttribute('target', '_blank');
+    LLink.setAttribute('rel', 'noopener');
+  end;
 end;
 
 procedure RequestLocal(const ABody: String; AReply: TOracleReply; ACanRetry: Boolean);
@@ -243,6 +257,7 @@ begin
   if GGraph <> nil then
   begin
     GGraph.Detach;
+    GGraph := nil;
   end;
   LPrior := GResultsDocument;
   GResultsRenderer.Render(ADocument, APage, GRenderer.ElementFor('results-frame'));
@@ -250,7 +265,7 @@ begin
   LPrior.Free;
 end;
 
-procedure MessageView(const ATitle, AMessage: String);
+procedure MessageView(const ATitle, AMessage: String; ABack: TPickerAction = nil);
 var
   LDocument: TNyxDocument;
   LPage: TNyxNode;
@@ -260,15 +275,24 @@ begin
   LDocument.AddPage(LPage);
   LPage.Add(Caption(nkHeading, 'result-heading', ATitle));
   LPage.Add(Caption(nkLabel, 'result-message', AMessage));
+  if Assigned(ABack) then
+    LPage.Add(Button('back-results', '‹ Back', nvSecondary));
   PublishResults(LDocument, LPage);
+  if Assigned(ABack) then
+    BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        Inc(GSequence);
+        ABack();
+        Result := True;
+      end);
 end;
 
 procedure ShowList(AResults: TJSObject; AFocus: Boolean = True); forward;
 procedure Query(ANewQuery: Boolean; AOffset: Integer); forward;
 procedure SwitchView(AView: TOracleView); forward;
-procedure BindReference(const ANodeId, APath: String; ARound: Integer;
-  const AClaimId: String); forward;
-procedure ShowGraph(AReset: Boolean); forward;
+procedure BindReference(const ANodeId, APath: String; AReturn: TPickerAction); forward;
+procedure ShowGraph(AGraph: TOracleGraphExplorer; AReturn: TPickerAction); forward;
 procedure StartGraph(const ASymptoms: TStringValues; const AIngredient: String;
   const AStartNode: String = ''; AReturn: TPickerAction = nil); forward;
 
@@ -462,8 +486,7 @@ var
   LButton: TJSHTMLElement;
   LLabel: String;
 begin
-  LCount := Ord((GIngredient.Chosen <> '') or (Trim(GIngredient.Input.value) <> '')) +
-    Ord((GPreparation.Chosen <> '') or (Trim(GPreparation.Input.value) <> '')) +
+  LCount := Ord((GPreparation.Chosen <> '') or (Trim(GPreparation.Input.value) <> '')) +
     Ord(SelectedIndex('scope') <> 2) + Ord(SelectedIndex('direction') > 0);
   LButton := GRenderer.ElementFor('show-filters');
   if LButton.getAttribute('aria-expanded') = 'true' then
@@ -564,6 +587,14 @@ begin
     end);
 end;
 
+function AssessmentTone(const ARole, ADirection: String): String;
+begin
+  if ARole = 'opposes' then
+    Result := 'challenged'
+  else
+    Result := GraphAssessmentTrend(ARole, ADirection);
+end;
+
 function EvidenceGroup(const ARole: String): Integer;
 begin
   if ARole = 'related' then
@@ -573,26 +604,22 @@ begin
   Result := 0;
 end;
 
-function Inspect(ARound: Integer; const AId: String): Boolean;
+function Inspect(ARound: Integer; const AId: String; AReturn: TPickerAction): Boolean;
 const
   CEvidenceGroups: array[0..2] of String = ('Evaluated the claim', 'Related studies',
     'Awaiting evidence');
 var
   LArgs: TJSObject;
   LSequence: Integer;
-  LReturn: TPickerAction;
+  LBack: TPickerAction;
+  LRestore: TPickerAction;
 
   procedure BindStudyConnections(const ATag, AStudy: String);
   begin
     BindEvent(GResultsRenderer.ElementFor('study-connections-' + ATag), 'click',
       function(AEvent: TEventListenerEvent): Boolean
       begin
-        StartGraph(nil, '', GraphKey('study', AStudy),
-          procedure
-          begin
-            GDetailReturn := LReturn;
-            Inspect(ARound, AId);
-          end);
+        StartGraph(nil, '', GraphKey('study', AStudy), LRestore);
         Result := True;
       end);
   end;
@@ -600,7 +627,16 @@ var
 begin
   Inc(GSequence);
   LSequence := GSequence;
-  LReturn := GDetailReturn;
+  LBack := AReturn;
+  if not Assigned(LBack) then
+    LBack := procedure
+      begin
+        ShowList(GResults);
+      end;
+  LRestore := procedure
+    begin
+      Inspect(ARound, AId, LBack);
+    end;
   LArgs := TJSObject.new;
   LArgs['round'] := ARound;
   LArgs['id'] := AId;
@@ -626,12 +662,12 @@ begin
         Exit;
       if AError <> '' then
       begin
-        MessageView('Evidence unavailable', AError);
+        MessageView('Evidence unavailable', AError, LBack);
         Exit;
       end;
       if TextOf(AData, 'found') <> 'true' then
       begin
-        MessageView('Claim unavailable', 'The published round does not contain this claim.');
+        MessageView('Claim unavailable', 'The published round does not contain this claim.', LBack);
         Exit;
       end;
 
@@ -640,8 +676,7 @@ begin
       LDocument.AddPage(LPage);
       LActions := Section(nkRow, 'detail-actions');
       LActions.Add(Button('back-results', '‹ Back', nvSecondary));
-      if not Assigned(LReturn) then
-        LActions.Add(Button('open-graph', 'Explore ingredient connections', nvSecondary));
+      LActions.Add(Button('open-graph', 'Explore ingredient connections', nvSecondary));
       LPage.Add(LActions);
       LPage.Add(Caption(nkHeading, 'result-heading', Capitalized(TextOf(AData, 'ingredient'))));
       LPage.Add(Caption(nkLabel, 'claim-symptom', FriendlySymptom(TextOf(AData, 'symptom'))));
@@ -687,12 +722,18 @@ begin
         LTag := IntToStr(LIndex);
         LCard := Section(nkCard, 'evidence-' + LTag);
         LCard.Add(Caption(nkBadge, 'role-' + LTag, GraphAssessmentLabel(LRole, LDirection)));
-        LCard.Add(Button('study-' + LTag, 'Open study: ' + TextOf(LRow, 'study'), nvSecondary));
+        if TextOf(LRow, 'local_reference') <> '' then
+          LCard.Add(SourceLink('study-' + LTag, TextOf(LRow, 'local_reference'),
+            'Read study reference · ' + TextOf(LRow, 'study')))
+        else
+          LCard.Add(Caption(nkHeading, 'study-key-' + LTag, TextOf(LRow, 'study')));
         LCard.Add(Caption(nkLabel, 'fit-' + LTag, TextOf(LRow, 'fit')));
         LCard.Add(Caption(nkLabel, 'analysis-' + LTag, TextOf(LRow, 'assessment')));
-        LCard.Add(SourceLink('ref-' + LTag, TextOf(LRow, 'local_reference')));
-        if (TextOf(LRow, 'study') <> '') and not Assigned(LReturn) then
-          LCard.Add(Button('study-connections-' + LTag, 'See study connections', nvSecondary));
+        LActions := Section(nkRow, 'study-actions-' + LTag);
+        if TextOf(LRow, 'study') <> '' then
+          LActions.Add(Button('study-connections-' + LTag, 'See study connections', nvSecondary));
+        if TextOf(LRow, 'study') <> '' then
+          LCard.Add(LActions);
         LGroups[EvidenceGroup(LRole)].Add(LCard);
       end;
       LItems := ItemsOf(AData, 'local_references');
@@ -705,53 +746,40 @@ begin
 
       PublishResults(LDocument, LPage);
       FocusResults;
-      if not Assigned(LReturn) then
-        BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
+      BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
         function(AEvent: TEventListenerEvent): Boolean
         var
           LSymptoms: TStringValues;
         begin
           LSymptoms := nil;
           LSymptoms := AddSelection(LSymptoms, TextOf(AData, 'symptom'));
-          StartGraph(LSymptoms, TextOf(AData, 'ingredient'), '',
-            procedure
-            begin
-              GDetailReturn := LReturn;
-              Inspect(ARound, AId);
-            end);
+          StartGraph(LSymptoms, TextOf(AData, 'ingredient'), '', LRestore);
           Result := True;
         end);
       LItems := ItemsOf(AData, 'assessments');
       for LIndex := 0 to LItems.Length - 1 do
       begin
         LRow := TJSObject(LItems[LIndex]);
-        if (TextOf(LRow, 'study') <> '') and not Assigned(LReturn) then
+        if TextOf(LRow, 'study') <> '' then
           BindStudyConnections(IntToStr(LIndex), TextOf(LRow, 'study'));
-        BindReference('study-' + IntToStr(LIndex), TextOf(LRow, 'local_reference'), ARound, AId);
+        if TextOf(LRow, 'local_reference') <> '' then
+          if GStaticOracle = nil then
+            BindReference('study-' + IntToStr(LIndex), TextOf(LRow, 'local_reference'), LRestore)
+          else
+            SetExternalLink('study-' + IntToStr(LIndex));
+        GResultsRenderer.ElementFor('role-' + IntToStr(LIndex)).setAttribute('data-trend',
+          AssessmentTone(TextOf(LRow, 'role'), LDirection));
+      end;
+      LItems := ItemsOf(AData, 'local_references');
+      for LIndex := 0 to LItems.Length - 1 do
         if GStaticOracle = nil then
-        begin
-          BindReference('ref-' + IntToStr(LIndex), TextOf(LRow, 'local_reference'), ARound, AId);
-        end;
-      end;
-      if GStaticOracle = nil then
-      begin
-        LItems := ItemsOf(AData, 'local_references');
-        for LIndex := 0 to LItems.Length - 1 do
-        begin
-          BindReference('citation-' + IntToStr(LIndex), JSValueText(LItems[LIndex]), ARound, AId);
-        end;
-      end;
+          BindReference('citation-' + IntToStr(LIndex), JSValueText(LItems[LIndex]), LRestore)
+        else
+          SetExternalLink('citation-' + IntToStr(LIndex));
       BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
         function(AEvent: TEventListenerEvent): Boolean
         begin
-          if Assigned(LReturn) then
-          begin
-            LReturn();
-          end
-          else
-          begin
-            ShowList(GResults);
-          end;
+          LBack();
           Result := True;
         end);
     end);
@@ -763,21 +791,23 @@ begin
   BindEvent(GResultsRenderer.ElementFor('inspect-' + ATag), 'click',
     function(AEvent: TEventListenerEvent): Boolean
     begin
-      GDetailReturn := nil;
-      Result := Inspect(ARound, AId);
+      Result := Inspect(ARound, AId,
+        procedure
+        begin
+          ShowList(GResults, False);
+          GResultsRenderer.ElementFor('inspect-' + ATag).focus;
+        end);
     end);
 end;
 
-procedure OpenSource(const APath, ATag: String; const AOffsets: TSourceOffsets);
+procedure OpenSource(const APath: String; const AOffsets: TSourceOffsets; AReturn: TPickerAction);
 var
   LArgs: TJSObject;
   LSequence: Integer;
   LOffset: Integer;
-  LReturn: TPickerAction;
 begin
   Inc(GSequence);
   LSequence := GSequence;
-  LReturn := GSourceReturn;
   LOffset := AOffsets[High(AOffsets)];
   LArgs := TJSObject.new;
   LArgs['path'] := APath;
@@ -800,8 +830,8 @@ begin
       LDocument := TNyxDocument.Create;
       LPage := Section(nkPage, 'result-page');
       LDocument.AddPage(LPage);
-      LPage.Add(Button('back-results', '‹ Back to results', nvSecondary));
-      LPage.Add(Caption(nkHeading, 'result-heading', ExtractFileName(APath)));
+      LPage.Add(Button('back-results', '‹ Back', nvSecondary));
+      LPage.Add(Caption(nkHeading, 'result-heading', SavedSourceTitle(APath)));
       LPage.Add(Caption(nkCode, 'source-path', APath));
       if IsCulturalSource(APath) then
         LPage.Add(Caption(nkBadge, 'reader-kind-culture',
@@ -812,7 +842,7 @@ begin
       LHasPrevious := (AError = '') and (Length(AOffsets) > 1);
       LHasNext := (AError = '') and (LNext > LOffset);
       LText := TextOf(AData, 'text');
-      LCanExplore := (AError = '') and (LText <> '') and not Assigned(LReturn);
+      LCanExplore := (AError = '') and (LText <> '');
       if AError <> '' then
         LPage.Add(Caption(nkLabel, 'result-message', AError))
       else
@@ -844,33 +874,21 @@ begin
             StartGraph(nil, '', GraphKey('source', APath),
               procedure
               begin
-                GSourceReturn := nil;
-                OpenSource(APath, ATag, AOffsets);
+                OpenSource(APath, AOffsets, AReturn);
               end);
             Result := True;
           end);
       BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
         function(AEvent: TEventListenerEvent): Boolean
         begin
-          if Assigned(LReturn) then
-          begin
-            LReturn();
-          end
-          else
-          begin
-            ShowList(GResults);
-            if GResultsRenderer.ElementFor('open-source-' + ATag) <> nil then
-            begin
-              GResultsRenderer.ElementFor('open-source-' + ATag).focus;
-            end;
-          end;
+          AReturn();
           Result := True;
         end);
       if LHasPrevious then
         BindEvent(GResultsRenderer.ElementFor('previous-page'), 'click',
           function(AEvent: TEventListenerEvent): Boolean
           begin
-            OpenSource(APath, ATag, Copy(AOffsets, 0, Length(AOffsets) - 1));
+            OpenSource(APath, Copy(AOffsets, 0, Length(AOffsets) - 1), AReturn);
             Result := True;
           end);
       if LHasNext then
@@ -882,7 +900,7 @@ begin
             LOffsets := Copy(AOffsets, 0, Length(AOffsets));
             SetLength(LOffsets, Length(LOffsets) + 1);
             LOffsets[High(LOffsets)] := LNext;
-            OpenSource(APath, ATag, LOffsets);
+            OpenSource(APath, LOffsets, AReturn);
             Result := True;
           end);
     end);
@@ -891,31 +909,33 @@ end;
 procedure OpenReference(const APath: String; AReturn: TPickerAction);
 var
   LPath: String;
+  LURL: String;
   LOffsets: TSourceOffsets;
 begin
   if GStaticOracle <> nil then
   begin
-    window.open(GStaticOracle.ReferenceURL(APath), '_blank');
+    LURL := GStaticOracle.ReferenceURL(APath);
+    if LURL = '' then
+    begin
+      Inc(GSequence);
+      MessageView('Source address unavailable', 'This snapshot needs a repository URL to open the source.', AReturn);
+    end
+    else
+      OpenWindow(LURL, '_blank', 'noopener');
     Exit;
   end;
   LPath := ReferenceFile(APath);
-  GSourceReturn := AReturn;
   SetLength(LOffsets, 1);
   LOffsets[0] := 0;
-  OpenSource(LPath, '', LOffsets);
+  OpenSource(LPath, LOffsets, AReturn);
 end;
 
-procedure BindReference(const ANodeId, APath: String; ARound: Integer;
-  const AClaimId: String);
+procedure BindReference(const ANodeId, APath: String; AReturn: TPickerAction);
 begin
   BindEvent(GResultsRenderer.ElementFor(ANodeId), 'click',
     function(AEvent: TEventListenerEvent): Boolean
     begin
-      OpenReference(APath,
-        procedure
-        begin
-          Inspect(ARound, AClaimId);
-        end);
+      OpenReference(APath, AReturn);
       Result := True;
     end);
 end;
@@ -924,150 +944,136 @@ procedure BindSource(const ATag, APath: String);
 begin
   BindEvent(GResultsRenderer.ElementFor('open-source-' + ATag), 'click',
     function(AEvent: TEventListenerEvent): Boolean
-    var
-      LOffsets: TSourceOffsets;
     begin
-      GSourceReturn := nil;
-      SetLength(LOffsets, 1);
-      LOffsets[0] := 0;
-      OpenSource(APath, ATag, LOffsets);
+      OpenReference(APath,
+        procedure
+        begin
+          ShowList(GResults, False);
+          GResultsRenderer.ElementFor('open-source-' + ATag).focus;
+        end);
       Result := True;
     end);
 end;
 
-procedure ShowGraph(AReset: Boolean);
+procedure ShowGraph(AGraph: TOracleGraphExplorer; AReturn: TPickerAction);
 var
   LSequence: Integer;
+  LDocument: TNyxDocument;
+  LPage: TNyxNode;
+begin
+  Inc(GSequence);
+  LSequence := GSequence;
+  LDocument := TNyxDocument.Create;
+  LPage := Section(nkPage, 'result-page');
+  LDocument.AddPage(LPage);
+  LPage.Add(Button('back-results', '‹ Back', nvSecondary));
+  LPage.Add(Caption(nkHeading, 'result-heading', 'Research connections'));
+  LPage.Add(Caption(nkLabel, 'graph-scope',
+    'Follow recorded links between symptoms, ingredients, studies and sources. Open questions appear alongside findings.'));
+  LPage.Add(Caption(nkLabel, 'graph-freshness', 'Checking the model snapshot…'));
+  LPage.Add(Section(nkPanel, 'graph-host'));
+  PublishResults(LDocument, LPage);
+  BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      AReturn();
+      Result := True;
+    end);
+  GGraph := AGraph;
+  GGraph.Attach(GResultsRenderer.ElementFor('graph-host'));
+  FocusResults;
+  Request('oracle_status', TJSObject.new,
+    procedure(AData: TJSObject; const AError: String)
+    var
+      LMessage: String;
+      LRevision: String;
+    begin
+      if (LSequence <> GSequence) or (GGraph <> AGraph) then
+        Exit;
+      LRevision := TextOf(AData, 'revision');
+      if (LRevision = '') and (AData <> nil) and isDefined(AData['claims']) then
+        LRevision := TextOf(TJSObject(AData['claims']), 'revision');
+      if AError <> '' then
+        LMessage := 'Graph snapshot available; the live revision check is unavailable.'
+      else if LRevision = AGraph.Revision then
+        LMessage := 'Graph matches the current oracle snapshot.'
+      else
+        LMessage := 'Newer research is available. Rebuild the graph to include it.';
+      GResultsRenderer.ElementFor('graph-freshness').textContent := LMessage;
+    end);
+end;
 
-  procedure RenderGraph;
-  var
-    LDocument: TNyxDocument;
-    LPage: TNyxNode;
-    LBackLabel: String;
-  begin
-    LDocument := TNyxDocument.Create;
-    LPage := Section(nkPage, 'result-page');
-    LDocument.AddPage(LPage);
-    LBackLabel := '‹ Back to results';
-    if Assigned(GGraphReturn) then
-      LBackLabel := '‹ Back to previous view';
-    LPage.Add(Button('back-results', LBackLabel, nvSecondary));
-    LPage.Add(Caption(nkHeading, 'result-heading', 'Research connections'));
-    LPage.Add(Caption(nkLabel, 'graph-scope',
-      'Follow recorded links among symptoms, ingredients, studies and saved sources. Open questions are included. A challenged claim leaves the opposite effect uncertain.'));
-    LPage.Add(Caption(nkLabel, 'graph-freshness', 'Checking the model snapshot…'));
-    LPage.Add(Section(nkPanel, 'graph-host'));
-    PublishResults(LDocument, LPage);
-    BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
-      function(AEvent: TEventListenerEvent): Boolean
-      begin
-        if Assigned(GGraphReturn) then
-          GGraphReturn()
-        else
-          ShowList(GResults);
-        Result := True;
-      end);
-    GGraph.Attach(GResultsRenderer.ElementFor('graph-host'));
-    FocusResults;
-    Request('oracle_status', TJSObject.new,
-      procedure(AData: TJSObject; const AError: String)
-      var
-        LMessage: String;
-        LRevision: String;
-      begin
-        if LSequence <> GSequence then
-        begin
-          Exit;
-        end;
-        LRevision := TextOf(AData, 'revision');
-        if (LRevision = '') and (AData <> nil) and isDefined(AData['claims']) then
-        begin
-          LRevision := TextOf(TJSObject(AData['claims']), 'revision');
-        end;
-        if AError <> '' then
-        begin
-          LMessage := 'Graph snapshot available; the live revision check is unavailable.';
-        end
-        else if LRevision = GGraph.Revision then
-        begin
-          LMessage := 'Graph matches the current oracle snapshot.';
-        end
-        else
-        begin
-          LMessage := 'Newer oracle research is available. This graph is a saved snapshot; rebuild the browser assets to include it.';
-        end;
-        GResultsRenderer.ElementFor('graph-freshness').textContent := LMessage;
-      end);
-  end;
+procedure ClearGraphHistory;
+var
+  LGraph: TOracleGraphExplorer;
+begin
+  GGraph := nil;
+  for LGraph in GGraphStack do
+    LGraph.Free;
+  GGraphStack := nil;
+end;
+
+procedure StartGraph(const ASymptoms: TStringValues; const AIngredient: String;
+  const AStartNode: String; AReturn: TPickerAction);
+var
+  LSequence: Integer;
+  LGraph: TOracleGraphExplorer;
+  LBack: TPickerAction;
+  LResume: TPickerAction;
 
   procedure ReceiveModel(AData: TJSObject; const AError: String);
   begin
     if LSequence <> GSequence then
-    begin
       Exit;
-    end;
     if AError <> '' then
     begin
-      MessageView('Graph unavailable', AError);
+      MessageView('Graph unavailable', AError, LBack);
       Exit;
     end;
-    GGraph := TOracleGraphExplorer.Create(AData, GGraphSymptoms, GGraphIngredient,
+    if GGraphModel = nil then
+      GGraphModel := TOracleGraphModel.Create(AData);
+    LGraph := TOracleGraphExplorer.Create(GGraphModel, ASymptoms, AIngredient,
       procedure(const APath: String)
       begin
-        OpenReference(APath,
-          procedure
-          begin
-            ShowGraph(False);
-          end);
+        OpenReference(APath, LResume);
       end,
       procedure(ARound: Integer; const AId: String)
       begin
-        GDetailReturn :=
-          procedure
-          begin
-            ShowGraph(False);
-          end;
-        Inspect(ARound, AId);
-      end, GGraphStartNode);
-    RenderGraph;
+        Inspect(ARound, AId, LResume);
+      end, AStartNode);
+    SetLength(GGraphStack, Length(GGraphStack) + 1);
+    GGraphStack[High(GGraphStack)] := LGraph;
+    LResume();
   end;
 
 begin
   Inc(GSequence);
   LSequence := GSequence;
-  if AReset then
-  begin
-    FreeAndNil(GGraph);
-  end;
-  if GGraph <> nil then
-  begin
-    RenderGraph;
-    Exit;
-  end;
-  MessageView('Opening graph', 'Indexing the saved claim and study relationships.');
-  if GStaticOracle <> nil then
-  begin
-    GStaticOracle.GraphModel(@ReceiveModel);
-  end
+  LBack := procedure
+    begin
+      Inc(GSequence);
+      if LGraph <> nil then
+      begin
+        GGraph := nil;
+        SetLength(GGraphStack, Length(GGraphStack) - 1);
+        FreeAndNil(LGraph);
+      end;
+      if Assigned(AReturn) then
+        AReturn()
+      else
+        ShowList(GResults);
+    end;
+  LResume := procedure
+    begin
+      ShowGraph(LGraph, LBack);
+    end;
+  MessageView('Opening graph', 'Reading the saved relationships.', LBack);
+  if GGraphModel <> nil then
+    ReceiveModel(nil, '')
+  else if GStaticOracle <> nil then
+    GStaticOracle.GraphModel(@ReceiveModel)
   else
-  begin
     ReceiveModel(EmbeddedGraphModel, '');
-  end;
-end;
-
-procedure StartGraph(const ASymptoms: TStringValues; const AIngredient: String;
-  const AStartNode: String; AReturn: TPickerAction);
-begin
-  if (Length(ASymptoms) = 0) and (AIngredient = '') and (AStartNode = '') then
-  begin
-    MessageView('Choose a starting point', 'Choose a symptom or ingredient before opening the graph.');
-    Exit;
-  end;
-  GGraphSymptoms := ASymptoms;
-  GGraphIngredient := AIngredient;
-  GGraphStartNode := AStartNode;
-  GGraphReturn := AReturn;
-  ShowGraph(True);
 end;
 
 procedure BindClaimGraph(const ATag, ASymptom, AIngredient: String);
@@ -1078,7 +1084,12 @@ begin
       LSymptoms: TStringValues;
     begin
       LSymptoms := nil;
-      StartGraph(AddSelection(LSymptoms, ASymptom), AIngredient);
+      StartGraph(AddSelection(LSymptoms, ASymptom), AIngredient, '',
+        procedure
+        begin
+          ShowList(GResults, False);
+          GResultsRenderer.ElementFor('claim-graph-' + ATag).focus;
+        end);
       Result := True;
     end);
 end;
@@ -1086,18 +1097,48 @@ end;
 procedure AddCatalogPreview(ACard: TNyxNode; const ATag, APath, APeriod: String);
 var
   LKind: String;
+  LURL: String;
+  LActions: TNyxNode;
 begin
   LKind := 'Research source';
   if IsCulturalSource(APath) then
     LKind := 'Culture & experience';
   ACard.Add(Caption(nkBadge, 'source-kind-' + ATag, LKind));
-  ACard.Add(Caption(nkHeading, 'source-title-' + ATag, ExtractFileName(APath)));
+  ACard.Add(Caption(nkHeading, 'source-title-' + ATag, SavedSourceTitle(APath)));
   ACard.Add(Caption(nkLabel, 'source-period-' + ATag, APeriod));
+  LActions := Section(nkRow, 'source-actions-' + ATag);
   if GStaticOracle = nil then
-    ACard.Add(Button('open-source-' + ATag, 'Read source', nvSecondary)
+    LActions.Add(Button('open-source-' + ATag, 'Read source', nvSecondary)
       .Configure.AccessibleName('Read source ' + ExtractFileName(APath)).Done)
   else
-    ACard.Add(SourceLink('path-' + ATag, APath));
+  begin
+    LURL := GStaticOracle.ReferenceURL(APath);
+    if LURL <> '' then
+      LActions.Add(Section(nkLink, 'open-source-' + ATag).Configure.Text('Read on GitHub')
+        .AccessibleName('Read source ' + ExtractFileName(APath) + ' on GitHub').LinkTo(LURL).Done);
+  end;
+  LActions.Add(Button('catalog-graph-' + ATag, 'See connections', nvSecondary)
+    .Configure.AccessibleName('See connections for ' + ExtractFileName(APath)).Done);
+  ACard.Add(LActions);
+end;
+
+procedure BindCatalogCard(const ATag, APath: String);
+begin
+  if GStaticOracle = nil then
+    BindSource(ATag, APath)
+  else
+    SetExternalLink('open-source-' + ATag);
+  BindEvent(GResultsRenderer.ElementFor('catalog-graph-' + ATag), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      StartGraph(nil, '', GraphKey('source', ReferenceFile(APath)),
+        procedure
+        begin
+          ShowList(GResults, False);
+          GResultsRenderer.ElementFor('catalog-graph-' + ATag).focus;
+        end);
+      Result := True;
+    end);
 end;
 
 procedure ShowList(AResults: TJSObject; AFocus: Boolean);
@@ -1175,9 +1216,7 @@ begin
     LTotal := CountOf(AResults, 'total');
     LPage.Add(Caption(nkHeading, 'result-heading', 'Catalog results'));
   end;
-  if (GView = ovClaims) and (GResearchKind = SourceKindCulture) then
-    LPage.Add(Caption(nkLabel, 'result-count', 'Cultural and experiential source collection'))
-  else if LRecords.Length > 0 then
+  if LRecords.Length > 0 then
   begin
     if GView = ovClaims then
       LPage.Add(Caption(nkHeading, 'claim-results-heading', 'Ingredient and symptom claims'));
@@ -1185,7 +1224,7 @@ begin
       IntToStr(LOffset + 1) + '–' + IntToStr(LOffset + LRecords.Length) +
       ' of ' + IntToStr(LTotal)));
   end
-  else
+  else if (GView <> ovClaims) or (GResearchKind <> SourceKindCulture) then
   begin
     if LCanShowAnyTrend then
     begin
@@ -1254,9 +1293,16 @@ begin
 
   if (GView = ovClaims) and (GRelatedTerms <> '') then
   begin
-    LPage.Add(Caption(nkHeading, 'related-heading', 'Source documents and reported experiences'));
-    LPage.Add(Caption(nkLabel, 'related-guidance',
-      'Catalog leads include studies, traditional practices and personal reports outside the experiment. Effect filters apply to claim cards; these source leads retain all reported directions.'));
+    case GResearchKind of
+      SourceKindStudies: LMessage := 'Studies and research sources';
+      SourceKindCulture: LMessage := 'Cultural accounts and personal reports';
+    else
+      LMessage := 'Related sources';
+    end;
+    LPage.Add(Caption(nkHeading, 'related-heading', LMessage));
+    if LTrend <> '' then
+      LPage.Add(Caption(nkLabel, 'related-guidance',
+        'The symptom effect filter applies to claims. Related sources can describe any effect.'));
     if HasSelection(ArgumentSymptoms(GArguments), 'rest tremor severity') then
       LPage.Add(Caption(nkLabel, 'related-tremor-scope',
         'These sources may discuss other tremor types. Check the source for the symptom, diagnosis and what was actually reported.'));
@@ -1383,10 +1429,9 @@ begin
           RefreshRelated(GRelatedNext);
           Result := True;
         end);
-    if GStaticOracle = nil then
-      for LIndex := 0 to LRelatedRecords.Length - 1 do
-        BindSource('related-' + IntToStr(LIndex),
-          TextOf(TJSObject(LRelatedRecords[LIndex]), 'path'));
+    for LIndex := 0 to LRelatedRecords.Length - 1 do
+      BindCatalogCard('related-' + IntToStr(LIndex),
+        TextOf(TJSObject(LRelatedRecords[LIndex]), 'path'));
   end;
   if LCanShowAnyTrend then
     BindEvent(GResultsRenderer.ElementFor('show-any-trend'), 'click',
@@ -1414,8 +1459,8 @@ begin
       BindDetail(IntToStr(LIndex), CountOf(LRow, 'round'), TextOf(LRow, 'claim_id'));
       BindClaimGraph(IntToStr(LIndex), TextOf(LRow, 'symptom'), TextOf(LRow, 'ingredient'));
     end;
-    if (GView = ovCatalog) and (GStaticOracle = nil) then
-      BindSource(IntToStr(LIndex), TextOf(LRow, 'path'));
+    if GView = ovCatalog then
+      BindCatalogCard(IntToStr(LIndex), TextOf(LRow, 'path'));
   end;
   if (LOffset > 0) and
     ((GView <> ovClaims) or (GResearchKind <> SourceKindCulture)) then
@@ -1512,6 +1557,7 @@ begin
     LTool := 'oracle_query'
   else
     LTool := 'oracle_search_catalog';
+  ClearGraphHistory;
   MessageView('Searching…', 'Checking the research catalog.');
   LReceive :=
     procedure(AData: TJSObject; const AError: String)
@@ -1589,6 +1635,7 @@ procedure SwitchView(AView: TOracleView);
 begin
   Inc(GSequence);
   GView := AView;
+  ClearGraphHistory;
   HideSuggestions;
   SetPressed('claims-tab', AView = ovClaims);
   SetPressed('catalog-tab', AView = ovCatalog);
@@ -1596,7 +1643,7 @@ begin
   begin
     GRenderer.ElementFor('catalog-form').setAttribute('hidden', '');
     GRenderer.ElementFor('claim-form').removeAttribute('hidden');
-    MessageView('Start with a symptom', 'Try Tremors, Constipation, or another symptom to see what researchers have found.');
+    MessageView('Explore Parkinson’s research', 'Choose a symptom or ingredient to see claims, studies and firsthand accounts.');
   end
   else
   begin
@@ -1675,13 +1722,13 @@ begin
   LControls := Section(nkPanel, 'reader-controls');
   LControls.Add(Caption(nkHeading, 'filters-heading', 'Find Parkinson’s research'));
   LTabs := Section(nkRow, 'lookup-tabs');
-  LTabs.Add(Button('claims-tab', 'By symptoms', nvSecondary));
+  LTabs.Add(Button('claims-tab', 'Symptoms & foods', nvSecondary));
   LTabs.Add(Button('catalog-tab', 'Search sources', nvSecondary));
   LControls.Add(LTabs);
 
   LClaims := Section(nkColumn, 'claim-form');
   LClaims.Add(Caption(nkLabel, 'guidance',
-    'Choose one or more symptoms. Research can match any of your selections.'));
+    'Start with an ingredient or choose one or more symptoms. Results can match any selected symptom.'));
   LClaims.Add(CreatePickerField('symptom', 'Symptoms', 'Add a symptom, e.g. trem', True));
   LQuick := Section(nkRow, 'quick-symptoms');
   for LIndex := Low(CQuickSymptoms) to High(CQuickSymptoms) do
@@ -1689,6 +1736,7 @@ begin
       nvSecondary));
   LClaims.Add(LQuick);
   LClaims.Add(Button('browse-symptoms', 'Browse all symptoms', nvSecondary));
+  LClaims.Add(CreatePickerField('ingredient', 'Food or ingredient', 'Any ingredient'));
   LClaims.Add(Caption(nkLabel, 'trend-label', 'Symptom effect'));
   LTrendOptions := Section(nkRow, 'trend-options').Configure
     .AccessibleName('Symptom effect').Done;
@@ -1698,7 +1746,6 @@ begin
   LClaims.Add(LTrendOptions);
   LClaims.Add(Button('show-filters', 'More filters', nvSecondary));
   LFilters := Section(nkColumn, 'extra-filters');
-  LFilters.Add(CreatePickerField('ingredient', 'Food or ingredient', 'Any ingredient'));
   LFilters.Add(CreatePickerField('preparation', 'Preparation', 'Any preparation'));
   LFilters.Add(SelectField('scope', 'Which claims to show',
     'Directional findings only'#10'All reviewed claims'#10'All findings and open questions'));

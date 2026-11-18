@@ -33,6 +33,7 @@ type
     FExpanded: TJSObject;
     FLanes: array[0..3] of TJSSet;
     FSelected: String;
+    FHistory: TStringValues;
     FHost: TJSHTMLElement;
     FDocument: TNyxDocument;
     FRenderer: TNyxBrowserRenderer;
@@ -51,6 +52,7 @@ type
     procedure ResetBranch;
     procedure Expand(AAmount: Integer);
     procedure Select(const AKey: String);
+    procedure NavigateBack;
     procedure FocusBranch;
     procedure Render;
     procedure BindNeighbor(const AId, AKey: String);
@@ -65,7 +67,7 @@ type
     function OnCanvasHomeKey(AEvent: TEventListenerEvent): Boolean;
     function OnCanvasHome(AEvent: TEventListenerEvent): Boolean;
   public
-    constructor Create(AModel: TJSObject; const ASymptoms: TStringValues;
+    constructor Create(AModel: TOracleGraphModel; const ASymptoms: TStringValues;
       const AIngredient: String; AOpenSource: TGraphOpenSource; AOpenClaim: TGraphOpenClaim;
       const AStartNode: String = '');
     destructor Destroy; override;
@@ -124,8 +126,10 @@ begin
   end;
   if ATone = 'challenged' then
     Exit(NyxRGB(137, 86, 20));
+  if ATone = 'mixed' then
+    Exit(NyxRGB(97, 69, 135));
   if AFocused then
-    Exit(NyxRGB(113, 127, 120));
+    Exit(NyxRGB(142, 159, 151));
   Result := NyxRGB(185, 199, 191);
 end;
 
@@ -135,6 +139,8 @@ begin
     Exit('↓ May ease');
   if ATone = 'worsens' then
     Exit('↑ May worsen');
+  if ATone = 'mixed' then
+    Exit('Multiple evidence signals');
   Result := '? Claim challenged';
 end;
 
@@ -144,10 +150,12 @@ begin
     Exit(NyxDrawingPaint(NyxRGB(231, 247, 237)));
   if ATone = 'worsens' then
     Exit(NyxDrawingPaint(NyxRGB(255, 237, 233)));
+  if ATone = 'mixed' then
+    Exit(NyxDrawingPaint(NyxRGB(244, 237, 252)));
   Result := NyxDrawingPaint(NyxRGB(255, 245, 221));
 end;
 
-constructor TOracleGraphExplorer.Create(AModel: TJSObject; const ASymptoms: TStringValues;
+constructor TOracleGraphExplorer.Create(AModel: TOracleGraphModel; const ASymptoms: TStringValues;
   const AIngredient: String; AOpenSource: TGraphOpenSource; AOpenClaim: TGraphOpenClaim;
   const AStartNode: String);
 var
@@ -158,7 +166,7 @@ var
   LIndex: Integer;
   LEdge: TJSObject;
 begin
-  FModel := TOracleGraphModel.Create(AModel);
+  FModel := AModel;
   ResetBranch;
   FOpenSource := AOpenSource;
   FOpenClaim := AOpenClaim;
@@ -216,7 +224,6 @@ end;
 destructor TOracleGraphExplorer.Destroy;
 begin
   Detach;
-  FModel.Free;
   inherited Destroy;
 end;
 
@@ -267,30 +274,49 @@ end;
 procedure TOracleGraphExplorer.Expand(AAmount: Integer);
 var
   LNeighbors: TJSArray;
+  LLinks: TJSArray;
+  LNeighbor: TJSObject;
   LIndex: Integer;
+  LLink: Integer;
   LEnd: Integer;
-  LEdge: TJSObject;
   LKey: String;
 begin
-  LNeighbors := FModel.Neighbors(FSelected);
+  LNeighbors := FModel.Connections(FSelected);
   LEnd := Min(ExpandedCount + AAmount, LNeighbors.Length);
   for LIndex := ExpandedCount to LEnd - 1 do
   begin
-    LEdge := TJSObject(LNeighbors[LIndex]);
-    LKey := FModel.Other(LEdge, FSelected);
+    LNeighbor := TJSObject(LNeighbors[LIndex]);
+    LKey := GraphText(LNeighbor, 'node');
     AddVisible(LKey, LevelFor(LKey));
-    AddConnection(LEdge);
+    LLinks := GraphRows(LNeighbor, 'edges');
+    for LLink := 0 to LLinks.Length - 1 do
+      AddConnection(TJSObject(LLinks[LLink]));
   end;
   FExpanded[FSelected] := LEnd;
 end;
 
 procedure TOracleGraphExplorer.Select(const AKey: String);
 begin
+  if FSelected = AKey then
+    Exit;
+  SetLength(FHistory, Length(FHistory) + 1);
+  FHistory[High(FHistory)] := FSelected;
   FSelected := AKey;
   if ExpandedCount = 0 then
   begin
     Expand(CExpandPage);
   end;
+  FRecenter := True;
+  Render;
+end;
+
+procedure TOracleGraphExplorer.NavigateBack;
+begin
+  FSelected := FHistory[High(FHistory)];
+  SetLength(FHistory, Length(FHistory) - 1);
+  AddVisible(FSelected, LevelFor(FSelected));
+  if ExpandedCount = 0 then
+    Expand(CExpandPage);
   FRecenter := True;
   Render;
 end;
@@ -571,10 +597,15 @@ var
   LInspector: TNyxNode;
   LLegend: TNyxNode;
   LGroups: array[0..3] of TNyxNode;
-  LGroupMembers: array[0..3] of TJSSet;
+  LGroupMembers: array[0..3] of Integer;
+  LGroupShown: array[0..3] of Integer;
   LGroupIndex: Integer;
-  LNeighborsShown: TJSSet;
-  LNeighborButtons: TJSSet;
+  LNeighbor: TJSObject;
+  LLinks: TJSArray;
+  LVisibleLinks: TJSArray;
+  LLink: Integer;
+  LTag: String;
+  LPart: TNyxNode;
   LCard: TNyxNode;
   LScene: INyxCanvasScene;
   LWorkspace: INyxCanvasWorkspace;
@@ -605,7 +636,10 @@ var
   LDirection: Integer;
   LArrow: TNyxDrawingPath;
   LLabelPoint: TNyxCanvasPoint;
-  LDrawnRoutes: TJSSet;
+  LRoutesByPair: TJSObject;
+  LRoutes: TJSArray;
+  LRoute: TJSObject;
+  LRouteTone: String;
   LBadges: array of TGraphLinkBadge;
   LBadgeCount: Integer;
   LBadgeWidth: Integer;
@@ -639,14 +673,18 @@ begin
   LLegend.Add(Control(nkBadge, 'effect-worse-graph-key', 'May worsen'));
   LLegend.Add(Control(nkBadge, 'effect-challenged-graph-key', 'Claim challenged'));
   LLegend.Add(Control(nkBadge, 'grade-unclear-graph-key', 'Open or related'));
+  LLegend.Add(Control(nkBadge, 'graph-mixed-key', 'Multiple signals'));
   LPage.Add(LLegend);
   if FSelected = '' then
   begin
     LPage.Add(Control(nkLabel, 'graph-empty',
-      'This item has no recorded connections in the graph yet.'));
+      'This source is in the catalog. The graph has no recorded claim or study connection for it yet.'));
     FRenderer.Render(FDocument, LPage, FHost);
     Exit;
   end;
+  if Length(FHistory) > 0 then
+    LPage.Add(Control(nkButton, 'graph-back-node', '‹ ' +
+      GraphText(FModel.Node(FHistory[High(FHistory)]), 'label')));
   LPage.Add(Control(nkLabel, 'graph-snapshot', 'Model snapshot ' + Copy(Revision, 1, 12)));
   LPage.Add(Control(nkPanel, 'graph-canvas', 'Research relationships'));
   LInspector := Control(nkColumn, 'graph-inspector', '');
@@ -659,63 +697,63 @@ begin
   begin
     LInspector.Add(Control(nkButton, 'graph-open-selected-source', 'Read saved source'));
   end;
-  LNeighbors := FModel.Neighbors(FSelected);
+  LNeighbors := FModel.Connections(FSelected);
   LInspector.Add(Control(nkLabel, 'graph-connection-count', IntToStr(ExpandedCount) + ' of ' +
-    IntToStr(LNeighbors.Length) + ' recorded connections shown'));
+    IntToStr(LNeighbors.Length) + ' connected items shown'));
   if ExpandedCount < LNeighbors.Length then
-  begin
     LInspector.Add(Control(nkButton, 'graph-expand', 'Show next connections'));
-  end;
-  for LGroupIndex := Low(LGroupMembers) to High(LGroupMembers) do
-    LGroupMembers[LGroupIndex] := TJSSet.new;
   for LIndex := 0 to LNeighbors.Length - 1 do
   begin
-    LOther := FModel.Other(TJSObject(LNeighbors[LIndex]), FSelected);
-    LGroupMembers[LevelFor(LOther)].add(LOther);
+    LOther := GraphText(TJSObject(LNeighbors[LIndex]), 'node');
+    LGroupIndex := LevelFor(LOther);
+    Inc(LGroupMembers[LGroupIndex]);
+    if LIndex < ExpandedCount then
+      Inc(LGroupShown[LGroupIndex]);
   end;
   for LGroupIndex := Low(LGroups) to High(LGroups) do
   begin
-    if LGroupMembers[LGroupIndex].size = 0 then
+    if LGroupShown[LGroupIndex] = 0 then
       Continue;
     LGroups[LGroupIndex] := Control(nkColumn, 'graph-group-' + GraphKinds[LGroupIndex], '');
     LGroups[LGroupIndex].Add(Control(nkHeading, 'graph-group-heading-' + GraphKinds[LGroupIndex],
-      GraphGroupNames[LGroupIndex] + ' · ' + IntToStr(LGroupMembers[LGroupIndex].size)));
+      GraphGroupNames[LGroupIndex] + ' · ' + IntToStr(LGroupShown[LGroupIndex]) + ' of ' +
+      IntToStr(LGroupMembers[LGroupIndex])));
     LInspector.Add(LGroups[LGroupIndex]);
   end;
-  LNeighborsShown := TJSSet.new;
-  LNeighborButtons := TJSSet.new;
+  LVisibleLinks := TJSArray.new;
   for LIndex := 0 to ExpandedCount - 1 do
   begin
-    LEdge := TJSObject(LNeighbors[LIndex]);
-    LOther := FModel.Other(LEdge, FSelected);
-    LClaim := TJSObject(LEdge['claim']);
-    LAssessment := TJSObject(LEdge['assessment']);
+    LNeighbor := TJSObject(LNeighbors[LIndex]);
+    LOther := GraphText(LNeighbor, 'node');
+    LLinks := GraphRows(LNeighbor, 'edges');
     LCard := Control(nkCard, 'graph-connection-' + IntToStr(LIndex), '');
-    if not LNeighborsShown.has(LOther) then
+    LCard.Add(Control(nkButton, 'graph-neighbor-' + IntToStr(LIndex),
+      GraphText(FModel.Node(LOther), 'label')));
+    if LLinks.Length > 1 then
+      LCard.Add(Control(nkLabel, 'graph-link-count-' + IntToStr(LIndex),
+        IntToStr(LLinks.Length) + ' recorded relationships'));
+    for LLink := 0 to LLinks.Length - 1 do
     begin
-      LNeighborsShown.add(LOther);
-      LNeighborButtons.add(LIndex);
-      LCard.Add(Control(nkButton, 'graph-neighbor-' + IntToStr(LIndex),
-        GraphText(FModel.Node(LOther), 'label')));
-    end
-    else
-      LCard.Add(Control(nkLabel, 'graph-repeated-neighbor-' + IntToStr(LIndex),
-        GraphText(FModel.Node(LOther), 'label')));
-    LCard.Add(Control(nkLabel, 'graph-relation-' + IntToStr(LIndex), GraphText(LEdge, 'label')));
-    LCard.Add(Control(nkLabel, 'graph-context-' + IntToStr(LIndex),
-      FriendlySymptom(GraphText(LClaim, 'symptom')) + ' · ' + GraphText(LClaim, 'preparation') +
-      ' ' + GraphText(LClaim, 'ingredient')));
-    if LAssessment <> nil then
-    begin
-      LCard.Add(Control(nkLabel, 'graph-fit-' + IntToStr(LIndex), GraphText(LAssessment, 'fit')));
-      LCard.Add(Control(nkLabel, 'graph-analysis-' + IntToStr(LIndex),
-        GraphText(LAssessment, 'assessment')));
-      if GraphText(LAssessment, 'local_reference') <> '' then
+      LEdge := TJSObject(LLinks[LLink]);
+      LTag := IntToStr(LVisibleLinks.Length);
+      LVisibleLinks.push(LEdge);
+      LClaim := TJSObject(LEdge['claim']);
+      LAssessment := TJSObject(LEdge['assessment']);
+      LPart := Control(nkColumn, 'graph-relationship-' + LTag, '');
+      LPart.Add(Control(nkBadge, 'graph-relation-' + LTag, GraphText(LEdge, 'label')));
+      LPart.Add(Control(nkLabel, 'graph-context-' + LTag,
+        FriendlySymptom(GraphText(LClaim, 'symptom')) + ' · ' + GraphText(LClaim, 'preparation') +
+        ' ' + GraphText(LClaim, 'ingredient')));
+      if LAssessment <> nil then
       begin
-        LCard.Add(Control(nkButton, 'graph-read-' + IntToStr(LIndex), 'Read source'));
+        LPart.Add(Control(nkLabel, 'graph-fit-' + LTag, GraphText(LAssessment, 'fit')));
+        LPart.Add(Control(nkLabel, 'graph-analysis-' + LTag, GraphText(LAssessment, 'assessment')));
+        if GraphText(LAssessment, 'local_reference') <> '' then
+          LPart.Add(Control(nkButton, 'graph-read-' + LTag, 'Read source'));
       end;
+      LPart.Add(Control(nkButton, 'graph-claim-' + LTag, 'Open claim and evidence'));
+      LCard.Add(LPart);
     end;
-    LCard.Add(Control(nkButton, 'graph-claim-' + IntToStr(LIndex), 'Open claim and evidence'));
     LGroups[LevelFor(LOther)].Add(LCard);
   end;
   FRenderer.Render(FDocument, LPage, FHost);
@@ -740,22 +778,46 @@ begin
   end;
   LDrawing := NewNyxDrawingPlan(NyxCanvasBounds(-CDrawingMargin, -CDrawingMargin,
     LWidth + 2 * CDrawingMargin, LHeight + 2 * CDrawingMargin));
-  SetLength(LBadges, FEdges.Length);
-  LBadgeCount := 0;
-  LDrawnRoutes := TJSSet.new;
+  { Several assessments can share endpoints. Draw one route so a neutral line
+    cannot cover a directional one, and keep every assessment in the inspector. }
+  LRoutesByPair := TJSObject.new;
+  LRoutes := TJSArray.new;
   for LIndex := 0 to FEdges.Length - 1 do
   begin
     LEdge := TJSObject(FEdges[LIndex]);
+    LBadgeKey := GraphText(LEdge, 'from') + '|' + GraphText(LEdge, 'to');
+    LTone := GraphEdgeTone(LEdge);
+    if not isDefined(LRoutesByPair[LBadgeKey]) then
+    begin
+      LRoute := TJSObject.new;
+      LRoute['edge'] := LEdge;
+      LRoute['tone'] := LTone;
+      LRoutesByPair[LBadgeKey] := LRoute;
+      LRoutes.push(LRoute);
+      Continue;
+    end;
+    LRoute := TJSObject(LRoutesByPair[LBadgeKey]);
+    LRouteTone := GraphText(LRoute, 'tone');
+    if (LTone <> '') and (LRouteTone = '') then
+    begin
+      LRoute['edge'] := LEdge;
+      LRoute['tone'] := LTone;
+    end
+    else if (LTone <> '') and (LTone <> LRouteTone) then
+      LRoute['tone'] := 'mixed';
+  end;
+  SetLength(LBadges, LRoutes.Length);
+  LBadgeCount := 0;
+  for LIndex := 0 to LRoutes.Length - 1 do
+  begin
+    LRoute := TJSObject(LRoutes[LIndex]);
+    LEdge := TJSObject(LRoute['edge']);
+    LTone := GraphText(LRoute, 'tone');
     LFrom := GraphText(LEdge, 'from');
     LTo := GraphText(LEdge, 'to');
     LStart := PositionOf(LFrom);
     LEnd := PositionOf(LTo);
     LFocused := (LFrom = FSelected) or (LTo = FSelected);
-    LTone := GraphEdgeTone(LEdge);
-    LBadgeKey := LFrom + '|' + LTo + '|' + LTone;
-    if LDrawnRoutes.has(LBadgeKey) then
-      Continue;
-    LDrawnRoutes.add(LBadgeKey);
     if FCompact and (LStart.X = LEnd.X) and
       (Abs(LStart.Y - LEnd.Y) > CCompactLevelStep) then
     begin
@@ -843,18 +905,17 @@ begin
     LPaint := NyxDrawingPaint(LinkColor(LTone, LFocused));
     LStroke := 1.25;
     if LTone <> '' then
-      LStroke := 3
-    else if LFocused then
-      LStroke := 1.75;
+      LStroke := 3;
     LDrawing.Path(LPath, NyxDrawingStyle.Stroke(LPaint, LStroke));
-    if LFocused or (LTone <> '') then
+    if LTone <> '' then
       LDrawing.Path(LArrow, NyxDrawingStyle.Stroke(LPaint, LStroke));
     if LFocused and (LTone <> '') then
     begin
       LBadges[LBadgeCount].Position := LLabelPoint;
       LBadges[LBadgeCount].Tone := LTone;
       LBadges[LBadgeCount].Text := LinkBadge(LTone);
-      if (GraphText(LEdge, 'kind') <> 'claim') and (LTone <> 'challenged') then
+      if (GraphText(LEdge, 'kind') <> 'claim') and
+        ((LTone = 'eases') or (LTone = 'worsens')) then
         LBadges[LBadgeCount].Text := GraphText(LEdge, 'label');
       Inc(LBadgeCount);
     end;
@@ -922,6 +983,16 @@ begin
       Result := True;
     end;
   FRenderer.ElementFor('graph-focus-branch').addEventListener('click', LClick);
+  if Length(FHistory) > 0 then
+  begin
+    LClick :=
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        NavigateBack;
+        Result := True;
+      end;
+    FRenderer.ElementFor('graph-back-node').addEventListener('click', LClick);
+  end;
   if ExpandedCount < LNeighbors.Length then
   begin
     LClick :=
@@ -944,18 +1015,17 @@ begin
     FRenderer.ElementFor('graph-open-selected-source').addEventListener('click', LClick);
   end;
   for LIndex := 0 to ExpandedCount - 1 do
+    BindNeighbor('graph-neighbor-' + IntToStr(LIndex),
+      GraphText(TJSObject(LNeighbors[LIndex]), 'node'));
+  for LIndex := 0 to LVisibleLinks.Length - 1 do
   begin
-    LEdge := TJSObject(LNeighbors[LIndex]);
-    FRenderer.ElementFor('graph-connection-' + IntToStr(LIndex)).setAttribute('data-trend',
+    LEdge := TJSObject(LVisibleLinks[LIndex]);
+    LTag := IntToStr(LIndex);
+    FRenderer.ElementFor('graph-relationship-' + LTag).setAttribute('data-trend',
       GraphEdgeTone(LEdge));
-    if LNeighborButtons.has(LIndex) then
-      BindNeighbor('graph-neighbor-' + IntToStr(LIndex), FModel.Other(LEdge, FSelected));
-    BindEvidence('graph-claim-' + IntToStr(LIndex), LEdge, False);
-    if (LEdge['assessment'] <> nil) and
-      (GraphText(TJSObject(LEdge['assessment']), 'local_reference') <> '') then
-    begin
-      BindEvidence('graph-read-' + IntToStr(LIndex), LEdge, True);
-    end;
+    BindEvidence('graph-claim-' + LTag, LEdge, False);
+    if GraphText(TJSObject(LEdge['assessment']), 'local_reference') <> '' then
+      BindEvidence('graph-read-' + LTag, LEdge, True);
   end;
 end;
 
