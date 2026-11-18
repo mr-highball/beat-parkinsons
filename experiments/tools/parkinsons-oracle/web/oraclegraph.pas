@@ -95,6 +95,14 @@ begin
   end;
 end;
 
+function IsTouchClick(AEvent: TEventListenerEvent): Boolean;
+begin
+  asm
+    return AEvent.pointerType === 'touch' ||
+      AEvent.sourceCapabilities?.firesTouchEvents === true;
+  end;
+end;
+
 function LinkColor(const ATrend: String): TNyxRGBColor;
 begin
   if ATrend = 'eases' then
@@ -390,6 +398,14 @@ function TOracleGraphExplorer.OnCanvasClick(AEvent: TEventListenerEvent): Boolea
 var
   LKey: String;
 begin
+  { Pointer-up already handles taps. The subsequent compatibility click can
+    hit a different node at the same screen coordinates after the redraw. }
+  if IsTouchClick(AEvent) then
+  begin
+    AEvent.stopImmediatePropagation;
+    AEvent.preventDefault;
+    Exit(True);
+  end;
   LKey := NodeAt(TJSNode(AEvent.target));
   if LKey <> '' then
   begin
