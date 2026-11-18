@@ -6,15 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 12,848 |
+| Local body or other primary-source context | 12,852 |
 | Exact assessment with basis unspecified | 128 |
 | Abstract context | 200 |
-| Title or index | 191 |
+| Title or index | 192 |
 | Pending or access-only disposition | 201 |
-| No imported exact review | 47,684 |
+| No imported exact review | 47,679 |
 | **Total** | **61,252** |
 
-The native replay keeps 48,076 pairs queued across 29,898 sources. That includes 191 title/index reviews, 201 pending pairs and 47,684 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
+The native replay keeps 48,072 pairs queued across 29,897 sources. That includes 192 title/index reviews, 201 pending pairs and 47,679 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
 
 
 Checkpoint 12 records 17 contextual decisions at verified body or abstract depth and preserves the remaining full-body routes. The full searches, focused result membership and genuine exposure assessments are linked from the checkpoint. [Checkpoint 12](../lemon-balm-depression-nov18-12/README.md)
@@ -22,6 +22,8 @@ Checkpoint 12 records 17 contextual decisions at verified body or abstract depth
 Checkpoint 13 authenticates the STACCATO abstract and author-name collision, and tracks the remaining body and registry routes. [Checkpoint 13](../lemon-balm-depression-nov18-13/README.md)
 
 Checkpoint 14 resolves four additional original collections at full-text depth. Five inspected sources retain scan, font-encoding or supplement-access gaps. [Original collection review](../lemon-balm-depression-nov18-14/README.md)
+
+Checkpoint 15 recovers the 279-page physiology proceedings and clears four original source pairs at body depth. The ARO title listing stays queued. The three new related assessments preserve preparation and endpoint fit. [Source recovery and comparator ledger](../lemon-balm-depression-nov18-15/README.md)
 
 ## Intake for exact source reviews
 
