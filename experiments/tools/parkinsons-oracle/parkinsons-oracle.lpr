@@ -40,10 +40,12 @@ const
       '"not":{"anyOf":[{"required":["assessment_study","assessment_offset"]},' +
       '{"required":["assessment_study","assessment_limit"]}]}}},' +
     '{"name":"oracle_search_catalog","description":"Search the local research text index with ' +
-      'literal terms. Word matches are discovery leads and carry no evidence or direction grade.",' +
+      'literal terms. Use source_kind to find dated cultural records, public forum conversations, ' +
+      'or archived study and registry texts. Word matches are discovery leads.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
       '"additionalProperties":false,"required":["terms"],"properties":{"terms":{"type":"string"},' +
       '"period":{"type":"string","pattern":"^[0-9]{4}-[0-9]{4}$"},' +
+      '"source_kind":{"enum":' + CatalogSourceKinds + '},' +
       '"offset":{"type":"integer","minimum":0},"limit":{"type":"integer","minimum":1,"maximum":100}}}},' +
     '{"name":"oracle_find_sources","description":"Find archived source documents by PMID, PMCID, ' +
       'DOI, NCT, ACTRN, ISRCTN, IRCT, DRKS, TCTR or UMIN ID. Matches come from source metadata. ' +
@@ -256,14 +258,15 @@ begin
       end;
     2:
       begin
-        RequireFields(AArguments, ['terms', 'period', 'offset', 'limit']);
+        RequireFields(AArguments, ['terms', 'period', 'source_kind', 'offset', 'limit']);
         LTerms := ReadString(AArguments, 'terms', '');
         LPeriod := ReadString(AArguments, 'period', '');
         LIndex := ReadInteger(AArguments, 'offset', 0, 0, MaxInt);
         if (Trim(LTerms) = '') or (Length(LTerms) > 512) then
           raise EConvertError.Create('Provide nonempty search terms of at most 512 bytes.');
         Result := Catalog.Search(LTerms, LPeriod, LIndex,
-          ReadInteger(AArguments, 'limit', 12, 1, 100));
+          ReadInteger(AArguments, 'limit', 12, 1, 100),
+          ReadString(AArguments, 'source_kind', 'all'));
       end;
     3:
       begin
@@ -414,7 +417,8 @@ begin
           LResult := TJSONObject.Create(['protocolVersion', LVersion,
             'capabilities', TJSONObject.Create(['tools', TJSONObject.Create]),
             'serverInfo', TJSONObject.Create(['name', 'parkinsons-oracle', 'version', '0.1.0']),
-            'instructions', 'Use reviewed claims and source locators before searching elsewhere. ' +
+            'instructions', 'Start each evidence question with the Oracle before broader searches. ' +
+              'Use assessed claims, exact source locators and catalog source_kind filters as needed. ' +
               'Hypothesis direction is the frozen wording. An Unknown is an open question.']);
         end;
       1: LResult := TJSONObject.Create;

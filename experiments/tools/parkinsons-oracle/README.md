@@ -57,9 +57,24 @@ Omit the study key and both assessment paging arguments to return the full evide
 
 ### Cultural and conversational lookup
 
-Use `oracle_search_catalog` first when investigating a cultural practice, traditional preparation, personal account or public discussion. The catalog indexes the UTF-8 records in each period's `Cultural-and-Experiential/` folder, including `Conversations/`. Search the broader collection with `{"terms":"tremor cultural experiential","limit":20}`. For archived Reddit and forum accounts, add `conversation`, for example `{"terms":"conversation coffee tremor","period":"2025-2029","limit":20}`.
+Use `oracle_search_catalog` before broader file searches or web discovery. Search by source category and use the text terms for the exposure or outcome.
 
-Results give the local text path and period. Open the file and check its source, date basis, reported outcome and limits. Search without the collection words when checking for relevant material in other sections. Continue with original sources or external discovery for unresolved questions. Keep the initial lookup and later retries under one evidence question in the [coverage ledger](../../oracle-coverage/README.md). Catalog mentions carry no claim verdict.
+| `source_kind` | Indexed collection |
+| --- | --- |
+| `all` (default) | Entire text catalog, including notes and citation trails |
+| `cultural` | Dated UTF-8 text records across the cultural and experiential categories |
+| `conversations` | Reddit, Parkinson’s UK and other community discussions |
+| `traditional_practices` | Traditional remedies, practitioner texts and ethnobotany |
+| `ceremonial_accounts` | Ritual, prayer and ceremonial contexts |
+| `personal_reports` | Individual accounts and patient-reported experience |
+| `local_knowledge` | Other local accounts, practices and explanatory beliefs |
+| `source_text` | Archived source texts, including study papers and registry records |
+
+Search for tremor-related cultural records with `{"terms":"tremor","source_kind":"cultural","limit":20}`. To find 2025–2029 conversations about coffee and tremor, use `{"terms":"coffee tremor","source_kind":"conversations","period":"2025-2029","limit":20}`. Category follows the dated catalog path. Period, totals and pagination apply within the selected category. Searches across all categories also include collection indexes and observations.
+
+Results give the local text path and period. Open the file and check its source, date basis, reported outcome and limits. Continue with the original sources or external discovery for unresolved questions. Keep the initial lookup and later retries under one evidence question in the [coverage ledger](../../oracle-coverage/README.md). If an existing MCP session still advertises the previous schema, relaunch the server. Catalog matches carry no claim verdict.
+
+The [native catalog fixtures](catalog.sourcekinds.tests.lpr) cover every category, period and page filters, and the effect of a refresh on cached results. Run the compiled fixture with a fresh directory under the ignored build output.
 
 ## Build and connect
 

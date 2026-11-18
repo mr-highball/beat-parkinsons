@@ -36,7 +36,7 @@ new sources into their chronological buckets, refresh the index and verify
 retrieval. Use batch summaries to identify the gaps that motivate that work.
 Record only research identifiers and relative source paths.
 
-For cultural or forum source questions, use [Oracle catalog search](../tools/parkinsons-oracle/README.md#cultural-and-conversational-lookup) before external discovery. A matching discussion can verify that an account was reported. Preparation, diagnosis, and symptom mismatches still matter when judging a frozen ingredient claim. Verify new chronological entries through MCP after refresh without counting the verification as another first pass.
+For cultural or forum source questions, use [Oracle catalog search](../tools/parkinsons-oracle/README.md#cultural-and-conversational-lookup) before external discovery. Record the `source_kind` filter with the lookup terms when used. A matching discussion can verify that an account was reported. Preparation, diagnosis, and symptom mismatches still matter when judging a frozen ingredient claim. Verify new chronological entries through MCP after refresh without counting the verification as another first pass.
 
 ## Validate a coverage append
 

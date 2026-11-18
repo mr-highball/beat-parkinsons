@@ -10,6 +10,10 @@ interface
 uses
   fpjson, sqlite3dyn, SysUtils;
 
+const
+  CatalogSourceKinds = '["all","cultural","conversations","traditional_practices",' +
+    '"ceremonial_accounts","personal_reports","local_knowledge","source_text"]';
+
 type
   ESourceReadError = class(EConvertError);
 
@@ -24,6 +28,7 @@ type
       Revision: Int64;
       Expression: UTF8String;
       Period: UTF8String;
+      SourceKind: String;
       Total: Int64;
       Offset: Integer;
       Rows: array of TSearchDocument;
@@ -42,7 +47,8 @@ type
     destructor Destroy; override;
     procedure Refresh;
     procedure ExportSearch(const AOutputDirectory: String);
-    function Search(const ATerms, APeriod: String; AOffset, ALimit: Integer): TJSONObject;
+    function Search(const ATerms, APeriod: String; AOffset, ALimit: Integer;
+      const ASourceKind: String = 'all'): TJSONObject;
     function FindSources(AIdentifiers: TJSONArray): TJSONObject;
     function ReadSource(const APath: String; AOffset: Int64): TJSONObject;
     function Status(AIncludeDiagnostics: Boolean = True): TJSONObject;
@@ -51,7 +57,7 @@ type
 implementation
 
 uses
-  BufStream, Classes, Generics.Collections, JwaNative, JwaWinternl, Math, Windows,
+  BufStream, Classes, Generics.Collections, JwaNative, JwaWinternl, Math, StrUtils, Windows,
   foodexperiment.archiveidentity;
 
 const
@@ -1208,11 +1214,31 @@ begin
   end;
 end;
 
+function SourceKindPattern(const AKind: String): UTF8String;
+const
+  CCultureRoot = 'cultural-and-experiential/';
+  CPatterns: array[0..7] of UTF8String = ('', CCultureRoot + '*.txt',
+    CCultureRoot + 'conversations/*.txt', CCultureRoot + 'traditional-practices/*.txt',
+    CCultureRoot + 'ceremonial-accounts/*.txt', CCultureRoot + 'personal-reports/*.txt',
+    CCultureRoot + 'local-knowledge/*.txt', 'source-text/*');
+var
+  LIndex: Integer;
+begin
+  LIndex := IndexStr(AKind, ['all', 'cultural', 'conversations', 'traditional_practices',
+    'ceremonial_accounts', 'personal_reports', 'local_knowledge', 'source_text']);
+  if LIndex < 0 then
+  begin
+    raise EConvertError.Create('Unknown catalog source_kind.');
+  end;
+  Result := CPatterns[LIndex];
+end;
+
 function TResearchCatalog.Search(const ATerms, APeriod: String;
-  AOffset, ALimit: Integer): TJSONObject;
+  AOffset, ALimit: Integer; const ASourceKind: String): TJSONObject;
 var
   LMatch: UTF8String;
   LPeriod: UTF8String;
+  LKindPattern: UTF8String;
   LCountFrom: AnsiString;
   LPageFrom: AnsiString;
   LCount: TSqlStatement;
@@ -1229,6 +1255,20 @@ var
   LRowIndex: Integer;
   LStart: Integer;
   LNextOffset: Int64;
+
+  procedure BindFilters(AStatement: TSqlStatement);
+  begin
+    AStatement.BindText(1, LMatch);
+    if LPeriod <> '' then
+    begin
+      AStatement.BindText(2, LPeriod);
+    end;
+    if LKindPattern <> '' then
+    begin
+      AStatement.BindText(5, LKindPattern);
+    end;
+  end;
+
 begin
   if (AOffset < 0) or (ALimit < 1) or (ALimit > MaximumPageSize) then
   begin
@@ -1241,15 +1281,25 @@ begin
   begin
     raise Exception.Create('Expected an exact catalog period name or an empty period');
   end;
+  LKindPattern := SourceKindPattern(ASourceKind);
   LPageFrom := MatchFrom;
-  if LPeriod = '' then
+  if LPeriod <> '' then
+  begin
+    LPageFrom := LPageFrom + ' AND documents.period=?2';
+  end;
+  if LKindPattern <> '' then
+  begin
+    // Strip the inventory's research/<period>/ prefix before matching a collection.
+    LPageFrom := LPageFrom + ' AND documents.period<>'''' AND' +
+      ' substr(lower(documents.path),length(''research/''||documents.period||''/'')+1) GLOB ?5';
+  end;
+  if (LPeriod = '') and (LKindPattern = '') then
   begin
     // Refresh keeps FTS rows and document IDs in the same transaction.
     LCountFrom := ' FROM document_fts' + MatchCondition;
   end
   else
   begin
-    LPageFrom := LPageFrom + ' AND documents.period=?2';
     LCountFrom := LPageFrom;
   end;
   LCount := nil;
@@ -1267,7 +1317,8 @@ begin
       begin
         if (FSearchWindows[LWindowIndex].Revision = LRevision) and
           (FSearchWindows[LWindowIndex].Expression = LMatch) and
-          (FSearchWindows[LWindowIndex].Period = LPeriod) then
+          (FSearchWindows[LWindowIndex].Period = LPeriod) and
+          (FSearchWindows[LWindowIndex].SourceKind = ASourceKind) then
         begin
           LCachedIndex := LWindowIndex;
           LWindow := FSearchWindows[LCachedIndex];
@@ -1277,11 +1328,7 @@ begin
       if LCachedIndex < 0 then
       begin
         LCount := TSqlStatement.Create(FDatabase, 'SELECT count(*)' + LCountFrom);
-        LCount.BindText(1, LMatch);
-        if LPeriod <> '' then
-        begin
-          LCount.BindText(2, LPeriod);
-        end;
+        BindFilters(LCount);
         if not LCount.Next then
         begin
           raise Exception.Create('Catalog search yielded no count');
@@ -1289,6 +1336,7 @@ begin
         LWindow.Revision := LRevision;
         LWindow.Expression := LMatch;
         LWindow.Period := LPeriod;
+        LWindow.SourceKind := ASourceKind;
         LWindow.Total := LCount.Number(0);
         LCount.Reset;
         LCachedIndex := High(FSearchWindows);
@@ -1309,11 +1357,7 @@ begin
           LMatches := TSqlStatement.Create(FDatabase, 'SELECT documents.path,documents.period' +
             LPageFrom + ' ORDER BY bm25(document_fts),documents.path COLLATE BINARY' +
             ' LIMIT ?3 OFFSET ?4');
-          LMatches.BindText(1, LMatch);
-          if LPeriod <> '' then
-          begin
-            LMatches.BindText(2, LPeriod);
-          end;
+          BindFilters(LMatches);
           LMatches.BindNumber(3, Length(LWindow.Rows));
           LMatches.BindNumber(4, AOffset);
           for LRowIndex := 0 to High(LWindow.Rows) do
@@ -1338,6 +1382,10 @@ begin
       end;
       LResult.Add('terms', UTF8String(ATerms));
       LResult.Add('period', LPeriod);
+      if LKindPattern <> '' then
+      begin
+        LResult.Add('source_kind', ASourceKind);
+      end;
       LResult.Add('offset', AOffset);
       LResult.Add('limit', ALimit);
       LResult.Add('total', LTotal);
