@@ -16,3 +16,5 @@ Collect traditional practices, ceremonial accounts, public personal reports and 
 Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experiential.md). Create the applicable subcategory when adding records, and cross-link prior research without duplicating studies.
 
 - [Niš ethnobotanical record of dried-leaf lemon-balm tea](Traditional-Practices/2024-Nis-Lemon-Balm-Leaf-Tea-Survey.txt).
+- [Parkinson's UK Forum discussion about coffee, tremor and shoulder symptoms](Conversations/2024-Parkinsons-UK-Forum-Coffee-Tremor-and-Shoulder.txt).
+- [Observations on coffee and tremor in public conversations](../Observations/Conversations-Coffee-and-Tremor.md).

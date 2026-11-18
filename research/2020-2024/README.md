@@ -573,3 +573,5 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Diet-specific differences in sucrose preference after injected extract](Source-Text/2024-PMID40255947-Hatami-Lemon-Balm-Diet-Extract.txt)
 - [Niš ethnobotanical record of dried-leaf lemon-balm tea](Cultural-and-Experiential/Traditional-Practices/2024-Nis-Lemon-Balm-Leaf-Tea-Survey.txt)
 - [Observations on lemon-balm preparations and behavioral measures](Observations/Food-Experiment-Lemon-Balm-Comparator-Crosscheck.md)
+- [Parkinson's UK Forum discussion about coffee, tremor and shoulder symptoms](Cultural-and-Experiential/Conversations/2024-Parkinsons-UK-Forum-Coffee-Tremor-and-Shoulder.txt).
+- [Observations on coffee and tremor in public conversations](Observations/Conversations-Coffee-and-Tremor.md).

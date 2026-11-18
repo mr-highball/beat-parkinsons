@@ -457,3 +457,6 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 - [Self-reported lemon balm use among Wrocław students](Cultural-and-Experiential/Personal-Reports/2026-PMID41584153-Wroclaw-Lemon-Balm-Survey.txt)
+- [Reddit discussion about coffee, tea, energy and tremor](Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt).
+- [Reddit discussion about levodopa, caffeinated drinks and tremor](Cultural-and-Experiential/Conversations/2025-Reddit-Levodopa-Caffeine-and-Tremor.txt).
+- [Observations on coffee and tremor in public conversations](Observations/Conversations-Coffee-and-Tremor.md).

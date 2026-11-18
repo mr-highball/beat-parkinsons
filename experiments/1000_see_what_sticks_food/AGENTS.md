@@ -24,6 +24,7 @@
 ## Follow-up evidence review
 
 - Include cultural, traditional, ceremonial and public experiential claims under the [separate chronological record policy](../../research/Cultural-and-Experiential.md). These are lower-weight efficacy leads, with provenance, contrary accounts and diagnostic uncertainty retained. Do not equate a historical tremor term with confirmed Parkinson disease or turn a documented practice into a verified outcome.
+- Collect relevant public Reddit and other forum threads as conversational evidence. Use the opening post year or an explicit first documented capture date, and file summaries under the corresponding period's Cultural-and-Experiential/Conversations folder. Follow the [cultural record policy](../../research/Cultural-and-Experiential.md) for the flexible fields. Attribute firsthand reports, caregiver observations and suggestions distinctly. Preserve differences and uncertainty, do not copy account identifiers, and do not count repeated posts as independent evidence or assign a clinical verdict from the conversation alone.
 - Research outside the frozen vocabulary belongs in the catalog and related-source view. Do not add or alter frozen claims to make such sources fit. Keep graded clinical evidence, reported experiences and unreviewed hypotheses visibly distinct.
 
 - Treat the frozen direction as a working premise. Search for evidence that supports it, challenges it, or qualifies when it applies. A verified finding requires evidence that bears on the claim. An untested premise stays open.

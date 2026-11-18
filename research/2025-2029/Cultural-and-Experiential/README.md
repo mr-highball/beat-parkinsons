@@ -8,3 +8,6 @@ Collect traditional practices, ceremonial accounts, public personal reports and 
 Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experiential.md). Create the applicable subcategory when adding records, and cross-link prior research without duplicating studies.
 
 - [Wrocław students’ reports of lemon balm use for mental-health context](Personal-Reports/2026-PMID41584153-Wroclaw-Lemon-Balm-Survey.txt).
+- [Reddit discussion about coffee, tea, energy and tremor](Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt).
+- [Reddit discussion about levodopa, caffeinated drinks and tremor](Conversations/2025-Reddit-Levodopa-Caffeine-and-Tremor.txt).
+- [Observations on coffee and tremor in public conversations](../Observations/Conversations-Coffee-and-Tremor.md).

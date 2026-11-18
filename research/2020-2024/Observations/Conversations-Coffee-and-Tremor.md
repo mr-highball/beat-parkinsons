@@ -1,0 +1,3 @@
+# Public conversation on coffee, tremor and shoulder symptoms
+
+The later forum thread reports worsening after brewed coffee before medication was started, little baseline tremor in a caregiver's account, and possible roles for tiredness and stress. A participant in the earlier thread described a different response after starting medication. Treat this as a follow-up within one public account. The topical ginger pain anecdote concerns a separate exposure with uncertain symptom fit. [2024 forum record](../Cultural-and-Experiential/Conversations/2024-Parkinsons-UK-Forum-Coffee-Tremor-and-Shoulder.txt) · [Prior period](../../2015-2019/Observations/Conversations-Coffee-and-Tremor.md)

@@ -11,3 +11,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [Non-psychotic psychiatric interviews on lemon-balm infusion](Personal-Reports/2017-PMID28951674-Serbia-Lemon-Balm-Infusion-Interviews.txt).
 - [Psychotic outpatient interviews on lemon-balm infusion](Personal-Reports/2018-PMID29556124-Serbia-Lemon-Balm-Psychiatric-Interviews.txt).
+- [Parkinson's UK Forum discussion about black coffee, mobility and tremor](Conversations/2019-Parkinsons-UK-Forum-Coffee-Mobility-and-Tremor.txt).
+- [Observations on coffee and tremor in public conversations](../Observations/Conversations-Coffee-and-Tremor.md).

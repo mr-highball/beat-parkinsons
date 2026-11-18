@@ -49,11 +49,12 @@ begin
   end;
 end;
 
-procedure VerifyRecords(const ADirectory, ARepo: String; AYear: Integer);
+procedure VerifyRecords(const ADirectory, ARepo: String; AYear: Integer;
+  AConversation: Boolean = False);
 const
-  CRequired: array[0..8] of String = ('Title', 'Source kind', 'Source',
-    'Publication date', 'Date basis', 'Reviewed', 'Reported direction',
-    'Authenticity', 'Efficacy evidence');
+  CRequired: array[0..2] of String = ('Title', 'Source', 'Date basis');
+  CFullRecord: array[0..5] of String = ('Source kind', 'Publication date',
+    'Reviewed', 'Reported direction', 'Authenticity', 'Efficacy evidence');
 var
   LSearch: TSearchRec;
   LPath: String;
@@ -77,7 +78,9 @@ begin
         'Linked cultural input is not supported: ' + LPath);
       if (LSearch.Attr and faDirectory) <> 0 then
       begin
-        VerifyRecords(LPath, ARepo, AYear);
+        VerifyRecords(LPath, ARepo, AYear, AConversation or
+          (SameText(ExtractFileName(ADirectory), 'Cultural-and-Experiential') and
+           SameText(LSearch.Name, 'Conversations')));
       end
       else if SameText(ExtractFileExt(LPath), '.txt') then
       begin
@@ -90,6 +93,14 @@ begin
           begin
             Require(Field(LLines, CRequired[LIndex]) <> '',
               'Missing ' + CRequired[LIndex] + ': ' + LPath);
+          end;
+          if not AConversation then
+          begin
+            for LIndex := Low(CFullRecord) to High(CFullRecord) do
+            begin
+              Require(Field(LLines, CFullRecord[LIndex]) <> '',
+                'Missing ' + CFullRecord[LIndex] + ': ' + LPath);
+            end;
           end;
           LValue := Field(LLines, 'Publication date');
           if not TryStrToInt(Copy(LValue, 1, 4), LSourceYear) then

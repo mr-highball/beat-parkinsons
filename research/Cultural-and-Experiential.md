@@ -9,11 +9,12 @@ Each five-year period has a separate `Cultural-and-Experiential/` folder. Use su
 - `Traditional-Practices/` for practitioner texts, ethnobotany and inherited remedies.
 - `Ceremonial-Accounts/` for ritual, religious or ceremonial contexts.
 - `Personal-Reports/` for public first-person experiences and patient-reported claims.
+- `Conversations/` for public Reddit and other forum threads or comparable community discussions.
 - `Local-Knowledge/` for other community accounts and explanatory beliefs.
 
 Use UTF-8 text for individual source records. Link each addition from the period index and its Observations record. Include an identifiable source URL or bibliographic locator and the specific page, passage or post inspected. Preserve original terminology and translate cautiously; record uncertain species, plant parts, preparations, diagnoses and symptom types. A historical word for shaking or a spiritual interpretation does not by itself establish a modern Parkinson diagnosis or measured rest tremor.
 
-Record these fields explicitly:
+Record these fields explicitly for the categories other than Conversations:
 
 | Field | Requirement |
 | --- | --- |
@@ -27,6 +28,14 @@ Record these fields explicitly:
 | Authenticity and efficacy | Evaluate source authenticity separately from evidence for symptom effects. |
 | Related research | Link existing clinical/laboratory accessions and conflicting accounts; identify duplicate reports. |
 | Access and follow-up | Record unread originals, translations, historical attribution and other unresolved trails. |
+
+### Conversation records
+
+Start with a title, `Collection: Cultural and experiential`, the original public thread URL in `Source`, and a `Date basis`. File the text under the period of the opening post. A year is enough when finer precision is unclear. If the publication year cannot be established, omit it or mark it unknown and supply a `Capture date` with an explicit first-documented-capture basis. A later reply can be dated in the summary where relevant.
+
+Summarize the relevant first-person experiences, caregiver observations, questions and replies in whatever shape fits the discussion. Attribute claims by role and retain the exposure, outcome, adverse reports, uncertainty and disagreement when the thread supplies them. Label any inference and leave an uncertain diagnosis, dose or symptom type open. Skip unavailable fields. Mention repeat or cross-posted accounts when identifiable without copying handles, and distinguish suggestions from reported use. Votes and reply counts supply no clinical evidence or population estimate.
+
+The Oracle shows these records under Culture & experience with a Conversation badge. Conversation summaries can guide follow-up searches and remain distinct from experimental verdicts.
 
 Use the actual source publication date for the bucket, not an unsupported ancient attribution. A modern edition of a historical text belongs with that edition and records the older attribution separately. For an undated public source, use the first documented capture's period and label `Date basis: first documented capture; publication date unknown`; this is an archival placement, not a fabricated publication date.
 
