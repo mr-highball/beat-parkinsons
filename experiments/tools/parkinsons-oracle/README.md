@@ -161,6 +161,14 @@ The [selection fixtures](selection.tests.lpr) run natively and after transpilati
 
 In Search sources, choose Open source to read the indexed file as text. Long documents have Previous part and Next part controls. Back to results restores the catalog page you were reading.
 
+Study titles and saved references in claim details are clickable. The live app opens the local text reader and returns to the claim afterward; portable builds open the configured repository citation. Reference fragments are retained in portable links and removed from live reader file paths.
+
+Choose **Graph view** from symptom results or **Explore graph** from a claim. The Nyx Canvas workspace supports pan, zoom, Fit, clickable nodes and a matching connection explorer. Expand a symptom into ingredient hypotheses, an ingredient into its assessed studies, and a study into its recorded symptom assessments and saved source documents. Opening evidence or reading a source preserves the explored web. Focus this branch starts a smaller view around the selected node. Expansion is paged with visible counts; open questions remain available.
+
+Green and red links carry qualified easing/worsening labels from the recorded judgment or a supporting assessment. Related, inconclusive and pending assessments stay gray. Evidence challenging a hypothesis does not create an opposite-effect claim. Each connection retains the preparation, symptom, exact study key, assessment and source reference. A study can connect to another symptom only through an existing assessment. The graph does not infer diagnoses or outcomes from article mentions, and its source-document nodes are saved reference files rather than a claim that every indexed catalog document has been assessed. Exact ledger study keys remain separate unless a future identity layer verifies an alias; file-level references may contain several studies.
+
+The graph projects the same committed claim model used by the oracle, including all 6,930 frozen pairs. Native web builds embed that model into the browser asset (about 5.8 MB before compression at this checkpoint), so they work with the existing live API without another route. Portable builds reuse their existing `claims.json` and avoid embedding a second copy. The interface shows the model revision and checks it against the oracle; rebuilding the browser assets updates the graph snapshot after research commits. Re-indexing the text catalog alone does not rebuild embedded browser assets.
+
 ```powershell
 git submodule update --init -- experiments/tools/vendor/nyx
 & ./experiments/tools/parkinsons-oracle/web/build.ps1 -Compiler 'path-to-pas2js' -Runtime 'path-to-rtl.js'

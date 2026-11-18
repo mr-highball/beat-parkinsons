@@ -1,3 +1,7 @@
+# Execution mode
+
+Dexter works in single-agent mode following the graph interface checkpoint. Do not spawn, resume or assign new work to subagents unless the user explicitly requests it. The role profiles below remain available for such a request; their existence does not authorize delegation. Preserve completed research handoffs for Dexter to resume.
+
 # Project team
 
 | Role | Model and reasoning | Responsibility |
@@ -11,8 +15,8 @@
 
 Use only Pinky, Slinky, Binky, Blimbo, and The Brain as subagents unless the user authorizes another. Dexter assigns all delegated work and verifies the results before publishing.
 
-- Give internet research to Pinky, Slinky, and Binky as independent assignments become available.
-- Assign Blimbo source searches and preparation for the research agents or for Dexter. Bring in The Brain when a difficult reasoning or quality review assignment can proceed while Dexter handles other work.
+- When the user explicitly authorizes delegation, give internet research to Pinky, Slinky, and Binky as independent assignments become available.
+- Under that explicit authorization, assign Blimbo source searches and preparation, or bring in The Brain for difficult reasoning or quality review.
 - Reuse the named agents for follow-ups. Give each agent a distinct deliverable, parallelize work that advances the experiment, and leave agents idle when their roles have no substantive work.
 - Use the project agent profiles for [Pinky](.codex/agents/pinky.toml), [Slinky](.codex/agents/slinky.toml), [Binky](.codex/agents/binky.toml), [Blimbo](.codex/agents/blimbo.toml), and [The Brain](.codex/agents/the_brain.toml). If the dispatch tool takes model settings directly, specify the model and reasoning effort from the profile and give the agent the context it needs for the assignment.
 

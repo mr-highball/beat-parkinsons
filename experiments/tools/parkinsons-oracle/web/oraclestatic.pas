@@ -31,11 +31,17 @@ type
     constructor Create(const ARevision: String);
     procedure Call(const ATool: String; AArguments: TJSObject; AReply: TOracleReply);
     function ReferenceURL(const ALocal: String): String;
+    procedure GraphModel(AReply: TOracleReply);
   end;
 
 implementation
 
 uses StrUtils, oraclevocab, parkinsonsoracle.trend;
+
+procedure TStaticOracle.GraphModel(AReply: TOracleReply);
+begin
+  WithModel(AReply);
+end;
 
 function AsText(AValue: JSValue): String; external name 'String';
 function EncodePathSegment(const AText: String): String; external name 'encodeURIComponent';

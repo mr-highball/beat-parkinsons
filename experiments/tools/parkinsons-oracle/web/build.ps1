@@ -5,7 +5,8 @@ param(
     [string] $Runtime = $env:PAS2JS_RTL,
     [string] $UnitRoot = $env:PAS2JS_UNITS,
     [string] $NativeCompiler = $env:FPC,
-    [string] $OutputDirectory
+    [string] $OutputDirectory,
+    [switch] $StaticModel
 )
 
 $ErrorActionPreference = 'Stop'
@@ -27,10 +28,28 @@ if (!$Output) {
     $Output = Join-Path $Repo 'build/parkinsons-oracle/web'
 }
 New-Item -ItemType Directory -Path $Output -Force | Out-Null
+if (!$NativeCompiler) {
+    $NativeCompiler = (Get-Command fpc -ErrorAction Stop).Source
+}
+$GlyphBuild = Join-Path $Repo ('build/parkinsons-oracle/glyph-tools/' + [Guid]::NewGuid().ToString('N'))
+New-Item -ItemType Directory -Path "$GlyphBuild/bin", "$GlyphBuild/units" -Force | Out-Null
+if (!$StaticModel) {
+    $GraphArgs = @('-Mdelphi', '-Sa', '-Cr', '-Co', '-Ci', '-gl', "-Fu$SharedUnits",
+        "-Fu$Repo/experiments/tools/vendor/wfc/src",
+        "-Fu$Repo/experiments/1000_see_what_sticks_food/tools",
+        "-FU$GlyphBuild/units", "-FE$GlyphBuild/bin", (Join-Path $SharedUnits 'graph.embed.lpr'))
+    & $NativeCompiler @GraphArgs
+    if ($LASTEXITCODE) { exit $LASTEXITCODE }
+    $GraphExe = Join-Path $GlyphBuild 'bin/graph.embed.exe'
+    if (!(Test-Path -LiteralPath $GraphExe)) { $GraphExe = Join-Path $GlyphBuild 'bin/graph.embed' }
+    & $GraphExe $Repo (Join-Path $GlyphBuild 'oraclegraph.inc')
+    if ($LASTEXITCODE) { exit $LASTEXITCODE }
+}
 $CompilerArgs = @(
     '-Mdelphi', '-Tbrowser', '-Jc',
-    "-Fu$Vendor", "-Fi$Vendor", "-Fu$SharedUnits", "-FE$Output"
+    "-Fu$Vendor", "-Fi$Vendor", "-Fu$SharedUnits", "-Fi$GlyphBuild", "-FE$Output"
 )
+if ($StaticModel) { $CompilerArgs += '-dORACLE_STATIC' }
 if ($UnitRoot) {
     $Packages = (Resolve-Path -LiteralPath $UnitRoot).Path
     $CompilerArgs += "-Fu$Packages/*/src"
@@ -45,11 +64,6 @@ Copy-Item -LiteralPath $Runtime -Destination (Join-Path $Output 'rtl.js') -Force
 foreach ($Name in @('index.html', 'oracle.css')) {
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot $Name) -Destination $Output -Force
 }
-if (!$NativeCompiler) {
-    $NativeCompiler = (Get-Command fpc -ErrorAction Stop).Source
-}
-$GlyphBuild = Join-Path $Repo ('build/parkinsons-oracle/glyph-tools/' + [Guid]::NewGuid().ToString('N'))
-New-Item -ItemType Directory -Path "$GlyphBuild/bin", "$GlyphBuild/units" -Force | Out-Null
 & $NativeCompiler -Mdelphi -Sa -Cr -Co -Ci -gl "-FU$GlyphBuild/units" "-FE$GlyphBuild/bin" (Join-Path $SharedUnits 'glyphs.embed.lpr')
 if ($LASTEXITCODE) { exit $LASTEXITCODE }
 $GlyphExe = Join-Path $GlyphBuild 'bin/glyphs.embed.exe'

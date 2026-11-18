@@ -8,7 +8,7 @@ program OracleWeb;
 uses
   SysUtils, StrUtils, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
   oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation,
-  parkinsonsoracle.selection, oraclemulti;
+  parkinsonsoracle.selection, oraclemulti, oraclegraph, oraclegraphdata, oraclegraphmodel;
 
 type
   TOracleView = (ovClaims, ovCatalog);
@@ -46,6 +46,11 @@ var
   GSymptom: TOraclePicker;
   GIngredient: TOraclePicker;
   GPreparation: TOraclePicker;
+  GSourceReturn: TPickerAction;
+  GDetailReturn: TPickerAction;
+  GGraph: TOracleGraphExplorer;
+  GGraphSymptoms: TStringValues;
+  GGraphIngredient: String;
 
 function JSValueText(AValue: JSValue): String; external name 'String';
 
@@ -94,7 +99,8 @@ begin
     if LURL <> '' then
       Exit(Section(nkLink, AId).Configure.Text(APath).LinkTo(LURL).Done);
   end;
-  Result := Caption(nkCode, AId, APath);
+  Result := Section(nkButton, AId).Configure.Text('Open source' + #10 + APath)
+    .AccessibleName('Open source ' + APath).Variant(nvSecondary).Done;
 end;
 
 function Button(const AId, AValue: String; AVariant: TNyxVariant): TNyxNode;
@@ -231,6 +237,10 @@ procedure PublishResults(ADocument: TNyxDocument; APage: TNyxNode);
 var
   LPrior: TNyxDocument;
 begin
+  if GGraph <> nil then
+  begin
+    GGraph.Detach;
+  end;
   LPrior := GResultsDocument;
   GResultsRenderer.Render(ADocument, APage, GRenderer.ElementFor('results-frame'));
   GResultsDocument := ADocument;
@@ -253,6 +263,10 @@ end;
 procedure ShowList(AResults: TJSObject; AFocus: Boolean = True); forward;
 procedure Query(ANewQuery: Boolean; AOffset: Integer); forward;
 procedure SwitchView(AView: TOracleView); forward;
+procedure BindReference(const ANodeId, APath: String; ARound: Integer;
+  const AClaimId: String); forward;
+procedure ShowGraph(AReset: Boolean); forward;
+procedure StartGraph(const ASymptoms: TStringValues; const AIngredient: String); forward;
 
 procedure ResetRelatedSources;
 var
@@ -538,9 +552,11 @@ function Inspect(ARound: Integer; const AId: String): Boolean;
 var
   LArgs: TJSObject;
   LSequence: Integer;
+  LReturn: TPickerAction;
 begin
   Inc(GSequence);
   LSequence := GSequence;
+  LReturn := GDetailReturn;
   LArgs := TJSObject.new;
   LArgs['round'] := ARound;
   LArgs['id'] := AId;
@@ -573,6 +589,7 @@ begin
       LPage := Section(nkPage, 'result-page');
       LDocument.AddPage(LPage);
       LPage.Add(Button('back-results', '‹ Back to results', nvSecondary));
+      LPage.Add(Button('open-graph', 'Explore graph', nvSecondary));
       LPage.Add(Caption(nkHeading, 'result-heading', Capitalized(TextOf(AData, 'ingredient'))));
       LPage.Add(ClaimIndicators(AData, 'detail'));
       LPage.Add(Caption(nkLabel, 'claim-question', ResearchQuestion(AData)));
@@ -599,7 +616,7 @@ begin
         LTag := IntToStr(LIndex);
         LCard := Section(nkCard, 'evidence-' + LTag);
         LCard.Add(Caption(nkBadge, 'role-' + LTag, TextOf(LRow, 'role')));
-        LCard.Add(Caption(nkLabel, 'study-' + LTag, TextOf(LRow, 'study')));
+        LCard.Add(Button('study-' + LTag, 'Open study: ' + TextOf(LRow, 'study'), nvSecondary));
         LCard.Add(Caption(nkLabel, 'fit-' + LTag, TextOf(LRow, 'fit')));
         LCard.Add(Caption(nkLabel, 'analysis-' + LTag, TextOf(LRow, 'assessment')));
         LCard.Add(SourceLink('ref-' + LTag, TextOf(LRow, 'local_reference')));
@@ -615,10 +632,45 @@ begin
 
       PublishResults(LDocument, LPage);
       FocusResults;
+      BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
+        function(AEvent: TEventListenerEvent): Boolean
+        var
+          LSymptoms: TStringValues;
+        begin
+          LSymptoms := nil;
+          LSymptoms := AddSelection(LSymptoms, TextOf(AData, 'symptom'));
+          StartGraph(LSymptoms, TextOf(AData, 'ingredient'));
+          Result := True;
+        end);
+      LItems := ItemsOf(AData, 'assessments');
+      for LIndex := 0 to LItems.Length - 1 do
+      begin
+        LRow := TJSObject(LItems[LIndex]);
+        BindReference('study-' + IntToStr(LIndex), TextOf(LRow, 'local_reference'), ARound, AId);
+        if GStaticOracle = nil then
+        begin
+          BindReference('ref-' + IntToStr(LIndex), TextOf(LRow, 'local_reference'), ARound, AId);
+        end;
+      end;
+      if GStaticOracle = nil then
+      begin
+        LItems := ItemsOf(AData, 'local_references');
+        for LIndex := 0 to LItems.Length - 1 do
+        begin
+          BindReference('citation-' + IntToStr(LIndex), JSValueText(LItems[LIndex]), ARound, AId);
+        end;
+      end;
       BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
         function(AEvent: TEventListenerEvent): Boolean
         begin
-          ShowList(GResults);
+          if Assigned(LReturn) then
+          begin
+            LReturn();
+          end
+          else
+          begin
+            ShowList(GResults);
+          end;
           Result := True;
         end);
     end);
@@ -630,6 +682,7 @@ begin
   BindEvent(GResultsRenderer.ElementFor('inspect-' + ATag), 'click',
     function(AEvent: TEventListenerEvent): Boolean
     begin
+      GDetailReturn := nil;
       Result := Inspect(ARound, AId);
     end);
 end;
@@ -639,9 +692,11 @@ var
   LArgs: TJSObject;
   LSequence: Integer;
   LOffset: Integer;
+  LReturn: TPickerAction;
 begin
   Inc(GSequence);
   LSequence := GSequence;
+  LReturn := GSourceReturn;
   LOffset := AOffsets[High(AOffsets)];
   LArgs := TJSObject.new;
   LArgs['path'] := APath;
@@ -700,8 +755,18 @@ begin
       BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
         function(AEvent: TEventListenerEvent): Boolean
         begin
-          ShowList(GResults);
-          GResultsRenderer.ElementFor('open-source-' + ATag).focus;
+          if Assigned(LReturn) then
+          begin
+            LReturn();
+          end
+          else
+          begin
+            ShowList(GResults);
+            if GResultsRenderer.ElementFor('open-source-' + ATag) <> nil then
+            begin
+              GResultsRenderer.ElementFor('open-source-' + ATag).focus;
+            end;
+          end;
           Result := True;
         end);
       if LHasPrevious then
@@ -726,6 +791,38 @@ begin
     end);
 end;
 
+procedure OpenReference(const APath: String; AReturn: TPickerAction);
+var
+  LPath: String;
+  LOffsets: TSourceOffsets;
+begin
+  if GStaticOracle <> nil then
+  begin
+    window.open(GStaticOracle.ReferenceURL(APath), '_blank');
+    Exit;
+  end;
+  LPath := ReferenceFile(APath);
+  GSourceReturn := AReturn;
+  SetLength(LOffsets, 1);
+  LOffsets[0] := 0;
+  OpenSource(LPath, '', LOffsets);
+end;
+
+procedure BindReference(const ANodeId, APath: String; ARound: Integer;
+  const AClaimId: String);
+begin
+  BindEvent(GResultsRenderer.ElementFor(ANodeId), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      OpenReference(APath,
+        procedure
+        begin
+          Inspect(ARound, AClaimId);
+        end);
+      Result := True;
+    end);
+end;
+
 procedure BindSource(const ATag, APath: String);
 begin
   BindEvent(GResultsRenderer.ElementFor('open-source-' + ATag), 'click',
@@ -733,11 +830,137 @@ begin
     var
       LOffsets: TSourceOffsets;
     begin
+      GSourceReturn := nil;
       SetLength(LOffsets, 1);
       LOffsets[0] := 0;
       OpenSource(APath, ATag, LOffsets);
       Result := True;
     end);
+end;
+
+procedure ShowGraph(AReset: Boolean);
+var
+  LSequence: Integer;
+
+  procedure RenderGraph;
+  var
+    LDocument: TNyxDocument;
+    LPage: TNyxNode;
+  begin
+    LDocument := TNyxDocument.Create;
+    LPage := Section(nkPage, 'result-page');
+    LDocument.AddPage(LPage);
+    LPage.Add(Button('back-results', '‹ Back to results', nvSecondary));
+    LPage.Add(Caption(nkHeading, 'result-heading', 'Explore the research web'));
+    LPage.Add(Caption(nkLabel, 'graph-scope',
+      'Connections come from frozen claims and recorded assessments. Sources can lead to other documented symptoms; a mention alone does not establish an effect. The graph includes open questions beyond your list filters.'));
+    LPage.Add(Caption(nkLabel, 'graph-freshness', 'Checking the model snapshot…'));
+    LPage.Add(Section(nkPanel, 'graph-host'));
+    PublishResults(LDocument, LPage);
+    BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        ShowList(GResults);
+        Result := True;
+      end);
+    GGraph.Attach(GResultsRenderer.ElementFor('graph-host'));
+    FocusResults;
+    Request('oracle_status', TJSObject.new,
+      procedure(AData: TJSObject; const AError: String)
+      var
+        LMessage: String;
+        LRevision: String;
+      begin
+        if LSequence <> GSequence then
+        begin
+          Exit;
+        end;
+        LRevision := TextOf(AData, 'revision');
+        if (LRevision = '') and (AData <> nil) and isDefined(AData['claims']) then
+        begin
+          LRevision := TextOf(TJSObject(AData['claims']), 'revision');
+        end;
+        if AError <> '' then
+        begin
+          LMessage := 'Graph snapshot available; the live revision check is unavailable.';
+        end
+        else if LRevision = GGraph.Revision then
+        begin
+          LMessage := 'Graph matches the current oracle snapshot.';
+        end
+        else
+        begin
+          LMessage := 'Newer oracle research is available. This graph is a saved snapshot; rebuild the browser assets to include it.';
+        end;
+        GResultsRenderer.ElementFor('graph-freshness').textContent := LMessage;
+      end);
+  end;
+
+  procedure ReceiveModel(AData: TJSObject; const AError: String);
+  begin
+    if LSequence <> GSequence then
+    begin
+      Exit;
+    end;
+    if AError <> '' then
+    begin
+      MessageView('Graph unavailable', AError);
+      Exit;
+    end;
+    GGraph := TOracleGraphExplorer.Create(AData, GGraphSymptoms, GGraphIngredient,
+      procedure(const APath: String)
+      begin
+        OpenReference(APath,
+          procedure
+          begin
+            ShowGraph(False);
+          end);
+      end,
+      procedure(ARound: Integer; const AId: String)
+      begin
+        GDetailReturn :=
+          procedure
+          begin
+            ShowGraph(False);
+          end;
+        Inspect(ARound, AId);
+      end);
+    RenderGraph;
+  end;
+
+begin
+  Inc(GSequence);
+  LSequence := GSequence;
+  if AReset then
+  begin
+    FreeAndNil(GGraph);
+  end;
+  if GGraph <> nil then
+  begin
+    RenderGraph;
+    Exit;
+  end;
+  MessageView('Opening graph', 'Indexing the saved claim and study relationships.');
+  if GStaticOracle <> nil then
+  begin
+    GStaticOracle.GraphModel(@ReceiveModel);
+  end
+  else
+  begin
+    ReceiveModel(EmbeddedGraphModel, '');
+  end;
+end;
+
+procedure StartGraph(const ASymptoms: TStringValues; const AIngredient: String);
+begin
+  if (Length(ASymptoms) = 0) and (AIngredient = '') then
+  begin
+    MessageView('Choose a starting point', 'Choose a symptom or ingredient before opening the graph.');
+    Exit;
+  end;
+  GGraphSymptoms := ASymptoms;
+  GGraphIngredient := AIngredient;
+  ShowGraph(True);
 end;
 
 procedure ShowList(AResults: TJSObject; AFocus: Boolean);
@@ -790,6 +1013,7 @@ begin
     else if TextOf(AResults, 'symptom') <> '' then
       LMessage := 'Research on ' + LowerCase(FriendlySymptom(TextOf(AResults, 'symptom')));
     LPage.Add(Caption(nkHeading, 'result-heading', LMessage));
+    LPage.Add(Button('open-graph', 'Graph view', nvSecondary));
     LKindTabs := Section(nkRow, 'research-kind-tabs');
     LKindTabs.Add(Button('research-kind-all', 'All research', nvSecondary));
     LKindTabs.Add(Button('research-kind-studies', 'Studies & analyses', nvSecondary));
@@ -936,6 +1160,15 @@ begin
   end;
 
   PublishResults(LDocument, LPage);
+  if GView = ovClaims then
+  begin
+    BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        StartGraph(ArgumentSymptoms(GResults), TextOf(GArguments, 'ingredient'));
+        Result := True;
+      end);
+  end;
   if AFocus then
     FocusResults;
   if GView = ovClaims then
