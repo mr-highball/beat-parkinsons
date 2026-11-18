@@ -579,3 +579,4 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Brewed lemon balm and 24-hour ventricular ectopy in a randomized trial](Source-Text/2021-PMID34309987-Kheirkhah-Lemon-Balm-Tea-PVC-Abstract-Extract.txt).
 - [Reserpine, lemon-balm extract and a botanical combination in mice](Source-Text/2022-PMID35470926-Talebi-Lemon-Balm-Reserpine-Abstract-Extract.txt).
 - [Observations on lemon-balm preparations and public discussions](Observations/Lemon-Balm-Preparation-and-Conversations.md).
+- [Injected Prunus cerasoides stem and leaf extract in a mouse stroke model](Source-Text/2021-PMID35052603-Kim-Prunus-Cerasoides-Ischemia-Extract.txt).

@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+Checkpoint 17 authenticates five posted conference collections and resolves 20 original claim–source pairs across 11 claims. Two Prunus papers distinguish injected extract in an acute stroke model from oral preparations in chronic vascular impairment. The Nepal survey adds cultural context. Eating dried cherry for Parkinson apathy remains untested in these records. Claim 0133 remains Maybe True at 51/100, with 476 original pairs queued. Round 1 retains 47,999 original pairs. [Scope, source records and open routes](followup/lemon-balm-depression-nov18-17/README.md)
+
 The sixteenth lemon balm checkpoint applies 53 body-level reviews across 34 frozen claims and adds six related assessments. It resolves 44 lexical mismatches and preserves nine genuine or associated exposures, including safflower mixed meals, a distinct Prunus species, a coffee cohort and separate lab or reward uses. Claim 0133 remains Maybe True at 51/100, with 481 original pairs queued. The round retains 48,019 original pairs. [Source scopes, assessment fit and remaining routes](followup/lemon-balm-depression-nov18-16/README.md)
 
 The fifteenth lemon balm checkpoint adds three related comparator assessments and resolves four complete original collections, including the repaired 279-page physiology proceedings. The ARO paper stays queued at title-and-index depth while full abstracts are unavailable. Claim 0133 remains Maybe True at 51/100. There are 48,072 original pairs still queued, including 487 for the claim. [Assessments, source coverage and access holds](followup/lemon-balm-depression-nov18-15/README.md)

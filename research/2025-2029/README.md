@@ -465,3 +465,5 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Observations on lemon-balm preparations and public discussions](Observations/Lemon-Balm-Preparation-and-Conversations.md).
 - [Safflower-oil mixed meals, APOE genotype and lipoprotein outcomes](Source-Text/2025-BrainPET-0262-Safflower-Oil-Meal-Comparator.txt).
 - [Prunus cerasoides extract and prunetin in two cerebrovascular model abstracts](Source-Text/2025-BrainPET-Prunus-Cerasoides-Prunetin-Comparators.txt).
+- [Oral Prunus cerasoides extract and prunetin in a mouse vascular dementia model](Source-Text/2026-Jeong-Prunus-Cerasoides-Prunetin-Vascular-Dementia.txt).
+- [Prunus cerasoides uses in Nepal and preparations across the study family](Observations/Prunus-Species-Preparation-and-Outcomes.md).

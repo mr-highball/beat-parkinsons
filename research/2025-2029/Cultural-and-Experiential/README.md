@@ -13,3 +13,4 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Observations on coffee and tremor in public conversations](../Observations/Conversations-Coffee-and-Tremor.md).
 - [Public caregiver discussion and a lemon-balm extract suggestion](Conversations/2025-Reddit-Lemon-Balm-Extract-Sleep-Suggestion.txt).
 - [Observations on lemon-balm preparations and public discussions](../Observations/Lemon-Balm-Preparation-and-Conversations.md).
+- [Reported cultural, food and medicinal uses of Prunus cerasoides in Nepal](Traditional-Practices/2025-Khadka-Prunus-Cerasoides-Nepal-Use-Survey.txt).

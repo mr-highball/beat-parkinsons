@@ -597,3 +597,4 @@ The MIND trial family reports sleep quality, cardiometabolic outcomes, and quali
 The new retrospective registration asks about smell changes as adverse symptoms after a blend containing cinnamon essential oil. It supplies no result. The earlier ground-cinnamon trial measured meal pleasantness. [Mixed-oil register](../Food-Experiment-Cinnamon-Olfaction-Followup.md#registered-oral-mixed-oils-and-adverse-smell-symptoms) · [Earlier oral trial](../../2020-2024/Food-Experiment-Cinnamon-Olfaction-Followup.md#oral-ground-cinnamon-and-ratings-of-meal-smell)
 
 - [Lemon balm formulations and repeated study reports](Food-Experiment-Lemon-Balm-Depression.md)
+- [Prunus species, oral and injected preparations, and outcome differences](Prunus-Species-Preparation-and-Outcomes.md)
