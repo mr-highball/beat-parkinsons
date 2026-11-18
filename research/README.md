@@ -1,6 +1,6 @@
 # Parkinson’s research archive
 
-Data collection through **November 11, 2026**. Each folder covers five calendar years, from January 1 of the first year through December 31 of the last year. The active [2025–2029 bucket](2025-2029/README.md) is partial.
+The initial collection snapshot is **November 11, 2026**. Collection and evidence review continue in the [experiment work record](../experiments/1000_see_what_sticks_food/WORK.md). Each period covers five calendar years; the active [2025–2029 bucket](2025-2029/README.md) is partial.
 
 The November 11 snapshot contains **430 annotated entries** across 33 periods, including 59 food and nutrition entries. The search indexes contain 133,596 Europe PMC literature records, 187 archival PubMed records with one overlap, and 5,075 ClinicalTrials.gov registrations.
 
@@ -18,6 +18,7 @@ James Parkinson published *An Essay on the Shaking Palsy* in 1817. The archive s
 
 ## How the collection works
 
+- **Cultural-and-Experiential/** in every period collects traditional practices, ceremonial accounts, local knowledge and public personal reports separately from formal-study archives. Source authenticity and treatment efficacy are separate questions; these accounts carry lower efficacy weight than controlled studies. [Record policy and date handling](Cultural-and-Experiential.md).
 - **Source-Text/** contains locally saved UTF-8 source text and catalogs. The annotated notes remain available alongside the source material. [Text coverage by period](Source-Text-Coverage.tsv)
 - **Annotated records** summarize selected original sources, including historical scans, clinical studies, pathology and laboratory research, regulatory records, and documented care models. Each period links to the categories with collected material.
 - **Observations** contains major and minor findings, a comparison with the immediately preceding period, and specific collection gaps. Comparisons distinguish replication, qualification, conflicting results, changed methods and unanswered questions.

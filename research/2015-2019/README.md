@@ -529,3 +529,5 @@ The walnut clinical-family index preserves protocol, cohort, preparation and end
 Recovered conference contexts distinguish genuine foods, laboratory derivatives and separate members. [2018 nutrition collection](Source-Text/2018-PMC6265811-Nutritional-Epidemiology-Culinary-Members-Extract.txt) · [Nuclear food-preparation poster](Source-Text/2018-PMC6354729-Nuclear-Imaging-Food-Preparation-Abstract-Extract.txt) · [Duplicate deposit identity](Source-Text/2018-PMC6231292-Nuclear-Collection-Identity-Extract.txt) · [2019 Cinnamomum leaf isolate](Source-Text/2019-PMC6493311-Cinnamomum-Leaf-Isolate-Abstract-Extract.txt) · [2019 green-tea polyphenols](Source-Text/2019-PMC6738495-Green-Tea-Polyphenols-Abstract-Extract.txt) · [Context observations](Observations/Food-Experiment-Conference-Context-Recovery.md).
 
 The contaminant trail includes an original total-diet abstract, without a measured Parkinson symptom outcome. [2017 Korean acrylamide and furan](Source-Text/2017-Kim-Lee-Korean-Acrylamide-Furan-Abstract-Extract.txt).
+
+- [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).

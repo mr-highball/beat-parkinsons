@@ -145,6 +145,12 @@ tool text. The median of 11 warm runs fell from 2.03 to 0.70 ms. A sweep of
 
 ## Browser interface
 
+The browser initially includes all findings, Unknowns and frozen questions awaiting review. The All research, Studies & analyses, and Culture & experience tabs separate source collections without treating a reported practice as a verified effect. Source documents outside the frozen ingredient list appear alongside the claim results. Unreviewed directions remain hypotheses, and effect filters apply to graded claim cards.
+
+Cultural and personal records have their own styling and original line glyph, with source type, date, reported experience and uncertainty in the text record. The collection follows the [cultural and experiential policy](../../../research/Cultural-and-Experiential.md). Older source material still awaiting cultural curation remains discoverable in All research and Search sources. A collection gap does not establish absence of a practice.
+
+Source-kind paging examines catalog batches until the page is filled or the result set ends. A nonmatching batch does not close the search, and cursor positions retain unconsumed rows. The shared Pascal presentation unit has native fixtures for source classification, query terms and pagination boundaries. Browser assets use Nyx and the web target; glyphs are original inline SVG masks in the stylesheet.
+
 The Nyx web target uses the same claim and catalog service as MCP. The local workbench offers common symptom pills, a browse list and suggestions for symptoms, ingredients and preparations. Under Symptom effect, choose May ease, May worsen, or Any trend before searching. The filters match the arrows on the cards. Selecting a result opens its study assessments and citations. The local server binds to the loopback address by default.
 
 In Search sources, choose Open source to read the indexed file as text. Long documents have Previous part and Next part controls. Back to results restores the catalog page you were reading.

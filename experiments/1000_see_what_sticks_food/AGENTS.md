@@ -23,6 +23,9 @@
 
 ## Follow-up evidence review
 
+- Include cultural, traditional, ceremonial and public experiential claims under the [separate chronological record policy](../../research/Cultural-and-Experiential.md). These are lower-weight efficacy leads, with provenance, contrary accounts and diagnostic uncertainty retained. Do not equate a historical tremor term with confirmed Parkinson disease or turn a documented practice into a verified outcome.
+- Research outside the frozen vocabulary belongs in the catalog and related-source view. Do not add or alter frozen claims to make such sources fit. Keep graded clinical evidence, reported experiences and unreviewed hypotheses visibly distinct.
+
 - Treat the frozen direction as a working premise. Search for evidence that supports it, challenges it, or qualifies when it applies. A verified finding requires evidence that bears on the claim. An untested premise stays open.
 - Exhaust accessible pages for the recorded searches and reconcile returned counts. Use the first-pass searches, broader ingredient searches, relevant compounds, alternative names, trial registries, and other appropriate sources. Continue following plausible references and citing papers while they produce new evidence. The original run screened up to 20 results per query and followed references once. Preserve those limits in the historical ledgers.
 - For each language used in a search, verify that the native matcher handles its script and that the vocabulary covers the frozen ingredients and symptoms. Keep broader context reviews for records that fail a lexical pair match. Record where a provider lacks an abstract or an original report is inaccessible.

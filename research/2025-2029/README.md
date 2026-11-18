@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [Mucuna survey's experiential context](Cultural-and-Experiential/Personal-Reports/2026-Mucuna-Patient-Survey-Context.txt) links the existing study family rather than adding a cohort. [Observations](Observations/Cultural-and-Experiential-Tremor.md).
+
 New dated profiles preserve the [2025 cinnamon image correction](Source-Text/2025-PMID40072646-Cinnamon-Correction-Extract.txt) and [2026 immature green-walnut local pain experiment](Source-Text/2026-PMID41596967-Marinaccio-Green-Walnut-Pain-Extract.txt). [Observations and route-specific limits](Observations/Food-Experiment-Source-Context-Nov17-10.md).
 
 January 1, 2025 through November 11, 2026 (partial period).
@@ -447,3 +449,5 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Botanical compound computational depression screen](Source-Text/2026-PMID42168279-Rahbar-Botanical-Depression-Screen-Extract.txt)
 
 - [2026 walnut-oil chemometrics abstract and access limits](Source-Text/2026-PMID42982915-Qian-Walnut-Oil-Chemometrics-Abstract-Extract.txt)
+
+- [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).

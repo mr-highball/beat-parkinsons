@@ -7,7 +7,7 @@ program OracleWeb;
 
 uses
   SysUtils, StrUtils, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
-  oraclestatic, parkinsonsoracle.trend;
+  oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation;
 
 type
   TOracleView = (ovClaims, ovCatalog);
@@ -28,6 +28,14 @@ var
   GSequence: Integer;
   GResults: TJSObject;
   GArguments: TJSObject;
+  GRelatedSources: TJSObject;
+  GRelatedTerms: String;
+  GRelatedError: String;
+  GResearchKind: Integer;
+  GRelatedOffsets: TSourceOffsets;
+  GRelatedPage: Integer;
+  GRelatedNext: Integer;
+  GRelatedBusy: Boolean;
   GTrend: String;
   GFilterOptions: TJSObject;
   GStaticOracle: TStaticOracle;
@@ -238,8 +246,125 @@ begin
   PublishResults(LDocument, LPage);
 end;
 
-procedure ShowList(AResults: TJSObject); forward;
+procedure ShowList(AResults: TJSObject; AFocus: Boolean = True); forward;
 procedure Query(ANewQuery: Boolean; AOffset: Integer); forward;
+procedure SwitchView(AView: TOracleView); forward;
+
+function RelatedCatalogTerms: String;
+begin
+  Result := RelatedSourceTerms(TextOf(GArguments, 'ingredient'),
+    TextOf(GArguments, 'symptom'), GResearchKind);
+end;
+
+procedure LoadRelatedSources(AOffset: Integer; AReply: TOracleReply);
+var
+  LMatches: TJSArray;
+  LSequence: Integer;
+  LKind: Integer;
+  LRevision: String;
+  LTerms: String;
+
+  procedure ReadBatch(ABatchOffset: Integer);
+  var
+    LArguments: TJSObject;
+  begin
+    LArguments := TJSObject.new;
+    LArguments['terms'] := LTerms;
+    LArguments['limit'] := 100;
+    LArguments['offset'] := ABatchOffset;
+    Request('oracle_search_catalog', LArguments,
+      procedure(AData: TJSObject; const AError: String)
+      var
+        LRows: TJSArray;
+        LPaths: array of String;
+        LSelection: TSourceSelection;
+        LIndex: Integer;
+        LCursor: Integer;
+        LTotal: Integer;
+        LResult: TJSObject;
+      begin
+        if LSequence <> GSequence then
+          Exit;
+        if AError <> '' then
+        begin
+          AReply(nil, AError);
+          Exit;
+        end;
+        if (LRevision <> '') and (LRevision <> TextOf(AData, 'revision')) then
+        begin
+          AReply(nil, 'The catalog changed while loading. Please try again.');
+          Exit;
+        end;
+        LRevision := TextOf(AData, 'revision');
+        LRows := ItemsOf(AData, 'matches');
+        SetLength(LPaths, LRows.Length);
+        for LIndex := 0 to LRows.Length - 1 do
+          LPaths[LIndex] := TextOf(TJSObject(LRows[LIndex]), 'path');
+        LSelection := SelectSourcePage(LPaths, LKind, CPageSize - LMatches.Length);
+        for LIndex := 0 to Length(LSelection.Indices) - 1 do
+          LMatches.push(LRows[LSelection.Indices[LIndex]]);
+        LCursor := ABatchOffset + LSelection.Examined;
+        LTotal := CountOf(AData, 'total');
+        if (LMatches.Length = CPageSize) or (LCursor >= LTotal) then
+        begin
+          LResult := TJSObject.new;
+          LResult['matches'] := LMatches;
+          LResult['total'] := LTotal;
+          LResult['revision'] := LRevision;
+          if LCursor < LTotal then
+            LResult['next_offset'] := LCursor
+          else
+            LResult['next_offset'] := 0;
+          AReply(LResult, '');
+        end
+        else if LSelection.Examined = 0 then
+          AReply(nil, 'Some source results could not be loaded. Please try again.')
+        else
+          ReadBatch(LCursor);
+      end);
+  end;
+
+begin
+  LMatches := TJSArray.new;
+  LSequence := GSequence;
+  LKind := GResearchKind;
+  LTerms := GRelatedTerms;
+  LRevision := '';
+  ReadBatch(AOffset);
+end;
+
+procedure RefreshRelated(AOffset: Integer);
+begin
+  Inc(GSequence);
+  GRelatedBusy := True;
+  GRelatedTerms := RelatedCatalogTerms;
+  LoadRelatedSources(AOffset,
+    procedure(AData: TJSObject; const AError: String)
+    var
+      LHeading: TJSHTMLElement;
+    begin
+      GRelatedBusy := False;
+      GRelatedSources := AData;
+      GRelatedError := AError;
+      GRelatedNext := CountOf(AData, 'next_offset');
+      ShowList(GResults, False);
+      LHeading := GResultsRenderer.ElementFor('related-heading');
+      if LHeading <> nil then
+      begin
+        LHeading.setAttribute('tabindex', '-1');
+        LHeading.focus;
+      end;
+    end);
+end;
+
+procedure ChangeResearchKind(AKind: Integer);
+begin
+  GResearchKind := AKind;
+  SetLength(GRelatedOffsets, 1);
+  GRelatedOffsets[0] := 0;
+  GRelatedPage := 0;
+  RefreshRelated(0);
+end;
 
 function EvidenceLabel(const AVerdict: String): String;
 begin
@@ -349,7 +474,7 @@ var
 begin
   LCount := Ord((GIngredient.Chosen <> '') or (Trim(GIngredient.Input.value) <> '')) +
     Ord((GPreparation.Chosen <> '') or (Trim(GPreparation.Input.value) <> '')) +
-    Ord(SelectedIndex('scope') > 0) + Ord(SelectedIndex('direction') > 0);
+    Ord(SelectedIndex('scope') <> 2) + Ord(SelectedIndex('direction') > 0);
   LButton := GRenderer.ElementFor('show-filters');
   if LButton.getAttribute('aria-expanded') = 'true' then
     LLabel := 'Fewer filters'
@@ -581,6 +706,11 @@ begin
       LPage.Add(Button('back-results', '‹ Back to results', nvSecondary));
       LPage.Add(Caption(nkHeading, 'result-heading', ExtractFileName(APath)));
       LPage.Add(Caption(nkCode, 'source-path', APath));
+      if IsCulturalSource(APath) then
+        LPage.Add(Caption(nkBadge, 'reader-kind-culture',
+          'Culture and lived experience · Reported account'))
+      else
+        LPage.Add(Caption(nkBadge, 'reader-kind-study', 'Research source'));
       LNext := CountOf(AData, 'next_offset');
       LHasPrevious := (AError = '') and (Length(AOffsets) > 1);
       LHasNext := (AError = '') and (LNext > LOffset);
@@ -650,7 +780,7 @@ begin
     end);
 end;
 
-procedure ShowList(AResults: TJSObject);
+procedure ShowList(AResults: TJSObject; AFocus: Boolean);
 var
   LDocument: TNyxDocument;
   LPage: TNyxNode;
@@ -658,6 +788,7 @@ var
   LCard: TNyxNode;
   LPaging: TNyxNode;
   LRecords: TJSArray;
+  LRelatedRecords: TJSArray;
   LIndex: Integer;
   LTotal: Integer;
   LOffset: Integer;
@@ -668,7 +799,9 @@ var
   LMessage: String;
   LCanShowReviewed: Boolean;
   LCanShowAnyTrend: Boolean;
+  LKindTabs: TNyxNode;
 begin
+  LRelatedRecords := TJSArray.new;
   LDocument := TNyxDocument.Create;
   LPage := Section(nkPage, 'result-page');
   LDocument.AddPage(LPage);
@@ -690,6 +823,17 @@ begin
     if TextOf(AResults, 'symptom') <> '' then
       LMessage := 'Research on ' + LowerCase(FriendlySymptom(TextOf(AResults, 'symptom')));
     LPage.Add(Caption(nkHeading, 'result-heading', LMessage));
+    LKindTabs := Section(nkRow, 'research-kind-tabs');
+    LKindTabs.Add(Button('research-kind-all', 'All research', nvSecondary));
+    LKindTabs.Add(Button('research-kind-studies', 'Studies & analyses', nvSecondary));
+    LKindTabs.Add(Button('research-kind-culture', 'Culture & experience', nvSecondary));
+    LPage.Add(LKindTabs);
+    if GResearchKind = SourceKindCulture then
+    begin
+      LRecords := TJSArray.new;
+      LPage.Add(Caption(nkLabel, 'culture-introduction',
+        'Traditional use, ceremonies and lived experience are active research leads. Explore the original accounts, their context and what is still untested.'));
+    end;
   end
   else
   begin
@@ -697,7 +841,9 @@ begin
     LTotal := CountOf(AResults, 'total');
     LPage.Add(Caption(nkHeading, 'result-heading', 'Catalog results'));
   end;
-  if LRecords.Length > 0 then
+  if (GView = ovClaims) and (GResearchKind = SourceKindCulture) then
+    LPage.Add(Caption(nkLabel, 'result-count', 'Cultural and experiential source collection'))
+  else if LRecords.Length > 0 then
     LPage.Add(Caption(nkLabel, 'result-count',
       IntToStr(LOffset + 1) + '–' + IntToStr(LOffset + LRecords.Length) +
       ' of ' + IntToStr(LTotal)))
@@ -734,7 +880,10 @@ begin
       LCard.Add(Caption(nkHeading, 'ingredient-' + LTag, Capitalized(TextOf(LRow, 'ingredient'))));
       LCard.Add(Caption(nkLabel, 'hypothesis-' + LTag, ResearchQuestion(LRow)));
       if TextOf(LRow, 'rationale') <> '' then
-        LCard.Add(Caption(nkLabel, 'rationale-' + LTag, TextOf(LRow, 'rationale')));
+        LCard.Add(Caption(nkLabel, 'rationale-' + LTag, TextOf(LRow, 'rationale')))
+      else
+        LCard.Add(Caption(nkLabel, 'rationale-' + LTag,
+          'An open hypothesis awaiting evidence review. Its assigned direction is not a finding.'));
       LCard.Add(Button('inspect-' + LTag, 'See studies and references', nvSecondary));
     end
     else
@@ -750,7 +899,8 @@ begin
     LPage.Add(LCard);
   end;
 
-  if (LOffset > 0) or (LNext > LOffset) then
+  if ((LOffset > 0) or (LNext > LOffset)) and
+    ((GView <> ovClaims) or (GResearchKind <> SourceKindCulture)) then
   begin
     LPaging := Section(nkRow, 'result-pagination');
     if LOffset > 0 then
@@ -760,8 +910,131 @@ begin
     LPage.Add(LPaging);
   end;
 
+  if (GView = ovClaims) and (GRelatedTerms <> '') then
+  begin
+    LPage.Add(Caption(nkHeading, 'related-heading', 'Source documents and reported experiences'));
+    LPage.Add(Caption(nkLabel, 'related-guidance',
+      'Catalog leads include studies, traditional practices and personal reports outside the experiment. Effect filters apply to claim cards; these source leads retain all reported directions.'));
+    if TextOf(GArguments, 'symptom') = 'rest tremor severity' then
+      LPage.Add(Caption(nkLabel, 'related-tremor-scope',
+        'These sources may discuss other tremor types. Check the source for the symptom, diagnosis and what was actually reported.'));
+    if GRelatedError <> '' then
+      LPage.Add(Caption(nkLabel, 'related-error',
+        'Source lookup unavailable: ' + GRelatedError))
+    else
+    begin
+      LRelatedRecords := ItemsOf(GRelatedSources, 'matches');
+      if GResearchKind = SourceKindAll then
+        LMessage := IntToStr(LRelatedRecords.Length) + ' of ' +
+          IntToStr(CountOf(GRelatedSources, 'total')) + ' matching source documents'
+      else
+        LMessage := IntToStr(LRelatedRecords.Length) + ' source documents on this page';
+      LPage.Add(Caption(nkLabel, 'related-count', LMessage));
+      if (LRelatedRecords.Length = 0) and (GResearchKind = SourceKindCulture) then
+        LPage.Add(Caption(nkLabel, 'culture-empty',
+          'No matching cultural account is cataloged here yet. This remains an open collection gap.'));
+      for LIndex := 0 to LRelatedRecords.Length - 1 do
+      begin
+        LTag := 'related-' + IntToStr(LIndex);
+        LRow := TJSObject(LRelatedRecords[LIndex]);
+        LPath := TextOf(LRow, 'path');
+        if IsCulturalSource(LPath) then
+        begin
+          LCard := Section(nkCard, 'source-cultural-' + LTag);
+          LMessage := 'Traditional or experiential account'
+        end
+        else
+        begin
+          LCard := Section(nkCard, 'source-study-' + LTag);
+          LMessage := 'Catalog source';
+        end;
+        LCard.Add(Caption(nkBadge, 'source-kind-' + LTag, LMessage));
+        LCard.Add(Caption(nkLabel, 'source-period-' + LTag, TextOf(LRow, 'period')));
+        if GStaticOracle = nil then
+          LCard.Add(Button('open-source-' + LTag, 'Open source' + #10 + LPath, nvSecondary))
+        else
+          LCard.Add(SourceLink('path-' + LTag, LPath));
+        LPage.Add(LCard);
+      end;
+      LPaging := Section(nkRow, 'source-pagination');
+      if GRelatedPage > 0 then
+        LPaging.Add(Button('previous-sources', 'Previous sources', nvSecondary));
+      if GRelatedNext > 0 then
+        LPaging.Add(Button('next-sources', 'Next sources', nvSecondary));
+      LPage.Add(LPaging);
+      if GResearchKind = SourceKindAll then
+        LPage.Add(Button('browse-related-sources', 'Browse all matching source documents', nvSecondary));
+    end;
+  end;
+
   PublishResults(LDocument, LPage);
-  FocusResults;
+  if AFocus then
+    FocusResults;
+  if GView = ovClaims then
+  begin
+    GResultsRenderer.ElementFor('research-kind-all').setAttribute('aria-pressed',
+      LowerCase(BoolToStr(GResearchKind = SourceKindAll, True)));
+    GResultsRenderer.ElementFor('research-kind-studies').setAttribute('aria-pressed',
+      LowerCase(BoolToStr(GResearchKind = SourceKindStudies, True)));
+    GResultsRenderer.ElementFor('research-kind-culture').setAttribute('aria-pressed',
+      LowerCase(BoolToStr(GResearchKind = SourceKindCulture, True)));
+    BindEvent(GResultsRenderer.ElementFor('research-kind-all'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        ChangeResearchKind(SourceKindAll);
+        Result := True;
+      end);
+    BindEvent(GResultsRenderer.ElementFor('research-kind-studies'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        ChangeResearchKind(SourceKindStudies);
+        Result := True;
+      end);
+    BindEvent(GResultsRenderer.ElementFor('research-kind-culture'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        ChangeResearchKind(SourceKindCulture);
+        Result := True;
+      end);
+  end;
+  if (GView = ovClaims) and (GRelatedTerms <> '') and (GRelatedError = '') then
+  begin
+    if GResearchKind = SourceKindAll then
+      BindEvent(GResultsRenderer.ElementFor('browse-related-sources'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        TJSHTMLInputElement(GRenderer.InputFor('terms')).value := GRelatedTerms;
+        SwitchView(ovCatalog);
+        Query(True, 0);
+        Result := True;
+      end);
+    if GRelatedPage > 0 then
+      BindEvent(GResultsRenderer.ElementFor('previous-sources'), 'click',
+        function(AEvent: TEventListenerEvent): Boolean
+        begin
+          if GRelatedBusy then
+            Exit(False);
+          Dec(GRelatedPage);
+          RefreshRelated(GRelatedOffsets[GRelatedPage]);
+          Result := True;
+        end);
+    if GRelatedNext > 0 then
+      BindEvent(GResultsRenderer.ElementFor('next-sources'), 'click',
+        function(AEvent: TEventListenerEvent): Boolean
+        begin
+          if GRelatedBusy then
+            Exit(False);
+          Inc(GRelatedPage);
+          SetLength(GRelatedOffsets, GRelatedPage + 1);
+          GRelatedOffsets[GRelatedPage] := GRelatedNext;
+          RefreshRelated(GRelatedNext);
+          Result := True;
+        end);
+    if GStaticOracle = nil then
+      for LIndex := 0 to LRelatedRecords.Length - 1 do
+        BindSource('related-' + IntToStr(LIndex),
+          TextOf(TJSObject(LRelatedRecords[LIndex]), 'path'));
+  end;
   if LCanShowAnyTrend then
     BindEvent(GResultsRenderer.ElementFor('show-any-trend'), 'click',
       function(AEvent: TEventListenerEvent): Boolean
@@ -788,14 +1061,16 @@ begin
     if (GView = ovCatalog) and (GStaticOracle = nil) then
       BindSource(IntToStr(LIndex), TextOf(LRow, 'path'));
   end;
-  if LOffset > 0 then
+  if (LOffset > 0) and
+    ((GView <> ovClaims) or (GResearchKind <> SourceKindCulture)) then
     BindEvent(GResultsRenderer.ElementFor('previous-page'), 'click',
       function(AEvent: TEventListenerEvent): Boolean
       begin
         Query(False, LOffset - CPageSize);
         Result := True;
       end);
-  if LNext > LOffset then
+  if (LNext > LOffset) and
+    ((GView <> ovClaims) or (GResearchKind <> SourceKindCulture)) then
     BindEvent(GResultsRenderer.ElementFor('next-page'), 'click',
       function(AEvent: TEventListenerEvent): Boolean
       begin
@@ -880,6 +1155,33 @@ begin
         Exit;
       end;
       GResults := AData;
+      GRelatedSources := nil;
+      GRelatedTerms := '';
+      GRelatedError := '';
+      GRelatedNext := 0;
+      SetLength(GRelatedOffsets, 1);
+      GRelatedOffsets[0] := 0;
+      GRelatedPage := 0;
+      if GView = ovClaims then
+      begin
+        GRelatedTerms := RelatedCatalogTerms;
+        if GRelatedTerms <> '' then
+        begin
+          GRelatedBusy := True;
+          LoadRelatedSources(0,
+            procedure(ASources: TJSObject; const ASourceError: String)
+            begin
+              if LSequence <> GSequence then
+                Exit;
+              GRelatedBusy := False;
+              GRelatedSources := ASources;
+              GRelatedError := ASourceError;
+              GRelatedNext := CountOf(ASources, 'next_offset');
+              ShowList(GResults);
+            end);
+          Exit;
+        end;
+      end;
       ShowList(GResults);
     end);
 end;
@@ -979,7 +1281,8 @@ begin
   LControls.Add(LTabs);
 
   LClaims := Section(nkColumn, 'claim-form');
-  LClaims.Add(Caption(nkLabel, 'guidance', 'Pick a symptom or start typing its name.'));
+  LClaims.Add(Caption(nkLabel, 'guidance',
+    'Pick a symptom. Results include findings, unresolved evidence and questions awaiting review.'));
   LClaims.Add(CreatePickerField('symptom', 'Symptom', 'Try typing trem'));
   LQuick := Section(nkRow, 'quick-symptoms');
   for LIndex := Low(CQuickSymptoms) to High(CQuickSymptoms) do
@@ -999,7 +1302,7 @@ begin
   LFilters.Add(CreatePickerField('ingredient', 'Food or ingredient', 'Any ingredient'));
   LFilters.Add(CreatePickerField('preparation', 'Preparation', 'Any preparation'));
   LFilters.Add(SelectField('scope', 'Which claims to show',
-    'Evidence leaning either way'#10'All reviewed claims'#10'Include unreviewed claims'));
+    'Directional findings only'#10'All reviewed claims'#10'All findings and open questions'));
   LFilters.Add(SelectField('direction', 'Claim being tested', 'Any direction'#10'Could reduce'#10'Could worsen'));
   LClaims.Add(LFilters);
   LClaims.Add(Button('search-claims', 'Find research', nvPrimary));
@@ -1020,6 +1323,8 @@ begin
     'Limited evidence means the findings lean one way. The studies may have tested a different preparation, symptom, or group of people.'));
   LHelp.Add(Caption(nkLabel, 'guide-unclear',
     'Still unclear means the available findings leave the question open. See the studies for what was measured and what still needs review.'));
+  LHelp.Add(Caption(nkLabel, 'guide-traditional',
+    'Traditional practices and personal reports are collected separately and carry lower evidential weight for treatment effects than controlled studies. A documented account is not proof of benefit.'));
   LHelp.Add(Caption(nkLabel, 'guide-shared',
     'Use the studies to prepare questions for your care team.'));
   LControls.Add(LHelp);
@@ -1044,6 +1349,7 @@ begin
   BindTrend('trend-eases', 'eases');
   BindTrend('trend-worsens', 'worsens');
   SelectTrend('');
+  TJSHTMLSelectElement(GRenderer.InputFor('scope')).selectedIndex := 2;
   GRenderer.ElementFor('extra-filters').id := 'extra-filters';
   GRenderer.ElementFor('extra-filters').setAttribute('hidden', '');
   GRenderer.ElementFor('show-filters').setAttribute('aria-controls', 'extra-filters');

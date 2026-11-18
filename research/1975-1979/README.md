@@ -29,3 +29,5 @@ January 1, 1975 through December 31, 1979.
 [All periods and collection method](../README.md)
 
 - [Bowel outcomes and selected motor or nonmotor follow-up](Food-Experiment-Bowel-and-Motor-Outcomes.md)
+
+- [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).

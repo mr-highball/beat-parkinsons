@@ -22,3 +22,5 @@ January 1, 1915 through December 31, 1919.
 - [Archival PubMed supplement](Archival-PubMed.tsv)
 
 [All periods and collection method](../README.md)
+
+- [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).

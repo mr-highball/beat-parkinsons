@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [2010 practitioner handbook record](Cultural-and-Experiential/Traditional-Practices/2010-CCRAS-Kampavata-Herbal-Practice.txt) preserves a documented traditional-use claim separately from clinical outcomes. [Observations](Observations/Cultural-and-Experiential-Tremor.md).
+
 New original-source profiles: [2011 multi-oil cancer diet and symptom trajectory](Source-Text/2011-PMID21794124-Schmidt-Ketogenic-Cancer-Diet-Extract.txt), [2012 Ocimum ethnobotanical identity](Source-Text/2012-PMC7119873-Ocimum-Ethnobotany-Abstract-Extract.txt), [2014 Alzheimer's plant-compound chapter](Source-Text/2014-PMC7149555-Alzheimer-Plant-Compound-Chapter-Extract.txt) and [2014 ground-cinnamon mouse motor study](Source-Text/2014-PMID24946862-Cinnamon-Motor-Extract.txt). [Observations and transfer limits](Observations/Food-Experiment-Source-Context-Nov17-10.md).
 
 January 1, 2010 through December 31, 2014.
@@ -362,3 +364,5 @@ January 1, 2010 through December 31, 2014.
 Walnut-fraction methods identify solvent-extracted oil, and the two Iranian oil protocols retain distinct registrations and date conflicts. [2013 component trial](Source-Text/2013-PMID23616506-Berryman-Walnut-Fractions-Extract.txt) · [Glucose registration](Source-Text/Trials/IRCT2014022216682N1.txt) · [Lipid registration](Source-Text/Trials/IRCT2014030611375N2.txt).
 
 Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinary treatment. [2011 original presentation](Source-Text/2011-PMC6863370-Clove-Odor-Stimulus-Abstract-Extract.txt).
+
+- [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).

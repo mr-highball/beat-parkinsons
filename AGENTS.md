@@ -20,6 +20,14 @@ Use only Pinky, Slinky, Binky, Blimbo, and The Brain as subagents unless the use
 
 Commit verified research and experiment updates incrementally. Use a descriptive subject and include the material source additions, verdict changes, or open evidence gaps in the commit body. Keep temporary downloads and build outputs in the ignored build directories.
 
+# Inclusive evidence collection
+
+- Collect cultural and traditional practices, ceremonial accounts, local knowledge and public personal reports alongside formal studies. Preserve favorable, unfavorable and no-benefit accounts. Follow the [cultural and experiential record policy](research/Cultural-and-Experiential.md).
+- Store these records separately under each period's `Cultural-and-Experiential/` folder, using the source's publication date and an explicit date basis. Distinguish a historical practice's claimed age from the date of the document actually inspected.
+- Label source kind, authenticity, symptom specificity and efficacy uncertainty separately. Traditional or personal claims have lower evidential weight for treatment effects than controlled clinical studies. Repetition of a claim is not independent confirmation, and documenting a belief does not verify efficacy.
+- Preserve the frozen experiments. Catalog relevant practices and ingredients outside their vocabulary without inventing completed assessments or changing frozen pairs. Cross-link existing studies rather than duplicating cohorts.
+- The public research view includes findings, Unknowns and unreviewed questions by default, with clear labels. Offer explicit filters without silently excluding unresolved material. Surface catalog-source leads beyond the frozen claim set and distinguish them from assessed findings.
+
 # Oracle-first research
 
 - Dexter, Pinky, Binky, Slinky, Blimbo, and The Brain use [Parkinson’s oracle](experiments/tools/parkinsons-oracle/README.md) as the first knowledge base for each evidence question. Consult it before broad file scans or web discovery. During blind generation, use only the experiment inputs.

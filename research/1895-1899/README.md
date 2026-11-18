@@ -1,5 +1,7 @@
 # 1895-1899
 
+The [1896 historical-source candidate](Cultural-and-Experiential/Traditional-Practices/1896-Bhavaprakasha-Candidate-Shaking-Passages.txt) records inspected pages while retaining translation and formulation-boundary uncertainty. [Observations](Observations/Cultural-and-Experiential-Tremor.md).
+
 January 1, 1895 through December 31, 1899.
 
 ## Annotated research
@@ -24,3 +26,5 @@ January 1, 1895 through December 31, 1899.
 - [Archival PubMed supplement](Archival-PubMed.tsv)
 
 [All periods and collection method](../README.md)
+
+- [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
