@@ -34,7 +34,7 @@ try {
 
     & (Join-Path $PSScriptRoot 'build.ps1') -Compiler $Compiler -BuildRoot $BuildRoot
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
-    & (Join-Path $PSScriptRoot 'web/build.ps1') -Compiler $Pas2js -Runtime $Runtime -UnitRoot $UnitRoot -OutputDirectory $Stage
+    & (Join-Path $PSScriptRoot 'web/build.ps1') -Compiler $Pas2js -Runtime $Runtime -UnitRoot $UnitRoot -NativeCompiler $Compiler -OutputDirectory $Stage
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
     $Notices = (New-Item -ItemType Directory -Path (Join-Path $Stage 'licenses')).FullName
     $Nyx = Join-Path $Repo 'experiments/tools/vendor/nyx'

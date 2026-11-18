@@ -4,6 +4,7 @@ param(
     [string] $Compiler = $env:PAS2JS,
     [string] $Runtime = $env:PAS2JS_RTL,
     [string] $UnitRoot = $env:PAS2JS_UNITS,
+    [string] $NativeCompiler = $env:FPC,
     [string] $OutputDirectory
 )
 
@@ -44,3 +45,16 @@ Copy-Item -LiteralPath $Runtime -Destination (Join-Path $Output 'rtl.js') -Force
 foreach ($Name in @('index.html', 'oracle.css')) {
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot $Name) -Destination $Output -Force
 }
+if (!$NativeCompiler) {
+    $NativeCompiler = (Get-Command fpc -ErrorAction Stop).Source
+}
+$GlyphBuild = Join-Path $Repo ('build/parkinsons-oracle/glyph-tools/' + [Guid]::NewGuid().ToString('N'))
+New-Item -ItemType Directory -Path "$GlyphBuild/bin", "$GlyphBuild/units" -Force | Out-Null
+& $NativeCompiler -Mdelphi -Sa -Cr -Co -Ci -gl "-FU$GlyphBuild/units" "-FE$GlyphBuild/bin" (Join-Path $SharedUnits 'glyphs.embed.lpr')
+if ($LASTEXITCODE) { exit $LASTEXITCODE }
+$GlyphExe = Join-Path $GlyphBuild 'bin/glyphs.embed.exe'
+if (!(Test-Path -LiteralPath $GlyphExe)) { $GlyphExe = Join-Path $GlyphBuild 'bin/glyphs.embed' }
+$InlineCss = Join-Path $GlyphBuild 'glyphs.css'
+& $GlyphExe (Join-Path $PSScriptRoot 'assets/glyphs') $InlineCss
+if ($LASTEXITCODE) { exit $LASTEXITCODE }
+[IO.File]::AppendAllText((Join-Path $Output 'oracle.css'), [IO.File]::ReadAllText($InlineCss), [Text.UTF8Encoding]::new($false))

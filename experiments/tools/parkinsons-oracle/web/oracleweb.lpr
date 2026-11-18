@@ -7,7 +7,8 @@ program OracleWeb;
 
 uses
   SysUtils, StrUtils, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
-  oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation;
+  oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation,
+  parkinsonsoracle.selection, oraclemulti;
 
 type
   TOracleView = (ovClaims, ovCatalog);
@@ -28,6 +29,9 @@ var
   GSequence: Integer;
   GResults: TJSObject;
   GArguments: TJSObject;
+  GClaimUnion: TJSObject;
+  GSourceUnion: TOracleSourceUnion;
+  GRelatedGroups: TStringValues;
   GRelatedSources: TJSObject;
   GRelatedTerms: String;
   GRelatedError: String;
@@ -250,94 +254,46 @@ procedure ShowList(AResults: TJSObject; AFocus: Boolean = True); forward;
 procedure Query(ANewQuery: Boolean; AOffset: Integer); forward;
 procedure SwitchView(AView: TOracleView); forward;
 
-function RelatedCatalogTerms: String;
+procedure ResetRelatedSources;
+var
+  LSymptoms: TStringValues;
+  LSymptom: String;
+  LTerms: String;
 begin
-  Result := RelatedSourceTerms(TextOf(GArguments, 'ingredient'),
-    TextOf(GArguments, 'symptom'), GResearchKind);
+  LSymptoms := ArgumentSymptoms(GArguments);
+  GRelatedGroups := nil;
+  for LSymptom in LSymptoms do
+    GRelatedGroups := AddSelection(GRelatedGroups,
+      RelatedSourceTerms(TextOf(GArguments, 'ingredient'), LSymptom, GResearchKind));
+  if Length(LSymptoms) = 0 then
+    GRelatedGroups := AddSelection(GRelatedGroups,
+      RelatedSourceTerms(TextOf(GArguments, 'ingredient'), '', GResearchKind));
+  GRelatedTerms := '';
+  for LTerms in GRelatedGroups do
+  begin
+    if GRelatedTerms <> '' then
+      GRelatedTerms := GRelatedTerms + ' or ';
+    GRelatedTerms := GRelatedTerms + LTerms;
+  end;
+  GSourceUnion.Reset(GRelatedGroups, GResearchKind);
 end;
 
 procedure LoadRelatedSources(AOffset: Integer; AReply: TOracleReply);
 var
-  LMatches: TJSArray;
   LSequence: Integer;
-  LKind: Integer;
-  LRevision: String;
-  LTerms: String;
-
-  procedure ReadBatch(ABatchOffset: Integer);
-  var
-    LArguments: TJSObject;
-  begin
-    LArguments := TJSObject.new;
-    LArguments['terms'] := LTerms;
-    LArguments['limit'] := 100;
-    LArguments['offset'] := ABatchOffset;
-    Request('oracle_search_catalog', LArguments,
-      procedure(AData: TJSObject; const AError: String)
-      var
-        LRows: TJSArray;
-        LPaths: array of String;
-        LSelection: TSourceSelection;
-        LIndex: Integer;
-        LCursor: Integer;
-        LTotal: Integer;
-        LResult: TJSObject;
-      begin
-        if LSequence <> GSequence then
-          Exit;
-        if AError <> '' then
-        begin
-          AReply(nil, AError);
-          Exit;
-        end;
-        if (LRevision <> '') and (LRevision <> TextOf(AData, 'revision')) then
-        begin
-          AReply(nil, 'The catalog changed while loading. Please try again.');
-          Exit;
-        end;
-        LRevision := TextOf(AData, 'revision');
-        LRows := ItemsOf(AData, 'matches');
-        SetLength(LPaths, LRows.Length);
-        for LIndex := 0 to LRows.Length - 1 do
-          LPaths[LIndex] := TextOf(TJSObject(LRows[LIndex]), 'path');
-        LSelection := SelectSourcePage(LPaths, LKind, CPageSize - LMatches.Length);
-        for LIndex := 0 to Length(LSelection.Indices) - 1 do
-          LMatches.push(LRows[LSelection.Indices[LIndex]]);
-        LCursor := ABatchOffset + LSelection.Examined;
-        LTotal := CountOf(AData, 'total');
-        if (LMatches.Length = CPageSize) or (LCursor >= LTotal) then
-        begin
-          LResult := TJSObject.new;
-          LResult['matches'] := LMatches;
-          LResult['total'] := LTotal;
-          LResult['revision'] := LRevision;
-          if LCursor < LTotal then
-            LResult['next_offset'] := LCursor
-          else
-            LResult['next_offset'] := 0;
-          AReply(LResult, '');
-        end
-        else if LSelection.Examined = 0 then
-          AReply(nil, 'Some source results could not be loaded. Please try again.')
-        else
-          ReadBatch(LCursor);
-      end);
-  end;
-
 begin
-  LMatches := TJSArray.new;
   LSequence := GSequence;
-  LKind := GResearchKind;
-  LTerms := GRelatedTerms;
-  LRevision := '';
-  ReadBatch(AOffset);
+  GSourceUnion.Page(AOffset, CPageSize,
+    function: Boolean
+    begin
+      Result := LSequence = GSequence;
+    end, AReply);
 end;
 
 procedure RefreshRelated(AOffset: Integer);
 begin
   Inc(GSequence);
   GRelatedBusy := True;
-  GRelatedTerms := RelatedCatalogTerms;
   LoadRelatedSources(AOffset,
     procedure(AData: TJSObject; const AError: String)
     var
@@ -360,6 +316,7 @@ end;
 procedure ChangeResearchKind(AKind: Integer);
 begin
   GResearchKind := AKind;
+  ResetRelatedSources;
   SetLength(GRelatedOffsets, 1);
   GRelatedOffsets[0] := 0;
   GRelatedPage := 0;
@@ -393,12 +350,12 @@ begin
     ['eases', 'worsens']) of
     0:
       begin
-        LEffect := '↓ May ease';
+        LEffect := 'May ease';
         LEffectId := 'effect-relief-';
       end;
     1:
       begin
-        LEffect := '↑ May worsen';
+        LEffect := 'May worsen';
         LEffectId := 'effect-worse-';
       end;
   end;
@@ -410,7 +367,10 @@ begin
     if LVerdict = 'Maybe True' then
       LEvidence := 'Limited evidence';
   end;
-  Result.Add(Caption(nkBadge, 'grade-' + AId, LEvidence));
+  if LEffect = '' then
+    Result.Add(Caption(nkBadge, 'grade-unclear-' + AId, LEvidence))
+  else
+    Result.Add(Caption(nkBadge, 'grade-' + AId, LEvidence));
 end;
 
 function ResearchQuestion(AClaim: TJSObject): String;
@@ -520,7 +480,7 @@ var
   LIndex: Integer;
 begin
   for LIndex := Low(CQuickSymptoms) to High(CQuickSymptoms) do
-    SetPressed('quick-' + IntToStr(LIndex), GSymptom.Chosen = CQuickSymptoms[LIndex]);
+    SetPressed('quick-' + IntToStr(LIndex), GSymptom.Contains(CQuickSymptoms[LIndex]));
 end;
 
 procedure BindQuickSymptom(const ANodeId, AValue: String);
@@ -528,7 +488,7 @@ begin
   BindEvent(GRenderer.ElementFor(ANodeId), 'click',
     function(AEvent: TEventListenerEvent): Boolean
     begin
-      GSymptom.Pick(AValue);
+      GSymptom.Toggle(AValue);
       Result := True;
     end);
 end;
@@ -708,7 +668,7 @@ begin
       LPage.Add(Caption(nkCode, 'source-path', APath));
       if IsCulturalSource(APath) then
         LPage.Add(Caption(nkBadge, 'reader-kind-culture',
-          'Culture and lived experience · Reported account'))
+          'Culture and lived experience · Source document'))
       else
         LPage.Add(Caption(nkBadge, 'reader-kind-study', 'Research source'));
       LNext := CountOf(AData, 'next_offset');
@@ -800,6 +760,7 @@ var
   LCanShowReviewed: Boolean;
   LCanShowAnyTrend: Boolean;
   LKindTabs: TNyxNode;
+  LSymptoms: TStringValues;
 begin
   LRelatedRecords := TJSArray.new;
   LDocument := TNyxDocument.Create;
@@ -820,7 +781,13 @@ begin
     LRecords := ItemsOf(AResults, 'options');
     LTotal := CountOf(AResults, 'total_matches');
     LMessage := 'Research results';
-    if TextOf(AResults, 'symptom') <> '' then
+    LSymptoms := ArgumentSymptoms(AResults);
+    if Length(LSymptoms) = 2 then
+      LMessage := 'Research on ' + LowerCase(FriendlySymptom(LSymptoms[0])) + ' or ' +
+        LowerCase(FriendlySymptom(LSymptoms[1]))
+    else if Length(LSymptoms) > 2 then
+      LMessage := 'Research across ' + IntToStr(Length(LSymptoms)) + ' symptoms'
+    else if TextOf(AResults, 'symptom') <> '' then
       LMessage := 'Research on ' + LowerCase(FriendlySymptom(TextOf(AResults, 'symptom')));
     LPage.Add(Caption(nkHeading, 'result-heading', LMessage));
     LKindTabs := Section(nkRow, 'research-kind-tabs');
@@ -915,7 +882,7 @@ begin
     LPage.Add(Caption(nkHeading, 'related-heading', 'Source documents and reported experiences'));
     LPage.Add(Caption(nkLabel, 'related-guidance',
       'Catalog leads include studies, traditional practices and personal reports outside the experiment. Effect filters apply to claim cards; these source leads retain all reported directions.'));
-    if TextOf(GArguments, 'symptom') = 'rest tremor severity' then
+    if HasSelection(ArgumentSymptoms(GArguments), 'rest tremor severity') then
       LPage.Add(Caption(nkLabel, 'related-tremor-scope',
         'These sources may discuss other tremor types. Check the source for the symptom, diagnosis and what was actually reported.'));
     if GRelatedError <> '' then
@@ -924,7 +891,8 @@ begin
     else
     begin
       LRelatedRecords := ItemsOf(GRelatedSources, 'matches');
-      if GResearchKind = SourceKindAll then
+      if (GResearchKind = SourceKindAll) and
+        (TextOf(GRelatedSources, 'total_is_exact') = 'true') then
         LMessage := IntToStr(LRelatedRecords.Length) + ' of ' +
           IntToStr(CountOf(GRelatedSources, 'total')) + ' matching source documents'
       else
@@ -941,7 +909,7 @@ begin
         if IsCulturalSource(LPath) then
         begin
           LCard := Section(nkCard, 'source-cultural-' + LTag);
-          LMessage := 'Traditional or experiential account'
+          LMessage := 'Cultural collection source'
         end
         else
         begin
@@ -962,7 +930,7 @@ begin
       if GRelatedNext > 0 then
         LPaging.Add(Button('next-sources', 'Next sources', nvSecondary));
       LPage.Add(LPaging);
-      if GResearchKind = SourceKindAll then
+      if (GResearchKind = SourceKindAll) and (Length(GRelatedGroups) = 1) then
         LPage.Add(Button('browse-related-sources', 'Browse all matching source documents', nvSecondary));
     end;
   end;
@@ -999,7 +967,7 @@ begin
   end;
   if (GView = ovClaims) and (GRelatedTerms <> '') and (GRelatedError = '') then
   begin
-    if GResearchKind = SourceKindAll then
+    if (GResearchKind = SourceKindAll) and (Length(GRelatedGroups) = 1) then
       BindEvent(GResultsRenderer.ElementFor('browse-related-sources'), 'click',
       function(AEvent: TEventListenerEvent): Boolean
       begin
@@ -1090,24 +1058,37 @@ var
   LTool: String;
   LSequence: Integer;
   LValue: String;
+  LValues: TStringValues;
+  LSymptomArray: TJSArray;
+  LReceive: TOracleReply;
+  LCurrent: TOracleCurrent;
 begin
   Inc(GSequence);
   LSequence := GSequence;
   if ANewQuery then
   begin
     GArguments := TJSObject.new;
+    GClaimUnion := nil;
     if GView = ovClaims then
     begin
-      if not GSymptom.ReadValue(LValue) then
+      if not GSymptom.ReadValues(LValues) then
         Exit;
-      MaybeSet(GArguments, 'symptom', LValue);
+      if Length(LValues) = 1 then
+        GArguments['symptom'] := LValues[0]
+      else if Length(LValues) > 1 then
+      begin
+        LSymptomArray := TJSArray.new;
+        for LValue in LValues do
+          LSymptomArray.push(LValue);
+        GArguments['symptoms'] := LSymptomArray;
+      end;
       if not GIngredient.ReadValue(LValue) then
         Exit;
       MaybeSet(GArguments, 'ingredient', LValue);
       if not GPreparation.ReadValue(LValue) then
         Exit;
       MaybeSet(GArguments, 'preparation', LValue);
-      if (TextOf(GArguments, 'symptom') = '') and (TextOf(GArguments, 'ingredient') = '') and
+      if (Length(LValues) = 0) and (TextOf(GArguments, 'ingredient') = '') and
         (TextOf(GArguments, 'preparation') = '') then
       begin
         MessageView('Choose where to start', 'Choose a symptom or an ingredient to look up.');
@@ -1144,7 +1125,7 @@ begin
   else
     LTool := 'oracle_search_catalog';
   MessageView('Searching…', 'Checking the research catalog.');
-  Request(LTool, GArguments,
+  LReceive :=
     procedure(AData: TJSObject; const AError: String)
     begin
       if LSequence <> GSequence then
@@ -1155,6 +1136,11 @@ begin
         Exit;
       end;
       GResults := AData;
+      if not ANewQuery and (GView = ovClaims) and (GRelatedSources <> nil) then
+      begin
+        ShowList(GResults);
+        Exit;
+      end;
       GRelatedSources := nil;
       GRelatedTerms := '';
       GRelatedError := '';
@@ -1164,7 +1150,7 @@ begin
       GRelatedPage := 0;
       if GView = ovClaims then
       begin
-        GRelatedTerms := RelatedCatalogTerms;
+        ResetRelatedSources;
         if GRelatedTerms <> '' then
         begin
           GRelatedBusy := True;
@@ -1183,7 +1169,32 @@ begin
         end;
       end;
       ShowList(GResults);
-    end);
+    end;
+  LCurrent := function: Boolean
+    begin
+      Result := LSequence = GSequence;
+    end;
+  if (GView = ovClaims) and (Length(ArgumentSymptoms(GArguments)) > 1) then
+  begin
+    if GClaimUnion <> nil then
+      LReceive(ClaimUnionPage(GClaimUnion, AOffset, CPageSize), '')
+    else
+      LoadClaimUnion(@Request, GArguments, LCurrent,
+        procedure(AData: TJSObject; const AError: String)
+        begin
+          if not LCurrent() then
+            Exit;
+          if AError <> '' then
+            LReceive(nil, AError)
+          else
+          begin
+            GClaimUnion := AData;
+            LReceive(ClaimUnionPage(AData, AOffset, CPageSize), '');
+          end;
+        end);
+  end
+  else
+    Request(LTool, GArguments, LReceive);
 end;
 
 procedure SwitchView(AView: TOracleView);
@@ -1276,14 +1287,14 @@ begin
   LControls := Section(nkPanel, 'reader-controls');
   LControls.Add(Caption(nkHeading, 'filters-heading', 'Find Parkinson’s research'));
   LTabs := Section(nkRow, 'lookup-tabs');
-  LTabs.Add(Button('claims-tab', 'By symptom', nvSecondary));
+  LTabs.Add(Button('claims-tab', 'By symptoms', nvSecondary));
   LTabs.Add(Button('catalog-tab', 'Search sources', nvSecondary));
   LControls.Add(LTabs);
 
   LClaims := Section(nkColumn, 'claim-form');
   LClaims.Add(Caption(nkLabel, 'guidance',
-    'Pick a symptom. Results include findings, unresolved evidence and questions awaiting review.'));
-  LClaims.Add(CreatePickerField('symptom', 'Symptom', 'Try typing trem'));
+    'Choose one or more symptoms. Research can match any of your selections.'));
+  LClaims.Add(CreatePickerField('symptom', 'Symptoms', 'Add a symptom, e.g. trem', True));
   LQuick := Section(nkRow, 'quick-symptoms');
   for LIndex := Low(CQuickSymptoms) to High(CQuickSymptoms) do
     LQuick.Add(Button('quick-' + IntToStr(LIndex), FriendlySymptom(CQuickSymptoms[LIndex]),
@@ -1294,8 +1305,8 @@ begin
   LTrendOptions := Section(nkRow, 'trend-options').Configure
     .AccessibleName('Symptom effect').Done;
   LTrendOptions.Add(Button('trend-any', 'Any trend', nvSecondary));
-  LTrendOptions.Add(Button('trend-eases', '↓ May ease', nvSecondary));
-  LTrendOptions.Add(Button('trend-worsens', '↑ May worsen', nvSecondary));
+  LTrendOptions.Add(Button('trend-eases', 'May ease', nvSecondary));
+  LTrendOptions.Add(Button('trend-worsens', 'May worsen', nvSecondary));
   LClaims.Add(LTrendOptions);
   LClaims.Add(Button('show-filters', 'More filters', nvSecondary));
   LFilters := Section(nkColumn, 'extra-filters');
@@ -1337,7 +1348,8 @@ begin
   GRenderer.Render(GDocument, LPage, TJSHTMLElement(document.getElementById('oracle')));
   GRenderer.ElementFor('brand').setAttribute('aria-level', '1');
   GRenderer.ElementFor('results-frame').setAttribute('aria-live', 'polite');
-  GSymptom := TOraclePicker.Create(GRenderer, 'symptom', @SymptomChanged, @SubmitLookup);
+  GSourceUnion := TOracleSourceUnion.Create(@Request);
+  GSymptom := TOraclePicker.Create(GRenderer, 'symptom', @SymptomChanged, @SubmitLookup, True);
   GIngredient := TOraclePicker.Create(GRenderer, 'ingredient', @IngredientChanged, @SubmitLookup);
   GPreparation := TOraclePicker.Create(GRenderer, 'preparation', @UpdateFilterCount, @SubmitLookup);
   GSymptom.BindBrowse(GRenderer.ElementFor('browse-symptoms'));

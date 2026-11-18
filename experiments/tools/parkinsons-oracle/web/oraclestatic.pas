@@ -218,6 +218,7 @@ begin
     Inc(LCount);
   end;
   Result := TJSObject.new;
+  Result['revision'] := FModel['revision'];
   Result['symptom'] := LSymptom;
   Result['ingredient'] := LIngredient;
   Result['total_matches'] := LCount;

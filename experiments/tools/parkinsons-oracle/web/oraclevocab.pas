@@ -5,7 +5,8 @@ unit oraclevocab;
 
 interface
 
-uses SysUtils, JS, Web, nyx.model, nyx.types, nyx.render.browser;
+uses SysUtils, JS, Web, nyx.model, nyx.types, nyx.render.browser,
+  parkinsonsoracle.selection;
 
 type
   TPickerAction = reference to procedure;
@@ -20,6 +21,10 @@ type
   private
     FId: String;
     FChosen: String;
+    FMultiple: Boolean;
+    FValues: TStringValues;
+    FSelectedRenderer: TNyxBrowserRenderer;
+    FSelectedDocument: TNyxDocument;
     FChoices: TJSArray;
     FRenderer: TNyxBrowserRenderer;
     FDocument: TNyxDocument;
@@ -36,20 +41,27 @@ type
     function LabelFor(const AValue: String): String;
     procedure UpdateSuggestions;
     procedure BindSuggestion(const ANodeId: String; const AOption: TPickerOption);
+    procedure RenderSelections;
+    procedure BindRemoval(const ANodeId, AValue: String);
   public
     constructor Create(ARenderer: TNyxBrowserRenderer; const AId: String;
-      AOnChange, AOnSubmit: TPickerAction);
+      AOnChange, AOnSubmit: TPickerAction; AMultiple: Boolean = False);
     procedure SetChoices(AChoices: TJSArray);
     procedure BindBrowse(AButton: TJSHTMLElement);
     procedure HideSuggestions;
     procedure Pick(const AValue: String);
+    procedure Toggle(const AValue: String);
+    procedure Remove(const AValue: String);
+    function Contains(const AValue: String): Boolean;
     procedure Clear;
     function ReadValue(out AValue: String): Boolean;
+    function ReadValues(out AValues: TStringValues): Boolean;
     property Chosen: String read FChosen;
     property Input: TJSHTMLInputElement read FInput;
   end;
 
-function CreatePickerField(const AId, AName, APlaceholder: String): TNyxNode;
+function CreatePickerField(const AId, AName, APlaceholder: String;
+  AMultiple: Boolean = False): TNyxNode;
 function FriendlySymptom(const AValue: String): String;
 function Capitalized(const AText: String): String;
 function VocabularyText(AObject: TJSObject; const AKey: String): String;
@@ -168,13 +180,18 @@ begin
   Result := Capitalized(AValue);
 end;
 
-function CreatePickerField(const AId, AName, APlaceholder: String): TNyxNode;
+function CreatePickerField(const AId, AName, APlaceholder: String;
+  AMultiple: Boolean): TNyxNode;
 begin
   Result := TNyxNode.Create(nkColumn, AId + '-field');
   Result.Add(TNyxNode.Create(nkInput, AId).Configure.Text(AName)
     .AccessibleName(AName).Placeholder(APlaceholder).Done);
-  Result.Add(TNyxNode.Create(nkButton, AId + '-selected').Configure
-    .Text('Clear selection').Variant(nvSecondary).Done);
+  if AMultiple then
+    Result.Add(TNyxNode.Create(nkRow, AId + '-selected').Configure
+      .AccessibleName('Selected symptoms').Done)
+  else
+    Result.Add(TNyxNode.Create(nkButton, AId + '-selected').Configure
+      .Text('Clear selection').Variant(nvSecondary).Done);
   Result.Add(TNyxNode.Create(nkColumn, AId + '-suggestions').Configure
     .AccessibleName(Capitalized(AId) + ' suggestions').Done);
 end;
@@ -265,7 +282,12 @@ begin
   FInput.value := '';
   FInput.removeAttribute('aria-invalid');
   HideSuggestions;
-  if FChosen = '' then
+  if FMultiple then
+  begin
+    FValues := AddSelection(FValues, AValue);
+    RenderSelections;
+  end
+  else if FChosen = '' then
     FSelected.setAttribute('hidden', '')
   else
   begin
@@ -280,8 +302,80 @@ begin
     FOnChange();
 end;
 
+function TOraclePicker.Contains(const AValue: String): Boolean;
+begin
+  if FMultiple then
+    Result := HasSelection(FValues, AValue)
+  else
+    Result := FChosen = AValue;
+end;
+
+procedure TOraclePicker.Toggle(const AValue: String);
+begin
+  if FMultiple and Contains(AValue) then
+    Remove(AValue)
+  else
+    Pick(AValue);
+end;
+
+procedure TOraclePicker.Remove(const AValue: String);
+begin
+  FValues := RemoveSelection(FValues, AValue);
+  FChosen := '';
+  RenderSelections;
+  if Assigned(FOnChange) then
+    FOnChange();
+end;
+
+procedure TOraclePicker.BindRemoval(const ANodeId, AValue: String);
+var
+  LClick: TJSEventHandler;
+begin
+  LClick :=
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      Remove(AValue);
+      FInput.focus;
+      Result := True;
+    end;
+  FSelectedRenderer.ElementFor(ANodeId).addEventListener('click', LClick);
+end;
+
+procedure TOraclePicker.RenderSelections;
+var
+  LDocument: TNyxDocument;
+  LPage: TNyxNode;
+  LPrior: TNyxDocument;
+  LIndex: Integer;
+  LId: String;
+  LLabel: String;
+begin
+  LDocument := TNyxDocument.Create;
+  LPage := TNyxNode.Create(nkPage, 'selected-pills');
+  LDocument.AddPage(LPage);
+  for LIndex := 0 to High(FValues) do
+  begin
+    LId := 'selected-' + IntToStr(LIndex);
+    LLabel := LabelFor(FValues[LIndex]);
+    LPage.Add(TNyxNode.Create(nkButton, LId).Configure.Text(LLabel + ' ×')
+      .AccessibleName('Remove ' + LLabel).Variant(nvSecondary).Done);
+  end;
+  LPrior := FSelectedDocument;
+  FSelectedRenderer.Render(LDocument, LPage, FSelected);
+  FSelectedDocument := LDocument;
+  LPrior.Free;
+  for LIndex := 0 to High(FValues) do
+    BindRemoval('selected-' + IntToStr(LIndex), FValues[LIndex]);
+  if Length(FValues) = 0 then
+    FSelected.setAttribute('hidden', '')
+  else
+    FSelected.removeAttribute('hidden');
+end;
+
 procedure TOraclePicker.Clear;
 begin
+  if FMultiple then
+    FValues := nil;
   Pick('');
 end;
 
@@ -294,7 +388,7 @@ begin
   LClick :=
     function(AEvent: TEventListenerEvent): Boolean
     begin
-      Pick(AOption.Value);
+      Toggle(AOption.Value);
       FInput.focus;
       Result := True;
     end;
@@ -349,10 +443,33 @@ begin
   if LLimit > 0 then
     FFirst := FRenderer.ElementFor('option-0');
   for LIndex := 0 to LLimit - 1 do
+  begin
     BindSuggestion('option-' + IntToStr(LIndex), LOptions[LIndex]);
+    if FMultiple then
+      FRenderer.ElementFor('option-' + IntToStr(LIndex)).setAttribute('aria-pressed',
+        LowerCase(BoolToStr(Contains(LOptions[LIndex].Value), True)));
+  end;
   FHost.removeAttribute('hidden');
   if FBrowseButton <> nil then
     FBrowseButton.setAttribute('aria-expanded', 'true');
+end;
+
+function TOraclePicker.ReadValues(out AValues: TStringValues): Boolean;
+var
+  LValue: String;
+begin
+  Result := ReadValue(LValue);
+  if not Result then
+    Exit;
+  if FMultiple and (Trim(FInput.value) <> '') then
+    Pick(LValue);
+  if FMultiple then
+    AValues := AddSelection(FValues, '')
+  else
+  begin
+    AValues := nil;
+    AValues := AddSelection(AValues, LValue);
+  end;
 end;
 
 function TOraclePicker.ReadValue(out AValue: String): Boolean;
@@ -415,7 +532,7 @@ begin
 end;
 
 constructor TOraclePicker.Create(ARenderer: TNyxBrowserRenderer; const AId: String;
-  AOnChange, AOnSubmit: TPickerAction);
+  AOnChange, AOnSubmit: TPickerAction; AMultiple: Boolean);
 var
   LType: TJSEventHandler;
   LKey: TJSEventHandler;
@@ -423,6 +540,10 @@ var
 begin
   inherited Create;
   FId := AId;
+  FMultiple := AMultiple;
+  FValues := nil;
+  if FMultiple then
+    FSelectedRenderer := TNyxBrowserRenderer.Create;
   FFormRenderer := ARenderer;
   FRenderer := TNyxBrowserRenderer.Create;
   FInput := TJSHTMLInputElement(ARenderer.InputFor(AId));
@@ -441,8 +562,11 @@ begin
   LType :=
     function(AEvent: TEventListenerEvent): Boolean
     begin
-      FChosen := '';
-      FSelected.setAttribute('hidden', '');
+      if not FMultiple then
+      begin
+        FChosen := '';
+        FSelected.setAttribute('hidden', '');
+      end;
       FInput.removeAttribute('aria-invalid');
       FBrowsing := False;
       if Assigned(FOnChange) then
@@ -458,7 +582,8 @@ begin
       FInput.focus;
       Result := True;
     end;
-  FSelected.addEventListener('click', LClear);
+  if not FMultiple then
+    FSelected.addEventListener('click', LClear);
   LKey :=
     function(AEvent: TEventListenerEvent): Boolean
     var
