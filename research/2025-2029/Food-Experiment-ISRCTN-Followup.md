@@ -6,7 +6,7 @@ Kimberly Dargan’s University of Kent thesis, deposited September 17, 2025, rep
 
 ## Ghana Mucuna trial final results
 
-Cilia and colleagues published the final report for PACTR201611001882367 online November 21, 2025. This open-label Ghana trial randomized 35 participants, with 32 in the efficacy analysis, to powder from roasted *Mucuna pruriens* seeds or levodopa plus benserazide for 12 months. Motor examination scores improved in both groups. The adjusted difference in PDQ-39 change was 0.5 points (95% CI −9.6 to 10.7). The authors report noninferiority, and the confidence interval extends beyond the +2-point margin specified in their methods. Nausea and diarrhea each prompted one powder-arm discontinuation. The study concerns a levodopa-containing seed powder from a species distinct from broad bean. [Primary publication](https://pmc.ncbi.nlm.nih.gov/articles/PMC13347555/) · [2018 interim report](../2015-2019/Food-Experiment-ISRCTN-Followup.md#ghana-mucuna-trial-interim-report)
+The final report for PACTR201611001882367 appeared online November 21, 2025. The [updated primary-source audit](Ghana-Mucuna-Tremor-and-Reporting-Audit.md) retains the efficacy interval, tremor-specificity limits and conflicting safety descriptions, superseding the earlier unqualified withdrawal-cause summary. [Existing full text](Source-Text/PMC13347555.txt) · [2018 interim report](../2015-2019/Food-Experiment-ISRCTN-Followup.md#ghana-mucuna-trial-interim-report)
 
 ## Gastric mapping after a standardized meal
 

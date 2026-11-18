@@ -1,5 +1,7 @@
 # 2025-2029
 
+- [Ghana Mucuna trial: tremor specificity, recovered supplement and reporting audit](Ghana-Mucuna-Tremor-and-Reporting-Audit.md).
+
 The [Mucuna survey's experiential context](Cultural-and-Experiential/Personal-Reports/2026-Mucuna-Patient-Survey-Context.txt) links the existing study family rather than adding a cohort. [Observations](Observations/Cultural-and-Experiential-Tremor.md).
 
 New dated profiles preserve the [2025 cinnamon image correction](Source-Text/2025-PMID40072646-Cinnamon-Correction-Extract.txt) and [2026 immature green-walnut local pain experiment](Source-Text/2026-PMID41596967-Marinaccio-Green-Walnut-Pain-Extract.txt). [Observations and route-specific limits](Observations/Food-Experiment-Source-Context-Nov17-10.md).

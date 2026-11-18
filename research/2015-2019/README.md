@@ -1,5 +1,9 @@
 # 2015-2019
 
+- [Broad-bean belief and practitioner opinion](Cultural-and-Experiential/Traditional-Practices/2015-Broad-Bean-Belief-and-Practitioner-Concern.txt).
+- [Public sprouted-fava resting-tremor account](Cultural-and-Experiential/Personal-Reports/2019-Sprouted-Fava-Perceived-Rest-Tremor-Relief.txt).
+- [Cultural-source comparison with the preceding period](Observations/Cultural-and-Experiential-Tremor.md).
+
 Additional dated source profiles: [2016 reproductive figures and access hold](Source-Text/2016-PMC7104458-Reproductive-Abstract-Figure-Access-Extract.txt), [2016 animal-model egg specimens](Source-Text/2016-PMC7150119-Animal-Model-Egg-Specimen-Extract.txt), [2016 commercial walnut hydrosol](Source-Text/2016-PMID27335580-Moravej-Walnut-Hydrosol-Extract.txt), [2017 French botanical dictionary](Source-Text/2017-PMC7151859-French-Dictionary-Culinary-Botanicals-Extract.txt), [2018 Miller author abstract](Source-Text/2018-PMID29634989-Miller-Walnut-Oil-Extinction-Abstract-Extract.txt), [2019 glycemic companion report](Source-Text/2019-Aghasadeghi-Walnut-Oil-Glycemia-Extract.txt), [2019 egg-allergy abstracts](Source-Text/2019-PMC7095959-Pediatric-Egg-Allergy-Abstract-Extract.txt) and [2019 cinnamon motor study](Source-Text/2019-PMID31119595-Cinnamon-GDNF-Motor-Extract.txt). [Observations and study-family limits](Observations/Food-Experiment-Source-Context-Nov17-10.md).
 
 January 1, 2015 through December 31, 2019.

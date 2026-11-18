@@ -1,5 +1,7 @@
 # Food thought experiment follow-up
 
+- [Second inclusive tremor checkpoint](tremor-cultural-nov17-02/README.md): five more cultural records, existing-trial reporting audit, five Oracle partials and preserved clinical grades.
+
 The [inclusive tremor and cultural checkpoint](tremor-cultural-nov17-01/README.md) adds separately classified practice and personal records, preserves differing experiences, and makes unresolved and unreviewed material visible by default. The clinical verdict totals remain unchanged.
 
 The tenth checkpoint adds 147 source dispositions, keeps 56 index-level pairs queued and corrects 33 earlier eligibility exclusions. Small animal motor-proxy evidence moves ground cinnamon and walking-slowness worsening to Maybe False 51; human gait benefit remains unverified. The original queue holds 48,103 pairs, including 516 for 0133. The complementary walnut retrieval screen reconciles all 1,024 records at declared depths while preserving body, symptom and registry gaps. [Current checkpoint](lemon-balm-depression-nov17-10/README.md)
