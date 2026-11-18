@@ -78,7 +78,7 @@ type
 
 implementation
 
-uses nyx.controls, nyx.drawing, nyx.colors, oraclevocab;
+uses nyx.controls, nyx.drawing, nyx.colors, oraclevocab, parkinsonsoracle.presentation;
 
 const
   CExpandPage = 12;
@@ -691,7 +691,11 @@ begin
   LPage.Add(LInspector);
   LNode := FModel.Node(FSelected);
   LInspector.Add(Control(nkHeading, 'graph-selection', GraphText(LNode, 'label')));
-  LInspector.Add(Control(nkLabel, 'graph-selection-kind', Capitalized(GraphText(LNode, 'kind'))));
+  if (GraphText(LNode, 'kind') = 'source') and
+    IsConversationSource(GraphText(LNode, 'value')) then
+    LInspector.Add(Control(nkBadge, 'conversation-badge-graph', ConversationSourceLabel))
+  else
+    LInspector.Add(Control(nkLabel, 'graph-selection-kind', Capitalized(GraphText(LNode, 'kind'))));
   LInspector.Add(Control(nkButton, 'graph-focus-branch', 'Focus this branch'));
   if GraphText(LNode, 'kind') = 'source' then
   begin

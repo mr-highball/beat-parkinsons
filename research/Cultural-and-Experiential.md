@@ -31,7 +31,7 @@ Record these fields explicitly for the categories other than Conversations:
 
 ### Conversation records
 
-Start with a title, `Collection: Cultural and experiential`, the original public thread URL in `Source`, and a `Date basis`. File the text under the period of the opening post. A year is enough when finer precision is unclear. If the publication year cannot be established, omit it or mark it unknown and supply a `Capture date` with an explicit first-documented-capture basis. A later reply can be dated in the summary where relevant.
+Start with a title, `Collection: Cultural and experiential`, the original public thread URL in `Source`, and a `Date basis`. Include `Source kind: Conversation` so the source can also be found by its type in catalog text searches. File the text under the period of the opening post. A year is enough when finer precision is unclear. If the publication year cannot be established, omit it or mark it unknown and supply a `Capture date` with an explicit first-documented-capture basis. A later reply can be dated in the summary where relevant.
 
 Summarize the relevant first-person experiences, caregiver observations, questions and replies in whatever shape fits the discussion. Attribute claims by role and retain the exposure, outcome, adverse reports, uncertainty and disagreement when the thread supplies them. Label any inference and leave an uncertain diagnosis, dose or symptom type open. Skip unavailable fields. Mention repeat or cross-posted accounts when identifiable without copying handles, and distinguish suggestions from reported use. Votes and reply counts supply no clinical evidence or population estimate.
 

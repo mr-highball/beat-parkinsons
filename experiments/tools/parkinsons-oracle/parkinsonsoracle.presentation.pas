@@ -17,8 +17,10 @@ const
   SourceKindAll = 0;
   SourceKindStudies = 1;
   SourceKindCulture = 2;
+  ConversationSourceLabel = 'Conversation';
 
 function IsCulturalSource(const APath: String): Boolean;
+function IsConversationSource(const APath: String): Boolean;
 function MatchesSourceKind(const APath: String; AKind: Integer): Boolean;
 function RelatedSourceTerms(const AIngredient, ASymptom: String; AKind: Integer): String;
 function SelectSourcePage(const APaths: array of String; AKind,
@@ -29,13 +31,26 @@ implementation
 uses
   SysUtils;
 
-function IsCulturalSource(const APath: String): Boolean;
+const
+  CCultureDirectory = '/cultural-and-experiential/';
+
+function IsInCulturalDirectory(const APath, ADirectory: String): Boolean;
 var
   LPath: String;
 begin
   LPath := LowerCase(StringReplace(APath, '\', '/', [rfReplaceAll]));
   Result := (Pos('research/', LPath) = 1) and
-    (Pos('/cultural-and-experiential/', LPath) > Length('research/'));
+    (Pos(ADirectory, LPath) > Length('research/'));
+end;
+
+function IsCulturalSource(const APath: String): Boolean;
+begin
+  Result := IsInCulturalDirectory(APath, CCultureDirectory);
+end;
+
+function IsConversationSource(const APath: String): Boolean;
+begin
+  Result := IsInCulturalDirectory(APath, CCultureDirectory + 'conversations/');
 end;
 
 function MatchesSourceKind(const APath: String; AKind: Integer): Boolean;

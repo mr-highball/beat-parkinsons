@@ -34,6 +34,15 @@ begin
     'Collection policy is not an individual cultural source.');
   Check(not IsCulturalSource('research/2020-2024/Source-Text/a.txt'),
     'Formal archive remains separate.');
+  Check(IsConversationSource('RESEARCH\2025-2029\Cultural-and-Experiential\Conversations\c.txt'),
+    'Conversation records use the same portable path rules.');
+  Check(not IsConversationSource(
+    'research/2025-2029/Cultural-and-Experiential/Personal-Reports/Conversations/c.txt'),
+    'Only the conversational collection receives the badge.');
+  Check(MatchesSourceKind('research/2025-2029/Cultural-and-Experiential/Conversations/c.txt',
+    SourceKindCulture) and not MatchesSourceKind(
+    'research/2025-2029/Cultural-and-Experiential/Conversations/c.txt', SourceKindStudies),
+    'Conversations belong to the cultural results scope.');
   Check(RelatedSourceTerms('', 'rest tremor severity', SourceKindAll) = 'tremor',
     'Broader tremor sources remain discoverable.');
   Check(RelatedSourceTerms('mucuna', 'rest tremor severity', SourceKindCulture) =

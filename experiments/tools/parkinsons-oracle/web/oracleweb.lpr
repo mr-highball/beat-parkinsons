@@ -801,6 +801,30 @@ begin
     end);
 end;
 
+function ConversationURL(const AText: String): String;
+var
+  LLine: String;
+  LURL: String;
+begin
+  Result := '';
+  for LLine in SplitString(AText, #10) do
+  begin
+    if Trim(LLine) = '' then
+    begin
+      Exit;
+    end;
+    if StartsText('Source:', LLine) then
+    begin
+      LURL := Trim(Copy(LLine, Length('Source:') + 1, MaxInt));
+      if StartsText('https://', LURL) then
+      begin
+        Result := LURL;
+      end;
+      Exit;
+    end;
+  end;
+end;
+
 procedure OpenSource(const APath: String; const AOffsets: TSourceOffsets; AReturn: TPickerAction);
 var
   LArgs: TJSObject;
@@ -822,6 +846,7 @@ begin
       LPaging: TNyxNode;
       LNext: Integer;
       LText: String;
+      LOriginalURL: String;
       LHasPrevious: Boolean;
       LHasNext: Boolean;
       LCanExplore: Boolean;
@@ -834,7 +859,13 @@ begin
       LPage.Add(Button('back-results', '‹ Back', nvSecondary));
       LPage.Add(Caption(nkHeading, 'result-heading', SavedSourceTitle(APath)));
       LPage.Add(Caption(nkCode, 'source-path', APath));
-      if IsCulturalSource(APath) then
+      if IsConversationSource(APath) then
+      begin
+        LPage.Add(Caption(nkBadge, 'conversation-badge-reader', ConversationSourceLabel));
+        LPage.Add(Caption(nkLabel, 'conversation-reader-context',
+          'This summary describes experiences shared in a public discussion.'));
+      end
+      else if IsCulturalSource(APath) then
         LPage.Add(Caption(nkBadge, 'reader-kind-culture',
           'Culture and lived experience · Source document'))
       else
@@ -843,6 +874,15 @@ begin
       LHasPrevious := (AError = '') and (Length(AOffsets) > 1);
       LHasNext := (AError = '') and (LNext > LOffset);
       LText := TextOf(AData, 'text');
+      if IsConversationSource(APath) and (LOffset = 0) then
+      begin
+        LOriginalURL := ConversationURL(LText);
+        if LOriginalURL <> '' then
+        begin
+          LPage.Add(Section(nkLink, 'original-conversation').Configure
+            .Text('Open original discussion').LinkTo(LOriginalURL).Done);
+        end;
+      end;
       LCanExplore := (AError = '') and (LText <> '');
       if AError <> '' then
         LPage.Add(Caption(nkLabel, 'result-message', AError))
@@ -868,6 +908,10 @@ begin
       end;
       PublishResults(LDocument, LPage);
       FocusResults;
+      if LOriginalURL <> '' then
+      begin
+        SetExternalLink('original-conversation');
+      end;
       if LCanExplore then
         BindEvent(GResultsRenderer.ElementFor('source-connections'), 'click',
           function(AEvent: TEventListenerEvent): Boolean
@@ -1095,18 +1139,28 @@ begin
     end);
 end;
 
-procedure AddCatalogPreview(ACard: TNyxNode; const ATag, APath, APeriod: String);
+function CatalogPreview(const ATag, APath, APeriod: String): TNyxNode;
 var
-  LKind: String;
   LURL: String;
   LActions: TNyxNode;
 begin
-  LKind := 'Research source';
-  if IsCulturalSource(APath) then
-    LKind := 'Culture & experience';
-  ACard.Add(Caption(nkBadge, 'source-kind-' + ATag, LKind));
-  ACard.Add(Caption(nkHeading, 'source-title-' + ATag, SavedSourceTitle(APath)));
-  ACard.Add(Caption(nkLabel, 'source-period-' + ATag, APeriod));
+  if IsConversationSource(APath) then
+  begin
+    Result := Section(nkCard, 'source-conversation-' + ATag);
+    Result.Add(Caption(nkBadge, 'conversation-badge-' + ATag, ConversationSourceLabel));
+  end
+  else if IsCulturalSource(APath) then
+  begin
+    Result := Section(nkCard, 'source-cultural-' + ATag);
+    Result.Add(Caption(nkBadge, 'source-kind-' + ATag, 'Culture & experience'));
+  end
+  else
+  begin
+    Result := Section(nkCard, 'source-study-' + ATag);
+    Result.Add(Caption(nkBadge, 'source-kind-' + ATag, 'Research source'));
+  end;
+  Result.Add(Caption(nkHeading, 'source-title-' + ATag, SavedSourceTitle(APath)));
+  Result.Add(Caption(nkLabel, 'source-period-' + ATag, APeriod));
   LActions := Section(nkRow, 'source-actions-' + ATag);
   if GStaticOracle = nil then
     LActions.Add(Button('open-source-' + ATag, 'Read source', nvSecondary)
@@ -1120,7 +1174,7 @@ begin
   end;
   LActions.Add(Button('catalog-graph-' + ATag, 'See connections', nvSecondary)
     .Configure.AccessibleName('See connections for ' + ExtractFileName(APath)).Done);
-  ACard.Add(LActions);
+  Result.Add(LActions);
 end;
 
 procedure BindCatalogCard(const ATag, APath: String);
@@ -1272,11 +1326,7 @@ begin
     else
     begin
       LPath := TextOf(LRow, 'path');
-      if IsCulturalSource(LPath) then
-        LCard := Section(nkCard, 'source-cultural-' + LTag)
-      else
-        LCard := Section(nkCard, 'source-study-' + LTag);
-      AddCatalogPreview(LCard, LTag, LPath, TextOf(LRow, 'period'));
+      LCard := CatalogPreview(LTag, LPath, TextOf(LRow, 'period'));
     end;
     LPage.Add(LCard);
   end;
@@ -1296,7 +1346,7 @@ begin
   begin
     case GResearchKind of
       SourceKindStudies: LMessage := 'Studies and research sources';
-      SourceKindCulture: LMessage := 'Cultural accounts and personal reports';
+      SourceKindCulture: LMessage := 'Cultural accounts and conversations';
     else
       LMessage := 'Related sources';
     end;
@@ -1328,12 +1378,7 @@ begin
         LTag := 'related-' + IntToStr(LIndex);
         LRow := TJSObject(LRelatedRecords[LIndex]);
         LPath := TextOf(LRow, 'path');
-        if IsCulturalSource(LPath) then
-          LCard := Section(nkCard, 'source-cultural-' + LTag)
-        else
-          LCard := Section(nkCard, 'source-study-' + LTag);
-        AddCatalogPreview(LCard, LTag, LPath, TextOf(LRow, 'period'));
-        LPage.Add(LCard);
+        LPage.Add(CatalogPreview(LTag, LPath, TextOf(LRow, 'period')));
       end;
       LPaging := Section(nkRow, 'source-pagination');
       if GRelatedPage > 0 then
