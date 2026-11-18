@@ -42,4 +42,4 @@
 
 ## Project team
 
-Dexter coordinates the experiment and verifies the evidence and deliverables. Assign independent internet research and source reviews to Pinky, Slinky, and Binky (GPT-6.1 Terra, high reasoning). Assign Blimbo (GPT-6 Luna, high reasoning) supporting searches, source checks, and evidence packet preparation. Delegate difficult reasoning and independent quality review to The Brain (`gpt-6.1-sol`, `ultra`) when Dexter can advance other work. Reuse these five agents under the [project team rules](../../AGENTS.md). The user must authorize any other subagent.
+Dexter conducts and verifies the experiment's work in single-agent mode under the [project execution rules](../../AGENTS.md). The named team roles apply when the user explicitly requests delegation. Keep previous source handoffs available as research records.

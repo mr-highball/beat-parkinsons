@@ -1,5 +1,7 @@
 # 2025-2029
 
+- [Pacific Talanoa interviews on care and coping in PINK1-associated Parkinson disease](Cultural-and-Experiential/Local-Knowledge/2026-Pacific-PINK1-Talanoa-Narratives.txt).
+
 - [Ghana Mucuna trial: tremor specificity, recovered supplement and reporting audit](Ghana-Mucuna-Tremor-and-Reporting-Audit.md).
 
 The [Mucuna survey's experiential context](Cultural-and-Experiential/Personal-Reports/2026-Mucuna-Patient-Survey-Context.txt) links the existing study family rather than adding a cohort. [Observations](Observations/Cultural-and-Experiential-Tremor.md).

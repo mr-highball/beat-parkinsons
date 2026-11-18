@@ -1,5 +1,6 @@
 # 2020-2024
 
+- [Tanzania faith and care follow-up](Cultural-and-Experiential/Ceremonial-Accounts/2021-Tanzania-Faith-and-Care-Followup.txt), [centering prayer comparison](Source-Text/2022-Machado-Centering-Prayer-Extract.txt) and [Kenyan stigma and healing accounts](Cultural-and-Experiential/Local-Knowledge/2023-Kenya-Stigma-and-Healing-Accounts.txt).
 - [Combined Kampavata case extract](Source-Text/2024-Sharma-Kampavata-Case-Extract.txt) and [practitioner context](Cultural-and-Experiential/Traditional-Practices/2024-Kampavata-Mixed-Practitioner-Course.txt).
 
 - [Practitioner skullcap–vervain tremor-use chart](Cultural-and-Experiential/Traditional-Practices/2023-Skullcap-Vervain-Practitioner-Tremor-Use.txt).

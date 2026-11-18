@@ -1,5 +1,9 @@
 # Cultural and experiential accounts, 2020-2024
 
+- [Tanzanian follow-up on faith, care and an unnamed herbal wash](Ceremonial-Accounts/2021-Tanzania-Faith-and-Care-Followup.txt).
+- [Exploratory centering prayer comparison](Ceremonial-Accounts/2022-Centering-Prayer-Exploratory-Report.txt).
+- [Kenyan accounts of stigma and healing practices](Local-Knowledge/2023-Kenya-Stigma-and-Healing-Accounts.txt).
+
 - [Contemporary Kampavata practitioner case context](Traditional-Practices/2024-Kampavata-Mixed-Practitioner-Course.txt).
 
 - [Skullcap and blue vervain in a practitioner tremor chart](Traditional-Practices/2023-Skullcap-Vervain-Practitioner-Tremor-Use.txt).

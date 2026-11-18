@@ -1,5 +1,6 @@
 # Cultural and experiential accounts, 2025-2029
 
+- [Pacific Talanoa narratives on care and coping with PINK1-associated Parkinson disease](Local-Knowledge/2026-Pacific-PINK1-Talanoa-Narratives.txt).
 - [Patient-reported Mucuna use in the already cataloged 2026 survey](Personal-Reports/2026-Mucuna-Patient-Survey-Context.txt).
 
 Collect traditional practices, ceremonial accounts, public personal reports and local knowledge here, separately from formal studies. An empty category does not establish that a practice or source is absent.

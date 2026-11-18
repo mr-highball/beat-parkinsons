@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The fourth cultural checkpoint adds four chronological records on care, stigma, prayer and patient experience. The collection has twenty records. The preliminary prayer comparison carries its original timing and control-data limitations, and the qualitative sources preserve cohort overlap and conflicting experiences. The food verdicts and original source queue are unchanged. [Sources and remaining questions](followup/tremor-cultural-nov18-04/README.md)
+
 The third cultural checkpoint adds five records and accurately dated historical buckets, while retaining manuscript, transcript and supplementary-access limits. The cultural collection has sixteen records; clinical grades remain 27 Maybe True, 32 Maybe False and 941 Unknown, with zero True/False. [Evidence and remaining scope](followup/tremor-cultural-nov18-03/README.md)
 
 The second inclusive tremor checkpoint adds five dated practice/personal records and a reporting audit of an existing trial; the cultural collection has eleven records. Provenance, contrasting accounts, source-access improvements and remaining uncertainty are explicit. All clinical totals remain unchanged: 27 Maybe True, 32 Maybe False, 941 Unknown and zero True/False. [Source follow-through and limits](followup/tremor-cultural-nov17-02/README.md)
