@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [potato-fiber crossover](Source-Text/2020-PMC7697495-Potato-Fiber-Crossover.txt) reports satiety and stool results. The [safflower and fish-oil lipoprotein study](Source-Text/2021-PMID33933722-Safflower-Fish-Oil-Lipoproteins.txt) and its [sex-specific analysis](Source-Text/2023-PMID37404855-Safflower-Fish-Oil-Sex-Analysis.txt) share a crossover. The [Y-maze report](Source-Text/2021-PMID34624673-High-Oleic-Sunflower-Y-Maze.txt) and [radial-maze study](Source-Text/2024-PMID38852700-High-Oleic-Sunflower-Radial-Maze.txt) distinguish high-oleic sunflower-oil diets and memory outcomes.
+
 A [public sensory account](Cultural-and-Experiential/Conversations/2020-Earth-Clinic-Macadamia-Oil-and-Paresthesia.txt) describes perceived relief of numbness and tingling after taking unrefined macadamia oil. Its copied versions describe one person.
 
 The [ARISTOTLE protocol](Source-Text/Trials/NCT04324749.txt) connects to the peanut-oil control spread in the main report. The [mixed-seed animal extract study](Source-Text/2020-Nandagopal-Peanut-Mixed-Seed-Extract-and-Catalepsy.txt) measures catalepsy, and the [groundnut-oil dietary comparison](Source-Text/2024-Berkoh-Groundnut-Oil-Diet-and-Fasting-Glucose.txt) measures glucose and lipids.
