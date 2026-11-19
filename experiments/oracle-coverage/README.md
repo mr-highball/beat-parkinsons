@@ -69,6 +69,8 @@ The UMIN crossover lookup returned an unsupported-identifier error. Lexical sear
 
 The twenty-third and twenty-fourth no-archive original-source batches each returned zero strict hits out of six at revision 66, continuing the same source-coverage gap. Fourteen evidence questions were added overall: those twelve source misses, one historical chapter miss at revision 66 and a partial cinnamon claim question at revision 67. The chapter's known-ID web-before-Oracle ordering exception remains explicit. Walnut-human searches and repeated source-role checks continue earlier questions and add no denominators. The separate managed-MCP binding failure is technical unavailability, with 0/0 evidence rates. Native merge preserves the earlier question and aggregate rows in bytes and order. [Evidence and remaining scope](../1000_see_what_sticks_food/followup/lemon-balm-depression-nov17-10/README.md) · [Merge proof](../1000_see_what_sticks_food/followup/lemon-balm-depression-nov17-10/oracle-merge-verification.txt)
 
+The fig resting-tremor checkpoint found an existing lead for the claim question and one source-summary lead across six distinct source-verification questions. The initial local searches had zero strict hits. Focused expansion added five fig-related records by publication period. The recovered conference collections continued existing exact-source questions outside this denominator. [Search and evidence checkpoint](../1000_see_what_sticks_food/followup/tremor-fig-nov19-30/README.md)
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the

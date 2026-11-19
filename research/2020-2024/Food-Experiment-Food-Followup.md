@@ -76,7 +76,7 @@ Shivanandappa and colleagues compared a methanol-water extract of dried Ajwa fru
 
 ## Fig fruit extract in a rat model
 
-Gafoor and colleagues reported less motor impairment in rats given an ethanolic *Ficus carica* fruit extract in a haloperidol-induced model. The author-posted abstract describes behavioral, biochemical, and histological measures. Full text was unavailable at review. The extract, drug-induced model and motor endpoints leave the effects of raw figs on resting tremor in people with Parkinson’s open. [Authors’ abstract, DOI 10.26463/rjps.10_2_3](https://www.researchgate.net/publication/366221659_Evaluation_of_Anti-Parkinson_Potential_of_Ficus_carica_Fruit_Extract)
+Gafoor and colleagues reported less motor impairment in rats given an ethanolic *Ficus carica* fruit extract in a haloperidol-induced model. The author-posted abstract describes behavioral, biochemical, and histological measures. Full text was unavailable at review. The extract, drug-induced model and motor endpoints leave the effects of raw figs on resting tremor in people with Parkinson’s open. [Authors’ abstract, DOI 10.26463/rjps.10_2_3](https://www.researchgate.net/publication/366221659_Evaluation_of_Anti-Parkinson_Potential_of_Ficus_carica_Fruit_Extract) · [Local abstract facts](Source-Text/2020-Gafoor-Fig-Fruit-Extract.txt)
 
 ## Potato salad and apple puree in a measured lunch
 

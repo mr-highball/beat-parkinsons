@@ -21,3 +21,4 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Public discussion and firsthand lemon-balm tincture sleep report](Conversations/2024-Reddit-Lemon-Balm-Tincture-and-Sleep.txt).
 - [Observations on lemon-balm preparations and public discussions](../Observations/Lemon-Balm-Preparation-and-Conversations.md).
 - [Mustard and shaking in a modern Ayurvedic dietary interpretation](Traditional-Practices/2024-Mustard-and-Shaking-Ayurvedic-Dietary-Interpretation.txt).
+- [Anjir in a modern Iranian review of traditional medicinal plants](Traditional-Practices/2024-Iranian-Review-Anjir-and-Parkinsons.txt).
