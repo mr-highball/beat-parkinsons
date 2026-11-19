@@ -91,6 +91,8 @@ The shared 2018–2019 proceedings checkpoint recorded zero strict hits across f
 
 The 2004 EASD and 2011 SGIM follow-up produced zero strict hits for eight newly identified companion-source questions at revision 115. The main proceedings were prior first-pass questions. The dated additions include the separately published erratum and linked primary reports. [Original member evidence](../1000_see_what_sticks_food/followup/sgim-easd-originals-nov19-46/README.md).
 
+The 2018 obesity congress review had zero strict hits across fourteen new companion-source questions at revision 116. The original congress lookup was already on record. The newly indexed records document publications and registrations while retaining cohort and food-preparation gaps. [Congress and companion coverage](../1000_see_what_sticks_food/followup/eco-obesity-originals-nov19-47/README.md).
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the
