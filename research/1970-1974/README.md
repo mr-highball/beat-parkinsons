@@ -1,5 +1,7 @@
 # 1970-1974
 
+[injectable fluphenazine trial and depression-treatment counts](Source-Text/PMC1588639.txt) · [shared corn-oil diet and medication-related constipation reports](Source-Text/PMC1800097.txt).
+
 January 1, 1970 through December 31, 1974.
 
 ## Annotated research

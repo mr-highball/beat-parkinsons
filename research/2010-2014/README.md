@@ -1,5 +1,7 @@
 # 2010-2014
 
+[cinnamon flavor and mouse preference experiment](Source-Text/PMC3138658.txt) · [inhaled almond control and carrier comparison](Source-Text/PMC3700459.txt) · [familial and sporadic supranuclear palsy cohort](Source-Text/PMC3716405.txt) · [medication-count cohort and excluded cranberry juice](Source-Text/PMC4158998.txt).
+
 A [terminated masked sage-tablet trial](Source-Text/Trials/NCT02032862.txt) registered sweating and menopause outcomes using a fresh-leaf extract.
 
 New [diazinon strain evidence](Source-Text/2012-PMID22871176-Diazinon-Strains-and-Tissue-Context.txt) records the female rat biochemical comparison. The [Pitozzi aging-rat olive oil study](Source-Text/2010-PMID20070918-Pitozzi-Olive-Oil-Light-Dark-Box.txt) records a direction discrepancy between Figure 2 and its abstract. The [Amaranthus renal paper](Source-Text/2014-PMID25415872-Amaranthus-Olive-Oil-Renal-Vehicle.txt) identifies injected olive oil as the vehicle and was posted online in 2014.

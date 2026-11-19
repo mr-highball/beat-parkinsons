@@ -1,5 +1,7 @@
 # 1975-1979
 
+[indexed digoxin meeting communication](Source-Text/1978-PMID728290-Digoxin-Proceedings-Member.txt).
+
 January 1, 1975 through December 31, 1979.
 
 ## Annotated research

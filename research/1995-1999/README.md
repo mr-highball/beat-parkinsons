@@ -1,5 +1,7 @@
 # 1995-1999
 
+[auditory gait cueing in Parkinson disease](Source-Text/PMC486690.txt).
+
 The [blinded crude and refined peanut-oil challenge](Source-Text/1997-PMID9133891-Crude-and-Refined-Peanut-Oil-Challenge.txt) reports allergy outcomes. [Dietary lipid deficiency and rod performance](Source-Text/1995-PMID7475943-Frances-Peanut-Oil-Diet-and-Rotarod.txt) and [fish oil versus a peanut-rapeseed blend](Source-Text/1998-PMID9868201-Chalon-Peanut-Rapeseed-Comparator-and-Activity.txt) give distinct animal comparisons.
 
 January 1, 1995 through December 31, 1999.

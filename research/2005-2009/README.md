@@ -1,5 +1,7 @@
 # 2005-2009
 
+[gastrointestinal tumor case series with saffron staining](Source-Text/PMC3207561.txt) · [Parkinson olfactory testing with a banana-like odor](Source-Text/PMC2790799.txt).
+
 The [dried common-sage crossover](Source-Text/2005-PMID16205785-Dried-Sage-Mood-Stressor.txt) records different alertness comparisons before and during a task.
 
 An [injected rosmarinic acid rat study](Source-Text/2005-PMID16026713-Rosmarinic-Acid-Behavior.txt) separates the authors' interpretation of motivation from a clinical apathy outcome. [Comparison with later work](../2025-2029/Observations/Clinical-Outcome-Specificity-and-Food-Claims.md).

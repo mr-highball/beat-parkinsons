@@ -1,5 +1,7 @@
 # 2015-2019
 
+[simulated vocal tremor and listener ratings](Source-Text/PMC4545074.txt) · [Parkinson genetic and olfaction comparison](Source-Text/PMC5567486.txt) · [ACID registration](Source-Text/Trials/NCT03419039.txt).
+
 The [registered mixed-sage comparison](Source-Text/Trials/NCT03695003.txt) includes acute and longer-term mood assessments in healthy adults and a probable link to the 2021 results.
 
 The [irsenontrine Lewy body dementia registration](Source-Text/Trials/NCT03467152.txt) includes aggregated results posted in 2022 and links to its later biomarker sub-study. The [pooled safinamide pain analysis](Source-Text/PMC5302028.txt) uses pain-treatment use and bodily discomfort outcomes.
