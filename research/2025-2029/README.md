@@ -631,3 +631,53 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Network based statistics associates increased connectivity to REM sleep disorder and hallucinations in early DLB](Source-Text/PMC13586286.txt).
 - [Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis](Source-Text/PMC13259922.txt).
 - [Reduced volume of neuromodulatory brainstem nuclei is associated with early hallucination-related vulnerability in Parkinson's disease](Source-Text/PMC13621912.txt).
+
+## Visual symptoms, clinical cohorts and conference members
+
+- [Visual symptom measures and study family reuse](Observations/Visual-Symptom-Outcomes-and-Cohort-Reuse.md).
+- [Connectome-based brain fingerprints predict early cognitive decline in Parkinson's patients with minor hallucinations](Source-Text/2025-BioRxiv-Parkinson-Minor-Hallucination-Fingerprints.txt).
+- [Selective Molecular and Network Architecture Features Underlie Brain Cortical Atrophy in Dementia with Lewy Bodies](Source-Text/2026-MedRxiv-Lewy-Body-Cortical-Atrophy.txt).
+- [Patient-specific functional networks track early cognitive alterations and minor hallucinations in Parkinson's disease](Source-Text/PMC13652722.txt).
+- [Inflammatory biomarker candidates in dementia with Lewy bodies: diagnostic classification, clinical associations, and survival](Source-Text/PMC13734266.txt).
+- [Preclinical Catecholaminergic Biomarkers of Central Lewy Body Diseases](Source-Text/PMC12802056.txt).
+- [Clinical Characterization of Probable Dementia with Lewy Bodies Based on the Initial Clinical Presentation in a Latin American Low- and Middle-Income Country](Source-Text/PMC12890269.txt).
+- [Exploring eye movement abnormalities as objective biomarkers for Parkinson's disease utilizing virtual reality-based eye tracking](Source-Text/PMC12961844.txt).
+- [Early retinal synaptic dysfunction and proteomic remodeling precede neurodegeneration in a Parkinson's disease model](Source-Text/PMC12909865.txt).
+- [Considerations for Initiation and Maintenance of Foslevodopa/Foscarbidopa for Advanced Parkinson's Disease](Source-Text/PMC13339506.txt).
+- [Management of Parkinson's disease psychosis-a European perspective](Source-Text/PMC12809755.txt).
+- [MCI-LB brain networks reorganization in relation to specific cognitive domains deficits](Source-Text/PMC12894966.txt).
+- [Abstracts from Hydrocephalus World Congress 2025 : Toulouse, France. 5-8 September 2025](Source-Text/PMC12838227.txt).
+- [Exploring Dynamic Alpha Band Connectivity in Parkinson's Disease: A Novel Approach to Postural Control Assessment Using the BioVRSea Paradigm](Source-Text/PMC12864210.txt).
+- [Pharmacological content in the television series "House MD": analysis from a German pharmacologist's perspective](Source-Text/PMC13152976.txt).
+- [Resolution of Levodopa/Dopa-Decarboxylase Inhibitor-Associated Microscopic Colitis with Subcutaneous Foslevodopa/Foscarbidopa: A Case Series and Review of the Literature](Source-Text/PMC13339309.txt).
+- [Clinical utility and prospective of TMS-EEG: Updated review from an international expert group](Source-Text/PMC12991018.txt).
+- [A quantitative DOPA decarboxylase biomarker for diagnosis in Lewy body disorders](Source-Text/PMC13004688.txt).
+- [Functional brain connectivity in patients with de novo Parkinson's disease](Source-Text/PMC12908061.txt).
+- [Factors associated with epileptiform discharges in patients visiting a memory clinic: A retrospective study](Source-Text/PMC12924192.txt).
+- [Machine learning integration of serial blood biomarkers enhances cognitive decline prediction in early Parkinson's disease](Source-Text/PMC13057232.txt).
+- [Chronological Diagnostic Algorithm Predicting Neuropathology in Parkinsonism](Source-Text/PMC13206486.txt).
+- [Predictors of shunt responsiveness and outcomes in idiopathic normal pressure hydrocephalus: a retrospective cohort study](Source-Text/PMC13009103.txt).
+- [Expanding the Phenotypic Spectrum of PUS3 Deficiency: A p.Tyr71Cys Case Demonstrating a Stable, Nonprogressive Leukoencephalopathy Pattern](Source-Text/PMC13068437.txt).
+- [Clinical correlates of a negative cerebrospinal fluid α-synuclein seed amplification assay result in Parkinson's disease](Source-Text/PMC13086934.txt).
+- [Regional gene expression and brain atrophy in dementia with Lewy bodies: an imaging transcriptomics study](Source-Text/PMC13087014.txt).
+- [Personalized metabolite biomarker predictions reveal heterogeneous characteristics of Parkinson's disease](Source-Text/PMC13284315.txt).
+- [Seeing Invisible Oligomers: Rethinking α-Synuclein Pathology Through Proximity Ligation Assay](Source-Text/PMC13387933.txt).
+- [The role of quantitative susceptibility mapping in dementia with Lewy Bodies](Source-Text/PMC13186079.txt).
+- [Clinical correlates of sleep profiles in dementia with Lewy bodies: a latent class approach](Source-Text/PMC13343939.txt).
+- [Recent Developments in the Drug Treatment of Parkinson's Disease](Source-Text/PMC13375751.txt).
+- [Abstracts of the 7th World Parkinson Congress](Source-Text/PMC13360760.txt).
+- [Homocysteine increases phosphorylation and aggregation of α-synuclein](Source-Text/PMC13193807.txt).
+- [GABAergic dysfunction in Parkinson's disease: insights from in vivo proton magnetic resonance spectroscopy](Source-Text/PMC13482129.txt).
+- [Characterization of patients with isolated REM sleep behavior disorder and cerebrospinal fluid α-synuclein negativity](Source-Text/PMC13282387.txt).
+- [Synucleinopathy-like clinical features and biologically defined synuclein seeding in PSP-Parkinsonism: an imperfect match](Source-Text/PMC13582891.txt).
+- [Selective molecular and network architecture features underlie brain cortical atrophy in dementia with Lewy bodies](Source-Text/PMC13251274.txt).
+- [Biomarkers stewardship in parkinsonism: integrating alpha-synuclein seed amplification assays and neurofilament light chain into diagnostic pathways and patient communication](Source-Text/PMC13269519.txt).
+- [Longitudinal biomarkers in dementia with Lewy bodies: A systematic review and meta-analysis](Source-Text/PMC13316175.txt).
+- [Context-agnostic machine learning for Parkinson's disease motor symptom detection using wearable sensors](Source-Text/PMC13660283.txt).
+- [Peripheral and central inflammation associated with progressive cognitive decline in dementia with Lewy bodies](Source-Text/PMC13416190.txt).
+- [Effect of genetic factors on [18F]FDG PET metabolic phenotypes in dementia with Lewy bodies](Source-Text/PMC13727925.txt).
+- [Continuous subcutaneous foslevodopa/foscarbidopa in advanced Parkinson's disease: A clinical workflow from 50 consecutive patients at a single U.S. center](Source-Text/PMC13487280.txt).
+- [Real-world experience with foslevodopa/foscarbidopa in Germany: therapeutic insights and lessons learned](Source-Text/PMC13531757.txt).
+- [A systematic review of the clinical correlates of delusions in Parkinson's disease](Source-Text/PMC13553566.txt).
+- [From dosage alteration to amplification strategies: mechanistically defined alpha-synuclein mouse models for Parkinson's disease therapy development](Source-Text/PMC13722733.txt).
+- [A Multimodal Nomogram Predicting the Risk of Cognitive Impairment in Parkinson Disease](Source-Text/PMC13728480.txt).

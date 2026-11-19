@@ -707,3 +707,7 @@ The contaminant trail includes an original total-diet abstract, without a measur
 ## Date-palm trial registrations
 
 - [Registered topical date-palm and diclofenac knee comparison](Source-Text/Trials/IRCT20180126038510N1.txt).
+
+## Parkinson minor hallucination imaging
+
+- [Original 2018 abstract on default mode network structure and connectivity](Source-Text/2018-PMID30536829-Minor-Hallucination-Network-Abstract.txt).
