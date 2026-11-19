@@ -20,6 +20,10 @@ January 1, 2015 through December 31, 2019.
 
 ## Annotated research
 
+- [2018 IPLeiria food and preparation members](Source-Text/2018-PMC6157254-IPLeiria-Food-Contexts.txt) and the [kindergarten vegetable registration](Source-Text/Trials/NCT03513081.txt).
+- [2018 European geriatric diet members](Source-Text/2018-PMC7091737-Geriatric-Coffee-Egg-Olive-Oil.txt), [older-adult dietary protein screener](Source-Text/2018-PMC5965846-Protein-Screener-Egg-Intake.txt), [Helsinki coffee and longevity analysis](Source-Text/2019-PMID31612429-Helsinki-Coffee-and-Longevity.txt) and [parent cohort registration](Source-Text/Trials/NCT02526082.txt).
+- [2019 SGIM food-related clinical vignettes and garden program](Source-Text/2019-PMC6582171-SGIM-Food-Member-Contexts.txt).
+
 - [Registration for the human apigenin food-matrix study](Source-Text/Trials/NCT03526081.txt)
 - [Liu butylphthalide Parkinson dementia group and total UPDRS](Source-Text/2016-Liu-Butylphthalide-Parkinson-Dementia-Extract.txt)
 - [Dai butylphthalide Parkinson dementia abstract and total UPDRS](Source-Text/2018-Dai-Butylphthalide-Parkinson-Dementia-Abstract-Extract.txt)
