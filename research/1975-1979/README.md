@@ -1,5 +1,7 @@
 # 1975-1979
 
+Original printed context: [Two geriatric cases: demonstration at Royal College of Physicians of London](Source-Text/PMC1599378.txt) · [Iatrogenic ‘torsade de pointes’ ventricular tachycardia](Source-Text/PMC2425796.txt).
+
 [indexed digoxin meeting communication](Source-Text/1978-PMID728290-Digoxin-Proceedings-Member.txt).
 
 January 1, 1975 through December 31, 1979.

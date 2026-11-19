@@ -1,5 +1,7 @@
 # 1980-1984
 
+Original printed context: [Psychopharmacology in medical practice—the benefits and the risks](Source-Text/PMC1272608.txt) · [Dentato-rubro-pallido-luysian atrophy: a clinico-pathological study](Source-Text/1984-PMID6512549-Dentatorubral-Clinical-Abstract.txt).
+
 January 1, 1980 through December 31, 1984.
 
 ## Annotated research

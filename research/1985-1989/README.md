@@ -1,5 +1,7 @@
 # 1985-1989
 
+Original printed context: [Dystonic-Parkinsonian syndrome after cyanide poisoning: clinical and MRI findings](Source-Text/PMC1032927.txt).
+
 January 1, 1985 through December 31, 1989.
 
 ## Annotated research

@@ -1,5 +1,7 @@
 # 1970-1974
 
+Original printed context: [Treatment of chronic hepatic encephalopathy with levodopa](Source-Text/PMC1412974.txt).
+
 [injectable fluphenazine trial and depression-treatment counts](Source-Text/PMC1588639.txt) · [shared corn-oil diet and medication-related constipation reports](Source-Text/PMC1800097.txt).
 
 January 1, 1970 through December 31, 1974.

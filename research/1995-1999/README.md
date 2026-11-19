@@ -1,5 +1,7 @@
 # 1995-1999
 
+Original printed context: [Usefulness of pallidotomy in advanced Parkinson’s disease](Source-Text/1997-PMID9048711-Pallidotomy-Abstract.txt) · [Cytochrome c oxidase deficiency associated with the first stop-codon point mutation in human mtDNA](Source-Text/1998-PMID9634511-Mitochondrial-Case-Abstract.txt). [Comparative observations](Observations/Printed-Clinical-Records-and-Diagnostic-Tremor.md).
+
 [auditory gait cueing in Parkinson disease](Source-Text/PMC486690.txt).
 
 The [blinded crude and refined peanut-oil challenge](Source-Text/1997-PMID9133891-Crude-and-Refined-Peanut-Oil-Challenge.txt) reports allergy outcomes. [Dietary lipid deficiency and rod performance](Source-Text/1995-PMID7475943-Frances-Peanut-Oil-Diet-and-Rotarod.txt) and [fish oil versus a peanut-rapeseed blend](Source-Text/1998-PMID9868201-Chalon-Peanut-Rapeseed-Comparator-and-Activity.txt) give distinct animal comparisons.

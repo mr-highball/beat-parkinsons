@@ -1,5 +1,7 @@
 # 2020-2024
 
+[Registered fig and almond syrup comparison](Source-Text/IRCT20220406054433N1.txt) · [Fig and date flower-bud plasma experiments](Source-Text/2022-Chhoud-Fig-and-Date-Flower-Buds-in-Parkinson-Plasma.txt) · [Vinegar-soaked fig and gallstone symptoms](Source-Text/2024-PMID39799455-Vinegar-Soaked-Fig-Gallstone-Trial.txt).
+
 [multidomain nutrition and cognition protocol](Source-Text/PMC7174118.txt) · [ACID protocol and anticipated bowel effects](Source-Text/PMC7492209.txt) · [Parkinson taste study with clove omitted from smell testing](Source-Text/PMC9171299.txt) · [Alzheimer caregiver review](Source-Text/PMC9392839.txt) · [ACID original cognition and constipation-event table](Source-Text/2022-PMID36372613-ACID-Cognition-and-Adverse-Events.txt) · [PPMI biomarker and dream-enactment context](Source-Text/PMC10627170.txt) · [whole blueberry powder and gastrointestinal symptoms registration](Source-Text/Trials/NCT04824976.txt) · [blueberry powder safety registry and two constipation reports](Source-Text/Trials/NCT05172128.txt).
 
 The [older-adult blueberry trial](Source-Text/Trials/NCT05358210.txt) assigns dried dates to its comparison arm. The [childhood autism date registration](Source-Text/Trials/NCT04261595.txt) preserves differences in reported enrollment and allocation.
