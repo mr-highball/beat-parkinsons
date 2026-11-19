@@ -426,3 +426,5 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [Official registry for the cod and lean-seafood diet crossover](Source-Text/Trials/NCT01708681.txt).
 - [Hard-boiled egg and labeled phosphatidylcholine challenge](Source-Text/2013-PMID23614584-Hard-Boiled-Egg-Phosphatidylcholine-Challenge.txt).
 - [Steamed broccoli and measured blood-cell DNA markers](Source-Text/2010-PMID20713433-Steamed-Broccoli-and-DNA-Markers.txt).
+
+- [Registered freeze-dried strawberry study with a gait endpoint](Source-Text/Trials/NCT02051140.txt).
