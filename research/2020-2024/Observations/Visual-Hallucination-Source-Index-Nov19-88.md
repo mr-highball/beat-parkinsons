@@ -1,0 +1,77 @@
+# Visual hallucination methods and dried fig source index
+
+The docket records full published material for 67 publication identities. It includes sensory and imaging outcomes, food and medication context, and verified proceedings members. These are source digests prepared from the original text. Congress abstracts are limited to what the meetings published. [Scope observations](Dried-Fig-Constituent-and-Visual-Episode-Measures.md).
+
+- 2022-12-24 · [PPR588814](../Source-Text/2022-PPR588814-Parkinson-Psychosis-Imaging-Preprint.txt) · Parkinson psychosis imaging review, preprint
+- 2024-02-09 · [PMC10854369](../Source-Text/PMC10854369.txt) · meeting member boundaries for psychosis and nutrition
+- 2024-06-28 · [PMC11235737](../Source-Text/PMC11235737.txt) · meal hemodynamics and Parkinson visual PET in separate ePresentations
+- 2024-06-28 · [PMC11235923](../Source-Text/PMC11235923.txt) · Parkinson visual phenotype EEG in separate ePosters
+- 2020-09-18 · [PMC7498986](../Source-Text/PMC7498986.txt) · cardiac MIBG diagnostic abstract within the EANM proceedings
+- 2024-01-03 · [PMC10764327](../Source-Text/PMC10764327.txt) · DLB regional FDG metabolism and cognitive performance
+- 2024-01-05 · [PMC10770032](../Source-Text/PMC10770032.txt) · cerebellar methylation in neuropathologically confirmed DLB
+- 2024-01-09 · [PMC10776839](../Source-Text/PMC10776839.txt) · late Parkinson disability milestones and serum neurofilament
+- 2024-01-12 · [PMC10928336](../Source-Text/PMC10928336.txt) · application of invasive treatment guidance
+- 2024-01-16 · [PMC10951171](../Source-Text/PMC10951171.txt) · randomized istradefylline and levodopa escalation
+- 2024-01-23 · [PMC10963284](../Source-Text/PMC10963284.txt) · postmortem tau stages across Lewy body and Alzheimer spectra
+- 2024-01-03 · [PMC10849442](../Source-Text/PMC10849442.txt) · scoping review of Lewy body dementia management
+- 2024-02-11 · [PMC11078492](../Source-Text/PMC11078492.txt) · PGK1 deficiency and levodopa-responsive parkinsonism
+- 2024-02-09 · [PMC10867667](../Source-Text/PMC10867667.txt) · psychiatric comorbidity and Parkinson outcomes synthesis
+- 2024-02-27 · [PMC10899210](../Source-Text/PMC10899210.txt) · Parkinson and schizophrenia molecular interaction networks
+- 2024-02-10 · [PMC10900117](../Source-Text/PMC10900117.txt) · infusion management and medication adverse events
+- 2024-04-09 · [PMC11107432](../Source-Text/PMC11107432.txt) · proton pump inhibitor and cognitive risk review
+- 2024-03-04 · [PMC11093243](../Source-Text/PMC11093243.txt) · diagnostic CSF marker combination
+- 2024-03-04 · [PMC11578031](../Source-Text/PMC11578031.txt) · donepezil in DLB and neuropsychiatric composites
+- 2024-02-29 · [PMC10926141](../Source-Text/PMC10926141.txt) · elicited pareidolia after stroke
+- 2024-03-14 · [PMC10938676](../Source-Text/PMC10938676.txt) · patient–caregiver treatment-needs survey
+- 2024-03-18 · [PMC11604380](../Source-Text/PMC11604380.txt) · clinical multiple system atrophy diagnostic criteria
+- 2024-03-26 · [PMC10964635](../Source-Text/PMC10964635.txt) · protein pathology synthesis across neurodegenerative disorders
+- 2024-03-27 · [PMC10967046](../Source-Text/PMC10967046.txt) · GABA and Parkinson symptom circuit review
+- 2024-04-08 · [PMC11026222](../Source-Text/PMC11026222.txt) · Parkinson psychosis diagnosis and pimavanserin review
+- 2024-04-09 · [PMC11004155](../Source-Text/PMC11004155.txt) · immune mechanisms in central neurodegeneration
+- 2024-04-13 · [PMC11016082](../Source-Text/PMC11016082.txt) · sex differences in DLB grey matter networks
+- 2024-03-17 · [PMC11008270](../Source-Text/PMC11008270.txt) · Gaucher enzyme replacement research review
+- 2024-04-17 · [PMC11022468](../Source-Text/PMC11022468.txt) · survey of geriatric assessment instruments
+- 2024-04-18 · [PMC11578037](../Source-Text/PMC11578037.txt) · practice review of behavioral and psychological symptoms in dementia
+- 2024-05-01 · [PMC11145110](../Source-Text/PMC11145110.txt) · DaTSCAN diagnostic applications across rare conditions
+- 2024-05-07 · [PMC11075309](../Source-Text/PMC11075309.txt) · neuroinflammation with Alzheimer co-pathology in DLB
+- 2024-05-09 · [PMC11233840](../Source-Text/PMC11233840.txt) · Huntington disease-like 2 phenotype and repeat lengths
+- 2024-05-14 · [PMC12226698](../Source-Text/PMC12226698.txt) · acute psychedelic subjective effects and later therapeutic outcomes
+- 2024-05-16 · [PMC11191525](../Source-Text/PMC11191525.txt) · peripheral inflammatory markers in DLB and Alzheimer disease
+- 2024-05-06 · [PMC11126858](../Source-Text/PMC11126858.txt) · progressive supranuclear palsy syndrome overview
+- 2024-05-24 · [PMC11307062](../Source-Text/PMC11307062.txt) · tissue concentration of a constituent measured in dried fig
+- 2024-06-11 · [PMC11307033](../Source-Text/PMC11307033.txt) · quality-of-life analysis of the same DLB survey
+- 2024-02-15 · [PMC11196570](../Source-Text/PMC11196570.txt) · imaging correlates of cognitive decline in Parkinson disease
+- 2024-06-28 · [PMC11329577](../Source-Text/PMC11329577.txt) · mitochondrial parkinsonism gene-to-phenotype review
+- 2024-07-08 · [PMC11629696](../Source-Text/PMC11629696.txt) · Gba1 variant model and motor and nonmotor phenotyping
+- 2024-07-10 · [PMC11494638](../Source-Text/PMC11494638.txt) · prodromal synucleinopathy biofluid assay
+- 2024-07-18 · [PMC11256463](../Source-Text/PMC11256463.txt) · antinuclear antibody patterns across synucleinopathies
+- 2024-07-25 · [PMC11378209](../Source-Text/PMC11378209.txt) · cellular secretion mechanisms review
+- 2024-08-16 · [PMC11830047](../Source-Text/PMC11830047.txt) · vision impairment measures in the ADAMS dementia population
+- 2024-08-29 · [PMC11630880](../Source-Text/PMC11630880.txt) · differential imaging of atypical parkinsonian syndromes
+- 2024-08-08 · [PMC11365335](../Source-Text/PMC11365335.txt) · music-based interventions across neurological disorders
+- 2024-09-09 · [PMC11385236](../Source-Text/PMC11385236.txt) · multimodal algorithm on PPMI data
+- 2024-07-31 · [PMC11412065](../Source-Text/PMC11412065.txt) · visuospatial syndrome in dementia with Lewy bodies
+- 2024-09-23 · [PMC11420368](../Source-Text/PMC11420368.txt) · multifactor neurodegeneration modeling review
+- 2024-09-30 · [PMC11443052](../Source-Text/PMC11443052.txt) · occipital TMS-evoked physiology in early Parkinson disease
+- 2024-10-03 · [PMC11657024](../Source-Text/PMC11657024.txt) · basal forebrain MRI and cognitive change
+- 2024-10-04 · [PMC11452635](../Source-Text/PMC11452635.txt) · general-population online survey of hallucination content
+- 2024-09-18 · [PMC11460479](../Source-Text/PMC11460479.txt) · multiple system atrophy diagnostic algorithm
+- 2024-10-09 · [PMC11802653](../Source-Text/PMC11802653.txt) · dyad agreement on Parkinson dementia psychosis ratings
+- 2024-10-09 · [PMC11542278](../Source-Text/PMC11542278.txt) · sex-stratified neuropsychiatric symptom synthesis
+- 2024-10-15 · [PMC11536104](../Source-Text/PMC11536104.txt) · emotion-modulated evoked potentials and personality dimensions
+- 2024-10-15 · [PMC11475835](../Source-Text/PMC11475835.txt) · early DLB transcranial sonography markers
+- 2024-11-02 · [PMC11531557](../Source-Text/PMC11531557.txt) · review of cognitive impairment biomarkers in synucleinopathies
+- 2024-11-06 · [PMC11538965](../Source-Text/PMC11538965.txt) · published Parkinson psychosis neuroimaging review
+- 2024-11-13 · [PMC11832806](../Source-Text/PMC11832806.txt) · neuromelanin MRI in Lewy body mild cognitive impairment
+- 2024-11-21 · [PMC11582613](../Source-Text/PMC11582613.txt) · rare genetic variants in East Asian DLB
+- 2024-11-26 · [PMC11841721](../Source-Text/PMC11841721.txt) · sequential ultrasound study in DLB
+- 2024-11-30 · [PMC11608222](../Source-Text/PMC11608222.txt) · static balance classification and Parkinson staging
+- 2024-12-09 · [PMC11752093](../Source-Text/PMC11752093.txt) · white matter MRI burden and cholinergic degeneration
+- 2024-12-30 · [PMC11684148](../Source-Text/PMC11684148.txt) · MRI diagnosis of Alzheimer disease overview
+- 2024-02-12 · [PMC12244155](../Source-Text/PMC12244155.txt) · color discrimination in schizophrenia spectrum disorders
+
+## Prior reports and composition
+
+- [2019 USDA dried fig record](../../2015-2019/Source-Text/2019-FDC174665-Dried-Fig-Pantothenic-Acid.txt).
+- [2021 diagnostic cardiac MIBG full report](../Source-Text/PMC8205462.txt), paired with EANM 2020 abstract OP-592.
+- [2021 Parkinson disease dementia brain-tissue analysis](../Source-Text/PMC8468190.txt).
