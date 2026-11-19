@@ -606,8 +606,8 @@ begin
     for I := 1 to LRows.Count - 1 do
     begin
       LFields := SplitFields(LRows[I], Tab);
-      if (Length(LFields) <> 10) or (Length(LFields[0]) <> 4) or
-        not (LFields[0][1] in ['E', 'R']) or (LSeen.IndexOf(LFields[0]) >= 0) then
+      if (Length(LFields) <> 10) or not ValidProviderQueryId(LFields[0]) or
+        (LSeen.IndexOf(LFields[0]) >= 0) then
       begin
         raise EConvertError.CreateFmt('Invalid Europe PMC ingredient query row %d', [I + 1]);
       end;

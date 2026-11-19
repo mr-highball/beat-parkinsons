@@ -6,6 +6,7 @@ unit foodexperiment.pubmedquery;
 
 interface
 
+function ValidProviderQueryId(const AValue: UTF8String): Boolean;
 function MakePubMedQuery(const AExpression, AQueryId, AMeshHeadings: UTF8String): UTF8String;
 function PubMedTranslationError(const AQuery, ATranslation: UTF8String): UTF8String;
 
@@ -21,7 +22,26 @@ const
     '"Parkinson Disease, Secondary"[mh:noexp] OR parkinson*[tiab] OR ' +
     '"shaking palsy"[tiab] OR "paralysis agitans"[tiab])';
   TitleField = 'TITLE_ABS:';
+  AuthorField = 'AUTH:';
   TokenSeparators = [#9, #10, #13, ' ', '(', ')', '"', '[', ']'];
+
+function ValidProviderQueryId(const AValue: UTF8String): Boolean;
+var
+  LIndex: Integer;
+begin
+  if (Length(AValue) < 4) or not (AValue[1] in ['E', 'R']) then
+  begin
+    Exit(False);
+  end;
+  for LIndex := 2 to Length(AValue) do
+  begin
+    if not (AValue[LIndex] in ['0'..'9']) then
+    begin
+      Exit(False);
+    end;
+  end;
+  Result := True;
+end;
 
 procedure ReadPhrase(const AExpression, AQueryId: UTF8String; var AIndex: Integer);
 begin
@@ -105,6 +125,8 @@ var
   LStart: Integer;
   LDepth: Integer;
   LToken: UTF8String;
+  LField: UTF8String;
+  LTag: UTF8String;
   LExpectTerm: Boolean;
 begin
   if AExpression = '' then
@@ -164,11 +186,23 @@ begin
         Inc(LIndex);
       else
         begin
+          LField := '';
           if Copy(AExpression, LIndex, Length(TitleField)) = TitleField then
           begin
-            ASimpleExposure := ASimpleExposure and (LDepth = 1) and LExpectTerm;
+            LField := TitleField;
+            LTag := '[tiab]';
+          end
+          else if Copy(AExpression, LIndex, Length(AuthorField)) = AuthorField then
+          begin
+            LField := AuthorField;
+            LTag := '[au]';
+          end;
+          if LField <> '' then
+          begin
+            ASimpleExposure := ASimpleExposure and (LField = TitleField) and
+              (LDepth = 1) and LExpectTerm;
             LExpectTerm := False;
-            Inc(LIndex, Length(TitleField));
+            Inc(LIndex, Length(LField));
             LStart := LIndex;
             if (LIndex <= Length(AExpression)) and (AExpression[LIndex] = '"') then
             begin
@@ -186,7 +220,7 @@ begin
             begin
               raise EConvertError.Create('Empty Europe PMC term for ' + AQueryId);
             end;
-            Result := Result + Copy(AExpression, LStart, LIndex - LStart) + '[tiab]';
+            Result := Result + Copy(AExpression, LStart, LIndex - LStart) + LTag;
             Continue;
           end;
           while (LIndex <= Length(AExpression)) and

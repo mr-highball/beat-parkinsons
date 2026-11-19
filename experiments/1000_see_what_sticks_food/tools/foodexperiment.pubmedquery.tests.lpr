@@ -64,6 +64,16 @@ begin
   Check('R803', '(TITLE_ABS:peanut AND (TITLE_ABS:oil OR TITLE_ABS:lipid)) AND ' +
     '(TITLE_ABS:fatigue)', '',
     '(peanut[tiab] AND (oil[tiab] OR lipid[tiab])) AND (fatigue[tiab])');
+  Check('E1001', '(TITLE_ABS:fennel OR TITLE_ABS:"Foeniculum vulgare")' +
+    ' AND (AUTH:Ostad OR AUTH:"Soodi M")', '',
+    '(fennel[tiab] OR "Foeniculum vulgare"[tiab]) AND (Ostad[au] OR "Soodi M"[au])');
+  Assert(ValidProviderQueryId('E999'));
+  Assert(ValidProviderQueryId('E1000'));
+  Assert(ValidProviderQueryId('R1001'));
+  Assert(not ValidProviderQueryId(''));
+  Assert(not ValidProviderQueryId('E10'));
+  Assert(not ValidProviderQueryId('E10x0'));
+  Assert(not ValidProviderQueryId('Q1000'));
   CheckInvalid('');
   CheckInvalid('(TITLE_ABS:)');
   CheckInvalid('(TITLE_ABS:"missing quote)');
