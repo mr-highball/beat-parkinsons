@@ -377,6 +377,8 @@ var
   LIndex: Integer;
   LData: TJSONObject;
 begin
+  // KeepConnections is disabled, so clients must open a new socket for the next request.
+  AResponse.Connection := 'close';
   AResponse.SetCustomHeader('Cache-Control', 'no-store');
   AResponse.SetCustomHeader('X-Content-Type-Options', 'nosniff');
   // Read the accepted socket's IPv4 address in network byte order.
