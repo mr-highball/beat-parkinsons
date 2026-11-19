@@ -52,6 +52,7 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Tea and hyposmia in a Parkinson methylation study](Food-Experiment-Tea-Hyposmia-Methylation.md)
 
 - [Rosemary, saffron and odor trials](Food-Experiment-Rosemary-Saffron-and-Odor-Trials.md)
+- [Conference rosemary depression forest plot](Source-Text/2026-Aucoin-Rosemary-Depression-Forest-Plot.txt) and [comparison across periods](Observations/Rosemary-Mood-Comparison-Limits.md).
 
 - [Terpene and lovage primary sources](Food-Experiment-Terpene-and-Lovage-Primary-Sources.md)
 

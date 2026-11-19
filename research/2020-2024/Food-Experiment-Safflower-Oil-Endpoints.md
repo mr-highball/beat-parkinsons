@@ -10,7 +10,7 @@ Results first posted on 27 May 2022 for [NCT04102501](../2015-2019/Food-Experime
 
 NCT04762589 first posted in February 2021. Weemering et al. published their phase 2 report in 2023. Twenty-two ALS participants received encapsulated USP safflower oil and 21 received synthetic RT001 during 24 weeks of blinded treatment. The mean modeled ALSFRS-R total fell 4.91 points (95% CI 2.58 to 7.23 points of decline) in the safflower arm and 3.00 points (0.70 to 5.31 points of decline) on RT001. The mean difference was 1.90 points in favor of RT001 (95% CI −1.39 to 5.19, p=0.25). ALSFRS-R includes items on speech, swallowing and walking. Table 3 reports the ALSFRS-R and ALSAQ-40 changes as overall scores. A speech or swallowing change cannot be recovered from those totals. This comparator trial supplies the exposure and a composite including relevant bulbar domains in another neurodegenerative condition. It leaves cold pressing, speech intelligibility and clinical dysphagia effects unresolved.
 
-[Weemering et al.](https://doi.org/10.1111/ene.16020) · [NCT04762589](https://clinicaltrials.gov/study/NCT04762589) · [Registry text](Source-Text/Trials/NCT04762589.txt)
+The full paper distinguishes bulbar onset at baseline from changes with treatment. Tube feeding appears only as part of a combined progression endpoint. The publisher lists a supplement whose download was inaccessible, and the official registry has no posted results. [Original paper](https://doi.org/10.1111/ene.16020) · [Full-paper text record](Source-Text/2023-PMID37550954-RT001-ALS-Safflower-Comparator.txt) · [Registry text](Source-Text/Trials/NCT04762589.txt).
 
 ## FORCES sarcopenia safflower oil trial
 

@@ -132,6 +132,7 @@ January 1, 2020 through December 31, 2024.
 - [Injected safranal and stiffness in a mouse model](Food-Experiment-Saffron-Rigidity-Context.md)
 
 - [Strawberry, attention and fall-related outcomes](Food-Experiment-Strawberry-Endpoint-Followup.md)
+- [Experimental balance-beam falls, foot slips and drug comparisons](Source-Text/2022-PMID35341069-Balance-Beam-Fall-Model.txt).
 
 - [Peach exposure and motor outcomes](Food-Experiment-Peach-Endpoint-Replay.md)
 
@@ -238,6 +239,7 @@ January 1, 2020 through December 31, 2024.
 - [Bok choy and fennel seed evidence](Food-Experiment-Bok-Choy-Fennel.md)
 - [Cod, pineapple, plum and cantaloupe evidence](Food-Experiment-Cod-Fruit.md)
 - [Rosemary and lemon balm evidence](Food-Experiment-Rosemary-Lemon-Balm.md)
+- [Randomized dried rosemary and SSRI adjunct depression comparison](Source-Text/2022-PMID36343423-Dried-Rosemary-Adjunct-Depression.txt).
 - [Squash, zucchini, button mushroom and eggplant evidence](Food-Experiment-Squash-Mushroom-Eggplant.md)
 - [Green beans, pinto beans, tempeh and garlic](Food-Experiment-Green-Pinto-Tempeh-Garlic.md)
 - [Leafy vegetables and grains](Food-Experiment-Leafy-Grains.md)
@@ -654,6 +656,7 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Primary Glut1 movement study with an oral safflower comparator](Source-Text/2024-PMID38725190-Glut1-Safflower-Crossover.txt).
 - [Deutetrabenazine and swallowing registration](Source-Text/Trials/NCT04301726.txt).
 - [ALS safflower comparator registry](Source-Text/Trials/NCT04762589.txt).
+- [Full ALS trial’s oil comparator and swallowing measurement limits](Source-Text/2023-PMID37550954-RT001-ALS-Safflower-Comparator.txt).
 - [Singer safflower comparator registry](Source-Text/Trials/NCT05141045.txt).
 - [Traditional seed oil uses in central Syria](Cultural-and-Experiential/Traditional-Practices/2021-PMC8231352-Safflower-Seeds-and-Oil-Syria.txt).
 - [Observations on separate swallowing and total-scale outcomes](Observations/Safflower-Comparator-and-Swallowing.md).

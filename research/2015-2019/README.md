@@ -493,6 +493,7 @@ January 1, 2015 through December 31, 2019.
 - [Turmeric Pain Models](Food-Experiment-Turmeric-Pain-Models.md)
 
 - [Cranberry Depression Protocol](Food-Experiment-Cranberry-Depression-Protocol.md)
+- [Gamus review’s separate cranberry, depression and Parkinson topics](Source-Text/2015-PMID25796668-Gamus-Cranberry-and-Depression-Contexts.txt).
 
 - [Clove Pain Comparators](Food-Experiment-Clove-Pain-Comparators.md)
 
