@@ -13,3 +13,5 @@ Reporting conflicts remain:
 - Supplementary Table 1 ferritin means are 50.9 versus 76.6 ng/mL, contrary to the prose direction; comparator out-of-range counts are two for each renal test, despite the prose's all-normal statement.
 
 The [official laboratory supplement](https://pmc-oa-opendata.s3.amazonaws.com/PMC13347555.1/sj-docx-1-pkn-10.1177_1877718X251383721.docx) contains 27 rows. Both named publisher versions retain these safety discrepancies. No cause, correction or new cohort is inferred.
+
+Earlier reports separate acute ON response from sustained tolerability. Their study-specific extractions preserve the motor-score and rest-tremor boundaries and the known shared publication lineage. [2004 crossover](../2000-2004/Source-Text/2004-PMID15548480-Mucuna-Crossover-Extract.txt) · [2017 acute trial and supplements](../2015-2019/Source-Text/2017-Cilia-Mucuna-ON-Time-Crossover.txt) · [2018 chronic follow-up](../2015-2019/Source-Text/2018-PMID29352722-Mucuna-Chronic-Crossover-Extract.txt) · [2024 Japanese crossover](../2020-2024/Source-Text/2024-PMID38462520-Japanese-Mucuna-Crossover-Extract.txt)
