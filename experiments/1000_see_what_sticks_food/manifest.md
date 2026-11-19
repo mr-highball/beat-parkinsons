@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-Twenty-one Round 1 claims have a checked version 1 scorecard.
+Twenty-two Round 1 claims have a checked version 1 scorecard.
+
+Grilled salmon and Parkinson bradykinesia (0583) has a checked Unknown grade at 50. The preschool salmon study reports an inconclusive peg-test comparison and the independent infant feeding study reports inconclusive Bayley psychomotor results. The Parkinson dietary heatmap has a small inverse sign for pooled non-fried fish and self-rated slowness. Fish species, cooking methods and a clinical bradykinesia estimate are unavailable. Eight newer clinical sources resolve 16 body-level pairs. Twelve historical articles still require body access across 24 pairs. [Salmon scorecard and exact source decisions](followup/historical-clinical-comparators-nov19-64/README.md)
 
 Sixteen verified clinical originals resolve 30 queued claim–source pairs. Eleven contextual assessments record clinical endpoints or measurement limits, including a medication-only dyskinesia onset comparison. Original PMC HTML recovered the group-boxing and cerebellar case bodies missing from the XML export. The boxing result uses mobility and balance measures, and the medication trial counts adverse reactions separately from symptom intensity or frequency. The experiment retains 60 directional grades and 940 Unknown. [Clinical source reviews and open routes](followup/clinical-comparators-nov19-63/README.md)
 
