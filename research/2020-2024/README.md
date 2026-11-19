@@ -591,3 +591,5 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Lemon balm and shared-source comparisons](Observations/Lemon-Balm-and-Shared-Source-Comparisons.md)
 
 - [Lemon balm dose and formulation boundaries](Observations/Lemon-Balm-Dose-and-Formulation-Boundaries.md)
+
+- [Saffron registration and outcome boundaries](Observations/Saffron-Registration-and-Outcome-Boundaries.md)

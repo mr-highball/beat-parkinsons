@@ -1,0 +1,7 @@
+# Saffron formulations and registered outcomes
+
+The prospective registration of the 2025 Affron study identifies the DASS-21 depression subscale as its primary endpoint and explicitly excludes Parkinson disease. The original author abstract reports a 2.92-point between-arm favorable depression contrast over twelve weeks in a selected low-mood population. The main secondary sleep comparisons were inconclusive. A favorable sleep subgroup was exploratory. [Registry and study relationships](clinical-families.tsv)
+
+A 2026 proprietary extract study reports a very large mood contrast and a combined DASS-21 distress score. Its baseline summaries do not reconcile with the reported nonsignificant comparison, and the paper does not report a separate depression result. The original crocin adjunct pilot and the later synthesis supply separate levels of evidence. The synthesis includes the pilot with high heterogeneity and evidence of asymmetry. [Related assessments](related-assessments.tsv) · [Baseline calculation](baseline-check.txt)
+
+The original priority-three body review covered all 13 queued pairs across 10 source keys. Each retains a specific access or completeness gap. A study found through a citation does not settle the original that cited it. Five additional related rows are recorded. The verdict for claim 0063 remains Maybe False at 58/100. There are 145 original pairs queued for 0063 and 47,664 for Round 1 overall. [Original-access ledger](priority-originals.tsv) · [Oracle accounting](lookup-merge.txt) · [Native replay](native-replay-verification.txt)

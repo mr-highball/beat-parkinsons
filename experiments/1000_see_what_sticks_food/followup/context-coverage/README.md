@@ -37,6 +37,8 @@ Checkpoint 20 verifies twelve original bodies, including two complete archived p
 
 Checkpoint 21 resolves five exact pairs through the complete SGIM abstracts and two original review reprints. The UEG posters retain separate individual member findings and an open whole-collection mapping. [Original boundaries and result follow-through](../lemon-balm-depression-nov19-21/README.md)
 
+The November 19 saffron follow-through rechecked all 13 priority-three pairs. Its linked trials contribute separate related assessments. The original source queue retains documented access gaps. [Priority originals and trial boundaries](../saffron-registrations-and-outcomes-nov19/README.md)
+
 ## Intake for exact source reviews
 
 Compile [the Free Pascal intake](../../tools/foodexperiment.contextintake.lpr) using the experiment tools unit path and output directories under `build/`. From the repository root, pass the current native context queue, canonical exact-review ledger, six-column proposal TSV, repository-relative packet directory and a distinct staged-ledger output path, in that order. Use the header in [exact-reviews.tsv](exact-reviews.tsv). The proposal locator must be a public source URL or an existing local research path. The reviewer records the verified depth.

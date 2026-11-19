@@ -388,3 +388,5 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [Role of food flavors and odors across the related reports](Observations/Food-Flavors-and-Odor-Stimuli.md).
 
 - [Lemon balm and shared-source comparisons](Observations/Lemon-Balm-and-Shared-Source-Comparisons.md)
+
+- [Saffron registration and outcome boundaries](Observations/Saffron-Registration-and-Outcome-Boundaries.md)
