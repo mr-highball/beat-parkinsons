@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [grapefruit juice concentration figure](Source-Text/2005-Nagai-Nomoto-Cabergoline-Figure4-Extract.txt), [clarithromycin interaction study](Source-Text/2006-PMID16410677-Cabergoline-Clarithromycin-Outcomes.txt) and [cabergoline resting-tremor pilot abstract](Source-Text/2008-PMID19092251-Cabergoline-Resting-Tremor-Pilot.txt) tested different exposures and outcomes. [Evidence comparison](../2020-2024/Observations/Grapefruit-Preparation-and-Tremor.md).
+
 A [2006 randomized crossover](Source-Text/2006-PMID16773618-Low-Protein-Foods-and-Off-Time-Abstract.txt) reports postprandial OFF time on two diets.
 
 A Japanese [ordinary-fatigue drinking study](Source-Text/2009-Shimizu-Imidazole-Dipeptide-Drink-Fatigue-Extract.txt), [extract sprint abstract](Source-Text/2006-PMID16531904-CBEX-Buffering-Extract.txt) and [baeksuk tasting report](Cultural-and-Experiential/Local-Knowledge/2005-KR20050019309A-Baeksuk-Fatigue-Claim.txt) give different measures of fatigue, performance and perceived recovery. [Observations](Observations/Food-Experiment-Chicken-Fatigue-Nov19-24.md).

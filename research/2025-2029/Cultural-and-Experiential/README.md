@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2025-2029
 
+- [Public discussion of grapefruit drinks and perceived symptoms](Conversations/2026-Reddit-Grapefruit-Drinks-and-Perceived-Symptoms.txt). [Preparation and outcome context](../../2020-2024/Observations/Grapefruit-Preparation-and-Tremor.md).
+
 - [Pacific Talanoa narratives on care and coping with PINK1-associated Parkinson disease](Local-Knowledge/2026-Pacific-PINK1-Talanoa-Narratives.txt).
 - [Patient-reported Mucuna use in the already cataloged 2026 survey](Personal-Reports/2026-Mucuna-Patient-Survey-Context.txt).
 

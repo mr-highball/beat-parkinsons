@@ -73,6 +73,8 @@ The fig resting-tremor checkpoint found an existing lead for the claim question 
 
 Five newly defined turkey meal and conversation source questions gave zero exact first-pass hits. An older protein-challenge record supplied general local context. The original proceedings checks continued earlier questions. The expansion indexed specific meal contrasts and a firsthand turkey account while preserving the absence of a separate symptom result. [Turkey evidence and access coverage](../1000_see_what_sticks_food/followup/tremor-turkey-nov19-31/README.md)
 
+The grapefruit checkpoint had zero exact first-pass hits for seven newly defined clinical and conversational source questions. One question had an existing narrative locator for the Japanese concentration figure. The initial claim lookup continued the previously recorded question. The indexed additions distinguish fresh pulp, juice, injected constituents and a flavored drink. [Grapefruit checkpoint](../1000_see_what_sticks_food/followup/tremor-grapefruit-nov19-32/README.md).
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the

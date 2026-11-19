@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+Eight Round 1 claims have a checked version 1 scorecard. The raw grapefruit reassessment (0009) remains Unknown at 50 across 15 evidence families. Grapefruit juice altered cabergoline concentrations, and a separate cabergoline pilot measured resting tremor. The fresh-fruit studies report exposure to different drugs. The review screens 30 distinct focused source keys, adds eleven assessments and advances the aroma registration's source depth. Round 1 retains 47,460 original pairs across 29,821 sources. [Grapefruit evidence, coverage and open leads](followup/tremor-grapefruit-nov19-32/README.md).
+
 Baked turkey and resting tremor (0392) remains Unknown at 50 after adding an archived firsthand report of reduced perceived medication benefit and four distinct meal or protein studies. The report gives no tremor observation, and clinical results address motor composites, medication response or OFF time. Three original-source pairs were resolved. Eight remain for turkey and 2,792 for fig. [Evidence and original-source scope](followup/tremor-turkey-nov19-31/README.md)
 
 Raw fig and resting tremor (0559) remains Unknown at 50 under the shared rubric. The checked draft separates the Parkinson mixed menu, fruit-extract motor proxies, bark biochemistry, aerial-part movement suppression and an Iranian traditional-literature lead. Eight exact source pairs were resolved across the fig and baked-turkey claims. Ten baked-turkey pairs and 2,793 fig pairs remain queued. [Scorecard basis and original sources](followup/tremor-fig-nov19-30/README.md)

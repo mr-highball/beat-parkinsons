@@ -1,5 +1,7 @@
 # 2000-2004
 
+Two human crossover studies tested [unprocessed grapefruit](Source-Text/2000-PMID11103749-Unprocessed-Grapefruit-and-Felodipine.txt) and [fresh grapefruit pulp](Source-Text/2002-PMID12040751-Grapefruit-Pulp-and-Calcium-Antagonists.txt) with cardiovascular drugs. A separate [cabergoline interaction case report](Source-Text/2002-PMID12465083-Cabergoline-and-Itraconazole-Cases.txt) tested itraconazole. [Later clinical and preparation observations](../2020-2024/Observations/Grapefruit-Preparation-and-Tremor.md).
+
 - [Broad-bean dietary-practice context](Cultural-and-Experiential/Traditional-Practices/2000-Broad-Bean-Turkish-Meal-Context.txt), reusing the existing clinical series.
 
 The [2000 Ayurvedic multicomponent Parkinson comparison](Source-Text/2000-PMID10930594-Ayurveda-Parkinson-Tremor-Abstract-Extract.txt) reports tremor response and worsening salivation at author-abstract depth. [Context and unresolved comparisons](Observations/Cultural-and-Experiential-Tremor.md).

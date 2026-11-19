@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [2015 naringin experiment](Source-Text/2015-PMID26878791-Naringin-Prevention-and-Restoration.txt) tests prevention and recovery of tissue markers in mice. The [grapefruit and lavender aroma registration](Source-Text/Trials/UMIN000021236.txt) records planned immediate human outcomes. [Comparative observations](../2020-2024/Observations/Grapefruit-Preparation-and-Tremor.md).
+
 The [2018 chicken crossover registration](Source-Text/Trials/UMIN000033042.txt), [2019 chicken and training registration](Source-Text/Trials/UMIN000038253.txt) and [2019 retort composition experiment](Source-Text/2019-Kouriki-Nagatomo-Chicken-Dipeptide-Retention-Extract.txt) document different prepared exposures. [Trial and preparation observations](Observations/Food-Experiment-Chicken-Fatigue-Nov19-24.md).
 
 - [Lumbee cultural context and supplementary access gap](Cultural-and-Experiential/Local-Knowledge/2017-Lumbee-Calming-Tea-Context.txt), linked to the existing factual extract.

@@ -6,6 +6,8 @@ UMIN000018102 was first disclosed June 26, 2015. The open single-arm trial plann
 
 ## Grapefruit and lavender aroma exposure
 
+[Standalone registry extract with date, status and endpoint verification](Source-Text/Trials/UMIN000021236.txt).
+
 UMIN000021236, receipt R000020500, was first disclosed March 1, 2016. The double-blind randomized crossover targeted ten participants across Parkinson’s, epilepsy, and healthy volunteers. Investigators planned an immediate magnetoencephalography and subjective assessment after grapefruit essential oil, lavender essential oil, or a synthetic lavender aroma. Neither enrollment by diagnosis nor results are posted. The route and endpoints differ from consuming raw grapefruit for [0009, rest tremor](../../experiments/1000_see_what_sticks_food/statements/0009.txt) and [0853, shortened stride](../../experiments/1000_see_what_sticks_food/statements/0853.txt). [UMIN trial record](https://center6.umin.ac.jp/cgi-open-bin/ctr/ctr_view.cgi?recptno=R000020500) · [MHLW trial mirror](https://rctportal.mhlw.go.jp/detail/um?trial_id=UMIN000021236)
 
 ## Caffeine absorption challenge

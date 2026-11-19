@@ -1,5 +1,7 @@
 # 2010-2014
 
+A [naringin rat experiment](Source-Text/2014-PMID24797334-Naringin-Nigrostriatal-Model.txt) reports nigrostriatal tissue outcomes. [Earlier and later contrasts](../2020-2024/Observations/Grapefruit-Preparation-and-Tremor.md).
+
 The [2013 UEG posters](Source-Text/2013-PMC4070603-UEG-Food-Context-Extracts.txt) and the [2014 propofol cohort report](Source-Text/2014-PMID24447028-Propofol-Food-Sensitization-Extract.txt) document separate dietary, digestion and procedure exposures. [Study families and observations](Observations/Food-Experiment-Shared-Originals-Nov19-23.md).
 
 - [Mixed-herb exposure case extract](Source-Text/2011-Carrasco-Herbs-Lorazepam-Case-Extract.txt) and [experiential context](Cultural-and-Experiential/Personal-Reports/2011-Mixed-Herb-Lorazepam-Adverse-Account.txt); related 2009 report is the same case.
