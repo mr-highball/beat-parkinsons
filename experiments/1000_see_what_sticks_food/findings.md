@@ -2,6 +2,8 @@
 
 Fifteen Round 1 claims have a checked version 1 scorecard.
 
+Four recovered print collections resolve 27 original pairs across 18 claims. Two retain related ingredient contexts. ErdBEHR reports similar chair-rise changes across lower- and higher-dose strawberry groups and provides no fall counts. The separate Cantlie report concerns fresh fruit for tropical sprue. Five original pairs remain for claim 0413 and its checked grade is Unknown at 50. Round 1 has 46,827 original pairs queued. [Print scopes, trial evidence, and open routes](followup/strawberry-print-sections-and-erdbehr-nov19-54/README.md).
+
 Three matching print volumes resolve 20 original pairs across 14 claims. Seven retain genuine ingredient or derivative context. The three strawberry source pairs resolve to vascular-lesion terminology. A separate confirmed epilepsy abstract describes an electrically evoked perception and its full proceedings remain open. Claim 0413 retains nine original pairs and remains Unknown at 50. The Round 1 queue holds 46,854 pairs. [Recovered volumes, clinical fall measures and access records](followup/strawberry-print-volume-recovery-nov19-53/README.md).
 
 Full-text review resolves three original pairs whose terms meant tonsil color or a journal publisher. The ALS safflower paper confirms total function changes with no separate swallowing or speech estimate. A companion rosemary poster recovers an earlier five-study depression estimate whose interval spans zero. The Hebrew cranberry review remains pending behind its publisher gate. The queue holds 46,874 original pairs. [Full-paper provenance, exact dispositions and open routes](followup/priority-original-provenance-nov19-52/README.md).
