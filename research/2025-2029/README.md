@@ -485,5 +485,7 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Fresh Apulian melon-landrace crossover](Source-Text/2025-PMID41195070-Apulian-Unripe-Melon-Crossover.txt).
 - [ASN proceedings on a stroke model and strawberry reward](Source-Text/2025-PMC12416199-P01-025-Cotter-Strawberry-Reward.txt).
 - [Grouped strawberry, cherry and grape reports in an overeating survey](Source-Text/2026-PMID42241377-LBP2-005-Grouped-Fruit-and-Overeating.txt).
+- [Cumin-containing formula and anthropometric outcomes](Source-Text/2026-PMID42241377-LBP4-128-Cumin-Formula-and-Body-Measures.txt).
+- [Fat sensitivity and reported food intake](Source-Text/2026-PMID42241377-LBP4-105-Fat-Sensitivity-and-Food-Reports.txt).
 - [TROFFi isolated fisetin protocol and planned fall recall](Source-Text/2026-PMID41835341-TROFFi-Fisetin-and-Falls-Protocol.txt).
 - [Rock melon glycemic crossover registration](Source-Text/Trials/NCT07017491.txt).
