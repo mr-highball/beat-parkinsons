@@ -498,3 +498,11 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Assigned sunflower seed oil and mouse recognition memory](Source-Text/2025-PMID39973828-Sunflower-Recognition-Memory.txt).
 - [Period observations on sunflower cognition and executive comparisons](Observations/Sunflower-Oil-Cognition-and-Executive-Comparisons.md).
 - [Tiger nut preprint and the sunflower reference group in a Parkinson-like model](Source-Text/2026-PPR1346503-Tiger-Nut-Sunflower-Model-Comparator.txt).
+
+
+## Safflower oral comparator and separate swallowing trials
+
+- [March Huntington trial update with separate oil and swallowing rows](Source-Text/2025-PMC12231940-Huntington-Trials-March.txt).
+- [October Huntington trial update and the same trial families](Source-Text/2025-PMC12847458-Huntington-Trials-October.txt).
+- [Ataxia-telangiectasia swallowing result with a medium-chain triglyceride comparator](Source-Text/2025-PMID40616902-Triheptanoin-Swallowing-Comparator.txt).
+- [Observations on the comparison across periods](Observations/Safflower-Comparator-and-Swallowing.md).

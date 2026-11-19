@@ -29,3 +29,6 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [Melon fruit and seeds in Persian sweating literature](Traditional-Practices/2020-Mahlouji-Melon-Persian-Sweating-Context.txt).
 - [Melon in the historical Persian marāqq treatment category](Traditional-Practices/2024-Dadmehr-Melon-in-Maraqq-Textbook-Context.txt).
+
+
+- [Central Syrian ethnomedicinal record of safflower seed oil](Traditional-Practices/2021-PMC8231352-Safflower-Seeds-and-Oil-Syria.txt).

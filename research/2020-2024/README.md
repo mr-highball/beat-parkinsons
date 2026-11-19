@@ -645,3 +645,15 @@ The Singapore total-diet papers and original supplement preserve measured black-
 
 - [Published fertilized egg-yolk supplement and muscle protein synthesis trial](Source-Text/2020-PMID32598445-Fertilized-Egg-Yolk-Muscle-Synthesis.txt).
 - [Primary corn-oil control for an older-adult strength trial](Source-Text/2020-PMID33284965-Corn-Oil-and-Resistance-Training.txt).
+
+
+## Safflower oil and swallowing outcome scope
+
+- [Distinct safflower and dysphagia topics in a neuroinflammation review](Source-Text/2022-PMC8891627-Safflower-and-Neuroinflammation-Context.txt).
+- [Primary TRIHEP3 report and aggregate Huntington motor outcomes](Source-Text/2024-PMID39804569-TRIHEP3-Safflower-Comparator.txt).
+- [Primary Glut1 movement study with an oral safflower comparator](Source-Text/2024-PMID38725190-Glut1-Safflower-Crossover.txt).
+- [Deutetrabenazine and swallowing registration](Source-Text/Trials/NCT04301726.txt).
+- [ALS safflower comparator registry](Source-Text/Trials/NCT04762589.txt).
+- [Singer safflower comparator registry](Source-Text/Trials/NCT05141045.txt).
+- [Traditional seed oil uses in central Syria](Cultural-and-Experiential/Traditional-Practices/2021-PMC8231352-Safflower-Seeds-and-Oil-Syria.txt).
+- [Observations on separate swallowing and total-scale outcomes](Observations/Safflower-Comparator-and-Swallowing.md).

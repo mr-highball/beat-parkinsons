@@ -601,3 +601,11 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Primary pilot of cod processing byproduct proteins](Source-Text/2018-Vildmyren-Cod-Residual-Protein-Pilot.txt).
 - [Corn-oil high-fat comparison for mouse muscle gene expression](Source-Text/2016-PMC5037530-Corn-Oil-Muscle-Transcriptome.txt).
 - [Coconut and DHA meal crossover with circulating endotoxin outcomes](Source-Text/2016-PMID27816052-Coconut-Oil-Meal-Endotoxin-Crossover.txt).
+
+
+## Safflower comparator and swallowing study lineage
+
+- [TRIHEP3 oral safflower comparator registration](Source-Text/Trials/NCT02453061.txt).
+- [Registered swallowing skills study in Huntington disease and ALS](Source-Text/Trials/ACTRN12617001269325.txt).
+- [Safflower-rich reference diet in an amyloid challenge](Source-Text/2017-PMID29109025-Safflower-Fish-Oil-Amyloid-Model.txt).
+- [Observations on trial scope and outcome assignment](Observations/Safflower-Comparator-and-Swallowing.md).
