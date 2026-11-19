@@ -62,3 +62,10 @@ January 1, 1985 through December 31, 1989.
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 [Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).
+
+
+## Parkinson disability and journal index retrieval
+
+- [Combined 1986 BMJ journal and supplement index](Source-Text/1986-PMC1340622-BMJ-Volume-293-Index-Context.txt).
+- [Community Parkinson disability and clinical gait measurements](Source-Text/1986-PMID3092977-Parkinson-Disability-and-Gait.txt).
+- [Observations on patient gait and source boundaries](Observations/BMJ-Index-and-Clinical-Gait.md).

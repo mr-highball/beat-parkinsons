@@ -660,3 +660,6 @@ The Singapore total-diet papers and original supplement preserve measured black-
 
 
 - [Safflower oleogel texture and the human sensory method](Source-Text/2022-PMID35622910-Safflower-Oleogel-Sensory-Panel.txt).
+
+- [Strawberry-flavored cannabidiol safety extension registration](Source-Text/Trials/NCT04252586.txt).
+- [Reported clinical falls in the Rett extension](Source-Text/Trials/NCT04252586-results.txt).

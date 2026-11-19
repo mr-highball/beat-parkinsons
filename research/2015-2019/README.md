@@ -612,3 +612,9 @@ The contaminant trail includes an original total-diet abstract, without a measur
 
 
 - [Safflower yoghurt comparator in allergic asthma](Source-Text/2016-PMID26843092-Safflower-Asthma-Comparator.txt).
+
+
+- [Freeze-dried strawberry and blueberry in three induced fall-latency tests](Source-Text/2015-PMID26392037-Strawberry-and-Blueberry-Fall-Latency.txt).
+- [Observations on berry preparations and provoked fall latency](Observations/Strawberry-Powder-and-Provoked-Fall-Latency.md).
+
+- [Purified procyanidin B2 and repeated provoked fall counts in a mouse model](Source-Text/2018-PMID35540280-Procyanidin-Provoked-Fall-Counts.txt).

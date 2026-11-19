@@ -61,3 +61,6 @@ The 1986 lemongrass report recorded a morning sleepiness item after both coded t
 ## Separate tarragon and mixed-herb experimental diets
 
 The primary diabetes paper separates the tarragon diet from the herbal mixture and limits its observations to feeding, drinking and metabolic outcomes. [Original study](../Food-Experiment-Tarragon-Diabetes-Models.md)
+
+
+- [BMJ index and Parkinson gait measurements](BMJ-Index-and-Clinical-Gait.md).

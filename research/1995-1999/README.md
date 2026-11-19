@@ -121,3 +121,6 @@ January 1, 1995 through December 31, 1999.
 [Strawberry and falls evidence and observations](Observations/Food-Experiment-Strawberry-Falls-Nov19-26.md).
 
 - [1998 rat prevention cohort and separate strawberry-extract outcomes](Source-Text/1998-PMID9742171-Joseph-Strawberry-Prevention-Maze-Study.txt).
+
+
+- [Cumulative cell biology index and its strawberry, oat and egg references](Source-Text/1997-PMID32287481-Cytology-Subject-Index-Context.txt).
