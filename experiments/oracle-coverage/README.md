@@ -155,3 +155,5 @@ $Body = @{ name = 'oracle_search_catalog'; arguments = @{ terms = '3762195'; lim
     ConvertTo-Json -Depth 4 -Compress
 Invoke-RestMethod 'http://127.0.0.1:8795/api/oracle' -Method Post -ContentType 'application/json' -Body $Body
 ```
+
+The sunflower-oil checkpoint recorded zero exact hits across 13 original-source questions at revision 117, matching the preceding 0/14 comparison at that depth. One exact hit across ten later retrieval questions returned a shared oil comparator. A separate claim question found partial evidence. The additions preserve the clinical preparation gap and the specific scope of the primary and cultural records. [Sunflower evidence and source coverage](../1000_see_what_sticks_food/followup/sunflower-executive-nov19-48/README.md).

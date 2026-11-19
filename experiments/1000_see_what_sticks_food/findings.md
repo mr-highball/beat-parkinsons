@@ -1,6 +1,8 @@
 ## Findings and limits
 
-Thirteen Round 1 claims have a checked version 1 scorecard.
+Fourteen Round 1 claims have a checked version 1 scorecard.
+
+The sunflower-oil review resolves 45 original pairs across six claims and all 13 remaining original pairs for 0772. Refined sunflower oil favored exploratory switching against coconut oil. Active-comparator human results were inconclusive, and distinct animal experiments reported favorable recognition and adverse spatial outcomes under different conditions. The checked scorecard retains Unknown at 50. The original Round 1 queue retains 46,987 pairs. [Scorecard, sources and search coverage](followup/sunflower-executive-nov19-48/README.md).
 
 The 2018 European Congress on Obesity HTML resolves 38 original pairs across 38 claims. Thirty-three retain relevant context and five resolve absent food exposure or date terminology. The related sunflower studies distinguish Y-maze and radial-maze outcomes. The safflower and potato trials provide no matching Parkinson endpoint. Verdicts stand and 47,032 original pairs remain queued. [Source and replay verification](followup/eco-obesity-originals-nov19-47/README.md).
 
