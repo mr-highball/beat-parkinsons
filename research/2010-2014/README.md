@@ -419,3 +419,4 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [Sunflower oil emulsion and the post-meal endotoxemia study](Source-Text/2010-PMID20303729-Sunflower-Emulsion-Endotoxemia.txt).
 - [Lespérance depression trial and the sunflower capsule comparator](Source-Text/2010-PMID20584525-Lesperance-Sunflower-Depression-Comparator.txt).
 - [Toxin-related learning and anxiety findings with a common sunflower vehicle](Source-Text/2011-PMID22178224-Shared-Sunflower-Vehicle-Toxin-Memory.txt).
+- [Sunflower sham injection in an electroacupuncture Parkinson model](Source-Text/2013-PMID23819239-Sunflower-Sham-Electroacupuncture-Model.txt).

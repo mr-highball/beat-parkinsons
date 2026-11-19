@@ -638,3 +638,5 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Sunflower seed oil and short-term recall in students](Source-Text/2020-Maranatha-Sunflower-Short-Term-Memory.txt).
 - [Sarcopenia trial with sunflower oil and resistance training](Source-Text/2022-PMID35889801-Sarcopenia-Sunflower-Comparator.txt).
 - [Thymol experiment with worse maze performance in the combined saline and sunflower vehicle group](Source-Text/2024-PMID38665779-Sunflower-Saline-Vehicle-Working-Memory.txt).
+- [Ferulic acid Parkinson-model comparator with injected sunflower oil](Source-Text/2024-PMID39577325-Ferulic-Sunflower-Model-Control.txt).
+- [Separate injected saline and sunflower controls in the boron Parkinson-model study](Source-Text/2022-PMID36800846-Boron-Sunflower-and-Saline-Controls.txt).
