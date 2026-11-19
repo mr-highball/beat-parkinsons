@@ -669,3 +669,8 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [PINGU infant development and Bayley psychomotor index, author abstract](Source-Text/2019-PMID31383978-PINGU-Development.txt).
 - [Holy basil combination frailty registry and Parkinson exclusion](Source-Text/Trials/NCT03365310.txt).
 - [Observations on fish trial families and motor outcomes](Observations/Salmon-Trial-Families-and-Motor-Measures.md).
+
+
+## Saffron and sleep trial registration
+
+- [First Affron comparison in adults with poor sleep](Source-Text/Trials/ACTRN12619000863134.txt).

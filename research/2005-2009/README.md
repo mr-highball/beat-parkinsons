@@ -302,3 +302,9 @@ The original walnut-fraction crossover registration is bucketed by first public 
 - [Cold-pressed flaxseed and safflower in an aged mouse immune comparison](Source-Text/2006-PMID16469136-Cold-Pressed-Safflower-Immune-Comparator.txt).
 - [Safflower capsule load and serum triglycerides](Source-Text/2008-PMID19074638-Safflower-Capsule-Lipid-Load.txt).
 - [Two safflower capsule loads and sensory sequencing](Source-Text/2009-PMID20352072-Safflower-Capsule-Load-Sequencing.txt).
+
+
+## Saffron floral parts and active depression comparators
+
+- [Stigma extract versus fluoxetine](Source-Text/2005-PMID15707766-Saffron-Stigma-Fluoxetine.txt).
+- [Petal extract versus fluoxetine](Source-Text/2006-PMID17174460-Saffron-Petal-Fluoxetine.txt).

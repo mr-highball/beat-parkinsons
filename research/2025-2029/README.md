@@ -591,3 +591,9 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [OPTIMO medication cohort and pooled nonmotor fluctuations](Source-Text/PMC12961986.txt).
 - [Prodromal cohort activity and overall symptom ratings](Source-Text/PMC13595541.txt).
 - [Ambulatory activity and motor or nonmotor factors](Source-Text/PMC13527663.txt).
+
+
+## Saffron extract and sleep components
+
+- [Posted extract trial with planned Insomnia Severity Index in middle-aged adults](Source-Text/Trials/NCT07497698.txt).
+- [Perimenopause preprint and separate sleep, fatigue and depression outcomes](Source-Text/2026-SafrInside-Perimenopause-Sleep-Preprint.txt).
