@@ -428,3 +428,7 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [Steamed broccoli and measured blood-cell DNA markers](Source-Text/2010-PMID20713433-Steamed-Broccoli-and-DNA-Markers.txt).
 
 - [Registered freeze-dried strawberry study with a gait endpoint](Source-Text/Trials/NCT02051140.txt).
+
+## Archived original contexts for the food experiment
+
+- [Electrically evoked strawberry smell in a pediatric epilepsy series](Source-Text/2012-PMID22554977-Evoked-Strawberry-Odor.txt).

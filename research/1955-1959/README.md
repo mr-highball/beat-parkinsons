@@ -27,3 +27,9 @@ January 1, 1955 through December 31, 1959.
 [All periods and collection method](../README.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+## Archived original contexts for the food experiment
+
+- [March 1955 California Medicine scan context](Source-Text/1955-PMC1532759-California-Medicine-March-Context.txt).
+- [March 1956 California Medicine scan context](Source-Text/1956-PMC1532905-California-Medicine-March-Context.txt).
+- [Observations on clinical names and advertised foods](Observations/Strawberry-Clinical-Name-and-Food.md).

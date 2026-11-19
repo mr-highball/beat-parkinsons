@@ -69,3 +69,9 @@ January 1, 1985 through December 31, 1989.
 - [Combined 1986 BMJ journal and supplement index](Source-Text/1986-PMC1340622-BMJ-Volume-293-Index-Context.txt).
 - [Community Parkinson disability and clinical gait measurements](Source-Text/1986-PMID3092977-Parkinson-Disability-and-Gait.txt).
 - [Observations on patient gait and source boundaries](Observations/BMJ-Index-and-Clinical-Gait.md).
+
+## Archived original contexts for the food experiment
+
+- [December 1985 bound journal and strawberry hemangioma](Source-Text/1985-PMC1306479-Western-Journal-December-Context.txt).
+- [1989 clinical fall frequency and motor-sign associations](Source-Text/1989-PMID2720700-Parkinson-Fall-Frequency.txt).
+- [Observations on fall frequency and clinical naming](Observations/Clinical-Falls-and-Fruit-Names.md).

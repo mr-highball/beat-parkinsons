@@ -619,3 +619,8 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Observations on berry preparations and provoked fall latency](Observations/Strawberry-Powder-and-Provoked-Fall-Latency.md).
 
 - [Purified procyanidin B2 and repeated provoked fall counts in a mouse model](Source-Text/2018-PMID35540280-Procyanidin-Provoked-Fall-Counts.txt).
+
+## Archived original contexts for the food experiment
+
+- [Parkinson fall histories and adjusted estimates in Nigeria](Source-Text/2016-PMID27667188-Parkinson-Falls-Nigeria.txt).
+- [Thymol vehicle arms and hippocampal electrical outcomes](Source-Text/2018-PMID29339105-Thymol-Oil-Vehicle-Plasticity.txt).

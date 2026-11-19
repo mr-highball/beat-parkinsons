@@ -1,0 +1,3 @@
+# Fall frequency and clinical fruit terminology
+
+The 1985 dermatology reports and index retain the same lesion terminology found in the 1950s meeting programs. The 1989 clinical report distinguishes the proportion of patients who fell from the proportion who fell more than weekly. It also distinguishes postural instability from tremor in its fall associations. These papers clarify source classification and outcomes for the strawberry question. The causal question needs its own food comparison. [Earlier meeting program](../../1955-1959/Source-Text/1956-PMC1532905-California-Medicine-March-Context.txt) · [1985 issue](../Source-Text/1985-PMC1306479-Western-Journal-December-Context.txt) · [1989 cohort](../Source-Text/1989-PMID2720700-Parkinson-Fall-Frequency.txt).
