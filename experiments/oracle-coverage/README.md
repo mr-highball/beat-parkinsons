@@ -89,6 +89,8 @@ The strawberry First Foods entry was already searchable with the cultural filter
 
 The shared 2018–2019 proceedings checkpoint recorded zero strict hits across five original-source questions and five linked-source questions, with one partial local scope note. The older geriatric original was already in the ledger. Official proceedings and linked reports closed specific archive gaps. [Proceedings and remaining access routes](../1000_see_what_sticks_food/followup/shared-proceedings-nov19-45/README.md).
 
+The 2004 EASD and 2011 SGIM follow-up produced zero strict hits for eight newly identified companion-source questions at revision 115. The main proceedings were prior first-pass questions. The dated additions include the separately published erratum and linked primary reports. [Original member evidence](../1000_see_what_sticks_food/followup/sgim-easd-originals-nov19-46/README.md).
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the

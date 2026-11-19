@@ -2,6 +2,8 @@
 
 Thirteen Round 1 claims have a checked version 1 scorecard.
 
+The 2004 EASD and 2011 SGIM proceedings resolve 55 original pairs across 44 claims. Nineteen retain related exposure or reagent contexts, and 36 resolve verified mismatches. Clinical and laboratory outcomes provide no new Parkinson symptom verdict. The later hepatocyte proof conflicts with the conference abstract about an enzyme response, while the tomato-juice abstract gives two post-exercise values on one page. Round 1 has 47,070 original pairs queued. [Source and replay coverage](followup/sgim-easd-originals-nov19-46/README.md).
+
 Three full 2018–2019 proceedings resolve 85 original-source pairs across 64 frozen claims. Forty-six pairs preserve actual exposure or ingredient-related context, and 39 resolve lexical matches. The new records distinguish the kindergarten vegetable intervention, olive-oil wound and dietary contexts, and overlapping Helsinki coffee and survival analyses. The clinical outcomes leave the current verdicts unchanged. Round 1 has 47,125 original pairs open. [Proceedings and verification](followup/shared-proceedings-nov19-45/README.md).
 
 The 306-page Hamburg neurology supplement resolves 36 original source pairs after a full column scan. Ten preserve verified coffee, chicken tissue or injected peanut-oil context. Twenty-six resolve lexical or clinical-term mismatches. A Parkinson report on blood-pressure drops after meals led to three dated clinical records. The source review leaves ingredient verdicts as recorded. Round 1 has 47,210 original pairs open. [Originals, context and scan verification](followup/hamburg-neurology-ocr-nov19-44/README.md).
