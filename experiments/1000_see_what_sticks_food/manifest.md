@@ -13,13 +13,15 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 941 |
-| Maybe True | 0 | 27 |
-| Maybe False | 0 | 32 |
+| Unknown | 1000 | 939 |
+| Maybe True | 0 | 28 |
+| Maybe False | 0 | 33 |
 | True | 0 | 0 |
 | False | 0 | 0 |
 
 ## Findings and limits
+
+The first tremor scoring checkpoint triages all 26 Round 1 resting-tremor claims. Two source-level reassessments give minimal easing leads at 50.005. Raw celery stalk receives Maybe False relative to its worsening hypothesis, based on a separately scored mouse rest-tremor result with matched-species extract and limited food transfer. Extra-virgin olive oil receives Maybe True from a weak human pooled-tremor association with unspecified grade. The black tea judgment remains Maybe True at 51. Both additional leads have substantial uncertainty about ordinary intake and clinical rest tremor. The focused evidence review adds six related assessments and six chronological source records. [Evidence and review scope](followup/tremor-direction-nov19-27/README.md)
 
 The strawberry falls review resolves eight original pairs at body depth and screens 48 distinct complementary provider keys. In 1,429 older women, the fruit group that included strawberries had adjusted HR 1.00 (95% CI 0.98–1.03) for fall-related hospitalization. A randomized six-fruit intake comparison reported inconclusive balance results (p=.457). The strawberry leaf extract findings concern rod-test latency in mice. The raw-fruit Parkinson fall-frequency hypothesis 0413 remains Unknown at 50, with 112 original records queued. Round 1 retains 47,504 queued original pairs across 29,840 sources. [Primary articles, scope and review](followup/strawberry-falls-source-depth-nov19-26/README.md)
 
@@ -839,6 +841,7 @@ The initial published verdicts were 997 Unknown and three Maybe False. [Open tra
 - [0262](statements/0262.txt) **Maybe True** (51%) Consuming cold-pressed sesame oil reduces depressive symptom severity in people with Parkinson's disease.
 - [0267](statements/0267.txt) **Maybe False** (51%) Consuming refined sunflower oil worsens swallowing difficulty severity in people with Parkinson's disease.
 - [0277](statements/0277.txt) **Maybe False** (51%) Consuming ground anise seed worsens fatigue severity in people with Parkinson's disease.
+- [0281](statements/0281.txt) **Maybe False** (50.005%) Consuming raw celery stalk worsens rest tremor severity in people with Parkinson's disease.
 - [0309](statements/0309.txt) **Maybe False** (51%) Consuming raw banana worsens anxiety severity in people with Parkinson's disease.
 - [0329](statements/0329.txt) **Maybe False** (51%) Consuming poached egg worsens fall frequency in people with Parkinson's disease.
 - [0340](statements/0340.txt) **Maybe False** (51%) Consuming toasted cumin worsens attention impairment in people with Parkinson's disease.
@@ -850,6 +853,7 @@ The initial published verdicts were 997 Unknown and three Maybe False. [Open tra
 - [0485](statements/0485.txt) **Maybe False** (53%) Consuming dried saffron worsens fatigue severity in people with Parkinson's disease.
 - [0513](statements/0513.txt) **Maybe False** (51%) Consuming virgin coconut oil worsens daytime sleepiness severity in people with Parkinson's disease.
 - [0560](statements/0560.txt) **Maybe True** (51%) Consuming ground cumin reduces constipation severity in people with Parkinson's disease.
+- [0577](statements/0577.txt) **Maybe True** (50.005%) Consuming extra-virgin olive oil reduces rest tremor severity in people with Parkinson's disease.
 - [0581](statements/0581.txt) **Maybe False** (52%) Consuming grated ginger worsens constipation severity in people with Parkinson's disease.
 - [0629](statements/0629.txt) **Maybe True** (51%) Consuming cold-pressed olive oil reduces bradykinesia severity in people with Parkinson's disease.
 - [0639](statements/0639.txt) **Maybe True** (51%) Consuming cold-pressed flaxseed oil reduces pain severity in people with Parkinson's disease.
