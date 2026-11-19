@@ -10,7 +10,7 @@ Lin and colleagues reported a prospective community cohort in 2016. Among 953 Ta
 
 ## Fennel essence and locomotor behavior in reserpine rats
 
-Nemati and colleagues published February 18, 2018. Rats given oral commercial fennel essence after reserpine showed shorter bar-test catalepsy and greater open-field movement. In Table 1, the non-ovariectomized reserpine group had means of 146.75 for bar and 4.25 for open field, versus 77.75 and 32.50 in the corresponding reserpine-plus-essence group. The movement tests model reserpine-related motor suppression. There were no timed OFF measurements, observed freezing episodes or toasted seeds. [Original report, Methods and Table 1](https://brieflands.com/journals/jjnpp/articles/67391) · [Earlier catalogue summary](Food-Experiment-Herb-Spice-Followup.md)
+Nemati and colleagues published February 18, 2018. In non-ovariectomized rats, the reserpine-only group II averaged 146.75 for bar posture and 4.25 for open field. Group III, given fennel essential oil with reserpine, averaged 17.67 and 332.17. Group IV received levodopa/carbidopa and averaged 77.75 and 32.50. The published figures annotate comparisons to untreated group I, so the oil versus reserpine values remain descriptive here. Resting tremor, timed OFF and observed freezing did not appear among the outcomes, and the exposure was concentrated oil. [Original report, Methods and Table 1](https://brieflands.com/journals/jjnpp/articles/67391) · [Indexed source extract](Source-Text/2018-Nemati-Fennel-Oil-Reserpine-Motor-Tests.txt)
 
 ## Fennel capsules and daytime dysfunction in a placebo trial
 

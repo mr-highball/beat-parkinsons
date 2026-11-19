@@ -75,6 +75,8 @@ Five newly defined turkey meal and conversation source questions gave zero exact
 
 The grapefruit checkpoint had zero exact first-pass hits for seven newly defined clinical and conversational source questions. One question had an existing narrative locator for the Japanese concentration figure. The initial claim lookup continued the previously recorded question. The indexed additions distinguish fresh pulp, juice, injected constituents and a flavored drink. [Grapefruit checkpoint](../1000_see_what_sticks_food/followup/tremor-grapefruit-nov19-32/README.md).
 
+The toasted fennel checkpoint revisited three narrative locators and recovered their exact article identities and outcomes. Source questions about toxicity, food preparations and traditional use identified missing standalone records, while earlier archived constituent studies were reused. [Fennel evidence and source coverage](../1000_see_what_sticks_food/followup/tremor-fennel-nov19-33/README.md).
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the

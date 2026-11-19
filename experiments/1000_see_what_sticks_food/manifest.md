@@ -21,7 +21,11 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-Eight Round 1 claims have a checked version 1 scorecard. The raw grapefruit reassessment (0009) remains Unknown at 50 across 15 evidence families. Grapefruit juice altered cabergoline concentrations, and a separate cabergoline pilot measured resting tremor. The fresh-fruit studies report exposure to different drugs. The review screens 30 distinct focused source keys, adds eleven assessments and advances the aroma registration's source depth. Round 1 retains 47,460 original pairs across 29,821 sources. [Grapefruit evidence, coverage and open leads](followup/tremor-grapefruit-nov19-32/README.md).
+Nine Round 1 claims have a checked version 1 scorecard.
+
+Toasted fennel seed and resting tremor (0214) remains Unknown at 50 after evaluating 19 evidence families and 39 checked biomedical source keys. Acute concentrated-oil toxicity and nitrate-associated cattle tremor are separate from the Parkinson-model bar, stride and rotarod results. A close whole-seed diet comparison measured general activity only. The original reserpine paper also corrects a previously misassigned comparator in the freezing-of-gait assessment. [Fennel evidence and search scope](followup/tremor-fennel-nov19-33/README.md).
+
+The raw grapefruit reassessment (0009) remains Unknown at 50 across 15 evidence families. Grapefruit juice altered cabergoline concentrations, and a separate cabergoline pilot measured resting tremor. The fresh-fruit studies report exposure to different drugs. The review screens 30 distinct focused source keys, adds eleven assessments and advances the aroma registration's source depth. Round 1 retains 47,460 original pairs across 29,821 sources. [Grapefruit evidence, coverage and open leads](followup/tremor-grapefruit-nov19-32/README.md).
 
 Baked turkey and resting tremor (0392) remains Unknown at 50 after adding an archived firsthand report of reduced perceived medication benefit and four distinct meal or protein studies. The report gives no tremor observation, and clinical results address motor composites, medication response or OFF time. Three original-source pairs were resolved. Eight remain for turkey and 2,792 for fig. [Evidence and original-source scope](followup/tremor-turkey-nov19-31/README.md)
 

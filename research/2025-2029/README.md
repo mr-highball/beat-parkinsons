@@ -1,5 +1,7 @@
 # 2025-2029
 
+An [oral methanolic fennel extract study](Source-Text/2025-PMID40958122-Fennel-Methanol-Extract-Rat-Toxicity.txt) reports rat toxicology. A [composite rapeseed seasoning experiment](Source-Text/2026-PMID41750818-Fennel-in-Composite-Rapeseed-Seasoning.txt) measures a heated fennel-containing mixture. [Comparative observations](../2020-2024/Observations/Fennel-Preparation-and-Resting-Tremor.md).
+
 - [Pacific Talanoa interviews on care and coping in PINK1-associated Parkinson disease](Cultural-and-Experiential/Local-Knowledge/2026-Pacific-PINK1-Talanoa-Narratives.txt).
 
 - [Ghana Mucuna trial: tremor specificity, recovered supplement and reporting audit](Ghana-Mucuna-Tremor-and-Reporting-Audit.md).

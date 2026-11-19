@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2010-2014
 
+- [Fennel and Middle Eastern falij practice literature](Traditional-Practices/2012-Abu-Rabia-Fennel-in-Falij-Literature.txt). The entry distinguishes a boiled-leaf preparation from an attributed calming use of fruit.
+
 - [Mixed-herb and lorazepam adverse account](Personal-Reports/2011-Mixed-Herb-Lorazepam-Adverse-Account.txt), reusing the linked primary case.
 
 - [Seasonal broad beans: no noticed arm-tremor change](Personal-Reports/2014-Broad-Bean-Arm-Tremor-No-Noticed-Change.txt).
