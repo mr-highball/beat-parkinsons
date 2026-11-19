@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [original Usp14 mouse study](Source-Text/2006-PMID17079671-Usp14-Ataxia-Rescue-and-Award-Name.txt) identifies the basil string in a research award and separates genetic motor rescue from dietary exposure.
+
 [Coffee history and fatigue measured separately](Source-Text/PMC2276830.txt) · [PMC2364726](Source-Text/PMC2364726.txt) · [PMC3376711](Source-Text/PMC3376711.txt).
 
 [gastrointestinal tumor case series with saffron staining](Source-Text/PMC3207561.txt) · [Parkinson olfactory testing with a banana-like odor](Source-Text/PMC2790799.txt).

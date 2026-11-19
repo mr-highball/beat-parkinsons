@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [CHAMPION anesthesia outcomes](Source-Text/2026-PMID42102350-CHAMPION-Anesthesia-Results.txt) link the 2026 primary publication to its earlier protocol. The abstract reports the signal-quality and motor-score comparisons. Pain-specific post-surgery measurements and the full participant flow remain open.
+
 [Observations comparing coffee preparation, fatigue outcomes and shared exposures](Observations/Brewed-Coffee-Fatigue-and-Shared-Comparators.md).
 
 [Fig and almond syrup adverse-event table](Source-Text/2025-Mohammadi-Kenari-Fig-Almond-Drooling.txt) · [Fresh fig puree and rat memory](Source-Text/PMC12455911.txt) · [Formulation and symptom observations](Observations/Fig-Formulations-and-Tremor-Ascertainment.md).
