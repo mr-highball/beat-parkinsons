@@ -692,3 +692,12 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Lemon balm cardioprotection and symptom context](Source-Text/PMC8100328.txt).
 - [Elobixibat and meal availability](Source-Text/PMC8488789.txt).
 - [Zoliflodacin breakfast comparison](Source-Text/PMC10176008.txt).
+
+## Date-fruit evidence and pain comparisons
+
+- [BRAINAID bergamot protocol](Source-Text/PMC9290822.txt).
+- [Severe dementia topical bergamot pilot](Source-Text/PMC11325727.txt).
+- [COVID-19 nutritional risk and chest pain as a clinical characteristic](Source-Text/PMC9021035.txt).
+- [Moroccan date-palm traditional-practice survey](Cultural-and-Experiential/Traditional-Practices/2024-Morocco-Date-Palm-Survey-Context.txt).
+- [BRAINAID registry](Source-Text/Trials/NCT04321889.txt).
+- [Acorus volatile oil and acupuncture registry](Source-Text/Trials/NCT06313866.txt).

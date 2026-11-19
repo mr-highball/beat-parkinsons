@@ -445,3 +445,7 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [Original asparagus-extract crossover and fatigue item](Source-Text/2014-PMID25297618-Asparagus-Extract-and-Sleep.txt).
 - [Freeze-dried cherry product and sleep trial](Source-Text/PMC12878997.txt).
 - [Tart cherry concentrate sleep author abstract](Source-Text/2011-PMID22038497-Tart-Cherry-Sleep.txt).
+
+## Date-fruit evidence and pain comparisons
+
+- [Whole Ajwa date crossover registration](Source-Text/Trials/NCT02288611.txt).

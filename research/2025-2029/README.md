@@ -538,3 +538,9 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Food and compounds in Parkinson disease review](Source-Text/PMC12897292.txt).
 - [Enteral nutrition and nocturnal polyuria comparison](Source-Text/PMC12790919.txt).
 - [Drug pharmacokinetics and a high-fat meal comparison](Source-Text/PMC13539275.txt).
+
+## Date-fruit evidence and pain comparisons
+
+- [Acorus oil and post-stroke cognition protocol](Source-Text/PMC12224042.txt).
+- [Brain recordings and food preoccupation](Source-Text/PMC12705427.txt).
+- [DoMAP malnutrition and oral pain](Source-Text/PMC13154458.txt).

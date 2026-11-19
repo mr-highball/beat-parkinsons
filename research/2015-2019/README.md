@@ -636,3 +636,10 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Caffeine and tea review](Source-Text/PMC4962431.txt).
 - [Spice herb neuroprotection review](Source-Text/PMC6435951.txt).
 - [NutriAct dietary comparison registration](Source-Text/Trials/DRKS00010049.txt).
+
+## Date-fruit evidence and pain comparisons
+
+- [Lian-Se Parkinson formula and Chinese date placebo](Source-Text/PMC5412142.txt).
+- [Three dried date cultivars and experimental nociception](Source-Text/PMC5040737.txt).
+- [Whole Ajwa abdominal pain diary](Source-Text/2015-Eid-Whole-Ajwa-Mood-Diary.txt).
+- [Loss-of-control eating neurostimulation registry](Source-Text/Trials/NCT03868670.txt).
