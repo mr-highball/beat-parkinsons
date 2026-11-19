@@ -1,5 +1,7 @@
 # 2005-2009
 
+A Japanese [ordinary-fatigue drinking study](Source-Text/2009-Shimizu-Imidazole-Dipeptide-Drink-Fatigue-Extract.txt), [extract sprint abstract](Source-Text/2006-PMID16531904-CBEX-Buffering-Extract.txt) and [baeksuk tasting report](Cultural-and-Experiential/Local-Knowledge/2005-KR20050019309A-Baeksuk-Fatigue-Claim.txt) give different measures of fatigue, performance and perceived recovery. [Observations](Observations/Food-Experiment-Chicken-Fatigue-Nov19-24.md).
+
 Body-level conference follow-through identified an earlier [spinach-derived peptide study in mice](Source-Text/2007-PMID17766012-Spinach-Rubiscolin-6-Anxiety-Extract.txt). [Preparation, endpoint and access observations](Observations/Food-Experiment-Shared-Originals-Nov19-23.md).
 
 - [Registered lemon balm food and drink crossover comparisons](Source-Text/Trials/ACTRN12609000864224.txt). The linked 2014 report covers beverages and yoghurt.

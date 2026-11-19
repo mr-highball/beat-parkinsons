@@ -1,5 +1,7 @@
 # 2020-2024
 
+Chicken follow-through adds [broth and cycling power](Source-Text/2021-PMID33588872-Chicken-Broth-Cycling-Extract.txt), [poultry as a modeled substitute in an older cohort](Source-Text/2021-PMID34755477-Poultry-Frailty-Extract.txt) and two reports from the [whole-chicken and exercise trial](Source-Text/2024-PMID38888088-Steamed-Chicken-Training-Extract.txt) and its [vascular analysis](Source-Text/2024-PMID39569460-Chicken-Training-Vascular-Extract.txt). [Study-family and endpoint observations](Observations/Food-Experiment-Chicken-Fatigue-Nov19-24.md).
+
 Shared-source review adds the [veterinary P chapter](Source-Text/2020-PMC9771673-Veterinary-Food-Context-Extracts.txt), [mouse olive oil vehicle](Source-Text/2022-PMID36359351-Olive-Oil-Vehicle-Extract.txt), [biophysics proceedings](Source-Text/2023-PMC10643713-Biophysics-Food-Context-Extracts.txt), [cinnamon–turmeric cell experiment](Source-Text/2023-PMID38138438-Cinnamon-Turmeric-Cell-Extract.txt) and [FEBS poster extracts](Source-Text/2024-PMC11208286-FEBS-Food-Context-Extracts.txt). [Preparation boundaries and observations](Observations/Food-Experiment-Shared-Originals-Nov19-23.md).
 
 - [Tanzania faith and care follow-up](Cultural-and-Experiential/Ceremonial-Accounts/2021-Tanzania-Faith-and-Care-Followup.txt), [centering prayer comparison](Source-Text/2022-Machado-Centering-Prayer-Extract.txt) and [Kenyan stigma and healing accounts](Cultural-and-Experiential/Local-Knowledge/2023-Kenya-Stigma-and-Healing-Accounts.txt).
