@@ -2,6 +2,8 @@
 
 Thirteen Round 1 claims have a checked version 1 scorecard.
 
+Review of the 2021 SGIM and 2025 ESOC bodies resolves 68 original pairs across 58 claims. Two coffee entries have genuine exposure or constituent context. The 598-person SECRETO study and its conference presentation share a cohort, and the case vignettes concern caffeine-containing products. The endpoints give no Parkinson fatigue measurement. Round 1 retains 47,246 queued source pairs. [Source boundaries and clinical contexts](followup/shared-clinical-collections-nov19-43/README.md).
+
 Raw strawberry and recurrent falls (0413) remains Unknown at 50 across 29 evidence families. The recovered aged-rat inclined-screen study favored blueberry and cranberry diets. Strawberry appears in earlier cited work. Three separate strawberry extract reports measured operant responding or conditioned taste avoidance after irradiation. Two original body-level decisions close the strawberry and orange pairs for the recovered paper, leaving 14 original pairs for 0413. [Recovered source, study distinctions and review scope](followup/strawberry-falls-berry-trials-nov19-42/README.md).
 
 Raw strawberry and recurrent falls (0413) remains Unknown at 50 across 26 evidence families. A large older-adult cohort tracked cognitive change, and a geriatric survey measured preference for strawberry-flavored supplements. The falls poster printed beside the survey studied vitamin D in a separate report. Recovered originals and targeted OCR resolve ten body-level pairs for 0413 and 42 for other claims. Two indexes retain their open status. Fifteen original pairs remain for 0413, with 47,316 queued across Round 1. [Recovered PDFs, evidence families and open routes](followup/strawberry-falls-pdf-recovery-nov19-40/README.md).
