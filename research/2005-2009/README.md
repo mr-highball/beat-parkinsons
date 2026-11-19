@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [central Italian field study](Cultural-and-Experiential/Traditional-Practices/2005-Guarrera-Central-Italy-Fig-Fruit-and-Latex.txt) records a mixed dried-fig decoction for respiratory complaints and separate latex practices. The [ripe dried-fig extract assays](Source-Text/2008-PMID18586078-Fig-Fruit-Extract-and-Lab-Endpoints-Abstract.txt) measure isolated gut tissue and platelets.
+
 Two original reports specify the comparison behind their visual findings. The [autopsy study](Source-Text/2005-PMID16170073-Olfaction-and-Lewy-Body-Phenotype.txt) treats hallucination history as a predictor of Lewy body pathology, and the [vision rehabilitation study](Source-Text/2006-PMID17035271-Contrast-Sensitivity-and-Formed-Visual-Hallucinations.txt) reports formed hallucinations alongside measured contrast sensitivity.
 
 The [original Usp14 mouse study](Source-Text/2006-PMID17079671-Usp14-Ataxia-Rescue-and-Award-Name.txt) identifies the basil string in a research award and separates genetic motor rescue from dietary exposure.

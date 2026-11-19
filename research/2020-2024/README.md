@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [walnut–fig syrup comparison](Source-Text/2022-Joudikhajeh-Walnut-Fig-Syrup-Active-Comparison.txt) reports four-week outcomes against active lactulose. Its [2020 protocol](Source-Text/Trials/IRCT20200714048108N1.txt) describes two weeks of treatment. [Preparation and comparison observations](Observations/Fig-Preparations-and-Active-Constipation-Comparators.md).
+
 The [fig leaf stress experiment](Source-Text/2024-PMID38741409-Fig-Leaf-Extract-and-Stress-Behavior.txt) and [fig peel cultivar comparison](Source-Text/2022-PMID36595373-Fig-Peel-Cultivars-and-Amyloid-Model.txt) report different animal behaviors and preparation routes.
 
 The [date-seed rat arthritis study](Source-Text/2024-PMID38565410-Date-Seed-Arthritis-Abstract.txt) reports swelling and inflammatory outcomes at original abstract depth. Its traditional seed tea background has no firsthand pain assessment.
