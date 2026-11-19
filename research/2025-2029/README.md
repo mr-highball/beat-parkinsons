@@ -1,5 +1,13 @@
 # 2025-2029
 
+The [OPTI-ON cohort](Source-Text/PMC13092661.txt), [effort-choice comparison](Source-Text/PMC13442672.txt), [coaching study](Source-Text/PMC12971501.txt), [frontotemporal dementia case](Source-Text/PMC13394904.txt) and [digital assessment protocol](Source-Text/PMC13423858.txt) distinguish measures of apathy, mood, activity and planned tracking.
+
+The [motor diary study](Source-Text/PMC13443092.txt), [Parkinson medication case](Source-Text/PMC13435170.txt), [postoperative beta study](Source-Text/PMC13442690.txt), [genetic dyskinesia cases](Source-Text/PMC13388009.txt) and [striatal hand review](Source-Text/PMC13155526.txt) describe different motor comparisons and outcomes.
+
+The [olfactory cognition model](Source-Text/PMC13347602.txt), [clinical diagnostic series](Source-Text/PMC13447608.txt), [Gaucher longitudinal cohort](Source-Text/PMC13108146.txt), [Alzheimer strength study](Source-Text/PMC13688339.txt) and [Parkinson hip fracture outcomes](Source-Text/PMC13691003.txt) preserve differences between clinical features, physical tests and injury outcomes.
+
+The [irsenontrine subset](Source-Text/PMC13244894.txt) belongs to an earlier registered clinical trial. The [2026 safinamide review](Source-Text/PMC13273036.txt) traces separate pain-related trial families. [Clinical and dietary observations](Observations/Clinical-Outcome-Specificity-and-Food-Claims.md).
+
 The [neurodegenerative constipation scoping review](Source-Text/2026-PMID42459041-Neurodegenerative-Constipation-Ginger-Review.txt) points to the earlier multiple sclerosis ginger trial and separate Parkinson studies.
 
 The [ErdBEHR gut microbiome report](Source-Text/2025-PMID39772703-ErdBEHR-Strawberry-Microbiome.txt) analyzes a subset of the registered strawberry intervention on separate endpoints.
