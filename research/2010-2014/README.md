@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [2011 SGIM food and coffee contexts](Source-Text/2011-PMC6730977-SGIM-Coffee-and-Ingredient-Contexts.txt) distinguish symptom-driven use and case histories. The [separate erratum](Source-Text/2011-PMC3181309-SGIM-Omitted-Abstracts.txt) supplies the omitted members.
+
 The [2012 online-first rosemary and common-sage study](Source-Text/2012-PMID23017402-Sage-Rosemary-Extracts.txt) profiles plant extracts and tests cell and chemical responses. The later IPLeiria proceedings cite it.
 
 The [BRAVO registry](Source-Text/Trials/NCT01901887.txt) used a macadamia-oil comparison drink. A [2014 family-history meal study](Source-Text/2014-PMID24824014-Macadamia-Oil-Meal-and-Lipemia.txt) gave the same oil to both participant groups.

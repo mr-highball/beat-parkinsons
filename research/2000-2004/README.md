@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [2004 diabetes congress food members](Source-Text/2004-PMC7096100-EASD-Food-Exposure-Contexts.txt) distinguish meat-derived laboratory reagents, coffee, tomato juice and oil formulations. The [related marine-fat feeding publication](Source-Text/2004-PMID15736913-Corn-Oil-and-Marine-PUFA-Adiposity.txt) records adiposity outcomes in mice.
+
 The [2002 author follow-up](Source-Text/2002-Hansen-Macadamia-Kernel-Toxicosis-Tremor-Scope.txt) distinguishes reported whole-kernel field tremor from the four-dog observation and links the same veterinary series.
 
 The [2000 sweet-fennel pamphlet trace](Source-Text/2000-Ostad-Sweet-Fennel-Toxicity-Pamphlet-Trace.txt) and [2001 essential-oil toxicology study](Source-Text/2001-PMID11448553-Fennel-Oil-Toxicity-and-Movement.txt) share three investigators. The original pamphlet remains open. [Comparative observations](../2020-2024/Observations/Fennel-Preparation-and-Resting-Tremor.md).
