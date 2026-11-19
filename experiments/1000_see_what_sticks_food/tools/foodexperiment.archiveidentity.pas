@@ -356,6 +356,7 @@ function OtherRegistryHeaderMatches(const AText: RawByteString;
   const AExpected: String): Boolean;
 const
   CHeaderBytes = 1024;
+  CAnzctrHeading = 'Official ANZCTR registration ';
 var
   LHeader: String;
   LLine: String;
@@ -403,10 +404,21 @@ begin
           end;
       end;
     LHasIdentity := LHasIdentity or AnsiStartsText(AExpected + '.', LLine);
+    if AnsiStartsStr('ACTRN', AExpected) and
+      AnsiStartsText(CAnzctrHeading, LLine) then
+    begin
+      LIdentity := Copy(LLine, Length(CAnzctrHeading) + 1, Length(AExpected));
+      if (OtherRegistryIdentifier(UpperCase(LIdentity)) <> AExpected) or
+        (Copy(LLine, Length(CAnzctrHeading) + Length(AExpected) + 1, 1) <> '.') then
+        Exit;
+      LHasIdentity := True;
+    end;
     if AnsiStartsText('Source: https://', LLine) then
-      LLine := Copy(LLine, 9, MaxInt)
+      LLine := Copy(LLine, Length('Source: ') + 1, MaxInt)
+    else if AnsiStartsText('Primary source: https://', LLine) then
+      LLine := Copy(LLine, Length('Primary source: ') + 1, MaxInt)
     else if AnsiStartsText('URL: https://', LLine) then
-      LLine := Copy(LLine, 6, MaxInt);
+      LLine := Copy(LLine, Length('URL: ') + 1, MaxInt);
     LUrl := LowerCase(LLine);
     if AnsiStartsStr('ACTRN', AExpected) then
       LHasProvider := LHasProvider or
@@ -480,11 +492,11 @@ begin
     begin
       case IndexText(Copy(LLine, 1, LSeparator - 1),
         ['NCT ID', 'Registration', 'Registry ID', 'Registry identifier', 'Source',
-          'URL', 'Official API']) of
+          'URL', 'Official API', 'Primary source']) of
         0..3:
           if NormalizeArchiveIdentifier(Copy(LLine, LSeparator + 1, MaxInt)) <> AExpected then
             Exit;
-        4..6:
+        4..7:
           LLine := Trim(Copy(LLine, LSeparator + 1, MaxInt));
       end;
     end;

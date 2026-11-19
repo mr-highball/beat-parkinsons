@@ -110,6 +110,14 @@ begin
     Assert(ParseTrialArchiveIdentifier('Registration: NCT07655219' + LineEnding +
       'See https://clinicaltrials.gov/study/NCT07655219' + LineEnding, 'NCT07655219') = '',
       'A citation in prose does not supply registry provenance');
+    Assert(ParseTrialArchiveIdentifier(
+      'Primary source: https://clinicaltrials.gov/study/NCT02463435' + LineEnding +
+      'Registration: NCT02463435' + LineEnding, 'NCT02463435') = 'NCT02463435',
+      'A legacy primary-source field can authenticate an official trial URL');
+    Assert(ParseTrialArchiveIdentifier(
+      'Primary source: https://clinicaltrials.gov/study/NCT05602688' + LineEnding +
+      'Registration: NCT02463435' + LineEnding, 'NCT02463435') = '',
+      'A legacy primary-source field for the wrong trial is rejected');
     Assert(ParseTrialArchiveIdentifier('Source: https://clinicaltrials.gov/study/NCT07655219' +
       LineEnding + 'Registry ID: NCT05719142' + LineEnding, 'NCT07655219') = '');
     Assert(ParseTrialArchiveIdentifier('Source: https://clinicaltrials.gov/study/NCT07655219' +
@@ -132,6 +140,18 @@ begin
     Assert(OtherRegistryHeaderMatches('Registry ID: ACTRN12626001145392' + LineEnding +
       'URL: https://www.anzctr.org.au/ACTRN12626001145392.aspx' + LineEnding,
       'ACTRN12626001145392'), 'The official www host is also supported');
+    Assert(OtherRegistryHeaderMatches(
+      'Official ANZCTR registration ACTRN12621001760864. First posted in 2021.' + LineEnding +
+      'Primary source: https://anzctr.org.au/Trial/Registration/TrialReview.aspx?id=382647' +
+      LineEnding, 'ACTRN12621001760864'), 'A legacy heading identifies the trial');
+    Assert(not OtherRegistryHeaderMatches(
+      'Official ANZCTR registration ACTRN12626001145392.' + LineEnding +
+      'https://anzctr.org.au/Trial/Registration/TrialReview.aspx?id=382647' +
+      LineEnding, 'ACTRN12621001760864'), 'A conflicting legacy trial heading is rejected');
+    Assert(not OtherRegistryHeaderMatches(
+      'Official ANZCTR registration ACTRN12621001760864.' + LineEnding +
+      'https://anzctr.org.au.example/Trial/Registration/TrialReview.aspx?id=382647' +
+      LineEnding, 'ACTRN12621001760864'), 'The heading still requires an official host');
     Assert(not OtherRegistryHeaderMatches('Registry ID: ACTRN12626001145392' + LineEnding +
       'URL: https://anzctr.org.au/ACTRN12625000047493.aspx' + LineEnding,
       'ACTRN12626001145392'), 'A short link for a different trial must not match');
