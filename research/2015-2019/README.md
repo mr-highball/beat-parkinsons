@@ -629,3 +629,10 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Ginger constituents and artificial blood–brain barrier permeability](Source-Text/2019-PMID31476432-Simon-Ginger-Permeability-Abstract.txt).
 - [Orange and grapefruit juice and short-term ionized calcium comparisons](Source-Text/2017-PMID28802068-Citrus-Juice-and-Ionized-Calcium.txt).
 - [Integrate safe-mobility trial registration](Source-Text/Trials/ACTRN12619000415101.txt).
+
+## Dietary methods and source context
+
+- [Lifestyle program original diet and testimony context](Source-Text/2016-Null-Kale-Lifestyle-Extract.txt).
+- [Caffeine and tea review](Source-Text/PMC4962431.txt).
+- [Spice herb neuroprotection review](Source-Text/PMC6435951.txt).
+- [NutriAct dietary comparison registration](Source-Text/Trials/DRKS00010049.txt).

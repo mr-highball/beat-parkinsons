@@ -681,3 +681,14 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Immersive virtual reality upper-limb training registration](Source-Text/Trials/DRKS00034193.txt).
 - [Freezing-of-gait and vibrotactile cueing registration](Source-Text/Trials/DRKS00034584.txt).
 - [Group boxing mobility author abstract and original access trail](Source-Text/2021-PMID39262882-Group-Boxing-Abstract.txt).
+
+## Dietary methods and source context
+
+- [Original soup composition and rat stool comparison](Source-Text/PMC6956756.txt).
+- [NutriAct protocol and planned anxiety measure](Source-Text/PMC7523819.txt).
+- [NutriAct 12-month adherence results abstract](Source-Text/2021-PMID34656026-NutriAct-Adherence.txt).
+- [Parkinson nutrition and gut review](Source-Text/PMC8609682.txt).
+- [Postpartum depression food-compound review](Source-Text/PMC7226878.txt).
+- [Lemon balm cardioprotection and symptom context](Source-Text/PMC8100328.txt).
+- [Elobixibat and meal availability](Source-Text/PMC8488789.txt).
+- [Zoliflodacin breakfast comparison](Source-Text/PMC10176008.txt).

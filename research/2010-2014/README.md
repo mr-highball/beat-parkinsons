@@ -438,3 +438,10 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [Electrically evoked strawberry smell in a pediatric epilepsy series](Source-Text/2012-PMID22554977-Evoked-Strawberry-Odor.txt).
 - [Olive oil and anxiety-like behavior in two rat experiments](Food-Experiment-Olive-Oil-Anxiety.md).
 - [Wood review on ginger for nausea and separate drug-related dyskinesia](Source-Text/2010-PMID20359261-Wood-Ginger-Nausea-Review.txt).
+
+## Dietary methods and source context
+
+- [Food and sleep review with ingredient comparisons](Source-Text/PMC4440346.txt).
+- [Original asparagus-extract crossover and fatigue item](Source-Text/2014-PMID25297618-Asparagus-Extract-and-Sleep.txt).
+- [Freeze-dried cherry product and sleep trial](Source-Text/PMC12878997.txt).
+- [Tart cherry concentrate sleep author abstract](Source-Text/2011-PMID22038497-Tart-Cherry-Sleep.txt).

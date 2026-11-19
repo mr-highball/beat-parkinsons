@@ -532,3 +532,9 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Mixed reality and conventional Parkinson rehabilitation](Source-Text/2026-PMID42539816-Mixed-Reality-Rehabilitation.txt).
 - [NeuroDance protocol](Source-Text/2026-PMID42824393-NeuroDance-Protocol.txt) and [original registration](Source-Text/Trials/DRKS00038241.txt).
 - [Observations on measured and assigned exposures](Observations/Rehabilitation-Swallowing-and-Food-Exposure.md).
+
+## Dietary methods and source context
+
+- [Food and compounds in Parkinson disease review](Source-Text/PMC12897292.txt).
+- [Enteral nutrition and nocturnal polyuria comparison](Source-Text/PMC12790919.txt).
+- [Drug pharmacokinetics and a high-fat meal comparison](Source-Text/PMC13539275.txt).
