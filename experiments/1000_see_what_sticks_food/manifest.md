@@ -23,6 +23,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 Twenty-seven Round 1 claims have a checked version 1 scorecard.
 
+Fourteen original clinical and animal-paper pairs were resolved at full-text depth. The 10/66 cohort separates informant-rated apathy from depression, the Care4PD figure uses orange as a legend color, and the basil match identifies a research award. Two date-palm assessments distinguish pathway modeling and seed-extract inflammation from pain under dried fruit. [Original measures, coverage and access limits](followup/clinical-originals-and-endpoints-nov19-77/README.md).
+
 The date-palm follow-through integrates six related source assessments and refines two existing study records at original depth. Three official registrations now resolve by exact identifier. The whole Mazafati pain study and the topical knee comparison still lack verified numerical results. [Trial identities and pain measurement](followup/date-registry-and-assessments-nov19-76/README.md).
 
 Seventeen original pairs advance at full-text depth across archived clinical sources and the ARO companion abstract. Its rotary reflex comparison uses existing freezing status. The new date-seed study reports lower 24-hour exercise soreness and an inconclusive immediate comparison. Fruit extracts, a jam preparation, and retained date-pit injuries supply distinct measured or reported outcomes. They leave the culinary Parkinson pain direction unresolved. [Original pairs and remaining research trails](followup/aro-and-clinical-archives-nov19-75/README.md).
