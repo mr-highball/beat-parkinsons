@@ -898,9 +898,17 @@ begin
     'rubric_path', CRubricPath, 'score_type', 'ordinal_review_tier']);
   try
     if AIncludeRules then
+    begin
       Result.Add('rules', FRubric);
+    end;
+    if AIncludeRules or (AId = '') then
+    begin
+      AddEvidenceRubricSchema(Result);
+    end;
     if AId = '' then
+    begin
       Exit;
+    end;
     Result.Add('round', ARound);
     Result.Add('id', AId);
     if not FIdentities.TryGetValue(Key(ARound, AId), LClaim) then

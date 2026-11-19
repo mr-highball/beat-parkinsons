@@ -5,7 +5,10 @@ The oracle is a local Free Pascal MCP server for the Parkinson’s research cata
 ## Evidence review rules
 
 Call `oracle_evidence_rubric` once at the beginning of evidence review. With no
-arguments it returns the rubric text, its version and the pinned Git revision.
+arguments it returns the rubric text, its version, the pinned Git revision,
+and the structured tier anchors, TSV columns and evidence-fit fields. Use
+`include_rules: false` for the compact structured reference after reading the
+rules. The draft checker uses the same anchors and column definitions.
 Send both `round` and `id` to see the published verdict, scorecard, source-family
 rows, and counts by direction and source kind. A claim lookup omits the full
 rubric by default. Set `include_rules: true` to include it alongside the claim.

@@ -13,6 +13,7 @@ uses fpjson;
 const
   EvidenceRubricVersion = '1';
 
+procedure AddEvidenceRubricSchema(AResponse: TJSONObject);
 procedure AddEvidenceScorecard(AResponse: TJSONObject;
   const ADecisions, ASources, AId, ADirection, AVerdict: String;
   AConfidence: Currency; ADraft: Boolean = False);
@@ -33,6 +34,34 @@ const
     ('open', 'minimal_signal', 'limited_clinical_link', 'direct_clinical_signal',
     'strong_directional_evidence');
   CAnchors: array[0..4] of Currency = (50, 50.005, 51, 55, 60);
+
+function FieldArray(const AFields: array of String): TJSONArray;
+var
+  LField: String;
+begin
+  Result := TJSONArray.Create;
+  for LField in AFields do
+  begin
+    Result.Add(LField);
+  end;
+end;
+
+procedure AddEvidenceRubricSchema(AResponse: TJSONObject);
+var
+  LTiers: TJSONArray;
+  LIndex: Integer;
+begin
+  LTiers := TJSONArray.Create;
+  AResponse.Add('tiers', LTiers);
+  for LIndex := Low(CTiers) to High(CTiers) do
+  begin
+    LTiers.Add(TJSONObject.Create(['tier', CTiers[LIndex],
+      'score_anchor', ReviewConfidenceText(CAnchors[LIndex])]));
+  end;
+  AResponse.Add('decision_fields', FieldArray(CDecisionHeader));
+  AResponse.Add('source_fields', FieldArray(CSourceHeader));
+  AResponse.Add('fit_fields', FieldArray(CFitFields));
+end;
 
 function RowsForClaim(const AText, AId, ALabel: String;
   const AHeader: array of String; ADraft: Boolean): TJSONArray;

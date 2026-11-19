@@ -55,6 +55,18 @@ begin
   end;
 end;
 
+function LedgerHeader(AFields: TJSONArray): String;
+var
+  LIndex: Integer;
+begin
+  Result := AFields.Strings[0];
+  for LIndex := 1 to AFields.Count - 1 do
+  begin
+    Result := Result + #9 + AFields.Strings[LIndex];
+  end;
+  Result := Result + #10;
+end;
+
 procedure Run;
 var
   LResult: TJSONObject;
@@ -63,6 +75,18 @@ begin
   LDecisions := Decision('minimal_signal', 'eases');
   LResult := TJSONObject.Create;
   try
+    AddEvidenceRubricSchema(LResult);
+    Check(LResult.Arrays['tiers'].Count = 5, 'Expected five published tiers.');
+    Check(LResult.Arrays['tiers'].Objects[1].Strings['tier'] = 'minimal_signal',
+      'The schema must identify the minimal signal.');
+    Check(LedgerHeader(LResult.Arrays['decision_fields']) = CDecisions,
+      'The decision field order must match the accepted TSV header.');
+    Check(LedgerHeader(LResult.Arrays['source_fields']) = CSources,
+      'The source field order must match the accepted TSV header.');
+    Check(LResult.Arrays['fit_fields'].Count = 5, 'Expected five separate fits.');
+    Check(LResult.Arrays['tiers'].Objects[1].Strings['score_anchor'] = '50.005',
+      'The schema must preserve the exact anchor.');
+    LResult.Clear;
     AddEvidenceScorecard(LResult, LDecisions, CSources + CConversation + CUncertain,
       '0281', 'worsens', 'Maybe False', 50.005);
     Check(LResult.Strings['review_status'] = 'recorded', 'Expected a recorded minimal signal.');

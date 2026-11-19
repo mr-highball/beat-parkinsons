@@ -42,7 +42,8 @@ const
     '{"name":"oracle_evidence_rubric","description":"Use the versioned evidence scorecard before ' +
       'rating efficacy in any food experiment round. Call without arguments for the rules. ' +
       'Pass round and id for the applied tier, independent source families and review status. ' +
-      'Use include_rules to override whether the full rules are returned.",' +
+      'General lookups include exact tier anchors and ledger fields. Use include_rules to ' +
+      'override whether the full rules are returned.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
       '"additionalProperties":false,"properties":{"round":{"type":"integer","minimum":1,"maximum":7},' +
       '"id":{"type":"string","pattern":"^[0-9]{4}$"},"include_rules":{"type":"boolean"}},' +
