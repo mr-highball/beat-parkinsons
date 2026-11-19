@@ -1,0 +1,9 @@
+# ARO abstract and 2010–2014 clinical archives
+
+This checkpoint covers every priority-four queue entry with a saved archive in the 2010–2014 period at the pinned replay. It also verifies the 2024 ARO index and original companion abstract for fresh lemon balm and freezing of gait. The 17 verified pairs preserve the actual article and protocol outcomes. [Pair decisions](dispositions.tsv) · [Pinned search members](selected-pairs.tsv) · [Source locators](source-receipts.tsv)
+
+The recovered Grossi article distinguishes clinical apathy from the anxiety subscale. A surname in its bibliography accounts for the salmon occurrence. The atomoxetine crossover tested impulsivity, and its illustrations account for the figure matches. The date-claim archive records distinguish pain severity from adverse event counts, registration criteria, surgical symptoms and reporting instruments. [Grossi original summary](../../../../research/2010-2014/Source-Text/2013-PMID23242363-Apathy-Executive-Tests-and-Anxiety.txt)
+
+ARO abstract SU212 provides preliminary rotary reflex data across 13 participants with freezing and 20 without. Its likely registry family lists 60 participants overall and no posted summary results. The original rotary measure, separate vestibular studies, and the registry endpoints require distinct interpretations. [Registry and comparison records](vestibular-lineage.md)
+
+A controlled date-seed exercise trial provides an interpretable 24-hour pain contrast. Other date preparations yield distinct animal-model or foreign-body observations. The comparison ledger preserves each source separately for the next aggregate assessment replay. The claim's effect direction remains unresolved. [Date preparation and outcome details](date-preparation-and-pain.md) · [Assessment candidates](assessment-candidates.tsv) · [Remaining source and outcome routes](open-trails.tsv)
