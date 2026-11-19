@@ -2,6 +2,8 @@
 
 Twenty-seven Round 1 claims have a checked version 1 scorecard.
 
+Nine older dried fig and visual hallucination source pairs now have full-body decisions, and four print originals remain queued. The 1872 first edition separates the reported harvest behavior after eating fresh figs from the preserved dried preparations. Companion records distinguish assays of digestion, identity and mouse behavior from the clinical visual outcome. Two complementary searches screened all three returned articles. The dried fig claim remains Unknown. [Primary sources and open access routes](followup/fig-earlier-originals-nov19-81/README.md).
+
 The recent fig and visual hallucination tranche resolves 21 full-text pairs from 2025–2026, plus one earlier Annonaceae carryover. Prospective psychosis onset, virtual reality events and caregiver-reported cognitive fluctuations are distinct measures. The three supplementary PubMed searches reconcile 17 memberships. Fourteen contextual assessments preserve meal timing and generic dried-fruit definitions. The dried fig effect remains Unknown. [Originals, query screening and next trails](followup/fig-current-originals-nov19-80/README.md).
 
 All 45 original 2020–2024 priority-four pairs for dried fig and visual hallucinations were reviewed at full-text depth, including six upgrades from title or index. Ten contextual assessments retain preparation, clinical measurement and trial-lineage distinctions. The measured Annonaceae exposure concerns a composite parkinsonism profile, while the inspected Kabylie edition names fresh figs for harvest excitement and describes dried use separately. The frozen direction remains Unknown. [Originals and open evidence trails](followup/fig-later-originals-nov19-79/README.md).
