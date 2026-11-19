@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-Twenty-three Round 1 claims have a checked version 1 scorecard.
+Twenty-four Round 1 claims have a checked version 1 scorecard.
+
+Raw blueberry and Parkinson constipation (0746) retains Maybe True at 50.005, the minimal-signal tier. The freeze-dried whole-blueberry powder crossover measured a small favorable change in constipation severity in adults outside Parkinson disease, with a confidence interval spanning both directions. Two reports of constipation during uncontrolled powder use limit transfer. The ACID adverse-event table concerns purified bilberry and black currant. Twenty-one original priority-four pairs were resolved by checking methods and, where needed, complete printed pages. The 1971 corn-oil diet shared the oil across all randomized groups and the broad-bean trial measured motor change separately from dyskinesia. [Checked evidence tier, original papers and exact decisions](followup/ingredient-comparator-bodies-nov19-67/README.md).
 
 The checked dried-sage and apathy claim (0906) is Unknown at 50. A controlled dried-leaf study showed opposite short-term alertness changes before and during a stress task. The animal studies concern movement, and the Parkinson dried-sage pilot does not report an apathy result. Registry searches screened 2,797 memberships and identified a dried-date arm in a blueberry trial, with separate planned cognition and fall outcomes. The registered date reward study concerns hedonic hunger and has no posted outcomes. [Checked scorecard, source depth and registry decisions](followup/sage-date-registered-outcomes-nov19-66/README.md).
 
@@ -932,7 +934,7 @@ The initial published verdicts were 997 Unknown and three Maybe False. [Open tra
 - [0659](statements/0659.txt) **Maybe True** (51%) Consuming fresh summer savory reduces pain severity in people with Parkinson's disease.
 - [0663](statements/0663.txt) **Maybe True** (51%) Consuming poached salmon reduces anxiety severity in people with Parkinson's disease.
 - [0725](statements/0725.txt) **Maybe True** (51%) Consuming grated ginger reduces pain severity in people with Parkinson's disease.
-- [0746](statements/0746.txt) **Maybe True** (52%) Consuming raw blueberry reduces constipation severity in people with Parkinson's disease.
+- [0746](statements/0746.txt) **Maybe True** (50.005%) Consuming raw blueberry reduces constipation severity in people with Parkinson's disease.
 - [0812](statements/0812.txt) **Maybe True** (51%) Consuming ground turmeric reduces pain severity in people with Parkinson's disease.
 - [0814](statements/0814.txt) **Maybe True** (51%) Consuming fresh basil reduces insomnia severity in people with Parkinson's disease.
 - [0838](statements/0838.txt) **Maybe False** (51%) Consuming virgin coconut oil worsens apathy severity in people with Parkinson's disease.

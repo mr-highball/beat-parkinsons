@@ -1,6 +1,8 @@
 ## Findings and limits
 
-Twenty-three Round 1 claims have a checked version 1 scorecard.
+Twenty-four Round 1 claims have a checked version 1 scorecard.
+
+Raw blueberry and Parkinson constipation (0746) retains Maybe True at 50.005, the minimal-signal tier. The freeze-dried whole-blueberry powder crossover measured a small favorable change in constipation severity in adults outside Parkinson disease, with a confidence interval spanning both directions. Two reports of constipation during uncontrolled powder use limit transfer. The ACID adverse-event table concerns purified bilberry and black currant. Twenty-one original priority-four pairs were resolved by checking methods and, where needed, complete printed pages. The 1971 corn-oil diet shared the oil across all randomized groups and the broad-bean trial measured motor change separately from dyskinesia. [Checked evidence tier, original papers and exact decisions](followup/ingredient-comparator-bodies-nov19-67/README.md).
 
 The checked dried-sage and apathy claim (0906) is Unknown at 50. A controlled dried-leaf study showed opposite short-term alertness changes before and during a stress task. The animal studies concern movement, and the Parkinson dried-sage pilot does not report an apathy result. Registry searches screened 2,797 memberships and identified a dried-date arm in a blueberry trial, with separate planned cognition and fall outcomes. The registered date reward study concerns hedonic hunger and has no posted outcomes. [Checked scorecard, source depth and registry decisions](followup/sage-date-registered-outcomes-nov19-66/README.md).
 
