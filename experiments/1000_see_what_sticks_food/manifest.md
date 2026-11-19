@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-Fourteen Round 1 claims have a checked version 1 scorecard.
+Fifteen Round 1 claims have a checked version 1 scorecard.
+
+Cold-pressed safflower oil and swallowing difficulty (0176) remains Unknown at 50 across 14 checked evidence families. The ALS and singer reports use totals that contain a swallowing item but supply no item-level change. The ataxia study measures swallowing using an MCT comparator, and the safflower oleogel panel used a sip-and-spit protocol. Eleven new original decisions close all three remaining original pairs for 0176. Round 1 has 46,883 original pairs queued. [Source comparisons, checked scorecard and open routes](followup/safflower-swallowing-nov19-50/README.md).
 
 The shared collection follow-up resolves 93 original pairs across 42 claims. Sixty-six have related ingredient or tested constituent context. The others resolve terms such as study acronyms, researcher names, dates and figure labels. Twelve dated records include the cod crossover registration. The boron paper adds plotted control comparisons and an unresolved injection-route discrepancy. Round 1 has 46,894 original pairs queued. [Body checks and companion evidence](followup/shared-sunflower-collections-nov19-49/README.md).
 
