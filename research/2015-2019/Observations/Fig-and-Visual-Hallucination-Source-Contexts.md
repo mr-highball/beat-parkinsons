@@ -50,3 +50,5 @@ The previous period's fruit extract experiment used a rat drug challenge and maz
 - [Differential Temporal Perception Abilities in Parkinson's Disease Patients Based on Timing Magnitude.](../Source-Text/PMC6928024.txt).
 - [Post-Pump Chorea and Progressive Supranuclear Palsy-Like Syndrome Following Major Cardiac Surgery.](../Source-Text/2019-PMID31970215-Movement-Disorders-After-Cardiac-Surgery.txt).
 - [Hypermanganesemia with Dystonia 1: A Novel Mutation and Response to Iron Supplementation.](../Source-Text/2019-PMID31970220-Hypermanganesemia-Dystonia-and-Psychosis.txt).
+
+The next period separates the clinical measures further and adds primary records for a dietary comparator and the inspected Kabylie edition. [Later clinical and dietary sources](../../2020-2024/Observations/Visual-Hallucination-Outcome-and-Dietary-Exposure.md).

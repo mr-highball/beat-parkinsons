@@ -178,3 +178,5 @@ The dementia trial used sunflower oil to compare topical lemon balm and measured
 ### Parsley and measured bowel effects
 
 The 2001 colon perfusion contrasts a seed extract against control fluid and reports a physiological transport measure. The earlier tarragon feeding experiment used whole plant material with food-intake and drinking observations. Those procedures answer different questions about plant part, route and outcomes. [Parsley original and exact estimate](../Food-Experiment-Basil-Parsley.md#parsley-seed-extract-and-rat-colon-water-absorption)
+
+- The inspected 2003 Kabylie edition describes a fresh harvest separately from year-round dried storage. [Historical preparation account](../Cultural-and-Experiential/Local-Knowledge/2003-Hanoteau-Letourneux-Fresh-and-Dried-Fig-Account.txt) · [Earlier parallel wording](../../1875-1879/Cultural-and-Experiential/Local-Knowledge/1875-Vilbort-Fresh-Fig-Harvest-Account.txt).
