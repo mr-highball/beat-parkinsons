@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [full 2011 FEBS poster supplement](Source-Text/2011-PMC7164111-FEBS-Poster-Food-and-Parkinson-Context.txt) distinguishes food composition, isolated compounds, oil substrates and separate Parkinson biomarker comparisons.
+
 The [2011 SGIM food and coffee contexts](Source-Text/2011-PMC6730977-SGIM-Coffee-and-Ingredient-Contexts.txt) distinguish symptom-driven use and case histories. The [separate erratum](Source-Text/2011-PMC3181309-SGIM-Omitted-Abstracts.txt) supplies the omitted members.
 
 The [2012 online-first rosemary and common-sage study](Source-Text/2012-PMID23017402-Sage-Rosemary-Extracts.txt) profiles plant extracts and tests cell and chemical responses. The later IPLeiria proceedings cite it.

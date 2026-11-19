@@ -1,0 +1,5 @@
+# Strawberry and mulberry use in the sprue literature
+
+The [1880 Van der Burg monograph](../Source-Text/1880-Van-der-Burg-Strawberries-and-Tropical-Sprue.txt) dates earlier than the year of its enclosing archive volume. It preserves both the use of strawberries alongside mulberries and contemporary reports that the fruits could irritate some people. The earlier [1878 BMJ volume](../../1875-1879/Source-Text/1878-PMC2222220-BMJ-December-Administrative-Context.txt) uses a strawberry descriptor for a physical sign. The monograph describes actual fruit intake in a different disease.
+
+The [1907 Cantlie account](../../1905-1909/Source-Text/1907-PMID20763306-Cantlie-Fresh-Strawberries-and-Sprue.txt) gives an apparently narrower fresh-fruit regimen without a case denominator. The [1936 Snijders account](../../1935-1939/Source-Text/1936-Snijders-Strawberry-Periods-and-Tropical-Sprue.txt) adds a repeated course within one patient, competing dietary and clinical changes, and explicit reports of intolerance. The evidence concerns historical gastrointestinal practice and leaves the Parkinson falls question open.

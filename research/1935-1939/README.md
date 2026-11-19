@@ -1,5 +1,7 @@
 # 1935-1939
 
+[Snijders’s longitudinal sprue case](Source-Text/1936-Snijders-Strawberry-Periods-and-Tropical-Sprue.txt) reports symptoms and weight during three strawberry periods. [Observations on the treatment phases and intolerance](Observations/Strawberry-Sprue-Longitudinal-Case.md).
+
 January 1, 1935 through December 31, 1939.
 
 ## Annotated research

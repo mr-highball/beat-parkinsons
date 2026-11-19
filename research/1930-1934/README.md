@@ -1,5 +1,7 @@
 # 1930-1934
 
+[Slot’s case discussion](Source-Text/1930-Slot-Fruit-Regimen-and-Sprue-Context.txt) distinguishes the earlier strawberry practice from his later report of mixed fruit treatment.
+
 January 1, 1930 through December 31, 1934.
 
 ## Annotated research

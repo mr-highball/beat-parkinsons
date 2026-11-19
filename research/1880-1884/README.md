@@ -1,5 +1,7 @@
 # 1880-1884
 
+[Van der Burg’s monograph](Source-Text/1880-Van-der-Burg-Strawberries-and-Tropical-Sprue.txt) describes prescribed strawberries and mulberries for sprue, including irritation in some recipients. The [observations](Observations/Strawberry-Sprue-Practice-Provenance.md) trace the formulation and the original 1880 imprint.
+
 January 1, 1880 through December 31, 1884.
 
 ## Annotated research
