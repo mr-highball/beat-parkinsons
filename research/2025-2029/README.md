@@ -597,3 +597,8 @@ January 1, 2025 through November 11, 2026 (partial period).
 
 - [Posted extract trial with planned Insomnia Severity Index in middle-aged adults](Source-Text/Trials/NCT07497698.txt).
 - [Perimenopause preprint and separate sleep, fatigue and depression outcomes](Source-Text/2026-sultana-Clinical-Source-Extract.txt).
+
+
+## Botanical preparations, experimental models and separate outcomes
+
+- [Crocin I in experimental Parkinson models with in vivo validation](Source-Text/PMC13191495.txt).

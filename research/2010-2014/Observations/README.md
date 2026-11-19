@@ -430,3 +430,7 @@ The official project report specifies abnormal hind-limb extension as the observ
 
 - [Mixed products and lemon balm attribution](Food-Experiment-Lemon-Balm-Depression.md)
 - [Food flavors and odors as experimental rewards and probes](Food-Flavors-and-Odor-Stimuli.md)
+
+### Saffron-water practice and Gardenia crocetin
+
+The 2011 Iranian literature compilation describes an external saffron-water preparation for sleeplessness. The nearby tea description concerns a separate culinary use. A 2010 crossover measured waking episodes after purified crocetin from Gardenia. The prior-period exercise trial measured cycling performance after isolated crocetin. These three sources distinguish route, botanical material and endpoint. [Historical practice record](../Cultural-and-Experiential/Traditional-Practices/2011-Mousavi-Bathaie-Saffron-Insomnia.txt) · [Gardenia crossover](../Source-Text/2010-PMID20537515-Gardenia-Crocetin-Sleep.txt) · [Earlier exercise trial](../../2005-2009/Source-Text/2009-PMID19358927-Mizuma-Crocetin-Exercise.txt).

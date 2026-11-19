@@ -467,3 +467,10 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [German preschool salmon intervention registration](Source-Text/Trials/NCT01951937.txt).
 - [PINGU infant intervention registration](Source-Text/Trials/NCT01487889.txt).
 - [Isolated salmon roe preparation and mouse locomotion, author abstract](Source-Text/2014-PMID25303858-Salmon-Roe-Mouse-Locomotion.txt).
+
+
+## Botanical preparations, experimental models and separate outcomes
+
+- [Medicinal plants and dementia therapy: herbal hopes for brain aging?](Source-Text/PMC6493900.txt).
+- [Gardenia-derived crocetin and recorded awakenings](Source-Text/2010-PMID20537515-Gardenia-Crocetin-Sleep.txt).
+- [Traditional external saffron-water use for insomnia](Cultural-and-Experiential/Traditional-Practices/2011-Mousavi-Bathaie-Saffron-Insomnia.txt).

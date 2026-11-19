@@ -739,3 +739,15 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Extract gummies and sleep education trial](Source-Text/Trials/NCT05315986.txt).
 - [Saffron extract with magnesium comparison](Source-Text/Trials/NCT05971771.txt).
 - [Perimenopause sleep-quality trial registration](Source-Text/Trials/NCT06227858.txt).
+
+
+## Botanical preparations, experimental models and separate outcomes
+
+- [Central crocin and thermal response in sleep-deprived rats](Source-Text/PMC7502193.txt).
+- [Crocetin and motor measures in an experimental Parkinson model](Source-Text/PMC7569465.txt).
+- [Effects of medicinal plants and flavonoids on Parkinson's disease: a review on basic and clinical evidences](Source-Text/PMC8046395.txt).
+- [Crocetin: a systematic review](Source-Text/PMC8795768.txt).
+- [The pharmacological activities of Crocus sativus and its phytoconstituents](Source-Text/PMC8860555.txt).
+- [The neuropsychotropic effects of saffron: overview of systematic reviews and meta-analyses](Source-Text/PMC9516399.txt).
+- [An overview of pharmacological effects of Crocus sativus and its constituents](Source-Text/PMC10897555.txt).
+- [In vivo and in vitro effects of crocetin and its amide derivative on acrylamide-induced neurotoxicity](Source-Text/PMC11210700.txt).

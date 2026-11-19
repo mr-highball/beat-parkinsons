@@ -674,3 +674,13 @@ The contaminant trail includes an original total-diet abstract, without a measur
 ## Saffron and sleep trial registration
 
 - [First Affron comparison in adults with poor sleep](Source-Text/Trials/ACTRN12619000863134.txt).
+
+
+## Botanical preparations, experimental models and separate outcomes
+
+- [Saffron: an old medicinal plant and a potential novel functional food](Source-Text/PMC5943931.txt).
+- [Antioxidant properties of saffron and its constituents in Alzheimer and Parkinson research](Source-Text/PMC6482475.txt).
+- [Safranal-promoted differentiation and survival of dopaminergic neurons in an animal model of Parkinson's disease](Source-Text/PMC6201804.txt).
+- [A review of herbal therapy in multiple sclerosis](Source-Text/PMC6311642.txt).
+- [Crocetin EEG crossover in adults with sleep complaints](Source-Text/2018-PMID30477864-Crocetin-EEG-Crossover.txt).
+- [Official registry for the crocetin sleep comparison](Source-Text/Trials/UMIN000025854.txt).

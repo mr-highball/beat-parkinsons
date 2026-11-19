@@ -308,3 +308,8 @@ The original walnut-fraction crossover registration is bucketed by first public 
 
 - [Stigma extract versus fluoxetine](Source-Text/2005-PMID15707766-Saffron-Stigma-Fluoxetine.txt).
 - [Petal extract versus fluoxetine](Source-Text/2006-PMID17174460-Saffron-Petal-Fluoxetine.txt).
+
+
+## Botanical preparations, experimental models and separate outcomes
+
+- [Crocetin and prolonged cycling performance in healthy adults](Source-Text/2009-PMID19358927-Mizuma-Crocetin-Exercise.txt).

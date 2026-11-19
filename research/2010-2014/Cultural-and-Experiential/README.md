@@ -14,3 +14,5 @@ Collect traditional practices, ceremonial accounts, public personal reports and 
 - [Alaska wild berry gathering and traditional home preparation](Local-Knowledge/2013-Alaska-Wild-Berry-Gathering-and-Home-Processing.txt).
 
 Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experiential.md). Create the applicable subcategory when adding records, and cross-link prior research without duplicating studies.
+
+- [External saffron-water use in traditional Iranian insomnia literature](Traditional-Practices/2011-Mousavi-Bathaie-Saffron-Insomnia.txt).
