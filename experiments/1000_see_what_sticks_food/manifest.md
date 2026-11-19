@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-Twelve Round 1 claims have a checked version 1 scorecard.
+Thirteen Round 1 claims have a checked version 1 scorecard.
+
+Raw strawberry and Parkinson fall frequency (0413) remains Unknown at 50 after a checked review of 17 evidence families. A randomized Parkinson trial reported four versus three participants with a fall, with strawberry extract in both groups. The whole-fruit evidence includes a null fall-admissions estimate for seven fruits pooled and a separate inconclusive posture result. The checkpoint resolves 59 original pairs at body depth, with 53 still open for this claim. [Scorecard, original bodies and access gaps](followup/strawberry-falls-originals-nov19-38/README.md).
 
 Cold-pressed macadamia oil and resting tremor (0177) remains Unknown at 50. The recovered seven-page 1994 trial supplies the fat formulations, lipid measurements and two transient gastrointestinal complaints, with no measured resting-tremor outcome. Fourteen families cover the oral and topical comparisons, separate acute canine kernel reactions, chemical brain injury, composition and two contextual accounts. [Sources, search and study scope](followup/tremor-macadamia-nov19-36/README.md).
 

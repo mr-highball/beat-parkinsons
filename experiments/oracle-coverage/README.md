@@ -83,6 +83,8 @@ The peanut-oil checkpoint found two exact hits and one partial across eighteen d
 
 The macadamia-oil checkpoint found six exact archive hits across 15 new source questions, all registrations, and contextual leads for the separate claim question. The original 1994 body and the older poison-center follow-up were recovered through continued identifier trails. [Macadamia-oil evidence](../1000_see_what_sticks_food/followup/tremor-macadamia-nov19-36/README.md).
 
+The strawberry-and-falls checkpoint recorded zero strict hits and three partial locators for 112 original-source questions. A separate companion batch recorded six misses. The fisetin registry check continued an existing source question. The original-source hit rate highlights a body-depth gap for these older extracts and official collections. [Review and body access](../1000_see_what_sticks_food/followup/strawberry-falls-originals-nov19-38/README.md).
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the
