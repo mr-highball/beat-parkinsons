@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-Twenty-two Round 1 claims have a checked version 1 scorecard.
+Twenty-three Round 1 claims have a checked version 1 scorecard.
+
+The checked dried-sage and apathy claim (0906) is Unknown at 50. A controlled dried-leaf study showed opposite short-term alertness changes before and during a stress task. The animal studies concern movement, and the Parkinson dried-sage pilot does not report an apathy result. Registry searches screened 2,797 memberships and identified a dried-date arm in a blueberry trial, with separate planned cognition and fall outcomes. The registered date reward study concerns hedonic hunger and has no posted outcomes. [Checked scorecard, source depth and registry decisions](followup/sage-date-registered-outcomes-nov19-66/README.md).
 
 Twenty clinical originals resolve 40 queued claim–source pairs across 12 claims. Recovered supplementary tables distinguish clinician apathy, patient-rated pain and effort-based choices from aggregate scores. The registered Lewy body dementia comparator supplies total neuropsychiatric and motor results from the parent trial of the later biomarker analysis. Two rosmarinic acid animal reports measure activity under different exposure routes and conditions. The dried-sage pilot does not report a named apathy result. The evidence review leaves the 60 directional grades and 940 Unknown grades in place. [Original source decisions, primary comparisons and open trails](followup/clinical-pair-clusters-nov19-65/README.md).
 
