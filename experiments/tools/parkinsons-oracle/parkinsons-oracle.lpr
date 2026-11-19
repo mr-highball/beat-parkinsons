@@ -6,6 +6,9 @@ program ParkinsonsOracle;
 {$codepage utf8}
 
 uses
+  {$IFDEF UNIX}
+  cthreads,
+  {$ENDIF}
   Classes, SysUtils, StrUtils, fpjson, jsonparser, parkinsonsoracle.claims,
   parkinsonsoracle.catalog, parkinsonsoracle.http;
 

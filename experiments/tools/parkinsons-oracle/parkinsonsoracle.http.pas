@@ -19,7 +19,7 @@ procedure ServeOracleWeb(const AWebRoot: String; APort: Word; AInvoke: TOracleIn
 implementation
 
 uses
-  Classes, SysUtils, StrUtils, Types, Sockets, fphttpserver, jsonparser, jsonscanner;
+  Classes, SysUtils, StrUtils, Types, Sockets, SyncObjs, fphttpserver, jsonparser, jsonscanner;
 
 const
   LoopbackAddress = '127.0.0.1';
@@ -41,6 +41,7 @@ type
     FPeerNetwork: LongWord;
     FPeerMask: LongWord;
     FInvoke: TOracleInvoke;
+    FInvokeLock: TCriticalSection;
     procedure ConfigureBinding(const ALanBinding: String);
     procedure ServeAsset(AResponse: TFPHTTPConnectionResponse; const AFileName, AMedia: String);
     procedure CallOracle(ARequest: TFPHTTPConnectionRequest;
@@ -50,6 +51,7 @@ type
   public
     constructor Create(const AWebRoot: String; APort: Word; AInvoke: TOracleInvoke;
       const ALanBinding: String);
+    destructor Destroy; override;
     procedure Run(APort: Word);
   end;
 
@@ -232,6 +234,13 @@ begin
     FHost := FHost + ':' + IntToStr(APort);
   end;
   FInvoke := AInvoke;
+  FInvokeLock := TCriticalSection.Create;
+end;
+
+destructor TOracleWeb.Destroy;
+begin
+  FInvokeLock.Free;
+  inherited Destroy;
 end;
 
 procedure TOracleWeb.ServeAsset(AResponse: TFPHTTPConnectionResponse;
@@ -324,7 +333,13 @@ begin
     LResult := nil;
     try
       try
-        LResult := FInvoke(LName.AsString, TJSONObject(LArguments));
+        // The catalog and claim indexes belong to one shared oracle instance.
+        FInvokeLock.Acquire;
+        try
+          LResult := FInvoke(LName.AsString, TJSONObject(LArguments));
+        finally
+          FInvokeLock.Release;
+        end;
         if LResult = nil then
         begin
           raise EInvalidOp.Create('Oracle returned no result.');
@@ -427,7 +442,7 @@ begin
   try
     LServer.Address := FBindAddress;
     LServer.Port := APort;
-    LServer.ThreadMode := tmNone;
+    LServer.ThreadMode := tmThreadPool;
     LServer.KeepConnections := False;
     LServer.RequestReadTimeout := 5000;
     LServer.MaxLineLength := 8192;

@@ -1193,6 +1193,12 @@ begin
     end);
 end;
 
+function HasClaimSearchTerms(AArguments: TJSObject): Boolean;
+begin
+  Result := (Length(ArgumentSymptoms(AArguments)) > 0) or
+    (TextOf(AArguments, 'ingredient') <> '') or (TextOf(AArguments, 'preparation') <> '');
+end;
+
 procedure ShowList(AResults: TJSObject; AFocus: Boolean);
 var
   LDocument: TNyxDocument;
@@ -1214,6 +1220,8 @@ var
   LMessage: String;
   LCanShowReviewed: Boolean;
   LCanShowAnyTrend: Boolean;
+  LTrendOnly: Boolean;
+  LNoTrendMatches: Boolean;
   LKindTabs: TNyxNode;
   LSymptoms: TStringValues;
 begin
@@ -1222,8 +1230,10 @@ begin
   LPage := Section(nkPage, 'result-page');
   LDocument.AddPage(LPage);
   LTrend := TextOf(GArguments, 'trend');
-  LCanShowAnyTrend := (GView = ovClaims) and (LTrend <> '') and
+  LTrendOnly := (GView = ovClaims) and (LTrend <> '') and not HasClaimSearchTerms(GArguments);
+  LNoTrendMatches := (GView = ovClaims) and (LTrend <> '') and
     (CountOf(AResults, 'total_matches') = 0);
+  LCanShowAnyTrend := LNoTrendMatches and not LTrendOnly;
   LCanShowReviewed := (GView = ovClaims) and
     (LTrend = '') and
     (TextOf(GArguments, 'scope') = '') and
@@ -1243,18 +1253,28 @@ begin
     else if Length(LSymptoms) > 2 then
       LMessage := 'Research across ' + IntToStr(Length(LSymptoms)) + ' symptoms'
     else if TextOf(AResults, 'symptom') <> '' then
-      LMessage := 'Research on ' + LowerCase(FriendlySymptom(TextOf(AResults, 'symptom')));
+      LMessage := 'Research on ' + LowerCase(FriendlySymptom(TextOf(AResults, 'symptom')))
+    else if LTrendOnly then
+    begin
+      if LTrend = 'eases' then
+        LMessage := 'What may ease symptoms'
+      else
+        LMessage := 'What may worsen symptoms';
+    end;
     LPage.Add(Caption(nkHeading, 'result-heading', LMessage));
-    LResultActions := Section(nkRow, 'result-actions');
-    LResultActions.Add(Button('open-graph', 'Graph view', nvSecondary));
-    if (GRelatedTerms <> '') and (GResearchKind <> SourceKindCulture) then
-      LResultActions.Add(Button('jump-to-sources', 'Jump to sources', nvSecondary));
-    LPage.Add(LResultActions);
-    LKindTabs := Section(nkRow, 'research-kind-tabs');
-    LKindTabs.Add(Button('research-kind-all', 'All research', nvSecondary));
-    LKindTabs.Add(Button('research-kind-studies', 'Studies & analyses', nvSecondary));
-    LKindTabs.Add(Button('research-kind-culture', 'Culture & experience', nvSecondary));
-    LPage.Add(LKindTabs);
+    if not LTrendOnly then
+    begin
+      LResultActions := Section(nkRow, 'result-actions');
+      LResultActions.Add(Button('open-graph', 'Graph view', nvSecondary));
+      if (GRelatedTerms <> '') and (GResearchKind <> SourceKindCulture) then
+        LResultActions.Add(Button('jump-to-sources', 'Jump to sources', nvSecondary));
+      LPage.Add(LResultActions);
+      LKindTabs := Section(nkRow, 'research-kind-tabs');
+      LKindTabs.Add(Button('research-kind-all', 'All research', nvSecondary));
+      LKindTabs.Add(Button('research-kind-studies', 'Studies & analyses', nvSecondary));
+      LKindTabs.Add(Button('research-kind-culture', 'Culture & experience', nvSecondary));
+      LPage.Add(LKindTabs);
+    end;
     if GResearchKind = SourceKindCulture then
     begin
       LRecords := TJSArray.new;
@@ -1278,12 +1298,12 @@ begin
   end
   else if (GView <> ovClaims) or (GResearchKind <> SourceKindCulture) then
   begin
-    if LCanShowAnyTrend then
+    if LNoTrendMatches then
     begin
       if LTrend = 'eases' then
-        LMessage := 'No matching claims point toward easing this symptom.'
+        LMessage := 'No matching claims point toward symptom relief.'
       else
-        LMessage := 'No matching claims point toward worsening this symptom.';
+        LMessage := 'No matching claims point toward worsening symptoms.';
     end
     else if LCanShowReviewed then
       LMessage := 'No clear direction in the reviewed evidence for this search. You can explore what the studies looked at.'
@@ -1389,7 +1409,7 @@ begin
   end;
 
   PublishResults(LDocument, LPage);
-  if GView = ovClaims then
+  if (GView = ovClaims) and not LTrendOnly then
   begin
     BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
       function(AEvent: TEventListenerEvent): Boolean
@@ -1412,7 +1432,7 @@ begin
   end;
   if AFocus then
     FocusResults;
-  if GView = ovClaims then
+  if (GView = ovClaims) and not LTrendOnly then
   begin
     GResultsRenderer.ElementFor('research-kind-all').setAttribute('aria-pressed',
       LowerCase(BoolToStr(GResearchKind = SourceKindAll, True)));
@@ -1564,12 +1584,16 @@ begin
       if not GPreparation.ReadValue(LValue) then
         Exit;
       MaybeSet(GArguments, 'preparation', LValue);
-      if (Length(LValues) = 0) and (TextOf(GArguments, 'ingredient') = '') and
-        (TextOf(GArguments, 'preparation') = '') then
+      if not HasClaimSearchTerms(GArguments) then
       begin
-        MessageView('Choose where to start', 'Choose a symptom or an ingredient to look up.');
-        GSymptom.Input.focus;
-        Exit;
+        if GTrend = '' then
+        begin
+          MessageView('Choose where to start',
+            'Choose a symptom, an ingredient, or a specific symptom effect.');
+          GSymptom.Input.focus;
+          Exit;
+        end;
+        GResearchKind := SourceKindAll;
       end;
       case SelectedIndex('scope') of
         1: GArguments['scope'] := 'assessed';
@@ -1686,7 +1710,8 @@ begin
   begin
     GRenderer.ElementFor('catalog-form').setAttribute('hidden', '');
     GRenderer.ElementFor('claim-form').removeAttribute('hidden');
-    MessageView('Explore Parkinson’s research', 'Choose a symptom or ingredient to see claims, studies and firsthand accounts.');
+    MessageView('Explore Parkinson’s research',
+      'Choose a symptom, an ingredient, or a symptom effect to explore the research.');
   end
   else
   begin
@@ -1771,7 +1796,8 @@ begin
 
   LClaims := Section(nkColumn, 'claim-form');
   LClaims.Add(Caption(nkLabel, 'guidance',
-    'Start with an ingredient or choose one or more symptoms. Results can match any selected symptom.'));
+    'Choose an ingredient or one or more symptoms. Results can match any selected symptom. ' +
+    'Select May ease or May worsen to search across all symptoms.'));
   LClaims.Add(CreatePickerField('symptom', 'Symptoms', 'Add a symptom, e.g. trem', True));
   LQuick := Section(nkRow, 'quick-symptoms');
   for LIndex := Low(CQuickSymptoms) to High(CQuickSymptoms) do
