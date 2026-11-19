@@ -1,6 +1,8 @@
 ## Findings and limits
 
-Sixteen Round 1 claims have a checked version 1 scorecard.
+Eighteen Round 1 claims have a checked version 1 scorecard.
+
+Cold-pressed olive oil and Parkinson anxiety (0343) retains Maybe True at the minimal-signal anchor of 50.005. The human association measured anxiety but did not identify oil grade or a Parkinson-specific effect. The new original rat study verifies the preparation and found a favorable result in one maze comparison, with an inconclusive center-time comparison. Brewed green tea and Parkinson fatigue (0948) retains Maybe True at 51 because fatigue rose 3.7 points in one uncontrolled cohort of 14 completers. The two source records from that cohort count once. The trial-arm tables, separate controlled fatigue comparison and Jiang full body remain open. [Queries, source comparisons and rubric checks](followup/olive-anxiety-green-tea-nov19-57/README.md).
 
 The checked version 1 scorecard for refined corn oil and Parkinson falls (0546) retains Unknown at 50. ENRGISE reports one serious fall in each of the two selected oil arms, and the Alzheimer study pools corn and soy placebo recipients. COPD and NUTRIMAL add mixed-oil functional context. A constipation review is now assessed at abstract depth through its previously archived multiple sclerosis ginger-tablet trial. [Arm data, scorecard and remaining access routes](followup/febs-oil-comparators-nov19-56/README.md).
 
