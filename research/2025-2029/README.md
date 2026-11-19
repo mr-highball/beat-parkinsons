@@ -553,3 +553,17 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Antioxidant, anti-inflammatory and cytoprotective effects of crocin in Alzheimer's and Parkinson's diseases](Source-Text/PMC13092161.txt).
 - [Original drooling program registration](Source-Text/Trials/ChiCTR2500096034.txt).
 - [Parkinson drooling patient journey interviews](Source-Text/PMC12999412.txt).
+
+## Clinical cohorts, comparison groups and endpoint definitions
+
+- [Cerebellar dysfunction with visual symptoms during enterocolitis](Source-Text/PMC12372600.txt).
+- [Serotonin imaging, impulse control and apathy in Parkinson disease](Source-Text/PMC12129733.txt).
+- [Quantitative myorhythmia case study](Source-Text/PMC11967460.txt).
+- [ODYSSEI randomized medication comparison](Source-Text/PMC12623527.txt).
+- [Urinary, motor and cognitive measures in a Parkinson clinic](Source-Text/PMC12516142.txt).
+- [Parkinson self-care dyad protocol](Source-Text/PMC12587928.txt).
+- [WHIP-PD activity and participation analysis](Source-Text/PMC12958334.txt).
+- [Self and informant reports from a memory clinic](Source-Text/PMC13687618.txt).
+- [Parkinson multidisciplinary clinic cohort](Source-Text/PMC12839184.txt).
+- [Hyponatremia and central fever in a multiple system atrophy case](Source-Text/PMC13193965.txt).
+- [Observations on clinical comparator endpoints and food claims](Observations/Clinical-Comparators-and-Food-Claim-Endpoints.md).

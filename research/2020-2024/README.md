@@ -711,3 +711,7 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Therapeutic effects of saffron and its components on neurodegenerative diseases](Source-Text/PMC10827773.txt).
 - [Neuroprotective effect of green tea extract (-)-epigallocatechin-3-gallate in a preformed fibril-induced mouse model of Parkinson's disease](Source-Text/PMC11060057.txt).
 - [Dietary Effects on the Gut Phageome](Source-Text/PMC11354428.txt).
+
+## Group exercise and mobility outcomes
+
+- [Parkinson group boxing and mobility, full article extract](Source-Text/2021-PMID39262882-Group-Boxing-Abstract.txt).

@@ -647,3 +647,9 @@ The contaminant trail includes an original total-diet abstract, without a measur
 ## Botanical source comparisons and outcome definitions
 
 - [Four-herb menopause comparison](Source-Text/PMC5437055.txt).
+
+## Clinical symptom measures and registry history
+
+- [Parkinson pain scales and intraepidermal nerve findings](Source-Text/PMC6383044.txt).
+- [ODYSSEI original UMIN registration](Source-Text/Trials/UMIN000024536.txt).
+- [ODYSSEI jRCT registration and later results](Source-Text/Trials/jRCTs071180014.txt).
