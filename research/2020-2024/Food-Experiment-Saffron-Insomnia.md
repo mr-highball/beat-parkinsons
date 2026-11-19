@@ -2,7 +2,7 @@
 
 ## Affron and the insomnia severity index
 
-Lopresti and colleagues randomized 63 adults with self-reported poor sleep in 2020. Fifty-five provided analysis data. After 28 days, the Insomnia Severity Index group-by-time comparison favored standardized Affron extract over placebo (p = .017). The extract group's mean final score of 11.7 remained in the subthreshold insomnia range. The methods specify 28 days. The brief summary gives an inconsistent duration of eight weeks. [Original study, Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC7849671/)
+Lopresti and colleagues randomized 63 adults with self-reported poor sleep in 2020. Fifty-five provided analysis data. After 28 days, the Insomnia Severity Index group-by-time comparison favored standardized Affron extract over placebo (p = .017). Table 2 gives an extract-group mean of 11.74 averaged across days 7–28. Figure 2 presents the individual follow-up visits. The methods specify 28 days. The brief summary gives an inconsistent duration of eight weeks. [Original study, Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC7849671/)
 
 ## Affron and the insomnia symptom questionnaire
 
