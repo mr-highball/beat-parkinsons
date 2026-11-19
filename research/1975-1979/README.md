@@ -1,5 +1,7 @@
 # 1975-1979
 
+The [original banana tissue assay](Source-Text/1976-PMID1245664-Salsolinol-in-Banana-Pulp-and-Peel.txt) measures salsolinol in pulp and peel at different stages of ripeness.
+
 Original printed context: [Two geriatric cases: demonstration at Royal College of Physicians of London](Source-Text/PMC1599378.txt) · [Iatrogenic ‘torsade de pointes’ ventricular tachycardia](Source-Text/PMC2425796.txt).
 
 [indexed digoxin meeting communication](Source-Text/1978-PMID728290-Digoxin-Proceedings-Member.txt).

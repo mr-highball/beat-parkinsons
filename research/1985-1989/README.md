@@ -1,5 +1,7 @@
 # 1985-1989
 
+A [dried banana feeding study](Source-Text/1989-PMID2754429-Dried-Banana-and-Urinary-Salsolinol-Abstract.txt) reports the two urinary salsolinol forms before and after intake in six healthy participants.
+
 [Levodopa crossover and baseline end-dose dystonia](Source-Text/PMC1032507.txt) · [PMC1276879](Source-Text/PMC1276879.txt).
 
 Original printed context: [Dystonic-Parkinsonian syndrome after cyanide poisoning: clinical and MRI findings](Source-Text/PMC1032927.txt).

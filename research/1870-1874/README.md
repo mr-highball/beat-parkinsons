@@ -1,5 +1,7 @@
 # 1870-1874
 
+The [1870 constipation correspondence](Source-Text/1870-PMC2261497-Spender-Therapeutics-of-Constipation.txt) describes iron and aloes. Walnut occurs separately as a size comparison in adjacent clinical reports.
+
 January 1, 1870 through December 31, 1874.
 
 ## Annotated research
