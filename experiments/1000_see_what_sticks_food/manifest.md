@@ -23,6 +23,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 Twenty-seven Round 1 claims have a checked version 1 scorecard.
 
+The dried-fig and visual hallucination review resolves all 44 original pairs in the 2015–2019 priority-four tranche, including twelve title/index upgrades. Clinical occurrence, first onset and frequency remain distinct. The two historical harvest accounts describe excitement, and the 1982 commentary puts hallucinations in rows separate from its dried-fruit category. Ten related assessments preserve cultural and experimental contexts, with no change to the frozen claim's Unknown verdict. [Sources, original passages and remaining trails](followup/fig-hallucination-sources-nov19-78/README.md).
+
 Fourteen original clinical and animal-paper pairs were resolved at full-text depth. The 10/66 cohort separates informant-rated apathy from depression, the Care4PD figure uses orange as a legend color, and the basil match identifies a research award. Two date-palm assessments distinguish pathway modeling and seed-extract inflammation from pain under dried fruit. [Original measures, coverage and access limits](followup/clinical-originals-and-endpoints-nov19-77/README.md).
 
 The date-palm follow-through integrates six related source assessments and refines two existing study records at original depth. Three official registrations now resolve by exact identifier. The whole Mazafati pain study and the topical knee comparison still lack verified numerical results. [Trial identities and pain measurement](followup/date-registry-and-assessments-nov19-76/README.md).
