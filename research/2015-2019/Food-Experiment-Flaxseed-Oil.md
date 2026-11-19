@@ -1,5 +1,9 @@
 # Flaxseed oil evidence
 
+## Oil as a carrier for an intranasal drug
+
+A 2018 delivery study tracked ropinirole in plasma and brain after administering an oil-based formulation by the nasal route in mice. Its results address drug distribution. A separate behavior study and an oral oil comparison are absent from the accessible report. [Primary source scope](Source-Text/2018-PMID30201564-Flaxseed-Oil-Nasal-Drug-Carrier-Scope.txt).
+
 ## Flaxseed-derived omega-3 plus vitamin E and UPDRS parts
 
 Taghizadeh and colleagues published the 60-person Parkinson trial on March 22, 2017. The intervention combined flaxseed-derived omega-3 with vitamin E. The accepted manuscript describes assessment of four UPDRS parts but Table 2 publishes only the combined total, with a change of −3.3 versus +4.4 with placebo (p = .02). The report gives no individual symptom results or verified oil pressing method. The study identifier is IRCT201604035623N73. [Primary accepted manuscript, Methods and Table 2](https://magistralbr.caldic.com/storage/product-files/1634072890.pdf) · [Earlier archive entry](Food-Experiment-Evidence.md#flaxseed-derived-omega-3-plus-vitamin-e)

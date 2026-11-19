@@ -1,5 +1,9 @@
 # Flaxseed oil evidence
 
+## Oral capsule oil and coordination in rats with hyperammonemia
+
+A 2023 primary report found longer rod retention under oral flaxseed oil than under the hyperammonemia control, with an inconclusive omnibus comparison for general open-field activity. The oil contained 43% alpha-linolenic acid by chemical assay. The investigators give no verified pressing method or resting-tremor outcome. [Primary methods and motor results](Source-Text/2023-PMID37960203-Flaxseed-Oil-Hyperammonemia-Motor-Tests.txt).
+
 ## Japanese flaxseed oil and cognition trial registration
 
 UMIN000039901 first became public March 24, 2020. The planned randomized, double-blind study compared equal pouches of flaxseed and corn oils for 12 weeks in 60 healthy adults aged 65–80. The registry lists cognition at baseline, six and 12 weeks and reports enrollment of 60 and completion. Its publication field had not been updated when checked. The March 2023 original publication gives the same identifier and study design. [Original registry](https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000045507) · [Selected local registry text](Source-Text/Trials/UMIN000039901.txt) · [Published results](#flaxseed-table-oil-and-executive-function-in-older-adults)
