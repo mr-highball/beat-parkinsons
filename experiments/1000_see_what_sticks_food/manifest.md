@@ -13,15 +13,17 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 940 |
+| Unknown | 1000 | 939 |
 | Maybe True | 0 | 27 |
-| Maybe False | 0 | 33 |
+| Maybe False | 0 | 34 |
 | True | 0 | 0 |
 | False | 0 | 0 |
 
 ## Findings and limits
 
-Twenty-five Round 1 claims have a checked version 1 scorecard.
+Twenty-six Round 1 claims have a checked version 1 scorecard.
+
+The checked brewed-coffee and Parkinson fatigue claim (0121) changes from Unknown to Maybe False at the 50.005 minimal-signal anchor against its frozen worsening direction. A randomized healthy-adult crossover found less acute mental fatigue with paper-filtered coffee than flavored water. An independent Parkinson caffeine-capsule trial gives favorable fatigue-scale point estimates with intervals spanning both directions. Regular-versus-decaf espresso had mixed individual responses, and the Turkish-coffee comparison was inconclusive. A new primary meal study shared espresso across both conditions and cannot identify its effect. Forty-two original pairs were reviewed at full-text depth across all four categories. [Checked comparisons and remaining trails](followup/clinical-coffee-context-nov19-69/README.md).
 
 The historical full-text replay verifies 24 original pairs, covering 11 sets of printed journal pages and a full publisher PDF. It separates clinical tremor measurement from diagnostic mentions and figure references. The randomized fig-and-almond syrup study records three tremor events in its fig-containing arm and zero in either comparison arm. It compares distinct oral formulations in children taking methylphenidate and gives no resting-tremor phenotype. The same trial's drooling counts and the acute allergy case supply adverse-event context. Raw fig and Parkinson rest tremor (0559) and drooling (0188) are both Unknown at 50. [Verified source and outcome comparisons](followup/historical-page-scans-nov19-68/README.md).
 
@@ -900,6 +902,7 @@ The initial published verdicts were 997 Unknown and three Maybe False. [Open tra
 - [0082](statements/0082.txt) **Maybe True** (51%) Consuming brewed black tea reduces bradykinesia severity in people with Parkinson's disease.
 - [0100](statements/0100.txt) **Maybe False** (52%) Consuming plain dark chocolate worsens anxiety severity in people with Parkinson's disease.
 - [0110](statements/0110.txt) **Maybe False** (51%) Consuming refined coconut oil worsens postural instability severity in people with Parkinson's disease.
+- [0121](statements/0121.txt) **Maybe False** (50.005%) Consuming brewed coffee worsens fatigue severity in people with Parkinson's disease.
 - [0128](statements/0128.txt) **Maybe False** (51%) Consuming fresh rosemary worsens depressive symptom severity in people with Parkinson's disease.
 - [0133](statements/0133.txt) **Maybe True** (51%) Consuming brewed lemon balm reduces depressive symptom severity in people with Parkinson's disease.
 - [0139](statements/0139.txt) **Maybe False** (51%) Consuming ground nigella seed worsens fatigue severity in people with Parkinson's disease.
