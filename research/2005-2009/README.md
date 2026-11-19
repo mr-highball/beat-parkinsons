@@ -283,3 +283,7 @@ The original walnut-fraction crossover registration is bucketed by first public 
 - [Lucas distress trial and the sunflower capsule comparator](Source-Text/2008-PMID19116322-Lucas-Sunflower-Distress-Comparator.txt).
 - [Interview-based record of sunflower culinary and traditional practices in Mexico](Cultural-and-Experiential/Traditional-Practices/2008-PMC2359819-Sunflower-Oil-Mexican-Uses.txt).
 - [Sunflower-based omega-3-deficient diet and maze performance](Source-Text/2008-PMID18492851-Sunflower-Diet-Working-Memory.txt).
+
+## Companion evidence from the food collection review
+
+- [Corn-oil comparison in the randomized sertraline trial](Source-Text/2009-PMID19843899-Corn-Oil-Sertraline-Depression-Results.txt).

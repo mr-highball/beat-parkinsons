@@ -166,3 +166,7 @@ The walnut-oil lipid trial is archived at author-abstract depth, with processing
 ## Sunflower oil evidence and source contexts
 
 - [High-oleic sunflower and medium-chain triglyceride crossover](Source-Text/2004-PMID15051598-Sunflower-MCT-Metabolic-Crossover.txt).
+
+## Companion evidence from the food collection review
+
+- [Cooked tomato sauce whole-food biomarker intervention](Source-Text/2001-PMID11752012-Cooked-Tomato-Sauce-and-Lycopene.txt).

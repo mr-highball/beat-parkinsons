@@ -640,3 +640,8 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Thymol experiment with worse maze performance in the combined saline and sunflower vehicle group](Source-Text/2024-PMID38665779-Sunflower-Saline-Vehicle-Working-Memory.txt).
 - [Ferulic acid Parkinson-model comparator with injected sunflower oil](Source-Text/2024-PMID39577325-Ferulic-Sunflower-Model-Control.txt).
 - [Separate injected saline and sunflower controls in the boron Parkinson-model study](Source-Text/2022-PMID36800846-Boron-Sunflower-and-Saline-Controls.txt).
+
+## Companion evidence from the food collection review
+
+- [Published fertilized egg-yolk supplement and muscle protein synthesis trial](Source-Text/2020-PMID32598445-Fertilized-Egg-Yolk-Muscle-Synthesis.txt).
+- [Primary corn-oil control for an older-adult strength trial](Source-Text/2020-PMID33284965-Corn-Oil-and-Resistance-Training.txt).

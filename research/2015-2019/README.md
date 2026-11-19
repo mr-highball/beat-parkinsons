@@ -593,3 +593,11 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Thymol study with a separate sunflower vehicle arm awaiting group tables](Source-Text/2017-PMID28255862-Thymol-Sunflower-Disease-Vehicle.txt).
 - [Preterm pig recognition comparison with sunflower-oil formula](Source-Text/2018-PMID29783637-Preterm-Pig-Cognition-Sunflower-Comparator.txt).
 - [Matched dietary MCT and sunflower oil comparison in aged rats](Source-Text/2016-PMID27517611-Aged-Rat-MCT-Sunflower-Recognition.txt).
+
+## Companion evidence from the food collection review
+
+- [Later corn-oil comparison in depressed adults with coronary risk](Source-Text/2019-PMID31163106-Corn-Oil-Sertraline-Cardiac-Risk-Trial.txt).
+- [Cod test meals and the registered lean-seafood crossover](Source-Text/2015-PMID26224298-Cod-Meal-and-Lean-Seafood-Crossover.txt).
+- [Primary pilot of cod processing byproduct proteins](Source-Text/2018-Vildmyren-Cod-Residual-Protein-Pilot.txt).
+- [Corn-oil high-fat comparison for mouse muscle gene expression](Source-Text/2016-PMC5037530-Corn-Oil-Muscle-Transcriptome.txt).
+- [Coconut and DHA meal crossover with circulating endotoxin outcomes](Source-Text/2016-PMID27816052-Coconut-Oil-Meal-Endotoxin-Crossover.txt).

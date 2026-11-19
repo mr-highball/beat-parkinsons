@@ -420,3 +420,9 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [Lespérance depression trial and the sunflower capsule comparator](Source-Text/2010-PMID20584525-Lesperance-Sunflower-Depression-Comparator.txt).
 - [Toxin-related learning and anxiety findings with a common sunflower vehicle](Source-Text/2011-PMID22178224-Shared-Sunflower-Vehicle-Toxin-Memory.txt).
 - [Sunflower sham injection in an electroacupuncture Parkinson model](Source-Text/2013-PMID23819239-Sunflower-Sham-Electroacupuncture-Model.txt).
+
+## Companion evidence from the food collection review
+
+- [Official registry for the cod and lean-seafood diet crossover](Source-Text/Trials/NCT01708681.txt).
+- [Hard-boiled egg and labeled phosphatidylcholine challenge](Source-Text/2013-PMID23614584-Hard-Boiled-Egg-Phosphatidylcholine-Challenge.txt).
+- [Steamed broccoli and measured blood-cell DNA markers](Source-Text/2010-PMID20713433-Steamed-Broccoli-and-DNA-Markers.txt).
