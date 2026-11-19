@@ -497,3 +497,4 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [L-DOPA gene expression study and the sunflower carrier](Source-Text/2025-PMID40293707-Parkinson-Model-Gene-Expression-Vehicle.txt).
 - [Assigned sunflower seed oil and mouse recognition memory](Source-Text/2025-PMID39973828-Sunflower-Recognition-Memory.txt).
 - [Period observations on sunflower cognition and executive comparisons](Observations/Sunflower-Oil-Cognition-and-Executive-Comparisons.md).
+- [Tiger nut preprint and the sunflower reference group in a Parkinson-like model](Source-Text/2026-PPR1346503-Tiger-Nut-Sunflower-Model-Comparator.txt).

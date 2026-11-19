@@ -637,3 +637,4 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Parkinson mouse behavior study with a common sunflower vehicle](Source-Text/2024-PMID38745938-Parkinson-Model-Common-Sunflower-Vehicle.txt).
 - [Sunflower seed oil and short-term recall in students](Source-Text/2020-Maranatha-Sunflower-Short-Term-Memory.txt).
 - [Sarcopenia trial with sunflower oil and resistance training](Source-Text/2022-PMID35889801-Sarcopenia-Sunflower-Comparator.txt).
+- [Thymol experiment with worse maze performance in the combined saline and sunflower vehicle group](Source-Text/2024-PMID38665779-Sunflower-Saline-Vehicle-Working-Memory.txt).
