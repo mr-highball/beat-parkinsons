@@ -279,3 +279,5 @@ The primate study measured posture, balance and bradykinesia around a medical in
 The early Minamata survey described sensory and ataxia findings after historical methylmercury exposure. Its accessible abstract does not resolve specific seafood preparation or report the dysarthria table recovered from the later reanalysis. [Original and cohort lineage](../Food-Experiment-Seafood-Exposure-Speech.md#original-minamata-survey-and-later-cohort-reuse)
 
 - [Celery leaf and human apigenin](Food-Experiment-Celery-Apigenin.md)
+
+A dated interview-based study documents Otomi culinary sunflower oil alongside use of flowers in ceremonies and medicinal preparations of other plant parts. The neurological outcome and pressing grade are unspecified. The 2008 Dutch MEMO trial in the same period studied a specified high-oleic comparator and reported an inconclusive executive contrast. [Community record](../Cultural-and-Experiential/Traditional-Practices/2008-PMC2359819-Sunflower-Oil-Mexican-Uses.txt) · [MEMO results](../Source-Text/2008-PMID18678826-MEMO-Sunflower-Executive-Function.txt).

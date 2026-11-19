@@ -281,3 +281,4 @@ The original walnut-fraction crossover registration is bucketed by first public 
 - [MEMO human executive-task results with a sunflower-oil comparator](Source-Text/2008-PMID18678826-MEMO-Sunflower-Executive-Function.txt).
 - [Official registration for the MEMO sunflower-comparator trial](Source-Text/Trials/ISRCTN46249783.txt).
 - [Lucas distress trial and the sunflower capsule comparator](Source-Text/2008-PMID19116322-Lucas-Sunflower-Distress-Comparator.txt).
+- [Interview-based record of sunflower culinary and traditional practices in Mexico](Cultural-and-Experiential/Traditional-Practices/2008-PMC2359819-Sunflower-Oil-Mexican-Uses.txt).
