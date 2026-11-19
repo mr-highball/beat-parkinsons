@@ -30,10 +30,19 @@ const
     'attribution_fit', 'reliability_fit', 'independence', 'n', 'unit', 'local_reference', 'rationale');
   CFitFields: array[0..4] of String =
     ('exposure_fit', 'population_fit', 'outcome_fit', 'attribution_fit', 'reliability_fit');
+  CFitValues: array[0..3] of String = ('direct', 'partial', 'remote', 'unusable');
+  CObservedEffects: array[0..4] of String = ('eases', 'worsens', 'null', 'mixed', 'unreported');
+  CClaimEffects: array[0..2] of String = ('none', 'eases', 'worsens');
+  CProvenanceValues: array[0..2] of String = ('original', 'traceable', 'untraced');
+  CIndependenceValues: array[0..1] of String = ('confirmed', 'uncertain');
+  CClinicalKinds: array[0..3] of String = ('trial', 'observational', 'clinical_case', 'registry');
+  CContextOnlyKinds: array[0..6] of String = ('professional_opinion', 'review', 'news',
+    'sponsor_statement', 'protocol', 'registry_without_results', 'customary_use');
   CTiers: array[0..4] of String =
     ('open', 'minimal_signal', 'limited_clinical_link', 'direct_clinical_signal',
     'strong_directional_evidence');
   CAnchors: array[0..4] of Currency = (50, 50.005, 51, 55, 60);
+  CMinimumSourceTier: array[0..4] of Integer = (0, 1, 2, 3, 3);
 
 function FieldArray(const AFields: array of String): TJSONArray;
 var
@@ -49,6 +58,7 @@ end;
 procedure AddEvidenceRubricSchema(AResponse: TJSONObject);
 var
   LTiers: TJSONArray;
+  LValues: TJSONObject;
   LIndex: Integer;
 begin
   LTiers := TJSONArray.Create;
@@ -56,11 +66,21 @@ begin
   for LIndex := Low(CTiers) to High(CTiers) do
   begin
     LTiers.Add(TJSONObject.Create(['tier', CTiers[LIndex],
-      'score_anchor', ReviewConfidenceText(CAnchors[LIndex])]));
+      'score_anchor', ReviewConfidenceText(CAnchors[LIndex]),
+      'minimum_source_tier', CTiers[CMinimumSourceTier[LIndex]]]));
   end;
   AResponse.Add('decision_fields', FieldArray(CDecisionHeader));
   AResponse.Add('source_fields', FieldArray(CSourceHeader));
   AResponse.Add('fit_fields', FieldArray(CFitFields));
+  LValues := TJSONObject.Create;
+  AResponse.Add('field_values', LValues);
+  LValues.Add('fit', FieldArray(CFitValues));
+  LValues.Add('observed_effect', FieldArray(CObservedEffects));
+  LValues.Add('claim_effect', FieldArray(CClaimEffects));
+  LValues.Add('provenance', FieldArray(CProvenanceValues));
+  LValues.Add('independence', FieldArray(CIndependenceValues));
+  AResponse.Add('clinical_source_kinds', FieldArray(CClinicalKinds));
+  AResponse.Add('context_only_source_kinds', FieldArray(CContextOnlyKinds));
 end;
 
 function RowsForClaim(const AText, AId, ALabel: String;
@@ -135,31 +155,37 @@ begin
   LObserved := ARow.Strings['observed_effect'];
   LEffect := ARow.Strings['claim_effect'];
   LProvenance := ARow.Strings['provenance'];
-  if not MatchStr(LObserved, ['eases', 'worsens', 'null', 'mixed', 'unreported']) or
-    not MatchStr(LEffect, ['eases', 'worsens', 'none']) or
-    not MatchStr(LProvenance, ['original', 'traceable', 'untraced']) or
-    not MatchStr(ARow.Strings['independence'], ['confirmed', 'uncertain']) then
-    raise EConvertError.Create('Invalid source role, provenance or effect.');
+  if not MatchStr(LObserved, CObservedEffects) or not MatchStr(LEffect, CClaimEffects) or
+    not MatchStr(LProvenance, CProvenanceValues) or
+    not MatchStr(ARow.Strings['independence'], CIndependenceValues) then
+  begin
+    raise EConvertError.Create('Invalid source effect, provenance or independence.');
+  end;
   if (ARow.Strings['n'] <> '') and
     (not TryStrToInt(ARow.Strings['n'], LSize) or (LSize < 1)) then
     raise EConvertError.Create('An analyzed sample size must be a positive integer.');
   for LFit in CFitFields do
   begin
     LFitValue := ARow.Strings[LFit];
-    if not MatchStr(LFitValue, ['direct', 'partial', 'remote', 'unusable']) then
+    if not MatchStr(LFitValue, CFitValues) then
       raise EConvertError.Create('Invalid source rating for ' + LFit + '.');
     if (LEffect <> 'none') and (LFitValue = 'unusable') then
       raise EConvertError.Create('An ineligible fit cannot support a direction.');
   end;
   if LEffect = 'none' then
     Exit(0);
+  if MatchStr(ARow.Strings['kind'], CContextOnlyKinds) then
+  begin
+    raise EConvertError.Create('A context-only source cannot sign the claim. ' +
+      'Record the underlying observation as its own source family.');
+  end;
   if (LEffect <> LObserved) or (LProvenance = 'untraced') or
     (ARow.Strings['outcome_fit'] = 'remote') or (ARow.Strings['attribution_fit'] = 'remote') then
     raise EConvertError.Create('A signed source requires an interpretable, traceable comparison.');
   Result := 1;
   if (ARow.Strings['population_fit'] <> 'direct') or (ARow.Strings['outcome_fit'] <> 'direct') or
     (ARow.Strings['reliability_fit'] = 'remote') or
-    not MatchStr(ARow.Strings['kind'], ['trial', 'observational', 'clinical_case', 'registry']) then
+    not MatchStr(ARow.Strings['kind'], CClinicalKinds) then
     Exit;
   Result := 2;
   if (ARow.Strings['exposure_fit'] = 'direct') and (ARow.Strings['attribution_fit'] = 'direct') then
@@ -189,7 +215,6 @@ var
   LKind: String;
   LExpectedVerdict: String;
   LTier: Integer;
-  LMinimumTier: Integer;
   LSupportedTier: Integer;
   LSourceTier: Integer;
 begin
@@ -258,10 +283,7 @@ begin
       end;
       CountFamily(LTypeCounts, LCountKey);
     end;
-    LMinimumTier := LTier;
-    if LTier = High(CTiers) then
-      LMinimumTier := High(CTiers) - 1;
-    if LSupportedTier < LMinimumTier then
+    if LSupportedTier < CMinimumSourceTier[LTier] then
       raise EConvertError.Create('Source fits do not meet the tier prerequisites for ' + AId + '.');
     LExpectedVerdict := 'Unknown';
     if LTier > 0 then

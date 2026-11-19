@@ -42,14 +42,14 @@ const
     '{"name":"oracle_evidence_rubric","description":"Use the versioned evidence scorecard before ' +
       'rating efficacy in any food experiment round. Call without arguments for the rules. ' +
       'Pass round and id for the applied tier, independent source families and review status. ' +
-      'General lookups include exact tier anchors and ledger fields. Use include_rules to ' +
+      'General lookups include exact tier anchors, ledger fields and accepted values. Use include_rules to ' +
       'override whether the full rules are returned.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
       '"additionalProperties":false,"properties":{"round":{"type":"integer","minimum":1,"maximum":7},' +
       '"id":{"type":"string","pattern":"^[0-9]{4}$"},"include_rules":{"type":"boolean"}},' +
       '"dependentRequired":{"round":["id"],"id":["round"]}}},' +
     '{"name":"oracle_check_scorecard","description":"Check a draft against the current rubric ' +
-      'and frozen claim before publishing. Supply the Git revision from oracle_evidence_rubric ' +
+      'and frozen claim before handoff or publication. Supply the revision from oracle_evidence_rubric ' +
       'and the exact tab-separated decision and source-family tables for one claim, each with ' +
       'its header. Returns the rubric-derived verdict and anchor without writing to the repository.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +

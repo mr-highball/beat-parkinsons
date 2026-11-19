@@ -71,8 +71,10 @@ procedure Run;
 var
   LResult: TJSONObject;
   LDecisions: String;
+  LContext: String;
 begin
   LDecisions := Decision('minimal_signal', 'eases');
+  LContext := StringReplace(CConversation, #9'conversation'#9, #9'customary_use'#9, []);
   LResult := TJSONObject.Create;
   try
     AddEvidenceRubricSchema(LResult);
@@ -86,6 +88,12 @@ begin
     Check(LResult.Arrays['fit_fields'].Count = 5, 'Expected five separate fits.');
     Check(LResult.Arrays['tiers'].Objects[1].Strings['score_anchor'] = '50.005',
       'The schema must preserve the exact anchor.');
+    Check(LResult.Arrays['tiers'].Objects[4].Strings['minimum_source_tier'] =
+      'direct_clinical_signal', 'Strong evidence needs at least a direct clinical source.');
+    Check(LResult.Objects['field_values'].Arrays['independence'].Strings[1] = 'uncertain',
+      'The schema must show how to record uncertain independence.');
+    Check(LResult.Arrays['context_only_source_kinds'].Count = 7,
+      'The schema must expose context-only source kinds.');
     LResult.Clear;
     AddEvidenceScorecard(LResult, LDecisions, CSources + CConversation + CUncertain,
       '0281', 'worsens', 'Maybe False', 50.005);
@@ -121,6 +129,12 @@ begin
       '0281', 'worsens', 'Unknown', 50, True);
     Check(LResult.Strings['review_status'] = 'valid_draft',
       'An open draft may have no material sources.');
+    LResult.Clear;
+    AddEvidenceScorecard(LResult, Decision('open', 'none'), CSources +
+      StringReplace(LContext, #9'eases'#9'eases'#9, #9'unreported'#9'none'#9, []),
+      '0281', 'worsens', 'Unknown', 50, True);
+    Check(LResult.Objects['family_counts'].Integers['context'] = 1,
+      'Keep recorded customary use visible as context.');
   finally
     LResult.Free;
   end;
@@ -130,6 +144,12 @@ begin
     'The limited clinical tier needs a clinical comparison.');
   CheckRejected(LDecisions, CSources + StringReplace(CConversation, #9'eases'#9'eases'#9,
     #9'null'#9'eases'#9, []), 'A null source cannot provide a signed effect.');
+  CheckRejected(LDecisions, CSources + LContext,
+    'Customary use without an observed response cannot supply a sign.', True);
+  CheckRejected(LDecisions, CSources + StringReplace(CConversation, #9'conversation'#9,
+    #9'professional_opinion'#9, []), 'A professional opinion alone cannot supply a sign.', True);
+  CheckRejected(LDecisions, CSources + StringReplace(CConversation, #9'conversation'#9,
+    #9'review'#9, []), 'A review points to the underlying evidence family.', True);
   CheckRejected(CDecisions, CSources, 'A draft requires a decision row.', True);
   CheckRejected(LDecisions, CSources + StringReplace(CConversation, '0281', '0100', []),
     'A draft must not silently drop evidence for another claim.', True);

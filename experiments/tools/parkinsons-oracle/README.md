@@ -6,7 +6,9 @@ The oracle is a local Free Pascal MCP server for the Parkinson’s research cata
 
 Call `oracle_evidence_rubric` once at the beginning of evidence review. With no
 arguments it returns the rubric text, its version, the pinned Git revision,
-and the structured tier anchors, TSV columns and evidence-fit fields. Use
+and structured tier anchors, TSV columns, accepted field values and source kind
+constraints. Each `minimum_source_tier` is a structural prerequisite. The rules
+explain the additional judgments needed before selecting a tier. Use
 `include_rules: false` for the compact structured reference after reading the
 rules. The draft checker uses the same anchors and column definitions.
 Send both `round` and `id` to see the published verdict, scorecard, source-family
@@ -28,6 +30,8 @@ with no material families uses the source header alone. A `valid_draft` returns
 the expected verdict, score anchor and family counts for that frozen hypothesis.
 The check uses the same tier prerequisites as the published lookup. Reviewers
 remain responsible for source fidelity, competing evidence and completeness.
+Keep opinions, secondary reports, result-free records and customary use as
+context. Grade any traceable underlying observation under its own evidence family.
 After a revision conflict, fetch the current claim and reconcile the draft before
 retrying. When the managed session has an earlier tool list, use the
 [local launcher](../../oracle-coverage/README.md#local-launcher).
