@@ -1589,7 +1589,7 @@ begin
         if GTrend = '' then
         begin
           MessageView('Choose where to start',
-            'Choose a symptom, an ingredient, or a specific symptom effect.');
+            'Choose a symptom or ingredient, or select May ease or May worsen to search across all symptoms.');
           GSymptom.Input.focus;
           Exit;
         end;
@@ -1796,8 +1796,7 @@ begin
 
   LClaims := Section(nkColumn, 'claim-form');
   LClaims.Add(Caption(nkLabel, 'guidance',
-    'Choose an ingredient or one or more symptoms. Results can match any selected symptom. ' +
-    'Select May ease or May worsen to search across all symptoms.'));
+    'Choose an ingredient or one or more symptoms. Results can match any selected symptom.'));
   LClaims.Add(CreatePickerField('symptom', 'Symptoms', 'Add a symptom, e.g. trem', True));
   LQuick := Section(nkRow, 'quick-symptoms');
   for LIndex := Low(CQuickSymptoms) to High(CQuickSymptoms) do
@@ -1813,6 +1812,8 @@ begin
   LTrendOptions.Add(Button('trend-eases', 'May ease', nvSecondary));
   LTrendOptions.Add(Button('trend-worsens', 'May worsen', nvSecondary));
   LClaims.Add(LTrendOptions);
+  LClaims.Add(Caption(nkLabel, 'trend-guidance',
+    'Leave Symptoms blank and choose May ease or May worsen to search across all symptoms.'));
   LClaims.Add(Button('show-filters', 'More filters', nvSecondary));
   LFilters := Section(nkColumn, 'extra-filters');
   LFilters.Add(CreatePickerField('preparation', 'Preparation', 'Any preparation'));
