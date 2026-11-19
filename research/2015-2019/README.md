@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [full IGMC member P105](Source-Text/2016-PMID27454254-IGMC-Date-Fruit-P105.txt) identifies computed cancer pathways for literature-selected date constituents.
+
 [Nutmeg volatile oil and hippocampal measures](Source-Text/PMC5634759.txt) · [PMC6869566](Source-Text/PMC6869566.txt) · [PMC6582384](Source-Text/PMC6582384.txt) · [PMC6661809](Source-Text/PMC6661809.txt) · [PMC4790408](Source-Text/PMC4790408.txt) · [PMC6296165](Source-Text/PMC6296165.txt).
 
 [simulated vocal tremor and listener ratings](Source-Text/PMC4545074.txt) · [Parkinson genetic and olfaction comparison](Source-Text/PMC5567486.txt) · [ACID registration](Source-Text/Trials/NCT03419039.txt).
