@@ -681,3 +681,66 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [A systematic review of the clinical correlates of delusions in Parkinson's disease](Source-Text/PMC13553566.txt).
 - [From dosage alteration to amplification strategies: mechanistically defined alpha-synuclein mouse models for Parkinson's disease therapy development](Source-Text/PMC13722733.txt).
 - [A Multimodal Nomogram Predicting the Risk of Cognitive Impairment in Parkinson Disease](Source-Text/PMC13728480.txt).
+
+## Visual episode measurement and clinical comparison sources
+
+- [Visual episode counts, clinical settings and conference reports](Observations/Visual-Episode-Counting-and-Conference-Scope.md).
+- [CURRENT STATUS AND PROBLEMS OF NEUROIMAGING-GUIDED DIAGNOSIS USING NEAR-INFRARED SPECTROSCOPY IN JAPAN](Source-Text/PMC11814881.txt).
+- [ESICM LIVES 2025](Source-Text/PMC12640885.txt).
+- [Establishing a robust triangulation framework to explore the relationship between hearing loss and Parkinson's disease](Source-Text/PMC11698951.txt).
+- [C19orf12 gene variants causing mitochondrial membrane protein-associated neurodegeneration (MPAN)](Source-Text/PMC12229627.txt).
+- [Positron emission tomography tracers for synucleinopathies](Source-Text/PMC11702101.txt).
+- [Viruses and neurodegeneration: a growing concern](Source-Text/PMC11727702.txt).
+- [Timing of risk factors, prodromal features, and comorbidities of dementia from a large health claims case-control study](Source-Text/PMC11736938.txt).
+- [Motor Functional Hierarchical Organization of Cerebrum and Its Underlying Genetic Architecture in Parkinson's Disease](Source-Text/PMC11823334.txt).
+- [Clinically probable RBD is an early predictor of malignant non-motor Parkinson's disease phenotypes](Source-Text/PMC11775280.txt).
+- [Toward a biological definition of neuronal and glial synucleinopathies](Source-Text/PMC12466200.txt).
+- [Classification and Genotype-Phenotype Relationships of GBA1 Variants: MDSGene Systematic Review](Source-Text/PMC12006889.txt).
+- [Progress and prospects of Parkinson's disease with depression research: A global bibliometric analysis based on CiteSpace](Source-Text/PMC11835133.txt).
+- [Epigenetic insights into neuropsychiatric and cognitive symptoms in Parkinson's disease: A DNA co-methylation network analysis](Source-Text/PMC11873129.txt).
+- [Heterogeneity of cognitive progression and clinical predictors in Parkinson's disease-subjective cognitive decline](Source-Text/PMC11882643.txt).
+- [The phenotype of "pure" autonomic failure](Source-Text/PMC13524171.txt).
+- [Alzheimer's disease neuropathology and its estimation with fluid and imaging biomarkers](Source-Text/PMC11907863.txt).
+- [Spatial and functional profiles distinguish target sets of Parkinson's disease and antipsychotic drugs with different clinical effects](Source-Text/PMC11971416.txt).
+- [Natural History and Progression of Dentatorubral-Pallidoluysian Atrophy (DRPLA): A Retrospective Study of 22 Patients](Source-Text/PMC12371440.txt).
+- [Cognitive and neuropsychiatric profiles distinguish atypical parkinsonian syndromes](Source-Text/PMC12404716.txt).
+- [Cerebral microbleeds: prevalence and relationship to clinical features in cognitive impairment with lewy body disease](Source-Text/PMC12016122.txt).
+- [The potential of brain organoids in addressing the heterogeneity of synucleinopathies](Source-Text/PMC12037466.txt).
+- [Cortical microstructural abnormalities in dementia with Lewy bodies and their associations with Alzheimer's disease copathologies](Source-Text/PMC12069582.txt).
+- [Genetic risk and plasma biomarkers of dementia with Lewy bodies in a Chinese population](Source-Text/PMC12081849.txt).
+- [Cerebrovascular co-pathology and cholinergic white matter pathways along the Lewy body continuum](Source-Text/PMC12086334.txt).
+- [Accurate detection of pathologic α-synuclein in CSF, skin, olfactory mucosa, and urine with a uniform seeding amplification assay](Source-Text/PMC12102825.txt).
+- [Elevated cerebrospinal fluid levels of SERPIN E1 in participants with lewy body diseases](Source-Text/PMC12166053.txt).
+- [Psychiatric-onset neuronal intranuclear inclusion disease in a psychiatry-based dementia-enriched cohort in Japan](Source-Text/PMC12405813.txt).
+- [Substantia Nigra Iron Deposition in Lewy Body Disease: A Magnetic Resonance Imaging and Neuropathology Study](Source-Text/PMC12354321.txt).
+- [Narcolepsy and psychiatric comorbidity: a review of the literature](Source-Text/PMC12179710.txt).
+- [The promise of gene therapy in common types of dementia](Source-Text/PMC12204781.txt).
+- [Alpha-synuclein seeding amplification assays in Lewy body dementia: a brief review](Source-Text/PMC12210522.txt).
+- [Blood‑brain barrier dysfunction in epilepsy: Mechanisms, therapeutic strategies and future orientation (Review)](Source-Text/PMC12270381.txt).
+- [Abstracts from the 2025 Annual Meeting of the Society of General Internal Medicine](Source-Text/PMC12572470.txt).
+- [Quantitative electroencephalography in the diagnosis of dementia with Lewy bodies](Source-Text/PMC12271817.txt).
+- [Electrophysiological Signatures of Visual Sensations Elicited by Direct Electrical Stimulation](Source-Text/PMC12433393.txt).
+- [VPS13C-Related Parkinson's Disease: Report of a Novel Variant from India and Systematic Review of the Literature](Source-Text/PMC12999003.txt).
+- [The Mild Behavioral Impairment Checklist for Parkinson's Disease: An Ancillary Instrument in Cognitive Assessment](Source-Text/PMC12839493.txt).
+- [Dopamine alters functional gradients in Parkinson's disease](Source-Text/PMC12319910.txt).
+- [Progressive Supranuclear Palsy-A Global Review](Source-Text/PMC13042570.txt).
+- [Mapping the distribution of neurotransmitters to resting-state functional connectivity in Parkinson's disease](Source-Text/PMC12418387.txt).
+- [Brain-clinical signatures of basal ganglia-related dysfunctional reorganisation in Parkinson's disease](Source-Text/PMC12571575.txt).
+- [Update on Medical Treatment of Cushing's Syndrome](Source-Text/PMC12484323.txt).
+- [α-Synuclein seed amplification assay positivity beyond synucleinopathies](Source-Text/PMC12489771.txt).
+- [Impact of levodopa and deep brain stimulation on visual impairments in Parkinson's disease](Source-Text/PMC12455113.txt).
+- [Thalamic nuclei volume changes associated with cognitive and motor manifestations of Parkinson's disease](Source-Text/PMC12484683.txt).
+- [A Biomarker-Based Classification of Corticobasal Syndrome](Source-Text/PMC12882055.txt).
+- [The cholinergic basal forebrain and its role in neurodegeneration](Source-Text/PMC12713553.txt).
+- [Novel Ways of Targeting the Dopamine Transporter](Source-Text/PMC12604107.txt).
+- [Septins in the nervous system: from cytoskeletal dynamics to neurological disorders](Source-Text/PMC12512388.txt).
+- [Clinical Outcome Assessments in Parkinson's Disease: A Scoping Review of Current Rating Scales and Future Needs](Source-Text/PMC13172760.txt).
+- [A Causal Association Between Drug Use and Cognitive Impairment: A Two-Sample Mendelian Randomization Study](Source-Text/PMC12606049.txt).
+- [Sentence comprehension in Lewy body diseases: a functional magnetic resonance imaging study](Source-Text/PMC12602868.txt).
+- [LRRK2 p.G2385R and p.R1628P variants in a multi-ethnic Asian Parkinson's Cohort: epidemiology and clinical insights](Source-Text/PMC12627830.txt).
+- [Sex and gender differences in Lewy body dementia: a narrative review](Source-Text/PMC12624417.txt).
+- [Retinal alterations resemble brain pathology in a rat model of Parkinson's disease induced by intranigral infusion of α-synuclein oligomers](Source-Text/PMC12663455.txt).
+- [Phenotypic variability in early-onset dementia segregating with a novel APP (p.I718M) variant](Source-Text/PMC12670831.txt).
+- [A Unified Continuous Staging Framework for Alzheimer's Disease and Lewy Body Dementia via Hierarchical Anatomical Features](Source-Text/PMC12714422.txt).
+- [Heterogeneity of dementia with lewy bodies: Insights from clinical presentations, neuropathology, and biomarkers](Source-Text/PMC12727820.txt).
+- [Hallucinations and disturbed behaviour in the critically ill: incidence, patient characteristics, associations, trajectory, and outcomes](Source-Text/PMC11783843.txt).

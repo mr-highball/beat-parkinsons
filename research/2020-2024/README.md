@@ -797,3 +797,8 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Patterns of tau, amyloid and synuclein pathology in ageing, Alzheimer's disease and synucleinopathies](Source-Text/PMC12073977.txt).
 - [An Extract from Ficus carica Cell Cultures Works as an Anti-Stress Ingredient for the Skin](Source-Text/2021-PMID33806157-Fig-Cell-Culture-Extract-and-Topical-Skin-Outcomes.txt).
 - [Quantification of tyramine in different types of food using novel green synthesis of ficus carica quantum dots as fluorescent probe](Source-Text/2022-PMID35586926-Fig-Reagent-and-Food-Tyramine-Abstract.txt).
+
+## Visual episode measurement and clinical comparison sources
+
+- [Distinct transcriptional alterations distinguish Lewy body disease from Alzheimer's disease](Source-Text/PMC11706328.txt).
+- [The graded multidimensional geometry of phenotypic variation and progression in neurodegenerative syndromes](Source-Text/PMC11788217.txt).
