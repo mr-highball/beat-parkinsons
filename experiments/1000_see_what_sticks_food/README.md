@@ -49,4 +49,6 @@ Review newly flagged sources and update [source dispositions](source-disposition
 
 Those search commands reproduce the historical first-pass pipeline in a build directory. The [follow-up instructions](followup/README.md#reproducing-the-follow-up) cover the uncapped search and the resumable evidence ledgers.
 
+For a follow-up expression ledger, the native ingredient search supports the documented [Europe PMC SOAP endpoint](https://dev.europepmc.org/SoapWebServices) if the default REST route fails. Run it with the same expressions and a separate output directory. The optional final `soap` argument selects the route, and `P_PDATE_D desc` supplies the SOAP publication-date sort. Both routes use the same query, pagination, and completion checks.
+
 Rebuild the [native coverage and masked research queue](followup/coverage-current/README.md) as the live assessment ledger changes.

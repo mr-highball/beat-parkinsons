@@ -54,10 +54,11 @@ type
     FResultFile: TFileStream;
     FSort: UTF8String;
     FPageSize: Integer;
+    FUseSoap: Boolean;
     procedure RestoreCompleted(const APriorDir: String);
   public
     constructor Create(const AQueries: TIngredientQueries; const AOutputDir, APriorDir: String;
-      const ASort: UTF8String; APageSize: Integer);
+      const ASort: UTF8String; APageSize: Integer; AUseSoap: Boolean);
     destructor Destroy; override;
     function TakeQuery(out AQuery: TIngredientQuery): Boolean;
     procedure WaitForRequest;
@@ -67,6 +68,7 @@ type
     property Failed: Integer read FFailed;
     property Sort: UTF8String read FSort;
     property PageSize: Integer read FPageSize;
+    property UseSoap: Boolean read FUseSoap;
   end;
 
   TSearchWorker = class(TThread)
@@ -403,7 +405,7 @@ begin
 end;
 
 constructor TSearchRun.Create(const AQueries: TIngredientQueries; const AOutputDir,
-  APriorDir: String; const ASort: UTF8String; APageSize: Integer);
+  APriorDir: String; const ASort: UTF8String; APageSize: Integer; AUseSoap: Boolean);
 var
   LDirectory: String;
 begin
@@ -412,6 +414,7 @@ begin
   FQueries := AQueries;
   FSort := ASort;
   FPageSize := APageSize;
+  FUseSoap := AUseSoap;
   LDirectory := IncludeTrailingPathDelimiter(AOutputDir);
   if (APriorDir <> '') and (SameText(LDirectory, IncludeTrailingPathDelimiter(APriorDir)) or
     FileExists(LDirectory + 'ingredient_queries.tsv') or
@@ -663,7 +666,14 @@ begin
       begin
         FClient := TEuropePmc.Create;
       end;
-      LResponse := FClient.SearchPage(AQuery, ACursor, FRun.PageSize, FRun.Sort);
+      if FRun.UseSoap then
+      begin
+        LResponse := FClient.SearchPageSoap(AQuery, ACursor, FRun.PageSize, FRun.Sort);
+      end
+      else
+      begin
+        LResponse := FClient.SearchPage(AQuery, ACursor, FRun.PageSize, FRun.Sort);
+      end;
       if LResponse.Status = 200 then
       begin
         Exit(LResponse.Body);
@@ -825,14 +835,14 @@ begin
 end;
 
 procedure RunSearch(const AQueries: TIngredientQueries; const AOutputDir, APriorDir: String;
-  const ASort: UTF8String; AWorkerCount, APageSize: Integer);
+  const ASort: UTF8String; AWorkerCount, APageSize: Integer; AUseSoap: Boolean);
 var
   LRun: TSearchRun;
   LWorkers: array of TSearchWorker;
   LWorker: TSearchWorker;
   I: Integer;
 begin
-  LRun := TSearchRun.Create(AQueries, AOutputDir, APriorDir, ASort, APageSize);
+  LRun := TSearchRun.Create(AQueries, AOutputDir, APriorDir, ASort, APageSize, AUseSoap);
   try
     SetLength(LWorkers, AWorkerCount);
     try
@@ -871,13 +881,20 @@ var
   LPageSize: Integer;
   LPriorDir: String;
   LSort: UTF8String;
+  LUseSoap: Boolean;
 begin
-  if not (ParamCount in [2, 3, 4, 5, 6, 7]) or ((ParamCount >= 4) and
+  if not (ParamCount in [2, 3, 4, 5, 6, 7, 8]) or ((ParamCount >= 4) and
     (ParamStr(4) <> 'claims') and (ParamStr(4) <> 'ingredients') and
     (ParamStr(4) <> 'expressions')) then
   begin
     raise EConvertError.Create('Usage: foodexperiment.ingredients <experiment-dir|expression-tsv> ' +
-      '<output-dir> [workers [claims|ingredients|expressions [prior-output-dir [sort [page-size]]]]]');
+      '<output-dir> [workers [claims|ingredients|expressions ' +
+      '[prior-output-dir [sort [page-size [rest|soap]]]]]]');
+  end;
+  LUseSoap := ParamStr(8) = 'soap';
+  if (ParamCount = 8) and not LUseSoap and (ParamStr(8) <> 'rest') then
+  begin
+    raise EConvertError.Create('Search transport must be rest or soap');
   end;
   LWorkerCount := DefaultWorkers;
   if (ParamCount >= 3) and (not TryStrToInt(ParamStr(3), LWorkerCount) or
@@ -916,7 +933,8 @@ begin
   begin
     LSort := '';
   end;
-  RunSearch(LQueries, ExpandFileName(ParamStr(2)), LPriorDir, LSort, LWorkerCount, LPageSize);
+  RunSearch(LQueries, ExpandFileName(ParamStr(2)), LPriorDir, LSort, LWorkerCount, LPageSize,
+    LUseSoap);
 end;
 
 begin

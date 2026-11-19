@@ -23,13 +23,15 @@ type
     FSession: HINTERNET;
     FConnection: HINTERNET;
     function Request(const APath, ABody: UTF8String; const AContentType: UnicodeString;
-      AOutput: TStream = nil): TSearchResponse;
+      AOutput: TStream = nil; const AExtraHeaders: UnicodeString = ''): TSearchResponse;
   public
     constructor Create(const AHost: UnicodeString = 'www.ebi.ac.uk';
       AReceiveTimeoutMs: Integer = 20000);
     destructor Destroy; override;
     function Search(const AQuery: UTF8String): TSearchResponse;
     function SearchPage(const AQuery, ACursor: UTF8String; APageSize: Integer;
+      const ASort: UTF8String = ''): TSearchResponse;
+    function SearchPageSoap(const AQuery, ACursor: UTF8String; APageSize: Integer;
       const ASort: UTF8String = ''): TSearchResponse;
     function GetPath(const APath: UTF8String; AOutput: TStream = nil): TSearchResponse;
     function PostJson(const APath, ABody: UTF8String): TSearchResponse;
@@ -42,11 +44,12 @@ function UrlEncode(const AValue: UTF8String): UTF8String;
 implementation
 
 uses
-  SysUtils;
+  SysUtils, foodexperiment.epmcsoap;
 
 const
   MaximumResponseBytes = 8 * 1024 * 1024;
   SearchPath = '/europepmc/webservices/rest/search?format=json&resultType=core';
+  SoapSearchPath = '/europepmc/webservices/soap';
 
 function UtcTimestamp: UTF8String;
 var
@@ -149,6 +152,17 @@ begin
   Result := GetPath(LPath);
 end;
 
+function TEuropePmc.SearchPageSoap(const AQuery, ACursor: UTF8String;
+  APageSize: Integer; const ASort: UTF8String): TSearchResponse;
+begin
+  Result := Request(SoapSearchPath, SoapSearchRequest(AQuery, ACursor, APageSize, ASort),
+    'text/xml; charset=UTF-8', nil, 'SOAPAction: ""'#13#10);
+  if Result.Status = 200 then
+  begin
+    Result.Body := SoapSearchResult(Result.Body, Result.ContentType);
+  end;
+end;
+
 function TEuropePmc.GetPath(const APath: UTF8String; AOutput: TStream): TSearchResponse;
 begin
   Result := Request(APath, '', '', AOutput);
@@ -173,7 +187,8 @@ begin
 end;
 
 function TEuropePmc.Request(const APath, ABody: UTF8String;
-  const AContentType: UnicodeString; AOutput: TStream): TSearchResponse;
+  const AContentType: UnicodeString; AOutput: TStream;
+  const AExtraHeaders: UnicodeString): TSearchResponse;
 var
   LPath: UnicodeString;
   LMethod: UnicodeString;
@@ -202,7 +217,7 @@ begin
   if LBodyBytes > 0 then
   begin
     LMethod := 'POST';
-    LHeaders := 'Content-Type: ' + AContentType + #13#10;
+    LHeaders := 'Content-Type: ' + AContentType + #13#10 + AExtraHeaders;
     LBodyPointer := @ABody[1];
   end;
   LRequest := WinHttpOpenRequest(FConnection, PWideChar(LMethod), PWideChar(LPath),
