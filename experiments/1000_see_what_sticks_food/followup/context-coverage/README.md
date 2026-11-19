@@ -6,15 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 13,259 |
+| Local body or other primary-source context | 13,386 |
 | Exact assessment with basis unspecified | 128 |
 | Abstract context | 201 |
 | Title or index | 192 |
 | Pending or access-only disposition | 201 |
-| No imported exact review | 47,271 |
+| No imported exact review | 47,144 |
 | **Total** | **61,252** |
 
-The native replay keeps 47,664 pairs queued across 29,856 sources. That includes 192 title/index reviews, 201 pending pairs and 47,271 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
+The native replay keeps 47,537 pairs queued across 29,852 sources. That includes 192 title/index reviews, 201 pending pairs and 47,144 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
 
 
 Checkpoint 12 records 17 contextual decisions at verified body or abstract depth and preserves the remaining full-body routes. The full searches, focused result membership and genuine exposure assessments are linked from the checkpoint. [Checkpoint 12](../lemon-balm-depression-nov18-12/README.md)
@@ -414,3 +414,5 @@ Run from the repository root with the Athena Free Pascal toolchain.
 The default overlay is the recovered original query layer at `build/claim-search-complete-date-overlay/ingredient_results.tsv` within the experiment. The runner accepts an equivalent experiment-relative `-Overlay` input. The complete inventory and queue are generated under `build/context-coverage/output`, alongside the per-claim summary and priority slices. The replay pairs assessments and earlier screening records only where there is an exact claim and unambiguous source match. These stored tables and fingerprints describe the November 15 snapshot. [Native source](../../tools/foodexperiment.contextqueue.lpr) · [Inputs](review-inputs.tsv) · [Input fingerprints](input-sha256.tsv)
 
 Add one line per exact pair to `exact-reviews.tsv`. Keep the claim `id` and `source_key` from the overlay. Use `excluded`, `related`, `supports`, `opposes`, `inconclusive` or `pending` for `result_role`, and `full_text`, `primary_source`, `abstract`, `title_and_index`, `assessment_unspecified` or `access_only` for `review_basis`. Use `access_only` with `pending`. Reference an existing repository-relative file and give the specific exposure, outcome, population or access reason. The replay rejects invalid keys, duplicates, invalid roles or bases, missing files and empty rationales. An exact disposition changes one claim–source pair. Clinical verdicts remain decisions in the experiment evidence ledger.
+
+Checkpoint 23 resolves 127 exact pairs in four complete posted originals, with 92 related contexts and 35 exclusions. It preserves ten sampled collection routes and the remaining 364 pairs at their current access depth. [Originals, companion reports and native replay](../shared-original-collections-nov19-23/README.md)

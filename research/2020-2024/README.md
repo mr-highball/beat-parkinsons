@@ -1,5 +1,7 @@
 # 2020-2024
 
+Shared-source review adds the [veterinary P chapter](Source-Text/2020-PMC9771673-Veterinary-Food-Context-Extracts.txt), [mouse olive oil vehicle](Source-Text/2022-PMID36359351-Olive-Oil-Vehicle-Extract.txt), [biophysics proceedings](Source-Text/2023-PMC10643713-Biophysics-Food-Context-Extracts.txt), [cinnamon–turmeric cell experiment](Source-Text/2023-PMID38138438-Cinnamon-Turmeric-Cell-Extract.txt) and [FEBS poster extracts](Source-Text/2024-PMC11208286-FEBS-Food-Context-Extracts.txt). [Preparation boundaries and observations](Observations/Food-Experiment-Shared-Originals-Nov19-23.md).
+
 - [Tanzania faith and care follow-up](Cultural-and-Experiential/Ceremonial-Accounts/2021-Tanzania-Faith-and-Care-Followup.txt), [centering prayer comparison](Source-Text/2022-Machado-Centering-Prayer-Extract.txt) and [Kenyan stigma and healing accounts](Cultural-and-Experiential/Local-Knowledge/2023-Kenya-Stigma-and-Healing-Accounts.txt).
 - [Combined Kampavata case extract](Source-Text/2024-Sharma-Kampavata-Case-Extract.txt) and [practitioner context](Cultural-and-Experiential/Traditional-Practices/2024-Kampavata-Mixed-Practitioner-Course.txt).
 
