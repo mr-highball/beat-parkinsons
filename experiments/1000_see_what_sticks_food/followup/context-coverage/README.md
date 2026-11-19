@@ -6,15 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 13,538 |
+| Local body or other primary-source context | 13,590 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 217 |
-| Title or index | 185 |
-| Pending or access-only disposition | 201 |
-| No imported exact review | 46,982 |
+| Title or index | 186 |
+| Pending or access-only disposition | 202 |
+| No imported exact review | 46,928 |
 | **Total** | **61,252** |
 
-The native replay keeps 47,368 pairs queued across 29,799 sources. That includes 185 title/index reviews, 201 pending pairs and 46,982 pairs with no imported exact decision. The latest strawberry follow-through advances 28 original pairs for claim 0413 and five additional pairs from the shared ASN proceedings. Twenty-five original pairs for 0413 remain open. [Original bodies, scan quality and pending routes](../strawberry-falls-continuation-nov19-39/README.md). The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Fig and turkey PDF scope](../tremor-fig-nov19-30/README.md) · [Resumed archive and turkey review](../tremor-turkey-nov19-31/README.md) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
+The native replay keeps 47,316 pairs queued across 29,794 sources. That includes 186 title or index reviews, 202 pending pairs and 46,928 pairs with no imported exact decision. The latest strawberry follow-through advances ten original pairs for claim 0413 and 42 shared-source pairs for other Round 1 claims. Two inspected indexes remain queued at index depth. Fifteen original pairs for 0413 remain open. [Recovered PDFs, source depth and open routes](../strawberry-falls-pdf-recovery-nov19-40/README.md). The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Fig and turkey PDF scope](../tremor-fig-nov19-30/README.md) · [Resumed archive and turkey review](../tremor-turkey-nov19-31/README.md) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
 
 
 Checkpoint 12 records 17 contextual decisions at verified body or abstract depth and preserves the remaining full-body routes. The full searches, focused result membership and genuine exposure assessments are linked from the checkpoint. [Checkpoint 12](../lemon-balm-depression-nov18-12/README.md)
