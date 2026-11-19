@@ -643,3 +643,7 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Three dried date cultivars and experimental nociception](Source-Text/PMC5040737.txt).
 - [Whole Ajwa abdominal pain diary](Source-Text/2015-Eid-Whole-Ajwa-Mood-Diary.txt).
 - [Loss-of-control eating neurostimulation registry](Source-Text/Trials/NCT03868670.txt).
+
+## Botanical source comparisons and outcome definitions
+
+- [Four-herb menopause comparison](Source-Text/PMC5437055.txt).

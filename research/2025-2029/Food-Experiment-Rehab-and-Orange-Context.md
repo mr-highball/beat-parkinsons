@@ -4,6 +4,10 @@
 
 Guan and colleagues randomized 80 people with Parkinson disease and sialorrhea. Table 3 item 2.5.2 lists orange juice among allowances in a larger dietary education program. This was one component of a multicomponent approach. Table 6 reports an adjusted Sialorrhea Clinical Scale difference of −2.34 points after four weeks (95% CI −3.98 to −0.70, p=.012). The comparison estimates the nurse-led program. Orange juice intake was not assigned or quantified and the paper does not report a fall-frequency outcome. [Original methods and Tables 3 and 6](Source-Text/PMC13044086.txt) · [Publisher original](https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2026.1788173/full)
 
+## Registration and reporting chronology
+
+ChiCTR2500096034 was registered on January 16, 2025 and lists salivation severity and swallowing function as primary. The record planned January–May work. The pilot article describes July–September recruitment and the SCS-PD drooling score as its primary outcome. The separately published ten-person qualitative journey map names the same registry ID. Link the program records without assuming participant overlap or counting the qualitative interviews as randomized outcome evidence. Orange juice appears in the published guidance table. No separately assigned juice exposure or falls outcome was reported. [Original registry digest](Source-Text/Trials/ChiCTR2500096034.txt) · [Qualitative program report](Source-Text/PMC12999412.txt)
+
 ## Shared orange juice and other registry matches
 
 The completed common-tremor crossover NCT06403280 registered rum-flavoured orange juice in its alcohol and control drinks. The assigned difference was alcohol. The registry shows no posted results, and its planned endpoints concern tremor rather than falls. Other results in the same query refer to orange flavouring shared in a probiotic trial, matched capsule colors or an equipment model. [Registered common-tremor study](../2020-2024/Source-Text/Trials/NCT06403280.txt)

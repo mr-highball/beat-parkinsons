@@ -449,3 +449,7 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 ## Date-fruit evidence and pain comparisons
 
 - [Whole Ajwa date crossover registration](Source-Text/Trials/NCT02288611.txt).
+
+## Botanical source comparisons and outcome definitions
+
+- [Neuroprotective herbs and foods from different traditional medicines and diets](Source-Text/PMC6263339.txt).

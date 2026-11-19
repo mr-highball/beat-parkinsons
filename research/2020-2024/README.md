@@ -701,3 +701,13 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Moroccan date-palm traditional-practice survey](Cultural-and-Experiential/Traditional-Practices/2024-Morocco-Date-Palm-Survey-Context.txt).
 - [BRAINAID registry](Source-Text/Trials/NCT04321889.txt).
 - [Acorus volatile oil and acupuncture registry](Source-Text/Trials/NCT06313866.txt).
+
+## Botanical source comparisons and outcome definitions
+
+- [Neuroprotective Potency of Saffron Against Neuropsychiatric Diseases, Neurodegenerative Diseases, and Other Brain Disorders](Source-Text/PMC7573929.txt).
+- [The effects of a saffron extract on menopausal symptoms in women during perimenopause](Source-Text/2021-Lopresti-Affron-Perimenopausal-Mood.txt).
+- [Neuroprotective Potential of Aromatic Herbs: Rosemary, Sage, and Lavender](Source-Text/PMC9297920.txt).
+- [Elucidating the Beneficial Effects of Ginger (Zingiber officinale Roscoe) in Parkinson’s Disease](Source-Text/PMC9578130.txt).
+- [Therapeutic effects of saffron and its components on neurodegenerative diseases](Source-Text/PMC10827773.txt).
+- [Neuroprotective effect of green tea extract (-)-epigallocatechin-3-gallate in a preformed fibril-induced mouse model of Parkinson's disease](Source-Text/PMC11060057.txt).
+- [Dietary Effects on the Gut Phageome](Source-Text/PMC11354428.txt).

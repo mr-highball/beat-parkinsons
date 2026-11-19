@@ -544,3 +544,12 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Acorus oil and post-stroke cognition protocol](Source-Text/PMC12224042.txt).
 - [Brain recordings and food preoccupation](Source-Text/PMC12705427.txt).
 - [DoMAP malnutrition and oral pain](Source-Text/PMC13154458.txt).
+
+## Botanical source comparisons and outcome definitions
+
+- [Iron-oxide nanoparticle neurotoxicity and rosemary methanolic extract](Source-Text/PMC11841213.txt).
+- [Integrative effects of saffron and physical activity across age-related and neurodegenerative diseases](Source-Text/PMC12695556.txt).
+- [Synergistic effects of plant polysaccharides and probiotics in Parkinson’s disease](Source-Text/PMC12844740.txt).
+- [Antioxidant, anti-inflammatory and cytoprotective effects of crocin in Alzheimer's and Parkinson's diseases](Source-Text/PMC13092161.txt).
+- [Original drooling program registration](Source-Text/Trials/ChiCTR2500096034.txt).
+- [Parkinson drooling patient journey interviews](Source-Text/PMC12999412.txt).
