@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [registered mixed-sage comparison](Source-Text/Trials/NCT03695003.txt) includes acute and longer-term mood assessments in healthy adults and a probable link to the 2021 results.
+
 The [irsenontrine Lewy body dementia registration](Source-Text/Trials/NCT03467152.txt) includes aggregated results posted in 2022 and links to its later biomarker sub-study. The [pooled safinamide pain analysis](Source-Text/PMC5302028.txt) uses pain-treatment use and bodily discomfort outcomes.
 
 The [COPD registration](Source-Text/Trials/NCT03796455.txt) and [NUTRIMAL registration](Source-Text/Trials/NCT03429491.txt) link to later mobility results. The [Smith corn-oil comparator trial](Source-Text/2015-PMID25994567-Smith-Corn-Oil-Muscle-Comparison.txt) documents muscle outcomes and the available adverse-event categories. The [Amaranthus liver paper](Source-Text/2015-Yilmaz-Ozden-Amaranthus-Olive-Oil-Hepatic-Vehicle.txt) and [female rat diazinon comparison](Source-Text/2016-Salehi-Corn-Oil-Diazinon-Carrier.txt) document injected oils in different laboratory contexts.

@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [date and hedonic hunger registration](Source-Text/Trials/NCT06826235.txt) lists a food-specific reward measure in type 2 diabetes. The [DIVE-I trial](Source-Text/PMC11922744.txt) records medication comparisons using combined motor outcomes. [Observations on dried sage and date outcome fit](Observations/Dried-Sage-and-Date-Outcome-Fit.md).
+
 The [OPTI-ON cohort](Source-Text/PMC13092661.txt), [effort-choice comparison](Source-Text/PMC13442672.txt), [coaching study](Source-Text/PMC12971501.txt), [frontotemporal dementia case](Source-Text/PMC13394904.txt) and [digital assessment protocol](Source-Text/PMC13423858.txt) distinguish measures of apathy, mood, activity and planned tracking.
 
 The [motor diary study](Source-Text/PMC13443092.txt), [Parkinson medication case](Source-Text/PMC13435170.txt), [postoperative beta study](Source-Text/PMC13442690.txt), [genetic dyskinesia cases](Source-Text/PMC13388009.txt) and [striatal hand review](Source-Text/PMC13155526.txt) describe different motor comparisons and outcomes.

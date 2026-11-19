@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [dried common-sage crossover](Source-Text/2005-PMID16205785-Dried-Sage-Mood-Stressor.txt) records different alertness comparisons before and during a task.
+
 An [injected rosmarinic acid rat study](Source-Text/2005-PMID16026713-Rosmarinic-Acid-Behavior.txt) separates the authors' interpretation of motivation from a clinical apathy outcome. [Comparison with later work](../2025-2029/Observations/Clinical-Outcome-Specificity-and-Food-Claims.md).
 
 The [normal-rat olive-oil study](Source-Text/2005-PMID15888922-Olive-Oil-GLP1-Normal-Rats.txt) and [streptozotocin model](Source-Text/2006-PMID16523410-Olive-Oil-GLP1-STZ-Rats.txt) report different chronic outcomes. The [mouse hepatocyte curcumin experiment](Source-Text/2008-PMID18221818-Curcumin-Hepatocyte-Glucose.txt) and [human endothelial-cell assay](Source-Text/2005-PMID15855339-Linoleate-Curcumin-LOX1-Cells.txt) document separate compound tests. [Comparison with the 2004 proceedings](Observations/EASD-Oil-and-Curcumin-Report-Comparison.md).
