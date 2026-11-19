@@ -16,3 +16,4 @@
 
 - Expand medical-journal searches by the historical terms for hemlock, galvanism, and shaking palsy. No comparative dietary results were verified.
 
+- The 1872 title page and pp. 439–440 establish the original distinction between fresh harvest behavior and stored dried figs. [First-edition source](../Cultural-and-Experiential/Local-Knowledge/1872-Hanoteau-Letourneux-Fig-Harvest-and-Storage.txt) · [Earlier travel narrative](../../1865-1869/Cultural-and-Experiential/Local-Knowledge/1867-Duhousset-Fig-Harvest-Excitation.txt) · [Later printing of the same account](../../2000-2004/Cultural-and-Experiential/Local-Knowledge/2003-Hanoteau-Letourneux-Fresh-and-Dried-Fig-Account.txt).

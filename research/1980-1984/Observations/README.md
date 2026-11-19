@@ -34,3 +34,5 @@
 - Paprika appeared in diagnostic skin or mucosal testing. The group results leave oral preparation and intelligibility effects open. [Paprika outcome follow-up](../Food-Experiment-Paprika-Gap-Replay.md)
 
 - The 1982 Ceylon account names boiled leaves in a hoarseness indication and supplies no measured clinical response. [Boiled curry leaves and traditional hoarseness use](../Food-Experiment-Curry-Leaf-Voice-History.md)
+
+- The printed clinical tables distinguish visual hallucinations at presentation and through the course of subacute Creutzfeldt–Jakob disease. [Full printed clinical summary](../Source-Text/1984-PMID6368752-Creutzfeldt-Jakob-Visual-Phenotype-Printed-Tables.txt).
