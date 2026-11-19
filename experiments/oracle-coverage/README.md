@@ -71,6 +71,8 @@ The twenty-third and twenty-fourth no-archive original-source batches each retur
 
 The fig resting-tremor checkpoint found an existing lead for the claim question and one source-summary lead across six distinct source-verification questions. The initial local searches had zero strict hits. Focused expansion added five fig-related records by publication period. The recovered conference collections continued existing exact-source questions outside this denominator. [Search and evidence checkpoint](../1000_see_what_sticks_food/followup/tremor-fig-nov19-30/README.md)
 
+Five newly defined turkey meal and conversation source questions gave zero exact first-pass hits. An older protein-challenge record supplied general local context. The original proceedings checks continued earlier questions. The expansion indexed specific meal contrasts and a firsthand turkey account while preserving the absence of a separate symptom result. [Turkey evidence and access coverage](../1000_see_what_sticks_food/followup/tremor-turkey-nov19-31/README.md)
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the

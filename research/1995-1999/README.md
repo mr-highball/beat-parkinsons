@@ -4,6 +4,8 @@ January 1, 1995 through December 31, 1999.
 
 ## Annotated research
 
+- [Meal-related hypotension and composite motor outcomes](Source-Text/1997-PMID9399210-Meal-Hypotension-and-Parkinsonisms.txt) and [observations across the meal studies and turkey conversation](Observations/Turkey-Meals-and-Medication-Response.md).
+- [Genetics poster scan scope](Source-Text/1995-PMC1801576-Genetics-Poster-Scope.txt) and [1999 neurology proceedings pagination](Source-Text/1999-PMC7088054-Neurology-Abstracts-Page-Scope.txt).
 - [Wild-lettuce extract case report and the separately cited tremor case](Source-Text/1998-PMID9778767-Wild-Lettuce-Case-Extract.txt)
 - [Rosemary preparations and mood outcomes](Food-Experiment-Rosemary-Preparation-and-Mood.md)
 - [Allergy after fresh and dried edible fig](Food-Experiment-Edible-Fig-Adverse-Contexts.md)

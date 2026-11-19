@@ -4,6 +4,7 @@ January 1, 1990 through December 31, 1994.
 
 ## Annotated research
 
+- [Random-order breakfast composition and medication response](Source-Text/1991-PMID1866021-Carbohydrate-Protein-Meal-Crossover.txt).
 - [Oral macadamia oil in the Nestel lipid trial](Source-Text/1994-PMID8006520-Macadamia-Oil-Lipid-Abstract-Extract.txt)
 - [Lemon juice coadministered with levodopa in a Japanese report](Source-Text/1994-PMID8200147-Lemon-Levodopa-Abstract-Extract.txt)
 
