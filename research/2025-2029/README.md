@@ -596,4 +596,4 @@ January 1, 2025 through November 11, 2026 (partial period).
 ## Saffron extract and sleep components
 
 - [Posted extract trial with planned Insomnia Severity Index in middle-aged adults](Source-Text/Trials/NCT07497698.txt).
-- [Perimenopause preprint and separate sleep, fatigue and depression outcomes](Source-Text/2026-SafrInside-Perimenopause-Sleep-Preprint.txt).
+- [Perimenopause preprint and separate sleep, fatigue and depression outcomes](Source-Text/2026-sultana-Clinical-Source-Extract.txt).

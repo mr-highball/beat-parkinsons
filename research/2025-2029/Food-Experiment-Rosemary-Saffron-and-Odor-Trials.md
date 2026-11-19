@@ -2,7 +2,7 @@
 
 ## Perimenopausal fatigue after a standardized saffron extract
 
-Sultana and colleagues reported a 12-week randomized trial of 30 mg/day standardized Safr'Inside extract or placebo in 104 perimenopausal women. Table 4 gives POMS fatigue changes of −7.6 and −1.7, respectively, with an interaction p=.0003. Depression findings differed between intention-to-treat and per-protocol analyses. Registration timing and item estimates from the per-protocol analysis remain unresolved. This preprint addresses an extract and perimenopausal symptoms, with no Parkinson fatigue estimate. [Original source](https://www.medrxiv.org/content/10.64898/2026.10.12.26365297v1.full.pdf) · [Local factual text](Source-Text/2026-sultana-Clinical-Source-Extract.txt)
+Sultana and colleagues reported a 12-week randomized trial of 30 mg/day standardized Safr'Inside extract or placebo in 104 perimenopausal women. Table 4 gives POMS fatigue changes of −7.6 and −1.7, respectively, with an interaction p=.0003. Depression findings differed between intention-to-treat and per-protocol analyses. The registration NCT06227858 was first posted in January 2024. Item estimates from the per-protocol analysis remain unavailable. This preprint addresses an extract and perimenopausal symptoms, with no Parkinson fatigue estimate. [Original source](https://www.medrxiv.org/content/10.64898/2026.10.12.26365297v1.full.pdf) · [Local factual text](Source-Text/2026-sultana-Clinical-Source-Extract.txt)
 
 ## Rosemary mood review and uncertainty in pooled estimates
 
