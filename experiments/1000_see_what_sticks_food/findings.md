@@ -2,6 +2,8 @@
 
 Thirteen Round 1 claims have a checked version 1 scorecard.
 
+Three full 2018–2019 proceedings resolve 85 original-source pairs across 64 frozen claims. Forty-six pairs preserve actual exposure or ingredient-related context, and 39 resolve lexical matches. The new records distinguish the kindergarten vegetable intervention, olive-oil wound and dietary contexts, and overlapping Helsinki coffee and survival analyses. The clinical outcomes leave the current verdicts unchanged. Round 1 has 47,125 original pairs open. [Proceedings and verification](followup/shared-proceedings-nov19-45/README.md).
+
 The 306-page Hamburg neurology supplement resolves 36 original source pairs after a full column scan. Ten preserve verified coffee, chicken tissue or injected peanut-oil context. Twenty-six resolve lexical or clinical-term mismatches. A Parkinson report on blood-pressure drops after meals led to three dated clinical records. The source review leaves ingredient verdicts as recorded. Round 1 has 47,210 original pairs open. [Originals, context and scan verification](followup/hamburg-neurology-ocr-nov19-44/README.md).
 
 Review of the 2021 SGIM and 2025 ESOC bodies resolves 68 original pairs across 58 claims. Two coffee entries have genuine exposure or constituent context. The 598-person SECRETO study and its conference presentation share a cohort, and the case vignettes concern caffeine-containing products. The endpoints give no Parkinson fatigue measurement. Round 1 retains 47,246 queued source pairs. [Source boundaries and clinical contexts](followup/shared-clinical-collections-nov19-43/README.md).
