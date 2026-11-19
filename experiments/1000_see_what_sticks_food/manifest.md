@@ -23,6 +23,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 Thirteen Round 1 claims have a checked version 1 scorecard.
 
+The 306-page Hamburg neurology supplement resolves 36 original source pairs after a full column scan. Ten preserve verified coffee, chicken tissue or injected peanut-oil context. Twenty-six resolve lexical or clinical-term mismatches. A Parkinson report on blood-pressure drops after meals led to three dated clinical records. The source review leaves ingredient verdicts as recorded. Round 1 has 47,210 original pairs open. [Originals, context and scan verification](followup/hamburg-neurology-ocr-nov19-44/README.md).
+
 Review of the 2021 SGIM and 2025 ESOC bodies resolves 68 original pairs across 58 claims. Two coffee entries have genuine exposure or constituent context. The 598-person SECRETO study and its conference presentation share a cohort, and the case vignettes concern caffeine-containing products. The endpoints give no Parkinson fatigue measurement. Round 1 retains 47,246 queued source pairs. [Source boundaries and clinical contexts](followup/shared-clinical-collections-nov19-43/README.md).
 
 Raw strawberry and recurrent falls (0413) remains Unknown at 50 across 29 evidence families. The recovered aged-rat inclined-screen study favored blueberry and cranberry diets. Strawberry appears in earlier cited work. Three separate strawberry extract reports measured operant responding or conditioned taste avoidance after irradiation. Two original body-level decisions close the strawberry and orange pairs for the recovered paper, leaving 14 original pairs for 0413. [Recovered source, study distinctions and review scope](followup/strawberry-falls-berry-trials-nov19-42/README.md).
