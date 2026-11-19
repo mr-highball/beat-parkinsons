@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-Fifteen Round 1 claims have a checked version 1 scorecard.
+Sixteen Round 1 claims have a checked version 1 scorecard.
+
+The checked version 1 scorecard for refined corn oil and Parkinson falls (0546) retains Unknown at 50. ENRGISE reports one serious fall in each of the two selected oil arms, and the Alzheimer study pools corn and soy placebo recipients. COPD and NUTRIMAL add mixed-oil functional context. A constipation review is now assessed at abstract depth through its previously archived multiple sclerosis ginger-tablet trial. [Arm data, scorecard and remaining access routes](followup/febs-oil-comparators-nov19-56/README.md).
 
 A complete 372-page FEBS supplement resolves 30 original pairs. Twenty-eight retain ingredient-related contexts. The strawberry references concern food phenolics and isolated ellagic acid, and the archived Dutch reports document a different disease and variable tolerability. Claim 0413 remains Unknown at 50 with four original pairs still open. Round 1 has 46,797 original pairs queued. [Original poster bodies, historical observations and access routes](followup/strawberry-falls-febs-and-sprue-nov19-55/README.md).
 

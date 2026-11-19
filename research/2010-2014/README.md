@@ -1,6 +1,6 @@
 # 2010-2014
 
-New [diazinon strain evidence](Source-Text/2012-PMID22871176-Diazinon-Strains-and-Tissue-Context.txt) records the female rat biochemical comparison. The [Amaranthus renal paper](Source-Text/2014-PMID25415872-Amaranthus-Olive-Oil-Renal-Vehicle.txt) identifies injected olive oil as the vehicle and was posted online in 2014.
+New [diazinon strain evidence](Source-Text/2012-PMID22871176-Diazinon-Strains-and-Tissue-Context.txt) records the female rat biochemical comparison. The [Pitozzi aging-rat olive oil study](Source-Text/2010-PMID20070918-Pitozzi-Olive-Oil-Light-Dark-Box.txt) records a direction discrepancy between Figure 2 and its abstract. The [Amaranthus renal paper](Source-Text/2014-PMID25415872-Amaranthus-Olive-Oil-Renal-Vehicle.txt) identifies injected olive oil as the vehicle and was posted online in 2014.
 
 The [full 2011 FEBS poster supplement](Source-Text/2011-PMC7164111-FEBS-Poster-Food-and-Parkinson-Context.txt) distinguishes food composition, isolated compounds, oil substrates and separate Parkinson biomarker comparisons.
 

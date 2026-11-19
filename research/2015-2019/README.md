@@ -1,6 +1,6 @@
 # 2015-2019
 
-The [COPD registration](Source-Text/Trials/NCT03796455.txt) and [NUTRIMAL registration](Source-Text/Trials/NCT03429491.txt) link to later mobility results. The [Amaranthus liver paper](Source-Text/2015-Yilmaz-Ozden-Amaranthus-Olive-Oil-Hepatic-Vehicle.txt) and [female rat diazinon comparison](Source-Text/2016-Salehi-Corn-Oil-Diazinon-Carrier.txt) document injected oils in different laboratory contexts.
+The [COPD registration](Source-Text/Trials/NCT03796455.txt) and [NUTRIMAL registration](Source-Text/Trials/NCT03429491.txt) link to later mobility results. The [Smith corn-oil comparator trial](Source-Text/2015-PMID25994567-Smith-Corn-Oil-Muscle-Comparison.txt) documents muscle outcomes and the available adverse-event categories. The [Amaranthus liver paper](Source-Text/2015-Yilmaz-Ozden-Amaranthus-Olive-Oil-Hepatic-Vehicle.txt) and [female rat diazinon comparison](Source-Text/2016-Salehi-Corn-Oil-Diazinon-Carrier.txt) document injected oils in different laboratory contexts.
 
 The [2018 European obesity congress source digest](Source-Text/2018-PMC7019188-ECO-Food-Exposure-Members.txt) keeps separate members and protocols. Linked records cover [MONICA coffee exposure](Source-Text/2017-PMID29381147-MONICA-Coffee-and-Adiposity.txt), [dysbiosis and beverage context](Source-Text/2018-PMC6276176-Faecal-Dysbiosis-and-Coffee-Context.txt), [the potato-fiber registration](Source-Text/Trials/NCT02957318.txt) and [the safflower and fish-oil crossover registration](Source-Text/Trials/NCT02647333.txt).
 
