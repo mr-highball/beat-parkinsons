@@ -689,3 +689,9 @@ The contaminant trail includes an original total-diet abstract, without a measur
 
 - [V81M genotype and freezing questionnaire results](Source-Text/2015-PMC4770791-V81M-Freezing-Questionnaire.txt).
 - [Whole-plant lemon balm extract and separate animal movement outcomes](Source-Text/2019-Reddy-Melissa-Rotarod-and-Locomotion.txt).
+
+## Date preparations and clinical outcomes
+
+- [Aqueous date fruit extract and heat-evoked withdrawal](Source-Text/2015-Maryam-Date-Fruit-Water-Extract-and-Tail-Flick.txt).
+- [Date-palm spathe and two animal pain assays](Source-Text/2015-PMID26693469-Date-Spathe-Evoked-Pain.txt).
+- [Iranian traditional uses of date-palm spathe distillate](Cultural-and-Experiential/Traditional-Practices/2015-Iranian-Date-Spathe-Distillate-Pain.txt).

@@ -174,3 +174,7 @@ The walnut-oil lipid trial is archived at author-abstract depth, with processing
 ## Clinical measurements and food preparation comparisons
 
 - [Parkinson pain and dopaminergic cycle timing](Source-Text/2004-PMID15043802-Parkinson-Pain-Timing-Review.txt).
+
+## Date preparations and clinical outcomes
+
+- [Zaghloul fruit and seed extracts in an arthritis model](Source-Text/2004-Mohamed-Zaghloul-Date-Extracts-and-Swelling.txt).

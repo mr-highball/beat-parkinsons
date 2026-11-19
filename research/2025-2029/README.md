@@ -610,3 +610,9 @@ January 1, 2025 through November 11, 2026 (partial period).
 ## Clinical measurements and food preparation comparisons
 
 - [Freezing onset in NS-Park and PPMI](Source-Text/2026-PMID42715510-NS-Park-PPMI-Freezing-Comparisons.txt).
+
+## Date preparations and clinical outcomes
+
+- [Head-impulse reflexes and freezing status](Source-Text/2025-PMID40256685-Vestibular-Reflexes-and-Freezing.txt).
+- [Retained date pit and recurrent abdominal pain](Source-Text/2026-PMID42822522-Retained-Date-Pit-and-Abdominal-Pain.txt).
+- [Accidental date pit and perianal injury](Source-Text/2026-PMID41837074-Ingested-Date-Pit-and-Perianal-Injury.txt).

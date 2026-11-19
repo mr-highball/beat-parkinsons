@@ -484,3 +484,8 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 
 - [Fear of falling and recalled fall frequency](Source-Text/2010-PMID20157723-Fear-and-Fall-Frequency.txt).
 - [Continuous intestinal infusion, gait freezing and falls](Source-Text/2014-PMID25578290-Infusion-Freezing-and-Falls.txt).
+
+## Date preparations and clinical outcomes
+
+- [Clinical apathy, executive tasks and anxiety in the Grossi comparison](Source-Text/2013-PMID23242363-Apathy-Executive-Tests-and-Anxiety.txt).
+- [Date-extract jam and paw swelling](Source-Text/2012-Al-Okbi-Date-Extract-Jam-and-Arthritis.txt).

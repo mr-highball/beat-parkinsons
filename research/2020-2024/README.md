@@ -767,3 +767,9 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [ONDRI white matter volume and two-year freezing questionnaire results](Source-Text/2023-PMID36692250-ONDRI-WMH-Freezing-Followup.txt).
 - [Amantadine in the NS-Park cohort](Source-Text/2024-PMID38578434-Amantadine-NS-Park-Followup.txt).
 - [ARO abstract SU212 and the preliminary rotary vestibular comparison by freezing status](Source-Text/2024-PMID38308691-ARO-SU212-Vestibular-Freezing.txt).
+
+## Date preparations and clinical outcomes
+
+- [Romberg sensory conflict and freezing status](Source-Text/2022-PMID36373942-Romberg-Freezing-and-Falls.txt).
+- [Date-seed trial and time-specific exercise soreness](Source-Text/2022-PMID35832028-Date-Seed-and-Exercise-Soreness.txt).
+- [Swallowed date pit and oesophageal injury](Source-Text/2021-PMID33614050-Date-Pit-and-Oesophageal-Injury.txt).
