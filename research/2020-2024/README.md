@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [2022 visual symptom source index](Observations/Visual-Symptom-Originals-and-Citation-Follow-Through-Nov19-90.md) links original articles and conference members. [Magnesium references and clinical endpoint observations](Observations/Visual-End-Points-and-Magnesium-Citation-Follow-Through.md) verify case modalities, repeated samples and separate drug and device trials.
+
 The [2023 search-group original index](Observations/Visual-Symptom-Originals-and-Exposure-Scope-Nov19-89.md) joins clinical measurement, medication reports and congress cases. [Dried fig magnesium and visual symptom timing](Observations/Dried-Fig-Magnesium-and-Visual-Symptom-Timing.md) traces contrasting case histories and the limits of drawing a food effect from deficiency treatment.
 
 The [visual hallucination source index](Observations/Visual-Hallucination-Source-Index-Nov19-88.md) links 67 original publications and separates conference member outcomes, diagnostic cohorts, and patient and caregiver reports. [Dried fig composition and visual symptom observations](Observations/Dried-Fig-Constituent-and-Visual-Episode-Measures.md) trace the new food chemistry and postmortem tissue sources.

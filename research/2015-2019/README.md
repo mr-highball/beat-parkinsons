@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [2017 basal forebrain stimulation crossover](Source-Text/PMC5838617.txt) reports individual visual hallucination observations and an exploratory neuropsychiatric outcome. Its [2022 follow-up](../2020-2024/Source-Text/PMC9346244.txt) reuses the same cohort.
+
 The [TOLEDO original report](Source-Text/2018-PMID30055903-TOLEDO-Visual-Adverse-Events.txt) records visual adverse events in a motor-fluctuation trial. [The separate refractory visual hallucination registration](Source-Text/Trials/NCT02702076.txt) identifies planned severity measures. [Registry and outcome observations](../2020-2024/Observations/Dried-Fig-Magnesium-and-Visual-Symptom-Timing.md).
 
 The [USDA dried fig composition record](Source-Text/2019-FDC174665-Dried-Fig-Pantothenic-Acid.txt) identifies measured pantothenic acid in dried, uncooked figs. The later [brain-tissue and visual endpoint observations](../2020-2024/Observations/Dried-Fig-Constituent-and-Visual-Episode-Measures.md) trace where the food and clinical evidence diverge.

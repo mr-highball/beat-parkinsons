@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [2010 clinical magnesium case](Source-Text/2010-PMID20493607-Regolisti-Magnesium-and-Delirium.txt) documents delirium with hallucinations during a period of acute electrolyte disturbance. [Comparative visual outcome and citation observations](../2020-2024/Observations/Visual-End-Points-and-Magnesium-Citation-Follow-Through.md).
+
 The [2011 electrolyte case](Source-Text/PMC3233929.txt) reports a visual hallucination episode that stopped before clinical replacement. [Comparison of visual symptom timing](../2020-2024/Observations/Dried-Fig-Magnesium-and-Visual-Symptom-Timing.md).
 
 An [active-fiber comparison in 20 patients](Source-Text/2010-Kim-FASEB-Ficus-Fiber-Comparisons-Abstract.txt) reports within-arm changes. The earlier publication date and study size distinguish this conference record from the 40-person and 80-person paste registrations. The [canine fig-paste model](Source-Text/2011-PMID22232635-Beagle-Fig-Paste-and-Transit.txt) and [rat fig-paste abstract](Source-Text/2011-PMID22178225-Rat-Fig-Paste-Constipation-Abstract.txt) supply separate measured animal outcomes.
