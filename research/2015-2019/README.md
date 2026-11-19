@@ -609,3 +609,6 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Registered swallowing skills study in Huntington disease and ALS](Source-Text/Trials/ACTRN12617001269325.txt).
 - [Safflower-rich reference diet in an amyloid challenge](Source-Text/2017-PMID29109025-Safflower-Fish-Oil-Amyloid-Model.txt).
 - [Observations on trial scope and outcome assignment](Observations/Safflower-Comparator-and-Swallowing.md).
+
+
+- [Safflower yoghurt comparator in allergic asthma](Source-Text/2016-PMID26843092-Safflower-Asthma-Comparator.txt).

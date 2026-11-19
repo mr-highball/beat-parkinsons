@@ -657,3 +657,6 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Singer safflower comparator registry](Source-Text/Trials/NCT05141045.txt).
 - [Traditional seed oil uses in central Syria](Cultural-and-Experiential/Traditional-Practices/2021-PMC8231352-Safflower-Seeds-and-Oil-Syria.txt).
 - [Observations on separate swallowing and total-scale outcomes](Observations/Safflower-Comparator-and-Swallowing.md).
+
+
+- [Safflower oleogel texture and the human sensory method](Source-Text/2022-PMID35622910-Safflower-Oleogel-Sensory-Panel.txt).

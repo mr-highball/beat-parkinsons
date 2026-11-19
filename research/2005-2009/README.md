@@ -287,3 +287,10 @@ The original walnut-fraction crossover registration is bucketed by first public 
 ## Companion evidence from the food collection review
 
 - [Corn-oil comparison in the randomized sertraline trial](Source-Text/2009-PMID19843899-Corn-Oil-Sertraline-Depression-Results.txt).
+
+
+## Cold-pressed safflower and swallowed capsule study context
+
+- [Cold-pressed flaxseed and safflower in an aged mouse immune comparison](Source-Text/2006-PMID16469136-Cold-Pressed-Safflower-Immune-Comparator.txt).
+- [Safflower capsule load and serum triglycerides](Source-Text/2008-PMID19074638-Safflower-Capsule-Lipid-Load.txt).
+- [Two safflower capsule loads and sensory sequencing](Source-Text/2009-PMID20352072-Safflower-Capsule-Load-Sequencing.txt).
