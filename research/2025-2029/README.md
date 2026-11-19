@@ -470,3 +470,5 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [DIGPD falls and walking-aid incidence with depression and freezing predictors](Source-Text/2026-PMID41612959-Mariani-DIGPD-Falls-and-Walking-Aid.txt).
 
 - [Saffron registration and outcome boundaries](Observations/Saffron-Registration-and-Outcome-Boundaries.md)
+
+[Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).

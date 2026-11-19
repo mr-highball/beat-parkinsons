@@ -152,3 +152,5 @@ The walnut-oil lipid trial is archived at author-abstract depth, with processing
 - [Coffee intake and glioma incidence in a managed-care cohort](Source-Text/2004-PMID15174522-Efird-Coffee-and-Glioma-Cohort-Abstract.txt).
 
 - [Lemon balm and shared-source comparisons](Observations/Lemon-Balm-and-Shared-Source-Comparisons.md)
+
+[Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).

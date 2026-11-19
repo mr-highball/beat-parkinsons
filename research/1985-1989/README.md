@@ -59,3 +59,5 @@ January 1, 1985 through December 31, 1989.
 - [Potato intake and Parkinson motor fluctuations](Food-Experiment-Potato-Off-Time.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+[Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).

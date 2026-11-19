@@ -45,3 +45,5 @@ January 1, 1980 through December 31, 1984.
 - [Recovered Parkinson Clinical Context](Food-Experiment-Recovered-Parkinson-Clinical-Context.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+[Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).

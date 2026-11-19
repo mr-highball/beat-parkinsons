@@ -258,3 +258,5 @@ The original walnut-fraction crossover registration is bucketed by first public 
 - [Lemon balm and shared-source comparisons](Observations/Lemon-Balm-and-Shared-Source-Comparisons.md)
 
 - [Lemon balm dose and formulation boundaries](Observations/Lemon-Balm-Dose-and-Formulation-Boundaries.md)
+
+[Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).

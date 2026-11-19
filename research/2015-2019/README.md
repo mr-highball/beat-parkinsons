@@ -558,3 +558,5 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [British Neuroscience Association corn-oil and flavored milk source members](Source-Text/2019-PMC8842476-Corn-Oil-and-Reward-Preference.txt).
 
 - [Lemon balm dose and formulation boundaries](Observations/Lemon-Balm-Dose-and-Formulation-Boundaries.md)
+
+[Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).
