@@ -250,3 +250,5 @@ January 1, 2005 through December 31, 2009.
 The original walnut-fraction crossover registration is bucketed by first public posting; its later results are a separate 2018 release of the same trial. [NCT00938340 registration](Source-Text/Trials/NCT00938340.txt).
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+- [Lemon balm and shared-source comparisons](Observations/Lemon-Balm-and-Shared-Source-Comparisons.md)

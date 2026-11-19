@@ -81,3 +81,5 @@ January 1, 1990 through December 31, 1994.
 - [Parkinson and related neurological symptom outcomes](Food-Experiment-Neurological-Symptom-Outcomes.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+- [Lemon balm and shared-source comparisons](Observations/Lemon-Balm-and-Shared-Source-Comparisons.md)

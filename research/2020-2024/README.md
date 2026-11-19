@@ -587,3 +587,5 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [GSA 2020 observational tea and prediabetes egg trial members](Source-Text/2020-PMC7741497-GSA-Tea-and-Egg-Trials.txt).
 - [SGIM 2022 supplement, restricted-diet and environmental exposure cases](Source-Text/2022-PMC9205280-SGIM-Food-Case-Contexts.txt).
 - [Preparation and outcome differences in the orthopedic lemon balm study family](Observations/Lemon-Balm-Tea-Orthopedic-Trial-Family.md).
+
+- [Lemon balm and shared-source comparisons](Observations/Lemon-Balm-and-Shared-Source-Comparisons.md)

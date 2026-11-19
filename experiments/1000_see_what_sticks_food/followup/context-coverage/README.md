@@ -6,15 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 13,162 |
+| Local body or other primary-source context | 13,254 |
 | Exact assessment with basis unspecified | 128 |
 | Abstract context | 201 |
 | Title or index | 192 |
 | Pending or access-only disposition | 201 |
-| No imported exact review | 47,368 |
+| No imported exact review | 47,276 |
 | **Total** | **61,252** |
 
-The native replay keeps 47,761 pairs queued across 29,871 sources. That includes 192 title/index reviews, 201 pending pairs and 47,368 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
+The native replay keeps 47,669 pairs queued across 29,859 sources. That includes 192 title/index reviews, 201 pending pairs and 47,276 pairs with no imported exact decision. The access packets preserve cases where the indexed PMCID identifies a different publication, including the Köles review and the iron-deficiency case letter. The priority-three journal bodies still open are linked in the original-source packets. The three reviewed PRIME protocol pairs have a separate study-result trail. There are 8,685 pairs joined to an archived text path and 16,343 with neither an indexed abstract nor an archived path in this join. The queue records archived body boundaries, indexed access and official PMC eligibility independently. [Replay counts](replay-summary.txt) · [Recent priority-three rechecks](../oracle-cumin-meals-and-originals-nov17/priority-three-access.tsv) · [Pending PRIME outcomes](../protocols-and-source-bodies-nov17/prime-result-followup.md) · [PMC eligibility receipts](../../../../research/PMC-Text-Retrieval.tsv)
 
 
 Checkpoint 12 records 17 contextual decisions at verified body or abstract depth and preserves the remaining full-body routes. The full searches, focused result membership and genuine exposure assessments are linked from the checkpoint. [Checkpoint 12](../lemon-balm-depression-nov18-12/README.md)
@@ -32,6 +32,8 @@ Checkpoint 17 excludes 20 lexical mismatches at original-body depth across five 
 Checkpoint 18 resolves 82 exact pairs at original-body depth across six conference collections. Eleven preserve actual flavor or odor inputs without converting them into graded food effects. The clinical article, two index sources and five PDF collections retain explicit access or depth gaps. [Original source and study-family review](../lemon-balm-depression-nov18-18/README.md)
 
 Checkpoint 19 resolves 155 body-level pairs and one abstract-level pair. Two official PDFs restored complete collection text. The other three collections retain access gaps. The trial registration links two postoperative tea outcomes outside the original search overlay. [Source depths, related evidence and access routes](../lemon-balm-depression-nov18-19/README.md)
+
+Checkpoint 20 verifies twelve original bodies, including two complete archived proceedings PDFs. Ninety-two pairs reach body depth. Four other originals stay queued with explicit publication routes. [Original boundaries, related trials and remaining gaps](../lemon-balm-depression-nov18-20/README.md)
 
 ## Intake for exact source reviews
 

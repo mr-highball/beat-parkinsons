@@ -386,3 +386,5 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [Banana-flavored pellets in nicotine and nicotine–cocaine research](Source-Text/2013-PMID23337868-Mello-Banana-Flavor-Nicotine-Comparator.txt).
 - [Orange scent conditioned to alcohol availability](Source-Text/2013-PMID23761908-Thorsell-Orange-Odor-Cue.txt).
 - [Role of food flavors and odors across the related reports](Observations/Food-Flavors-and-Odor-Stimuli.md).
+
+- [Lemon balm and shared-source comparisons](Observations/Lemon-Balm-and-Shared-Source-Comparisons.md)
