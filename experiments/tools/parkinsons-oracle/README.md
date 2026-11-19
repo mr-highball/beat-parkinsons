@@ -70,6 +70,8 @@ The shortcuts `hallucination`, `hallucinations` and `seeing things` select
 visual hallucination frequency, the outcome in the frozen claims. The
 response gives the canonical outcome. Use catalog search for other modalities.
 
+### Exact source identifiers
+
 For known identifiers, send up to 100 PMIDs, PMCIDs, DOIs, NCT IDs or trial IDs
 from ANZCTR (ACTRN), ISRCTN, IRCT, DRKS, UMIN and the Thai Clinical Trials Registry
 (TCTR) to `oracle_find_sources`. Bare numeric identifiers are PMIDs. Each result
@@ -79,16 +81,20 @@ The three additional registries require a matching source filename, an exact
 registration field or leading ID, and the official registry address in the
 source header. Use text search for other archives and citation trails.
 The tool indexes leading publication metadata from `Source-Text` text files and
-matching registry provenance from `Source-Text/Trials` exports. A match can be
-a curated extraction or collection, so confirm the actual article and its depth.
-Use full-text search for mentions in references, narrative notes and archives
-without structured headers.
+matching registry provenance from `Source-Text/Trials` exports. Dated cultural
+text files also support exact publication lookup when their leading metadata
+includes a matching PMC, PubMed or DOI source URL. A match can be a curated
+extract or collection, so confirm the actual source and its depth. Use full-text
+search for citation mentions, conversations and archives without structured
+publication metadata.
 
 UMIN extracts require the matching nine-digit UMIN identifier in recognized leading
 provenance and an official UMIN record URL. Receipt numbers beginning with `R` are
 separate from the trial ID. A filename and receipt URL alone leave identity open.
 Results and status companion extracts return under the same identifier. Each path
 retains its own publication period and coverage.
+
+### Study assessments
 
 For a known study, send `assessment_study` with its case-sensitive ledger key and omit the paging arguments. The result reports `matching_assessments` and returns all rows for that key in ledger order. A found claim can have zero matches. The rationale, citations, verdict and coverage counts still apply to the whole claim.
 
@@ -115,7 +121,7 @@ Results give the local text path and period. Pass the exact `path` to `oracle_re
 
 Continue with the original sources or external discovery for unresolved questions. Catalog matches carry no claim verdict. Keep the initial lookup and later retries under one evidence question in the [coverage ledger](../../oracle-coverage/README.md). Use its [local launcher](../../oracle-coverage/README.md#local-launcher) when the session’s cached tool schema lacks the category filter or source reader. A fresh MCP connection advertises both.
 
-The [native catalog fixtures](catalog.sourcekinds.tests.lpr) cover every category, period and page filters, and the effect of a refresh on cached results. Run the compiled fixture with a fresh directory under the ignored build output.
+The [native catalog fixtures](catalog.sourcekinds.tests.lpr) cover every category, period and page filters, and the effect of a refresh on cached results and exact publication identifiers. Run the compiled fixture with a fresh directory under the ignored build output.
 
 ## Build and connect
 

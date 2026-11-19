@@ -15,6 +15,7 @@ type
     Pmid: String;
     Doi: String;
     Title: String;
+    Source: String;
   end;
 
 function ReadArchiveIdentity(const APath: String): TArchiveIdentity;
@@ -550,7 +551,7 @@ begin
     if LSplit = 0 then
       Continue;
     LValue := Trim(Copy(LLine, LSplit + 1, MaxInt));
-    case IndexStr(Copy(LLine, 1, LSplit - 1), ['PMCID', 'PMID', 'DOI', 'Title']) of
+    case IndexStr(Copy(LLine, 1, LSplit - 1), ['PMCID', 'PMID', 'DOI', 'Title', 'Source']) of
       0:
         if AnsiStartsText('PMC', LValue) and DigitsOnly(Copy(LValue, 4, MaxInt)) then
           Result.Pmcid := UpperCase(LValue);
@@ -561,6 +562,8 @@ begin
         Result.Doi := NormalizeDoi(LValue);
       3:
         Result.Title := LValue;
+      4:
+        Result.Source := LValue;
     end;
   end;
 end;

@@ -85,6 +85,8 @@ The macadamia-oil checkpoint found six exact archive hits across 15 new source q
 
 The strawberry-and-falls checkpoint recorded zero strict hits and three partial locators for 112 original-source questions. A separate companion batch recorded six misses. The fisetin registry check continued an existing source question. The original-source hit rate highlights a body-depth gap for these older extracts and official collections. [Review and body access](../1000_see_what_sticks_food/followup/strawberry-falls-originals-nov19-38/README.md).
 
+The strawberry First Foods entry was already searchable with the cultural filter. Exact lookup initially missed its three verified publication keys because the identifier index covered only the study archive tree. After the cultural metadata backfill at index revision 105, the PMID, PMCID and DOI all returned the same local record. Seven exact source controls kept their paths and order. The filtered text results were unchanged. [Oracle publication identity rules](../tools/parkinsons-oracle/README.md#exact-source-identifiers).
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the

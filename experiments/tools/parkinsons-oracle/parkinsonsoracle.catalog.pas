@@ -69,6 +69,7 @@ const
   ErrorExampleLimit = 10;
   SourcePageBytes = 16384;
   ResearchPathPrefix = 'research/';
+  CulturalSourceDirectory = '/Cultural-and-Experiential/';
   OpenReparsePoint = $00200000;
   MatchCondition = ' WHERE document_fts MATCH ?1';
   MatchFrom = ' FROM document_fts JOIN documents ON documents.id=document_fts.rowid' +
@@ -801,6 +802,7 @@ var
   LStoreIdentifier: TSqlStatement;
   LFinish: TSqlStatement;
   LRebuildIdentifiers: Boolean;
+  LRefreshCulturalIdentifiers: Boolean;
   LRefreshRegistries: Boolean;
   LRefreshTctr: Boolean;
   LChanged: Boolean;
@@ -816,11 +818,30 @@ var
     LStoreIdentifier.Execute;
   end;
 
-  procedure IndexSourceIdentifiers(ADocumentId: Int64; const ABody: UTF8String);
+  procedure IndexSourceIdentifiers(ADocumentId: Int64; const ABody: UTF8String;
+    ARequirePublicationSource: Boolean);
   var
     LIdentity: TArchiveIdentity;
+    LSource: String;
   begin
     LIdentity := ParseArchiveIdentity(ABody);
+    if ARequirePublicationSource then
+    begin
+      // A cultural note may cite a paper without being an extract of that paper.
+      LSource := LIdentity.Source;
+      if AnsiEndsStr('/', LSource) then
+      begin
+        SetLength(LSource, Length(LSource) - 1);
+      end;
+      if not (((LIdentity.Pmcid <> '') and
+        SameText(LSource, 'https://pmc.ncbi.nlm.nih.gov/articles/' + LIdentity.Pmcid)) or
+        ((LIdentity.Pmid <> '') and
+        SameText(LSource, 'https://pubmed.ncbi.nlm.nih.gov/' + LIdentity.Pmid)) or
+        ((LIdentity.Doi <> '') and SameText(LSource, 'https://doi.org/' + LIdentity.Doi))) then
+      begin
+        Exit;
+      end;
+    end;
     if LIdentity.Pmid <> '' then
     begin
       StoreIdentifier(ADocumentId, 'PMID:' + LIdentity.Pmid);
@@ -861,6 +882,9 @@ var
     LId: Int64;
     LHadBody: Boolean;
     LArchivedSource: Boolean;
+    LCulturalSource: Boolean;
+    LBackfillIdentifiers: Boolean;
+    LPeriodEnd: Integer;
     LSameMetadata: Boolean;
     LOldError: UTF8String;
     LError: UTF8String;
@@ -885,16 +909,22 @@ var
     end;
     LFind.Reset;
     LHadBody := (LId <> 0) and (LOldError = '');
+    LPeriodEnd := Length(ResearchPathPrefix) + Length(APeriod) + 1;
     LArchivedSource := (APeriod <> '') and
-      (Pos('/Source-Text/', ARelative) = Length(ResearchPathPrefix) + Length(APeriod) + 1) and
+      (Pos('/Source-Text/', ARelative) = LPeriodEnd) and
       (ExtractFileExt(LowerCase(String(ARelative))) = '.txt');
+    LCulturalSource := (APeriod <> '') and
+      SameText(Copy(ARelative, LPeriodEnd, Length(CulturalSourceDirectory)),
+        CulturalSourceDirectory) and SameText(ExtractFileExt(String(ARelative)), '.txt');
+    LBackfillIdentifiers := (LArchivedSource and LRebuildIdentifiers) or
+      (LCulturalSource and LRefreshCulturalIdentifiers);
     LRegistryId := '';
     if LArchivedSource and (LRefreshRegistries or LRefreshTctr or
       not (LHadBody and LSameMetadata)) then
     begin
       LRegistryId := RegistryArchiveFileIdentifier(ExtractFileName(String(ARelative)));
     end;
-    if LHadBody and LSameMetadata and not ((LArchivedSource and LRebuildIdentifiers) or
+    if LHadBody and LSameMetadata and not (LBackfillIdentifiers or
       ((LRegistryId <> '') and (LRefreshRegistries or
       (LRefreshTctr and (Copy(LRegistryId, 1, 4) = 'TCTR'))))) then
     begin
@@ -929,9 +959,9 @@ var
     end;
     if (LId <> 0) and LSameMetadata and (LError = LOldError) then
     begin
-      if LArchivedSource and LRebuildIdentifiers and (LError = '') then
+      if LBackfillIdentifiers and (LError = '') then
       begin
-        IndexSourceIdentifiers(LId, LBody);
+        IndexSourceIdentifiers(LId, LBody, LCulturalSource);
       end;
       if LError = '' then
       begin
@@ -945,12 +975,12 @@ var
       LDelete.Reset;
       LDelete.BindNumber(1, LId);
       LDelete.Execute;
-      if LArchivedSource then
-      begin
-        LDeleteIdentifiers.Reset;
-        LDeleteIdentifiers.BindNumber(1, LId);
-        LDeleteIdentifiers.Execute;
-      end;
+    end;
+    if (LId <> 0) and (LArchivedSource or LCulturalSource) then
+    begin
+      LDeleteIdentifiers.Reset;
+      LDeleteIdentifiers.BindNumber(1, LId);
+      LDeleteIdentifiers.Execute;
     end;
     LStore.Reset;
     LStore.BindText(1, ARelative);
@@ -971,9 +1001,9 @@ var
       LIndex.BindText(2, LBody);
       LIndex.Execute;
       LIndex.Reset;
-      if LArchivedSource then
+      if LArchivedSource or LCulturalSource then
       begin
-        IndexSourceIdentifiers(LId, LBody);
+        IndexSourceIdentifiers(LId, LBody, LCulturalSource);
       end;
       IndexRegistryIdentifier(LId, LRegistryId, LBody);
     end;
@@ -1081,6 +1111,12 @@ begin
       ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_identifier_state VALUES (1,-1)');
       LRebuildIdentifiers := Scalar(FDatabase, 'SELECT source_identifier_state.revision' +
         ' <> catalog_state.revision FROM source_identifier_state, catalog_state') <> 0;
+      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_cultural_state (' +
+        ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
+      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_cultural_state VALUES (1,-1)');
+      LRefreshCulturalIdentifiers := LRebuildIdentifiers or
+        (Scalar(FDatabase, 'SELECT source_cultural_state.revision <> catalog_state.revision' +
+          ' FROM source_cultural_state, catalog_state') <> 0);
       ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_registry_v6_state (' +
         ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
       ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_registry_v6_state VALUES (1,-1)');
@@ -1094,7 +1130,7 @@ begin
         (Scalar(FDatabase, 'SELECT source_tctr_state.revision <> catalog_state.revision' +
           ' FROM source_tctr_state, catalog_state') <> 0);
       // An identifier backfill changes the results even when document bytes match.
-      LChanged := LChanged or LRefreshRegistries or LRefreshTctr;
+      LChanged := LChanged or LRefreshCulturalIdentifiers or LRefreshRegistries or LRefreshTctr;
       if LRebuildIdentifiers then
       begin
         // Also recover when an older executable has refreshed the text catalog.
@@ -1108,6 +1144,13 @@ begin
       if LRefreshTctr and not LRebuildIdentifiers then
       begin
         ExecuteSql(FDatabase, 'DELETE FROM source_identifiers WHERE identifier GLOB ''TCTR[0-9]*''');
+      end;
+      if LRefreshCulturalIdentifiers and not LRebuildIdentifiers then
+      begin
+        ExecuteSql(FDatabase, 'DELETE FROM source_identifiers WHERE document_id IN (' +
+          ' SELECT id FROM documents WHERE' +
+          ' lower(substr(path, length(''research/'') + length(period) + 1))' +
+          ' GLOB ''/cultural-and-experiential/*.txt'')');
       end;
       ExecuteSql(FDatabase, 'CREATE TEMP TABLE IF NOT EXISTS seen (' +
         ' path TEXT PRIMARY KEY) WITHOUT ROWID');
@@ -1144,6 +1187,8 @@ begin
       LFinish.BindNumber(2, LReparseCount);
       LFinish.Execute;
       ExecuteSql(FDatabase, 'UPDATE source_identifier_state' +
+        ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
+      ExecuteSql(FDatabase, 'UPDATE source_cultural_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
       ExecuteSql(FDatabase, 'UPDATE source_registry_v6_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
