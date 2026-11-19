@@ -1,6 +1,8 @@
 ## Findings and limits
 
-Twenty-four Round 1 claims have a checked version 1 scorecard.
+Twenty-five Round 1 claims have a checked version 1 scorecard.
+
+The historical full-text replay verifies 24 original pairs, covering 11 sets of printed journal pages and a full publisher PDF. It separates clinical tremor measurement from diagnostic mentions and figure references. The randomized fig-and-almond syrup study records three tremor events in its fig-containing arm and zero in either comparison arm. It compares distinct oral formulations in children taking methylphenidate and gives no resting-tremor phenotype. The same trial's drooling counts and the acute allergy case supply adverse-event context. Raw fig and Parkinson rest tremor (0559) and drooling (0188) are both Unknown at 50. [Verified source and outcome comparisons](followup/historical-page-scans-nov19-68/README.md).
 
 Raw blueberry and Parkinson constipation (0746) retains Maybe True at 50.005, the minimal-signal tier. The freeze-dried whole-blueberry powder crossover measured a small favorable change in constipation severity in adults outside Parkinson disease, with a confidence interval spanning both directions. Two reports of constipation during uncontrolled powder use limit transfer. The ACID adverse-event table concerns purified bilberry and black currant. Twenty-one original priority-four pairs were resolved by checking methods and, where needed, complete printed pages. The 1971 corn-oil diet shared the oil across all randomized groups and the broad-bean trial measured motor change separately from dyskinesia. [Checked evidence tier, original papers and exact decisions](followup/ingredient-comparator-bodies-nov19-67/README.md).
 
