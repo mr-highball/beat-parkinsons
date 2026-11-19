@@ -479,3 +479,8 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 
 - [Part I on Parkinson disease](Source-Text/2011-PMID20874702-Natural-Products-Parkinson-Review.txt).
 - [Part II on Alzheimer disease](Source-Text/2011-PMID20874701-Natural-Products-Alzheimer-Review.txt).
+
+## Clinical measurements and food preparation comparisons
+
+- [Fear of falling and recalled fall frequency](Source-Text/2010-PMID20157723-Fear-and-Fall-Frequency.txt).
+- [Continuous intestinal infusion, gait freezing and falls](Source-Text/2014-PMID25578290-Infusion-Freezing-and-Falls.txt).

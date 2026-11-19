@@ -606,3 +606,7 @@ January 1, 2025 through November 11, 2026 (partial period).
 ## Clinical comparison and exposure verification
 
 - [Original clinical comparisons, symptoms, and food-identity checks](Food-Experiment-Priority-Clinical-Contexts.md).
+
+## Clinical measurements and food preparation comparisons
+
+- [Freezing onset in NS-Park and PPMI](Source-Text/2026-PMID42715510-NS-Park-PPMI-Freezing-Comparisons.txt).

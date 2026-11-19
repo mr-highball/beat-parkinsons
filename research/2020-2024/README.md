@@ -759,3 +759,10 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Persian public posts about figs, dates and shaking](Cultural-and-Experiential/Conversations/2023-Persian-Public-Fig-and-Tremor-Suggestions.txt).
 
 - [Original fig-fruit extract motor-model narrative and outcome limits](Source-Text/2020-Gafoor-Fig-Fruit-Extract.txt).
+
+## Clinical measurements and food preparation comparisons
+
+- [Pan American congress index and matched freezing reports](Source-Text/2020-PMC7017818-Pan-American-Congress-Index.txt).
+- [Dried-date extract, grooming and swim behavior in stressed rats](Source-Text/2022-PMID35348229-Date-Extract-Grooming-and-Swim.txt).
+- [ONDRI white matter volume and two-year freezing questionnaire results](Source-Text/2023-PMID36692250-ONDRI-WMH-Freezing-Followup.txt).
+- [Amantadine in the NS-Park cohort](Source-Text/2024-PMID38578434-Amantadine-NS-Park-Followup.txt).

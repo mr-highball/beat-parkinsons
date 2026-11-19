@@ -170,3 +170,7 @@ The walnut-oil lipid trial is archived at author-abstract depth, with processing
 ## Companion evidence from the food collection review
 
 - [Cooked tomato sauce whole-food biomarker intervention](Source-Text/2001-PMID11752012-Cooked-Tomato-Sauce-and-Lycopene.txt).
+
+## Clinical measurements and food preparation comparisons
+
+- [Parkinson pain and dopaminergic cycle timing](Source-Text/2004-PMID15043802-Parkinson-Pain-Timing-Review.txt).

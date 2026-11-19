@@ -133,3 +133,7 @@ January 1, 1995 through December 31, 1999.
 
 - [Pallidotomy in levodopa-sensitive Parkinson disease, author abstract](Source-Text/1997-PMID9048711-Pallidotomy-Abstract.txt).
 - [Mitochondrial disorder and exercise intolerance, author abstract](Source-Text/1998-PMID9634511-Mitochondrial-Case-Abstract.txt).
+
+## Clinical measurements and food preparation comparisons
+
+- [Age-group chart review and conflicting insomnia and dystonia cells](Source-Text/1996-PMID8879356-Age-Insomnia-and-Dystonia-Table.txt).

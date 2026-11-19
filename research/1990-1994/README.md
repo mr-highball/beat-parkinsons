@@ -94,3 +94,7 @@ January 1, 1990 through December 31, 1994.
 ## Parkinson imaging
 
 - [Early imaging of striatal dopamine transporter availability, author abstract](Source-Text/1993-PMID8265656-Striatal-Transporter-Abstract.txt).
+
+## Clinical measurements and food preparation comparisons
+
+- [Levodopa-associated leg pain and local versus spinal anesthesia](Source-Text/1990-PMID2328508-Levodopa-Associated-Pain-Case.txt).

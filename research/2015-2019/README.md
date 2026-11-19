@@ -684,3 +684,8 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [A review of herbal therapy in multiple sclerosis](Source-Text/PMC6311642.txt).
 - [Crocetin EEG crossover in adults with sleep complaints](Source-Text/2018-PMID30477864-Crocetin-EEG-Crossover.txt).
 - [Official registry for the crocetin sleep comparison](Source-Text/Trials/UMIN000025854.txt).
+
+## Clinical measurements and food preparation comparisons
+
+- [V81M genotype and freezing questionnaire results](Source-Text/2015-PMC4770791-V81M-Freezing-Questionnaire.txt).
+- [Whole-plant lemon balm extract and separate animal movement outcomes](Source-Text/2019-Reddy-Melissa-Rotarod-and-Locomotion.txt).
