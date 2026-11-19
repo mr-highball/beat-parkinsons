@@ -511,3 +511,9 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [October Huntington trial update and the same trial families](Source-Text/2025-PMC12847458-Huntington-Trials-October.txt).
 - [Ataxia-telangiectasia swallowing result with a medium-chain triglyceride comparator](Source-Text/2025-PMID40616902-Triheptanoin-Swallowing-Comparator.txt).
 - [Observations on the comparison across periods](Observations/Safflower-Comparator-and-Swallowing.md).
+
+## Olive oil and anxiety-like behavior
+
+- [Measured pressing conditions, oil phenolic content and original behavioral results](Food-Experiment-Olive-Oil-Anxiety.md).
+- [Observations across the cold-pressed and earlier oil comparisons](Observations/Olive-Oil-Anxiety-and-Dose.md).
+- [Olive-oil secoiridoid extract in a zebrafish seizure model](Source-Text/2026-PMID42772005-Olive-Secoiridoids-Zebrafish-Extract.txt).

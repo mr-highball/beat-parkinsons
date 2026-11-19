@@ -670,3 +670,5 @@ The Singapore total-diet papers and original supplement preserve measured black-
 
 - [Strawberry-flavored cannabidiol safety extension registration](Source-Text/Trials/NCT04252586.txt).
 - [Reported clinical falls in the Rett extension](Source-Text/Trials/NCT04252586-results.txt).
+- [Olive oil preparation and anxiety outcome records](Food-Experiment-Olive-Oil-Anxiety.md).
+- [Observations on animal comparisons and human anxiety measurement](Observations/Olive-Oil-Exposure-and-Anxiety.md).

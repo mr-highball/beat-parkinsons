@@ -436,3 +436,4 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 ## Archived original contexts for the food experiment
 
 - [Electrically evoked strawberry smell in a pediatric epilepsy series](Source-Text/2012-PMID22554977-Evoked-Strawberry-Odor.txt).
+- [Olive oil and anxiety-like behavior in two rat experiments](Food-Experiment-Olive-Oil-Anxiety.md).

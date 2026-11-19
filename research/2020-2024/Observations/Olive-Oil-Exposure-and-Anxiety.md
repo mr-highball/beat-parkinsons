@@ -1,0 +1,5 @@
+# Olive oil exposure and anxiety measurement
+
+The [2013 Wistar-rat study](../../2010-2014/Food-Experiment-Olive-Oil-Anxiety.md) reported more open-arm time in a maze after commercial extra-virgin oil. The [older female rat comparison](../Food-Experiment-Olive-Oil-Anxiety.md#aged-rats-and-open-field-behavior) found an inconclusive open-field result for two phenolic concentrations. These tests measure different aspects of exploration in different animals. The [injected phenolic study](../Food-Experiment-Olive-Oil-Anxiety.md#injected-olive-phenolics-and-exploratory-activity) measured increased general activity as well as more center visits, which weakens symptom attribution.
+
+The [DieTBra study and critique](../Food-Experiment-Olive-Oil-Anxiety.md#original-dietbra-commentary-trail) measure a clinically relevant anxiety scale under a known cold-pressed preparation outside Parkinson disease. The within-arm and between-arm questions differ. The anxiety estimate from a matched active arm comparison remains open.
