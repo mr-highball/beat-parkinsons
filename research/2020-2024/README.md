@@ -611,6 +611,8 @@ The Singapore total-diet papers and original supplement preserve measured black-
 [Strawberry and falls evidence and observations](Observations/Food-Experiment-Strawberry-Falls-Nov19-26.md).
 
 - [Strawberry flavoring and falls in randomized comparisons](Observations/Strawberry-Flavoring-and-Fall-Outcomes.md).
+- [Strawberry milkshake reward in cue learning](Source-Text/2022-PMID36564387-Milkshake-Reward-and-Cue-Learning.txt).
+- [Strawberry milkshake and peanut oil in an older-mouse touchscreen task](Source-Text/2024-SfN-PSTR397-23-Cotter-Strawberry-Milkshake-and-Peanut-Oil.txt).
 - [Seasonal strawberry consumption in dietary records](Source-Text/2024-PMID38779015-Strawberry-Seasonality-in-Habitual-Diets.txt).
 - [Isolated fisetin physical-function registration](Source-Text/Trials/NCT05595499.txt).
 
