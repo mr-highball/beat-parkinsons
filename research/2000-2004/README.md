@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [2002 author follow-up](Source-Text/2002-Hansen-Macadamia-Kernel-Toxicosis-Tremor-Scope.txt) distinguishes reported whole-kernel field tremor from the four-dog observation and links the same veterinary series.
+
 The [2000 sweet-fennel pamphlet trace](Source-Text/2000-Ostad-Sweet-Fennel-Toxicity-Pamphlet-Trace.txt) and [2001 essential-oil toxicology study](Source-Text/2001-PMID11448553-Fennel-Oil-Toxicity-and-Movement.txt) share three investigators. The original pamphlet remains open. [Comparative observations](../2020-2024/Observations/Fennel-Preparation-and-Resting-Tremor.md).
 
 Two human crossover studies tested [unprocessed grapefruit](Source-Text/2000-PMID11103749-Unprocessed-Grapefruit-and-Felodipine.txt) and [fresh grapefruit pulp](Source-Text/2002-PMID12040751-Grapefruit-Pulp-and-Calcium-Antagonists.txt) with cardiovascular drugs. A separate [cabergoline interaction case report](Source-Text/2002-PMID12465083-Cabergoline-and-Itraconazole-Cases.txt) tested itraconazole. [Later clinical and preparation observations](../2020-2024/Observations/Grapefruit-Preparation-and-Tremor.md).

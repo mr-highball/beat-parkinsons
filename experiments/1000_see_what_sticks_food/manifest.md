@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-Eleven Round 1 claims have a checked version 1 scorecard.
+Twelve Round 1 claims have a checked version 1 scorecard.
+
+Cold-pressed macadamia oil and resting tremor (0177) remains Unknown at 50. The recovered seven-page 1994 trial supplies the fat formulations, lipid measurements and two transient gastrointestinal complaints, with no measured resting-tremor outcome. Fourteen families cover the oral and topical comparisons, separate acute canine kernel reactions, chemical brain injury, composition and two contextual accounts. [Sources, search and study scope](followup/tremor-macadamia-nov19-36/README.md).
 
 Cold-pressed peanut oil and resting tremor (0090) remains Unknown at 50. The recovered 1949 original reports reduced tremor amplitude during drug treatment with unchanged frequency and occurrence. Its peanut oil was an injected drug carrier without an oil-only comparison. The scorecard covers 14 families, and recovering the Europe PMC route enables screening 72 combined biomedical provider keys. [Original pages, dated additions and open evidence](followup/tremor-peanut-oil-nov19-35/README.md).
 

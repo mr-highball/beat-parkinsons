@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [rat chemical brain-injury study](Source-Text/2025-PMID40818780-Salama-Macadamia-Oil-Brain-Injury-Scope.txt) measured tissue responses. The [oil extraction comparison](Source-Text/2026-PMC13208092-Lan-Macadamia-Oil-Extraction-Comparisons.txt) identifies a room-temperature pressing method and physicochemical results.
+
 The [Mayurbhanj ethnobotanical survey](Cultural-and-Experiential/Traditional-Practices/2025-Odisha-Peanut-Oil-Cooking-and-Massage-Uses.txt) records culinary and topical peanut-oil use.
 
 An [oral methanolic fennel extract study](Source-Text/2025-PMID40958122-Fennel-Methanol-Extract-Rat-Toxicity.txt) reports rat toxicology. A [composite rapeseed seasoning experiment](Source-Text/2026-PMID41750818-Fennel-in-Composite-Rapeseed-Seasoning.txt) measures a heated fennel-containing mixture. [Comparative observations](../2020-2024/Observations/Fennel-Preparation-and-Resting-Tremor.md).

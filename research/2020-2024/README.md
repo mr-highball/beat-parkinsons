@@ -1,5 +1,7 @@
 # 2020-2024
 
+A [public sensory account](Cultural-and-Experiential/Conversations/2020-Earth-Clinic-Macadamia-Oil-and-Paresthesia.txt) describes perceived relief of numbness and tingling after taking unrefined macadamia oil. Its copied versions describe one person.
+
 The [ARISTOTLE protocol](Source-Text/Trials/NCT04324749.txt) connects to the peanut-oil control spread in the main report. The [mixed-seed animal extract study](Source-Text/2020-Nandagopal-Peanut-Mixed-Seed-Extract-and-Catalepsy.txt) measures catalepsy, and the [groundnut-oil dietary comparison](Source-Text/2024-Berkoh-Groundnut-Oil-Diet-and-Fasting-Glucose.txt) measures glucose and lipids.
 
 The [fennel accession study](Source-Text/2021-PMID33681616-Variation-Across-Fennel-Fruit-Accessions.txt) describes starting-material variation. A [fenchone toxicity comparison](Source-Text/2023-PMID36778012-Fenchone-Toxicity-Tremor-Observation.txt) separately records acute movement signs and other outcomes. [Fennel preparation and resting-tremor observations](Observations/Fennel-Preparation-and-Resting-Tremor.md).

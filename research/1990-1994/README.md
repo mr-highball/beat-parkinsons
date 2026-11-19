@@ -1,5 +1,7 @@
 # 1990-1994
 
+The [recovered original macadamia dietary comparison](Source-Text/1994-PMID8006520-Nestel-Macadamia-Oil-Primary-Extract.txt) gives the blended preparations, lipid contrasts and two transient gastrointestinal complaints. [Observations](Observations/Macadamia-Oil-Blends-and-Tremor.md).
+
 January 1, 1990 through December 31, 1994.
 
 ## Annotated research

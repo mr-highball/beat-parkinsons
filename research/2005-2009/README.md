@@ -1,5 +1,7 @@
 # 2005-2009
 
+A [topical nickel challenge](Source-Text/2005-PMID15723201-Pearce-Topical-Macadamia-Oil-Control.txt) used macadamia oil as a comparison. The [Southern Macadamia plan](Cultural-and-Experiential/Local-Knowledge/2009-Southern-Macadamia-Indigenous-Food-and-Trade.txt) records separate consultation on kernel food and trade uses.
+
 A single healthy-adult oil-assignment trial reported [appetite and food choice](Source-Text/2005-PMID16314877-Peanut-Oil-Diet-Appetite-and-Food-Choice.txt) and later [energy and general activity](Source-Text/2007-Akuamoah-Boateng-Peanut-Oil-Energy-and-Activity.txt).
 
 The [grapefruit juice concentration figure](Source-Text/2005-Nagai-Nomoto-Cabergoline-Figure4-Extract.txt), [clarithromycin interaction study](Source-Text/2006-PMID16410677-Cabergoline-Clarithromycin-Outcomes.txt) and [cabergoline resting-tremor pilot abstract](Source-Text/2008-PMID19092251-Cabergoline-Resting-Tremor-Pilot.txt) tested different exposures and outcomes. [Evidence comparison](../2020-2024/Observations/Grapefruit-Preparation-and-Tremor.md).

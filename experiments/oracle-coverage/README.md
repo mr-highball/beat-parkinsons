@@ -81,6 +81,8 @@ The raw cantaloupe checkpoint found four exact archive hits across fourteen dist
 
 The peanut-oil checkpoint found two exact hits and one partial across eighteen distinct source questions. The partial was a historical index receipt. The expansion recovered the original Parkinsonian measurements and added oral-oil, trial-registry and traditional-practice records. [Peanut-oil evidence and original pages](../1000_see_what_sticks_food/followup/tremor-peanut-oil-nov19-35/README.md).
 
+The macadamia-oil checkpoint found six exact archive hits across 15 new source questions, all registrations, and contextual leads for the separate claim question. The original 1994 body and the older poison-center follow-up were recovered through continued identifier trails. [Macadamia-oil evidence](../1000_see_what_sticks_food/followup/tremor-macadamia-nov19-36/README.md).
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the

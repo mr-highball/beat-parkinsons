@@ -4,6 +4,8 @@ The 1992 black pepper study measured time from the mouth to the cecum in healthy
 
 ## Major observations
 
+[Macadamia-oil blends and tremor leads](Macadamia-Oil-Blends-and-Tremor.md) compares the recovered 1994 original with subsequent preparation, animal and laboratory comparisons.
+
 - The [DATATOP follow-up](../Food-and-Nutrition.md) found no benefit from supplemental vitamin E for delaying disability requiring levodopa. Selegiline delayed the endpoint, with evidence that symptomatic benefit contributed.
 - [Autopsy correlation](../Clinical-and-Diagnosis.md) identified alternative pathologies among people diagnosed with Parkinson’s disease during life. Applying stricter criteria retrospectively improved agreement in this series. Case definition became important for interpreting exposure studies and treatment samples.
 - [Surgical reports](../Procedures-and-Devices.md) described sustained thalamic tremor control, broader motor responses and serious visual complications after lesion surgery, and encouraging but uncontrolled fetal graft findings.

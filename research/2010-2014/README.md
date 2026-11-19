@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [BRAVO registry](Source-Text/Trials/NCT01901887.txt) used a macadamia-oil comparison drink. A [2014 family-history meal study](Source-Text/2014-PMID24824014-Macadamia-Oil-Meal-and-Lipemia.txt) gave the same oil to both participant groups.
+
 The [clinical seizure report](Source-Text/2011-PMID21865126-Fennel-Oil-Baked-Exposure-Seizure.txt), [mouse bar-test study](Source-Text/2013-Jamwal-Fennel-Extract-and-Catalepsy.txt), [leaf-oil experiment](Source-Text/2014-PMID25149087-Fennel-Leaf-Oil-Behavior-and-Toxicity.txt) and [cattle nitrate outbreak](Source-Text/2014-PMID24453016-Fennel-Nitrate-Toxicosis-and-Tremor.txt) document distinct preparations and movement outcomes. A [Middle Eastern practice description](Cultural-and-Experiential/Traditional-Practices/2012-Abu-Rabia-Fennel-in-Falij-Literature.txt) preserves customary use. [Comparative observations](../2020-2024/Observations/Fennel-Preparation-and-Resting-Tremor.md).
 
 A [naringin rat experiment](Source-Text/2014-PMID24797334-Naringin-Nigrostriatal-Model.txt) reports nigrostriatal tissue outcomes. [Earlier and later contrasts](../2020-2024/Observations/Grapefruit-Preparation-and-Tremor.md).
