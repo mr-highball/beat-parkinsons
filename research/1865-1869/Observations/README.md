@@ -6,6 +6,8 @@
 
 ## Minor observations
 
+- The seasonal fig account describes behavior in nonclinical language. It does not share the clinical examination approach of the period's shaking-palsy papers. [Source record](../Cultural-and-Experiential/Local-Knowledge/1867-Duhousset-Fig-Harvest-Excitation.txt)
+
 - One-sided presentation, fatigue, cognitive changes, and pneumonia were already topics in the case literature. [Clinical sources](../Clinical-and-Diagnosis.md) · [Daily life](../Nonmotor-and-Daily-Life.md)
 - A single case recorded worse shaking after tea, coffee, and spirits. Sanders’s textbook listed a supportive regimen and conflicting results with electricity. [Food and nutrition](../Food-and-Nutrition.md) · [Devices](../Procedures-and-Devices.md)
 

@@ -6,6 +6,8 @@
 
 ## Minor observations
 
+- The earlier Duhousset account leaves the eaten preparation implicit. Vilbort names fresh fruit. Both use an intoxication comparison, and the two reports may transmit the same motif. [Source record](../Cultural-and-Experiential/Local-Knowledge/1875-Vilbort-Fresh-Fig-Harvest-Account.txt)
+
 - Saint-Léger compared electrical cure claims against the original case descriptions and reported a transient effect in two patients. Photographs gave readers a durable view of posture. [Devices](../Procedures-and-Devices.md) · [Publication context](../History-and-Context.md)
 
 - Boe's 1876 food-exposure case describes visual disturbance and delirium after foraged wild lettuce. The child's jumping was recorded during delirium. Unlike the period's Parkinson and galvanism case reports, the wild-lettuce case gives no tremor observation or chronic movement disorder. The July English digest and 1877 reprint follow the same patients. [Original text extract](../Source-Text/1876-Boe-Wild-Lettuce-Case-Extract.txt)

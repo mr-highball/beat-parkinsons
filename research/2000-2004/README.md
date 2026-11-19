@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [clinical fig allergy and laboratory cross-reactivity record](Source-Text/2003-PMID12859455-Fresh-and-Dried-Fig-Cross-Reactivity.txt) separates fresh and dried preparations in the assay.
+
 The [2004 diabetes congress food members](Source-Text/2004-PMC7096100-EASD-Food-Exposure-Contexts.txt) distinguish meat-derived laboratory reagents, coffee, tomato juice and oil formulations. The [related marine-fat feeding publication](Source-Text/2004-PMID15736913-Corn-Oil-and-Marine-PUFA-Adiposity.txt) records adiposity outcomes in mice.
 
 The [2002 author follow-up](Source-Text/2002-Hansen-Macadamia-Kernel-Toxicosis-Tremor-Scope.txt) distinguishes reported whole-kernel field tremor from the four-dog observation and links the same veterinary series.

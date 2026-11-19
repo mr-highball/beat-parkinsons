@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [fig leaf stress experiment](Source-Text/2024-PMID38741409-Fig-Leaf-Extract-and-Stress-Behavior.txt) and [fig peel cultivar comparison](Source-Text/2022-PMID36595373-Fig-Peel-Cultivars-and-Amyloid-Model.txt) report different animal behaviors and preparation routes.
+
 The [date-seed rat arthritis study](Source-Text/2024-PMID38565410-Date-Seed-Arthritis-Abstract.txt) reports swelling and inflammatory outcomes at original abstract depth. Its traditional seed tea background has no firsthand pain assessment.
 
 The [10/66 apathy analysis](Source-Text/2023-PMID37427840-Parkinsonism-Apathy-and-Caregiver-Scales.txt), [HIIT crossover](Source-Text/2023-PMID37371330-Exercise-Crossover-and-Outcome-Scales.txt), [Care4PD questionnaire](Source-Text/2023-PMID37239208-Care4PD-Bothersome-Symptom-Survey.txt), [manometry series](Source-Text/2023-PMID37476327-Manometry-and-Abdominal-Pain-Presence.txt) and [swallowing-sound report](Source-Text/2023-PMID37837871-Swallowing-Sound-Stimulation.txt) use distinct symptom measures. The [official swallowing registry](Source-Text/Trials/jRCTs062220013.txt) links the same cohort across cough, bolus and sound reports. [Endpoint observations and source locators](Observations/Parkinson-Endpoint-Definitions-Nov19-77.md).

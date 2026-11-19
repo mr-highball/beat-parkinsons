@@ -8,6 +8,8 @@
 
 ## Minor observations
 
+- The original food table places hallucinations in rows distinct from the dried fig group. The collapsed search display joins phrases across those rows. Participant and item-specific effects remain unverified. [Source record](../Cultural-and-Experiential/Personal-Reports/1982-Douglass-Raw-Food-Symptom-Table.txt)
+
 - The UK case series identified acute gastrointestinal illness after inadequately prepared red kidney beans. The preceding bucket contains incidents later reviewed retrospectively. Clinical Parkinson symptom effects remain unmeasured in these reports. [Lentil and kidney bean evidence](../Food-Experiment-Lentil-Kidney-Bean.md)
 - [Postural tasks](../Clinical-and-Diagnosis.md), [depression, and smell testing](../Nonmotor-and-Daily-Life.md) broadened the measured outcomes beyond rigidity and tremor.
 - A [four-week therapy program](../Movement-and-Rehabilitation.md) yielded a null result on its measured tasks in a small crossover study with attrition.

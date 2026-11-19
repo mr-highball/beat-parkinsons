@@ -1,5 +1,7 @@
 # 1980-1984
 
+An [original raw-food commentary](Cultural-and-Experiential/Personal-Reports/1982-Douglass-Raw-Food-Symptom-Table.txt) lists dried figs in a grouped food category. Hallucinations appear in other rows.
+
 [Historical work-capacity and fatigue measurement](Source-Text/PMC1463373.txt).
 
 Original printed context: [Psychopharmacology in medical practice—the benefits and the risks](Source-Text/PMC1272608.txt) · [Dentato-rubro-pallido-luysian atrophy: a clinico-pathological study](Source-Text/1984-PMID6512549-Dentatorubral-Clinical-Abstract.txt).

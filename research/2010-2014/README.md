@@ -1,5 +1,7 @@
 # 2010-2014
 
+An [oral fig-fruit extract experiment](Source-Text/2014-Sumanth-Mamatha-Fig-Fruit-Extract-and-Maze-Behavior.txt) reports maze behavior in a rat drug-challenge model.
+
 [Caffeine capsule trial with a separate Parkinson fatigue scale](Source-Text/PMC3414662.txt).
 
 [Isolated safranal and sleep recording](Source-Text/PMC6493539.txt) · [PMC2952755](Source-Text/PMC2952755.txt) · [PMC3397813](Source-Text/PMC3397813.txt) · [PMC6869072](Source-Text/PMC6869072.txt) · [PMC11513554](Source-Text/PMC11513554.txt) · [PMC4127168](Source-Text/PMC4127168.txt).
