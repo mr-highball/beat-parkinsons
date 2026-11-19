@@ -554,3 +554,5 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [UEG Week 2017 ingredient-specific exposure and preparation contexts](Source-Text/2017-PMC7672678-UEG-Food-Context-Extracts.txt).
 - [Aubert conference companion on the fixed blend and stress-related intestinal measures](Source-Text/2017-Aubert-STW5-Bowel-Transit-and-Stress.txt).
 - [British Neuroscience Association corn-oil and flavored milk source members](Source-Text/2019-PMC8842476-Corn-Oil-and-Reward-Preference.txt).
+
+- [Lemon balm dose and formulation boundaries](Observations/Lemon-Balm-Dose-and-Formulation-Boundaries.md)

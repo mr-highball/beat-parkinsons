@@ -589,3 +589,5 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Preparation and outcome differences in the orthopedic lemon balm study family](Observations/Lemon-Balm-Tea-Orthopedic-Trial-Family.md).
 
 - [Lemon balm and shared-source comparisons](Observations/Lemon-Balm-and-Shared-Source-Comparisons.md)
+
+- [Lemon balm dose and formulation boundaries](Observations/Lemon-Balm-Dose-and-Formulation-Boundaries.md)

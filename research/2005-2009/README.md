@@ -252,3 +252,5 @@ The original walnut-fraction crossover registration is bucketed by first public 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 - [Lemon balm and shared-source comparisons](Observations/Lemon-Balm-and-Shared-Source-Comparisons.md)
+
+- [Lemon balm dose and formulation boundaries](Observations/Lemon-Balm-Dose-and-Formulation-Boundaries.md)
