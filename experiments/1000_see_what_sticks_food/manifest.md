@@ -23,6 +23,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 Fifteen Round 1 claims have a checked version 1 scorecard.
 
+A complete 372-page FEBS supplement resolves 30 original pairs. Twenty-eight retain ingredient-related contexts. The strawberry references concern food phenolics and isolated ellagic acid, and the archived Dutch reports document a different disease and variable tolerability. Claim 0413 remains Unknown at 50 with four original pairs still open. Round 1 has 46,797 original pairs queued. [Original poster bodies, historical observations and access routes](followup/strawberry-falls-febs-and-sprue-nov19-55/README.md).
+
 Four recovered print collections resolve 27 original pairs across 18 claims. Two retain related ingredient contexts. ErdBEHR reports similar chair-rise changes across lower- and higher-dose strawberry groups and provides no fall counts. The separate Cantlie report concerns fresh fruit for tropical sprue. Five original pairs remain for claim 0413 and its checked grade is Unknown at 50. Round 1 has 46,827 original pairs queued. [Print scopes, trial evidence, and open routes](followup/strawberry-print-sections-and-erdbehr-nov19-54/README.md).
 
 Three matching print volumes resolve 20 original pairs across 14 claims. Seven retain genuine ingredient or derivative context. The three strawberry source pairs resolve to vascular-lesion terminology. A separate confirmed epilepsy abstract describes an electrically evoked perception and its full proceedings remain open. Claim 0413 retains nine original pairs and remains Unknown at 50. The Round 1 queue holds 46,854 pairs. [Recovered volumes, clinical fall measures and access records](followup/strawberry-print-volume-recovery-nov19-53/README.md).
