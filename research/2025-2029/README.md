@@ -618,3 +618,16 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Head-impulse reflexes and freezing status](Source-Text/2025-PMID40256685-Vestibular-Reflexes-and-Freezing.txt).
 - [Retained date pit and recurrent abdominal pain](Source-Text/2026-PMID42822522-Retained-Date-Pit-and-Abdominal-Pain.txt).
 - [Accidental date pit and perianal injury](Source-Text/2026-PMID41837074-Ingested-Date-Pit-and-Perianal-Injury.txt).
+
+## Visual symptom definitions and food exposure boundaries
+
+- [Disrupted functional brain network associated with presence of hallucinations in Parkinson's disease](Source-Text/PMC12127509.txt).
+- [Visual hallucinations in neurosurgery: A systematic review and two case insights into Charles Bonnet Syndrome](Source-Text/PMC12139488.txt).
+- [The relationship between paracingulate sulcus length and visual hallucinations in Parkinson's disease suggests a neurobiological predisposition](Source-Text/PMC12216215.txt).
+- [Association of the number of minor hallucinations and well-structured visual hallucinations in Parkinson's disease](Source-Text/PMC12361504.txt).
+- [Imposter in the brain: aetiological, clinical and neuroimaging characteristics of Capgras syndrome](Source-Text/PMC13058470.txt).
+- [Disrupted visual-to-semantic dynamics promote visual hallucinations in Parkinson's disease](Source-Text/PMC12827262.txt).
+- [Temporal assessment of behavior in Parkinson's visual hallucinations via a multidimensional analysis strategy](Source-Text/PMC13102970.txt).
+- [Network based statistics associates increased connectivity to REM sleep disorder and hallucinations in early DLB](Source-Text/PMC13586286.txt).
+- [Deviations in effective connectivity explain different hallucination subtypes in Parkinson's disease psychosis](Source-Text/PMC13259922.txt).
+- [Reduced volume of neuromodulatory brainstem nuclei is associated with early hallucination-related vulnerability in Parkinson's disease](Source-Text/PMC13621912.txt).

@@ -790,3 +790,10 @@ The Singapore total-diet papers and original supplement preserve measured black-
 
 - [Date-seed exercise trial registration](Source-Text/Trials/IRCT20150205020965N9.txt).
 - [Registered whole Mazafati comparison and menstrual pain](Source-Text/Trials/IRCT20180708040381N1.txt).
+
+## Visual symptom definitions and food exposure boundaries
+
+- [Visual hallucinations in Parkinson's disease: spotlight on central cholinergic dysfunction](Source-Text/PMC11788216.txt).
+- [Patterns of tau, amyloid and synuclein pathology in ageing, Alzheimer's disease and synucleinopathies](Source-Text/PMC12073977.txt).
+- [An Extract from Ficus carica Cell Cultures Works as an Anti-Stress Ingredient for the Skin](Source-Text/2021-PMID33806157-Fig-Cell-Culture-Extract-and-Topical-Skin-Outcomes.txt).
+- [Quantification of tyramine in different types of food using novel green synthesis of ficus carica quantum dots as fluorescent probe](Source-Text/2022-PMID35586926-Fig-Reagent-and-Food-Tyramine-Abstract.txt).

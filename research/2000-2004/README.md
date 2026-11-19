@@ -182,3 +182,7 @@ The walnut-oil lipid trial is archived at author-abstract depth, with processing
 ## Date preparations and clinical outcomes
 
 - [Zaghloul fruit and seed extracts in an arthritis model](Source-Text/2004-Mohamed-Zaghloul-Date-Extracts-and-Swelling.txt).
+
+## Visual symptom definitions and food exposure boundaries
+
+- [Modulation of striatal serotonin and opioid receptor mRNA expression following systemic N-methyl-norsalsolinol administration](Source-Text/2003-PMID14607311-N-Methyl-Norsalsolinol-Receptor-Expression-Abstract.txt).
