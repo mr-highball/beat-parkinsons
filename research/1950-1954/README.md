@@ -1,5 +1,7 @@
 # 1950-1954
 
+[Historical tremor and the peanut-oil vehicle](Observations/Peanut-Oil-Vehicle-and-Historical-Tremor.md) compares the 1951 secondary account with the recovered 1949 primary electromyography paper.
+
 January 1, 1950 through December 31, 1954.
 
 ## Annotated research

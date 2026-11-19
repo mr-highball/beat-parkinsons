@@ -79,6 +79,8 @@ The toasted fennel checkpoint revisited three narrative locators and recovered t
 
 The raw cantaloupe checkpoint found four exact archive hits across fourteen distinct source questions, plus a local lead for the separate claim question. The additions recover an original motor supplement, linked cohort, cultivar-specific comparisons, two registrations and traditional documentation. The known fig use of the shared diet paper adds no repeat source question. [Cantaloupe evidence and source depth](../1000_see_what_sticks_food/followup/tremor-cantaloupe-nov19-34/README.md).
 
+The peanut-oil checkpoint found two exact hits and one partial across eighteen distinct source questions. The partial was a historical index receipt. The expansion recovered the original Parkinsonian measurements and added oral-oil, trial-registry and traditional-practice records. [Peanut-oil evidence and original pages](../1000_see_what_sticks_food/followup/tremor-peanut-oil-nov19-35/README.md).
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the

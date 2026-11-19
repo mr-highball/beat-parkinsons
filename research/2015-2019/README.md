@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [cold-pressed peanut-oil composition study](Source-Text/2016-Kostadinovic-Cold-Pressed-Peanut-Oil-Composition.txt), [ENHANce sarcopenia registration](Source-Text/Trials/NCT03649698.txt) and [Sultanpur customary massage record](Cultural-and-Experiential/Traditional-Practices/2018-Sultanpur-Peanut-Oil-Massage-Use.txt) describe different preparation roles and endpoints.
+
 Four fennel texts describe [reserpine and bar-test activity](Source-Text/2018-Nemati-Fennel-Oil-Reserpine-Motor-Tests.txt), [aerial juice toxicity](Source-Text/2018-Al-Hizab-Fennel-Aerial-Juice-Toxicity.txt), [roasted-fruit volatiles](Source-Text/2018-PMID30268004-Roasted-Fennel-Fruit-Volatiles.txt) and [whole crushed seed in mouse feed](Source-Text/2019-PMID31680077-Fennel-Seed-Diet-and-Mouse-Activity.txt). [Comparative observations](../2020-2024/Observations/Fennel-Preparation-and-Resting-Tremor.md).
 
 The [2015 naringin experiment](Source-Text/2015-PMID26878791-Naringin-Prevention-and-Restoration.txt) tests prevention and recovery of tissue markers in mice. The [grapefruit and lavender aroma registration](Source-Text/Trials/UMIN000021236.txt) records planned immediate human outcomes. [Comparative observations](../2020-2024/Observations/Grapefruit-Preparation-and-Tremor.md).

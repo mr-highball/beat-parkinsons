@@ -8,6 +8,8 @@ Independent follow-up of artery occlusion found only temporary tremor relief and
 
 The Leeds practitioner survey and bedside descriptions recorded signs across a broader population than the surgical and drug series. A lysivane case series also recorded coffee use for post-dose drowsiness. The latter report had no dietary comparator. [Diagnosis](../Clinical-and-Diagnosis.md) · [Food and nutrition](../Food-and-Nutrition.md)
 
+[Peanut-oil vehicle and historical tremor](Peanut-Oil-Vehicle-and-Historical-Tremor.md) separates the 1951 review’s clinical description from the 1949 study’s amplitude and frequency observations.
+
 ## Comparison with 1945–1949
 
 [Previous observations](../../1945-1949/Observations/README.md)

@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2025-2029
 
+- [Mayurbhanj culinary and topical peanut-oil use](Traditional-Practices/2025-Odisha-Peanut-Oil-Cooking-and-Massage-Uses.txt).
+
 - [Public discussion of grapefruit drinks and perceived symptoms](Conversations/2026-Reddit-Grapefruit-Drinks-and-Perceived-Symptoms.txt). [Preparation and outcome context](../../2020-2024/Observations/Grapefruit-Preparation-and-Tremor.md).
 
 - [Pacific Talanoa narratives on care and coping with PINK1-associated Parkinson disease](Local-Knowledge/2026-Pacific-PINK1-Talanoa-Narratives.txt).

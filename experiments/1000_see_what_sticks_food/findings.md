@@ -1,5 +1,7 @@
 ## Findings and limits
 
+Cold-pressed peanut oil and resting tremor (0090) remains Unknown at 50. The recovered 1949 original reports reduced tremor amplitude during drug treatment with unchanged frequency and occurrence. Its peanut oil was an injected drug carrier without an oil-only comparison. The scorecard covers 14 families, and recovering the Europe PMC route enables screening 72 combined biomedical provider keys. [Original pages, dated additions and open evidence](followup/tremor-peanut-oil-nov19-35/README.md).
+
 Raw cantaloupe and resting tremor (0341) remains Unknown at 50 under the shared rubric. The 14-family review checks the original Parkinson mixed-diet supplement, distinguishes a pooled disease-occurrence estimate from symptom response, and separates seed and peel motor proxies from raw fruit. The focused biomedical inventory includes 307 provider identities before alias reconciliation. [Cantaloupe sources, study contrasts and open trails](followup/tremor-cantaloupe-nov19-34/README.md).
 
 Toasted fennel seed and resting tremor (0214) remains Unknown at 50 after evaluating 19 evidence families and 39 checked biomedical source keys. Acute concentrated-oil toxicity and nitrate-associated cattle tremor are separate from the Parkinson-model bar, stride and rotarod results. A close whole-seed diet comparison measured general activity only. The original reserpine paper also corrects a previously misassigned comparator in the freezing-of-gait assessment. [Fennel evidence and search scope](followup/tremor-fennel-nov19-33/README.md).

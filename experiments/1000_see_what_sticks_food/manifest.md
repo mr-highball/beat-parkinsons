@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-Ten Round 1 claims have a checked version 1 scorecard.
+Eleven Round 1 claims have a checked version 1 scorecard.
+
+Cold-pressed peanut oil and resting tremor (0090) remains Unknown at 50. The recovered 1949 original reports reduced tremor amplitude during drug treatment with unchanged frequency and occurrence. Its peanut oil was an injected drug carrier without an oil-only comparison. The scorecard covers 14 families, and recovering the Europe PMC route enables screening 72 combined biomedical provider keys. [Original pages, dated additions and open evidence](followup/tremor-peanut-oil-nov19-35/README.md).
 
 Raw cantaloupe and resting tremor (0341) remains Unknown at 50 under the shared rubric. The 14-family review checks the original Parkinson mixed-diet supplement, distinguishes a pooled disease-occurrence estimate from symptom response, and separates seed and peel motor proxies from raw fruit. The focused biomedical inventory includes 307 provider identities before alias reconciliation. [Cantaloupe sources, study contrasts and open trails](followup/tremor-cantaloupe-nov19-34/README.md).
 

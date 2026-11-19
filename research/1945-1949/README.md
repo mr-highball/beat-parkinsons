@@ -1,10 +1,12 @@
 # 1945-1949
 
+The recovered [Bird and Meyers tremor article](Source-Text/1949-PMID18130078-Bird-Meyers-Parkinson-Tremor-Primary-Extract.txt) separates amplitude, frequency and occurrence under drug treatment. The [1946 clinical series](Source-Text/1946-PMID19312495-Schlesinger-Parkinson-Formulation-Scope.txt) gives earlier formulation context. Both used peanut oil as a vehicle.
+
 January 1, 1945 through December 31, 1949.
 
 ## Annotated research
 
-- [Bird and Meyers Parkinson electromyography paper and full-source gap](Source-Text/1949-PMID18130078-Bird-Meyers-Index-Receipt.txt)
+- [Bird and Meyers Parkinson electromyography paper index and access receipt](Source-Text/1949-PMID18130078-Bird-Meyers-Index-Receipt.txt)
 - [Almond oil in original historical collections](Food-Experiment-Almond-Historical-Collections.md)
 
 - [Mechanisms and models](Mechanisms-and-Models.md)
