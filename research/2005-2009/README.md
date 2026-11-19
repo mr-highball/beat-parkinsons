@@ -1,5 +1,7 @@
 # 2005-2009
 
+[Coffee history and fatigue measured separately](Source-Text/PMC2276830.txt) · [PMC2364726](Source-Text/PMC2364726.txt) · [PMC3376711](Source-Text/PMC3376711.txt).
+
 [gastrointestinal tumor case series with saffron staining](Source-Text/PMC3207561.txt) · [Parkinson olfactory testing with a banana-like odor](Source-Text/PMC2790799.txt).
 
 The [dried common-sage crossover](Source-Text/2005-PMID16205785-Dried-Sage-Mood-Stressor.txt) records different alertness comparisons before and during a task.

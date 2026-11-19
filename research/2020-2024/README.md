@@ -1,5 +1,7 @@
 # 2020-2024
 
+[Espresso shared across breakfast conditions](Source-Text/2021-PMID33640376-Shared-Espresso-Breakfast-Tiredness.txt) · [PMC8446893](Source-Text/PMC8446893.txt) · [PMC10615702](Source-Text/PMC10615702.txt) · [PMC8355947](Source-Text/PMC8355947.txt) · [PMC8417778](Source-Text/PMC8417778.txt) · [PMC7281977](Source-Text/PMC7281977.txt).
+
 [Registered fig and almond syrup comparison](Source-Text/IRCT20220406054433N1.txt) · [Fig and date flower-bud plasma experiments](Source-Text/2022-Chhoud-Fig-and-Date-Flower-Buds-in-Parkinson-Plasma.txt) · [Vinegar-soaked fig and gallstone symptoms](Source-Text/2024-PMID39799455-Vinegar-Soaked-Fig-Gallstone-Trial.txt).
 
 [multidomain nutrition and cognition protocol](Source-Text/PMC7174118.txt) · [ACID protocol and anticipated bowel effects](Source-Text/PMC7492209.txt) · [Parkinson taste study with clove omitted from smell testing](Source-Text/PMC9171299.txt) · [Alzheimer caregiver review](Source-Text/PMC9392839.txt) · [ACID original cognition and constipation-event table](Source-Text/2022-PMID36372613-ACID-Cognition-and-Adverse-Events.txt) · [PPMI biomarker and dream-enactment context](Source-Text/PMC10627170.txt) · [whole blueberry powder and gastrointestinal symptoms registration](Source-Text/Trials/NCT04824976.txt) · [blueberry powder safety registry and two constipation reports](Source-Text/Trials/NCT05172128.txt).

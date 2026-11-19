@@ -1,5 +1,7 @@
 # 2025-2029
 
+[Observations comparing coffee preparation, fatigue outcomes and shared exposures](Observations/Brewed-Coffee-Fatigue-and-Shared-Comparators.md).
+
 [Fig and almond syrup adverse-event table](Source-Text/2025-Mohammadi-Kenari-Fig-Almond-Drooling.txt) · [Fresh fig puree and rat memory](Source-Text/PMC12455911.txt) · [Formulation and symptom observations](Observations/Fig-Formulations-and-Tremor-Ascertainment.md).
 
 [Still disease case with clinical fatigue](Source-Text/PMC11670017.txt) · [multi-odor clove protocol with planned anxiety assessment](Source-Text/PMC12352155.txt) · [Observations across periods](Observations/Comparator-Ingredients-and-Anticipated-Side-Effects.md).

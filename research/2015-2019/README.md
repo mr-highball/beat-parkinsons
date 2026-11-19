@@ -1,5 +1,7 @@
 # 2015-2019
 
+[Nutmeg volatile oil and hippocampal measures](Source-Text/PMC5634759.txt) · [PMC6869566](Source-Text/PMC6869566.txt) · [PMC6582384](Source-Text/PMC6582384.txt) · [PMC6661809](Source-Text/PMC6661809.txt) · [PMC4790408](Source-Text/PMC4790408.txt) · [PMC6296165](Source-Text/PMC6296165.txt).
+
 [simulated vocal tremor and listener ratings](Source-Text/PMC4545074.txt) · [Parkinson genetic and olfaction comparison](Source-Text/PMC5567486.txt) · [ACID registration](Source-Text/Trials/NCT03419039.txt).
 
 The [registered mixed-sage comparison](Source-Text/Trials/NCT03695003.txt) includes acute and longer-term mood assessments in healthy adults and a probable link to the 2021 results.

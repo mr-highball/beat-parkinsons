@@ -1,5 +1,7 @@
 # 1985-1989
 
+[Levodopa crossover and baseline end-dose dystonia](Source-Text/PMC1032507.txt) · [PMC1276879](Source-Text/PMC1276879.txt).
+
 Original printed context: [Dystonic-Parkinsonian syndrome after cyanide poisoning: clinical and MRI findings](Source-Text/PMC1032927.txt).
 
 January 1, 1985 through December 31, 1989.

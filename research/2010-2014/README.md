@@ -1,5 +1,9 @@
 # 2010-2014
 
+[Caffeine capsule trial with a separate Parkinson fatigue scale](Source-Text/PMC3414662.txt).
+
+[Isolated safranal and sleep recording](Source-Text/PMC6493539.txt) · [PMC2952755](Source-Text/PMC2952755.txt) · [PMC3397813](Source-Text/PMC3397813.txt) · [PMC6869072](Source-Text/PMC6869072.txt) · [PMC11513554](Source-Text/PMC11513554.txt) · [PMC4127168](Source-Text/PMC4127168.txt).
+
 [cinnamon flavor and mouse preference experiment](Source-Text/PMC3138658.txt) · [inhaled almond control and carrier comparison](Source-Text/PMC3700459.txt) · [familial and sporadic supranuclear palsy cohort](Source-Text/PMC3716405.txt) · [medication-count cohort and excluded cranberry juice](Source-Text/PMC4158998.txt).
 
 A [terminated masked sage-tablet trial](Source-Text/Trials/NCT02032862.txt) registered sweating and menopause outcomes using a fresh-leaf extract.
