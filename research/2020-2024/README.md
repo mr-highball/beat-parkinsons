@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [ErdBEHR trial registration](Source-Text/Trials/DRKS00026998.txt) and [main paper and supplement](Source-Text/2024-Hartmann-ErdBEHR-Strawberry-and-Chair-Rise.txt) compare amounts of fresh strawberries in older adults. The chair-rise improvement was similar across groups. [Observations on mobility and the companion report](Observations/Fresh-Strawberries-and-Mobility-ErdBEHR.md).
+
 The [potato-fiber crossover](Source-Text/2020-PMC7697495-Potato-Fiber-Crossover.txt) reports satiety and stool results. The [safflower and fish-oil lipoprotein study](Source-Text/2021-PMID33933722-Safflower-Fish-Oil-Lipoproteins.txt) and its [sex-specific analysis](Source-Text/2023-PMID37404855-Safflower-Fish-Oil-Sex-Analysis.txt) share a crossover. The [Y-maze report](Source-Text/2021-PMID34624673-High-Oleic-Sunflower-Y-Maze.txt) and [radial-maze study](Source-Text/2024-PMID38852700-High-Oleic-Sunflower-Radial-Maze.txt) distinguish high-oleic sunflower-oil diets and memory outcomes.
 
 A [public sensory account](Cultural-and-Experiential/Conversations/2020-Earth-Clinic-Macadamia-Oil-and-Paresthesia.txt) describes perceived relief of numbness and tingling after taking unrefined macadamia oil. Its copied versions describe one person.

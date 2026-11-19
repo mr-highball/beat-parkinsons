@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [ErdBEHR gut microbiome report](Source-Text/2025-PMID39772703-ErdBEHR-Strawberry-Microbiome.txt) analyzes a subset of the registered strawberry intervention on separate endpoints.
+
 The [safflower and fish-oil inflammatory analysis](Source-Text/2025-PMC11999210-Safflower-Fish-Oil-Inflammatory-Markers.txt) follows the earlier crossover. The [sunflower oil and hippocampal markers study](Source-Text/2026-PMC13454707-Sunflower-Oil-Hippocampal-Markers.txt) examines biochemical changes in mice.
 
 The [rat chemical brain-injury study](Source-Text/2025-PMID40818780-Salama-Macadamia-Oil-Brain-Injury-Scope.txt) measured tissue responses. The [oil extraction comparison](Source-Text/2026-PMC13208092-Lan-Macadamia-Oil-Extraction-Comparisons.txt) identifies a room-temperature pressing method and physicochemical results.

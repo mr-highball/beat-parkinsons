@@ -1,5 +1,7 @@
 # 1905-1909
 
+The [June 29 BMJ materials](Source-Text/1907-PMC2358282-BMJ-June-Administrative-and-Epitome-Context.txt) distinguish early clinical terms from food exposures. The separate [June 22 Cantlie report](Source-Text/1907-PMID20763306-Cantlie-Fresh-Strawberries-and-Sprue.txt) documents a fresh-strawberry regimen for tropical sprue. [Observations on preparation and clinical terminology](Observations/Strawberries-as-Food-and-as-a-Clinical-Term.md).
+
 January 1, 1905 through December 31, 1909.
 
 ## Annotated research

@@ -1,5 +1,7 @@
 # 1950-1954
 
+The [December 1953 BMJ issue](Source-Text/1953-PMC2030426-BMJ-December-Administrative-Context.txt) separates an early food regimen discussion from the indexed administrative pages.
+
 [Historical tremor and the peanut-oil vehicle](Observations/Peanut-Oil-Vehicle-and-Historical-Tremor.md) compares the 1951 secondary account with the recovered 1949 primary electromyography paper.
 
 January 1, 1950 through December 31, 1954.

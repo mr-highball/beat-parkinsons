@@ -1,5 +1,7 @@
 # 1920-1924
 
+A [1922 clinical discussion preserved in a 1926 reprint](Source-Text/1922-Koolemans-Beynen-Sprue-Diet-Report-1926-Reprint.txt) describes fruit-based diets for sprue and separates them from the treatment of the reported tetany case.
+
 January 1, 1920 through December 31, 1924.
 
 ## Annotated research

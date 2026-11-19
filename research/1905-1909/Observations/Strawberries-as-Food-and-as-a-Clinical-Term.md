@@ -1,0 +1,5 @@
+# Strawberries as food and as a clinical term
+
+In the [1878 bound issue context](../../1875-1879/Source-Text/1878-PMC2222220-BMJ-December-Administrative-Context.txt), strawberry tongue appears outside the dated issue and describes a physical sign. The [June 29, 1907 materials](../Source-Text/1907-PMC2358282-BMJ-June-Administrative-and-Epitome-Context.txt) repeat a skin-lesion usage and separately mention strawberries as a possible urticaria exposure.
+
+The [June 22 Cantlie report](../Source-Text/1907-PMID20763306-Cantlie-Fresh-Strawberries-and-Sprue.txt) records fresh strawberries given as a food intervention for tropical sprue. That identifies preparation and route more clearly than the clinical descriptors do. The historical narrative has no comparator, case denominator, or fall endpoint. The [1922 discussion as reprinted in 1926](../../1920-1924/Source-Text/1922-Koolemans-Beynen-Sprue-Diet-Report-1926-Reprint.txt) preserves a related historical practice account with mixed diets and a different attribution for the detailed tetany outcome.

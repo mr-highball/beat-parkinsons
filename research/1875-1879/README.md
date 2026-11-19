@@ -1,5 +1,7 @@
 # 1875-1879
 
+The [December 1878 BMJ issue](Source-Text/1878-PMC2222220-BMJ-December-Administrative-Context.txt) preserves administrative pages and clarifies which ingredient matches are names and clinical terms.
+
 January 1, 1875 through December 31, 1879.
 
 ## Annotated research

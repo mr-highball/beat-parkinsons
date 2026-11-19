@@ -1,5 +1,7 @@
 # 1915-1919
 
+The [Royal Society proceedings](Source-Text/1916-PMC2017445-RSM-Psychiatry-and-Neurology-Context.txt) distinguish the joint Psychiatry and Neurology session from the other bound sections and document food terms used as examples.
+
 January 1, 1915 through December 31, 1919.
 
 ## Annotated research
