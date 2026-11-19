@@ -36,3 +36,5 @@ January 1, 1950 through December 31, 1954.
 - [Paprika Occupational Exposure](Food-Experiment-Paprika-Occupational-Exposure.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+- [Common fig names in the USDA plant inventory](Cultural-and-Experiential/Local-Knowledge/1950-USDA-Anjir-Fig-Accessions.txt).

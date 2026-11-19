@@ -27,3 +27,7 @@ The original 1950 psychiatric paper establishes an injected peanut-oil drug vehi
 ## Paprika processing and respiratory illness
 
 The annual index leads to a respiratory account whose author distinguishes fungal dust from handling finished paprika. Its separate biliary dyskinesia entry concerns another page. [Recovered 1950 article](../Food-Experiment-Paprika-Occupational-Exposure.md)
+
+## Food identity in historical sources
+
+The fig inventory distinguishes common fig accessions from entries identified only to Ficus. Anjir and closely related names occur across both groups. Later folk and research references can be searched with those names while preserving species and preparation uncertainty. [Original inventory context](../Cultural-and-Experiential/Local-Knowledge/1950-USDA-Anjir-Fig-Accessions.txt).

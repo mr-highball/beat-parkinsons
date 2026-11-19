@@ -32,3 +32,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 
 - [Central Syrian ethnomedicinal record of safflower seed oil](Traditional-Practices/2021-PMC8231352-Safflower-Seeds-and-Oil-Syria.txt).
+
+- [Persian public posts about figs, dates and shaking](Conversations/2023-Persian-Public-Fig-and-Tremor-Suggestions.txt).

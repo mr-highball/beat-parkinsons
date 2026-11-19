@@ -755,3 +755,5 @@ The Singapore total-diet papers and original supplement preserve measured black-
 ## Rosemary constituent and outcome references
 
 - [Rosmarinic acid review and the separate mouse behavior citation](Source-Text/2020-PMID32725282-Rosmarinic-Review-Citations.txt).
+
+- [Persian public posts about figs, dates and shaking](Cultural-and-Experiential/Conversations/2023-Persian-Public-Fig-and-Tremor-Suggestions.txt).
