@@ -1,5 +1,7 @@
 # 2010-2014
 
+New [diazinon strain evidence](Source-Text/2012-PMID22871176-Diazinon-Strains-and-Tissue-Context.txt) records the female rat biochemical comparison. The [Amaranthus renal paper](Source-Text/2014-PMID25415872-Amaranthus-Olive-Oil-Renal-Vehicle.txt) identifies injected olive oil as the vehicle and was posted online in 2014.
+
 The [full 2011 FEBS poster supplement](Source-Text/2011-PMC7164111-FEBS-Poster-Food-and-Parkinson-Context.txt) distinguishes food composition, isolated compounds, oil substrates and separate Parkinson biomarker comparisons.
 
 The [2011 SGIM food and coffee contexts](Source-Text/2011-PMC6730977-SGIM-Coffee-and-Ingredient-Contexts.txt) distinguish symptom-driven use and case histories. The [separate erratum](Source-Text/2011-PMC3181309-SGIM-Omitted-Abstracts.txt) supplies the omitted members.

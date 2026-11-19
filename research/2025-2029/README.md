@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [neurodegenerative constipation scoping review](Source-Text/2026-PMID42459041-Neurodegenerative-Constipation-Ginger-Review.txt) points to the earlier multiple sclerosis ginger trial and separate Parkinson studies.
+
 The [ErdBEHR gut microbiome report](Source-Text/2025-PMID39772703-ErdBEHR-Strawberry-Microbiome.txt) analyzes a subset of the registered strawberry intervention on separate endpoints.
 
 The [safflower and fish-oil inflammatory analysis](Source-Text/2025-PMC11999210-Safflower-Fish-Oil-Inflammatory-Markers.txt) follows the earlier crossover. The [sunflower oil and hippocampal markers study](Source-Text/2026-PMC13454707-Sunflower-Oil-Hippocampal-Markers.txt) examines biochemical changes in mice.
