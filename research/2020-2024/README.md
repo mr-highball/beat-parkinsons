@@ -773,3 +773,8 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Romberg sensory conflict and freezing status](Source-Text/2022-PMID36373942-Romberg-Freezing-and-Falls.txt).
 - [Date-seed trial and time-specific exercise soreness](Source-Text/2022-PMID35832028-Date-Seed-and-Exercise-Soreness.txt).
 - [Swallowed date pit and oesophageal injury](Source-Text/2021-PMID33614050-Date-Pit-and-Oesophageal-Injury.txt).
+
+## Date-palm trial registrations
+
+- [Date-seed exercise trial registration](Source-Text/Trials/IRCT20150205020965N9.txt).
+- [Registered whole Mazafati comparison and menstrual pain](Source-Text/Trials/IRCT20180708040381N1.txt).

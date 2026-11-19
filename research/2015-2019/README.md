@@ -695,3 +695,7 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Aqueous date fruit extract and heat-evoked withdrawal](Source-Text/2015-Maryam-Date-Fruit-Water-Extract-and-Tail-Flick.txt).
 - [Date-palm spathe and two animal pain assays](Source-Text/2015-PMID26693469-Date-Spathe-Evoked-Pain.txt).
 - [Iranian traditional uses of date-palm spathe distillate](Cultural-and-Experiential/Traditional-Practices/2015-Iranian-Date-Spathe-Distillate-Pain.txt).
+
+## Date-palm trial registrations
+
+- [Registered topical date-palm and diclofenac knee comparison](Source-Text/Trials/IRCT20180126038510N1.txt).
