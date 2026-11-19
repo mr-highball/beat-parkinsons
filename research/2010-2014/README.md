@@ -1,5 +1,9 @@
 # 2010-2014
 
+The [Parkinson interview study](Source-Text/2010-PMID20437542-Parkinson-Psychosis-Interviews-and-Visual-Outcomes.txt) separates past-month visual and nonvisual hallucinations. Original comparisons report [pedunculopontine and thalamic MRI findings](Source-Text/2011-PMID21717194-Parkinson-Visual-Hallucinations-and-Pedunculopontine-MRI.txt), [stimulus-evoked visual experiences in Lewy body dementia](Source-Text/2011-PMID22016436-Lewy-Body-Visual-Hallucinations-and-Cortical-Stimulation.txt), [connectivity by dementia group](Source-Text/2011-PMID22189566-Visual-Connectivity-in-Lewy-Body-and-Alzheimer-Dementia.txt), and [history of sleep-related falling](Source-Text/2012-PMID22523513-Sleep-Related-Falling-and-Visual-Hallucinations-in-Parkinson.txt). The [Onofrj review](Source-Text/PMC5215646.txt) describes measurement boundaries. Separate studies inspect [patterned visual hallucinations during proton pump inhibitor exposure](Source-Text/2013-PMID23341015-Visual-Hallucinations-with-Macular-Degeneration-and-PPIs.txt) and [acute experimental visual experiences in healthy volunteers](Source-Text/2013-PMID23785166-Experimental-Visual-Effects-in-Healthy-Volunteers.txt). [Earlier fig and visual observations](Observations/Fig-Preparation-and-Older-Visual-Phenotypes.md).
+
+Two separately registered functional constipation trials studied fig paste. [2010 40-person protocol](Source-Text/Trials/NCT01185431.txt) · [2014 80-person protocol](Source-Text/Trials/NCT02138851.txt) · [2016 controlled comparison](../2015-2019/Source-Text/2016-PMID27440682-Fig-Paste-and-Functional-Constipation.txt).
+
 An [oral fig-fruit extract experiment](Source-Text/2014-Sumanth-Mamatha-Fig-Fruit-Extract-and-Maze-Behavior.txt) reports maze behavior in a rat drug-challenge model.
 
 [Caffeine capsule trial with a separate Parkinson fatigue scale](Source-Text/PMC3414662.txt).

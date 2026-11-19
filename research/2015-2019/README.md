@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [2016 fig-paste trial](Source-Text/2016-PMID27440682-Fig-Paste-and-Functional-Constipation.txt) estimates effects on colonic transit and individual bowel outcomes. [Preparation and protocol lineage observations](Observations/Fig-Paste-and-Clinical-Outcome-Boundaries.md).
+
 The [original visual symptom and study-methods review](Observations/Fig-and-Visual-Hallucination-Source-Contexts.md) links dated clinical archives for 44 source comparisons and a separate fig extract convulsion paper.
 
 The [full IGMC member P105](Source-Text/2016-PMID27454254-IGMC-Date-Fruit-P105.txt) identifies computed cancer pathways for literature-selected date constituents.

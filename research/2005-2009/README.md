@@ -1,5 +1,7 @@
 # 2005-2009
 
+Two original reports specify the comparison behind their visual findings. The [autopsy study](Source-Text/2005-PMID16170073-Olfaction-and-Lewy-Body-Phenotype.txt) treats hallucination history as a predictor of Lewy body pathology, and the [vision rehabilitation study](Source-Text/2006-PMID17035271-Contrast-Sensitivity-and-Formed-Visual-Hallucinations.txt) reports formed hallucinations alongside measured contrast sensitivity.
+
 The [original Usp14 mouse study](Source-Text/2006-PMID17079671-Usp14-Ataxia-Rescue-and-Award-Name.txt) identifies the basil string in a research award and separates genetic motor rescue from dietary exposure.
 
 [Coffee history and fatigue measured separately](Source-Text/PMC2276830.txt) · [PMC2364726](Source-Text/PMC2364726.txt) · [PMC3376711](Source-Text/PMC3376711.txt).
