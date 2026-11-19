@@ -157,3 +157,5 @@ Invoke-RestMethod 'http://127.0.0.1:8795/api/oracle' -Method Post -ContentType '
 ```
 
 The sunflower-oil checkpoint recorded zero exact hits across 13 original-source questions at revision 117, matching the preceding 0/14 comparison at that depth. One exact hit across ten later retrieval questions returned a shared oil comparator. A separate claim question found partial evidence. The additions preserve the clinical preparation gap and the specific scope of the primary and cultural records. [Sunflower evidence and source coverage](../1000_see_what_sticks_food/followup/sunflower-executive-nov19-48/README.md).
+
+The shared-collection follow-up found one exact registry hit among seventeen new companion-source questions at revision 120. The ten original bodies were already archived and resumed their existing questions. This pass adds the primary comparisons and links the cod trial registry to the analysis cohort. [Shared collection scope and results](../1000_see_what_sticks_food/followup/shared-sunflower-collections-nov19-49/README.md).
