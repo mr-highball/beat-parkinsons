@@ -138,6 +138,15 @@ begin
     Assert(not OtherRegistryHeaderMatches('Registry ID: ACTRN12626001145392' + LineEnding +
       'URL: https://anzctr.org.au.example/ACTRN12626001145392.aspx' + LineEnding,
       'ACTRN12626001145392'), 'A lookalike host must not authenticate a trial');
+    Assert(OtherRegistryHeaderMatches('Record: ACTRN12617001269325' + LineEnding +
+      'Source: https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?ACTRN=12617001269325' +
+      LineEnding, 'ACTRN12617001269325'), 'The official ACTRN query authenticates a matching trial');
+    Assert(not OtherRegistryHeaderMatches('Record: ACTRN12617001269325' + LineEnding +
+      'Source: https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?ACTRN=12626001145392' +
+      LineEnding, 'ACTRN12617001269325'), 'An ACTRN query for another trial does not authenticate');
+    Assert(not OtherRegistryHeaderMatches('Record: ACTRN12617001269325' + LineEnding +
+      'Source: https://www.anzctr.org.au.example/Trial/Registration/TrialReview.aspx?ACTRN=12617001269325' +
+      LineEnding, 'ACTRN12617001269325'), 'A lookalike ACTRN query does not authenticate');
     Assert(NormalizeArchiveIdentifier('drks00012459') = 'DRKS00012459');
     Assert(NormalizeArchiveIdentifier('umin000055134') = 'UMIN000055134');
     Assert(NormalizeArchiveIdentifier('UMIN00005513') = '');

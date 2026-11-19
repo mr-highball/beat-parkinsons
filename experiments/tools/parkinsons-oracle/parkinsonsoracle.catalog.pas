@@ -1117,12 +1117,12 @@ begin
       LRefreshCulturalIdentifiers := LRebuildIdentifiers or
         (Scalar(FDatabase, 'SELECT source_cultural_state.revision <> catalog_state.revision' +
           ' FROM source_cultural_state, catalog_state') <> 0);
-      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_registry_v6_state (' +
+      ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_registry_v7_state (' +
         ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
-      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_registry_v6_state VALUES (1,-1)');
+      ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_registry_v7_state VALUES (1,-1)');
       LRefreshRegistries := LRebuildIdentifiers or
-        (Scalar(FDatabase, 'SELECT source_registry_v6_state.revision <> catalog_state.revision' +
-          ' FROM source_registry_v6_state, catalog_state') <> 0);
+        (Scalar(FDatabase, 'SELECT source_registry_v7_state.revision <> catalog_state.revision' +
+          ' FROM source_registry_v7_state, catalog_state') <> 0);
       ExecuteSql(FDatabase, 'CREATE TABLE IF NOT EXISTS source_tctr_state (' +
         ' id INTEGER PRIMARY KEY CHECK(id=1), revision INTEGER NOT NULL)');
       ExecuteSql(FDatabase, 'INSERT OR IGNORE INTO source_tctr_state VALUES (1,-1)');
@@ -1190,7 +1190,7 @@ begin
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
       ExecuteSql(FDatabase, 'UPDATE source_cultural_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
-      ExecuteSql(FDatabase, 'UPDATE source_registry_v6_state' +
+      ExecuteSql(FDatabase, 'UPDATE source_registry_v7_state' +
         ' SET revision=(SELECT revision FROM catalog_state) WHERE id=1');
       // A running reader from before the backfill can use the same updated keys.
       for LLegacyRegistryState in LegacyRegistryStates do
@@ -1518,8 +1518,8 @@ begin
       end;
       if LNeedsRegistries and
         ((Scalar(FDatabase, 'SELECT count(*) FROM sqlite_schema' +
-          ' WHERE type=''table'' AND name=''source_registry_v6_state''') = 0) or
-        (Scalar(FDatabase, 'SELECT revision FROM source_registry_v6_state WHERE id=1') <> LRevision)) then
+          ' WHERE type=''table'' AND name=''source_registry_v7_state''') = 0) or
+        (Scalar(FDatabase, 'SELECT revision FROM source_registry_v7_state WHERE id=1') <> LRevision)) then
       begin
         raise Exception.Create('Source registry identifiers need a catalog refresh');
       end;
