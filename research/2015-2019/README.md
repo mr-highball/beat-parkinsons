@@ -582,3 +582,11 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [FlaSeCo dark chocolate trial registration](Source-Text/Trials/ACTRN12617000748314.txt).
 - [Sarcopenia rehabilitation registration for the shared-flavor study](Source-Text/Trials/NCT03120026.txt).
 - [Melon-derived SOD capsule frailty trial registration](Source-Text/Trials/NCT02753582.txt).
+
+## Sunflower oil evidence and source contexts
+
+- [Cochrane depression review with sunflower comparator family locators](Source-Text/2015-PMID26537796-Depression-Sunflower-Comparators.txt).
+- [European Obesity Summit dietary reports with sunflower oil](Source-Text/2016-PMID27238363-Obesity-Summit-Sunflower-Contexts.txt).
+- [Nordic Nutrition Conference sunflower oil and linoleic-acid context](Source-Text/2016-PMID27317923-Nordic-Nutrition-Sunflower-Mention.txt).
+- [Dietary fat review and the original sunflower emulsion trail](Source-Text/2017-PMID29046155-Dietary-Fats-Sunflower-Emulsion-Trail.txt).
+- [Jenkins executive-task trial with high-oleic sunflower oil](Source-Text/2016-PMID27521997-Jenkins-Sunflower-Executive-Tasks.txt).

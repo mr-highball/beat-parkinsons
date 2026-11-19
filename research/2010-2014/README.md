@@ -413,3 +413,8 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [Alaska wild berry assays and separate strawberry citations](Source-Text/2013-PMID23977647-Dinstel-Wild-Berry-Assays-and-Strawberry-References.txt).
 - [Alaska berry gathering and home processing](Cultural-and-Experiential/Local-Knowledge/2013-Alaska-Wild-Berry-Gathering-and-Home-Processing.txt).
 - [Case-control cohort and follow-up analysis of pooled cucurbit intake](Source-Text/2013-PMID23661325-Solanaceae-Cohort-and-Cucurbit-Reply-Link.txt).
+
+## Sunflower oil evidence and source contexts
+
+- [Sunflower oil emulsion and the post-meal endotoxemia study](Source-Text/2010-PMID20303729-Sunflower-Emulsion-Endotoxemia.txt).
+- [Lespérance depression trial and the sunflower capsule comparator](Source-Text/2010-PMID20584525-Lesperance-Sunflower-Depression-Comparator.txt).

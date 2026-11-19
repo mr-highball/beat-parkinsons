@@ -625,3 +625,15 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Parkinson diet supplement and motor outcome scope](Source-Text/2020-PMC7072275-Supplement-Motor-Outcome-Scope.txt).
 - [Ripe pickling-melon and muskmelon juice glucose comparison](Source-Text/2020-PMID32612089-Ripe-Pickling-Melon-and-Muskmelon-Juice-Glucose.txt).
 - [Muskmelon seed-extract behavior and coordination tables](Source-Text/2023-PMID36967516-Muskmelon-Seed-Extract-and-Coordination.txt).
+
+## Sunflower oil evidence and source contexts
+
+- [Naringenin rat cognition experiment and its sunflower-oil vehicle](Source-Text/2020-PMID31945778-Naringenin-Sunflower-Vehicle.txt).
+- [ICFSR oral supplement and duplicated P169 poster boundary](Source-Text/2020-PMID32150216-ICFSR-Symposia-HTML-Boundary.txt).
+- [ICFSR P169 sunflower capsule and activity comparison](Source-Text/2020-PMID32150217-ICFSR-P169-Sunflower-Comparator.txt).
+- [CTAD abstract for the BENEFIC refined sunflower comparison](Source-Text/2020-PMID33169784-CTAD-OC5-BENEFIC.txt).
+- [MCT review and the sunflower-oil metabolic trial locator](Source-Text/2022-PMID35911092-MCT-Narrative-Sunflower-Trail.txt).
+- [Healthy-aging review and the sunflower tissue-outcome citations](Source-Text/2023-PMID36901921-Healthy-Aging-Sunflower-Traces.txt).
+- [Parkinson mouse behavior study with a common sunflower vehicle](Source-Text/2024-PMID38745938-Parkinson-Model-Common-Sunflower-Vehicle.txt).
+- [Sunflower seed oil and short-term recall in students](Source-Text/2020-Maranatha-Sunflower-Short-Term-Memory.txt).
+- [Sarcopenia trial with sunflower oil and resistance training](Source-Text/2022-PMID35889801-Sarcopenia-Sunflower-Comparator.txt).

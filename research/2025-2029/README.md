@@ -491,3 +491,9 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Fat sensitivity and reported food intake](Source-Text/2026-PMID42241377-LBP4-105-Fat-Sensitivity-and-Food-Reports.txt).
 - [TROFFi isolated fisetin protocol and planned fall recall](Source-Text/2026-PMID41835341-TROFFi-Fisetin-and-Falls-Protocol.txt).
 - [Rock melon glycemic crossover registration](Source-Text/Trials/NCT07017491.txt).
+
+## Sunflower oil evidence and source contexts
+
+- [L-DOPA gene expression study and the sunflower carrier](Source-Text/2025-PMID40293707-Parkinson-Model-Gene-Expression-Vehicle.txt).
+- [Assigned sunflower seed oil and mouse recognition memory](Source-Text/2025-PMID39973828-Sunflower-Recognition-Memory.txt).
+- [Period observations on sunflower cognition and executive comparisons](Observations/Sunflower-Oil-Cognition-and-Executive-Comparisons.md).

@@ -274,3 +274,10 @@ The original walnut-fraction crossover registration is bucketed by first public 
 - [Dermatology reference on strawberry food reactions and descriptive signs](Source-Text/2006-PMC7144037-Lexikon-Strawberry-Food-Reaction-Context.txt).
 - [2009 EBSA strawberry fruit-extract comparison](Source-Text/2009-PMID19506855-P557-Strawberry-Fruit-Membrane-Comparison.txt).
 - [Melon SOD extract and restraint-stress memory comparison](Source-Text/2009-PMID19373977-Nakajima-Melon-SOD-Stress-and-Memory.txt).
+
+## Sunflower oil evidence and source contexts
+
+- [2009 obesity poster on yogurt and the sunflower-oil lipid comparator](Source-Text/2009-PMC6450046-Poster-Sunflower-Lipid-Comparator.txt).
+- [MEMO human executive-task results with a sunflower-oil comparator](Source-Text/2008-PMID18678826-MEMO-Sunflower-Executive-Function.txt).
+- [Official registration for the MEMO sunflower-comparator trial](Source-Text/Trials/ISRCTN46249783.txt).
+- [Lucas distress trial and the sunflower capsule comparator](Source-Text/2008-PMID19116322-Lucas-Sunflower-Distress-Comparator.txt).

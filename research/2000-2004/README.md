@@ -162,3 +162,7 @@ The walnut-oil lipid trial is archived at author-abstract depth, with processing
 - [Lemon balm and shared-source comparisons](Observations/Lemon-Balm-and-Shared-Source-Comparisons.md)
 
 [Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).
+
+## Sunflower oil evidence and source contexts
+
+- [High-oleic sunflower and medium-chain triglyceride crossover](Source-Text/2004-PMID15051598-Sunflower-MCT-Metabolic-Crossover.txt).
