@@ -86,3 +86,7 @@ January 1, 1990 through December 31, 1994.
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 - [Lemon balm and shared-source comparisons](Observations/Lemon-Balm-and-Shared-Source-Comparisons.md)
+
+## Parkinson imaging
+
+- [Early imaging of striatal dopamine transporter availability, author abstract](Source-Text/1993-PMID8265656-Striatal-Transporter-Abstract.txt).

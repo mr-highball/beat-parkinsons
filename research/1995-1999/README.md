@@ -124,3 +124,8 @@ January 1, 1995 through December 31, 1999.
 
 
 - [Cumulative cell biology index and its strawberry, oat and egg references](Source-Text/1997-PMID32287481-Cytology-Subject-Index-Context.txt).
+
+## Clinical and neurological comparisons
+
+- [Pallidotomy in levodopa-sensitive Parkinson disease, author abstract](Source-Text/1997-PMID9048711-Pallidotomy-Abstract.txt).
+- [Mitochondrial disorder and exercise intolerance, author abstract](Source-Text/1998-PMID9634511-Mitochondrial-Case-Abstract.txt).

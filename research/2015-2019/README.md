@@ -653,3 +653,11 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Parkinson pain scales and intraepidermal nerve findings](Source-Text/PMC6383044.txt).
 - [ODYSSEI original UMIN registration](Source-Text/Trials/UMIN000024536.txt).
 - [ODYSSEI jRCT registration and later results](Source-Text/Trials/jRCTs071180014.txt).
+
+## Salmon trial families and measured outcomes
+
+- [Preschool salmon and peg-test outcomes, author abstract](Source-Text/2018-Demmelmair-Salmon-Dexterity.txt).
+- [PINGU salmon jars and fatty acid status, author abstract](Source-Text/2015-PMID26169870-PINGU-Fatty-Acids.txt).
+- [PINGU infant development and Bayley psychomotor index, author abstract](Source-Text/2019-PMID31383978-PINGU-Development.txt).
+- [Holy basil combination frailty registry and Parkinson exclusion](Source-Text/Trials/NCT03365310.txt).
+- [Observations on fish trial families and motor outcomes](Observations/Salmon-Trial-Families-and-Motor-Measures.md).

@@ -715,3 +715,7 @@ The Singapore total-diet papers and original supplement preserve measured black-
 ## Group exercise and mobility outcomes
 
 - [Parkinson group boxing and mobility, full article extract](Source-Text/2021-PMID39262882-Group-Boxing-Abstract.txt).
+
+## Sialorrhea registry
+
+- [Original Japanese phase 3 sialorrhea trial registration and posted results](Source-Text/Trials/jRCT2051210082.txt).

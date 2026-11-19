@@ -567,3 +567,11 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Parkinson multidisciplinary clinic cohort](Source-Text/PMC12839184.txt).
 - [Hyponatremia and central fever in a multiple system atrophy case](Source-Text/PMC13193965.txt).
 - [Observations on clinical comparator endpoints and food claims](Observations/Clinical-Comparators-and-Food-Claim-Endpoints.md).
+
+## Symptom measurement and clinical comparisons
+
+- [Japanese sialorrhea trial and saliva-flow outcome](Source-Text/PMC12839494.txt).
+- [Parkinson speech subtypes and the composite tremor score](Source-Text/PMC12320695.txt).
+- [OPTIMO medication cohort and pooled nonmotor fluctuations](Source-Text/PMC12961986.txt).
+- [Prodromal cohort activity and overall symptom ratings](Source-Text/PMC13595541.txt).
+- [Ambulatory activity and motor or nonmotor factors](Source-Text/PMC13527663.txt).

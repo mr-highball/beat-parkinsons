@@ -47,3 +47,7 @@ January 1, 1980 through December 31, 1984.
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 [Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).
+
+## Clinical study access
+
+- [Dentato-rubro-pallido-luysian degeneration, author abstract](Source-Text/1984-PMID6512549-Dentatorubral-Clinical-Abstract.txt).

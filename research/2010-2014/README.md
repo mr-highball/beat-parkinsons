@@ -453,3 +453,9 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 ## Botanical source comparisons and outcome definitions
 
 - [Neuroprotective herbs and foods from different traditional medicines and diets](Source-Text/PMC6263339.txt).
+
+## Fish exposures and motor measures
+
+- [German preschool salmon intervention registration](Source-Text/Trials/NCT01951937.txt).
+- [PINGU infant intervention registration](Source-Text/Trials/NCT01487889.txt).
+- [Isolated salmon roe preparation and mouse locomotion, author abstract](Source-Text/2014-PMID25303858-Salmon-Roe-Mouse-Locomotion.txt).
