@@ -47,6 +47,15 @@ const
       '"additionalProperties":false,"properties":{"round":{"type":"integer","minimum":1,"maximum":7},' +
       '"id":{"type":"string","pattern":"^[0-9]{4}$"},"include_rules":{"type":"boolean"}},' +
       '"dependentRequired":{"round":["id"],"id":["round"]}}},' +
+    '{"name":"oracle_check_scorecard","description":"Check a draft against the current rubric ' +
+      'and frozen claim before publishing. Supply the Git revision from oracle_evidence_rubric ' +
+      'and the exact tab-separated decision and source-family tables for one claim, each with ' +
+      'its header. Returns the rubric-derived verdict and anchor without writing to the repository.",' +
+      '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
+      '"additionalProperties":false,"required":["round","id","revision","decision_tsv","sources_tsv"],' +
+      '"properties":{"round":{"type":"integer","minimum":1,"maximum":7},' +
+      '"id":{"type":"string","pattern":"^[0-9]{4}$"},"revision":{"type":"string","minLength":1},' +
+      '"decision_tsv":{"type":"string","minLength":1},"sources_tsv":{"type":"string","minLength":1}}}},' +
     '{"name":"oracle_search_catalog","description":"Search the local research text index with ' +
       'literal terms. Use source_kind to find dated cultural records, public forum conversations, ' +
       'or archived study and registry texts. Word matches are discovery leads.",' +
@@ -87,6 +96,7 @@ type
     function Status: TJSONObject;
     function ReadSource(AArguments: TJSONObject): TJSONObject;
     function EvidenceRubric(AArguments: TJSONObject): TJSONObject;
+    function CheckScorecard(AArguments: TJSONObject): TJSONObject;
   public
     constructor Create(const ARepoRoot: String);
     destructor Destroy; override;
@@ -104,6 +114,23 @@ begin
   if LData.JSONType <> jtString then
     raise EConvertError.Create('Expected a string for ' + AName + '.');
   Result := LData.AsString;
+end;
+
+procedure RequireClaimId(const AId: String);
+var
+  LDigit: Char;
+begin
+  if Length(AId) <> 4 then
+  begin
+    raise EConvertError.Create('Provide a four-digit claim ID.');
+  end;
+  for LDigit in AId do
+  begin
+    if not (LDigit in ['0'..'9']) then
+    begin
+      raise EConvertError.Create('Provide a four-digit claim ID.');
+    end;
+  end;
 end;
 
 function ReadInteger(AArguments: TJSONObject; const AName: String;
@@ -208,7 +235,6 @@ function TOracle.Invoke(const AName: String; AArguments: TJSONObject): TJSONObje
 var
   LQuery: TClaimQuery;
   LId: String;
-  LDigit: Char;
   LPeriod: String;
   LIndex: Integer;
   LTerms: String;
@@ -219,7 +245,7 @@ var
 begin
   case IndexStr(AName, ['oracle_query', 'oracle_claim', 'oracle_search_catalog',
     'oracle_status', 'oracle_filter_options', 'oracle_find_sources', 'oracle_read_source',
-    'oracle_evidence_rubric']) of
+    'oracle_evidence_rubric', 'oracle_check_scorecard']) of
     0:
       begin
         RequireFields(AArguments, ['symptom', 'ingredient', 'preparation', 'direction',
@@ -243,11 +269,11 @@ begin
           'assessment_study']);
         LId := ReadString(AArguments, 'id', '');
         LIndex := ReadInteger(AArguments, 'round', 0, 1, 7);
-        if (Length(LId) <> 4) or (LIndex = 0) then
-          raise EConvertError.Create('Provide the round and four-digit claim ID.');
-        for LDigit in LId do
-          if not (LDigit in ['0'..'9']) then
-            raise EConvertError.Create('Provide a four-digit claim ID.');
+        if LIndex = 0 then
+        begin
+          raise EConvertError.Create('Provide the claim round.');
+        end;
+        RequireClaimId(LId);
         LAssessmentStudy := ReadString(AArguments, 'assessment_study', '');
         if AArguments.Find('assessment_study') <> nil then
         begin
@@ -311,6 +337,10 @@ begin
       begin
         Result := EvidenceRubric(AArguments);
       end;
+    8:
+      begin
+        Result := CheckScorecard(AArguments);
+      end;
   else
     raise EConvertError.Create('Unknown tool: ' + AName);
   end;
@@ -320,7 +350,6 @@ function TOracle.EvidenceRubric(AArguments: TJSONObject): TJSONObject;
 var
   LRound: Integer;
   LId: String;
-  LDigit: Char;
   LRules: TJSONData;
   LIncludeRules: Boolean;
 begin
@@ -329,13 +358,11 @@ begin
   LId := ReadString(AArguments, 'id', '');
   if (LRound <> 0) or (AArguments.Find('id') <> nil) then
   begin
-    if (LRound = 0) or (Length(LId) <> 4) then
-      raise EConvertError.Create('Provide the round and four-digit claim ID.');
-    for LDigit in LId do
+    if LRound = 0 then
     begin
-      if not (LDigit in ['0'..'9']) then
-        raise EConvertError.Create('Provide a four-digit claim ID.');
+      raise EConvertError.Create('Provide the claim round.');
     end;
+    RequireClaimId(LId);
   end;
   LIncludeRules := LId = '';
   LRules := AArguments.Find('include_rules');
@@ -346,6 +373,23 @@ begin
     LIncludeRules := LRules.AsBoolean;
   end;
   Result := Index.EvidenceRubric(LRound, LId, LIncludeRules);
+end;
+
+function TOracle.CheckScorecard(AArguments: TJSONObject): TJSONObject;
+var
+  LRound: Integer;
+  LId: String;
+begin
+  RequireFields(AArguments, ['round', 'id', 'revision', 'decision_tsv', 'sources_tsv']);
+  LRound := ReadInteger(AArguments, 'round', 0, 1, 7);
+  if LRound = 0 then
+  begin
+    raise EConvertError.Create('Provide the claim round.');
+  end;
+  LId := ReadString(AArguments, 'id', '');
+  RequireClaimId(LId);
+  Result := Index.CheckScorecard(LRound, LId, ReadString(AArguments, 'revision', ''),
+    ReadString(AArguments, 'decision_tsv', ''), ReadString(AArguments, 'sources_tsv', ''));
 end;
 
 function TOracle.ReadSource(AArguments: TJSONObject): TJSONObject;
@@ -471,6 +515,7 @@ begin
             'instructions', 'Start each evidence question with the Oracle before broader searches. ' +
               'Use assessed claims, exact source locators and catalog source_kind filters as needed. ' +
               'Read oracle_evidence_rubric before assigning or revisiting an efficacy rating. ' +
+              'Run oracle_check_scorecard before publishing or handing off a proposed verdict. ' +
               'Hypothesis direction is the frozen wording. An Unknown is an open question.']);
         end;
       1: LResult := TJSONObject.Create;

@@ -17,6 +17,18 @@ identifies an earlier rubric version, and `verdict_mismatch` flags a discrepancy
 with the published verdict or score. Search coverage and efficacy remain separate
 review questions. [Canonical rubric and ledger format](../../1000_see_what_sticks_food/EVIDENCE-SCORECARD.md)
 
+Use `oracle_check_scorecard` before handing off or publishing a proposed verdict.
+Pass the `revision` returned by the claim lookup and the claim's draft tables as
+`decision_tsv` and `sources_tsv`. Each string includes its TSV header. Supply one
+decision row and only that claim's material source-family rows. An open claim
+with no material families uses the source header alone. A `valid_draft` returns
+the expected verdict, score anchor and family counts for that frozen hypothesis.
+The check uses the same tier prerequisites as the published lookup. Reviewers
+remain responsible for source fidelity, competing evidence and completeness.
+After a revision conflict, fetch the current claim and reconcile the draft before
+retrying. When the managed session has an earlier tool list, use the
+[local launcher](../../oracle-coverage/README.md#local-launcher).
+
 ## How the lookup works
 
 - Symptom and ingredient postings narrow a request to candidate claims. Each experiment supplies canonical words and aliases. The oracle verifies each round’s freeze hash and reads claims and assessments from one Git commit.
@@ -32,6 +44,7 @@ review questions. [Canonical rubric and ledger format](../../1000_see_what_stick
 | `oracle_claim` | `{"round":1,"id":"0904","assessment_limit":8}` | Frozen statement, verdict and rationale, citations, queue counts, and a page of assessments |
 | `oracle_claim` with a study key | `{"round":1,"id":"0121","assessment_study":"PMID:37294324"}` | Assessments for that exact study key and the same claim-wide metadata |
 | `oracle_evidence_rubric` | `{}` or `{"round":1,"id":"0904"}` | Canonical review rules or a specific claim's applied tier, observed direction, and source families |
+| `oracle_check_scorecard` | `round`, `id`, `revision`, `decision_tsv`, `sources_tsv` | Validate one proposed verdict and calculate its anchor and verdict from the frozen direction before publication |
 | `oracle_search_catalog` | `{"terms":"black tea tremor","period":"2010-2014","limit":8}` | Ranked local documents containing the requested words |
 | `oracle_find_sources` | `{"identifiers":["PMID:40647065","NCT04986982"]}` | Every archived document whose source metadata matches each supplied identifier |
 | `oracle_read_source` | `{"path":"research/2025-2029/Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt"}` | Indexed UTF-8 source text, with a byte cursor for longer documents |

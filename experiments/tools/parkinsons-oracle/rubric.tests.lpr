@@ -32,7 +32,7 @@ begin
     #9'Tested evidence decision.'#10;
 end;
 
-procedure CheckRejected(const ADecisions, ASources, ALabel: String);
+procedure CheckRejected(const ADecisions, ASources, ALabel: String; ADraft: Boolean = False);
 var
   LResult: TJSONObject;
   LRejected: Boolean;
@@ -42,7 +42,7 @@ begin
   try
     try
       AddEvidenceScorecard(LResult, ADecisions, ASources, '0281', 'worsens',
-        'Maybe False', 50.005);
+        'Maybe False', 50.005, ADraft);
     except
       on EConvertError do
         LRejected := True;
@@ -84,6 +84,19 @@ begin
     AddEvidenceScorecard(LResult, LDecisions, CSources + CConversation,
       '0100', 'worsens', 'Unknown', 50);
     Check(LResult.Strings['review_status'] = 'no_scorecard', 'Expected a legacy claim lookup.');
+    LResult.Clear;
+    AddEvidenceScorecard(LResult, LDecisions, CSources + CConversation,
+      '0281', 'worsens', 'Unknown', 50, True);
+    Check(LResult.Strings['review_status'] = 'valid_draft', 'Expected a valid draft.');
+    Check(LResult.Objects['scorecard'].Strings['expected_verdict'] = 'Maybe False',
+      'The draft verdict must come from the frozen direction.');
+    Check(LResult.Objects['scorecard'].Strings['score_anchor'] = '50.005',
+      'The draft must return the exact tier anchor.');
+    LResult.Clear;
+    AddEvidenceScorecard(LResult, Decision('open', 'none'), CSources,
+      '0281', 'worsens', 'Unknown', 50, True);
+    Check(LResult.Strings['review_status'] = 'valid_draft',
+      'An open draft may have no material sources.');
   finally
     LResult.Free;
   end;
@@ -93,6 +106,13 @@ begin
     'The limited clinical tier needs a clinical comparison.');
   CheckRejected(LDecisions, CSources + StringReplace(CConversation, #9'eases'#9'eases'#9,
     #9'null'#9'eases'#9, []), 'A null source cannot provide a signed effect.');
+  CheckRejected(CDecisions, CSources, 'A draft requires a decision row.', True);
+  CheckRejected(LDecisions, CSources + StringReplace(CConversation, '0281', '0100', []),
+    'A draft must not silently drop evidence for another claim.', True);
+  CheckRejected(StringReplace(LDecisions, #9 + EvidenceRubricVersion + #9, #9'0'#9, []),
+    CSources + CConversation, 'A historical version must not pass draft validation.', True);
+  CheckRejected(Decision('limited_clinical_link', 'eases'), CSources + CConversation,
+    'Drafts use the published tier prerequisites.', True);
 end;
 
 begin

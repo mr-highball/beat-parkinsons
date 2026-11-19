@@ -95,6 +95,8 @@ type
       AAssessmentLimit: Integer; const AAssessmentStudy: String): TJSONObject;
     function EvidenceRubric(ARound: Integer; const AId: String;
       AIncludeRules: Boolean): TJSONObject;
+    function CheckScorecard(ARound: Integer;
+      const AId, ARevision, ADecision, ASources: String): TJSONObject;
     function FilterOptions: TJSONObject;
     function StaticModel(const ARepository: String): TJSONObject;
   end;
@@ -911,6 +913,34 @@ begin
     Result.Add('published_verdict', LClaim.Verdict);
     AddEvidenceScorecard(Result, FScorecards[ARound], FScorecardSources[ARound], AId,
       LClaim.Direction, LClaim.Verdict, LClaim.Confidence);
+  except
+    Result.Free;
+    raise;
+  end;
+end;
+
+function TClaimIndex.CheckScorecard(ARound: Integer;
+  const AId, ARevision, ADecision, ASources: String): TJSONObject;
+var
+  LClaim: TClaim;
+begin
+  if FRubric = '' then
+  begin
+    raise EInOutError.Create('The published evidence rubric is unavailable.');
+  end;
+  if ARevision <> FRevision then
+  begin
+    raise EConvertError.Create('Claim revision changed. Read oracle_evidence_rubric again.');
+  end;
+  if not FIdentities.TryGetValue(Key(ARound, AId), LClaim) then
+  begin
+    raise EConvertError.Create('The draft claim ID was not found in that round.');
+  end;
+  Result := TJSONObject.Create(['revision', FRevision, 'rubric_version', EvidenceRubricVersion,
+    'round', ARound, 'id', AId, 'hypothesis_direction', LClaim.Direction,
+    'published_verdict', LClaim.Verdict]);
+  try
+    AddEvidenceScorecard(Result, ADecision, ASources, AId, LClaim.Direction, '', 0, True);
   except
     Result.Free;
     raise;

@@ -14,7 +14,8 @@ const
   EvidenceRubricVersion = '1';
 
 procedure AddEvidenceScorecard(AResponse: TJSONObject;
-  const ADecisions, ASources, AId, ADirection, AVerdict: String; AConfidence: Currency);
+  const ADecisions, ASources, AId, ADirection, AVerdict: String;
+  AConfidence: Currency; ADraft: Boolean = False);
 
 implementation
 
@@ -34,7 +35,7 @@ const
   CAnchors: array[0..4] of Currency = (50, 50.005, 51, 55, 60);
 
 function RowsForClaim(const AText, AId, ALabel: String;
-  const AHeader: array of String): TJSONArray;
+  const AHeader: array of String; ADraft: Boolean): TJSONArray;
 var
   LLines: TStringList;
   LFields: TFields;
@@ -66,7 +67,14 @@ begin
           raise EConvertError.CreateFmt('Invalid row width in %s at line %d.',
             [ALabel, LIndex + 1]);
         if LFields[0] <> AId then
+        begin
+          if ADraft then
+          begin
+            raise EConvertError.CreateFmt('Draft %s row %d must use claim ID %s.',
+              [ALabel, LIndex + 1, AId]);
+          end;
           Continue;
+        end;
         LRow := TJSONObject.Create;
         Result.Add(LRow);
         for LColumn := Low(AHeader) to High(AHeader) do
@@ -135,7 +143,8 @@ begin
 end;
 
 procedure AddEvidenceScorecard(AResponse: TJSONObject;
-  const ADecisions, ASources, AId, ADirection, AVerdict: String; AConfidence: Currency);
+  const ADecisions, ASources, AId, ADirection, AVerdict: String;
+  AConfidence: Currency; ADraft: Boolean);
 var
   LDecisions: TJSONArray;
   LSources: TJSONArray;
@@ -155,7 +164,7 @@ var
   LSupportedTier: Integer;
   LSourceTier: Integer;
 begin
-  if (ADecisions = '') and (ASources = '') then
+  if not ADraft and (ADecisions = '') and (ASources = '') then
   begin
     AResponse.Add('review_status', 'no_scorecard');
     Exit;
@@ -167,19 +176,22 @@ begin
     LFamilyRows.CaseSensitive := True;
     LFamilyRows.Sorted := True;
     LFamilyRows.Duplicates := dupError;
-    LDecisions := RowsForClaim(ADecisions, AId, 'scorecards', CDecisionHeader);
-    LSources := RowsForClaim(ASources, AId, 'scorecard sources',
-      CSourceHeader);
-    if (LDecisions.Count = 0) and (LSources.Count = 0) then
+    LDecisions := RowsForClaim(ADecisions, AId, 'scorecards', CDecisionHeader, ADraft);
+    LSources := RowsForClaim(ASources, AId, 'scorecard sources', CSourceHeader, ADraft);
+    if not ADraft and (LDecisions.Count = 0) and (LSources.Count = 0) then
     begin
       AResponse.Add('review_status', 'no_scorecard');
       Exit;
     end;
     if LDecisions.Count <> 1 then
-      raise EConvertError.Create('Expected one published scorecard for claim ' + AId + '.');
+      raise EConvertError.Create('Expected one scorecard for claim ' + AId + '.');
     LDecision := LDecisions.Objects[0];
     if LDecision.Strings['rubric_version'] <> EvidenceRubricVersion then
     begin
+      if ADraft then
+      begin
+        raise EConvertError.Create('Use rubric version ' + EvidenceRubricVersion + ' for drafts.');
+      end;
       AResponse.Add('review_status', 'historical_scorecard');
       AResponse.Add('scorecard', LDecision.Clone);
       AResponse.Add('sources', LSources.Clone);
@@ -232,14 +244,19 @@ begin
       if LTier < High(CTiers) then
         LExpectedVerdict := 'Maybe ' + LExpectedVerdict;
     end;
-    if (LExpectedVerdict = AVerdict) and (CAnchors[LTier] = AConfidence) then
+    if ADraft then
+      AResponse.Add('review_status', 'valid_draft')
+    else if (LExpectedVerdict = AVerdict) and (CAnchors[LTier] = AConfidence) then
       AResponse.Add('review_status', 'recorded')
     else
       AResponse.Add('review_status', 'verdict_mismatch');
     LDecision.Add('score_anchor', ReviewConfidenceText(CAnchors[LTier]));
     LDecision.Add('expected_verdict', LExpectedVerdict);
     AResponse.Add('scorecard', LDecision.Clone);
-    AResponse.Add('sources', LSources.Clone);
+    if not ADraft then
+    begin
+      AResponse.Add('sources', LSources.Clone);
+    end;
   finally
     LFamilyRows.Free;
     LSources.Free;

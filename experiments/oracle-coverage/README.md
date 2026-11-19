@@ -115,8 +115,9 @@ When a compatibility checkout links its Git metadata and build directory to the
 moved checkout, the launcher resolves the Git junction's physical repository
 before starting a fresh server. Already-running MCP processes keep their original
 arguments and tool schema until relaunched. If the connected tools lack
-`source_kind` or `oracle_read_source`, use a fresh local launcher process with
-the same request pattern above. For other filesystem aliases, launch from the
+`source_kind`, `oracle_read_source`, `oracle_evidence_rubric` or
+`oracle_check_scorecard`, use a fresh local launcher process with the same
+request pattern above. For other filesystem aliases, launch from the
 checkout that owns the index. Use `oracle_status` before recording a source miss:
 a catalog binding failure is unavailable, not evidence missing from the catalog.
 
