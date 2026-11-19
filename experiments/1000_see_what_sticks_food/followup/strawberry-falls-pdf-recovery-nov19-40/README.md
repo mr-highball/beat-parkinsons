@@ -13,3 +13,7 @@ The shared-source reviews record genuine ingredient links, including soybean oil
 ## Remaining access and outcome work
 
 The 1986 BMJ and 1997 cell-biology records are source indexes. Continue from the cell-biology index's exact strawberry-fruit citation and retain its index depth. A three-page author deposit from the AES proceedings confirms a small published part of the 492-page supplement. Its full scope remains open, as do the original Allergy and FEBS PDF bodies, the nematology proceedings, eight administrative records, and the 2005 Shukitt-Hale paper behind its available abstract. The clinical gait trial NCT03162913 and the 1999 aged-mouse original retain their separate result and access gaps. [Accessible and unsuccessful routes](publisher-route-review.tsv)
+
+### The cell biology index citation
+
+The index's strawberry-fruit cross-reference points to page 133 of Takahashi, Ishida and Nagata's 1994 chapter on plant auxin signaling. The publisher lists the Archbold and Dennis strawberry fruit-growth experiment among the chapter references. Its first page is available in the society's neighboring PDF and describes fruit tissues, hormone treatment and growth. The chapter preview contains the contents listing. The publisher body and page 133 remain unverified, so the original subject index retains index depth. [1994 chapter and scope](../../../../research/1990-1994/Source-Text/1994-PMID8206702-Auxin-Gene-Review.txt) · [1985 cited experiment](../../../../research/1985-1989/Source-Text/1985-Archbold-Dennis-Strawberry-Achene-Growth.txt)
