@@ -484,5 +484,6 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Muskmelon peel extract and rotating-rod comparison](Source-Text/2025-Dokkada-Muskmelon-Peel-and-Rotating-Rod.txt).
 - [Fresh Apulian melon-landrace crossover](Source-Text/2025-PMID41195070-Apulian-Unripe-Melon-Crossover.txt).
 - [ASN proceedings on a stroke model and strawberry reward](Source-Text/2025-PMC12416199-P01-025-Cotter-Strawberry-Reward.txt).
+- [Grouped strawberry, cherry and grape reports in an overeating survey](Source-Text/2026-PMID42241377-LBP2-005-Grouped-Fruit-and-Overeating.txt).
 - [TROFFi isolated fisetin protocol and planned fall recall](Source-Text/2026-PMID41835341-TROFFi-Fisetin-and-Falls-Protocol.txt).
 - [Rock melon glycemic crossover registration](Source-Text/Trials/NCT07017491.txt).

@@ -269,4 +269,6 @@ The original walnut-fraction crossover registration is bucketed by first public 
 
 [Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).
 
+- [Dermatology reference on strawberry food reactions and descriptive signs](Source-Text/2006-PMC7144037-Lexikon-Strawberry-Food-Reaction-Context.txt).
+- [2009 EBSA strawberry fruit-extract comparison](Source-Text/2009-PMID19506855-P557-Strawberry-Fruit-Membrane-Comparison.txt).
 - [Melon SOD extract and restraint-stress memory comparison](Source-Text/2009-PMID19373977-Nakajima-Melon-SOD-Stress-and-Memory.txt).

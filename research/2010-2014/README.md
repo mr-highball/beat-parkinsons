@@ -403,4 +403,9 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 
 [Strawberry and falls evidence and observations](Observations/Food-Experiment-Strawberry-Falls-Nov19-26.md).
 
+- [Strawberry fruit extracts and model membranes](Source-Text/2010-Bonarska-Kujawa-Fruit-Extracts-and-Model-Membranes.txt).
+- [Strawberry leaf extracts and red-cell models](Source-Text/2011-PMID22161078-Strawberry-Leaf-and-Erythrocyte-Models.txt).
+- [Nurses’ Health Study strawberry intake and cognitive change](Source-Text/2012-PMID22535616-Devore-Strawberry-Intake-and-Cognitive-Change.txt).
+- [Alaska wild berry assays and separate strawberry citations](Source-Text/2013-PMID23977647-Dinstel-Wild-Berry-Assays-and-Strawberry-References.txt).
+- [Alaska berry gathering and home processing](Cultural-and-Experiential/Local-Knowledge/2013-Alaska-Wild-Berry-Gathering-and-Home-Processing.txt).
 - [Case-control cohort and follow-up analysis of pooled cucurbit intake](Source-Text/2013-PMID23661325-Solanaceae-Cohort-and-Cucurbit-Reply-Link.txt).
