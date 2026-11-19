@@ -590,3 +590,6 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Nordic Nutrition Conference sunflower oil and linoleic-acid context](Source-Text/2016-PMID27317923-Nordic-Nutrition-Sunflower-Mention.txt).
 - [Dietary fat review and the original sunflower emulsion trail](Source-Text/2017-PMID29046155-Dietary-Fats-Sunflower-Emulsion-Trail.txt).
 - [Jenkins executive-task trial with high-oleic sunflower oil](Source-Text/2016-PMID27521997-Jenkins-Sunflower-Executive-Tasks.txt).
+- [Thymol study with a separate sunflower vehicle arm awaiting group tables](Source-Text/2017-PMID28255862-Thymol-Sunflower-Disease-Vehicle.txt).
+- [Preterm pig recognition comparison with sunflower-oil formula](Source-Text/2018-PMID29783637-Preterm-Pig-Cognition-Sunflower-Comparator.txt).
+- [Matched dietary MCT and sunflower oil comparison in aged rats](Source-Text/2016-PMID27517611-Aged-Rat-MCT-Sunflower-Recognition.txt).
