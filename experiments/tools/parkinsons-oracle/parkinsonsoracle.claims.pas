@@ -9,6 +9,9 @@ interface
 
 uses Classes, Process, SysUtils, Generics.Collections, fpjson;
 
+const
+  CRoundCount = 7;
+
 type
   TClaimQuery = record
     Symptom: String;
@@ -56,6 +59,9 @@ type
   private
     FRoot: String;
     FRevision: String;
+    FRubric: String;
+    FScorecards: array[1..CRoundCount] of String;
+    FScorecardSources: array[1..CRoundCount] of String;
     FClaims: TObjectList<TClaim>;
     FIdentities: TDictionary<String, TClaim>;
     FBySymptom: TObjectDictionary<String, TList<TClaim>>;
@@ -87,6 +93,8 @@ type
     function Query(const AQuery: TClaimQuery): TJSONObject;
     function Claim(ARound: Integer; const AId: String; AAssessmentOffset: Integer;
       AAssessmentLimit: Integer; const AAssessmentStudy: String): TJSONObject;
+    function EvidenceRubric(ARound: Integer; const AId: String;
+      AIncludeRules: Boolean): TJSONObject;
     function FilterOptions: TJSONObject;
     function StaticModel(const ARepository: String): TJSONObject;
   end;
@@ -94,12 +102,14 @@ type
 implementation
 
 uses {$IFDEF WINDOWS}Windows,{$ENDIF} StrUtils, FPSHA256, foodexperiment.externaldata,
-  foodexperiment.confidence, parkinsonsoracle.trend, wfc;
+  foodexperiment.confidence, parkinsonsoracle.trend, parkinsonsoracle.rubric, wfc;
 
 const
   CBase = 'experiments/1000_see_what_sticks_food';
-  CRoundCount = 7;
   CVerdictPath = '/verdicts.tsv';
+  CRubricPath = CBase + '/EVIDENCE-SCORECARD.md';
+  CScorecardPath = '/followup/scorecards.tsv';
+  CScorecardSourcesPath = '/followup/scorecard-sources.tsv';
   CEvidencePath = '/followup/assessments.tsv';
   CCoveragePath = '/followup/context-coverage/coverage-by-claim.tsv';
   CIdentityBit = 4;
@@ -536,7 +546,8 @@ end;
 constructor TClaimIndex.Create(const ARepoRoot: String);
 const
   CTreeArguments = 5;
-  COptionalPaths: array[0..2] of String = (CVerdictPath, CEvidencePath, CCoveragePath);
+  COptionalPaths: array[0..4] of String = (CVerdictPath, CEvidencePath, CCoveragePath,
+    CScorecardPath, CScorecardSourcesPath);
 var
   LRound: Integer;
   LIndex: Integer;
@@ -560,7 +571,7 @@ begin
   {$ENDIF}
   // A batch "missing" response also covers unreadable objects. Check the
   // pinned tree once so a damaged published table cannot pass as absent.
-  SetLength(LArguments, CTreeArguments + CRoundCount * Length(COptionalPaths));
+  SetLength(LArguments, CTreeArguments + CRoundCount * Length(COptionalPaths) + 1);
   LArguments[0] := 'ls-tree';
   LArguments[1] := '-rt';
   LArguments[2] := '--name-only';
@@ -575,6 +586,7 @@ begin
       Inc(LIndex);
     end;
   end;
+  LArguments[LIndex] := CRubricPath;
   // Reuse one Git process and address every blob through the same commit.
   LProcess := nil;
   LTables := TStringList.Create;
@@ -589,9 +601,16 @@ begin
     LProcess.Options := [poUsePipes];
     LProcess.ShowWindow := swoHide;
     LProcess.Execute;
+    if LTables.IndexOf(CRubricPath) >= 0 then
+      FRubric := ReadBlob(LProcess, CRubricPath);
     for LRound := 1 to CRoundCount do
     begin
       LoadRound(LRound, LProcess, LTables);
+      LSuffix := ExperimentPath(LRound);
+      if LTables.IndexOf(LSuffix + CScorecardPath) >= 0 then
+        FScorecards[LRound] := ReadBlob(LProcess, LSuffix + CScorecardPath);
+      if LTables.IndexOf(LSuffix + CScorecardSourcesPath) >= 0 then
+        FScorecardSources[LRound] := ReadBlob(LProcess, LSuffix + CScorecardSourcesPath);
     end;
     // FPC's pipe stream owns the writer once Input has been accessed.
     LProcess.Input.DontClose := True;
@@ -864,6 +883,38 @@ begin
   Result := LClaim.View(True, AAssessmentOffset, AAssessmentLimit, AAssessmentStudy);
   Result.Add('revision', FRevision);
   Result.Add('found', True);
+end;
+
+function TClaimIndex.EvidenceRubric(ARound: Integer; const AId: String;
+  AIncludeRules: Boolean): TJSONObject;
+var
+  LClaim: TClaim;
+begin
+  if FRubric = '' then
+    raise EInOutError.Create('The published evidence rubric is unavailable.');
+  Result := TJSONObject.Create(['revision', FRevision, 'rubric_version', EvidenceRubricVersion,
+    'rubric_path', CRubricPath, 'score_type', 'ordinal_review_tier']);
+  try
+    if AIncludeRules then
+      Result.Add('rules', FRubric);
+    if AId = '' then
+      Exit;
+    Result.Add('round', ARound);
+    Result.Add('id', AId);
+    if not FIdentities.TryGetValue(Key(ARound, AId), LClaim) then
+    begin
+      Result.Add('review_status', 'claim_not_found');
+      Exit;
+    end;
+    Result.Add('hypothesis_direction', LClaim.Direction);
+    Result.Add('statement', LClaim.Statement);
+    Result.Add('published_verdict', LClaim.Verdict);
+    AddEvidenceScorecard(Result, FScorecards[ARound], FScorecardSources[ARound], AId,
+      LClaim.Direction, LClaim.Verdict, LClaim.Confidence);
+  except
+    Result.Free;
+    raise;
+  end;
 end;
 
 function SortedValues: TStringList;

@@ -13,8 +13,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 939 |
-| Maybe True | 0 | 28 |
+| Unknown | 1000 | 940 |
+| Maybe True | 0 | 27 |
 | Maybe False | 0 | 33 |
 | True | 0 | 0 |
 | False | 0 | 0 |
@@ -853,7 +853,6 @@ The initial published verdicts were 997 Unknown and three Maybe False. [Open tra
 - [0485](statements/0485.txt) **Maybe False** (53%) Consuming dried saffron worsens fatigue severity in people with Parkinson's disease.
 - [0513](statements/0513.txt) **Maybe False** (51%) Consuming virgin coconut oil worsens daytime sleepiness severity in people with Parkinson's disease.
 - [0560](statements/0560.txt) **Maybe True** (51%) Consuming ground cumin reduces constipation severity in people with Parkinson's disease.
-- [0577](statements/0577.txt) **Maybe True** (50.005%) Consuming extra-virgin olive oil reduces rest tremor severity in people with Parkinson's disease.
 - [0581](statements/0581.txt) **Maybe False** (52%) Consuming grated ginger worsens constipation severity in people with Parkinson's disease.
 - [0629](statements/0629.txt) **Maybe True** (51%) Consuming cold-pressed olive oil reduces bradykinesia severity in people with Parkinson's disease.
 - [0639](statements/0639.txt) **Maybe True** (51%) Consuming cold-pressed flaxseed oil reduces pain severity in people with Parkinson's disease.

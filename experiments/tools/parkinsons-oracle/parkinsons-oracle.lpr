@@ -39,6 +39,14 @@ const
       '"assessment_study":{"type":"string","minLength":1}},' +
       '"not":{"anyOf":[{"required":["assessment_study","assessment_offset"]},' +
       '{"required":["assessment_study","assessment_limit"]}]}}},' +
+    '{"name":"oracle_evidence_rubric","description":"Use the versioned evidence scorecard before ' +
+      'rating efficacy in any food experiment round. Call without arguments for the rules. ' +
+      'Pass round and id for the applied tier, independent source families and review status. ' +
+      'Use include_rules to override whether the full rules are returned.",' +
+      '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
+      '"additionalProperties":false,"properties":{"round":{"type":"integer","minimum":1,"maximum":7},' +
+      '"id":{"type":"string","pattern":"^[0-9]{4}$"},"include_rules":{"type":"boolean"}},' +
+      '"dependentRequired":{"round":["id"],"id":["round"]}}},' +
     '{"name":"oracle_search_catalog","description":"Search the local research text index with ' +
       'literal terms. Use source_kind to find dated cultural records, public forum conversations, ' +
       'or archived study and registry texts. Word matches are discovery leads.",' +
@@ -78,6 +86,7 @@ type
     function Catalog: TResearchCatalog;
     function Status: TJSONObject;
     function ReadSource(AArguments: TJSONObject): TJSONObject;
+    function EvidenceRubric(AArguments: TJSONObject): TJSONObject;
   public
     constructor Create(const ARepoRoot: String);
     destructor Destroy; override;
@@ -209,7 +218,8 @@ var
   LIdentifiers: TJSONData;
 begin
   case IndexStr(AName, ['oracle_query', 'oracle_claim', 'oracle_search_catalog',
-    'oracle_status', 'oracle_filter_options', 'oracle_find_sources', 'oracle_read_source']) of
+    'oracle_status', 'oracle_filter_options', 'oracle_find_sources', 'oracle_read_source',
+    'oracle_evidence_rubric']) of
     0:
       begin
         RequireFields(AArguments, ['symptom', 'ingredient', 'preparation', 'direction',
@@ -297,9 +307,45 @@ begin
       begin
         Result := ReadSource(AArguments);
       end;
+    7:
+      begin
+        Result := EvidenceRubric(AArguments);
+      end;
   else
     raise EConvertError.Create('Unknown tool: ' + AName);
   end;
+end;
+
+function TOracle.EvidenceRubric(AArguments: TJSONObject): TJSONObject;
+var
+  LRound: Integer;
+  LId: String;
+  LDigit: Char;
+  LRules: TJSONData;
+  LIncludeRules: Boolean;
+begin
+  RequireFields(AArguments, ['round', 'id', 'include_rules']);
+  LRound := ReadInteger(AArguments, 'round', 0, 1, 7);
+  LId := ReadString(AArguments, 'id', '');
+  if (LRound <> 0) or (AArguments.Find('id') <> nil) then
+  begin
+    if (LRound = 0) or (Length(LId) <> 4) then
+      raise EConvertError.Create('Provide the round and four-digit claim ID.');
+    for LDigit in LId do
+    begin
+      if not (LDigit in ['0'..'9']) then
+        raise EConvertError.Create('Provide a four-digit claim ID.');
+    end;
+  end;
+  LIncludeRules := LId = '';
+  LRules := AArguments.Find('include_rules');
+  if LRules <> nil then
+  begin
+    if LRules.JSONType <> jtBoolean then
+      raise EConvertError.Create('Expected a boolean for include_rules.');
+    LIncludeRules := LRules.AsBoolean;
+  end;
+  Result := Index.EvidenceRubric(LRound, LId, LIncludeRules);
 end;
 
 function TOracle.ReadSource(AArguments: TJSONObject): TJSONObject;
@@ -424,6 +470,7 @@ begin
             'serverInfo', TJSONObject.Create(['name', 'parkinsons-oracle', 'version', '0.1.0']),
             'instructions', 'Start each evidence question with the Oracle before broader searches. ' +
               'Use assessed claims, exact source locators and catalog source_kind filters as needed. ' +
+              'Read oracle_evidence_rubric before assigning or revisiting an efficacy rating. ' +
               'Hypothesis direction is the frozen wording. An Unknown is an open question.']);
         end;
       1: LResult := TJSONObject.Create;

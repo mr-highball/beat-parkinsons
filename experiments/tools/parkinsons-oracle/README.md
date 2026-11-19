@@ -2,6 +2,21 @@
 
 The oracle is a local Free Pascal MCP server for the Parkinson’s research catalog and food experiments. Use it to retrieve assessed claims, inspect conflicting evidence and find local documents before opening more web searches.
 
+## Evidence review rules
+
+Call `oracle_evidence_rubric` once at the beginning of evidence review. With no
+arguments it returns the rubric text, its version and the pinned Git revision.
+Send both `round` and `id` to see the published verdict, scorecard, source-family
+rows, and counts by direction and source kind. A claim lookup omits the full
+rubric by default. Set `include_rules: true` to include it alongside the claim.
+
+A `recorded` status means the rubric version, required source fits, expected
+verdict and score agree with the published data. `no_scorecard` means the
+current rubric has yet to be applied in the ledger. `historical_scorecard`
+identifies an earlier rubric version, and `verdict_mismatch` flags a discrepancy
+with the published verdict or score. Search coverage and efficacy remain separate
+review questions. [Canonical rubric and ledger format](../../1000_see_what_sticks_food/EVIDENCE-SCORECARD.md)
+
 ## How the lookup works
 
 - Symptom and ingredient postings narrow a request to candidate claims. Each experiment supplies canonical words and aliases. The oracle verifies each round’s freeze hash and reads claims and assessments from one Git commit.
@@ -16,6 +31,7 @@ The oracle is a local Free Pascal MCP server for the Parkinson’s research cata
 | `oracle_query` | `{"symptom":"tremors"}` | Directional local matches, candidate count, assessment counts and a first citation |
 | `oracle_claim` | `{"round":1,"id":"0904","assessment_limit":8}` | Frozen statement, verdict and rationale, citations, queue counts, and a page of assessments |
 | `oracle_claim` with a study key | `{"round":1,"id":"0121","assessment_study":"PMID:37294324"}` | Assessments for that exact study key and the same claim-wide metadata |
+| `oracle_evidence_rubric` | `{}` or `{"round":1,"id":"0904"}` | Canonical review rules or a specific claim's applied tier, observed direction, and source families |
 | `oracle_search_catalog` | `{"terms":"black tea tremor","period":"2010-2014","limit":8}` | Ranked local documents containing the requested words |
 | `oracle_find_sources` | `{"identifiers":["PMID:40647065","NCT04986982"]}` | Every archived document whose source metadata matches each supplied identifier |
 | `oracle_read_source` | `{"path":"research/2025-2029/Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt"}` | Indexed UTF-8 source text, with a byte cursor for longer documents |
