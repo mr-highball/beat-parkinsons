@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-Nine Round 1 claims have a checked version 1 scorecard.
+Ten Round 1 claims have a checked version 1 scorecard.
+
+Raw cantaloupe and resting tremor (0341) remains Unknown at 50 under the shared rubric. The 14-family review checks the original Parkinson mixed-diet supplement, distinguishes a pooled disease-occurrence estimate from symptom response, and separates seed and peel motor proxies from raw fruit. The focused biomedical inventory includes 307 provider identities before alias reconciliation. [Cantaloupe sources, study contrasts and open trails](followup/tremor-cantaloupe-nov19-34/README.md).
 
 Toasted fennel seed and resting tremor (0214) remains Unknown at 50 after evaluating 19 evidence families and 39 checked biomedical source keys. Acute concentrated-oil toxicity and nitrate-associated cattle tremor are separate from the Parkinson-model bar, stride and rotarod results. A close whole-seed diet comparison measured general activity only. The original reserpine paper also corrects a previously misassigned comparator in the freezing-of-gait assessment. [Fennel evidence and search scope](followup/tremor-fennel-nov19-33/README.md).
 

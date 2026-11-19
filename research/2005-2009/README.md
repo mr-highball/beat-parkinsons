@@ -264,3 +264,5 @@ The original walnut-fraction crossover registration is bucketed by first public 
 - [Lemon balm dose and formulation boundaries](Observations/Lemon-Balm-Dose-and-Formulation-Boundaries.md)
 
 [Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).
+
+- [Melon SOD extract and restraint-stress memory comparison](Source-Text/2009-PMID19373977-Nakajima-Melon-SOD-Stress-and-Memory.txt).

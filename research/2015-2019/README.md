@@ -568,3 +568,5 @@ The contaminant trail includes an original total-diet abstract, without a measur
 [Strawberry and falls evidence and observations](Observations/Food-Experiment-Strawberry-Falls-Nov19-26.md).
 
 [Tremor evidence and preparation observations](Observations/Tremor-Evidence-Transfer-Nov19.md).
+
+- [Melon-derived SOD capsule frailty trial registration](Source-Text/Trials/NCT02753582.txt).

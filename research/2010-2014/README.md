@@ -400,3 +400,5 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 [Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).
 
 [Strawberry and falls evidence and observations](Observations/Food-Experiment-Strawberry-Falls-Nov19-26.md).
+
+- [Case-control cohort and follow-up analysis of pooled cucurbit intake](Source-Text/2013-PMID23661325-Solanaceae-Cohort-and-Cucurbit-Reply-Link.txt).

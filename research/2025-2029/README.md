@@ -476,3 +476,7 @@ January 1, 2025 through November 11, 2026 (partial period).
 [Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).
 
 [Strawberry and falls evidence and observations](Observations/Food-Experiment-Strawberry-Falls-Nov19-26.md).
+
+- [Muskmelon peel extract and rotating-rod comparison](Source-Text/2025-Dokkada-Muskmelon-Peel-and-Rotating-Rod.txt).
+- [Fresh Apulian melon-landrace crossover](Source-Text/2025-PMID41195070-Apulian-Unripe-Melon-Crossover.txt).
+- [Rock melon glycemic crossover registration](Source-Text/Trials/NCT07017491.txt).

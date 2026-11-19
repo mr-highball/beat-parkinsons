@@ -77,6 +77,8 @@ The grapefruit checkpoint had zero exact first-pass hits for seven newly defined
 
 The toasted fennel checkpoint revisited three narrative locators and recovered their exact article identities and outcomes. Source questions about toxicity, food preparations and traditional use identified missing standalone records, while earlier archived constituent studies were reused. [Fennel evidence and source coverage](../1000_see_what_sticks_food/followup/tremor-fennel-nov19-33/README.md).
 
+The raw cantaloupe checkpoint found four exact archive hits across fourteen distinct source questions, plus a local lead for the separate claim question. The additions recover an original motor supplement, linked cohort, cultivar-specific comparisons, two registrations and traditional documentation. The known fig use of the shared diet paper adds no repeat source question. [Cantaloupe evidence and source depth](../1000_see_what_sticks_food/followup/tremor-cantaloupe-nov19-34/README.md).
+
 ## Local launcher
 
 Use the project's direct MCP tools when they are visible. Otherwise launch the

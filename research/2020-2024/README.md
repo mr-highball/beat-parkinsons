@@ -607,3 +607,8 @@ The Singapore total-diet papers and original supplement preserve measured black-
 [Strawberry and falls evidence and observations](Observations/Food-Experiment-Strawberry-Falls-Nov19-26.md).
 
 [Tremor evidence and preparation observations](Observations/Tremor-Evidence-Transfer-Nov19.md).
+
+- [Cantaloupe preparation and resting tremor](Observations/Cantaloupe-Preparation-and-Resting-Tremor.md).
+- [Parkinson diet supplement and motor outcome scope](Source-Text/2020-PMC7072275-Supplement-Motor-Outcome-Scope.txt).
+- [Ripe pickling-melon and muskmelon juice glucose comparison](Source-Text/2020-PMID32612089-Ripe-Pickling-Melon-and-Muskmelon-Juice-Glucose.txt).
+- [Muskmelon seed-extract behavior and coordination tables](Source-Text/2023-PMID36967516-Muskmelon-Seed-Extract-and-Coordination.txt).
