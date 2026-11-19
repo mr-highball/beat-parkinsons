@@ -673,3 +673,11 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Olive oil preparation and anxiety outcome records](Food-Experiment-Olive-Oil-Anxiety.md).
 - [Observations on animal comparisons and human anxiety measurement](Observations/Olive-Oil-Exposure-and-Anxiety.md).
 - [Original experiments cited in saffron reviews, including human motor scores and animal behavior](Food-Experiment-Saffron-Review-Primary-Trails.md).
+
+## Rehabilitation and stimulus registrations
+
+- [AquaDualPark exercise and usual-activity groups](Source-Text/Trials/RBR-5yjyr7.txt).
+- [Parkinson stimulation trial registration](Source-Text/Trials/ChiCTR2300071969.txt).
+- [Immersive virtual reality upper-limb training registration](Source-Text/Trials/DRKS00034193.txt).
+- [Freezing-of-gait and vibrotactile cueing registration](Source-Text/Trials/DRKS00034584.txt).
+- [Group boxing mobility author abstract and original access trail](Source-Text/2021-PMID39262882-Group-Boxing-Abstract.txt).

@@ -627,3 +627,5 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Parkinson fall histories and adjusted estimates in Nigeria](Source-Text/2016-PMID27667188-Parkinson-Falls-Nigeria.txt).
 - [Thymol vehicle arms and hippocampal electrical outcomes](Source-Text/2018-PMID29339105-Thymol-Oil-Vehicle-Plasticity.txt).
 - [Ginger constituents and artificial blood–brain barrier permeability](Source-Text/2019-PMID31476432-Simon-Ginger-Permeability-Abstract.txt).
+- [Orange and grapefruit juice and short-term ionized calcium comparisons](Source-Text/2017-PMID28802068-Citrus-Juice-and-Ionized-Calcium.txt).
+- [Integrate safe-mobility trial registration](Source-Text/Trials/ACTRN12619000415101.txt).

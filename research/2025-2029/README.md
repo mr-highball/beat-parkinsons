@@ -523,3 +523,12 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Kaur and Gupta review citation relationships](Source-Text/2025-Kaur-Gupta-Parkinson-Herbal-Review-References.txt).
 - [Isfahan Parkinson trial depression, fatigue and cognitive outcomes](Source-Text/2025-Hajhashemy-Saffron-AMT-and-PDQ.txt).
 - [Observations across the prior and current period](Observations/Saffron-Clinical-Comparison-and-Model-Outcomes.md).
+
+## Rehabilitation, swallowing, and orange-juice context
+
+- [Orange juice in drooling guidance, swallowed textures, and rehabilitation comparisons](Food-Experiment-Rehab-and-Orange-Context.md).
+- [Combined stimulation and freezing compared with single-target stimulation](Source-Text/2025-PMID40760816-DBS-Freezing-Crossover.txt).
+- [Behavior change and exercise adherence feasibility](Source-Text/2025-PMID40901341-Exercise-Adherence-Comparison.txt).
+- [Mixed reality and conventional Parkinson rehabilitation](Source-Text/2026-PMID42539816-Mixed-Reality-Rehabilitation.txt).
+- [NeuroDance protocol](Source-Text/2026-PMID42824393-NeuroDance-Protocol.txt) and [original registration](Source-Text/Trials/DRKS00038241.txt).
+- [Observations on measured and assigned exposures](Observations/Rehabilitation-Swallowing-and-Food-Exposure.md).

@@ -1,0 +1,17 @@
+# Rehabilitation comparisons and orange-juice context
+
+## Orange juice in nurse-led dietary guidance
+
+Guan and colleagues randomized 80 people with Parkinson disease and sialorrhea. Table 3 item 2.5.2 lists orange juice among allowances in a larger dietary education program. This was one component of a multicomponent approach. Table 6 reports an adjusted Sialorrhea Clinical Scale difference of −2.34 points after four weeks (95% CI −3.98 to −0.70, p=.012). The comparison estimates the nurse-led program. Orange juice intake was not assigned or quantified and the paper does not report a fall-frequency outcome. [Original methods and Tables 3 and 6](Source-Text/PMC13044086.txt) · [Publisher original](https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2026.1788173/full)
+
+## Shared orange juice and other registry matches
+
+The completed common-tremor crossover NCT06403280 registered rum-flavoured orange juice in its alcohol and control drinks. The assigned difference was alcohol. The registry shows no posted results, and its planned endpoints concern tremor rather than falls. Other results in the same query refer to orange flavouring shared in a probiotic trial, matched capsule colors or an equipment model. [Registered common-tremor study](../2020-2024/Source-Text/Trials/NCT06403280.txt)
+
+The [citrus juice comparison](../2015-2019/Source-Text/2017-PMID28802068-Citrus-Juice-and-Ionized-Calcium.txt) measured a short-term decrease in ionized calcium in volunteers. The origin of the word fall in that study is the laboratory measurement. A [separate cohort](../2015-2019/Food-Experiment-Food-Followup.md#vegetable-intake-and-falls-in-older-adults) considers first fall admission for fruit groups and does not isolate raw oranges in people with Parkinson disease.
+
+## Swallowing tests, texture and unrelated treatment comparisons
+
+The [Marshall longitudinal study](Source-Text/2026-PMID41744403-Longitudinal-Swallow-Function.txt) follows serial texture and swallowing safety measures in 19 people with Parkinson disease. The [Yee case](Source-Text/2025-PMID40894001-EMST-Swallow-Case.txt) separately evaluates barium boluses while a person with mixed dementia undergoes expiratory strength training. These are evaluations of swallowing and food texture. The results do not attribute a change in fatigue, falls or rigidity to sage.
+
+The [Integrate registry](../2015-2019/Source-Text/Trials/ACTRN12619000415101.txt) identifies its primary mobility outcomes. The [published feasibility results](Source-Text/2025-PMID40090322-Integrate-Mobility-Feasibility.txt) report the analyzed within-person cohort. [AquaDualPark](Source-Text/2025-PMID40688414-AquaDualPark-Protocol.txt) and its [registry](../2020-2024/Source-Text/Trials/RBR-5yjyr7.txt) distinguish four exercise interventions from the usual-activity control. The [upper-limb VR trial](Source-Text/2026-PMID41508050-Virtual-Reality-Upper-Limb-Training.txt) matches its [2024 registry record](../2020-2024/Source-Text/Trials/DRKS00034193.txt). The [freezing protocol](Source-Text/PMC13391885.txt) with [DRKS00034584](../2020-2024/Source-Text/Trials/DRKS00034584.txt) names Raspberry Pi hardware. The [NeuroDance protocol](Source-Text/2026-PMID42824393-NeuroDance-Protocol.txt) links its [retrospective registration](Source-Text/Trials/DRKS00038241.txt). [Historical stimulation registration](../2020-2024/Source-Text/Trials/ChiCTR2300071969.txt) · [Published active-versus-sham trial](Source-Text/PMC13121914.txt)
