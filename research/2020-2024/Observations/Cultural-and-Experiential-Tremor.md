@@ -11,3 +11,5 @@ The [2023 practitioner chart](../Cultural-and-Experiential/Traditional-Practices
 The [2020 report](../Cultural-and-Experiential/Personal-Reports/2020-Mucuna-Variable-Benefit-and-Adverse-Experience.txt) and [2023 report](../Cultural-and-Experiential/Personal-Reports/2023-Mucuna-No-Benefit-and-Sickness-Report.txt) preserve differing reported effects and preparations. Neither supplies a controlled resting-tremor comparison.
 
 Compared with the preceding bucket's formal-study material, these additions describe individual experience at lower causal certainty. Preparation changes, concurrent treatments and diagnosis need to remain visible rather than collapsing the reports into one favorable or unfavorable result.
+
+The [2024 dietary interpretation](../Cultural-and-Experiential/Traditional-Practices/2024-Mustard-and-Shaking-Ayurvedic-Dietary-Interpretation.txt) adds a proposed worsening association between excess pungent foods and shaking. Earlier practice and adverse-experience records include individual accounts. This source supplies a modern textual interpretation and leaves exposure, preparation, diagnosis and observed symptom direction open.
