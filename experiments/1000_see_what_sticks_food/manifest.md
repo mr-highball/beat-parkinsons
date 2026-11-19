@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-Eighteen Round 1 claims have a checked version 1 scorecard.
+Twenty Round 1 claims have a checked version 1 scorecard.
+
+Ground saffron and Parkinson depression (0063) and dried saffron and Parkinson fatigue (0485) both retain Maybe False at 55, the direct clinical signal tier. Both measured outcomes favored the fixed whole Sargol powder tablet over placebo in one Parkinson trial. Depression was listed in the original registration. The first archived public revision listing the standalone fatigue scale follows the results manuscript receipt. The separate Tehran depression trial found a Hamilton difference and inconclusive results on two other scales. The original Kaur review still lacks accessible full text, and its verified primary citations report different outcomes. [Primary results, search coverage and source boundaries](followup/priority-three-originals-nov19-58/README.md).
 
 Cold-pressed olive oil and Parkinson anxiety (0343) retains Maybe True at the minimal-signal anchor of 50.005. The human association measured anxiety but did not identify oil grade or a Parkinson-specific effect. The new original rat study verifies the preparation and found a favorable result in one maze comparison, with an inconclusive center-time comparison. Brewed green tea and Parkinson fatigue (0948) retains Maybe True at 51 because fatigue rose 3.7 points in one uncontrolled cohort of 14 completers. The two source records from that cohort count once. The trial-arm tables, separate controlled fatigue comparison and Jiang full body remain open. [Queries, source comparisons and rubric checks](followup/olive-anxiety-green-tea-nov19-57/README.md).
 
@@ -872,7 +874,7 @@ The initial published verdicts were 997 Unknown and three Maybe False. [Open tra
 - [0025](statements/0025.txt) **Maybe False** (51%) Consuming fresh sage worsens pain severity in people with Parkinson's disease.
 - [0039](statements/0039.txt) **Maybe False** (51%) Consuming cold-pressed sesame oil worsens anxiety severity in people with Parkinson's disease.
 - [0060](statements/0060.txt) **Maybe False** (51%) Consuming dried sage worsens insomnia severity in people with Parkinson's disease.
-- [0063](statements/0063.txt) **Maybe False** (58%) Consuming ground saffron worsens depressive symptom severity in people with Parkinson's disease.
+- [0063](statements/0063.txt) **Maybe False** (55%) Consuming ground saffron worsens depressive symptom severity in people with Parkinson's disease.
 - [0065](statements/0065.txt) **Maybe True** (51%) Consuming cold-pressed walnut oil reduces pain severity in people with Parkinson's disease.
 - [0072](statements/0072.txt) **Maybe True** (53%) Consuming extra-virgin olive oil reduces constipation severity in people with Parkinson's disease.
 - [0082](statements/0082.txt) **Maybe True** (51%) Consuming brewed black tea reduces bradykinesia severity in people with Parkinson's disease.
@@ -904,7 +906,7 @@ The initial published verdicts were 997 Unknown and three Maybe False. [Open tra
 - [0404](statements/0404.txt) **Maybe False** (51%) Consuming cold-pressed sesame oil worsens fatigue severity in people with Parkinson's disease.
 - [0406](statements/0406.txt) **Maybe True** (51%) Consuming brewed lemongrass worsens daytime sleepiness severity in people with Parkinson's disease.
 - [0470](statements/0470.txt) **Maybe False** (51%) Consuming cold-pressed flaxseed oil worsens constipation severity in people with Parkinson's disease.
-- [0485](statements/0485.txt) **Maybe False** (53%) Consuming dried saffron worsens fatigue severity in people with Parkinson's disease.
+- [0485](statements/0485.txt) **Maybe False** (55%) Consuming dried saffron worsens fatigue severity in people with Parkinson's disease.
 - [0513](statements/0513.txt) **Maybe False** (51%) Consuming virgin coconut oil worsens daytime sleepiness severity in people with Parkinson's disease.
 - [0560](statements/0560.txt) **Maybe True** (51%) Consuming ground cumin reduces constipation severity in people with Parkinson's disease.
 - [0581](statements/0581.txt) **Maybe False** (52%) Consuming grated ginger worsens constipation severity in people with Parkinson's disease.

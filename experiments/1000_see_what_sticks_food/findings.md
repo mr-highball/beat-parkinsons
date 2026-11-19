@@ -1,6 +1,8 @@
 ## Findings and limits
 
-Eighteen Round 1 claims have a checked version 1 scorecard.
+Twenty Round 1 claims have a checked version 1 scorecard.
+
+Ground saffron and Parkinson depression (0063) and dried saffron and Parkinson fatigue (0485) both retain Maybe False at 55, the direct clinical signal tier. Both measured outcomes favored the fixed whole Sargol powder tablet over placebo in one Parkinson trial. Depression was listed in the original registration. The first archived public revision listing the standalone fatigue scale follows the results manuscript receipt. The separate Tehran depression trial found a Hamilton difference and inconclusive results on two other scales. The original Kaur review still lacks accessible full text, and its verified primary citations report different outcomes. [Primary results, search coverage and source boundaries](followup/priority-three-originals-nov19-58/README.md).
 
 Cold-pressed olive oil and Parkinson anxiety (0343) retains Maybe True at the minimal-signal anchor of 50.005. The human association measured anxiety but did not identify oil grade or a Parkinson-specific effect. The new original rat study verifies the preparation and found a favorable result in one maze comparison, with an inconclusive center-time comparison. Brewed green tea and Parkinson fatigue (0948) retains Maybe True at 51 because fatigue rose 3.7 points in one uncontrolled cohort of 14 completers. The two source records from that cohort count once. The trial-arm tables, separate controlled fatigue comparison and Jiang full body remain open. [Queries, source comparisons and rubric checks](followup/olive-anxiety-green-tea-nov19-57/README.md).
 
