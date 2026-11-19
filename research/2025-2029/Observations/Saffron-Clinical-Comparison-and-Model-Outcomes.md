@@ -1,0 +1,5 @@
+# Whole saffron outcomes and constituent evidence
+
+The [prior period's primary comparison trails](../../2020-2024/Food-Experiment-Saffron-Review-Primary-Trails.md) distinguish forced-swim behavior, fly climbing and human motor totals. The [2025 review bibliography](../Source-Text/2025-Kaur-Gupta-Parkinson-Herbal-Review-References.txt) links those papers. The underlying measures remain distinct across species and preparations.
+
+The [later Isfahan trial](../Source-Text/2025-Hajhashemy-Saffron-AMT-and-PDQ.txt) assigned dried Sargol stigma powder in tablets and measured separate depression and fatigue scores in Parkinson disease. The [earlier Tehran trial](../../2020-2024/Food-Experiment-Evidence.md#saffron-capsules-and-depressive-symptoms) used capsules of unverified processing and found differences on one of its depression scales. The later trial's public depression outcome is more clearly documented than the standalone fatigue scale. [Registry and editorial chronology](../Food-Experiment-Saffron-Registry-History.md)

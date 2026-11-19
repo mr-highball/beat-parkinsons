@@ -672,3 +672,4 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Reported clinical falls in the Rett extension](Source-Text/Trials/NCT04252586-results.txt).
 - [Olive oil preparation and anxiety outcome records](Food-Experiment-Olive-Oil-Anxiety.md).
 - [Observations on animal comparisons and human anxiety measurement](Observations/Olive-Oil-Exposure-and-Anxiety.md).
+- [Original experiments cited in saffron reviews, including human motor scores and animal behavior](Food-Experiment-Saffron-Review-Primary-Trails.md).

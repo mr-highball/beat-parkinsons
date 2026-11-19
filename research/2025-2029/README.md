@@ -517,3 +517,9 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Measured pressing conditions, oil phenolic content and original behavioral results](Food-Experiment-Olive-Oil-Anxiety.md).
 - [Observations across the cold-pressed and earlier oil comparisons](Observations/Olive-Oil-Anxiety-and-Dose.md).
 - [Olive-oil secoiridoid extract in a zebrafish seizure model](Source-Text/2026-PMID42772005-Olive-Secoiridoids-Zebrafish-Extract.txt).
+
+## Saffron review citations and reported clinical outcomes
+
+- [Kaur and Gupta review citation relationships](Source-Text/2025-Kaur-Gupta-Parkinson-Herbal-Review-References.txt).
+- [Isfahan Parkinson trial depression, fatigue and cognitive outcomes](Source-Text/2025-Hajhashemy-Saffron-AMT-and-PDQ.txt).
+- [Observations across the prior and current period](Observations/Saffron-Clinical-Comparison-and-Model-Outcomes.md).
