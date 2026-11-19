@@ -734,7 +734,7 @@ The Singapore total-diet papers and original supplement preserve measured black-
 ## Saffron preparations and sleep endpoints
 
 - [Primary Insomnia Severity Index and comparison in the first Affron trial](Source-Text/2020-Lopresti-Saffron-ISI-Factual-Extract.txt).
-- [Evening extract and Insomnia Symptom Questionnaire](Source-Text/2021-PMID34438361-Evening-Affron-Insomnia-Symptoms.txt) and [official registration](Source-Text/Trials/ACTRN12620000973910.txt).
+- [Evening extract and Insomnia Symptom Questionnaire](Source-Text/2021-Lopresti-Saffron-ISQ-Factual-Extract.txt) and [official registration](Source-Text/Trials/ACTRN12620000973910.txt).
 - [Combined nasal botanical oils versus sesame oil](Source-Text/2020-PMID32736046-Multi-Herb-Nasal-Oil-Insomnia.txt).
 - [Extract gummies and sleep education trial](Source-Text/Trials/NCT05315986.txt).
 - [Saffron extract with magnesium comparison](Source-Text/Trials/NCT05971771.txt).

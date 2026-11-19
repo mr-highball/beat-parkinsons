@@ -6,7 +6,7 @@ Lopresti and colleagues randomized 63 adults with self-reported poor sleep in 20
 
 ## Affron and the insomnia symptom questionnaire
 
-A different four-week study from Lopresti and colleagues published in 2021 randomized 120 adults with unsatisfactory sleep to two Affron extract groups or placebo. Its original abstract reports improved Insomnia Symptom Questionnaire total score and classifications in addition to the primary subjective sleep-quality result. It supplies no Parkinson population or ground saffron arm. [Original study](https://pubmed.ncbi.nlm.nih.gov/34438361/)
+A different four-week study from Lopresti and colleagues published in 2021 randomized 120 adults with unsatisfactory sleep to two Affron extract groups or placebo. Its original abstract reports improved Insomnia Symptom Questionnaire total score and classifications in addition to the primary subjective sleep-quality result. It supplies no Parkinson population or ground saffron arm. [Original study](https://pubmed.ncbi.nlm.nih.gov/34438361/) · [Local factual text](Source-Text/2021-Lopresti-Saffron-ISQ-Factual-Extract.txt)
 
 ## Extract and subjective sleep quality in primary sleep complaints
 
