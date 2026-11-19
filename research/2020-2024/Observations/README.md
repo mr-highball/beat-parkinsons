@@ -686,3 +686,5 @@ The oral crossover contains precisely identified ground cinnamon and rates meal 
 Two Persian posts share a recommendation to eat figs in a wider regimen. The earlier post discusses hand and foot shaking and includes dates. The later post names Parkinson disease. Both leave the preparation and observed outcome unknown. The modern Iranian review supplies a botanical name and chemistry citation, while the older inventory distinguishes cases where the same common name referred to species-verified and unresolved figs. [Public conversation](../Cultural-and-Experiential/Conversations/2023-Persian-Public-Fig-and-Tremor-Suggestions.txt) · [Modern review](../Cultural-and-Experiential/Traditional-Practices/2024-Iranian-Review-Anjir-and-Parkinsons.txt) · [Earlier landrace records](../../1950-1954/Cultural-and-Experiential/Local-Knowledge/1950-USDA-Anjir-Fig-Accessions.txt).
 
 - [Visual hallucination outcomes and recorded dietary exposure](Visual-Hallucination-Outcome-and-Dietary-Exposure.md).
+
+- [Diet records and visual hallucination outcome gaps](Diet-Records-and-Visual-Hallucination-Outcome-Gaps.md).

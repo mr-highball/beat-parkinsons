@@ -52,3 +52,5 @@ The previous period's fruit extract experiment used a rat drug challenge and maz
 - [Hypermanganesemia with Dystonia 1: A Novel Mutation and Response to Iron Supplementation.](../Source-Text/2019-PMID31970220-Hypermanganesemia-Dystonia-and-Psychosis.txt).
 
 The next period separates the clinical measures further and adds primary records for a dietary comparator and the inspected Kabylie edition. [Later clinical and dietary sources](../../2020-2024/Observations/Visual-Hallucination-Outcome-and-Dietary-Exposure.md).
+
+The 2018 blood pressure case distinguishes an observed alertness episode from visual hallucinations in the broader history. A separate questionnaire study documents grouped dietary exposures and the perception domain. [Pressure and alertness case](../Source-Text/2018-PMID29456869-Blood-Pressure-and-Cognitive-Fluctuations.txt) · [Diet instrument comparison](../../2020-2024/Observations/Diet-Records-and-Visual-Hallucination-Outcome-Gaps.md).
