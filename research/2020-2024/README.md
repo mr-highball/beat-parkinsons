@@ -599,3 +599,5 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Saffron registration and outcome boundaries](Observations/Saffron-Registration-and-Outcome-Boundaries.md)
 
 [Banana source follow-through and observations](Observations/Food-Experiment-Banana-Apathy-Nov19-25.md).
+
+[Strawberry and falls evidence and observations](Observations/Food-Experiment-Strawberry-Falls-Nov19-26.md).

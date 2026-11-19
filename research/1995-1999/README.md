@@ -113,3 +113,5 @@ January 1, 1995 through December 31, 1999.
 - [Peanut Oil Carriers](Food-Experiment-Peanut-Oil-Carriers.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+[Strawberry and falls evidence and observations](Observations/Food-Experiment-Strawberry-Falls-Nov19-26.md).

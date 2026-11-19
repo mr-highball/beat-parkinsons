@@ -1,0 +1,3 @@
+# Strawberry extract and motor function in aging rodents
+
+Two 1999 reports used dietary strawberry extract in distinct aging models. In the mouse study the author abstract describes no reversal of the age-related motor deficit. In the rat study the published motor plots favor the blueberry arm, while the strawberry arm shows separate neurochemical and cognitive measures. Preparation, species and the specific outcome determine how these comparisons can be used. [Aged mice](../Source-Text/1999-PMID10579639-Shukitt-Hale-Strawberry-Extract-Mice.txt) · [Aged rats](../Source-Text/1999-PMID10479711-Joseph-Strawberry-Extract-Motor-Tests.txt)

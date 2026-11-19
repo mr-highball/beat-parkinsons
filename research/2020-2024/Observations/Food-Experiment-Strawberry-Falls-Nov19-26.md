@@ -1,0 +1,5 @@
+# Gait research plans and mixed fruit registration
+
+The USDA's 2021 strawberry-powder project descriptions name gait under cognitive load and describe a proposed analysis. They match a registered obesity-study family, which is distinct from the published powder trial in healthy older adults. Concurrently, a randomized comparison of higher and lower mixed-fruit intake was registered. The latter paper appeared in 2025 and reports balance among its additional outcomes. [USDA project plans](../Source-Text/2021-USDA-Strawberry-Mobility-Project-Records.txt) · [Mixed-fruit trial](../Source-Text/Trials/NCT05063929.txt) · [Healthy older-adult trial](../Food-Experiment-Strawberry-Endpoint-Followup.md#freeze-dried-strawberry-attention-and-fall-related-measures)
+
+The 2024 Christmas meal experiment adds an example of why a prepared ingredient in the recipe requires separate attribution. Optional strawberry or blackcurrant jam accompanied the assigned chili or control pancakes. The comparison measured a static plank rather than falls. [Pancakes, jam and endurance](../Source-Text/2024-PMID39655550-Rasmussen-Pancakes-Jam-and-Plank.txt)

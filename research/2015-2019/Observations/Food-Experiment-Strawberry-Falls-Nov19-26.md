@@ -1,0 +1,3 @@
+# Strawberry intake and falls in the older-women cohort
+
+The 2018 Western Australian study moves from the older extract experiments to a human cohort with linked injury admissions. The questionnaire had a strawberry item and the published regression grouped it with six other fruits. Table S4 gives HR 1.00 (95% CI 0.98–1.03) for that group. The study's hospital-based endpoint differs from total or recurrent fall counts. The same period's Parkinson diet pilot lists strawberries as menu options but does not provide a fall-rate comparison. [Fruit and injurious falls](../Source-Text/2018-PMID30153877-Sim-Fruit-Injurious-Falls.txt) · [Parkinson diet pilot menu](../Food-Experiment-Strawberry-Endpoint-Followup.md#strawberry-options-and-cognitive-item-in-a-parkinson-diet-trial)
