@@ -751,3 +751,7 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [The neuropsychotropic effects of saffron: overview of systematic reviews and meta-analyses](Source-Text/PMC9516399.txt).
 - [An overview of pharmacological effects of Crocus sativus and its constituents](Source-Text/PMC10897555.txt).
 - [In vivo and in vitro effects of crocetin and its amide derivative on acrylamide-induced neurotoxicity](Source-Text/PMC11210700.txt).
+
+## Rosemary constituent and outcome references
+
+- [Rosmarinic acid review and the separate mouse behavior citation](Source-Text/2020-PMID32725282-Rosmarinic-Review-Citations.txt).

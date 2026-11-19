@@ -474,3 +474,8 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [Medicinal plants and dementia therapy: herbal hopes for brain aging?](Source-Text/PMC6493900.txt).
 - [Gardenia-derived crocetin and recorded awakenings](Source-Text/2010-PMID20537515-Gardenia-Crocetin-Sleep.txt).
 - [Traditional external saffron-water use for insomnia](Cultural-and-Experiential/Traditional-Practices/2011-Mousavi-Bathaie-Saffron-Insomnia.txt).
+
+## Natural-product review identities
+
+- [Part I on Parkinson disease](Source-Text/2011-PMID20874702-Natural-Products-Parkinson-Review.txt).
+- [Part II on Alzheimer disease](Source-Text/2011-PMID20874701-Natural-Products-Alzheimer-Review.txt).

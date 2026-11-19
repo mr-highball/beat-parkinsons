@@ -602,3 +602,7 @@ January 1, 2025 through November 11, 2026 (partial period).
 ## Botanical preparations, experimental models and separate outcomes
 
 - [Crocin I in experimental Parkinson models with in vivo validation](Source-Text/PMC13191495.txt).
+
+## Clinical comparison and exposure verification
+
+- [Original clinical comparisons, symptoms, and food-identity checks](Food-Experiment-Priority-Clinical-Contexts.md).

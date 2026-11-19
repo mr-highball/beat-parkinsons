@@ -602,3 +602,7 @@ The new retrospective registration asks about smell changes as adverse symptoms 
 
 
 - [Safflower comparisons and separately tested swallowing](Safflower-Comparator-and-Swallowing.md).
+
+## Clinical outcome comparisons and ingredient identification
+
+The newer safinamide analysis reports pooled symptom domains while a separate Parkinson cohort measures apathy directly. The REPOSE article adds clinical results to the prior period's trial registration. The reports illustrate why a pooled domain, a mobility test and an observed symptom count must be retained as separate endpoints. A processed powder flavor and a laboratory enzyme name likewise need to be distinguished from verified food intake. [Original comparisons](../Food-Experiment-Priority-Clinical-Contexts.md) · [Earlier trial registration](../../2020-2024/Source-Text/Trials/NCT06141317.txt).
