@@ -25,5 +25,7 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Mustard and shaking in a modern Ayurvedic dietary interpretation](Traditional-Practices/2024-Mustard-and-Shaking-Ayurvedic-Dietary-Interpretation.txt).
 - [Anjir in a modern Iranian review of traditional medicinal plants](Traditional-Practices/2024-Iranian-Review-Anjir-and-Parkinsons.txt).
 
+- [Wild strawberries as First Foods in the New York climate assessment](Local-Knowledge/2024-NY-First-Foods-Wild-Strawberry-Context.txt).
+
 - [Melon fruit and seeds in Persian sweating literature](Traditional-Practices/2020-Mahlouji-Melon-Persian-Sweating-Context.txt).
 - [Melon in the historical Persian marāqq treatment category](Traditional-Practices/2024-Dadmehr-Melon-in-Maraqq-Textbook-Context.txt).

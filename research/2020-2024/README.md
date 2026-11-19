@@ -610,6 +610,10 @@ The Singapore total-diet papers and original supplement preserve measured black-
 
 [Strawberry and falls evidence and observations](Observations/Food-Experiment-Strawberry-Falls-Nov19-26.md).
 
+- [Strawberry flavoring and falls in randomized comparisons](Observations/Strawberry-Flavoring-and-Fall-Outcomes.md).
+- [Seasonal strawberry consumption in dietary records](Source-Text/2024-PMID38779015-Strawberry-Seasonality-in-Habitual-Diets.txt).
+- [Isolated fisetin physical-function registration](Source-Text/Trials/NCT05595499.txt).
+
 [Tremor evidence and preparation observations](Observations/Tremor-Evidence-Transfer-Nov19.md).
 
 - [Cantaloupe preparation and resting tremor](Observations/Cantaloupe-Preparation-and-Resting-Tremor.md).

@@ -571,4 +571,5 @@ The contaminant trail includes an original total-diet abstract, without a measur
 
 [Tremor evidence and preparation observations](Observations/Tremor-Evidence-Transfer-Nov19.md).
 
+- [Sarcopenia rehabilitation registration for the shared-flavor study](Source-Text/Trials/NCT03120026.txt).
 - [Melon-derived SOD capsule frailty trial registration](Source-Text/Trials/NCT02753582.txt).
