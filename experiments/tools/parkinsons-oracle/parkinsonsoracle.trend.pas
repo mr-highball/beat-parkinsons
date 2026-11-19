@@ -12,6 +12,14 @@ implementation
 function ClaimTrend(const AVerdict, ADirection: String): String;
 begin
   Result := '';
+  if AVerdict = 'Maybe False' then
+  begin
+    if ADirection = 'worsens' then
+      Result := 'eases'
+    else if ADirection = 'reduces' then
+      Result := 'worsens';
+    Exit;
+  end;
   if (AVerdict <> 'True') and (AVerdict <> 'Maybe True') then
   begin
     Exit;

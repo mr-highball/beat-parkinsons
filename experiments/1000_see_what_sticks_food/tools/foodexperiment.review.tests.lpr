@@ -117,12 +117,12 @@ begin
       end;
       3:
       begin
-        AReviews := AReviews + LId + #9'Maybe True'#9'51'#9'Fixture rationale.'#9 +
+        AReviews := AReviews + LId + #9'Maybe True'#9'50.005'#9'Fixture rationale.'#9 +
           'research/source.txt'#9'Q1|Q2'#9'Maybe True' + Lf;
       end;
       4:
       begin
-        AReviews := AReviews + LId + #9'Maybe False'#9'59'#9'Fixture rationale.'#9 +
+        AReviews := AReviews + LId + #9'Maybe False'#9'59.9999'#9'Fixture rationale.'#9 +
           'research/source.txt'#9'Q1|Q2'#9'Unknown' + Lf;
       end;
       else
@@ -177,6 +177,19 @@ begin
     #9'True'#9'59'#9, [])));
   Exercise(AExecutable, 'apply', LExperiment, 'at least 60');
   Assert(ReadText(LStatementPath) = LPending);
+  WriteText(LReviewsPath, UTF8String(StringReplace(String(LReviews), #9'Maybe True'#9'50.005'#9,
+    #9'Maybe True'#9'50'#9, [])));
+  Exercise(AExecutable, 'apply', LExperiment, 'above 50 and below 60');
+  WriteText(LReviewsPath, UTF8String(StringReplace(String(LReviews), #9'Maybe False'#9'59.9999'#9,
+    #9'Maybe False'#9'60'#9, [])));
+  Exercise(AExecutable, 'apply', LExperiment, 'above 50 and below 60');
+  WriteText(LReviewsPath, UTF8String(StringReplace(String(LReviews), #9'Unknown'#9'50'#9,
+    #9'Unknown'#9'50.0001'#9, [])));
+  Exercise(AExecutable, 'apply', LExperiment, 'Unknown requires 50');
+  WriteText(LReviewsPath, UTF8String(StringReplace(String(LReviews), #9'Maybe True'#9'50.005'#9,
+    #9'Maybe True'#9'50.00001'#9, [])));
+  Exercise(AExecutable, 'apply', LExperiment, 'Invalid confidence decimal');
+  Assert(ReadText(LStatementPath) = LPending);
   WriteText(LReviewsPath, UTF8String(StringReplace(String(LReviews), 'Q1|Q2', 'Q1', [])));
   Exercise(AExecutable, 'apply', LExperiment, 'two distinct external queries');
   Assert(ReadText(LStatementPath) = LPending);
@@ -196,6 +209,10 @@ begin
   Exercise(AExecutable, 'verify', LExperiment);
   LReviewed := ReadText(LStatementPath);
   Assert(Pos('Verdict: True' + Lf + 'Confidence: 60', LReviewed) > 0);
+  Assert(Pos('Verdict: Maybe True' + Lf + 'Confidence: 50.005' + Lf,
+    ReadText(JoinPath(LExperiment, 'statements/0003.txt'))) > 0, 'Expected a fractional lean.');
+  Assert(Pos('Verdict: Maybe False' + Lf + 'Confidence: 59.9999' + Lf,
+    ReadText(JoinPath(LExperiment, 'statements/0004.txt'))) > 0, 'Expected exact decimal storage.');
   Assert(Pos(UTF8String(TestRationale), LReviewed) > 0, 'Expected UTF-8 rationale to round-trip.');
   Assert(Pos('Local references: research/source.txt#section', LReviewed) > 0);
   Assert(not DirectoryExists(JoinPath(LExperiment, 'statements.review-backup')));
@@ -207,6 +224,7 @@ begin
   LManifest := ReadText(JoinPath(LExperiment, 'manifest.md'));
   Assert(Pos('| Unknown | 998 | 996 |', LManifest) > 0);
   Assert(Pos('[0001](statements/0001.txt) **True** (60%)', LManifest) > 0);
+  Assert(Pos('[0003](statements/0003.txt) **Maybe True** (50.005%)', LManifest) > 0);
   Assert(Pos('## Synthetic findings', LManifest) > 0);
   Exercise(AExecutable, 'summary', LExperiment);
   Assert(ReadText(JoinPath(LExperiment, 'manifest.md')) = LManifest);

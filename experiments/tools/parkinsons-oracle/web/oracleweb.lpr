@@ -407,20 +407,17 @@ begin
   if LEffect <> '' then
   begin
     Result.Add(Caption(nkBadge, LEffectId + AId, LEffect));
-    if LVerdict = 'Maybe True' then
+    if (LVerdict = 'Maybe True') or (LVerdict = 'Maybe False') then
       LEvidence := 'Limited evidence';
-  end;
-  if (LVerdict = 'False') or (LVerdict = 'Maybe False') then
+  end
+  else if LVerdict = 'False' then
   begin
     if TextOf(AClaim, 'hypothesis_direction') = 'worsens' then
       LEffect := 'Worsening challenged'
     else
       LEffect := 'Easing challenged';
     Result.Add(Caption(nkBadge, 'effect-challenged-' + AId, LEffect));
-    if LVerdict = 'Maybe False' then
-      LEvidence := 'Limited evidence'
-    else
-      LEvidence := 'Evidence against the claim';
+    LEvidence := 'Evidence against the claim';
   end;
   if LEffect = '' then
     Result.Add(Caption(nkBadge, 'grade-unclear-' + AId, LEvidence))

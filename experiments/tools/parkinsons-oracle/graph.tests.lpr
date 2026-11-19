@@ -21,7 +21,8 @@ begin
   Check(GraphClaimLabel('Maybe True', 'reduces') = 'May ease', 'Supported relief direction.');
   Check(GraphClaimLabel('Maybe True', 'worsens') = 'May worsen', 'Supported worsening direction.');
   Check(GraphClaimLabel('Unknown', 'worsens') = 'Open hypothesis', 'An assigned direction is not a finding.');
-  Check(GraphClaimLabel('Maybe False', 'worsens') = 'Hypothesis challenged', 'Opposition is not inverse efficacy.');
+  Check(GraphClaimLabel('Maybe False', 'worsens') = 'May ease', 'A weak easing finding reverses worsening.');
+  Check(GraphClaimLabel('Maybe False', 'reduces') = 'May worsen', 'A weak worsening finding reverses easing.');
   Check(GraphClaimLabel('False', 'reduces') = 'Hypothesis challenged', 'False is not automatic worsening.');
   Check(GraphAssessmentTrend('related', 'reduces') = '', 'Related caffeine context is not green.');
   Check(GraphAssessmentTrend('related', 'worsens') = '', 'Related green tea context is not red.');

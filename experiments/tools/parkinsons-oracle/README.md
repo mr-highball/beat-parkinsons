@@ -7,7 +7,7 @@ The oracle is a local Free Pascal MCP server for the Parkinson’s research cata
 - Symptom and ingredient postings narrow a request to candidate claims. Each experiment supplies canonical words and aliases. The oracle verifies each round’s freeze hash and reads claims and assessments from one Git commit.
 - The claim index solves the WFC identity, hypothesis and evidence passes once for all eight input combinations. Each lookup evaluates the three inputs for its candidates and applies the solved decision table. Every combination has one valid decision, independent of seed. The same decisions determine evidence scopes in the static model.
 - SQLite FTS5 keeps a separate inverted index of local Markdown, text and TSV files under `research/`. Its matches are document leads. It returns short local locators with the index snapshot and coverage.
-- Direction filters the original hypothesis wording. A Maybe verdict preserves the recorded weak lean and rationale. A False verdict challenges that hypothesis and carries no automatic claim for the reverse effect.
+- Direction filters the original hypothesis wording. A Maybe verdict preserves the recorded weak lean and rationale. Maybe False records a lean in the opposite direction. A definitive False verdict carries only the challenge to the original claim.
 
 ## MCP tools
 
@@ -23,6 +23,8 @@ The oracle is a local Free Pascal MCP server for the Parkinson’s research cata
 | `oracle_filter_options` | `{}` | Canonical symptom, ingredient, and preparation choices, with their aliases |
 
 Query scope defaults to `directional`, which requires a True, False, Maybe True or Maybe False verdict with a nonpending assessment. Use `assessed` to inspect records with at least one nonpending assessment, including Unknown, or `frozen` to include hypotheses still awaiting review. Filter by the canonical `preparation`, `round`, `direction` or `verdict` as needed. Results use stable round and claim-ID order. Follow `next_offset` to page through larger result sets.
+
+The numeric `confidence` field is a reviewer score. A defensible lean such as 50.005 qualifies for a Maybe verdict. The symptom effect follows the finding relative to the frozen hypothesis, so Maybe False on a worsening hypothesis can appear under “May ease”.
 
 Use `{"symptom":"tremors","trend":"eases"}` to look up evidence that may point toward relief. Set `trend` to `worsens` for evidence of worsening. The trend uses the card arrows, which require support for the claim being tested. Evidence against a claim leaves the opposite effect open. The `direction` filter applies to the original hypothesis wording.
 

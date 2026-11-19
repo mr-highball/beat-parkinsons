@@ -26,6 +26,7 @@ Commit verified research and experiment updates incrementally. Use a descriptive
 
 # Inclusive evidence collection
 
+- A defensible directional lean qualifies for Maybe, however small. Apply the [experiment's scoring rules](experiments/1000_see_what_sticks_food/AGENTS.md#evidence-assessment) in every round. Record the observed direction, competing evidence and why it may transfer to the frozen exposure and symptom.
 - Collect cultural and traditional practices, ceremonial accounts, local knowledge and public personal reports alongside formal studies. Preserve favorable, unfavorable and no-benefit accounts. Follow the [cultural and experiential record policy](research/Cultural-and-Experiential.md).
 - Store these records separately under each period's `Cultural-and-Experiential/` folder, using the source's publication date and an explicit date basis. Distinguish a historical practice's claimed age from the date of the document actually inspected.
 - Include relevant public Reddit and other forum discussions under `Cultural-and-Experiential/Conversations/`. Preserve the original thread locator, approximate or exact date basis and a privacy-safe account of what participants observed. Let the available source information determine the rest of the format.

@@ -5,7 +5,7 @@ program FoodExperimentReview;
 {$H+}
 
 uses
-  Classes, Generics.Collections, SysUtils, FPSha256
+  Classes, Generics.Collections, SysUtils, FPSha256, foodexperiment.confidence
   {$ifdef windows}, Windows{$endif};
 
 const
@@ -34,7 +34,7 @@ type
   TReview = record
     Seen: Boolean;
     Verdict: TVerdict;
-    Confidence: Integer;
+    Confidence: Currency;
     Rationale: UTF8String;
     References: UTF8String;
     SearchRecord: UTF8String;
@@ -409,28 +409,13 @@ begin
     LReview := Default(TReview);
     LReview.Seen := True;
     LReview.Verdict := ReadVerdict(LFields[1], String(LFields[0]));
-    LReview.Confidence := ReadInteger(LFields[2], 'confidence', 50, 100);
+    LReview.Confidence := ReadReviewConfidence(String(LFields[2]), VerdictNames[LReview.Verdict],
+      String(LFields[0]));
     LReview.Rationale := LFields[3];
     LReview.References := LFields[4];
     LReview.SearchRecord := LFields[5];
     LReview.LocalVerdict := ReadVerdict(LFields[6], String(LFields[0]) + ' local verdict');
     Require(Trim(LReview.Rationale) <> '', 'Missing rationale for ' + String(LFields[0]));
-    case LReview.Verdict of
-      vUnknown:
-      begin
-        Require(LReview.Confidence = 50, 'Unknown requires 50 confidence: ' + String(LFields[0]));
-      end;
-      vMaybeTrue, vMaybeFalse:
-      begin
-        Require((LReview.Confidence > 50) and (LReview.Confidence < 60),
-          'Maybe verdict requires confidence from 51 through 59: ' + String(LFields[0]));
-      end;
-      vTrue, vFalse:
-      begin
-        Require(LReview.Confidence >= 60, 'Definitive verdict requires at least 60: ' +
-          String(LFields[0]));
-      end;
-    end;
     LHasResearch := ValidateReferences(LReview.References, ARoot, AExperiment);
     if LReview.Verdict <> vUnknown then
     begin
@@ -467,7 +452,7 @@ function RenderReviewed(const AClaim: TClaim; const AReview: TReview): UTF8Strin
 begin
   Result := RenderClaimPrefix(AClaim) +
     RenderField(7, UTF8String(VerdictNames[AReview.Verdict])) +
-    RenderField(8, UTF8String(IntToStr(AReview.Confidence))) +
+    RenderField(8, UTF8String(ReviewConfidenceText(AReview.Confidence))) +
     RenderField(9, AReview.Rationale) +
     RenderField(10, AReview.References) +
     RenderField(11, AReview.SearchRecord);
@@ -747,7 +732,8 @@ begin
       LId := UTF8String(ClaimId(LIndex));
       LManifest := LManifest + '- [' + LId + '](statements/' + LId + '.txt) **' +
         UTF8String(VerdictNames[LVerdict]) + '** (' +
-        UTF8String(IntToStr(AReviews[LIndex].Confidence)) + '%) ' + AClaims[LIndex].Fields[6] + Lf;
+        UTF8String(ReviewConfidenceText(AReviews[LIndex].Confidence)) + '%) ' +
+        AClaims[LIndex].Fields[6] + Lf;
     end;
   end;
   ReplaceText(JoinPath(AExperiment, 'results-summary.tsv'), LTable);

@@ -34,7 +34,7 @@ type
     Direction: String;
     Statement: String;
     Verdict: String;
-    Confidence: Integer;
+    Confidence: Currency;
     Rationale: String;
     References: TJSONArray;
     Evidence: TJSONArray;
@@ -94,7 +94,7 @@ type
 implementation
 
 uses {$IFDEF WINDOWS}Windows,{$ENDIF} StrUtils, FPSHA256, foodexperiment.externaldata,
-  parkinsonsoracle.trend, wfc;
+  foodexperiment.confidence, parkinsonsoracle.trend, wfc;
 
 const
   CBase = 'experiments/1000_see_what_sticks_food';
@@ -235,7 +235,12 @@ begin
     'nonpending_assessments', AssessedRows, 'pending_assessments', PendingRows]);
   try
     if Confidence >= 0 then
-      Result.Add('confidence', Confidence);
+    begin
+      if Frac(Confidence) = 0 then
+        Result.Add('confidence', Trunc(Confidence))
+      else
+        Result.Add('confidence', Double(Confidence));
+    end;
     if QueuedPairs >= 0 then
     begin
       Result.Add('original_europe_pmc_pairs', OriginalPairs);
@@ -683,7 +688,6 @@ var
   LClaim: TClaim;
   LIndex: Integer;
   LField: String;
-  LThresholdValid: Boolean;
   LCanonical: String;
   LRoundClaims: Integer;
 
@@ -767,18 +771,12 @@ begin
         if LClaim.Confidence >= 0 then
           raise EConvertError.Create('Duplicate published verdict: ' + LClaim.Id);
         LClaim.Verdict := LFields[1];
-        LClaim.Confidence := StrToInt(LFields[2]);
+        LClaim.Confidence := ReadReviewConfidence(LFields[2], LClaim.Verdict, LClaim.Id);
         LClaim.Rationale := LFields[3];
-        LThresholdValid := False;
-        case IndexStr(LClaim.Verdict, ['Unknown', 'Maybe True', 'Maybe False', 'True', 'False']) of
-          0: LThresholdValid := LClaim.Confidence = 50;
-          1, 2: LThresholdValid := (LClaim.Confidence > 50) and (LClaim.Confidence < 60);
-          3, 4: LThresholdValid := (LClaim.Confidence >= 60) and (LClaim.Confidence <= 100);
-        end;
         for LField in SplitFields(LFields[4], '|') do
           if LField <> '' then
             LClaim.References.Add(LField);
-        if not LThresholdValid or (LClaim.IsDirectional and (LClaim.References.Count = 0)) then
+        if LClaim.IsDirectional and (LClaim.References.Count = 0) then
           raise EConvertError.Create('Invalid published verdict: ' + LClaim.Id);
         if LClaim.IsDirectional then
           Inc(FDirectional)
