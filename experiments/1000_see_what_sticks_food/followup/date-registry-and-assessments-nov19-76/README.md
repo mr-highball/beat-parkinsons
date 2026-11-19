@@ -1,0 +1,7 @@
+# Date-palm registry and evidence ledger follow-through
+
+The existing date-pain narrative had three official trial identifiers without standalone source records. The original English pages were recovered again and the registrations now have dated text records suitable for exact lookup. [Date-seed trial](../../../../research/2020-2024/Source-Text/Trials/IRCT20150205020965N9.txt) · [Whole Mazafati trial](../../../../research/2020-2024/Source-Text/Trials/IRCT20180708040381N1.txt) · [Topical knee comparison](../../../../research/2015-2019/Source-Text/Trials/IRCT20180126038510N1.txt)
+
+The registered exercise trial lists oxidative and performance outcomes. The separate published protocol includes pain, and the primary outcome publication has the checked two-week and 24-hour values. The trial, protocol and companion publications represent one study family. Six contextual records and two original-text refinements from the preceding checkpoint are available in the live assessment ledger after replay. The two pending clinical registrations retain their original study-family keys and now cite the dated registry records. [Evidence candidates and measures](../aro-and-clinical-archives-nov19-75/date-preparation-and-pain.md)
+
+The original analyses still leave both the whole-fruit menstrual pain results and the topical knee outcomes open. These trials would supply comparisons in different clinical populations. The current evidence does not warrant a change in the frozen dried-date and Parkinson pain verdict.

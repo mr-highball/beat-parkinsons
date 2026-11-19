@@ -2,6 +2,8 @@
 
 Twenty-seven Round 1 claims have a checked version 1 scorecard.
 
+The date-palm follow-through integrates six related source assessments and refines two existing study records at original depth. Three official registrations now resolve by exact identifier. The whole Mazafati pain study and the topical knee comparison still lack verified numerical results. [Trial identities and pain measurement](followup/date-registry-and-assessments-nov19-76/README.md).
+
 Seventeen original pairs advance at full-text depth across archived clinical sources and the ARO companion abstract. Its rotary reflex comparison uses existing freezing status. The new date-seed study reports lower 24-hour exercise soreness and an inconclusive immediate comparison. Fruit extracts, a jam preparation, and retained date-pit injuries supply distinct measured or reported outcomes. They leave the culinary Parkinson pain direction unresolved. [Original pairs and remaining research trails](followup/aro-and-clinical-archives-nov19-75/README.md).
 
 Eleven additional original claim–source pairs reach complete article, protocol or index depth. Eleven pairs retain access gaps. The original ONDRI and V81M reports give separate freezing questionnaire comparisons, and the recovered lemon balm extract table measures general activity and rotating-rod retention. Dried-date extract increased grooming duration in stressed rats, while its swim and locomotor contrasts were inconclusive. Neither animal study measured the frozen clinical outcome. The fig entry now distinguishes the three reported motor outcomes and retains the missing numerical tables. [Source decisions and search coverage](followup/shared-clinical-and-food-methods-nov19-74/README.md).
