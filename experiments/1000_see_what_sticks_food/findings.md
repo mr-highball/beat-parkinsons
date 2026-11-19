@@ -1,6 +1,8 @@
 ## Findings and limits
 
-Twenty-six Round 1 claims have a checked version 1 scorecard.
+Twenty-seven Round 1 claims have a checked version 1 scorecard.
+
+Ground saffron and Parkinson insomnia severity (0218) remains Maybe True at the checked 50.005 minimal-signal tier, replacing its earlier 51 rating. Two oral stigma extract comparisons outside Parkinson disease favor lower scores on distinct insomnia instruments. The Parkinson trial of ground Sargol powder reports overall sleep quality without a separate insomnia severity estimate. An older-adult ISI comparison and a new perimenopause global sleep comparison were inconclusive. The petal trial recorded three insomnia adverse events in each arm. [Checked evidence and open search trails](followup/saffron-petal-and-sleep-nov19-70/README.md).
 
 The checked brewed-coffee and Parkinson fatigue claim (0121) changes from Unknown to Maybe False at the 50.005 minimal-signal anchor against its frozen worsening direction. A randomized healthy-adult crossover found less acute mental fatigue with paper-filtered coffee than flavored water. An independent Parkinson caffeine-capsule trial gives favorable fatigue-scale point estimates with intervals spanning both directions. Regular-versus-decaf espresso had mixed individual responses, and the Turkish-coffee comparison was inconclusive. A new primary meal study shared espresso across both conditions and cannot identify its effect. Forty-two original pairs were reviewed at full-text depth across all four categories. [Checked comparisons and remaining trails](followup/clinical-coffee-context-nov19-69/README.md).
 
