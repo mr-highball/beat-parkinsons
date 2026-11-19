@@ -442,7 +442,8 @@ begin
   try
     LServer.Address := FBindAddress;
     LServer.Port := APort;
-    LServer.ThreadMode := tmThreadPool;
+    // The Windows FPC connection pool can spin and leave API requests unanswered.
+    LServer.ThreadMode := tmThread;
     LServer.KeepConnections := False;
     LServer.RequestReadTimeout := 5000;
     LServer.MaxLineLength := 8192;
