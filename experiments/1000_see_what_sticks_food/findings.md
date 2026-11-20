@@ -2,6 +2,8 @@
 
 Twenty-seven Round 1 claims have a checked version 1 scorecard.
 
+All 28 pinned 2014 source pairs now have body-level decisions. A full FDA clinical review distinguishes the ADVANCE-PD conversion and maintenance adverse-event terms. Thirteen related assessments cover clinical persistence, induced visual experiences, plant-model outcomes, and other preparations. Claim 0175 remains Unknown with 159 original pairs queued. [2014 originals and study lineage](followup/fig-priority-six-2014-nov19-98/README.md).
+
 Twenty-six of 27 pinned 2015 source pairs have full-body decisions. The AES supplement remains open after five individual original abstracts were verified. Fifteen related assessments distinguish medication conversion, diagnostic presence, perceptual tests and a botanical trial with a better motor total but worse resting tremor. Claim 0175 remains Unknown with 187 original pairs queued. [2015 original sources and remaining trails](followup/fig-priority-six-2015-nov19-97/README.md).
 
 Twenty-four of 25 original 2016 source pairs now have full-text decisions. The ANA issue remains open with separate society component scopes. The nilotinib reports distinguish adverse events and concurrent medication changes from visual episode measures. The published caregiver excerpts retain their source limits. A separate grapefruit juice comparison measures drug exposure in healthy adults. Claims 0175 and 0009 remain Unknown, with 213 original pairs open for 0175. [Originals, assessments and open trails](followup/fig-priority-six-2016-nov19-96/README.md).
