@@ -631,6 +631,7 @@ The Singapore total-diet papers and original supplement preserve measured black-
 - [Observations on lemon-balm preparations and behavioral measures](Observations/Food-Experiment-Lemon-Balm-Comparator-Crosscheck.md)
 - [Parkinson's UK Forum discussion about coffee, tremor and shoulder symptoms](Cultural-and-Experiential/Conversations/2024-Parkinsons-UK-Forum-Coffee-Tremor-and-Shoulder.txt).
 - [Observations on coffee and tremor in public conversations](Observations/Conversations-Coffee-and-Tremor.md).
+- [Ginger tea, supplements and contrasting bowel experiences](Observations/Ginger-Bowel-Conversations.md).
 - [Public discussion and firsthand lemon-balm tincture sleep report](Cultural-and-Experiential/Conversations/2024-Reddit-Lemon-Balm-Tincture-and-Sleep.txt).
 - [Brewed lemon balm and 24-hour ventricular ectopy in a randomized trial](Source-Text/2021-PMID34309987-Kheirkhah-Lemon-Balm-Tea-PVC-Abstract-Extract.txt).
 - [Reserpine, lemon-balm extract and a botanical combination in mice](Source-Text/2022-PMID35470926-Talebi-Lemon-Balm-Reserpine-Abstract-Extract.txt).

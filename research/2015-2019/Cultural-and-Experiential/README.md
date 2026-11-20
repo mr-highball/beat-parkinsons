@@ -19,6 +19,8 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Psychotic outpatient interviews on lemon-balm infusion](Personal-Reports/2018-PMID29556124-Serbia-Lemon-Balm-Psychiatric-Interviews.txt).
 - [Parkinson's UK Forum discussion about black coffee, mobility and tremor](Conversations/2019-Parkinsons-UK-Forum-Coffee-Mobility-and-Tremor.txt).
 - [Observations on coffee and tremor in public conversations](../Observations/Conversations-Coffee-and-Tremor.md).
+- [Ginger-containing smoothie in a Parkinson’s UK constipation discussion](Conversations/2018-Parkinsons-UK-Ginger-Smoothie-and-Constipation.txt).
+- [Observations on ginger preparations and bowel conversations](../Observations/Ginger-Bowel-Conversations.md).
 - [Shahrekord practitioner reports about lemon balm use for anxiety and depression](Traditional-Practices/2019-Teimouri-Shahrekord-Lemon-Balm-Traditional-Use.txt).
 
 - [A Parkinson UK conversation about banana or a biscuit for nausea](Conversations/2019-Parkinsons-UK-Banana-Nausea-Conversation.txt)

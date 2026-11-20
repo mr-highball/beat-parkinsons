@@ -602,6 +602,7 @@ The contaminant trail includes an original total-diet abstract, without a measur
 - [Psychotic outpatient interviews on lemon-balm infusion](Cultural-and-Experiential/Personal-Reports/2018-PMID29556124-Serbia-Lemon-Balm-Psychiatric-Interviews.txt)
 - [Parkinson's UK Forum discussion about black coffee, mobility and tremor](Cultural-and-Experiential/Conversations/2019-Parkinsons-UK-Forum-Coffee-Mobility-and-Tremor.txt).
 - [Observations on coffee and tremor in public conversations](Observations/Conversations-Coffee-and-Tremor.md).
+- [Ginger smoothie and bowel conversations](Observations/Ginger-Bowel-Conversations.md).
 - [Odor detection after intranasal oxytocin and the earlier clove comparison](Source-Text/2015-PMID25637811-Woolley-Olfaction-Study-Family.txt).
 - [Strawberry-flavored milk as a common reward in a mouse learning experiment](Source-Text/2017-PMID28143767-Higa-Strawberry-Flavor-Reinforcement.txt).
 - [Registered lemon balm, chamomile and black tea postoperative comparison](Source-Text/Trials/IRCT20170122032101N2.txt).

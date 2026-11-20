@@ -26,6 +26,10 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Niš ethnobotanical record of dried-leaf lemon-balm tea](Traditional-Practices/2024-Nis-Lemon-Balm-Leaf-Tea-Survey.txt).
 - [Parkinson's UK Forum discussion about coffee, tremor and shoulder symptoms](Conversations/2024-Parkinsons-UK-Forum-Coffee-Tremor-and-Shoulder.txt).
 - [Observations on coffee and tremor in public conversations](../Observations/Conversations-Coffee-and-Tremor.md).
+- [IBS conversation about ginger tea, chews and bowel symptoms](Conversations/2022-Reddit-IBS-Ginger-Tea-and-Bowel-Symptoms.txt).
+- [Reported constipation during a switch to ginger](Conversations/2024-Reddit-Ginger-After-Aloe-and-Constipation.txt).
+- [Mixed experiences with ginger capsules and bowel symptoms](Conversations/2024-Reddit-Ginger-Capsules-and-Mixed-Bowel-Experiences.txt).
+- [Observations on ginger and contrasting bowel experiences](../Observations/Ginger-Bowel-Conversations.md).
 - [Public discussion and firsthand lemon-balm tincture sleep report](Conversations/2024-Reddit-Lemon-Balm-Tincture-and-Sleep.txt).
 - [Observations on lemon-balm preparations and public discussions](../Observations/Lemon-Balm-Preparation-and-Conversations.md).
 - [Mustard and shaking in a modern Ayurvedic dietary interpretation](Traditional-Practices/2024-Mustard-and-Shaking-Ayurvedic-Dietary-Interpretation.txt).
