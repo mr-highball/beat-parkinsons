@@ -191,6 +191,7 @@ January 1, 2000 through December 31, 2004.
 The walnut-oil lipid trial is archived at author-abstract depth, with processing and between-group details still open. [2003 original abstract](Source-Text/2003-PMID12934760-Zibaeenezhad-Walnut-Oil-Lipids-Abstract-Extract.txt).
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+- [Jordanian market survey of sage leaf and intestinal pain](Cultural-and-Experiential/Traditional-Practices/2002-Lev-Amar-Jordan-Market-Sage-Leaf.txt).
 
 - [Acute standardized extract, calmness and reduced alertness in healthy volunteers](Source-Text/2004-PMID15272110-Kennedy-Stress-Abstract-Extract.txt)
 - [Coffee intake and glioma incidence in a managed-care cohort](Source-Text/2004-PMID15174522-Efird-Coffee-and-Glioma-Cohort-Abstract.txt).

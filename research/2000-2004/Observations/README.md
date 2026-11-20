@@ -1,5 +1,7 @@
 # Observations for 2000–2004
 
+The [Jordanian market survey](../Cultural-and-Experiential/Traditional-Practices/2002-Lev-Amar-Jordan-Market-Sage-Leaf.txt) records sellers' reports about *Salvia fruticosa* for intestinal pain. The [2010 common-sage experiment](../../2010-2014/Source-Text/2010-PMID20860437.txt) uses *Salvia officinalis* extracts and induced rodent pain. The two records document different species, exposures and outcomes.
+
 The [2001 standard](../Source-Text/2001-API-Phalgu-Dried-Root-Botanical-Identity.txt) distinguishes the monographs for Phalgu root and fruit. The [earlier translation](../../1945-1949/Cultural-and-Experiential/Traditional-Practices/1949-Caraka-Apasmara-Phalgu-Root-Translation.txt) uses a common English plant name. The [2001 thesis entry](../Source-Text/2001-Usha-Apasmara-Thesis-Identity.txt) supplies a separate clinical provenance trail, with primary comparison results still open.
 
 The [2004 doctoral survey](../Source-Text/2004-Zinedine-IMIST-Dried-Fig-Ochratoxin-Thesis.txt) found ochratoxin A below the method’s detection limit in its five fig samples. A separate [2007 report](../../2005-2009/Source-Text/2007-PMID17364931-Zinedine-Rabat-Sale-Dried-Fig-Ochratoxin.txt) records measurable values in some retail samples bought in 2005. The change in sample frame and detection details limits a direct temporal comparison.

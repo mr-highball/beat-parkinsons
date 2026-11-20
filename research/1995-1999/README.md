@@ -92,6 +92,7 @@ January 1, 1995 through December 31, 1999.
 - [Movement and rehabilitation](Movement-and-Rehabilitation.md)
 - [Risk and prevention](Risk-and-Prevention.md)
 - [Nonmotor and daily life](Nonmotor-and-Daily-Life.md)
+- [End-of-dose nonmotor symptoms and pain phenotypes](Source-Text/1996-PMID8909426-Hillen-Sage-Nonmotor-Fluctuations.txt)
 - [Community and care](Community-and-Care.md)
 - [History and context](History-and-Context.md)
 
