@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The next November 20 review resolved 181 original pairs across 19 complete sources. Fifty-six pairs remain open across SNO and UEG 2022. Eleven related assessments and 29 dated catalog records cover original proceedings, clinical companions and a trial registration. The original queue holds 44,723 pairs, including 35 for claim 0581. [Source review and cross-checks](followup/ginger-and-proceedings-2020-2022-nov20-129/README.md)
+The latest November 20 replay resolves 146 original pairs across 24 complete bodies and keeps 39 original 2025 UEG pairs open. Twenty-nine dated catalog records and ten related assessments distinguish French Parkinson cohort data, cultural indications and plant-vesicle research. The original queue holds 44,577 pairs, including 11 for claim 0581. [Originals, evidence boundaries and replay](followup/ginger-and-proceedings-2023-2026-nov20-130/README.md)
+
+The preceding November 20 review resolved 181 original pairs across 19 complete sources. Fifty-six pairs remain open across SNO and UEG 2022. Eleven related assessments and 29 dated catalog records cover original proceedings, clinical companions and a trial registration. At that checkpoint the original queue held 44,723 pairs, including 35 for claim 0581. [Source review and cross-checks](followup/ginger-and-proceedings-2020-2022-nov20-129/README.md)
 
 The November 20 review checked 22 originals and resolved 203 claim–source pairs. The 2016 reproductive proceedings retain 22 figure-access holds. Twelve related assessments and 24 dated catalog entries preserve cultural indications and animal studies of different tissues and outcomes. The original queue holds 44,904 pairs, including 54 for claim 0581. [Source receipts and replay](followup/ginger-and-proceedings-2010-2019-nov20-128/README.md)
 
