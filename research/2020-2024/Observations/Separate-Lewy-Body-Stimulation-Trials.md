@@ -1,0 +1,3 @@
+# Separate Lewy body stimulation trials
+
+The French crossover, NCT01340001, used three-month stimulation conditions and memory free recall as its primary outcome. The UK crossover, NCT02263937, used shorter periods and reports a separate hallucinations subscale within its neuropsychiatric instrument. The earlier Parkinson dementia trial, NCT01701544, is another study population. Keep the clinical comparisons and outcome scales attached to their original samples. [French trial](../Source-Text/PMC7884989.txt) · [UK trial](../Source-Text/2020-PMID32334074-Lewy-Body-Nucleus-Basalis-Trial.txt) · [Earlier Parkinson dementia trial](../../2015-2019/Source-Text/PMC5838617.txt).

@@ -141,3 +141,6 @@ January 1, 1995 through December 31, 1999.
 ## Clinical measurements and food preparation comparisons
 
 - [Age-group chart review and conflicting insomnia and dystonia cells](Source-Text/1996-PMID8879356-Age-Insomnia-and-Dystonia-Table.txt).
+
+
+[Early apomorphine and neuropsychiatric outcomes](Source-Text/1997-PMID18591063-Apomorphine-and-Neuropsychiatric-Complications.txt).

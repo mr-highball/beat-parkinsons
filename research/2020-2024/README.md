@@ -819,3 +819,6 @@ The conference and observational review links the separate visual outcomes, the 
 
 
 [Visual hallucination trial record lineage](Observations/Visual-Hallucination-Trial-Record-Lineage.md).
+
+
+[Separate Lewy body stimulation trials](Observations/Separate-Lewy-Body-Stimulation-Trials.md).

@@ -321,3 +321,6 @@ The original walnut-fraction crossover registration is bucketed by first public 
 ## Botanical preparations, experimental models and separate outcomes
 
 - [Crocetin and prolonged cycling performance in healthy adults](Source-Text/2009-PMID19358927-Mizuma-Crocetin-Exercise.txt).
+
+
+[Apomorphine clinical letter and original body access](Source-Text/2009-PMID19524477-Apomorphine-Visual-Hallucination-Letter-Access.txt).

@@ -501,3 +501,6 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 
 - [Clinical apathy, executive tasks and anxiety in the Grossi comparison](Source-Text/2013-PMID23242363-Apathy-Executive-Tests-and-Anxiety.txt).
 - [Date-extract jam and paw swelling](Source-Text/2012-Al-Okbi-Date-Extract-Jam-and-Arthritis.txt).
+
+
+[French Lewy body stimulation registration](Source-Text/Trials/NCT01340001.txt).

@@ -723,3 +723,6 @@ Two original first releases date to 2019, with 2020 journal issues. [Insular mor
 
 
 [Clinical stimulation and visual outcome definitions](Observations/Clinical-Stimulation-and-Visual-Outcome-Definitions.md).
+
+
+[Apomorphine treatment changes and visual events](Observations/Apomorphine-Treatment-Changes-and-Visual-Events.md).
