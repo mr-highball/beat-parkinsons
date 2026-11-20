@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 20 dried-fig preparation checkpoint adds six sources. The Taounate winter custom names dried fruit and olive oil. The Turkish and Rabat-Salé studies directly measure contaminants in food, while the Skoura paper reports fungi cultured from sampled fruit. Three new related assessments preserve these distinctions. Claim 0175 remains Unknown with 55 original pairs queued. [Food preparations, laboratory results and remaining access](followup/fig-drying-and-archive-nov20-117/README.md)
+
 The November 20 Taounate checkpoint identifies the 2003 primary excerpt and adds four cultural records. The 2010 bulletin identifies a sun-dried fruit preparation. The later tables distinguish food and fuelwood, grouped fruit and leaf entries, and a fruit row coded for powder and inhalation. The surveyed drying states and visual outcomes remain unresolved. Claim 0175 remains Unknown with 55 original pairs queued. [Verified sources and open trails](followup/fig-regional-evidence-nov20-116/README.md)
 
 The November 20 regional follow-up verifies two Moroccan fig survey entries and a Spanish flora account, with plant part, route and intended use preserved. Publisher excerpts verify flow and registry linkage for the Isfahan fig trial. Four multilingual Europe PMC expressions reached their reported end and returned zero results. The claim remains Unknown and the original queue is retained. [Regional sources and primary preview](followup/fig-cultural-and-human-exposures-nov20-115/README.md)

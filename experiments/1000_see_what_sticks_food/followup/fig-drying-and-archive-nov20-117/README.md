@@ -1,0 +1,7 @@
+# Dried fig practices and contaminant comparisons
+
+The 2005 UNIDO guide documents the Bouadel pilot. A separate 2009 Taounate report describes eating dried figs, often with olive oil, to withstand winter cold. Its maturity table cites the guide. The 2018 four-site inventory adds regional and cultivar context, including dried autumn figs from Bouhouda. The winter custom leaves drying method, olive oil grade, dose and clinical outcome open. [Source receipts](source-receipts.tsv) · [Winter custom](../../../../research/2005-2009/Cultural-and-Experiential/Traditional-Practices/2009-Jeddi-Taounate-Fig-and-Olive-Oil-Winter-Use.txt)
+
+Three laboratory studies cover preparation-level exposures. Two directly measured mycotoxins in distinct Turkish and Rabat-Salé market samples. The Skoura study cultured fungi from ten samples. Its 68% describes 30 of 44 isolates from two genera. It tested jam production and did not quantify toxins in the original or processed samples. The three studies contribute related evidence without a human ingestion, Parkinson diagnosis or visual episode endpoint. [Study assessments](assessments.tsv)
+
+Dried-fig claim 0175 remains Unknown with 55 original-source pairs queued. The six added records address some preparation and contaminant gaps, while the independently tracked clinical bodies and original 2003 Taounate table remain open. [Unresolved trails](open-trails.tsv) · [Oracle intake](oracle-first.tsv)
