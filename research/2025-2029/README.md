@@ -770,3 +770,5 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Probiotic delivery, kefir and millet](Source-Text/2026-PMC13359322-Probiotics-Review-Ginger-Kefir-and-Millet-Scope.txt).
 - [Gut–brain nanomedicine, tea and olive oil](Source-Text/2026-PMC13402341-Gut-Brain-Nanomedicine-Review-Culinary-Scope.txt).
 - [Turmeric pharmacognosy and botanical names](Source-Text/2026-PMC13670277-Turmeric-Pharmacognosy-and-Culinary-Names.txt).
+- [Parkinson constipation cohort, aggregate food measures and symptom outcome limits](Source-Text/2026-PMID41737295-Parkinson-Constipation-Cohort-and-Food-Scope.txt).
+- [Indian placebo trial of Helicobacter pylori treatment and Parkinson motor symptoms](Source-Text/2026-PMID42579018-HP-Eradication-Placebo-Trial.txt).

@@ -853,3 +853,5 @@ The conference and observational review links the separate visual outcomes, the 
 - [Plant vesicles, experimental delivery and brain research](Source-Text/2023-PMC11997602-Plant-Nanovesicle-Review-Brain-and-Food-Scope.txt).
 - [Broccoli-derived vesicles in a mouse constipation model](Source-Text/2023-PMID37875137-Broccoli-Vesicles-Mouse-Constipation.txt).
 - [Ginger-derived vesicles and curcumin for inflammatory bowel disease, official registration](Source-Text/Trials/NCT04879810.txt).
+- [Parkinson motor fluctuations after Helicobacter pylori treatment and the separate food covariate](Source-Text/2021-PMID33945559-HP-PD-Registry-and-Food-Scope.txt).
+- [Malaysian placebo trial of Helicobacter pylori treatment, primary motor outcome and registry comparison](Source-Text/2020-PMID32894625-HP-Eradication-Placebo-Trial.txt).
