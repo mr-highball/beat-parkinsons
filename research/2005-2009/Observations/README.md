@@ -1,5 +1,7 @@
 # Observations for 2005-2009
 
+The [2006 visual history and treatment observations](2006-Visual-History-Treatment-and-Diagnostic-Comparisons.md) compare symptom history, tissue diagnoses, clinical measurement and early medication evidence.
+
 The [2007 visual history and proceedings notes](2007-Visual-History-Symptom-Measurement-and-Proceedings.md) distinguish visual symptoms, gaze tracking, diagnostic scan ratings and individual conference members.
 
 The [2008 visual event and Spheramine observations](2008-Visual-Event-Definitions-and-Spheramine-Lineage.md) distinguish the pilot, randomized trial and autopsy report and retain different accounts of how visual symptoms resolved.

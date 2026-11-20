@@ -1,5 +1,7 @@
 # 2000-2004
 
+The open-label [rivastigmine](Source-Text/2001-PMID11748755-Rivastigmine-Parkinson-Psychosis.txt), [tacrine or donepezil](Source-Text/2001-PMID11768630-Cholinesterase-Cognition-and-Motor.txt), and [quetiapine](Source-Text/2004-PMID15090935-Quetiapine-Parkinson-Psychosis.txt) papers report distinct psychosis, cognition or motor outcomes. [2006 evidence comparison](../2005-2009/Observations/2006-Visual-History-Treatment-and-Diagnostic-Comparisons.md).
+
 Two 2004 FP-CIT papers use [clinical diagnosis groups](Source-Text/2004-PMID15210531-FP-CIT-Clinical-Diagnosis-Comparison.txt) and [statistical image maps](Source-Text/2004-PMID15528096-FP-CIT-Statistical-Mapping-Comparison.txt). [Comparison with the autopsy series and symptom measures](../2005-2009/Observations/2007-Visual-History-Symptom-Measurement-and-Proceedings.md).
 
 The [six-month Spheramine pilot report](Source-Text/2004-PMID14766394-Spheramine-Six-Month-Pilot.txt) describes the initial clinical follow-up of six participants. [Comparison with the later pilot and randomized reports](../2005-2009/Observations/2008-Visual-Event-Definitions-and-Spheramine-Lineage.md).
