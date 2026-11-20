@@ -579,6 +579,8 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Antioxidant, anti-inflammatory and cytoprotective effects of crocin in Alzheimer's and Parkinson's diseases](Source-Text/PMC13092161.txt).
 - [Original drooling program registration](Source-Text/Trials/ChiCTR2500096034.txt).
 - [Parkinson drooling patient journey interviews](Source-Text/PMC12999412.txt).
+- [Parkinson drooling impact and separately measured salivary flow](Source-Text/2025-PMID40257190-Nascimento-Drooling-and-Salivary-Flow.txt).
+- [Restless legs, swallowing and drooling outcomes in Parkinson disease](Source-Text/2025-PMID40684087-Restless-Legs-and-Sialorrhea-Scale.txt).
 
 ## Clinical cohorts, comparison groups and endpoint definitions
 

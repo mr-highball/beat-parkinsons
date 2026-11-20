@@ -65,6 +65,7 @@ January 1, 2000 through December 31, 2004.
 - [Rosemary preparations and mood outcomes](Food-Experiment-Rosemary-Preparation-and-Mood.md)
 - [Clinical symptom measures and case boundaries](Food-Experiment-Ranked-Symptom-and-Case-Context.md)
 - [Hallucinations, drooling and pain in a Parkinson surgery series](Food-Experiment-Recovered-Parkinson-Clinical-Context.md)
+- [Fig oral allergy challenge cases](Source-Text/2003-PMID12811022-Antico-Fig-Oral-Allergy-Challenges.txt)
 - [Shiso and perilla follow-up](Food-Experiment-Shiso-Followup.md)
 
 - [Oral ginger preparations and measured pain](Food-Experiment-Ginger-Pain-Origins.md)

@@ -248,6 +248,7 @@ January 1, 2020 through December 31, 2024.
 - [Blackberry preparations and pain outcomes](Food-Experiment-Blackberry-Pain.md)
 - [Tomato preparations and cognitive outcomes](Food-Experiment-Tomato-Cognition.md)
 - [Fig clinical outcomes and animal evidence](Food-Experiment-Fig-Clinical-and-Model-Traces.md)
+- [Saliva and drooling item in the pooled phase 3 amantadine trials](Source-Text/2021-PMID34024025-Gocovri-Pooled-Saliva-and-Drooling-Item.txt)
 - [Black tea extracts and animal motor tests](Food-Experiment-Black-Tea-Animal-Motor.md)
 - [Black pepper preparations and measured clinical outcomes](Food-Experiment-Black-Pepper-Clinical-Outcomes.md)
 - [Black pepper in multicomponent clinical preparations](Food-Experiment-Black-Pepper-Clinical-Addendum.md)

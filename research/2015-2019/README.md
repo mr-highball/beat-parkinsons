@@ -241,6 +241,8 @@ January 1, 2015 through December 31, 2019.
 - [Tomato, lycopene, gait and stride](Food-Experiment-Tomato-Stride.md)
 - [Blackberry preparations and pain outcomes](Food-Experiment-Blackberry-Pain.md)
 - [Fig clinical outcomes and animal evidence](Food-Experiment-Fig-Clinical-and-Model-Traces.md)
+- [Dysphagia and oral levodopa transport in a Parkinson case](Source-Text/2018-PMID29681829-Dysphagia-and-Oral-Levodopa-Fluctuations.txt)
+- [Parkinson dietary survey, microbiome and sialorrhea measurement](Source-Text/2019-PMID31221587-Aho-Dietary-Survey-and-Sialorrhea.txt)
 - [Black pepper preparations and measured clinical outcomes](Food-Experiment-Black-Pepper-Clinical-Outcomes.md)
 - [Black pepper in multicomponent clinical preparations](Food-Experiment-Black-Pepper-Clinical-Addendum.md)
 - [Black tea, walking and tremor](Food-Experiment-Black-Tea-Motor.md)

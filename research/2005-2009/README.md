@@ -192,6 +192,7 @@ January 1, 2005 through December 31, 2009.
 - [Broad bean correspondence](Food-Experiment-Broad-Bean-Citation-Followup.md)
 - [Cocoa and blood-pressure comparisons](Food-Experiment-Cocoa-Blood-Pressure-Followup.md)
 - [Enteral nutrition and Parkinson symptoms](Food-Experiment-Clinical-Nutrition-Followup.md)
+- [Drooling and perioral dermatitis in a Parkinson case](Source-Text/2009-PMID19412723-Bloem-Drooling-and-Perioral-Dermatitis.txt)
 - [Food experiment evidence](Food-Experiment-Evidence.md)
 - [Dietary and botanical ClinicalTrials.gov leads](Food-Experiment-WHO-CTG-Followup.md)
 - [Dietary and botanical leads from WHO ICTRP](Food-Experiment-WHO-ICTRP-Followup.md)
