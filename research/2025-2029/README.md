@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [French DUMP cohort](Source-Text/2025-PMID40062736-DUMP-Ginger-Use-and-Registration.txt) includes an observation of ginger use for nausea and an inconsistent registration ID. The [period’s cultural records](Cultural-and-Experiential/README.md) include Brunei postpartum practices and a Guadeloupe botanical survey.
+
 The [Parkinson gastrointestinal narrative review](Source-Text/2025-PMID40823476-Parkinson-GI-Formula-Cohort-Scope.txt) links Daikenchuto, Rikkunshi-to, STW5 and DA-9701 to separate original reports. The local note records the repeated Daikenchuto cohort and the caraway and jujube identities.
 
 The [CHAMPION anesthesia outcomes](Source-Text/2026-PMID42102350-CHAMPION-Anesthesia-Results.txt) link the 2026 primary publication to its earlier protocol. The abstract reports the signal-quality and motor-score comparisons. Pain-specific post-surgery measurements and the full participant flow remain open.

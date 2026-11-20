@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [2018 DUMP umbrella registration](Source-Text/Trials/EUPAS26319.txt) documents three French prescribing studies. The separately registered cross-sectional component links to the [2025 Parkinson cohort](../2025-2029/Source-Text/2025-PMID40062736-DUMP-Ginger-Use-and-Registration.txt).
+
 The [2017 ginger-extract report](Source-Text/2017-Dass-Ginger-Extract-Rhodes-and-Heartburn.txt) gives a before-and-after pregnancy nausea score and four heartburn reports. The later pharmacology abstract appears to describe the same cohort.
 
 The [2018 ginger contractility study](Source-Text/2018-PMC5954582-Ginger-Small-Intestinal-Contractility.txt) distinguished prior oral exposure from direct application to excised rat small intestine. The [period’s cultural sources](Cultural-and-Experiential/README.md) include the Trinidad plant survey and the Chinese zongzi wrapper survey.

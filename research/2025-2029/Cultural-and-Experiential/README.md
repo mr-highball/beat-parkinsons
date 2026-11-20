@@ -1,5 +1,8 @@
 # Cultural and experiential accounts, 2025-2029
 
+- [Brunei postpartum uses of ginger and other culinary ingredients](Traditional-Practices/2025-Brunei-Postpartum-Ginger-Spices-and-Food.txt).
+- [Guadeloupe botanical knowledge and reported mosquito-control uses](Local-Knowledge/2025-Guadeloupe-Plant-Use-and-Mosquito-Reports.txt).
+
 - [Sierra de Baza fig study custom and figwood smoke belief, captured in 2026](Local-Knowledge/2026-Sierra-de-Baza-Fig-Study-and-Smoke-Beliefs.txt).
 
 - [Mayurbhanj culinary and topical peanut-oil use](Traditional-Practices/2025-Odisha-Peanut-Oil-Cooking-and-Massage-Uses.txt).

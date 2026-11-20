@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [2024 canna resistant-starch study](Source-Text/2024-PMID39347419-Canna-Starch-Parkinson-Rat-Model.txt) measured behavior and tissue outcomes in a Parkinson model. Banana yam and ginger yam refer to the canna plant in that study.
+
 The [Zhang 2022 journal report](Source-Text/2022-Zhang-Ginger-Evodia-Postoperative-First-Stool.txt) and [UEG poster P1009](Source-Text/2022-UEG-P1009-Ginger-Evodia-Postoperative-Recovery.txt) report postoperative bowel recovery for a topical combination. A [2023 companion abstract](Source-Text/2023-Zhang-Ginger-Evodia-Postoperative-Hormones-Abstract.txt) adds hormone and complication endpoints with likely cohort overlap. A [2021 timing comparison](Source-Text/2021-Zhang-Herbal-Hot-Pack-Postoperative-Timing-Abstract.txt) uses a separate three-arm protocol.
 
 The conference access records cover [Japanese anatomy and physiology](Source-Text/2021-PMC8373421-Anatomy-Physiology-Meeting-Food-Scope.txt), [Indian pharmacology](Source-Text/2021-PMC9045589-Pharmacology-Prize-Papers-Food-Scope.txt), [EuGMS](Source-Text/2021-PMC8689573-Conference-Scope.txt), [SNO](Source-Text/2021-PMC8598757-SNO-Proceedings-Access-Receipt.txt) and [UEG 2022](Source-Text/2022-PMC9548091-UEG-Lemon-Balm-Blend-Members.txt). The SNO and UEG receipts preserve unresolved whole-collection screening.
