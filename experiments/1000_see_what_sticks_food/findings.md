@@ -2,6 +2,8 @@
 
 Twenty-seven Round 1 claims have a checked version 1 scorecard.
 
+Twenty-four of 25 original 2016 source pairs now have full-text decisions. The ANA issue remains open with separate society component scopes. The nilotinib reports distinguish adverse events and concurrent medication changes from visual episode measures. The published caregiver excerpts retain their source limits. A separate grapefruit juice comparison measures drug exposure in healthy adults. Claims 0175 and 0009 remain Unknown, with 213 original pairs open for 0175. [Originals, assessments and open trails](followup/fig-priority-six-2016-nov19-96/README.md).
+
 Thirty-three of 34 original source pairs in the 2017 provider-date group have full-text decisions. The ANA conference pair stays open after partial member access. The BNA poster and journal paper distinguish enrollment and analysis denominators. USDA identifies four minerals in dried figs that were also measured in a separate postmortem tissue study, with no measured connection to visual episodes. Claim 0175 remains Unknown with 237 original pairs open. [Originals, study lineage and remaining access](followup/fig-priority-six-2017-nov19-95/README.md).
 
 All 36 original source pairs in the 2018 provider-date group now have full-body decisions. Earlier apomorphine reports describe both improvement and worsening in visual hallucinations while other medicines changed. Two cohorts recruited at the same center during overlapping periods. The original French stimulation report identifies a separate six-person trial. These clinical records supply no dried fig intake comparison. Claim 0175 remains Unknown with 270 original pairs open. [Originals, companion sources and open trails](followup/fig-priority-six-2018-nov19-94/README.md).
