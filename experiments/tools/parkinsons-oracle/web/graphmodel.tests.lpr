@@ -8,6 +8,12 @@ uses SysUtils, JS, oraclegraphmodel, oraclegraphdata;
 var
   GChecks: Integer;
 
+const
+  CConversation = 'research/2025-2029/Cultural-and-Experiential/Conversations/' +
+    '2025-Reddit-Levodopa-Caffeine-and-Tremor.txt';
+  CUnlinkedCulture = 'research/1995-1999/Cultural-and-Experiential/Ceremonial-Accounts/' +
+    '1999-UDV-Hoasca-Research-Setting.txt';
+
 { Node's built-in crypto hashes the generated UTF-8 text; it supplies no model logic. }
 function HostDigest(const AText: String): String;
 begin
@@ -78,6 +84,17 @@ begin
   LModel := TOracleGraphModel.Create(LData);
   try
     Check(LModel.Revision = GraphText(LData, 'revision'), 'Graph revision matches model.');
+    Check(GraphRows(LData, 'culture_sources').Length > 0,
+      'The published model includes the dedicated cultural collection.');
+    Check(GraphText(LModel.Node(GraphKey('source', CUnlinkedCulture)), 'kind') = 'culture',
+      'A cultural account with no annotated topic still has a readable graph node.');
+    Check(LModel.Connections(GraphKey('source', CUnlinkedCulture)).Length = 0,
+      'An unannotated account does not acquire an invented connection.');
+    LEdge := FindEdge(LModel.Neighbors(GraphKey('source', CConversation)),
+      GraphKey('source', CConversation) + '/topic/' + GraphKey('symptom', 'rest tremor severity'));
+    Check((LEdge <> nil) and (GraphText(LEdge, 'trend') = '') and
+      (GraphEdgeTone(LEdge) = 'cultural') and (TJSObject(LEdge['claim']) = nil),
+      'A conversational topic links to its symptom without a verdict or directional arrow.');
     LRows := LModel.Neighbors('symptom:rest tremor severity');
     Check(CountKind(LRows, 'claim') = 210, 'All tremor hypotheses are available without a hidden cap.');
     Check(CountKind(LRows, 'outcome') > 0, 'A symptom links back to studies that assessed it.');

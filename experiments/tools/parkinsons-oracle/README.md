@@ -103,6 +103,10 @@ Omit the study key and both assessment paging arguments to return the full evide
 
 ### Cultural and conversational lookup
 
+Claim lookups and symptom or ingredient queries include a `culture_sources` array in the same response. Each record supplies a local path, its source kind, the available date and original URL, a short summary, and the account’s stated limits when recorded. The `ingredient_match` and `symptom_match` flags identify the matched topics. The account's recorded direction and the study verdict retain their own fields. Catalog lookup also returns a `cultural` metadata object for each matching account.
+
+The [cultural graph topic table](cultural-graph-topics.tsv) connects reviewed accounts to the existing ingredient and symptom vocabulary. Link labels describe the topic discussed, which can be broader than the exact preparation or symptom in an experimental claim. All committed cultural text records enter the graph, including accounts awaiting topic annotation. Open any cultural catalog card's connections to read the account and follow its available topics.
+
 Use `oracle_search_catalog` before broader file searches or web discovery. Search by source category and use the text terms for the exposure or outcome.
 
 | `source_kind` | Indexed collection |
@@ -232,7 +236,7 @@ The browser initially includes all findings, Unknowns and frozen questions await
 
 Cultural and personal records have their own styling and original line glyph, with source type, date, reported experience and uncertainty in the text record. The collection follows the [cultural and experiential policy](../../../research/Cultural-and-Experiential.md). Older source material still awaiting cultural curation remains discoverable in All research and Search sources. A collection gap does not establish absence of a practice.
 
-Public forum summaries appear in Culture & experience and Search sources with a Conversation badge and chat-bubble glyph. The live reader links to the original discussion when the archived header supplies an HTTPS source. The portable model links to the archived record through the configured repository.
+Public forum summaries appear in Culture & experience and Search sources with a Conversation badge and chat-bubble glyph. The live reader links to the original article or discussion when the archived header supplies a web address. Web addresses in the visible source text are also clickable and open in a new tab. The portable model links to the archived record through the configured repository.
 
 Source-kind paging examines catalog batches until the page is filled or the result set ends. A nonmatching batch does not close the search, and cursor positions retain unconsumed rows. The shared Pascal presentation unit has native fixtures for source classification, query terms and pagination boundaries. Browser assets use Nyx and the web target. Fourteen distinct [imagegen glyph masters and their prompts](web/assets/glyphs/README.md) supply the navigation, research tabs, evidence indicators and helper controls. The native build embeds lossless alpha masks into the stylesheet, so portable builds need no image endpoint.
 
@@ -250,7 +254,7 @@ Study titles and saved references in claim details are clickable. The live app o
 
 Choose **Graph view** from symptom and ingredient results or **See connections** on a claim or a catalog source. A claim can open the graph at its ingredient or a specific study. The live reader can also open the graph for a saved source. Back returns to the view that opened the graph, including when a second graph is opened from a source or claim. Portable source links open the configured repository in a separate tab.
 
-The Nyx canvas arranges entities in symptom, ingredient, study and saved-source groups. Each group uses a distinct glyph and shaded card. Selecting a node highlights its connections and leaves the surrounding links visible. Links fan out from separate points along each card, and diamonds and arrows mark the start and destination of highlighted evidence links. Select any node to explore its recorded connections in either direction. The list below the canvas has one card per connected item, with all its assessments and counts for each group. Use the previous-node button to retrace a link, or **Focus this branch** to redraw around the selected item. Open hypotheses remain available. The results view separates ingredient claims from catalog sources, and claim details group evaluated, related and pending evidence.
+The Nyx canvas arranges entities in symptom, ingredient, study, saved-source and cultural-account groups. Each group uses a distinct glyph and shaded card. Selecting a node highlights its connections and leaves the surrounding links visible. Links fan out from separate points along each card, and diamonds and arrows mark the start and destination of highlighted evidence links. Select any node to explore its recorded connections in either direction. The list below the canvas has one card per connected item, with all its assessments and counts for each group. Use the previous-node button to retrace a link, or **Focus this branch** to redraw around the selected item. Open hypotheses remain available. The results view separates ingredient claims from catalog sources, and claim details group evaluated, related and pending evidence.
 
 On a narrow screen the graph opens top-to-bottom so the selected node and its first connection are readable together. Within the canvas, drag with one finger to pan or pinch with two fingers to zoom. A short stationary tap opens a node. The surrounding page uses the browser's normal touch behavior. Home centers the selected node at readable size, and Fit content shows the entire explored web.
 

@@ -35,12 +35,16 @@ const
   CCultureDirectory = '/cultural-and-experiential/';
 
 function IsInCulturalDirectory(const APath, ADirectory: String): Boolean;
+const
+  CResearchPrefix = 'research/';
 var
   LPath: String;
+  LPeriodEnd: Integer;
 begin
   LPath := LowerCase(StringReplace(APath, '\', '/', [rfReplaceAll]));
-  Result := (Pos('research/', LPath) = 1) and
-    (Pos(ADirectory, LPath) > Length('research/'));
+  LPeriodEnd := Pos('/', Copy(LPath, Length(CResearchPrefix) + 1, MaxInt));
+  Result := (Pos(CResearchPrefix, LPath) = 1) and (LPeriodEnd > 1) and
+    (Copy(LPath, Length(CResearchPrefix) + LPeriodEnd, Length(ADirectory)) = ADirectory);
 end;
 
 function IsCulturalSource(const APath: String): Boolean;

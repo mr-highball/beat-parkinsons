@@ -6,7 +6,7 @@ program OracleWeb;
 {$codepage utf8}
 
 uses
-  SysUtils, StrUtils, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
+  SysUtils, StrUtils, Types, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
   oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation,
   parkinsonsoracle.selection, parkinsonsoracle.graph, oraclemulti, oraclegraph,
   oraclegraphdata, oraclegraphmodel, oraclegallery;
@@ -17,6 +17,7 @@ type
 
 const
   CPageSize = 8;
+  CSourceURLPattern = 'https?://[^\s<>\[\]{}"''\x60]+';
   CTextInputs: array[0..1] of String = ('terms', 'period');
   CQuickSymptoms: array[0..4] of String = ('rest tremor severity', 'constipation severity',
     'fatigue severity', 'insomnia severity', 'pain severity');
@@ -803,28 +804,110 @@ begin
     end);
 end;
 
-function ConversationURL(const AText: String): String;
+function ExternalSourceURL(const AValue: String): String;
+var
+  LURL: TJSURL;
+begin
+  Result := '';
+  if not StartsText('https://', AValue) and not StartsText('http://', AValue) then
+    Exit;
+  try
+    LURL := TJSURL.new(AValue);
+    if (LURL.hostname <> '') and (LURL.username = '') and (LURL.password = '') then
+      Result := LURL.href;
+  except
+    Exit;
+  end;
+end;
+
+function SourceURLText(const AToken: String): String;
+var
+  LChar: Char;
+  LParens: Integer;
+  LLength: Integer;
+begin
+  LParens := 0;
+  for LChar in AToken do
+    case LChar of
+      '(': Inc(LParens);
+      ')': Dec(LParens);
+    end;
+  LLength := Length(AToken);
+  while LLength > 0 do
+    case AToken[LLength] of
+      '.', ',', ';', ':', '!', '?': Dec(LLength);
+      ')':
+        if LParens < 0 then
+        begin
+          Inc(LParens);
+          Dec(LLength);
+        end
+        else
+          Break;
+    else
+      Break;
+    end;
+  Result := Copy(AToken, 1, LLength);
+end;
+
+function OriginalSourceURL(const AText: String): String;
 var
   LLine: String;
-  LURL: String;
+  LMatch: TStringDynArray;
 begin
   Result := '';
   for LLine in SplitString(AText, #10) do
   begin
     if Trim(LLine) = '' then
-    begin
       Exit;
-    end;
     if StartsText('Source:', LLine) then
     begin
-      LURL := Trim(Copy(LLine, Length('Source:') + 1, MaxInt));
-      if StartsText('https://', LURL) then
-      begin
-        Result := LURL;
-      end;
+      LMatch := TJSRegexp.new(CSourceURLPattern, 'i')
+        .exec(Trim(Copy(LLine, Length('Source:') + 1, MaxInt)));
+      if LMatch <> nil then
+        Result := ExternalSourceURL(SourceURLText(LMatch[0]));
       Exit;
     end;
   end;
+end;
+
+procedure PopulateSourceLinks(AHost: TJSHTMLElement; const AText: String; AHasNext: Boolean);
+var
+  LPattern: TJSRegexp;
+  LMatch: TStringDynArray;
+  LBody: TJSHTMLElement;
+  LLink: TJSHTMLAnchorElement;
+  LStart: Integer;
+  LCursor: Integer;
+  LLabel: String;
+  LURL: String;
+begin
+  LBody := TJSHTMLElement(document.createElement('pre'));
+  LPattern := TJSRegexp.new(CSourceURLPattern, 'gi');
+  LCursor := 1;
+  LMatch := LPattern.exec(AText);
+  while LMatch <> nil do
+  begin
+    if AHasNext and (LPattern.lastIndex = Length(AText)) then
+      Break;
+    LStart := LPattern.lastIndex - Length(LMatch[0]) + 1;
+    LLabel := SourceURLText(LMatch[0]);
+    LURL := ExternalSourceURL(LLabel);
+    if LURL <> '' then
+    begin
+      LBody.appendChild(document.createTextNode(Copy(AText, LCursor, LStart - LCursor)));
+      LLink := TJSHTMLAnchorElement(document.createElement('a'));
+      LLink.href := LURL;
+      LLink.textContent := LLabel;
+      LLink.target := '_blank';
+      LLink.rel := 'noopener noreferrer';
+      LBody.appendChild(LLink);
+      LCursor := LStart + Length(LLabel);
+    end;
+    LMatch := LPattern.exec(AText);
+  end;
+  LBody.appendChild(document.createTextNode(Copy(AText, LCursor, MaxInt)));
+  AHost.appendChild(LBody);
 end;
 
 procedure OpenSource(const APath: String; const AOffsets: TSourceOffsets; AReturn: TPickerAction);
@@ -849,6 +932,7 @@ begin
       LNext: Integer;
       LText: String;
       LOriginalURL: String;
+      LOriginalCaption: String;
       LHasPrevious: Boolean;
       LHasNext: Boolean;
       LCanExplore: Boolean;
@@ -876,13 +960,17 @@ begin
       LHasPrevious := (AError = '') and (Length(AOffsets) > 1);
       LHasNext := (AError = '') and (LNext > LOffset);
       LText := TextOf(AData, 'text');
-      if IsConversationSource(APath) and (LOffset = 0) then
+      if (AError = '') and (LOffset = 0) then
       begin
-        LOriginalURL := ConversationURL(LText);
+        LOriginalURL := OriginalSourceURL(LText);
         if LOriginalURL <> '' then
         begin
-          LPage.Add(Section(nkLink, 'original-conversation').Configure
-            .Text('Open original discussion').LinkTo(LOriginalURL).Done);
+          if IsConversationSource(APath) then
+            LOriginalCaption := 'Open original discussion'
+          else
+            LOriginalCaption := 'Open original source';
+          LPage.Add(Section(nkLink, 'original-source').Configure
+            .Text(LOriginalCaption).LinkTo(LOriginalURL).Done);
         end;
       end;
       LCanExplore := (AError = '') and (LText <> '');
@@ -895,7 +983,7 @@ begin
         if LCanExplore then
           LPage.Add(Button('source-connections', 'Explore source connections', nvSecondary));
         if LText <> '' then
-          LPage.Add(Caption(nkCode, 'source-body', LText))
+          LPage.Add(Section(nkColumn, 'source-body'))
         else
           LPage.Add(Caption(nkLabel, 'result-message', 'This file has no text.'));
       end;
@@ -911,10 +999,10 @@ begin
       PublishResults(LDocument, LPage);
       FocusResults;
       if LOriginalURL <> '' then
-      begin
-        SetExternalLink('original-conversation');
-      end;
+        SetExternalLink('original-source');
       if LCanExplore then
+      begin
+        PopulateSourceLinks(GResultsRenderer.ElementFor('source-body'), LText, LHasNext);
         BindEvent(GResultsRenderer.ElementFor('source-connections'), 'click',
           function(AEvent: TEventListenerEvent): Boolean
           begin
@@ -925,6 +1013,7 @@ begin
               end);
             Result := True;
           end);
+      end;
       BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
         function(AEvent: TEventListenerEvent): Boolean
         begin

@@ -73,6 +73,35 @@ begin
   end;
 end;
 
+procedure CheckCulturalMetadata(ACatalog: TResearchCatalog);
+var
+  LPage: TJSONObject;
+  LSource: TJSONObject;
+  LRecord: TJSONObject;
+begin
+  LPage := ACatalog.Search('coffee tremor', '2020-2024', 0, 2, 'conversations');
+  try
+    LRecord := LPage.Arrays['matches'].Objects[0].Objects['cultural'];
+    if (LRecord.Strings['title'] <> 'Discussion citing a paper') or
+      (LRecord.Strings['collection'] <> 'conversations') or
+      (LRecord.Strings['source_url'] <>
+        'https://example.org/pmc.ncbi.nlm.nih.gov/articles/PMC85000001/') or
+      (LRecord.Strings['summary'] <> CText) or
+      (LRecord.Strings['evidence_role'] <> 'cultural_context') then
+      raise Exception.Create('The catalog response must include the cultural record summary.');
+    LSource := ACatalog.ReadSource(CForum, 0);
+    try
+      if LSource.Objects['cultural'].AsJSON <> LRecord.AsJSON then
+        raise Exception.Create('Direct source reads must expose the same cultural metadata.');
+    finally
+      LSource.Free;
+    end;
+    Inc(GChecks);
+  finally
+    LPage.Free;
+  end;
+end;
+
 procedure CheckIdentifier(ACatalog: TResearchCatalog; const AIdentifier, APath: String);
 var
   LIds: TJSONArray;
@@ -141,6 +170,7 @@ begin
     CheckPage(LCatalog, 'personal_reports', '', 0, 2, 1, -1, [CPersonal]);
     CheckPage(LCatalog, 'local_knowledge', '', 0, 2, 1, -1, [CLocal]);
     CheckPage(LCatalog, 'source_text', '2020-2024', 0, 2, 1, -1, [CArchive]);
+    CheckCulturalMetadata(LCatalog);
     CheckIdentifier(LCatalog, 'PMID:85000001', CLocal);
     CheckIdentifier(LCatalog, 'PMCID:PMC85000001', CLocal);
     CheckIdentifier(LCatalog, 'DOI:10.1234/food-use', CLocal);

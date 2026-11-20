@@ -39,7 +39,7 @@ const
       '"additionalProperties":false,"required":["symptoms"],"properties":{"symptoms":{' +
       '"type":"array","minItems":1,"items":{"type":"string","minLength":1}}}}},' +
     '{"name":"oracle_claim","description":"Read one frozen claim with its rationale, study ' +
-      'assessments, citations and queue counts. Use assessment_limit for a smaller first reply ' +
+      'assessments, citations, queue counts and matching cultural source summaries. Use assessment_limit for a smaller first reply ' +
       'and next_assessment_offset to continue. Use assessment_study in place of pagination ' +
       'to select one exact case-sensitive ledger key. With neither, all assessments are returned.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
@@ -71,7 +71,7 @@ const
       '"decision_tsv":{"type":"string","minLength":1},"sources_tsv":{"type":"string","minLength":1}}}},' +
     '{"name":"oracle_search_catalog","description":"Search the local research text index with ' +
       'literal terms. Use source_kind to find dated cultural records, public forum conversations, ' +
-      'or archived study and registry texts. Word matches are discovery leads.",' +
+      'or archived study and registry texts. Cultural hits include source metadata and a summary.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
       '"additionalProperties":false,"required":["terms"],"properties":{"terms":{"type":"string"},' +
       '"period":{"type":"string","pattern":"^[0-9]{4}-[0-9]{4}$"},' +

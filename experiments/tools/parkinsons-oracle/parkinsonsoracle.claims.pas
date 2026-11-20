@@ -68,6 +68,7 @@ type
     FByIngredient: TObjectDictionary<String, TList<TClaim>>;
     FSymptomAliases: TDictionary<String, String>;
     FIngredientAliases: TDictionary<String, String>;
+    FCulturalSources: TJSONArray;
     FSourceRows: Integer;
     FDirectional: Integer;
     FUnknown: Integer;
@@ -84,6 +85,8 @@ type
     {$ENDIF}
     function Git(const AArguments: array of String): String;
     function ReadBlob(AProcess: TProcess; const APath: String): String;
+    function LoadCulturalSources: TJSONArray;
+    function CulturalMatches(const ASymptom, AIngredient: String): TJSONArray;
     procedure LoadRound(ARound: Integer; AProcess: TProcess; APublishedTables: TStrings);
   public
     constructor Create(const ARepoRoot: String);
@@ -106,7 +109,7 @@ implementation
 
 uses {$IFDEF WINDOWS}Windows,{$ENDIF} StrUtils, FPSHA256, foodexperiment.externaldata,
   foodexperiment.confidence, parkinsonsoracle.trend, parkinsonsoracle.rubric,
-  parkinsonsoracle.ingredients, wfc;
+  parkinsonsoracle.ingredients, parkinsonsoracle.presentation, parkinsonsoracle.culture, wfc;
 
 const
   CBase = 'experiments/1000_see_what_sticks_food';
@@ -638,6 +641,7 @@ end;
 
 destructor TClaimIndex.Destroy;
 begin
+  FCulturalSources.Free;
   FIngredientAliases.Free;
   FSymptomAliases.Free;
   FByIngredient.Free;
@@ -887,6 +891,12 @@ begin
   Result := LClaim.View(True, AAssessmentOffset, AAssessmentLimit, AAssessmentStudy);
   Result.Add('revision', FRevision);
   Result.Add('found', True);
+  try
+    Result.Add('culture_sources', CulturalMatches(LClaim.Symptom, LClaim.Ingredient));
+  except
+    Result.Free;
+    raise;
+  end;
 end;
 
 function TClaimIndex.EvidenceRubric(ARound: Integer; const AId: String;
@@ -1195,6 +1205,12 @@ begin
         'offset', LQuery.Offset, 'identity_excluded', LResolved.IdentityExcluded,
         'hypothesis_excluded', LResolved.PremiseExcluded,
         'evidence_excluded', LResolved.EvidenceExcluded]);
+      try
+        Result.Add('culture_sources', CulturalMatches(LQuery.Symptom, LQuery.Ingredient));
+      except
+        Result.Free;
+        raise;
+      end;
       if LQuery.Trend <> '' then
         Result.Add('trend_filter', LQuery.Trend);
       Result.Add('options', LResolved.Options);
@@ -1300,6 +1316,137 @@ begin
   end;
 end;
 
+function TClaimIndex.LoadCulturalSources: TJSONArray;
+const
+  CTopics = 'experiments/tools/parkinsons-oracle/cultural-graph-topics.tsv';
+  CHeader = 'path'#9'ingredients'#9'symptoms';
+var
+  LPaths: TStringList;
+  LFields: TFields;
+  LTopics: TDictionary<String, TFields>;
+  LLines: TStringList;
+  LProcess: TProcess;
+  LPath: String;
+  LIndex: Integer;
+  LSource: TJSONObject;
+
+  procedure AddTopics(const AKey, AText: String; AChoices: TObjectDictionary<String, TList<TClaim>>);
+  var
+    LArray: TJSONArray;
+    LValue: String;
+  begin
+    LArray := TJSONArray.Create;
+    LSource.Add(AKey, LArray);
+    if (AText = '') or (AText = '-') then
+      Exit;
+    for LValue in SplitFields(AText, ';') do
+    begin
+      if not AChoices.ContainsKey(LValue) or HasCulturalTopic(LArray, LValue) then
+        raise EConvertError.Create('Invalid or repeated graph topic for ' + LPath + ': ' + LValue);
+      LArray.Add(LValue);
+    end;
+  end;
+
+begin
+  LPaths := TStringList.Create;
+  LLines := TStringList.Create;
+  LTopics := TDictionary<String, TFields>.Create;
+  LProcess := TProcess.Create(nil);
+  Result := TJSONArray.Create;
+  try
+    try
+      LPaths.CaseSensitive := True;
+      LPaths.Text := Git(['-c', 'core.quotePath=false', 'ls-tree', '-r', '--name-only',
+        FRevision, '--', 'research', CTopics]);
+      LProcess.Executable := 'git';
+      LProcess.CurrentDirectory := FRoot;
+      LProcess.Parameters.Add('cat-file');
+      LProcess.Parameters.Add('--batch');
+      LProcess.Options := [poUsePipes];
+      LProcess.ShowWindow := swoHide;
+      LProcess.Execute;
+      if LPaths.IndexOf(CTopics) >= 0 then
+      begin
+        LLines.Text := ReadBlob(LProcess, CTopics);
+        if (LLines.Count = 0) or (LLines[0] <> CHeader) then
+          raise EConvertError.Create('The cultural graph topic table has an invalid header.');
+        for LIndex := 1 to LLines.Count - 1 do
+        begin
+          LFields := SplitFields(LLines[LIndex], #9);
+          if Length(LFields) <> 3 then
+            raise EConvertError.CreateFmt('Invalid cultural topic row %d.', [LIndex + 1]);
+          LTopics.Add(LFields[0], LFields);
+        end;
+      end;
+      for LPath in LPaths do
+      begin
+        if not IsCulturalSource(LPath) or not SameText(ExtractFileExt(LPath), '.txt') then
+          Continue;
+        LSource := CulturalMetadata(LPath, ReadBlob(LProcess, LPath));
+        LSource.Add('path', LPath);
+        Result.Add(LSource);
+        if LTopics.TryGetValue(LPath, LFields) then
+        begin
+          AddTopics('ingredients', LFields[1], FByIngredient);
+          AddTopics('symptoms', LFields[2], FBySymptom);
+          LTopics.Remove(LPath);
+        end;
+      end;
+      if LTopics.Count <> 0 then
+        raise EConvertError.Create('Cultural graph topics reference missing source records.');
+      LProcess.Input.DontClose := True;
+      FileClose(LProcess.Input.Handle);
+      if not LProcess.WaitOnExit or (LProcess.ExitStatus <> 0) then
+        raise EInOutError.Create('Git could not finish reading the published cultural sources.');
+    except
+      Result.Free;
+      raise;
+    end;
+  finally
+    LProcess.Free;
+    LTopics.Free;
+    LLines.Free;
+    LPaths.Free;
+  end;
+end;
+
+function TClaimIndex.CulturalMatches(const ASymptom, AIngredient: String): TJSONArray;
+var
+  LRank: Integer;
+  LIndex: Integer;
+  LMatchRank: Integer;
+  LSource: TJSONObject;
+  LMatch: TJSONObject;
+  LIngredientMatch: Boolean;
+  LSymptomMatch: Boolean;
+begin
+  Result := TJSONArray.Create;
+  try
+    if (ASymptom = '') and (AIngredient = '') then
+      Exit;
+    if FCulturalSources = nil then
+      FCulturalSources := LoadCulturalSources;
+    for LRank := 3 downto 1 do
+      for LIndex := 0 to FCulturalSources.Count - 1 do
+      begin
+        LSource := FCulturalSources.Objects[LIndex];
+        LIngredientMatch := HasCulturalTopic(LSource.Get('ingredients', TJSONArray(nil)),
+          AIngredient);
+        LSymptomMatch := HasCulturalTopic(LSource.Get('symptoms', TJSONArray(nil)), ASymptom);
+        LMatchRank := 2 * Ord(LIngredientMatch) + Ord(LSymptomMatch);
+        if LMatchRank <> LRank then
+          Continue;
+        LMatch := TJSONObject(LSource.Clone);
+        Result.Add(LMatch);
+        LMatch.Add('ingredient_match', LIngredientMatch);
+        LMatch.Add('symptom_match', LSymptomMatch);
+      end;
+  except
+    Result.Free;
+    raise;
+  end;
+end;
+
 function TClaimIndex.StaticModel(const ARepository: String): TJSONObject;
 const
   CScopes: array[0..1] of String = ('assessed', 'directional');
@@ -1340,6 +1487,9 @@ begin
       Result.Add('filter_options', FilterOptions);
       LClaims := TJSONArray.Create;
       Result.Add('claims', LClaims);
+      if FCulturalSources = nil then
+        FCulturalSources := LoadCulturalSources;
+      Result.Add('culture_sources', FCulturalSources.Clone);
       for LClaim in FClaims do
       begin
         LRow := LClaim.View(True);

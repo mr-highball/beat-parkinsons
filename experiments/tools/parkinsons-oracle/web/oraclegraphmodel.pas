@@ -7,12 +7,16 @@ interface
 
 uses SysUtils, JS;
 
+type
+  TGraphLevel = 0..4;
+
 const
-  GraphKinds: array[0..3] of String = ('symptom', 'ingredient', 'study', 'source');
-  GraphGroupNames: array[0..3] of String = ('Symptoms', 'Ingredients', 'Studies', 'Saved sources');
+  GraphKinds: array[TGraphLevel] of String = ('symptom', 'ingredient', 'study', 'source', 'culture');
+  GraphGroupNames: array[TGraphLevel] of String =
+    ('Symptoms', 'Ingredients', 'Studies', 'Saved sources', 'Culture & experience');
 
 { An indexed, read-only projection of the committed oracle model. References
-  retain the original claim and assessment objects; no text inference creates edges. }
+  retain claim, assessment and catalog metadata. Cultural edges use curated topic associations. }
 type
   TOracleGraphModel = class
   private
@@ -21,6 +25,7 @@ type
     FAdjacent: TJSObject;
     FNodeCount: Integer;
     FEdgeCount: Integer;
+    function AddSavedSource(const APath, ATitle: String): String;
     procedure AddNode(const AKey, AKind, ALabel, AValue: String);
     procedure AddEdge(const AKey, AFrom, ATo, AKind, ALabel, ATrend: String;
       AClaim, AAssessment: TJSObject);
@@ -45,7 +50,7 @@ function GraphEdgeTone(AEdge: TJSObject): String;
 
 implementation
 
-uses oraclevocab, parkinsonsoracle.graph, parkinsonsoracle.trend;
+uses oraclevocab, parkinsonsoracle.graph, parkinsonsoracle.trend, parkinsonsoracle.presentation;
 
 function ValueText(AValue: JSValue): String; external name 'String';
 
@@ -97,6 +102,8 @@ begin
     Exit;
   end;
   LKind := GraphText(AEdge, 'kind');
+  if LKind = 'cultural_topic' then
+    Exit('cultural');
   if LKind = 'claim' then
   begin
     LVerdict := GraphText(TJSObject(AEdge['claim']), 'verdict');
@@ -134,6 +141,22 @@ begin
     Result := ExtractFileName(ExtractFileDir(LFile)) + ' overview';
   Result := StringReplace(Result, '-', ' ', [rfReplaceAll]);
   Result := StringReplace(Result, '_', ' ', [rfReplaceAll]);
+end;
+
+function TOracleGraphModel.AddSavedSource(const APath, ATitle: String): String;
+var
+  LKind: String;
+  LLabel: String;
+begin
+  Result := GraphKey('source', APath);
+  if IsCulturalSource(APath) then
+    LKind := 'culture'
+  else
+    LKind := 'source';
+  LLabel := ATitle;
+  if LLabel = '' then
+    LLabel := SavedSourceTitle(APath);
+  AddNode(Result, LKind, LLabel, APath);
 end;
 
 procedure TOracleGraphModel.AddNode(const AKey, AKind, ALabel, AValue: String);
@@ -180,6 +203,8 @@ end;
 constructor TOracleGraphModel.Create(AModel: TJSObject);
 var
   LClaims: TJSArray;
+  LCulturalSources: TJSArray;
+  LCulturalSource: TJSObject;
   LAssessments: TJSArray;
   LClaim: TJSObject;
   LAssessment: TJSObject;
@@ -196,10 +221,35 @@ var
   LEdgeKey: String;
   LRole: String;
   LDirection: String;
+  procedure AddTopics(const AField, AKind: String);
+  var
+    LTopic: String;
+    LOther: String;
+    LTopics: TJSArray;
+    LTopicIndex: Integer;
+  begin
+    LTopics := GraphRows(LCulturalSource, AField);
+    for LTopicIndex := 0 to LTopics.Length - 1 do
+    begin
+      LTopic := String(LTopics[LTopicIndex]);
+      LOther := GraphKey(AKind, LTopic);
+      if Node(LOther) <> nil then
+        AddEdge(LSource + '/topic/' + LOther, LSource, LOther,
+          'cultural_topic', 'Topic in account', '', nil, nil);
+    end;
+  end;
 begin
   FModel := AModel;
   FNodes := TJSObject.new;
   FAdjacent := TJSObject.new;
+  LCulturalSources := GraphRows(FModel, 'culture_sources');
+  for LIndex := 0 to LCulturalSources.Length - 1 do
+  begin
+    LCulturalSource := TJSObject(LCulturalSources[LIndex]);
+    LPath := GraphText(LCulturalSource, 'path');
+    LSource := AddSavedSource(LPath, GraphText(LCulturalSource, 'title'));
+    Node(LSource)['cultural'] := LCulturalSource;
+  end;
   LClaims := GraphRows(FModel, 'claims');
   for LIndex := 0 to LClaims.Length - 1 do
   begin
@@ -238,8 +288,7 @@ begin
       if LPath <> '' then
       begin
         LCitedPaths.add(LPath);
-        LSource := GraphKey('source', LPath);
-        AddNode(LSource, 'source', SavedSourceTitle(LPath), LPath);
+        LSource := AddSavedSource(LPath, '');
         AddEdge(LEdgeKey + '/source', LStudy, LSource, 'reference',
           'Read saved source', '', LClaim, LAssessment);
       end;
@@ -251,14 +300,20 @@ begin
       if (Copy(LPath, 1, 9) <> 'research/') or LCitedPaths.has(LPath) then
         Continue;
       LCitedPaths.add(LPath);
-      LSource := GraphKey('source', LPath);
-      AddNode(LSource, 'source', SavedSourceTitle(LPath), LPath);
+      LSource := AddSavedSource(LPath, '');
       LEdgeKey := LClaimKey + '/citation:' + IntToStr(LAssessmentIndex);
       AddEdge(LEdgeKey + '/ingredient', LIngredient, LSource, 'citation',
         'Cited in claim', '', LClaim, nil);
       AddEdge(LEdgeKey + '/symptom', LSymptom, LSource, 'citation',
         'Cited in claim', '', LClaim, nil);
     end;
+  end;
+  for LIndex := 0 to LCulturalSources.Length - 1 do
+  begin
+    LCulturalSource := TJSObject(LCulturalSources[LIndex]);
+    LSource := GraphKey('source', GraphText(LCulturalSource, 'path'));
+    AddTopics('ingredients', 'ingredient');
+    AddTopics('symptoms', 'symptom');
   end;
 end;
 
@@ -301,7 +356,7 @@ end;
 function TOracleGraphModel.Neighbors(const AKey: String): TJSArray;
 var
   LRows: TJSArray;
-  LGroups: array[0..3] of TJSArray;
+  LGroups: array[TGraphLevel] of TJSArray;
   LGroup: TJSArray;
   LIndex: Integer;
   LGroupIndex: Integer;
@@ -360,7 +415,7 @@ end;
 function TOracleGraphModel.Connections(const AKey: String): TJSArray;
 var
   LRows: TJSArray;
-  LGroups: array[0..3] of TJSArray;
+  LGroups: array[TGraphLevel] of TJSArray;
   LGroup: TJSArray;
   LByNode: TJSObject;
   LConnection: TJSObject;

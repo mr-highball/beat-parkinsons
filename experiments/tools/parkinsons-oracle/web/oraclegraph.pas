@@ -31,7 +31,7 @@ type
     FEdges: TJSArray;
     FEdgeKeys: TJSSet;
     FExpanded: TJSObject;
-    FLanes: array[0..3] of TJSSet;
+    FLanes: array[TGraphLevel] of TJSSet;
     FSelected: String;
     FHistory: TStringValues;
     FHost: TJSHTMLElement;
@@ -117,6 +117,12 @@ end;
 
 function LinkColor(const ATone: String; AFocused: Boolean): TNyxRGBColor;
 begin
+  if ATone = 'cultural' then
+  begin
+    if AFocused then
+      Exit(NyxRGB(104, 68, 141));
+    Exit(NyxRGB(183, 161, 205));
+  end;
   if not AFocused then
   begin
     if ATone = 'eases' then
@@ -594,7 +600,10 @@ begin
       LClaim := TJSObject(AEdge['claim']);
       if ASource then
       begin
-        FOpenSource(GraphText(TJSObject(AEdge['assessment']), 'local_reference'));
+        if GraphText(AEdge, 'kind') = 'cultural_topic' then
+          FOpenSource(GraphText(FModel.Node(GraphText(AEdge, 'from')), 'value'))
+        else
+          FOpenSource(GraphText(TJSObject(AEdge['assessment']), 'local_reference'));
       end
       else
       begin
@@ -656,9 +665,9 @@ begin
   LPoint := PositionOf(FSelected);
   LLevel := LevelFor(FSelected);
   LOffset := 0;
-  if LLevel = Low(GraphKinds) then
+  if (FVisible.Length > 1) and (LLevel = Low(GraphKinds)) then
     LOffset := 0.5
-  else if LLevel = High(GraphKinds) then
+  else if (FVisible.Length > 1) and (LLevel = High(GraphKinds)) then
     LOffset := -0.5;
   if FCompact then
   begin
@@ -788,9 +797,9 @@ var
   LPage: TNyxNode;
   LInspector: TNyxNode;
   LLegend: TNyxNode;
-  LGroups: array[0..3] of TNyxNode;
-  LGroupMembers: array[0..3] of Integer;
-  LGroupShown: array[0..3] of Integer;
+  LGroups: array[TGraphLevel] of TNyxNode;
+  LGroupMembers: array[TGraphLevel] of Integer;
+  LGroupShown: array[TGraphLevel] of Integer;
   LGroupIndex: Integer;
   LNeighbor: TJSObject;
   LLinks: TJSArray;
@@ -838,6 +847,10 @@ var
   LCompact: Boolean;
   LVariant: TNyxVariant;
   LHasGallery: Boolean;
+  LIsCulture: Boolean;
+  LNodeKind: String;
+  LNodeTitle: String;
+  LMetadata: TJSObject;
 begin
   if FHost = nil then
   begin
@@ -860,6 +873,7 @@ begin
   LLegend.Add(Control(nkBadge, 'effect-challenged-graph-key', 'Claim challenged'));
   LLegend.Add(Control(nkBadge, 'grade-unclear-graph-key', 'Open or related'));
   LLegend.Add(Control(nkBadge, 'graph-mixed-key', 'Multiple signals'));
+  LLegend.Add(Control(nkBadge, 'graph-culture-key', 'Culture & experience'));
   LPage.Add(LLegend);
   if FSelected = '' then
   begin
@@ -879,23 +893,33 @@ begin
   LHasGallery := (GraphText(LNode, 'kind') = 'ingredient') and
     HasIngredientGallery(GraphText(LNode, 'value'));
   LInspector.Add(Control(nkHeading, 'graph-selection', GraphText(LNode, 'label')));
-  if (GraphText(LNode, 'kind') = 'source') and
-    IsConversationSource(GraphText(LNode, 'value')) then
-    LInspector.Add(Control(nkBadge, 'conversation-badge-graph', ConversationSourceLabel))
+  LIsCulture := GraphText(LNode, 'kind') = 'culture';
+  if LIsCulture then
+  begin
+    if IsConversationSource(GraphText(LNode, 'value')) then
+      LInspector.Add(Control(nkBadge, 'conversation-badge-graph', ConversationSourceLabel))
+    else
+      LInspector.Add(Control(nkBadge, 'graph-culture-badge', 'Cultural account'));
+    LMetadata := TJSObject(LNode['cultural']);
+    if GraphText(LMetadata, 'summary') <> '' then
+      LInspector.Add(Control(nkLabel, 'graph-culture-summary', GraphText(LMetadata, 'summary')));
+    if GraphText(LMetadata, 'evidence_limits') <> '' then
+      LInspector.Add(Control(nkLabel, 'graph-culture-limits', GraphText(LMetadata, 'evidence_limits')));
+  end
   else
     LInspector.Add(Control(nkLabel, 'graph-selection-kind', Capitalized(GraphText(LNode, 'kind'))));
-  LInspector.Add(Control(nkButton, 'graph-focus-branch', 'Focus this branch'));
-  if LHasGallery then
-  begin
-    AddIngredientGallery(LInspector, GraphText(LNode, 'value'), '-graph');
-  end;
-  if GraphText(LNode, 'kind') = 'source' then
-  begin
-    LInspector.Add(Control(nkButton, 'graph-open-selected-source', 'Read saved source'));
-  end;
   LNeighbors := FModel.Connections(FSelected);
-  LInspector.Add(Control(nkLabel, 'graph-connection-count', IntToStr(ExpandedCount) + ' of ' +
-    IntToStr(LNeighbors.Length) + ' connected items shown'));
+  if (LNeighbors.Length > 0) or not LIsCulture then
+    LInspector.Add(Control(nkButton, 'graph-focus-branch', 'Focus this branch'));
+  if LHasGallery then
+    AddIngredientGallery(LInspector, GraphText(LNode, 'value'), '-graph');
+  if LIsCulture or (GraphText(LNode, 'kind') = 'source') then
+    LInspector.Add(Control(nkButton, 'graph-open-selected-source', 'Read saved source'));
+  if LIsCulture and (LNeighbors.Length = 0) then
+    LInspector.Add(Control(nkLabel, 'graph-connection-count', 'No topic links recorded for this account.'))
+  else
+    LInspector.Add(Control(nkLabel, 'graph-connection-count', IntToStr(ExpandedCount) + ' of ' +
+      IntToStr(LNeighbors.Length) + ' connected items shown'));
   if ExpandedCount < LNeighbors.Length then
     LInspector.Add(Control(nkButton, 'graph-expand', 'Show next connections'));
   for LIndex := 0 to LNeighbors.Length - 1 do
@@ -937,7 +961,8 @@ begin
       LAssessment := TJSObject(LEdge['assessment']);
       LPart := Control(nkColumn, 'graph-relationship-' + LTag, '');
       LPart.Add(Control(nkBadge, 'graph-relation-' + LTag, GraphText(LEdge, 'label')));
-      LPart.Add(Control(nkLabel, 'graph-context-' + LTag,
+      if LClaim <> nil then
+        LPart.Add(Control(nkLabel, 'graph-context-' + LTag,
         FriendlySymptom(GraphText(LClaim, 'symptom')) + ' · ' + GraphText(LClaim, 'preparation') +
         ' ' + GraphText(LClaim, 'ingredient')));
       if LAssessment <> nil then
@@ -947,7 +972,10 @@ begin
         if GraphText(LAssessment, 'local_reference') <> '' then
           LPart.Add(Control(nkButton, 'graph-read-' + LTag, 'Read source'));
       end;
-      LPart.Add(Control(nkButton, 'graph-claim-' + LTag, 'Open claim and evidence'));
+      if LClaim <> nil then
+        LPart.Add(Control(nkButton, 'graph-claim-' + LTag, 'Open claim and evidence'));
+      if GraphText(LEdge, 'kind') = 'cultural_topic' then
+        LPart.Add(Control(nkButton, 'graph-read-' + LTag, 'Read account'));
       LCard.Add(LPart);
     end;
     LGroups[LevelFor(LOther)].Add(LCard);
@@ -1034,7 +1062,7 @@ begin
         end;
       end;
       LDrawing.Path(LGeometry.Path, NyxDrawingStyle.Stroke(LPaint, LStroke));
-      if LTone = '' then
+      if (LTone = '') or (LTone = 'cultural') then
         Continue;
       LDrawing.Path(LGeometry.Arrow, NyxDrawingStyle.Stroke(LPaint, LStroke));
       if not LFocused then
@@ -1078,8 +1106,19 @@ begin
     LVariant := nvSecondary;
     if LKey = FSelected then
       LVariant := nvPrimary;
-    LNodeControl.Configure.Text(Capitalized(GraphText(LNode, 'kind')) + #10 +
-      GraphText(LNode, 'label')).AccessibleName(GraphText(LNode, 'kind') + ': ' +
+    LNodeKind := Capitalized(GraphText(LNode, 'kind'));
+    LNodeTitle := GraphText(LNode, 'label');
+    if LNodeKind = 'Culture' then
+    begin
+      if IsConversationSource(GraphText(LNode, 'value')) then
+        LNodeKind := 'Conversation'
+      else
+        LNodeKind := 'Cultural account';
+      if Length(LNodeTitle) > 42 then
+        LNodeTitle := Trim(Copy(LNodeTitle, 1, 40)) + '…';
+    end;
+    LNodeControl.Configure.Text(LNodeKind + #10 + LNodeTitle)
+      .AccessibleName(GraphText(LNode, 'kind') + ': ' +
       GraphText(LNode, 'label') + '. Explore connections.').Variant(LVariant).Done;
     LScene.AddControl(NyxCanvasItem('Node ' + IntToStr(LIndex)),
       NyxCanvasPlacement(NyxCanvasLayer('Nodes'),
@@ -1112,7 +1151,8 @@ begin
       FocusBranch;
       Result := True;
     end;
-  FRenderer.ElementFor('graph-focus-branch').addEventListener('click', LClick);
+  if (LNeighbors.Length > 0) or not LIsCulture then
+    FRenderer.ElementFor('graph-focus-branch').addEventListener('click', LClick);
   if Length(FHistory) > 0 then
   begin
     LClick :=
@@ -1138,7 +1178,7 @@ begin
   begin
     BindIngredientGallery(FRenderer, GraphText(FModel.Node(FSelected), 'value'), '-graph');
   end;
-  if GraphText(FModel.Node(FSelected), 'kind') = 'source' then
+  if LIsCulture or (GraphText(FModel.Node(FSelected), 'kind') = 'source') then
   begin
     LClick :=
       function(AEvent: TEventListenerEvent): Boolean
@@ -1157,8 +1197,10 @@ begin
     LTag := IntToStr(LIndex);
     FRenderer.ElementFor('graph-relationship-' + LTag).setAttribute('data-trend',
       GraphEdgeTone(LEdge));
-    BindEvidence('graph-claim-' + LTag, LEdge, False);
-    if GraphText(TJSObject(LEdge['assessment']), 'local_reference') <> '' then
+    if TJSObject(LEdge['claim']) <> nil then
+      BindEvidence('graph-claim-' + LTag, LEdge, False);
+    if (GraphText(LEdge, 'kind') = 'cultural_topic') or
+      (GraphText(TJSObject(LEdge['assessment']), 'local_reference') <> '') then
       BindEvidence('graph-read-' + LTag, LEdge, True);
   end;
 end;

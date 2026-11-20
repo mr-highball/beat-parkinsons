@@ -58,7 +58,7 @@ implementation
 
 uses
   BufStream, Classes, Generics.Collections, JwaNative, JwaWinternl, Math, StrUtils, Windows,
-  foodexperiment.archiveidentity;
+  foodexperiment.archiveidentity, parkinsonsoracle.presentation, parkinsonsoracle.culture;
 
 const
   CatalogApplicationId = $504F5243;
@@ -782,6 +782,8 @@ begin
   end;
   Result := TJSONObject.Create(['path', LPath, 'period', LPeriod, 'text', LText,
     'offset', AOffset]);
+  if (AOffset = 0) and IsCulturalSource(APath) and SameText(ExtractFileExt(APath), '.txt') then
+    Result.Add('cultural', CulturalMetadata(APath, LText));
   if AOffset + Length(LText) < LBytes then
   begin
     Result.Add('next_offset', AOffset + Length(LText));
@@ -1291,6 +1293,8 @@ var
   LMatches: TSqlStatement;
   LRows: TJSONArray;
   LRow: TJSONObject;
+  LDocument: TJSONObject;
+  LPath: String;
   LResult: TJSONObject;
   LRevision: Int64;
   LCachedIndex: Integer;
@@ -1422,8 +1426,23 @@ begin
         begin
           LRow := TJSONObject.Create;
           LRows.Add(LRow);
-          LRow.Add('path', LWindow.Rows[LRowIndex].Path);
+          LPath := LWindow.Rows[LRowIndex].Path;
+          LRow.Add('path', UTF8String(LPath));
           LRow.Add('period', LWindow.Rows[LRowIndex].Period);
+          if IsCulturalSource(LPath) and SameText(ExtractFileExt(LPath), '.txt') then
+          begin
+            try
+              LDocument := ReadSource(LPath, 0);
+              try
+                LRow.Add('cultural', LDocument.Objects['cultural'].Clone);
+              finally
+                LDocument.Free;
+              end;
+            except
+              on E: ESourceReadError do
+                LRow.Add('cultural_metadata_status', 'Refresh the catalog to read this record.');
+            end;
+          end;
         end;
       end;
       LResult.Add('terms', UTF8String(ATerms));
