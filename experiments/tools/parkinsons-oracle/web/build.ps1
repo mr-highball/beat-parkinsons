@@ -72,3 +72,21 @@ $InlineCss = Join-Path $GlyphBuild 'glyphs.css'
 & $GlyphExe (Join-Path $PSScriptRoot 'assets/glyphs') $InlineCss
 if ($LASTEXITCODE) { exit $LASTEXITCODE }
 [IO.File]::AppendAllText((Join-Path $Output 'oracle.css'), [IO.File]::ReadAllText($InlineCss), [Text.UTF8Encoding]::new($false))
+
+$IngredientAssets = Join-Path $PSScriptRoot 'assets/ingredients'
+$GalleryArgs = @('-Mdelphi', '-Sa', '-Cr', '-Co', '-Ci', '-gl', "-Fu$SharedUnits",
+    "-Fu$Repo/experiments/1000_see_what_sticks_food/tools",
+    "-FU$GlyphBuild/units", "-FE$GlyphBuild/bin", (Join-Path $SharedUnits 'ingredients.gallery.check.lpr'))
+& $NativeCompiler @GalleryArgs
+if ($LASTEXITCODE) { exit $LASTEXITCODE }
+$GalleryExe = Join-Path $GlyphBuild 'bin/ingredients.gallery.check.exe'
+if (!(Test-Path -LiteralPath $GalleryExe)) {
+    $GalleryExe = Join-Path $GlyphBuild 'bin/ingredients.gallery.check'
+}
+& $GalleryExe (Join-Path $Repo 'experiments/1000_see_what_sticks_food_round_2/ingredients.tsv') $IngredientAssets
+if ($LASTEXITCODE) { exit $LASTEXITCODE }
+$IngredientOutput = Join-Path $Output 'ingredients'
+New-Item -ItemType Directory -Path $IngredientOutput -Force | Out-Null
+Get-ChildItem -LiteralPath $IngredientAssets -File -Filter '*.jpg' | ForEach-Object {
+    Copy-Item -LiteralPath $_.FullName -Destination $IngredientOutput -Force
+}

@@ -29,6 +29,15 @@ const
       '"verdict":{"enum":["True","False","Maybe True","Maybe False","Unknown","Unreviewed"]},' +
       '"round":{"type":"integer","minimum":1,"maximum":7},"offset":{"type":"integer","minimum":0},' +
       '"limit":{"type":"integer","minimum":1,"maximum":100}}}},' +
+    '{"name":"oracle_ingredient_effects","description":"Compare ingredients across one or more ' +
+      'selected symptoms. Returns may_ease, may_worsen and mixed ingredient groups, each with ' +
+      'preparation, symptom, verdict, claim identity and a local reference. Unresolved symptoms ' +
+      'have no directional claim in this view. The unresolved array lists ingredients with no ' +
+      'directional finding for the selected symptoms. Use oracle_claim for supporting and conflicting ' +
+      'assessments. These are qualified research findings.",' +
+      '"annotations":{"readOnlyHint":true,"openWorldHint":false},"inputSchema":{"type":"object",' +
+      '"additionalProperties":false,"required":["symptoms"],"properties":{"symptoms":{' +
+      '"type":"array","minItems":1,"items":{"type":"string","minLength":1}}}}},' +
     '{"name":"oracle_claim","description":"Read one frozen claim with its rationale, study ' +
       'assessments, citations and queue counts. Use assessment_limit for a smaller first reply ' +
       'and next_assessment_offset to continue. Use assessment_study in place of pagination ' +
@@ -246,10 +255,11 @@ var
   LAssessmentLimit: Integer;
   LAssessmentStudy: String;
   LIdentifiers: TJSONData;
+  LSymptoms: TJSONData;
 begin
   case IndexStr(AName, ['oracle_query', 'oracle_claim', 'oracle_search_catalog',
     'oracle_status', 'oracle_filter_options', 'oracle_find_sources', 'oracle_read_source',
-    'oracle_evidence_rubric', 'oracle_check_scorecard']) of
+    'oracle_evidence_rubric', 'oracle_check_scorecard', 'oracle_ingredient_effects']) of
     0:
       begin
         RequireFields(AArguments, ['symptom', 'ingredient', 'preparation', 'direction',
@@ -344,6 +354,16 @@ begin
     8:
       begin
         Result := CheckScorecard(AArguments);
+      end;
+    9:
+      begin
+        RequireFields(AArguments, ['symptoms']);
+        LSymptoms := AArguments.Find('symptoms');
+        if not (LSymptoms is TJSONArray) then
+        begin
+          raise EConvertError.Create('Provide an array of symptoms.');
+        end;
+        Result := Index.Ingredients(TJSONArray(LSymptoms));
       end;
   else
     raise EConvertError.Create('Unknown tool: ' + AName);

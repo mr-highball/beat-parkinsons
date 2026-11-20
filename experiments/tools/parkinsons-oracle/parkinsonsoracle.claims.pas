@@ -91,6 +91,7 @@ type
     function IsCurrent: Boolean;
     function Status: TJSONObject;
     function Query(const AQuery: TClaimQuery): TJSONObject;
+    function Ingredients(ASymptoms: TJSONArray): TJSONObject;
     function Claim(ARound: Integer; const AId: String; AAssessmentOffset: Integer;
       AAssessmentLimit: Integer; const AAssessmentStudy: String): TJSONObject;
     function EvidenceRubric(ARound: Integer; const AId: String;
@@ -104,7 +105,8 @@ type
 implementation
 
 uses {$IFDEF WINDOWS}Windows,{$ENDIF} StrUtils, FPSHA256, foodexperiment.externaldata,
-  foodexperiment.confidence, parkinsonsoracle.trend, parkinsonsoracle.rubric, wfc;
+  foodexperiment.confidence, parkinsonsoracle.trend, parkinsonsoracle.rubric,
+  parkinsonsoracle.ingredients, wfc;
 
 const
   CBase = 'experiments/1000_see_what_sticks_food';
@@ -1217,6 +1219,84 @@ begin
     end;
   finally
     LEmpty.Free;
+  end;
+end;
+
+function TClaimIndex.Ingredients(ASymptoms: TJSONArray): TJSONObject;
+var
+  LSelected: array of String;
+  LIngredients: array of String;
+  LIngredient: String;
+  LUnique: TStringList;
+  LSymptom: String;
+  LPostings: TList<TClaim>;
+  LClaim: TClaim;
+  LSignals: TIngredientSignals;
+  LIndex: Integer;
+  LSelectedCount: Integer;
+  LSignalCount: Integer;
+begin
+  if ASymptoms.Count = 0 then
+  begin
+    raise EConvertError.Create('Provide at least one symptom.');
+  end;
+  LUnique := TStringList.Create;
+  try
+    LSelectedCount := 0;
+    LSignalCount := 0;
+    SetLength(LSelected, ASymptoms.Count);
+    for LIndex := 0 to ASymptoms.Count - 1 do
+    begin
+      if ASymptoms.Items[LIndex].JSONType <> jtString then
+      begin
+        raise EConvertError.Create('Provide symptoms as strings.');
+      end;
+      LSymptom := LookupAlias(ASymptoms.Strings[LIndex], FSymptomAliases);
+      if not FBySymptom.TryGetValue(LSymptom, LPostings) then
+      begin
+        raise EConvertError.CreateFmt('Unknown symptom at position %d. Use oracle_filter_options.',
+          [LIndex + 1]);
+      end;
+      if LUnique.IndexOf(LSymptom) >= 0 then
+      begin
+        Continue;
+      end;
+      LUnique.Add(LSymptom);
+      LSelected[LSelectedCount] := LSymptom;
+      Inc(LSelectedCount);
+      for LClaim in LPostings do
+      begin
+        if (LClaim.AssessedRows = 0) or
+          (ClaimTrend(LClaim.Verdict, LClaim.Direction) = '') then
+        begin
+          Continue;
+        end;
+        SetLength(LSignals, LSignalCount + 1);
+        LSignals[LSignalCount].Ingredient := LClaim.Ingredient;
+        LSignals[LSignalCount].Symptom := LClaim.Symptom;
+        LSignals[LSignalCount].Preparation := LClaim.Preparation;
+        LSignals[LSignalCount].Verdict := LClaim.Verdict;
+        LSignals[LSignalCount].HypothesisDirection := LClaim.Direction;
+        LSignals[LSignalCount].ClaimId := LClaim.Id;
+        LSignals[LSignalCount].Round := LClaim.Round;
+        if LClaim.References.Count > 0 then
+        begin
+          LSignals[LSignalCount].LocalReference := LClaim.References.Strings[0];
+        end;
+        Inc(LSignalCount);
+      end;
+    end;
+    SetLength(LSelected, LSelectedCount);
+    SetLength(LIngredients, FByIngredient.Count);
+    LIndex := 0;
+    for LIngredient in FByIngredient.Keys do
+    begin
+      LIngredients[LIndex] := LIngredient;
+      Inc(LIndex);
+    end;
+    Result := IngredientEffects(FRevision, LSelected, LIngredients, LSignals);
+  finally
+    LUnique.Free;
   end;
 end;
 

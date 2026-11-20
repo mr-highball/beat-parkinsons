@@ -25,6 +25,7 @@ type
     procedure WithModel(AReply: TOracleReply);
     function Canonical(const AKind, AValue: String): String;
     function Query(AArguments: TJSObject): TJSObject;
+    function Ingredients(AArguments: TJSObject): TJSObject;
     procedure ReadPostings(const ATerm: String; AReply: TPostingReply);
     procedure Search(AArguments: TJSObject; AReply: TOracleReply);
   public
@@ -36,7 +37,7 @@ type
 
 implementation
 
-uses StrUtils, oraclevocab, parkinsonsoracle.trend;
+uses StrUtils, fpjson, oraclevocab, parkinsonsoracle.trend, parkinsonsoracle.ingredients;
 
 procedure TStaticOracle.GraphModel(AReply: TOracleReply);
 begin
@@ -236,6 +237,80 @@ begin
     Result['next_offset'] := LOffset + LLimit;
   if LEvidenceExcluded > 0 then
     Result['no_match_reason'] := 'evidence_filters';
+end;
+
+function TStaticOracle.Ingredients(AArguments: TJSObject): TJSObject;
+var
+  LRequested: TJSArray;
+  LClaims: TJSArray;
+  LReferences: TJSArray;
+  LSelected: array of String;
+  LIngredients: array of String;
+  LIngredientOptions: TJSArray;
+  LSeen: TJSSet;
+  LSignals: TIngredientSignals;
+  LRow: TJSObject;
+  LSymptom: String;
+  LIndex: Integer;
+  LClaimIndex: Integer;
+  LSelectedCount: Integer;
+  LSignalCount: Integer;
+  LProfile: TJSONObject;
+begin
+  LRequested := VocabularyItems(AArguments, 'symptoms');
+  LClaims := VocabularyItems(FModel, 'claims');
+  LSeen := TJSSet.new;
+  SetLength(LSelected, LRequested.Length);
+  LSelectedCount := 0;
+  LSignalCount := 0;
+  for LIndex := 0 to LRequested.Length - 1 do
+  begin
+    LSymptom := Canonical('symptoms', AsText(LRequested[LIndex]));
+    if LSeen.has(LSymptom) then
+    begin
+      Continue;
+    end;
+    LSeen.add(LSymptom);
+    LSelected[LSelectedCount] := LSymptom;
+    Inc(LSelectedCount);
+    for LClaimIndex := 0 to LClaims.Length - 1 do
+    begin
+      LRow := TJSObject(LClaims[LClaimIndex]);
+      if (VocabularyText(LRow, 'symptom') <> LSymptom) or
+        (VocabularyText(LRow, 'evidence_scope') <> 'directional') then
+      begin
+        Continue;
+      end;
+      SetLength(LSignals, LSignalCount + 1);
+      LSignals[LSignalCount].Ingredient := VocabularyText(LRow, 'ingredient');
+      LSignals[LSignalCount].Symptom := LSymptom;
+      LSignals[LSignalCount].Preparation := VocabularyText(LRow, 'preparation');
+      LSignals[LSignalCount].Verdict := VocabularyText(LRow, 'verdict');
+      LSignals[LSignalCount].HypothesisDirection := VocabularyText(LRow, 'hypothesis_direction');
+      LSignals[LSignalCount].ClaimId := VocabularyText(LRow, 'claim_id');
+      LSignals[LSignalCount].Round := Count(LRow, 'round');
+      LReferences := VocabularyItems(LRow, 'local_references');
+      if LReferences.Length > 0 then
+      begin
+        LSignals[LSignalCount].LocalReference := AsText(LReferences[0]);
+      end;
+      Inc(LSignalCount);
+    end;
+  end;
+  SetLength(LSelected, LSelectedCount);
+  LIngredientOptions := VocabularyItems(TJSObject(FModel['filter_options']), 'ingredients');
+  SetLength(LIngredients, LIngredientOptions.Length);
+  for LIndex := 0 to LIngredientOptions.Length - 1 do
+  begin
+    LIngredients[LIndex] := VocabularyText(TJSObject(LIngredientOptions[LIndex]), 'value');
+  end;
+  LProfile := IngredientEffects(VocabularyText(FModel, 'revision'), LSelected,
+    LIngredients, LSignals);
+  try
+    Result := TJSObject(TJSJSON.parse(LProfile.AsJSON));
+  finally
+    LProfile.Free;
+  end;
 end;
 
 function NextNumber(ABytes: TJSUint8Array; var AOffset: Integer): Integer;
@@ -504,7 +579,7 @@ begin
         Exit;
       end;
       case IndexStr(ATool, ['oracle_status', 'oracle_filter_options', 'oracle_query',
-        'oracle_claim', 'oracle_search_catalog']) of
+        'oracle_claim', 'oracle_search_catalog', 'oracle_ingredient_effects']) of
         0:
           begin
             LResult := TJSObject.new;
@@ -533,6 +608,7 @@ begin
             AReply(LResult, '');
           end;
         4: Search(AArguments, AReply);
+        5: AReply(Ingredients(AArguments), '');
       else
         AReply(nil, 'Unsupported lookup in the published model.');
       end;

@@ -48,6 +48,7 @@ retrying. When the managed session has an earlier tool list, use the
 | Tool | Input example | Result |
 | --- | --- | --- |
 | `oracle_query` | `{"symptom":"tremors"}` | Directional local matches, candidate count, assessment counts and a first citation |
+| `oracle_ingredient_effects` | `{"symptoms":["constipation","tremors"]}` | All 210 ingredients grouped by easing, worsening, mixed evidence, or no clear direction, with preparation and references for directional findings |
 | `oracle_claim` | `{"round":1,"id":"0904","assessment_limit":8}` | Frozen statement, verdict and rationale, citations, queue counts, and a page of assessments |
 | `oracle_claim` with a study key | `{"round":1,"id":"0121","assessment_study":"PMID:37294324"}` | Assessments for that exact study key and the same claim-wide metadata |
 | `oracle_evidence_rubric` | `{}` or `{"round":1,"id":"0904"}` | Canonical review rules or a specific claim's applied tier, observed direction, and source families |
@@ -210,6 +211,18 @@ documents. The four-ID fixture fell from 1,318 to 761 UTF-8 bytes of decoded
 tool text. The median of 11 warm runs fell from 2.03 to 0.70 ms. A sweep of
 5,400 NCT-named candidates found 5,297 exact paths, up from 5,099. It recovered
 106 of 140 older-format candidates and retained every previously returned path.
+
+## Compare ingredients across symptoms
+
+Select one or more symptoms and choose **Compare ingredients** from the results or graph. The comparison includes all ingredients for the selected symptoms and keeps the exact preparation beside each finding. **May ease** and **May worsen** group ingredients with one recorded direction across the selection. **Mixed effects** keeps ingredients with both directions together. **No clear direction** lists remaining ingredients, with a name filter and access to each gallery. Use **See evidence** to open the reviewed claim, its rationale and studies. An unresolved symptom remains open even if the ingredient has a directional finding for another symptom.
+
+The `oracle_ingredient_effects` MCP tool accepts canonical symptom names and their recognized aliases. Repeated aliases resolve to one symptom. Its `may_ease`, `may_worsen` and `mixed` arrays contain ingredient groups with preparation-specific `findings` and the selected `unresolved_symptoms` for that ingredient. The top-level `unresolved` lists all remaining ingredient names. `ingredient_count` counts the complete vocabulary and `directional_ingredient_count` counts the ingredients with a directional finding. The top-level `unresolved_symptoms` lists selected symptoms with no directional finding from any ingredient. Use each finding's `round` and `claim_id` with `oracle_claim` to review the underlying evidence. The grouped view uses the published verdict and evidence trend. Opposing a proposed direction without evidence of an inverse effect leaves the direction open.
+
+The live server and portable browser use the same Pascal grouping code. The comparison is an evidence lookup for ingredient selection. Effects of combined ingredients and finished recipes remain separate research questions.
+
+### Ingredient photos and shopping tips
+
+Use **Photos & tips** from an ingredient card or an ingredient selected in the graph. Every ingredient has a carousel with two culinary preparations and a sourced shopping or storage tip. The same gallery is available below the claim's evidence. The collection covers all 210 canonical ingredients, including those with no clear direction in the comparison. Real photos include public-domain credits, while ImageGen illustrations are labeled. [Photo provenance, coverage and prompts](web/assets/ingredients/README.md).
 
 ## Browser interface
 

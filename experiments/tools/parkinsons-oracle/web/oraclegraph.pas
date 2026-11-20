@@ -14,6 +14,7 @@ type
   { Navigation callbacks borrow the application, never a retired graph renderer. }
   TGraphOpenSource = reference to procedure(const APath: String);
   TGraphOpenClaim = reference to procedure(ARound: Integer; const AId: String);
+  TGraphOpenIngredient = reference to procedure(const AIngredient: String);
 
   TGraphLinkBadge = record
     Position: TNyxCanvasPoint;
@@ -47,6 +48,7 @@ type
     FRecenter: Boolean;
     FOpenSource: TGraphOpenSource;
     FOpenClaim: TGraphOpenClaim;
+    FOpenIngredient: TGraphOpenIngredient;
     procedure AddVisible(const AKey: String; ALevel: Integer);
     procedure AddConnection(AEdge: TJSObject);
     procedure ResetBranch;
@@ -69,7 +71,7 @@ type
   public
     constructor Create(AModel: TOracleGraphModel; const ASymptoms: TStringValues;
       const AIngredient: String; AOpenSource: TGraphOpenSource; AOpenClaim: TGraphOpenClaim;
-      const AStartNode: String = '');
+      const AStartNode: String = ''; AOpenIngredient: TGraphOpenIngredient = nil);
     destructor Destroy; override;
     procedure Attach(AHost: TJSHTMLElement);
     procedure Detach;
@@ -78,7 +80,8 @@ type
 
 implementation
 
-uses nyx.controls, nyx.drawing, nyx.colors, oraclevocab, parkinsonsoracle.presentation;
+uses nyx.controls, nyx.drawing, nyx.colors, oraclevocab, parkinsonsoracle.presentation,
+  oraclegallery;
 
 const
   CExpandPage = 12;
@@ -348,7 +351,7 @@ end;
 
 constructor TOracleGraphExplorer.Create(AModel: TOracleGraphModel; const ASymptoms: TStringValues;
   const AIngredient: String; AOpenSource: TGraphOpenSource; AOpenClaim: TGraphOpenClaim;
-  const AStartNode: String);
+  const AStartNode: String; AOpenIngredient: TGraphOpenIngredient);
 var
   LSymptom: String;
   LKey: String;
@@ -361,6 +364,7 @@ begin
   ResetBranch;
   FOpenSource := AOpenSource;
   FOpenClaim := AOpenClaim;
+  FOpenIngredient := AOpenIngredient;
   FCamera := NyxCanvasCamera(800, 520, NyxCanvasPoint(300, 180));
   FRecenter := True;
   if AStartNode <> '' then
@@ -836,6 +840,7 @@ var
   LName: String;
   LCompact: Boolean;
   LVariant: TNyxVariant;
+  LHasGallery: Boolean;
 begin
   if FHost = nil then
   begin
@@ -874,6 +879,8 @@ begin
   LInspector := Control(nkColumn, 'graph-inspector', '');
   LPage.Add(LInspector);
   LNode := FModel.Node(FSelected);
+  LHasGallery := Assigned(FOpenIngredient) and (GraphText(LNode, 'kind') = 'ingredient') and
+    HasIngredientGallery(GraphText(LNode, 'value'));
   LInspector.Add(Control(nkHeading, 'graph-selection', GraphText(LNode, 'label')));
   if (GraphText(LNode, 'kind') = 'source') and
     IsConversationSource(GraphText(LNode, 'value')) then
@@ -881,6 +888,10 @@ begin
   else
     LInspector.Add(Control(nkLabel, 'graph-selection-kind', Capitalized(GraphText(LNode, 'kind'))));
   LInspector.Add(Control(nkButton, 'graph-focus-branch', 'Focus this branch'));
+  if LHasGallery then
+  begin
+    LInspector.Add(Control(nkButton, 'ingredient-photos-selected-node', 'Photos & tips'));
+  end;
   if GraphText(LNode, 'kind') = 'source' then
   begin
     LInspector.Add(Control(nkButton, 'graph-open-selected-source', 'Read saved source'));
@@ -1125,6 +1136,16 @@ begin
         Result := True;
       end;
     FRenderer.ElementFor('graph-expand').addEventListener('click', LClick);
+  end;
+  if LHasGallery then
+  begin
+    LClick :=
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        FOpenIngredient(GraphText(FModel.Node(FSelected), 'value'));
+        Result := True;
+      end;
+    FRenderer.ElementFor('ingredient-photos-selected-node').addEventListener('click', LClick);
   end;
   if GraphText(FModel.Node(FSelected), 'kind') = 'source' then
   begin

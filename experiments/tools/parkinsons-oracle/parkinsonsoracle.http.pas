@@ -363,6 +363,34 @@ begin
   end;
 end;
 
+function IngredientPhotoPath(const AUri: String): String;
+const
+  Prefix = '/ingredients/';
+  Extension = '.jpg';
+var
+  LFile: String;
+  LIndex: Integer;
+begin
+  Result := '';
+  if not StartsStr(Prefix, AUri) or not EndsStr(Extension, AUri) then
+  begin
+    Exit;
+  end;
+  LFile := Copy(AUri, Length(Prefix) + 1, MaxInt);
+  if (Length(LFile) <= Length(Extension)) or (Length(LFile) > 96) then
+  begin
+    Exit;
+  end;
+  for LIndex := 1 to Length(LFile) - Length(Extension) do
+  begin
+    if not CharInSet(LFile[LIndex], ['a'..'z', '0'..'9', '-']) then
+    begin
+      Exit;
+    end;
+  end;
+  Result := 'ingredients/' + LFile;
+end;
+
 procedure TOracleWeb.HandleRequest(Sender: TObject; var ARequest: TFPHTTPConnectionRequest;
   var AResponse: TFPHTTPConnectionResponse);
 const
@@ -375,6 +403,7 @@ var
   LOrigin: String;
   LPeerAddress: TSockAddr;
   LIndex: Integer;
+  LImage: String;
   LData: TJSONObject;
 begin
   // KeepConnections is disabled, so clients must open a new socket for the next request.
@@ -410,7 +439,8 @@ begin
     Exit;
   end;
   LIndex := IndexStr(ARequest.URI, Paths);
-  if (LIndex < 0) and (ARequest.URI <> '/health') then
+  LImage := IngredientPhotoPath(ARequest.URI);
+  if (LIndex < 0) and (LImage = '') and (ARequest.URI <> '/health') then
   begin
     WriteError(AResponse, 404, 'Route not found.');
     Exit;
@@ -424,6 +454,10 @@ begin
   if LIndex >= 0 then
   begin
     ServeAsset(AResponse, Files[LIndex], Types[LIndex]);
+  end
+  else if LImage <> '' then
+  begin
+    ServeAsset(AResponse, LImage, 'image/jpeg');
   end
   else
   begin

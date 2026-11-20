@@ -9,7 +9,7 @@ uses
   SysUtils, StrUtils, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
   oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation,
   parkinsonsoracle.selection, parkinsonsoracle.graph, oraclemulti, oraclegraph,
-  oraclegraphdata, oraclegraphmodel;
+  oraclegraphdata, oraclegraphmodel, oraclegallery;
 
 type
   TOracleView = (ovClaims, ovCatalog);
@@ -293,7 +293,8 @@ procedure ShowList(AResults: TJSObject; AFocus: Boolean = True); forward;
 procedure Query(ANewQuery: Boolean; AOffset: Integer); forward;
 procedure SwitchView(AView: TOracleView); forward;
 procedure BindReference(const ANodeId, APath: String; AReturn: TPickerAction); forward;
-procedure ShowGraph(AGraph: TOracleGraphExplorer; AReturn: TPickerAction); forward;
+procedure ShowGraph(AGraph: TOracleGraphExplorer; AReturn: TPickerAction;
+  const ASymptoms: TStringValues); forward;
 procedure StartGraph(const ASymptoms: TStringValues; const AIngredient: String;
   const AStartNode: String = ''; AReturn: TPickerAction = nil); forward;
 
@@ -742,7 +743,9 @@ begin
           LPage.Add(SourceLink('citation-' + IntToStr(LIndex), JSValueText(LItems[LIndex])));
       end;
 
+      AddIngredientGallery(LPage, TextOf(AData, 'ingredient'));
       PublishResults(LDocument, LPage);
+      BindIngredientGallery(GResultsRenderer, TextOf(AData, 'ingredient'));
       FocusResults;
       BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
         function(AEvent: TEventListenerEvent): Boolean
@@ -997,7 +1000,388 @@ begin
     end);
 end;
 
-procedure ShowGraph(AGraph: TOracleGraphExplorer; AReturn: TPickerAction);
+function IngredientSymptomLabels(const ASymptoms: TStringValues): String;
+var
+  LSymptom: String;
+begin
+  Result := '';
+  for LSymptom in ASymptoms do
+  begin
+    if Result <> '' then
+    begin
+      Result := Result + ' · ';
+    end;
+    Result := Result + FriendlySymptom(LSymptom);
+  end;
+end;
+
+procedure ShowIngredientEffects(AProfile: TJSObject; ABack: TPickerAction;
+  AFocus: Boolean = True); forward;
+
+procedure ShowIngredientGalleryPage(const AIngredient: String; AReturn: TPickerAction);
+var
+  LDocument: TNyxDocument;
+  LPage: TNyxNode;
+begin
+  LDocument := TNyxDocument.Create;
+  LPage := Section(nkPage, 'result-page');
+  LDocument.AddPage(LPage);
+  LPage.Add(Button('back-results', '‹ Back', nvSecondary));
+  LPage.Add(Caption(nkHeading, 'result-heading', Capitalized(AIngredient)));
+  AddIngredientGallery(LPage, AIngredient);
+  PublishResults(LDocument, LPage);
+  BindIngredientGallery(GResultsRenderer, AIngredient);
+  BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      AReturn();
+      Result := True;
+    end);
+  FocusResults;
+end;
+
+procedure BindIngredientGalleryAction(const AButton, AIngredient: String; AProfile: TJSObject;
+  ABack: TPickerAction);
+begin
+  BindEvent(GResultsRenderer.ElementFor(AButton), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      ShowIngredientGalleryPage(AIngredient,
+        procedure
+        begin
+          ShowIngredientEffects(AProfile, ABack, False);
+          GResultsRenderer.ElementFor(AButton).focus;
+        end);
+      Result := True;
+    end);
+end;
+
+procedure BindIngredientFinding(const AButton, ADescription: String; AFinding,
+  AProfile: TJSObject; ABack: TPickerAction);
+var
+  LButton: TJSHTMLElement;
+begin
+  LButton := GResultsRenderer.ElementFor(AButton);
+  LButton.setAttribute('aria-label', 'See evidence for ' + ADescription);
+  BindEvent(LButton, 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      Result := Inspect(CountOf(AFinding, 'round'), TextOf(AFinding, 'claim_id'),
+        procedure
+        begin
+          ShowIngredientEffects(AProfile, ABack, False);
+          GResultsRenderer.ElementFor(AButton).focus;
+        end);
+    end);
+end;
+
+procedure BindIngredientJump(const AKey: String);
+begin
+  BindEvent(GResultsRenderer.ElementFor('ingredient-jump-' + AKey), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    var
+      LHeading: TJSHTMLElement;
+    begin
+      LHeading := GResultsRenderer.ElementFor('ingredient-heading-' + AKey);
+      LHeading.setAttribute('tabindex', '-1');
+      LHeading.focus;
+      LHeading.scrollIntoView;
+      Result := True;
+    end);
+end;
+
+procedure BindOpenIngredientFilter(AProfile: TJSObject; ANames: TJSArray);
+var
+  LInput: TJSHTMLInputElement;
+  LStatus: TJSHTMLElement;
+  LHandler: TJSEventHandler;
+begin
+  LInput := TJSHTMLInputElement(GResultsRenderer.InputFor('ingredient-open-filter'));
+  LStatus := GResultsRenderer.ElementFor('ingredient-open-count');
+  LStatus.setAttribute('aria-live', 'polite');
+  LHandler :=
+    function(AEvent: TEventListenerEvent): Boolean
+    var
+      LIndex: Integer;
+      LMatches: Integer;
+      LNeedle: String;
+      LMatchesName: Boolean;
+    begin
+      LMatches := 0;
+      AProfile['open_filter'] := LInput.value;
+      LNeedle := LowerCase(Trim(LInput.value));
+      for LIndex := 0 to ANames.Length - 1 do
+      begin
+        LMatchesName := (LNeedle = '') or (Pos(LNeedle, LowerCase(JSValueText(ANames[LIndex]))) > 0);
+        GResultsRenderer.ElementFor('ingredient-open-entry-' + IntToStr(LIndex)).hidden :=
+          not LMatchesName;
+        if LMatchesName then
+        begin
+          Inc(LMatches);
+        end;
+      end;
+      LStatus.textContent := IntToStr(LMatches) + ' matching ingredients';
+      Result := True;
+    end;
+  LInput.value := TextOf(AProfile, 'open_filter');
+  if LInput.value <> '' then
+  begin
+    LHandler(nil);
+  end;
+  LInput.addEventListener('input', LHandler);
+end;
+
+procedure ShowIngredientEffects(AProfile: TJSObject; ABack: TPickerAction; AFocus: Boolean);
+const
+  CKeys: array[0..3] of String = ('may_ease', 'may_worsen', 'mixed', 'unresolved');
+  CTitles: array[0..3] of String = ('May ease', 'May worsen', 'Mixed effects',
+    'No clear direction');
+var
+  LDocument: TNyxDocument;
+  LPage: TNyxNode;
+  LNav: TNyxNode;
+  LSection: TNyxNode;
+  LOpenList: TNyxNode;
+  LCard: TNyxNode;
+  LSignal: TNyxNode;
+  LBadges: TNyxNode;
+  LGroup: TJSArray;
+  LGroupRow: TJSObject;
+  LFindings: TJSArray;
+  LFinding: TJSObject;
+  LButtons: TJSArray;
+  LButton: TJSObject;
+  LKey: String;
+  LTag: String;
+  LName: String;
+  LSymptom: String;
+  LEffect: String;
+  LEffectId: String;
+  LGrade: String;
+  LUnresolved: String;
+  LType: Integer;
+  LIndex: Integer;
+  LSignalIndex: Integer;
+
+  function UnresolvedLabel(AItem: TJSObject): String;
+  var
+    LSelection: TJSObject;
+  begin
+    LSelection := TJSObject.new;
+    LSelection['symptoms'] := AItem['unresolved_symptoms'];
+    Result := IngredientSymptomLabels(ArgumentSymptoms(LSelection));
+  end;
+
+begin
+  LDocument := TNyxDocument.Create;
+  LPage := Section(nkPage, 'result-page');
+  LDocument.AddPage(LPage);
+  LPage.Add(Button('back-results', '‹ Back', nvSecondary));
+  LPage.Add(Caption(nkHeading, 'result-heading', 'Compare ingredients'));
+  LPage.Add(Caption(nkLabel, 'ingredient-comparison-symptoms',
+    IngredientSymptomLabels(ArgumentSymptoms(AProfile))));
+  LPage.Add(Caption(nkLabel, 'ingredient-comparison-intro',
+    'Across all ingredients for the selected symptoms.'));
+  LButtons := TJSArray.new;
+  LNav := Section(nkRow, 'ingredient-comparison-nav');
+  for LType := Low(CKeys) to High(CKeys) do
+  begin
+    LKey := CKeys[LType];
+    LGroup := ItemsOf(AProfile, LKey);
+    if LGroup.Length > 0 then
+    begin
+      LNav.Add(Button('ingredient-jump-' + LKey,
+        CTitles[LType] + ' (' + IntToStr(LGroup.Length) + ')', nvSecondary));
+    end;
+  end;
+  LPage.Add(LNav);
+  LUnresolved := UnresolvedLabel(AProfile);
+  if LUnresolved <> '' then
+  begin
+    LPage.Add(Caption(nkLabel, 'ingredient-comparison-unresolved',
+      'No clear direction yet for ' + LowerCase(LUnresolved) + '.'));
+  end;
+  for LType := Low(CKeys) to High(CKeys) do
+  begin
+    LKey := CKeys[LType];
+    LGroup := ItemsOf(AProfile, LKey);
+    if LGroup.Length = 0 then
+    begin
+      Continue;
+    end;
+    LSection := Section(nkColumn, 'ingredient-group-' + LKey);
+    LSection.Add(Caption(nkHeading, 'ingredient-heading-' + LKey, CTitles[LType]));
+    if LKey = 'unresolved' then
+    begin
+      LSection.Add(Caption(nkLabel, 'ingredient-open-explanation',
+        'For these ingredients, the selected symptoms still have open or unreviewed evidence.'));
+      LSection.Add(Field('ingredient-open-filter', 'Find an ingredient', 'Type its name'));
+      LSection.Add(Caption(nkLabel, 'ingredient-open-count',
+        IntToStr(LGroup.Length) + ' ingredients'));
+      LOpenList := Section(nkColumn, 'ingredient-open-list');
+      for LIndex := 0 to LGroup.Length - 1 do
+      begin
+        LName := JSValueText(LGroup[LIndex]);
+        LTag := IntToStr(LIndex);
+        LCard := Section(nkRow, 'ingredient-open-entry-' + LTag);
+        if HasIngredientGallery(LName) then
+        begin
+          LCard.Add(Button('ingredient-photos-unresolved-' + LTag, Capitalized(LName),
+            nvSecondary));
+          LButton := TJSObject.new;
+          LButton['id'] := 'ingredient-photos-unresolved-' + LTag;
+          LButton['gallery'] := LName;
+          LButtons.push(LButton);
+        end
+        else
+        begin
+          LCard.Add(Caption(nkLabel, 'ingredient-open-name-' + LTag, Capitalized(LName)));
+        end;
+        LOpenList.Add(LCard);
+      end;
+      LSection.Add(LOpenList);
+      LPage.Add(LSection);
+      Continue;
+    end;
+    if LKey = 'mixed' then
+    begin
+      LSection.Add(Caption(nkLabel, 'ingredient-mixed-explanation',
+        'These ingredients have both easing and worsening findings across the selected symptoms.'));
+    end;
+    for LIndex := 0 to LGroup.Length - 1 do
+    begin
+      LGroupRow := TJSObject(LGroup[LIndex]);
+      LTag := LKey + '-' + IntToStr(LIndex);
+      LName := Capitalized(TextOf(LGroupRow, 'ingredient'));
+      LCard := Section(nkCard, 'ingredient-card-' + LTag);
+      LCard.Add(Caption(nkHeading, 'ingredient-name-' + LTag, LName));
+      if HasIngredientGallery(TextOf(LGroupRow, 'ingredient')) then
+      begin
+        LCard.Add(Button('ingredient-photos-' + LTag, 'Photos & tips', nvSecondary));
+        LButton := TJSObject.new;
+        LButton['id'] := 'ingredient-photos-' + LTag;
+        LButton['gallery'] := TextOf(LGroupRow, 'ingredient');
+        LButtons.push(LButton);
+      end;
+      LFindings := ItemsOf(LGroupRow, 'findings');
+      for LSignalIndex := 0 to LFindings.Length - 1 do
+      begin
+        LFinding := TJSObject(LFindings[LSignalIndex]);
+        LTag := LKey + '-' + IntToStr(LIndex) + '-' + IntToStr(LSignalIndex);
+        LSignal := Section(nkColumn, 'ingredient-finding-' + LTag);
+        LSymptom := FriendlySymptom(TextOf(LFinding, 'symptom'));
+        LSignal.Add(Caption(nkLabel, 'ingredient-preparation-' + LTag,
+          LSymptom + ' · ' + Capitalized(TextOf(LFinding, 'preparation'))));
+        LEffect := 'May ease';
+        LEffectId := 'effect-relief-';
+        if TextOf(LFinding, 'trend') = 'worsens' then
+        begin
+          LEffect := 'May worsen';
+          LEffectId := 'effect-worse-';
+        end;
+        LGrade := 'Evidence supports this direction';
+        if StartsStr('Maybe ', TextOf(LFinding, 'verdict')) then
+        begin
+          LGrade := 'Limited evidence';
+        end;
+        LBadges := Section(nkRow, 'claim-indicators-ingredient-' + LTag);
+        LBadges.Add(Caption(nkBadge, LEffectId + LTag, LEffect));
+        LBadges.Add(Caption(nkBadge, 'grade-' + LTag, LGrade));
+        LSignal.Add(LBadges);
+        LSignal.Add(Button('ingredient-evidence-' + LTag, 'See evidence', nvSecondary));
+        LCard.Add(LSignal);
+        LButton := TJSObject.new;
+        LButton['id'] := 'ingredient-evidence-' + LTag;
+        LButton['description'] := LName + ' and ' + LowerCase(LSymptom);
+        LButton['finding'] := LFinding;
+        LButtons.push(LButton);
+      end;
+      LUnresolved := UnresolvedLabel(LGroupRow);
+      if LUnresolved <> '' then
+      begin
+        LCard.Add(Caption(nkLabel, 'ingredient-unresolved-' + LTag,
+          'No clear direction for ' + LowerCase(LUnresolved) + '.'));
+      end;
+      LSection.Add(LCard);
+    end;
+    LPage.Add(LSection);
+  end;
+  PublishResults(LDocument, LPage);
+  BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      Inc(GSequence);
+      ABack();
+      Result := True;
+    end);
+  for LKey in CKeys do
+  begin
+    if ItemsOf(AProfile, LKey).Length > 0 then
+    begin
+      BindIngredientJump(LKey);
+    end;
+  end;
+  for LIndex := 0 to LButtons.Length - 1 do
+  begin
+    LButton := TJSObject(LButtons[LIndex]);
+    if TextOf(LButton, 'gallery') <> '' then
+    begin
+      BindIngredientGalleryAction(TextOf(LButton, 'id'), TextOf(LButton, 'gallery'),
+        AProfile, ABack);
+    end
+    else
+    begin
+      BindIngredientFinding(TextOf(LButton, 'id'), TextOf(LButton, 'description'),
+        TJSObject(LButton['finding']), AProfile, ABack);
+    end;
+  end;
+  if ItemsOf(AProfile, 'unresolved').Length > 0 then
+  begin
+    BindOpenIngredientFilter(AProfile, ItemsOf(AProfile, 'unresolved'));
+  end;
+  if AFocus then
+  begin
+    FocusResults;
+  end;
+end;
+
+procedure CompareIngredients(const ASymptoms: TStringValues; ABack: TPickerAction);
+var
+  LArgs: TJSObject;
+  LSelected: TJSArray;
+  LSymptom: String;
+  LSequence: Integer;
+begin
+  Inc(GSequence);
+  LSequence := GSequence;
+  LArgs := TJSObject.new;
+  LSelected := TJSArray.new;
+  for LSymptom in ASymptoms do
+  begin
+    LSelected.push(LSymptom);
+  end;
+  LArgs['symptoms'] := LSelected;
+  MessageView('Comparing ingredients', 'Checking the reviewed claims.', ABack);
+  Request('oracle_ingredient_effects', LArgs,
+    procedure(AData: TJSObject; const AError: String)
+    begin
+      if LSequence <> GSequence then
+      begin
+        Exit;
+      end;
+      if AError <> '' then
+      begin
+        MessageView('Ingredient comparison unavailable', AError, ABack);
+      end
+      else
+      begin
+        ShowIngredientEffects(AData, ABack);
+      end;
+    end);
+end;
+
+procedure ShowGraph(AGraph: TOracleGraphExplorer; AReturn: TPickerAction;
+  const ASymptoms: TStringValues);
 var
   LSequence: Integer;
   LDocument: TNyxDocument;
@@ -1010,6 +1394,10 @@ begin
   LDocument.AddPage(LPage);
   LPage.Add(Button('back-results', '‹ Back', nvSecondary));
   LPage.Add(Caption(nkHeading, 'result-heading', 'Research connections'));
+  if Length(ASymptoms) > 0 then
+  begin
+    LPage.Add(Button('compare-ingredients', 'Compare ingredients', nvSecondary));
+  end;
   LPage.Add(Caption(nkLabel, 'graph-scope',
     'Follow recorded links between symptoms, ingredients, studies and sources. Open questions appear alongside findings.'));
   LPage.Add(Caption(nkLabel, 'graph-freshness', 'Checking the model snapshot…'));
@@ -1021,6 +1409,19 @@ begin
       AReturn();
       Result := True;
     end);
+  if Length(ASymptoms) > 0 then
+  begin
+    BindEvent(GResultsRenderer.ElementFor('compare-ingredients'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        CompareIngredients(ASymptoms,
+          procedure
+          begin
+            ShowGraph(AGraph, AReturn, ASymptoms);
+          end);
+        Result := True;
+      end);
+  end;
   GGraph := AGraph;
   GGraph.Attach(GResultsRenderer.ElementFor('graph-host'));
   FocusResults;
@@ -1082,7 +1483,11 @@ var
       procedure(ARound: Integer; const AId: String)
       begin
         Inspect(ARound, AId, LResume);
-      end, AStartNode);
+      end, AStartNode,
+      procedure(const AValue: String)
+      begin
+        ShowIngredientGalleryPage(AValue, LResume);
+      end);
     SetLength(GGraphStack, Length(GGraphStack) + 1);
     GGraphStack[High(GGraphStack)] := LGraph;
     LResume();
@@ -1107,7 +1512,7 @@ begin
     end;
   LResume := procedure
     begin
-      ShowGraph(LGraph, LBack);
+      ShowGraph(LGraph, LBack, ASymptoms);
     end;
   MessageView('Opening graph', 'Reading the saved relationships.', LBack);
   if GGraphModel <> nil then
@@ -1265,6 +1670,10 @@ begin
     if not LTrendOnly then
     begin
       LResultActions := Section(nkRow, 'result-actions');
+      if Length(LSymptoms) > 0 then
+      begin
+        LResultActions.Add(Button('compare-ingredients', 'Compare ingredients', nvSecondary));
+      end;
       LResultActions.Add(Button('open-graph', 'Graph view', nvSecondary));
       if (GRelatedTerms <> '') and (GResearchKind <> SourceKindCulture) then
         LResultActions.Add(Button('jump-to-sources', 'Jump to sources', nvSecondary));
@@ -1417,6 +1826,20 @@ begin
         StartGraph(ArgumentSymptoms(GResults), TextOf(GArguments, 'ingredient'));
         Result := True;
       end);
+    if Length(LSymptoms) > 0 then
+    begin
+      BindEvent(GResultsRenderer.ElementFor('compare-ingredients'), 'click',
+        function(AEvent: TEventListenerEvent): Boolean
+        begin
+          CompareIngredients(ArgumentSymptoms(GResults),
+            procedure
+            begin
+              ShowList(GResults, False);
+              GResultsRenderer.ElementFor('compare-ingredients').focus;
+            end);
+          Result := True;
+        end);
+    end;
     if (GRelatedTerms <> '') and (GResearchKind <> SourceKindCulture) then
       BindEvent(GResultsRenderer.ElementFor('jump-to-sources'), 'click',
         function(AEvent: TEventListenerEvent): Boolean
