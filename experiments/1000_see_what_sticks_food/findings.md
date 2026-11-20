@@ -942,3 +942,7 @@ Eight original pairs reached main-body review and fifteen related assessments we
 ## 2009 provider-date visual symptom definitions and proceedings identity
 
 Two original pairs reached main-body review. Seven related assessments retain population, exposure and outcome boundaries. The schizophrenia proceedings DOI differs from the separate author index in the PubMed field. The proceedings body remains queued. Claim 0175 remains Unknown with 104 queued originals. The native replay verified the identity and relative order of all 45,405 retained pairs. [Source and review packet](followup/fig-priority-six-2009-nov19-103/README.md).
+
+## 2008 provider-date visual events and study lineage
+
+Both pinned original articles reached full main-text review. Eight related assessments include the six-person Spheramine pilot publications, the distinct randomized trial and a nested autopsy case, two registry records, and an independent dementia pathology cohort. The pilot publications give different accounts of how the three visual cases resolved. Claim 0175 remains Unknown with 102 queued originals. Native replay verified both removals and all 45,403 retained queue pairs. [Source and review packet](followup/fig-priority-six-2008-nov19-104/README.md).
