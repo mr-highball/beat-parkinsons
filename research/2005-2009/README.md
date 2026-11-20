@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [2006 DLB perfusion study](Source-Text/2006-PMID16567718-Donepezil-and-Visual-Hallucination-Perfusion.txt) measures caregiver-rated visual symptoms before and after donepezil. [Comparison with the later imaging and randomized studies](../2010-2014/Observations/2012-Lewy-Body-Hallucination-Measures.md).
+
 The [2005 Hoasca pharmacokinetic reanalysis](Source-Text/2005-PMID16149329-Hoasca-Metabolizer-Reanalysis.txt) reuses 14 of the original 15 volunteer profiles.
 
 The [grapefruit juice and nilotinib crossover](Source-Text/2009-PMID19948946-Grapefruit-Juice-and-Nilotinib.txt) measures serum drug exposure in healthy participants. [Later Parkinson protocol context](../2015-2019/Observations/2016-Visual-Outcome-Definitions-and-Nilotinib-Lineage.md).
