@@ -816,3 +816,6 @@ The Singapore total-diet papers and original supplement preserve measured black-
 
 
 The conference and observational review links the separate visual outcomes, the high-exposure nutmeg case and the food-frequency microbiome comparison. [Original evidence and measurements](Observations/Conference-Visual-Phenotypes-and-Food-Frequency.md).
+
+
+[Visual hallucination trial record lineage](Observations/Visual-Hallucination-Trial-Record-Lineage.md).

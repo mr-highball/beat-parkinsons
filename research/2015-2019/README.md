@@ -720,3 +720,6 @@ The contaminant trail includes an original total-diet abstract, without a measur
 
 
 Two original first releases date to 2019, with 2020 journal issues. [Insular morphometry meta-analysis](Source-Text/PMC7648006.txt) · [Lewy body family-history cohort](Source-Text/PMC7029358.txt).
+
+
+[Clinical stimulation and visual outcome definitions](Observations/Clinical-Stimulation-and-Visual-Outcome-Definitions.md).

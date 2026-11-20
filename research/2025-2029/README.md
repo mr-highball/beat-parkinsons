@@ -747,3 +747,6 @@ January 1, 2025 through November 11, 2026 (partial period).
 
 
 [Parkinson hallucination interview and sensory phenotypes](Source-Text/2026-MedRxiv-26357376-Parkinson-Hallucination-Phenotypes.txt) · [Pantothenic-acid systematic review and full-text access](Source-Text/2026-PMID41712554-Pantothenic-Acid-Review-Access.txt).
+
+
+[Medication state and induced sensed presence in a Parkinson crossover](Source-Text/2026-MedRxiv-26361921-Dopaminergic-Presence-Crossover.txt).
