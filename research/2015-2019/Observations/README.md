@@ -616,3 +616,5 @@ The pinto crossover registers metabolic, vascular and satiety measures. The kidn
 - [Strawberry powder and induced fall latency](Strawberry-Powder-and-Provoked-Fall-Latency.md).
 
 The 2017 Algerian oasis field survey records date syrup for sore pain. The formulation and indication differ from the 2014 paper's attribution of date use for abdominal pain. Neither account supplies measured patient pain outcomes. [Original survey record](../Cultural-and-Experiential/Traditional-Practices/2017-PMID28480429-Algerian-Oasis-Date-Syrup-and-Sore-Pain.txt)
+
+Participants in a Riyadh focus group reported date fruit at iftar, with different approaches to the amount eaten. The Kuwait Parkinson cohort separately records fasting and medication changes, with no individual date fruit or pain and apathy measures. Its conference abstract and journal article likely share a cohort. [Ceremonial accounts](../Cultural-and-Experiential/Ceremonial-Accounts/2018-PMID29801593-Riyadh-Ramadan-Iftar-Dates.txt) · [Conference abstract](../Source-Text/2017-MDS1106-Kamel-Parkinson-Ramadan-Abstract.txt) · [Clinical manuscript](../Source-Text/2019-PMID31176513-Kamel-Parkinson-Ramadan-Cohort.txt)

@@ -773,3 +773,5 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Parkinson constipation cohort, aggregate food measures and symptom outcome limits](Source-Text/2026-PMID41737295-Parkinson-Constipation-Cohort-and-Food-Scope.txt).
 - [Indian placebo trial of Helicobacter pylori treatment and Parkinson motor symptoms](Source-Text/2026-PMID42579018-HP-Eradication-Placebo-Trial.txt).
 - [MENASA Parkinson database protocol, black tea and resting tremor fields](Source-Text/2025-PMID40671919-MENASA-Black-Tea-and-Tremor-Fields.txt).
+- [Bradford interviews on dates at iftar and meal-related discomfort](Cultural-and-Experiential/Ceremonial-Accounts/2025-PMID39787165-Bradford-Iftar-Dates-and-Meal-Experiences.txt).
+- [Parkinson Ramadan cohort, medication groups and nonmotor totals](Source-Text/2025-PMID41025303-Metta-Parkinson-Ramadan-Cohort.txt).
