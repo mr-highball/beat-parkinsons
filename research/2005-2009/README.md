@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [2008 clinical observations](Observations/2008-Visual-Event-Definitions-and-Spheramine-Lineage.md) compare the [Spheramine pilot events](Source-Text/2005-PMID16344341-Spheramine-Pilot-Visual-Events.txt), [2008 review](Source-Text/PMC5084167.txt), [2009 STEPS autopsy](Source-Text/PMC2764397.txt) and [visual symptom timing in dementia](Source-Text/PMC2745052.txt).
+
 The [2009 visual symptom observations](Observations/2009-Visual-Symptom-Definitions-and-Proceedings-Identity.md) compare [visual history in GBA carriers](Source-Text/PMC2702833.txt), the [infestation review](Source-Text/PMC2772366.txt), and the identity of the [schizophrenia conference proceedings](Source-Text/PMC2651108.txt).
 
 The [2010 source-lineage notes](../2010-2014/Observations/2010-Visual-Sleep-and-Drug-Outcome-Lineage.md) link primary records from this period on nocturnal hallucinations, visual perfusion, autopsy sample overlap and juvenile parkinsonism.

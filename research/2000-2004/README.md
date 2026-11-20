@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [six-month Spheramine pilot report](Source-Text/2004-PMID14766394-Spheramine-Six-Month-Pilot.txt) describes the initial clinical follow-up of six participants. [Comparison with the later pilot and randomized reports](../2005-2009/Observations/2008-Visual-Event-Definitions-and-Spheramine-Lineage.md).
+
 The [2002 multiple system atrophy report](Source-Text/2002-PMID12040988-Infestation-in-MSA.txt) describes infestation delusion in a distinct diagnostic population. [Comparison with Parkinson case reports](../2005-2009/Observations/2009-Visual-Symptom-Definitions-and-Proceedings-Identity.md).
 
 The [2002 temporal pathology study](Source-Text/2002-PMID11844739-Formed-Visual-Hallucinations-and-Temporal-Pathology.txt) compares formed visual hallucination phenotypes with regional Lewy body findings.

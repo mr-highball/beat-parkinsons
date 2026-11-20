@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [STEPS randomized results abstract](Source-Text/2011-PMID21565557-Spheramine-STEPS-Randomized-Results.txt) identifies the sham-controlled comparison and its motor endpoint. [Pilot and pathology lineage](../2005-2009/Observations/2008-Visual-Event-Definitions-and-Spheramine-Lineage.md).
+
 The [2012 RECOVER extension abstract](Source-Text/2012-RECOVER-Open-Label-Extension.txt) reports general hallucinations in the open-label group. Its participant proportion aligns with the [posted results](Source-Text/2010-RECOVER-Registry-Visual-Adverse-Events.txt).
 
 The [2010 visual symptom observations](Observations/2010-Visual-Sleep-and-Drug-Outcome-Lineage.md) trace the RECOVER reports, nocturnal hallucination ratings, diagnostic differences and the open congress issue.

@@ -1,5 +1,7 @@
 # Observations for 2005-2009
 
+The [2008 visual event and Spheramine observations](2008-Visual-Event-Definitions-and-Spheramine-Lineage.md) distinguish the pilot, randomized trial and autopsy report and retain different accounts of how visual symptoms resolved.
+
 The [2009 visual symptom observations](2009-Visual-Symptom-Definitions-and-Proceedings-Identity.md) distinguish symptom history, episode frequency, infestation beliefs and adverse-event coding.
 
 A reconstituted chicken soup crossover adds a controlled ordinary fatigue outcome beyond earlier laboratory task work. Its fatigue contrast was inconclusive and its anxiety subscale showed a separate favorable comparison. Earlier mood studies used different routes and outcomes. [Chicken soup](../Food-Experiment-Chicken-Fatigue.md) · [Prior carrier trials](../../2000-2004/Food-Experiment-Carrier-Oils-Mood.md)
