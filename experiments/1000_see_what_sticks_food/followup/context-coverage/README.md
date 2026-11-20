@@ -14,6 +14,8 @@ The original searches produced 69,107 result appearances across 2,000 expression
 | No imported exact review | 45,004 |
 | **Total** | **61,252** |
 
+The dried-fig bibliographic follow-up adds five assessments outside the original pair inventory. The new searches and their reported endpoints are stored separately. [Search and evidence follow-up](../fig-dried-exposure-followthrough-nov20-114/README.md)
+
 The print and diagnostic follow-up verifies the full Ala paper and preserves seven other staged access gaps. [Drawing evidence and assay scope](../fig-print-and-diagnostic-nov20-113/README.md)
 
 The clinical full-text checkpoint verifies four original papers for claim 0175, including two that were pending. Two staged original bodies and the separate Kuopio table transcription remain open. [Clinical evidence and access receipts](../fig-clinical-fulltext-nov20-112/README.md)
