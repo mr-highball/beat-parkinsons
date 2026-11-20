@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 15,549 |
+| Local body or other primary-source context | 15,592 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 218 |
 | Title or index | 145 |
-| Pending or access-only disposition | 207 |
+| Pending or access-only disposition | 164 |
 | No imported exact review | 45,004 |
 | **Total** | **61,252** |
+
+The current native replay leaves 45,313 pairs queued across 28,888 sources. The 2021 FEBS full-supplement review resolves 43 previous access-only pairs and keeps each poster's preparation and outcome separate. [Original poster review](../febs-2021-original-posters-nov20-120/README.md)
 
 The dried-fig bibliographic follow-up adds five assessments outside the original pair inventory. The new searches and their reported endpoints are stored separately. [Search and evidence follow-up](../fig-dried-exposure-followthrough-nov20-114/README.md)
 

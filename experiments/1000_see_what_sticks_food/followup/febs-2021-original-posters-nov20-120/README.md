@@ -1,0 +1,9 @@
+# 2021 FEBS poster supplement and companion studies
+
+The 405-page publisher PDF covers printed pages 103–507. Two University of Basilicata downloads had identical hashes, and the Wiley PDF index confirms the page span. The supplement ends at P-E-02-3 and excludes late-breaking abstracts. All 43 open Round 1 pairs for this collection now have original-body reviews. Twenty-one retain low-fit ingredient context and 22 resolve irrelevant matches. The screen treated individual poster IDs as the unit of comparison. [Source receipts](source-receipts.tsv) · [Pair decisions](dispositions.tsv) · [Native validation](native-replay-verification.txt)
+
+The nutmeg essential-oil poster and original author abstract describe the same Cx43 cell assays. The olive polyphenol paper adds a timing result. Oxidative stress decreased in pretreated cells, with no significant decrease when the compounds were applied at the same time as the amyloid challenge or after it. The basil material was made from seed mucilage, and the sunflower and corn oils appeared as a diet component or a control-group exposure. These contexts contain no comparison of a frozen culinary preparation against its Parkinson outcome.
+
+The 2023 kefir and mahewu paper explicitly reuses two kefir isolates' enzyme readouts from a 2021 paper. It identifies the published commercial-mahewu sourcing separately. The poster does not name the isolates. The commercial beverage study assayed three retail kefirs without testing falls or fatigue. [Related assessments](related-assessments.tsv) · [Open source trails](open-trails.tsv)
+
+Six dated archive records and 32 related assessments were added. Round 1 remains at 61 directional verdicts and 939 Unknown. Claim 0175 retains 55 original pairs in the queue. The first-pass Oracle batch returned three partial matches and eleven misses. [Oracle intake](oracle-first.tsv) · [Coverage merge](lookup-merge.txt)
