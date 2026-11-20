@@ -23,6 +23,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+Another 117 archive pairs reached full-text context review. The indexed Kagoshima original reports separate nighttime sleep and constipation associations and nonmonotonic binary hyposmia comparisons. It adds related clinical context for brewed green tea with no small-handwriting or fatigue measure. This packet records two assessments and the source leads for the relevant frozen Round 4 claims. [Context and endpoint review](followup/date-context-and-green-tea-cohort-nov20-138/README.md)
+
 Another 92 exact archive pairs were resolved. The butylphthalide registry and article agree on complete follow-up counts, with a 2018 retrospective registration after 2014 first enrollment. The clinical review and related public discussion use botanical group labels. The underlying exposures are a pharmaceutical compound and ground soybeans with medication, with the exact culinary claims unchanged. [Registry and preparation scope](followup/date-exact-and-celery-registry-nov20-137/README.md)
 
 Another 119 exact archive pairs were resolved at full-text depth. The reported iftar date practice, meal-size descriptions and aggregate nonmotor outcomes come from distinct observation groups. The 2017 and 2019 Kuwait reports are likely one cohort. The Parkinson cohorts have no date-specific exposure or pain and apathy estimates. Both dried-date verdicts remain open. [Original scopes and clinical comparisons](followup/date-wide-review-and-ramadan-nov20-136/README.md)
