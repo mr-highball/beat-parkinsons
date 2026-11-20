@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [COPARK cohort](Source-Text/2020-PMID32880023-Rascol-COPARK-Saliva-and-Drooling.txt) and [Figure 2 correction](Source-Text/2020-DOI10.1007-s00702-020-02264-1-COPARK-Figure-Correction.txt) separate clinical saliva categories and on/off medication ratings. [Off-period and swallowing observations](Observations/Drooling-Off-Periods-and-Swallowing.md) link patient reports and swallow-specific measures.
+
 The [drooling chart and instrument observations](Observations/Drooling-Chart-Events-and-Scale-Validation.md) distinguish recorded worsening, drug adverse events, airway penetration and scale performance.
 
 The [STEADY-PD III analysis](Source-Text/2022-PMID35466955-Tosin-STEADY-PD3-Emergent-Drooling.txt) tracks newly endorsed drooling. The [PDQoL7 form](Source-Text/2022-PMID35235090-Stathis-PDQoL7-Salivation-Item.txt) groups salivation with other complaints. The [period observations](Observations/Drooling-Interviews-and-Item-Emergence.md) link original participant experiences.
