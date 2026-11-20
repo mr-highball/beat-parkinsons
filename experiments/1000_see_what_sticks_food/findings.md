@@ -2,6 +2,8 @@
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+The 40 remaining priority-six originals from 2025 reached body review for raw fig and drooling. The Nascimento reports likely overlap and offer separate flow and drooling comparisons. Participant interviews identify the contexts of food preparation and oral cueing. No study assigned raw fig with a measured drooling outcome, and claim 0188 remains Unknown. [Originals and source context](followup/fig-drooling-2025-originals-nov20-147/README.md)
+
 All 17 previously unreviewed 2026 priority-six originals for raw fig and drooling reached body review. Congress presentations distinguish spontaneous swallowing, unstimulated saliva flow and patient reports. The newly catalogued Persian review reports use for subjective dry mouth, and historical allergy cases show distinct preparation and symptom scopes. Claim 0188 remains Unknown. [Originals and follow-up records](followup/fig-drooling-2026-originals-nov20-146/README.md)
 
 Thirty-one more fig and drooling pairs reached original-body review, including two historical papers recovered from thirteen official page scans. The divided-attention registry, conference abstract and journal report describe one cohort and separate drooling frequency from severity. The archive now includes the distinct wrist-cue pilot and larger CueBand protocol lineage. A new PDF gap remains open and claim 0188 stays Unknown. [Review and source lineage](followup/fig-drooling-priority-six-nov20-145/README.md)

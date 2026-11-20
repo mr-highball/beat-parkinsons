@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 19,205 |
+| Local body or other primary-source context | 19,245 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 224 |
 | Title or index | 85 |
 | Pending or access-only disposition | 360 |
-| No imported exact review | 41,249 |
+| No imported exact review | 41,209 |
 | **Total** | **61,252** |
+
+The remaining 40 priority-six raw fig and drooling originals in the 2025 publication group reached body review. The exact replay leaves 41,654 source pairs across 26,143 keys. The SGIM and Padua member audit preserves an open title-only Padua entry. [Full study and proceedings review](../fig-drooling-2025-originals-nov20-147/README.md)
 
 The 17 remaining priority-six raw fig and drooling originals from 2026 reached original-body review. The replay has 41,694 original pairs queued across 26,159 provider keys. The congress replay separates 881 presentation bodies and retains 14 individual context checks. [2026 source audit](../fig-drooling-2026-originals-nov20-146/README.md)
 
