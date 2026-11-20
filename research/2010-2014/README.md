@@ -544,3 +544,6 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 [Grape-derived preparation for chemoradiation-associated oral mucositis, official registration](Source-Text/Trials/NCT01668849.txt).
 
 [Tamr Ajwa date preparations in laboratory fermentation and cell assays](Source-Text/2014-PMID26101614-Ajwa-Fermentation-and-Cell-Assays.txt).
+
+- [Deglet Nour fruit fractions and mouse nociception, with Table 1 discrepancies](Source-Text/2014-Ouafi-Deglet-Nour-Fruit-Fractions-and-Nociception.txt).
+- [Attributed southern Algerian date-fruit use for abdominal pain](Cultural-and-Experiential/Traditional-Practices/2014-Southern-Algeria-Date-Fruit-Abdominal-Pain-Attribution.txt).

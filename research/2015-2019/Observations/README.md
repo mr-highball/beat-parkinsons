@@ -614,3 +614,5 @@ The pinto crossover registers metabolic, vascular and satiety measures. The kidn
 
 
 - [Strawberry powder and induced fall latency](Strawberry-Powder-and-Provoked-Fall-Latency.md).
+
+The 2017 Algerian oasis field survey records date syrup for sore pain. The formulation and indication differ from the 2014 paper's attribution of date use for abdominal pain. Neither account supplies measured patient pain outcomes. [Original survey record](../Cultural-and-Experiential/Traditional-Practices/2017-PMID28480429-Algerian-Oasis-Date-Syrup-and-Sore-Pain.txt)

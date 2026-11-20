@@ -766,3 +766,4 @@ Two original first releases date to 2019, with 2020 journal issues. [Insular mor
 
 - [Wild date-palm fruit-pulp extract and mouse nociception](Source-Text/2015-PMID26483687-Wild-Date-Palm-Nociception-Tests.txt).
 - [Ajwa fruit extract, liver injury and model exposure differences](Source-Text/2018-Rahmani-Ajwa-Fruit-Extract-Liver-Model.txt).
+- [Algerian oasis field survey on date-palm preparations, including sore pain](Cultural-and-Experiential/Traditional-Practices/2017-PMID28480429-Algerian-Oasis-Date-Syrup-and-Sore-Pain.txt).
