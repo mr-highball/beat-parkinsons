@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [2018 ginger contractility study](Source-Text/2018-PMC5954582-Ginger-Small-Intestinal-Contractility.txt) distinguished prior oral exposure from direct application to excised rat small intestine. The [period’s cultural sources](Cultural-and-Experiential/README.md) include the Trinidad plant survey and the Chinese zongzi wrapper survey.
+
 The [2015 Daikenchuto report](Source-Text/2015-PMID27069528-Daikenchuto-Bloating-and-Pain.txt), [2018 chart review](Source-Text/2018-PMID29693001-Daikenchuto-Stool-Frequency-Chart-Review.txt) and [2019 poststroke reanalysis](Source-Text/2019-PMID31823650-Daikenchuto-Poststroke-Reanalysis.txt) address different outcomes and designs. The [2016 placebo trial registration](Source-Text/Trials/UMIN000020570.txt) gives the planned dose and endpoints for a separate study. A [2019 Cochrane review](Source-Text/2019-PMID30706461-Poststroke-Urinary-Moxibustion-Scope.txt) documents a topical ginger–salt and acupuncture method for urinary incontinence after stroke.
 
 The [Mahapanchagavya treated series](Source-Text/2018-Usha-Singh-Mahapanchagavya-Epilepsy-Series.txt) reports compound seizure outcomes. The [earlier thesis entry](../2000-2004/Source-Text/2001-Usha-Apasmara-Thesis-Identity.txt) and later textual commentary point to likely reuse of the treatment group.

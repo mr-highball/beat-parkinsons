@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2010-2014
 
+- [Bougainville reports of ginger use for abdominal pain and constipation](Traditional-Practices/2011-Bougainville-Ginger-Abdominal-Pain-and-Constipation.txt). The survey groups these indications in a typhoid context.
+
 - [Chriha sun-dried common fig in a Moroccan agricultural bulletin](Local-Knowledge/2010-El-Khaloui-Chriha-Dried-Fig-Practice.txt).
 - [Common fig food and fuelwood in the upper Sebou watershed](Local-Knowledge/2011-Libiad-Sebou-Fig-Food-and-Fuelwood.txt).
 

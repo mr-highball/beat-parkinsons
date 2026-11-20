@@ -1,5 +1,7 @@
 # 1990-1994
 
+Two ginger studies measured [small-intestinal charcoal transport](Source-Text/1990-PMID2337957-Ginger-Charcoal-Transit.txt) and [serotonin-provoked diarrhea](Source-Text/1990-PMID2074539-Ginger-Serotonin-Provoked-Diarrhea.txt) in separate experiments.
+
 The [1992 apasmāra history abstract](Source-Text/1992-PMID1592022-Manyam-Apasmara-Symptom-Descriptions.txt) distinguishes reported aura sensations from signs during attacks. [Textual comparison](Observations/README.md)
 
 The [1988 Turkish fig crop survey](Source-Text/1991-PMID23605655-Ozay-Alperden-1988-Dried-Fig-Crop.txt) measured food contaminants across orchards and processing stages. [Sampling comparison](Observations/README.md)

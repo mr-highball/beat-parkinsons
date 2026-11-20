@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [Bougainville field survey](Cultural-and-Experiential/Traditional-Practices/2011-Bougainville-Ginger-Abdominal-Pain-and-Constipation.txt) documents a traditional ginger use that lists abdominal pain and constipation in a typhoid context.
+
 The [2011 metabolic study](Source-Text/2011-PMID22152092-Ginger-Diabetic-Rat-Metabolism.txt) and [2009 IUPS poster](../2005-2009/Source-Text/2009-PMC10722647-IUPS-Poster-Food-Exposures.txt) share researchers and an extract schedule. Animal cohort overlap remains unresolved.
 
 The [healthy adult transit study](Source-Text/2010-PMID20378829-Daikenchuto-Healthy-Colonic-Transit.txt) and its [W1413 abstract](Source-Text/2010-W1413-Daikenchuto-Healthy-Transit-Abstract.txt) match the same 60-person registered comparison. [T1829](Source-Text/2010-T1829-Daikenchuto-Constipation-and-Pain-Abstract.txt) and the [chronic constipation article](Source-Text/PMC5139733.txt) share phases and outcomes. The link to the single-arm registration remains uncertain.
