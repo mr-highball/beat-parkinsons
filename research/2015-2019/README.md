@@ -770,3 +770,4 @@ Two original first releases date to 2019, with 2020 journal issues. [Insular mor
 - [Kuwait Parkinson Ramadan cohort, conference abstract](Source-Text/2017-MDS1106-Kamel-Parkinson-Ramadan-Abstract.txt).
 - [Riyadh focus-group accounts of dates at iftar](Cultural-and-Experiential/Ceremonial-Accounts/2018-PMID29801593-Riyadh-Ramadan-Iftar-Dates.txt).
 - [Kuwait Parkinson Ramadan cohort, attrition and symptom outcomes](Source-Text/2019-PMID31176513-Kamel-Parkinson-Ramadan-Cohort.txt).
+- [Butylphthalide Parkinson trial, retrospective WHO ICTRP registration](Source-Text/Trials/ChiCTR1800018892.txt).

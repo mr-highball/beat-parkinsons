@@ -775,3 +775,5 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [MENASA Parkinson database protocol, black tea and resting tremor fields](Source-Text/2025-PMID40671919-MENASA-Black-Tea-and-Tremor-Fields.txt).
 - [Bradford interviews on dates at iftar and meal-related discomfort](Cultural-and-Experiential/Ceremonial-Accounts/2025-PMID39787165-Bradford-Iftar-Dates-and-Meal-Experiences.txt).
 - [Parkinson Ramadan cohort, medication groups and nonmotor totals](Source-Text/2025-PMID41025303-Metta-Parkinson-Ramadan-Cohort.txt).
+- [Clinical review of plant therapies, original preparation and study lineage](Source-Text/2026-PMID42489905-Sukmueng-Plant-Therapies-and-Preparation-Scope.txt).
+- [Public discussion of the plant-therapy review and celery exposure](Cultural-and-Experiential/Conversations/2026-MJFF-Plant-Therapy-Review-and-Celery-Scope.txt).
