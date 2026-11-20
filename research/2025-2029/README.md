@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [ginger water-extract rat comparison](Source-Text/2025-PMID40429970-Lee-Ginger-Stress-and-Paw-Withdrawal.txt) records faster paw withdrawal in a stress model and distinguishes the thermal reflex from clinical pain.
+
 The [Kagoshima green-tea survey](Source-Text/2026-PMID42816813-Sakakima-Green-Tea-Nonmotor-Symptoms.txt) reports separate associations for nighttime sleep and constipation, plus binary hyposmia comparisons. [Observations across periods](Observations/Green-Tea-Nonmotor-Outcome-Distinctions.md)
 
 The [French DUMP cohort](Source-Text/2025-PMID40062736-DUMP-Ginger-Use-and-Registration.txt) includes an observation of ginger use for nausea and an inconsistent registration ID. The [period’s cultural records](Cultural-and-Experiential/README.md) include Brunei postpartum practices and a Guadeloupe botanical survey.

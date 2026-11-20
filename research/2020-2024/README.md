@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [galangal membrane assay](Source-Text/2022-PMID36145715-Simon-Galangal-Membrane-Assay-Scope.txt) distinguishes greater galangal compounds from the same team's earlier ginger comparison and records the instability of three samples.
+
 The [fruit constipation review and extraction audit](Source-Text/2022-PMID36276840-Huo-Date-Stool-Frequency-Forest-Plot.txt) trace the date estimate to the same earlier healthy-adult crossover and distinguish stool frequency from pain.
 
 The [2024 canna resistant-starch study](Source-Text/2024-PMID39347419-Canna-Starch-Parkinson-Rat-Model.txt) measured behavior and tissue outcomes in a Parkinson model. Banana yam and ginger yam refer to the canna plant in that study.
