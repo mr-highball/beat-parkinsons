@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The latest November 20 date-fruit review resolved 201 archived pair mismatches. The original queue holds 42,269 pairs, including 465 retained date-fruit cases. Two dated public abstracts extend the clinical and animal evidence trails. Exact Oracle identifiers now resolve for the 2025 stress experiment and 2017 survey. [Date-fruit disambiguation and source priority](followup/date-context-disambiguation-nov20-135/README.md)
+The latest November 20 date-fruit review resolved 119 archived pairs, including 12 former publication-boundary holds. The original queue now holds 42,150 pairs, including 346 retained date-fruit cases. Five dated clinical and cultural records distinguish reported date fruit at iftar from the Ramadan Parkinson outcomes. [Wider archive and Ramadan evidence](followup/date-wide-review-and-ramadan-nov20-136/README.md)
+
+The preceding November 20 date-fruit review resolved 201 archived pair mismatches. That checkpoint left 42,269 pairs, including 465 retained date-fruit cases. Two dated public abstracts extend the clinical and animal evidence trails. Exact Oracle identifiers resolved for the 2025 stress experiment and 2017 survey. [Date-fruit disambiguation and source priority](followup/date-context-disambiguation-nov20-135/README.md)
 
 The preceding November 20 date-fruit review added the original Deglet Nour mouse study and two Algerian cultural records. The stored proceedings show disagreement on the active control and protection percentages. The original Béchar report remains open. [Primary and cultural source receipts](followup/date-pain-proceedings-and-cultural-sources-nov20-134/README.md)
 

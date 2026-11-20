@@ -6,17 +6,19 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 18,636 |
+| Local body or other primary-source context | 18,755 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 218 |
 | Title or index | 93 |
 | Pending or access-only disposition | 352 |
-| No imported exact review | 41,824 |
+| No imported exact review | 41,705 |
 | **Total** | **61,252** |
 
 Three verified members from the 2025 UEG proceedings inform nine original pairs. All 39 pairs for the supplement stay queued while its remaining pages are unverified. [Member review and clinical follow-through](../ueg-2025-verified-members-nov20-121/README.md)
 
-The current date-fruit review resolves 201 pairs from the previously held scope. The replay leaves 42,269 pairs across 26,666 source keys, including 465 retained date-fruit cases. [Context and boundary review](../date-context-disambiguation-nov20-135/README.md)
+The wider date-fruit review resolves 119 pairs from the held scope, including 12 formerly uncertain publication boundaries. The replay leaves 42,150 pairs across 26,565 source keys, including 346 retained date-fruit cases. [Wider review and original source receipts](../date-wide-review-and-ramadan-nov20-136/README.md)
+
+The preceding date-fruit review resolved 201 pairs from the previously held scope. That checkpoint left 42,269 pairs across 26,666 source keys. [Context and boundary review](../date-context-disambiguation-nov20-135/README.md)
 
 The preceding date-fruit review resolved 1,400 body-level pairs and retained 666 for specific context or source-boundary checks. [Date-fruit receipts and coverage](../date-context-and-primary-models-nov20-133/README.md)
 
