@@ -328,3 +328,7 @@ The original walnut-fraction crossover registration is bucketed by first public 
 
 
 [Apomorphine clinical letter and original body access](Source-Text/2009-PMID19524477-Apomorphine-Visual-Hallucination-Letter-Access.txt).
+
+## Traditional ojé and clinical toxicology
+
+- [Hospital series of reactions to Ficus insipida latex](Source-Text/2005-PMID15814256-Oje-Latex-Hospital-Cases.txt).

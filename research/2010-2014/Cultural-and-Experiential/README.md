@@ -16,3 +16,5 @@ Collect traditional practices, ceremonial accounts, public personal reports and 
 Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experiential.md). Create the applicable subcategory when adding records, and cross-link prior research without duplicating studies.
 
 - [External saffron-water use in traditional Iranian insomnia literature](Traditional-Practices/2011-Mousavi-Bathaie-Saffron-Insomnia.txt).
+
+- [Ojé plant-teacher and cleansing practices in East-Central Peru](Traditional-Practices/2011-PMID21295130-Oje-Plant-Teachers.txt).

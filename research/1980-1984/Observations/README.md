@@ -36,3 +36,7 @@
 - The 1982 Ceylon account names boiled leaves in a hoarseness indication and supplies no measured clinical response. [Boiled curry leaves and traditional hoarseness use](../Food-Experiment-Curry-Leaf-Voice-History.md)
 
 - The printed clinical tables distinguish visual hallucinations at presentation and through the course of subacute Creutzfeldt–Jakob disease. [Full printed clinical summary](../Source-Text/1984-PMID6368752-Creutzfeldt-Jakob-Visual-Phenotype-Printed-Tables.txt).
+
+### Peruvian Ficus accounts and plant-associated experiences
+
+The original interviews distinguish ojé from the genus-level identity of renaco and record disagreement about visions, dreams and dizziness. The older clinical period and these ethnographic accounts use different outcome definitions. The later [East-Central Peru field study](../../2010-2014/Cultural-and-Experiential/Traditional-Practices/2011-PMID21295130-Oje-Plant-Teachers.txt) identifies several plants called ojé and contributes a separate attributed account. [Original Iquitos account](../Cultural-and-Experiential/Traditional-Practices/1984-PMID6492831-Luna-Ficus-Plant-Teachers.txt).

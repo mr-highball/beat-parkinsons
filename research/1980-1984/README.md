@@ -57,3 +57,7 @@ January 1, 1980 through December 31, 1984.
 ## Clinical study access
 
 - [Dentato-rubro-pallido-luysian degeneration, author abstract](Source-Text/1984-PMID6512549-Dentatorubral-Clinical-Abstract.txt).
+
+## Ficus in the Iquitos field accounts
+
+- [Ojé, renaco and reports of plant teaching](Cultural-and-Experiential/Traditional-Practices/1984-PMID6492831-Luna-Ficus-Plant-Teachers.txt).

@@ -182,3 +182,7 @@ The 2001 colon perfusion contrasts a seed extract against control fluid and repo
 - The inspected 2003 Kabylie edition describes a fresh harvest separately from year-round dried storage. [Historical preparation account](../Cultural-and-Experiential/Local-Knowledge/2003-Hanoteau-Letourneux-Fresh-and-Dried-Fig-Account.txt) · [Earlier parallel wording](../../1875-1879/Cultural-and-Experiential/Local-Knowledge/1875-Vilbort-Fresh-Fig-Harvest-Account.txt).
 
 - The early imaging and recurrent psychosis examples have separate clinical outcomes. The abstract for seasonal recurrent psychosis identifies a different ingested plant. [Imaging abstract](../Source-Text/2001-PMID11385013-MIBG-Lewy-Body-Differential-Abstract.txt) · [Recurrent psychosis abstract](../Source-Text/2003-PMID12743348-Autumnal-Psychosis-Original-Abstract.txt).
+
+### Hallucination adverse events and observer methods
+
+The [EXPRESS randomized comparison](../Source-Text/2004-PMID15590953-EXPRESS-Hallucination-and-Tremor-Events.txt) provides counts of participants with a general adverse-event term. That coding differs from clinical interviews that ask about specific visual experiences, and its tremor adverse-event differences do not correspond to a clear difference on the trial’s examination scores.

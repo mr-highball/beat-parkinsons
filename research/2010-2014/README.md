@@ -510,3 +510,9 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 
 
 [French Lewy body stimulation registration](Source-Text/Trials/NCT01340001.txt).
+
+## Fig preparations and visual symptom definitions
+
+- [Omani fig diet and memory testing in the APPsw/Tg2576 mouse model](Source-Text/PMC4090508.txt).
+- [Traditional ojé preparation and an attributed spirit account](Cultural-and-Experiential/Traditional-Practices/2011-PMID21295130-Oje-Plant-Teachers.txt).
+- [2013 visual symptom, clinical and biological context sources](Observations/2013-Visual-Endpoints-and-Ficus-Preparations.md).

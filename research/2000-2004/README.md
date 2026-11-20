@@ -190,3 +190,7 @@ The walnut-oil lipid trial is archived at author-abstract depth, with processing
 ## Visual symptom definitions and food exposure boundaries
 
 - [Modulation of striatal serotonin and opioid receptor mRNA expression following systemic N-methyl-norsalsolinol administration](Source-Text/2003-PMID14607311-N-Methyl-Norsalsolinol-Receptor-Expression-Abstract.txt).
+
+## Parkinson dementia trial safety and visual outcomes
+
+- [EXPRESS original publication, adverse-event and clinical scores](Source-Text/2004-PMID15590953-EXPRESS-Hallucination-and-Tremor-Events.txt).
