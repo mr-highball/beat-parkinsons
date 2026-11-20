@@ -860,3 +860,6 @@ The conference and observational review links the separate visual outcomes, the 
 - [MIND and Mediterranean diet scores and patient-reported fatigue](Source-Text/2022-PMID36501214-MIND-Mediterranean-Fatigue-and-Food-Scope.txt).
 - [Publisher retraction of the Neelum Valley ethnobotany survey](Source-Text/2023-PMID37315012-Neelum-Ethnobotany-Retraction.txt).
 - [Publisher retraction of the aging and alpha-synuclein animal study](Source-Text/2024-PMID39415232-Synuclein-Model-Retraction.txt).
+- [Dried-date comparator protocol filed with ClinicalTrials.gov](Source-Text/Trials/NCT05358210-Protocol-2022-03-17.txt).
+- [Deglet Noor cultivar and recruitment in the older-adult comparator trial](Source-Text/2024-Mukamal-Date-Blueberry-Protocol-Preprint.txt).
+- [Ajwa date fruit extract in an animal lung injury model](Source-Text/2022-Almatroodi-Ajwa-Fruit-Extract-Lung-Model.txt).

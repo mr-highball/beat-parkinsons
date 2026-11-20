@@ -763,3 +763,6 @@ Two original first releases date to 2019, with 2020 journal issues. [Insular mor
 [Indian placebo comparison of Helicobacter pylori treatment in Parkinson disease, WHO registration](Source-Text/Trials/CTRI-2019-04-018524.txt).
 
 [Registered grape juice and aquatic exercise trial, WHO record](Source-Text/Trials/RBR-2c4xxb.txt).
+
+- [Wild date-palm fruit-pulp extract and mouse nociception](Source-Text/2015-PMID26483687-Wild-Date-Palm-Nociception-Tests.txt).
+- [Ajwa fruit extract, liver injury and model exposure differences](Source-Text/2018-Rahmani-Ajwa-Fruit-Extract-Liver-Model.txt).

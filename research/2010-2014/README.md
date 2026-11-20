@@ -542,3 +542,5 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [2013 visual symptom, clinical and biological context sources](Observations/2013-Visual-Endpoints-and-Ficus-Preparations.md).
 
 [Grape-derived preparation for chemoradiation-associated oral mucositis, official registration](Source-Text/Trials/NCT01668849.txt).
+
+[Tamr Ajwa date preparations in laboratory fermentation and cell assays](Source-Text/2014-PMID26101614-Ajwa-Fermentation-and-Cell-Assays.txt).
