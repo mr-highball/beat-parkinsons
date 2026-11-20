@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The next November 20 review resolved 181 original pairs across 19 complete sources. Fifty-six pairs remain open across SNO and UEG 2022. Eleven related assessments and 29 dated catalog records cover original proceedings, clinical companions and a trial registration. The original queue holds 44,723 pairs, including 35 for claim 0581. [Source review and cross-checks](followup/ginger-and-proceedings-2020-2022-nov20-129/README.md)
+
 The November 20 review checked 22 originals and resolved 203 claim–source pairs. The 2016 reproductive proceedings retain 22 figure-access holds. Twelve related assessments and 24 dated catalog entries preserve cultural indications and animal studies of different tissues and outcomes. The original queue holds 44,904 pairs, including 54 for claim 0581. [Source receipts and replay](followup/ginger-and-proceedings-2010-2019-nov20-128/README.md)
 
 The November 20 proceedings checkpoint resolves 130 original pairs across ten complete sources and records 18 remaining access holds. Eight related assessments and 13 dated notes distinguish ginger labeling surveys, original poster outcomes and the older perioperative nausea and gastric physiology studies. The queue holds 45,107 original pairs, including 75 for claim 0581. [Originals, evidence boundaries and replay](followup/ginger-proceedings-through-2009-nov20-127/README.md)

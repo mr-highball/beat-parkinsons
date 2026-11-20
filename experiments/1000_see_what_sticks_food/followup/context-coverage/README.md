@@ -6,17 +6,19 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 16,001 |
+| Local body or other primary-source context | 16,182 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 218 |
 | Title or index | 105 |
-| Pending or access-only disposition | 267 |
-| No imported exact review | 44,532 |
+| Pending or access-only disposition | 323 |
+| No imported exact review | 44,295 |
 | **Total** | **61,252** |
 
 Three verified members from the 2025 UEG proceedings inform nine original pairs. All 39 pairs for the supplement stay queued while its remaining pages are unverified. [Member review and clinical follow-through](../ueg-2025-verified-members-nov20-121/README.md)
 
-The current native replay leaves 44,904 pairs queued across 28,843 source keys. Twenty-one complete originals supplied 203 full-text decisions. Twenty-two additional pairs remain pending for the 2016 reproductive sciences proceedings' online-only figures. [Proceedings and physiological evidence](../ginger-and-proceedings-2010-2019-nov20-128/README.md)
+The current native replay leaves 44,723 pairs queued across 28,824 source keys. Nineteen complete originals supplied 181 body-level decisions. Fifty-six pairs retain whole-collection holds across SNO and UEG 2022, while individual UEG poster outcomes are recorded. [Proceedings and clinical companions](../ginger-and-proceedings-2020-2022-nov20-129/README.md)
+
+The prior replay closed 203 pairs from the 2010–2019 provider date group. The 2016 reproductive sciences proceedings retain 22 pending pairs for online-only figures. [Proceedings and physiological evidence](../ginger-and-proceedings-2010-2019-nov20-128/README.md)
 
 The previous replay resolved 130 full-text decisions, including 40 upgraded index reviews. A 1995 BMJ object and the 2008 peptide supplement account for 18 pending pairs. [Proceedings and access checkpoint](../ginger-proceedings-through-2009-nov20-127/README.md)
 

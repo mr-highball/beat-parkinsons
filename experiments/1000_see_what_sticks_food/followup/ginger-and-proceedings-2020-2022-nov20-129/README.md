@@ -1,0 +1,11 @@
+# Original publications from 2020 through 2022 and topical ginger comparisons
+
+The 21 original sources supplied 181 body-level decisions. The 133 related contexts and 48 exclusions preserve numbered study limits and distinguish foods, compounds, taxa, and clinical labels. Whole-collection screening remains open for 17 SNO and 39 UEG 2022 pairs. [Exact decisions](dispositions.tsv) · [Original source receipts](source-receipts.tsv) · [Open trails](open-trails.tsv)
+
+UEG poster P1009 and the 2022 Zhang primary paper report a similar 100-person gastric surgery trial. The journal table gives mean first postoperative stool at 42.23 versus 60.19 hours in the 49 intervention and 48 control completers. Later postoperative pain grades were lower in the intervention group. The pack included heat, dried ginger, Evodia and salt. The comparator received enhanced-recovery care without a matched pack. The first stool measure concerns postoperative recovery. Publication lineage and a recruitment-date discrepancy are tracked separately. [Original primary report](https://tougao.cdmc.edu.cn/CN/Y2022/V39/I3/232) · [UEG poster source](https://onlinelibrary.wiley.com/doi/epdf/10.1002/ueg2.12295)
+
+The 2007 ginger-partitioned moxibustion abstract concerns chemotherapy leukopenia. Its constipation mention is in a grouped gastrointestinal toxicity field in a later review. The 2006 study and the 2013 registration concern poststroke urinary symptoms. The registration's three-arm prospective design is separate and lists the 2014 protocol without results. [2007 original](https://pubmed.ncbi.nlm.nih.gov/18257343/) · [2006 original](https://pubmed.ncbi.nlm.nih.gov/17036477/) · [Official registration](https://www.isrctn.com/pdf/44706974)
+
+The Indian pharmacology abstract CPO-9 and the 2017 study match on 30 pregnant participants, the oral ginger extract regimen, outcome and four heartburn reports. They are treated as one likely study family. The conference and review outcomes do not provide a Parkinson constipation comparison, and claim 0581 retains its prior grade. [2017 original](https://www.ijbcp.com/index.php/ijbcp/article/download/1947/1557/7191) · [Assessments](assessments.tsv)
+
+[Oracle first-pass records](oracle-first.tsv) · [Native replay](native-replay-verification.txt)
