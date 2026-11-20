@@ -18,6 +18,8 @@ The dried-fig bibliographic follow-up adds five assessments outside the original
 
 The dried-fig preparation and contaminant checkpoint adds three related assessments outside the original pair inventory. Native replay preserves pair membership and order. Five line references now point to the same assessments at their updated positions. [Source scopes and open routes](../fig-drying-and-archive-nov20-117/README.md)
 
+The dried-fig sampling checkpoint adds four related assessments and updates the 2006 Rabat–Salé assessment. Native replay retains the original pairs and their order. Four assessment line numbers moved to the same study rows. [Primary sampling and clinical boundaries](../fig-intake-and-sample-lineage-nov20-118/README.md)
+
 The print and diagnostic follow-up verifies the full Ala paper and preserves seven other staged access gaps. [Drawing evidence and assay scope](../fig-print-and-diagnostic-nov20-113/README.md)
 
 The clinical full-text checkpoint verifies four original papers for claim 0175, including two that were pending. Two staged original bodies and the separate Kuopio table transcription remain open. [Clinical evidence and access receipts](../fig-clinical-fulltext-nov20-112/README.md)

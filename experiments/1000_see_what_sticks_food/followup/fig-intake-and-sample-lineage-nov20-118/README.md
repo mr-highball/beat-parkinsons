@@ -1,0 +1,7 @@
+# Dried fig sampling campaigns and clinical source boundaries
+
+The 2004 Zinedine thesis describes five fig samples with ochratoxin A below the method’s detection limit. The reported earlier-eluting signal has no confirmed molecular identity. The 2007 journal article describes a separate 20-fig campaign sampled in July–August 2005. The 2008 Juan paper bought its samples in January–October 2006. Its original Table 2 verifies the fig results and distinguishes total aflatoxins from aflatoxin B1. The purchase dates resolve the overlap question for the two market campaigns. [Original access and sampling comparison](source-receipts.tsv) · [Study assessments](assessments.tsv)
+
+The 1991 Turkish crop abstract pools orchard and processing stages. The 2023 surveillance abstract reports dried-fig percentages within a wider food panel and estimates intake. The stage-specific 1991 tables and 2023 fig denominators and sample dates remain open. [Follow-up routes](open-trails.tsv)
+
+The cataloged Pavletic case records eating dried figs before an elevated potassium result. It gives no Parkinson diagnosis or visual episode outcome. A retrieved conference abstract refers to sea figs of the genus Microcosmus, an animal food distinct from common fig fruit. The BMJ routes checked for the 1998 and 2003 original clinical bodies did not supply verified body text. The frozen claim remains Unknown with 55 original pairs queued. [Clinical and search triage](clinical-screen.tsv)
