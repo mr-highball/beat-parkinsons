@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [2002 temporal pathology study](Source-Text/2002-PMID11844739-Formed-Visual-Hallucinations-and-Temporal-Pathology.txt) compares formed visual hallucination phenotypes with regional Lewy body findings.
+
 The [2001 single-vine extract trial](Source-Text/2001-Serrano-Duenas-Banisteriopsis-Parkinson-Trial.txt) reports distinct motor total, tremor and adverse-event observations. The [2003 enzyme and tissue study](Source-Text/2003-Banisteriopsis-MAO-and-Striatal-Slices.txt) examines a separate experimental question.
 
 The [Rush hallucination cohort](Source-Text/2001-PMID11739829-Parkinson-Hallucination-Followup-Abstract.txt) tracked Parkinson symptoms with sequential interviews. [Later outcome comparisons](../2015-2019/Observations/Psychosis-Remission-and-Visual-Symptom-Status.md).

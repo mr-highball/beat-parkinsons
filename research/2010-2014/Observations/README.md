@@ -1,5 +1,7 @@
 # Observations for 2010-2014
 
+The [2010 clinical comparisons](2010-Visual-Sleep-and-Drug-Outcome-Lineage.md) separate sleep questionnaire items, adverse-event coding and regional pathology.
+
 The [2011 source comparisons](2011-Visual-Phenotypes-and-Imaging-Lineage.md) separate visual episode measures, complaint timing, brain imaging and shared sample lineage.
 
 The [2012 visual symptom measures](2012-Lewy-Body-Hallucination-Measures.md) compare the exploratory DLB trial and imaging study with the prior SPECT study, later confirmatory and postmarketing trials, and diagnostic mimics.

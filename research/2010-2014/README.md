@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [2010 visual symptom observations](Observations/2010-Visual-Sleep-and-Drug-Outcome-Lineage.md) trace the RECOVER reports, nocturnal hallucination ratings, diagnostic differences and the open congress issue.
+
 The [2011 visual phenotype and imaging observations](Observations/2011-Visual-Phenotypes-and-Imaging-Lineage.md) distinguish presentation, recurrence, diagnostic classification and imaging signals, and verify reuse of stimulation and MRI data.
 
 The [2012 DLB and visual symptom source group](Observations/2012-Lewy-Body-Hallucination-Measures.md) separates visual ratings, symptom composites, adverse events and the older imaging comparison. The [phase III registration](Source-Text/Trials/NCT01278407.txt) links the subsequent confirmatory publication.
