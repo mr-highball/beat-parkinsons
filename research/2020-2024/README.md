@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [drooling chart and instrument observations](Observations/Drooling-Chart-Events-and-Scale-Validation.md) distinguish recorded worsening, drug adverse events, airway penetration and scale performance.
+
 The [STEADY-PD III analysis](Source-Text/2022-PMID35466955-Tosin-STEADY-PD3-Emergent-Drooling.txt) tracks newly endorsed drooling. The [PDQoL7 form](Source-Text/2022-PMID35235090-Stathis-PDQoL7-Salivation-Item.txt) groups salivation with other complaints. The [period observations](Observations/Drooling-Interviews-and-Item-Emergence.md) link original participant experiences.
 
 The [COPPADIS cohort](Source-Text/2023-PMID37065970-Santos-Garcia-COPPADIS-Drooling.txt) reports daytime drooling at three visits. The [iRBD workbook](Source-Text/2023-PMID37680305-Barone-iRBD-Drooling-Item.txt) shows how many ratings inform the follow-up item. The [paired ESSD conference and journal records](Observations/Drooling-Visit-Denominators-and-Instrument-Lineage.md) distinguish symptom ratings from swallowing residue.

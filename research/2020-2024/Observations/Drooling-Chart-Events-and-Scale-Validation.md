@@ -1,0 +1,5 @@
+# Drooling in chart records and scale validation
+
+The chart review separately reports charted sialorrhea worsening and medication adverse events. The swallowing study measures airway penetration and contains three people with Parkinson disease, without a separate Parkinson estimate. Neither combines the two symptoms into one outcome. [Chart review](../Source-Text/2021-PMID34950865-Navaratnam-Sialorrhea-Chart-Review.txt) · [Penetration study](../Source-Text/2021-PMID33399994-Ko-Chin-Tuck-Penetration.txt)
+
+European Portuguese and Turkish instrument validations report psychometric measures. The later online survey records the co-occurrence of dry mouth and drooling and estimates their associations separately. The original sources supply distinctions for future exposure comparisons. [Portuguese scale](../Source-Text/2020-PMID32772888-Cardoso-Portuguese-Sialorrhea-Scale.txt) · [Turkish scale](../Source-Text/2022-PMID36911563-Genc-Turkish-Sialorrhea-Scale.txt) · [Later survey](../../2025-2029/Source-Text/2026-PMID41546443-van-Dijk-Drooling-and-Dry-Mouth-Survey.txt)
