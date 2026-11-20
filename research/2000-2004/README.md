@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [Rush hallucination cohort](Source-Text/2001-PMID11739829-Parkinson-Hallucination-Followup-Abstract.txt) tracked Parkinson symptoms with sequential interviews. [Later outcome comparisons](../2015-2019/Observations/Psychosis-Remission-and-Visual-Symptom-Status.md).
+
 The [banana pulp enzyme study](Source-Text/2000-PMID11087516-Banana-Pulp-Oxidation-and-Salsolinol-Abstract.txt) measures salsolinol oxidation outside the body.
 
 The [clinical fig allergy and laboratory cross-reactivity record](Source-Text/2003-PMID12859455-Fresh-and-Dried-Fig-Cross-Reactivity.txt) separates fresh and dried preparations in the assay.
