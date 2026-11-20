@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 19,340 |
+| Local body or other primary-source context | 19,367 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 224 |
 | Title or index | 85 |
 | Pending or access-only disposition | 360 |
-| No imported exact review | 41,114 |
+| No imported exact review | 41,087 |
 | **Total** | **61,252** |
+
+The 27 queued raw fig and drooling originals from 2020 all reached primary-body review. The replay leaves 41,532 pairs across 26,090 source keys. The congress check compares 808 exact member locators. Seven related source records include patient reports, instrumental studies and the corrected cohort figure. [2020 original review](../fig-drooling-2020-originals-nov20-152/README.md)
 
 Twelve raw fig and drooling originals in the 2021 provider group reached original-body review. The replay leaves 41,559 pairs across 26,102 source keys. Six related records distinguish charted drooling worsening, swallowing, flow, and subjective oral dryness. The Portuguese validation result tables remain access-limited. [2021 original review](../fig-drooling-2021-originals-nov20-151/README.md)
 

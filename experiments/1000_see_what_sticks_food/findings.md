@@ -2,6 +2,8 @@
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+Twenty-seven 2020 originals reached primary-body review for raw fig and drooling. The corrected COPARK figure separates excess saliva from marked drooling. Two Fox Insight analyses share the same survey and report separate drooling, eating and timing categories. The supplemental table remains open. Claim 0188 remains Unknown. [2020 originals and study lineage](followup/fig-drooling-2020-originals-nov20-152/README.md)
+
 Twelve 2021 provider-group originals reached primary-body review for the raw fig and drooling claim. Six dated records distinguish sialorrhea chart events, airway penetration, co-occurring oral dryness and symptom-instrument validation. The Portuguese validation has an author abstract and forms, with the original results tables still open. Claim 0188 remains Unknown. [2021 originals and outcome definitions](followup/fig-drooling-2021-originals-nov20-151/README.md)
 
 Twenty-four originals from the 2022 provider group reached primary-body review. The interviews distinguish spontaneous and prompted reports. The STEADY-PD III and PDQoL7 records distinguish new symptom endorsement and combined nonmotor ratings. The exact ClinicalTrials.gov query supplied no raw-fig comparison. Claim 0188 remains Unknown. [2022 originals and participant evidence](followup/fig-drooling-2022-originals-nov20-150/README.md)
