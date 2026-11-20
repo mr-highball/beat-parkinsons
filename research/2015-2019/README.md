@@ -717,3 +717,6 @@ The contaminant trail includes an original total-diet abstract, without a measur
 ## Parkinson minor hallucination imaging
 
 - [Original 2018 abstract on default mode network structure and connectivity](Source-Text/2018-PMID30536829-Minor-Hallucination-Network-Abstract.txt).
+
+
+Two original first releases date to 2019, with 2020 journal issues. [Insular morphometry meta-analysis](Source-Text/PMC7648006.txt) · [Lewy body family-history cohort](Source-Text/PMC7029358.txt).

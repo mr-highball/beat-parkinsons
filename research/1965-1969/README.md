@@ -30,3 +30,6 @@ January 1, 1965 through December 31, 1969.
 [All periods and collection method](../README.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+
+[Experimental magnesium depletion publications and body-access gaps](Observations/Magnesium-Depletion-Study-Access.md).

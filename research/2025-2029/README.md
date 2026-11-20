@@ -744,3 +744,6 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [A Unified Continuous Staging Framework for Alzheimer's Disease and Lewy Body Dementia via Hierarchical Anatomical Features](Source-Text/PMC12714422.txt).
 - [Heterogeneity of dementia with lewy bodies: Insights from clinical presentations, neuropathology, and biomarkers](Source-Text/PMC12727820.txt).
 - [Hallucinations and disturbed behaviour in the critically ill: incidence, patient characteristics, associations, trajectory, and outcomes](Source-Text/PMC11783843.txt).
+
+
+[Parkinson hallucination interview and sensory phenotypes](Source-Text/2026-MedRxiv-26357376-Parkinson-Hallucination-Phenotypes.txt) · [Pantothenic-acid systematic review and full-text access](Source-Text/2026-PMID41712554-Pantothenic-Acid-Review-Access.txt).

@@ -813,3 +813,6 @@ The Singapore total-diet papers and original supplement preserve measured black-
 
 - [Original publications from the 2021 discovery group](Observations/Visual-Symptom-Originals-2021.md).
 - [Visual symptom reporting and treatment routes](Observations/Visual-Hallucination-Reporting-and-Magnesium-Routes.md).
+
+
+The conference and observational review links the separate visual outcomes, the high-exposure nutmeg case and the food-frequency microbiome comparison. [Original evidence and measurements](Observations/Conference-Visual-Phenotypes-and-Food-Frequency.md).
