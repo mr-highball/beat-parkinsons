@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 20 historical checkpoint reviewed 139 printed pages across six original objects. Nineteen original pairs reached full-text decisions and 54 remain queued with five verified BMJ administrative identities. Fifteen dated source, registry and experiential entries, and eight study assessments preserve reported pain course and modern formula lineage. The original queue holds 45,237 pairs, including 85 for claim 0581. [Historical pages, trial records and access](followup/ginger-historical-print-and-transit-nov20-126/README.md)
+
 The November 20 formula checkpoint verified 11 original bodies and resolved all 56 matching Round 1 pairs. Thirteen publication notes, three trial registrations and one Barbados traditional-use record expand the chronological catalog. Twelve related assessments preserve the placebo findings, reused poststroke cohort and reported practices. The original queue now holds 45,256 pairs, including 87 for claim 0581. [Full-text decisions and open trails](followup/ginger-formulas-and-original-pairs-nov20-125/README.md)
 
 The November 20 ginger scorecard applies the version 1 rubric to claim 0581. It retains Maybe False at 50.005, the minimal-signal tier, after checking independent constipation comparisons, conflicting evidence and the Parkinson registrations. Four public discussions entered the chronological catalog, with five related assessments including the gingerol rat-colon paper. [Scorecard, confirmed sources and open trails](followup/ginger-constipation-scorecard-nov20-124/README.md)

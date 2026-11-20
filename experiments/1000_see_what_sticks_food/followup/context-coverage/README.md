@@ -6,17 +6,19 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 15,649 |
+| Local body or other primary-source context | 15,668 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 218 |
 | Title or index | 145 |
-| Pending or access-only disposition | 173 |
-| No imported exact review | 44,938 |
+| Pending or access-only disposition | 227 |
+| No imported exact review | 44,865 |
 | **Total** | **61,252** |
 
 Three verified members from the 2025 UEG proceedings inform nine original pairs. All 39 pairs for the supplement stay queued while its remaining pages are unverified. [Member review and clinical follow-through](../ueg-2025-verified-members-nov20-121/README.md)
 
-The current native replay leaves 45,256 pairs queued across 28,876 source keys. Eleven complete original articles brought 56 individual scope decisions. The replay verified all original keys and dispositions outside that group. [Ginger formulation and botanical-use checkpoint](../ginger-formulas-and-original-pairs-nov20-125/README.md)
+The current native replay leaves 45,237 pairs queued across 28,874 source keys. Two 1820 print objects supplied 19 full-text dispositions. Five related BMJ administrative objects carried 54 pairs that received pending metadata receipts. The replay preserved original key order and verified the decisions outside that group. [Historical print and transit checkpoint](../ginger-historical-print-and-transit-nov20-126/README.md)
+
+The preceding ginger formulation checkpoint verified 56 scope decisions from 11 original articles. [Ginger formulation and botanical use](../ginger-formulas-and-original-pairs-nov20-125/README.md)
 
 The 2021 FEBS full-supplement review resolved 43 previous access-only pairs and kept each poster's preparation and outcome separate. [Original poster review](../febs-2021-original-posters-nov20-120/README.md)
 
