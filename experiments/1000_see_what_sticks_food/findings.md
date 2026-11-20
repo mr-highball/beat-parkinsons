@@ -2,6 +2,8 @@
 
 Twenty-seven Round 1 claims have a checked version 1 scorecard.
 
+Twenty-six of 27 pinned 2015 source pairs have full-body decisions. The AES supplement remains open after five individual original abstracts were verified. Fifteen related assessments distinguish medication conversion, diagnostic presence, perceptual tests and a botanical trial with a better motor total but worse resting tremor. Claim 0175 remains Unknown with 187 original pairs queued. [2015 original sources and remaining trails](followup/fig-priority-six-2015-nov19-97/README.md).
+
 Twenty-four of 25 original 2016 source pairs now have full-text decisions. The ANA issue remains open with separate society component scopes. The nilotinib reports distinguish adverse events and concurrent medication changes from visual episode measures. The published caregiver excerpts retain their source limits. A separate grapefruit juice comparison measures drug exposure in healthy adults. Claims 0175 and 0009 remain Unknown, with 213 original pairs open for 0175. [Originals, assessments and open trails](followup/fig-priority-six-2016-nov19-96/README.md).
 
 Thirty-three of 34 original source pairs in the 2017 provider-date group have full-text decisions. The ANA conference pair stays open after partial member access. The BNA poster and journal paper distinguish enrollment and analysis denominators. USDA identifies four minerals in dried figs that were also measured in a separate postmortem tissue study, with no measured connection to visual episodes. Claim 0175 remains Unknown with 237 original pairs open. [Originals, study lineage and remaining access](followup/fig-priority-six-2017-nov19-95/README.md).
