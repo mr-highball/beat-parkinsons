@@ -8,6 +8,8 @@ The [visual processing and clinical measurement notes](2002-2004-Visual-Processi
 
 The [2001–2003 original imaging and visual outcome notes](2001-2003-Imaging-and-Visual-Outcome-Scope.md) record the recovered clinical methods, diagnostic counts and remaining table gaps.
 
+The [pentagon copying and medication follow-up](2001-2002-Visual-Task-and-Drug-Cohort-Limits.md) compares the two scoring definitions, the contemporary critique and reply, and the limits of the apomorphine cohorts.
+
 The isolated oral piperine experiment reports delayed transit and follows the earlier human whole powder pilot. The clinical carrier studies add depression scales under inhalation and massage, with routes distinct from food intake. [Piperine animals](../Food-Experiment-Black-Pepper-Transit.md) · [Earlier powder trial](../../1990-1994/Food-Experiment-Black-Pepper-Transit.md) · [Oil carrier studies](../Food-Experiment-Carrier-Oils-Mood.md)
 
 ## Major observations

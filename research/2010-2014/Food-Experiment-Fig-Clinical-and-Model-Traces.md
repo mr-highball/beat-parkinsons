@@ -7,3 +7,7 @@ Peterson et al. randomized 102 adults to a crossover in which each five-week usu
 ## Dried figs and recurrent high potassium in a screening volunteer
 
 2011. Pavletic described raised potassium during screening of an otherwise healthy 36-year-old volunteer. After normalization on follow-up, potassium rose again when the participant reported unusually large dried fig intake the preceding evening. The case was uncontrolled and contains no documented visual hallucination or Parkinson diagnosis. [Original case report](https://pmc.ncbi.nlm.nih.gov/articles/PMC3932298/) · [Local source text](Source-Text/2011-Pavletic-Dried-Fig-Factual-Extract.txt)
+
+## Dried fig material and laboratory enzyme activity
+
+Loizzo and colleagues measured the composition and cholinesterase inhibition of material from three dried fig cultivars. The strongest enzyme signals favored the Dottato material in the assays. The study did not measure symptom changes, Parkinson participants or exposure after eating dried fig. The complete methods and assay controls remain open. [Primary report](Source-Text/2014-PMID24338976-Dried-Fig-Cholinesterase-Assays.txt)

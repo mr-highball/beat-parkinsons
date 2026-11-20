@@ -1,0 +1,5 @@
+# Visual task scoring and cohort boundaries in 2001–2002
+
+The original pentagon-copying comparison reported a difference under standard scoring and an inconclusive difference under the relaxed definition. The contemporary letter questioned how the researchers treated orientation. The reply showed original drawing models to clarify the distinction between a rotated printed model and a patient error. These records help distinguish visuospatial testing from clinical visual hallucination measurement. [Primary comparison](../Source-Text/PMC1737321.txt) · [Letter and reply](../Source-Text/2002-PMID11784847-Pentagon-Orientation-Correspondence.txt)
+
+The longer 64-person retrospective apomorphine report extends the earlier motor outcome context. The reports share investigators. Recruitment overlap and item-level visual adverse-event reporting still require original-body verification. [Earlier comparison](../../1995-1999/Source-Text/PMC2170072.txt) · [64-person follow-up](../Source-Text/2002-PMID12465062-Manson-Apomorphine-Retrospective.txt)
