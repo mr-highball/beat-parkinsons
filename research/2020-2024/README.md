@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [PERSPECTIVE randomized trial](Source-Text/2024-PMID39309726-Maas-Perspective-Drooling.txt) reports separate patient-rated drooling, swallowing and speech results. The [NeuroVoz corpus](Source-Text/2024-PMID39695127-NeuroVoz-Sialorrhea-Annotation.txt) records whether sialorrhea was present. The [22q11.2 study](Source-Text/2024-PMID38661486-Fanella-Saliva-Biomarker.txt) measures biomarker concentration in saliva. [Endpoint observations](Observations/Drooling-Ratings-and-Saliva-Sampling.md)
+
 The [oral dysbiosis study](Source-Text/2021-PMID33646178-Oral-Dysbiosis-and-Saliva-Measures.txt) measured higher drooling scores alongside lower stimulated flow. The [swallow-safety comparison](Source-Text/2022-PMID36120789-Swallow-Safety-by-Bolus-and-Diagnosis.txt) reports bolus-specific airway measures. The [Battel feasibility study](Source-Text/2022-PMID36478035-Battel-Biofeedback-and-Saliva-Outcomes.txt) separates endoscopic residue from self-reported drooling. The [CueBand registry](Source-Text/Trials/ISRCTN59284050.txt) links to its [published protocol](Source-Text/PMC9955579.txt) and gives planned drooling measures.
 
 The [galangal membrane assay](Source-Text/2022-PMID36145715-Simon-Galangal-Membrane-Assay-Scope.txt) distinguishes greater galangal compounds from the same team's earlier ginger comparison and records the instability of three samples.

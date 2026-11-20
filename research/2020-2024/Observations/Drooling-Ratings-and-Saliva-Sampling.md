@@ -1,0 +1,5 @@
+# Drooling ratings and saliva sampling
+
+The PERSPECTIVE trial separates three symptom ratings in the same respondents. The published eight-week drooling estimate is near zero and its interval spans zero. Both the protocol and registry describe the same trial. [Trial results](../Source-Text/2024-PMID39309726-Maas-Perspective-Drooling.txt) · [Protocol](../Source-Text/PMC8990485.txt) · [Registration](../../2015-2019/Source-Text/Trials/NCT03963388.txt)
+
+The speech corpus records a binary sialorrhea annotation. The 22q11.2 study uses passive drooling for saliva collection and quantifies a biomarker concentration. The conference poster on exercise reports an item-level within-group p-value and its image table omits the drooling item. These designs leave different gaps when asking about a change in drooling severity. [Speech corpus](../Source-Text/2024-PMID39695127-NeuroVoz-Sialorrhea-Annotation.txt) · [Biomarker study](../Source-Text/2024-PMID38661486-Fanella-Saliva-Biomarker.txt) · [Conference proceedings](../Source-Text/PMC10854369.txt)
