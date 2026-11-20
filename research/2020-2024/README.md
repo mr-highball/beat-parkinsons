@@ -841,3 +841,15 @@ The conference and observational review links the separate visual outcomes, the 
 
 
 [Separate Lewy body stimulation trials](Observations/Separate-Lewy-Body-Stimulation-Trials.md).
+
+## Ginger, plant vesicles and gastrointestinal outcomes
+
+- [Diet and the intestinal barrier](Source-Text/2023-PMC10084985-Gut-Barrier-Diet-and-Food-Scope.txt).
+- [Microglia and isolated ginger constituents](Source-Text/2023-PMC10513083-Microglia-Review-Ginger-Constituent-Scope.txt).
+- [Polygonum preparations, ginger and turmeric](Source-Text/2024-PMC11024578-Polygonum-Review-Ginger-Turmeric-and-Oil-Scope.txt).
+- [Serotonin receptor studies of ginger and grape constituents](Source-Text/2024-PMC11184608-Serotonin-Receptor-Review-Ginger-and-Grape-Scope.txt).
+- [Supportive care for poor oral intake and nausea](Source-Text/2024-PMC11531996-Poor-Oral-Intake-Review-Ginger-Context.txt).
+- [Plant vesicle sources and the broccoli constipation citation](Source-Text/2024-PMC11413507-Plant-Vesicle-Review-Food-Source-Boundaries.txt).
+- [Plant vesicles, experimental delivery and brain research](Source-Text/2023-PMC11997602-Plant-Nanovesicle-Review-Brain-and-Food-Scope.txt).
+- [Broccoli-derived vesicles in a mouse constipation model](Source-Text/2023-PMID37875137-Broccoli-Vesicles-Mouse-Constipation.txt).
+- [Ginger-derived vesicles and curcumin for inflammatory bowel disease, official registration](Source-Text/Trials/NCT04879810.txt).

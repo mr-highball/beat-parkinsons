@@ -755,3 +755,5 @@ Two original first releases date to 2019, with 2020 journal issues. [Insular mor
 
 
 [Apomorphine treatment changes and visual events](Observations/Apomorphine-Treatment-Changes-and-Visual-Events.md).
+
+[Withdrawn ginger and aloe vesicle trial for polycystic ovary syndrome, official registration](Source-Text/Trials/NCT03493984.txt).

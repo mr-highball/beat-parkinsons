@@ -754,3 +754,19 @@ January 1, 2025 through November 11, 2026 (partial period).
 
 
 [Medication state and induced sensed presence in a Parkinson crossover](Source-Text/2026-MedRxiv-26361921-Dopaminergic-Presence-Crossover.txt).
+
+## Ginger, food preparations and gastrointestinal outcomes
+
+- [Chronic nausea guideline and the ginger citation](Source-Text/2025-PMC11999049-Chronic-Nausea-Guideline-Ginger-Scope.txt).
+- [Antiemetics, ginger and separate constipation reports](Source-Text/2025-PMC11817452-Antiemetics-Review-Ginger-and-Constipation-Scope.txt).
+- [Saffron, ginger and ethnopharmacology](Source-Text/2025-PMC11847069-Ethnopharmacology-Review-Saffron-and-Ginger-Scope.txt).
+- [Beverage formulations and food ingredients](Source-Text/2025-PMC12003216-Moringa-Review-Food-Formulation-Scope.txt).
+- [Geriatric prescribing alternatives and food references](Source-Text/2025-PMC12448428-AGS-Alternatives-Ginger-and-Food-Scope.txt).
+- [Vesicle delivery, food freshness and color terminology](Source-Text/2025-PMC12452363-Food-Delivery-Systems-Ginger-and-Other-Food-Scope.txt).
+- [Dietary constituents and separate microbiota endpoints](Source-Text/2026-PMC12999160-Gut-Brain-Review-Ginger-and-Endpoint-Scope.txt).
+- [Tapyadi Loha mixture in a hepatic encephalopathy model](Source-Text/2026-PMC12955553-Tapyadi-Loha-Ginger-Mixture-Scope.txt).
+- [Postoperative nausea guideline and ginger trials](Source-Text/2025-PMC13001765-Postoperative-Nausea-Guideline-Ginger-Scope.txt).
+- [Measurement of vesicles from different plant sources](Source-Text/2026-PMC13097501-Flow-Cytometry-Plant-Vesicle-Food-Scope.txt).
+- [Probiotic delivery, kefir and millet](Source-Text/2026-PMC13359322-Probiotics-Review-Ginger-Kefir-and-Millet-Scope.txt).
+- [Gut–brain nanomedicine, tea and olive oil](Source-Text/2026-PMC13402341-Gut-Brain-Nanomedicine-Review-Culinary-Scope.txt).
+- [Turmeric pharmacognosy and botanical names](Source-Text/2026-PMC13670277-Turmeric-Pharmacognosy-and-Culinary-Names.txt).
