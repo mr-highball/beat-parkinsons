@@ -1,6 +1,8 @@
 ## Findings and limits
 
-Twenty-seven Round 1 claims have a checked version 1 scorecard.
+Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
+
+Grated ginger and constipation claim 0581 retains Maybe False at the 50.005 minimal-signal tier. Two capsule trials in adults with IBS identify separate constipation-domain comparisons. Variations in preparation, diagnosis and study design limit their transfer to Parkinson disease. The scorecard records the clinical adverse event, the rat-colon comparison, and four public accounts separately. Both Parkinson registrations still have open outcome trails. [Checked scorecard and primary sources](followup/ginger-constipation-scorecard-nov20-124/README.md)
 
 All 28 pinned 2014 source pairs now have body-level decisions. A full FDA clinical review distinguishes the ADVANCE-PD conversion and maintenance adverse-event terms. Thirteen related assessments cover clinical persistence, induced visual experiences, plant-model outcomes, and other preparations. Claim 0175 remains Unknown with 159 original pairs queued. [2014 originals and study lineage](followup/fig-priority-six-2014-nov19-98/README.md).
 
