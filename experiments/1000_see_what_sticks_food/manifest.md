@@ -1011,3 +1011,7 @@ All 13 pinned 2013 original pairs for claim 0175 reached main-body review, with 
 - [0948](statements/0948.txt) **Maybe True** (51%) Consuming brewed green tea worsens fatigue severity in people with Parkinson's disease.
 - [0949](statements/0949.txt) **Maybe False** (51%) Consuming frozen raspberry worsens executive function impairment in people with Parkinson's disease.
 - [0953](statements/0953.txt) **Maybe False** (51%) Consuming boiled barley worsens anxiety severity in people with Parkinson's disease.
+
+## Original 2012 visual symptom and donepezil source review
+
+Seventeen of 18 pinned original pairs reached main-body review. The AES abstract issue remains queued at issue-metadata depth. The accompanying clinical records separate visual ratings, composite scores, adverse events and independent enrollment. Twelve related assessments were added. Claim 0175 remains Unknown with 129 original pairs queued. The native replay verified 45,430 retained pairs in their original relative order. [Source decisions and further access](followup/fig-priority-six-2012-nov19-100/README.md).
