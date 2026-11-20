@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [serotonin PET comparison](Source-Text/2010-PMID20385906-Parkinson-Visual-Hallucinations-and-Serotonin-PET.txt) distinguishes formed visual hallucinations from PET binding in two groups of Parkinson patients. The later [2014 nilotinib pilot registration](Source-Text/Trials/NCT02281474.txt) tracks different outcomes.
+
 The [2010 clinical magnesium case](Source-Text/2010-PMID20493607-Regolisti-Magnesium-and-Delirium.txt) documents delirium with hallucinations during a period of acute electrolyte disturbance. [Comparative visual outcome and citation observations](../2020-2024/Observations/Visual-End-Points-and-Magnesium-Citation-Follow-Through.md).
 
 The [2011 electrolyte case](Source-Text/PMC3233929.txt) reports a visual hallucination episode that stopped before clinical replacement. [Comparison of visual symptom timing](../2020-2024/Observations/Dried-Fig-Magnesium-and-Visual-Symptom-Timing.md).

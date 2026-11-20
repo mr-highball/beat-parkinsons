@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [grapefruit juice and nilotinib crossover](Source-Text/2009-PMID19948946-Grapefruit-Juice-and-Nilotinib.txt) measures serum drug exposure in healthy participants. [Later Parkinson protocol context](../2015-2019/Observations/2016-Visual-Outcome-Definitions-and-Nilotinib-Lineage.md).
+
 The [complete ripe dried-fig extract study](Source-Text/2008-PMID18586078-Fig-Fruit-Extract-and-Lab-Endpoints-Abstract.txt) verifies the botanical voucher, isolated gut assay and separate platelet result. These are laboratory measurements of an extract.
 
 The [central Italian field study](Cultural-and-Experiential/Traditional-Practices/2005-Guarrera-Central-Italy-Fig-Fruit-and-Latex.txt) records a mixed dried-fig decoction for respiratory complaints and separate latex practices. The [ripe dried-fig extract assays](Source-Text/2008-PMID18586078-Fig-Fruit-Extract-and-Lab-Endpoints-Abstract.txt) measure isolated gut tissue and platelets.
