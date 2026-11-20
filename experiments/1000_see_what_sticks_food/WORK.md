@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The latest November 20 date-fruit review resolved 119 archived pairs, including 12 former publication-boundary holds. The original queue now holds 42,150 pairs, including 346 retained date-fruit cases. Five dated clinical and cultural records distinguish reported date fruit at iftar from the Ramadan Parkinson outcomes. [Wider archive and Ramadan evidence](followup/date-wide-review-and-ramadan-nov20-136/README.md)
+The latest November 20 archive review resolved 92 date-fruit pairs. The original queue now holds 42,058 pairs, including 254 retained date-fruit cases. The official WHO butylphthalide registration confirms the retrospective timing and matching follow-up arm counts. The plant-therapy review and conversation are linked to the original preparations. [Exact contexts and primary registry](followup/date-exact-and-celery-registry-nov20-137/README.md)
+
+The preceding November 20 date-fruit review resolved 119 archived pairs, including 12 former publication-boundary holds. That checkpoint left 42,150 pairs, including 346 retained date-fruit cases. Five dated clinical and cultural records distinguish reported date fruit at iftar from the Ramadan Parkinson outcomes. [Wider archive and Ramadan evidence](followup/date-wide-review-and-ramadan-nov20-136/README.md)
 
 The preceding November 20 date-fruit review resolved 201 archived pair mismatches. That checkpoint left 42,269 pairs, including 465 retained date-fruit cases. Two dated public abstracts extend the clinical and animal evidence trails. Exact Oracle identifiers resolved for the 2025 stress experiment and 2017 survey. [Date-fruit disambiguation and source priority](followup/date-context-disambiguation-nov20-135/README.md)
 

@@ -2,6 +2,8 @@
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+Another 92 exact archive pairs were resolved. The butylphthalide registry and article agree on complete follow-up counts, with a 2018 retrospective registration after 2014 first enrollment. The clinical review and related public discussion use botanical group labels. The underlying exposures are a pharmaceutical compound and ground soybeans with medication, with the exact culinary claims unchanged. [Registry and preparation scope](followup/date-exact-and-celery-registry-nov20-137/README.md)
+
 Another 119 exact archive pairs were resolved at full-text depth. The reported iftar date practice, meal-size descriptions and aggregate nonmotor outcomes come from distinct observation groups. The 2017 and 2019 Kuwait reports are likely one cohort. The Parkinson cohorts have no date-specific exposure or pain and apathy estimates. Both dried-date verdicts remain open. [Original scopes and clinical comparisons](followup/date-wide-review-and-ramadan-nov20-136/README.md)
 
 The preceding exact date-fruit review ruled out 201 contextual mismatches. The older author abstract reports sucrose consumption in stressed rats given date-fruit extract and no comparison of clinical apathy or whole dried fruit. A human trial review supplies an open primary-citation trail. Both date-fruit verdicts retain their published grades. [Archive scope and literature leads](followup/date-context-disambiguation-nov20-135/README.md)
