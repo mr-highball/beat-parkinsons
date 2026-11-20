@@ -1,0 +1,5 @@
+# Drooling across visits and measurement methods
+
+The COPPADIS cohort followed daytime drooling using a frequency–severity item. Its two-year period prevalence is calculated among people with all three visits, while each visit uses its available denominator. The iRBD supplement has separate saliva and swallowing columns. The follow-up drooling item is present for four and nine participants in the two groups, fewer than the full group sizes of eight and 25. [COPPADIS](../Source-Text/2023-PMID37065970-Santos-Garcia-COPPADIS-Drooling.txt) · [iRBD original and workbook](../Source-Text/2023-PMID37680305-Barone-iRBD-Drooling-Item.txt)
+
+The 2020 ESSD meeting poster and later Battel journal paper describe one study. Endoscopy measured residue across swallowing tasks and the journal tabulated patient-rated drooling separately. The 2021 ESSD scales poster and matching Nascimento journal review likewise represent one review family. [Swallowing study lineage](../Source-Text/2022-PMID35704116-ESSD10-Drooling-and-Swallowing.txt) · [Rating scales](../Source-Text/2022-PMID35579802-ESSD11-Drooling-Rating-Scales.txt)
