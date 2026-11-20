@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [2001 visual histories and publication scope notes](Observations/2001-Visual-History-and-Conference-Scope.md) link the EANM proceedings, the later perfusion report, and diagnostic and medication sources.
+
 The [visual processing and clinical measurement notes](Observations/2002-2004-Visual-Processing-and-Clinical-Outcome-Scope.md) compare visual reasoning, diagnostic classification and behavioral ratings. [Moretti primary follow-up](Source-Text/PMC10833835.txt) · [Kuopio diagnostic prevalence](Source-Text/PMC1738491.txt).
 
 The [2004 Lewy body dementia expert report](Source-Text/2004-PMID14693108-Lewy-Body-Dementia-Expert-Review.txt) gives historical diagnostic context for the [2005 classification and visual symptom records](../2005-2009/Observations/2005-Conference-Scope-and-Diagnostic-Outcomes.md).
