@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [2017 ginger-extract report](Source-Text/2017-Dass-Ginger-Extract-Rhodes-and-Heartburn.txt) gives a before-and-after pregnancy nausea score and four heartburn reports. The later pharmacology abstract appears to describe the same cohort.
+
 The [2018 ginger contractility study](Source-Text/2018-PMC5954582-Ginger-Small-Intestinal-Contractility.txt) distinguished prior oral exposure from direct application to excised rat small intestine. The [period’s cultural sources](Cultural-and-Experiential/README.md) include the Trinidad plant survey and the Chinese zongzi wrapper survey.
 
 The [2019 UEG poster collection](Source-Text/2019-PMC8454868-UEG-Poster-Food-Boundaries.txt) distinguishes pediatric herbal search mentions from measured dietary and curcumin comparisons. The [reproductive sciences abstract book](Source-Text/2016-PMC7104458-Reproductive-Abstract-Figure-Access-Extract.txt) retains an online figure-access gap. [NHANES abstract 2501](Source-Text/2018-PMC6798479-NHANES-Depression-Abstract-Identity.txt) has a separate record within a bundled PDF.
