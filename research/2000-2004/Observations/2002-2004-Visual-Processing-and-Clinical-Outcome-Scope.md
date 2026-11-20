@@ -1,0 +1,7 @@
+# Visual processing and clinical outcome scope
+
+The [Abe abstract](../Source-Text/PMC1738406.txt) relates visual reasoning to regional perfusion. The later [Matsui cohort](../../2005-2009/Source-Text/2005-PMID16293914-Parkinson-Dementia-Perfusion-Comparison.txt) groups Parkinson participants by dementia. The [Oishi study](../../2005-2009/Source-Text/2005-PMID16344511-Visual-Hallucinations-and-Perfusion.txt) groups participants by visual hallucination history. These are different group definitions and outcomes. The full Abe and Oishi methods remain open.
+
+The [Moretti follow-up](../Source-Text/PMC10833835.txt) describes a three-person Parkinson dementia subgroup with behavioral ratings after an antipsychotic exposure. Its visual percentage cannot be converted to an affected-patient count using the reported subgroup size. The [CMAJ clinical review](../Source-Text/PMC140472.txt) describes several medication-related contexts. Neither source supplies a dried-fig comparison or a separate controlled count of visual episodes.
+
+The [Kuopio abstract](../Source-Text/PMC1738491.txt) measures clinical prevalence of Lewy body dementia. The [young-onset review](../Source-Text/PMC1742955.txt) uses visual symptoms as part of differential diagnosis. The [vascular tissue study](../Source-Text/PMC1737900.txt), [aniracetam review](../Source-Text/PMC6741661.txt) and [toxicology review](../Source-Text/PMC6741736.txt) concern separate source contexts.

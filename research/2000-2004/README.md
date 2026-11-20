@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [visual processing and clinical measurement notes](Observations/2002-2004-Visual-Processing-and-Clinical-Outcome-Scope.md) compare visual reasoning, diagnostic classification and behavioral ratings. [Moretti primary follow-up](Source-Text/PMC10833835.txt) · [Kuopio diagnostic prevalence](Source-Text/PMC1738491.txt).
+
 The [2004 Lewy body dementia expert report](Source-Text/2004-PMID14693108-Lewy-Body-Dementia-Expert-Review.txt) gives historical diagnostic context for the [2005 classification and visual symptom records](../2005-2009/Observations/2005-Conference-Scope-and-Diagnostic-Outcomes.md).
 
 The open-label [rivastigmine](Source-Text/2001-PMID11748755-Rivastigmine-Parkinson-Psychosis.txt), [tacrine or donepezil](Source-Text/2001-PMID11768630-Cholinesterase-Cognition-and-Motor.txt), and [quetiapine](Source-Text/2004-PMID15090935-Quetiapine-Parkinson-Psychosis.txt) papers report distinct psychosis, cognition or motor outcomes. [2006 evidence comparison](../2005-2009/Observations/2006-Visual-History-Treatment-and-Diagnostic-Comparisons.md).

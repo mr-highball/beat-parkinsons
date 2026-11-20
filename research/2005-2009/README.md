@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [Matsui perfusion study](Source-Text/2005-PMID16293914-Parkinson-Dementia-Perfusion-Comparison.txt) groups Parkinson participants by dementia status. [Comparison with the Abe visual reasoning and Oishi symptom history studies](../2000-2004/Observations/2002-2004-Visual-Processing-and-Clinical-Outcome-Scope.md).
+
 The [2005 diagnostic and conference observations](Observations/2005-Conference-Scope-and-Diagnostic-Outcomes.md) distinguish [SGIM abstract coverage](Source-Text/PMC1490295.txt), [neuropathological diagnosis](Source-Text/PMC1765714.txt) and the [third Lewy body dementia consensus report](Source-Text/2005-PMID16237129-Third-DLB-Consortium-Report.txt).
 
 The [2006 clinical observations](Observations/2006-Visual-History-Treatment-and-Diagnostic-Comparisons.md) compare visual symptom history with fall risk, tissue findings, diagnostic imaging, and the individual [SGIM abstract members](Source-Text/PMC1484878.txt).
