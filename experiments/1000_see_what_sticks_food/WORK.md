@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 20 UEG checkpoint verifies three numbered 2025 posters and traces their main results back to five journal articles. Six dated records and 13 assessments identify shared cohort reporting and distinguish ingredient effects from gastric-emptying and dysphagia measurements. Nine original pairs have new partial-scope receipts and all 39 supplement pairs stay queued. [Original sources and review](followup/ueg-2025-verified-members-nov20-121/README.md)
+
 The November 20 FEBS poster checkpoint resolves 43 pairs after recovering the complete 2021 supplement. Six catalog records and 32 related assessments document the original nutmeg, olive compound and kefir comparisons, including explicit reuse of enzyme data. The queue holds 45,313 pairs, and no verdict changed. [2021 poster review and remaining originals](followup/febs-2021-original-posters-nov20-120/README.md)
 
 The November 20 historical botany checkpoint verifies phalgu root in the Caraka Sanskrit and the Ficus hispida assignment in the modern root monograph. An epilepsy paper reports likely reuse of the treatment arm from a 2001 thesis. The Isfahan assessment now separates the registered daily fruit amount from the secondary account of its dried preparation. Claim 0175 remains Unknown with 55 original pairs queued. [Textual witnesses and clinical access](followup/fig-historical-botany-and-clinical-nov20-119/README.md)

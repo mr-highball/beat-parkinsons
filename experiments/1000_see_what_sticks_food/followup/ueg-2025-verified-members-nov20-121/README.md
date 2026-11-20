@@ -1,0 +1,9 @@
+# UEG 2025 poster members and original clinical outcomes
+
+The poster proceedings cover S803–S1476. The available publisher text reaches printed page 1000 and the start of PP0332, with some further lines beyond that start. Three complete numbered abstracts inform nine original Round 1 pairs. Their partial-scope dispositions preserve all 39 pairs for this proceedings source. [Source receipts](source-receipts.tsv) · [Pair-level dispositions](dispositions.tsv) · [Open scope](open-trails.tsv)
+
+PP0011 and the 2026 dysphagia article report the same admissions cohort and adjusted Parkinson association. Table 4 confirms an odds ratio of 3.879 for newly recorded dysphagia, without an ingredient contrast. The 2018 paper had a different recruitment period and denominator and combines Parkinson disease and parkinsonism for its seven cases. PP0021 separately records gastrointestinal questionnaires in 76 people with Parkinson disease, with definite delayed emptying in one of eight people tested. [Study lineage and interpretation](outcome-comparisons.tsv)
+
+PP0024 repeats previous functional dyspepsia studies. In the original cinnamon trial the macerate and control both contained sesame oil. The between-arm pain comparison did not show a clear difference. The original ginger–artichoke trial favored the combined capsule for epigastric pain. A separate acute ginger capsule comparison shortened gastric emptying without a clear symptom change, and the independent artichoke-only trial had an imprecise pain result. No study isolates a grated ginger effect on Parkinson pain. [Related assessments](assessments.tsv)
+
+Six dated research records and 13 related assessments were added. No verdict changed. The Oracle batch recorded three hits, one partial and eight misses. [First-pass source checks](oracle-first.tsv) · [Replay validation](native-replay-verification.txt)

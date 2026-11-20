@@ -10,9 +10,11 @@ The original searches produced 69,107 result appearances across 2,000 expression
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 218 |
 | Title or index | 145 |
-| Pending or access-only disposition | 164 |
-| No imported exact review | 45,004 |
+| Pending or access-only disposition | 173 |
+| No imported exact review | 44,995 |
 | **Total** | **61,252** |
+
+Three verified members from the 2025 UEG proceedings inform nine original pairs. All 39 pairs for the supplement stay queued while its remaining pages are unverified. [Member review and clinical follow-through](../ueg-2025-verified-members-nov20-121/README.md)
 
 The current native replay leaves 45,313 pairs queued across 28,888 sources. The 2021 FEBS full-supplement review resolves 43 previous access-only pairs and keeps each poster's preparation and outcome separate. [Original poster review](../febs-2021-original-posters-nov20-120/README.md)
 
