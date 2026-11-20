@@ -6,17 +6,19 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 15,798 |
+| Local body or other primary-source context | 16,001 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 218 |
 | Title or index | 105 |
-| Pending or access-only disposition | 245 |
-| No imported exact review | 44,757 |
+| Pending or access-only disposition | 267 |
+| No imported exact review | 44,532 |
 | **Total** | **61,252** |
 
 Three verified members from the 2025 UEG proceedings inform nine original pairs. All 39 pairs for the supplement stay queued while its remaining pages are unverified. [Member review and clinical follow-through](../ueg-2025-verified-members-nov20-121/README.md)
 
-The current native replay leaves 45,107 pairs queued across 28,864 source keys. Ten complete originals supplied 130 full-text decisions, including 40 upgraded index reviews. A 1995 BMJ object and the 2008 peptide supplement account for 18 pending pairs. [Proceedings and access checkpoint](../ginger-proceedings-through-2009-nov20-127/README.md)
+The current native replay leaves 44,904 pairs queued across 28,843 source keys. Twenty-one complete originals supplied 203 full-text decisions. Twenty-two additional pairs remain pending for the 2016 reproductive sciences proceedings' online-only figures. [Proceedings and physiological evidence](../ginger-and-proceedings-2010-2019-nov20-128/README.md)
+
+The previous replay resolved 130 full-text decisions, including 40 upgraded index reviews. A 1995 BMJ object and the 2008 peptide supplement account for 18 pending pairs. [Proceedings and access checkpoint](../ginger-proceedings-through-2009-nov20-127/README.md)
 
 The preceding replay closed 19 pairs from the two 1820 indexes. Five BMJ objects retained 54 access holds. [Historical print and transit checkpoint](../ginger-historical-print-and-transit-nov20-126/README.md)
 

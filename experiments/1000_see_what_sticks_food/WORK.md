@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 20 review checked 22 originals and resolved 203 claim–source pairs. The 2016 reproductive proceedings retain 22 figure-access holds. Twelve related assessments and 24 dated catalog entries preserve cultural indications and animal studies of different tissues and outcomes. The original queue holds 44,904 pairs, including 54 for claim 0581. [Source receipts and replay](followup/ginger-and-proceedings-2010-2019-nov20-128/README.md)
+
 The November 20 proceedings checkpoint resolves 130 original pairs across ten complete sources and records 18 remaining access holds. Eight related assessments and 13 dated notes distinguish ginger labeling surveys, original poster outcomes and the older perioperative nausea and gastric physiology studies. The queue holds 45,107 original pairs, including 75 for claim 0581. [Originals, evidence boundaries and replay](followup/ginger-proceedings-through-2009-nov20-127/README.md)
 
 The November 20 historical checkpoint reviewed 139 printed pages across six original objects. Nineteen original pairs reached full-text decisions and 54 remain queued with five verified BMJ administrative identities. Fifteen dated source, registry and experiential entries, and eight study assessments preserve reported pain course and modern formula lineage. The original queue holds 45,237 pairs, including 85 for claim 0581. [Historical pages, trial records and access](followup/ginger-historical-print-and-transit-nov20-126/README.md)
