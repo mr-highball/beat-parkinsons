@@ -12,6 +12,8 @@ January 1, 1985 through December 31, 1989.
 
 ## Annotated research
 
+- [Finnish food-frequency questionnaire validation cited by the later Parkinson microbiome study](Source-Text/1988-PMID2843041-Pietinen-Finnish-Food-Questionnaire.txt).
+
 - [High-protein formula and levodopa response](Source-Text/1987-PMID3632369-Protein-Formula-and-Levodopa-Abstract.txt).
 - [Acute caffeine and surveyed coffee-related tremor](Source-Text/1987-PMID3796831-Caffeine-Tremor-Abstract-Extract.txt)
 

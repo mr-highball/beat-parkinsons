@@ -581,6 +581,9 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Parkinson drooling patient journey interviews](Source-Text/PMC12999412.txt).
 - [Parkinson drooling impact and separately measured salivary flow](Source-Text/2025-PMID40257190-Nascimento-Drooling-and-Salivary-Flow.txt).
 - [Restless legs, swallowing and drooling outcomes in Parkinson disease](Source-Text/2025-PMID40684087-Restless-Legs-and-Sialorrhea-Scale.txt).
+- [Computational study of a milk-derived peptide with no measured drooling outcome](Source-Text/2025-PMID40492044-Milk-Peptide-Sialorrhea-Computational-Scope.txt).
+- [Open-label OPTIMYST saliva flow and drooling measures](Source-Text/2025-PMID40498248-OPTIMYST-Flow-and-Symptom-Scales.txt).
+- [Drooling presence in a Parkinson metabolite and stage classifier](Source-Text/2026-PMID41565969-Drooling-and-Metabolite-Classification.txt).
 
 ## Clinical cohorts, comparison groups and endpoint definitions
 

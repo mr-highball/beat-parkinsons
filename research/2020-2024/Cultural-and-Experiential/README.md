@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2020-2024
 
+- [Parkinson’s Europe patient and caregiver survey on drooling](Local-Knowledge/2021-Parkinson-Europe-Drooling-Survey.txt).
+
 - [Ziziphus fruit and ginger in reported digestive practices](Traditional-Practices/2021-Ziziphus-Ginger-Reported-Digestive-Use.txt). The review attributes the combined use to earlier sources and supplies no isolated effect.
 
 - [Barbados interviews on ginger, turmeric, parsley and clove preparations for pain](Traditional-Practices/2021-PMID34776949-Barbados-Ginger-and-Pain-Uses.txt).

@@ -202,6 +202,7 @@ January 1, 2010 through December 31, 2014.
 - [Sichuan pepper symptom follow-up](Food-Experiment-Sichuan-Pepper-Followup.md)
 - [Macadamia and hazelnut oil symptom follow-up](Food-Experiment-Macadamia-Hazelnut-Followup.md)
 - [Sage and summer savory symptom studies](Food-Experiment-Sage-Savory-Outcomes.md)
+- [Gum chewing and short-term swallowing measures in Parkinson disease](Source-Text/2010-PMID20385891-South-Gum-Chewing-and-Swallowing.txt)
 - [Common sage extract and induced rodent pain responses](Source-Text/2010-PMID20860437.txt)
 - [Oats and carrot symptom studies](Food-Experiment-Oats-Carrot-Followup.md)
 - [Turmeric symptom follow-up](Food-Experiment-Turmeric-Followup.md)
