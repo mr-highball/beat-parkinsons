@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [STEADY-PD III analysis](Source-Text/2022-PMID35466955-Tosin-STEADY-PD3-Emergent-Drooling.txt) tracks newly endorsed drooling. The [PDQoL7 form](Source-Text/2022-PMID35235090-Stathis-PDQoL7-Salivation-Item.txt) groups salivation with other complaints. The [period observations](Observations/Drooling-Interviews-and-Item-Emergence.md) link original participant experiences.
+
 The [COPPADIS cohort](Source-Text/2023-PMID37065970-Santos-Garcia-COPPADIS-Drooling.txt) reports daytime drooling at three visits. The [iRBD workbook](Source-Text/2023-PMID37680305-Barone-iRBD-Drooling-Item.txt) shows how many ratings inform the follow-up item. The [paired ESSD conference and journal records](Observations/Drooling-Visit-Denominators-and-Instrument-Lineage.md) distinguish symptom ratings from swallowing residue.
 
 The [PERSPECTIVE randomized trial](Source-Text/2024-PMID39309726-Maas-Perspective-Drooling.txt) reports separate patient-rated drooling, swallowing and speech results. The [NeuroVoz corpus](Source-Text/2024-PMID39695127-NeuroVoz-Sialorrhea-Annotation.txt) records whether sialorrhea was present. The [22q11.2 study](Source-Text/2024-PMID38661486-Fanella-Saliva-Biomarker.txt) measures biomarker concentration in saliva. [Endpoint observations](Observations/Drooling-Ratings-and-Saliva-Sampling.md)

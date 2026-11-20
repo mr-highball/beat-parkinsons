@@ -1,0 +1,5 @@
+# Drooling interviews and first symptom endorsement
+
+The Staunton interviews distinguish seven spontaneous reports of excess saliva or drooling from six prompted reports. Morel's supplement records dribbling, saliva pooling during speech and oral dryness as distinct experiences. Neither study assigns a food. [Staunton interviews](../Cultural-and-Experiential/Personal-Reports/2021-PMID34657850-Staunton-Early-Parkinson-Drooling-Accounts.txt) · [Morel interviews](../Cultural-and-Experiential/Personal-Reports/2022-PMID35778541-Morel-Saliva-and-Mealtime-Accounts.txt)
+
+The STEADY-PD III secondary analysis counts newly endorsed symptoms in a cohort drawn from the randomized trial. Its treatment-start comparison uses an observational grouping. The PDQoL7 form combines salivation with other nonmotor complaints. Both distinctions matter when comparing earlier drooling studies. [STEADY-PD III analysis](../Source-Text/2022-PMID35466955-Tosin-STEADY-PD3-Emergent-Drooling.txt) · [PDQoL7 form](../Source-Text/2022-PMID35235090-Stathis-PDQoL7-Salivation-Item.txt)

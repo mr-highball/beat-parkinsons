@@ -1,5 +1,8 @@
 # Cultural and experiential accounts, 2020-2024
 
+- [Spontaneous and prompted reports of drooling in early Parkinson disease](Personal-Reports/2021-PMID34657850-Staunton-Early-Parkinson-Drooling-Accounts.txt).
+- [Saliva control and related early Parkinson experiences](Personal-Reports/2022-PMID35778541-Morel-Saliva-and-Mealtime-Accounts.txt).
+
 - [Parkinson’s Europe patient and caregiver survey on drooling](Local-Knowledge/2021-Parkinson-Europe-Drooling-Survey.txt).
 
 - [Ziziphus fruit and ginger in reported digestive practices](Traditional-Practices/2021-Ziziphus-Ginger-Reported-Digestive-Use.txt). The review attributes the combined use to earlier sources and supplies no isolated effect.
