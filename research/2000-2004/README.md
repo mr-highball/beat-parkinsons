@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [2001 swallow reminder study](Source-Text/2001-PMID11340797-Marks-Drooling-and-Swallow-Cueing.txt) preserves the original author abstract and the open body-access gap for numerical drooling effects.
+
 The [date-waste mushroom citation](Source-Text/2002-Jwanny-Date-Waste-Mushroom-Polysaccharide-Citation.txt) records the coauthor's verified journal and page locator for the antitumor study. The article body remains open.
 
 The [2001 SGIM label survey](Source-Text/2001-PMID11357836-SGIM-Herb-Supplement-and-Food-Scopes.txt) and [2003 emergency-department survey](Source-Text/2003-PMID14535236-ACEP-Herbal-Knowledge-and-Scope.txt) address marketed herbal products and knowledge of indications. The separate [rat gastric-emptying experiment](Source-Text/2001-PMID11876024-Ginger-Extract-Rat-Gastric-Emptying.txt) and [human gastric electrical comparison](Source-Text/2003-PMID14534370-Ginger-Gastric-Electrical-Rhythm.txt) measured distinct physiological endpoints.

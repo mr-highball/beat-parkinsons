@@ -1,5 +1,7 @@
 # 1985-1989
 
+The [1986 folate-metabolism case](Source-Text/1986-PMID3755752-Clayton-Folate-and-Parkinsonism.txt) distinguishes baseline drooling from an acute movement crisis during combined treatment in secondary parkinsonism.
+
 The [1989 gingerol derivatives study](Source-Text/1989-PMID2795431-Gingerol-Mesenteric-Vein-Contraction.txt) used isolated mouse mesenteric veins and records a vascular response.
 
 A [dried banana feeding study](Source-Text/1989-PMID2754429-Dried-Banana-and-Urinary-Salsolinol-Abstract.txt) reports the two urinary salsolinol forms before and after intake in six healthy participants.

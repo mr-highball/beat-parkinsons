@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [oral dysbiosis study](Source-Text/2021-PMID33646178-Oral-Dysbiosis-and-Saliva-Measures.txt) measured higher drooling scores alongside lower stimulated flow. The [swallow-safety comparison](Source-Text/2022-PMID36120789-Swallow-Safety-by-Bolus-and-Diagnosis.txt) reports bolus-specific airway measures. The [Battel feasibility study](Source-Text/2022-PMID36478035-Battel-Biofeedback-and-Saliva-Outcomes.txt) separates endoscopic residue from self-reported drooling. The [CueBand registry](Source-Text/Trials/ISRCTN59284050.txt) links to its [published protocol](Source-Text/PMC9955579.txt) and gives planned drooling measures.
+
 The [galangal membrane assay](Source-Text/2022-PMID36145715-Simon-Galangal-Membrane-Assay-Scope.txt) distinguishes greater galangal compounds from the same team's earlier ginger comparison and records the instability of three samples.
 
 The [fruit constipation review and extraction audit](Source-Text/2022-PMID36276840-Huo-Date-Stool-Frequency-Forest-Plot.txt) trace the date estimate to the same earlier healthy-adult crossover and distinguish stool frequency from pain.
