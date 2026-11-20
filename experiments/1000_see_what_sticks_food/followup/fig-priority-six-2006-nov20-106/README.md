@@ -1,0 +1,7 @@
+# Review of the 2006 provider-date originals
+
+All seven pinned sources reached complete main-text or collection review. The official SGIM archive contains 283 pages. The existing neuropharmacology source was verified against its nine-page archive PDF. The original four-page imaging review was verified from a public copy. The other four articles were reviewed in official PMC HTML. [Source receipts](source-receipts.tsv) · [Retrieval scope](retrieval-scope.tsv) · [Exact decisions](dispositions.tsv).
+
+The records distinguish visual symptom history, generic hallucination coding, diagnostic scans, laboratory tissue measures and the clinical course described by three separate SGIM members. The treatment review led to four primary abstracts. These preserve the combined hallucination/illusion endpoint and distinct medication, cognition and motor results at their verified depth. [Member scope](member-scope.tsv) · [Related assessments](related-assessments.tsv) · [Chronological observations](../../../../research/2005-2009/Observations/2006-Visual-History-Treatment-and-Diagnostic-Comparisons.md).
+
+Claim 0175 remains Unknown. The material supplies no dried-fig exposure contrast in Parkinson visual episode frequency. One of seven original accessions matched the first-pass Oracle lookup. None of the four primary companion accessions was locally cataloged at intake. [Oracle first pass](oracle-first.tsv) · [Open trails](open-trails.tsv).

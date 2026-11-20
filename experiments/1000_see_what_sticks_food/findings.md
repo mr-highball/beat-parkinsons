@@ -950,3 +950,7 @@ Both pinned original articles reached full main-text review. Eight related asses
 ## 2007 provider-date proceedings and visual history
 
 The review verified four exact full-text decisions, including two original proceedings with all pages available, and added seven related assessments. The Oxford schizophrenia proceedings are identified but remain queued at metadata depth. Claim 0175 remains Unknown with 98 queued original pairs. The native replay preserves the order and membership of all 45,399 remaining pairs across 28,906 source keys. [Source and review packet](followup/fig-priority-six-2007-nov19-105/README.md).
+
+## 2006 provider-date visual history and diagnostic measurements
+
+All seven original pairs reached complete main-text or issue review. Ten related assessments record symptom history, diagnostic imaging, tissue results, separate proceedings members and four primary treatment or observational abstracts. Claim 0175 remains Unknown with 91 queued originals. Native replay verified exactly seven removals and preserved all 45,392 remaining pair identities and order. [Source and review packet](followup/fig-priority-six-2006-nov20-106/README.md).
