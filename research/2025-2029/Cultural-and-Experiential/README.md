@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2025-2029
 
+- [Food preparation and oral cueing in Parkinson drooling interviews](Personal-Reports/2025-Cocks-Parkinson-Drooling-Interview-Experiences.txt). Participants describe differing contexts and experiences with gum.
+
 - [Brunei postpartum uses of ginger and other culinary ingredients](Traditional-Practices/2025-Brunei-Postpartum-Ginger-Spices-and-Food.txt).
 - [Guadeloupe botanical knowledge and reported mosquito-control uses](Local-Knowledge/2025-Guadeloupe-Plant-Use-and-Mosquito-Reports.txt).
 
