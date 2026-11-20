@@ -8,11 +8,13 @@ The original searches produced 69,107 result appearances across 2,000 expression
 | --- | ---: |
 | Local body or other primary-source context | 19,099 |
 | Exact assessment with basis unspecified | 129 |
-| Abstract context | 218 |
-| Title or index | 93 |
-| Pending or access-only disposition | 352 |
-| No imported exact review | 41,361 |
+| Abstract context | 224 |
+| Title or index | 89 |
+| Pending or access-only disposition | 351 |
+| No imported exact review | 41,360 |
 | **Total** | **61,252** |
+
+Six priority-four sage pairs advanced to author-abstract depth. The queue has 41,800 pairs across 26,235 source keys. The 41 disputed article-identifier pairs and the DIGPD supplement still require the original material. [Sage trial lineage and source context](../sage-trial-lineage-and-context-nov20-142/README.md)
 
 Three verified members from the 2025 UEG proceedings inform nine original pairs. All 39 pairs for the supplement stay queued while its remaining pages are unverified. [Member review and clinical follow-through](../ueg-2025-verified-members-nov20-121/README.md)
 

@@ -2,6 +2,8 @@
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+Six sage pairs reached author-abstract review. The original common-sage rodent study confirms injected extract comparisons, while the premenstrual trial registration and two likely companion reports leave individual pain outcomes open. A Jordanian market survey reports use for intestinal pain under a different sage species. The archived sources preserve distinct exposures and outcomes, with the Round 1 verdicts unchanged. [Sage evidence and source context](followup/sage-trial-lineage-and-context-nov20-142/README.md)
+
 The ginger anxiety article and registration now have exact Oracle locators. The reported Hamilton direction still conflicts across the published abstract. A separate ginger extract rat experiment reports faster heat withdrawal in a chronic stress model and provides related context for pain without a Parkinson symptom outcome. The original ginger permeability article remains gated. [Ginger source and endpoint review](followup/ginger-anxiety-and-stress-nov20-141/README.md)
 
 Seven held date-fruit pairs reached original-context review. The whole Ajwa crossover's Table 2 labels its significant stool-frequency test as a baseline contrast, while the Results prose names the control. The subsequent meta-analysis extracts the same cohort and provides no paired estimate. Two held pairs need the original 62-fruit species table. [Bowel outcome and source review](followup/date-bowel-comparators-nov20-140/README.md)
