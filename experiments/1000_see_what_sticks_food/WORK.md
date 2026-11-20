@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The latest November 20 date-fruit archive review resolved 1,400 original pairs and preserved 666 for further context or body-boundary checks. Six dated primary records and seven related assessments cover date-palm extracts and the dried-date comparator protocol. The original queue now holds 42,470 pairs across 26,846 source keys. [Date identity and primary evidence](followup/date-context-and-primary-models-nov20-133/README.md)
+The latest November 20 date-fruit review added the original Deglet Nour mouse study and two Algerian cultural records. The stored proceedings show disagreement on the active control and protection percentages. The original Béchar report remains open. [Primary and cultural source receipts](followup/date-pain-proceedings-and-cultural-sources-nov20-134/README.md)
+
+The preceding November 20 date-fruit archive review resolved 1,400 original pairs and preserved 666 for further context or body-boundary checks. Six dated primary records and seven related assessments cover date-palm extracts and the dried-date comparator protocol. The original queue holds 42,470 pairs across 26,846 source keys. [Date identity and primary evidence](followup/date-context-and-primary-models-nov20-133/README.md)
 
 The preceding November 20 archived-text review resolved 382 priority-five pairs and added five related evidence assessments. Nine dated catalog entries verify the grape-juice trial family, beverage measurement and two retraction notices. That checkpoint left 43,870 pairs across 28,141 source keys. [Food exposure and trial review](followup/archived-food-context-and-grape-nov20-132/README.md)
 

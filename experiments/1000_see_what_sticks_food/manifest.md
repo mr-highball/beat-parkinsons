@@ -23,6 +23,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+The original Deglet Nour proceedings report fewer acute writhes in mice given date fruit fractions. Its reference product and percentages conflict across methods and results. Two separate cultural records concern abdominal pain attributed to dates and sore pain reported for date syrup. Whole dried dates and clinical Parkinson pain remain an open comparison. [Primary comparison and cultural context](followup/date-pain-proceedings-and-cultural-sources-nov20-134/README.md)
+
 The date-fruit archive group resolved 1,400 original pairs, including three genuine date-palm citations. The related lung, liver, fermentation and wild date-palm studies measure distinct experimental outcomes. The Deglet Noor comparator protocol confirms a human dietary design without posted comparative outcomes. Both dried-date claims retain their published grades. [Source scopes and clinical endpoints](followup/date-context-and-primary-models-nov20-133/README.md)
 
 The archive group resolved 382 original pairs. In the linked grape-juice trial reports, the original functional table does not show a clear incremental juice benefit. Participant flow and registry differences remain traceable. The MENASA protocol supplies a prospective black-tea and rest-tremor history trail without a tea-specific severity result. Two publisher-retracted sources were excluded. [Study-level findings and source limits](followup/archived-food-context-and-grape-nov20-132/README.md)
