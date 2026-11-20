@@ -934,3 +934,7 @@ Seventeen of 18 pinned original pairs reached main-body review. The AES abstract
 ## 2011 original visual symptom review
 
 The review verified all 15 pinned original bodies and recorded 13 related assessments and four companion abstracts. Claim 0175 remains Unknown with 114 queued original pairs. The native replay preserves the identity and order of all 45,415 remaining queued pairs. The earlier AES supplement and the Compta pathology supplements remain open. [Source and review packet](followup/fig-priority-six-2011-nov19-101/README.md).
+
+## 2010 provider-date clinical visual symptom review
+
+Eight original pairs reached main-body review and fifteen related assessments were recorded. The RECOVER registry records separate the randomized phase's visual serious event from the general hallucination term in the open-label extension. Claim 0175 remains Unknown with 106 queued originals. The ICN proceedings remain at metadata depth. The exact replay retains the order and membership of the other 45,407 pairs. [Source and review packet](followup/fig-priority-six-2010-nov19-102/README.md).
