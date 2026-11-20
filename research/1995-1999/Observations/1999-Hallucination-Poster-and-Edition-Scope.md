@@ -1,0 +1,7 @@
+# Visual outcomes and publication identity in 1999
+
+The [Milan proceedings](../Source-Text/1999-PMC7088054-Neurology-Abstracts-Page-Scope.txt) include follow-up observations that build on the [1997 hallucinosis interview study](../Source-Text/1997-Graham-Hallucinosis-and-Illusions.txt). The follow-up distinguishes cognition after early and late hallucination onset. The relationship to the 1997 sample is plausible and individual cohort linkage remains unresolved. A separate poster describes treatment in 17 admissions for broad acute psychiatric symptoms, including an evening hallucination adverse report.
+
+The [1999 journal review](../Source-Text/PMC9665667.txt) presents formed visual hallucinations as a clinical characteristic in Lewy body dementia. A [2000 pathology comparison](../../2000-2004/Source-Text/PMC1736862.txt) used a broader category for psychiatric adverse effects, while a [2000 case conference](../../2000-2004/Source-Text/PMC1736868.txt) describes visual hallucinations after a medication change in someone with a different final diagnosis. No direct culinary comparison is recorded in these sources.
+
+The [July JNNP title crosswalk](../Source-Text/1999-JNNP-Book-Review-Identity.tsv) records four title mismatches between linked PubMed and PMC records. The original printed reviews separate the distinct contributions and their authors. One original review still has an incomplete text extraction.

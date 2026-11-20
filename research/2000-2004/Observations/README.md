@@ -1,5 +1,7 @@
 # Observations for 2000–2004
 
+The [2000 hallucination and proceedings notes](2000-Hallucination-and-Proceedings-Access.md) compare clinical measurements and record missing archival pages.
+
 The [2001 visual histories and publication scope notes](2001-Visual-History-and-Conference-Scope.md) link the EANM proceedings, the later perfusion report, and diagnostic and medication sources.
 
 The [visual processing and clinical measurement notes](2002-2004-Visual-Processing-and-Clinical-Outcome-Scope.md) distinguish brain perfusion, visual and behavioral measures, and diagnostic prevalence.

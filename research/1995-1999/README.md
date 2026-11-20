@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [1999 poster and archive notes](Observations/1999-Hallucination-Poster-and-Edition-Scope.md) describe longitudinal cognition, episode definitions and original journal review identities.
+
 The [1999 Parkinson sleep and hallucination study](Source-Text/1999-PMID9918353-Hallucinations-Dreams-and-Sleep.txt) distinguishes sleep fragmentation and altered dreams from the combined hallucination and illusion category.
 
 An [early clinical perfusion comparison](Source-Text/1997-PMID9143472-Lewy-Body-Perfusion-and-Transporter-Imaging.txt) and [autopsy-confirmed imaging case](Source-Text/1999-PMID10466669-FP-CIT-Lewy-Body-Autopsy-Case.txt) give antecedents to the [later visual history and pathology comparison](../2005-2009/Observations/2007-Visual-History-Symptom-Measurement-and-Proceedings.md).

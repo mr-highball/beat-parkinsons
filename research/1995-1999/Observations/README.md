@@ -1,5 +1,7 @@
 # Observations for 1995–1999
 
+The [1999 poster and archive notes](1999-Hallucination-Poster-and-Edition-Scope.md) describe longitudinal cognition, episode definitions and original journal review identities.
+
 ## Major observations
 
 - [Family genetics and human tissue](../Mechanisms-and-Models.md) converged on alpha-synuclein. The filament results refined the earlier hypothesis about what forms Lewy-body filaments. Parkin mutations identified a separate inherited juvenile syndrome.
