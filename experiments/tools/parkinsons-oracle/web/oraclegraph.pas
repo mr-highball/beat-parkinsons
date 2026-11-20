@@ -82,13 +82,13 @@ uses nyx.controls, nyx.drawing, nyx.colors, oraclevocab, parkinsonsoracle.presen
 
 const
   CExpandPage = 12;
-  CNodeWidth = 220;
-  CNodeHeight = 80;
-  CColumnStep = 340;
-  CRowStep = 145;
+  CNodeWidth = 216;
+  CNodeHeight = 78;
+  CColumnStep = 392;
+  CRowStep = 154;
   CCompactWidth = 550;
-  CCompactNodeStep = 258;
-  CCompactLevelStep = 128;
+  CCompactNodeStep = 278;
+  CCompactLevelStep = 174;
   CDrawingMargin = 84;
   CTouchEvents: array[0..4] of String = ('pointerdown', 'pointermove', 'pointerup',
     'pointercancel', 'lostpointercapture');
@@ -116,21 +116,27 @@ end;
 
 function LinkColor(const ATone: String; AFocused: Boolean): TNyxRGBColor;
 begin
+  if not AFocused then
+  begin
+    if ATone = 'eases' then
+      Exit(NyxRGB(136, 179, 158));
+    if ATone = 'worsens' then
+      Exit(NyxRGB(208, 158, 158));
+    if ATone = 'challenged' then
+      Exit(NyxRGB(201, 175, 129));
+    if ATone = 'mixed' then
+      Exit(NyxRGB(179, 161, 199));
+    Exit(NyxRGB(184, 198, 191));
+  end;
   if ATone = 'eases' then
-  begin
     Exit(NyxRGB(20, 112, 78));
-  end;
   if ATone = 'worsens' then
-  begin
     Exit(NyxRGB(176, 49, 49));
-  end;
   if ATone = 'challenged' then
     Exit(NyxRGB(137, 86, 20));
   if ATone = 'mixed' then
     Exit(NyxRGB(97, 69, 135));
-  if AFocused then
-    Exit(NyxRGB(142, 159, 151));
-  Result := NyxRGB(185, 199, 191);
+  Result := NyxRGB(122, 148, 135);
 end;
 
 function LinkBadge(const ATone: String): String;
@@ -140,7 +146,7 @@ begin
   if ATone = 'worsens' then
     Exit('↑ May worsen');
   if ATone = 'mixed' then
-    Exit('Multiple evidence signals');
+    Exit('Multiple signals');
   Result := '? Claim challenged';
 end;
 
@@ -153,6 +159,191 @@ begin
   if ATone = 'mixed' then
     Exit(NyxDrawingPaint(NyxRGB(244, 237, 252)));
   Result := NyxDrawingPaint(NyxRGB(255, 245, 221));
+end;
+
+type
+  TGraphLinkGeometry = record
+    Path: TNyxDrawingPath;
+    Arrow: TNyxDrawingPath;
+    Origin: TNyxDrawingPath;
+    Badge: TNyxCanvasPoint;
+  end;
+
+function LinkPoint(ACompact: Boolean; ALane, ALevel: Double): TNyxCanvasPoint;
+begin
+  if ACompact then
+    Exit(NyxCanvasPoint(ALane, ALevel));
+  Result := NyxCanvasPoint(ALevel, ALane);
+end;
+
+function LinkGeometry(ACompact: Boolean; const AFrom, ATo: TNyxCanvasPoint;
+  AFromPort, AToPort: Double; ABadgeAtOrigin: Boolean): TGraphLinkGeometry;
+var
+  LFromLane: Double;
+  LToLane: Double;
+  LFromLevel: Double;
+  LToLevel: Double;
+  LLaneSize: Double;
+  LLevelSize: Double;
+  LLevelStep: Double;
+  LStem: Double;
+  LBadgeGap: Double;
+  LSign: Integer;
+  LSpread: Integer;
+  LDeparture: Double;
+  LArrival: Double;
+  LGutter: Double;
+  LMiddle: Double;
+
+  function Point(ALane, ALevel: Double): TNyxCanvasPoint;
+  begin
+    Result := LinkPoint(ACompact, ALane, ALevel);
+  end;
+
+begin
+  if ACompact then
+  begin
+    LFromLane := AFrom.X;
+    LToLane := ATo.X;
+    LFromLevel := AFrom.Y;
+    LToLevel := ATo.Y;
+    LLaneSize := CNodeWidth;
+    LLevelSize := CNodeHeight;
+    LLevelStep := CCompactLevelStep;
+    LStem := 32;
+    LBadgeGap := 27;
+  end
+  else
+  begin
+    LFromLane := AFrom.Y;
+    LToLane := ATo.Y;
+    LFromLevel := AFrom.X;
+    LToLevel := ATo.X;
+    LLaneSize := CNodeHeight;
+    LLevelSize := CNodeWidth;
+    LLevelStep := CColumnStep;
+    LStem := 84;
+    LBadgeGap := 84;
+  end;
+
+  LSign := Sign(LToLevel - LFromLevel);
+  LSpread := Sign(LToLane - LFromLane);
+  LGutter := LToLane - 24;
+  if LSpread <= 0 then
+    LGutter := LToLane + LLaneSize + 24;
+  LFromLane := LFromLane + LLaneSize / 2 + AFromPort;
+  LToLane := LToLane + LLaneSize / 2 + AToPort;
+  LFromLevel := LFromLevel + (1 + LSign) * LLevelSize / 2;
+  LToLevel := LToLevel + (1 - LSign) * LLevelSize / 2;
+  LDeparture := LFromLevel + LSign * LStem;
+  LArrival := LToLevel - LSign * LStem;
+  Result.Path := NyxDrawingPath(Point(LFromLane, LFromLevel));
+  if Abs(LToLevel - LFromLevel) > LLevelStep then
+  begin
+    { Move sideways between rows or columns so a long link bypasses intervening cards. }
+    Result.Path := Result.Path
+      .LineTo(Point(LFromLane, LDeparture))
+      .CurveTo(Point(LFromLane, LDeparture + LSign * 8), Point(LGutter, LDeparture),
+        Point(LGutter, LDeparture + LSign * 14))
+      .LineTo(Point(LGutter, LArrival - LSign * 14))
+      .CurveTo(Point(LGutter, LArrival), Point(LToLane, LArrival - LSign * 8),
+        Point(LToLane, LArrival))
+      .LineTo(Point(LToLane, LToLevel));
+  end
+  else
+  begin
+    LMiddle := (LDeparture + LArrival) / 2;
+    Result.Path := Result.Path
+      .LineTo(Point(LFromLane, LDeparture))
+      .CurveTo(Point(LFromLane, LMiddle), Point(LToLane, LMiddle),
+        Point(LToLane, LArrival))
+      .LineTo(Point(LToLane, LToLevel));
+  end;
+  Result.Origin := NyxDrawingPath(Point(LFromLane, LFromLevel - 5))
+    .LineTo(Point(LFromLane + 5, LFromLevel))
+    .LineTo(Point(LFromLane, LFromLevel + 5))
+    .LineTo(Point(LFromLane - 5, LFromLevel)).Close;
+  Result.Arrow := NyxDrawingPath(Point(LToLane - 6, LToLevel - LSign * 11))
+    .LineTo(Point(LToLane, LToLevel)).LineTo(Point(LToLane + 6, LToLevel - LSign * 11));
+  if ABadgeAtOrigin then
+    Result.Badge := Point(LFromLane, LFromLevel + LSign * LBadgeGap)
+  else
+    Result.Badge := Point(LToLane, LToLevel - LSign * LBadgeGap);
+end;
+
+{ Give each side its own ordered ports. Neighbor order coordinates local fan-out. }
+procedure AssignLinkPorts(ARoutes: TJSArray; APositions: TJSObject; ACompact: Boolean);
+var
+  LGroups: TJSObject;
+  LPortLists: TJSArray;
+  LList: TJSArray;
+  LRoute: TJSObject;
+  LEdge: TJSObject;
+  LPort: TJSObject;
+  LIndex: Integer;
+  LGroupIndex: Integer;
+  LSpread: Double;
+  LSpan: Double;
+  LCompare: TJSArrayCompareCallBack;
+
+  procedure RegisterPort(const ANode, APeer, AField: String);
+  var
+    LGroup: String;
+    LHere: TJSObject;
+    LThere: TJSObject;
+    LPorts: TJSArray;
+    LSlot: TJSObject;
+  begin
+    LHere := TJSObject(APositions[ANode]);
+    LThere := TJSObject(APositions[APeer]);
+    LGroup := ANode + '|' + IntToStr(Sign(Integer(LThere['level']) - Integer(LHere['level'])));
+    if not isDefined(LGroups[LGroup]) then
+    begin
+      LPorts := TJSArray.new;
+      LGroups[LGroup] := LPorts;
+      LPortLists.push(LPorts);
+    end;
+    LPorts := TJSArray(LGroups[LGroup]);
+    LSlot := TJSObject.new;
+    LSlot['route'] := LRoute;
+    LSlot['field'] := AField;
+    LSlot['row'] := LThere['row'];
+    LSlot['level'] := LThere['level'];
+    LPorts.push(LSlot);
+  end;
+
+begin
+  LGroups := TJSObject.new;
+  LPortLists := TJSArray.new;
+  for LIndex := 0 to ARoutes.Length - 1 do
+  begin
+    LRoute := TJSObject(ARoutes[LIndex]);
+    LEdge := TJSObject(LRoute['edge']);
+    RegisterPort(GraphText(LEdge, 'from'), GraphText(LEdge, 'to'), 'origin-port');
+    RegisterPort(GraphText(LEdge, 'to'), GraphText(LEdge, 'from'), 'target-port');
+  end;
+  LSpan := CNodeHeight - 24;
+  if ACompact then
+    LSpan := CNodeWidth - 36;
+  LCompare :=
+    function(ALeft, ARight: JSValue): NativeInt
+    begin
+      Result := Integer(TJSObject(ALeft)['row']) - Integer(TJSObject(ARight)['row']);
+      if Result = 0 then
+        Result := Integer(TJSObject(ALeft)['level']) - Integer(TJSObject(ARight)['level']);
+    end;
+  for LGroupIndex := 0 to LPortLists.Length - 1 do
+  begin
+    LList := TJSArray(LPortLists[LGroupIndex]);
+    LList.sort(LCompare);
+    LSpread := Min(26.0, LSpan / Max(1, LList.Length - 1));
+    for LIndex := 0 to LList.Length - 1 do
+    begin
+      LPort := TJSObject(LList[LIndex]);
+      LRoute := TJSObject(LPort['route']);
+      LRoute[GraphText(LPort, 'field')] := (LIndex - (LList.Length - 1) / 2) * LSpread;
+    end;
+  end;
 end;
 
 constructor TOracleGraphExplorer.Create(AModel: TOracleGraphModel; const ASymptoms: TStringValues;
@@ -616,8 +807,6 @@ var
   LOther: String;
   LNode: TJSObject;
   LPosition: TNyxCanvasPoint;
-  LStart: TNyxCanvasPoint;
-  LEnd: TNyxCanvasPoint;
   LEdge: TJSObject;
   LClaim: TJSObject;
   LAssessment: TJSObject;
@@ -626,16 +815,10 @@ var
   LTop: Double;
   LWidth: Double;
   LHeight: Double;
-  LX1: Double;
-  LY1: Double;
-  LX2: Double;
-  LY2: Double;
-  LMiddle: Double;
-  LGutter: Double;
   LStroke: Double;
-  LDirection: Integer;
-  LArrow: TNyxDrawingPath;
   LLabelPoint: TNyxCanvasPoint;
+  LGeometry: TGraphLinkGeometry;
+  LPass: Integer;
   LRoutesByPair: TJSObject;
   LRoutes: TJSArray;
   LRoute: TJSObject;
@@ -644,7 +827,6 @@ var
   LBadgeCount: Integer;
   LBadgeWidth: Integer;
   LBadgeKey: String;
-  LPath: TNyxDrawingPath;
   LPaint: TNyxDrawingPaint;
   LFocused: Boolean;
   LFrom: String;
@@ -667,7 +849,9 @@ begin
   LPage := Control(nkPage, 'graph-workspace', '');
   FDocument.AddPage(LPage);
   LPage.Add(Control(nkLabel, 'graph-guide',
-    'Tap a node to follow its connections. Drag to move or pinch to zoom.'));
+    'Tap a node to highlight its links. Drag to move or pinch to zoom.'));
+  LPage.Add(Control(nkLabel, 'graph-route-guide',
+    'On a highlighted link, the diamond marks its start and the arrow marks its destination.'));
   LLegend := Control(nkRow, 'graph-legend', '');
   LLegend.Add(Control(nkBadge, 'effect-relief-graph-key', 'May ease'));
   LLegend.Add(Control(nkBadge, 'effect-worse-graph-key', 'May worsen'));
@@ -810,112 +994,46 @@ begin
     else if (LTone <> '') and (LTone <> LRouteTone) then
       LRoute['tone'] := 'mixed';
   end;
+  AssignLinkPorts(LRoutes, FPositions, FCompact);
   SetLength(LBadges, LRoutes.Length);
   LBadgeCount := 0;
-  for LIndex := 0 to LRoutes.Length - 1 do
+  { Draw quieter context first, then give the selected node's links a light outline
+    so crossings stay readable without dropping the surrounding branch. }
+  for LPass := 0 to 1 do
   begin
-    LRoute := TJSObject(LRoutes[LIndex]);
-    LEdge := TJSObject(LRoute['edge']);
-    LTone := GraphText(LRoute, 'tone');
-    LFrom := GraphText(LEdge, 'from');
-    LTo := GraphText(LEdge, 'to');
-    LStart := PositionOf(LFrom);
-    LEnd := PositionOf(LTo);
-    LFocused := (LFrom = FSelected) or (LTo = FSelected);
-    if FCompact and (LStart.X = LEnd.X) and
-      (Abs(LStart.Y - LEnd.Y) > CCompactLevelStep) then
+    for LIndex := 0 to LRoutes.Length - 1 do
     begin
-      { Route past the side of any intervening card in this lane. A line
-        through the card would make it appear to be part of the relationship. }
-      LX1 := LStart.X + CNodeWidth;
-      LX2 := LX1;
-      LY1 := LStart.Y + CNodeHeight / 2;
-      LY2 := LEnd.Y + CNodeHeight / 2;
-      LDirection := Sign(LY2 - LY1);
-      LGutter := LX1 + 20;
-      LPath := NyxDrawingPath(NyxCanvasPoint(LX1, LY1))
-        .CurveTo(NyxCanvasPoint(LX1 + 12, LY1), NyxCanvasPoint(LGutter, LY1 + 12 * LDirection),
-          NyxCanvasPoint(LGutter, LY1 + 24 * LDirection))
-        .LineTo(NyxCanvasPoint(LGutter, LY2 - 24 * LDirection))
-        .CurveTo(NyxCanvasPoint(LGutter, LY2 - 12 * LDirection), NyxCanvasPoint(LX2 + 12, LY2),
-          NyxCanvasPoint(LX2, LY2));
-      LArrow := NyxDrawingPath(NyxCanvasPoint(LX2 + 8, LY2 - 5))
-        .LineTo(NyxCanvasPoint(LX2, LY2)).LineTo(NyxCanvasPoint(LX2 + 8, LY2 + 5));
-      LLabelPoint := NyxCanvasPoint(LGutter, (LY1 + LY2) / 2);
-    end
-    else if (not FCompact) and (LStart.Y = LEnd.Y) and
-      (Abs(LStart.X - LEnd.X) > CColumnStep) then
-    begin
-      LX1 := LStart.X + CNodeWidth / 2;
-      LX2 := LEnd.X + CNodeWidth / 2;
-      LY1 := LStart.Y + CNodeHeight;
-      LY2 := LY1;
-      LDirection := Sign(LX2 - LX1);
-      LGutter := LY1 + 20;
-      LPath := NyxDrawingPath(NyxCanvasPoint(LX1, LY1))
-        .CurveTo(NyxCanvasPoint(LX1, LY1 + 12), NyxCanvasPoint(LX1 + 12 * LDirection, LGutter),
-          NyxCanvasPoint(LX1 + 24 * LDirection, LGutter))
-        .LineTo(NyxCanvasPoint(LX2 - 24 * LDirection, LGutter))
-        .CurveTo(NyxCanvasPoint(LX2 - 12 * LDirection, LGutter), NyxCanvasPoint(LX2, LY2 + 12),
-          NyxCanvasPoint(LX2, LY2));
-      LArrow := NyxDrawingPath(NyxCanvasPoint(LX2 - 5, LY2 + 8))
-        .LineTo(NyxCanvasPoint(LX2, LY2)).LineTo(NyxCanvasPoint(LX2 + 5, LY2 + 8));
-      LLabelPoint := NyxCanvasPoint((LX1 + LX2) / 2, LGutter);
-    end
-    else if FCompact then
-    begin
-      LDirection := 1;
-      if LEnd.Y < LStart.Y then
+      LRoute := TJSObject(LRoutes[LIndex]);
+      LEdge := TJSObject(LRoute['edge']);
+      LFrom := GraphText(LEdge, 'from');
+      LTo := GraphText(LEdge, 'to');
+      LFocused := (LFrom = FSelected) or (LTo = FSelected);
+      if LFocused <> (LPass = 1) then
+        Continue;
+      LTone := GraphText(LRoute, 'tone');
+      LGeometry := LinkGeometry(FCompact, PositionOf(LFrom), PositionOf(LTo),
+        Double(LRoute['origin-port']), Double(LRoute['target-port']), LTo = FSelected);
+      LPaint := NyxDrawingPaint(LinkColor(LTone, LFocused));
+      LStroke := 1.25;
+      if LTone <> '' then
       begin
-        LDirection := -1;
+        LStroke := 1.8;
+        if LFocused then
+        begin
+          LStroke := 3;
+          LDrawing.Path(LGeometry.Path, NyxDrawingStyle
+            .Stroke(NyxDrawingPaint(NyxRGB(249, 251, 248)), 7));
+        end;
       end;
-      LX1 := LStart.X + CNodeWidth / 2;
-      LY1 := LStart.Y + (1 + LDirection) * CNodeHeight / 2;
-      LX2 := LEnd.X + CNodeWidth / 2;
-      LY2 := LEnd.Y + (1 - LDirection) * CNodeHeight / 2;
-      LMiddle := (LY1 + LY2) / 2;
-      LPath := NyxDrawingPath(NyxCanvasPoint(LX1, LY1))
-        .CurveTo(NyxCanvasPoint(LX1, LMiddle), NyxCanvasPoint(LX2, LMiddle),
-          NyxCanvasPoint(LX2, LY2));
-      LArrow := NyxDrawingPath(NyxCanvasPoint(LX2 - 5, LY2 - LDirection * 8))
-        .LineTo(NyxCanvasPoint(LX2, LY2)).LineTo(NyxCanvasPoint(LX2 + 5, LY2 - LDirection * 8));
-      if LTo = FSelected then
-        LLabelPoint := NyxCanvasPoint(LX1, LY1 + LDirection * 23)
-      else
-        LLabelPoint := NyxCanvasPoint(LX2, LY2 - LDirection * 23);
-    end
-    else
-    begin
-      LDirection := 1;
-      if LEnd.X < LStart.X then
-      begin
-        LDirection := -1;
-      end;
-      LX1 := LStart.X + (1 + LDirection) * CNodeWidth / 2;
-      LY1 := LStart.Y + CNodeHeight / 2;
-      LX2 := LEnd.X + (1 - LDirection) * CNodeWidth / 2;
-      LY2 := LEnd.Y + CNodeHeight / 2;
-      LMiddle := (LX1 + LX2) / 2;
-      LPath := NyxDrawingPath(NyxCanvasPoint(LX1, LY1))
-        .CurveTo(NyxCanvasPoint(LMiddle, LY1), NyxCanvasPoint(LMiddle, LY2),
-          NyxCanvasPoint(LX2, LY2));
-      LArrow := NyxDrawingPath(NyxCanvasPoint(LX2 - LDirection * 8, LY2 - 5))
-        .LineTo(NyxCanvasPoint(LX2, LY2)).LineTo(NyxCanvasPoint(LX2 - LDirection * 8, LY2 + 5));
-      if LTo = FSelected then
-        LLabelPoint := NyxCanvasPoint(0.65 * LX1 + 0.35 * LX2, LY1)
-      else
-        LLabelPoint := NyxCanvasPoint(0.35 * LX1 + 0.65 * LX2, LY2);
-    end;
-    LPaint := NyxDrawingPaint(LinkColor(LTone, LFocused));
-    LStroke := 1.25;
-    if LTone <> '' then
-      LStroke := 3;
-    LDrawing.Path(LPath, NyxDrawingStyle.Stroke(LPaint, LStroke));
-    if LTone <> '' then
-      LDrawing.Path(LArrow, NyxDrawingStyle.Stroke(LPaint, LStroke));
-    if LFocused and (LTone <> '') then
-    begin
-      LBadges[LBadgeCount].Position := LLabelPoint;
+      LDrawing.Path(LGeometry.Path, NyxDrawingStyle.Stroke(LPaint, LStroke));
+      if LTone = '' then
+        Continue;
+      LDrawing.Path(LGeometry.Arrow, NyxDrawingStyle.Stroke(LPaint, LStroke));
+      if not LFocused then
+        Continue;
+      LDrawing.Path(LGeometry.Origin, NyxDrawingStyle.Fill(LPaint)
+        .Stroke(NyxDrawingPaint(NyxRGB(249, 251, 248)), 1.25));
+      LBadges[LBadgeCount].Position := LGeometry.Badge;
       LBadges[LBadgeCount].Tone := LTone;
       LBadges[LBadgeCount].Text := LinkBadge(LTone);
       if (GraphText(LEdge, 'kind') <> 'claim') and
