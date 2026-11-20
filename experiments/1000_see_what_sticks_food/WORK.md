@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The latest November 20 archive review resolved 325 ingredient identity mismatches from complete local article text. Two original registry records and five publication notes distinguish general food measures from constipation and infection-treatment outcomes. The original queue holds 44,252 pairs, with 11 still open for grated ginger and constipation. [Archive and clinical evidence checkpoint](followup/archive-ingredient-identities-nov20-131/README.md)
+The latest November 20 archived-text review resolved 382 priority-five pairs and added five related evidence assessments. Nine dated catalog entries verify the grape-juice trial family, beverage measurement and two retraction notices. The original queue holds 43,870 pairs across 28,141 sources. [Food exposure and trial review](followup/archived-food-context-and-grape-nov20-132/README.md)
+
+The preceding November 20 archive review resolved 325 ingredient identity mismatches from complete local article text. Two original registry records and five publication notes distinguish general food measures from constipation and infection-treatment outcomes. At that checkpoint the original queue held 44,252 pairs, with 11 open for grated ginger and constipation. [Archive and clinical evidence checkpoint](followup/archive-ingredient-identities-nov20-131/README.md)
 
 The preceding November 20 replay resolved 146 original pairs across 24 complete bodies and kept 39 original 2025 UEG pairs open. Twenty-nine dated catalog records and ten related assessments distinguish French Parkinson cohort data, cultural indications and plant-vesicle research. At that checkpoint the original queue held 44,577 pairs, including 11 for claim 0581. [Originals, evidence boundaries and replay](followup/ginger-and-proceedings-2023-2026-nov20-130/README.md)
 

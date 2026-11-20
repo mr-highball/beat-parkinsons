@@ -6,17 +6,19 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 16,653 |
+| Local body or other primary-source context | 17,035 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 218 |
 | Title or index | 93 |
-| Pending or access-only disposition | 353 |
-| No imported exact review | 43,806 |
+| Pending or access-only disposition | 352 |
+| No imported exact review | 43,425 |
 | **Total** | **61,252** |
 
 Three verified members from the 2025 UEG proceedings inform nine original pairs. All 39 pairs for the supplement stay queued while its remaining pages are unverified. [Member review and clinical follow-through](../ueg-2025-verified-members-nov20-121/README.md)
 
-The current native replay leaves 44,252 pairs queued across 28,475 source keys. The archived priority-four group supplied 325 ingredient-identity decisions at full-text depth. [Ingredient identity and original provenance](../archive-ingredient-identities-nov20-131/README.md)
+The current native replay leaves 43,870 pairs queued across 28,141 source keys. The archived priority-five review resolved 382 pairs across 29 ingredients other than date. [Original scopes and trial lineage](../archived-food-context-and-grape-nov20-132/README.md)
+
+The archived priority-four group supplied 325 ingredient-identity decisions at full-text depth. [Ingredient identity and original provenance](../archive-ingredient-identities-nov20-131/README.md)
 
 Twenty-four complete originals supplied 146 body-level decisions in the 2023–2026 group. The 2025 UEG collection retains 39 screening holds. [Original sources and scope](../ginger-and-proceedings-2023-2026-nov20-130/README.md)
 

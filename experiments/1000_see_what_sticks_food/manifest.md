@@ -23,6 +23,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+The archive group resolved 382 original pairs. In the linked grape-juice trial reports, the original functional table does not show a clear incremental juice benefit. Participant flow and registry differences remain traceable. The MENASA protocol supplies a prospective black-tea and rest-tremor history trail without a tea-specific severity result. Two publisher-retracted sources were excluded. [Study-level findings and source limits](followup/archived-food-context-and-grape-nov20-132/README.md)
+
 The archive review resolved 325 ambiguous ingredient matches at full-text depth. The Parkinson *Helicobacter pylori* treatment reports and constipation cohort distinguish generic food measures from ingredient-level symptom comparisons. Published verdicts retain their grades. [Source scope and clinical provenance](followup/archive-ingredient-identities-nov20-131/README.md)
 
 The 2023–2026 group resolved 146 original pairs and kept 39 UEG 2025 pairs open. The French DUMP Parkinson cohort reports one ginger use for nausea without a patient response. Its constipation measure is a baseline cohort characteristic tabulated by domperidone use. The separate plant-vesicle studies and registrations distinguish food source, preparation, population and outcome. No published verdict changed. [Sources and unresolved searches](followup/ginger-and-proceedings-2023-2026-nov20-130/README.md)
