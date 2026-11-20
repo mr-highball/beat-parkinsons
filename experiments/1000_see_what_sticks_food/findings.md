@@ -954,3 +954,7 @@ The review verified four exact full-text decisions, including two original proce
 ## 2006 provider-date visual history and diagnostic measurements
 
 All seven original pairs reached complete main-text or issue review. Ten related assessments record symptom history, diagnostic imaging, tissue results, separate proceedings members and four primary treatment or observational abstracts. Claim 0175 remains Unknown with 91 queued originals. Native replay verified exactly seven removals and preserved all 45,392 remaining pair identities and order. [Source and review packet](followup/fig-priority-six-2006-nov20-106/README.md).
+
+## 2005 provider-date conference scope and diagnostic review
+
+Five original pairs reached complete body or DOI-specific collection review. Three JNNP articles remain queued. The SGIM publisher deposit and complete archive give pages 25–279, with the additional PubMed range still open. Four related assessments preserve diagnostic and source-family boundaries. Claim 0175 remains Unknown with 86 queued original pairs. Native replay verified all five removals and the sequence of the other 45,387 pairs. [Source and review packet](followup/fig-priority-six-2005-nov20-107/README.md).
