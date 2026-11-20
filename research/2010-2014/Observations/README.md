@@ -2,6 +2,8 @@
 
 The [upper Sebou fig inventory](../Cultural-and-Experiential/Local-Knowledge/2011-Libiad-Sebou-Fig-Food-and-Fuelwood.txt) documents food and fuelwood use without specifying dried fruit or a clinical outcome. The previous period's [Italian field report](../../2005-2009/Cultural-and-Experiential/Traditional-Practices/2005-Guarrera-Central-Italy-Fig-Fruit-and-Latex.txt) identifies dried fig fruit in a customary mixture. The similar plant labels describe different exposure detail.
 
+The [2010 agricultural bulletin](../Cultural-and-Experiential/Local-Knowledge/2010-El-Khaloui-Chriha-Dried-Fig-Practice.txt) gives a specific sun-dried fruit meaning for Chriha and dates the local processing example to 2009. The [later Taounate survey](../../2020-2024/Cultural-and-Experiential/Traditional-Practices/2021-El-Assri-Taounate-Fig-Parts-and-Names.txt) uses the name in a row covering fruit and leaves. The glossary context can guide source discovery while the clinical preparation remains unresolved.
+
 The [2010 clinical comparisons](2010-Visual-Sleep-and-Drug-Outcome-Lineage.md) separate sleep questionnaire items, adverse-event coding and regional pathology.
 
 The [2011 source comparisons](2011-Visual-Phenotypes-and-Imaging-Lineage.md) separate visual episode measures, complaint timing, brain imaging and shared sample lineage.

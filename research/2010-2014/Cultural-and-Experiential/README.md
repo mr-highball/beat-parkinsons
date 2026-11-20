@@ -1,5 +1,6 @@
 # Cultural and experiential accounts, 2010-2014
 
+- [Chriha sun-dried common fig in a Moroccan agricultural bulletin](Local-Knowledge/2010-El-Khaloui-Chriha-Dried-Fig-Practice.txt).
 - [Common fig food and fuelwood in the upper Sebou watershed](Local-Knowledge/2011-Libiad-Sebou-Fig-Food-and-Fuelwood.txt).
 
 - [Fennel and Middle Eastern falij practice literature](Traditional-Practices/2012-Abu-Rabia-Fennel-in-Falij-Literature.txt). The entry distinguishes a boiled-leaf preparation from an attributed calming use of fruit.
