@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 20 print and diagnostic follow-up resolves the original Ala body, documents the disputed drawing score and the reply with the same sample, and adds the Manson clinical abstract and Loizzo dried-fig assay. Seven staged original access gaps remain. The native queue retains 45,356 pairs overall and 55 for dried-fig claim 0175. The claim remains Unknown. [Original scope, assays and open routes](followup/fig-print-and-diagnostic-nov20-113/README.md)
+
 The November 20 clinical checkpoint verifies four original bodies and preserves two body-access gaps and the unverified Kuopio symptom table transcription. It adds exact local access for the previously reviewed Yoshita paper and updates two pending assessments. The native replay retains 45,357 Round 1 pairs, including 56 for dried-fig claim 0175. The claim remains Unknown. [Clinical evidence and follow-up](followup/fig-clinical-fulltext-nov20-112/README.md)
 
 The November 20 pre-1999 checkpoint verifies eight original pairs from 83 official page images and keeps five incomplete bodies in the queue. The separate 2009 primary manuscript measured opposing changes in visual contrast and attention, with clinical visual events unscored. The original queue holds 45,361 pairs. Dried-fig claim 0175 remains Unknown with 60 original pairs queued. [Historical evidence and receipts](followup/fig-originals-pre1999-nov20-111/README.md)
