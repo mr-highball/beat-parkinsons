@@ -1,0 +1,7 @@
+# Visual symptom definitions and treatment records from 1995–1998
+
+Quinn's [treatment review](../Source-Text/PMC2548944.txt) distinguishes illusions, experiences with retained insight and hallucinations. The [diagnostic review](../Source-Text/PMC2548823.txt) records a counterexample to using visual hallucinations to distinguish Lewy body disease from Alzheimer disease. The [vascular dementia review](../Source-Text/PMC2350015.txt) treats these symptoms as part of a differential diagnosis.
+
+The earlier [acute behavior review](../../1990-1994/Source-Text/PMC489814.txt) discusses delirium and treatment effects that can resemble disease symptoms. A later [four-person experiment](../../2005-2009/Source-Text/2009-PMID19667979-Apomorphine-Visual-Perception-Pilot.txt) separates measured contrast sensitivity and attention from an unmeasured visual hallucination outcome. The [1998 motor follow-up](../Source-Text/PMC2170072.txt) has a frequency result for dyskinesia. Its complete adverse-event reporting remains open.
+
+The [1998 clinical case](../Source-Text/PMC2170387.txt) has a verified article identity and a partial opening text. The main diagnostic discussion and pathology are still pending. The [two 1997 reviews](../Source-Text/1997-JNNP-Neuroanatomy-and-Clinical-Reviews.tsv) also retain their access boundaries. None of these records measured dried-fig intake against a Parkinson visual episode rate.

@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [1995–1998 visual outcome review](Observations/1995-1998-Visual-Symptom-and-Access-Scope.md) links the historical differential diagnoses, clinical event definitions and remaining original full-text gaps.
+
 The [1999 poster and archive notes](Observations/1999-Hallucination-Poster-and-Edition-Scope.md) describe longitudinal cognition, episode definitions and original journal review identities.
 
 The [1999 Parkinson sleep and hallucination study](Source-Text/1999-PMID9918353-Hallucinations-Dreams-and-Sleep.txt) distinguishes sleep fragmentation and altered dreams from the combined hallucination and illusion category.
