@@ -27,3 +27,4 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Shahrekord practitioner reports about lemon balm use for anxiety and depression](Traditional-Practices/2019-Teimouri-Shahrekord-Lemon-Balm-Traditional-Use.txt).
 
 - [A Parkinson UK conversation about banana or a biscuit for nausea](Conversations/2019-Parkinsons-UK-Banana-Nausea-Conversation.txt)
+- [Lower Mekong outpatient reports of herbal and other traditional use](Local-Knowledge/2016-PMID26952043-Lower-Mekong-Reported-Herbal-Use.txt)

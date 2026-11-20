@@ -761,3 +761,5 @@ Two original first releases date to 2019, with 2020 journal issues. [Insular mor
 [Parkinson motor fluctuations after Helicobacter pylori treatment, official registration](Source-Text/Trials/TCTR20190222005.txt).
 
 [Indian placebo comparison of Helicobacter pylori treatment in Parkinson disease, WHO registration](Source-Text/Trials/CTRI-2019-04-018524.txt).
+
+[Registered grape juice and aquatic exercise trial, WHO record](Source-Text/Trials/RBR-2c4xxb.txt).

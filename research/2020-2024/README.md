@@ -855,3 +855,8 @@ The conference and observational review links the separate visual outcomes, the 
 - [Ginger-derived vesicles and curcumin for inflammatory bowel disease, official registration](Source-Text/Trials/NCT04879810.txt).
 - [Parkinson motor fluctuations after Helicobacter pylori treatment and the separate food covariate](Source-Text/2021-PMID33945559-HP-PD-Registry-and-Food-Scope.txt).
 - [Malaysian placebo trial of Helicobacter pylori treatment, primary motor outcome and registry comparison](Source-Text/2020-PMID32894625-HP-Eradication-Placebo-Trial.txt).
+- [Aquatic exercise and grape juice, original participant flow and functional outcomes](Source-Text/2020-PMID32798568-Grape-Juice-Aquatic-Exercise-Trial.txt).
+- [Linked grape juice and exercise report with cognition and oxidative measurements](Source-Text/2021-PMID33644467-Grape-Juice-Oxidative-Cognition-Study.txt).
+- [MIND and Mediterranean diet scores and patient-reported fatigue](Source-Text/2022-PMID36501214-MIND-Mediterranean-Fatigue-and-Food-Scope.txt).
+- [Publisher retraction of the Neelum Valley ethnobotany survey](Source-Text/2023-PMID37315012-Neelum-Ethnobotany-Retraction.txt).
+- [Publisher retraction of the aging and alpha-synuclein animal study](Source-Text/2024-PMID39415232-Synuclein-Model-Retraction.txt).
