@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 20 clinical checkpoint verifies four original bodies and preserves two body-access gaps and the unverified Kuopio symptom table transcription. It adds exact local access for the previously reviewed Yoshita paper and updates two pending assessments. The native replay retains 45,357 Round 1 pairs, including 56 for dried-fig claim 0175. The claim remains Unknown. [Clinical evidence and follow-up](followup/fig-clinical-fulltext-nov20-112/README.md)
+
 The November 20 pre-1999 checkpoint verifies eight original pairs from 83 official page images and keeps five incomplete bodies in the queue. The separate 2009 primary manuscript measured opposing changes in visual contrast and attention, with clinical visual events unscored. The original queue holds 45,361 pairs. Dried-fig claim 0175 remains Unknown with 60 original pairs queued. [Historical evidence and receipts](followup/fig-originals-pre1999-nov20-111/README.md)
 
 The November 20 review verifies ten 1999–2000 claim–source pairs. It documents four shifted PubMed-to-PMC titles, follows the Milan hallucination posters and preserves eleven body gaps, including missing printed page 1010 of the Paris proceedings. The original queue holds 45,369 pairs, with 68 for dried-fig claim 0175, which remains Unknown. [Source and coverage checkpoint](followup/fig-priority-six-2000-1999-nov20-110/README.md)
