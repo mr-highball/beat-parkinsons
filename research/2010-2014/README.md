@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [2014 clinical visual criteria and plant preparation observations](Observations/2014-Visual-Criteria-and-Plant-Preparation-Lineage.md) compare the GBA clinical cohort, stimulation case, 2014 Ayurvedic records and adjacent trial phases.
+
 The [ADVANCE-PD](Source-Text/2013-PMID23485610-ADVANCE-PD-Randomized-Maintenance.txt) and [ASCEND-PD](Source-Text/2014-PMID25306200-ASCEND-PD-Randomized-Crossover.txt) primary abstracts identify the two randomized levodopa comparison families. The [2014 epilepsy meeting members](Source-Text/2014-AES-Selected-Visual-and-Parkinsonism-Abstracts.txt) cross-reference the [original Dravet cohort](Source-Text/PMC4113465.txt) and the separately published 2015 issue.
 
 The [serotonin PET comparison](Source-Text/2010-PMID20385906-Parkinson-Visual-Hallucinations-and-Serotonin-PET.txt) distinguishes formed visual hallucinations from PET binding in two groups of Parkinson patients. The later [2014 nilotinib pilot registration](Source-Text/Trials/NCT02281474.txt) tracks different outcomes.

@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [1995 open HP-200 study](Source-Text/1995-PMID9395621-HP200-Mucuna-Open-Study.txt), [1996 ceremonial cohort](Source-Text/1996-PMID8596116-Hoasca-Ceremonial-Cohort.txt) and [dopamine agonist sleep-attack series](Source-Text/1999-PMID10371546-Dopamine-Agonist-Sleep-Attacks.txt) document distinct populations, preparations and outcomes.
+
 The [1999 ceremonial account](Cultural-and-Experiential/Ceremonial-Accounts/1999-UDV-Hoasca-Research-Setting.txt) and [primary pharmacokinetic record](Source-Text/1999-PMID10404423-Hoasca-Ceremonial-Pharmacokinetics.txt) identify the healthy-volunteer setting and measured exposure.
 
 A [Parkinson urinary salsolinol comparison](Source-Text/1996-PMID9617786-Urinary-Salsolinol-and-Parkinson-Visual-History-Abstract.txt) reports differences by visual hallucination status and cites the earlier dried banana feeding study.

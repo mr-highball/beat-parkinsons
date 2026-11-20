@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [2005 Hoasca pharmacokinetic reanalysis](Source-Text/2005-PMID16149329-Hoasca-Metabolizer-Reanalysis.txt) reuses 14 of the original 15 volunteer profiles.
+
 The [grapefruit juice and nilotinib crossover](Source-Text/2009-PMID19948946-Grapefruit-Juice-and-Nilotinib.txt) measures serum drug exposure in healthy participants. [Later Parkinson protocol context](../2015-2019/Observations/2016-Visual-Outcome-Definitions-and-Nilotinib-Lineage.md).
 
 The [complete ripe dried-fig extract study](Source-Text/2008-PMID18586078-Fig-Fruit-Extract-and-Lab-Endpoints-Abstract.txt) verifies the botanical voucher, isolated gut assay and separate platelet result. These are laboratory measurements of an extract.

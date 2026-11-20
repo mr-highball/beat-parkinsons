@@ -1,5 +1,7 @@
 # 1990-1994
 
+The [1994 Hoasca platelet comparison](Source-Text/1994-PMID7892432-Hoasca-Platelet-Transporter.txt) records a peripheral transporter marker in healthy volunteers.
+
 Original printed context: [Clinicians and the coronial system: ability of clinicians to recognise reportable deaths](Source-Text/PMC1677018.txt) · [Single photon emission computed tomographic imaging demonstrates loss of striatal dopamine transporters in Parkinson disease](Source-Text/1993-PMID8265656-Striatal-Transporter-Abstract.txt) · [Depression followed by dementia and disordered movement. Clinicopathologic correlation](Source-Text/PMC1022389.txt) · [Dystonia-parkinsonism syndrome resulting from a bullet injury in the midbrain](Source-Text/PMC1072944.txt).
 
 [cooked broad-bean Parkinson and dyskinesia comparison](Source-Text/PMC489215.txt).
