@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 19,099 |
+| Local body or other primary-source context | 19,134 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 224 |
-| Title or index | 89 |
-| Pending or access-only disposition | 351 |
-| No imported exact review | 41,360 |
+| Title or index | 85 |
+| Pending or access-only disposition | 358 |
+| No imported exact review | 41,322 |
 | **Total** | **61,252** |
+
+Thirty-five raw fig and drooling sources reached body review. The replay has 41,765 pairs across 26,200 original source keys. Seven PDF-only bodies and the earlier identity conflict remain visible for claim 0188. [Fig drooling review and open original routes](../fig-drooling-originals-nov20-143/README.md)
 
 Six priority-four sage pairs advanced to author-abstract depth. The queue has 41,800 pairs across 26,235 source keys. The 41 disputed article-identifier pairs and the DIGPD supplement still require the original material. [Sage trial lineage and source context](../sage-trial-lineage-and-context-nov20-142/README.md)
 

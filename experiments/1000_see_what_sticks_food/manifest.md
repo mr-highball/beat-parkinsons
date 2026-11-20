@@ -23,6 +23,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+Thirty-five raw fig and drooling pairs reached original-body review, with seven PDF access gaps preserved. The recovered microbiome supplement analyzes grouped food intake and separate sialorrhea scores without a raw-fig estimate. The 2025 drooling study separates salivary flow and perceived symptom impact. An earlier fig challenge reports acute oral and respiratory allergy with no separate drooling measurement. Claim 0188 remains Unknown. [Fig and drooling review](followup/fig-drooling-originals-nov20-143/README.md)
+
 Six sage pairs reached author-abstract review. The original common-sage rodent study confirms injected extract comparisons, while the premenstrual trial registration and two likely companion reports leave individual pain outcomes open. A Jordanian market survey reports use for intestinal pain under a different sage species. The archived sources preserve distinct exposures and outcomes, with the Round 1 verdicts unchanged. [Sage evidence and source context](followup/sage-trial-lineage-and-context-nov20-142/README.md)
 
 The ginger anxiety article and registration now have exact Oracle locators. The reported Hamilton direction still conflicts across the published abstract. A separate ginger extract rat experiment reports faster heat withdrawal in a chronic stress model and provides related context for pain without a Parkinson symptom outcome. The original ginger permeability article remains gated. [Ginger source and endpoint review](followup/ginger-anxiety-and-stress-nov20-141/README.md)
