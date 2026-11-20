@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 19,188 |
+| Local body or other primary-source context | 19,205 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 224 |
 | Title or index | 85 |
 | Pending or access-only disposition | 360 |
-| No imported exact review | 41,266 |
+| No imported exact review | 41,249 |
 | **Total** | **61,252** |
+
+The 17 remaining priority-six raw fig and drooling originals from 2026 reached original-body review. The replay has 41,694 original pairs queued across 26,159 provider keys. The congress replay separates 881 presentation bodies and retains 14 individual context checks. [2026 source audit](../fig-drooling-2026-originals-nov20-146/README.md)
 
 Thirty-one further raw fig and drooling pairs reached original-body review. The replay has 41,711 pairs across 26,168 original source keys. Two historical papers were recovered from official page scans and the Porta paper remains queued at author-abstract depth. [Exact decisions and access routes](../fig-drooling-priority-six-nov20-145/README.md)
 
