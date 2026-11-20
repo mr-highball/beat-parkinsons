@@ -2,6 +2,8 @@
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+Twelve 2021 provider-group originals reached primary-body review for the raw fig and drooling claim. Six dated records distinguish sialorrhea chart events, airway penetration, co-occurring oral dryness and symptom-instrument validation. The Portuguese validation has an author abstract and forms, with the original results tables still open. Claim 0188 remains Unknown. [2021 originals and outcome definitions](followup/fig-drooling-2021-originals-nov20-151/README.md)
+
 Twenty-four originals from the 2022 provider group reached primary-body review. The interviews distinguish spontaneous and prompted reports. The STEADY-PD III and PDQoL7 records distinguish new symptom endorsement and combined nonmotor ratings. The exact ClinicalTrials.gov query supplied no raw-fig comparison. Claim 0188 remains Unknown. [2022 originals and participant evidence](followup/fig-drooling-2022-originals-nov20-150/README.md)
 
 Twenty-two 2023 provider-group originals reached primary-body review for raw fig and drooling. The recovered ESSD reports distinguish swallowing residue from drooling severity. The COPPADIS and iRBD sources supply different follow-up denominators. Claim 0188 remains Unknown. [Source and workbook audit](followup/fig-drooling-2023-originals-nov20-149/README.md)
