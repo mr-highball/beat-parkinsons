@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [2013 registration](Source-Text/Trials/ISRCTN44706974.txt) and [2014 protocol](Source-Text/2014-PMC4208054-Ginger-Salt-Poststroke-Urinary-Protocol.txt) document a prospective ginger–salt moxibustion comparison for poststroke urinary incontinence. The public registry lists the protocol and no results.
+
 The [Bougainville field survey](Cultural-and-Experiential/Traditional-Practices/2011-Bougainville-Ginger-Abdominal-Pain-and-Constipation.txt) documents a traditional ginger use that lists abdominal pain and constipation in a typhoid context.
 
 Original conference screens cover the [2010 European Students’ Conference](Source-Text/2010-PMC3476935-European-Students-Conference-Food-Scope.txt), [2012 FEBS poster block](Source-Text/2012-PMC7163973-FEBS-Poster-Culinary-Exposure-Scope.txt) and [2014 Indian pharmacology oral papers](Source-Text/2014-PMC4308838-Indian-Pharmacology-Oral-Papers-Food-Scope.txt). The notes distinguish measured exposures from comparators, vehicles and neighboring abstracts.
