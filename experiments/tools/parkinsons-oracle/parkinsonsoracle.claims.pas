@@ -1291,7 +1291,7 @@ begin
     LIndex := 0;
     for LIngredient in FByIngredient.Keys do
     begin
-      LIngredients[LIndex] := LIngredient;
+      LIngredients[LIndex] := FByIngredient[LIngredient][0].Ingredient;
       Inc(LIndex);
     end;
     Result := IngredientEffects(FRevision, LSelected, LIngredients, LSignals);
