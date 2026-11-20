@@ -2,6 +2,8 @@
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+The date-fruit archive group resolved 1,400 original pairs, including three genuine date-palm citations. The related lung, liver, fermentation and wild date-palm studies measure distinct experimental outcomes. The Deglet Noor comparator protocol confirms a human dietary design without posted comparative outcomes. Both dried-date claims retain their published grades. [Source scopes and clinical endpoints](followup/date-context-and-primary-models-nov20-133/README.md)
+
 The archive group resolved 382 original pairs. In the linked grape-juice trial reports, the original functional table does not show a clear incremental juice benefit. Participant flow and registry differences remain traceable. The MENASA protocol supplies a prospective black-tea and rest-tremor history trail without a tea-specific severity result. Two publisher-retracted sources were excluded. [Study-level findings and source limits](followup/archived-food-context-and-grape-nov20-132/README.md)
 
 The archive review resolved 325 ambiguous ingredient matches at full-text depth. The Parkinson *Helicobacter pylori* treatment reports and constipation cohort distinguish generic food measures from ingredient-level symptom comparisons. Published verdicts retain their grades. [Source scope and clinical provenance](followup/archive-ingredient-identities-nov20-131/README.md)

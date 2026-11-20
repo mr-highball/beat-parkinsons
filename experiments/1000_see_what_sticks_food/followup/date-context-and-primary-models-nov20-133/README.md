@@ -1,0 +1,13 @@
+# Date-fruit identity checks and primary evidence
+
+This checkpoint screened 2,066 original claim–source pairs across 1,906 distinct verified archive paths. The native extraction marked 9,705 contexts using the ordinary word, plural forms, botanical and cultivar names, fruit vocabulary and preparation terms. Original texts were matched by exact article identifiers before interpretation. [Full-text decisions](dispositions.tsv) · [Archive inventory](source-inventory.tsv)
+
+The clear-context group resolved 1,400 pairs. It contains 1,397 source exclusions based on dates in time language and other verified nonfood contexts, plus three genuinely related source citations. There are 1,061 decisions for dried date and pain, and 339 for dried date and apathy. Another 602 pairs require context review and 64 need independent source-body confirmation. Ambiguous contexts and uncertain extraction boundaries remain in the original queue. [Retained exact pairs](retained-contexts.tsv)
+
+Two primary Ajwa extract reports trace to separate lung and liver injury models. The liver article prints different model-agent schedules across its two exposed groups. The earlier Tamr Ajwa fermentation study uses human donor cultures and laboratory cell endpoints. The later human crossover used whole Ajwa dates, but its published abdominal-pain diary comparison was inconclusive and its mood values were unreported. [Lung study](https://www.mdpi.com/2076-3417/12/13/6784) · [Liver study](https://doi.org/10.4103/pr.pr_119_17) · [Fermentation study](https://pubmed.ncbi.nlm.nih.gov/26101614/) · [Human crossover](https://pubmed.ncbi.nlm.nih.gov/26428278/)
+
+The wild date-palm study reports longer thermal response latencies and separate activity and sedation findings in mice. It used Phoenix sylvestris fruit-pulp extract. Common culinary dates are Phoenix dactylifera. Species, preparation, behavioural measures and cohort limit transfer to chronic Parkinson pain or apathy. [Original wild date-palm study](https://pmc.ncbi.nlm.nih.gov/articles/PMC4591841/)
+
+The NIH-filed protocol and 2024 author abstract identify the older-adult study behind the dried-date comparator. The preprint names pitted Deglet Noor fruit and confirms the 61-person recruitment denominator. The completed registry supplies no posted results, and the measured domains listed in the protocol do not isolate apathy or pain severity. [Filed protocol](https://cdn.clinicaltrials.gov/large-docs/10/NCT05358210/Prot_000.pdf) · [Recruitment preprint](https://preprints.jmir.org/preprint/64013)
+
+[Source receipts](source-receipts.tsv) · [Related assessments](assessments.tsv) · [Open trails](open-trails.tsv) · [Native verification](native-replay-verification.txt)
