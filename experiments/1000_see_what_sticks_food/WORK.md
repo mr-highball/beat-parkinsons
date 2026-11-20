@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The latest November 20 archive review resolved 325 ingredient identity mismatches from complete local article text. Two original registry records and five publication notes distinguish general food measures from constipation and infection-treatment outcomes. The original queue holds 44,252 pairs, with 11 still open for grated ginger and constipation. [Archive and clinical evidence checkpoint](followup/archive-ingredient-identities-nov20-131/README.md)
+
 The latest November 20 replay resolves 146 original pairs across 24 complete bodies and keeps 39 original 2025 UEG pairs open. Twenty-nine dated catalog records and ten related assessments distinguish French Parkinson cohort data, cultural indications and plant-vesicle research. The original queue holds 44,577 pairs, including 11 for claim 0581. [Originals, evidence boundaries and replay](followup/ginger-and-proceedings-2023-2026-nov20-130/README.md)
 
 The preceding November 20 review resolved 181 original pairs across 19 complete sources. Fifty-six pairs remain open across SNO and UEG 2022. Eleven related assessments and 29 dated catalog records cover original proceedings, clinical companions and a trial registration. At that checkpoint the original queue held 44,723 pairs, including 35 for claim 0581. [Source review and cross-checks](followup/ginger-and-proceedings-2020-2022-nov20-129/README.md)
