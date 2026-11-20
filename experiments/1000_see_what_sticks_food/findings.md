@@ -2,6 +2,8 @@
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+The date-fruit review resolved 128 exact archive pairs, with nine specific source checks queued. Separate primary abstracts measured oyster mushroom cultivation and processed date-waste fibre in rats. The official El-Bayadh field survey lists 62 plants for gastrointestinal uses and confirms a geographical boundary for the older Béchar trail. Neither dried-date claim has a transferable clinical direction from these sources. [Archive and research sources](followup/date-fruit-source-lineage-nov20-139/README.md)
+
 Another 117 archive pairs reached full-text context review. The indexed Kagoshima original reports separate nighttime sleep and constipation associations and nonmonotonic binary hyposmia comparisons. It adds related clinical context for brewed green tea with no small-handwriting or fatigue measure. This packet records two assessments and the source leads for the relevant frozen Round 4 claims. [Context and endpoint review](followup/date-context-and-green-tea-cohort-nov20-138/README.md)
 
 Another 92 exact archive pairs were resolved. The butylphthalide registry and article agree on complete follow-up counts, with a 2018 retrospective registration after 2014 first enrollment. The clinical review and related public discussion use botanical group labels. The underlying exposures are a pharmaceutical compound and ground soybeans with medication, with the exact culinary claims unchanged. [Registry and preparation scope](followup/date-exact-and-celery-registry-nov20-137/README.md)
