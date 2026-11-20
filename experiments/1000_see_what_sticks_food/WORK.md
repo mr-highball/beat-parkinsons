@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 20 ginger checkpoint verifies the 2023 completer pain counts and links subsequent Debrecen outcomes to the same open-label research program. Eight source records, one trial registration and eight related assessments distinguish gastrointestinal symptoms, gastric-emptying measures and Parkinson clinical outcomes. The three associated verdicts retain their existing grades. [Original texts, study lineage and open trails](followup/ginger-dyspepsia-lineage-nov20-122/README.md)
+
 The November 20 UEG checkpoint verifies three numbered 2025 posters and traces their main results back to five journal articles. Six dated records and 13 assessments identify shared cohort reporting and distinguish ingredient effects from gastric-emptying and dysphagia measurements. Nine original pairs have new partial-scope receipts and all 39 supplement pairs stay queued. [Original sources and review](followup/ueg-2025-verified-members-nov20-121/README.md)
 
 The November 20 FEBS poster checkpoint resolves 43 pairs after recovering the complete 2021 supplement. Six catalog records and 32 related assessments document the original nutmeg, olive compound and kefir comparisons, including explicit reuse of enzyme data. The queue holds 45,313 pairs, and no verdict changed. [2021 poster review and remaining originals](followup/febs-2021-original-posters-nov20-120/README.md)
