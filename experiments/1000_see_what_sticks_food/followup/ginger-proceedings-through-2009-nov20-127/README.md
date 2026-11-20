@@ -1,0 +1,9 @@
+# Original publications through 2009 and the ginger citation trails
+
+Ten complete original documents resolved 130 exact pairs. The 1995 BMJ administrative record and 2008 peptide symposium collection retain 18 open pairs with verified identity. A public reproduction supplied one numbered 2008 ginger protein poster. The complete printed supplement remains unverified. [Poster collection](https://onlinelibrary.wiley.com/doi/10.1002/psc.1090) · [Original scopes](source-receipts.tsv) · [Pending access](open-trails.tsv)
+
+The 2009 physiology poster assigns an aqueous ginger extract to rats with experimental diabetes and reports glucose, blood and organ measures. The adjacent sheep motility poster has a different study and intervention. An earlier emergency-department survey studied knowledge of ginger uses and adverse effects, and the 2001 SGIM member counted ginger labels on mixed supplements. [2009 original poster block](https://link.springer.com/content/pdf/10.1007/BF03405813.pdf) · [2003 supplement](https://pmc.ncbi.nlm.nih.gov/articles/PMC7135773/) · [2001 supplement](https://pmc.ncbi.nlm.nih.gov/articles/PMC1495316/)
+
+The older antiemetic review gives inconclusive ginger comparisons for postoperative nausea and vomiting. It records a separate reduction in rescue antiemetics. The original gastric electrical trial found different effects under induced hyperglycemia and misoprostol. The related rat trial measured stomach emptying. These findings concern distinct preparations and endpoints, so the frozen constipation claim retains its existing grade. [Cochrane original](https://pmc.ncbi.nlm.nih.gov/articles/PMC6463839/) · [Human trial](https://pubmed.ncbi.nlm.nih.gov/14534370/) · [Rat trial](https://pubmed.ncbi.nlm.nih.gov/11876024/)
+
+[Exact dispositions](dispositions.tsv) · [Assessments](assessments.tsv) · [Scanned index pages](scan-pages.tsv) · [Oracle first pass](oracle-first.tsv) · [Native verification](native-replay-verification.txt)
