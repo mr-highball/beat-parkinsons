@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2015-2019
 
+- [Fig cultivars, fresh fruit and drying across four Moroccan production sites](Local-Knowledge/2018-El-Hajjam-Moroccan-Fig-Cultivars-and-Drying.txt).
+
 - [Ouezzane fig leaf uses recorded in interviews](Traditional-Practices/2017-Bouyahya-Ouezzane-Fig-Leaf-Uses.txt).
 
 - [Sultanpur customary peanut-oil massage](Traditional-Practices/2018-Sultanpur-Peanut-Oil-Massage-Use.txt).

@@ -1,5 +1,7 @@
 # 2005-2009
 
+Two studies measured contaminants in sampled dried figs from distinct markets. The [Turkish export and retail analysis](Source-Text/2005-PMID16013398-Senyuva-Dried-Fig-Mycotoxin-Survey.txt) reports two mycotoxins in separate sampling sets. The [Rabat-Salé survey](Source-Text/2008-Juan-Rabat-Sale-Dried-Fig-Aflatoxins.txt) reports aflatoxins in 20 fig samples within a five-food panel. [Preparation and measurement comparisons](Observations/README.md)
+
 The [Matsui perfusion study](Source-Text/2005-PMID16293914-Parkinson-Dementia-Perfusion-Comparison.txt) groups Parkinson participants by dementia status. [Comparison with the Abe visual reasoning and Oishi symptom history studies](../2000-2004/Observations/2002-2004-Visual-Processing-and-Clinical-Outcome-Scope.md).
 
 The [2005 diagnostic and conference observations](Observations/2005-Conference-Scope-and-Diagnostic-Outcomes.md) distinguish [SGIM abstract coverage](Source-Text/PMC1490295.txt), [neuropathological diagnosis](Source-Text/PMC1765714.txt) and the [third Lewy body dementia consensus report](Source-Text/2005-PMID16237129-Third-DLB-Consortium-Report.txt).

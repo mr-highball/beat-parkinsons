@@ -1,5 +1,8 @@
 # Cultural and experiential accounts, 2005-2009
 
+- [Bouadel pilot and the first UNIDO fig drying guide](Local-Knowledge/2005-Ouaouich-Chimi-UNIDO-Fig-Drying-Guide.txt).
+- [Taounate winter practice with dried figs and olive oil](Traditional-Practices/2009-Jeddi-Taounate-Fig-and-Olive-Oil-Winter-Use.txt).
+
 - [Southern macadamia and Indigenous food and trade practices](Local-Knowledge/2009-Southern-Macadamia-Indigenous-Food-and-Trade.txt).
 
 Collect traditional practices, ceremonial accounts, public personal reports and local knowledge here, separately from formal studies. An empty category does not establish that a practice or source is absent.

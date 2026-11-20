@@ -1,5 +1,7 @@
 # Observations for 2015-2019
 
+The [four-site cultivar inventory](../Cultural-and-Experiential/Local-Knowledge/2018-El-Hajjam-Moroccan-Fig-Cultivars-and-Drying.txt) describes Nabout and dried autumn fruit in Bouhouda. The [earlier Chriha bulletin](../../2010-2014/Cultural-and-Experiential/Local-Knowledge/2010-El-Khaloui-Chriha-Dried-Fig-Practice.txt) identifies a sun-drying practice in the same area. Neither report links a cultivar or preparation to a household visual episode.
+
 The Ouezzane interviews record a fig leaf preparation for colds and sexual vitality. The earlier [central Italian field report](../../2005-2009/Cultural-and-Experiential/Traditional-Practices/2005-Guarrera-Central-Italy-Fig-Fruit-and-Latex.txt) describes dried fruit in a mixture for respiratory complaints. Both document uses, with different plant parts and preparations. [Ouezzane source](../Cultural-and-Experiential/Traditional-Practices/2017-Bouyahya-Ouezzane-Fig-Leaf-Uses.txt)
 
 The [fig preparations and outcomes comparison](2015-2019-Fig-Preparations-and-Outcome-Limits.md) distinguishes registered human bowel outcomes from tissue assays and product quality measurements.

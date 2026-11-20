@@ -1,5 +1,9 @@
 # Observations for 2005-2009
 
+The [Bouadel drying guide](../Cultural-and-Experiential/Local-Knowledge/2005-Ouaouich-Chimi-UNIDO-Fig-Drying-Guide.txt) gives a processing context. The [2009 Taounate report](../Cultural-and-Experiential/Traditional-Practices/2009-Jeddi-Taounate-Fig-and-Olive-Oil-Winter-Use.txt) describes eating dried figs with olive oil as a winter custom. The previous period's [fig allergy study](../../2000-2004/Source-Text/2003-PMID12859455-Fresh-and-Dried-Fig-Cross-Reactivity.txt) uses fresh and dried assay preparations for an unrelated clinical question.
+
+The [Turkish contaminant study](../Source-Text/2005-PMID16013398-Senyuva-Dried-Fig-Mycotoxin-Survey.txt) and [Moroccan market assay](../Source-Text/2008-Juan-Rabat-Sale-Dried-Fig-Aflatoxins.txt) directly measured toxins in food samples. They differ in sampling, geography and toxin panels. The results supply food exposure context and leave consumer intake and clinical outcomes open.
+
 The [2005 diagnostic outcomes and conference scope notes](2005-Conference-Scope-and-Diagnostic-Outcomes.md) compare diagnostic labels, symptom context and the SGIM pagination discrepancy.
 
 The [2006 visual history and treatment observations](2006-Visual-History-Treatment-and-Diagnostic-Comparisons.md) compare symptom history, tissue diagnoses, clinical measurement and early medication evidence.
