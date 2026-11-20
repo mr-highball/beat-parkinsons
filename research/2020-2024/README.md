@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [fruit constipation review and extraction audit](Source-Text/2022-PMID36276840-Huo-Date-Stool-Frequency-Forest-Plot.txt) trace the date estimate to the same earlier healthy-adult crossover and distinguish stool frequency from pain.
+
 The [2024 canna resistant-starch study](Source-Text/2024-PMID39347419-Canna-Starch-Parkinson-Rat-Model.txt) measured behavior and tissue outcomes in a Parkinson model. Banana yam and ginger yam refer to the canna plant in that study.
 
 The [Zhang 2022 journal report](Source-Text/2022-Zhang-Ginger-Evodia-Postoperative-First-Stool.txt) and [UEG poster P1009](Source-Text/2022-UEG-P1009-Ginger-Evodia-Postoperative-Recovery.txt) report postoperative bowel recovery for a topical combination. A [2023 companion abstract](Source-Text/2023-Zhang-Ginger-Evodia-Postoperative-Hormones-Abstract.txt) adds hormone and complication endpoints with likely cohort overlap. A [2021 timing comparison](Source-Text/2021-Zhang-Herbal-Hot-Pack-Postoperative-Timing-Abstract.txt) uses a separate three-arm protocol.

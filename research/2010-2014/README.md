@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [fibromyalgia fasting comparison](Source-Text/2013-PMID23431352-Michalsen-Fibromyalgia-Fasting-and-Fruit.txt) documents the unspecified prefasting fruit option. The [rat transit study](Source-Text/2014-PMID24611963-Souli-Date-Pulp-Sap-and-Intestinal-Transit.txt) distinguishes date pulp extract from palm sap.
+
 The [2013 registration](Source-Text/Trials/ISRCTN44706974.txt) and [2014 protocol](Source-Text/2014-PMC4208054-Ginger-Salt-Poststroke-Urinary-Protocol.txt) document a prospective ginger–salt moxibustion comparison for poststroke urinary incontinence. The public registry lists the protocol and no results.
 
 The [Bougainville field survey](Cultural-and-Experiential/Traditional-Practices/2011-Bougainville-Ginger-Abdominal-Pain-and-Constipation.txt) documents a traditional ginger use that lists abdominal pain and constipation in a typhoid context.
