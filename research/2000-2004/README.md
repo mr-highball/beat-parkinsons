@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [date-waste mushroom citation](Source-Text/2002-Jwanny-Date-Waste-Mushroom-Polysaccharide-Citation.txt) records the coauthor's verified journal and page locator for the antitumor study. The article body remains open.
+
 The [2001 SGIM label survey](Source-Text/2001-PMID11357836-SGIM-Herb-Supplement-and-Food-Scopes.txt) and [2003 emergency-department survey](Source-Text/2003-PMID14535236-ACEP-Herbal-Knowledge-and-Scope.txt) address marketed herbal products and knowledge of indications. The separate [rat gastric-emptying experiment](Source-Text/2001-PMID11876024-Ginger-Extract-Rat-Gastric-Emptying.txt) and [human gastric electrical comparison](Source-Text/2003-PMID14534370-Ginger-Gastric-Electrical-Rhythm.txt) measured distinct physiological endpoints.
 
 The [Indian Phalgu root monograph](Source-Text/2001-API-Phalgu-Dried-Root-Botanical-Identity.txt) designates dried Ficus hispida root. The [2001 apasmāra thesis record](Source-Text/2001-Usha-Apasmara-Thesis-Identity.txt) traces a likely shared study family with the [2018 treatment report](../2015-2019/Source-Text/2018-Usha-Singh-Mahapanchagavya-Epilepsy-Series.txt).

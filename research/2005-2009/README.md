@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [El-Bayadh field survey](Cultural-and-Experiential/Traditional-Practices/2006-Cheriti-El-Bayadh-Gastrointestinal-Plant-Survey.txt) lists traditional gastrointestinal plant uses and documents a separate source trail from the 2000 Béchar report.
+
 The [2007 ginger-partitioned study](Source-Text/2007-PMID18257343-Ginger-Partition-Chemotherapy-Abstract.txt) addresses chemotherapy leukopenia, with no separate constipation estimate in the author abstract. A [2006 ginger–salt study](Source-Text/2006-PMID17036477-Ginger-Salt-Moxibustion-Poststroke-Urinary-Abstract.txt) compares poststroke urinary outcomes.
 
 The [abbreviation glossary](Source-Text/2005-PMC7122588-Abbreviation-Glossary-Culinary-Terms.txt), [obstetric case chapter](Source-Text/2007-PMC7124088-Obstetric-Ginger-Discussion-and-Case-Boundaries.txt) and [peptide poster excerpt](Source-Text/2008-PMC7167823-Ginger-Rhizome-Protein-Poster-Excerpt.txt) preserve distinct glossary, clinical discussion and laboratory contexts. The [2006 antiemetic review](Source-Text/2006-PMID16856030-Perioperative-Ginger-Review-Endpoints.txt), [2009 gastroparesis review](Source-Text/2009-PMID19115465-Gastroparesis-Ginger-Citation-Scope.txt) and [IUPS proceedings](Source-Text/2009-PMC10722647-IUPS-Poster-Food-Exposures.txt) link food-related interventions to their individual comparisons.

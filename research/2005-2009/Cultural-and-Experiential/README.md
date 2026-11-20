@@ -1,5 +1,6 @@
 # Cultural and experiential accounts, 2005-2009
 
+- [El-Bayadh field interviews on gastrointestinal plant remedies](Traditional-Practices/2006-Cheriti-El-Bayadh-Gastrointestinal-Plant-Survey.txt).
 - [Bouadel pilot and the first UNIDO fig drying guide](Local-Knowledge/2005-Ouaouich-Chimi-UNIDO-Fig-Drying-Guide.txt).
 - [Taounate winter practice with dried figs and olive oil](Traditional-Practices/2009-Jeddi-Taounate-Fig-and-Olive-Oil-Winter-Use.txt).
 

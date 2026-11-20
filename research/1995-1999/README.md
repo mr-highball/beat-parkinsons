@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [oyster mushroom cultivation comparison](Source-Text/1995-PMID7626144-Jwanny-Date-and-Mango-Waste-Mushroom.txt) and [date-waste fibre rat diet](Source-Text/1996-Jwanny-Date-Waste-Fibre-Rat-Feeding.txt) distinguish growth substrate, processed dietary material, and measured endpoints.
+
 The [1995–1998 visual outcome review](Observations/1995-1998-Visual-Symptom-and-Access-Scope.md) links the historical differential diagnoses, clinical event definitions and remaining original full-text gaps.
 
 The [1999 poster and archive notes](Observations/1999-Hallucination-Poster-and-Edition-Scope.md) describe longitudinal cognition, episode definitions and original journal review identities.
