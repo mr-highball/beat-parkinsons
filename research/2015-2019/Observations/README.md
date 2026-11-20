@@ -1,5 +1,7 @@
 # Observations for 2015-2019
 
+The [fig preparations and outcomes comparison](2015-2019-Fig-Preparations-and-Outcome-Limits.md) distinguishes registered human bowel outcomes from tissue assays and product quality measurements.
+
 The lentil mood presentation adds short-term anxiety ratings to the preceding appetite paper on the same cohort. Time-course and overall comparisons differ. Oral cinnamaldehyde again gave inconclusive standalone maze findings, and chicken essence studies remain inconclusive for ordinary tiredness. [Lentil outcomes](../Food-Experiment-Lentil-Meal-Anxiety.md) · [Earlier food methods](../../2010-2014/Food-Experiment-Lentil-Meal-Anxiety.md) · [Cinnamaldehyde comparison](../Food-Experiment-Cinnamon-Anxiety.md)
 
 A controlled lemon balm study measured nighttime jaw-muscle contraction categories with an inconclusive arm comparison. The Japanese fish peptide registration used a symptom rating and reported lower fatigue without specifying species. These focused endpoints differ from the earlier food-containing nutrition program's observed falls. [Lemon balm trial](../Food-Experiment-Lemon-Balm-Motor.md) · [Fish peptide registry](../Food-Experiment-Fish-Peptide-Fatigue.md) · [Earlier falls comparison](../../2010-2014/Food-Experiment-Oats-Falls.md)
