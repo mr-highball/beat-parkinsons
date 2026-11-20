@@ -1,0 +1,9 @@
+# Regional fig accounts and Isfahan trial follow-up
+
+The earlier review’s Ouezzane citation now links to an original survey table. The table describes fig leaves in milk for colds and sexual vitality. Its separate digestive indication is a citation to earlier work. Tarfaya’s independent survey documents an oral fig fruit decoction used for constipation and leaves the drying state open. Neither is an outcome study. [Cultural sources](cultural-contexts.tsv) · [Original scope](source-receipts.tsv)
+
+The Spanish Sierra de Baza profile recounts a studying custom involving dried figs in milk and a separate belief about unusual experiences around figwood smoke. It reports neither measured cognition nor visual episode frequency. The flora page has an unknown publication date and was indexed using its first documented capture. The cited 1998 guide dates a separate cheesemaking account. [Spanish account](../../../../research/2025-2029/Cultural-and-Experiential/Local-Knowledge/2026-Sierra-de-Baza-Fig-Study-and-Smoke-Beliefs.txt)
+
+Publisher excerpts verify the Isfahan trial’s explicit registration link and 142 completers, with four withdrawals from the fig group and two from each other group. The discussion is consistent with dried fruit. The complete intervention Methods, analysis denominators and outcome tables remain open. The assessment records this progress and retains Unknown for claim 0175. The original pair queue is verified separately in the native replay. [Updated assessment](assessments.tsv) · [Access and follow-up](open-trails.tsv)
+
+Four additional provider expressions tested Spanish, French, Persian and Chinese terms and reached the end of Europe PMC’s reported pages. They returned zero matches. This extends regional indexing coverage. The separate PubMed translation failure and discovery in national indexes remain open. [Regional search receipts](regional-search.tsv)

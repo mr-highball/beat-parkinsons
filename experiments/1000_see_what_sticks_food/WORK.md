@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 20 regional follow-up verifies two Moroccan fig survey entries and a Spanish flora account, with plant part, route and intended use preserved. Publisher excerpts verify flow and registry linkage for the Isfahan fig trial. Four multilingual Europe PMC expressions reached their reported end and returned zero results. The claim remains Unknown and the original queue is retained. [Regional sources and primary preview](followup/fig-cultural-and-human-exposures-nov20-115/README.md)
+
 The November 20 dried-fig follow-up screens all 96 deposited references from the Arvaniti review and reconciles four Europe PMC appearances to three works. It links two human trial families to their registrations and adds five assessments, including the uncertain preparation and animal-study overlap. The regional PubMed translation remains open. Claim 0175 remains Unknown. [Exposure evidence and exact search receipts](followup/fig-dried-exposure-followthrough-nov20-114/README.md)
 
 The November 20 print and diagnostic follow-up resolves the original Ala body, documents the disputed drawing score and the reply with the same sample, and adds the Manson clinical abstract and Loizzo dried-fig assay. Seven staged original access gaps remain. The native queue retains 45,356 pairs overall and 55 for dried-fig claim 0175. The claim remains Unknown. [Original scope, assays and open routes](followup/fig-print-and-diagnostic-nov20-113/README.md)
