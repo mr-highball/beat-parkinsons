@@ -1,0 +1,7 @@
+# Visual outcome measures in the 2001–2003 originals
+
+- The two cardiac imaging studies use different groups and tables. Watanabe's records general hallucination presence in a Lewy body dementia cohort. Yoshita records visual hallucination presence in a clinically selected group. The studies measure tracer uptake. Neither gives a food comparison or an episode rate. [Watanabe's original summary](../Source-Text/2001-PMID11385013-MIBG-Lewy-Body-Differential-Abstract.txt) · [Yoshita's original summary](../Source-Text/2001-PMID11606666-Yoshita-Myocardial-Differential.txt)
+- Abe's perfusion study explicitly excluded Parkinson participants with visual hallucinations. Its visual reasoning test therefore adds evidence about another visual function. Kril's tissue comparison excluded the cited Lewy body dementia cases at cohort selection. [Abe study](../Source-Text/PMC1738406.txt) · [Kril study](../Source-Text/PMC1737900.txt)
+- The Kuopio study records 20 probable and 10 possible Lewy body dementia diagnoses among 601 examined people. The 5.0% describes diagnostic prevalence. A checked scan of Table 4 is still needed to count the visual feature entries. [Kuopio study](../Source-Text/PMC1738491.txt)
+
+The [preceding period's observations](../../1995-1999/Observations/README.md) cover older diagnostic and treatment contexts. These newer records distinguish cohort selection, diagnostic prevalence, symptom presence and visual task performance. The dated originals provide no direct comparison of dried fig and visual hallucination frequency.
