@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [original Sialorrhea Clinical Scale study](Source-Text/2006-PMID17089393-Perez-Lloret-Sialorrhea-Scale.txt) distinguishes subjective drooling discomfort from measured saliva volume.
+
 The [El-Bayadh field survey](Cultural-and-Experiential/Traditional-Practices/2006-Cheriti-El-Bayadh-Gastrointestinal-Plant-Survey.txt) lists traditional gastrointestinal plant uses and documents a separate source trail from the 2000 Béchar report.
 
 The [2007 ginger-partitioned study](Source-Text/2007-PMID18257343-Ginger-Partition-Chemotherapy-Abstract.txt) addresses chemotherapy leukopenia, with no separate constipation estimate in the author abstract. A [2006 ginger–salt study](Source-Text/2006-PMID17036477-Ginger-Salt-Moxibustion-Poststroke-Urinary-Abstract.txt) compares poststroke urinary outcomes.

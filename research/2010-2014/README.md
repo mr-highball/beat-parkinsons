@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [fresh-versus-dried fig allergy-testing study](Source-Text/2010-PMID20447079-Hemmer-Form-Specific-Fig-Sensitization.txt) distinguishes fresh-fruit skin reactivity from clinical outcomes. The [ROMP validation](Source-Text/2011-PMID21704797-Kalf-ROMP-Saliva-Validation.txt) evaluates perceived saliva control separately from swallowing and speech. A [Persian medicine review](Cultural-and-Experiential/Traditional-Practices/2014-Persian-Review-Fig-and-Dry-Mouth.txt) lists figs for subjective dry mouth without a Parkinson drooling comparison.
+
 The [fibromyalgia fasting comparison](Source-Text/2013-PMID23431352-Michalsen-Fibromyalgia-Fasting-and-Fruit.txt) documents the unspecified prefasting fruit option. The [rat transit study](Source-Text/2014-PMID24611963-Souli-Date-Pulp-Sap-and-Intestinal-Transit.txt) distinguishes date pulp extract from palm sap.
 
 The [2013 registration](Source-Text/Trials/ISRCTN44706974.txt) and [2014 protocol](Source-Text/2014-PMC4208054-Ginger-Salt-Poststroke-Urinary-Protocol.txt) document a prospective ginger–salt moxibustion comparison for poststroke urinary incontinence. The public registry lists the protocol and no results.

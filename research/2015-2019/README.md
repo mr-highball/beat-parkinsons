@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [P167 food-allergy abstract](Source-Text/2015-PMC4412414-P167-Fig-Allergy-Case.txt) separates unspecified ingested fig from fresh and dried skin-test materials. The published case gives no separate drooling report.
+
 The [divided-attention registry](Source-Text/Trials/ISRCTN11045864.txt), [2017 congress abstract](Source-Text/2017-MDS-111-Reynolds-Divided-Attention-and-Drooling.txt) and [2018 article](Source-Text/2018-PMID29785679-Reynolds-Divided-Attention-and-Drooling.txt) report one Parkinson study. Its drooling frequency and severity outcomes differ. The [2019 wrist-cue pilot](Source-Text/2019-PMID31662884-McNaney-Wrist-Cueing-and-Drooling.txt) contrasts the delayed-start and pooled before–after estimates.
 
 The [2018 DUMP umbrella registration](Source-Text/Trials/EUPAS26319.txt) documents three French prescribing studies. The separately registered cross-sectional component links to the [2025 Parkinson cohort](../2025-2029/Source-Text/2025-PMID40062736-DUMP-Ginger-Use-and-Registration.txt).

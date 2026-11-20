@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [autonomic preprint](Source-Text/2026-Dhanis-Autonomic-Preprint-and-Drooling-Measure.txt) records collection of a drooling scale and reports cardiovascular results. The [exocrine review](Source-Text/2026-PMID41902376-Exocrine-Dysfunction-and-Saliva-Measurement.txt) distinguishes dry mouth, saliva production and loss. The [progression-score study](Source-Text/2026-PMID41577682-Progression-Scores-and-Saliva-Item.txt) weights a saliva item in a composite. The [2026 prebiotic report](Source-Text/2026-PMID42315784-Active-Prebiotic-Arms-and-Constipation.txt) reuses a randomized study with three active arms. The [WPC proceedings](Source-Text/PMC13360760.txt) add distinct saliva and swallowing presentation leads.
+
 The [ginger water-extract rat comparison](Source-Text/2025-PMID40429970-Lee-Ginger-Stress-and-Paw-Withdrawal.txt) records faster paw withdrawal in a stress model and distinguishes the thermal reflex from clinical pain.
 
 The [Kagoshima green-tea survey](Source-Text/2026-PMID42816813-Sakakima-Green-Tea-Nonmotor-Symptoms.txt) reports separate associations for nighttime sleep and constipation, plus binary hyposmia comparisons. [Observations across periods](Observations/Green-Tea-Nonmotor-Outcome-Distinctions.md)
