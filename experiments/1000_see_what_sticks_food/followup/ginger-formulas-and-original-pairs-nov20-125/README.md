@@ -1,0 +1,11 @@
+# Ginger formulations and original full-text pairs
+
+The 2023 placebo trial of Daikenchuto favored the complete formula on global constipation response and stool form. The individual estimates for frequency, straining and incomplete evacuation were inconclusive. Abdominal pain changed by −0.59 versus −0.13 (p=.063). The formula contains processed ginger, ginseng and Japanese pepper. Its 2016 registration differs from the publication on amount and timing. [Original article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10037039/) · [Registration](https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000022244)
+
+The 2015 uncontrolled bloating report and its 2012 registration differ on daily amount and duration. The study's face-scale abdominal pain result and its inconclusive GSRS pain subscale belong to the same uncontrolled sample. A separate 45-person placebo comparison reported inconclusive stool and transit results. The 2019 poststroke reanalysis reuses the 2014 randomized sample. The 2025 review also carries forward the older six-person Parkinson subgroup. [2015 original report](https://pmc.ncbi.nlm.nih.gov/articles/PMC4812817/) · [2012 registration](https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000009507) · [2013 primary abstract](https://onlinelibrary.wiley.com/doi/abs/10.1111/apt.12264) · [Poststroke reanalysis](https://pmc.ncbi.nlm.nih.gov/articles/PMC6906340/)
+
+The Barbadian survey records ginger rhizome decoction, infusion or stew for joint or back pain. Its grated-or-whole wording belongs to general health. The survey also distinguishes culinary plants from other species called sage, bay leaf and black cumin. The study describes reported practices and includes no comparative symptom measurement. [Original survey](https://pmc.ncbi.nlm.nih.gov/articles/PMC8579079/)
+
+All 56 queue pairs for the 11 pinned sources have individual full-text decisions. Twelve related assessment rows record the formula comparisons and reported uses without treating dependent reports as separate studies. The existing evidence tier for claim 0581 remains Maybe False at 50.005.
+
+[Source receipts](source-receipts.tsv) · [Assessment rows](assessments.tsv) · [Exact dispositions](dispositions.tsv) · [Oracle-first checks](oracle-first.tsv) · [Open trails](open-trails.tsv) · [Native replay](native-replay-verification.txt)
