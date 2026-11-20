@@ -1,5 +1,7 @@
 # 1865-1869
 
+The [1820 historical indexes](../1820-1824/README.md) trace separate ginger, garden parsley and shaking palsy publications before the English naming milestone.
+
 A [travel account of the fig harvest](Cultural-and-Experiential/Local-Knowledge/1867-Duhousset-Fig-Harvest-Excitation.txt) records an intoxication comparison and an attributed local saying.
 
 January 1, 1865 through December 31, 1869.

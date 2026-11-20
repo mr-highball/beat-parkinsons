@@ -1,5 +1,7 @@
 # 2005-2009
 
+Three [postoperative](Source-Text/Trials/NCT00266461.txt), [chronic constipation](Source-Text/Trials/NCT00522093.txt) and [healthy adult transit](Source-Text/Trials/NCT00871325.txt) registrations document distinct Daikenchuto comparisons. The healthy adult protocol matches the later journal and conference reports.
+
 The separate [2007 Rabat–Salé ochratoxin A survey](Source-Text/2007-PMID17364931-Zinedine-Rabat-Sale-Dried-Fig-Ochratoxin.txt) verifies the July–August 2005 purchase period. The [2008 Rabat–Salé aflatoxin survey](Source-Text/2008-Juan-Rabat-Sale-Dried-Fig-Aflatoxins.txt) purchased its samples in 2006 and now includes the verified fig results from Table 2.
 
 Two studies measured contaminants in sampled dried figs from distinct markets. The [Turkish export and retail analysis](Source-Text/2005-PMID16013398-Senyuva-Dried-Fig-Mycotoxin-Survey.txt) reports two mycotoxins in separate sampling sets. The [Rabat-Salé survey](Source-Text/2008-Juan-Rabat-Sale-Dried-Fig-Aflatoxins.txt) reports aflatoxins in 20 fig samples within a five-food panel. [Preparation and measurement comparisons](Observations/README.md)
