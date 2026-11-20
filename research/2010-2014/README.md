@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [registered Daikenchuto transit comparison](Source-Text/Trials/NCT01139216.txt) and [2013 author abstract](Source-Text/2013-PMID23451764-Daikenchuto-Transit-and-Rectal-Sensation.txt) document mostly inconclusive transit and stool outcomes. The [2012 bloating registration](Source-Text/Trials/UMIN000008070.txt) specifies a single uncontrolled arm. A [2013 ginger review](Source-Text/2013-PMID23717767-Ginger-Review-Constipation-and-Pain.txt) lists customary digestive uses and cites a distinct exercise-pain trial. The [2014 poststroke trial](Source-Text/2014-PMID25089144-Daikenchuto-Poststroke-Constipation.txt) measured an add-on effect of the complete formula.
+
 The [STEPS randomized results abstract](Source-Text/2011-PMID21565557-Spheramine-STEPS-Randomized-Results.txt) identifies the sham-controlled comparison and its motor endpoint. [Pilot and pathology lineage](../2005-2009/Observations/2008-Visual-Event-Definitions-and-Spheramine-Lineage.md).
 
 The [2012 RECOVER extension abstract](Source-Text/2012-RECOVER-Open-Label-Extension.txt) reports general hallucinations in the open-label group. Its participant proportion aligns with the [posted results](Source-Text/2010-RECOVER-Registry-Visual-Adverse-Events.txt).

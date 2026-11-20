@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [Daikenchuto placebo trial](Source-Text/2023-PMID36968570-Daikenchuto-Placebo-Constipation-and-Pain.txt) separates global response, bowel frequency, bloating and pain and records a dose discrepancy with the registry. The [NHANES inflammatory diet analysis](Source-Text/2024-PMID38455207-Diet-Inflammation-and-Constipation.txt) measures a pooled food score. The [postoperative antiemetics review](Source-Text/2020-PMID33075160-Postoperative-Antiemetics-Food-Scope.txt) separates ginger trial arms from eligible drug adverse-event comparisons. The [Barbados survey](Source-Text/2021-PMID34776949-Barbados-Botanical-Uses.txt) and [Bangladesh review](Source-Text/2021-PMID34819855-Bangladesh-Botanical-Review-Scope.txt) preserve botanical identities and the indications attached to their individual entries.
+
 The [2023 Moroccan dried food surveillance study](Source-Text/2023-PMID37778435-Mannani-Moroccan-Dried-Fruit-Surveillance.txt) reports fig-specific detection percentages within a wider food panel. [Comparison with the earlier Moroccan studies](Observations/README.md)
 
 The [Skoura dried fig sample survey](Source-Text/2020-Salih-Skoura-Dried-Fig-Fungal-Survey.txt) records fungal isolates and distinguishes them from measured contaminants in the earlier reference studies. [Observations and source comparisons](Observations/README.md)

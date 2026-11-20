@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2020-2024
 
+- [Barbados interviews on ginger, turmeric, parsley and clove preparations for pain](Traditional-Practices/2021-PMID34776949-Barbados-Ginger-and-Pain-Uses.txt).
+
 - [Sanskrit phalgu root and seizure-associated visual experiences in the Caraka edition](Traditional-Practices/2020-Caraka-Apasmara-Sanskrit-Phalgu-Root.txt).
 
 - [Tarfaya oral fig fruit decoction for constipation](Traditional-Practices/2020-Idmhand-Tarfaya-Fig-Fruit-Decoction.txt).

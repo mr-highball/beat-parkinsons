@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [Parkinson gastrointestinal narrative review](Source-Text/2025-PMID40823476-Parkinson-GI-Formula-Cohort-Scope.txt) links Daikenchuto, Rikkunshi-to, STW5 and DA-9701 to separate original reports. The local note records the repeated Daikenchuto cohort and the caraway and jujube identities.
+
 The [CHAMPION anesthesia outcomes](Source-Text/2026-PMID42102350-CHAMPION-Anesthesia-Results.txt) link the 2026 primary publication to its earlier protocol. The abstract reports the signal-quality and motor-score comparisons. Pain-specific post-surgery measurements and the full participant flow remain open.
 
 [Observations comparing coffee preparation, fatigue outcomes and shared exposures](Observations/Brewed-Coffee-Fatigue-and-Shared-Comparators.md).
