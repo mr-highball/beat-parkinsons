@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 19,134 |
+| Local body or other primary-source context | 19,157 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 224 |
 | Title or index | 85 |
-| Pending or access-only disposition | 358 |
-| No imported exact review | 41,322 |
+| Pending or access-only disposition | 359 |
+| No imported exact review | 41,298 |
 | **Total** | **61,252** |
+
+Twenty-three additional raw fig and drooling sources reached original-body review. The replay has 41,742 pairs across 26,185 original source keys. The original JL 13 body remains open at verified author-abstract depth. [Scope review and registered measurements](../fig-drooling-priority-five-nov20-144/README.md)
 
 Thirty-five raw fig and drooling sources reached body review. The replay has 41,765 pairs across 26,200 original source keys. Seven PDF-only bodies and the earlier identity conflict remain visible for claim 0188. [Fig drooling review and open original routes](../fig-drooling-originals-nov20-143/README.md)
 

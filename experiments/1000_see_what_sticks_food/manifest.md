@@ -23,6 +23,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+Twenty-three more raw fig and drooling sources reached original-body review. The corrected patient survey figure restores numeric severity labels for the same respondent cohort. Measured swallowing events after gum chewing and the distinct drooling and saliva measures in the open-label OPTIMYST report add clinical context without a raw-fig comparison. [Drooling measures and provenance](followup/fig-drooling-priority-five-nov20-144/README.md)
+
 Thirty-five raw fig and drooling pairs reached original-body review, with seven PDF access gaps preserved. The recovered microbiome supplement analyzes grouped food intake and separate sialorrhea scores without a raw-fig estimate. The 2025 drooling study separates salivary flow and perceived symptom impact. An earlier fig challenge reports acute oral and respiratory allergy with no separate drooling measurement. Claim 0188 remains Unknown. [Fig and drooling review](followup/fig-drooling-originals-nov20-143/README.md)
 
 Six sage pairs reached author-abstract review. The original common-sage rodent study confirms injected extract comparisons, while the premenstrual trial registration and two likely companion reports leave individual pain outcomes open. A Jordanian market survey reports use for intestinal pain under a different sage species. The archived sources preserve distinct exposures and outcomes, with the Round 1 verdicts unchanged. [Sage evidence and source context](followup/sage-trial-lineage-and-context-nov20-142/README.md)
