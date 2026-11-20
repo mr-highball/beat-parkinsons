@@ -863,3 +863,4 @@ The conference and observational review links the separate visual outcomes, the 
 - [Dried-date comparator protocol filed with ClinicalTrials.gov](Source-Text/Trials/NCT05358210-Protocol-2022-03-17.txt).
 - [Deglet Noor cultivar and recruitment in the older-adult comparator trial](Source-Text/2024-Mukamal-Date-Blueberry-Protocol-Preprint.txt).
 - [Ajwa date fruit extract in an animal lung injury model](Source-Text/2022-Almatroodi-Ajwa-Fruit-Extract-Lung-Model.txt).
+- [Date-palm clinical trials review, public abstract and study-table trail](Source-Text/2020-PMID32507440-Date-Palm-Trials-Review-Abstract.txt).

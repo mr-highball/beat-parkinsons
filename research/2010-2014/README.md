@@ -547,3 +547,4 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 
 - [Deglet Nour fruit fractions and mouse nociception, with Table 1 discrepancies](Source-Text/2014-Ouafi-Deglet-Nour-Fruit-Fractions-and-Nociception.txt).
 - [Attributed southern Algerian date-fruit use for abdominal pain](Cultural-and-Experiential/Traditional-Practices/2014-Southern-Algeria-Date-Fruit-Abdominal-Pain-Attribution.txt).
+- [Date fruit and pit extracts in stressed rats, primary abstract](Source-Text/2012-Mohamad-Date-Fruit-and-Pit-Extracts-Stress-Abstract.txt).
