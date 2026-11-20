@@ -1,5 +1,7 @@
 # Observations for 2010-2014
 
+The [2011 source comparisons](2011-Visual-Phenotypes-and-Imaging-Lineage.md) separate visual episode measures, complaint timing, brain imaging and shared sample lineage.
+
 The [2012 visual symptom measures](2012-Lewy-Body-Hallucination-Measures.md) compare the exploratory DLB trial and imaging study with the prior SPECT study, later confirmatory and postmarketing trials, and diagnostic mimics.
 
 The lentil trial Methods identify canned rather than boiled-from-dry lentils in the meals later used for anxiety analysis. The post-task chicken essence source and earlier soup comparison measure distinct fatigue settings. An isolated marine-oil trial reports lower anxiety without assigning whole fish. [Lentil methods](../Food-Experiment-Lentil-Meal-Anxiety.md) · [Earlier soup](../../2005-2009/Food-Experiment-Chicken-Fatigue.md) · [Marine oil trial](../Food-Experiment-Fish-Anxiety.md)

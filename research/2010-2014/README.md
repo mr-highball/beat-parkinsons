@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [2011 visual phenotype and imaging observations](Observations/2011-Visual-Phenotypes-and-Imaging-Lineage.md) distinguish presentation, recurrence, diagnostic classification and imaging signals, and verify reuse of stimulation and MRI data.
+
 The [2012 DLB and visual symptom source group](Observations/2012-Lewy-Body-Hallucination-Measures.md) separates visual ratings, symptom composites, adverse events and the older imaging comparison. The [phase III registration](Source-Text/Trials/NCT01278407.txt) links the subsequent confirmatory publication.
 
 The [2014 clinical visual criteria and plant preparation observations](Observations/2014-Visual-Criteria-and-Plant-Preparation-Lineage.md) compare the GBA clinical cohort, stimulation case, 2014 Ayurvedic records and adjacent trial phases.
