@@ -808,3 +808,8 @@ The Singapore total-diet papers and original supplement preserve measured black-
 
 - [Distinct transcriptional alterations distinguish Lewy body disease from Alzheimer's disease](Source-Text/PMC11706328.txt).
 - [The graded multidimensional geometry of phenotypic variation and progression in neurodegenerative syndromes](Source-Text/PMC11788217.txt).
+
+## Visual symptom measures and clinical observations
+
+- [Original publications from the 2021 discovery group](Observations/Visual-Symptom-Originals-2021.md).
+- [Visual symptom reporting and treatment routes](Observations/Visual-Hallucination-Reporting-and-Magnesium-Routes.md).

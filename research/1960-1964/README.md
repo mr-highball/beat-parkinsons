@@ -30,3 +30,7 @@ January 1, 1960 through December 31, 1964.
 [All periods and collection method](../README.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+## Clinical magnesium case records
+
+- [Routes, original episodes and access gaps](Observations/Clinical-Magnesium-Routes-and-Access.md).
