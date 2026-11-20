@@ -1,0 +1,9 @@
+# Original 2011 research on visual symptoms
+
+All 15 pinned original provider-date pairs reached main-body review. Ten bodies were verified in structured PMC material and five in the official PMC article HTML. Four companion studies remain at primary abstract depth. The companions cover a visual hallucination interview, image recognition, longitudinal atrophy and evoked responses. [Original receipts](source-receipts.tsv) · [Companion receipts](companion-receipts.tsv) · [Exact decisions](dispositions.tsv).
+
+The visual cortex follow-up explicitly reused participants from the earlier stimulation and functional imaging studies. The three papers used distinct measures and share participants. The 2011 Compta pathology comparison also reports partial reuse of 23 of 56 cases from the earlier Lashley series. The seven public PMC supplement requests returned HTML responses without the expected supplement files. [Study lineage](study-lineage.tsv) · [Supplement attempts](supplement-attempts.tsv) · [Chronological observations](../../../../research/2010-2014/Observations/2011-Visual-Phenotypes-and-Imaging-Lineage.md).
+
+The 13 related assessments describe visual phenomena, comparison groups, imaging, or model boundaries. Claim 0175 remains Unknown. The new sources contain no dried-fig exposure comparison that measures recurring visual hallucinations in people with Parkinson disease. There are 114 queued original pairs for this claim, including the preceding 2012 AES issue. [Related assessments](related-assessments.tsv) · [Open trails](open-trails.tsv).
+
+The Oracle resolved zero of 15 original accessions on the first pass. After catalog expansion, revision 199 located all 15 originals and all four companions at their assigned paths. [First-pass record](oracle-first.tsv) · [Verified locators](oracle-reindex.tsv).

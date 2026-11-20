@@ -930,3 +930,7 @@ All 13 pinned 2013 original pairs for claim 0175 reached main-body review, with 
 ## Original 2012 visual symptom and donepezil source review
 
 Seventeen of 18 pinned original pairs reached main-body review. The AES abstract issue remains queued at issue-metadata depth. The accompanying clinical records separate visual ratings, composite scores, adverse events and independent enrollment. Twelve related assessments were added. Claim 0175 remains Unknown with 129 original pairs queued. The native replay verified 45,430 retained pairs in their original relative order. [Source decisions and further access](followup/fig-priority-six-2012-nov19-100/README.md).
+
+## 2011 original visual symptom review
+
+The review verified all 15 pinned original bodies and recorded 13 related assessments and four companion abstracts. Claim 0175 remains Unknown with 114 queued original pairs. The native replay preserves the identity and order of all 45,415 remaining queued pairs. The earlier AES supplement and the Compta pathology supplements remain open. [Source and review packet](followup/fig-priority-six-2011-nov19-101/README.md).
