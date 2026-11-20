@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [2005 diagnostic and conference observations](Observations/2005-Conference-Scope-and-Diagnostic-Outcomes.md) distinguish [SGIM abstract coverage](Source-Text/PMC1490295.txt), [neuropathological diagnosis](Source-Text/PMC1765714.txt) and the [third Lewy body dementia consensus report](Source-Text/2005-PMID16237129-Third-DLB-Consortium-Report.txt).
+
 The [2006 clinical observations](Observations/2006-Visual-History-Treatment-and-Diagnostic-Comparisons.md) compare visual symptom history with fall risk, tissue findings, diagnostic imaging, and the individual [SGIM abstract members](Source-Text/PMC1484878.txt).
 
 The [2007 observations](Observations/2007-Visual-History-Symptom-Measurement-and-Proceedings.md) compare an [autopsy and scan cohort](Source-Text/PMC2117602.txt), a [gaze study](Source-Text/PMC1911188.txt), the [SGIM abstracts](Source-Text/PMC2219573.txt), the [West European psychiatry proceedings](Source-Text/PMC7103174.txt), and an [open Oxford issue](Source-Text/PMC2632307.txt).

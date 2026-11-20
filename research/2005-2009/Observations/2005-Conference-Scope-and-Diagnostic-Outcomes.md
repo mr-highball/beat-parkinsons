@@ -1,0 +1,7 @@
+# Conference scope and diagnostic outcomes
+
+The [SGIM abstracts](../Source-Text/PMC1490295.txt) contain a visual symptom case associated with thyroid dysfunction. The official DOI-specific PDF and publisher deposit span pages 25–279, while PubMed lists 25–296. The scope record keeps the additional page references open. The [2006 out-of-scope etiologies](../Source-Text/PMC1484878.txt) provide separate examples of electrolyte illness and visual impairment.
+
+The [neuropathology guide](../Source-Text/PMC1765714.txt), [expert review](../../2000-2004/Source-Text/2004-PMID14693108-Lewy-Body-Dementia-Expert-Review.txt), and [third consensus report](../Source-Text/2005-PMID16237129-Third-DLB-Consortium-Report.txt) use symptoms and diagnostic findings to classify disorders. The [later autopsy and scan study](../Source-Text/PMC2117602.txt) and [prospective diagnostic cohort](../Source-Text/PMC2745052.txt) report original clinical comparisons. Keep the diagnostic criteria and the original frequency data separate.
+
+The [prion diagnostic study](../Source-Text/PMC552933.txt), [alcohol withdrawal review](../Source-Text/PMC2268999.txt) and [Alzheimer case with hemiparkinsonism](../Source-Text/PMC2854937.txt) measure or describe different syndromes. None gives a dried-fig comparison. The [cognitive assessment](../Source-Text/PMC1765683.txt), [early dementia assessment](../Source-Text/PMC1765712.txt), and [higher visual function](../Source-Text/PMC1765708.txt) articles retain separate article-level access gaps.
