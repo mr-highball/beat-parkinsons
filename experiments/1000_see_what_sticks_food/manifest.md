@@ -980,6 +980,10 @@ All seven original pairs reached complete main-text or issue review. Ten related
 
 Five original pairs reached complete body or DOI-specific collection review. Three JNNP articles remain queued. The SGIM publisher deposit and complete archive give pages 25–279, with the additional PubMed range still open. Four related assessments preserve diagnostic and source-family boundaries. Claim 0175 remains Unknown with 86 queued original pairs. Native replay verified all five removals and the sequence of the other 45,387 pairs. [Source and review packet](followup/fig-priority-six-2005-nov20-107/README.md).
 
+## 2002–2004 provider-date visual processing and behavioral follow-up
+
+Four original pairs reached full-text review and four remain at primary abstract depth. The Moretti denominator and behavioral assessment boundaries are recorded in the source packet. Four related and two pending assessments preserve the recovered outcomes and unmet full-text scope. Claim 0175 remains Unknown with 82 queued original pairs. Native replay removed exactly four pairs and preserved the identity and order of the other 45,383. [Source and review packet](followup/fig-priority-six-2004-2002-nov20-108/README.md).
+
 ## Directional verdicts
 
 - [0019](statements/0019.txt) **Maybe True** (51%) Consuming toasted nigella seed reduces depressive symptom severity in people with Parkinson's disease.
