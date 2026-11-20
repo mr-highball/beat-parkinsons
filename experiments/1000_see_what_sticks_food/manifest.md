@@ -23,6 +23,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+Twenty-four originals from the 2022 provider group reached primary-body review. The interviews distinguish spontaneous and prompted reports. The STEADY-PD III and PDQoL7 records distinguish new symptom endorsement and combined nonmotor ratings. The exact ClinicalTrials.gov query supplied no raw-fig comparison. Claim 0188 remains Unknown. [2022 originals and participant evidence](followup/fig-drooling-2022-originals-nov20-150/README.md)
+
 Twenty-two 2023 provider-group originals reached primary-body review for raw fig and drooling. The recovered ESSD reports distinguish swallowing residue from drooling severity. The COPPADIS and iRBD sources supply different follow-up denominators. Claim 0188 remains Unknown. [Source and workbook audit](followup/fig-drooling-2023-originals-nov20-149/README.md)
 
 Thirty-seven raw fig and drooling originals from 2024 reached primary-body review. The PERSPECTIVE trial reports an inconclusive drooling difference after speech therapy, and the exercise poster supplies a within-group p-value without a signed between-group drooling estimate. The literature adds outcome-measure context and claim 0188 remains Unknown. [2024 primary sources and follow-up](followup/fig-drooling-2024-originals-nov20-148/README.md)

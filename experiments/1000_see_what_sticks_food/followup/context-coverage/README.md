@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 19,304 |
+| Local body or other primary-source context | 19,328 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 224 |
 | Title or index | 85 |
 | Pending or access-only disposition | 360 |
-| No imported exact review | 41,150 |
+| No imported exact review | 41,126 |
 | **Total** | **61,252** |
+
+Twenty-four raw fig and drooling originals in the 2022 provider group reached original-body review. The replay leaves 41,571 original pairs across 26,106 source keys. Interviews, a separate clinical scale and the complete exact registry response are recorded. [2022 original review](../fig-drooling-2022-originals-nov20-150/README.md)
 
 Twenty-two raw fig and drooling originals from the 2023 provider group reached primary-body review. The replay leaves 41,595 pairs across 26,120 source keys. The audit recovered two original ESSD PDFs, the complete UEG supplement and item-level iRBD evidence. [2023 originals and source context](../fig-drooling-2023-originals-nov20-149/README.md)
 
