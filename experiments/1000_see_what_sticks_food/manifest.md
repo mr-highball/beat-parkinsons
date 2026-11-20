@@ -960,6 +960,10 @@ The review verified all 15 pinned original bodies and recorded 13 related assess
 
 Eight original pairs reached main-body review and fifteen related assessments were recorded. The RECOVER registry records separate the randomized phase's visual serious event from the general hallucination term in the open-label extension. Claim 0175 remains Unknown with 106 queued originals. The ICN proceedings remain at metadata depth. The exact replay retains the order and membership of the other 45,407 pairs. [Source and review packet](followup/fig-priority-six-2010-nov19-102/README.md).
 
+## 2009 provider-date visual symptom definitions and proceedings identity
+
+Two original pairs reached main-body review. Seven related assessments retain population, exposure and outcome boundaries. The schizophrenia proceedings DOI differs from the separate author index in the PubMed field. The proceedings body remains queued. Claim 0175 remains Unknown with 104 queued originals. The native replay verified the identity and relative order of all 45,405 retained pairs. [Source and review packet](followup/fig-priority-six-2009-nov19-103/README.md).
+
 ## Directional verdicts
 
 - [0019](statements/0019.txt) **Maybe True** (51%) Consuming toasted nigella seed reduces depressive symptom severity in people with Parkinson's disease.
