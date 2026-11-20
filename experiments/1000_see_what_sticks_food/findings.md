@@ -2,6 +2,8 @@
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+The ginger anxiety article and registration now have exact Oracle locators. The reported Hamilton direction still conflicts across the published abstract. A separate ginger extract rat experiment reports faster heat withdrawal in a chronic stress model and provides related context for pain without a Parkinson symptom outcome. The original ginger permeability article remains gated. [Ginger source and endpoint review](followup/ginger-anxiety-and-stress-nov20-141/README.md)
+
 Seven held date-fruit pairs reached original-context review. The whole Ajwa crossover's Table 2 labels its significant stool-frequency test as a baseline contrast, while the Results prose names the control. The subsequent meta-analysis extracts the same cohort and provides no paired estimate. Two held pairs need the original 62-fruit species table. [Bowel outcome and source review](followup/date-bowel-comparators-nov20-140/README.md)
 
 The date-fruit review resolved 128 exact archive pairs, with nine specific source checks queued. Separate primary abstracts measured oyster mushroom cultivation and processed date-waste fibre in rats. The official El-Bayadh field survey lists 62 plants for gastrointestinal uses and confirms a geographical boundary for the older Béchar trail. Neither dried-date claim has a transferable clinical direction from these sources. [Archive and research sources](followup/date-fruit-source-lineage-nov20-139/README.md)
