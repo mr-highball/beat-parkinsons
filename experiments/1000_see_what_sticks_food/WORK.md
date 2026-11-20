@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 20 historical botany checkpoint verifies phalgu root in the Caraka Sanskrit and the Ficus hispida assignment in the modern root monograph. An epilepsy paper reports likely reuse of the treatment arm from a 2001 thesis. The Isfahan assessment now separates the registered daily fruit amount from the secondary account of its dried preparation. Claim 0175 remains Unknown with 55 original pairs queued. [Textual witnesses and clinical access](followup/fig-historical-botany-and-clinical-nov20-119/README.md)
+
 The November 20 dried-fig sampling checkpoint adds four dated originals and verifies the Juan article’s Table 2. The older thesis and the 2005 and 2006 purchases form distinct sampling series. Four related assessments entered the claim ledger and one was updated. Claim 0175 remains Unknown with 55 original pairs queued. [Sampling and clinical boundaries](followup/fig-intake-and-sample-lineage-nov20-118/README.md)
 
 The November 20 dried-fig preparation checkpoint adds six sources. The Taounate winter custom names dried fruit and olive oil. The Turkish and Rabat-Salé studies directly measure contaminants in food, while the Skoura paper reports fungi cultured from sampled fruit. Three new related assessments preserve these distinctions. Claim 0175 remains Unknown with 55 original pairs queued. [Food preparations, laboratory results and remaining access](followup/fig-drying-and-archive-nov20-117/README.md)

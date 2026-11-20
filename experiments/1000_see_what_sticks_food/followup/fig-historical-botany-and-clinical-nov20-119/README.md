@@ -1,0 +1,7 @@
+# Phalgu root and clinical preparation boundaries
+
+The 1949 Caraka English edition translates the plant item as “root of common fig.” The matching Sanskrit verse specifies phalgu root in a compound preparation. The 2001 Indian pharmacopoeia defines its root material as dried *Ficus hispida* root, with a separate fruit monograph. The vernacular name has other botanical associations, so the historical specimen remains uncertain. Both editions describe visual experiences with seizure-like events and provide no isolated observation of a common fig fruit effect. [Source receipts](source-receipts.tsv) · [Eligibility decisions](source-scope.tsv)
+
+The 2018 Usha and Singh paper reports 12 participants treated with a named compound for epilepsy. Its seizure-frequency and remission values match the later account citing Usha’s 2001 thesis. This suggests a shared study family. The original thesis comparison arm and ingredient authentication remain open. [Family and access trails](open-trails.tsv)
+
+The Isfahan trial record now distinguishes the registered daily fig amount from the dried-fruit preparation described by a December 2018 secondary summary. The article’s original intervention methods remain open. The updated study assessment retains its gastrointestinal scope and the trial registration link. The 1998 visual case remains at partial opening depth. Claim 0175 stays Unknown with 440 assessments and 55 original pairs queued. [Updated assessment](assessments.tsv) · [Oracle source intake](oracle-first.tsv)
