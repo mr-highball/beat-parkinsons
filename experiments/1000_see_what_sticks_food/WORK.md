@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 20 2001-provider checkpoint verifies four complete originals, including the 303-page EANM DOI object, and retains 27 incomplete pairs. Seven assessments preserve diagnostic, treatment and access distinctions. The original queue has 45,379 pairs, including 78 for dried-fig claim 0175. The claim remains Unknown. [Evidence and open coverage](followup/fig-priority-six-2001-nov20-109/README.md)
+
 Five further cultural records include original historical witnesses in their actual pre-1865 periods, bringing the collection to sixteen. The native date validator now admits existing historical buckets without padding missing centuries; sixteen chronology/preservation/failure checks pass. Lumbee metadata and selected-table coverage are corrected without claiming full-text or supplement access. Clinical grades and frozen claims are unchanged. [Source scope and remaining intake](followup/tremor-cultural-nov18-03/README.md)
 
 The second inclusive tremor checkpoint adds five verified cultural records, bringing the collection to eleven, and updates the existing Ghana trial context after original-body, supplement and version follow-through. Five Oracle-first partials are appended with local leads and explicit gaps; no frozen fields or clinical grades change. [Accessions, coverage and open trails](followup/tremor-cultural-nov17-02/README.md)
