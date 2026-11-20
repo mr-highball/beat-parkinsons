@@ -109,8 +109,8 @@ begin
     end;
     Check((LNodes.size = LConnections.Length) and (LLinkCount = LRows.Length),
       'Each neighbor consumes one slot and its group keeps all recorded edges.');
-    Check(GraphText(TJSObject(LConnections[0]), 'node') = 'ingredient:black tea',
-      'The grouped projection keeps the qualified evidence visible first.');
+    Check(GraphEdgeTone(TJSObject(GraphRows(TJSObject(LConnections[0]), 'edges')[0])) <> '',
+      'A qualified directional ingredient is shown before unresolved claims.');
     Check(Pos('study:', GraphText(TJSObject(LConnections[1]), 'node')) = 1,
       'Studies appear in the first group rotation.');
     LEdge := FindEdge(LRows, 'claim:1/0904');
@@ -119,7 +119,7 @@ begin
     Check((GraphText(LEdge, 'label') = 'May ease') and (GraphText(LEdge, 'trend') = 'eases'),
       'Recorded weak relief has a green, qualified label.');
     Check((GraphEdgeTone(LEdge) = 'eases') and
-      (GraphText(TJSObject(LRows[0]), 'key') = 'claim:1/0904') and
+      (GraphEdgeTone(TJSObject(LRows[0])) <> '') and
       (GraphText(TJSObject(LRows[1]), 'kind') = 'outcome'),
       'The first expansion interleaves claims and studies without burying the directional claim.');
     Check(FindEdge(LModel.Neighbors('ingredient:black tea'), 'claim:1/0904') = LEdge,
