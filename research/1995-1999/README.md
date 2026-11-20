@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [1999 ceremonial account](Cultural-and-Experiential/Ceremonial-Accounts/1999-UDV-Hoasca-Research-Setting.txt) and [primary pharmacokinetic record](Source-Text/1999-PMID10404423-Hoasca-Ceremonial-Pharmacokinetics.txt) identify the healthy-volunteer setting and measured exposure.
+
 A [Parkinson urinary salsolinol comparison](Source-Text/1996-PMID9617786-Urinary-Salsolinol-and-Parkinson-Visual-History-Abstract.txt) reports differences by visual hallucination status and cites the earlier dried banana feeding study.
 
 The [1996 anatomical tracing paper](Source-Text/1996-PMID8710931-Basal-Ganglia-and-Temporal-Projection-Scans.txt) maps pathways from basal ganglia to temporal cortex. Its clinical interpretation refers to separately reported human observations.
