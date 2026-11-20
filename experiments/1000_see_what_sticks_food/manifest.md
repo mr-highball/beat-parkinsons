@@ -968,6 +968,10 @@ Two original pairs reached main-body review. Seven related assessments retain po
 
 Both pinned original articles reached full main-text review. Eight related assessments include the six-person Spheramine pilot publications, the distinct randomized trial and a nested autopsy case, two registry records, and an independent dementia pathology cohort. The pilot publications give different accounts of how the three visual cases resolved. Claim 0175 remains Unknown with 102 queued originals. Native replay verified both removals and all 45,403 retained queue pairs. [Source and review packet](followup/fig-priority-six-2008-nov19-104/README.md).
 
+## 2007 provider-date proceedings and visual history
+
+The review verified four exact full-text decisions, including two original proceedings with all pages available, and added seven related assessments. The Oxford schizophrenia proceedings are identified but remain queued at metadata depth. Claim 0175 remains Unknown with 98 queued original pairs. The native replay preserves the order and membership of all 45,399 remaining pairs across 28,906 source keys. [Source and review packet](followup/fig-priority-six-2007-nov19-105/README.md).
+
 ## Directional verdicts
 
 - [0019](statements/0019.txt) **Maybe True** (51%) Consuming toasted nigella seed reduces depressive symptom severity in people with Parkinson's disease.

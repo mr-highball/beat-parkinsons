@@ -1,0 +1,7 @@
+# Review of the 2007 provider-date sources
+
+Four of the five pinned originals reached full main-text or whole-issue depth. The SGIM and West European psychiatry abstracts were recovered through the official PMC archive PDFs, spanning 276 and 65 pages respectively. The Walker autopsy cohort and the gaze-tracking study were available as complete PMC HTML main articles. The Oxford schizophrenia proceedings retain an access gap. Oxford identifies the 11th congress for the DOI and pages that the PMC metadata labels XX. [Source receipts](source-receipts.tsv) · [Retrieval and issue boundaries](original-route-scope.tsv).
+
+The collection review retained the independent insulinoma, suspected grapefruit–medication interaction, head-drop and stimulation abstracts. Four older imaging abstracts clarify the use of clinical diagnosis, scan ratings and autopsy. Claim 0175 remains Unknown. The reviewed material does not establish a dried-fig exposure contrast for Parkinson visual episode frequency. [Exact decisions](dispositions.tsv) · [Member scope](member-scope.tsv) · [Related assessments](related-assessments.tsv) · [Chronological observations](../../../../research/2005-2009/Observations/2007-Visual-History-Symptom-Measurement-and-Proceedings.md).
+
+The exact-accession lookup found one cataloged original among five. That SGIM entry was a single member for another food question. The body review uses the recovered complete issue. [First-pass lookups](oracle-first.tsv) · [Open trails](open-trails.tsv).
