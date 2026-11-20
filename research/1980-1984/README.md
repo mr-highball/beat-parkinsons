@@ -1,5 +1,7 @@
 # 1980-1984
 
+The [1984 BMJ volume index](Source-Text/1984-PMC1440947-BMJ-Volume-289-Index-Food-Scope.txt) links separate Parkinson drug treatment and drug-induced movement reports. Several food words are author names.
+
 An [original raw-food commentary](Cultural-and-Experiential/Personal-Reports/1982-Douglass-Raw-Food-Symptom-Table.txt) lists dried figs in a grouped food category. Hallucinations appear in other rows.
 
 [Historical work-capacity and fatigue measurement](Source-Text/PMC1463373.txt).

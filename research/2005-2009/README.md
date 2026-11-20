@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [abbreviation glossary](Source-Text/2005-PMC7122588-Abbreviation-Glossary-Culinary-Terms.txt), [obstetric case chapter](Source-Text/2007-PMC7124088-Obstetric-Ginger-Discussion-and-Case-Boundaries.txt) and [peptide poster excerpt](Source-Text/2008-PMC7167823-Ginger-Rhizome-Protein-Poster-Excerpt.txt) preserve distinct glossary, clinical discussion and laboratory contexts. The [2006 antiemetic review](Source-Text/2006-PMID16856030-Perioperative-Ginger-Review-Endpoints.txt), [2009 gastroparesis review](Source-Text/2009-PMID19115465-Gastroparesis-Ginger-Citation-Scope.txt) and [IUPS proceedings](Source-Text/2009-PMC10722647-IUPS-Poster-Food-Exposures.txt) link food-related interventions to their individual comparisons.
+
 Three [postoperative](Source-Text/Trials/NCT00266461.txt), [chronic constipation](Source-Text/Trials/NCT00522093.txt) and [healthy adult transit](Source-Text/Trials/NCT00871325.txt) registrations document distinct Daikenchuto comparisons. The healthy adult protocol matches the later journal and conference reports.
 
 The separate [2007 Rabat–Salé ochratoxin A survey](Source-Text/2007-PMID17364931-Zinedine-Rabat-Sale-Dried-Fig-Ochratoxin.txt) verifies the July–August 2005 purchase period. The [2008 Rabat–Salé aflatoxin survey](Source-Text/2008-Juan-Rabat-Sale-Dried-Fig-Aflatoxins.txt) purchased its samples in 2006 and now includes the verified fig results from Table 2.
