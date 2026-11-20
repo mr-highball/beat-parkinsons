@@ -1,5 +1,7 @@
 # 1990-1994
 
+The [1992 apasmāra history abstract](Source-Text/1992-PMID1592022-Manyam-Apasmara-Symptom-Descriptions.txt) distinguishes reported aura sensations from signs during attacks. [Textual comparison](Observations/README.md)
+
 The [1988 Turkish fig crop survey](Source-Text/1991-PMID23605655-Ozay-Alperden-1988-Dried-Fig-Crop.txt) measured food contaminants across orchards and processing stages. [Sampling comparison](Observations/README.md)
 
 The [1994 Hoasca platelet comparison](Source-Text/1994-PMID7892432-Hoasca-Platelet-Transporter.txt) records a peripheral transporter marker in healthy volunteers.

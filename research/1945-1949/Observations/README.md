@@ -1,5 +1,7 @@
 # Observations for 1945–1949
 
+The [1949 Caraka translation](../Cultural-and-Experiential/Traditional-Practices/1949-Caraka-Apasmara-Phalgu-Root-Translation.txt) names a fig root in a compound remedy. The [2020 Sanskrit edition](../../2020-2024/Cultural-and-Experiential/Traditional-Practices/2020-Caraka-Apasmara-Sanskrit-Phalgu-Root.txt) identifies the root term in the same verses. The [2001 root monograph](../../2000-2004/Source-Text/2001-API-Phalgu-Dried-Root-Botanical-Identity.txt) specifies a modern botanical identity. These records establish textual and preparation context for the historical symptom terminology.
+
 ## Major observations
 
 Synthetic trihexyphenidyl entered larger preliminary clinical series. Human stereotactic instrumentation made precise deep-brain targeting possible, and primate work linked the subthalamic region to hyperkinetic movement. [Remedies](../Drugs-and-Remedies.md) · [Procedures](../Procedures-and-Devices.md) · [Models](../Mechanisms-and-Models.md)

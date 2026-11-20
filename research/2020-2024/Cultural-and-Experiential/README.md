@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2020-2024
 
+- [Sanskrit phalgu root and seizure-associated visual experiences in the Caraka edition](Traditional-Practices/2020-Caraka-Apasmara-Sanskrit-Phalgu-Root.txt).
+
 - [Tarfaya oral fig fruit decoction for constipation](Traditional-Practices/2020-Idmhand-Tarfaya-Fig-Fruit-Decoction.txt).
 - [Taounate fig names, parts and solvents in the 2021 survey](Traditional-Practices/2021-El-Assri-Taounate-Fig-Parts-and-Names.txt).
 - [Taounate fig fruit preparation and use codes in the 2024 survey](Traditional-Practices/2024-Jeddi-Taounate-Fig-Fruit-Preparations.txt).

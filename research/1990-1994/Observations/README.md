@@ -1,5 +1,7 @@
 # Observations for 1990–1994
 
+The [Manyam historical analysis](../Source-Text/1992-PMID1592022-Manyam-Apasmara-Symptom-Descriptions.txt) distinguishes aura, perception and attack signs. The [earlier English edition](../../1945-1949/Cultural-and-Experiential/Traditional-Practices/1949-Caraka-Apasmara-Phalgu-Root-Translation.txt) describes a compound recommendation. The historical questions differ from a modern experiment measuring visual episode frequency.
+
 The [1988 crop report](../Source-Text/1991-PMID23605655-Ozay-Alperden-1988-Dried-Fig-Crop.txt) pools results across harvest and processing stages. The later [2005 Turkish survey](../../2005-2009/Source-Text/2005-PMID16013398-Senyuva-Dried-Fig-Mycotoxin-Survey.txt) separates export-year and retail batches. The two designs yield different denominators for interpreting a dried food exposure.
 
 The 1992 black pepper study measured time from the mouth to the cecum in healthy volunteers. The pepper comparison was inconclusive. The preceding period's food studies include medication and post-meal outcomes in Parkinson cohorts, which address a distinct clinical population and outcome. [Transit pilot](../Food-Experiment-Black-Pepper-Transit.md) · [Earlier meal studies](../../1985-1989/Food-and-Nutrition.md)

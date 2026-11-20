@@ -1,5 +1,7 @@
 # Observations for 2020-2024
 
+The [Sanskrit chapter edition](../Cultural-and-Experiential/Traditional-Practices/2020-Caraka-Apasmara-Sanskrit-Phalgu-Root.txt) separates a visual description during attacks from its compound remedy. The [2018 treated series](../../2015-2019/Source-Text/2018-Usha-Singh-Mahapanchagavya-Epilepsy-Series.txt) measures seizures and general symptom categories. Its results offer no separate visual endpoint or authenticated botanical batch.
+
 The [2023 Moroccan surveillance report](../Source-Text/2023-PMID37778435-Mannani-Moroccan-Dried-Fruit-Surveillance.txt) describes both toxin measurements and modeled intake. The [2020 Skoura report](../Source-Text/2020-Salih-Skoura-Dried-Fig-Fungal-Survey.txt) reports cultured fungi. Earlier [Rabat–Salé sampling](../../2005-2009/Source-Text/2007-PMID17364931-Zinedine-Rabat-Sale-Dried-Fig-Ochratoxin.txt) has a verified sampling window and fig denominator. Those fields remain open for comparison with the 2023 report.
 
 The [Skoura sample survey](../Source-Text/2020-Salih-Skoura-Dried-Fig-Fungal-Survey.txt) reports fungi cultured from ten dried fig samples. The earlier [Rabat-Salé assay](../../2005-2009/Source-Text/2008-Juan-Rabat-Sale-Dried-Fig-Aflatoxins.txt) measured aflatoxin concentrations and uses a different sample frame. The prior period's [cultivar survey](../../2015-2019/Cultural-and-Experiential/Local-Knowledge/2018-El-Hajjam-Moroccan-Fig-Cultivars-and-Drying.txt) describes regional drying and marketing practices without testing contaminants.

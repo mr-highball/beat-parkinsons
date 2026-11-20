@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [Indian Phalgu root monograph](Source-Text/2001-API-Phalgu-Dried-Root-Botanical-Identity.txt) designates dried Ficus hispida root. The [2001 apasmāra thesis record](Source-Text/2001-Usha-Apasmara-Thesis-Identity.txt) traces a likely shared study family with the [2018 treatment report](../2015-2019/Source-Text/2018-Usha-Singh-Mahapanchagavya-Epilepsy-Series.txt).
+
 The [2004 Rabat–Salé doctoral survey](Source-Text/2004-Zinedine-IMIST-Dried-Fig-Ochratoxin-Thesis.txt) reports an ochratoxin A detection-limit result and an unidentified chromatogram peak in five fig samples. [Comparison with later retail samples](Observations/README.md)
 
 The [2000 hallucination and proceedings notes](Observations/2000-Hallucination-and-Proceedings-Access.md) compare clinical measurements and record missing archival pages.

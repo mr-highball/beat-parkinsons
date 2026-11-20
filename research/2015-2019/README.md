@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [Mahapanchagavya treated series](Source-Text/2018-Usha-Singh-Mahapanchagavya-Epilepsy-Series.txt) reports compound seizure outcomes. The [earlier thesis entry](../2000-2004/Source-Text/2001-Usha-Apasmara-Thesis-Identity.txt) and later textual commentary point to likely reuse of the treatment group.
+
 The [five selected Parkinson cases with delusional infestation](Source-Text/PMC6353320.txt) distinguish visual and tactile modality from the duration of the infestation syndrome.
 
 The [confirmatory DLB donepezil trial](Source-Text/PMC4338565.txt) found an inconclusive placebo-adjusted hallucination and fluctuation composite. The separately recruited [postmarketing trial registration](Source-Text/Trials/NCT02345213.txt) prioritized global clinical change.
