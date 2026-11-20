@@ -1,5 +1,7 @@
 # Observations for 2000–2004
 
+The [Taounate survey excerpt](../Source-Text/2003-PMID12738079-Taounate-Ethnobotany-Excerpt.txt) verifies the identity of an original field study cited by the later Ouezzane paper. The same era’s [fig allergy assay](../Source-Text/2003-PMID12859455-Fresh-and-Dried-Fig-Cross-Reactivity.txt) distinguishes fresh and dried exposures. The available Taounate passages leave that distinction open for the reported use.
+
 The [2000 hallucination and proceedings notes](2000-Hallucination-and-Proceedings-Access.md) compare clinical measurements and record missing archival pages.
 
 The [2001 visual histories and publication scope notes](2001-Visual-History-and-Conference-Scope.md) link the EANM proceedings, the later perfusion report, and diagnostic and medication sources.

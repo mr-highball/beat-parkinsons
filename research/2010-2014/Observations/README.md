@@ -1,5 +1,7 @@
 # Observations for 2010-2014
 
+The [upper Sebou fig inventory](../Cultural-and-Experiential/Local-Knowledge/2011-Libiad-Sebou-Fig-Food-and-Fuelwood.txt) documents food and fuelwood use without specifying dried fruit or a clinical outcome. The previous period's [Italian field report](../../2005-2009/Cultural-and-Experiential/Traditional-Practices/2005-Guarrera-Central-Italy-Fig-Fruit-and-Latex.txt) identifies dried fig fruit in a customary mixture. The similar plant labels describe different exposure detail.
+
 The [2010 clinical comparisons](2010-Visual-Sleep-and-Drug-Outcome-Lineage.md) separate sleep questionnaire items, adverse-event coding and regional pathology.
 
 The [2011 source comparisons](2011-Visual-Phenotypes-and-Imaging-Lineage.md) separate visual episode measures, complaint timing, brain imaging and shared sample lineage.
