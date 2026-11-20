@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [2023 Moroccan dried food surveillance study](Source-Text/2023-PMID37778435-Mannani-Moroccan-Dried-Fruit-Surveillance.txt) reports fig-specific detection percentages within a wider food panel. [Comparison with the earlier Moroccan studies](Observations/README.md)
+
 The [Skoura dried fig sample survey](Source-Text/2020-Salih-Skoura-Dried-Fig-Fungal-Survey.txt) records fungal isolates and distinguishes them from measured contaminants in the earlier reference studies. [Observations and source comparisons](Observations/README.md)
 
 The [ropinirole case](Source-Text/PMC7899248.txt) reports visual and tactile experiences. The [piribedil case](Source-Text/PMC10917070.txt) records tactile symptoms and a fixed infestation belief after drug escalation.

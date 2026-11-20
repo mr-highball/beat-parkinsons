@@ -1,5 +1,7 @@
 # Observations for 2000–2004
 
+The [2004 doctoral survey](../Source-Text/2004-Zinedine-IMIST-Dried-Fig-Ochratoxin-Thesis.txt) found ochratoxin A below the method’s detection limit in its five fig samples. A separate [2007 report](../../2005-2009/Source-Text/2007-PMID17364931-Zinedine-Rabat-Sale-Dried-Fig-Ochratoxin.txt) records measurable values in some retail samples bought in 2005. The change in sample frame and detection details limits a direct temporal comparison.
+
 The [Taounate survey excerpt](../Source-Text/2003-PMID12738079-Taounate-Ethnobotany-Excerpt.txt) verifies the identity of an original field study cited by the later Ouezzane paper. The same era’s [fig allergy assay](../Source-Text/2003-PMID12859455-Fresh-and-Dried-Fig-Cross-Reactivity.txt) distinguishes fresh and dried exposures. The available Taounate passages leave that distinction open for the reported use.
 
 The [2000 hallucination and proceedings notes](2000-Hallucination-and-Proceedings-Access.md) compare clinical measurements and record missing archival pages.

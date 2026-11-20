@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [2004 Rabat–Salé doctoral survey](Source-Text/2004-Zinedine-IMIST-Dried-Fig-Ochratoxin-Thesis.txt) reports an ochratoxin A detection-limit result and an unidentified chromatogram peak in five fig samples. [Comparison with later retail samples](Observations/README.md)
+
 The [2000 hallucination and proceedings notes](Observations/2000-Hallucination-and-Proceedings-Access.md) compare clinical measurements and record missing archival pages.
 
 The [2001 visual histories and publication scope notes](Observations/2001-Visual-History-and-Conference-Scope.md) link the EANM proceedings, the later perfusion report, and diagnostic and medication sources.

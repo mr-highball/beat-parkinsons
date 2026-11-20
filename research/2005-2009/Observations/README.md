@@ -1,5 +1,7 @@
 # Observations for 2005-2009
 
+The [2007 ochratoxin A survey](../Source-Text/2007-PMID17364931-Zinedine-Rabat-Sale-Dried-Fig-Ochratoxin.txt) and [2008 aflatoxin survey](../Source-Text/2008-Juan-Rabat-Sale-Dried-Fig-Aflatoxins.txt) both include 20 Rabat–Salé fig samples. Their verified purchase windows fall in different years. The earlier [2004 thesis](../../2000-2004/Source-Text/2004-Zinedine-IMIST-Dried-Fig-Ochratoxin-Thesis.txt) describes a five-fig survey. These are separate samples with no paired clinical outcomes.
+
 The [Bouadel drying guide](../Cultural-and-Experiential/Local-Knowledge/2005-Ouaouich-Chimi-UNIDO-Fig-Drying-Guide.txt) gives a processing context. The [2009 Taounate report](../Cultural-and-Experiential/Traditional-Practices/2009-Jeddi-Taounate-Fig-and-Olive-Oil-Winter-Use.txt) describes eating dried figs with olive oil as a winter custom. The previous period's [fig allergy study](../../2000-2004/Source-Text/2003-PMID12859455-Fresh-and-Dried-Fig-Cross-Reactivity.txt) uses fresh and dried assay preparations for an unrelated clinical question.
 
 The [Turkish contaminant study](../Source-Text/2005-PMID16013398-Senyuva-Dried-Fig-Mycotoxin-Survey.txt) and [Moroccan market assay](../Source-Text/2008-Juan-Rabat-Sale-Dried-Fig-Aflatoxins.txt) directly measured toxins in food samples. They differ in sampling, geography and toxin panels. The results supply food exposure context and leave consumer intake and clinical outcomes open.
