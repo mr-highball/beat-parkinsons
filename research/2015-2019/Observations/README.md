@@ -1,5 +1,7 @@
 # Observations for 2015-2019
 
+The Ouezzane interviews record a fig leaf preparation for colds and sexual vitality. The earlier [central Italian field report](../../2005-2009/Cultural-and-Experiential/Traditional-Practices/2005-Guarrera-Central-Italy-Fig-Fruit-and-Latex.txt) describes dried fruit in a mixture for respiratory complaints. Both document uses, with different plant parts and preparations. [Ouezzane source](../Cultural-and-Experiential/Traditional-Practices/2017-Bouyahya-Ouezzane-Fig-Leaf-Uses.txt)
+
 The [fig preparations and outcomes comparison](2015-2019-Fig-Preparations-and-Outcome-Limits.md) distinguishes registered human bowel outcomes from tissue assays and product quality measurements.
 
 The lentil mood presentation adds short-term anxiety ratings to the preceding appetite paper on the same cohort. Time-course and overall comparisons differ. Oral cinnamaldehyde again gave inconclusive standalone maze findings, and chicken essence studies remain inconclusive for ordinary tiredness. [Lentil outcomes](../Food-Experiment-Lentil-Meal-Anxiety.md) · [Earlier food methods](../../2010-2014/Food-Experiment-Lentil-Meal-Anxiety.md) · [Cinnamaldehyde comparison](../Food-Experiment-Cinnamon-Anxiety.md)

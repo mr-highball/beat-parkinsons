@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2020-2024
 
+- [Tarfaya oral fig fruit decoction for constipation](Traditional-Practices/2020-Idmhand-Tarfaya-Fig-Fruit-Decoction.txt).
+
 - [Public account of unrefined macadamia oil and tingling](Conversations/2020-Earth-Clinic-Macadamia-Oil-and-Paresthesia.txt).
 
 - [Tanzanian follow-up on faith, care and an unnamed herbal wash](Ceremonial-Accounts/2021-Tanzania-Faith-and-Care-Followup.txt).

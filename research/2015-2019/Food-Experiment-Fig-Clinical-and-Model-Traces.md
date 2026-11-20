@@ -6,7 +6,7 @@ Alharthy and Bawazir studied five groups of ten male rats. Animals in relevant a
 
 ## Fig and bowel outcomes in irritable bowel syndrome
 
-Pourmasoumi et al. randomized 150 adults with constipation-predominant irritable bowel syndrome to fig, flixweed or usual diet. The report describes favorable changes in pain frequency and several bowel outcomes, and no clear difference in pain severity or C-reactive protein. The authors' abstract and trial registry do not specify drying. The trial did not measure visual events. [Primary report](Source-Text/2018-Pourmasoumi-Fig-IBS.txt) · [Registered design](Source-Text/Trials/NCT02559245.txt)
+Pourmasoumi et al. randomized 150 adults with constipation-predominant irritable bowel syndrome to fig, flixweed or usual diet. The publisher excerpt reports 142 completers. Some bowel outcomes and pain frequency favored the fig group. Pain severity and C-reactive protein did not clearly differ. The discussion suggests dried fruit. The intervention methods and outcome tables remain open. The trial did not measure visual events. [Primary report](Source-Text/2018-Pourmasoumi-Fig-IBS.txt) · [Registered design](Source-Text/Trials/NCT02559245.txt)
 
 ## Dried fig preparations in animal studies
 
