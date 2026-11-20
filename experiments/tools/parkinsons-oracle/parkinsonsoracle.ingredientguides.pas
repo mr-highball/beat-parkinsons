@@ -29,6 +29,7 @@ type
 {$I web/oraclegallerydata.inc}
 
 function IngredientGuideIndex(const AIngredient: String): Integer;
+function IngredientThumbnailName(AGuideIndex: Integer): String;
 
 implementation
 
@@ -46,6 +47,11 @@ begin
       Exit(LIndex);
     end;
   end;
+end;
+
+function IngredientThumbnailName(AGuideIndex: Integer): String;
+begin
+  Result := 'thumb-' + IntToStr(AGuideIndex) + '.jpg';
 end;
 
 end.

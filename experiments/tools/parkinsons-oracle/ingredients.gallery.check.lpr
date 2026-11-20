@@ -6,7 +6,7 @@ program IngredientGalleryCheck;
 {$codepage utf8}
 
 uses
-  Classes, SysUtils, Types, StrUtils, Generics.Collections, FPImage, FPReadJPEG,
+  Classes, SysUtils, Types, StrUtils, Math, Generics.Collections, FPImage, FPReadJPEG, FPWriteJPEG,
   foodexperiment.externaldata, parkinsonsoracle.ingredientguides;
 
 procedure Require(ATest: Boolean; const AMessage: String);
@@ -65,6 +65,91 @@ begin
   Require((LSize.X mod AFrame.GridColumns = 0) and (LSize.Y mod AFrame.GridRows = 0) and
     (LSize.X div AFrame.GridColumns = LSize.Y div AFrame.GridRows),
     'Gallery atlas does not contain equal square cells: ' + AFrame.Asset);
+end;
+
+procedure BuildThumbnails(const AAssetRoot, AOutput: String);
+const
+  CSize = 128;
+var
+  LSource: TFPMemoryImage;
+  LPreview: TFPMemoryImage;
+  LWriter: TFPWriterJPEG;
+  LFrame: TGalleryFrame;
+  LAsset: String;
+  LWidth: Integer;
+  LLeft: Integer;
+  LTop: Integer;
+  LIndex: Integer;
+  X, Y, SX, SY: Integer;
+  LX0, LX1, LY0, LY1: Integer;
+  LCount, LRed, LGreen, LBlue: QWord;
+  LColor: TFPColor;
+begin
+  Require(ForceDirectories(AOutput), 'Cannot create the ingredient thumbnail directory');
+  LSource := TFPMemoryImage.Create(0, 0);
+  LPreview := TFPMemoryImage.Create(CSize, CSize);
+  LWriter := TFPWriterJPEG.Create;
+  try
+    LWriter.CompressionQuality := 83;
+    LAsset := '';
+    for LIndex := Low(CIngredientGuides) to High(CIngredientGuides) do
+    begin
+      LFrame := CIngredientGuides[LIndex].Frames[0];
+      if LAsset <> LFrame.Asset then
+      begin
+        LAsset := LFrame.Asset;
+        LSource.LoadFromFile(IncludeTrailingPathDelimiter(AAssetRoot) + LAsset);
+      end;
+      if LFrame.Column >= 0 then
+      begin
+        LWidth := LSource.Width div LFrame.GridColumns;
+        LLeft := LWidth * LFrame.Column;
+        LTop := LWidth * LFrame.Row;
+      end
+      else
+      begin
+        LWidth := Min(LSource.Width, LSource.Height);
+        LLeft := (LSource.Width - LWidth) div 2;
+        LTop := (LSource.Height - LWidth) div 2;
+      end;
+      for Y := 0 to CSize - 1 do
+      begin
+        LY0 := LTop + Y * LWidth div CSize;
+        LY1 := Max(LY0 + 1, LTop + (Y + 1) * LWidth div CSize);
+        for X := 0 to CSize - 1 do
+        begin
+          LX0 := LLeft + X * LWidth div CSize;
+          LX1 := Max(LX0 + 1, LLeft + (X + 1) * LWidth div CSize);
+          LCount := (LX1 - LX0) * (LY1 - LY0);
+          LRed := 0;
+          LGreen := 0;
+          LBlue := 0;
+          for SY := LY0 to LY1 - 1 do
+          begin
+            for SX := LX0 to LX1 - 1 do
+            begin
+              LColor := LSource.Colors[SX, SY];
+              Inc(LRed, LColor.Red);
+              Inc(LGreen, LColor.Green);
+              Inc(LBlue, LColor.Blue);
+            end;
+          end;
+          LColor.Red := LRed div LCount;
+          LColor.Green := LGreen div LCount;
+          LColor.Blue := LBlue div LCount;
+          LColor.Alpha := AlphaOpaque;
+          LPreview.Colors[X, Y] := LColor;
+        end;
+      end;
+      LPreview.SaveToFile(IncludeTrailingPathDelimiter(AOutput) +
+        IngredientThumbnailName(LIndex), LWriter);
+    end;
+    WriteLn(Length(CIngredientGuides), ' ingredient thumbnails at ', CSize, ' px.');
+  finally
+    LWriter.Free;
+    LPreview.Free;
+    LSource.Free;
+  end;
 end;
 
 procedure Run(const AVocabulary, AAssetRoot: String);
@@ -137,8 +222,12 @@ end;
 begin
   try
     SetMultiByteConversionCodePage(CP_UTF8);
-    Require(ParamCount = 2, 'Provide the shared ingredient vocabulary and gallery asset directory.');
+    Require(ParamCount in [2, 3], 'Provide ingredient vocabulary, gallery assets and optional thumbnail output.');
     Run(ParamStr(1), ParamStr(2));
+    if ParamCount = 3 then
+    begin
+      BuildThumbnails(ParamStr(2), ParamStr(3));
+    end;
   except
     on E: Exception do
     begin

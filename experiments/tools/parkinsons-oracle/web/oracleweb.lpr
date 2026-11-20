@@ -32,6 +32,10 @@ var
   GArguments: TJSObject;
   GClaimUnion: TJSObject;
   GSourceUnion: TOracleSourceUnion;
+  GRelatedRenderer: TNyxBrowserRenderer;
+  GRelatedDocument: TNyxDocument;
+  GRelatedHost: TJSHTMLElement;
+  GRelatedSequence: Integer;
   GRelatedGroups: TStringValues;
   GRelatedSources: TJSObject;
   GRelatedTerms: String;
@@ -260,6 +264,12 @@ begin
     GGraph.Detach;
     GGraph := nil;
   end;
+  if GRelatedHost <> nil then
+  begin
+    GRelatedRenderer.Unmount;
+    FreeAndNil(GRelatedDocument);
+    GRelatedHost := nil;
+  end;
   LPrior := GResultsDocument;
   GResultsRenderer.Render(ADocument, APage, GRenderer.ElementFor('results-frame'));
   GResultsDocument := ADocument;
@@ -291,6 +301,7 @@ end;
 
 procedure ShowList(AResults: TJSObject; AFocus: Boolean = True); forward;
 procedure Query(ANewQuery: Boolean; AOffset: Integer); forward;
+procedure RenderRelated(AFocus: Boolean = False); forward;
 procedure SwitchView(AView: TOracleView); forward;
 procedure BindReference(const ANodeId, APath: String; AReturn: TPickerAction); forward;
 procedure ShowGraph(AGraph: TOracleGraphExplorer; AReturn: TPickerAction;
@@ -322,41 +333,27 @@ begin
   GSourceUnion.Reset(GRelatedGroups, GResearchKind);
 end;
 
-procedure LoadRelatedSources(AOffset: Integer; AReply: TOracleReply);
+procedure RefreshRelated(AOffset: Integer; AFocus: Boolean);
 var
   LSequence: Integer;
 begin
-  LSequence := GSequence;
+  Inc(GRelatedSequence);
+  LSequence := GRelatedSequence;
+  GRelatedBusy := True;
   GSourceUnion.Page(AOffset, CPageSize,
     function: Boolean
     begin
-      Result := LSequence = GSequence;
-    end, AReply);
-end;
-
-procedure RefreshRelated(AOffset: Integer);
-begin
-  Inc(GSequence);
-  GRelatedBusy := True;
-  LoadRelatedSources(AOffset,
+      Result := LSequence = GRelatedSequence;
+    end,
     procedure(AData: TJSObject; const AError: String)
-    var
-      LHeading: TJSHTMLElement;
     begin
       GRelatedBusy := False;
       GRelatedSources := AData;
       GRelatedError := AError;
       GRelatedNext := CountOf(AData, 'next_offset');
-      ShowList(GResults, False);
-      LHeading := GResultsRenderer.ElementFor('related-heading');
-      if LHeading <> nil then
-      begin
-        LHeading.setAttribute('tabindex', '-1');
-        LHeading.focus;
-      end;
+      RenderRelated(AFocus);
     end);
 end;
-
 procedure ChangeResearchKind(AKind: Integer);
 begin
   GResearchKind := AKind;
@@ -364,7 +361,12 @@ begin
   SetLength(GRelatedOffsets, 1);
   GRelatedOffsets[0] := 0;
   GRelatedPage := 0;
-  RefreshRelated(0);
+  GRelatedSources := nil;
+  GRelatedError := '';
+  GRelatedNext := 0;
+  GRelatedBusy := True;
+  ShowList(GResults, False);
+  RefreshRelated(0, False);
 end;
 
 function EvidenceLabel(const AVerdict: String): String;
@@ -680,6 +682,7 @@ begin
       LPage.Add(Caption(nkHeading, 'result-heading', Capitalized(TextOf(AData, 'ingredient'))));
       LPage.Add(Caption(nkLabel, 'claim-symptom', FriendlySymptom(TextOf(AData, 'symptom'))));
       LPage.Add(ClaimIndicators(AData, 'detail'));
+      AddIngredientGallery(LPage, TextOf(AData, 'ingredient'));
       LPage.Add(Caption(nkLabel, 'claim-question', ResearchQuestion(AData)));
       if TextOf(AData, 'confidence') <> '' then
         LPage.Add(Caption(nkLabel, 'claim-confidence',
@@ -743,7 +746,6 @@ begin
           LPage.Add(SourceLink('citation-' + IntToStr(LIndex), JSValueText(LItems[LIndex])));
       end;
 
-      AddIngredientGallery(LPage, TextOf(AData, 'ingredient'));
       PublishResults(LDocument, LPage);
       BindIngredientGallery(GResultsRenderer, TextOf(AData, 'ingredient'));
       FocusResults;
@@ -985,16 +987,16 @@ begin
     end);
 end;
 
-procedure BindSource(const ATag, APath: String);
+procedure BindSource(ARenderer: TNyxBrowserRenderer; const ATag, APath: String);
 begin
-  BindEvent(GResultsRenderer.ElementFor('open-source-' + ATag), 'click',
+  BindEvent(ARenderer.ElementFor('open-source-' + ATag), 'click',
     function(AEvent: TEventListenerEvent): Boolean
     begin
       OpenReference(APath,
         procedure
         begin
           ShowList(GResults, False);
-          GResultsRenderer.ElementFor('open-source-' + ATag).focus;
+          ARenderer.ElementFor('open-source-' + ATag).focus;
         end);
       Result := True;
     end);
@@ -1018,40 +1020,23 @@ end;
 procedure ShowIngredientEffects(AProfile: TJSObject; ABack: TPickerAction;
   AFocus: Boolean = True); forward;
 
-procedure ShowIngredientGalleryPage(const AIngredient: String; AReturn: TPickerAction);
-var
-  LDocument: TNyxDocument;
-  LPage: TNyxNode;
-begin
-  LDocument := TNyxDocument.Create;
-  LPage := Section(nkPage, 'result-page');
-  LDocument.AddPage(LPage);
-  LPage.Add(Button('back-results', '‹ Back', nvSecondary));
-  LPage.Add(Caption(nkHeading, 'result-heading', Capitalized(AIngredient)));
-  AddIngredientGallery(LPage, AIngredient);
-  PublishResults(LDocument, LPage);
-  BindIngredientGallery(GResultsRenderer, AIngredient);
-  BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
-    function(AEvent: TEventListenerEvent): Boolean
-    begin
-      AReturn();
-      Result := True;
-    end);
-  FocusResults;
-end;
-
-procedure BindIngredientGalleryAction(const AButton, AIngredient: String; AProfile: TJSObject;
+procedure BindIngredientGalleryAction(const AButton: String; AProfile: TJSObject;
   ABack: TPickerAction);
+var
+  LButton: TJSHTMLElement;
 begin
-  BindEvent(GResultsRenderer.ElementFor(AButton), 'click',
+  LButton := GResultsRenderer.ElementFor(AButton);
+  LButton.setAttribute('aria-expanded', LowerCase(BoolToStr(
+    TextOf(AProfile, 'expanded_gallery') = AButton, True)));
+  BindEvent(LButton, 'click',
     function(AEvent: TEventListenerEvent): Boolean
     begin
-      ShowIngredientGalleryPage(AIngredient,
-        procedure
-        begin
-          ShowIngredientEffects(AProfile, ABack, False);
-          GResultsRenderer.ElementFor(AButton).focus;
-        end);
+      if TextOf(AProfile, 'expanded_gallery') = AButton then
+        AProfile['expanded_gallery'] := ''
+      else
+        AProfile['expanded_gallery'] := AButton;
+      ShowIngredientEffects(AProfile, ABack, False);
+      GResultsRenderer.ElementFor(AButton).focus;
       Result := True;
     end);
 end;
@@ -1162,6 +1147,21 @@ var
   LType: Integer;
   LIndex: Integer;
   LSignalIndex: Integer;
+  LExpandedIngredient: String;
+
+  procedure AddComparisonGallery(AParent: TNyxNode; const AButton, AName, ACaption: String);
+  begin
+    AParent.Add(Button(AButton, ACaption, nvSecondary));
+    if TextOf(AProfile, 'expanded_gallery') = AButton then
+    begin
+      LExpandedIngredient := AName;
+      AddIngredientGallery(AParent, AName, '-comparison');
+    end;
+    LButton := TJSObject.new;
+    LButton['id'] := AButton;
+    LButton['gallery'] := True;
+    LButtons.push(LButton);
+  end;
 
   function UnresolvedLabel(AItem: TJSObject): String;
   var
@@ -1223,15 +1223,11 @@ begin
       begin
         LName := JSValueText(LGroup[LIndex]);
         LTag := IntToStr(LIndex);
-        LCard := Section(nkRow, 'ingredient-open-entry-' + LTag);
+        LCard := Section(nkColumn, 'ingredient-open-entry-' + LTag);
         if HasIngredientGallery(LName) then
         begin
-          LCard.Add(Button('ingredient-photos-unresolved-' + LTag, Capitalized(LName),
-            nvSecondary));
-          LButton := TJSObject.new;
-          LButton['id'] := 'ingredient-photos-unresolved-' + LTag;
-          LButton['gallery'] := LName;
-          LButtons.push(LButton);
+          AddComparisonGallery(LCard, 'ingredient-photos-unresolved-' + LTag,
+            LName, Capitalized(LName));
         end
         else
         begin
@@ -1257,11 +1253,8 @@ begin
       LCard.Add(Caption(nkHeading, 'ingredient-name-' + LTag, LName));
       if HasIngredientGallery(TextOf(LGroupRow, 'ingredient')) then
       begin
-        LCard.Add(Button('ingredient-photos-' + LTag, 'Photos & tips', nvSecondary));
-        LButton := TJSObject.new;
-        LButton['id'] := 'ingredient-photos-' + LTag;
-        LButton['gallery'] := TextOf(LGroupRow, 'ingredient');
-        LButtons.push(LButton);
+        AddComparisonGallery(LCard, 'ingredient-photos-' + LTag,
+          TextOf(LGroupRow, 'ingredient'), 'Photos & tips');
       end;
       LFindings := ItemsOf(LGroupRow, 'findings');
       for LSignalIndex := 0 to LFindings.Length - 1 do
@@ -1307,6 +1300,8 @@ begin
     LPage.Add(LSection);
   end;
   PublishResults(LDocument, LPage);
+  if LExpandedIngredient <> '' then
+    BindIngredientGallery(GResultsRenderer, LExpandedIngredient, '-comparison');
   BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
     function(AEvent: TEventListenerEvent): Boolean
     begin
@@ -1324,10 +1319,9 @@ begin
   for LIndex := 0 to LButtons.Length - 1 do
   begin
     LButton := TJSObject(LButtons[LIndex]);
-    if TextOf(LButton, 'gallery') <> '' then
+    if TextOf(LButton, 'gallery') = 'true' then
     begin
-      BindIngredientGalleryAction(TextOf(LButton, 'id'), TextOf(LButton, 'gallery'),
-        AProfile, ABack);
+      BindIngredientGalleryAction(TextOf(LButton, 'id'), AProfile, ABack);
     end
     else
     begin
@@ -1483,11 +1477,7 @@ var
       procedure(ARound: Integer; const AId: String)
       begin
         Inspect(ARound, AId, LResume);
-      end, AStartNode,
-      procedure(const AValue: String)
-      begin
-        ShowIngredientGalleryPage(AValue, LResume);
-      end);
+      end, AStartNode);
     SetLength(GGraphStack, Length(GGraphStack) + 1);
     GGraphStack[High(GGraphStack)] := LGraph;
     LResume();
@@ -1579,20 +1569,20 @@ begin
   Result.Add(LActions);
 end;
 
-procedure BindCatalogCard(const ATag, APath: String);
+procedure BindCatalogCard(ARenderer: TNyxBrowserRenderer; const ATag, APath: String);
 begin
   if GStaticOracle = nil then
-    BindSource(ATag, APath)
+    BindSource(ARenderer, ATag, APath)
   else
     SetExternalLink('open-source-' + ATag);
-  BindEvent(GResultsRenderer.ElementFor('catalog-graph-' + ATag), 'click',
+  BindEvent(ARenderer.ElementFor('catalog-graph-' + ATag), 'click',
     function(AEvent: TEventListenerEvent): Boolean
     begin
       StartGraph(nil, '', GraphKey('source', ReferenceFile(APath)),
         procedure
         begin
           ShowList(GResults, False);
-          GResultsRenderer.ElementFor('catalog-graph-' + ATag).focus;
+          ARenderer.ElementFor('catalog-graph-' + ATag).focus;
         end);
       Result := True;
     end);
@@ -1604,6 +1594,158 @@ begin
     (TextOf(AArguments, 'ingredient') <> '') or (TextOf(AArguments, 'preparation') <> '');
 end;
 
+procedure BindSearchGallery(const ATag, AIngredient: String);
+var
+  LURL: String;
+  LThumb: TJSHTMLElement;
+  LPanel: TJSHTMLElement;
+  LKey: String;
+  LBound: Boolean;
+begin
+  LURL := IngredientThumbnailURL(AIngredient);
+  if LURL = '' then
+  begin
+    Exit;
+  end;
+  LKey := '-search-' + ATag;
+  LThumb := GResultsRenderer.ElementFor('claim-photo-' + ATag);
+  LPanel := GResultsRenderer.ElementFor('ingredient-gallery' + LKey);
+  LPanel.hidden := True;
+  LPanel.id := 'ingredient-gallery' + LKey;
+  LThumb.style.setProperty('background-image', 'url("' + LURL + '")');
+  LThumb.setAttribute('aria-controls', LPanel.id);
+  LThumb.setAttribute('aria-expanded', 'false');
+  LBound := False;
+  BindEvent(LThumb, 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      LPanel.hidden := not LPanel.hidden;
+      if not LPanel.hidden and not LBound then
+      begin
+        BindIngredientGallery(GResultsRenderer, AIngredient, LKey, True);
+        LBound := True;
+      end;
+      LThumb.setAttribute('aria-expanded', LowerCase(BoolToStr(not LPanel.hidden, True)));
+      Result := True;
+    end);
+end;
+
+procedure RenderRelated(AFocus: Boolean);
+var
+  LDocument: TNyxDocument;
+  LPrior: TNyxDocument;
+  LPage: TNyxNode;
+  LPaging: TNyxNode;
+  LRelatedRecords: TJSArray;
+  LHeading: TJSHTMLElement;
+  LRow: TJSObject;
+  LMessage: String;
+  LTrend: String;
+  LIndex: Integer;
+  LTag: String;
+  LPath: String;
+begin
+  if GRelatedHost = nil then
+    Exit;
+  LDocument := TNyxDocument.Create;
+  LPage := Section(nkColumn, 'related-content');
+  LDocument.AddPage(LPage);
+  LRelatedRecords := TJSArray.new;
+  LTrend := TextOf(GArguments, 'trend');
+  case GResearchKind of
+    SourceKindStudies: LMessage := 'Studies and research sources';
+    SourceKindCulture: LMessage := 'Cultural accounts and conversations';
+  else
+    LMessage := 'Related sources';
+  end;
+  LPage.Add(Caption(nkHeading, 'related-heading', LMessage));
+  if LTrend <> '' then
+    LPage.Add(Caption(nkLabel, 'related-guidance',
+      'The symptom effect filter applies to claims. Related sources can describe any effect.'));
+  if HasSelection(ArgumentSymptoms(GArguments), 'rest tremor severity') then
+    LPage.Add(Caption(nkLabel, 'related-tremor-scope',
+      'These sources may discuss other tremor types. Check the source for the symptom, diagnosis and what was actually reported.'));
+  if GRelatedBusy then
+    LPage.Add(Caption(nkLabel, 'related-count', 'Looking for related sources…'))
+  else if GRelatedError <> '' then
+    LPage.Add(Caption(nkLabel, 'related-error',
+      'Source lookup unavailable: ' + GRelatedError))
+  else
+  begin
+    LRelatedRecords := ItemsOf(GRelatedSources, 'matches');
+    if (GResearchKind = SourceKindAll) and
+      (TextOf(GRelatedSources, 'total_is_exact') = 'true') then
+      LMessage := IntToStr(LRelatedRecords.Length) + ' of ' +
+        IntToStr(CountOf(GRelatedSources, 'total')) + ' matching source documents'
+    else
+      LMessage := IntToStr(LRelatedRecords.Length) + ' source documents on this page';
+    LPage.Add(Caption(nkLabel, 'related-count', LMessage));
+    if (LRelatedRecords.Length = 0) and (GResearchKind = SourceKindCulture) then
+      LPage.Add(Caption(nkLabel, 'culture-empty',
+        'No matching cultural account is cataloged here yet. This remains an open collection gap.'));
+    for LIndex := 0 to LRelatedRecords.Length - 1 do
+    begin
+      LTag := 'related-' + IntToStr(LIndex);
+      LRow := TJSObject(LRelatedRecords[LIndex]);
+      LPath := TextOf(LRow, 'path');
+      LPage.Add(CatalogPreview(LTag, LPath, TextOf(LRow, 'period')));
+    end;
+    LPaging := Section(nkRow, 'source-pagination');
+    if GRelatedPage > 0 then
+      LPaging.Add(Button('previous-sources', 'Previous sources', nvSecondary));
+    if GRelatedNext > 0 then
+      LPaging.Add(Button('next-sources', 'Next sources', nvSecondary));
+    LPage.Add(LPaging);
+    if (GResearchKind = SourceKindAll) and (Length(GRelatedGroups) = 1) then
+      LPage.Add(Button('browse-related-sources', 'Browse all matching source documents', nvSecondary));
+  end;
+  LPrior := GRelatedDocument;
+  GRelatedRenderer.Render(LDocument, LPage, GRelatedHost);
+  GRelatedDocument := LDocument;
+  LPrior.Free;
+  LHeading := GRelatedRenderer.ElementFor('related-heading');
+  LHeading.setAttribute('tabindex', '-1');
+  if AFocus then
+    LHeading.focus;
+  if not GRelatedBusy and (GRelatedError = '') then
+  begin
+    if (GResearchKind = SourceKindAll) and (Length(GRelatedGroups) = 1) then
+      BindEvent(GRelatedRenderer.ElementFor('browse-related-sources'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        TJSHTMLInputElement(GRenderer.InputFor('terms')).value := GRelatedTerms;
+        SwitchView(ovCatalog);
+        Query(True, 0);
+        Result := True;
+      end);
+    if GRelatedPage > 0 then
+      BindEvent(GRelatedRenderer.ElementFor('previous-sources'), 'click',
+        function(AEvent: TEventListenerEvent): Boolean
+        begin
+          if GRelatedBusy then
+            Exit(False);
+          Dec(GRelatedPage);
+          RefreshRelated(GRelatedOffsets[GRelatedPage], True);
+          Result := True;
+        end);
+    if GRelatedNext > 0 then
+      BindEvent(GRelatedRenderer.ElementFor('next-sources'), 'click',
+        function(AEvent: TEventListenerEvent): Boolean
+        begin
+          if GRelatedBusy then
+            Exit(False);
+          Inc(GRelatedPage);
+          SetLength(GRelatedOffsets, GRelatedPage + 1);
+          GRelatedOffsets[GRelatedPage] := GRelatedNext;
+          RefreshRelated(GRelatedNext, True);
+          Result := True;
+        end);
+    for LIndex := 0 to LRelatedRecords.Length - 1 do
+      BindCatalogCard(GRelatedRenderer, 'related-' + IntToStr(LIndex),
+        TextOf(TJSObject(LRelatedRecords[LIndex]), 'path'));
+  end;
+end;
+
 procedure ShowList(AResults: TJSObject; AFocus: Boolean);
 var
   LDocument: TNyxDocument;
@@ -1611,15 +1753,17 @@ var
   LRow: TJSObject;
   LCard: TNyxNode;
   LCardActions: TNyxNode;
+  LIdentity: TNyxNode;
+  LIdentityText: TNyxNode;
   LResultActions: TNyxNode;
   LPaging: TNyxNode;
   LRecords: TJSArray;
-  LRelatedRecords: TJSArray;
   LIndex: Integer;
   LTotal: Integer;
   LOffset: Integer;
   LNext: Integer;
   LTag: String;
+  LIngredient: String;
   LPath: String;
   LTrend: String;
   LMessage: String;
@@ -1630,7 +1774,6 @@ var
   LKindTabs: TNyxNode;
   LSymptoms: TStringValues;
 begin
-  LRelatedRecords := TJSArray.new;
   LDocument := TNyxDocument.Create;
   LPage := Section(nkPage, 'result-page');
   LDocument.AddPage(LPage);
@@ -1699,8 +1842,6 @@ begin
   end;
   if LRecords.Length > 0 then
   begin
-    if GView = ovClaims then
-      LPage.Add(Caption(nkHeading, 'claim-results-heading', 'Ingredient and symptom claims'));
     LPage.Add(Caption(nkLabel, 'result-count',
       IntToStr(LOffset + 1) + '–' + IntToStr(LOffset + LRecords.Length) +
       ' of ' + IntToStr(LTotal)));
@@ -1735,18 +1876,26 @@ begin
     begin
       LCard := Section(nkCard, 'match-' + LTag);
       LCard.Add(ClaimIndicators(LRow, LTag));
-      LCard.Add(Caption(nkHeading, 'ingredient-' + LTag, Capitalized(TextOf(LRow, 'ingredient'))));
+      LIngredient := TextOf(LRow, 'ingredient');
+      LIdentity := Section(nkRow, 'claim-identity-' + LTag);
+      LIdentityText := Section(nkColumn, 'claim-identity-text-' + LTag);
+      LIdentityText.Add(Caption(nkHeading, 'ingredient-' + LTag, Capitalized(LIngredient)));
       if Length(LSymptoms) <> 1 then
-        LCard.Add(Caption(nkLabel, 'claim-symptom-' + LTag, FriendlySymptom(TextOf(LRow, 'symptom'))));
+        LIdentityText.Add(Caption(nkLabel, 'claim-symptom-' + LTag,
+          FriendlySymptom(TextOf(LRow, 'symptom'))));
+      LIdentity.Add(LIdentityText);
+      if HasIngredientGallery(LIngredient) then
+        LIdentity.Add(Button('claim-photo-' + LTag, '', nvSecondary)
+          .Configure.AccessibleName('View photos of ' + LIngredient).Done);
+      LCard.Add(LIdentity);
+      AddIngredientGallery(LCard, LIngredient, '-search-' + LTag);
       LCard.Add(Caption(nkLabel, 'hypothesis-' + LTag, ResearchQuestion(LRow)));
       if TextOf(LRow, 'rationale') <> '' then
-        LCard.Add(Caption(nkLabel, 'rationale-' + LTag, TextOf(LRow, 'rationale')))
-      else
-        LCard.Add(Caption(nkLabel, 'rationale-' + LTag,
-          'An open hypothesis awaiting evidence review. Its assigned direction is not a finding.'));
+        LCard.Add(Caption(nkLabel, 'rationale-' + LTag, TextOf(LRow, 'rationale')));
+
       LCardActions := Section(nkRow, 'claim-actions-' + LTag);
-      LCardActions.Add(Button('inspect-' + LTag, 'See studies and references', nvSecondary));
-      LCardActions.Add(Button('claim-graph-' + LTag, 'See connections', nvSecondary));
+      LCardActions.Add(Button('inspect-' + LTag, 'Studies & sources', nvSecondary));
+      LCardActions.Add(Button('claim-graph-' + LTag, 'Connections', nvSecondary));
       LCard.Add(LCardActions);
     end
     else
@@ -1769,55 +1918,16 @@ begin
   end;
 
   if (GView = ovClaims) and (GRelatedTerms <> '') then
-  begin
-    case GResearchKind of
-      SourceKindStudies: LMessage := 'Studies and research sources';
-      SourceKindCulture: LMessage := 'Cultural accounts and conversations';
-    else
-      LMessage := 'Related sources';
-    end;
-    LPage.Add(Caption(nkHeading, 'related-heading', LMessage));
-    if LTrend <> '' then
-      LPage.Add(Caption(nkLabel, 'related-guidance',
-        'The symptom effect filter applies to claims. Related sources can describe any effect.'));
-    if HasSelection(ArgumentSymptoms(GArguments), 'rest tremor severity') then
-      LPage.Add(Caption(nkLabel, 'related-tremor-scope',
-        'These sources may discuss other tremor types. Check the source for the symptom, diagnosis and what was actually reported.'));
-    if GRelatedError <> '' then
-      LPage.Add(Caption(nkLabel, 'related-error',
-        'Source lookup unavailable: ' + GRelatedError))
-    else
-    begin
-      LRelatedRecords := ItemsOf(GRelatedSources, 'matches');
-      if (GResearchKind = SourceKindAll) and
-        (TextOf(GRelatedSources, 'total_is_exact') = 'true') then
-        LMessage := IntToStr(LRelatedRecords.Length) + ' of ' +
-          IntToStr(CountOf(GRelatedSources, 'total')) + ' matching source documents'
-      else
-        LMessage := IntToStr(LRelatedRecords.Length) + ' source documents on this page';
-      LPage.Add(Caption(nkLabel, 'related-count', LMessage));
-      if (LRelatedRecords.Length = 0) and (GResearchKind = SourceKindCulture) then
-        LPage.Add(Caption(nkLabel, 'culture-empty',
-          'No matching cultural account is cataloged here yet. This remains an open collection gap.'));
-      for LIndex := 0 to LRelatedRecords.Length - 1 do
-      begin
-        LTag := 'related-' + IntToStr(LIndex);
-        LRow := TJSObject(LRelatedRecords[LIndex]);
-        LPath := TextOf(LRow, 'path');
-        LPage.Add(CatalogPreview(LTag, LPath, TextOf(LRow, 'period')));
-      end;
-      LPaging := Section(nkRow, 'source-pagination');
-      if GRelatedPage > 0 then
-        LPaging.Add(Button('previous-sources', 'Previous sources', nvSecondary));
-      if GRelatedNext > 0 then
-        LPaging.Add(Button('next-sources', 'Next sources', nvSecondary));
-      LPage.Add(LPaging);
-      if (GResearchKind = SourceKindAll) and (Length(GRelatedGroups) = 1) then
-        LPage.Add(Button('browse-related-sources', 'Browse all matching source documents', nvSecondary));
-    end;
-  end;
-
+    LPage.Add(Section(nkColumn, 'related-host'));
   PublishResults(LDocument, LPage);
+  if (GView = ovClaims) and (GRelatedTerms <> '') then
+  begin
+    GRelatedHost := GResultsRenderer.ElementFor('related-host');
+    RenderRelated;
+  end;
+  if GView = ovClaims then
+    for LIndex := 0 to LRecords.Length - 1 do
+      BindSearchGallery(IntToStr(LIndex), TextOf(TJSObject(LRecords[LIndex]), 'ingredient'));
   if (GView = ovClaims) and not LTrendOnly then
   begin
     BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
@@ -1846,8 +1956,7 @@ begin
         var
           LHeading: TJSHTMLElement;
         begin
-          LHeading := GResultsRenderer.ElementFor('related-heading');
-          LHeading.setAttribute('tabindex', '-1');
+          LHeading := GRelatedRenderer.ElementFor('related-heading');
           LHeading.focus;
           LHeading.scrollIntoView;
           Result := True;
@@ -1882,43 +1991,6 @@ begin
         Result := True;
       end);
   end;
-  if (GView = ovClaims) and (GRelatedTerms <> '') and (GRelatedError = '') then
-  begin
-    if (GResearchKind = SourceKindAll) and (Length(GRelatedGroups) = 1) then
-      BindEvent(GResultsRenderer.ElementFor('browse-related-sources'), 'click',
-      function(AEvent: TEventListenerEvent): Boolean
-      begin
-        TJSHTMLInputElement(GRenderer.InputFor('terms')).value := GRelatedTerms;
-        SwitchView(ovCatalog);
-        Query(True, 0);
-        Result := True;
-      end);
-    if GRelatedPage > 0 then
-      BindEvent(GResultsRenderer.ElementFor('previous-sources'), 'click',
-        function(AEvent: TEventListenerEvent): Boolean
-        begin
-          if GRelatedBusy then
-            Exit(False);
-          Dec(GRelatedPage);
-          RefreshRelated(GRelatedOffsets[GRelatedPage]);
-          Result := True;
-        end);
-    if GRelatedNext > 0 then
-      BindEvent(GResultsRenderer.ElementFor('next-sources'), 'click',
-        function(AEvent: TEventListenerEvent): Boolean
-        begin
-          if GRelatedBusy then
-            Exit(False);
-          Inc(GRelatedPage);
-          SetLength(GRelatedOffsets, GRelatedPage + 1);
-          GRelatedOffsets[GRelatedPage] := GRelatedNext;
-          RefreshRelated(GRelatedNext);
-          Result := True;
-        end);
-    for LIndex := 0 to LRelatedRecords.Length - 1 do
-      BindCatalogCard('related-' + IntToStr(LIndex),
-        TextOf(TJSObject(LRelatedRecords[LIndex]), 'path'));
-  end;
   if LCanShowAnyTrend then
     BindEvent(GResultsRenderer.ElementFor('show-any-trend'), 'click',
       function(AEvent: TEventListenerEvent): Boolean
@@ -1946,7 +2018,7 @@ begin
       BindClaimGraph(IntToStr(LIndex), TextOf(LRow, 'symptom'), TextOf(LRow, 'ingredient'));
     end;
     if GView = ovCatalog then
-      BindCatalogCard(IntToStr(LIndex), TextOf(LRow, 'path'));
+      BindCatalogCard(GResultsRenderer, IntToStr(LIndex), TextOf(LRow, 'path'));
   end;
   if (LOffset > 0) and
     ((GView <> ovClaims) or (GResearchKind <> SourceKindCulture)) then
@@ -1986,6 +2058,7 @@ begin
   LSequence := GSequence;
   if ANewQuery then
   begin
+    Inc(GRelatedSequence);
     GArguments := TJSObject.new;
     GClaimUnion := nil;
     if GView = ovClaims then
@@ -2060,7 +2133,7 @@ begin
         Exit;
       end;
       GResults := AData;
-      if not ANewQuery and (GView = ovClaims) and (GRelatedSources <> nil) then
+      if not ANewQuery and (GView = ovClaims) then
       begin
         ShowList(GResults);
         Exit;
@@ -2072,27 +2145,15 @@ begin
       SetLength(GRelatedOffsets, 1);
       GRelatedOffsets[0] := 0;
       GRelatedPage := 0;
+      GRelatedBusy := False;
       if GView = ovClaims then
       begin
         ResetRelatedSources;
-        if GRelatedTerms <> '' then
-        begin
-          GRelatedBusy := True;
-          LoadRelatedSources(0,
-            procedure(ASources: TJSObject; const ASourceError: String)
-            begin
-              if LSequence <> GSequence then
-                Exit;
-              GRelatedBusy := False;
-              GRelatedSources := ASources;
-              GRelatedError := ASourceError;
-              GRelatedNext := CountOf(ASources, 'next_offset');
-              ShowList(GResults);
-            end);
-          Exit;
-        end;
+        GRelatedBusy := GRelatedTerms <> '';
       end;
       ShowList(GResults);
+      if GRelatedBusy then
+        RefreshRelated(0, False);
     end;
   LCurrent := function: Boolean
     begin
@@ -2124,6 +2185,7 @@ end;
 procedure SwitchView(AView: TOracleView);
 begin
   Inc(GSequence);
+  Inc(GRelatedSequence);
   GView := AView;
   ClearGraphHistory;
   HideSuggestions;
@@ -2275,6 +2337,7 @@ begin
 
   GRenderer := TNyxBrowserRenderer.Create;
   GResultsRenderer := TNyxBrowserRenderer.Create;
+  GRelatedRenderer := TNyxBrowserRenderer.Create;
   GRenderer.Render(GDocument, LPage, TJSHTMLElement(document.getElementById('oracle')));
   GRenderer.ElementFor('brand').setAttribute('aria-level', '1');
   GRenderer.ElementFor('results-frame').setAttribute('aria-live', 'polite');

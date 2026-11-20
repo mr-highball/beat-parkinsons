@@ -8,8 +8,11 @@ interface
 uses nyx.model, nyx.render.browser;
 
 function HasIngredientGallery(const AIngredient: String): Boolean;
-procedure AddIngredientGallery(AParent: TNyxNode; const AIngredient: String);
-procedure BindIngredientGallery(ARenderer: TNyxBrowserRenderer; const AIngredient: String);
+function IngredientThumbnailURL(const AIngredient: String): String;
+procedure AddIngredientGallery(AParent: TNyxNode; const AIngredient: String;
+  const AKey: String = '');
+procedure BindIngredientGallery(ARenderer: TNyxBrowserRenderer; const AIngredient: String;
+  const AKey: String = ''; AInitiallyEnlarged: Boolean = False);
 
 implementation
 
@@ -20,10 +23,23 @@ begin
   Result := IngredientGuideIndex(AIngredient) >= 0;
 end;
 
-procedure AddIngredientGallery(AParent: TNyxNode; const AIngredient: String);
+function IngredientThumbnailURL(const AIngredient: String): String;
+var
+  LIndex: Integer;
+begin
+  LIndex := IngredientGuideIndex(AIngredient);
+  if LIndex < 0 then
+  begin
+    Exit('');
+  end;
+  Result := 'ingredients/' + IngredientThumbnailName(LIndex);
+end;
+
+procedure AddIngredientGallery(AParent: TNyxNode; const AIngredient: String; const AKey: String);
 var
   LIndex: Integer;
   LPanel: TNyxNode;
+  LTip: TNyxNode;
   LNav: TNyxNode;
 begin
   LIndex := IngredientGuideIndex(AIngredient);
@@ -31,47 +47,71 @@ begin
   begin
     Exit;
   end;
-  LPanel := TNyxNode.Create(nkCard, 'ingredient-gallery');
-  LPanel.Add(TNyxNode.Create(nkHeading, 'ingredient-gallery-title')
-    .Configure.Text('Ingredient photos and tips').Done);
-  LPanel.Add(TNyxNode.Create(nkPanel, 'ingredient-gallery-photo')
-    .Configure.TouchBehavior(ntbPanY).Done);
-  LPanel.Add(TNyxNode.Create(nkLabel, 'ingredient-gallery-caption'));
-  LNav := TNyxNode.Create(nkRow, 'ingredient-gallery-nav');
-  LNav.Add(TNyxNode.Create(nkButton, 'ingredient-gallery-prev')
-    .Configure.Text('‹ Previous photo').Variant(nvSecondary).Done);
-  LNav.Add(TNyxNode.Create(nkButton, 'ingredient-gallery-next')
-    .Configure.Text('Next photo ›').Variant(nvSecondary).Done);
-  LPanel.Add(LNav);
-  LPanel.Add(TNyxNode.Create(nkLabel, 'ingredient-gallery-credit'));
-  LPanel.Add(TNyxNode.Create(nkLink, 'ingredient-gallery-photo-source')
-    .Configure.Text('Photo credit').LinkTo(CIngredientGuides[LIndex].TipURL).Done);
-  LPanel.Add(TNyxNode.Create(nkLabel, 'ingredient-gallery-tip-title')
-    .Configure.Text('Shopping tip').Done);
-  LPanel.Add(TNyxNode.Create(nkLabel, 'ingredient-gallery-tip')
+  LPanel := TNyxNode.Create(nkCard, 'ingredient-gallery' + AKey);
+  LPanel.Add(TNyxNode.Create(nkButton, 'ingredient-gallery-tip-toggle' + AKey)
+    .Configure.Text('Shopping tip').Variant(nvSecondary).Done);
+  LTip := TNyxNode.Create(nkColumn, 'ingredient-gallery-tip-detail' + AKey);
+  LTip.Add(TNyxNode.Create(nkLabel, 'ingredient-gallery-tip' + AKey)
     .Configure.Text(CIngredientGuides[LIndex].Tip).Done);
-  LPanel.Add(TNyxNode.Create(nkLink, 'ingredient-gallery-tip-source')
+  LTip.Add(TNyxNode.Create(nkLink, 'ingredient-gallery-tip-source' + AKey)
     .Configure.Text(CIngredientGuides[LIndex].TipSource)
     .LinkTo(CIngredientGuides[LIndex].TipURL).Done);
+  LPanel.Add(LTip);
+  LPanel.Add(TNyxNode.Create(nkButton, 'ingredient-gallery-photo' + AKey)
+    .Configure.AccessibleName('Enlarge ingredient photo').TouchBehavior(ntbPanY).Done);
+  LNav := TNyxNode.Create(nkRow, 'ingredient-gallery-nav' + AKey);
+  LNav.Add(TNyxNode.Create(nkButton, 'ingredient-gallery-prev' + AKey)
+    .Configure.Text('‹').AccessibleName('Previous photo').Variant(nvSecondary).Done);
+  LNav.Add(TNyxNode.Create(nkLabel, 'ingredient-gallery-caption' + AKey));
+  LNav.Add(TNyxNode.Create(nkButton, 'ingredient-gallery-next' + AKey)
+    .Configure.Text('›').AccessibleName('Next photo').Variant(nvSecondary).Done);
+  LPanel.Add(LNav);
+  LPanel.Add(TNyxNode.Create(nkLabel, 'ingredient-gallery-credit' + AKey));
+  LPanel.Add(TNyxNode.Create(nkLink, 'ingredient-gallery-photo-source' + AKey)
+    .Configure.Text('Photo credit').LinkTo(CIngredientGuides[LIndex].TipURL).Done);
   AParent.Add(LPanel);
 end;
 
-procedure BindIngredientGallery(ARenderer: TNyxBrowserRenderer; const AIngredient: String);
+procedure BindIngredientGallery(ARenderer: TNyxBrowserRenderer; const AIngredient: String;
+  const AKey: String; AInitiallyEnlarged: Boolean);
 var
   LIndex: Integer;
   LFrame: Integer;
+  LPanel: TJSHTMLElement;
+  LTipToggle: TJSHTMLElement;
+  LTipDetail: TJSHTMLElement;
   LPhoto: TJSHTMLElement;
   LCredit: TJSHTMLElement;
   LSource: TJSHTMLAnchorElement;
   LCaption: TJSHTMLElement;
+  LCaptionNode: TNyxNode;
+  LCreditNode: TNyxNode;
+  LSourceNode: TNyxNode;
   LPointer: Integer;
   LStartX: Double;
   LStartY: Double;
+  LWasSwiped: Boolean;
+  LEnlarged: Boolean;
   LHandler: TJSEventHandler;
+
+  procedure UpdatePhotoLabel;
+  var
+    LAction: String;
+  begin
+    if LEnlarged then
+      LAction := 'Reduce photo size'
+    else
+      LAction := 'Enlarge photo';
+    LPhoto.setAttribute('aria-label', LAction + ' · ' +
+      CIngredientGuides[LIndex].Frames[LFrame].Description);
+    LPhoto.setAttribute('aria-expanded', LowerCase(BoolToStr(LEnlarged, True)));
+    LPhoto.setAttribute('title', LAction);
+  end;
 
   procedure ShowFrame(AFrame: Integer);
   var
     LItem: TGalleryFrame;
+    LCaptionText: String;
   begin
     LFrame := (AFrame + Length(CIngredientGuides[LIndex].Frames)) mod
       Length(CIngredientGuides[LIndex].Frames);
@@ -90,9 +130,13 @@ var
       LPhoto.style.setProperty('background-size', 'contain');
       LPhoto.style.setProperty('background-position', 'center');
     end;
-    LPhoto.setAttribute('aria-label', LItem.Description);
-    LCaption.textContent := LItem.Caption + ' · ' + IntToStr(LFrame + 1) + ' of ' +
+    UpdatePhotoLabel;
+    LCaptionText := LItem.Caption + ' · ' + IntToStr(LFrame + 1) + ' of ' +
       IntToStr(Length(CIngredientGuides[LIndex].Frames));
+    LCaptionNode.Configure.Text(LCaptionText);
+    LCreditNode.Configure.Text(LItem.Credit);
+    LSourceNode.Configure.LinkTo(LItem.CreditURL);
+    LCaption.textContent := LCaptionText;
     LCredit.textContent := LItem.Credit;
     LSource.hidden := LItem.CreditURL = '';
     LSource.href := LItem.CreditURL;
@@ -105,34 +149,73 @@ begin
     Exit;
   end;
   LPointer := -1;
-  LPhoto := ARenderer.ElementFor('ingredient-gallery-photo');
-  LCredit := ARenderer.ElementFor('ingredient-gallery-credit');
-  LCaption := ARenderer.ElementFor('ingredient-gallery-caption');
-  LSource := TJSHTMLAnchorElement(ARenderer.ElementFor('ingredient-gallery-photo-source'));
+  LWasSwiped := False;
+  LEnlarged := AInitiallyEnlarged;
+  LPanel := ARenderer.ElementFor('ingredient-gallery' + AKey);
+  LPanel.classList.add('oracle-ingredient-gallery');
+  LPanel.setAttribute('role', 'region');
+  LPanel.setAttribute('aria-label', AIngredient + ' photos');
+  LPanel.setAttribute('data-enlarged', LowerCase(BoolToStr(LEnlarged, True)));
+  LTipToggle := ARenderer.ElementFor('ingredient-gallery-tip-toggle' + AKey);
+  LTipDetail := ARenderer.ElementFor('ingredient-gallery-tip-detail' + AKey);
+  LTipDetail.hidden := True;
+  LTipDetail.id := 'ingredient-gallery-tip-detail' + AKey;
+  LTipToggle.setAttribute('aria-controls', LTipDetail.id);
+  LTipToggle.setAttribute('aria-expanded', 'false');
+  LHandler :=
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      LTipDetail.hidden := not LTipDetail.hidden;
+      LTipToggle.setAttribute('aria-expanded', LowerCase(BoolToStr(not LTipDetail.hidden, True)));
+      Result := True;
+    end;
+  LTipToggle.addEventListener('click', LHandler);
+
+  LPhoto := ARenderer.ElementFor('ingredient-gallery-photo' + AKey);
+  LPhoto.classList.add('oracle-gallery-photo');
+  LCredit := ARenderer.ElementFor('ingredient-gallery-credit' + AKey);
+  LCaption := ARenderer.ElementFor('ingredient-gallery-caption' + AKey);
+  LCaptionNode := ARenderer.Root.Find('ingredient-gallery-caption' + AKey);
+  LCreditNode := ARenderer.Root.Find('ingredient-gallery-credit' + AKey);
+  LSourceNode := ARenderer.Root.Find('ingredient-gallery-photo-source' + AKey);
+  LSource := TJSHTMLAnchorElement(ARenderer.ElementFor('ingredient-gallery-photo-source' + AKey));
   LSource.setAttribute('target', '_blank');
   LSource.setAttribute('rel', 'noopener');
-  ARenderer.ElementFor('ingredient-gallery-tip-source').setAttribute('target', '_blank');
-  ARenderer.ElementFor('ingredient-gallery-tip-source').setAttribute('rel', 'noopener');
-  LPhoto.setAttribute('role', 'img');
-  LPhoto.setAttribute('tabindex', '0');
+  ARenderer.ElementFor('ingredient-gallery-tip-source' + AKey).setAttribute('target', '_blank');
+  ARenderer.ElementFor('ingredient-gallery-tip-source' + AKey).setAttribute('rel', 'noopener');
   LCaption.setAttribute('aria-live', 'polite');
+  LHandler :=
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      if LWasSwiped then
+      begin
+        LWasSwiped := False;
+        Exit(True);
+      end;
+      LEnlarged := not LEnlarged;
+      LPanel.setAttribute('data-enlarged', LowerCase(BoolToStr(LEnlarged, True)));
+      UpdatePhotoLabel;
+      Result := True;
+    end;
+  LPhoto.addEventListener('click', LHandler);
   LHandler :=
     function(AEvent: TEventListenerEvent): Boolean
     begin
       ShowFrame(LFrame - 1);
       Result := True;
     end;
-  ARenderer.ElementFor('ingredient-gallery-prev').addEventListener('click', LHandler);
+  ARenderer.ElementFor('ingredient-gallery-prev' + AKey).addEventListener('click', LHandler);
   LHandler :=
     function(AEvent: TEventListenerEvent): Boolean
     begin
       ShowFrame(LFrame + 1);
       Result := True;
     end;
-  ARenderer.ElementFor('ingredient-gallery-next').addEventListener('click', LHandler);
+  ARenderer.ElementFor('ingredient-gallery-next' + AKey).addEventListener('click', LHandler);
   LHandler :=
     function(AEvent: TEventListenerEvent): Boolean
     begin
+      LWasSwiped := False;
       case TJSKeyboardEvent(AEvent).key of
         'ArrowLeft': ShowFrame(LFrame - 1);
         'ArrowRight': ShowFrame(LFrame + 1);
@@ -142,7 +225,7 @@ begin
       AEvent.preventDefault;
       Result := False;
     end;
-  LPhoto.addEventListener('keydown', LHandler);
+  LPanel.addEventListener('keydown', LHandler);
   LHandler :=
     function(AEvent: TEventListenerEvent): Boolean
     var
@@ -150,7 +233,12 @@ begin
     begin
       Result := True;
       LEvent := TJSPointerEvent(AEvent);
-      if (LEvent.pointerType <> 'touch') or (LPointer >= 0) then
+      if LPointer >= 0 then
+      begin
+        Exit;
+      end;
+      LWasSwiped := False;
+      if LEvent.pointerType <> 'touch' then
       begin
         Exit;
       end;
@@ -173,9 +261,10 @@ begin
       if LPointer = LEvent.pointerId then
       begin
         LDelta := LEvent.clientX - LStartX;
-        if (Abs(LDelta) > 40) and (Abs(LDelta) > 1.2 * Abs(LEvent.clientY - LStartY)) then
+        if (Abs(LDelta) > 32) and (Abs(LDelta) > 1.2 * Abs(LEvent.clientY - LStartY)) then
         begin
           LPointer := -1;
+          LWasSwiped := True;
           ShowFrame(LFrame - Sign(LDelta));
         end;
       end;

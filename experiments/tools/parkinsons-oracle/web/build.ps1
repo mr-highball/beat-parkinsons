@@ -83,9 +83,9 @@ $GalleryExe = Join-Path $GlyphBuild 'bin/ingredients.gallery.check.exe'
 if (!(Test-Path -LiteralPath $GalleryExe)) {
     $GalleryExe = Join-Path $GlyphBuild 'bin/ingredients.gallery.check'
 }
-& $GalleryExe (Join-Path $Repo 'experiments/1000_see_what_sticks_food_round_2/ingredients.tsv') $IngredientAssets
-if ($LASTEXITCODE) { exit $LASTEXITCODE }
 $IngredientOutput = Join-Path $Output 'ingredients'
+& $GalleryExe (Join-Path $Repo 'experiments/1000_see_what_sticks_food_round_2/ingredients.tsv') $IngredientAssets $IngredientOutput
+if ($LASTEXITCODE) { exit $LASTEXITCODE }
 New-Item -ItemType Directory -Path $IngredientOutput -Force | Out-Null
 Get-ChildItem -LiteralPath $IngredientAssets -File -Filter '*.jpg' | ForEach-Object {
     Copy-Item -LiteralPath $_.FullName -Destination $IngredientOutput -Force

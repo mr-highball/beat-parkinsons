@@ -222,7 +222,9 @@ The live server and portable browser use the same Pascal grouping code. The comp
 
 ### Ingredient photos and shopping tips
 
-Use **Photos & tips** from an ingredient card or an ingredient selected in the graph. Every ingredient has a carousel with two culinary preparations and a sourced shopping or storage tip. The same gallery is available below the claim's evidence. The collection covers all 210 canonical ingredients, including those with no clear direction in the comparison. Real photos include public-domain credits, while ImageGen illustrations are labeled. [Photo provenance, coverage and prompts](web/assets/ingredients/README.md).
+Search result cards include a small ingredient photo. Tap it to open the carousel in the same card. The carousel is also available in claim details, ingredient comparisons and ingredient nodes in the graph. Swipe or use the arrow buttons to browse the two culinary preparations. Tap a photo to enlarge it in place. The Shopping tip banner expands to show the full shopping or storage tip and its source.
+
+All 210 canonical ingredients have a gallery, including ingredients with no clear direction in the comparison. The web builder derives a 128 × 128 JPEG for each ingredient from its first gallery frame. The carousel uses the full-size photos. Real photos include public-domain credits and generated illustrations are labeled. [Photo provenance, coverage and prompts](web/assets/ingredients/README.md).
 
 ## Browser interface
 
@@ -234,7 +236,7 @@ Public forum summaries appear in Culture & experience and Search sources with a 
 
 Source-kind paging examines catalog batches until the page is filled or the result set ends. A nonmatching batch does not close the search, and cursor positions retain unconsumed rows. The shared Pascal presentation unit has native fixtures for source classification, query terms and pagination boundaries. Browser assets use Nyx and the web target. Fourteen distinct [imagegen glyph masters and their prompts](web/assets/glyphs/README.md) supply the navigation, research tabs, evidence indicators and helper controls. The native build embeds lossless alpha masks into the stylesheet, so portable builds need no image endpoint.
 
-The Nyx web target uses the same claim and catalog service as MCP. The local workbench offers common symptom pills, a browse list and suggestions for symptoms, ingredients and preparations. Under Symptom effect, choose May ease, May worsen, or Any trend before searching. The filters match the arrows on the cards. May ease and May worsen can search across all symptoms with the ingredient and symptom fields blank. Each result identifies its symptom and opens its study assessments and citations. The local server binds to the loopback address by default.
+The Nyx web target uses the same claim and catalog service as MCP. The local workbench offers common symptom pills, a browse list and suggestions for symptoms, ingredients and preparations. Under Symptom effect, choose May ease, May worsen, or Any trend before searching. The filters match the arrows on the cards. May ease and May worsen can search across all symptoms with the ingredient and symptom fields blank. Each result identifies its symptom and opens its study assessments and citations. Claim results appear as soon as they are ready. Related sources load below them while the visible cards remain in place. The local server binds to the loopback address by default.
 
 Choose multiple symptom pills to find research for any selected symptom: Tremors **or** Pain, for example. Adding a symptom keeps the previous pills. Clicking a selected quick choice or its removal pill removes only that symptom. Typing another symptom keeps the current selection. Ingredient, preparation, evidence scope and effect filters apply to each selected symptom before the results are combined.
 
