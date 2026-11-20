@@ -6,17 +6,19 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 19,092 |
+| Local body or other primary-source context | 19,099 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 218 |
 | Title or index | 93 |
 | Pending or access-only disposition | 352 |
-| No imported exact review | 41,368 |
+| No imported exact review | 41,361 |
 | **Total** | **61,252** |
 
 Three verified members from the 2025 UEG proceedings inform nine original pairs. All 39 pairs for the supplement stay queued while its remaining pages are unverified. [Member review and clinical follow-through](../ueg-2025-verified-members-nov20-121/README.md)
 
-The current date-fruit review resolves 128 pairs. The replay leaves 41,813 pairs across 26,246 source keys, including nine retained date-fruit cases. [Exact context review](../date-fruit-source-lineage-nov20-139/README.md)
+The current date-fruit review resolves seven pairs. The replay leaves 41,806 pairs across 26,239 source keys, including two retained date-fruit cases pending one species table. [Exact context review](../date-bowel-comparators-nov20-140/README.md)
+
+The preceding date-fruit review resolved 128 pairs and left nine retained date-fruit cases. [Date processing exposures and source reports](../date-fruit-source-lineage-nov20-139/README.md)
 
 The preceding date-fruit review resolved 117 pairs and left 137 retained date-fruit cases. [Context and green-tea source review](../date-context-and-green-tea-cohort-nov20-138/README.md)
 
