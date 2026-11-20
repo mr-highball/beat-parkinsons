@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 20 review verifies ten 1999–2000 claim–source pairs. It documents four shifted PubMed-to-PMC titles, follows the Milan hallucination posters and preserves eleven body gaps, including missing printed page 1010 of the Paris proceedings. The original queue holds 45,369 pairs, with 68 for dried-fig claim 0175, which remains Unknown. [Source and coverage checkpoint](followup/fig-priority-six-2000-1999-nov20-110/README.md)
+
 The November 20 2001-provider checkpoint verifies four complete originals, including the 303-page EANM DOI object, and retains 27 incomplete pairs. Seven assessments preserve diagnostic, treatment and access distinctions. The original queue has 45,379 pairs, including 78 for dried-fig claim 0175. The claim remains Unknown. [Evidence and open coverage](followup/fig-priority-six-2001-nov20-109/README.md)
 
 Five further cultural records include original historical witnesses in their actual pre-1865 periods, bringing the collection to sixteen. The native date validator now admits existing historical buckets without padding missing centuries; sixteen chronology/preservation/failure checks pass. Lumbee metadata and selected-table coverage are corrected without claiming full-text or supplement access. Clinical grades and frozen claims are unchanged. [Source scope and remaining intake](followup/tremor-cultural-nov18-03/README.md)
