@@ -1,5 +1,7 @@
 # 1995-1999
 
+An [early clinical perfusion comparison](Source-Text/1997-PMID9143472-Lewy-Body-Perfusion-and-Transporter-Imaging.txt) and [autopsy-confirmed imaging case](Source-Text/1999-PMID10466669-FP-CIT-Lewy-Body-Autopsy-Case.txt) give antecedents to the [later visual history and pathology comparison](../2005-2009/Observations/2007-Visual-History-Symptom-Measurement-and-Proceedings.md).
+
 The [1995 open HP-200 study](Source-Text/1995-PMID9395621-HP200-Mucuna-Open-Study.txt), [1996 ceremonial cohort](Source-Text/1996-PMID8596116-Hoasca-Ceremonial-Cohort.txt) and [dopamine agonist sleep-attack series](Source-Text/1999-PMID10371546-Dopamine-Agonist-Sleep-Attacks.txt) document distinct populations, preparations and outcomes.
 
 The [1999 ceremonial account](Cultural-and-Experiential/Ceremonial-Accounts/1999-UDV-Hoasca-Research-Setting.txt) and [primary pharmacokinetic record](Source-Text/1999-PMID10404423-Hoasca-Ceremonial-Pharmacokinetics.txt) identify the healthy-volunteer setting and measured exposure.

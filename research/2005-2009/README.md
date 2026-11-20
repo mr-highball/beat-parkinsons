@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [2007 observations](Observations/2007-Visual-History-Symptom-Measurement-and-Proceedings.md) compare an [autopsy and scan cohort](Source-Text/PMC2117602.txt), a [gaze study](Source-Text/PMC1911188.txt), the [SGIM abstracts](Source-Text/PMC2219573.txt), the [West European psychiatry proceedings](Source-Text/PMC7103174.txt), and an [open Oxford issue](Source-Text/PMC2632307.txt).
+
 The [2008 clinical observations](Observations/2008-Visual-Event-Definitions-and-Spheramine-Lineage.md) compare the [Spheramine pilot events](Source-Text/2005-PMID16344341-Spheramine-Pilot-Visual-Events.txt), [2008 review](Source-Text/PMC5084167.txt), [2009 STEPS autopsy](Source-Text/PMC2764397.txt) and [visual symptom timing in dementia](Source-Text/PMC2745052.txt).
 
 The [2009 visual symptom observations](Observations/2009-Visual-Symptom-Definitions-and-Proceedings-Identity.md) compare [visual history in GBA carriers](Source-Text/PMC2702833.txt), the [infestation review](Source-Text/PMC2772366.txt), and the identity of the [schizophrenia conference proceedings](Source-Text/PMC2651108.txt).
