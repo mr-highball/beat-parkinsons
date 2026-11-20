@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [2002 multiple system atrophy report](Source-Text/2002-PMID12040988-Infestation-in-MSA.txt) describes infestation delusion in a distinct diagnostic population. [Comparison with Parkinson case reports](../2005-2009/Observations/2009-Visual-Symptom-Definitions-and-Proceedings-Identity.md).
+
 The [2002 temporal pathology study](Source-Text/2002-PMID11844739-Formed-Visual-Hallucinations-and-Temporal-Pathology.txt) compares formed visual hallucination phenotypes with regional Lewy body findings.
 
 The [2001 single-vine extract trial](Source-Text/2001-Serrano-Duenas-Banisteriopsis-Parkinson-Trial.txt) reports distinct motor total, tremor and adverse-event observations. The [2003 enzyme and tissue study](Source-Text/2003-Banisteriopsis-MAO-and-Striatal-Slices.txt) examines a separate experimental question.

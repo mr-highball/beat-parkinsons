@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [2009 visual symptom observations](Observations/2009-Visual-Symptom-Definitions-and-Proceedings-Identity.md) compare [visual history in GBA carriers](Source-Text/PMC2702833.txt), the [infestation review](Source-Text/PMC2772366.txt), and the identity of the [schizophrenia conference proceedings](Source-Text/PMC2651108.txt).
+
 The [2010 source-lineage notes](../2010-2014/Observations/2010-Visual-Sleep-and-Drug-Outcome-Lineage.md) link primary records from this period on nocturnal hallucinations, visual perfusion, autopsy sample overlap and juvenile parkinsonism.
 
 Earlier visual symptom studies report [recalled episode characteristics](Source-Text/2006-PMID16473980-Visual-Hallucination-Relative-Frequency-Interview.txt), [task-related MRI activation](Source-Text/2009-PMID19755518-Image-Recognition-and-Visual-Hallucination-Groups.txt) and [longitudinal atrophy](Source-Text/2009-PMID19965847-Clinical-Visual-Hallucination-Groups-and-Atrophy.txt) in distinct clinical contrasts.

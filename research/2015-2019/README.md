@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [five selected Parkinson cases with delusional infestation](Source-Text/PMC6353320.txt) distinguish visual and tactile modality from the duration of the infestation syndrome.
+
 The [confirmatory DLB donepezil trial](Source-Text/PMC4338565.txt) found an inconclusive placebo-adjusted hallucination and fluctuation composite. The separately recruited [postmarketing trial registration](Source-Text/Trials/NCT02345213.txt) prioritized global clinical change.
 
 The [2015 FDA clinical review and label](Source-Text/2015-FDA-NDA203312-Levodopa-Phase-and-Hallucination-Events.txt) distinguish medication conversion adverse events and randomized maintenance in the ADVANCE-PD and ASCEND-PD programs.

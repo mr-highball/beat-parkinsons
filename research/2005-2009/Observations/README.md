@@ -1,5 +1,7 @@
 # Observations for 2005-2009
 
+The [2009 visual symptom observations](2009-Visual-Symptom-Definitions-and-Proceedings-Identity.md) distinguish symptom history, episode frequency, infestation beliefs and adverse-event coding.
+
 A reconstituted chicken soup crossover adds a controlled ordinary fatigue outcome beyond earlier laboratory task work. Its fatigue contrast was inconclusive and its anxiety subscale showed a separate favorable comparison. Earlier mood studies used different routes and outcomes. [Chicken soup](../Food-Experiment-Chicken-Fatigue.md) · [Prior carrier trials](../../2000-2004/Food-Experiment-Carrier-Oils-Mood.md)
 
 The Dutch hospital nutrition registration records a whole support program in malnourished older adults. The later original measured falls and named fortified oatmeal among several components. This chronology distinguishes the registered program from the individual foods documented in the later report. [2006 registration](../Food-Experiment-Oats-Falls.md) · [2012 outcomes](../../2010-2014/Food-Experiment-Oats-Falls.md)

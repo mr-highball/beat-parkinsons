@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [ropinirole case](Source-Text/PMC7899248.txt) reports visual and tactile experiences. The [piribedil case](Source-Text/PMC10917070.txt) records tactile symptoms and a fixed infestation belief after drug escalation.
+
 The [postmarketing DLB donepezil trial](Source-Text/PMC11578010.txt) found inconclusive changes in global status and the hallucination and fluctuation composite, with a favorable secondary cognitive-domain result. [Trial registration](../2015-2019/Source-Text/Trials/NCT02345213.txt).
 
 The [2022 visual symptom source index](Observations/Visual-Symptom-Originals-and-Citation-Follow-Through-Nov19-90.md) links original articles and conference members. [Magnesium references and clinical endpoint observations](Observations/Visual-End-Points-and-Magnesium-Citation-Follow-Through.md) verify case modalities, repeated samples and separate drug and device trials.
