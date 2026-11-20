@@ -2,6 +2,8 @@
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+The latest exact date-fruit review ruled out 201 contextual mismatches. The older author abstract reports sucrose consumption in stressed rats given date-fruit extract and no comparison of clinical apathy or whole dried fruit. A human trial review supplies an open primary-citation trail. Both date-fruit verdicts retain their published grades. [Archive scope and literature leads](followup/date-context-disambiguation-nov20-135/README.md)
+
 The original Deglet Nour proceedings report fewer acute writhes in mice given date fruit fractions. Its reference product and percentages conflict across methods and results. Two separate cultural records concern abdominal pain attributed to dates and sore pain reported for date syrup. Whole dried dates and clinical Parkinson pain remain an open comparison. [Primary comparison and cultural context](followup/date-pain-proceedings-and-cultural-sources-nov20-134/README.md)
 
 The date-fruit archive group resolved 1,400 original pairs, including three genuine date-palm citations. The related lung, liver, fermentation and wild date-palm studies measure distinct experimental outcomes. The Deglet Noor comparator protocol confirms a human dietary design without posted comparative outcomes. Both dried-date claims retain their published grades. [Source scopes and clinical endpoints](followup/date-context-and-primary-models-nov20-133/README.md)

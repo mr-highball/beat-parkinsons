@@ -6,17 +6,19 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 18,435 |
+| Local body or other primary-source context | 18,636 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 218 |
 | Title or index | 93 |
 | Pending or access-only disposition | 352 |
-| No imported exact review | 42,025 |
+| No imported exact review | 41,824 |
 | **Total** | **61,252** |
 
 Three verified members from the 2025 UEG proceedings inform nine original pairs. All 39 pairs for the supplement stay queued while its remaining pages are unverified. [Member review and clinical follow-through](../ueg-2025-verified-members-nov20-121/README.md)
 
-The current date-fruit review resolves 1,400 additional body-level pairs and retains 666 for specific context or source boundary checks. The replay leaves 42,470 pairs across 26,846 source keys. [Date-fruit receipts and coverage](../date-context-and-primary-models-nov20-133/README.md)
+The current date-fruit review resolves 201 pairs from the previously held scope. The replay leaves 42,269 pairs across 26,666 source keys, including 465 retained date-fruit cases. [Context and boundary review](../date-context-disambiguation-nov20-135/README.md)
+
+The preceding date-fruit review resolved 1,400 body-level pairs and retained 666 for specific context or source-boundary checks. [Date-fruit receipts and coverage](../date-context-and-primary-models-nov20-133/README.md)
 
 The preceding archived priority-five review resolved 382 pairs across 29 ingredients other than date. [Original scopes and trial lineage](../archived-food-context-and-grape-nov20-132/README.md)
 

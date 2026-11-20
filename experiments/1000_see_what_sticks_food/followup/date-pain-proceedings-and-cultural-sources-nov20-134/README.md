@@ -8,4 +8,4 @@ The existing rubric record for dried dates and pain remains open. The three addi
 
 All 64 earlier body-boundary holds have a confirmed article-content divider. Fifty-four also have a recognized section heading after the divider. These cues help locate the text for review. Pair dispositions still require confirmation of each source's complete scope and the relevant term context. All 64 and the 602 separate context holds remain in the exact queue.
 
-Oracle revision 239 returns the proceedings through the source-text catalog and both cultural records through the traditional-practice catalog. Direct identifier lookup currently does not return the 2017 cultural record, so use the cultural catalog or its indexed path for retrieval.
+Oracle revision 239 returned the proceedings through the source-text catalog and both cultural records through the traditional-practice catalog. Direct identifier lookup for the 2017 survey first resolved in catalog revision 240 after the source header was corrected. [Identifier verification](../date-context-disambiguation-nov20-135/README.md)
