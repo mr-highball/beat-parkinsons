@@ -2,6 +2,8 @@
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+Thirty-seven raw fig and drooling originals from 2024 reached primary-body review. The PERSPECTIVE trial reports an inconclusive drooling difference after speech therapy, and the exercise poster supplies a within-group p-value without a signed between-group drooling estimate. The literature adds outcome-measure context and claim 0188 remains Unknown. [2024 primary sources and follow-up](followup/fig-drooling-2024-originals-nov20-148/README.md)
+
 The 40 remaining priority-six originals from 2025 reached body review for raw fig and drooling. The Nascimento reports likely overlap and offer separate flow and drooling comparisons. Participant interviews identify the contexts of food preparation and oral cueing. No study assigned raw fig with a measured drooling outcome, and claim 0188 remains Unknown. [Originals and source context](followup/fig-drooling-2025-originals-nov20-147/README.md)
 
 All 17 previously unreviewed 2026 priority-six originals for raw fig and drooling reached body review. Congress presentations distinguish spontaneous swallowing, unstimulated saliva flow and patient reports. The newly catalogued Persian review reports use for subjective dry mouth, and historical allergy cases show distinct preparation and symptom scopes. Claim 0188 remains Unknown. [Originals and follow-up records](followup/fig-drooling-2026-originals-nov20-146/README.md)

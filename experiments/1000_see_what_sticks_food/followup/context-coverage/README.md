@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 19,245 |
+| Local body or other primary-source context | 19,282 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 224 |
 | Title or index | 85 |
 | Pending or access-only disposition | 360 |
-| No imported exact review | 41,209 |
+| No imported exact review | 41,172 |
 | **Total** | **61,252** |
+
+Thirty-seven 2024 priority-six raw fig and drooling originals reached primary-body review. The replay leaves 41,617 pairs across 26,125 original source keys. Four conference collections are checked by member identifier and the original trial distinguishes drooling from swallowing. [2024 originals and source context](../fig-drooling-2024-originals-nov20-148/README.md)
 
 The remaining 40 priority-six raw fig and drooling originals in the 2025 publication group reached body review. The exact replay leaves 41,654 source pairs across 26,143 keys. The SGIM and Padua member audit preserves an open title-only Padua entry. [Full study and proceedings review](../fig-drooling-2025-originals-nov20-147/README.md)
 
