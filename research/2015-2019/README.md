@@ -791,3 +791,6 @@ Two original first releases date to 2019, with 2020 journal issues. [Insular mor
 - [Quercetin antagonism of 6-OHDA-induced Parkinsonian muscle tremor in rats, primary abstract](Source-Text/2016-PMID26217978-Mu-Quercetin-6OHDA-Rat-Tremor.txt).
 - [Demethoxycurcumin attenuation of rotenone-induced dopamine depletion and motor deficits in rats](Source-Text/2018-PMID29576695-Ramkumar-Demethoxycurcumin-Rotenone-Rat-PD.txt).
 - [Morus nigra (black mulberry, mislabeled blackberry) fruit juice in MPTP levodopa-induced dyskinesia mice, botanical identity record](Source-Text/2018-PMID30013404-Fahimi-Morus-Nigra-Fruit-Juice-LID-Mice.txt).
+- [Germinated brown rice pretreatment in rotenone Parkinson model rats, open-field and pole-test abstract](Source-Text/2016-PMID27430236-Chompoopong-Germinated-Brown-Rice-Rotenone-Rats.txt).
+- [Nigella sativa seed oil reduction of haloperidol extrapyramidal symptoms and oral dyskinesia in rats](Source-Text/2016-PMID27752803-Malik-Nigella-Sativa-Oil-Haloperidol-EPS-Rats.txt).
+- [Oral crocin preservation of pole-test, wire-hang, and nigral TH neurons in MPTP mice](Source-Text/2019-PMID30159851-Haeri-Crocin-MPTP-Mice-Pole-Wire.txt).

@@ -559,3 +559,4 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [Attributed southern Algerian date-fruit use for abdominal pain](Cultural-and-Experiential/Traditional-Practices/2014-Southern-Algeria-Date-Fruit-Abdominal-Pain-Attribution.txt).
 - [Date fruit and pit extracts in stressed rats, primary abstract](Source-Text/2012-Mohamad-Date-Fruit-and-Pit-Extracts-Stress-Abstract.txt).
 - [Murraya koenigii leaf extract and alkaloid fraction in haloperidol-induced rat orofacial dyskinesia, primary abstract](Source-Text/2012-PMID22136413-Patil-Murraya-Koenigii-Haloperidol-Dyskinesia.txt).
+- [Post-lesion oral zingerone and eugenol in 6-OHDA mice with L-DOPA, striatal dopamine depletion safety record](Source-Text/2011-PMID21769642-Kabuto-Zingerone-Eugenol-6OHDA-PostTreatment.txt).

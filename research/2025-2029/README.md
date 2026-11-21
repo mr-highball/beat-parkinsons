@@ -804,3 +804,6 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Public discussion of the plant-therapy review and celery exposure](Cultural-and-Experiential/Conversations/2026-MJFF-Plant-Therapy-Review-and-Celery-Scope.txt).
 - [Quercetin nanoemulsion in harmaline-induced essential tremor mice, behavioral and neuroinflammatory outcomes](Source-Text/2025-PMID41354816-Pirmoradi-Quercetin-Nanoemulsion-Tremor.txt).
 - [Curcumin nanoparticles in MPTP Parkinson model mice, open-field movement and gut microbiota](Source-Text/2026-PMID41878684-Mu-Curcumin-Nanoparticles-MPTP-PD-Mice.txt).
+- [Foods, dairy, milk, legumes/nuts, and dietary patterns dose-response meta-analysis of Parkinson incidence across 29 cohorts](Source-Text/2026-PMID41252180-Akhlaghi-Foods-Diet-PD-Risk-MetaAnalysis.txt).
+- [Caffeinated coffee and tea intake, dementia risk, and cognitive function in NHS and HPFS cohorts](Source-Text/2026-PMID41661604-Zhang-Coffee-Tea-Cognition-JAMA.txt).
+- [Flavonoid-rich dietary patterns and incident Parkinson disease decomposition in UK Biobank](Source-Text/2026-PMID42638917-Yang-Flavonoid-Diet-UKBiobank-PD.txt).

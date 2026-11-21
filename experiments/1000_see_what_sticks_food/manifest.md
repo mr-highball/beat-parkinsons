@@ -13,9 +13,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 933 |
+| Unknown | 1000 | 932 |
 | Maybe True | 0 | 35 |
-| Maybe False | 0 | 32 |
+| Maybe False | 0 | 33 |
 | True | 0 | 0 |
 | False | 0 | 0 |
 
@@ -88,6 +88,7 @@ One hundred thirty-two Round 1 claims carry a checked version 1 evidence scoreca
 - [0404](statements/0404.txt) **Maybe False** (50.005%) Consuming cold-pressed sesame oil worsens fatigue severity in people with Parkinson's disease.
 - [0428](statements/0428.txt) **Maybe False** (50.005%) Consuming toasted pumpkin seed oil worsens shortened stride severity in people with Parkinson's disease.
 - [0485](statements/0485.txt) **Maybe False** (55%) Consuming dried saffron worsens fatigue severity in people with Parkinson's disease.
+- [0503](statements/0503.txt) **Maybe False** (50.005%) Consuming ground nigella seed worsens bradykinesia severity in people with Parkinson's disease.
 - [0507](statements/0507.txt) **Maybe True** (50.005%) Consuming ground turmeric reduces bradykinesia severity in people with Parkinson's disease.
 - [0560](statements/0560.txt) **Maybe True** (50.005%) Consuming ground cumin reduces constipation severity in people with Parkinson's disease.
 - [0581](statements/0581.txt) **Maybe False** (50.005%) Consuming grated ginger worsens constipation severity in people with Parkinson's disease.

@@ -901,3 +901,7 @@ The conference and observational review links the separate visual outcomes, the 
 - [Nano-curcumin supplementation in coronary slow flow phenomenon, SF-36 bodily pain and BDI-II depression randomized double-blind trial](Source-Text/2024-PMID39085864-Soltani-NanoCurcumin-CSFP-Pain-Depression.txt).
 - [Hidrox olive-pulp hydroxytyrosol extract in rotenone-induced Parkinson model mice, catalepsy and locomotor outcomes](Source-Text/2020-PMID32899274-Siracusa-Hidrox-Olive-Polyphenol-Rotenone-PD-Mice.txt).
 - [Curcumin dosage and duration for movement symptoms in 6-OHDA Parkinson model rats](Source-Text/2023-PMID37484231-Liu-Curcumin-Dosage-6OHDA-Rat-PD-Movement.txt).
+- [Bilberry and red grape juice randomized trial in older men, null Grooved Pegboard dexterity and inflammation biomarkers](Source-Text/2021-PMID34802467-Bohn-Bilberry-Red-Grape-Juice-Pegboard-RCT.txt).
+- [Rosemary extract and adipose stem cells in 6-OHDA lesion memory model, species discrepancy noted](Source-Text/2024-PMID38903548-Kousha-Rosemary-Extract-6OHDA-Rats.txt).
+- [Coffee types (unsweetened caffeinated vs sweetened and decaf) and incident Parkinson disease in UK Biobank](Source-Text/2024-PMID39168304-Zhang-Coffee-Types-UKBiobank-PD.txt).
+- [Plain milk vs beverage-added milk and incident Parkinson disease in French E3N women cohort](Source-Text/2024-PMID39294525-Hajji-Louati-Milk-Dairy-E3N-PD.txt).
