@@ -27,3 +27,7 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Public caregiver discussion and a lemon-balm extract suggestion](Conversations/2025-Reddit-Lemon-Balm-Extract-Sleep-Suggestion.txt).
 - [Observations on lemon-balm preparations and public discussions](../Observations/Lemon-Balm-Preparation-and-Conversations.md).
 - [Reported cultural, food and medicinal uses of Prunus cerasoides in Nepal](Traditional-Practices/2025-Khadka-Prunus-Cerasoides-Nepal-Use-Survey.txt).
+- [Culturally adapted Thai Parkinson dietary habits, dysphagia and dyskinesia survey (Phokaewvarangkul et al., 2026)](Personal-Reports/2026-PMID42059527-Phokaewvarangkul-Thai-PD-Dietary-Habits.txt).
+- [Qualitative focus groups on functional food literacy, cooking fatigue and caregiver support in Parkinson disease and multiple sclerosis (Sauzet et al., 2026)](Personal-Reports/2026-PMID42047406-Sauzet-PD-MS-Food-Literacy-Focus-Groups.txt).
+- [Focus-group accounts of dysphagia, religious rituals and cultural food traditions in the United States (Helder et al., 2026)](Ceremonial-Accounts/2026-PMID41071416-Helder-Dysphagia-Religious-Cultural-Food-Rituals.txt).
+- [Parkinson's UK Forum query on combining turmeric, ginger and black pepper supplements with Madopar for joint pain](Conversations/2026-Parkinsons-UK-Madopar-Turmeric-Ginger-Black-Pepper-Query.txt).

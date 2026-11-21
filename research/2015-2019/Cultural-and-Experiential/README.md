@@ -28,3 +28,8 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [A Parkinson UK conversation about banana or a biscuit for nausea](Conversations/2019-Parkinsons-UK-Banana-Nausea-Conversation.txt)
 - [Lower Mekong outpatient reports of herbal and other traditional use](Local-Knowledge/2016-PMID26952043-Lower-Mekong-Reported-Herbal-Use.txt)
+- [Ayurvedic medicinal plants and adjuvant regimens in Parkinson disease (Pathak-Gandhi & Vaidya, 2017)](Traditional-Practices/2017-PMID27544001-Pathak-Gandhi-Ayurveda-PD-Botanicals.txt).
+- [Pikuni-Blackfeet traditional medicinal plants for Parkinson-related symptoms (de Rus Jacquet et al., 2017)](Traditional-Practices/2017-PMID28088492-de-Rus-Jacquet-Pikuni-Blackfeet-PD-Plants.txt).
+- [Parkinson's UK Forum discussion on turmeric, black pepper, chia seeds and exercise routine](Conversations/2017-Parkinsons-UK-Turmeric-Black-Pepper-and-Chia-Routine.txt).
+- [Parkinson's UK Forum discussion on dairy reduction, protein timing and levodopa OFF periods](Conversations/2018-Parkinsons-UK-Dairy-Protein-and-Off-Periods.txt).
+- [Parkinson's UK Forum discussion on constipation coping with prunes, figs, dates, walnuts and milled golden flaxseed](Conversations/2019-Parkinsons-UK-Constipation-Prunes-Figs-Dates-Flaxseed.txt).

@@ -54,3 +54,7 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [Persian public posts about figs, dates and shaking](Conversations/2023-Persian-Public-Fig-and-Tremor-Suggestions.txt).
 - [Retracted Neelum Valley wild-plant survey and botanical identity record](Local-Knowledge/2021-PMID34324561-Neelum-Wild-Plant-Survey-and-Sleep-Reports.txt).
+- [Traditional Chinese medicine insomnia rationale and essential oil study of Perilla frutescens (Zhong et al., 2021)](Traditional-Practices/2021-PMID33246117-Zhong-Perilla-TCM-Insomnia-Context.txt).
+- [Fez-Meknes Moroccan herbalist survey of traditional remedies for insomnia, asthenia and oral conditions (Beniaich et al., 2022)](Traditional-Practices/2022-PMID34031820-Beniaich-Fez-Meknes-Insomnia-Asthenia-Survey.txt).
+- [Chinese and Western traditional insomnia rationale and rat hydrosol study of Rosmarinus officinalis (Li et al., 2024)](Traditional-Practices/2024-PMID37532071-Li-Rosemary-Traditional-Insomnia-Context.txt).
+- [Parkinson's UK Forum discussion on green tea, daytime relaxation and no noticed Parkinson symptom effect](Conversations/2020-Parkinsons-UK-Green-Tea-Relaxation-and-No-Effect.txt).

@@ -25,3 +25,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [External saffron-water use in traditional Iranian insomnia literature](Traditional-Practices/2011-Mousavi-Bathaie-Saffron-Insomnia.txt).
 
 - [Ojé plant-teacher and cleansing practices in East-Central Peru](Traditional-Practices/2011-PMID21295130-Oje-Plant-Teachers.txt).
+- [Parkinson's UK Forum discussion on coconut oil culinary use and perceived mobility](Conversations/2013-Parkinsons-UK-Coconut-Oil-Culinary-and-Mobility.txt).
+- [Parkinson's UK Forum discussion on cinnamon, Ceylon versus Cassia coumarin safety and Parkinson diet lists](Conversations/2014-Parkinsons-UK-Cinnamon-Coumarin-and-PD-Diet-Lists.txt).
