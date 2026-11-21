@@ -13,9 +13,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 939 |
+| Unknown | 1000 | 940 |
 | Maybe True | 0 | 27 |
-| Maybe False | 0 | 34 |
+| Maybe False | 0 | 33 |
 | True | 0 | 0 |
 | False | 0 | 0 |
 
@@ -60,7 +60,7 @@ Twenty-nine Round 1 claims carry a checked version 1 evidence scorecard ([scorec
 - [0168](statements/0168.txt) **Maybe True** (51%) Consuming ground nutmeg worsens constipation severity in people with Parkinson's disease.
 - [0171](statements/0171.txt) **Maybe False** (51%) Consuming toasted fennel seed worsens fatigue severity in people with Parkinson's disease.
 - [0180](statements/0180.txt) **Maybe False** (50.005%) Consuming ground nigella seed worsens insomnia severity in people with Parkinson's disease.
-- [0181](statements/0181.txt) **Maybe False** (51%) Consuming dried cherry worsens fatigue severity in people with Parkinson's disease.
+- [0181](statements/0181.txt) **Maybe False** (50.005%) Consuming dried cherry worsens fatigue severity in people with Parkinson's disease.
 - [0199](statements/0199.txt) **Maybe False** (51%) Consuming ground anise seed worsens pain severity in people with Parkinson's disease.
 - [0218](statements/0218.txt) **Maybe True** (50.005%) Consuming ground saffron reduces insomnia severity in people with Parkinson's disease.
 - [0225](statements/0225.txt) **Maybe True** (51%) Consuming grated turmeric reduces swallowing difficulty severity in people with Parkinson's disease.
@@ -69,8 +69,7 @@ Twenty-nine Round 1 claims carry a checked version 1 evidence scorecard ([scorec
 - [0267](statements/0267.txt) **Maybe False** (51%) Consuming refined sunflower oil worsens swallowing difficulty severity in people with Parkinson's disease.
 - [0277](statements/0277.txt) **Maybe False** (51%) Consuming ground anise seed worsens fatigue severity in people with Parkinson's disease.
 - [0281](statements/0281.txt) **Maybe False** (50.005%) Consuming raw celery stalk worsens rest tremor severity in people with Parkinson's disease.
-- [0309](statements/0309.txt) **Maybe False** (51%) Consuming raw banana worsens anxiety severity in people with Parkinson's disease.
-- [0329](statements/0329.txt) **Maybe False** (51%) Consuming poached egg worsens fall frequency in people with Parkinson's disease.
+- [0309](statements/0309.txt) **Maybe False** (50.005%) Consuming raw banana worsens anxiety severity in people with Parkinson's disease.
 - [0340](statements/0340.txt) **Maybe False** (51%) Consuming toasted cumin worsens attention impairment in people with Parkinson's disease.
 - [0343](statements/0343.txt) **Maybe True** (50.005%) Consuming cold-pressed olive oil reduces anxiety severity in people with Parkinson's disease.
 - [0362](statements/0362.txt) **Maybe True** (51%) Consuming dried thyme reduces anxiety severity in people with Parkinson's disease.
@@ -85,19 +84,19 @@ Twenty-nine Round 1 claims carry a checked version 1 evidence scorecard ([scorec
 - [0639](statements/0639.txt) **Maybe True** (51%) Consuming cold-pressed flaxseed oil reduces pain severity in people with Parkinson's disease.
 - [0642](statements/0642.txt) **Maybe False** (51%) Consuming grated turmeric worsens walking slowness in people with Parkinson's disease.
 - [0659](statements/0659.txt) **Maybe True** (51%) Consuming fresh summer savory reduces pain severity in people with Parkinson's disease.
-- [0663](statements/0663.txt) **Maybe True** (51%) Consuming poached salmon reduces anxiety severity in people with Parkinson's disease.
+- [0663](statements/0663.txt) **Maybe True** (50.005%) Consuming poached salmon reduces anxiety severity in people with Parkinson's disease.
 - [0725](statements/0725.txt) **Maybe True** (50.005%) Consuming grated ginger reduces pain severity in people with Parkinson's disease.
 - [0746](statements/0746.txt) **Maybe True** (50.005%) Consuming raw blueberry reduces constipation severity in people with Parkinson's disease.
 - [0812](statements/0812.txt) **Maybe True** (50.005%) Consuming ground turmeric reduces pain severity in people with Parkinson's disease.
 - [0814](statements/0814.txt) **Maybe True** (50.005%) Consuming fresh basil reduces insomnia severity in people with Parkinson's disease.
 - [0838](statements/0838.txt) **Maybe False** (51%) Consuming virgin coconut oil worsens apathy severity in people with Parkinson's disease.
-- [0860](statements/0860.txt) **Maybe False** (51%) Consuming raw grape worsens anxiety severity in people with Parkinson's disease.
+- [0860](statements/0860.txt) **Maybe False** (50.005%) Consuming raw grape worsens anxiety severity in people with Parkinson's disease.
 - [0874](statements/0874.txt) **Maybe False** (51%) Consuming poached trout worsens depressive symptom severity in people with Parkinson's disease.
-- [0878](statements/0878.txt) **Maybe False** (51%) Consuming raw orange worsens constipation severity in people with Parkinson's disease.
+- [0878](statements/0878.txt) **Maybe False** (50.005%) Consuming raw orange worsens constipation severity in people with Parkinson's disease.
 - [0883](statements/0883.txt) **Maybe False** (51%) Consuming fresh sage worsens fatigue severity in people with Parkinson's disease.
 - [0889](statements/0889.txt) **Maybe False** (51%) Consuming ground cinnamon worsens walking slowness in people with Parkinson's disease.
 - [0904](statements/0904.txt) **Maybe True** (51%) Consuming brewed black tea reduces rest tremor severity in people with Parkinson's disease.
 - [0913](statements/0913.txt) **Maybe True** (51%) Consuming cold-pressed flaxseed oil reduces bradykinesia severity in people with Parkinson's disease.
 - [0948](statements/0948.txt) **Maybe True** (51%) Consuming brewed green tea worsens fatigue severity in people with Parkinson's disease.
 - [0949](statements/0949.txt) **Maybe False** (51%) Consuming frozen raspberry worsens executive function impairment in people with Parkinson's disease.
-- [0953](statements/0953.txt) **Maybe False** (51%) Consuming boiled barley worsens anxiety severity in people with Parkinson's disease.
+- [0953](statements/0953.txt) **Maybe False** (50.005%) Consuming boiled barley worsens anxiety severity in people with Parkinson's disease.
