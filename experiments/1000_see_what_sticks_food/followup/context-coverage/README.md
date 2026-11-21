@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 19,402 |
+| Local body or other primary-source context | 19,409 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 224 |
 | Title or index | 85 |
 | Pending or access-only disposition | 361 |
-| No imported exact review | 41,051 |
+| No imported exact review | 41,044 |
 | **Total** | **61,252** |
+
+Seven queued 2016 raw fig and drooling originals reached body review. The replay leaves 41,490 pairs across 26,071 sources globally. Claim 0188 has 92 of 562 original pairs remaining, including 12 access or identity holds. [2016 original review](../fig-drooling-2016-originals-nov20-156/README.md)
 
 Eighteen queued 2017 raw fig and drooling originals reached body review. The ANA proceedings remain open after partial source and member checks. The replay leaves 41,497 pairs across 26,074 sources globally, and 99 of 562 original claim 0188 pairs including 12 access or identity holds. [2017 original review](../fig-drooling-2017-originals-nov20-155/README.md)
 

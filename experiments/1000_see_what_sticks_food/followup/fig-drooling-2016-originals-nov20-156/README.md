@@ -1,0 +1,7 @@
+# The 2016 raw fig and drooling originals
+
+All seven pinned originals reached body review. The Parkinson posture cohort measured four angles. The wearable viewpoint lists saliva loss in the background and the skin review reuses a prior clinical report. Four other sources describe different diseases or veterinary contexts. [Exact dispositions](dispositions.tsv) · [Pinned scope](pinned-scope.tsv)
+
+The 1971 scan audit identifies one binary ptyalism result and checks the boundary with a different article on the final page. The later Parkinson registry reports rated drooling, with overlap between the salivation item and its Part II disability measure. The Lisbon cohort retained 73 of 101 participants and separately measured posture and drooling. The supplemental results are overlapping strata with no food comparison. [Study assessments](assessments.tsv) · [Chronological observations](../../../../research/2015-2019/Observations/Posture-Wearables-and-Saliva-Outcomes.md) · [Search trails](search-trails.tsv)
+
+Claim 0188 remains Unknown. These records do not estimate a raw fig effect on drooling in Parkinson disease. The native replay leaves 92 of 562 original pairs queued, including 12 access or identity holds. [Replay](native-replay-verification.txt) · [Remaining pairs](open-cluster-pairs.tsv) · [Retrieval receipts](retrieval-sha256.tsv) · [Open trails](open-trails.tsv) · [Oracle accounting](lookup-merge.txt)
