@@ -26,8 +26,9 @@ const
       '"ingredient":{"type":"string"},"preparation":{"type":"string"},' +
       '"direction":{"enum":["reduces","worsens"]},"trend":{"enum":["eases","worsens",""]},' +
       '"scope":{"enum":["directional","assessed","frozen"]},' +
-      '"verdict":{"enum":["True","False","Maybe True","Maybe False","Unknown","Unreviewed"]},' +
+      '"verdict":{"enum":["True","False","Maybe True","Maybe False","Unknown","Unknown (Researched)","Unreviewed"]},' +
       '"scorecard_status":{"enum":["recorded","no_scorecard","historical_scorecard","verdict_mismatch"]},' +
+      '"research_status":{"enum":["researched","partial","unreviewed"]},' +
       '"include_culture":{"type":"boolean"},' +
       '"round":{"type":"integer","minimum":1,"maximum":7},"offset":{"type":"integer","minimum":0},' +
       '"limit":{"type":"integer","minimum":1,"maximum":100}}}},' +
@@ -340,8 +341,8 @@ begin
     otQuery:
       begin
         RequireFields(AArguments, ['symptom', 'ingredient', 'preparation', 'direction',
-          'trend', 'scope', 'verdict', 'scorecard_status', 'include_culture', 'round',
-          'offset', 'limit']);
+          'trend', 'scope', 'verdict', 'scorecard_status', 'research_status', 'include_culture',
+          'round', 'offset', 'limit']);
         LQuery := Default(TClaimQuery);
         LQuery.Symptom := ReadString(AArguments, 'symptom', '');
         LQuery.Ingredient := ReadString(AArguments, 'ingredient', '');
@@ -351,6 +352,7 @@ begin
         LQuery.Scope := ReadString(AArguments, 'scope', 'directional');
         LQuery.Verdict := ReadString(AArguments, 'verdict', '');
         LQuery.ScorecardStatus := ReadString(AArguments, 'scorecard_status', '');
+        LQuery.ResearchStatus := ReadString(AArguments, 'research_status', '');
         LQuery.OmitCulture := not ReadBoolean(AArguments, 'include_culture', True);
         LQuery.Round := ReadInteger(AArguments, 'round', 0, 1, 7);
         LQuery.Offset := ReadInteger(AArguments, 'offset', 0, 0, MaxInt);

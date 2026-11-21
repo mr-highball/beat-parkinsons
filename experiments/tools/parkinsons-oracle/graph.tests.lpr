@@ -35,5 +35,11 @@ begin
   Check(GraphAssessmentTrend('supports', 'worsens') = 'worsens', 'Support can describe harm.');
   Check(GraphAssessmentLabel('pending', 'reduces') = 'Awaiting evidence', 'Access gaps remain visible.');
   Check(GraphAssessmentLabel('inconclusive', 'reduces') = 'Inconclusive', 'Keep uncertainty explicit.');
+  Check(GraphClaimLabelWithStatus('Unknown', 'reduces', 'researched') = 'Unknown (Researched)',
+    'Exhaustively researched Unknown surfaces as Unknown (Researched).');
+  Check(GraphClaimLabelWithStatus('Unknown', 'worsens', 'partial') = 'Open hypothesis',
+    'Unfinished Unknown retains Open hypothesis.');
+  Check(GraphClaimLabelWithStatus('Maybe False', 'worsens', 'researched') = 'May ease',
+    'Directional verdicts keep directional graph labels when researched.');
   WriteLn(GChecks, ' graph evidence-direction checks passed.');
 end.

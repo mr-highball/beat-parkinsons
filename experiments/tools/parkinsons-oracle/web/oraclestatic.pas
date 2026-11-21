@@ -185,6 +185,7 @@ var
   LPreparation: String;
   LDirection: String;
   LVerdict: String;
+  LResearchStatus: String;
   LTrend: String;
   LRound: Integer;
   LOffset: Integer;
@@ -201,6 +202,7 @@ begin
   LPreparation := LowerCase(VocabularyText(AArguments, 'preparation'));
   LDirection := VocabularyText(AArguments, 'direction');
   LVerdict := VocabularyText(AArguments, 'verdict');
+  LResearchStatus := LowerCase(VocabularyText(AArguments, 'research_status'));
   LTrend := VocabularyText(AArguments, 'trend');
   LRound := Count(AArguments, 'round');
   LOffset := Count(AArguments, 'offset');
@@ -221,7 +223,11 @@ begin
     LRowScope := VocabularyText(LRow, 'evidence_scope');
     if ((LScope = 'directional') and (LRowScope <> 'directional')) or
       ((LScope = 'assessed') and (LRowScope = 'frozen')) or
-      ((LVerdict <> '') and (VocabularyText(LRow, 'verdict') <> LVerdict)) or
+      ((LVerdict <> '') and (VocabularyText(LRow, 'verdict') <> LVerdict) and
+        not ((LVerdict = 'Unknown (Researched)') and
+          (VocabularyText(LRow, 'verdict') = 'Unknown') and
+          (VocabularyText(LRow, 'research_status') = 'researched'))) or
+      ((LResearchStatus <> '') and (VocabularyText(LRow, 'research_status') <> LResearchStatus)) or
       ((LTrend <> '') and (ClaimTrend(VocabularyText(LRow, 'verdict'),
         VocabularyText(LRow, 'hypothesis_direction')) <> LTrend)) then
     begin

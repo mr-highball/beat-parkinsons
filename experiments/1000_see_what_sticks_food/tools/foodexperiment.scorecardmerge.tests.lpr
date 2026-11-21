@@ -228,7 +228,35 @@ begin
     LDraftDir + PathDelim + 's1.tsv', LExp], LOutput);
   Check(LCode <> 0, 'In-place staging into experiment dir must fail.');
 
-  WriteLn('ScorecardMergeTests passed (5/5).');
+  // 6. Batch merge of two claims in one atomic invocation.
+  WriteUtf8(LDraftDir + PathDelim + 'd-batch.tsv',
+    CDecisionHeader + CLf +
+    '0001'#9'1'#9'minimal_signal'#9'eases'#9'Batch minimal signal.' + CLf +
+    '0002'#9'1'#9'open'#9'none'#9'Batch open after exhaustive search.' + CLf);
+  WriteUtf8(LDraftDir + PathDelim + 's-batch.tsv',
+    CSourceHeader + CLf +
+    '0001'#9'olive-2021'#9'trial'#9'investigators'#9'original'#9'eases'#9'eases'#9 +
+    'direct'#9'partial'#9'direct'#9'direct'#9'direct'#9'confirmed'#9'50'#9'people'#9 +
+    'research/2020-2024/olive-trial.txt'#9'Controlled olive oil stool trial.' + CLf);
+  LCode := InvokeMerger(AExe, ['--batch', LExp, LDraftDir + PathDelim + 'd-batch.tsv',
+    LDraftDir + PathDelim + 's-batch.tsv', LRoot + PathDelim + 'staged-batch'], LOutput);
+  Check((LCode = 0) and (Pos('batch_claims=2', LOutput) > 0),
+    'Batch merge of 2 claims must succeed: ' + LOutput);
+  LVerdicts := ReadUtf8(LRoot + PathDelim + 'staged-batch' + PathDelim + 'verdicts.tsv');
+  Check((Pos('0001'#9'Maybe True'#9'50.005'#9'Batch minimal signal.', LVerdicts) > 0) and
+    (Pos('0002'#9'Unknown'#9'50'#9'Batch open after exhaustive search.', LVerdicts) > 0),
+    'Batch merge must update both verdict rows cleanly.');
+
+  // 7. Batch merge rejects duplicate decision rows.
+  WriteUtf8(LDraftDir + PathDelim + 'd-batch-dup.tsv',
+    CDecisionHeader + CLf +
+    '0001'#9'1'#9'open'#9'none'#9'First.' + CLf +
+    '0001'#9'1'#9'open'#9'none'#9'Duplicate.' + CLf);
+  LCode := InvokeMerger(AExe, ['--batch', LExp, LDraftDir + PathDelim + 'd-batch-dup.tsv',
+    LDraftDir + PathDelim + 's-batch.tsv', LStagedBad], LOutput);
+  Check(LCode <> 0, 'Batch merge must reject duplicate claim decisions.');
+
+  WriteLn('ScorecardMergeTests passed (7/7).');
 end;
 
 begin

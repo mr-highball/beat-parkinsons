@@ -375,14 +375,18 @@ begin
   RefreshRelated(0, False);
 end;
 
-function EvidenceLabel(const AVerdict: String): String;
+function EvidenceLabel(const AVerdict: String; const AResearchStatus: String = ''): String;
 begin
   case IndexStr(AVerdict, ['True', 'False', 'Maybe True', 'Maybe False', 'Unknown']) of
     0: Result := 'Evidence supports this claim';
     1: Result := 'Evidence weighs against this claim';
     2: Result := 'Limited evidence in favor';
     3: Result := 'Limited evidence against this claim';
-    4: Result := 'Still unclear';
+    4:
+      if AResearchStatus = 'researched' then
+        Result := 'Unknown (Researched)'
+      else
+        Result := 'Still unclear';
   else
     Result := 'Awaiting review';
   end;
@@ -396,7 +400,7 @@ var
   LEvidence: String;
 begin
   LVerdict := TextOf(AClaim, 'verdict');
-  LEvidence := EvidenceLabel(LVerdict);
+  LEvidence := EvidenceLabel(LVerdict, TextOf(AClaim, 'research_status'));
   LEffect := '';
   case IndexStr(ClaimTrend(LVerdict, TextOf(AClaim, 'hypothesis_direction')),
     ['eases', 'worsens']) of

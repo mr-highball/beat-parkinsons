@@ -263,7 +263,8 @@ begin
     LClaimKey := GraphText(LClaim, 'round') + '/' + GraphText(LClaim, 'claim_id');
     LDirection := GraphText(LClaim, 'hypothesis_direction');
     AddEdge('claim:' + LClaimKey, LSymptom, LIngredient, 'claim',
-      GraphClaimLabel(GraphText(LClaim, 'verdict'), LDirection),
+      GraphClaimLabelWithStatus(GraphText(LClaim, 'verdict'), LDirection,
+        GraphText(LClaim, 'research_status')),
       ClaimTrend(GraphText(LClaim, 'verdict'), LDirection), LClaim, nil);
     LCitedPaths := TJSSet.new;
     LAssessments := GraphRows(LClaim, 'assessments');

@@ -22,6 +22,7 @@ type
     Scope: String;
     Verdict: String;
     ScorecardStatus: String;
+    ResearchStatus: String;
     OmitCulture: Boolean;
     Round: Integer;
     Offset: Integer;
@@ -42,6 +43,13 @@ type
     Confidence: Currency;
     Rationale: String;
     ScorecardStatus: String;
+    ResearchStatus: String;
+    LabClinicalChecked: Boolean;
+    CulturalChecked: Boolean;
+    ScorecardChecked: Boolean;
+    LastCheckedUtc: String;
+    SearchBasis: String;
+    OpenGaps: String;
     References: TJSONArray;
     Evidence: TJSONArray;
     AssessedRows: Integer;
@@ -51,6 +59,7 @@ type
     constructor Create;
     destructor Destroy; override;
     function IsDirectional: Boolean;
+    function DisplayVerdict: String;
     function View(ADetailed: Boolean; AAssessmentOffset: Integer = 0;
       AAssessmentLimit: Integer = -1; const AAssessmentStudy: String = ''): TJSONObject;
   end;
@@ -65,6 +74,7 @@ type
     FRubric: String;
     FScorecards: array[1..CRoundCount] of String;
     FScorecardSources: array[1..CRoundCount] of String;
+    FResearchStatus: array[1..CRoundCount] of String;
     FClaims: TObjectList<TClaim>;
     FIdentities: TDictionary<String, TClaim>;
     FBySymptom: TObjectDictionary<String, TList<TClaim>>;
@@ -76,6 +86,8 @@ type
     FSourceRows: Integer;
     FDirectional: Integer;
     FUnknown: Integer;
+    FUnknownResearched: Integer;
+    FUnknownUnresearched: Integer;
     FV1Scorecards: Integer;
     FDirectionalWithScorecard: Integer;
     FDirectionalWithoutScorecard: Integer;
@@ -97,6 +109,7 @@ type
     function CulturalMatches(const ASymptom, AIngredient: String): TJSONArray;
     procedure LoadRound(ARound: Integer; AProcess: TProcess; APublishedTables: TStrings);
     procedure LoadScorecardStatuses;
+    procedure LoadResearchStatuses;
   public
     constructor Create(const ARepoRoot: String);
     destructor Destroy; override;
@@ -119,8 +132,9 @@ type
 implementation
 
 uses {$IFDEF WINDOWS}Windows,{$ENDIF} StrUtils, FPSHA256, foodexperiment.externaldata,
-  foodexperiment.confidence, parkinsonsoracle.trend, parkinsonsoracle.rubric,
-  parkinsonsoracle.ingredients, parkinsonsoracle.presentation, parkinsonsoracle.culture, wfc;
+  foodexperiment.confidence, foodexperiment.auditstatus, parkinsonsoracle.trend,
+  parkinsonsoracle.rubric, parkinsonsoracle.ingredients, parkinsonsoracle.presentation,
+  parkinsonsoracle.culture, wfc;
 
 const
   CBase = 'experiments/1000_see_what_sticks_food';
@@ -128,6 +142,7 @@ const
   CRubricPath = CBase + '/EVIDENCE-SCORECARD.md';
   CScorecardPath = '/followup/scorecards.tsv';
   CScorecardSourcesPath = '/followup/scorecard-sources.tsv';
+  CResearchStatusPath = '/followup/research-status.tsv';
   CEvidencePath = '/followup/assessments.tsv';
   CCoveragePath = '/followup/context-coverage/coverage-by-claim.tsv';
   CIdentityBit = 4;
@@ -233,6 +248,7 @@ begin
   QueuedPairs := -1;
   Verdict := 'Unreviewed';
   ScorecardStatus := 'no_scorecard';
+  ResearchStatus := 'unreviewed';
   References := TJSONArray.Create;
   Evidence := TJSONArray.Create;
 end;
@@ -249,6 +265,11 @@ begin
   Result := IndexStr(Verdict, ['True', 'False', 'Maybe True', 'Maybe False']) >= 0;
 end;
 
+function TClaim.DisplayVerdict: String;
+begin
+  Result := DisplayVerdictLabel(Verdict, ResearchStatus);
+end;
+
 function TClaim.View(ADetailed: Boolean; AAssessmentOffset, AAssessmentLimit: Integer;
   const AAssessmentStudy: String): TJSONObject;
 var
@@ -260,7 +281,8 @@ begin
   Result := TJSONObject.Create([
     'round', Round, 'claim_id', Id, 'category', Category, 'ingredient', Ingredient,
     'preparation', Preparation, 'symptom', Symptom, 'hypothesis_direction', Direction,
-    'verdict', Verdict, 'assessment_rows', AssessedRows + PendingRows,
+    'verdict', Verdict, 'display_verdict', DisplayVerdict, 'research_status', ResearchStatus,
+    'assessment_rows', AssessedRows + PendingRows,
     'nonpending_assessments', AssessedRows, 'pending_assessments', PendingRows]);
   try
     if Confidence >= 0 then
@@ -281,6 +303,16 @@ begin
     if ADetailed then
     begin
       Result.Add('scorecard_status', ScorecardStatus);
+      if LastCheckedUtc <> '' then
+      begin
+        Result.Add('research_audit', TJSONObject.Create([
+          'lab_clinical_checked', LabClinicalChecked,
+          'cultural_checked', CulturalChecked,
+          'scorecard_checked', ScorecardChecked,
+          'last_checked_utc', LastCheckedUtc,
+          'search_basis', SearchBasis,
+          'open_gaps', OpenGaps]));
+      end;
       Result.Add('local_references', References.Clone);
       if (AAssessmentStudy = '') and (AAssessmentLimit < 0) then
       begin
@@ -583,8 +615,8 @@ end;
 constructor TClaimIndex.Create(const ARepoRoot: String);
 const
   CTreeArguments = 5;
-  COptionalPaths: array[0..4] of String = (CVerdictPath, CEvidencePath, CCoveragePath,
-    CScorecardPath, CScorecardSourcesPath);
+  COptionalPaths: array[0..5] of String = (CVerdictPath, CEvidencePath, CCoveragePath,
+    CScorecardPath, CScorecardSourcesPath, CResearchStatusPath);
 var
   LRound: Integer;
   LIndex: Integer;
@@ -651,6 +683,8 @@ begin
         FScorecards[LRound] := ReadBlob(LProcess, LSuffix + CScorecardPath);
       if LTables.IndexOf(LSuffix + CScorecardSourcesPath) >= 0 then
         FScorecardSources[LRound] := ReadBlob(LProcess, LSuffix + CScorecardSourcesPath);
+      if LTables.IndexOf(LSuffix + CResearchStatusPath) >= 0 then
+        FResearchStatus[LRound] := ReadBlob(LProcess, LSuffix + CResearchStatusPath);
     end;
     // FPC's pipe stream owns the writer once Input has been accessed.
     LProcess.Input.DontClose := True;
@@ -671,6 +705,7 @@ begin
   AddAlias(FSymptomAliases, 'seeing things', 'visual hallucination frequency');
   FDecisions := CompileClaimDecisions;
   LoadScorecardStatuses;
+  LoadResearchStatuses;
   for LClaim in FClaims do
   begin
     LTrend := ClaimTrend(LClaim.Verdict, LClaim.Direction);
@@ -990,10 +1025,73 @@ begin
   end;
 end;
 
+procedure TClaimIndex.LoadResearchStatuses;
+var
+  LRound: Integer;
+  LIndex: Integer;
+  LLines: TStringList;
+  LClaim: TClaim;
+  LRow: TResearchStatusRow;
+begin
+  FUnknownResearched := 0;
+  FUnknownUnresearched := 0;
+  for LClaim in FClaims do
+  begin
+    if (LClaim.Verdict = 'Unreviewed') or (LClaim.Verdict = '') then
+      LClaim.ResearchStatus := 'unreviewed'
+    else
+      LClaim.ResearchStatus := 'partial';
+  end;
+  LLines := TStringList.Create;
+  try
+    for LRound := 1 to CRoundCount do
+    begin
+      if FResearchStatus[LRound] = '' then
+      begin
+        Continue;
+      end;
+      ReadTable(LLines, FResearchStatus[LRound], CResearchStatusHeader);
+      for LIndex := 1 to LLines.Count - 1 do
+      begin
+        if LLines[LIndex] = '' then
+        begin
+          Continue;
+        end;
+        LRow := ParseResearchStatusRow(LLines[LIndex], LIndex + 1);
+        if not FIdentities.TryGetValue(Key(LRound, LRow.Id), LClaim) then
+        begin
+          raise EConvertError.Create('research-status.tsv references unknown claim ' + LRow.Id);
+        end;
+        LClaim.LabClinicalChecked := LRow.LabClinicalChecked;
+        LClaim.CulturalChecked := LRow.CulturalChecked;
+        LClaim.ScorecardChecked := LRow.ScorecardChecked;
+        LClaim.LastCheckedUtc := LRow.LastCheckedUtc;
+        LClaim.SearchBasis := LRow.SearchBasis;
+        LClaim.OpenGaps := LRow.OpenGaps;
+        LClaim.ResearchStatus := EffectiveResearchStatus(LRow.Status, LClaim.ScorecardStatus,
+          LClaim.Verdict, LRow.LabClinicalChecked, LRow.CulturalChecked, LRow.ScorecardChecked);
+      end;
+    end;
+  finally
+    LLines.Free;
+  end;
+  for LClaim in FClaims do
+  begin
+    if LClaim.Verdict = 'Unknown' then
+    begin
+      if LClaim.ResearchStatus = 'researched' then
+        Inc(FUnknownResearched)
+      else
+        Inc(FUnknownUnresearched);
+    end;
+  end;
+end;
+
 function TClaimIndex.Status: TJSONObject;
 begin
   Result := TJSONObject.Create(['revision', FRevision, 'frozen_claims', FClaims.Count,
     'directional_verdicts', FDirectional, 'unknown_verdicts', FUnknown,
+    'unknown_researched', FUnknownResearched, 'unknown_unresearched', FUnknownUnresearched,
     'unreviewed_claims', FClaims.Count - FDirectional - FUnknown, 'assessment_rows', FSourceRows,
     'v1_scorecards', FV1Scorecards, 'directional_with_scorecard', FDirectionalWithScorecard,
     'directional_without_scorecard', FDirectionalWithoutScorecard,
@@ -1041,6 +1139,7 @@ var
   LFrozen: array[1..CRoundCount] of Integer;
   LDirectional: array[1..CRoundCount] of Integer;
   LUnknown: array[1..CRoundCount] of Integer;
+  LUnknownResearched: array[1..CRoundCount] of Integer;
   LScorecards: array[1..CRoundCount] of Integer;
   I: Integer;
   LItem: TJSONObject;
@@ -1048,6 +1147,7 @@ begin
   FillChar(LFrozen, SizeOf(LFrozen), 0);
   FillChar(LDirectional, SizeOf(LDirectional), 0);
   FillChar(LUnknown, SizeOf(LUnknown), 0);
+  FillChar(LUnknownResearched, SizeOf(LUnknownResearched), 0);
   FillChar(LScorecards, SizeOf(LScorecards), 0);
   LLegacy := TList.Create;
   LSymptomKeys := TStringList.Create;
@@ -1073,7 +1173,11 @@ begin
         if LClaim.IsDirectional then
           Inc(LDirectional[LClaim.Round])
         else if LClaim.Verdict = 'Unknown' then
+        begin
           Inc(LUnknown[LClaim.Round]);
+          if LClaim.ResearchStatus = 'researched' then
+            Inc(LUnknownResearched[LClaim.Round]);
+        end;
         if (LClaim.ScorecardStatus = 'recorded') or
           (LClaim.ScorecardStatus = 'verdict_mismatch') then
           Inc(LScorecards[LClaim.Round]);
@@ -1112,6 +1216,8 @@ begin
           'frozen', LFrozen[LRound],
           'directional', LDirectional[LRound],
           'unknown', LUnknown[LRound],
+          'unknown_researched', LUnknownResearched[LRound],
+          'unknown_unresearched', LUnknown[LRound] - LUnknownResearched[LRound],
           'unreviewed', LFrozen[LRound] - LDirectional[LRound] - LUnknown[LRound],
           'v1_scorecards', LScorecards[LRound]]));
       end;
@@ -1364,10 +1470,15 @@ end;
 
 function EvidenceAllowed(AClaim: TClaim; const AQuery: TClaimQuery): Boolean;
 begin
-  Result := ((AQuery.Verdict = '') or SameText(AQuery.Verdict, AClaim.Verdict)) and
+  Result := ((AQuery.Verdict = '') or SameText(AQuery.Verdict, AClaim.Verdict) or
+      (SameText(AQuery.Verdict, 'Unknown (Researched)') and
+        SameText(AClaim.Verdict, 'Unknown') and
+        SameText(AClaim.ResearchStatus, 'researched'))) and
     ((AQuery.Trend = '') or (ClaimTrend(AClaim.Verdict, AClaim.Direction) = AQuery.Trend)) and
     ((AQuery.ScorecardStatus = '') or
-      SameText(AQuery.ScorecardStatus, AClaim.ScorecardStatus));
+      SameText(AQuery.ScorecardStatus, AClaim.ScorecardStatus)) and
+    ((AQuery.ResearchStatus = '') or
+      SameText(AQuery.ResearchStatus, AClaim.ResearchStatus));
   case IndexStr(AQuery.Scope, ['directional', 'assessed', 'frozen']) of
     0: Result := Result and AClaim.IsDirectional and (AClaim.AssessedRows > 0);
     1: Result := Result and (AClaim.AssessedRows > 0);
@@ -1442,6 +1553,7 @@ begin
   LQuery.Direction := Normalize(AQuery.Direction);
   LQuery.Trend := Normalize(AQuery.Trend);
   LQuery.ScorecardStatus := Normalize(AQuery.ScorecardStatus);
+  LQuery.ResearchStatus := Normalize(AQuery.ResearchStatus);
   if IndexStr(LQuery.Scope, ['directional', 'assessed', 'frozen']) < 0 then
     raise EConvertError.Create('Scope must be directional, assessed or frozen.');
   if IndexStr(LQuery.Direction, ['', 'reduces', 'worsens']) < 0 then
@@ -1449,11 +1561,13 @@ begin
   if IndexStr(LQuery.Trend, ['', 'eases', 'worsens']) < 0 then
     raise EConvertError.Create('Trend must be eases or worsens.');
   if IndexText(LQuery.Verdict, ['', 'True', 'False', 'Maybe True', 'Maybe False',
-    'Unknown', 'Unreviewed']) < 0 then
+    'Unknown', 'Unknown (Researched)', 'Unreviewed']) < 0 then
     raise EConvertError.Create('Invalid verdict filter.');
   if IndexStr(LQuery.ScorecardStatus, ['', 'recorded', 'no_scorecard',
     'historical_scorecard', 'verdict_mismatch']) < 0 then
     raise EConvertError.Create('Invalid scorecard_status filter.');
+  if IndexStr(LQuery.ResearchStatus, ['', 'researched', 'partial', 'unreviewed']) < 0 then
+    raise EConvertError.Create('Invalid research_status filter.');
   if (LQuery.Round < 0) or (LQuery.Round > 7) or (LQuery.Offset < 0) or
     (LQuery.Limit < 1) or (LQuery.Limit > 100) then
     raise EConvertError.Create('Invalid round or pagination.');
@@ -1516,6 +1630,8 @@ begin
         Result.Add('trend_filter', LQuery.Trend);
       if LQuery.ScorecardStatus <> '' then
         Result.Add('scorecard_status_filter', LQuery.ScorecardStatus);
+      if LQuery.ResearchStatus <> '' then
+        Result.Add('research_status_filter', LQuery.ResearchStatus);
       Result.Add('options', LResolved.Options);
       LResolved.Options := nil;
       if (LQuery.Offset < LResolved.Selected) and

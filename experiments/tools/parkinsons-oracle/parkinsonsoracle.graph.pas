@@ -6,6 +6,7 @@ unit parkinsonsoracle.graph;
 interface
 
 function GraphClaimLabel(const AVerdict, ADirection: String): String;
+function GraphClaimLabelWithStatus(const AVerdict, ADirection, AResearchStatus: String): String;
 function GraphAssessmentLabel(const ARole, ADirection: String): String;
 function GraphAssessmentTrend(const ARole, ADirection: String): String;
 
@@ -31,6 +32,15 @@ begin
     Exit('Hypothesis challenged');
   end;
   Result := 'Open hypothesis';
+end;
+
+function GraphClaimLabelWithStatus(const AVerdict, ADirection, AResearchStatus: String): String;
+begin
+  if (AVerdict = 'Unknown') and (AResearchStatus = 'researched') then
+  begin
+    Exit('Unknown (Researched)');
+  end;
+  Result := GraphClaimLabel(AVerdict, ADirection);
 end;
 
 function GraphAssessmentTrend(const ARole, ADirection: String): String;
