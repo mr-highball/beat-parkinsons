@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [2022 Mucuna product assays](Source-Text/2022-PMID35939305-Cohen-Mucuna-Product-Assays.txt) compared single samples from sixteen products. The [2023 Qamar correction](Source-Text/2023-PMID36737446-Qamar-Imaging-Review-Correction.txt) updates author attribution in the earlier imaging review.
+
 The [Wenzhou subtype study](Source-Text/2020-DOI10.3389-fneur.2020.577128-Wang-Autonomic-Subtype-Outcomes.txt) reports a gastrointestinal autonomic domain. Its earlier congress report has a separate salivation item and a smaller sample.
 
 The [COPARK cohort](Source-Text/2020-PMID32880023-Rascol-COPARK-Saliva-and-Drooling.txt) and [Figure 2 correction](Source-Text/2020-DOI10.1007-s00702-020-02264-1-COPARK-Figure-Correction.txt) separate clinical saliva categories and on/off medication ratings. [Off-period and swallowing observations](Observations/Drooling-Off-Periods-and-Swallowing.md) link patient reports and swallow-specific measures.

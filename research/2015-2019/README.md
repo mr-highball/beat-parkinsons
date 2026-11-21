@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [oral outcomes and Mucuna observations](Observations/Oral-Outcome-Distinctions-and-Mucuna-Products.md) link the [Salivagram study](Source-Text/2017-PMID29354567-Park-Salivagram-and-Swallowing.txt), the [review of swallowing measures](Source-Text/2017-PMID28375450-Patel-Dysphagia-Instrument-Review.txt) and the [Mucuna product assay](Source-Text/2017-PMID28922612-Soumyanath-Mucuna-Label-Comparison.txt).
+
 The [drooling and saliva measurements](Observations/Drooling-Swallowing-and-Saliva-Sampling.md) compare the [Sohag cohort](Source-Text/2018-PMID30416335-Mohamed-Subtype-Drooling-and-Swallowing.txt), [Zhejiang cohort](Source-Text/2016-Xie-Videofluoroscopy-and-Drooling.txt), [Hamburg cohort](Source-Text/2017-PMID29178420-Nienstedt-Aspiration-and-Drooling.txt) and [S4 feasibility report](Source-Text/2018-PMID30248065-Chahine-S4-Saliva-Collection.txt). Their outcomes include oral saliva loss, swallowing and collected sample volume.
 
 The [Barbe diary registration](Source-Text/Trials/DRKS00012458.txt) and [publication](Source-Text/2018-PMID30028552-Barbe-Symptom-Diary-and-Meals.txt) distinguish hourly dry mouth, drooling, swallowing and food activity. [Period observations](Observations/Saliva-Diary-Motor-Subtypes-and-Patient-Accounts.md) link the adjacent outcome measures and patient reports.
