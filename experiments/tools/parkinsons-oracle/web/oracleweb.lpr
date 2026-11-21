@@ -9,7 +9,7 @@ uses
   SysUtils, StrUtils, Types, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
   oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation,
   parkinsonsoracle.selection, parkinsonsoracle.graph, oraclemulti, oraclegraph,
-  oraclegraphdata, oraclegraphmodel, oraclegallery;
+  oraclegraphmodel, oraclegallery;
 
 type
   TOracleView = (ovClaims, ovCatalog);
@@ -1562,7 +1562,15 @@ var
       Exit;
     end;
     if GGraphModel = nil then
+    begin
+      if (TextOf(AData, 'schema') <> 'parkinsons-oracle-model-1') or
+        not TJSArray.isArray(AData['claims']) then
+      begin
+        MessageView('Graph unavailable', 'The saved graph has an unsupported format.', LBack);
+        Exit;
+      end;
       GGraphModel := TOracleGraphModel.Create(AData);
+    end;
     LGraph := TOracleGraphExplorer.Create(GGraphModel, ASymptoms, AIngredient,
       procedure(const APath: String)
       begin
@@ -1604,7 +1612,7 @@ begin
   else if GStaticOracle <> nil then
     GStaticOracle.GraphModel(@ReceiveModel)
   else
-    ReceiveModel(EmbeddedGraphModel, '');
+    GetOracleAsset('./graph.json', @ReceiveModel);
 end;
 
 procedure BindClaimGraph(const ATag, ASymptom, AIngredient: String);

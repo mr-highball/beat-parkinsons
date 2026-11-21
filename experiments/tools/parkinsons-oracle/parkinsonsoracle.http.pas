@@ -285,7 +285,7 @@ var
 begin
   LPath := FWebRoot + AFileName;
   LUseGzip := False;
-  if (ExtractFileExt(AFileName) = '.js') or (ExtractFileExt(AFileName) = '.css') then
+  if MatchStr(ExtractFileExt(AFileName), ['.js', '.css', '.json']) then
   begin
     AResponse.SetCustomHeader('Vary', 'Accept-Encoding');
     if AcceptsGzip(AAcceptEncoding) then
@@ -445,11 +445,13 @@ end;
 procedure TOracleWeb.HandleRequest(Sender: TObject; var ARequest: TFPHTTPConnectionRequest;
   var AResponse: TFPHTTPConnectionResponse);
 const
-  Paths: array[0..4] of String = ('/', '/index.html', '/app.js', '/rtl.js', '/oracle.css');
-  Files: array[0..4] of String = ('index.html', 'index.html', 'app.js', 'rtl.js', 'oracle.css');
-  Types: array[0..4] of String = ('text/html; charset=utf-8', 'text/html; charset=utf-8',
+  Paths: array[0..5] of String = ('/', '/index.html', '/app.js', '/rtl.js', '/oracle.css',
+    '/graph.json');
+  Files: array[0..5] of String = ('index.html', 'index.html', 'app.js', 'rtl.js', 'oracle.css',
+    'graph.json');
+  Types: array[0..5] of String = ('text/html; charset=utf-8', 'text/html; charset=utf-8',
     'application/javascript; charset=utf-8', 'application/javascript; charset=utf-8',
-    'text/css; charset=utf-8');
+    'text/css; charset=utf-8', 'application/json; charset=utf-8');
 var
   LOrigin: String;
   LPeerAddress: TSockAddr;

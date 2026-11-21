@@ -3,7 +3,7 @@ program GraphModelTests;
 
 {$mode delphi}{$H+}{$codepage utf8}
 
-uses SysUtils, JS, oraclegraphmodel, oraclegraphdata;
+uses SysUtils, JS, NodeJSApp, oraclegraphmodel;
 
 var
   GChecks: Integer;
@@ -15,6 +15,13 @@ const
     '1999-UDV-Hoasca-Research-Setting.txt';
 
 { Node's built-in crypto hashes the generated UTF-8 text; it supplies no model logic. }
+function ReadModel(const APath: String): String;
+begin
+  asm
+    return require('fs').readFileSync(APath, 'utf8');
+  end;
+end;
+
 function HostDigest(const AText: String): String;
 begin
   asm
@@ -59,6 +66,7 @@ end;
 
 procedure Run;
 var
+  LJSON: String;
   LData: TJSObject;
   LModel: TOracleGraphModel;
   LRows: TJSArray;
@@ -77,10 +85,14 @@ var
   LReference: Boolean;
   LOpposingSaffron: Integer;
 begin
-  Check(HostDigest(EmbeddedGraphJSON) = EmbeddedGraphDigest,
-    'Every embedded UTF-8 byte matches the native model before parsing.');
-  LData := EmbeddedGraphModel;
-  Check(GraphRows(LData, 'claims').Length = 6930, 'All frozen pairs survive embedding.');
+  if ParamCount <> 2 then
+  begin
+    raise EArgumentException.Create('Supply the path and SHA-256 of the exported graph JSON.');
+  end;
+  LJSON := ReadModel(ParamStr(1));
+  Check(HostDigest(LJSON) = ParamStr(2), 'Every UTF-8 byte matches the native graph export.');
+  LData := TJSObject(TJSJSON.parse(LJSON));
+  Check(GraphRows(LData, 'claims').Length = 6930, 'All frozen pairs survive export.');
   LModel := TOracleGraphModel.Create(LData);
   try
     Check(LModel.Revision = GraphText(LData, 'revision'), 'Graph revision matches model.');

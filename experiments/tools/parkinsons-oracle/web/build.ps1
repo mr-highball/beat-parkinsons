@@ -42,14 +42,13 @@ if (!$StaticModel) {
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
     $GraphExe = Join-Path $GlyphBuild 'bin/graph.embed.exe'
     if (!(Test-Path -LiteralPath $GraphExe)) { $GraphExe = Join-Path $GlyphBuild 'bin/graph.embed' }
-    & $GraphExe $Repo (Join-Path $GlyphBuild 'oraclegraph.inc')
+    & $GraphExe $Repo (Join-Path $Output 'graph.json')
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
 }
 $CompilerArgs = @(
     '-Mdelphi', '-Tbrowser', '-Jc',
-    "-Fu$Vendor", "-Fi$Vendor", "-Fu$SharedUnits", "-Fi$GlyphBuild", "-FE$Output"
+    "-Fu$Vendor", "-Fi$Vendor", "-Fu$SharedUnits", "-FE$Output"
 )
-if ($StaticModel) { $CompilerArgs += '-dORACLE_STATIC' }
 if ($UnitRoot) {
     $Packages = (Resolve-Path -LiteralPath $UnitRoot).Path
     $CompilerArgs += "-Fu$Packages/*/src"
@@ -74,7 +73,7 @@ if ($LASTEXITCODE) { exit $LASTEXITCODE }
 [IO.File]::AppendAllText((Join-Path $Output 'oracle.css'), [IO.File]::ReadAllText($InlineCss), [Text.UTF8Encoding]::new($false))
 
 if (!$StaticModel) {
-    foreach ($Name in @('app.js', 'rtl.js', 'oracle.css')) {
+    foreach ($Name in @('app.js', 'rtl.js', 'oracle.css', 'graph.json')) {
         $Asset = Join-Path $Output $Name
         $InputStream = [IO.File]::OpenRead($Asset)
         try {

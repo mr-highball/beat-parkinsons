@@ -35,6 +35,9 @@ type
     procedure GraphModel(AReply: TOracleReply);
   end;
 
+procedure GetOracleAsset(const APath: String; AJson: TOracleReply;
+  ABuffer: TBufferReply = nil);
+
 implementation
 
 uses StrUtils, fpjson, oraclevocab, parkinsonsoracle.trend, parkinsonsoracle.ingredients;
@@ -68,12 +71,12 @@ begin
   FAssetPath := './model/' + EncodePathSegment(ARevision) + '/';
 end;
 
-procedure TStaticOracle.GetAsset(const APath: String; AJson: TOracleReply; ABuffer: TBufferReply);
+procedure GetOracleAsset(const APath: String; AJson: TOracleReply; ABuffer: TBufferReply);
 var
   LRequest: TJSXMLHttpRequest;
 begin
   LRequest := TJSXMLHttpRequest.new;
-  LRequest.open('GET', FAssetPath + APath, True);
+  LRequest.open('GET', APath, True);
   LRequest.timeout := 25000;
   if Assigned(ABuffer) then
     TJSObject(LRequest)['responseType'] := 'arraybuffer';
@@ -87,7 +90,7 @@ begin
         Exit;
       LError := '';
       if LRequest.Status <> 200 then
-        LError := 'Unable to load the published model file ' + APath + '.';
+        LError := 'Unable to load the saved model file ' + APath + '.';
       if Assigned(ABuffer) then
       begin
         ABuffer(TJSArrayBuffer(LRequest.response), LError);
@@ -98,11 +101,16 @@ begin
         try
           LData := TJSObject(TJSJSON.parse(LRequest.responseText));
         except
-          LError := 'The published model contains invalid JSON.';
+          LError := 'The saved model contains invalid JSON.';
         end;
       AJson(LData, LError);
     end;
   LRequest.send;
+end;
+
+procedure TStaticOracle.GetAsset(const APath: String; AJson: TOracleReply; ABuffer: TBufferReply);
+begin
+  GetOracleAsset(FAssetPath + APath, AJson, ABuffer);
 end;
 
 procedure TStaticOracle.Loaded(AData: TJSObject; const AError: String);
