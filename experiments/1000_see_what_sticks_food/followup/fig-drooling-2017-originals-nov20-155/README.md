@@ -1,0 +1,7 @@
+# The 2017 raw fig and drooling originals
+
+Eighteen of 19 queued originals reached body review. The American Neurological Association proceedings remain open. The publisher lists S1–S233, and its searchable rendering includes the S199 footer and opening S200 material. The paper, archive cover, and society program verify the accession, with no claim of a complete member screen. [Exact dispositions](dispositions.tsv) · [Member notes](conference-contexts.tsv) · [Open access routes](open-trails.tsv)
+
+The original UCLA surgical abstract reports four instances of increased drooling alongside change in speech. Other cited cohorts measured walking or motor off time. Mucuna assays examine levodopa content in commercial products. The 2012 and 2017 reports may share materials, while the 2022 study uses a different sample and comparison. The 2003 account describes saliva loss as part of the traditional syndrome, without a treatment-specific estimate. [Study assessments](assessments.tsv) · [Chronological observation](../../../../research/2015-2019/Observations/Oral-Outcome-Distinctions-and-Mucuna-Products.md)
+
+No new comparison tests raw fig and rated Parkinson drooling. Claim 0188 remains Unknown. The replay leaves 99 of 562 original pairs, including 12 access or identity holds. [Replay](native-replay-verification.txt) · [Remaining pairs](open-cluster-pairs.tsv) · [Original retrieval receipts](retrieval-sha256.tsv) · [Oracle accounting](lookup-merge.txt)

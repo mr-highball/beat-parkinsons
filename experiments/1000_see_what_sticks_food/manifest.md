@@ -23,6 +23,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
 
+Eighteen queued 2017 originals reached body review for raw fig and Parkinson drooling. Original surgical evidence and saliva outcome measures distinguish drooling from gait, swallowing and specimen measures. Mucuna assay and traditional-syndrome evidence involve separate exposures and supply no raw-fig comparison. The 2017 ANA proceedings remain open at partial depth. Claim 0188 remains Unknown. [2017 original review](followup/fig-drooling-2017-originals-nov20-155/README.md)
+
 Seven 2018 originals reached primary-body review for raw fig and drooling. The Sohag cohort differentiates drooling and dysphagia by motor subtype, with results that differ from the larger Suzhou saliva comparison. The Zhejiang, Hamburg and S4 records preserve the distinction between food-test materials, reported drooling and obtained saliva volume. The new related evidence leaves claim 0188 Unknown. [2018 sources and outcomes](followup/fig-drooling-2018-originals-nov20-154/README.md)
 
 Ten 2019 originals reached primary-body review for raw fig and drooling. Two congress members report clinical saliva outcomes, and patient accounts describe public eating and drooling. The registered diary distinguishes meal activity, dry mouth and saliva loss. Its results tables and the associated diary forms remain open. Claim 0188 remains Unknown. [2019 original outcomes and diary registration](followup/fig-drooling-2019-originals-nov20-153/README.md)
