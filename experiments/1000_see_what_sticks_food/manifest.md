@@ -13,8 +13,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 952 |
-| Maybe True | 0 | 22 |
+| Unknown | 1000 | 951 |
+| Maybe True | 0 | 23 |
 | Maybe False | 0 | 26 |
 | True | 0 | 0 |
 | False | 0 | 0 |
@@ -85,6 +85,7 @@ Twenty-nine Round 1 claims carry a checked version 1 evidence scorecard ([scorec
 - [0883](statements/0883.txt) **Maybe False** (50.005%) Consuming fresh sage worsens fatigue severity in people with Parkinson's disease.
 - [0889](statements/0889.txt) **Maybe False** (50.005%) Consuming ground cinnamon worsens walking slowness in people with Parkinson's disease.
 - [0904](statements/0904.txt) **Maybe True** (51%) Consuming brewed black tea reduces rest tremor severity in people with Parkinson's disease.
+- [0916](statements/0916.txt) **Maybe True** (50.005%) Consuming ground cinnamon reduces urinary urgency frequency in people with Parkinson's disease.
 - [0948](statements/0948.txt) **Maybe True** (51%) Consuming brewed green tea worsens fatigue severity in people with Parkinson's disease.
 - [0949](statements/0949.txt) **Maybe False** (50.005%) Consuming frozen raspberry worsens executive function impairment in people with Parkinson's disease.
 - [0953](statements/0953.txt) **Maybe False** (50.005%) Consuming boiled barley worsens anxiety severity in people with Parkinson's disease.
