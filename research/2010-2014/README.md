@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [Storch nonmotor fluctuation study](Source-Text/2013-PMID23365054-Storch-On-Off-Nonmotor-Outcomes.txt) positioned ten outcomes in motor on and off periods. It measured dysphagia separately from other nonmotor symptoms.
+
 The [2012 Mucuna product poster](Source-Text/2012-PMC3373868-Soumyanath-Mucuna-P36.txt) reports an assay of six products. The [later same-team publication](../2015-2019/Source-Text/2017-PMID28922612-Soumyanath-Mucuna-Label-Comparison.txt) gives different comparisons against the labels.
 
 The [fresh-versus-dried fig allergy-testing study](Source-Text/2010-PMID20447079-Hemmer-Form-Specific-Fig-Sensitization.txt) distinguishes fresh-fruit skin reactivity from clinical outcomes. The [ROMP validation](Source-Text/2011-PMID21704797-Kalf-ROMP-Saliva-Validation.txt) evaluates perceived saliva control separately from swallowing and speech. A [Persian medicine review](Cultural-and-Experiential/Traditional-Practices/2014-Persian-Review-Fig-and-Dry-Mouth.txt) lists figs for subjective dry mouth without a Parkinson drooling comparison.

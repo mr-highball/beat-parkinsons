@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [posture and saliva observation](Observations/Posture-Wearables-and-Saliva-Outcomes.md) cross-links the [Iijima case lineage](Source-Text/2015-PMID29468202-Iijima-Antecollis-Case-Lineage.txt), [Yoshii posture cohort](Source-Text/2016-PMID26835153-Yoshii-Posture-Angles-and-Drooling-Context.txt), [wearable viewpoint](Source-Text/2016-PMID27003779-Van-Uem-Wearable-Measurement-and-Drooling-Context.txt), [skin review](Source-Text/2016-PMID30363435-Skorvanek-Skin-and-Drooling-Context.txt), and [Swedish orofacial registry](Source-Text/2017-PMID28798882-Fereshtehnejad-Registry-Drooling.txt).
+
 The [oral outcomes and Mucuna observations](Observations/Oral-Outcome-Distinctions-and-Mucuna-Products.md) link the [Salivagram study](Source-Text/2017-PMID29354567-Park-Salivagram-and-Swallowing.txt), the [review of swallowing measures](Source-Text/2017-PMID28375450-Patel-Dysphagia-Instrument-Review.txt) and the [Mucuna product assay](Source-Text/2017-PMID28922612-Soumyanath-Mucuna-Label-Comparison.txt).
 
 The [drooling and saliva measurements](Observations/Drooling-Swallowing-and-Saliva-Sampling.md) compare the [Sohag cohort](Source-Text/2018-PMID30416335-Mohamed-Subtype-Drooling-and-Swallowing.txt), [Zhejiang cohort](Source-Text/2016-Xie-Videofluoroscopy-and-Drooling.txt), [Hamburg cohort](Source-Text/2017-PMID29178420-Nienstedt-Aspiration-and-Drooling.txt) and [S4 feasibility report](Source-Text/2018-PMID30248065-Chahine-S4-Saliva-Collection.txt). Their outcomes include oral saliva loss, swallowing and collected sample volume.

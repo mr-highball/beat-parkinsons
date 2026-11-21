@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [Suzuki case](Source-Text/2007-PMID17826796-Suzuki-Pramipexole-Antecollis.txt) and [Uzawa report](Source-Text/2009-PMID19890970-Uzawa-Dopamine-Agonist-Antecollis.txt) describe medication-associated neck flexion. The later pooled case table reproduces some of their observations.
+
 The [original Sialorrhea Clinical Scale study](Source-Text/2006-PMID17089393-Perez-Lloret-Sialorrhea-Scale.txt) distinguishes subjective drooling discomfort from measured saliva volume.
 
 The [El-Bayadh field survey](Cultural-and-Experiential/Traditional-Practices/2006-Cheriti-El-Bayadh-Gastrointestinal-Plant-Survey.txt) lists traditional gastrointestinal plant uses and documents a separate source trail from the 2000 Béchar report.

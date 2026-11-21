@@ -1,5 +1,7 @@
 # 1970-1974
 
+The [1971 autonomic case series](Source-Text/1971-PMID5097425-Aminoff-Autonomic-Assessment.txt) records one binary ptyalism item and separately measures several autonomic systems. All five original page scans were checked.
+
 Original printed context: [Treatment of chronic hepatic encephalopathy with levodopa](Source-Text/PMC1412974.txt).
 
 [injectable fluphenazine trial and depression-treatment counts](Source-Text/PMC1588639.txt) · [shared corn-oil diet and medication-related constipation reports](Source-Text/PMC1800097.txt).
