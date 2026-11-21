@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-Twenty-eight Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
+Twenty-nine Round 1 claims have a checked version 1 scorecard. Scores for these claims denote ordinal evidence tiers.
+
+Extra-virgin olive oil and Parkinson constipation (0072) retains Maybe True at the checked 50.005 minimal-signal tier, replacing its legacy 53 score across 13 material source families. Full-text review of Joukar et al. 2025 (PMC12694839, n = 140 analyzed per-protocol) confirms lower four-week Rome III constipation severity (-4.22, p < 0.001) and better week-4 Bristol stool form (+1.14, p < 0.001) for two tablespoons daily of raw extra-virgin versus refined olive oil, while excluding neurological disease, lacking an oil-free arm, omitting polyphenol assay, and containing a week-1 table discrepancy. A newly cataloged ulcerative colitis crossover abstract (Morvaridi et al. 2020, PMID:31901082, n = 32 completers) reports reduced GSRS constipation after extra-virgin olive oil with full between-oil tables paywalled. In Parkinson disease, MEDI-PD was inconclusive (p = 0.600), the eight-person pilot was uncontrolled and multicomponent, and the KIM crossover encouraged olive oil in both phases; an epilepsy ketogenic cohort recorded 26.2% constipation without an oil-free comparator. [Joukar 2025 digest](../../research/2025-2029/Source-Text/2025-PMID41383802-Joukar-EVOO-vs-Refined-Constipation.txt) · [Morvaridi 2020 abstract](../../research/2020-2024/Source-Text/2020-PMID31901082-Morvaridi-EVOO-vs-Canola-UC-Constipation.txt)
 
 Seven queued 2016 originals reached body review for raw fig and Parkinson drooling. The posture cohort measured four body angles, and the wearable and skin sources give separate clinical context. The historical autonomic scans show one binary ptyalism observation. The Lisbon follow-up and supplements distinguish changes in posture and rated saliva loss and clarify the likely shared cohort. No record estimates the effect of raw fig. Claim 0188 remains Unknown. [2016 original review](followup/fig-drooling-2016-originals-nov20-156/README.md)
 
@@ -1058,7 +1060,7 @@ Four original pairs reached full-text review and four remain at primary abstract
 - [0060](statements/0060.txt) **Maybe False** (51%) Consuming dried sage worsens insomnia severity in people with Parkinson's disease.
 - [0063](statements/0063.txt) **Maybe False** (55%) Consuming ground saffron worsens depressive symptom severity in people with Parkinson's disease.
 - [0065](statements/0065.txt) **Maybe True** (51%) Consuming cold-pressed walnut oil reduces pain severity in people with Parkinson's disease.
-- [0072](statements/0072.txt) **Maybe True** (53%) Consuming extra-virgin olive oil reduces constipation severity in people with Parkinson's disease.
+- [0072](statements/0072.txt) **Maybe True** (50.005%) Consuming extra-virgin olive oil reduces constipation severity in people with Parkinson's disease.
 - [0082](statements/0082.txt) **Maybe True** (51%) Consuming brewed black tea reduces bradykinesia severity in people with Parkinson's disease.
 - [0100](statements/0100.txt) **Maybe False** (52%) Consuming plain dark chocolate worsens anxiety severity in people with Parkinson's disease.
 - [0110](statements/0110.txt) **Maybe False** (51%) Consuming refined coconut oil worsens postural instability severity in people with Parkinson's disease.
