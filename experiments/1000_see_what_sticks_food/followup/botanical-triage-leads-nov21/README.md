@@ -1,0 +1,20 @@
+# Botanical-Term Lead Triage Follow-Through (Nov 21)
+
+This packet resolves all `19` unarchived `food_term_lead` pairs (`17` distinct PMIDs across `7` Round 1 claims: `0025`, `0259`, `0370`, `0502`, `0878`, `0883`, `0906`) surfaced by the read-only `foodexperiment.homographscreen triage-abstract` pass over `21,648` queued homograph abstracts.
+
+## Oracle-first lookup and primary retrieval
+
+- First-pass `oracle_find_sources` across all `17` lead PMIDs returned `0/17` local matches (catalog revision `269`). Secondary citation follow-through from `PMID:41346684` (`PMC12673667`, reference 46) hit existing registry record `NCT06352099` (`research/2020-2024/Source-Text/2024-NCT06352099-Altemor-Registry-Extract.txt`) while its published journal paper (`PMID:40694049`, Giovannini et al., 2025/2026) was a miss (`1/19` overall strict hit rate logged in [Oracle coverage](../../../oracle-coverage/README.md)).
+- Official NCBI PMC JATS full-text XML (`efetch.fcgi?db=pmc`) was retrieved and inspected for all `15` Open Access PMC articles (`17` claim-source pairs resolved at `full_text` depth). The two non-open-access PMC records (`PMID:21444610` *Salvia divinorum* hallucinogen review; `PMID:42613903` naringenin review) were recorded honestly at `abstract` depth.
+
+## Key primary records cataloged
+
+- **Isolated sclareol mouse formalin assay (`PMID:41550165`, `PMC12710028`, 2023-11-23):** Oral sclareol from clary sage (*Salvia sclarea*, different species and isolated constituent from culinary fresh *Salvia officinalis*) reduced mouse paw licking and edema (`n = 5/group`) with zero fatigue measurement; included in an October 2026 journal batch corrigendum (`PMID:42898092`). Marked `related` for `0025` (pain) and `excluded` for `0883` (fatigue). [Local text](../../../../research/2020-2024/Source-Text/2023-PMID41550165-Prottay-Sclareol-Formalin-Pain.txt)
+- **Altemor elderly crossover pilot (`PMID:40694049`, `NCT06352099`, 2025/2026) & hesperidin review (`PMID:41346684`, `PMC12673667`, 2025):** Multi-ingredient supplement (`hesperidin + diosmin + proanthocyanidins`, `n = 36` non-Parkinson elderly adults vs routine-care control) reported lower fall risk and improved attention without isolating hesperidin or whole raw orange; full numeric tables remain paywalled. Combined with the null Sim et al. 2018 older-women citrus falls cohort (`HR 1.01`, `95% CI 0.99-1.04`), claim `0259` (`raw orange -> worsens fall frequency`) receives a checked `open` (`Unknown`, `50`) v1 scorecard. [Altemor abstract](../../../../research/2025-2029/Source-Text/2025-PMID40694049-Giovannini-Altemor-Elderly-Falls-Cognition.txt) · [Hesperidin review](../../../../research/2025-2029/Source-Text/2025-PMID41346684-Zhao-Hesperidin-Neuroprotection-Review.txt)
+- **Orange-odor sleep study (`PMID:36229501`, `PMC9562345`, 2022):** Controlled trial (`n = 139` healthy adults) of inhaled orange essential-oil odor via nose clips on sleep quality; all `"fall"` hits refer solely to falling asleep (`excluded` for `0259`). [Local text](../../../../research/2020-2024/Source-Text/2022-PMID36229501-Orange-Odor-Sleep-Quality.txt)
+- **Jujube vs date palm disambiguation (`PMID:34422074`, `PMC8373493`, 2021):** Aqueous *Ziziphus jujuba* leaf extract rat memory study (distinct genus from *Phoenix dactylifera* dried date fruit; zero pain assay; `excluded` for `0502`). [Local text](../../../../research/2020-2024/Source-Text/2021-PMID34422074-Ziziphus-Jujuba-Rat-Cognition.txt)
+
+## Queue reconciliation and replay
+
+- Reconciled cleanly through `foodexperiment.contextintake.exe`: `19 checked; 0 still queued; 19 new; 0 upgraded; 0 retained; Total 18,600`.
+- Replayed `context-queue.tsv` via `build-contextqueue.ps1`: `Context queue: 41,459 -> 41,440` (`body_or_primary_context_reviewed: 19,440 -> 19,457`; `abstract_context_reviewed: 224 -> 226`; `0` archive identity discrepancies). [Exact dispositions](dispositions.tsv) · [Pinned scope](pinned-scope.tsv) · [Remaining pairs](open-cluster-pairs.tsv) · [Native replay verification](native-replay-verification.txt)
