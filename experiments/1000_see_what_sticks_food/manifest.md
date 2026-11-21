@@ -13,9 +13,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 951 |
+| Unknown | 1000 | 950 |
 | Maybe True | 0 | 23 |
-| Maybe False | 0 | 26 |
+| Maybe False | 0 | 27 |
 | True | 0 | 0 |
 | False | 0 | 0 |
 
@@ -77,6 +77,7 @@ Ninety-seven Round 1 claims carry a checked version 1 evidence scorecard ([score
 - [0485](statements/0485.txt) **Maybe False** (55%) Consuming dried saffron worsens fatigue severity in people with Parkinson's disease.
 - [0560](statements/0560.txt) **Maybe True** (50.005%) Consuming ground cumin reduces constipation severity in people with Parkinson's disease.
 - [0581](statements/0581.txt) **Maybe False** (50.005%) Consuming grated ginger worsens constipation severity in people with Parkinson's disease.
+- [0588](statements/0588.txt) **Maybe False** (50.005%) Consuming grated turmeric worsens olfactory impairment severity in people with Parkinson's disease.
 - [0639](statements/0639.txt) **Maybe True** (50.005%) Consuming cold-pressed flaxseed oil reduces pain severity in people with Parkinson's disease.
 - [0642](statements/0642.txt) **Maybe False** (50.005%) Consuming grated turmeric worsens walking slowness in people with Parkinson's disease.
 - [0659](statements/0659.txt) **Maybe True** (50.005%) Consuming fresh summer savory reduces pain severity in people with Parkinson's disease.
