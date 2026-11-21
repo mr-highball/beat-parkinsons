@@ -9,7 +9,7 @@ uses
   {$IFDEF UNIX}
   cthreads,
   {$ENDIF}
-  Classes, SysUtils, StrUtils, fpjson, jsonparser, parkinsonsoracle.claims,
+  Classes, SysUtils, StrUtils, SyncObjs, fpjson, jsonparser, parkinsonsoracle.claims,
   parkinsonsoracle.catalog, parkinsonsoracle.http;
 
 const
@@ -99,11 +99,24 @@ const
       '"inputSchema":{"type":"object","additionalProperties":false}}]}';
 
 type
+  TOracleTool = (otQuery, otClaim, otSearchCatalog, otStatus, otFilterOptions,
+    otFindSources, otReadSource, otEvidenceRubric, otCheckScorecard, otIngredientEffects);
+
+const
+  COracleToolNames: array[TOracleTool] of String = ('oracle_query', 'oracle_claim',
+    'oracle_search_catalog', 'oracle_status', 'oracle_filter_options', 'oracle_find_sources',
+    'oracle_read_source', 'oracle_evidence_rubric', 'oracle_check_scorecard',
+    'oracle_ingredient_effects');
+
+type
   TOracle = class
   private
     FRepoRoot: String;
     FClaims: TClaimIndex;
     FCatalog: TResearchCatalog;
+    FClaimsLock: TCriticalSection;
+    FCatalogLock: TCriticalSection;
+    function RunTool(ATool: TOracleTool; AArguments: TJSONObject): TJSONObject;
     function Index: TClaimIndex;
     function Catalog: TResearchCatalog;
     function Status: TJSONObject;
@@ -187,12 +200,16 @@ begin
   FRepoRoot := IncludeTrailingPathDelimiter(ExpandFileName(ARepoRoot));
   if not DirectoryExists(FRepoRoot + 'research') or not DirectoryExists(FRepoRoot + 'experiments') then
     raise EInOutError.Create('Pass the beat-parkinsons repository root.');
+  FClaimsLock := TCriticalSection.Create;
+  FCatalogLock := TCriticalSection.Create;
 end;
 
 destructor TOracle.Destroy;
 begin
   FCatalog.Free;
   FClaims.Free;
+  FCatalogLock.Free;
+  FClaimsLock.Free;
   inherited Destroy;
 end;
 
@@ -225,12 +242,23 @@ var
 begin
   Result := TJSONObject.Create;
   try
-    Result.Add('claims', Index.Status);
+    // Release the claims snapshot before opening or reading the text catalog.
+    FClaimsLock.Acquire;
     try
-      LCatalogState := Catalog.Status;
-    except
-      on LException: Exception do
-        LCatalogState := TJSONObject.Create(['ready', False, 'error', LException.Message]);
+      Result.Add('claims', Index.Status);
+    finally
+      FClaimsLock.Release;
+    end;
+    FCatalogLock.Acquire;
+    try
+      try
+        LCatalogState := Catalog.Status;
+      except
+        on LException: Exception do
+          LCatalogState := TJSONObject.Create(['ready', False, 'error', LException.Message]);
+      end;
+    finally
+      FCatalogLock.Release;
     end;
     Result.Add('catalog', LCatalogState);
   except
@@ -246,6 +274,31 @@ end;
 
 function TOracle.Invoke(const AName: String; AArguments: TJSONObject): TJSONObject;
 var
+  LIndex: Integer;
+  LTool: TOracleTool;
+  LLock: TCriticalSection;
+begin
+  LIndex := IndexStr(AName, COracleToolNames);
+  if LIndex < 0 then
+    raise EConvertError.Create('Unknown tool: ' + AName);
+  LTool := TOracleTool(LIndex);
+  if LTool = otStatus then
+    Exit(RunTool(LTool, AArguments));
+
+  if LTool in [otSearchCatalog, otFindSources, otReadSource] then
+    LLock := FCatalogLock
+  else
+    LLock := FClaimsLock;
+  LLock.Acquire;
+  try
+    Result := RunTool(LTool, AArguments);
+  finally
+    LLock.Release;
+  end;
+end;
+
+function TOracle.RunTool(ATool: TOracleTool; AArguments: TJSONObject): TJSONObject;
+var
   LQuery: TClaimQuery;
   LId: String;
   LPeriod: String;
@@ -257,10 +310,8 @@ var
   LIdentifiers: TJSONData;
   LSymptoms: TJSONData;
 begin
-  case IndexStr(AName, ['oracle_query', 'oracle_claim', 'oracle_search_catalog',
-    'oracle_status', 'oracle_filter_options', 'oracle_find_sources', 'oracle_read_source',
-    'oracle_evidence_rubric', 'oracle_check_scorecard', 'oracle_ingredient_effects']) of
-    0:
+  case ATool of
+    otQuery:
       begin
         RequireFields(AArguments, ['symptom', 'ingredient', 'preparation', 'direction',
           'trend', 'scope', 'verdict', 'round', 'offset', 'limit']);
@@ -277,7 +328,7 @@ begin
         LQuery.Limit := ReadInteger(AArguments, 'limit', 12, 1, 100);
         Result := Index.Query(LQuery);
       end;
-    1:
+    otClaim:
       begin
         RequireFields(AArguments, ['round', 'id', 'assessment_offset', 'assessment_limit',
           'assessment_study']);
@@ -311,7 +362,7 @@ begin
         Result := Index.Claim(LIndex, LId, LAssessmentOffset, LAssessmentLimit,
           LAssessmentStudy);
       end;
-    2:
+    otSearchCatalog:
       begin
         RequireFields(AArguments, ['terms', 'period', 'source_kind', 'offset', 'limit']);
         LTerms := ReadString(AArguments, 'terms', '');
@@ -323,17 +374,17 @@ begin
           ReadInteger(AArguments, 'limit', 12, 1, 100),
           ReadString(AArguments, 'source_kind', 'all'));
       end;
-    3:
+    otStatus:
       begin
         RequireFields(AArguments, []);
         Result := Status;
       end;
-    4:
+    otFilterOptions:
       begin
         RequireFields(AArguments, []);
         Result := Index.FilterOptions;
       end;
-    5:
+    otFindSources:
       begin
         RequireFields(AArguments, ['identifiers']);
         LIdentifiers := AArguments.Find('identifiers');
@@ -343,19 +394,19 @@ begin
         end;
         Result := Catalog.FindSources(TJSONArray(LIdentifiers));
       end;
-    6:
+    otReadSource:
       begin
         Result := ReadSource(AArguments);
       end;
-    7:
+    otEvidenceRubric:
       begin
         Result := EvidenceRubric(AArguments);
       end;
-    8:
+    otCheckScorecard:
       begin
         Result := CheckScorecard(AArguments);
       end;
-    9:
+    otIngredientEffects:
       begin
         RequireFields(AArguments, ['symptoms']);
         LSymptoms := AArguments.Find('symptoms');
@@ -365,8 +416,7 @@ begin
         end;
         Result := Index.Ingredients(TJSONArray(LSymptoms));
       end;
-  else
-    raise EConvertError.Create('Unknown tool: ' + AName);
+
   end;
 end;
 

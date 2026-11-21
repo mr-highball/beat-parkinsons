@@ -160,7 +160,8 @@ begin
   end;
 end;
 
-procedure RequestLocal(const ABody: String; AReply: TOracleReply; ACanRetry: Boolean);
+procedure RequestLocal(const ABody: String; AReply: TOracleReply; ACanRetry,
+  AClaimPage: Boolean);
 var
   LRequest: TJSXMLHttpRequest;
   LCompleted: Boolean;
@@ -175,7 +176,7 @@ var
       window.setTimeout(
         procedure
         begin
-          RequestLocal(ABody, AReply, False);
+          RequestLocal(ABody, AReply, False, AClaimPage);
         end, 500);
     end
     else
@@ -196,7 +197,7 @@ begin
   LRequest.ontimeout :=
     function(AEvent: TJSProgressEvent): Boolean
     begin
-      Fail('The request took too long. Please try again.', True);
+      Fail('The request took too long. Please try again.', not AClaimPage);
       Result := False;
     end;
   LRequest.onload :=
@@ -234,7 +235,10 @@ begin
   try
     LRequest.open('POST', '/api/oracle', True);
     LRequest.setRequestHeader('Content-Type', 'application/json');
-    LRequest.timeout := 25000;
+    if AClaimPage then
+      LRequest.timeout := 10000
+    else
+      LRequest.timeout := 25000;
     LRequest.send(ABody);
   except
     Fail('The request could not start. Please try again.', False);
@@ -253,7 +257,7 @@ begin
   LBody := TJSObject.new;
   LBody['name'] := ATool;
   LBody['arguments'] := AArguments;
-  RequestLocal(TJSJSON.stringify(LBody), AReply, True);
+  RequestLocal(TJSJSON.stringify(LBody), AReply, True, ATool = 'oracle_query');
 end;
 
 procedure PublishResults(ADocument: TNyxDocument; APage: TNyxNode);
@@ -277,7 +281,8 @@ begin
   LPrior.Free;
 end;
 
-procedure MessageView(const ATitle, AMessage: String; ABack: TPickerAction = nil);
+procedure MessageView(const ATitle, AMessage: String; ABack: TPickerAction = nil;
+  const AActionLabel: String = '‹ Back');
 var
   LDocument: TNyxDocument;
   LPage: TNyxNode;
@@ -288,7 +293,7 @@ begin
   LPage.Add(Caption(nkHeading, 'result-heading', ATitle));
   LPage.Add(Caption(nkLabel, 'result-message', AMessage));
   if Assigned(ABack) then
-    LPage.Add(Button('back-results', '‹ Back', nvSecondary));
+    LPage.Add(Button('back-results', AActionLabel, nvSecondary));
   PublishResults(LDocument, LPage);
   if Assigned(ABack) then
     BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
@@ -2210,7 +2215,10 @@ begin
   else
     LTool := 'oracle_search_catalog';
   ClearGraphHistory;
-  MessageView('Searching…', 'Checking the research catalog.');
+  if GView = ovClaims then
+    MessageView('Searching…', 'Looking up ingredient and symptom claims.')
+  else
+    MessageView('Searching…', 'Checking the research catalog.');
   LReceive :=
     procedure(AData: TJSObject; const AError: String)
     begin
@@ -2218,7 +2226,11 @@ begin
         Exit;
       if AError <> '' then
       begin
-        MessageView('Search unavailable', AError);
+        MessageView('Search unavailable', AError,
+          procedure
+          begin
+            Query(ANewQuery, AOffset);
+          end, 'Retry search');
         Exit;
       end;
       GResults := AData;

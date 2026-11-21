@@ -73,6 +73,28 @@ $InlineCss = Join-Path $GlyphBuild 'glyphs.css'
 if ($LASTEXITCODE) { exit $LASTEXITCODE }
 [IO.File]::AppendAllText((Join-Path $Output 'oracle.css'), [IO.File]::ReadAllText($InlineCss), [Text.UTF8Encoding]::new($false))
 
+if (!$StaticModel) {
+    foreach ($Name in @('app.js', 'rtl.js', 'oracle.css')) {
+        $Asset = Join-Path $Output $Name
+        $InputStream = [IO.File]::OpenRead($Asset)
+        try {
+            $Compressed = [IO.File]::Create("$Asset.gz")
+            try {
+                $Gzip = [IO.Compression.GZipStream]::new($Compressed, [IO.Compression.CompressionLevel]::Optimal)
+                try {
+                    $InputStream.CopyTo($Gzip)
+                } finally {
+                    $Gzip.Dispose()
+                }
+            } finally {
+                $Compressed.Dispose()
+            }
+        } finally {
+            $InputStream.Dispose()
+        }
+    }
+}
+
 $IngredientAssets = Join-Path $PSScriptRoot 'assets/ingredients'
 $GalleryArgs = @('-Mdelphi', '-Sa', '-Cr', '-Co', '-Ci', '-gl', "-Fu$SharedUnits",
     "-Fu$Repo/experiments/1000_see_what_sticks_food/tools",

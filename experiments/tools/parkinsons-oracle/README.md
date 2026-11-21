@@ -216,6 +216,24 @@ tool text. The median of 11 warm runs fell from 2.03 to 0.70 ms. A sweep of
 5,400 NCT-named candidates found 5,297 exact paths, up from 5,099. It recovered
 106 of 140 older-format candidates and retained every previously returned path.
 
+Broad symptom-effect searches use claim IDs grouped by recorded trend in the
+pinned claim index. They still apply the requested evidence scope, preserve
+round and claim order, and return the requested page and exact total. The
+local browser requests eight claims at a time. Claim lookups and catalog
+requests use separate locks, so a cold catalog or a source search can finish
+independently of a claim page. When a live claim page times out, the browser
+offers a retry after ten seconds.
+
+In a controlled HTTP check, an exclusive lock on a throwaway catalog held
+status for about 2.3 seconds in both versions. The eight-row May ease page
+fell from 2,062 ms to 33 ms and arrived before the lock was released. All
+48 compared MCP responses were byte-for-byte equal across pages, scopes
+and additional filters. Across 100 warm MCP runs per build, median response
+time for the first May ease page fell from 1.10 ms to 0.74 ms. The served
+JavaScript was 2.2 MB with gzip in the live build. A mobile Chromium run
+returned the first page in about half a second after submission and verified
+paging, claim details, the graph and retry after an interrupted search.
+
 ## Compare ingredients across symptoms
 
 Select one or more symptoms and choose **Compare ingredients** from the results or graph. The comparison includes all ingredients for the selected symptoms and keeps the exact preparation beside each finding. **May ease** and **May worsen** group ingredients with one recorded direction across the selection. **Mixed effects** keeps ingredients with both directions together. **No clear direction** lists remaining ingredients, with a name filter and access to each gallery. Use **See evidence** to open the reviewed claim, its rationale and studies. An unresolved symptom remains open even if the ingredient has a directional finding for another symptom.
@@ -240,7 +258,7 @@ Public forum summaries appear in Culture & experience and Search sources with a 
 
 Source-kind paging examines catalog batches until the page is filled or the result set ends. A nonmatching batch does not close the search, and cursor positions retain unconsumed rows. The shared Pascal presentation unit has native fixtures for source classification, query terms and pagination boundaries. Browser assets use Nyx and the web target. Fourteen distinct [imagegen glyph masters and their prompts](web/assets/glyphs/README.md) supply the navigation, research tabs, evidence indicators and helper controls. The native build embeds lossless alpha masks into the stylesheet, so portable builds need no image endpoint.
 
-The Nyx web target uses the same claim and catalog service as MCP. The local workbench offers common symptom pills, a browse list and suggestions for symptoms, ingredients and preparations. Under Symptom effect, choose May ease, May worsen, or Any trend before searching. The filters match the arrows on the cards. May ease and May worsen can search across all symptoms with the ingredient and symptom fields blank. Each result identifies its symptom and opens its study assessments and citations. Claim results appear as soon as they are ready. Related sources load below them while the visible cards remain in place. The local server binds to the loopback address by default.
+The Nyx web target uses the same claim and catalog service as MCP. The local workbench offers common symptom pills, a browse list and suggestions for symptoms, ingredients and preparations. Under Symptom effect, choose May ease, May worsen, or Any trend before searching. The filters match the arrows on the cards. May ease and May worsen can search across all symptoms with the ingredient and symptom fields blank. Each result identifies its symptom and opens its study assessments and citations. Claim results appear as soon as they are ready. Related sources load below them while the visible cards remain in place. The local server binds to the loopback address by default. The local web build also prepares gzip copies of the scripts and stylesheet. The server uses them for browsers that accept gzip and can serve the original files on their existing URLs.
 
 Choose multiple symptom pills to find research for any selected symptom: Tremors **or** Pain, for example. Adding a symptom keeps the previous pills. Clicking a selected quick choice or its removal pill removes only that symptom. Typing another symptom keeps the current selection. Ingredient, preparation, evidence scope and effect filters apply to each selected symptom before the results are combined.
 

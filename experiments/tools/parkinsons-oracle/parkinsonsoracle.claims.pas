@@ -66,6 +66,7 @@ type
     FIdentities: TDictionary<String, TClaim>;
     FBySymptom: TObjectDictionary<String, TList<TClaim>>;
     FByIngredient: TObjectDictionary<String, TList<TClaim>>;
+    FByTrend: TObjectDictionary<String, TList<TClaim>>;
     FSymptomAliases: TDictionary<String, String>;
     FIngredientAliases: TDictionary<String, String>;
     FCulturalSources: TJSONArray;
@@ -562,6 +563,8 @@ var
   LArguments: TFields;
   LTables: TStringList;
   LProcess: TProcess;
+  LClaim: TClaim;
+  LTrend: String;
 begin
   inherited Create;
   FRoot := IncludeTrailingPathDelimiter(ExpandFileName(ARepoRoot));
@@ -569,6 +572,7 @@ begin
   FIdentities := TDictionary<String, TClaim>.Create;
   FBySymptom := TObjectDictionary<String, TList<TClaim>>.Create([doOwnsValues]);
   FByIngredient := TObjectDictionary<String, TList<TClaim>>.Create([doOwnsValues]);
+  FByTrend := TObjectDictionary<String, TList<TClaim>>.Create([doOwnsValues]);
   FSymptomAliases := TDictionary<String, String>.Create;
   FIngredientAliases := TDictionary<String, String>.Create;
   {$IFDEF WINDOWS}
@@ -637,6 +641,14 @@ begin
   AddAlias(FSymptomAliases, 'hallucinations', 'visual hallucination frequency');
   AddAlias(FSymptomAliases, 'seeing things', 'visual hallucination frequency');
   FDecisions := CompileClaimDecisions;
+  for LClaim in FClaims do
+  begin
+    LTrend := ClaimTrend(LClaim.Verdict, LClaim.Direction);
+    if LTrend <> '' then
+    begin
+      AddPosting(FByTrend, LTrend, LClaim);
+    end;
+  end;
 end;
 
 destructor TClaimIndex.Destroy;
@@ -644,6 +656,7 @@ begin
   FCulturalSources.Free;
   FIngredientAliases.Free;
   FSymptomAliases.Free;
+  FByTrend.Free;
   FByIngredient.Free;
   FBySymptom.Free;
   FIdentities.Free;
@@ -1154,7 +1167,9 @@ var
   LBySymptom: TList<TClaim>;
   LByIngredient: TList<TClaim>;
   LCandidates: TList<TClaim>;
+  LTrendCandidates: TList<TClaim>;
   LEmpty: TList<TClaim>;
+  LCandidateCount: Integer;
   LResolved: TQueryResolution;
 begin
   LQuery := AQuery;
@@ -1195,13 +1210,29 @@ begin
   else
     LCandidates := LByIngredient;
   try
+    LCandidateCount := LCandidates.Count;
+    if (LCandidates = FClaims) and (LQuery.Trend <> '') and
+      (LQuery.Preparation = '') and (LQuery.Round = 0) and (LQuery.Direction = '') then
+    begin
+      if FByTrend.TryGetValue(LQuery.Trend, LTrendCandidates) then
+      begin
+        LCandidates := LTrendCandidates;
+      end
+      else
+      begin
+        LEmpty := TList<TClaim>.Create;
+        LCandidates := LEmpty;
+      end;
+    end;
     LResolved := ResolveRows(LCandidates, LQuery, FDecisions);
     try
+      // The skipped rows would all reach the evidence pass and fail its trend filter.
+      Inc(LResolved.EvidenceExcluded, LCandidateCount - LCandidates.Count);
       Result := TJSONObject.Create(['revision', FRevision, 'scope', LQuery.Scope,
         'symptom', LQuery.Symptom, 'ingredient', LQuery.Ingredient,
         'preparation', LQuery.Preparation, 'hypothesis_direction', LQuery.Direction,
         'verdict_filter', LQuery.Verdict, 'round_filter', LQuery.Round,
-        'index_candidates', LCandidates.Count, 'total_matches', LResolved.Selected,
+        'index_candidates', LCandidateCount, 'total_matches', LResolved.Selected,
         'offset', LQuery.Offset, 'identity_excluded', LResolved.IdentityExcluded,
         'hypothesis_excluded', LResolved.PremiseExcluded,
         'evidence_excluded', LResolved.EvidenceExcluded]);

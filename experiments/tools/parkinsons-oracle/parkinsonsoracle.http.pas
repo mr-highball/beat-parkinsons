@@ -19,7 +19,7 @@ procedure ServeOracleWeb(const AWebRoot: String; APort: Word; AInvoke: TOracleIn
 implementation
 
 uses
-  Classes, SysUtils, StrUtils, Types, Sockets, SyncObjs, fphttpserver, jsonparser, jsonscanner;
+  Classes, SysUtils, StrUtils, Types, Sockets, fphttpserver, jsonparser, jsonscanner;
 
 const
   LoopbackAddress = '127.0.0.1';
@@ -41,9 +41,9 @@ type
     FPeerNetwork: LongWord;
     FPeerMask: LongWord;
     FInvoke: TOracleInvoke;
-    FInvokeLock: TCriticalSection;
     procedure ConfigureBinding(const ALanBinding: String);
-    procedure ServeAsset(AResponse: TFPHTTPConnectionResponse; const AFileName, AMedia: String);
+    procedure ServeAsset(AResponse: TFPHTTPConnectionResponse;
+      const AFileName, AMedia: String; const AAcceptEncoding: String = '');
     procedure CallOracle(ARequest: TFPHTTPConnectionRequest;
       AResponse: TFPHTTPConnectionResponse);
     procedure HandleRequest(Sender: TObject; var ARequest: TFPHTTPConnectionRequest;
@@ -51,7 +51,6 @@ type
   public
     constructor Create(const AWebRoot: String; APort: Word; AInvoke: TOracleInvoke;
       const ALanBinding: String);
-    destructor Destroy; override;
     procedure Run(APort: Word);
   end;
 
@@ -234,22 +233,76 @@ begin
     FHost := FHost + ':' + IntToStr(APort);
   end;
   FInvoke := AInvoke;
-  FInvokeLock := TCriticalSection.Create;
 end;
 
-destructor TOracleWeb.Destroy;
+
+function AcceptsGzip(const AHeader: String): Boolean;
+var
+  LEntry: String;
+  LParameter: String;
+  LParts: TStringDynArray;
+  LQuality: Double;
+  LWildcard: Boolean;
+  LFormat: TFormatSettings;
 begin
-  FInvokeLock.Free;
-  inherited Destroy;
+  LFormat := DefaultFormatSettings;
+  LFormat.DecimalSeparator := '.';
+  LWildcard := False;
+  for LEntry in SplitString(AHeader, ',') do
+  begin
+    LParts := SplitString(LEntry, ';');
+    if Length(LParts) = 0 then
+      Continue;
+    LQuality := 1;
+    if Length(LParts) > 1 then
+    begin
+      LParameter := LowerCase(Trim(LParts[1]));
+      if not StartsStr('q=', LParameter) or
+        not TryStrToFloat(Copy(LParameter, 3, MaxInt), LQuality, LFormat) then
+      begin
+        LQuality := 0;
+      end;
+    end;
+    if SameText(Trim(LParts[0]), 'gzip') then
+    begin
+      Exit((LQuality > 0) and (LQuality <= 1));
+    end;
+    if Trim(LParts[0]) = '*' then
+    begin
+      LWildcard := (LQuality > 0) and (LQuality <= 1);
+    end;
+  end;
+  Result := LWildcard;
 end;
 
 procedure TOracleWeb.ServeAsset(AResponse: TFPHTTPConnectionResponse;
-  const AFileName, AMedia: String);
+  const AFileName, AMedia: String; const AAcceptEncoding: String);
 var
   LFile: TFileStream;
+  LPath: String;
+  LUseGzip: Boolean;
+  LPlainAge: LongInt;
 begin
+  LPath := FWebRoot + AFileName;
+  LUseGzip := False;
+  if (ExtractFileExt(AFileName) = '.js') or (ExtractFileExt(AFileName) = '.css') then
+  begin
+    AResponse.SetCustomHeader('Vary', 'Accept-Encoding');
+    if AcceptsGzip(AAcceptEncoding) then
+    begin
+      LPlainAge := FileAge(LPath);
+      LUseGzip := (LPlainAge <> -1) and (FileAge(LPath + '.gz') >= LPlainAge);
+    end;
+  end;
   try
-    LFile := TFileStream.Create(FWebRoot + AFileName, fmOpenRead or fmShareDenyNone);
+    if LUseGzip then
+    begin
+      LFile := TFileStream.Create(LPath + '.gz', fmOpenRead or fmShareDenyNone);
+    end
+    else
+    begin
+      LFile := TFileStream.Create(LPath, fmOpenRead or fmShareDenyNone);
+    end;
   except
     on EFOpenError do
     begin
@@ -260,6 +313,10 @@ begin
   try
     AResponse.Code := 200;
     AResponse.ContentType := AMedia;
+    if LUseGzip then
+    begin
+      AResponse.SetCustomHeader('Content-Encoding', 'gzip');
+    end;
     AResponse.FreeContentStream := True;
     AResponse.ContentStream := LFile;
     LFile := nil;
@@ -333,13 +390,7 @@ begin
     LResult := nil;
     try
       try
-        // The catalog and claim indexes belong to one shared oracle instance.
-        FInvokeLock.Acquire;
-        try
-          LResult := FInvoke(LName.AsString, TJSONObject(LArguments));
-        finally
-          FInvokeLock.Release;
-        end;
+        LResult := FInvoke(LName.AsString, TJSONObject(LArguments));
         if LResult = nil then
         begin
           raise EInvalidOp.Create('Oracle returned no result.');
@@ -453,7 +504,7 @@ begin
   end;
   if LIndex >= 0 then
   begin
-    ServeAsset(AResponse, Files[LIndex], Types[LIndex]);
+    ServeAsset(AResponse, Files[LIndex], Types[LIndex], ARequest.GetFieldByName('Accept-Encoding'));
   end
   else if LImage <> '' then
   begin
