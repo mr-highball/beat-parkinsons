@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [drooling and saliva measurements](Observations/Drooling-Swallowing-and-Saliva-Sampling.md) compare the [Sohag cohort](Source-Text/2018-PMID30416335-Mohamed-Subtype-Drooling-and-Swallowing.txt), [Zhejiang cohort](Source-Text/2016-Xie-Videofluoroscopy-and-Drooling.txt), [Hamburg cohort](Source-Text/2017-PMID29178420-Nienstedt-Aspiration-and-Drooling.txt) and [S4 feasibility report](Source-Text/2018-PMID30248065-Chahine-S4-Saliva-Collection.txt). Their outcomes include oral saliva loss, swallowing and collected sample volume.
+
 The [Barbe diary registration](Source-Text/Trials/DRKS00012458.txt) and [publication](Source-Text/2018-PMID30028552-Barbe-Symptom-Diary-and-Meals.txt) distinguish hourly dry mouth, drooling, swallowing and food activity. [Period observations](Observations/Saliva-Diary-Motor-Subtypes-and-Patient-Accounts.md) link the adjacent outcome measures and patient reports.
 
 The [P167 food-allergy abstract](Source-Text/2015-PMC4412414-P167-Fig-Allergy-Case.txt) separates unspecified ingested fig from fresh and dried skin-test materials. The published case gives no separate drooling report.
