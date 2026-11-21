@@ -11,15 +11,29 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $Repo = (Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '../../../..')).Path
+$LocalPas2jsDir = Join-Path $Repo 'build/parkinsons-oracle/pas2js-aug'
+$LocalPas2jsExe = Join-Path $LocalPas2jsDir ($(if ($IsWindows -or $env:OS -eq 'Windows_NT') { 'pas2js.exe' } else { 'pas2js' }))
+$LocalRtl = Join-Path $Repo 'build/parkinsons-oracle/pas2js-aug-source/utils/pas2js/dist/rtl.js'
+$LocalPackages = Join-Path $Repo 'build/parkinsons-oracle/pas2js-source/packages'
 if (!$Compiler) {
-    $Compiler = (Get-Command pas2js -ErrorAction Stop).Source
+    if (Test-Path -LiteralPath $LocalPas2jsExe -PathType Leaf) {
+        $Compiler = $LocalPas2jsExe
+    } else {
+        $Compiler = (Get-Command pas2js -ErrorAction Stop).Source
+    }
 }
 if (!$Runtime) {
     $Candidate = Join-Path (Split-Path -Parent (Get-Command $Compiler).Source) 'rtl.js'
-    if (!(Test-Path -LiteralPath $Candidate -PathType Leaf)) {
+    if (Test-Path -LiteralPath $Candidate -PathType Leaf) {
+        $Runtime = $Candidate
+    } elseif (Test-Path -LiteralPath $LocalRtl -PathType Leaf) {
+        $Runtime = $LocalRtl
+    } else {
         throw 'Pass -Runtime with the rtl.js distributed with this pas2js compiler.'
     }
-    $Runtime = $Candidate
+}
+if (!$UnitRoot -and (Test-Path -LiteralPath $LocalPackages -PathType Container)) {
+    $UnitRoot = $LocalPackages
 }
 $Vendor = Join-Path $Repo 'experiments/tools/vendor/nyx/src'
 $SharedUnits = Split-Path -Parent $PSScriptRoot

@@ -3,7 +3,11 @@
 param(
     [string] $Compiler = $env:FPC,
     [switch] $RefreshCatalog,
-    [string] $BuildRoot
+    [string] $BuildRoot,
+    [string] $Pas2js = $env:PAS2JS,
+    [string] $Runtime = $env:PAS2JS_RTL,
+    [string] $UnitRoot = $env:PAS2JS_UNITS,
+    [switch] $SkipWeb
 )
 
 $ErrorActionPreference = 'Stop'
@@ -46,5 +50,23 @@ if ($RefreshCatalog) {
     }
     $Executable = Join-Path $Bin $Name
     & $Executable index $Repo
-    exit $LASTEXITCODE
+    if ($LASTEXITCODE) {
+        exit $LASTEXITCODE
+    }
+}
+if (!$SkipWeb) {
+    $WebBuild = Join-Path $PSScriptRoot 'web/build.ps1'
+    if (Test-Path -LiteralPath $WebBuild -PathType Leaf) {
+        $WebArgs = @{
+            NativeCompiler  = $Compiler
+            OutputDirectory = (Join-Path $BuildRoot 'web')
+        }
+        if ($Pas2js) { $WebArgs.Compiler = $Pas2js }
+        if ($Runtime) { $WebArgs.Runtime = $Runtime }
+        if ($UnitRoot) { $WebArgs.UnitRoot = $UnitRoot }
+        & $WebBuild @WebArgs
+        if ($LASTEXITCODE) {
+            exit $LASTEXITCODE
+        }
+    }
 }

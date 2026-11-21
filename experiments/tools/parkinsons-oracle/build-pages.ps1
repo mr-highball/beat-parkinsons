@@ -32,7 +32,7 @@ try {
     $Published = Join-Path $Pages $Id
     New-Item -ItemType Directory -Path $BuildRoot, $Pages -Force | Out-Null
 
-    & (Join-Path $PSScriptRoot 'build.ps1') -Compiler $Compiler -BuildRoot $BuildRoot
+    & (Join-Path $PSScriptRoot 'build.ps1') -Compiler $Compiler -BuildRoot $BuildRoot -SkipWeb
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
     & (Join-Path $PSScriptRoot 'web/build.ps1') -Compiler $Pas2js -Runtime $Runtime -UnitRoot $UnitRoot -NativeCompiler $Compiler -OutputDirectory $Stage -StaticModel
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
