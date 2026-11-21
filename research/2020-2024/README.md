@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [2024 6-shogaol plus levodopa mouse study](Source-Text/2024-PMID39092515-6Shogaol-Levodopa-Mouse-Olfaction.txt) reports improved buried-food olfactory latency and non-motor behavior with isolated oral 6-shogaol in MPTP/probenecid mice without scoring dyskinesia or human clinical rigidity.
+
 The [Han Chinese PRKN family report](Source-Text/2020-PMID33154736-PRKN-Family-Green-Tea-History.txt) records descriptive baseline green-tea intake ("Never" and "Quit") alongside onset fatigue complaints without a tea intervention or fatigue scale comparison.
 
 The [Prottay mouse formalin study](Source-Text/2023-PMID41550165-Prottay-Sclareol-Formalin-Pain.txt) tests isolated oral sclareol from clary sage (Salvia sclarea) on paw licking and edema (with an October 2026 journal batch corrigendum, PMID:42898092) and measures zero fatigue outcomes. The [orange-odor sleep study](Source-Text/2022-PMID36229501-Orange-Odor-Sleep-Quality.txt) finds no consistent main effect of inhaled orange essential oil via nose clips in 139 healthy adults, with "fall" referring solely to falling asleep. The [Ziziphus jujuba rat memory study](Source-Text/2021-PMID34422074-Ziziphus-Jujuba-Rat-Cognition.txt) distinguishes jujube leaf extract from Phoenix dactylifera date fruit and performs no pain assay.

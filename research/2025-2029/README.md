@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [2026 6-shogaol brain-gut mouse study](Source-Text/2026-PMID42375089-6Shogaol-Levodopa-Gut-Motility.txt) reports restored gastrointestinal motility and higher striatal levodopa/dopamine with oral 6-shogaol coadministration in MPTP/probenecid mice without scoring dyskinesia.
+
 The [Giovannini Altemor crossover pilot abstract](Source-Text/2025-PMID40694049-Giovannini-Altemor-Elderly-Falls-Cognition.txt) reports the published primary findings of [NCT06352099](../2020-2024/Source-Text/2024-NCT06352099-Altemor-Registry-Extract.txt) for a multi-ingredient hesperidin, diosmin and proanthocyanidins supplement on elderly attention and fall risk without isolating raw orange or enrolling Parkinson patients; the [Zhao hesperidin neuroprotection review](Source-Text/2025-PMID41346684-Zhao-Hesperidin-Neuroprotection-Review.txt) flags this pilot trial as preliminary and underpowered.
 
 The [Joukar randomized olive-oil constipation trial](Source-Text/2025-PMID41383802-Joukar-EVOO-vs-Refined-Constipation.txt) compares two tablespoons daily of raw extra-virgin versus refined olive oil across 140 analyzed adults with functional constipation (excluding neurological causes). The [2026 caregiver olive-oil discussion](Cultural-and-Experiential/Conversations/2026-Reddit-Olive-Oil-and-Parkinson-Constipation.txt) records an uncontrolled report of softer stools alongside concurrent walking.
