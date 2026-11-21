@@ -787,3 +787,4 @@ Two original first releases date to 2019, with 2020 journal issues. [Insular mor
 - [Riyadh focus-group accounts of dates at iftar](Cultural-and-Experiential/Ceremonial-Accounts/2018-PMID29801593-Riyadh-Ramadan-Iftar-Dates.txt).
 - [Kuwait Parkinson Ramadan cohort, attrition and symptom outcomes](Source-Text/2019-PMID31176513-Kamel-Parkinson-Ramadan-Cohort.txt).
 - [Butylphthalide Parkinson trial, retrospective WHO ICTRP registration](Source-Text/Trials/ChiCTR1800018892.txt).
+- [Aqueous spearmint extract in age-associated memory impairment, working memory, sleep onset, attention, and mood randomized double-blind trial](Source-Text/2018-PMID29314866-Herrlinger-Spearmint-Extract-Memory-Sleep-Mood.txt).
