@@ -1,0 +1,7 @@
+# The 2018 raw fig and drooling originals
+
+All seven queued 2018 originals reached original-body review. Eight new related assessment rows and dated catalog records distinguish reported drooling, swallowing under different textures, and obtained saliva volume. No comparison identifies the effect of raw fig on graded drooling in Parkinson disease. Claim 0188 remains Unknown. [Exact dispositions](dispositions.tsv) · [Study assessments](assessments.tsv) · [Replay](native-replay-verification.txt)
+
+Sohag reported more sialorrhea in the tremor-dominant group and more instrumental dysphagia in the gait-dominant group. The Zhejiang videofluoroscopy study related drooling most consistently to food leakage from the mouth. Three Hamburg reports describe distinct outcomes within a likely shared cohort. The sponsor protocol, design publication, registry and feasibility report identify one S4 specimen study. The food-timing observation concerned obtained volume, with the underlying estimate unreported. [Chronological catalog observations](../../../../research/2015-2019/Observations/Drooling-Swallowing-and-Saliva-Sampling.md)
+
+The replay leaves 117 of 562 original pairs queued for claim 0188, including 11 access or identity holds. The exact original dispositions and companion evidence distinguish clinical outcome context from diagnostic mismatches. [Remaining original pairs](open-cluster-pairs.tsv) · [Search routes](search-trails.tsv) · [Open trails](open-trails.tsv) · [Retrieval receipts](retrieval-sha256.tsv) · [Oracle accounting](lookup-merge.txt)

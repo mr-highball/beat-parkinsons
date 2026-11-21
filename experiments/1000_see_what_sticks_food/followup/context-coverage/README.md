@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 19,377 |
+| Local body or other primary-source context | 19,384 |
 | Exact assessment with basis unspecified | 129 |
 | Abstract context | 224 |
 | Title or index | 85 |
 | Pending or access-only disposition | 360 |
-| No imported exact review | 41,077 |
+| No imported exact review | 41,070 |
 | **Total** | **61,252** |
+
+All seven queued 2018 raw fig and drooling originals reached primary-body review. The original replay leaves 41,515 pairs across 26,081 source keys. Eight newly cataloged records distinguish symptom ratings, instrumental swallowing and saliva sampling. There are 117 of the 562 original claim 0188 pairs left, including 11 access or identity holds. [2018 original review](../fig-drooling-2018-originals-nov20-154/README.md)
 
 All ten queued 2019 raw fig and drooling originals reached primary-body review. The replay leaves 41,522 pairs across 26,086 source keys. The 237 proceedings numbers match the separate contents, including 21 withdrawals. Related records distinguish the registered diary and oral measurements. [2019 original review](../fig-drooling-2019-originals-nov20-153/README.md)
 
