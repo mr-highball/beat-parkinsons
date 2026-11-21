@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [Prottay mouse formalin study](Source-Text/2023-PMID41550165-Prottay-Sclareol-Formalin-Pain.txt) tests isolated oral sclareol from clary sage (Salvia sclarea) on paw licking and edema (with an October 2026 journal batch corrigendum, PMID:42898092) and measures zero fatigue outcomes. The [orange-odor sleep study](Source-Text/2022-PMID36229501-Orange-Odor-Sleep-Quality.txt) finds no consistent main effect of inhaled orange essential oil via nose clips in 139 healthy adults, with "fall" referring solely to falling asleep. The [Ziziphus jujuba rat memory study](Source-Text/2021-PMID34422074-Ziziphus-Jujuba-Rat-Cognition.txt) distinguishes jujube leaf extract from Phoenix dactylifera date fruit and performs no pain assay.
+
 The [Morvaridi olive-oil versus canola-oil crossover abstract](Source-Text/2020-PMID31901082-Morvaridi-EVOO-vs-Canola-UC-Constipation.txt) reports reduced GSRS constipation after extra-virgin olive oil in 32 ulcerative colitis completers, with full between-oil tables paywalled.
 
 The [2022 Mucuna product assays](Source-Text/2022-PMID35939305-Cohen-Mucuna-Product-Assays.txt) compared single samples from sixteen products. The [2023 Qamar correction](Source-Text/2023-PMID36737446-Qamar-Imaging-Review-Correction.txt) updates author attribution in the earlier imaging review.
