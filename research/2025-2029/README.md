@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [Joukar randomized olive-oil constipation trial](Source-Text/2025-PMID41383802-Joukar-EVOO-vs-Refined-Constipation.txt) compares two tablespoons daily of raw extra-virgin versus refined olive oil across 140 analyzed adults with functional constipation (excluding neurological causes). The [2026 caregiver olive-oil discussion](Cultural-and-Experiential/Conversations/2026-Reddit-Olive-Oil-and-Parkinson-Constipation.txt) records an uncontrolled report of softer stools alongside concurrent walking.
+
 The [2026 online salivary survey](Source-Text/2026-PMID41546443-van-Dijk-Drooling-and-Dry-Mouth-Survey.txt) measures dry mouth and drooling separately and reports their co-occurrence.
 
 The [Nascimento severity study](Source-Text/2025-PMID39812680-Nascimento-Drooling-Severity-and-Flow.txt) and [case–control report](Source-Text/2025-PMID40257190-Nascimento-Drooling-and-Salivary-Flow.txt) likely reuse the same Parkinson cohort. The [one-year report](Source-Text/2026-PMID42340753-Nascimento-Year-One-Drooling-Followup.txt) gives separate speech, swallowing and drooling comparisons for 73 returning participants, with [supplemental subgroup tables](Source-Text/2026-Nascimento-Oromotor-Followup-Supplement.txt). The [participant interviews](Cultural-and-Experiential/Personal-Reports/2025-Cocks-Parkinson-Drooling-Interview-Experiences.txt) distinguish preparing food and perceived changes while chewing gum.

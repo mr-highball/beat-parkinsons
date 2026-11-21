@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2025-2029
 
+- [Caregiver report of olive oil shots and softer stools in a public Parkinson discussion](Conversations/2026-Reddit-Olive-Oil-and-Parkinson-Constipation.txt). Uncontrolled caregiver account noting softer stools with unspecified oil grade and concurrent walking.
+
 - [Food preparation and oral cueing in Parkinson drooling interviews](Personal-Reports/2025-Cocks-Parkinson-Drooling-Interview-Experiences.txt). Participants describe differing contexts and experiences with gum.
 
 - [Brunei postpartum uses of ginger and other culinary ingredients](Traditional-Practices/2025-Brunei-Postpartum-Ginger-Spices-and-Food.txt).
