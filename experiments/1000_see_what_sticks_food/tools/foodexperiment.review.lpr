@@ -9,7 +9,7 @@ uses
   {$ifdef windows}, Windows{$endif};
 
 const
-  ClaimCount = 1000;
+  MaxClaimCount = 9999;
   FreezeHeader = 'id'#9'category'#9'ingredient'#9'preparation'#9'symptom'#9'direction'#9'statement';
   ReviewHeader = 'id'#9'verdict'#9'confidence'#9'rationale'#9'local_references'#9 +
     'search_record'#9'local_verdict';
@@ -30,7 +30,7 @@ type
     Category: TCategory;
     Direction: TDirection;
   end;
-  TClaims = array[1..ClaimCount] of TClaim;
+  TClaims = TArray<TClaim>;
   TReview = record
     Seen: Boolean;
     Verdict: TVerdict;
@@ -40,8 +40,8 @@ type
     SearchRecord: UTF8String;
     LocalVerdict: TVerdict;
   end;
-  TReviews = array[1..ClaimCount] of TReview;
-  TBaseline = array[1..ClaimCount] of UTF8String;
+  TReviews = TArray<TReview>;
+  TBaseline = TArray<UTF8String>;
   TQueries = TDictionary<UTF8String, UTF8String>;
   TCounts = array[TVerdict] of Integer;
   TQuotaCounts = array[TCategory, TDirection] of Integer;
@@ -211,18 +211,37 @@ begin
   raise Exception.Create('Invalid frozen direction: ' + String(AValue));
 end;
 
-function ClaimNumber(const AValue: UTF8String): Integer;
+function FormatCount(ACount: Integer): String;
+var
+  LRaw: String;
+  LPos: Integer;
 begin
-  Result := ReadInteger(AValue, 'claim ID', 1, ClaimCount);
+  LRaw := IntToStr(ACount);
+  Result := '';
+  for LPos := 1 to Length(LRaw) do
+  begin
+    if (LPos > 1) and (((Length(LRaw) - LPos + 1) mod 3) = 0) then
+    begin
+      Result := Result + ',';
+    end;
+    Result := Result + LRaw[LPos];
+  end;
+end;
+
+function ClaimNumber(const AValue: UTF8String; AClaimCount: Integer): Integer;
+begin
+  Result := ReadInteger(AValue, 'claim ID', 1, AClaimCount);
   Require(AValue = ClaimId(Result), 'Claim ID must have four digits: ' + String(AValue));
 end;
 
-procedure ReadFreeze(const AInputs: TReviewInputs; out AClaims: TClaims);
+procedure ReadFreeze(const AInputs: TReviewInputs; AEnforceBalancedQuotas: Boolean;
+  out AClaims: TClaims);
 var
   LLines: TTextFields;
   LFields: TTextFields;
   LBytes: TBytes;
   LHash: AnsiString;
+  LCount: Integer;
   LIndex: Integer;
   LField: Integer;
   LPairs: TDictionary<UTF8String, Boolean>;
@@ -236,12 +255,14 @@ begin
   TSHA256.DigestHexa(LBytes, LHash);
   Require(AInputs.FreezeHash = LowerCase(LHash) + Lf, 'Frozen claim digest mismatch.');
   LLines := LinesOf(AInputs.FreezeText, 'freeze.tsv');
-  Require((Length(LLines) = ClaimCount + 1) and (LLines[0] = FreezeHeader),
+  LCount := Length(LLines) - 1;
+  Require((LCount >= 1) and (LCount <= MaxClaimCount) and (LLines[0] = FreezeHeader),
     'Invalid frozen header or claim count.');
+  SetLength(AClaims, LCount);
   LPairs := TDictionary<UTF8String, Boolean>.Create;
   try
     LQuotas := Default(TQuotaCounts);
-    for LIndex := 1 to ClaimCount do
+    for LIndex := 1 to LCount do
     begin
       LFields := Split(LLines[LIndex], #9);
       Require((Length(LFields) = 7) and (LFields[0] = ClaimId(LIndex)),
@@ -250,21 +271,24 @@ begin
       begin
         Require(Trim(LFields[LField]) <> '', 'Empty frozen field in ' + ClaimId(LIndex));
       end;
-      AClaims[LIndex].Fields := LFields;
+      AClaims[LIndex - 1].Fields := LFields;
       LCategory := ReadCategory(LFields[1]);
       LDirection := ReadDirection(LFields[5]);
-      AClaims[LIndex].Category := LCategory;
-      AClaims[LIndex].Direction := LDirection;
+      AClaims[LIndex - 1].Category := LCategory;
+      AClaims[LIndex - 1].Direction := LDirection;
       Require(not LPairs.ContainsKey(LFields[2] + #9 + LFields[4]),
         'Repeated ingredient and symptom in frozen row ' + ClaimId(LIndex));
       LPairs.Add(LFields[2] + #9 + LFields[4], True);
       Inc(LQuotas[LCategory, LDirection]);
     end;
-    for LCategory := Low(TCategory) to High(TCategory) do
+    if AEnforceBalancedQuotas then
     begin
-      for LDirection := Low(TDirection) to High(TDirection) do
+      for LCategory := Low(TCategory) to High(TCategory) do
       begin
-        Require(LQuotas[LCategory, LDirection] = 125, 'Frozen category or direction quota mismatch.');
+        for LDirection := Low(TDirection) to High(TDirection) do
+        begin
+          Require(LQuotas[LCategory, LDirection] = 125, 'Frozen category or direction quota mismatch.');
+        end;
       end;
     end;
   finally
@@ -387,7 +411,7 @@ begin
 end;
 
 procedure ReadReviews(const AText: UTF8String; const ARoot, AExperiment: String; AQueries: TQueries;
-  out AReviews: TReviews);
+  AClaimCount: Integer; out AReviews: TReviews);
 var
   LLines: TTextFields;
   LFields: TTextFields;
@@ -396,15 +420,16 @@ var
   LReview: TReview;
   LHasResearch: Boolean;
 begin
-  AReviews := Default(TReviews);
+  AReviews := nil;
+  SetLength(AReviews, AClaimCount);
   LLines := LinesOf(AText, 'verdicts.tsv');
-  Require((Length(LLines) = ClaimCount + 1) and (LLines[0] = ReviewHeader),
+  Require((Length(LLines) = AClaimCount + 1) and (LLines[0] = ReviewHeader),
     'Invalid verdict header or verdict count.');
   for LIndex := 1 to High(LLines) do
   begin
     LFields := Split(LLines[LIndex], #9);
     Require(Length(LFields) = 7, 'Invalid verdict row ' + IntToStr(LIndex + 1));
-    LClaim := ClaimNumber(LFields[0]);
+    LClaim := ClaimNumber(LFields[0], AClaimCount) - 1;
     Require(not AReviews[LClaim].Seen, 'Repeated verdict for ' + String(LFields[0]));
     LReview := Default(TReview);
     LReview.Seen := True;
@@ -458,7 +483,7 @@ begin
     RenderField(11, AReview.SearchRecord);
 end;
 
-function ReadDirectory(const APath: String): Integer;
+function ReadDirectory(const APath: String; AClaimCount: Integer): Integer;
 var
   LEntry: TSearchRec;
   LId: Integer;
@@ -476,7 +501,7 @@ begin
         Require(((LEntry.Attr and faDirectory) = 0) and (Length(LEntry.Name) = 8) and
           (Copy(LEntry.Name, 5, 4) = '.txt'), 'Unexpected item in statement directory: ' +
           JoinPath(APath, LEntry.Name));
-        LId := ClaimNumber(UTF8String(Copy(LEntry.Name, 1, 4)));
+        LId := ClaimNumber(UTF8String(Copy(LEntry.Name, 1, 4)), AClaimCount);
         Require(LEntry.Name = ClaimId(LId) + '.txt', 'Invalid statement filename: ' + LEntry.Name);
         Inc(Result);
       until FindNext(LEntry) <> 0;
@@ -509,22 +534,27 @@ end;
 procedure CheckStatements(const APath: String; const AClaims: TClaims; const AReviews: TReviews;
   ARequireReviewed: Boolean; out ABaseline: TBaseline);
 var
+  LCount: Integer;
   LIndex: Integer;
 begin
-  Require(ReadDirectory(APath) = ClaimCount, 'Expected exactly 1,000 statement files: ' + APath);
-  for LIndex := 1 to ClaimCount do
+  LCount := Length(AClaims);
+  ABaseline := nil;
+  SetLength(ABaseline, LCount);
+  Require(ReadDirectory(APath, LCount) = LCount,
+    'Expected exactly ' + FormatCount(LCount) + ' statement files: ' + APath);
+  for LIndex := 1 to LCount do
   begin
-    ABaseline[LIndex] := ReadText(ClaimFile(APath, LIndex));
-    CheckStatement(ABaseline[LIndex], AClaims[LIndex]);
+    ABaseline[LIndex - 1] := ReadText(ClaimFile(APath, LIndex));
+    CheckStatement(ABaseline[LIndex - 1], AClaims[LIndex - 1]);
     if ARequireReviewed then
     begin
-      Require(ABaseline[LIndex] = RenderReviewed(AClaims[LIndex], AReviews[LIndex]),
+      Require(ABaseline[LIndex - 1] = RenderReviewed(AClaims[LIndex - 1], AReviews[LIndex - 1]),
         'Statement review differs from the verdict ledger: ' + ClaimId(LIndex));
     end;
   end;
 end;
 
-procedure RemoveGeneratedDirectory(const APath: String);
+procedure RemoveGeneratedDirectory(const APath: String; AClaimCount: Integer);
 var
   LIndex: Integer;
   LPath: String;
@@ -533,8 +563,8 @@ begin
   begin
     Exit;
   end;
-  ReadDirectory(APath);
-  for LIndex := 1 to ClaimCount do
+  ReadDirectory(APath, AClaimCount);
+  for LIndex := 1 to AClaimCount do
   begin
     LPath := ClaimFile(APath, LIndex);
     if FileExists(LPath) then
@@ -569,26 +599,29 @@ var
   LPath: String;
   LCandidate: String;
   LBackup: String;
+  LCount: Integer;
   LIndex: Integer;
   LValidated: TBaseline;
 begin
+  LCount := Length(AClaims);
   LPath := JoinPath(AExperiment, 'statements');
   LCandidate := JoinPath(AExperiment, 'statements.review-next');
   LBackup := JoinPath(AExperiment, 'statements.review-backup');
-  RemoveGeneratedDirectory(LCandidate);
-  RemoveGeneratedDirectory(LBackup);
+  RemoveGeneratedDirectory(LCandidate, LCount);
+  RemoveGeneratedDirectory(LBackup, LCount);
   Require(CreateDir(LCandidate), 'Cannot create review staging directory: ' + LCandidate);
   try
-    for LIndex := 1 to ClaimCount do
+    for LIndex := 1 to LCount do
     begin
-      WriteText(ClaimFile(LCandidate, LIndex), RenderReviewed(AClaims[LIndex], AReviews[LIndex]));
+      WriteText(ClaimFile(LCandidate, LIndex),
+        RenderReviewed(AClaims[LIndex - 1], AReviews[LIndex - 1]));
     end;
     CheckStatements(LCandidate, AClaims, AReviews, True, LValidated);
     CheckUnchanged(AExperiment, AInputs);
-    Require(ReadDirectory(LPath) = ClaimCount, 'Statement set changed during application.');
-    for LIndex := 1 to ClaimCount do
+    Require(ReadDirectory(LPath, LCount) = LCount, 'Statement set changed during application.');
+    for LIndex := 1 to LCount do
     begin
-      Require(ReadText(ClaimFile(LPath, LIndex)) = ABaseline[LIndex],
+      Require(ReadText(ClaimFile(LPath, LIndex)) = ABaseline[LIndex - 1],
         'Statement changed during application: ' + ClaimId(LIndex));
     end;
     Require(RenameFile(LPath, LBackup), 'Cannot preserve the baseline statement directory.');
@@ -597,13 +630,13 @@ begin
       Require(RenameFile(LBackup, LPath), 'Publication failed. Baseline remains at ' + LBackup);
       raise Exception.Create('Publication failed. Baseline statements were restored.');
     end;
-    RemoveGeneratedDirectory(LBackup);
+    RemoveGeneratedDirectory(LBackup, LCount);
   finally
-    RemoveGeneratedDirectory(LCandidate);
+    RemoveGeneratedDirectory(LCandidate, LCount);
   end;
 end;
 
-procedure RestoreInterruptedPublish(const AExperiment: String);
+procedure RestoreInterruptedPublish(const AExperiment: String; AClaimCount: Integer);
 var
   LPath: String;
   LBackup: String;
@@ -612,7 +645,8 @@ begin
   LBackup := JoinPath(AExperiment, 'statements.review-backup');
   if not DirectoryExists(LPath) and DirectoryExists(LBackup) then
   begin
-    Require(ReadDirectory(LBackup) = ClaimCount, 'Incomplete statement backup: ' + LBackup);
+    Require(ReadDirectory(LBackup, AClaimCount) = AClaimCount,
+      'Incomplete statement backup: ' + LBackup);
     Require(RenameFile(LBackup, LPath), 'Cannot restore interrupted statement publication.');
   end;
 end;
@@ -645,6 +679,7 @@ var
   LCounts: TCounts;
   LByGroup: TStratifiedCounts;
   LLocal: TCounts;
+  LCount: Integer;
   LIndex: Integer;
   LExternalClaims: Integer;
   LVerdict: TVerdict;
@@ -656,23 +691,25 @@ var
   LCoverage: String;
   LId: UTF8String;
 begin
+  LCount := Length(AClaims);
   LCounts := Default(TCounts);
   LLocal := Default(TCounts);
   LByGroup := Default(TStratifiedCounts);
   LExternalClaims := 0;
-  for LIndex := 1 to ClaimCount do
+  for LIndex := 1 to LCount do
   begin
-    LVerdict := AReviews[LIndex].Verdict;
+    LVerdict := AReviews[LIndex - 1].Verdict;
     Inc(LCounts[LVerdict]);
-    Inc(LLocal[AReviews[LIndex].LocalVerdict]);
-    Inc(LByGroup[AClaims[LIndex].Category, AClaims[LIndex].Direction][LVerdict]);
-    if AReviews[LIndex].SearchRecord <> '' then
+    Inc(LLocal[AReviews[LIndex - 1].LocalVerdict]);
+    Inc(LByGroup[AClaims[LIndex - 1].Category, AClaims[LIndex - 1].Direction][LVerdict]);
+    if AReviews[LIndex - 1].SearchRecord <> '' then
     begin
       Inc(LExternalClaims);
     end;
   end;
   LManifest := '# Parkinson''s food thought experiment results' + Lf + Lf +
-    'Verdicts are tracked for **1,000** frozen statements. Confidence values are reviewer judgments.' + Lf + Lf +
+    'Verdicts are tracked for **' + UTF8String(FormatCount(LCount)) +
+    '** frozen statements. Confidence values are reviewer judgments.' + Lf + Lf +
     '- Frozen SHA-256 `' + UTF8String(Trim(AFreezeHash)) + '`' + Lf +
     '- [Statement verdict ledger](verdicts.tsv)' + Lf +
     '- [First-pass search ledger](queries.tsv) with ' + UTF8String(IntToStr(AQueryCount)) +
@@ -722,9 +759,9 @@ begin
   end
   else
   begin
-    for LIndex := 1 to ClaimCount do
+    for LIndex := 1 to LCount do
     begin
-      LVerdict := AReviews[LIndex].Verdict;
+      LVerdict := AReviews[LIndex - 1].Verdict;
       if LVerdict = vUnknown then
       begin
         Continue;
@@ -732,8 +769,8 @@ begin
       LId := UTF8String(ClaimId(LIndex));
       LManifest := LManifest + '- [' + LId + '](statements/' + LId + '.txt) **' +
         UTF8String(VerdictNames[LVerdict]) + '** (' +
-        UTF8String(ReviewConfidenceText(AReviews[LIndex].Confidence)) + '%) ' +
-        AClaims[LIndex].Fields[6] + Lf;
+        UTF8String(ReviewConfidenceText(AReviews[LIndex - 1].Confidence)) + '%) ' +
+        AClaims[LIndex - 1].Fields[6] + Lf;
     end;
   end;
   ReplaceText(JoinPath(AExperiment, 'results-summary.tsv'), LTable);
@@ -763,14 +800,15 @@ begin
     'only once no review tool is running: ' + LLock);
   LQueries := TQueries.Create;
   try
+    LInputs := ReadInputs(AExperiment);
+    ReadFreeze(LInputs, SameText(ExtractFileName(AExperiment), '1000_see_what_sticks_food'),
+      LClaims);
     if ACommand = 'apply' then
     begin
-      RestoreInterruptedPublish(AExperiment);
+      RestoreInterruptedPublish(AExperiment, Length(LClaims));
     end;
-    LInputs := ReadInputs(AExperiment);
-    ReadFreeze(LInputs, LClaims);
     ReadQueries(LInputs.Queries, LQueries);
-    ReadReviews(LInputs.Reviews, LRoot, AExperiment, LQueries, LReviews);
+    ReadReviews(LInputs.Reviews, LRoot, AExperiment, LQueries, Length(LClaims), LReviews);
     CheckStatements(LStatementPath, LClaims, LReviews, ACommand <> 'apply', LBaseline);
     if ACommand = 'apply' then
     begin
@@ -781,7 +819,7 @@ begin
       CheckUnchanged(AExperiment, LInputs);
       WriteSummary(AExperiment, LClaims, LReviews, LQueries.Count, LInputs.FreezeHash);
     end;
-    WriteLn(ACommand, ' validated ', ClaimCount, ' frozen claims and ', LQueries.Count,
+    WriteLn(ACommand, ' validated ', Length(LClaims), ' frozen claims and ', LQueries.Count,
       ' completed external query records.');
   finally
     LQueries.Free;

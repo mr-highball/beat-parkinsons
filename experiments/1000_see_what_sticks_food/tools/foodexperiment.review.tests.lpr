@@ -65,7 +65,8 @@ begin
   end;
 end;
 
-procedure BuildFixture(const AExperiment: String; out AReviews, AQueries: UTF8String);
+procedure BuildFixture(const AExperiment: String; AClaimCount: Integer; AUnbalanced: Boolean;
+  out AReviews, AQueries: UTF8String);
 var
   LFreeze: UTF8String;
   LId: UTF8String;
@@ -82,10 +83,32 @@ begin
   Assert(ForceDirectories(JoinPath(AExperiment, 'statements')));
   LFreeze := FreezeHeader + Lf;
   AReviews := ReviewHeader + Lf;
-  for LIndex := 1 to 1000 do
+  for LIndex := 1 to AClaimCount do
   begin
     LId := UTF8String(Format('%.4d', [LIndex]));
-    LCategory := UTF8String(CategoryNames[(LIndex - 1) div 250]);
+    if AUnbalanced then
+    begin
+      if LIndex <= (AClaimCount * 7) div 10 then
+      begin
+        LCategory := 'food';
+      end
+      else if LIndex <= (AClaimCount * 8) div 10 then
+      begin
+        LCategory := 'herb';
+      end
+      else if LIndex <= (AClaimCount * 9) div 10 then
+      begin
+        LCategory := 'spice';
+      end
+      else
+      begin
+        LCategory := 'oil';
+      end;
+    end
+    else
+    begin
+      LCategory := UTF8String(CategoryNames[(LIndex - 1) div 250]);
+    end;
     LIngredient := 'fixture ' + LId;
     if Odd(LIndex) then
     begin
@@ -148,6 +171,58 @@ begin
   WriteText(JoinPath(AExperiment, 'queries.tsv'), AQueries);
 end;
 
+procedure RunRound7Tests(const AExecutable, ABuildDirectory: String);
+var
+  LGuid: TGuid;
+  LFixture: String;
+  LExperiment: String;
+  LBadRound1Fixture: String;
+  LBadRound1: String;
+  LReviews: UTF8String;
+  LQueries: UTF8String;
+  LLastPath: String;
+  LReviewedLast: UTF8String;
+  LManifest: UTF8String;
+  LHash: UTF8String;
+begin
+  Assert(CreateGuid(LGuid) = 0);
+  LFixture := JoinPath(ABuildDirectory, 'review-round7-fixture-' + GuidToString(LGuid));
+  LExperiment := JoinPath(LFixture, 'experiments/1000_see_what_sticks_food_round_7');
+  Assert(ForceDirectories(JoinPath(LFixture, 'research')));
+  WriteText(JoinPath(LFixture, 'research/source.txt'), 'Synthetic source.' + Lf);
+  BuildFixture(LExperiment, 930, True, LReviews, LQueries);
+  LLastPath := JoinPath(LExperiment, 'statements/0930.txt');
+
+  Exercise(AExecutable, 'verify', LExperiment, 'review differs');
+  LHash := ReadText(JoinPath(LExperiment, 'freeze.sha256'));
+  WriteText(JoinPath(LExperiment, 'freeze.sha256'), 'bad' + Lf);
+  Exercise(AExecutable, 'apply', LExperiment, 'digest mismatch');
+  WriteText(JoinPath(LExperiment, 'freeze.sha256'), LHash);
+
+  Exercise(AExecutable, 'apply', LExperiment);
+  Exercise(AExecutable, 'verify', LExperiment);
+  Exercise(AExecutable, 'summary', LExperiment);
+  LManifest := ReadText(JoinPath(LExperiment, 'manifest.md'));
+  Assert(Pos('**930** frozen statements', LManifest) > 0, 'Expected 930 statement count.');
+  Assert(Pos('| Unknown | 928 | 926 |', LManifest) > 0, 'Expected 930-claim unknown counts.');
+  Assert(Pos('[0003](statements/0003.txt) **Maybe True** (50.005%)', LManifest) > 0);
+
+  LReviewedLast := ReadText(LLastPath);
+  WriteText(LLastPath, UTF8String(StringReplace(String(LReviewedLast), 'Synthetic claim 0930.',
+    'Edited claim.', [])));
+  Exercise(AExecutable, 'verify', LExperiment, 'Frozen statement was edited');
+  WriteText(LLastPath, LReviewedLast);
+  Exercise(AExecutable, 'verify', LExperiment);
+
+  Assert(CreateGuid(LGuid) = 0);
+  LBadRound1Fixture := JoinPath(ABuildDirectory, 'review-quota-fixture-' + GuidToString(LGuid));
+  LBadRound1 := JoinPath(LBadRound1Fixture, 'experiments/1000_see_what_sticks_food');
+  Assert(ForceDirectories(JoinPath(LBadRound1Fixture, 'research')));
+  WriteText(JoinPath(LBadRound1Fixture, 'research/source.txt'), 'Synthetic source.' + Lf);
+  BuildFixture(LBadRound1, 1000, True, LReviews, LQueries);
+  Exercise(AExecutable, 'apply', LBadRound1, 'quota mismatch');
+end;
+
 procedure RunTests(const AExecutable, ABuildDirectory: String);
 var
   LGuid: TGuid;
@@ -164,10 +239,10 @@ var
 begin
   Assert(CreateGuid(LGuid) = 0);
   LFixture := JoinPath(ABuildDirectory, 'review-fixture-' + GuidToString(LGuid));
-  LExperiment := JoinPath(LFixture, 'experiments/review');
+  LExperiment := JoinPath(LFixture, 'experiments/1000_see_what_sticks_food');
   Assert(ForceDirectories(JoinPath(LFixture, 'research')));
   WriteText(JoinPath(LFixture, 'research/source.txt'), 'Synthetic source.' + Lf);
-  BuildFixture(LExperiment, LReviews, LQueries);
+  BuildFixture(LExperiment, 1000, False, LReviews, LQueries);
   LReviewsPath := JoinPath(LExperiment, 'verdicts.tsv');
   LStatementPath := JoinPath(LExperiment, 'statements/0001.txt');
   LPending := ReadText(LStatementPath);
@@ -222,6 +297,7 @@ begin
   WriteText(JoinPath(LExperiment, 'findings.md'), '## Synthetic findings' + Lf);
   Exercise(AExecutable, 'summary', LExperiment);
   LManifest := ReadText(JoinPath(LExperiment, 'manifest.md'));
+  Assert(Pos('**1,000** frozen statements', LManifest) > 0, 'Expected 1,000 statement count.');
   Assert(Pos('| Unknown | 998 | 996 |', LManifest) > 0);
   Assert(Pos('[0001](statements/0001.txt) **True** (60%)', LManifest) > 0);
   Assert(Pos('[0003](statements/0003.txt) **Maybe True** (50.005%)', LManifest) > 0);
@@ -239,5 +315,6 @@ end;
 begin
   Assert(ParamCount = 2, 'Pass the review executable and an isolated build directory.');
   RunTests(ParamStr(1), ParamStr(2));
-  WriteLn('PASS synthetic review fixture, including no mutation on rejected input.');
+  RunRound7Tests(ParamStr(1), ParamStr(2));
+  WriteLn('PASS synthetic review fixtures (1,000-claim balanced Round 1 + 930-claim unbalanced Round 7).');
 end.
