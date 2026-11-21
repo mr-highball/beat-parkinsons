@@ -899,3 +899,5 @@ The conference and observational review links the separate visual outcomes, the 
 - [Ajwa date fruit extract in an animal lung injury model](Source-Text/2022-Almatroodi-Ajwa-Fruit-Extract-Lung-Model.txt).
 - [Date-palm clinical trials review, public abstract and study-table trail](Source-Text/2020-PMID32507440-Date-Palm-Trials-Review-Abstract.txt).
 - [Nano-curcumin supplementation in coronary slow flow phenomenon, SF-36 bodily pain and BDI-II depression randomized double-blind trial](Source-Text/2024-PMID39085864-Soltani-NanoCurcumin-CSFP-Pain-Depression.txt).
+- [Hidrox olive-pulp hydroxytyrosol extract in rotenone-induced Parkinson model mice, catalepsy and locomotor outcomes](Source-Text/2020-PMID32899274-Siracusa-Hidrox-Olive-Polyphenol-Rotenone-PD-Mice.txt).
+- [Curcumin dosage and duration for movement symptoms in 6-OHDA Parkinson model rats](Source-Text/2023-PMID37484231-Liu-Curcumin-Dosage-6OHDA-Rat-PD-Movement.txt).

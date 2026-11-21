@@ -13,9 +13,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 940 |
-| Maybe True | 0 | 30 |
-| Maybe False | 0 | 30 |
+| Unknown | 1000 | 933 |
+| Maybe True | 0 | 35 |
+| Maybe False | 0 | 32 |
 | True | 0 | 0 |
 | False | 0 | 0 |
 
@@ -58,6 +58,7 @@ One hundred thirty-two Round 1 claims carry a checked version 1 evidence scoreca
 - [0072](statements/0072.txt) **Maybe True** (50.005%) Consuming extra-virgin olive oil reduces constipation severity in people with Parkinson's disease.
 - [0082](statements/0082.txt) **Maybe True** (51%) Consuming brewed black tea reduces bradykinesia severity in people with Parkinson's disease.
 - [0100](statements/0100.txt) **Maybe False** (50.005%) Consuming plain dark chocolate worsens anxiety severity in people with Parkinson's disease.
+- [0117](statements/0117.txt) **Maybe True** (50.005%) Consuming ground sichuan pepper reduces fatigue severity in people with Parkinson's disease.
 - [0121](statements/0121.txt) **Maybe False** (50.005%) Consuming brewed coffee worsens fatigue severity in people with Parkinson's disease.
 - [0128](statements/0128.txt) **Maybe False** (50.005%) Consuming fresh rosemary worsens depressive symptom severity in people with Parkinson's disease.
 - [0133](statements/0133.txt) **Maybe True** (50.005%) Consuming brewed lemon balm reduces depressive symptom severity in people with Parkinson's disease.
@@ -69,6 +70,7 @@ One hundred thirty-two Round 1 claims carry a checked version 1 evidence scoreca
 - [0180](statements/0180.txt) **Maybe False** (50.005%) Consuming ground nigella seed worsens insomnia severity in people with Parkinson's disease.
 - [0181](statements/0181.txt) **Maybe False** (50.005%) Consuming dried cherry worsens fatigue severity in people with Parkinson's disease.
 - [0199](statements/0199.txt) **Maybe False** (50.005%) Consuming ground anise seed worsens pain severity in people with Parkinson's disease.
+- [0210](statements/0210.txt) **Maybe False** (50.005%) Consuming ground sumac worsens constipation severity in people with Parkinson's disease.
 - [0218](statements/0218.txt) **Maybe True** (50.005%) Consuming ground saffron reduces insomnia severity in people with Parkinson's disease.
 - [0225](statements/0225.txt) **Maybe True** (50.005%) Consuming grated turmeric reduces swallowing difficulty severity in people with Parkinson's disease.
 - [0256](statements/0256.txt) **Maybe True** (50.005%) Consuming cold-pressed flaxseed oil reduces insomnia severity in people with Parkinson's disease.
@@ -79,11 +81,14 @@ One hundred thirty-two Round 1 claims carry a checked version 1 evidence scoreca
 - [0285](statements/0285.txt) **Maybe True** (50.005%) Consuming fresh tarragon reduces pain severity in people with Parkinson's disease.
 - [0309](statements/0309.txt) **Maybe False** (50.005%) Consuming raw banana worsens anxiety severity in people with Parkinson's disease.
 - [0312](statements/0312.txt) **Maybe False** (50.005%) Consuming cracked black pepper worsens pain severity in people with Parkinson's disease.
+- [0327](statements/0327.txt) **Maybe True** (50.005%) Consuming ground cayenne pepper reduces dystonia severity in people with Parkinson's disease.
 - [0343](statements/0343.txt) **Maybe True** (50.005%) Consuming cold-pressed olive oil reduces anxiety severity in people with Parkinson's disease.
+- [0348](statements/0348.txt) **Maybe True** (50.005%) Consuming poached chicken reduces fatigue severity in people with Parkinson's disease.
 - [0362](statements/0362.txt) **Maybe True** (50.005%) Consuming dried thyme reduces anxiety severity in people with Parkinson's disease.
 - [0404](statements/0404.txt) **Maybe False** (50.005%) Consuming cold-pressed sesame oil worsens fatigue severity in people with Parkinson's disease.
 - [0428](statements/0428.txt) **Maybe False** (50.005%) Consuming toasted pumpkin seed oil worsens shortened stride severity in people with Parkinson's disease.
 - [0485](statements/0485.txt) **Maybe False** (55%) Consuming dried saffron worsens fatigue severity in people with Parkinson's disease.
+- [0507](statements/0507.txt) **Maybe True** (50.005%) Consuming ground turmeric reduces bradykinesia severity in people with Parkinson's disease.
 - [0560](statements/0560.txt) **Maybe True** (50.005%) Consuming ground cumin reduces constipation severity in people with Parkinson's disease.
 - [0581](statements/0581.txt) **Maybe False** (50.005%) Consuming grated ginger worsens constipation severity in people with Parkinson's disease.
 - [0588](statements/0588.txt) **Maybe False** (50.005%) Consuming grated turmeric worsens olfactory impairment severity in people with Parkinson's disease.
@@ -95,8 +100,10 @@ One hundred thirty-two Round 1 claims carry a checked version 1 evidence scoreca
 - [0725](statements/0725.txt) **Maybe True** (50.005%) Consuming grated ginger reduces pain severity in people with Parkinson's disease.
 - [0746](statements/0746.txt) **Maybe True** (50.005%) Consuming raw blueberry reduces constipation severity in people with Parkinson's disease.
 - [0764](statements/0764.txt) **Maybe False** (50.005%) Consuming fresh shiso worsens urinary urgency frequency in people with Parkinson's disease.
+- [0810](statements/0810.txt) **Maybe True** (50.005%) Consuming raw cantaloupe reduces fatigue severity in people with Parkinson's disease.
 - [0812](statements/0812.txt) **Maybe True** (50.005%) Consuming ground turmeric reduces pain severity in people with Parkinson's disease.
 - [0814](statements/0814.txt) **Maybe True** (50.005%) Consuming fresh basil reduces insomnia severity in people with Parkinson's disease.
+- [0836](statements/0836.txt) **Maybe False** (50.005%) Consuming toasted sichuan pepper worsens attention impairment in people with Parkinson's disease.
 - [0860](statements/0860.txt) **Maybe False** (50.005%) Consuming raw grape worsens anxiety severity in people with Parkinson's disease.
 - [0878](statements/0878.txt) **Maybe False** (50.005%) Consuming raw orange worsens constipation severity in people with Parkinson's disease.
 - [0881](statements/0881.txt) **Maybe True** (50.005%) Consuming frozen grape reduces muscle rigidity severity in people with Parkinson's disease.

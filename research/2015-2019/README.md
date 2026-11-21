@@ -789,3 +789,5 @@ Two original first releases date to 2019, with 2020 journal issues. [Insular mor
 - [Butylphthalide Parkinson trial, retrospective WHO ICTRP registration](Source-Text/Trials/ChiCTR1800018892.txt).
 - [Aqueous spearmint extract in age-associated memory impairment, working memory, sleep onset, attention, and mood randomized double-blind trial](Source-Text/2018-PMID29314866-Herrlinger-Spearmint-Extract-Memory-Sleep-Mood.txt).
 - [Quercetin antagonism of 6-OHDA-induced Parkinsonian muscle tremor in rats, primary abstract](Source-Text/2016-PMID26217978-Mu-Quercetin-6OHDA-Rat-Tremor.txt).
+- [Demethoxycurcumin attenuation of rotenone-induced dopamine depletion and motor deficits in rats](Source-Text/2018-PMID29576695-Ramkumar-Demethoxycurcumin-Rotenone-Rat-PD.txt).
+- [Morus nigra (black mulberry, mislabeled blackberry) fruit juice in MPTP levodopa-induced dyskinesia mice, botanical identity record](Source-Text/2018-PMID30013404-Fahimi-Morus-Nigra-Fruit-Juice-LID-Mice.txt).

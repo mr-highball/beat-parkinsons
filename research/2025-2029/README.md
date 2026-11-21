@@ -803,3 +803,4 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Clinical review of plant therapies, original preparation and study lineage](Source-Text/2026-PMID42489905-Sukmueng-Plant-Therapies-and-Preparation-Scope.txt).
 - [Public discussion of the plant-therapy review and celery exposure](Cultural-and-Experiential/Conversations/2026-MJFF-Plant-Therapy-Review-and-Celery-Scope.txt).
 - [Quercetin nanoemulsion in harmaline-induced essential tremor mice, behavioral and neuroinflammatory outcomes](Source-Text/2025-PMID41354816-Pirmoradi-Quercetin-Nanoemulsion-Tremor.txt).
+- [Curcumin nanoparticles in MPTP Parkinson model mice, open-field movement and gut microbiota](Source-Text/2026-PMID41878684-Mu-Curcumin-Nanoparticles-MPTP-PD-Mice.txt).
