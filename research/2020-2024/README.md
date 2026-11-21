@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [Malekmakan CKD curcumin olfaction trial](Source-Text/2023-PMID36967933-Malekmakan-Curcumin-CKD-Olfaction.txt) reports double-blind placebo-controlled improvements in olfactory quality of life (QOD p = 0.045), self-assessment (p = 0.047) and categorical normosmia shift (20% vs 0%, p = 0.032) alongside an internal Table 2 pre/post arithmetic discrepancy on Iran-SIT.
+
 The [2024 6-shogaol plus levodopa mouse study](Source-Text/2024-PMID39092515-6Shogaol-Levodopa-Mouse-Olfaction.txt) reports improved buried-food olfactory latency and non-motor behavior with isolated oral 6-shogaol in MPTP/probenecid mice without scoring dyskinesia or human clinical rigidity.
 
 The [Han Chinese PRKN family report](Source-Text/2020-PMID33154736-PRKN-Family-Green-Tea-History.txt) records descriptive baseline green-tea intake ("Never" and "Quit") alongside onset fatigue complaints without a tea intervention or fatigue scale comparison.

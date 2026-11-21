@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [Nasution hemodialysis curcumin olfaction trial](Source-Text/2026-PMID42602430-Nasution-Curcumin-Hemodialysis-Olfaction.txt) randomizes 48 hemodialysis adults across placebo, 500 mg and 1000 mg curcumin for 12 weeks and reports Bonferroni-corrected Sniffin' Sticks composite TDI improvements (p = 0.010 and p = 0.002) and discrimination improvements (both p = 0.001) over placebo.
+
 The [2026 6-shogaol brain-gut mouse study](Source-Text/2026-PMID42375089-6Shogaol-Levodopa-Gut-Motility.txt) reports restored gastrointestinal motility and higher striatal levodopa/dopamine with oral 6-shogaol coadministration in MPTP/probenecid mice without scoring dyskinesia.
 
 The [Giovannini Altemor crossover pilot abstract](Source-Text/2025-PMID40694049-Giovannini-Altemor-Elderly-Falls-Cognition.txt) reports the published primary findings of [NCT06352099](../2020-2024/Source-Text/2024-NCT06352099-Altemor-Registry-Extract.txt) for a multi-ingredient hesperidin, diosmin and proanthocyanidins supplement on elderly attention and fall risk without isolating raw orange or enrolling Parkinson patients; the [Zhao hesperidin neuroprotection review](Source-Text/2025-PMID41346684-Zhao-Hesperidin-Neuroprotection-Review.txt) flags this pilot trial as preliminary and underpowered.
