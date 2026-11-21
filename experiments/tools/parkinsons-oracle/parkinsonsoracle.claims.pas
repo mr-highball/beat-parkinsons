@@ -21,6 +21,8 @@ type
     Trend: String;
     Scope: String;
     Verdict: String;
+    ScorecardStatus: String;
+    OmitCulture: Boolean;
     Round: Integer;
     Offset: Integer;
     Limit: Integer;
@@ -39,6 +41,7 @@ type
     Verdict: String;
     Confidence: Currency;
     Rationale: String;
+    ScorecardStatus: String;
     References: TJSONArray;
     Evidence: TJSONArray;
     AssessedRows: Integer;
@@ -73,6 +76,10 @@ type
     FSourceRows: Integer;
     FDirectional: Integer;
     FUnknown: Integer;
+    FV1Scorecards: Integer;
+    FDirectionalWithScorecard: Integer;
+    FDirectionalWithoutScorecard: Integer;
+    FScorecardMismatches: Integer;
     FDecisions: TClaimDecisions;
     {$IFDEF WINDOWS}
     FMayPinLooseHead: Boolean;
@@ -89,15 +96,18 @@ type
     function LoadCulturalSources: TJSONArray;
     function CulturalMatches(const ASymptom, AIngredient: String): TJSONArray;
     procedure LoadRound(ARound: Integer; AProcess: TProcess; APublishedTables: TStrings);
+    procedure LoadScorecardStatuses;
   public
     constructor Create(const ARepoRoot: String);
     destructor Destroy; override;
     function IsCurrent: Boolean;
     function Status: TJSONObject;
+    function Backlog: TJSONObject;
     function Query(const AQuery: TClaimQuery): TJSONObject;
     function Ingredients(ASymptoms: TJSONArray): TJSONObject;
     function Claim(ARound: Integer; const AId: String; AAssessmentOffset: Integer;
-      AAssessmentLimit: Integer; const AAssessmentStudy: String): TJSONObject;
+      AAssessmentLimit: Integer; const AAssessmentStudy: String;
+      AIncludeCulture: Boolean = True): TJSONObject;
     function EvidenceRubric(ARound: Integer; const AId: String;
       AIncludeRules: Boolean): TJSONObject;
     function CheckScorecard(ARound: Integer;
@@ -222,6 +232,7 @@ begin
   OriginalPairs := -1;
   QueuedPairs := -1;
   Verdict := 'Unreviewed';
+  ScorecardStatus := 'no_scorecard';
   References := TJSONArray.Create;
   Evidence := TJSONArray.Create;
 end;
@@ -269,6 +280,7 @@ begin
       Result.Add('rationale', Rationale);
     if ADetailed then
     begin
+      Result.Add('scorecard_status', ScorecardStatus);
       Result.Add('local_references', References.Clone);
       if (AAssessmentStudy = '') and (AAssessmentLimit < 0) then
       begin
@@ -506,18 +518,35 @@ begin
     Exit;
   end;
   LBranch := Trim(Copy(LHead, Length(CBranchPrefix) + 1, MaxInt));
-  if (LBranch = '') or (LBranch[1] = '.') or (Pos('..', LBranch) <> 0) then
+  if (LBranch = '') or (LBranch[1] = '/') or (LBranch[Length(LBranch)] = '/') or
+    (Pos('//', LBranch) <> 0) or (Pos('..', LBranch) <> 0) then
   begin
     Exit;
   end;
   for LChar in LBranch do
   begin
-    if not (LChar in ['a'..'z', 'A'..'Z', '0'..'9', '_', '-', '.']) then
+    if not (LChar in ['a'..'z', 'A'..'Z', '0'..'9', '_', '-', '.', '/']) then
     begin
       Exit;
     end;
   end;
-  LRef := 'refs/heads/' + LBranch;
+  LRef := 'refs/heads';
+  for LGitResult in SplitFields(LBranch, '/') do
+  begin
+    if (LGitResult = '') or (LGitResult[1] = '.') then
+    begin
+      Exit;
+    end;
+    if LRef <> 'refs/heads' then
+    begin
+      if not RegularGitDirectory(LGitDir + LRef) then
+      begin
+        Exit;
+      end;
+    end;
+    LRef := LRef + '/' + LGitResult;
+  end;
+  LGitResult := '';
   if not ReadGitMetadata(LGitDir + LRef, LValue) or (Trim(LValue) <> FRevision) or
     not ReadGitMetadata(LGitDir + 'config', LConfig) then
   begin
@@ -641,6 +670,7 @@ begin
   AddAlias(FSymptomAliases, 'hallucinations', 'visual hallucination frequency');
   AddAlias(FSymptomAliases, 'seeing things', 'visual hallucination frequency');
   FDecisions := CompileClaimDecisions;
+  LoadScorecardStatuses;
   for LClaim in FClaims do
   begin
     LTrend := ClaimTrend(LClaim.Verdict, LClaim.Direction);
@@ -887,15 +917,243 @@ begin
   Result := Trim(Git(['rev-parse', '--verify', 'HEAD'])) = FRevision;
 end;
 
+procedure TClaimIndex.LoadScorecardStatuses;
+var
+  LRound: Integer;
+  LIndex: Integer;
+  LLines: TStringList;
+  LFields: TFields;
+  LClaim: TClaim;
+  LCheck: TJSONObject;
+  LStatus: String;
+begin
+  FV1Scorecards := 0;
+  FDirectionalWithScorecard := 0;
+  FDirectionalWithoutScorecard := 0;
+  FScorecardMismatches := 0;
+  LLines := TStringList.Create;
+  try
+    for LRound := 1 to CRoundCount do
+    begin
+      if FScorecards[LRound] = '' then
+      begin
+        Continue;
+      end;
+      LLines.Text := FScorecards[LRound];
+      for LIndex := 1 to LLines.Count - 1 do
+      begin
+        if LLines[LIndex] = '' then
+        begin
+          Continue;
+        end;
+        LFields := SplitFields(LLines[LIndex], #9);
+        if (Length(LFields) < 1) or
+          not FIdentities.TryGetValue(Key(LRound, LFields[0]), LClaim) then
+        begin
+          Continue;
+        end;
+        LCheck := TJSONObject.Create;
+        try
+          AddEvidenceScorecard(LCheck, FScorecards[LRound], FScorecardSources[LRound],
+            LClaim.Id, LClaim.Direction, LClaim.Verdict, LClaim.Confidence);
+          LStatus := LCheck.Get('review_status', 'no_scorecard');
+          LClaim.ScorecardStatus := LStatus;
+        finally
+          LCheck.Free;
+        end;
+      end;
+    end;
+  finally
+    LLines.Free;
+  end;
+  for LClaim in FClaims do
+  begin
+    if (LClaim.ScorecardStatus = 'recorded') or (LClaim.ScorecardStatus = 'verdict_mismatch') then
+    begin
+      Inc(FV1Scorecards);
+    end;
+    if LClaim.ScorecardStatus = 'verdict_mismatch' then
+    begin
+      Inc(FScorecardMismatches);
+    end;
+    if LClaim.IsDirectional then
+    begin
+      if LClaim.ScorecardStatus = 'recorded' then
+      begin
+        Inc(FDirectionalWithScorecard);
+      end
+      else
+      begin
+        Inc(FDirectionalWithoutScorecard);
+      end;
+    end;
+  end;
+end;
+
 function TClaimIndex.Status: TJSONObject;
 begin
   Result := TJSONObject.Create(['revision', FRevision, 'frozen_claims', FClaims.Count,
     'directional_verdicts', FDirectional, 'unknown_verdicts', FUnknown,
-    'unreviewed_claims', FClaims.Count - FDirectional - FUnknown, 'assessment_rows', FSourceRows]);
+    'unreviewed_claims', FClaims.Count - FDirectional - FUnknown, 'assessment_rows', FSourceRows,
+    'v1_scorecards', FV1Scorecards, 'directional_with_scorecard', FDirectionalWithScorecard,
+    'directional_without_scorecard', FDirectionalWithoutScorecard,
+    'scorecard_mismatches', FScorecardMismatches]);
+end;
+
+function CompareLegacyDirectional(ALeft, ARight: Pointer): Integer;
+var
+  LLeft: TClaim;
+  LRight: TClaim;
+  LLeftRows: Integer;
+  LRightRows: Integer;
+begin
+  LLeft := TClaim(ALeft);
+  LRight := TClaim(ARight);
+  if LLeft.Confidence > LRight.Confidence then
+    Exit(-1);
+  if LLeft.Confidence < LRight.Confidence then
+    Exit(1);
+  LLeftRows := LLeft.AssessedRows + LLeft.PendingRows;
+  LRightRows := LRight.AssessedRows + LRight.PendingRows;
+  if LLeftRows > LRightRows then
+    Exit(-1);
+  if LLeftRows < LRightRows then
+    Exit(1);
+  if LLeft.Round <> LRight.Round then
+    Exit(LLeft.Round - LRight.Round);
+  Result := CompareStr(LLeft.Id, LRight.Id);
+end;
+
+function TClaimIndex.Backlog: TJSONObject;
+var
+  LLegacy: TList;
+  LClaim: TClaim;
+  LLegacyJson: TJSONArray;
+  LMismatchesJson: TJSONArray;
+  LRoundsJson: TJSONArray;
+  LZeroSymptomsJson: TJSONArray;
+  LSymptomKeys: TStringList;
+  LKey: String;
+  LPostings: TList<TClaim>;
+  LHasDirectional: Boolean;
+  LAssessedCount: Integer;
+  LRound: Integer;
+  LFrozen: array[1..CRoundCount] of Integer;
+  LDirectional: array[1..CRoundCount] of Integer;
+  LUnknown: array[1..CRoundCount] of Integer;
+  LScorecards: array[1..CRoundCount] of Integer;
+  I: Integer;
+  LItem: TJSONObject;
+begin
+  FillChar(LFrozen, SizeOf(LFrozen), 0);
+  FillChar(LDirectional, SizeOf(LDirectional), 0);
+  FillChar(LUnknown, SizeOf(LUnknown), 0);
+  FillChar(LScorecards, SizeOf(LScorecards), 0);
+  LLegacy := TList.Create;
+  LSymptomKeys := TStringList.Create;
+  Result := TJSONObject.Create(['revision', FRevision]);
+  try
+    try
+      LSymptomKeys.CaseSensitive := True;
+      LSymptomKeys.UseLocale := False;
+      LSymptomKeys.Sorted := True;
+      LSymptomKeys.Duplicates := dupIgnore;
+      Result.Add('summary', Status);
+      LRoundsJson := TJSONArray.Create;
+      Result.Add('rounds', LRoundsJson);
+      LMismatchesJson := TJSONArray.Create;
+      Result.Add('scorecard_mismatches', LMismatchesJson);
+      LLegacyJson := TJSONArray.Create;
+      Result.Add('directional_without_v1_scorecard', LLegacyJson);
+      LZeroSymptomsJson := TJSONArray.Create;
+      Result.Add('zero_directional_symptoms', LZeroSymptomsJson);
+      for LClaim in FClaims do
+      begin
+        Inc(LFrozen[LClaim.Round]);
+        if LClaim.IsDirectional then
+          Inc(LDirectional[LClaim.Round])
+        else if LClaim.Verdict = 'Unknown' then
+          Inc(LUnknown[LClaim.Round]);
+        if (LClaim.ScorecardStatus = 'recorded') or
+          (LClaim.ScorecardStatus = 'verdict_mismatch') then
+          Inc(LScorecards[LClaim.Round]);
+        if LClaim.ScorecardStatus = 'verdict_mismatch' then
+        begin
+          LMismatchesJson.Add(TJSONObject.Create(['round', LClaim.Round, 'id', LClaim.Id,
+            'verdict', LClaim.Verdict, 'ingredient', LClaim.Ingredient,
+            'symptom', LClaim.Symptom]));
+        end;
+        if LClaim.IsDirectional and (LClaim.ScorecardStatus <> 'recorded') then
+        begin
+          LLegacy.Add(LClaim);
+        end;
+      end;
+      LLegacy.Sort(@CompareLegacyDirectional);
+      for I := 0 to LLegacy.Count - 1 do
+      begin
+        LClaim := TClaim(LLegacy[I]);
+        LItem := TJSONObject.Create(['round', LClaim.Round, 'id', LClaim.Id,
+          'verdict', LClaim.Verdict,
+          'confidence', ReviewConfidenceText(LClaim.Confidence),
+          'scorecard_status', LClaim.ScorecardStatus,
+          'category', LClaim.Category, 'ingredient', LClaim.Ingredient,
+          'preparation', LClaim.Preparation, 'symptom', LClaim.Symptom,
+          'hypothesis_direction', LClaim.Direction,
+          'assessment_rows', LClaim.AssessedRows + LClaim.PendingRows]);
+        if LClaim.QueuedPairs >= 0 then
+        begin
+          LItem.Add('queued_original_pairs', LClaim.QueuedPairs);
+        end;
+        LLegacyJson.Add(LItem);
+      end;
+      for LRound := 1 to CRoundCount do
+      begin
+        LRoundsJson.Add(TJSONObject.Create(['round', LRound,
+          'frozen', LFrozen[LRound],
+          'directional', LDirectional[LRound],
+          'unknown', LUnknown[LRound],
+          'unreviewed', LFrozen[LRound] - LDirectional[LRound] - LUnknown[LRound],
+          'v1_scorecards', LScorecards[LRound]]));
+      end;
+      for LKey in FBySymptom.Keys do
+      begin
+        LSymptomKeys.Add(LKey);
+      end;
+      for LKey in LSymptomKeys do
+      begin
+        LPostings := FBySymptom[LKey];
+        LHasDirectional := False;
+        LAssessedCount := 0;
+        for LClaim in LPostings do
+        begin
+          if LClaim.IsDirectional then
+          begin
+            LHasDirectional := True;
+          end;
+          if LClaim.AssessedRows > 0 then
+          begin
+            Inc(LAssessedCount);
+          end;
+        end;
+        if not LHasDirectional then
+        begin
+          LZeroSymptomsJson.Add(TJSONObject.Create(['symptom', LPostings[0].Symptom,
+            'frozen_claims', LPostings.Count, 'assessed_claims', LAssessedCount]));
+        end;
+      end;
+    except
+      Result.Free;
+      raise;
+    end;
+  finally
+    LSymptomKeys.Free;
+    LLegacy.Free;
+  end;
 end;
 
 function TClaimIndex.Claim(ARound: Integer; const AId: String;
-  AAssessmentOffset, AAssessmentLimit: Integer; const AAssessmentStudy: String): TJSONObject;
+  AAssessmentOffset, AAssessmentLimit: Integer; const AAssessmentStudy: String;
+  AIncludeCulture: Boolean): TJSONObject;
 var
   LClaim: TClaim;
 begin
@@ -904,11 +1162,14 @@ begin
   Result := LClaim.View(True, AAssessmentOffset, AAssessmentLimit, AAssessmentStudy);
   Result.Add('revision', FRevision);
   Result.Add('found', True);
-  try
-    Result.Add('culture_sources', CulturalMatches(LClaim.Symptom, LClaim.Ingredient));
-  except
-    Result.Free;
-    raise;
+  if AIncludeCulture then
+  begin
+    try
+      Result.Add('culture_sources', CulturalMatches(LClaim.Symptom, LClaim.Ingredient));
+    except
+      Result.Free;
+      raise;
+    end;
   end;
 end;
 
@@ -1104,7 +1365,9 @@ end;
 function EvidenceAllowed(AClaim: TClaim; const AQuery: TClaimQuery): Boolean;
 begin
   Result := ((AQuery.Verdict = '') or SameText(AQuery.Verdict, AClaim.Verdict)) and
-    ((AQuery.Trend = '') or (ClaimTrend(AClaim.Verdict, AClaim.Direction) = AQuery.Trend));
+    ((AQuery.Trend = '') or (ClaimTrend(AClaim.Verdict, AClaim.Direction) = AQuery.Trend)) and
+    ((AQuery.ScorecardStatus = '') or
+      SameText(AQuery.ScorecardStatus, AClaim.ScorecardStatus));
   case IndexStr(AQuery.Scope, ['directional', 'assessed', 'frozen']) of
     0: Result := Result and AClaim.IsDirectional and (AClaim.AssessedRows > 0);
     1: Result := Result and (AClaim.AssessedRows > 0);
@@ -1178,6 +1441,7 @@ begin
   LQuery.Preparation := Normalize(AQuery.Preparation);
   LQuery.Direction := Normalize(AQuery.Direction);
   LQuery.Trend := Normalize(AQuery.Trend);
+  LQuery.ScorecardStatus := Normalize(AQuery.ScorecardStatus);
   if IndexStr(LQuery.Scope, ['directional', 'assessed', 'frozen']) < 0 then
     raise EConvertError.Create('Scope must be directional, assessed or frozen.');
   if IndexStr(LQuery.Direction, ['', 'reduces', 'worsens']) < 0 then
@@ -1187,6 +1451,9 @@ begin
   if IndexText(LQuery.Verdict, ['', 'True', 'False', 'Maybe True', 'Maybe False',
     'Unknown', 'Unreviewed']) < 0 then
     raise EConvertError.Create('Invalid verdict filter.');
+  if IndexStr(LQuery.ScorecardStatus, ['', 'recorded', 'no_scorecard',
+    'historical_scorecard', 'verdict_mismatch']) < 0 then
+    raise EConvertError.Create('Invalid scorecard_status filter.');
   if (LQuery.Round < 0) or (LQuery.Round > 7) or (LQuery.Offset < 0) or
     (LQuery.Limit < 1) or (LQuery.Limit > 100) then
     raise EConvertError.Create('Invalid round or pagination.');
@@ -1236,14 +1503,19 @@ begin
         'offset', LQuery.Offset, 'identity_excluded', LResolved.IdentityExcluded,
         'hypothesis_excluded', LResolved.PremiseExcluded,
         'evidence_excluded', LResolved.EvidenceExcluded]);
-      try
-        Result.Add('culture_sources', CulturalMatches(LQuery.Symptom, LQuery.Ingredient));
-      except
-        Result.Free;
-        raise;
+      if not LQuery.OmitCulture then
+      begin
+        try
+          Result.Add('culture_sources', CulturalMatches(LQuery.Symptom, LQuery.Ingredient));
+        except
+          Result.Free;
+          raise;
+        end;
       end;
       if LQuery.Trend <> '' then
         Result.Add('trend_filter', LQuery.Trend);
+      if LQuery.ScorecardStatus <> '' then
+        Result.Add('scorecard_status_filter', LQuery.ScorecardStatus);
       Result.Add('options', LResolved.Options);
       LResolved.Options := nil;
       if (LQuery.Offset < LResolved.Selected) and

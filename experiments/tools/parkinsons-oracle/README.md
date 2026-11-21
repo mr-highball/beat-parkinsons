@@ -56,10 +56,11 @@ retrying. When the managed session has an earlier tool list, use the
 | `oracle_search_catalog` | `{"terms":"black tea tremor","period":"2010-2014","limit":8}` | Ranked local documents containing the requested words |
 | `oracle_find_sources` | `{"identifiers":["PMID:40647065","NCT04986982"]}` | Every archived document whose source metadata matches each supplied identifier |
 | `oracle_read_source` | `{"path":"research/2025-2029/Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt"}` | Indexed UTF-8 source text, with a byte cursor for longer documents |
-| `oracle_status` | `{}` | Published claim revision, assessed and unreviewed counts, and the text index’s coverage and refresh record |
+| `oracle_status` | `{}` | Published claim revision, assessed, unreviewed and v1 scorecard counts, and the text index’s coverage and refresh record |
+| `oracle_backlog` | `{}` | Review backlog across all rounds: directional claims awaiting v1 scorecards, scorecard mismatches, per-round counts and zero-directional symptoms |
 | `oracle_filter_options` | `{}` | Canonical symptom, ingredient, and preparation choices, with their aliases |
 
-Query scope defaults to `directional`, which requires a True, False, Maybe True or Maybe False verdict with a nonpending assessment. Use `assessed` to inspect records with at least one nonpending assessment, including Unknown, or `frozen` to include hypotheses still awaiting review. Filter by the canonical `preparation`, `round`, `direction` or `verdict` as needed. Results use stable round and claim-ID order. Follow `next_offset` to page through larger result sets.
+Query scope defaults to `directional`, which requires a True, False, Maybe True or Maybe False verdict with a nonpending assessment. Use `assessed` to inspect records with at least one nonpending assessment, including Unknown, or `frozen` to include hypotheses still awaiting review. Filter by the canonical `preparation`, `round`, `direction`, `verdict`, or `scorecard_status` (`recorded`, `no_scorecard`, `historical_scorecard`, `verdict_mismatch`) as needed. Pass `include_culture: false` on `oracle_query` or `oracle_claim` to omit the `culture_sources` array when inspecting study ledgers or paging assessments without repeating cultural summaries. Results use stable round and claim-ID order. Follow `next_offset` to page through larger result sets.
 
 The numeric `confidence` field is a reviewer score. A defensible lean such as 50.005 qualifies for a Maybe verdict. The symptom effect follows the finding relative to the frozen hypothesis, so Maybe False on a worsening hypothesis can appear under “May ease”.
 
@@ -233,6 +234,15 @@ time for the first May ease page fell from 1.10 ms to 0.74 ms. The served
 JavaScript was 2.2 MB with gzip in the live build. A mobile Chromium run
 returned the first page in about half a second after submission and verified
 paging, claim details, the graph and retry after an interrupted search.
+
+On commit `f7d48e7b4` (catalog revision 267, hierarchical branch `feature/trying-neon`),
+adding `include_culture: false` reduced `oracle_query` (`fig`, `drooling`, `assessed`, `limit: 5`)
+from 15,782 to 1,530 decoded UTF-8 bytes (-90.3%) and `oracle_claim` (`round: 1`, `id: "0188"`,
+`assessment_limit: 8`) from 19,183 to 4,931 bytes (-74.3%) while preserving exact `options`,
+`assessments` and result order. Supporting hierarchical loose branch refs in the Windows HEAD
+pin cut warm median lookup latency across 11 repetitions from 28.13 ms to 1.11 ms (`include_culture: true`)
+and 0.54 ms (`include_culture: false`). `oracle_backlog` returned the live 7-round backlog
+(18,977 bytes) in 3.37 ms median. Verified with [backlog fixtures](backlog.tests.lpr).
 
 ## Compare ingredients across symptoms
 

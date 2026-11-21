@@ -27,6 +27,8 @@ const
       '"direction":{"enum":["reduces","worsens"]},"trend":{"enum":["eases","worsens",""]},' +
       '"scope":{"enum":["directional","assessed","frozen"]},' +
       '"verdict":{"enum":["True","False","Maybe True","Maybe False","Unknown","Unreviewed"]},' +
+      '"scorecard_status":{"enum":["recorded","no_scorecard","historical_scorecard","verdict_mismatch"]},' +
+      '"include_culture":{"type":"boolean"},' +
       '"round":{"type":"integer","minimum":1,"maximum":7},"offset":{"type":"integer","minimum":0},' +
       '"limit":{"type":"integer","minimum":1,"maximum":100}}}},' +
     '{"name":"oracle_ingredient_effects","description":"Compare ingredients across one or more ' +
@@ -48,7 +50,8 @@ const
       '"id":{"type":"string","pattern":"^[0-9]{4}$"},' +
       '"assessment_offset":{"type":"integer","minimum":0},' +
       '"assessment_limit":{"type":"integer","minimum":1,"maximum":100},' +
-      '"assessment_study":{"type":"string","minLength":1}},' +
+      '"assessment_study":{"type":"string","minLength":1},' +
+      '"include_culture":{"type":"boolean"}},' +
       '"not":{"anyOf":[{"required":["assessment_study","assessment_offset"]},' +
       '{"required":["assessment_study","assessment_limit"]}]}}},' +
     '{"name":"oracle_evidence_rubric","description":"Use the versioned evidence scorecard before ' +
@@ -96,17 +99,23 @@ const
     '{"name":"oracle_filter_options","description":"List frozen symptom, ingredient and preparation ' +
       'choices and their unambiguous aliases.",' +
       '"annotations":{"readOnlyHint":true,"openWorldHint":false},' +
+      '"inputSchema":{"type":"object","additionalProperties":false}},' +
+    '{"name":"oracle_backlog","description":"Summarize research review backlog across all rounds: ' +
+      'directional verdicts awaiting v1 scorecards, any scorecard mismatches, per-round progress, ' +
+      'and symptoms with zero directional verdicts.",' +
+      '"annotations":{"readOnlyHint":true,"openWorldHint":false},' +
       '"inputSchema":{"type":"object","additionalProperties":false}}]}';
 
 type
   TOracleTool = (otQuery, otClaim, otSearchCatalog, otStatus, otFilterOptions,
-    otFindSources, otReadSource, otEvidenceRubric, otCheckScorecard, otIngredientEffects);
+    otFindSources, otReadSource, otEvidenceRubric, otCheckScorecard, otIngredientEffects,
+    otBacklog);
 
 const
   COracleToolNames: array[TOracleTool] of String = ('oracle_query', 'oracle_claim',
     'oracle_search_catalog', 'oracle_status', 'oracle_filter_options', 'oracle_find_sources',
     'oracle_read_source', 'oracle_evidence_rubric', 'oracle_check_scorecard',
-    'oracle_ingredient_effects');
+    'oracle_ingredient_effects', 'oracle_backlog');
 
 type
   TOracle = class
@@ -170,6 +179,23 @@ begin
   if (LData.JSONType <> jtNumber) or not TryStrToInt(LData.AsJSON, Result) or
     (Result < AMinimum) or (Result > AMaximum) then
     raise EConvertError.Create('Invalid integer for ' + AName + '.');
+end;
+
+function ReadBoolean(AArguments: TJSONObject; const AName: String;
+  ADefault: Boolean): Boolean;
+var
+  LData: TJSONData;
+begin
+  LData := AArguments.Find(AName);
+  if LData = nil then
+  begin
+    Exit(ADefault);
+  end;
+  if LData.JSONType <> jtBoolean then
+  begin
+    raise EConvertError.Create('Expected a boolean for ' + AName + '.');
+  end;
+  Result := LData.AsBoolean;
 end;
 
 procedure RequireFields(AArguments: TJSONObject; const AAllowed: array of String);
@@ -314,7 +340,8 @@ begin
     otQuery:
       begin
         RequireFields(AArguments, ['symptom', 'ingredient', 'preparation', 'direction',
-          'trend', 'scope', 'verdict', 'round', 'offset', 'limit']);
+          'trend', 'scope', 'verdict', 'scorecard_status', 'include_culture', 'round',
+          'offset', 'limit']);
         LQuery := Default(TClaimQuery);
         LQuery.Symptom := ReadString(AArguments, 'symptom', '');
         LQuery.Ingredient := ReadString(AArguments, 'ingredient', '');
@@ -323,6 +350,8 @@ begin
         LQuery.Trend := ReadString(AArguments, 'trend', '');
         LQuery.Scope := ReadString(AArguments, 'scope', 'directional');
         LQuery.Verdict := ReadString(AArguments, 'verdict', '');
+        LQuery.ScorecardStatus := ReadString(AArguments, 'scorecard_status', '');
+        LQuery.OmitCulture := not ReadBoolean(AArguments, 'include_culture', True);
         LQuery.Round := ReadInteger(AArguments, 'round', 0, 1, 7);
         LQuery.Offset := ReadInteger(AArguments, 'offset', 0, 0, MaxInt);
         LQuery.Limit := ReadInteger(AArguments, 'limit', 12, 1, 100);
@@ -331,7 +360,7 @@ begin
     otClaim:
       begin
         RequireFields(AArguments, ['round', 'id', 'assessment_offset', 'assessment_limit',
-          'assessment_study']);
+          'assessment_study', 'include_culture']);
         LId := ReadString(AArguments, 'id', '');
         LIndex := ReadInteger(AArguments, 'round', 0, 1, 7);
         if LIndex = 0 then
@@ -360,7 +389,7 @@ begin
           LAssessmentLimit := DefaultAssessmentPageSize;
         end;
         Result := Index.Claim(LIndex, LId, LAssessmentOffset, LAssessmentLimit,
-          LAssessmentStudy);
+          LAssessmentStudy, ReadBoolean(AArguments, 'include_culture', True));
       end;
     otSearchCatalog:
       begin
@@ -415,6 +444,11 @@ begin
           raise EConvertError.Create('Provide an array of symptoms.');
         end;
         Result := Index.Ingredients(TJSONArray(LSymptoms));
+      end;
+    otBacklog:
+      begin
+        RequireFields(AArguments, []);
+        Result := Index.Backlog;
       end;
 
   end;
@@ -663,11 +697,11 @@ var
   LFile: TStringStream;
 begin
   if ParamCount < 2 then
-    raise EConvertError.Create('Use serve, index, status, web or model, followed by the repository path.');
+    raise EConvertError.Create('Use serve, index, status, backlog, web or model, followed by the repository path.');
   LCommand := ParamStr(1);
   LOracle := TOracle.Create(ParamStr(2));
   try
-    case IndexStr(LCommand, ['serve', 'index', 'status', 'web', 'model']) of
+    case IndexStr(LCommand, ['serve', 'index', 'status', 'web', 'model', 'backlog']) of
       0: Serve(LOracle);
       1:
         begin
@@ -733,6 +767,15 @@ begin
             LResult.Free;
           end;
           LOracle.Catalog.ExportSearch(LOutputDirectory + 'search');
+        end;
+      5:
+        begin
+          LResult := LOracle.Index.Backlog;
+          try
+            WriteLn(LResult.AsJSON);
+          finally
+            LResult.Free;
+          end;
         end;
     else
       raise EConvertError.Create('Unknown command: ' + LCommand);
