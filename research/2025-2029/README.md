@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [Round 1 grouped source review](Food-Experiment-Round-1-Grouped-Body-Scope-Nov22.md) links 40 verified source scopes by date. The [Cypriot olive-oil historical record](Cultural-and-Experiential/Traditional-Practices/2026-John-the-Physician-Cyprus-Olive-Oil-Headache.txt) records a topical headache indication in its cultural context.
+
 The [Round 1 saffron and original-source audit](Food-Experiment-Round-1-Saffron-Originals-Nov22.md) links dated texts for 19 recovered originals and the outstanding questions that the audited studies could not answer. A [period comparison](Observations/Food-Experiment-Saffron-Comparator-Scope-Nov22.md) records how the clinical controls and predeclared outcomes differed.
 
 The [dried-date and apathy source review](Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim. The [publisher and archive follow-up](Food-Experiment-Dried-Date-Apathy-Publisher-Recovery-Nov22.md) adds 58 original-scope checks and two dated access notes, including a separate [medRxiv protocol scope](Source-Text/2025-MedRxiv-25337654-Alcohol-Dementia-Protocol-Scope.txt).

@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-Round 1 resolved 101 further source checks across 19 originals. Three new assessed comparisons add context on saffron and crocin and retain both provisional saffron verdicts. The original queue now holds 38,548 exact pairs across 24,176 sources. The 384 explicit access gaps remain indexed in 88 dated texts. [Saffron and original-source checkpoint](followup/saffron-and-originals-nov22/README.md)
+Round 1 resolved 531 exact source checks across 40 publications. A 2015 rice bran oil experiment was corrected to animal evidence, and both affected verdicts retain their prior directions and scores. The queue now holds 38,017 pairs across 24,136 sources. All 384 documented access gaps remain indexed. [Grouped originals](followup/large-source-bodies-nov22/README.md)
+
+Round 1 resolved 101 further source checks across 19 originals. Three new assessed comparisons add context on saffron and crocin and retain both provisional saffron verdicts. That checkpoint left 38,548 exact pairs across 24,176 sources. The 384 explicit access gaps remain indexed in 88 dated texts. [Saffron and original-source checkpoint](followup/saffron-and-originals-nov22/README.md)
 
 The preceding original-source pass checked 169 pairs across 34 publications and resolved 166. Three linked to a 2015 article stay open at abstract depth. That checkpoint left 38,649 queued pairs across 24,195 sources. A traced red rice bran oil comparison changes claim 0476 to Maybe False with a minimal easing signal in a rat proxy. [Originals, gaps and scorecard](followup/priority-five-multi-route-nov22/README.md)
 

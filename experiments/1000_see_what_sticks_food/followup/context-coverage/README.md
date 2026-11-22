@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-Round 1 resolved 101 further source checks across 19 originals. Three new assessed comparisons add context on saffron and crocin and retain both provisional saffron verdicts. The original queue now holds 38,548 exact pairs across 24,176 sources. The 384 explicit access gaps remain indexed in 88 dated texts. [Saffron and original-source checkpoint](../saffron-and-originals-nov22/README.md)
+Round 1 resolved 531 exact source checks across 40 publications. A 2015 rice bran oil experiment was corrected to animal evidence, and both affected verdicts retain their prior directions and scores. The queue now holds 38,017 pairs across 24,136 sources. All 384 documented access gaps remain indexed. [Grouped originals](../large-source-bodies-nov22/README.md)
+
+Round 1 resolved 101 further source checks across 19 originals. Three new assessed comparisons add context on saffron and crocin and retain both provisional saffron verdicts. That checkpoint left 38,548 exact pairs across 24,176 sources. The 384 explicit access gaps remain indexed in 88 dated texts. [Saffron and original-source checkpoint](../saffron-and-originals-nov22/README.md)
 
 The full per-pair and source-grouped queues regenerate under the experiment's ignored `build/context-coverage/output/` directory. Keep the curated exact ledger, per-claim counters, provenance and replay summary in Git; do not copy the full generated queues into this source folder.
 
@@ -8,12 +10,12 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 22,345 |
+| Local body or other primary-source context | 22,876 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 35 |
 | Pending or access-only disposition | 366 |
-| No imported exact review | 38,147 |
+| No imported exact review | 37,616 |
 | **Total** | **61,252** |
 
 The exact queue includes 384 explicit pending or access-only pairs. Eighteen also retain a stronger imported title or index review in the table above, which reports the strongest recorded review across layers. All 384 have dated local source texts in the [known original access index](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md).
