@@ -1,5 +1,7 @@
 # 2020-2024
 
+[2023 UEG poster identity and full-volume access gap](Source-Text/2023-PMC10576948-UEG-Poster-Access-Gap.txt).
+
 The [Round 1 original source-depth audit](Food-Experiment-Original-Source-Depth-Nov22.md) links verified article summaries and original-access gaps filed in this period.
 
 New primary records include [Qin Stimulation and Falls Scope](Source-Text/2023-PMID37712094-Qin-Stimulation-and-Falls-Scope.txt) · [Bhowmick Genetic Rest Tremor Case](Source-Text/2023-PMID37636228-Bhowmick-Genetic-Rest-Tremor-Case.txt) · [Johnson Apathy and Caregiver Burden](Source-Text/2023-PMID37772283-Johnson-Apathy-and-Caregiver-Burden.txt) · [Vendrik Parkinson Pilot Outcome Scope](Source-Text/2023-PMID37798034-Vendrik-Parkinson-Pilot-Outcome-Scope.txt).

@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [shared original source access audit](Food-Experiment-Shared-Original-Access-Nov22.md) summarizes the two recovered originals and the six remaining archives.
+
 The [June and July original-source audit](Food-Experiment-June-July-Originals-Nov22.md) links 42 verified clinical source notes. The [dried-date pain follow-up](Food-Experiment-Date-Pain-Followup.md) now includes an [exact migraine registry extract](Source-Text/Trials/IRCT20260702070048N1.txt) and a [Parkinson pain trial with a shared triglyceride vehicle](Source-Text/2026-PMID42563548-Kubota-Parkinson-Pain-and-Shared-Vehicle.txt).
 
 The [printed-page and clinical context audit](Food-Experiment-Printed-Pages-and-Clinical-Context-Nov22.md) links original-source reviews filed in this period.

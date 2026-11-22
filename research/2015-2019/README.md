@@ -1,5 +1,7 @@
 # 2015-2019
 
+[2016 FEBS poster exposure review](Source-Text/2016-PMC7164006-FEBS-Poster-Exposure-Scope.txt), [Talbina customary-use account](Cultural-and-Experiential/Traditional-Practices/2016-FEBS-Talbina-Illness-and-Bereavement.txt), and [2016 neurology meeting access record](Source-Text/PMC7159757.txt).
+
 New source records on oral outcomes and symptom measurement include [Russo SCA3 Swallowing Scales](Source-Text/2015-PMID30363545-Russo-SCA3-Swallowing-Scales.txt).
 
 The [Café-PD capsule trial](Source-Text/2017-PMID28954882-Postuma-Cafe-PD-Adverse-Outcomes.txt) separates measured dyskinesia, sleep outcomes and aggregate adverse events. The [Phillips diet pilot](Source-Text/2018-PMID30098269-Phillips-Diet-Adverse-Outcomes.txt) reports combined tremor or rigidity worsening alongside its nonmotor scores. The assigned exposures were caffeine capsules and whole diets, respectively.

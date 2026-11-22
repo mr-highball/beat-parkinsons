@@ -1,0 +1,16 @@
+# Round 1 shared original source access
+
+Reviewed on 2026-11-22. The Round 1 audit selected 272 exact claim–source pairs attached to eight shared records. Two complete originals resolved 64 source-context pairs. The six records below account for 208 pairs still in the exact review queue. Review that queue by claim ID and source key using the linked [208-pair gap ledger](../../experiments/1000_see_what_sticks_food/followup/shared-originals-and-archive-gaps-nov22/archive-gaps.tsv). These are source-access and attribution findings. They do not change the claims' efficacy verdicts.
+
+| Source and period | Verified depth | Pairs open | Next original-source route |
+| --- | --- | ---: | --- |
+| [2016 American Neurological Association meeting supplement, PMC7159757](../2015-2019/Source-Text/PMC7159757.txt) | Selected abstracts and separately bounded components | 35 | Obtain the complete journal supplement and reconcile parent pages S1–S432 with the shorter PMC component. |
+| [2025 UEG Week posters, PMC12496561](Source-Text/2025-PMC12496561-UEG-Parkinson-Swallowing-and-Dyspepsia.txt) | Three original poster abstracts and a separate ten-page selection | 39 | Obtain the publisher section S803–S1476 or the original individual posters. Keep abstracts separated. |
+| [2014 FEBS posters, PMC7163937](../2010-2014/Source-Text/2014-PMC7163937-FEBS-Poster-Access-Gap.txt) | Publisher identity and first printed page | 44 | Locate the repository or library copy of the complete poster section beginning on page 65. |
+| [2011 European hematology congress, PMC3127552](../2010-2014/Source-Text/2011-PMC3127552-Hematology-Congress-Access-Gap.txt) | Complete collection identity and wrapper | 31 | Obtain the original abstract book through the journal or its congress archive, then identify exact members. |
+| [2023 UEG Week posters, PMC10576948](../2020-2024/Source-Text/2023-PMC10576948-UEG-Poster-Access-Gap.txt) | Published wrapper and selected institutional citations | 30 | Obtain the poster section or original single-poster records. |
+| [Purinergic receptor review, PMID 18273661](../2005-2009/Source-Text/2007-PMID18273661-Purinergic-Review-Access-Gap.txt) | Correct article abstract; wrong inherited PMCID documented | 29 | Request the original review using DOI 10.1007/s00210-007-0222-2 and preserve the imported queue keys for replay. |
+
+The [1974 aluminum review](../1970-1974/Source-Text/1974-PMID4470920-Aluminum-Food-Composition-Scope.txt) was checked on all 93 printed pages. Its measurements, including food composition by preparation, establish exposure context. The [2016 FEBS poster volume](../2015-2019/Source-Text/2016-PMC7164006-FEBS-Poster-Exposure-Scope.txt) contains 894 authenticated individual abstracts in 301 continuous printed pages. Its [Talbina entry](../2015-2019/Cultural-and-Experiential/Traditional-Practices/2016-FEBS-Talbina-Illness-and-Bereavement.txt) documents a reported practice involving a barley preparation. The original poster's experiment measured laboratory outcomes. It supplies no clinical anxiety observation.
+
+The [experiment audit](../../experiments/1000_see_what_sticks_food/followup/shared-originals-and-archive-gaps-nov22/README.md) describes the exact dispositions, archive routes and checks.

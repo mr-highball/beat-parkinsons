@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The shared-original audit resolved 64 exact source-context pairs from two complete originals. The queue contains 40,832 pairs. Dated local records preserve 208 remaining source-access pairs across six originals, including a corrected review identity. The barley Talbina account is separately visible as a traditional practice. Verdicts are unchanged. [Audit and open gaps](followup/shared-originals-and-archive-gaps-nov22/README.md)
+
 The June and July checkpoint verified 42 more article pairs at original-body depth. The dated migraine registry now resolves from its exact ID, and the v1 scorecard for dried dates and Parkinson pain remains Unknown. The Round 1 source queue contains 40,896 pairs. [June and July original-source checkpoint](followup/june-july-originals-and-date-pain-nov22/README.md)
 
 The printed-page and clinical context checkpoint verified 39 original claim–source pairs, including three historical articles from 18 printed scans. It adds separate actigraphy, chewing and apathy contexts and an indexed digest of the 12 remaining priority-three holds. The original Round 1 queue is 40,938. The 69 easing, two worsening and 929 open verdicts are unchanged. [Printed-page and clinical context audit](followup/printed-pages-and-clinical-context-nov22/README.md)

@@ -1,5 +1,7 @@
 # 2005-2009
 
+[Purinergic receptor review identity and original-access gap](Source-Text/2007-PMID18273661-Purinergic-Review-Access-Gap.txt), using the verified PMID and DOI.
+
 The [Round 1 original source-depth audit](Food-Experiment-Original-Source-Depth-Nov22.md) links verified article summaries and original-access gaps filed in this period.
 
 New source records on oral outcomes and symptom measurement include [Fig Tree Contact Photodermatitis](Source-Text/2007-PMID17721568-Fig-Tree-Contact-Photodermatitis.txt) · [Matsuo Palmer Swallowing Mechanisms](Source-Text/2008-PMID18940636-Matsuo-Palmer-Swallowing-Mechanisms.txt).
