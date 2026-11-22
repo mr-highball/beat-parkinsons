@@ -1,5 +1,7 @@
 # 2000-2004
 
+The Round 1 gap audit preserves the original access limits for the [recurrent psychosis case](Source-Text/2003-PMID12743348-Autumnal-Psychosis-Original-Abstract.txt) and [hippocampal sclerosis series](Source-Text/2003-PMID12946017-Original-Access-Gap.txt).
+
 The [Round 1 original source-depth audit](Food-Experiment-Original-Source-Depth-Nov22.md) links verified article summaries and original-access gaps filed in this period.
 
 The [Singhal historical account](Cultural-and-Experiential/Traditional-Practices/2003-PMID12915075-Singhal-Kampavata-Saliva-and-Mucuna.txt) separates traditional syndrome descriptions from measured symptom response. The surgical reports record [gait](Source-Text/2000-PMID10681077-Siegel-Pallidotomy-and-Gait.txt), [adverse drooling](Source-Text/2001-PMID11235949-Intemann-Pallidotomy-and-Drooling.txt) and [separate motor follow-up](Source-Text/2001-PMID11274323-Counihan-Pallidotomy-Followup.txt).

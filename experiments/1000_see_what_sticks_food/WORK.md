@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The clinical originals and rosemary audit verified 17 priority-four pairs. The queue contains 40,815 original pairs. Eight dated notes preserve 50 open access pairs with the exact claim IDs and symptoms. The new APA supplement supplies Parkinson mood context with no rosemary exposure. Verdicts are unchanged. [Clinical source audit](followup/clinical-originals-and-rosemary-access-nov22/README.md)
+
 The shared-original audit resolved 64 exact source-context pairs from two complete originals. The queue contains 40,832 pairs. Dated local records preserve 208 remaining source-access pairs across six originals, including a corrected review identity. The barley Talbina account is separately visible as a traditional practice. Verdicts are unchanged. [Audit and open gaps](followup/shared-originals-and-archive-gaps-nov22/README.md)
 
 The June and July checkpoint verified 42 more article pairs at original-body depth. The dated migraine registry now resolves from its exact ID, and the v1 scorecard for dried dates and Parkinson pain remains Unknown. The Round 1 source queue contains 40,896 pairs. [June and July original-source checkpoint](followup/june-july-originals-and-date-pain-nov22/README.md)

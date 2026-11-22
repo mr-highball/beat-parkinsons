@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [Parkinson mood and daily-function study supplement](Source-Text/2021-PMID34323563-Patel-Parkinson-Depression-Author-Supplement.txt) provides clinical endpoint context. The [related audit](../2025-2029/Food-Experiment-Clinical-Originals-Rosemary-Access-Nov22.md) indexes 14 reviewed 2022 originals and remaining source-access gaps.
+
 [2023 UEG poster identity and full-volume access gap](Source-Text/2023-PMC10576948-UEG-Poster-Access-Gap.txt).
 
 The [Round 1 original source-depth audit](Food-Experiment-Original-Source-Depth-Nov22.md) links verified article summaries and original-access gaps filed in this period.

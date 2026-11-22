@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [original eye case series](Source-Text/1997-PMID9183200-Original-Scope.txt) and [original hydrolase paper](Source-Text/1999-PMID10406793-Original-Scope.txt) clarify two Round 1 source matches.
+
 The [printed-page and clinical context audit](Food-Experiment-Printed-Pages-and-Clinical-Context-Nov22.md) links original-source reviews filed in this period.
 
 The [Round 1 original source-depth audit](Food-Experiment-Original-Source-Depth-Nov22.md) links verified article summaries and original-access gaps filed in this period.
