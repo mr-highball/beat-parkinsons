@@ -11,3 +11,5 @@ Claim 0502 retains **Unknown (50)**. The scorecard now includes 18 independent f
 [Exact dispositions](dispositions.tsv) · [Dated source notes](source-notes.tsv) · [Continuing gaps](archive-gaps.tsv) · [Search trails](search-trails.tsv) · [Scorecard](0502-decision.tsv) · [Source families](0502-families.tsv) · [Oracle draft validation](0502-oracle-draft-check.json) · [Research catalog digest](../../../../research/2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md)
 
 The [native replay verification](native-replay-verification.txt) confirms every new local text and exact queue disposition. The queue contains 39,624 pairs across 24,873 sources, including 14,247 for claim 0502.
+
+The [context and printed-source recheck](../dried-date-pain-context-and-scans-nov22/README.md) supersedes the original batch snapshot for current gap counts and disposition.

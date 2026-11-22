@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The latest dried-date pain audit checked 859 source identities and cleared 432 original-scope mismatches. It added 427 continuing gap notes and five evidence families for claim 0502, which remains Unknown. Round 1 holds 39,624 exact pairs across 24,873 sources, including 14,247 pairs for claim 0502. [Dried-date source notes and remaining checks](followup/dried-date-pain-priority-four-nov22/README.md)
+The dried-date pain recheck resolved 368 of 427 continuing original-source holds. This includes 182 recovered printed papers, two reconciled DOI records and 184 main-body context exclusions. Fifty-nine exact records remain open with dated notes. Claim 0502 remains Unknown. Round 1 holds 39,256 exact pairs across 24,505 sources, including 13,879 for claim 0502. [Recovered originals and remaining gaps](followup/dried-date-pain-context-and-scans-nov22/README.md)
+
+The preceding dried-date pain audit checked 859 source identities and cleared 432 original-scope mismatches. It added 427 continuing gap notes and five evidence families for claim 0502, which remains Unknown. That checkpoint left 39,624 exact pairs across 24,873 sources, including 14,247 pairs for claim 0502. [Dried-date source notes and remaining checks](followup/dried-date-pain-priority-four-nov22/README.md)
 
 The tea and ginger reassessment retained the existing verdicts, added five source families, and verified 16 additional original-source checks. Thirteen continuing access gaps have dated local source files. That checkpoint left 40,056 exact pairs. [Tea and ginger evidence and access routes](followup/priority-three-replay-nov22/README.md)
 

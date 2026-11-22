@@ -128,3 +128,5 @@ January 1, 1990 through December 31, 1994.
 The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
 
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
+
+[Iowa dietary questionnaire methods](Source-Text/1992-PMID1415141-Iowa-Food-Questionnaire.txt)

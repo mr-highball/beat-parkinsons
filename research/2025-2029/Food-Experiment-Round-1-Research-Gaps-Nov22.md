@@ -22,6 +22,8 @@ Use the exact-source list to distinguish a verified source summary from an acces
 
 A later [gerontology and neurology collections checkpoint](Food-Experiment-Neurology-Collections-Access-Nov22.md) maps 172 exact pairs to seven dated source texts. It distinguishes original access or figure gaps from recovered PDFs awaiting member review.
 
-The [known original access index](Food-Experiment-Round-1-Original-Access-Nov22.md) reconciles all 962 entries classified as pending or access-only and records their dated local texts.
+The [known original access index](Food-Experiment-Round-1-Original-Access-Nov22.md) reconciles all 594 entries classified as pending or access-only and records their dated local texts.
 
-The latest [dried-date pain review](Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) records 427 continuing local source and context gaps, with verified depths and exact next checks.
+The earlier [dried-date pain review](Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) records 427 continuing local source and context gaps, with verified depths and exact next checks.
+
+The [printed originals and context recheck](Food-Experiment-Dried-Date-Pain-Scanned-Originals-Nov22.md) resolved 368 of the 427 audited source holds. The current notes retain 54 original-access holds and five diet-item questions from this batch.
