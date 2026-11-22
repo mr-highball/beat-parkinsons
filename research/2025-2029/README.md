@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [original collections and turmeric pain audit](Food-Experiment-Original-Collections-Turmeric-Nov22.md) links 125 original reviews, 125 access gaps, and the November 2026 Cochrane synthesis.
+
 The [Round 1 clinical originals and rosemary access audit](Food-Experiment-Clinical-Originals-Rosemary-Access-Nov22.md) links 17 original body reviews and 50 continuing access-limited pairs.
 
 The [shared original source access audit](Food-Experiment-Shared-Original-Access-Nov22.md) summarizes the two recovered originals and the six remaining archives.

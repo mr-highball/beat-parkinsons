@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,078 |
+| Local body or other primary-source context | 20,203 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 74 |
 | Pending or access-only disposition | 330 |
-| No imported exact review | 40,411 |
+| No imported exact review | 40,286 |
 | **Total** | **61,252** |
+
+The original collections audit verifies 125 more original-depth pairs across five complete records. The queue retains 40,690 pairs across 25,700 source keys. Four dated source notes preserve 125 still-open pairs. [Original member scope and access notes](../five-original-collections-and-turmeric-nov22/README.md)
 
 The clinical originals and rosemary audit moves 17 more pairs to original-body depth. The exact replay leaves 40,815 pairs across 25,705 source keys. All 50 access-limited pairs in this audit have dated local notes. [Scope and gaps](../clinical-originals-and-rosemary-access-nov22/README.md)
 

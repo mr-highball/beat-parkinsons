@@ -1,0 +1,14 @@
+# Round 1 original collections and turmeric pain
+
+The November 22 audit checked 250 exact Round 1 claim–source pairs across nine records. Five original records resolved 125 pairs, including 68 related exposure contexts and 57 contextual exclusions. Four collections still account for 125 access-limited pairs. Their source notes list each affected claim ID, ingredient and symptom for direct MCP access. [Exact gap ledger](../../experiments/1000_see_what_sticks_food/followup/five-original-collections-and-turmeric-nov22/archive-gaps.tsv)
+
+| Open original | Pairs | Remaining material |
+| --- | ---: | --- |
+| [2008 FEBS posters](../2005-2009/Source-Text/2008-PMC7163982-FEBS-Poster-Access-Gap.txt) | 23 | Complete printed pp. 99–437 or authenticated individual members. |
+| [2014 AES meeting proceedings, published 2015](../2015-2019/Source-Text/PMC4591846.txt) | 38 | Complete supplement over pp. 1–578 or the exact member bodies. |
+| [2022 World Congress on Osteoporosis](../2020-2024/Source-Text/2022-PMID36008648-WCO-Poster-Access-Gap.txt) | 25 | Complete original beginning on p. 35 or the corresponding original meeting sections. |
+| [2022 UEG Week poster supplement](../2020-2024/Source-Text/2022-PMC9548091-UEG-Lemon-Balm-Blend-Members.txt) | 39 | Complete pp. 473–1092 or authenticated member originals beyond the selected local records. |
+
+The original record decisions are anchored to [2023 SGIM controls](../2020-2024/Source-Text/2023-PMC10323075-SGIM-Complete-Member-Exposure-Scope.txt), the [2023 flowering-plant review](../2020-2024/Source-Text/2023-PMID38002124-Edible-Flower-Identity-Scope.txt), the [2022 FEBS printed posters](../2020-2024/Source-Text/2022-PMC9260650-FEBS-Poster-Exposure-Scope.txt), [2024 movement-disorders abstracts](../2020-2024/Source-Text/2024-PMC10854369-MDCP-Complete-Member-Exposure-Scope.txt), and the [2025 osteoporosis congress](Source-Text/2025-PMID40986224-WCO-Complete-Member-Exposure-Scope.txt) with its [published correction](Source-Text/2025-PMID41417439-WCO-Missing-Poster-Correction.txt).
+
+The English P1266 abstract and French poster 12 report the same 39-person spondyloarthritis survey. Participants described perceived pain easing with turmeric, with no isolated turmeric comparison. The new Cochrane synthesis reports a small pain difference for extracts in knee osteoarthritis. Its low-certainty interval falls below the review's 1.5-point threshold for clinically important benefit. The Parkinson nanomicelle pilot has no separate pain result. Claim 0812 retains a minimal easing signal under the rubric. A treatment effect of ground turmeric on Parkinson pain remains open. [Same-cohort member note](Source-Text/2025-WCO-P1266-Ben-Tekaya-Turmeric-Reported-Pain.txt) · [Cochrane estimate and limits](Source-Text/2026-PMID43051256-Cochrane-Turmeric-Knee-Pain.txt) · [Parkinson pilot](../2020-2024/Source-Text/2022-PMID35636380-Ghodsi-Parkinson-Curcumin-Symptom-Gaps.txt)

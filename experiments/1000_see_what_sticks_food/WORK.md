@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+Five original records resolved 125 Round 1 pairs. The exact queue now holds 40,690 pairs. Four dated source notes expose 125 additional access gaps through MCP. The checked turmeric pain scorecard includes the Cochrane synthesis and same-cohort patient-reported evidence, and retains its minimal easing signal. [Original collections checkpoint](followup/five-original-collections-and-turmeric-nov22/README.md)
+
 The clinical originals and rosemary audit verified 17 priority-four pairs. The queue contains 40,815 original pairs. Eight dated notes preserve 50 open access pairs with the exact claim IDs and symptoms. The new APA supplement supplies Parkinson mood context with no rosemary exposure. Verdicts are unchanged. [Clinical source audit](followup/clinical-originals-and-rosemary-access-nov22/README.md)
 
 The shared-original audit resolved 64 exact source-context pairs from two complete originals. The queue contains 40,832 pairs. Dated local records preserve 208 remaining source-access pairs across six originals, including a corrected review identity. The barley Talbina account is separately visible as a traditional practice. Verdicts are unchanged. [Audit and open gaps](followup/shared-originals-and-archive-gaps-nov22/README.md)
