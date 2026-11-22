@@ -1,9 +1,9 @@
 # Gerontology and neurology collection review
 
-The November 22 intake pinned 301 exact Round 1 claim–source pairs across 13 collections. The [research-gap digest](../../../../research/2025-2029/Food-Experiment-Neurology-Collections-Access-Nov22.md) records seven incomplete reviews and their publication-period source notes. The [exact gap ledger](archive-gaps.tsv) maps 172 pairs to the material inspected and the outstanding work.
+Six original HTML collections resolved 129 of 301 pinned Round 1 claim–source pairs at original text depth. Thirty-one are related contexts and 98 are contextual exclusions. The published BRAIN correction adds three original abstracts and eight author-list changes. The boundary inventory preserves the duplicate standalone label in the 2024 ESHG hybrid posters and the introduction-only records in ISEV. [Exact decisions](dispositions.tsv) · [Source notes](source-notes.tsv) · [Original boundaries](original-boundaries.tsv) · [Capture hashes](capture-sha256.tsv)
 
-- Original proceedings or required figures remain incomplete for 125 pairs across five 2015–2019 publications.
-- Original publisher PDFs have been recovered for the CIRSE 2019 and Italian Society of Neurology 2020 collections. The 47 mapped ingredient–symptom pairs await separate review of the individual abstracts and relevant tables or figures.
-- The six other collections in the intake have original HTML available and are undergoing member review.
+- The BRAIN nutmeg extract report tracks memory tasks in mice. Its separate olive-oil constituent abstract reports walking distance and vascular recovery after experimental stroke. The stroke conference reports only an aggregated meat, poultry and fish dietary measure.
+- The ESHG studies provide piperine and resveratrol cell comparisons and genetic food-liking context. The ISEV ginger vesicle report tracks arthritis scores in mice. This group supplies no direction for the exact Round 1 Parkinson preparation and outcome pairs.
+- Five publications retain 125 proceedings-access or online-figure gaps. The original PDFs for the CIRSE and Italian Society of Neurology collections are secured, and their 47 pairs await review of the individual abstracts and relevant tables or figures. [Dated source notes and remaining work](../../../../research/2025-2029/Food-Experiment-Neurology-Collections-Access-Nov22.md) · [Exact open pairs](archive-gaps.tsv)
 
-Each gap stays queued at its current evidence depth. The freeze and published verdicts are unchanged at this checkpoint.
+The Round 1 replay retains 40,561 exact pairs across 25,694 source keys, including all 12 priority-three holds and 35 raw fig and drooling pairs. The frozen claims and verdicts remain unchanged at 69 easing leans, two worsening leans and 929 Unknown. Round 2 remains queued. [Replay verification](native-replay-verification.txt) · [Search trails](search-trails.tsv) · [First-pass coverage verification](oracle-coverage-verification.txt)

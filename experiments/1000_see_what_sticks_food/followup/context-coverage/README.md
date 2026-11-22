@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,203 |
+| Local body or other primary-source context | 20,332 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 74 |
 | Pending or access-only disposition | 330 |
-| No imported exact review | 40,286 |
+| No imported exact review | 40,157 |
 | **Total** | **61,252** |
+
+The gerontology and neurology proceedings audit verifies 129 additional pairs from six complete HTML records and checks the original BRAIN corrigendum. The queue retains 40,561 pairs across 25,694 source keys. Seven dated source texts preserve the 172 exact pairs that await either source recovery, figure inspection or member review. [Proceedings and gap audit](../gerontology-neurology-collection-review-nov22/README.md)
 
 The original collections audit verifies 125 more original-depth pairs across five complete records. The queue retains 40,690 pairs across 25,700 source keys. Four dated source notes preserve 125 still-open pairs. [Original member scope and access notes](../five-original-collections-and-turmeric-nov22/README.md)
 
