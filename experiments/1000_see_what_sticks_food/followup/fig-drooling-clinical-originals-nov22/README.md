@@ -1,0 +1,15 @@
+# Raw fig, clinical drooling and original-source depth
+
+This checkpoint reviewed 71 frozen claim and source pairs at full original depth. Forty-eight apply to claim 0188, raw fig and Parkinson drooling. The other 23 use separately identified presentations in the 2005 Society of General Internal Medicine supplement. The queue for claim 0188 fell from 87 to 39. [Exact decisions](dispositions.tsv) · [Native replay](native-replay-verification.txt) · [Original-object fingerprints](retrieval-sha256.tsv)
+
+## Exposure and measurement
+
+- The 1972 six-person drug crossover reports its drooling item separately. One score was lower, one higher, and four were unchanged with the add-on. The 2014 Japanese MDS-UPDRS validation separates its saliva-and-drooling item from chewing and swallowing. The 2011 pilot measured protein concentrations in saliva samples. Each comparison addresses a different outcome or exposure. [Rao Table 1](../../../../research/1970-1974/Source-Text/1972-PMID4568331-Rao-Levodopa-Drooling-Items.txt) · [Kashihara Table 4](../../../../research/2010-2014/Source-Text/2014-PMID25328906-Kashihara-Japanese-Saliva-Drooling-Validation.txt) · [Devic Figure 2](../../../../research/2010-2014/Source-Text/2011-PMID21349902-Devic-Saliva-Biomarkers.txt)
+- Acute drooling during a probable fig allergy and adverse reports from a pediatric mixed syrup trial remain in the scorecard. The recovered photodermatitis cases involve fig branches and sun exposure. Traditional fig use for dry mouth describes a separate symptom. The checked rating remains **Unknown** for raw fig and chronic Parkinson drooling. [Scorecard validation](0188-oracle-draft-check.json) · [Fig contact report](../../../../research/2005-2009/Source-Text/2007-PMID17721568-Fig-Tree-Contact-Photodermatitis.txt) · [Traditional dry-mouth record](../../../../research/2010-2014/Cultural-and-Experiential/Traditional-Practices/2014-Persian-Review-Fig-and-Dry-Mouth.txt)
+- The 2005 supplement names green tea in a possible interaction survey, steamed shrimp in an autoimmune hepatitis history and orange juice in a hypoglycemia case. The drooling report concerns ALS. The separate tremor report concerns thyroid dysfunction and medication. All 255 DOI-defined pages supplied text. The additional PubMed pages 280–296 remain outside the verified primary extent. [Conference member record](../../../../research/2005-2009/Source-Text/PMC1490295.txt)
+
+## Access remaining
+
+Eight complete historical scan sets cover 67 printed pages. The 1989 Parkinson review supplied seven more pages, with p. 514 still missing. The Dipple and Prashanth reports are PDF-only at their verified archive endpoints. The Sellitto PMID points to a different PMC object. The Wiley reader surfaced part of the 2017 neurological meeting and a separate drooling case, with the end of the published page range still unverified. Several book reviews remain PDF-only with nearby provider title conflicts. [Search and access trails](search-trails.tsv)
+
+Round 1 totals remain 69 easing leans, two worsening leans and 929 open. Round 2 remains queued.

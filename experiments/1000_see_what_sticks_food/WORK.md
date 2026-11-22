@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The raw fig and clinical drooling checkpoint completed 71 original context decisions, including 48 raw-fig pairs and 23 companion pairs in the complete DOI-defined 2005 conference supplement. Claim 0188 remains Unknown. Its original-source queue fell to 39 and the Round 1 queue fell to 41,046. [Raw fig source audit](followup/fig-drooling-clinical-originals-nov22/README.md)
+
 The priority-three access and clinical-originals checkpoint kept all 12 restricted source pairs queued and resolved ten priority-four pairs at original-body depth. Eleven dated factual texts were filed. The Araki rosemary reanalysis now has an exact local Table 1 record and a checked scorecard rationale. Round 1 remains at 69 easing, two worsening, and 929 open verdicts, with 41,117 original pairs queued. [Source audit](followup/priority-three-and-clinical-originals-nov22/README.md)
 
 The caffeine and tea checkpoint recovered three complete source bodies and resolved 28 original Europe PMC pairs, including all three remaining black-tea walking pairs. Rechecking the frozen overlay imported four earlier protein links at unspecified depth, leaving 41,127 pairs queued. The black-tea and celery tremor grades and the open black-tea walking verdict passed the rubric checks. [Caffeine and tea source audit](followup/caffeine-and-tea-originals-nov22/README.md)
