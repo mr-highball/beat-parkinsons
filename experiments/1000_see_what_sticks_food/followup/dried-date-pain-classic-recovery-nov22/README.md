@@ -1,0 +1,11 @@
+# Dried-date pain classic archive review, November 22, 2026
+
+Oracle revision 36 found exact dated locators for 41 of 49 priority-four pairs. This audit cataloged eight first-pass locator misses. The result counts represent exact source scope. The assay, clinical and dietary evidence stay at their verified depths.
+
+The review checked 46 PMC page views, 36 alternate archive views, 20 publisher article or PDF routes and the separately hosted CLEAT and Agari PDFs. It authenticated and transcribed all 16 original printed pages from 11 issue members. Eight more decisions use four complete article bodies, two complete PDFs, and two exact publisher sections. Four additional decisions use identifiable publisher sections. In total, 17 complete originals and six verified original sections resolved 23 exact checks. The publisher extracts retain their original coverage limits.
+
+Twenty-six pairs remain open in this batch. Twenty-two still need original text, including the mismatched microarray archive and the restricted iron-deficiency case. Four already have original bodies but need a specific dietary item or feeding record. The Italian iron-deficiency case keeps its Springer DOI and the shared conference PMC identifier remains an identity mismatch. The two similar sudden-death titles belong to separate question and answer members of one issue.
+
+The six-page post-stroke pain report separates its case from a cited Parkinson pain paper. The five-page Agari and Date series measured pain after spinal cord stimulation. Date is an author name. The cohort acupuncture report measures hospitalization for accidental injury. None provides an attributable dried-date and Parkinson pain comparison. The 18-family scorecard remains Unknown at 50.
+
+[Original route decisions](source-route-reviews.tsv) · [Twenty-six ongoing gaps](remaining-gaps.tsv) · [Printed pages](printed-originals.tsv) · [Search trails](search-trails.tsv) · [Exact ledger inputs](dispositions.tsv) · [Oracle first pass](lookup-merge.txt) · [Native route verification](native-route-verification.txt) · [Native queue verification](native-replay-verification.txt) · [Dated research digest](../../../../research/2025-2029/Food-Experiment-Dried-Date-Pain-Classic-Archive-Nov22.md)

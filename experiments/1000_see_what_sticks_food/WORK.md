@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The dried-date apathy publisher and archive audit resolved 58 of 60 exact source checks. Fifty-one used complete originals, and seven used identifiable sections of original articles. The two open checks in this batch have dated source notes. Claim 0758 remains Unknown. Round 1 has 39,070 exact pairs queued across 24,319 sources, including 2,387 for claim 0758. [Dried-date apathy recovery](followup/dried-date-apathy-publisher-recovery-nov22/README.md)
+The dried-date pain archive audit resolved 23 of 49 exact source checks. Seventeen used complete originals and six used identifiable sections of original articles. The 26 open checks in this batch have local notes, including four unresolved dietary items. Claim 0502 remains Unknown. Round 1 has 39,047 exact pairs queued, including 13,836 for claim 0502. [Dried-date pain archive audit](followup/dried-date-pain-classic-recovery-nov22/README.md)
+
+The dried-date apathy publisher and archive audit resolved 58 of 60 exact source checks. Fifty-one used complete originals, and seven used identifiable sections of original articles. The two open checks in this batch have dated source notes. Claim 0758 remains Unknown. That checkpoint left 39,070 exact pairs queued across 24,319 sources, including 2,387 for claim 0758. [Dried-date apathy recovery](followup/dried-date-apathy-publisher-recovery-nov22/README.md)
 
 The remaining raw-fig original-access review cleared 26 of 39 exact source checks. Eleven publications supplied 68 printed pages. Three further originals or print views and 12 indexed original article scopes completed the other checks. The 13 continuing gaps have dated local notes. Claim 0559 remains Unknown. That checkpoint left 39,128 exact pairs queued across 24,377 sources, including 2,545 for claim 0559. [Classic archive and publisher scopes](followup/fig-rest-tremor-final-archive-routes-nov22/README.md)
 

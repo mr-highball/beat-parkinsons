@@ -1,5 +1,7 @@
 # Observations for 1995–1999
 
+The 1994 botulinum report links dystonic toes to pain and gait and describes a local intervention. The 1995 naproxen report starts from musculoskeletal pain and describes deterioration in other Parkinson symptoms after drug exposure. The 1999 case examines central post-stroke pain and cites separate Parkinson pain work. The papers distinguish different causes and endpoints without identifying a dried-date effect. [1994 original scope](../../1990-1994/Source-Text/1994-PMID8201355-Dried-Date-Pain-Original-Scope.txt) · [1995 original scope](../Source-Text/1995-PMID7640588-Dried-Date-Pain-Original-Scope.txt) · [1999 original scope](../Source-Text/1999-PMC2485464-Dried-Date-Pain-Original-Scope.txt)
+
 The [1995–1998 visual outcome review](1995-1998-Visual-Symptom-and-Access-Scope.md) links the historical differential diagnoses, clinical event definitions and remaining original full-text gaps.
 
 The [1999 poster and archive notes](1999-Hallucination-Poster-and-Edition-Scope.md) describe longitudinal cognition, episode definitions and original journal review identities.
