@@ -951,3 +951,20 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [PMID:36508883 · claim 0583 · abstract](Source-Text/2022-PMID36508883-Priority-Four-Original-Scope.txt).
 - [PMID:37165996 · claim 0733 · abstract](Source-Text/2023-PMID37165996-Priority-Four-Original-Scope.txt).
 - [PMID:38578434 · claim 0369 · primary source](Source-Text/2024-PMID38578434-Amantadine-NS-Park-Followup.txt).
+
+## Round 1 grouped original-source scopes
+
+[Source review and open evidence questions](../2025-2029/Food-Experiment-Round-1-Priority-Five-Grouped-Originals-Nov22.md)
+
+- [PMID 34776851, verified full-text scope](Source-Text/2021-PMID34776851-Endocannabinoid-Dietary-Context.txt)
+- [PMID 34512404, verified full-text scope](Source-Text/2021-PMID34512404-Pinene-Linalool-and-Culinary-Herb-Scope.txt)
+- [PMID 33381646, verified full-text scope](Source-Text/2020-PMID33381646-Parkinson-Cannabidiol-Sesame-Oil-Carrier.txt)
+- [PMID 37089709, verified full-text scope](Source-Text/2023-PMID37089709-Neuroimmune-Review-Cinnamon-Ginger-and-Tea.txt)
+- [PMID 38792737, verified full-text scope](Source-Text/2024-PMID38792737-Multicomponent-Case-Series-Food-Context.txt)
+- [PMID 32990945, verified full-text scope](Source-Text/2020-PMID32990945-Pine-Bark-Review-Food-and-Control-Scope.txt)
+- [PMID 34678050, verified full-text scope](Source-Text/2021-PMID34678050-Cannabidiol-Review-Corn-Oil-Carrier.txt)
+- [PMID 35950245, verified full-text scope](Source-Text/2022-PMID35950245-Quercetin-Food-Source-Scope.txt)
+- [PMID 35953850, verified full-text scope](Source-Text/2022-PMID35953850-Phytochemical-Models-and-Food-Preparation.txt)
+- [PMID 38026508, verified full-text scope](Source-Text/2023-PMID38026508-Axial-Posture-Review-Sage-Date-Collision.txt)
+- [PMID 39291235, verified full-text scope](Source-Text/2024-PMID39291235-Telehealth-Qi-Gong-Nonfood-Intervention.txt)
+- [PMID 39677172, verified full-text scope](Source-Text/2024-PMID39677172-Pompe-Review-Sage-Date-Collision.txt)

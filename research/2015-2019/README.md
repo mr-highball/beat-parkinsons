@@ -842,3 +842,11 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 
 - [PMID:27037215 · claim 0755 · abstract](Source-Text/2016-PMID27037215-Priority-Four-Original-Scope.txt).
 - [PMID:27956674 · claim 0663 · full text](Source-Text/2016-PMID27956674-Priority-Four-Original-Scope.txt).
+
+## Round 1 grouped original-source scopes
+
+[Source review and open evidence questions](../2025-2029/Food-Experiment-Round-1-Priority-Five-Grouped-Originals-Nov22.md)
+
+- [PMID 30127639, verified full-text scope](Source-Text/2018-PMID30127639-Neuroinflammation-Sesame-and-Spices.txt)
+- [PMID 28776303, verified full-text scope](Source-Text/2017-PMID28776303-Cinnamon-Orange-Odor-Testing.txt)
+- [2015 topical sesame oil and limb-trauma pain](Source-Text/2015-PMID26161326-Topical-Sesame-Oil-Trauma-Pain.txt)

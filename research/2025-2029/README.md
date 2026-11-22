@@ -881,3 +881,12 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [PMID:41612959 · claim 0133 · abstract](Source-Text/2026-PMID41612959-Mariani-DIGPD-Falls-and-Walking-Aid.txt).
 - [PMID:41944203 · claim 0593 · full text](Source-Text/2026-PMID41944203-Priority-Four-Original-Scope.txt).
 - [PMID:42715510 · claim 0369 · abstract](Source-Text/2026-PMID42715510-NS-Park-PPMI-Freezing-Comparisons.txt).
+
+## Round 1 grouped original-source scopes
+
+[Source review and open evidence questions](Food-Experiment-Round-1-Priority-Five-Grouped-Originals-Nov22.md)
+
+- [PMID 42581113, verified full-text scope](Source-Text/2026-PMID42581113-Neurodegeneration-Review-Culinary-Compound-Scope.txt)
+- [PMID 40109334, verified full-text scope](Source-Text/2025-PMID40109334-Cancer-Cannabinoid-Review-Clove-Turmeric.txt)
+- [PMID 40291755, verified full-text scope](Source-Text/2025-PMID40291755-Safinamide-Review-Nonfood-Scope.txt)
+- [PMID 42646502, verified full-text scope](Source-Text/2026-PMID42646502-Parkinson-Diet-Review-Olive-and-Coconut.txt)

@@ -6,12 +6,12 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 21,895 |
+| Local body or other primary-source context | 22,078 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 35 |
 | Pending or access-only disposition | 363 |
-| No imported exact review | 38,600 |
+| No imported exact review | 38,417 |
 | **Total** | **61,252** |
 
 The exact queue includes 381 explicit pending or access-only pairs. Eighteen also retain a stronger imported title or index review in the table above, which reports the strongest recorded review across layers. All 381 have dated local source texts in the [known original access index](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md).
@@ -26,7 +26,9 @@ The publisher and archive recheck resolved 20 of the 59 remaining dried-date pai
 
 The raw-fig resting-tremor follow-up resolved 82 of 121 exact source-scope checks. The original documents include 113 printed pages from 19 archival articles and a 25-page protocol. The 39 open original-access checks have dated source notes. Claim 0559 remains Unknown. That checkpoint left 39,154 exact pairs queued across 24,403 sources, including 2,571 for claim 0559. [Raw-fig originals and access gaps](../fig-rest-tremor-publisher-recovery-nov22/README.md)
 
-The priority-four original-source sweep checked 112 exact pairs across 70 publications. Seven complete originals and five original sections resolved 12 source-context checks. The 100 continuing priority-four checks have dated local notes. Round 1 has 38,998 exact pairs queued across 24,247 sources, including 381 explicit access gaps mapped to 87 local texts. [Priority-four original sweep](../priority-four-original-sweep-nov22/README.md)
+The grouped original-source review resolved 183 exact checks across 19 complete publications. It preserves 124 related scopes and 59 source exclusions. Round 1 has 38,815 exact pairs queued across 24,228 sources. All 19 original notes retain their preparation and symptom gaps. [Grouped originals and gaps](../priority-five-grouped-originals-nov22/README.md)
+
+The priority-four original-source sweep checked 112 exact pairs across 70 publications. Seven complete originals and five original sections resolved 12 source-context checks. The 100 continuing priority-four checks have dated local notes. That checkpoint left 38,998 exact pairs queued across 24,247 sources, including 381 explicit access gaps mapped to 87 local texts. [Priority-four original sweep](../priority-four-original-sweep-nov22/README.md)
 
 The priority-three original-scope review checked 12 exact pairs across nine sources. Original tables or sections resolved four source-context decisions as related. Eight pairs retain open original access with dated notes. That checkpoint left 39,010 exact pairs queued across 24,259 sources, including 393 documented access gaps mapped to 99 local files. [Priority-three original scope](../priority-three-original-scopes-nov22/README.md)
 

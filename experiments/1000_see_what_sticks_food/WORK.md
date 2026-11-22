@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The priority-four original-source sweep checked 112 exact pairs across 70 publications. Seven complete originals and five original sections resolved 12 source-context checks. The 100 continuing priority-four checks have dated local notes. Round 1 has 38,998 exact pairs queued across 24,247 sources, including 381 explicit access gaps mapped to 87 local texts. [Priority-four original sweep](followup/priority-four-original-sweep-nov22/README.md)
+The grouped original-source review resolved 183 exact checks across 19 complete publications. It preserves 124 related scopes and 59 source exclusions. Round 1 has 38,815 exact pairs queued across 24,228 sources. All 19 original notes retain their preparation and symptom gaps. [Grouped originals and gaps](followup/priority-five-grouped-originals-nov22/README.md)
+
+The priority-four original-source sweep checked 112 exact pairs across 70 publications. Seven complete originals and five original sections resolved 12 source-context checks. The 100 continuing priority-four checks have dated local notes. That checkpoint left 38,998 exact pairs queued across 24,247 sources, including 381 explicit access gaps mapped to 87 local texts. [Priority-four original sweep](followup/priority-four-original-sweep-nov22/README.md)
 
 The priority-three original-scope review checked 12 exact pairs across nine sources. Original tables or sections resolved four source-context decisions as related. Eight pairs retain open original access with dated notes. That checkpoint left 39,010 exact pairs queued across 24,259 sources, including 393 documented access gaps mapped to 99 local files. [Priority-three original scope](followup/priority-three-original-scopes-nov22/README.md)
 
