@@ -1,5 +1,7 @@
 # 1975-1979
 
+The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
+
 The [1977 environmental neurology review](Source-Text/1977-PMID202447-Environmental-Neurology-Exposure-Scope.txt) records the studied toxic exposures and separates incidental dietary examples from culinary ingredient comparisons.
 
 The [original banana tissue assay](Source-Text/1976-PMID1245664-Salsolinol-in-Banana-Pulp-and-Peel.txt) measures salsolinol in pulp and peel at different stages of ripeness.

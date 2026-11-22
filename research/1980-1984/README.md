@@ -1,5 +1,7 @@
 # 1980-1984
 
+The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
+
 The [1984 ginger constituent study](Source-Text/1984-PMID6335723-Ginger-Constituents-Route-and-Transit.txt) measured acute transit through rat small intestine and found different results for oral and intravenous 6-shogaol. Its stomach and isolated-ileum experiments used distinct endpoints.
 
 The [1984 BMJ volume index](Source-Text/1984-PMC1440947-BMJ-Volume-289-Index-Food-Scope.txt) links separate Parkinson drug treatment and drug-induced movement reports. Several food words are author names.

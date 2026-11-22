@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
+
 The [original eye case series](Source-Text/1997-PMID9183200-Original-Scope.txt) and [original hydrolase paper](Source-Text/1999-PMID10406793-Original-Scope.txt) clarify two Round 1 source matches.
 
 The [printed-page and clinical context audit](Food-Experiment-Printed-Pages-and-Clinical-Context-Nov22.md) links original-source reviews filed in this period.

@@ -1,0 +1,11 @@
+# Raw fig and rest tremor originals, November 22, 2026
+
+This checkpoint verifies the 202 identity-matched priority-four Round 1 source candidates for claim 0559. The PMC response set supplied 78 complete article bodies suitable for clinical scope review. Another three original bodies were recovered through Europe PMC JATS. Original Methods already retained in the dated electroacupuncture trial note verified that both study arms concerned nonfood exposures. Those 82 exclusions were replayed at original depth.
+
+The remaining 120 original-access holds include 99 authenticated abstracts and 21 bibliography-only records. For the legacy journal subset, attempted PMC PDF routes returned HTML. For the remaining unverified PMC wrappers, NLM PubMed authenticated the exact bibliographic identities while the Europe PMC attempt supplied documents for three. Specific source routes remain in the dated notes and the exact gap table. Previously available case and tauopathy access notes were reused.
+
+The evidence search also confirms figs in the 2026 baked walnut-bar comparison, two original clinical series cited by a 2023 Unani review, and the Gokand interview survey’s fig row. The 2010 Unani mixture lists peepal rather than common fig. The separately measured tremor frequencies in the 2011 series concern another mixture without fig. The scorecard adds the mixed walnut-bar family as context, updates the Gafoor original’s depth, preserves the child syrup harm signal in its own setting and retains Unknown at anchor 50.
+
+The exact replay leaves 40,212 Round 1 pairs queued across 25,461 source keys. Claim 0559 retains 2,653 original-source checks. The 46 repeated title or identifier questions are excluded from the 156-question Oracle first-pass denominator. One prior original methods note was sufficient to answer the scoped question at first pass.
+
+[Exact source notes](source-notes.tsv) · [Access holds](archive-gaps.tsv) · [Dispositions](dispositions.tsv) · [Decision](0559-decision.tsv) · [Source families](0559-families.tsv) · [Oracle validation](0559-oracle-draft-check.json) · [Replay proof](native-replay-verification.txt) · [Dated gap digest](../../../../research/2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md)

@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
+
 The Round 1 gap audit preserves the original access limits for the [recurrent psychosis case](Source-Text/2003-PMID12743348-Autumnal-Psychosis-Original-Abstract.txt) and [hippocampal sclerosis series](Source-Text/2003-PMID12946017-Original-Access-Gap.txt).
 
 The [Round 1 original source-depth audit](Food-Experiment-Original-Source-Depth-Nov22.md) links verified article summaries and original-access gaps filed in this period.

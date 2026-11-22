@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The latest dried-date pain review verified 42 further originals and reconciled four related source families. Claim 0502 retains Unknown. The Round 1 queue holds 40,294 pairs across 25,543 source keys. [Originals, scorecard and research gaps](followup/date-pain-source-review-nov22/README.md)
+The raw-fig rest-tremor review cleared 82 original-source checks, cataloged 120 continuing access holds and retained Unknown for claim 0559. Round 1 has 40,212 exact pairs queued across 25,461 source keys. [Raw fig sources, scorecard and gaps](followup/fig-rest-tremor-originals-nov22/README.md)
+
+The preceding dried-date pain review verified 42 further originals and reconciled four related source families. Claim 0502 retains Unknown. That checkpoint left 40,294 pairs across 25,543 source keys. [Originals, scorecard and research gaps](followup/date-pain-source-review-nov22/README.md)
 
 The preceding dried-date pain review verified 22 originals and retained one Parkinson cohort protocol as related dietary context. Twelve priority-three pairs across nine sources still need complete original bodies. [Prior dried-date review and exact access routes](followup/date-pain-clinical-originals-nov22/README.md)
 

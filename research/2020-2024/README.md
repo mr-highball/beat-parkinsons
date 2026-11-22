@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
+
 The [complete UEG 2023 posters](Source-Text/2023-PMC10576948-UEG-Poster-Access-Gap.txt) and [TANDIM randomized IBS trial](Source-Text/2023-PMID37969059-Staudacher-TANDIM-IBS-Whole-Diet.txt) distinguish whole-diet results from ingredient effects.
 
 Original scopes include the [2022 FEBS poster book](Source-Text/2022-PMC9260650-FEBS-Poster-Exposure-Scope.txt), [2023 SGIM proceedings](Source-Text/2023-PMC10323075-SGIM-Complete-Member-Exposure-Scope.txt), [edible flower review](Source-Text/2023-PMID38002124-Edible-Flower-Identity-Scope.txt), and the [2024 movement-disorders congress](Source-Text/2024-PMC10854369-MDCP-Complete-Member-Exposure-Scope.txt). The [Parkinson nanomicelle pilot](Source-Text/2022-PMID35636380-Ghodsi-Parkinson-Curcumin-Symptom-Gaps.txt) records aggregate measures and missing pain-item results.

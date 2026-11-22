@@ -1,5 +1,7 @@
 # 1985-1989
 
+The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
+
 [Original ibuprofen-associated movement case](Source-Text/1987-PMID3658874-Original-Scope.txt), verified from printed page 593.
 
 New primary records include [BPS Parotid Abstract and Page Scope](Source-Text/1985-PMC1916963-BPS-Parotid-Abstract-and-Page-Scope.txt).

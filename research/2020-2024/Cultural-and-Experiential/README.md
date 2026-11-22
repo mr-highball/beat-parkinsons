@@ -1,5 +1,8 @@
 # Cultural and experiential accounts, 2020-2024
 
+- [Unani tremor formulations and peepal identity](Traditional-Practices/2023-Akhtar-Unani-Tremor-Peepal-Identity.txt).
+- [Gokand common fig fruit and latex accounts](Local-Knowledge/2020-Gokand-Fig-Fruit-and-Latex-Survey.txt).
+
 - [Spontaneous and prompted reports of drooling in early Parkinson disease](Personal-Reports/2021-PMID34657850-Staunton-Early-Parkinson-Drooling-Accounts.txt).
 - [Saliva control and related early Parkinson experiences](Personal-Reports/2022-PMID35778541-Morel-Saliva-and-Mealtime-Accounts.txt).
 
