@@ -811,3 +811,5 @@ Two original first releases date to 2019, with 2020 journal issues. [Insular mor
 The [gerontology and neurology collections checkpoint](../2025-2029/Food-Experiment-Neurology-Collections-Access-Nov22.md) links six source notes from this period and records their exact Round 1 review gaps.
 
 The [complete CIRSE 2019 member review](Source-Text/2019-PMC7103159-CIRSE-Collection-Review-Gap.txt) includes the main presentations and the late addendum after the first author index.
+
+The [Japanese physiology proceedings source](Source-Text/2019-PMC10716970-Physiology-Original-Access.txt) gives the recovered original, individual presentation locators, and related capsaicin, olive oil, nutmeg and chocolate context.

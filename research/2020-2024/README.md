@@ -921,3 +921,5 @@ The conference and observational review links the separate visual outcomes, the 
 - [58th EASD Annual Meeting of the European Association for the Study of Diabetes](Source-Text/2022-PMID35920845-EASD-Food-and-Motor-Scope.txt).
 
 The [Italian Society of Neurology source note](Source-Text/2020-PMC7683589-Italian-Neurology-Collection-Review-Gap.txt) links the recovered original PDF, distinguishes 11 cleared pairs, and records the 12 olive-oil pairs with missing poster figures.
+
+The [sustained capsaicin journal access note](Source-Text/2020-PMID32755305-Yoshihara-Sustained-Capsaicin-Swallowing.txt) links the date-bucketed abstract to the 2018 and 2019 original proceedings. The [brief and continuous exposure study](Source-Text/2021-PMID33449304-Cheng-Capsaicinoid-Exposure-Timing.txt) records a separate comparison in healthy volunteers.

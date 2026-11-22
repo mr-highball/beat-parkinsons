@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,367 |
+| Local body or other primary-source context | 20,391 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 74 |
 | Pending or access-only disposition | 330 |
-| No imported exact review | 40,122 |
+| No imported exact review | 40,098 |
 | **Total** | **61,252** |
+
+The numbered Japanese physiology proceedings resolved 24 exact claim–source pairs. The queue retains 40,502 pairs across 25,692 source keys. The Yoshihara journal article has a separate dated body-access note. [Physiology review and source scope](../japanese-physiology-originals-nov22/README.md)
 
 The recovered PDF proceedings move 35 exact pairs to original text depth. The queue retains 40,526 pairs across 25,693 source keys. Twelve olive-oil pairs remain open for missing Figures 1–3 in the Italian Neurology poster. [Recovered originals and specific gaps](../recovered-pdf-proceedings-nov22/README.md)
 

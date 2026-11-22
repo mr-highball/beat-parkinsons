@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The Japanese physiology checkpoint resolved 24 more original claim–source pairs. The Round 1 queue retains 40,502. The cayenne swallowing scorecard now records 29 families and stays at Unknown. The Yoshihara journal-page gap is tracked separately from the resolved proceedings review. [Japanese physiology originals](followup/japanese-physiology-originals-nov22/README.md)
+
 The recovered proceedings checkpoint verified 35 exact Round 1 pairs from 832 labeled PDF pages. Twelve Italian Neurology olive-oil pairs retain an exact three-figure gap identified as official poster 212. The 1995 diet citation now has a dated abstract and separate body-access record. [Recovered proceedings](followup/recovered-pdf-proceedings-nov22/README.md)
 
 The gerontology and neurology proceedings audit verified 129 additional original-text pairs. Round 1 retains 40,561 queued pairs. Seven dated source texts map all 172 still-open pairs, including 47 with original PDFs available for member review. Oracle MCP can find the gap notes by exact identifier. [Proceedings and gap audit](followup/gerontology-neurology-collection-review-nov22/README.md)
