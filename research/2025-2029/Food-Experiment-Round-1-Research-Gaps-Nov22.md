@@ -22,7 +22,9 @@ Use the exact-source list to distinguish a verified source summary from an acces
 
 A later [gerontology and neurology collections checkpoint](Food-Experiment-Neurology-Collections-Access-Nov22.md) maps 172 exact pairs to seven dated source texts. It distinguishes original access or figure gaps from recovered PDFs awaiting member review.
 
-The [known original access index](Food-Experiment-Round-1-Original-Access-Nov22.md) reconciles all 402 entries classified as pending or access-only and records their 110 dated local texts.
+- **Raw orange and fall frequency, 0259.** The archive audit separates observed falls and fall counts from gait imagery, balance scores, freezing tasks and rodent latency to fall. Three exact originals still need readable sources. A Parkinson comparison with measured raw-orange intake and prospectively recorded falls remains open. [Current orange archive and preprint notes](Food-Experiment-Raw-Orange-Falls-Classic-Archive-Nov22.md)
+
+The [known original access index](Food-Experiment-Round-1-Original-Access-Nov22.md) reconciles all 381 entries classified as pending or access-only and records their 89 dated local texts.
 
 The earlier [dried-date pain review](Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) records 427 continuing local source and context gaps, with verified depths and exact next checks.
 

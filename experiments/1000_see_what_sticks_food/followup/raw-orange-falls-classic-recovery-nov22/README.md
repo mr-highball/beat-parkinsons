@@ -1,0 +1,9 @@
+# Raw-orange and fall frequency archive and preprint review, November 22, 2026
+
+The first pass used the Oracle at catalog revision 37. It returned dated notes for 24 of 26 priority-four sources and exposed two exact preprint gaps. Both preprints now have catalog records preserving their archived versions, settings and underlying endpoints.
+
+Seventeen complete PMC article bodies, three complete printed originals totaling 24 pages, two complete publisher preprint PDFs and one identifiable original letter section resolved 23 exact source checks. Three checks remain open. The optic neuropathy and CFTR letters require readable issue members. The two-dye microarray paper requires its own eight-page original. The DOI and publisher PII verify its identity, and the assigned conference collection has a different DOI.
+
+The neurological originals measure such outcomes as imagined gait, medication response, balance scores, gait freezing, neural activity and assay results. Some report isolated falls or rodent latency to fall. Orange identifies colors, a laboratory stain, an optical filter or urine discoloration in the recovered sources. None measures the effect of culinary raw orange on Parkinson fall frequency. The five-family scorecard remains Unknown at 50, and its existing clinical and cultural comparisons remain linked.
+
+[Exact dispositions](dispositions.tsv) · [Dated scope and source routes](source-route-reviews.tsv) · [Three continuing checks](remaining-gaps.tsv) · [Scanned issue pages](printed-originals.tsv) · [Preprint versions](preprint-versions.tsv) · [Search trails](search-trails.tsv) · [Oracle coverage](lookup-merge.txt) · [Native scope](native-route-verification.txt) · [Native replay](native-replay-verification.txt) · [Research digest](../../../../research/2025-2029/Food-Experiment-Raw-Orange-Falls-Classic-Archive-Nov22.md)

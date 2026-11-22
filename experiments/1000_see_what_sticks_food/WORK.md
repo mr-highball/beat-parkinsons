@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The dried-date pain archive audit resolved 23 of 49 exact source checks. Seventeen used complete originals and six used identifiable sections of original articles. The 26 open checks in this batch have local notes, including four unresolved dietary items. Claim 0502 remains Unknown. Round 1 has 39,047 exact pairs queued, including 13,836 for claim 0502. [Dried-date pain archive audit](followup/dried-date-pain-classic-recovery-nov22/README.md)
+The raw-orange and fall frequency archive audit resolved 23 of 26 exact source checks. It examined 22 complete originals and one identifiable section from an original letter. Three checks in this batch still need their original texts and have dated local notes. Claim 0259 remains Unknown. Round 1 has 39,024 exact pairs queued, including 2,266 for claim 0259. [Raw-orange archive audit](followup/raw-orange-falls-classic-recovery-nov22/README.md)
+
+The dried-date pain archive audit resolved 23 of 49 exact source checks. Seventeen used complete originals and six used identifiable sections of original articles. The 26 open checks in this batch have local notes, including four unresolved dietary items. Claim 0502 remains Unknown. That checkpoint left 39,047 exact pairs queued, including 13,836 for claim 0502. [Dried-date pain archive audit](followup/dried-date-pain-classic-recovery-nov22/README.md)
 
 The dried-date apathy publisher and archive audit resolved 58 of 60 exact source checks. Fifty-one used complete originals, and seven used identifiable sections of original articles. The two open checks in this batch have dated source notes. Claim 0758 remains Unknown. That checkpoint left 39,070 exact pairs queued across 24,319 sources, including 2,387 for claim 0758. [Dried-date apathy recovery](followup/dried-date-apathy-publisher-recovery-nov22/README.md)
 

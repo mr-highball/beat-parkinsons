@@ -854,7 +854,7 @@ The [dried-date pain and priority-three review](Food-Experiment-Date-Pain-and-Pr
 
 The [raw-orange falls source review](Food-Experiment-Raw-Orange-Falls-Originals-Nov22.md) links the dated originals, continuing access holds and related study and cultural context.
 
-The [Round 1 original-access locator audit](Food-Experiment-Round-1-Original-Access-Nov22.md) gives dated local research texts for all 402 entries currently classified as pending or access-limited. The [dried-date pain classic archive and questionnaire review](Food-Experiment-Dried-Date-Pain-Classic-Archive-Nov22.md) records the latest source boundaries, including the [Parkinson acupuncture and accidental injury cohort](Source-Text/2026-PMC13661429-Dried-Date-Pain-Original-Scope.txt).
+The [Round 1 original-access locator audit](Food-Experiment-Round-1-Original-Access-Nov22.md) gives dated local research texts for all 381 entries currently classified as pending or access-limited. The [raw-orange fall frequency follow-up](Food-Experiment-Raw-Orange-Falls-Classic-Archive-Nov22.md) adds two dated preprint scopes and records the remaining article gaps. The [dried-date pain classic archive and questionnaire review](Food-Experiment-Dried-Date-Pain-Classic-Archive-Nov22.md) records the latest source boundaries, including the [Parkinson acupuncture and accidental injury cohort](Source-Text/2026-PMC13661429-Dried-Date-Pain-Original-Scope.txt).
 
 The [tea, ginger and original-source audit](Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
 
