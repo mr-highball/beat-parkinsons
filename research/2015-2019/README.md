@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [IAGG original extract](Source-Text/2017-PMC6183407-IAGG-Gerontology-Original-Access.txt) verifies printed pp. 1293–1294. The [FEBS poster correction](Source-Text/2019-PMC6886306-FEBS-Poster-Corrigendum.txt) is available alongside the [poster collection access record](Source-Text/2019-PMC6610278-FEBS-Original-Access.txt).
+
 The [2014 AES meeting supplement](Source-Text/PMC4591846.txt) was published in 2015. Its access note preserves the member and complete-volume gaps.
 
 [2016 FEBS poster exposure review](Source-Text/2016-PMC7164006-FEBS-Poster-Exposure-Scope.txt), [Talbina customary-use account](Cultural-and-Experiential/Traditional-Practices/2016-FEBS-Talbina-Illness-and-Bereavement.txt), and [2016 neurology meeting access record](Source-Text/PMC7159757.txt).

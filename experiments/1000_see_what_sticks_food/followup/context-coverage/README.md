@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,391 |
+| Local body or other primary-source context | 20,395 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 74 |
 | Pending or access-only disposition | 330 |
-| No imported exact review | 40,098 |
+| No imported exact review | 40,094 |
 | **Total** | **61,252** |
+
+The shared proceedings and clinical audit resolved four exact source pairs at original-body depth. The queue retains 40,498 pairs across 25,688 source keys. Five proceedings records and six clinical source records preserve the exact open pair locators. [Shared proceedings and clinical original access](../shared-proceedings-access-nov22/README.md)
 
 The numbered Japanese physiology proceedings resolved 24 exact claim–source pairs. The queue retains 40,502 pairs across 25,692 source keys. The Yoshihara journal article has a separate dated body-access note. [Physiology review and source scope](../japanese-physiology-originals-nov22/README.md)
 
