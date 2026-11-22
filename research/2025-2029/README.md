@@ -829,3 +829,5 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Posted protein-distribution crossover results, including outcome and flow limitations](Source-Text/Trials/2025-NCT05437640-Protein-Distribution-Results.txt).
 
 The [gerontology and neurology collections checkpoint](Food-Experiment-Neurology-Collections-Access-Nov22.md) links the dated source text for each of 172 open Round 1 claim–source pairs.
+
+The [recovered proceedings member review](Food-Experiment-Recovered-PDF-Proceedings-Nov22.md) documents 35 completed original source checks, the 12 continuing Italian Neurology figure holds, and the cited 1995 dietary abstract.

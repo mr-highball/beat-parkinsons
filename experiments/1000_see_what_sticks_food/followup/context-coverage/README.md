@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,332 |
+| Local body or other primary-source context | 20,367 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 74 |
 | Pending or access-only disposition | 330 |
-| No imported exact review | 40,157 |
+| No imported exact review | 40,122 |
 | **Total** | **61,252** |
+
+The recovered PDF proceedings move 35 exact pairs to original text depth. The queue retains 40,526 pairs across 25,693 source keys. Twelve olive-oil pairs remain open for missing Figures 1–3 in the Italian Neurology poster. [Recovered originals and specific gaps](../recovered-pdf-proceedings-nov22/README.md)
 
 The gerontology and neurology proceedings audit verifies 129 additional pairs from six complete HTML records and checks the original BRAIN corrigendum. The queue retains 40,561 pairs across 25,694 source keys. Seven dated source texts preserve the 172 exact pairs that await either source recovery, figure inspection or member review. [Proceedings and gap audit](../gerontology-neurology-collection-review-nov22/README.md)
 

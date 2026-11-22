@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The recovered proceedings checkpoint verified 35 exact Round 1 pairs from 832 labeled PDF pages. Twelve Italian Neurology olive-oil pairs retain an exact three-figure gap identified as official poster 212. The 1995 diet citation now has a dated abstract and separate body-access record. [Recovered proceedings](followup/recovered-pdf-proceedings-nov22/README.md)
+
 The gerontology and neurology proceedings audit verified 129 additional original-text pairs. Round 1 retains 40,561 queued pairs. Seven dated source texts map all 172 still-open pairs, including 47 with original PDFs available for member review. Oracle MCP can find the gap notes by exact identifier. [Proceedings and gap audit](followup/gerontology-neurology-collection-review-nov22/README.md)
 
 Five original records resolved 125 Round 1 pairs. The exact queue now holds 40,690 pairs. Four dated source notes expose 125 additional access gaps through MCP. The checked turmeric pain scorecard includes the Cochrane synthesis and same-cohort patient-reported evidence, and retains its minimal easing signal. [Original collections checkpoint](followup/five-original-collections-and-turmeric-nov22/README.md)

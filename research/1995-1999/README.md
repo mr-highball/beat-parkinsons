@@ -167,3 +167,5 @@ January 1, 1995 through December 31, 1999.
 
 
 [Early apomorphine and neuropsychiatric outcomes](Source-Text/1997-PMID18591063-Apomorphine-and-Neuropsychiatric-Complications.txt).
+
+The [Keys Mediterranean diet abstract](Source-Text/1995-PMID7754982-Keys-Mediterranean-Diet-Abstract-Scope.txt) traces the reference used in a later CIRSE teaching presentation. The original three-page article body remains open.
