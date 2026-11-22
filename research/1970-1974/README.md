@@ -1,5 +1,7 @@
 # 1970-1974
 
+New source records on oral outcomes and symptom measurement include [Rao Levodopa Drooling Items](Source-Text/1972-PMID4568331-Rao-Levodopa-Drooling-Items.txt).
+
 The [1971 autonomic case series](Source-Text/1971-PMID5097425-Aminoff-Autonomic-Assessment.txt) records one binary ptyalism item and separately measures several autonomic systems. All five original page scans were checked.
 
 Original printed context: [Treatment of chronic hepatic encephalopathy with levodopa](Source-Text/PMC1412974.txt).

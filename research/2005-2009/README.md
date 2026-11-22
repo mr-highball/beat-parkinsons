@@ -1,5 +1,7 @@
 # 2005-2009
 
+New source records on oral outcomes and symptom measurement include [Fig Tree Contact Photodermatitis](Source-Text/2007-PMID17721568-Fig-Tree-Contact-Photodermatitis.txt) · [Matsuo Palmer Swallowing Mechanisms](Source-Text/2008-PMID18940636-Matsuo-Palmer-Swallowing-Mechanisms.txt).
+
 The [Suzuki case](Source-Text/2007-PMID17826796-Suzuki-Pramipexole-Antecollis.txt) and [Uzawa report](Source-Text/2009-PMID19890970-Uzawa-Dopamine-Agonist-Antecollis.txt) describe medication-associated neck flexion. The later pooled case table reproduces some of their observations.
 
 The [original Sialorrhea Clinical Scale study](Source-Text/2006-PMID17089393-Perez-Lloret-Sialorrhea-Scale.txt) distinguishes subjective drooling discomfort from measured saliva volume.

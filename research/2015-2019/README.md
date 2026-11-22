@@ -1,5 +1,7 @@
 # 2015-2019
 
+New source records on oral outcomes and symptom measurement include [Russo SCA3 Swallowing Scales](Source-Text/2015-PMID30363545-Russo-SCA3-Swallowing-Scales.txt).
+
 The [Café-PD capsule trial](Source-Text/2017-PMID28954882-Postuma-Cafe-PD-Adverse-Outcomes.txt) separates measured dyskinesia, sleep outcomes and aggregate adverse events. The [Phillips diet pilot](Source-Text/2018-PMID30098269-Phillips-Diet-Adverse-Outcomes.txt) reports combined tremor or rigidity worsening alongside its nonmotor scores. The assigned exposures were caffeine capsules and whole diets, respectively.
 
 The [posture and saliva observation](Observations/Posture-Wearables-and-Saliva-Outcomes.md) cross-links the [Iijima case lineage](Source-Text/2015-PMID29468202-Iijima-Antecollis-Case-Lineage.txt), [Yoshii posture cohort](Source-Text/2016-PMID26835153-Yoshii-Posture-Angles-and-Drooling-Context.txt), [wearable viewpoint](Source-Text/2016-PMID27003779-Van-Uem-Wearable-Measurement-and-Drooling-Context.txt), [skin review](Source-Text/2016-PMID30363435-Skorvanek-Skin-and-Drooling-Context.txt), and [Swedish orofacial registry](Source-Text/2017-PMID28798882-Fereshtehnejad-Registry-Drooling.txt).

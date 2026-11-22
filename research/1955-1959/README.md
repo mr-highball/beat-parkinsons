@@ -1,5 +1,7 @@
 # 1955-1959
 
+New source records on oral outcomes and symptom measurement include [Chesler Sialorrhea and Rhythm](Source-Text/1957-PMID13471827-Chesler-Sialorrhea-and-Rhythm.txt).
+
 January 1, 1955 through December 31, 1959.
 
 ## Annotated research
