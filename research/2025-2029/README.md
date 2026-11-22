@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [dried-date pain originals and research gaps](Food-Experiment-Date-Pain-Source-Review-Nov22.md) link 42 dated original reviews and four newly reconciled source families.
+
 The [open congress originals and TANDIM audit](Food-Experiment-Open-Congress-and-TANDIM-Nov22.md) links two whole proceedings, the [same-cohort olive oil analysis](Source-Text/2025-PMID41325894-Staudacher-TANDIM-Olive-Oil-Secondary.txt), and the remaining journal access gaps.
 
 The [indexed primary original audit](Food-Experiment-Indexed-Primary-Originals-Nov22.md) links 17 verified source summaries and the dated notes for the remaining case and article access gaps.

@@ -6,15 +6,17 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,557 |
+| Local body or other primary-source context | 20,599 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 71 |
 | Pending or access-only disposition | 330 |
-| No imported exact review | 39,935 |
+| No imported exact review | 39,893 |
 | **Total** | **61,252** |
 
-The dried-date pain review verified 22 originals and retained one Parkinson cohort protocol as related dietary context. The 12 priority-three pairs across nine sources still need complete original bodies. The Round 1 queue now holds 40,336 pairs across 25,585 source keys. [Dried-date and priority-three review](../date-pain-clinical-originals-nov22/README.md)
+The latest dried-date pain review verified 42 further originals and reconciled four related source families. Claim 0502 retains Unknown. The Round 1 queue holds 40,294 pairs across 25,543 source keys. [Originals, scorecard and research gaps](../date-pain-source-review-nov22/README.md)
+
+The preceding dried-date pain review verified 22 originals and retained one Parkinson cohort protocol as related dietary context. Twelve priority-three pairs across nine sources still need complete original bodies. [Prior dried-date review and exact access routes](../date-pain-clinical-originals-nov22/README.md)
 
 The sage access follow-up recovered 14 originals from the 20 held pairs and recorded the six remaining access gaps in dated source text. That checkpoint left 40,358 pairs across 25,607 source keys. All five sage verdicts retain their prior grades. [Sage access follow-up](../sage-access-followup-nov22/README.md)
 
