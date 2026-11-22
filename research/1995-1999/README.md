@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [printed-page and clinical context audit](Food-Experiment-Printed-Pages-and-Clinical-Context-Nov22.md) links original-source reviews filed in this period.
+
 The [Round 1 original source-depth audit](Food-Experiment-Original-Source-Depth-Nov22.md) links verified article summaries and original-access gaps filed in this period.
 
 The [1995 fresh-fig allergy case](Source-Text/1995-PMID7573846-Dechamp-Fresh-Fig-Allergy.txt) describes an acute reaction after ingestion. The [1996 weeping-fig sensitization case](Source-Text/1996-PMID9036129-Brehler-Fig-Oral-Challenge.txt) reports a tolerated fruit challenge despite laboratory reactivity.

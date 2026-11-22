@@ -1,5 +1,9 @@
 # 2025-2029
 
+The [printed-page and clinical context audit](Food-Experiment-Printed-Pages-and-Clinical-Context-Nov22.md) links original-source reviews filed in this period.
+
+The [priority-three original-source access digest](Food-Experiment-Priority-Three-Access-Nov22.md) records the twelve outstanding source pairs and their current evidence depth.
+
 The [Round 1 research-gap digest](Food-Experiment-Round-1-Research-Gaps-Nov22.md) records unresolved exact source identities, access limits, and ingredient–symptom gaps from the November 22 checkpoint.
 
 The [Round 1 original source-depth audit](Food-Experiment-Original-Source-Depth-Nov22.md) links verified article summaries and original-access gaps filed in this period.
