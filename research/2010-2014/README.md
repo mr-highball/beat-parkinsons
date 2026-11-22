@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [Round 1 original source-depth audit](Food-Experiment-Original-Source-Depth-Nov22.md) links verified article summaries and original-access gaps filed in this period.
+
 New source records on oral outcomes and symptom measurement include [Beach Salivary Gland Pathology](Source-Text/2010-PMID20306269-Beach-Salivary-Gland-Pathology.txt) · [Devic Saliva Biomarkers](Source-Text/2011-PMID21349902-Devic-Saliva-Biomarkers.txt) · [Kashihara Japanese Saliva Drooling Validation](Source-Text/2014-PMID25328906-Kashihara-Japanese-Saliva-Drooling-Validation.txt).
 
 The [Storch nonmotor fluctuation study](Source-Text/2013-PMID23365054-Storch-On-Off-Nonmotor-Outcomes.txt) positioned ten outcomes in motor on and off periods. It measured dysphagia separately from other nonmotor symptoms.

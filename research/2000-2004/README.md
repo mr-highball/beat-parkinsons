@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [Round 1 original source-depth audit](Food-Experiment-Original-Source-Depth-Nov22.md) links verified article summaries and original-access gaps filed in this period.
+
 The [Singhal historical account](Cultural-and-Experiential/Traditional-Practices/2003-PMID12915075-Singhal-Kampavata-Saliva-and-Mucuna.txt) separates traditional syndrome descriptions from measured symptom response. The surgical reports record [gait](Source-Text/2000-PMID10681077-Siegel-Pallidotomy-and-Gait.txt), [adverse drooling](Source-Text/2001-PMID11235949-Intemann-Pallidotomy-and-Drooling.txt) and [separate motor follow-up](Source-Text/2001-PMID11274323-Counihan-Pallidotomy-Followup.txt).
 
 The [2001 swallow reminder study](Source-Text/2001-PMID11340797-Marks-Drooling-and-Swallow-Cueing.txt) preserves the original author abstract and the open body-access gap for numerical drooling effects.

@@ -1,5 +1,7 @@
 # 1990-1994
 
+The [Round 1 original source-depth audit](Food-Experiment-Original-Source-Depth-Nov22.md) links verified article summaries and original-access gaps filed in this period.
+
 New primary records include [Thorax Caffeine Olive Oil and Saliva](Source-Text/1992-PMC464082-Thorax-Caffeine-Olive-Oil-and-Saliva.txt).
 
 Two ginger studies measured [small-intestinal charcoal transport](Source-Text/1990-PMID2337957-Ginger-Charcoal-Transit.txt) and [serotonin-provoked diarrhea](Source-Text/1990-PMID2074539-Ginger-Serotonin-Provoked-Diarrhea.txt) in separate experiments.

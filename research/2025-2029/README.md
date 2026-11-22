@@ -1,5 +1,9 @@
 # 2025-2029
 
+The [Round 1 research-gap digest](Food-Experiment-Round-1-Research-Gaps-Nov22.md) records unresolved exact source identities, access limits, and ingredient–symptom gaps from the November 22 checkpoint.
+
+The [Round 1 original source-depth audit](Food-Experiment-Original-Source-Depth-Nov22.md) links verified article summaries and original-access gaps filed in this period.
+
 The [Nasution hemodialysis curcumin olfaction trial](Source-Text/2026-PMID42602430-Nasution-Curcumin-Hemodialysis-Olfaction.txt) randomizes 48 hemodialysis adults across placebo, 500 mg and 1000 mg curcumin for 12 weeks and reports Bonferroni-corrected Sniffin' Sticks composite TDI improvements (p = 0.010 and p = 0.002) and discrimination improvements (both p = 0.001) over placebo.
 
 The [2026 6-shogaol brain-gut mouse study](Source-Text/2026-PMID42375089-6Shogaol-Levodopa-Gut-Motility.txt) reports restored gastrointestinal motility and higher striatal levodopa/dopamine with oral 6-shogaol coadministration in MPTP/probenecid mice without scoring dyskinesia.
