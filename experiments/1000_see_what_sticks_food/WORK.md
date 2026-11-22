@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The printed-page and clinical context checkpoint verified 39 original claim–source pairs, including three historical articles from 18 printed scans. It adds separate actigraphy, chewing and apathy contexts and an indexed digest of the 12 remaining priority-three holds. The original Round 1 queue is 40,938. The 69 easing, two worsening and 929 open verdicts are unchanged. [Printed-page and clinical context audit](followup/printed-pages-and-clinical-context-nov22/README.md)
+
 The original sources and gaps audit verified 34 exact priority-four pairs at original-body depth. The catalog now records 46 source notes, including 12 original-access notes covering 53 retained pairs. Two incorrect imported archive locators account for 41 of the retained pairs. The Wilson disease study supplies drooling context and leaves the raw-fig verdict Unknown. Round 1 has 40,977 source pairs queued. [Source and gap audit](followup/priority-four-sources-and-gaps-nov22/README.md)
 
 The proceedings and apathy checkpoint verified 35 original context pairs, including 25 priority-four clinical records and three raw-fig and drooling pairs. Dried date and apathy remains Unknown after the v1 scorecard was checked. The Round 1 original queue fell to 41,011, with 36 raw-fig and drooling pairs pending. [Proceedings and apathy audit](followup/fig-proceedings-and-apathy-nov22/README.md)
