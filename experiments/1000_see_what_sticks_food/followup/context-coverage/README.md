@@ -6,15 +6,17 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,681 |
+| Local body or other primary-source context | 20,770 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
-| Title or index | 71 |
-| Pending or access-only disposition | 449 |
-| No imported exact review | 39,692 |
+| Title or index | 53 |
+| Pending or access-only disposition | 499 |
+| No imported exact review | 39,571 |
 | **Total** | **61,252** |
 
-The raw-fig rest-tremor review cleared 82 original-source checks, cataloged 120 continuing access holds and retained Unknown for claim 0559. Round 1 has 40,212 exact pairs queued across 25,461 source keys. [Raw fig sources, scorecard and gaps](../fig-rest-tremor-originals-nov22/README.md)
+The dried-date apathy review resolved 89 original-source checks and documented 59 continuing holds. Claim 0758 retains Unknown after eleven source families were checked. Round 1 now holds 40,123 exact pairs across 25,372 sources. [Dried-date apathy sources, scorecard and gaps](../dried-date-apathy-originals-nov22/README.md)
+
+The raw-fig rest-tremor review cleared 82 original-source checks, cataloged 120 continuing access holds and retained Unknown for claim 0559. That checkpoint left 40,212 exact pairs queued across 25,461 source keys. [Raw fig sources, scorecard and gaps](../fig-rest-tremor-originals-nov22/README.md)
 
 The preceding dried-date pain review verified 42 further originals and reconciled four related source families. Claim 0502 retains Unknown. That checkpoint left 40,294 pairs across 25,543 source keys. [Originals, scorecard and research gaps](../date-pain-source-review-nov22/README.md)
 

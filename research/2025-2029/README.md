@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [dried-date and apathy source review](Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
+
 The [raw-fig rest-tremor originals and evidence gaps](Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) link the exact clinical checks, remaining access holds, and the [fig-containing baked-bar study](Source-Text/2026-Raees-Fig-In-Walnut-Bar-Parkinsonism-Model.txt).
 
 The [dried-date pain originals and research gaps](Food-Experiment-Date-Pain-Source-Review-Nov22.md) link 42 dated original reviews and four newly reconciled source families.

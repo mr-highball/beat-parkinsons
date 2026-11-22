@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
+
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
 
 The original Unani journal issues preserve two before-and-after tremor series. [2010 Majoon clinical series](Source-Text/2010-Shoaib-Majoon-e-Jograj-Gogul-Parkinson-Tremor.txt) · [2011 Safoof clinical series](Source-Text/2011-Ahangar-Safoof-e-Rasha-Parkinsonian-Tremor.txt)

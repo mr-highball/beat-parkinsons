@@ -1,5 +1,7 @@
 # 1975-1979
 
+The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
+
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
 
 The [1977 environmental neurology review](Source-Text/1977-PMID202447-Environmental-Neurology-Exposure-Scope.txt) records the studied toxic exposures and separates incidental dietary examples from culinary ingredient comparisons.

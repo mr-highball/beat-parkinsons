@@ -1,5 +1,7 @@
 # 1965-1969
 
+The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
+
 January 1, 1965 through December 31, 1969.
 
 ## Annotated research

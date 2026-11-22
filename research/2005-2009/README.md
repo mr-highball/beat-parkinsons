@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
+
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
 
 The [2008 FEBS poster access record](Source-Text/2008-PMC7163982-FEBS-Poster-Access-Gap.txt) maps 23 Round 1 pairs to their original collection identity.

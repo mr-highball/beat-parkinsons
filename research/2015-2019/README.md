@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
+
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
 
 The [Round 1 indexed original audit](../2025-2029/Food-Experiment-Indexed-Primary-Originals-Nov22.md) links the authenticated original bodies and the remaining [Parkinson gait imagery](Source-Text/2015-PMID25765327-Lau-Parkinson-Gait-Original-Access.txt) and [Lewy body sleep case](Source-Text/2019-PMID30852516-Londos-Lewy-Body-Sleep-Original-Access.txt) source gaps.

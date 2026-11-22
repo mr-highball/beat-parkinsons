@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2020-2024
 
+- [Apathya dietary terminology and dates in a menopause case](Traditional-Practices/2024-Patel-Makim-Apathya-Diet-Terminology.txt).
+
 - [Unani tremor formulations and peepal identity](Traditional-Practices/2023-Akhtar-Unani-Tremor-Peepal-Identity.txt).
 - [Gokand common fig fruit and latex accounts](Local-Knowledge/2020-Gokand-Fig-Fruit-and-Latex-Survey.txt).
 

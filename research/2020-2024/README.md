@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
+
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
 
 The [complete UEG 2023 posters](Source-Text/2023-PMC10576948-UEG-Poster-Access-Gap.txt) and [TANDIM randomized IBS trial](Source-Text/2023-PMID37969059-Staudacher-TANDIM-IBS-Whole-Diet.txt) distinguish whole-diet results from ingredient effects.

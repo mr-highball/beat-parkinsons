@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The raw-fig rest-tremor review cleared 82 original-source checks, cataloged 120 continuing access holds and retained Unknown for claim 0559. Round 1 has 40,212 exact pairs queued across 25,461 source keys. [Raw fig sources, scorecard and gaps](followup/fig-rest-tremor-originals-nov22/README.md)
+The dried-date apathy review resolved 89 original-source checks and documented 59 continuing holds. Claim 0758 retains Unknown after eleven source families were checked. Round 1 now holds 40,123 exact pairs across 25,372 sources. [Dried-date apathy sources, scorecard and gaps](followup/dried-date-apathy-originals-nov22/README.md)
+
+The raw-fig rest-tremor review cleared 82 original-source checks, cataloged 120 continuing access holds and retained Unknown for claim 0559. That checkpoint left 40,212 exact pairs queued across 25,461 source keys. [Raw fig sources, scorecard and gaps](followup/fig-rest-tremor-originals-nov22/README.md)
 
 The preceding dried-date pain review verified 42 further originals and reconciled four related source families. Claim 0502 retains Unknown. That checkpoint left 40,294 pairs across 25,543 source keys. [Originals, scorecard and research gaps](followup/date-pain-source-review-nov22/README.md)
 
