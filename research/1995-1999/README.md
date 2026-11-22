@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [1996 progressive supranuclear palsy original](Source-Text/1996-PMID8648326-Progressive-Supranuclear-Palsy-Printed-Scope.txt) preserves printed-page fall data and the distinction from culinary sage and Parkinson disease.
+
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
 
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.

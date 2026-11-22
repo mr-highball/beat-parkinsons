@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [fibromyalgia saffron extract trial](Source-Text/2018-PMID30456199-Shakiba-Saffron-Duloxetine-Fibromyalgia.txt), its [prospective registration](Source-Text/Trials/IRCT201604261556N91.txt), and the [burning-mouth crocin trial](Source-Text/2019-PMID31763210-Pakfetrat-Crocin-Citalopram-Burning-Mouth.txt) record their active-drug comparisons and outcome gaps.
+
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
 
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.

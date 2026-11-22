@@ -1,17 +1,19 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+Round 1 resolved 101 further source checks across 19 originals. Three new assessed comparisons add context on saffron and crocin and retain both provisional saffron verdicts. The original queue now holds 38,548 exact pairs across 24,176 sources. The 384 explicit access gaps remain indexed in 88 dated texts. [Saffron and original-source checkpoint](../saffron-and-originals-nov22/README.md)
+
 The full per-pair and source-grouped queues regenerate under the experiment's ignored `build/context-coverage/output/` directory. Keep the curated exact ledger, per-claim counters, provenance and replay summary in Git; do not copy the full generated queues into this source folder.
 
 The original searches produced 69,107 result appearances across 2,000 expressions. There are 61,252 distinct frozen claim and provider-key pairs across 34,099 source keys. Results map to 679 claims. The other 321 have zero returns in this original search layer and can still have follow-up searches, other providers or evidence assessments. The inventory leaves the original provider keys intact and reports ambiguous identifier aliases separately. [Original lexical screen](../claim-query-screen.tsv) · [All 1,000 claim denominators](coverage-by-claim.tsv) · [Ambiguous identifiers](ambiguous-source-aliases.tsv)
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 22,244 |
+| Local body or other primary-source context | 22,345 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 35 |
 | Pending or access-only disposition | 366 |
-| No imported exact review | 38,248 |
+| No imported exact review | 38,147 |
 | **Total** | **61,252** |
 
 The exact queue includes 384 explicit pending or access-only pairs. Eighteen also retain a stronger imported title or index review in the table above, which reports the strongest recorded review across layers. All 384 have dated local source texts in the [known original access index](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md).
@@ -26,7 +28,7 @@ The publisher and archive recheck resolved 20 of the 59 remaining dried-date pai
 
 The raw-fig resting-tremor follow-up resolved 82 of 121 exact source-scope checks. The original documents include 113 printed pages from 19 archival articles and a 25-page protocol. The 39 open original-access checks have dated source notes. Claim 0559 remains Unknown. That checkpoint left 39,154 exact pairs queued across 24,403 sources, including 2,571 for claim 0559. [Raw-fig originals and access gaps](../fig-rest-tremor-publisher-recovery-nov22/README.md)
 
-The latest original-source pass checked 169 pairs across 34 publications and resolved 166. Three linked to a 2015 article stay open at abstract depth. Round 1 has 38,649 queued pairs across 24,195 sources. A traced red rice bran oil comparison changes claim 0476 to Maybe False with a minimal easing signal in a rat proxy. [Originals, gaps and scorecard](../priority-five-multi-route-nov22/README.md)
+The preceding original-source pass checked 169 pairs across 34 publications and resolved 166. Three linked to a 2015 article stay open at abstract depth. That checkpoint left 38,649 queued pairs across 24,195 sources. A traced red rice bran oil comparison changes claim 0476 to Maybe False with a minimal easing signal in a rat proxy. [Originals, gaps and scorecard](../priority-five-multi-route-nov22/README.md)
 
 The grouped original-source review resolved 183 exact checks across 19 complete publications. It preserves 124 related scopes and 59 source exclusions. That checkpoint left 38,815 exact pairs queued across 24,228 sources. All 19 original notes retain their preparation and symptom gaps. [Grouped originals and gaps](../priority-five-grouped-originals-nov22/README.md)
 

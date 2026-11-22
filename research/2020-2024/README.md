@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [Round 1 saffron and original-source audit](../2025-2029/Food-Experiment-Round-1-Saffron-Originals-Nov22.md) links the verified originals from this period, the [Parkinson gold kiwi prebiotic registration](Source-Text/Trials/ACTRN12620000991910.txt), and its [conference outcomes](Source-Text/2024-Livaux-Parkinson-Constipation-Conference-Results.txt).
+
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
 
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
