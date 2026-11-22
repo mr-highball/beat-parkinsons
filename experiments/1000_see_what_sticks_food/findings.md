@@ -1,6 +1,6 @@
 ## Findings and limits
 
-All 1,000 frozen Round 1 claims have a v1 evidence scorecard with 3,786 source-family rows. Round 1 now records 71 directional verdicts (38 Maybe True and 33 Maybe False) across 18 symptoms and 929 open verdicts. There are 69 easing leans and two worsening leans, with 2 direct clinical signals, 3 limited clinical links and 66 minimal signals. Research-status rows document completed checks and open gaps. The original-source queue, deeper searches and independent direction audit remain open. [Scorecards](followup/scorecards.tsv) · [Research status](followup/research-status.tsv) · [Direction audit](followup/direction-bias-audit-nov21/README.md)
+All 1,000 frozen Round 1 claims have a v1 evidence scorecard with 3,788 source-family rows. Round 1 now records 71 directional verdicts (38 Maybe True and 33 Maybe False) across 18 symptoms and 929 open verdicts. There are 69 easing leans and two worsening leans, with 2 direct clinical signals, 3 limited clinical links and 66 minimal signals. Research-status rows document completed checks and open gaps. The original-source queue, deeper searches and independent direction audit remain open. [Scorecards](followup/scorecards.tsv) · [Research status](followup/research-status.tsv) · [Direction audit](followup/direction-bias-audit-nov21/README.md) · [Dietary protein follow-up](followup/protein-levodopa-audit-nov22/README.md)
 
 ### Highlighted checked v1 findings
 
