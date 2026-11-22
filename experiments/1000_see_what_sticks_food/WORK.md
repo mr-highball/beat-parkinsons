@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The sage access follow-up recovered 14 originals from the 20 held pairs and recorded the six remaining access gaps in dated source text. The Round 1 queue now holds 40,358 pairs across 25,607 source keys. All five sage verdicts retain their prior grades. [Sage access follow-up](followup/sage-access-followup-nov22/README.md)
+The dried-date pain review verified 22 originals and retained one Parkinson cohort protocol as related dietary context. The 12 priority-three pairs across nine sources still need complete original bodies. The Round 1 queue now holds 40,336 pairs across 25,585 source keys. [Dried-date pain and priority-three sources](followup/date-pain-clinical-originals-nov22/README.md)
+
+The sage access follow-up recovered 14 originals from the 20 held pairs and recorded the six remaining access gaps in dated source text. That checkpoint left 40,358 pairs across 25,607 source keys. All five sage verdicts retain their prior grades. [Sage access follow-up](followup/sage-access-followup-nov22/README.md)
 
 The sage audit verified 48 original claim–source pairs across five frozen hypotheses and recorded 20 remaining access gaps in dated local source text. That checkpoint left 40,372 pairs across 25,621 source keys. All five scorecards retain their prior verdicts. [Sage originals and gaps](followup/sage-originals-nov22/README.md)
 

@@ -6,15 +6,17 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,535 |
+| Local body or other primary-source context | 20,557 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 71 |
 | Pending or access-only disposition | 330 |
-| No imported exact review | 39,957 |
+| No imported exact review | 39,935 |
 | **Total** | **61,252** |
 
-The sage access follow-up recovered 14 originals from the 20 held pairs and recorded the six remaining access gaps in dated source text. The Round 1 queue now holds 40,358 pairs across 25,607 source keys. All five sage verdicts retain their prior grades. [Sage access follow-up](../sage-access-followup-nov22/README.md)
+The dried-date pain review verified 22 originals and retained one Parkinson cohort protocol as related dietary context. The 12 priority-three pairs across nine sources still need complete original bodies. The Round 1 queue now holds 40,336 pairs across 25,585 source keys. [Dried-date and priority-three review](../date-pain-clinical-originals-nov22/README.md)
+
+The sage access follow-up recovered 14 originals from the 20 held pairs and recorded the six remaining access gaps in dated source text. That checkpoint left 40,358 pairs across 25,607 source keys. All five sage verdicts retain their prior grades. [Sage access follow-up](../sage-access-followup-nov22/README.md)
 
 The sage audit verified 48 original claim–source pairs across five frozen hypotheses and recorded 20 remaining access gaps in dated local source text. That checkpoint left 40,372 pairs across 25,621 source keys. All five scorecards retain their prior verdicts. [Sage originals and gaps](../sage-originals-nov22/README.md)
 

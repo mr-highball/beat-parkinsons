@@ -843,3 +843,5 @@ The [Japanese physiology originals checkpoint](Food-Experiment-Japanese-Physiolo
 The [sage originals and indexed-gap review](Food-Experiment-Sage-Originals-and-Gaps-Nov22.md) links 48 original-depth checks and 20 unresolved access pairs, with the remaining preparation and Parkinson outcome questions.
 
 The [sage original-access follow-up](Food-Experiment-Sage-Access-Followup-Nov22.md) records 14 bodies recovered through alternate original source routes and the six remaining exact gaps.
+
+The [dried-date pain and priority-three review](Food-Experiment-Date-Pain-and-Priority-Three-Originals-Nov22.md) links 22 original clinical sources and 12 exact pairs across nine sources whose full bodies remain open.
