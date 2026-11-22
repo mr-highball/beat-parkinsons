@@ -807,3 +807,7 @@ January 1, 2025 through November 11, 2026 (partial period).
 - [Foods, dairy, milk, legumes/nuts, and dietary patterns dose-response meta-analysis of Parkinson incidence across 29 cohorts](Source-Text/2026-PMID41252180-Akhlaghi-Foods-Diet-PD-Risk-MetaAnalysis.txt).
 - [Caffeinated coffee and tea intake, dementia risk, and cognitive function in NHS and HPFS cohorts](Source-Text/2026-PMID41661604-Zhang-Coffee-Tea-Cognition-JAMA.txt).
 - [Flavonoid-rich dietary patterns and incident Parkinson disease decomposition in UK Biobank](Source-Text/2026-PMID42638917-Yang-Flavonoid-Diet-UKBiobank-PD.txt).
+
+## Dietary protein and levodopa
+
+- [Posted protein-distribution crossover results, including outcome and flow limitations](Source-Text/Trials/2025-NCT05437640-Protein-Distribution-Results.txt).

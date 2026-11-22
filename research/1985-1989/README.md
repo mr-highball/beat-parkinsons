@@ -87,3 +87,13 @@ January 1, 1985 through December 31, 1989.
 - [December 1985 bound journal and strawberry hemangioma](Source-Text/1985-PMC1306479-Western-Journal-December-Context.txt).
 - [1989 clinical fall frequency and motor-sign associations](Source-Text/1989-PMID2720700-Parkinson-Fall-Frequency.txt).
 - [Observations on fall frequency and clinical naming](Observations/Clinical-Falls-and-Fruit-Names.md).
+
+## Dietary protein and levodopa
+
+- [Tsui et al. Blinded high and low dietary protein comparison](Source-Text/1989-PMID2494567-Blinded-Dietary-Protein-Levodopa.txt).
+- [Carter et al. Amount and timing of protein and motor ON time](Source-Text/1989-PMID2648188-Protein-Amount-and-Distribution.txt).
+- [Pincus and Barry. Protein contrast, bradykinesia and chorea in 11 patients](Source-Text/1987-PMID3827678-Protein-Diet-Bradykinesia-and-Chorea.txt).
+- [Pincus and Barry. Plasma amino acids, motor response and dyskinesia](Source-Text/1987-PMID3632370-Amino-Acids-and-Dyskinesia.txt).
+- [Pincus and Barry. Protein redistribution in medication-resistant OFF periods](Source-Text/1988-PMID3126411-Redistribution-Dopa-Resistant-Off.txt).
+- [Pincus and Barry's printed report and clinical figures](Source-Text/1987-Pincus-Barry-Daytime-Protein-and-Motor-Fluctuation.txt).
+- [Observations across the 1984 and 1987–1989 comparisons](Observations/Protein-Motor-Response-and-Dyskinesia.md).

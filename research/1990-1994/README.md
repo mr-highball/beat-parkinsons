@@ -106,3 +106,7 @@ January 1, 1990 through December 31, 1994.
 ## Clinical measurements and food preparation comparisons
 
 - [Levodopa-associated leg pain and local versus spinal anesthesia](Source-Text/1990-PMID2328508-Levodopa-Associated-Pain-Case.txt).
+
+## Dietary protein and levodopa
+
+- [Bracco et al. Protein redistribution and fluctuating motor response](Source-Text/1991-PMID2044618-Protein-Redistribution-and-Motor-Response.txt).

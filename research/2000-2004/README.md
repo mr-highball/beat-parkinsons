@@ -228,3 +228,7 @@ The walnut-oil lipid trial is archived at author-abstract depth, with processing
 ## Parkinson dementia trial safety and visual outcomes
 
 - [EXPRESS original publication, adverse-event and clinical scores](Source-Text/2004-PMID15590953-EXPRESS-Hallucination-and-Tremor-Events.txt).
+
+## Dietary protein and levodopa
+
+- [Simon et al. Ordinary-protein lunch and oral levodopa kinetics](Source-Text/2004-PMID15036167-Ordinary-Protein-and-Levodopa-Kinetics.txt).
