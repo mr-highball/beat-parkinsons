@@ -919,3 +919,5 @@ The conference and observational review links the separate visual outcomes, the 
 ## Caffeine, tea and clinical source context
 
 - [58th EASD Annual Meeting of the European Association for the Study of Diabetes](Source-Text/2022-PMID35920845-EASD-Food-and-Motor-Scope.txt).
+
+The [Italian Society of Neurology source note](Source-Text/2020-PMC7683589-Italian-Neurology-Collection-Review-Gap.txt) gives the recovered original PDF and identifies 23 Round 1 pairs awaiting member review.

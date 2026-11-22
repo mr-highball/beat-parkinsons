@@ -827,3 +827,5 @@ January 1, 2025 through November 11, 2026 (partial period).
 ## Dietary protein and levodopa
 
 - [Posted protein-distribution crossover results, including outcome and flow limitations](Source-Text/Trials/2025-NCT05437640-Protein-Distribution-Results.txt).
+
+The [gerontology and neurology collections checkpoint](Food-Experiment-Neurology-Collections-Access-Nov22.md) links the dated source text for each of 172 open Round 1 claim–source pairs.

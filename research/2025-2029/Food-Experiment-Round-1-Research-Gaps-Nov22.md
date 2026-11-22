@@ -19,3 +19,5 @@ This catalog note records gaps from the November 22 original-source audit. The [
 - **Sage and pain, dystonia, rigidity, falls, or fatigue.** The checked human originals cover platelet biomarkers, spinocerebellar ataxia, meditation, and patient views on symptom monitoring. The tarantula eye case series remains open at body depth. These sources provide no observed direction for the specific culinary sage preparations and Parkinson outcomes mapped to them. [Platelet study](Source-Text/2026-PMID42648890-Original-Scope.txt) · [Tarantula study access](../1995-1999/Source-Text/1997-PMID9183200-Original-Access-Gap.txt)
 
 Use the exact-source list to distinguish a verified source summary from an access note, and retrieve the local text when answering questions about evidence depth.
+
+A later [gerontology and neurology collections checkpoint](Food-Experiment-Neurology-Collections-Access-Nov22.md) maps 172 exact pairs to seven dated source texts. It distinguishes original access or figure gaps from recovered PDFs awaiting member review.

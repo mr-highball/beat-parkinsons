@@ -807,3 +807,5 @@ Two original first releases date to 2019, with 2020 journal issues. [Insular mor
 
 - [Health—exploring complexity: an interdisciplinary systems approach HEC2016](Source-Text/2016-PMID27522353-HEC-Food-and-Gait-Extract.txt).
 - [Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019](Source-Text/2019-PMID31188969-Geriatric-Cardiology-Food-Context.txt).
+
+The [gerontology and neurology collections checkpoint](../2025-2029/Food-Experiment-Neurology-Collections-Access-Nov22.md) links six source notes from this period and records their exact Round 1 review gaps.
