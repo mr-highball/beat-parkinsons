@@ -28,7 +28,7 @@ A later [gerontology and neurology collections checkpoint](Food-Experiment-Neuro
 
 The [priority-four title-depth review](Food-Experiment-Round-1-Priority-Four-Title-Depth-Nov22.md) carries forward 20 original-access gaps with exact claim and source records.
 
-The [known original access index](Food-Experiment-Round-1-Original-Access-Nov22.md) reconciles all 393 entries with explicit pending or access-only dispositions and records their 99 dated local texts. The [latest priority-three audit](Food-Experiment-Round-1-Priority-Three-Original-Scopes-Nov22.md) records eight continuing original-access pairs and the full-text routes for its four related decisions.
+The [known original access index](Food-Experiment-Round-1-Original-Access-Nov22.md) reconciles all 381 entries with explicit pending or access-only dispositions and records their 87 dated local texts. The [priority-four original sweep](Food-Experiment-Round-1-Priority-Four-Original-Sweep-Nov22.md) records 12 verified source-context exclusions and the exact remaining routes for 100 open pairs. The [latest priority-three audit](Food-Experiment-Round-1-Priority-Three-Original-Scopes-Nov22.md) records eight continuing original-access pairs and the full-text routes for its four related decisions.
 
 The earlier [dried-date pain review](Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) records 427 continuing local source and context gaps, with verified depths and exact next checks.
 
