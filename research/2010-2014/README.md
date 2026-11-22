@@ -598,3 +598,12 @@ The [2011 Wang rosmarinic acid model](Source-Text/2011-PMID22205146-Wang-Rosmari
 [Source review and open evidence questions](../2025-2029/Food-Experiment-Round-1-Priority-Five-Grouped-Originals-Nov22.md)
 
 - [PMID 23251743, verified full-text scope](Source-Text/2010-PMID23251743-Parkinson-Nonmotor-Review-Sage-Collision.txt)
+
+## Round 1 original-source review and rice bran oil reassessment
+
+[Review, observations and access gaps](../2025-2029/Food-Experiment-Round-1-Priority-Five-Multi-Route-Nov22.md)
+
+- [PMID:20091554, original source scope](Source-Text/2010-PMID20091554-Placebo-Review-Date-Sage-Collisions.txt)
+- [PMID:21848415, original source scope](Source-Text/2011-PMID21848415-Placebo-Study-Cherry-Hill-Scope.txt)
+- [PMID:22928089, original source scope](Source-Text/2012-PMID22928089-Curcuminoids-Rat-Movement-Outcome-Scope.txt)
+- [Red rice bran oil and catalepsy by drug exposure](Source-Text/2014-Naz-Shireen-Red-Rice-Bran-Oil-Catalepsy.txt)

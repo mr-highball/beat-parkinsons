@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The grouped original-source review resolved 183 exact checks across 19 complete publications. It preserves 124 related scopes and 59 source exclusions. Round 1 has 38,815 exact pairs queued across 24,228 sources. All 19 original notes retain their preparation and symptom gaps. [Grouped originals and gaps](followup/priority-five-grouped-originals-nov22/README.md)
+The latest original-source pass checked 169 pairs across 34 publications and resolved 166. Three linked to a 2015 article stay open at abstract depth. Round 1 has 38,649 queued pairs across 24,195 sources. A traced red rice bran oil comparison changes claim 0476 to Maybe False with a minimal easing signal in a rat proxy. [Originals, gaps and scorecard](followup/priority-five-multi-route-nov22/README.md)
+
+The grouped original-source review resolved 183 exact checks across 19 complete publications. It preserves 124 related scopes and 59 source exclusions. That checkpoint left 38,815 exact pairs queued across 24,228 sources. All 19 original notes retain their preparation and symptom gaps. [Grouped originals and gaps](followup/priority-five-grouped-originals-nov22/README.md)
 
 The priority-four original-source sweep checked 112 exact pairs across 70 publications. Seven complete originals and five original sections resolved 12 source-context checks. The 100 continuing priority-four checks have dated local notes. That checkpoint left 38,998 exact pairs queued across 24,247 sources, including 381 explicit access gaps mapped to 87 local texts. [Priority-four original sweep](followup/priority-four-original-sweep-nov22/README.md)
 

@@ -395,3 +395,10 @@ The original walnut-fraction crossover registration is bucketed by first public 
 The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
 
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
+
+## Round 1 original-source review and rice bran oil reassessment
+
+[Review, observations and access gaps](../2025-2029/Food-Experiment-Round-1-Priority-Five-Multi-Route-Nov22.md)
+
+- [PMID:18684235, original source scope](Source-Text/2008-PMID18684235-Resveratrol-and-Grape-Exposure-Scope.txt)
+- [PMID:19191039, original source scope](Source-Text/2008-PMID19191039-Botanical-Phenolics-and-Parkinson-Transfer.txt)

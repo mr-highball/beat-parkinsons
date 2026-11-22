@@ -6,15 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 22,078 |
+| Local body or other primary-source context | 22,244 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 35 |
-| Pending or access-only disposition | 363 |
-| No imported exact review | 38,417 |
+| Pending or access-only disposition | 366 |
+| No imported exact review | 38,248 |
 | **Total** | **61,252** |
 
-The exact queue includes 381 explicit pending or access-only pairs. Eighteen also retain a stronger imported title or index review in the table above, which reports the strongest recorded review across layers. All 381 have dated local source texts in the [known original access index](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md).
+The exact queue includes 384 explicit pending or access-only pairs. Eighteen also retain a stronger imported title or index review in the table above, which reports the strongest recorded review across layers. All 384 have dated local source texts in the [known original access index](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md).
 
 The tea and ginger reassessment retained the existing verdicts, added five source families, and verified 16 additional original-source checks. Thirteen continuing access gaps have dated local source files. That checkpoint left 40,056 exact pairs. [Tea and ginger evidence and access routes](../priority-three-replay-nov22/README.md)
 
@@ -26,7 +26,9 @@ The publisher and archive recheck resolved 20 of the 59 remaining dried-date pai
 
 The raw-fig resting-tremor follow-up resolved 82 of 121 exact source-scope checks. The original documents include 113 printed pages from 19 archival articles and a 25-page protocol. The 39 open original-access checks have dated source notes. Claim 0559 remains Unknown. That checkpoint left 39,154 exact pairs queued across 24,403 sources, including 2,571 for claim 0559. [Raw-fig originals and access gaps](../fig-rest-tremor-publisher-recovery-nov22/README.md)
 
-The grouped original-source review resolved 183 exact checks across 19 complete publications. It preserves 124 related scopes and 59 source exclusions. Round 1 has 38,815 exact pairs queued across 24,228 sources. All 19 original notes retain their preparation and symptom gaps. [Grouped originals and gaps](../priority-five-grouped-originals-nov22/README.md)
+The latest original-source pass checked 169 pairs across 34 publications and resolved 166. Three linked to a 2015 article stay open at abstract depth. Round 1 has 38,649 queued pairs across 24,195 sources. A traced red rice bran oil comparison changes claim 0476 to Maybe False with a minimal easing signal in a rat proxy. [Originals, gaps and scorecard](../priority-five-multi-route-nov22/README.md)
+
+The grouped original-source review resolved 183 exact checks across 19 complete publications. It preserves 124 related scopes and 59 source exclusions. That checkpoint left 38,815 exact pairs queued across 24,228 sources. All 19 original notes retain their preparation and symptom gaps. [Grouped originals and gaps](../priority-five-grouped-originals-nov22/README.md)
 
 The priority-four original-source sweep checked 112 exact pairs across 70 publications. Seven complete originals and five original sections resolved 12 source-context checks. The 100 continuing priority-four checks have dated local notes. That checkpoint left 38,998 exact pairs queued across 24,247 sources, including 381 explicit access gaps mapped to 87 local texts. [Priority-four original sweep](../priority-four-original-sweep-nov22/README.md)
 
@@ -44,7 +46,7 @@ The dried-date apathy publisher and archive audit resolved 58 of 60 exact source
 
 The remaining raw-fig original-access review cleared 26 of 39 exact source checks. Eleven publications supplied 68 printed pages. Three further originals or print views and 12 indexed original article scopes completed the other checks. The 13 continuing gaps have dated local notes. Claim 0559 remains Unknown. That checkpoint left 39,128 exact pairs queued across 24,377 sources, including 2,545 for claim 0559. [Classic archive review](../fig-rest-tremor-final-archive-routes-nov22/README.md)
 
-The latest locator audit maps all 381 pending or access-only pairs to 87 dated local research files. Consult the indexed list for the verified depth, scope and continuing check for each pair. [Oracle-readable locator audit](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md)
+The latest locator audit maps all 384 pending or access-only pairs to 88 dated local research files. Consult the indexed list for the verified depth, scope and continuing check for each pair. [Oracle-readable locator audit](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md)
 
 The raw-orange falls review resolved 51 original-source checks and recorded 24 continuing access gaps. Claim 0259 retains Unknown after five evidence families were checked. Round 1 holds 40,072 exact pairs across 25,321 sources. [Raw orange sources, scorecard and gaps](../raw-orange-falls-originals-nov22/README.md)
 
