@@ -854,7 +854,7 @@ The [dried-date pain and priority-three review](Food-Experiment-Date-Pain-and-Pr
 
 The [raw-orange falls source review](Food-Experiment-Raw-Orange-Falls-Originals-Nov22.md) links the dated originals, continuing access holds and related study and cultural context.
 
-The [Round 1 original-access locator audit](Food-Experiment-Round-1-Original-Access-Nov22.md) gives dated local research texts for all 574 entries currently classified as pending or access-limited.
+The [Round 1 original-access locator audit](Food-Experiment-Round-1-Original-Access-Nov22.md) gives dated local research texts for all 493 entries currently classified as pending or access-limited.
 
 The [tea, ginger and original-source audit](Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
 
@@ -867,3 +867,7 @@ The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-
 [Mashhad dietary questionnaire and analysis scope](Source-Text/2025-PMID40635042-Mashhad-Diet-Questionnaire-Scope.txt)
 
 [Dried-date pain publisher and archive scope](Food-Experiment-Dried-Date-Pain-Publisher-Recovery-Nov22.md)
+
+- [Common fig leaf extracts and enzyme activity](Source-Text/2026-PMID42795383-Fig-Leaf-Enzyme-Assays.txt). The laboratory endpoints provide plant-part context for the raw-fig review.
+
+- [Raw-fig and rest-tremor archive recovery, including remaining dated gaps](Food-Experiment-Fig-Rest-Tremor-Publisher-Recovery-Nov22.md).

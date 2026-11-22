@@ -303,3 +303,5 @@ A dated interview-based study documents Otomi culinary sunflower oil alongside u
 ### Latex toxicity and visual symptom interpretation
 
 The 12-year [hospital record review](../Source-Text/2005-PMID15814256-Oje-Latex-Hospital-Cases.txt) documents serious reactions to Ficus insipida latex. These acute toxicity cases differ from the earlier Parkinson dementia [adverse-event comparison](../../2000-2004/Source-Text/2004-PMID15590953-EXPRESS-Hallucination-and-Tremor-Events.txt) and the ethnographic interpretation of [plant-associated experiences](../../1980-1984/Cultural-and-Experiential/Traditional-Practices/1984-PMID6492831-Luna-Ficus-Plant-Teachers.txt).
+
+- [Scope of the Lucania fig and linden interviews](2005-Lucania-Fig-and-Linden-Source-Boundary.md).

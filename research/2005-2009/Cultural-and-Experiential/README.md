@@ -12,3 +12,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [Korean baeksuk tasting-panel fatigue and preparation claims](Local-Knowledge/2005-KR20050019309A-Baeksuk-Fatigue-Claim.txt)
 - [Parkinson's UK Forum discussion on drooling coping tips involving pineapple, lemon and clove](Conversations/2009-Parkinsons-UK-Drooling-Pineapple-Lemon-Clove.txt).
+
+- [Lucania interviews distinguish common fig from linden for shaking](Traditional-Practices/2005-PMID15978757-Lucania-Fig-and-Linden-Use.txt).

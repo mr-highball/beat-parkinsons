@@ -1,0 +1,13 @@
+# Raw fig and resting tremor original-source recovery, November 22, 2026
+
+This review covers the 121 priority-four original-source checks for Round 1 claim 0559. It resolves 82 exact source-scope questions. Forty have complete PMC XML bodies and 22 have readable original HTML. Nineteen older reports supply all 113 original printed pages. The remaining completed review is the exact 25-page Research Square protocol registered as NCT05779137. It plans accelerometry during rest and three other task conditions in a mindfulness trial. The peer-reviewed protocol and registry represent the same study family.
+
+The exact PMID and PMCID matched in NCBI's response for all 120 previously held PubMed records. The cloud archive supplied versioned XML for 40. All 80 remaining PMC browser routes were inspected for body and scan scope. The remaining 39 sources still need authenticated originals. Several indexed publisher snippets describe nonfood study scopes, with complete source review still open. The dated notes retain the verified depth and specific DOI and Europe PMC retrieval outcome.
+
+The printed originals were transcribed and screened at the verified article boundaries. The extracted bodies were checked for fig terms, illustrations and diet wording. Routine animal feeding, a patient eating lunch, a broad diet question and calcium/vitamin D treatment supplied no raw common fig comparison. Records describing tremor at rest include joint accelerometry, pharmacology, surgery and neural recordings.
+
+The broader search retained the existing 2025 bark report and the dried-fruit extract model while distinguishing their plant parts and endpoints. It added the 2026 fig-leaf assay, the southern Italian interview source, and a public blood-pressure report. The interview's shaking entry concerns linden. The blood-pressure report mentions rasagiline and an unspecified fig preparation, and repeats one person's related account. The verified fresh-fig constipation reply extends an existing conversation. These sources supply no transferable direction for raw fig and Parkinson rest tremor.
+
+The ten-family scorecard for claim 0559 remains Unknown at 50. The Gafoor catalepsy table values and individual fig intake and rest-tremor data in the Hegelmaier dietary study remain open. The 39 access gaps and their next routes are available as dated research text.
+
+[Native replay verification](native-replay-verification.txt) · [Dispositions](dispositions.tsv) · [Source routes and scope](source-route-reviews.tsv) · [Printed originals](printed-originals.tsv) · [Continuing gaps](remaining-gaps.tsv) · [Search trails](search-trails.tsv) · [Catalog digest](../../../../research/2025-2029/Food-Experiment-Fig-Rest-Tremor-Publisher-Recovery-Nov22.md)

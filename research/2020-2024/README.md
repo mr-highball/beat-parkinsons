@@ -939,3 +939,5 @@ The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Gin
 [Date fruit and reported pain observations](Observations/Conversations-Date-Fruit-and-Pain.md)
 
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
+
+- [MIND-PD preprint scope and planned resting-tremor measurement](Source-Text/2024-MIND-PD-Research-Square-Protocol-Scope.txt).

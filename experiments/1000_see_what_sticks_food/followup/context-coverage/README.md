@@ -6,12 +6,12 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 21,657 |
+| Local body or other primary-source context | 21,739 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 53 |
-| Pending or access-only disposition | 574 |
-| No imported exact review | 38,609 |
+| Pending or access-only disposition | 493 |
+| No imported exact review | 38,608 |
 | **Total** | **61,252** |
 
 The tea and ginger reassessment retained the existing verdicts, added five source families, and verified 16 additional original-source checks. Thirteen continuing access gaps have dated local source files. That checkpoint left 40,056 exact pairs. [Tea and ginger evidence and access routes](../priority-three-replay-nov22/README.md)
@@ -20,9 +20,11 @@ The preceding dried-date pain audit checked 859 source identities and cleared 43
 
 The dried-date pain recheck resolved 368 of 427 continuing original-source holds. This includes 182 recovered printed papers, two reconciled DOI records and 184 main-body context exclusions. That checkpoint retained 59 open records with dated notes. Claim 0502 remained Unknown. Round 1 held 39,256 exact pairs across 24,505 sources, including 13,879 for claim 0502. [Scanned originals audit](../dried-date-pain-context-and-scans-nov22/README.md)
 
-The publisher and archive recheck resolved 20 of the 59 remaining dried-date pain source-scope checks. Seventeen used identifiable original publisher text and three used complete archived originals or protocol materials. Thirty-five original-access holds and four diet-item questions remain. The claim stays Unknown. Round 1 has 39,236 exact pairs queued across 24,485 sources, including 13,859 for claim 0502. [Publisher sources and gaps](../dried-date-pain-publisher-recovery-nov22/README.md)
+The publisher and archive recheck resolved 20 of the 59 remaining dried-date pain source-scope checks. Seventeen used identifiable original publisher text and three used complete archived originals or protocol materials. Thirty-five original-access holds and four diet-item questions remain. The claim stays Unknown. That checkpoint left 39,236 exact pairs queued across 24,485 sources, including 13,859 for claim 0502. [Publisher sources and gaps](../dried-date-pain-publisher-recovery-nov22/README.md)
 
-The latest locator audit maps all 574 pending or access-only pairs to 282 dated local research files. Consult the indexed list for the verified depth, scope and continuing check for each pair. [Oracle-readable locator audit](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md)
+The raw-fig resting-tremor follow-up resolved 82 of 121 exact source-scope checks. The original documents include 113 printed pages from 19 archival articles and a 25-page protocol. The 39 open original-access checks have dated source notes. Claim 0559 remains Unknown. Round 1 has 39,154 exact pairs queued across 24,403 sources, including 2,571 for claim 0559. [Raw-fig originals and access gaps](../fig-rest-tremor-publisher-recovery-nov22/README.md)
+
+The latest locator audit maps all 493 pending or access-only pairs to 201 dated local research files. Consult the indexed list for the verified depth, scope and continuing check for each pair. [Oracle-readable locator audit](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md)
 
 The raw-orange falls review resolved 51 original-source checks and recorded 24 continuing access gaps. Claim 0259 retains Unknown after five evidence families were checked. Round 1 holds 40,072 exact pairs across 25,321 sources. [Raw orange sources, scorecard and gaps](../raw-orange-falls-originals-nov22/README.md)
 

@@ -454,3 +454,5 @@ The 2011 Iranian literature compilation describes an external saffron-water prep
 - [2013 visual symptom measurements and Ficus preparation comparisons](2013-Visual-Endpoints-and-Ficus-Preparations.md).
 
 The 2014 Deglet Nour paper gives lower mouse writhing counts for both fruit fractions. Its percentages and active-control names conflict across the printed results and methods. Its discussion attributes a separate use of dates for abdominal pain to residents of southern Algeria. The cited pages resolve to a mismatched article, and the original Béchar report remains open. [Laboratory paper](../Source-Text/2014-Ouafi-Deglet-Nour-Fruit-Fractions-and-Nociception.txt) · [Traditional-use attribution](../Cultural-and-Experiential/Traditional-Practices/2014-Southern-Algeria-Date-Fruit-Abdominal-Pain-Attribution.txt)
+
+- [Fig and rasagiline conversation scope](2014-Fig-and-Rasagiline-Conversation.md).
