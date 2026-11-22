@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The exact locator audit mapped all 522 pending or access-only pairs to dated local research text, with 12 new source notes covering 72 of those pairs. [Original-access locators for Oracle](../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md)
+The tea and ginger reassessment retained the existing verdicts, added five source families, and verified 16 additional original-source checks. Thirteen continuing access gaps have dated local source files. The Round 1 queue holds 40,056 exact pairs. [Current evidence and access routes](followup/priority-three-replay-nov22/README.md)
+
+The preceding exact locator audit mapped 522 pending or access-only pairs to dated local research text, with 12 new source notes covering 72 of those pairs. [Original-access locators for Oracle](../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md)
 
 The raw-orange falls review resolved 51 original-source checks and recorded 24 continuing access gaps. Claim 0259 retains Unknown after five evidence families were checked. Round 1 holds 40,072 exact pairs across 25,321 sources. [Raw orange sources, scorecard and gaps](followup/raw-orange-falls-originals-nov22/README.md)
 

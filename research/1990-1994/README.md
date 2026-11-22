@@ -124,3 +124,5 @@ January 1, 1990 through December 31, 1994.
 ## Round 1 original-access notes
 
 - [PMCID:PMC2280327 access and exact claim scope](Source-Text/1990-PMCIDPMC2280327-Round1-Original-Access.txt).
+
+The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.

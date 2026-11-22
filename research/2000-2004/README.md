@@ -245,3 +245,5 @@ The walnut-oil lipid trial is archived at author-abstract depth, with processing
 
 - [PMID:12595911 access and exact claim scope](Source-Text/2003-PMID12595911-Round1-Original-Access.txt).
 - [PMID:11254784 access and exact claim scope](Source-Text/2001-PMID11254784-Round1-Original-Access.txt).
+
+The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.

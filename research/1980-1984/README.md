@@ -71,3 +71,5 @@ January 1, 1980 through December 31, 1984.
 ## Dietary protein and levodopa
 
 - [Nutt et al. Meals, amino acids and levodopa response](Source-Text/1984-PMID6694694-Meals-and-Levodopa-On-Off.txt).
+
+The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.

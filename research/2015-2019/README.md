@@ -829,3 +829,5 @@ The [raw-orange falls source review](../2025-2029/Food-Experiment-Raw-Orange-Fal
 ## Round 1 original-access notes
 
 - [PMCID:PMC7159476 access and exact claim scope](Source-Text/2017-PMCIDPMC7159476-Round1-Original-Access.txt).
+
+The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.

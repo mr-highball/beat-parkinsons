@@ -854,4 +854,6 @@ The [dried-date pain and priority-three review](Food-Experiment-Date-Pain-and-Pr
 
 The [raw-orange falls source review](Food-Experiment-Raw-Orange-Falls-Originals-Nov22.md) links the dated originals, continuing access holds and related study and cultural context.
 
-The [Round 1 original-access locator audit](Food-Experiment-Round-1-Original-Access-Nov22.md) gives dated local research texts for all 522 entries classified as pending or access-only in this snapshot.
+The [Round 1 original-access locator audit](Food-Experiment-Round-1-Original-Access-Nov22.md) gives dated local research texts for all 535 entries currently classified as pending or access-limited.
+
+The [tea, ginger and original-source audit](Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.

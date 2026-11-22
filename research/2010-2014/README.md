@@ -580,3 +580,7 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 ## Round 1 original-access notes
 
 - [PMCID:PMC3918939 access and exact claim scope](Source-Text/2013-PMCIDPMC3918939-Round1-Original-Access.txt).
+
+[Conversation source and limitations](Cultural-and-Experiential/Conversations/2010-NeuroTalk-Green-Tea-Blend-and-Fatigue.txt) · [Observations](Observations/Conversations-Green-Tea-and-Fatigue.md)
+
+The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.

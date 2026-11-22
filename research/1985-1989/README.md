@@ -105,3 +105,5 @@ January 1, 1985 through December 31, 1989.
 - [Pincus and Barry. Protein redistribution in medication-resistant OFF periods](Source-Text/1988-PMID3126411-Redistribution-Dopa-Resistant-Off.txt).
 - [Pincus and Barry's printed report and clinical figures](Source-Text/1987-Pincus-Barry-Daytime-Protein-and-Motor-Fluctuation.txt).
 - [Observations across the 1984 and 1987–1989 comparisons](Observations/Protein-Motor-Response-and-Dyskinesia.md).
+
+The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.

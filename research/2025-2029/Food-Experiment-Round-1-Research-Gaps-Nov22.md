@@ -22,4 +22,4 @@ Use the exact-source list to distinguish a verified source summary from an acces
 
 A later [gerontology and neurology collections checkpoint](Food-Experiment-Neurology-Collections-Access-Nov22.md) maps 172 exact pairs to seven dated source texts. It distinguishes original access or figure gaps from recovered PDFs awaiting member review.
 
-The [known original access index](Food-Experiment-Round-1-Original-Access-Nov22.md) reconciles all 522 entries classified as pending or access-only and records their dated local texts.
+The [known original access index](Food-Experiment-Round-1-Original-Access-Nov22.md) reconciles all 535 entries classified as pending or access-only and records their dated local texts.
