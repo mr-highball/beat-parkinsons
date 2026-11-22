@@ -1,6 +1,6 @@
 # 2025-2029
 
-The [dried-date and apathy source review](Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
+The [dried-date and apathy source review](Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim. The [publisher and archive follow-up](Food-Experiment-Dried-Date-Apathy-Publisher-Recovery-Nov22.md) adds 58 original-scope checks and two dated access notes, including a separate [medRxiv protocol scope](Source-Text/2025-MedRxiv-25337654-Alcohol-Dementia-Protocol-Scope.txt).
 
 The [raw-fig rest-tremor originals and evidence gaps](Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) link the exact clinical checks, remaining access holds, and the [fig-containing baked-bar study](Source-Text/2026-Raees-Fig-In-Walnut-Bar-Parkinsonism-Model.txt).
 
@@ -854,7 +854,7 @@ The [dried-date pain and priority-three review](Food-Experiment-Date-Pain-and-Pr
 
 The [raw-orange falls source review](Food-Experiment-Raw-Orange-Falls-Originals-Nov22.md) links the dated originals, continuing access holds and related study and cultural context.
 
-The [Round 1 original-access locator audit](Food-Experiment-Round-1-Original-Access-Nov22.md) gives dated local research texts for all 467 entries currently classified as pending or access-limited.
+The [Round 1 original-access locator audit](Food-Experiment-Round-1-Original-Access-Nov22.md) gives dated local research texts for all 417 entries currently classified as pending or access-limited.
 
 The [tea, ginger and original-source audit](Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
 

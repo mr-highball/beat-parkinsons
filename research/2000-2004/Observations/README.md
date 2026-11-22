@@ -1,5 +1,7 @@
 # Observations for 2000–2004
 
+The 1999 Aarsland study used caregiver ratings and distinguished apathy from depression. The 2002 Pluck comparison used separate clinician and participant apathy ratings and assessed mood separately. The sources show how the observer and the instrument shape the recorded outcome. Both leave the effects of culinary dried dates open. [1999 original scope](../../1995-1999/Source-Text/1999-PMID10486397-Original-Access-Gap.txt) · [2002 original scope](../Source-Text/2002-PMID12438462-Dried-Date-Apathy-Original-Access.txt)
+
 The [Jordanian market survey](../Cultural-and-Experiential/Traditional-Practices/2002-Lev-Amar-Jordan-Market-Sage-Leaf.txt) records sellers' reports about *Salvia fruticosa* for intestinal pain. The [2010 common-sage experiment](../../2010-2014/Source-Text/2010-PMID20860437.txt) uses *Salvia officinalis* extracts and induced rodent pain. The two records document different species, exposures and outcomes.
 
 The [2001 standard](../Source-Text/2001-API-Phalgu-Dried-Root-Botanical-Identity.txt) distinguishes the monographs for Phalgu root and fruit. The [earlier translation](../../1945-1949/Cultural-and-Experiential/Traditional-Practices/1949-Caraka-Apasmara-Phalgu-Root-Translation.txt) uses a common English plant name. The [2001 thesis entry](../Source-Text/2001-Usha-Apasmara-Thesis-Identity.txt) supplies a separate clinical provenance trail, with primary comparison results still open.
