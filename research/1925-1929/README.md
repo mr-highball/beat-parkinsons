@@ -28,3 +28,7 @@ January 1, 1925 through December 31, 1929.
 [All periods and collection method](../README.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+## Round 1 original-access notes
+
+- [PMCID:PMC2453796 access and exact claim scope](Source-Text/1927-PMCIDPMC2453796-Round1-Original-Access.txt).

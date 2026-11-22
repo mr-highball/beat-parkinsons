@@ -576,3 +576,7 @@ Clove oil was an odor stimulus in an oxytocin crossover, not an assigned culinar
 - [Date fruit and pit extracts in stressed rats, primary abstract](Source-Text/2012-Mohamad-Date-Fruit-and-Pit-Extracts-Stress-Abstract.txt).
 - [Murraya koenigii leaf extract and alkaloid fraction in haloperidol-induced rat orofacial dyskinesia, primary abstract](Source-Text/2012-PMID22136413-Patil-Murraya-Koenigii-Haloperidol-Dyskinesia.txt).
 - [Post-lesion oral zingerone and eugenol in 6-OHDA mice with L-DOPA, striatal dopamine depletion safety record](Source-Text/2011-PMID21769642-Kabuto-Zingerone-Eugenol-6OHDA-PostTreatment.txt).
+
+## Round 1 original-access notes
+
+- [PMCID:PMC3918939 access and exact claim scope](Source-Text/2013-PMCIDPMC3918939-Round1-Original-Access.txt).

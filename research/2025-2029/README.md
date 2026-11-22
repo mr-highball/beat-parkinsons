@@ -853,3 +853,5 @@ The [sage original-access follow-up](Food-Experiment-Sage-Access-Followup-Nov22.
 The [dried-date pain and priority-three review](Food-Experiment-Date-Pain-and-Priority-Three-Originals-Nov22.md) links 22 original clinical sources and 12 exact pairs across nine sources whose full bodies remain open.
 
 The [raw-orange falls source review](Food-Experiment-Raw-Orange-Falls-Originals-Nov22.md) links the dated originals, continuing access holds and related study and cultural context.
+
+The [Round 1 original-access locator audit](Food-Experiment-Round-1-Original-Access-Nov22.md) gives dated local research texts for all 522 entries classified as pending or access-only in this snapshot.

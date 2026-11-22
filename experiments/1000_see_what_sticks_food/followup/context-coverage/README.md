@@ -14,6 +14,8 @@ The original searches produced 69,107 result appearances across 2,000 expression
 | No imported exact review | 39,497 |
 | **Total** | **61,252** |
 
+A locator audit mapped all 522 pending or access-only pairs to dated local research text. Consult the indexed list for the verified depth, scope and continuing check for each pair. [Oracle-readable locator audit](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md)
+
 The raw-orange falls review resolved 51 original-source checks and recorded 24 continuing access gaps. Claim 0259 retains Unknown after five evidence families were checked. Round 1 holds 40,072 exact pairs across 25,321 sources. [Raw orange sources, scorecard and gaps](../raw-orange-falls-originals-nov22/README.md)
 
 The dried-date apathy review resolved 89 original-source checks and documented 59 continuing holds. Claim 0758 retains Unknown after eleven source families were checked. Round 1 now holds 40,123 exact pairs across 25,372 sources. [Dried-date apathy sources, scorecard and gaps](../dried-date-apathy-originals-nov22/README.md)

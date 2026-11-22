@@ -25,3 +25,7 @@ January 1, 1900 through December 31, 1904.
 [All periods and collection method](../README.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+## Round 1 original-access notes
+
+- [PMCID:PMC2356163 access and exact claim scope](Source-Text/1904-PMCIDPMC2356163-Round1-Original-Access.txt).

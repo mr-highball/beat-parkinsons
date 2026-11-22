@@ -120,3 +120,7 @@ January 1, 1990 through December 31, 1994.
 ## Dietary protein and levodopa
 
 - [Bracco et al. Protein redistribution and fluctuating motor response](Source-Text/1991-PMID2044618-Protein-Redistribution-and-Motor-Response.txt).
+
+## Round 1 original-access notes
+
+- [PMCID:PMC2280327 access and exact claim scope](Source-Text/1990-PMCIDPMC2280327-Round1-Original-Access.txt).

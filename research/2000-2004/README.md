@@ -240,3 +240,8 @@ The walnut-oil lipid trial is archived at author-abstract depth, with processing
 ## Dietary protein and levodopa
 
 - [Simon et al. Ordinary-protein lunch and oral levodopa kinetics](Source-Text/2004-PMID15036167-Ordinary-Protein-and-Levodopa-Kinetics.txt).
+
+## Round 1 original-access notes
+
+- [PMID:12595911 access and exact claim scope](Source-Text/2003-PMID12595911-Round1-Original-Access.txt).
+- [PMID:11254784 access and exact claim scope](Source-Text/2001-PMID11254784-Round1-Original-Access.txt).

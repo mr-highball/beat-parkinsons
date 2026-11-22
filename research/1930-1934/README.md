@@ -30,3 +30,9 @@ January 1, 1930 through December 31, 1934.
 [All periods and collection method](../README.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+## Round 1 original-access notes
+
+- [PMCID:PMC2369166 access and exact claim scope](Source-Text/1933-PMCIDPMC2369166-Round1-Original-Access.txt).
+- [PMCID:PMC2368176 access and exact claim scope](Source-Text/1933-PMCIDPMC2368176-Round1-Original-Access.txt).
+- [PMCID:PMC2452719 access and exact claim scope](Source-Text/1930-PMCIDPMC2452719-Round1-Original-Access.txt).

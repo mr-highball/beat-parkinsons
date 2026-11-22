@@ -1,0 +1,9 @@
+# Round 1 known original access gaps, November 22, 2026
+
+The [exact original access locators](Food-Experiment-Round-1-Original-Access-Locators-Nov22.tsv) give all 522 queued pairs classified as pending or access-only in this Round 1 snapshot. Each row contains the claim, source key, frozen ingredient, preparation and symptom, recorded review depth, a readable local research file, the prior receipt and what remains open. See the linked file for updated source access and exposure or outcome boundaries.
+
+The reconciliation traced 325 entries to their existing dated texts and connected 125 entries to additional source texts already present in Oracle. Twelve source summaries in their original publication periods cover the remaining 72 mapped entries. The twelve notes cover seven administrative pages, three meeting collections and two article abstracts. The meeting notes identify the primary material inspected so far and the remaining member or booklet routes. None of the new access records changes the original-depth disposition.
+
+Use `oracle_find_sources` with the exact PMID, PMCID or DOI and `oracle_read_source` for the returned text. For receipts or exposure and symptom questions, use `oracle_search_catalog` with the source key or with “Round 1 known original access gaps” and read the linked TSV. Some source records have advanced since the original review. Resolving a locator supplies evidence for the next review while the exact pair stays open until its source and claim are examined together.
+
+This is an index of the 522 recorded pending or access-only entries within the 40,072 queued original-source pairs. The broader queue also contains sources awaiting their first exact review and records checked at other partial depths. [Round 1 exact coverage](../../experiments/1000_see_what_sticks_food/followup/context-coverage/README.md) · [Raw orange access and evidence review](Food-Experiment-Raw-Orange-Falls-Originals-Nov22.md)

@@ -387,3 +387,7 @@ The original walnut-fraction crossover registration is bucketed by first public 
 ## Caffeine, tea and clinical source context
 
 - [Effects of caffeine on levodopa pharmacokinetics and pharmacodynamics in Parkinson disease](Source-Text/2006-PMID16966563-Caffeine-Levodopa-and-Walking.txt).
+
+## Round 1 original-access notes
+
+- [PMCID:PMC2620969 access and exact claim scope](Source-Text/2005-PMCIDPMC2620969-Round1-Original-Access.txt).

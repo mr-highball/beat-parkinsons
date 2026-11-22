@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The exact locator audit mapped all 522 pending or access-only pairs to dated local research text, with 12 new source notes covering 72 of those pairs. [Original-access locators for Oracle](../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md)
+
 The raw-orange falls review resolved 51 original-source checks and recorded 24 continuing access gaps. Claim 0259 retains Unknown after five evidence families were checked. Round 1 holds 40,072 exact pairs across 25,321 sources. [Raw orange sources, scorecard and gaps](followup/raw-orange-falls-originals-nov22/README.md)
 
 The dried-date apathy review resolved 89 original-source checks and documented 59 continuing holds. Claim 0758 retains Unknown after eleven source families were checked. Round 1 now holds 40,123 exact pairs across 25,372 sources. [Dried-date apathy sources, scorecard and gaps](followup/dried-date-apathy-originals-nov22/README.md)

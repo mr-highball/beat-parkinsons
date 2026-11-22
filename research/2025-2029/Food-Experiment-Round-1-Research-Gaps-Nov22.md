@@ -21,3 +21,5 @@ This catalog note records gaps from the November 22 original-source audit. The [
 Use the exact-source list to distinguish a verified source summary from an access note, and retrieve the local text when answering questions about evidence depth.
 
 A later [gerontology and neurology collections checkpoint](Food-Experiment-Neurology-Collections-Access-Nov22.md) maps 172 exact pairs to seven dated source texts. It distinguishes original access or figure gaps from recovered PDFs awaiting member review.
+
+The [known original access index](Food-Experiment-Round-1-Original-Access-Nov22.md) reconciles all 522 entries classified as pending or access-only and records their dated local texts.
