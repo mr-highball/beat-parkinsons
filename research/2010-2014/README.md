@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [2011 European Hematology Association abstract book](Source-Text/2011-PMC3127552-Hematology-Congress-Access-Gap.txt) includes all 1,755 numbered entries in the publisher contents. The local record documents the printed scientific page sequence and the differing NLM page count.
+
 The [original iron-deficiency case access record](Source-Text/2010-PMID20532731-Original-Access-Gap.txt) includes its institutional citation and the 30 affected Round 1 pairs.
 
 Original-access records for the [2011 hematology congress](Source-Text/2011-PMC3127552-Hematology-Congress-Access-Gap.txt) and the [2014 FEBS posters](Source-Text/2014-PMC7163937-FEBS-Poster-Access-Gap.txt).

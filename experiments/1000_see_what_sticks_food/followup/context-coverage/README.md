@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,412 |
+| Local body or other primary-source context | 20,473 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 74 |
 | Pending or access-only disposition | 330 |
-| No imported exact review | 40,077 |
+| No imported exact review | 40,016 |
 | **Total** | **61,252** |
+
+The open congress audit resolved 61 original-depth pairs using two complete publisher originals. The queue retains 40,420 pairs across 25,669 source keys. Six dated source records preserve 224 continuing access gaps from this batch. [Open congress originals and TANDIM](../open-congress-originals-nov22/README.md)
 
 The indexed-primary audit resolved 17 original-depth pairs. The queue retains 40,481 pairs across 25,671 source keys. Three reviewed records still need complete originals, and each has a dated local source note. [Originals and access gaps](../indexed-primary-originals-nov22/README.md)
 

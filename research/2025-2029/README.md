@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [open congress originals and TANDIM audit](Food-Experiment-Open-Congress-and-TANDIM-Nov22.md) links two whole proceedings, the [same-cohort olive oil analysis](Source-Text/2025-PMID41325894-Staudacher-TANDIM-Olive-Oil-Secondary.txt), and the remaining journal access gaps.
+
 The [indexed primary original audit](Food-Experiment-Indexed-Primary-Originals-Nov22.md) links 17 verified source summaries and the dated notes for the remaining case and article access gaps.
 
 The [shared proceedings and clinical gap audit](Food-Experiment-Shared-Proceedings-and-Clinical-Gaps-Nov22.md) links the exact original-access gaps across five collections and six clinical sources.

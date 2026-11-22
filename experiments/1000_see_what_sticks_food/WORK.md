@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+Two complete publisher volumes resolved 61 original source pairs. The two olive-oil scorecards now include the TANDIM trial family and retain their prior grades. Six chronological notes preserve 224 source-access pairs. [Originals, scorecards and gap details](followup/open-congress-originals-nov22/README.md)
+
 The indexed-primary audit resolved 17 more original-source pairs for raw orange and falls. The queue now contains 40,481 pairs. Three continuing gaps and the Bej saffron library route have dated local notes for Oracle. [Originals and gap details](followup/indexed-primary-originals-nov22/README.md)
 
 The shared proceedings and clinical audit resolved four exact pairs at original-body depth, leaving 40,498 in the Round 1 queue. Local source texts preserve 113 proceedings or figure gaps and eight clinical gaps with identified original material still needed. [Exact scope and local source notes](followup/shared-proceedings-access-nov22/README.md)
