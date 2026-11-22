@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The dried-date pain recheck resolved 368 of 427 continuing original-source holds. This includes 182 recovered printed papers, two reconciled DOI records and 184 main-body context exclusions. Fifty-nine exact records remain open with dated notes. Claim 0502 remains Unknown. Round 1 holds 39,256 exact pairs across 24,505 sources, including 13,879 for claim 0502. [Recovered originals and remaining gaps](followup/dried-date-pain-context-and-scans-nov22/README.md)
+The publisher and archive recheck resolved 20 of the 59 remaining dried-date pain source-scope checks. Seventeen used identifiable original publisher text and three used complete archived originals or protocol materials. Thirty-five original-access holds and four diet-item questions remain. The claim stays Unknown. Round 1 has 39,236 exact pairs queued across 24,485 sources, including 13,859 for claim 0502. [Publisher sources and gaps](followup/dried-date-pain-publisher-recovery-nov22/README.md)
+
+The dried-date pain recheck resolved 368 of 427 continuing original-source holds. This includes 182 recovered printed papers, two reconciled DOI records and 184 main-body context exclusions. That checkpoint retained 59 open records with dated notes. Claim 0502 remained Unknown. Round 1 held 39,256 exact pairs across 24,505 sources, including 13,879 for claim 0502. [Recovered originals and remaining gaps](followup/dried-date-pain-context-and-scans-nov22/README.md)
 
 The preceding dried-date pain audit checked 859 source identities and cleared 432 original-scope mismatches. It added 427 continuing gap notes and five evidence families for claim 0502, which remains Unknown. That checkpoint left 39,624 exact pairs across 24,873 sources, including 14,247 pairs for claim 0502. [Dried-date source notes and remaining checks](followup/dried-date-pain-priority-four-nov22/README.md)
 

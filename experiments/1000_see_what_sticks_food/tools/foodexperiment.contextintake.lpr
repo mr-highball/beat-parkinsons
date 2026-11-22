@@ -43,7 +43,10 @@ end;
 function Depth(const ABasis: String): Integer;
 begin
   Result := IndexStr(CanonicalBasis(ABasis),
-    ['access_only', 'title_and_index', 'abstract', 'full_text']);
+    ['access_only', 'title_and_index', 'abstract', 'full_text', 'primary_source']);
+  // The replay queue treats both original-source bases at the same depth.
+  if Result = 4 then
+    Result := 3;
 end;
 
 function ReviewLine(const AFields: TFields): String;
