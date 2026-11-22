@@ -6,21 +6,23 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,473 |
+| Local body or other primary-source context | 20,521 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
-| Title or index | 74 |
+| Title or index | 72 |
 | Pending or access-only disposition | 330 |
-| No imported exact review | 40,016 |
+| No imported exact review | 39,970 |
 | **Total** | **61,252** |
 
-The open congress audit resolved 61 original-depth pairs using two complete publisher originals. The queue retains 40,420 pairs across 25,669 source keys. Six dated source records preserve 224 continuing access gaps from this batch. [Open congress originals and TANDIM](../open-congress-originals-nov22/README.md)
+The sage audit verified 48 original claim–source pairs across five frozen hypotheses and recorded 20 remaining access gaps in dated local source text. The Round 1 queue now holds 40,372 pairs across 25,621 source keys. All five scorecards retain their prior verdicts. [Sage originals and gaps](../sage-originals-nov22/README.md)
 
-The indexed-primary audit resolved 17 original-depth pairs. The queue retains 40,481 pairs across 25,671 source keys. Three reviewed records still need complete originals, and each has a dated local source note. [Originals and access gaps](../indexed-primary-originals-nov22/README.md)
+The open congress audit resolved 61 original-depth pairs using two complete publisher originals. That checkpoint retained 40,420 pairs across 25,669 source keys. Six dated source records preserve 224 continuing access gaps from this batch. [Open congress originals and TANDIM](../open-congress-originals-nov22/README.md)
 
-The shared proceedings and clinical audit resolved four exact source pairs at original-body depth. The queue retains 40,498 pairs across 25,688 source keys. Five proceedings records and six clinical source records preserve the exact open pair locators. [Shared proceedings and clinical original access](../shared-proceedings-access-nov22/README.md)
+The indexed-primary audit resolved 17 original-depth pairs. That checkpoint retained 40,481 pairs across 25,671 source keys. Three reviewed records still need complete originals, and each has a dated local source note. [Originals and access gaps](../indexed-primary-originals-nov22/README.md)
 
-The numbered Japanese physiology proceedings resolved 24 exact claim–source pairs. The queue retains 40,502 pairs across 25,692 source keys. The Yoshihara journal article has a separate dated body-access note. [Physiology review and source scope](../japanese-physiology-originals-nov22/README.md)
+The shared proceedings and clinical audit resolved four exact source pairs at original-body depth. That checkpoint retained 40,498 pairs across 25,688 source keys. Five proceedings records and six clinical source records preserve the exact open pair locators. [Shared proceedings and clinical original access](../shared-proceedings-access-nov22/README.md)
+
+The numbered Japanese physiology proceedings resolved 24 exact claim–source pairs. That checkpoint retained 40,502 pairs across 25,692 source keys. The Yoshihara journal article has a separate dated body-access note. [Physiology review and source scope](../japanese-physiology-originals-nov22/README.md)
 
 The recovered PDF proceedings move 35 exact pairs to original text depth. The queue retains 40,526 pairs across 25,693 source keys. Twelve olive-oil pairs remain open for missing Figures 1–3 in the Italian Neurology poster. [Recovered originals and specific gaps](../recovered-pdf-proceedings-nov22/README.md)
 

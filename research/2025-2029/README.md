@@ -839,3 +839,5 @@ The [gerontology and neurology collections checkpoint](Food-Experiment-Neurology
 The [recovered proceedings member review](Food-Experiment-Recovered-PDF-Proceedings-Nov22.md) documents 35 completed original source checks, the 12 continuing Italian Neurology figure holds, and the cited 1995 dietary abstract.
 
 The [Japanese physiology originals checkpoint](Food-Experiment-Japanese-Physiology-Capsaicin-Nov22.md) links 24 verified pairs, the 29-family cayenne swallowing scorecard, and the original journal pages that remain open.
+
+The [sage originals and indexed-gap review](Food-Experiment-Sage-Originals-and-Gaps-Nov22.md) links 48 original-depth checks and 20 unresolved access pairs, with the remaining preparation and Parkinson outcome questions.
