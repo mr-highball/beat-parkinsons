@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The sage audit verified 48 original claim–source pairs across five frozen hypotheses and recorded 20 remaining access gaps in dated local source text. The Round 1 queue now holds 40,372 pairs across 25,621 source keys. All five scorecards retain their prior verdicts. [Sage originals and gaps](followup/sage-originals-nov22/README.md)
+The sage access follow-up recovered 14 originals from the 20 held pairs and recorded the six remaining access gaps in dated source text. The Round 1 queue now holds 40,358 pairs across 25,607 source keys. All five sage verdicts retain their prior grades. [Sage access follow-up](followup/sage-access-followup-nov22/README.md)
+
+The sage audit verified 48 original claim–source pairs across five frozen hypotheses and recorded 20 remaining access gaps in dated local source text. That checkpoint left 40,372 pairs across 25,621 source keys. All five scorecards retain their prior verdicts. [Sage originals and gaps](followup/sage-originals-nov22/README.md)
 
 Two complete publisher volumes resolved 61 original source pairs. The two olive-oil scorecards now include the TANDIM trial family and retain their prior grades. Six chronological notes preserve 224 source-access pairs. [Originals, scorecards and gap details](followup/open-congress-originals-nov22/README.md)
 

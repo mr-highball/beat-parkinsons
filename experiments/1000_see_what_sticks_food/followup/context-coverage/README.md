@@ -6,15 +6,17 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,521 |
+| Local body or other primary-source context | 20,535 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
-| Title or index | 72 |
+| Title or index | 71 |
 | Pending or access-only disposition | 330 |
-| No imported exact review | 39,970 |
+| No imported exact review | 39,957 |
 | **Total** | **61,252** |
 
-The sage audit verified 48 original claim–source pairs across five frozen hypotheses and recorded 20 remaining access gaps in dated local source text. The Round 1 queue now holds 40,372 pairs across 25,621 source keys. All five scorecards retain their prior verdicts. [Sage originals and gaps](../sage-originals-nov22/README.md)
+The sage access follow-up recovered 14 originals from the 20 held pairs and recorded the six remaining access gaps in dated source text. The Round 1 queue now holds 40,358 pairs across 25,607 source keys. All five sage verdicts retain their prior grades. [Sage access follow-up](../sage-access-followup-nov22/README.md)
+
+The sage audit verified 48 original claim–source pairs across five frozen hypotheses and recorded 20 remaining access gaps in dated local source text. That checkpoint left 40,372 pairs across 25,621 source keys. All five scorecards retain their prior verdicts. [Sage originals and gaps](../sage-originals-nov22/README.md)
 
 The open congress audit resolved 61 original-depth pairs using two complete publisher originals. That checkpoint retained 40,420 pairs across 25,669 source keys. Six dated source records preserve 224 continuing access gaps from this batch. [Open congress originals and TANDIM](../open-congress-originals-nov22/README.md)
 

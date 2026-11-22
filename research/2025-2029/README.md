@@ -841,3 +841,5 @@ The [recovered proceedings member review](Food-Experiment-Recovered-PDF-Proceedi
 The [Japanese physiology originals checkpoint](Food-Experiment-Japanese-Physiology-Capsaicin-Nov22.md) links 24 verified pairs, the 29-family cayenne swallowing scorecard, and the original journal pages that remain open.
 
 The [sage originals and indexed-gap review](Food-Experiment-Sage-Originals-and-Gaps-Nov22.md) links 48 original-depth checks and 20 unresolved access pairs, with the remaining preparation and Parkinson outcome questions.
+
+The [sage original-access follow-up](Food-Experiment-Sage-Access-Followup-Nov22.md) records 14 bodies recovered through alternate original source routes and the six remaining exact gaps.

@@ -9,4 +9,6 @@ The review froze a scope of 68 original priority-four pairs across 67 citations 
 - [Source identities, review depth and local paths](source-notes.tsv)
 - [Native exact queue replay](native-replay-verification.txt)
 
-The verified studies and genuine sage records preserve the difference between a studied exposure, an exact symptom and a matching population. The Menosan secondary fatigue result and Newcastle trial reporting gap retain their existing implications for the scorecards. The broader research queue contains 40,372 original pairs. Round 2 remains queued.
+The verified studies and genuine sage records preserve the difference between a studied exposure, an exact symptom and a matching population. The Menosan secondary fatigue result and Newcastle trial reporting gap retain their existing implications for the scorecards. At that checkpoint the broader research queue contained 40,372 original pairs. Round 2 remains queued.
+
+The [follow-up checkpoint](../sage-access-followup-nov22/README.md) recovered 14 of those originals and records the six still-open access pairs.
