@@ -1,5 +1,7 @@
 # 1985-1989
 
+New primary records include [BPS Parotid Abstract and Page Scope](Source-Text/1985-PMC1916963-BPS-Parotid-Abstract-and-Page-Scope.txt).
+
 The [1986 folate-metabolism case](Source-Text/1986-PMID3755752-Clayton-Folate-and-Parkinsonism.txt) distinguishes baseline drooling from an acute movement crisis during combined treatment in secondary parkinsonism.
 
 The [1989 gingerol derivatives study](Source-Text/1989-PMID2795431-Gingerol-Mesenteric-Vein-Contraction.txt) used isolated mouse mesenteric veins and records a vascular response.

@@ -1,5 +1,7 @@
 # 2020-2024
 
+New primary records include [Qin Stimulation and Falls Scope](Source-Text/2023-PMID37712094-Qin-Stimulation-and-Falls-Scope.txt) · [Bhowmick Genetic Rest Tremor Case](Source-Text/2023-PMID37636228-Bhowmick-Genetic-Rest-Tremor-Case.txt) · [Johnson Apathy and Caregiver Burden](Source-Text/2023-PMID37772283-Johnson-Apathy-and-Caregiver-Burden.txt) · [Vendrik Parkinson Pilot Outcome Scope](Source-Text/2023-PMID37798034-Vendrik-Parkinson-Pilot-Outcome-Scope.txt).
+
 The [Malekmakan CKD curcumin olfaction trial](Source-Text/2023-PMID36967933-Malekmakan-Curcumin-CKD-Olfaction.txt) reports double-blind placebo-controlled improvements in olfactory quality of life (QOD p = 0.045), self-assessment (p = 0.047) and categorical normosmia shift (20% vs 0%, p = 0.032) alongside an internal Table 2 pre/post arithmetic discrepancy on Iran-SIT.
 
 The [2024 6-shogaol plus levodopa mouse study](Source-Text/2024-PMID39092515-6Shogaol-Levodopa-Mouse-Olfaction.txt) reports improved buried-food olfactory latency and non-motor behavior with isolated oral 6-shogaol in MPTP/probenecid mice without scoring dyskinesia or human clinical rigidity.
