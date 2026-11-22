@@ -73,3 +73,5 @@ January 1, 1980 through December 31, 1984.
 - [Nutt et al. Meals, amino acids and levodopa response](Source-Text/1984-PMID6694694-Meals-and-Levodopa-On-Off.txt).
 
 The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
+
+The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.

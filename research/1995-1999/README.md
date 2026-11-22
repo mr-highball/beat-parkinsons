@@ -179,3 +179,5 @@ The [Keys Mediterranean diet abstract](Source-Text/1995-PMID7754982-Keys-Mediter
 - [PMCID:PMC2539096 access and exact claim scope](Source-Text/1995-PMCIDPMC2539096-Round1-Original-Access.txt).
 
 The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
+
+The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.

@@ -935,3 +935,7 @@ The [raw-orange falls source review](../2025-2029/Food-Experiment-Raw-Orange-Fal
 [Conversation source and limitations](Cultural-and-Experiential/Conversations/2020-Mental-Health-Forum-Grated-Ginger-and-Calm.txt) · [Observations](Observations/Conversations-Ginger-and-Anxiety.md)
 
 The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
+
+[Date fruit and reported pain observations](Observations/Conversations-Date-Fruit-and-Pain.md)
+
+The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.

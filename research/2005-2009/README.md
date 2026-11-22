@@ -393,3 +393,5 @@ The original walnut-fraction crossover registration is bucketed by first public 
 - [PMCID:PMC2620969 access and exact claim scope](Source-Text/2005-PMCIDPMC2620969-Round1-Original-Access.txt).
 
 The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
+
+The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.

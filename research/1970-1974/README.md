@@ -43,3 +43,5 @@ January 1, 1970 through December 31, 1974.
 - [Marjoram Hallucination Reports](Food-Experiment-Marjoram-Hallucination-Reports.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.

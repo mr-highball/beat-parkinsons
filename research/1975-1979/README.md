@@ -48,3 +48,5 @@ January 1, 1975 through December 31, 1979.
 
 - [Caffeine and the antiparkinsonian response to levodopa or piribedil](Source-Text/1975-PMID125389-Caffeine-Levodopa-and-Dyskinesia.txt).
 - [Studies with bromocriptine: III. Concomitant administration of caffeine to patients with idiopathic parkinsonism](Source-Text/1976-PMID181692-Caffeine-and-Bromocriptine.txt).
+
+The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.

@@ -35,3 +35,5 @@ January 1, 1965 through December 31, 1969.
 
 
 [Experimental magnesium depletion publications and body-access gaps](Observations/Magnesium-Depletion-Study-Access.md).
+
+The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.

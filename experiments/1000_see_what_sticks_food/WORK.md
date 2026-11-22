@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The tea and ginger reassessment retained the existing verdicts, added five source families, and verified 16 additional original-source checks. Thirteen continuing access gaps have dated local source files. The Round 1 queue holds 40,056 exact pairs. [Current evidence and access routes](followup/priority-three-replay-nov22/README.md)
+The latest dried-date pain audit checked 859 source identities and cleared 432 original-scope mismatches. It added 427 continuing gap notes and five evidence families for claim 0502, which remains Unknown. Round 1 holds 39,624 exact pairs across 24,873 sources, including 14,247 pairs for claim 0502. [Dried-date source notes and remaining checks](followup/dried-date-pain-priority-four-nov22/README.md)
+
+The tea and ginger reassessment retained the existing verdicts, added five source families, and verified 16 additional original-source checks. Thirteen continuing access gaps have dated local source files. That checkpoint left 40,056 exact pairs. [Tea and ginger evidence and access routes](followup/priority-three-replay-nov22/README.md)
 
 The preceding exact locator audit mapped 522 pending or access-only pairs to dated local research text, with 12 new source notes covering 72 of those pairs. [Original-access locators for Oracle](../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md)
 
