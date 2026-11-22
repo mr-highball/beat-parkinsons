@@ -204,3 +204,5 @@ The 2001 colon perfusion contrasts a seed extract against control fluid and repo
 ### Hallucination adverse events and observer methods
 
 The [EXPRESS randomized comparison](../Source-Text/2004-PMID15590953-EXPRESS-Hallucination-and-Tremor-Events.txt) provides counts of participants with a general adverse-event term. That coding differs from clinical interviews that ask about specific visual experiences, and its tremor adverse-event differences do not correspond to a clear difference on the trial’s examination scores.
+
+The [2002 pramipexole comparison](../Source-Text/2002-PMID12023411-Raw-Fig-Rest-Tremor-Original-Access.txt) measures a clinical tremor score alongside electromyography. The preceding [1999 pallidal case](../../1995-1999/Source-Text/1999-PMID9990083-Raw-Fig-Rest-Tremor-Original-Access.txt) couples a tremor measurement with intraoperative neural signals in one person. These designs answer different tremor questions and provide no fig comparison.

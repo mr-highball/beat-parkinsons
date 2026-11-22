@@ -1,0 +1,9 @@
+# Raw-fig remaining original access routes, November 22, 2026
+
+All 39 continuing exact identities were checked against the branch Oracle catalog revision 34 and the prior source notes. The lookups repeat previous evidence questions and add no new first-pass denominator. All 39 sources had a dated locator before this review.
+
+Of the 38 PMC classic-view requests made alongside the already recovered PNAS original, 11 had authenticated printed page sequences. The other 27 pointed to PDFs and returned HTTP 200 responses without PDF bodies. Independent routes supplied one more original PDF containing the exact transmission-test letter and a complete publisher print view of the tetanus case. Indexed publisher originals and mirrored original passages supplied another 12 source-scope decisions. Where an extract included neighboring articles, the exact case, letter or report was separated by title and page. Indexed primary scope is recorded separately from complete text.
+
+The 14 complete originals or complete print views and 12 original-scope decisions resolve 26 of 39 exact pairs. Thirteen access gaps remain, including eight abstracts and five bibliographic records. Each has a dated source note with its verified depth, inspected archive route and unresolved check. The public and local search trails preserved the raw common fig, individual intake, Parkinson population and separate rest-tremor boundaries. The ten-family scorecard for claim 0559 remains Unknown at 50.
+
+[Exact dispositions](dispositions.tsv) · [Member methods and routes](source-route-reviews.tsv) · [Scanned page receipts](printed-originals.tsv) · [Continuing source gaps](remaining-gaps.tsv) · [Search trails](search-trails.tsv) · [Native route proof](native-route-verification.txt) · [Native replay proof](native-replay-verification.txt) · [Research digest](../../../../research/2025-2029/Food-Experiment-Fig-Rest-Tremor-Classic-Archive-Nov22.md)
