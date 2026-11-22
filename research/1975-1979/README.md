@@ -39,3 +39,8 @@ January 1, 1975 through December 31, 1979.
 - [Bowel outcomes and selected motor or nonmotor follow-up](Food-Experiment-Bowel-and-Motor-Outcomes.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+## Caffeine, tea and clinical source context
+
+- [Caffeine and the antiparkinsonian response to levodopa or piribedil](Source-Text/1975-PMID125389-Caffeine-Levodopa-and-Dyskinesia.txt).
+- [Studies with bromocriptine: III. Concomitant administration of caffeine to patients with idiopathic parkinsonism](Source-Text/1976-PMID181692-Caffeine-and-Bromocriptine.txt).

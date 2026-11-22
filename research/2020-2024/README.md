@@ -905,3 +905,7 @@ The conference and observational review links the separate visual outcomes, the 
 - [Rosemary extract and adipose stem cells in 6-OHDA lesion memory model, species discrepancy noted](Source-Text/2024-PMID38903548-Kousha-Rosemary-Extract-6OHDA-Rats.txt).
 - [Coffee types (unsweetened caffeinated vs sweetened and decaf) and incident Parkinson disease in UK Biobank](Source-Text/2024-PMID39168304-Zhang-Coffee-Types-UKBiobank-PD.txt).
 - [Plain milk vs beverage-added milk and incident Parkinson disease in French E3N women cohort](Source-Text/2024-PMID39294525-Hajji-Louati-Milk-Dairy-E3N-PD.txt).
+
+## Caffeine, tea and clinical source context
+
+- [58th EASD Annual Meeting of the European Association for the Study of Diabetes](Source-Text/2022-PMID35920845-EASD-Food-and-Motor-Scope.txt).

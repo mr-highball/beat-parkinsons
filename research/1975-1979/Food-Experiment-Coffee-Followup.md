@@ -1,6 +1,6 @@
 # Isolated caffeine as a bromocriptine adjunct in idiopathic parkinsonism
 
-In a 1976 double-blind study, Shoulson et al. gave isolated caffeine to six people with idiopathic parkinsonism during bromocriptine therapy. The investigators reported that caffeine failed to enhance the antiparkinsonian action of bromocriptine. The indexed abstract supplies no separate fatigue estimate and the exposure was pharmacologic caffeine rather than brewed coffee. This is historical context for [0121](../../experiments/1000_see_what_sticks_food/statements/0121.txt). [Primary abstract, PMID 181692](https://pubmed.ncbi.nlm.nih.gov/181692/) · [Journal record](https://doi.org/10.1212/WNL.26.8.741)
+In a 1976 double-blind study, Kartzinel and colleagues gave isolated caffeine to six people with idiopathic parkinsonism during bromocriptine therapy. The investigators reported that caffeine failed to enhance the antiparkinsonian action of bromocriptine. The indexed abstract supplies no separate fatigue estimate and the exposure was pharmacologic caffeine rather than brewed coffee. This is historical context for [0121](../../experiments/1000_see_what_sticks_food/statements/0121.txt). [Primary abstract, PMID 181692](https://pubmed.ncbi.nlm.nih.gov/181692/) · [Journal record](https://doi.org/10.1212/WNL.26.8.741)
 
 ## Caffeine with levodopa or piribedil
 

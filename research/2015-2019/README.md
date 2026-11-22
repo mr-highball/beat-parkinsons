@@ -796,3 +796,8 @@ Two original first releases date to 2019, with 2020 journal issues. [Insular mor
 - [Germinated brown rice pretreatment in rotenone Parkinson model rats, open-field and pole-test abstract](Source-Text/2016-PMID27430236-Chompoopong-Germinated-Brown-Rice-Rotenone-Rats.txt).
 - [Nigella sativa seed oil reduction of haloperidol extrapyramidal symptoms and oral dyskinesia in rats](Source-Text/2016-PMID27752803-Malik-Nigella-Sativa-Oil-Haloperidol-EPS-Rats.txt).
 - [Oral crocin preservation of pole-test, wire-hang, and nigral TH neurons in MPTP mice](Source-Text/2019-PMID30159851-Haeri-Crocin-MPTP-Mice-Pole-Wire.txt).
+
+## Caffeine, tea and clinical source context
+
+- [Health—exploring complexity: an interdisciplinary systems approach HEC2016](Source-Text/2016-PMID27522353-HEC-Food-and-Gait-Extract.txt).
+- [Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019](Source-Text/2019-PMID31188969-Geriatric-Cardiology-Food-Context.txt).

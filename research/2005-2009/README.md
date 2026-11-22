@@ -369,3 +369,7 @@ The original walnut-fraction crossover registration is bucketed by first public 
 - [Hospital series of reactions to Ficus insipida latex](Source-Text/2005-PMID15814256-Oje-Latex-Hospital-Cases.txt).
 
 [Helicobacter pylori treatment, levodopa absorption and the antioxidant comparison](Source-Text/2006-PMID16801644-HP-Eradication-Levodopa-Absorption.txt).
+
+## Caffeine, tea and clinical source context
+
+- [Effects of caffeine on levodopa pharmacokinetics and pharmacodynamics in Parkinson disease](Source-Text/2006-PMID16966563-Caffeine-Levodopa-and-Walking.txt).
