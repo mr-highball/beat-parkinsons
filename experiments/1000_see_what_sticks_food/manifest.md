@@ -25,6 +25,8 @@ All 1,000 frozen Round 1 claims have a v1 evidence scorecard with 3,798 source-f
 
 ### Highlighted checked v1 findings
 
+The November 22 indexed-primary audit moved 17 source reviews to original-body depth for the raw-orange and fall-frequency claim. Verified source matches concerned other exposures, endpoints, places or figure labels. The broader Round 1 queue remains open with 40,481 exact pairs. [Indexed originals and remaining gaps](followup/indexed-primary-originals-nov22/README.md)
+
 - **Ground saffron and Parkinson depression ([0063](statements/0063.txt), Maybe False, 55 — direct clinical signal):** Randomized 92-person Parkinson trial of fixed oral Sargol stigma powder tablets favored lower DASS depression (-4.58 points, 95% CI -8.34 to -0.81), opposing the frozen worsening hypothesis. Independent Tehran trial also favored Hamilton depression with two inconclusive secondary scales.
 - **Dried saffron and Parkinson fatigue ([0485](statements/0485.txt), Maybe False, 55 — direct clinical signal):** Same 92-person Parkinson trial favored lower Parkinson Fatigue Scale scores (-9.20 points, 95% CI -13.76 to -4.65); original public registration omitted the standalone fatigue scale until a post-receipt revision, keeping the signal provisional.
 - **Brewed black tea and Parkinson bradykinesia ([0082](statements/0082.txt), Maybe True, 51 — limited clinical link):** Double-blind randomized Parkinson caffeine trial (Postuma et al. 2012, `n = 61`) reported lower UPDRS motor/bradykinesia scores on caffeine versus placebo (-4.69 UPDRS-III points), linked to brewed black tea via infusion chromatography; isolated caffeine transfer and longer-term follow-up remain open.

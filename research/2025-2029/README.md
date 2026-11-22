@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [indexed primary original audit](Food-Experiment-Indexed-Primary-Originals-Nov22.md) links 17 verified source summaries and the dated notes for the remaining case and article access gaps.
+
 The [shared proceedings and clinical gap audit](Food-Experiment-Shared-Proceedings-and-Clinical-Gaps-Nov22.md) links the exact original-access gaps across five collections and six clinical sources.
 
 The [original collections and turmeric pain audit](Food-Experiment-Original-Collections-Turmeric-Nov22.md) links 125 original reviews, 125 access gaps, and the November 2026 Cochrane synthesis.

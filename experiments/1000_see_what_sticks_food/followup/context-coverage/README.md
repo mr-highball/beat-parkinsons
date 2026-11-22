@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,395 |
+| Local body or other primary-source context | 20,412 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 74 |
 | Pending or access-only disposition | 330 |
-| No imported exact review | 40,094 |
+| No imported exact review | 40,077 |
 | **Total** | **61,252** |
+
+The indexed-primary audit resolved 17 original-depth pairs. The queue retains 40,481 pairs across 25,671 source keys. Three reviewed records still need complete originals, and each has a dated local source note. [Originals and access gaps](../indexed-primary-originals-nov22/README.md)
 
 The shared proceedings and clinical audit resolved four exact source pairs at original-body depth. The queue retains 40,498 pairs across 25,688 source keys. Five proceedings records and six clinical source records preserve the exact open pair locators. [Shared proceedings and clinical original access](../shared-proceedings-access-nov22/README.md)
 
