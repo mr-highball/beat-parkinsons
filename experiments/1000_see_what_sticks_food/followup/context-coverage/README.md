@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 19,409 |
-| Exact assessment with basis unspecified | 129 |
-| Abstract context | 224 |
-| Title or index | 85 |
+| Local body or other primary-source context | 19,766 |
+| Exact assessment with basis unspecified | 133 |
+| Abstract context | 226 |
+| Title or index | 84 |
 | Pending or access-only disposition | 361 |
-| No imported exact review | 41,044 |
+| No imported exact review | 40,682 |
 | **Total** | **61,252** |
+
+The November 22 caffeine and tea checkpoint verifies 28 original pairs at body depth, including all three remaining for black tea and walking. The replay leaves 41,127 pairs across 25,906 source keys, with journal body and query gaps retained separately. [Exact scope and replay](../caffeine-and-tea-originals-nov22/README.md)
 
 Seven queued 2016 raw fig and drooling originals reached body review. The replay leaves 41,490 pairs across 26,071 sources globally. Claim 0188 has 92 of 562 original pairs remaining, including 12 access or identity holds. [2016 original review](../fig-drooling-2016-originals-nov20-156/README.md)
 
