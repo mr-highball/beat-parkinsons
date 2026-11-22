@@ -1,0 +1,5 @@
+# Tea, wakefulness and vigor
+
+The 1596 Bencao Gangmu tea entry attributes reduced sleep and increased vigor to an earlier text. It also preserves cautions about quantity and when to drink tea. The historical language describes customary expectations and leaves the preparation undefined. No earlier five-year period has an inspected witness for this passage in the catalog. [Dated traditional record](../Cultural-and-Experiential/Traditional-Practices/1596-Li-Shizhen-Tea-Wakefulness-and-Vigor.txt)
+
+Later research separates daytime sleepiness, nighttime sleep problems and fatigue into different outcomes. The Jiang study uses traditional tea use as background for a fly experiment on isolated EGCG. The Kagoshima Parkinson cohort reports nighttime sleep associations and leaves daytime sleepiness and fatigue unmeasured. [EGCG model scope](../../2025-2029/Source-Text/2026-Jiang-EGCG-PINK1-Glycolysis-Abstract-Extract.txt) · [Kagoshima endpoint notes](../../2025-2029/Source-Text/2026-PMID42816813-Sakakima-Green-Tea-Nonmotor-Symptoms.txt)

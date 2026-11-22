@@ -590,3 +590,5 @@ The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Gin
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
 
 [French PNNS fruit item and the PACAPh protocol](Source-Text/2013-PMID23490635-PNNS-Fruit-Item-Scope.txt)
+
+The [2011 Wang rosmarinic acid model](Source-Text/2011-PMID22205146-Wang-Rosmarinic-Acid-Parkinson-Rats.txt) and [2013 Jin chronic-stress experiment](Source-Text/2013-Jin-Rosmarinic-Acid-and-Rat-Stress.txt) trace separate study families and outcomes in the later review tables.

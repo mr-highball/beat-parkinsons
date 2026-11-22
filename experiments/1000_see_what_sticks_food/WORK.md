@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The priority-four title-depth review checked 26 source identities across 13 claims and resolved six source scopes. Twenty original-access gaps have dated local notes. Round 1 has 39,014 exact pairs queued across 24,263 sources, including 397 known pending or access-only pairs mapped to 103 local texts. Published verdicts remain unchanged. [Source audit and remaining originals](followup/priority-four-title-depth-nov22/README.md)
+The priority-three original-scope review checked 12 exact pairs across nine sources. Original tables or sections resolved four source-context decisions as related. Eight pairs retain open original access with dated notes. Round 1 has 39,010 exact pairs queued across 24,259 sources, including 393 documented access gaps mapped to 99 local files. [Priority-three original scope](followup/priority-three-original-scopes-nov22/README.md)
+
+The priority-four title-depth review checked 26 source identities across 13 claims and resolved six source scopes. Twenty original-access gaps have dated local notes. That checkpoint left 39,014 exact pairs queued across 24,263 sources, including 397 known pending or access-only pairs mapped to 103 local texts. Published verdicts remain unchanged. [Source audit and remaining originals](followup/priority-four-title-depth-nov22/README.md)
 
 The raw-fig resting-tremor publisher recheck resolved four of 13 exact source scopes using identifiable original sections. Nine still need original text and have dated notes. Claim 0559 remains Unknown. That checkpoint left 39,020 exact pairs queued, including 2,541 for claim 0559. [Raw-fig publisher sections](followup/fig-rest-tremor-publisher-sections-nov22/README.md)
 
