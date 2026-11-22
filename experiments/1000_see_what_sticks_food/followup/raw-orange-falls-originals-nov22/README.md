@@ -1,0 +1,9 @@
+# Raw orange and fall frequency originals, November 22, 2026
+
+This audit examined 75 priority-four originals mapped to frozen claim 0259. It verified 47 originals from PMC HTML and four through authenticated Europe PMC JATS. The 51 original-depth dispositions include 50 exclusions and one related Kampo study. Twenty-four pairs remain open, comprising 21 authenticated abstracts and three bibliographic records. Three existing dated notes were reused, including the two-dye microarray article whose imported PMC alias points to the wrong DOI.
+
+The evidence review distinguishes grouped citrus and hospitalizations, the non-Parkinson Altemor supplement, broader fruit and vegetable intake, a traditional multi-herb formulation, and a Parkinson diet protocol with planned fall collection. The Blekkenhorst fracture analysis shares the CAIFOS parent cohort with Sim. The cultural note is linked to the underlying Kampo study. Five source families supply no transferable direction for raw orange and fall frequency in diagnosed Parkinson disease. The v1 scorecard remains open at 50.
+
+Of 75 subjects of exact source lookup, three had been checked before. The 72 new first-pass questions returned zero exact local matches. This targeted set was selected for incomplete knowledge. The exact replay leaves 2,289 original pairs for 0259 and 40,072 across Round 1. Round 2 remains queued.
+
+[Original dispositions](dispositions.tsv) · [Local source texts](source-notes.tsv) · [Access holds and next routes](archive-gaps.tsv) · [Scorecard decision](0259-decision.tsv) · [Source families](0259-families.tsv) · [MCP draft check](0259-oracle-draft-check.json) · [Search trail](search-trails.tsv) · [Native replay](native-replay-verification.txt) · [Dated gap digest](../../../../research/2025-2029/Food-Experiment-Raw-Orange-Falls-Originals-Nov22.md)

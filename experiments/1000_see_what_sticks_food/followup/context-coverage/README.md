@@ -6,13 +6,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 20,770 |
+| Local body or other primary-source context | 20,821 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 53 |
-| Pending or access-only disposition | 499 |
-| No imported exact review | 39,571 |
+| Pending or access-only disposition | 522 |
+| No imported exact review | 39,497 |
 | **Total** | **61,252** |
+
+The raw-orange falls review resolved 51 original-source checks and recorded 24 continuing access gaps. Claim 0259 retains Unknown after five evidence families were checked. Round 1 holds 40,072 exact pairs across 25,321 sources. [Raw orange sources, scorecard and gaps](../raw-orange-falls-originals-nov22/README.md)
 
 The dried-date apathy review resolved 89 original-source checks and documented 59 continuing holds. Claim 0758 retains Unknown after eleven source families were checked. Round 1 now holds 40,123 exact pairs across 25,372 sources. [Dried-date apathy sources, scorecard and gaps](../dried-date-apathy-originals-nov22/README.md)
 

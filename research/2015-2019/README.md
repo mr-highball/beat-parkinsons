@@ -823,3 +823,5 @@ The [complete CIRSE 2019 member review](Source-Text/2019-PMC7103159-CIRSE-Collec
 The [Japanese physiology proceedings source](Source-Text/2019-PMC10716970-Physiology-Original-Access.txt) gives the recovered original, individual presentation locators, and related capsaicin, olive oil, nutmeg and chocolate context.
 
 The [Newcastle Parkinson sage trial summary and missing outcomes](Source-Text/2019-EudraCT2007-002899-34-Parkinson-Sage-Outcome-Gap.txt) preserves the original grant report route and the gaps for five frozen claims.
+
+The [raw-orange falls source review](../2025-2029/Food-Experiment-Raw-Orange-Falls-Originals-Nov22.md) links the dated originals, continuing access holds and related study and cultural context.

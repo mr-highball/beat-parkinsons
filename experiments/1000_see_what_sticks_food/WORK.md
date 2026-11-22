@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The raw-orange falls review resolved 51 original-source checks and recorded 24 continuing access gaps. Claim 0259 retains Unknown after five evidence families were checked. Round 1 holds 40,072 exact pairs across 25,321 sources. [Raw orange sources, scorecard and gaps](followup/raw-orange-falls-originals-nov22/README.md)
+
 The dried-date apathy review resolved 89 original-source checks and documented 59 continuing holds. Claim 0758 retains Unknown after eleven source families were checked. Round 1 now holds 40,123 exact pairs across 25,372 sources. [Dried-date apathy sources, scorecard and gaps](followup/dried-date-apathy-originals-nov22/README.md)
 
 The raw-fig rest-tremor review cleared 82 original-source checks, cataloged 120 continuing access holds and retained Unknown for claim 0559. That checkpoint left 40,212 exact pairs queued across 25,461 source keys. [Raw fig sources, scorecard and gaps](followup/fig-rest-tremor-originals-nov22/README.md)

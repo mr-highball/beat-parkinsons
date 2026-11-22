@@ -929,3 +929,5 @@ The conference and observational review links the separate visual outcomes, the 
 The [Italian Society of Neurology source note](Source-Text/2020-PMC7683589-Italian-Neurology-Collection-Review-Gap.txt) links the recovered original PDF, distinguishes 11 cleared pairs, and records the 12 olive-oil pairs with missing poster figures.
 
 The [sustained capsaicin journal access note](Source-Text/2020-PMID32755305-Yoshihara-Sustained-Capsaicin-Swallowing.txt) links the date-bucketed abstract to the 2018 and 2019 original proceedings. The [brief and continuous exposure study](Source-Text/2021-PMID33449304-Cheng-Capsaicinoid-Exposure-Timing.txt) records a separate comparison in healthy volunteers.
+
+The [raw-orange falls source review](../2025-2029/Food-Experiment-Raw-Orange-Falls-Originals-Nov22.md) links the dated originals, continuing access holds and related study and cultural context.
