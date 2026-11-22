@@ -1,6 +1,6 @@
 # Round 1 shared original source access
 
-Reviewed on 2026-11-22. The Round 1 audit selected 272 exact claim–source pairs attached to eight shared records. Two complete originals resolved 64 source-context pairs. The six records below account for 208 pairs still in the exact review queue. Review that queue by claim ID and source key using the linked [208-pair gap ledger](../../experiments/1000_see_what_sticks_food/followup/shared-originals-and-archive-gaps-nov22/archive-gaps.tsv). These are source-access and attribution findings. They do not change the claims' efficacy verdicts.
+Reviewed on 2026-11-22. The Round 1 audit selected 272 exact claim–source pairs attached to eight shared records. Two complete originals resolved 64 source-context pairs. The six records below account for 208 pairs still in the exact review queue. Review that queue by claim ID and source key using the linked [208-pair gap ledger](../../experiments/1000_see_what_sticks_food/followup/shared-originals-and-archive-gaps-nov22/archive-gaps.tsv). Each linked source note includes its affected claim IDs, source keys, ingredients and symptoms for direct MCP lookup. These are source-access and attribution findings. They do not change the claims' efficacy verdicts.
 
 | Source and period | Verified depth | Pairs open | Next original-source route |
 | --- | --- | ---: | --- |
