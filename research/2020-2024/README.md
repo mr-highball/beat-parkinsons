@@ -941,3 +941,13 @@ The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Gin
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
 
 - [MIND-PD preprint scope and planned resting-tremor measurement](Source-Text/2024-MIND-PD-Research-Square-Protocol-Scope.txt).
+
+### Round 1 original-source scopes, November 22, 2026
+
+These dated notes preserve verified source depth and remaining gaps. [Round 1 source audit](../2025-2029/Food-Experiment-Round-1-Priority-Four-Title-Depth-Nov22.md)
+
+- [PMID:33464710 · claim 0583 · abstract](Source-Text/2021-PMID33464710-Priority-Four-Original-Scope.txt).
+- [PMID:34323563 · claim 0128 · abstract](Source-Text/2021-PMID34323563-Patel-Parkinson-Depression-Author-Supplement.txt).
+- [PMID:36508883 · claim 0583 · abstract](Source-Text/2022-PMID36508883-Priority-Four-Original-Scope.txt).
+- [PMID:37165996 · claim 0733 · abstract](Source-Text/2023-PMID37165996-Priority-Four-Original-Scope.txt).
+- [PMID:38578434 · claim 0369 · primary source](Source-Text/2024-PMID38578434-Amantadine-NS-Park-Followup.txt).

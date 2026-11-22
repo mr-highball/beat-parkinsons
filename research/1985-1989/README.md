@@ -109,3 +109,10 @@ January 1, 1985 through December 31, 1989.
 The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
 
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
+
+### Round 1 original-source scopes, November 22, 2026
+
+These dated notes preserve verified source depth and remaining gaps. [Round 1 source audit](../2025-2029/Food-Experiment-Round-1-Priority-Four-Title-Depth-Nov22.md)
+
+- [PMID:2472582 · claim 0305 · abstract](Source-Text/1989-PMID2472582-Priority-Four-Original-Scope.txt).
+- [PMID:2690730 · claim 0305 · full text](Source-Text/1989-PMID2690730-Priority-Four-Original-Scope.txt).

@@ -130,3 +130,13 @@ The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Gin
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
 
 [Iowa dietary questionnaire methods](Source-Text/1992-PMID1415141-Iowa-Food-Questionnaire.txt)
+
+### Round 1 original-source scopes, November 22, 2026
+
+These dated notes preserve verified source depth and remaining gaps. [Round 1 source audit](../2025-2029/Food-Experiment-Round-1-Priority-Four-Title-Depth-Nov22.md)
+
+- [PMID:2328507 · claim 0305 · abstract](Source-Text/1990-PMID2328507-Priority-Four-Original-Scope.txt).
+- [PMID:1758464 · claim 0305 · title and index](Source-Text/1991-PMID1758464-Priority-Four-Original-Scope.txt).
+- [PMID:8058144 · claim 0305 · abstract](Source-Text/1994-PMID8058144-Priority-Four-Original-Scope.txt).
+- [PMID:8147565 · claim 0305 · full text](Source-Text/1994-PMID8147565-Priority-Four-Original-Scope.txt).
+- [PMID:8196678 · claim 0305 · abstract](Source-Text/1994-PMID8196678-Priority-Four-Original-Scope.txt).

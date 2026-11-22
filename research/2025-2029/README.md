@@ -854,7 +854,7 @@ The [dried-date pain and priority-three review](Food-Experiment-Date-Pain-and-Pr
 
 The [raw-orange falls source review](Food-Experiment-Raw-Orange-Falls-Originals-Nov22.md) links the dated originals, continuing access holds and related study and cultural context.
 
-The [Round 1 original-access locator audit](Food-Experiment-Round-1-Original-Access-Nov22.md) gives dated local research texts for all 377 entries currently classified as pending or access-limited. The [raw-fig resting-tremor publisher check](Food-Experiment-Raw-Fig-Rest-Tremor-Publisher-Sections-Nov22.md) adds four verified study sections and updated source routes. The [raw-orange fall frequency follow-up](Food-Experiment-Raw-Orange-Falls-Classic-Archive-Nov22.md) adds two dated preprint scopes and records the remaining article gaps. The [dried-date pain classic archive and questionnaire review](Food-Experiment-Dried-Date-Pain-Classic-Archive-Nov22.md) records the latest source boundaries, including the [Parkinson acupuncture and accidental injury cohort](Source-Text/2026-PMC13661429-Dried-Date-Pain-Original-Scope.txt).
+The [Round 1 original-access locator audit](Food-Experiment-Round-1-Original-Access-Nov22.md) gives dated local research texts for all 397 entries currently classified as pending or access-limited. The [priority-four title-depth audit](Food-Experiment-Round-1-Priority-Four-Title-Depth-Nov22.md) covers 26 source identities and records 20 continuing original-access gaps. The [raw-fig resting-tremor publisher check](Food-Experiment-Raw-Fig-Rest-Tremor-Publisher-Sections-Nov22.md) adds four verified study sections and updated source routes. The [raw-orange fall frequency follow-up](Food-Experiment-Raw-Orange-Falls-Classic-Archive-Nov22.md) adds two dated preprint scopes and records the remaining article gaps. The [dried-date pain classic archive and questionnaire review](Food-Experiment-Dried-Date-Pain-Classic-Archive-Nov22.md) records the latest source boundaries, including the [Parkinson acupuncture and accidental injury cohort](Source-Text/2026-PMC13661429-Dried-Date-Pain-Original-Scope.txt).
 
 The [tea, ginger and original-source audit](Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
 
@@ -873,3 +873,11 @@ The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-
 - [Raw-fig and rest-tremor archive recovery, including remaining dated gaps](Food-Experiment-Fig-Rest-Tremor-Publisher-Recovery-Nov22.md).
 
 - [Raw-fig classic archive and publisher scope](Food-Experiment-Fig-Rest-Tremor-Classic-Archive-Nov22.md). The dated record links the 13 continuing original-access gaps.
+
+### Round 1 original-source scopes, November 22, 2026
+
+These dated notes preserve verified source depth and remaining gaps. [Round 1 source audit](Food-Experiment-Round-1-Priority-Four-Title-Depth-Nov22.md)
+
+- [PMID:41612959 · claim 0133 · abstract](Source-Text/2026-PMID41612959-Mariani-DIGPD-Falls-and-Walking-Aid.txt).
+- [PMID:41944203 · claim 0593 · full text](Source-Text/2026-PMID41944203-Priority-Four-Original-Scope.txt).
+- [PMID:42715510 · claim 0369 · abstract](Source-Text/2026-PMID42715510-NS-Park-PPMI-Freezing-Comparisons.txt).

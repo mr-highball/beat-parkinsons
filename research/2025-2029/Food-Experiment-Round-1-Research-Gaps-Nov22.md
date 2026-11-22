@@ -26,7 +26,9 @@ A later [gerontology and neurology collections checkpoint](Food-Experiment-Neuro
 
 - **Raw fig and resting tremor, 0559.** The source recheck verified four original study sections and kept nine original-text questions open. Eating tasks, baseline tremor and scored outcomes remain separate. A measured Parkinson resting-tremor comparison for raw fig remains open. [Publisher scope and original gaps](Food-Experiment-Raw-Fig-Rest-Tremor-Publisher-Sections-Nov22.md)
 
-The [known original access index](Food-Experiment-Round-1-Original-Access-Nov22.md) reconciles all 377 entries classified as pending or access-only and records their 85 dated local texts.
+The [priority-four title-depth review](Food-Experiment-Round-1-Priority-Four-Title-Depth-Nov22.md) carries forward 20 original-access gaps with exact claim and source records.
+
+The [known original access index](Food-Experiment-Round-1-Original-Access-Nov22.md) reconciles all 397 entries classified as pending or access-only and records their 103 dated local texts.
 
 The earlier [dried-date pain review](Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) records 427 continuing local source and context gaps, with verified depths and exact next checks.
 

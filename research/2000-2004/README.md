@@ -249,3 +249,15 @@ The walnut-oil lipid trial is archived at author-abstract depth, with processing
 The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
 
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
+
+### Round 1 original-source scopes, November 22, 2026
+
+These dated notes preserve verified source depth and remaining gaps. [Round 1 source audit](../2025-2029/Food-Experiment-Round-1-Priority-Four-Title-Depth-Nov22.md)
+
+- [PMID:10896689 · claim 0445 · abstract](Source-Text/2000-PMID10896689-Priority-Four-Original-Scope.txt).
+- [PMID:14602969 · claim 0370 · abstract](Source-Text/2001-PMID14602969-Priority-Four-Original-Scope.txt).
+- [PMID:12429221 · claim 0663 · abstract](Source-Text/2002-PMID12429221-Priority-Four-Original-Scope.txt).
+- [PMID:12853230 · claim 0178 · abstract](Source-Text/2003-PMID12853230-SCA17-Parkinsonism-Access.txt).
+- [PMID:14615078 · claim 0370 · abstract](Source-Text/2004-PMID14615078-Priority-Four-Original-Scope.txt).
+- [PMID:14978684 · claim 0178 · full text](Source-Text/2004-PMID14978684-Familial-Parkinson-Dystonia-Access.txt).
+- [PMID:15282366 · claim 0305 · abstract](Source-Text/2004-PMID15282366-Priority-Four-Original-Scope.txt).

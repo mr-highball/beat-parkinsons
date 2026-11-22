@@ -835,3 +835,10 @@ The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Gin
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
 
 [Chinese food-frequency questionnaire versions](Source-Text/2018-PMID30593302-Liu-Chinese-FFQ-Versions.txt)
+
+### Round 1 original-source scopes, November 22, 2026
+
+These dated notes preserve verified source depth and remaining gaps. [Round 1 source audit](../2025-2029/Food-Experiment-Round-1-Priority-Four-Title-Depth-Nov22.md)
+
+- [PMID:27037215 · claim 0755 · abstract](Source-Text/2016-PMID27037215-Priority-Four-Original-Scope.txt).
+- [PMID:27956674 · claim 0663 · full text](Source-Text/2016-PMID27956674-Priority-Four-Original-Scope.txt).

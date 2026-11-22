@@ -1,6 +1,8 @@
 # Food thought experiment work record
 
-The raw-fig resting-tremor publisher recheck resolved four of 13 exact source scopes using identifiable original sections. Nine still need original text and have dated notes. Claim 0559 remains Unknown. Round 1 has 39,020 exact pairs queued, including 2,541 for claim 0559. [Raw-fig publisher sections](followup/fig-rest-tremor-publisher-sections-nov22/README.md)
+The priority-four title-depth review checked 26 source identities across 13 claims and resolved six source scopes. Twenty original-access gaps have dated local notes. Round 1 has 39,014 exact pairs queued across 24,263 sources, including 397 known pending or access-only pairs mapped to 103 local texts. Published verdicts remain unchanged. [Source audit and remaining originals](followup/priority-four-title-depth-nov22/README.md)
+
+The raw-fig resting-tremor publisher recheck resolved four of 13 exact source scopes using identifiable original sections. Nine still need original text and have dated notes. Claim 0559 remains Unknown. That checkpoint left 39,020 exact pairs queued, including 2,541 for claim 0559. [Raw-fig publisher sections](followup/fig-rest-tremor-publisher-sections-nov22/README.md)
 
 The raw-orange and fall frequency archive audit resolved 23 of 26 exact source checks. It examined 22 complete originals and one identifiable section from an original letter. Three checks in this batch still need their original texts and have dated local notes. Claim 0259 remains Unknown. That checkpoint left 39,024 exact pairs queued, including 2,266 for claim 0259. [Raw-orange archive audit](followup/raw-orange-falls-classic-recovery-nov22/README.md)
 

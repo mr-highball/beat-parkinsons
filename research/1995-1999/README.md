@@ -181,3 +181,10 @@ The [Keys Mediterranean diet abstract](Source-Text/1995-PMID7754982-Keys-Mediter
 The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md) links the dated records and their remaining scope.
 
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
+
+### Round 1 original-source scopes, November 22, 2026
+
+These dated notes preserve verified source depth and remaining gaps. [Round 1 source audit](../2025-2029/Food-Experiment-Round-1-Priority-Four-Title-Depth-Nov22.md)
+
+- [PMID:10653307 · claim 0583 · abstract](Source-Text/1999-PMID10653307-Priority-Four-Original-Scope.txt).
+- [PMID:9854977 · claim 0175 · title and index](Source-Text/PMC2170387.txt).

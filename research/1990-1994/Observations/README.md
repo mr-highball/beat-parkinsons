@@ -22,6 +22,8 @@ The 1992 black pepper study measured time from the mouth to the cecum in healthy
 - [Interviews and patient accounts](../Community-and-Care.md) documented support, independence, driving, and counseling as care priorities.
 - [Colonic transit](../Nonmotor-and-Daily-Life.md) gave clinicians an objective measure of constipation. [Food histories](../Food-and-Nutrition.md) generated dietary hypotheses with substantial recall and multiple-comparison limitations.
 
+The 1989 one-year follow-up records early-morning dystonia and time in different motor states during carbidopa–levodopa treatment. The 1994 retrospective series distinguishes dystonic and choreic dyskinesias across medication states in a severe-dyskinesia cohort. The shared author surname Sage explains the search match for both papers. Read the designs separately when comparing their motor findings. [1989 treatment follow-up](../../1985-1989/Source-Text/1989-PMID2690730-Priority-Four-Original-Scope.txt) · [1994 retrospective series](../Source-Text/1994-PMID8147565-Priority-Four-Original-Scope.txt)
+
 ## Comparison with [1985–1989](../../1985-1989/Observations/README.md)
 
 - The earlier interim selegiline report was followed by a more complete factorial trial report. Vitamin E lacked benefit on the measured outcome, and symptom effects complicated the selegiline progression claim.
