@@ -731,13 +731,22 @@ begin
             LPort := StrToInt(ParamStr(3));
           if (LPort < 1) or (LPort > 65535) then
             raise EConvertError.Create('The web port must be between 1 and 65535.');
-          LWebRoot := LOracle.FRepoRoot + 'build' + PathDelim + 'parkinsons-oracle' +
-            PathDelim + 'web';
+          LWebRoot := ExpandFileName(ExtractFilePath(ParamStr(0)) + '..' + PathDelim + 'web');
+          if not DirectoryExists(LWebRoot) then
+            LWebRoot := LOracle.FRepoRoot + 'build' + PathDelim + 'parkinsons-oracle' +
+              PathDelim + 'web';
           LLanBinding := '';
           if ParamCount >= 4 then
             LLanBinding := ParamStr(4);
           if ParamCount > 4 then
             raise EArgumentException.Create('Use web <repo> [port] [private-ipv4/prefix].');
+          // Pre-warm the claim index and catalog before listening so initial browser requests never stall.
+          LOracle.Index;
+          try
+            LResult := LOracle.Catalog.Status;
+            LResult.Free;
+          except
+          end;
           ServeOracleWeb(LWebRoot, LPort, LOracle.Invoke, LLanBinding);
         end;
       4:

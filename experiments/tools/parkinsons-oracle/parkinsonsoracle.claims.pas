@@ -961,6 +961,7 @@ var
   LClaim: TClaim;
   LCheck: TJSONObject;
   LStatus: String;
+  LScorecardIndex: TScorecardIndex;
 begin
   FV1Scorecards := 0;
   FDirectionalWithScorecard := 0;
@@ -974,28 +975,33 @@ begin
       begin
         Continue;
       end;
-      LLines.Text := FScorecards[LRound];
-      for LIndex := 1 to LLines.Count - 1 do
-      begin
-        if LLines[LIndex] = '' then
+      LScorecardIndex := TScorecardIndex.Create(FScorecards[LRound], FScorecardSources[LRound]);
+      try
+        LLines.Text := FScorecards[LRound];
+        for LIndex := 1 to LLines.Count - 1 do
         begin
-          Continue;
+          if LLines[LIndex] = '' then
+          begin
+            Continue;
+          end;
+          LFields := SplitFields(LLines[LIndex], #9);
+          if (Length(LFields) < 1) or
+            not FIdentities.TryGetValue(Key(LRound, LFields[0]), LClaim) then
+          begin
+            Continue;
+          end;
+          LCheck := TJSONObject.Create;
+          try
+            LScorecardIndex.AddEvidenceScorecardFor(LCheck, LClaim.Id, LClaim.Direction,
+              LClaim.Verdict, LClaim.Confidence);
+            LStatus := LCheck.Get('review_status', 'no_scorecard');
+            LClaim.ScorecardStatus := LStatus;
+          finally
+            LCheck.Free;
+          end;
         end;
-        LFields := SplitFields(LLines[LIndex], #9);
-        if (Length(LFields) < 1) or
-          not FIdentities.TryGetValue(Key(LRound, LFields[0]), LClaim) then
-        begin
-          Continue;
-        end;
-        LCheck := TJSONObject.Create;
-        try
-          AddEvidenceScorecard(LCheck, FScorecards[LRound], FScorecardSources[LRound],
-            LClaim.Id, LClaim.Direction, LClaim.Verdict, LClaim.Confidence);
-          LStatus := LCheck.Get('review_status', 'no_scorecard');
-          LClaim.ScorecardStatus := LStatus;
-        finally
-          LCheck.Free;
-        end;
+      finally
+        LScorecardIndex.Free;
       end;
     end;
   finally

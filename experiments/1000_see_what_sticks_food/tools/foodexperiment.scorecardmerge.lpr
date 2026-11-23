@@ -422,6 +422,7 @@ var
   LSrcList: TStringList;
   LSingleSrcText: String;
   LCheck: TJSONObject;
+  LScorecardIndex: TScorecardIndex;
   LExpectedVerdict: String;
   LAnchorText: String;
   LAnchorValue: Currency;
@@ -671,28 +672,32 @@ begin
 
     LStagedDecisionsText := String(ReadUtf8Text(LStaged + PathDelim + 'scorecards.tsv'));
     LStagedSourcesText := String(ReadUtf8Text(LStaged + PathDelim + 'scorecard-sources.tsv'));
-    for LIndex := 1 to LDraftDecisions.Count - 1 do
-    begin
-      if LDraftDecisions[LIndex] = '' then
+    LScorecardIndex := TScorecardIndex.Create(LStagedDecisionsText, LStagedSourcesText);
+    try
+      for LIndex := 1 to LDraftDecisions.Count - 1 do
       begin
-        Continue;
+        if LDraftDecisions[LIndex] = '' then
+        begin
+          Continue;
+        end;
+        LFields := SplitFields(LDraftDecisions[LIndex], #9);
+        LClaimId := LFields[0];
+        LDirection := LDirections[LClaimId];
+        LJ := LVerdictPos[LClaimId];
+        LFields := SplitFields(LVerdicts[LJ], #9);
+        LExpectedVerdict := LFields[1];
+        LAnchorValue := ReadReviewConfidence(LFields[2], LExpectedVerdict, LClaimId);
+        LCheck := TJSONObject.Create;
+        try
+          LScorecardIndex.AddEvidenceScorecardFor(LCheck, LClaimId, LDirection, LExpectedVerdict, LAnchorValue);
+          Require(LCheck.Strings['review_status'] = 'recorded',
+            'Staged batch scorecard failed post-write verification for ' + LClaimId);
+        finally
+          LCheck.Free;
+        end;
       end;
-      LFields := SplitFields(LDraftDecisions[LIndex], #9);
-      LClaimId := LFields[0];
-      LDirection := LDirections[LClaimId];
-      LJ := LVerdictPos[LClaimId];
-      LFields := SplitFields(LVerdicts[LJ], #9);
-      LExpectedVerdict := LFields[1];
-      LAnchorValue := ReadReviewConfidence(LFields[2], LExpectedVerdict, LClaimId);
-      LCheck := TJSONObject.Create;
-      try
-        AddEvidenceScorecard(LCheck, LStagedDecisionsText, LStagedSourcesText, LClaimId,
-          LDirection, LExpectedVerdict, LAnchorValue, False);
-        Require(LCheck.Strings['review_status'] = 'recorded',
-          'Staged batch scorecard failed post-write verification for ' + LClaimId);
-      finally
-        LCheck.Free;
-      end;
+    finally
+      LScorecardIndex.Free;
     end;
 
     WriteLn('batch_claims=', LDraftMap.Count, ' appended=', LAppended, ' replaced=', LReplaced,

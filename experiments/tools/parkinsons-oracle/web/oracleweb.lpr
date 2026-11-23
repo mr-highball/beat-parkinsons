@@ -55,6 +55,12 @@ var
   GGraph: TOracleGraphExplorer;
   GGraphModel: TOracleGraphModel;
   GGraphStack: array of TOracleGraphExplorer;
+  GMainRequest: TJSXMLHttpRequest;
+  GRelatedRequest: TJSXMLHttpRequest;
+  GMainGeneration: Integer;
+  GRelatedGeneration: Integer;
+  GStatusLoaded: Boolean;
+  GStatusLoading: Boolean;
 
 function JSValueText(AValue: JSValue): String; external name 'String';
 function OpenWindow(const AURL, ATarget, AFeatures: String): TJSWindow; external name 'window.open';
@@ -160,26 +166,80 @@ begin
   end;
 end;
 
+procedure LoadStatus; forward;
+
+procedure CancelRequest(var ARequest: TJSXMLHttpRequest);
+var
+  LPrior: TJSXMLHttpRequest;
+begin
+  if ARequest <> nil then
+  begin
+    LPrior := ARequest;
+    ARequest := nil;
+    try
+      LPrior.onabort := nil;
+      LPrior.onerror := nil;
+      LPrior.ontimeout := nil;
+      LPrior.onload := nil;
+      LPrior.abort;
+    except
+    end;
+  end;
+end;
+
+procedure CancelMainRequest;
+begin
+  Inc(GMainGeneration);
+  CancelRequest(GMainRequest);
+end;
+
+procedure CancelRelatedRequest;
+begin
+  Inc(GRelatedGeneration);
+  CancelRequest(GRelatedRequest);
+end;
+
 procedure RequestLocal(const ABody: String; AReply: TOracleReply; ACanRetry,
-  AClaimPage: Boolean);
+  AFastTimeout: Boolean; AChannel: Integer = 0);
 var
   LRequest: TJSXMLHttpRequest;
   LCompleted: Boolean;
+  LGeneration: Integer;
+
+  procedure ReleaseSlot;
+  begin
+    if (AChannel = 1) and (GMainRequest = LRequest) then
+      GMainRequest := nil
+    else if (AChannel = 2) and (GRelatedRequest = LRequest) then
+      GRelatedRequest := nil;
+  end;
+
+  function ChannelActive: Boolean;
+  begin
+    if AChannel = 1 then
+      Result := LGeneration = GMainGeneration
+    else if AChannel = 2 then
+      Result := LGeneration = GRelatedGeneration
+    else
+      Result := True;
+  end;
 
   procedure Fail(const AError: String; ATransient: Boolean);
   begin
     if LCompleted then
       Exit;
     LCompleted := True;
-    if ATransient and ACanRetry then
+    ReleaseSlot;
+    if ATransient and ACanRetry and ChannelActive then
     begin
       window.setTimeout(
         procedure
         begin
-          RequestLocal(ABody, AReply, False, AClaimPage);
+          if ChannelActive then
+            RequestLocal(ABody, AReply, False, AFastTimeout, AChannel);
         end, 500);
     end
-    else
+    else if ChannelActive then
       AReply(nil, AError);
   end;
 
@@ -191,13 +251,28 @@ var
 
 begin
   LCompleted := False;
+  LGeneration := 0;
+  if AChannel = 1 then
+  begin
+    CancelMainRequest;
+    LGeneration := GMainGeneration;
+  end
+  else if AChannel = 2 then
+  begin
+    CancelRelatedRequest;
+    LGeneration := GRelatedGeneration;
+  end;
   LRequest := TJSXMLHttpRequest.new;
+  if AChannel = 1 then
+    GMainRequest := LRequest
+  else if AChannel = 2 then
+    GRelatedRequest := LRequest;
   LRequest.onerror := @ConnectionFailed;
   LRequest.onabort := @ConnectionFailed;
   LRequest.ontimeout :=
     function(AEvent: TJSProgressEvent): Boolean
     begin
-      Fail('The request took too long. Please try again.', not AClaimPage);
+      Fail('The request took too long. Please try again.', False);
       Result := False;
     end;
   LRequest.onload :=
@@ -216,6 +291,7 @@ begin
         Exit;
       end;
       LCompleted := True;
+      ReleaseSlot;
       try
         LValue := TJSJSON.parse(LRequest.responseText);
       except
@@ -230,22 +306,25 @@ begin
       LError := TextOf(TJSObject(LValue), 'error');
       if (LError = '') and (LRequest.Status >= 400) then
         LError := 'The oracle reported HTTP ' + IntToStr(LRequest.Status) + '.';
+      if (LError = '') and not GStatusLoaded and not GStatusLoading then
+        LoadStatus;
       AReply(TJSObject(LValue), LError);
     end;
   try
     LRequest.open('POST', '/api/oracle', True);
     LRequest.setRequestHeader('Content-Type', 'application/json');
-    if AClaimPage then
+    if AFastTimeout then
       LRequest.timeout := 10000
     else
-      LRequest.timeout := 25000;
+      LRequest.timeout := 20000;
     LRequest.send(ABody);
   except
     Fail('The request could not start. Please try again.', False);
   end;
 end;
 
-procedure Request(const ATool: String; AArguments: TJSObject; AReply: TOracleReply);
+procedure RequestChannel(const ATool: String; AArguments: TJSObject; AReply: TOracleReply;
+  AChannel: Integer);
 var
   LBody: TJSObject;
 begin
@@ -257,7 +336,30 @@ begin
   LBody := TJSObject.new;
   LBody['name'] := ATool;
   LBody['arguments'] := AArguments;
-  RequestLocal(TJSJSON.stringify(LBody), AReply, True, ATool = 'oracle_query');
+  RequestLocal(TJSJSON.stringify(LBody), AReply, True,
+    (ATool = 'oracle_query') or (ATool = 'oracle_read_source') or (ATool = 'oracle_claim'),
+    AChannel);
+end;
+
+procedure Request(const ATool: String; AArguments: TJSObject; AReply: TOracleReply);
+var
+  LChannel: Integer;
+begin
+  LChannel := 0;
+  if (ATool = 'oracle_claim') or (ATool = 'oracle_read_source') or
+    (ATool = 'oracle_ingredient_effects') then
+    LChannel := 1;
+  RequestChannel(ATool, AArguments, AReply, LChannel);
+end;
+
+procedure RequestMain(const ATool: String; AArguments: TJSObject; AReply: TOracleReply);
+begin
+  RequestChannel(ATool, AArguments, AReply, 1);
+end;
+
+procedure RequestRelated(const ATool: String; AArguments: TJSObject; AReply: TOracleReply);
+begin
+  RequestChannel(ATool, AArguments, AReply, 2);
 end;
 
 procedure PublishResults(ADocument: TNyxDocument; APage: TNyxNode);
@@ -300,6 +402,7 @@ begin
       function(AEvent: TEventListenerEvent): Boolean
       begin
         Inc(GSequence);
+        CancelMainRequest;
         ABack();
         Result := True;
       end);
@@ -651,7 +754,7 @@ begin
   LArgs := TJSObject.new;
   LArgs['round'] := ARound;
   LArgs['id'] := AId;
-  MessageView('Loading evidence', 'Reading the published assessment ledger.');
+  MessageView('Loading evidence', 'Reading the published assessment ledger.', LBack, '‹ Cancel');
   Request('oracle_claim', LArgs,
     procedure(AData: TJSObject; const AError: String)
     var
@@ -931,7 +1034,7 @@ begin
   LArgs := TJSObject.new;
   LArgs['path'] := APath;
   LArgs['offset'] := LOffset;
-  MessageView('Opening source', 'Reading the indexed research file.');
+  MessageView('Opening source', 'Reading the indexed research file.', AReturn, '‹ Cancel');
   Request('oracle_read_source', LArgs,
     procedure(AData: TJSObject; const AError: String)
     var
@@ -2162,9 +2265,11 @@ var
 begin
   Inc(GSequence);
   LSequence := GSequence;
+  CancelMainRequest;
   if ANewQuery then
   begin
     Inc(GRelatedSequence);
+    CancelRelatedRequest;
     GArguments := TJSObject.new;
     GClaimUnion := nil;
     if GView = ovClaims then
@@ -2228,9 +2333,27 @@ begin
     LTool := 'oracle_search_catalog';
   ClearGraphHistory;
   if GView = ovClaims then
-    MessageView('Searching…', 'Looking up ingredient and symptom claims.')
+  begin
+    if GResults <> nil then
+      MessageView('Searching…', 'Looking up ingredient and symptom claims.',
+        procedure
+        begin
+          ShowList(GResults, False);
+        end, '‹ Cancel')
+    else
+      MessageView('Searching…', 'Looking up ingredient and symptom claims.');
+  end
   else
-    MessageView('Searching…', 'Checking the research catalog.');
+  begin
+    if GResults <> nil then
+      MessageView('Searching…', 'Checking the research catalog.',
+        procedure
+        begin
+          ShowList(GResults, False);
+        end, '‹ Cancel')
+    else
+      MessageView('Searching…', 'Checking the research catalog.');
+  end;
   LReceive :=
     procedure(AData: TJSObject; const AError: String)
     begin
@@ -2277,7 +2400,7 @@ begin
     if GClaimUnion <> nil then
       LReceive(ClaimUnionPage(GClaimUnion, AOffset, CPageSize), '')
     else
-      LoadClaimUnion(@Request, GArguments, LCurrent,
+      LoadClaimUnion(@RequestMain, GArguments, LCurrent,
         procedure(AData: TJSObject; const AError: String)
         begin
           if not LCurrent() then
@@ -2292,13 +2415,15 @@ begin
         end);
   end
   else
-    Request(LTool, GArguments, LReceive);
+    RequestChannel(LTool, GArguments, LReceive, 1);
 end;
 
 procedure SwitchView(AView: TOracleView);
 begin
   Inc(GSequence);
   Inc(GRelatedSequence);
+  CancelMainRequest;
+  CancelRelatedRequest;
   GView := AView;
   ClearGraphHistory;
   HideSuggestions;
@@ -2331,6 +2456,9 @@ end;
 
 procedure LoadStatus;
 begin
+  if GStatusLoading then
+    Exit;
+  GStatusLoading := True;
   Request('oracle_status', TJSObject.new,
     procedure(AData: TJSObject; const AError: String)
     var
@@ -2338,10 +2466,21 @@ begin
       LCatalog: TJSObject;
       LStatus: String;
     begin
+      GStatusLoading := False;
       if AError <> '' then
-        LStatus := 'Catalog status unavailable'
+      begin
+        LStatus := 'Catalog status unavailable';
+        if not GStatusLoaded then
+          window.setTimeout(
+            procedure
+            begin
+              if not GStatusLoaded then
+                LoadStatus;
+            end, 2500);
+      end
       else
       begin
+        GStatusLoaded := True;
         LClaims := TJSObject(AData['claims']);
         LCatalog := TJSObject(AData['catalog']);
         LStatus := TextOf(LClaims, 'frozen_claims') + ' research questions';
@@ -2454,7 +2593,7 @@ begin
   GRenderer.Render(GDocument, LPage, TJSHTMLElement(document.getElementById('oracle')));
   GRenderer.ElementFor('brand').setAttribute('aria-level', '1');
   GRenderer.ElementFor('results-frame').setAttribute('aria-live', 'polite');
-  GSourceUnion := TOracleSourceUnion.Create(@Request);
+  GSourceUnion := TOracleSourceUnion.Create(@RequestRelated);
   GSymptom := TOraclePicker.Create(GRenderer, 'symptom', @SymptomChanged, @SubmitLookup, True);
   GIngredient := TOraclePicker.Create(GRenderer, 'ingredient', @IngredientChanged, @SubmitLookup);
   GPreparation := TOraclePicker.Create(GRenderer, 'preparation', @UpdateFilterCount, @SubmitLookup);

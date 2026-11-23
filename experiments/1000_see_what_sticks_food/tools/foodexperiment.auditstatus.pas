@@ -259,6 +259,7 @@ var
   LDirection: String;
   LConf: Currency;
   LCheck: TJSONObject;
+  LScorecardIndex: TScorecardIndex;
   LReviewStatus: String;
   LEffective: String;
 begin
@@ -289,7 +290,12 @@ begin
   LConfidences := TDictionary<String, Currency>.Create;
   LSeen := TDictionary<String, Boolean>.Create;
   LLines := TStringList.Create;
+  LScorecardIndex := nil;
   try
+    if (LScorecardsText <> '') or (LSourcesText <> '') then
+    begin
+      LScorecardIndex := TScorecardIndex.Create(LScorecardsText, LSourcesText);
+    end;
     LoadLines(LLines, String(LFreezeText), 'freeze.tsv');
     Require((LLines.Count > 1) and (LLines[0] = CFreezeHeader), 'Invalid freeze.tsv header.');
     for LIndex := 1 to LLines.Count - 1 do
@@ -344,12 +350,12 @@ begin
       end;
 
       LReviewStatus := 'no_scorecard';
-      if (LScorecardsText <> '') and (LVerdict <> 'Unreviewed') then
+      if (LScorecardIndex <> nil) and (LVerdict <> 'Unreviewed') then
       begin
         LCheck := TJSONObject.Create;
         try
-          AddEvidenceScorecard(LCheck, LScorecardsText, LSourcesText, LRow.Id,
-            LDirection, LVerdict, LConf, False);
+          LScorecardIndex.AddEvidenceScorecardFor(LCheck, LRow.Id,
+            LDirection, LVerdict, LConf);
           LReviewStatus := LCheck.Get('review_status', 'no_scorecard');
         finally
           LCheck.Free;
@@ -420,6 +426,7 @@ begin
         ' of ' + IntToStr(Result.TotalFrozen) + ' claims are researched.');
     end;
   finally
+    LScorecardIndex.Free;
     LLines.Free;
     LSeen.Free;
     LConfidences.Free;
