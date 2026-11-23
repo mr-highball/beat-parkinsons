@@ -59,6 +59,7 @@ type
     procedure NavigateBack;
     procedure FocusBranch;
     procedure UpdateLevelSlots;
+    procedure RenderWorkspace(AHost: TJSHTMLElement; out ACanvasHost: TJSHTMLElement);
     procedure Render;
     procedure BindNeighbor(const AId, AKey: String);
     procedure BindEvidence(const AId: String; AEdge: TJSObject; ASource: Boolean);
@@ -110,6 +111,39 @@ procedure RemoveCapture(AElement: TJSHTMLElement; const AName: String; AHandler:
 begin
   asm
     AElement.removeEventListener(AName, AHandler, true);
+  end;
+end;
+
+function WindowScrollX: Double;
+begin
+  asm
+    return window.scrollX || 0;
+  end;
+end;
+
+function WindowScrollY: Double;
+begin
+  asm
+    return window.scrollY || 0;
+  end;
+end;
+
+procedure WindowScrollTo(AX, AY: Double);
+begin
+  asm
+    window.scrollTo(AX, AY);
+  end;
+end;
+
+procedure FocusNoScroll(AElement: TJSHTMLElement);
+begin
+  if AElement = nil then
+    Exit;
+  asm
+    try {
+      AElement.focus({ preventScroll: true });
+    } catch (e) {
+    }
   end;
 end;
 
@@ -915,6 +949,75 @@ procedure TOracleGraphExplorer.Render;
 var
   LHost: TJSHTMLElement;
   LCanvasHost: TJSHTMLElement;
+  LSelectedButton: TJSHTMLElement;
+  LPreserveScroll: Boolean;
+  LHadCanvasFocus: Boolean;
+  LPrevScrollX: Double;
+  LPrevCanvasTop: Double;
+  LTargetScrollY: Double;
+  LPrevHostHeight: Integer;
+begin
+  if FHost = nil then
+  begin
+    Exit;
+  end;
+  LHost := FHost;
+  LCanvasHost := nil;
+  LPreserveScroll := (FRenderer <> nil) and (FRenderer.Root <> nil) and
+    (FRenderer.Root.Find('graph-canvas') <> nil);
+  LHadCanvasFocus := False;
+  LPrevScrollX := 0;
+  LPrevCanvasTop := 0;
+  LTargetScrollY := 0;
+  if LPreserveScroll then
+  begin
+    LPrevScrollX := WindowScrollX;
+    LPrevCanvasTop := FRenderer.ElementFor('graph-canvas').getBoundingClientRect.top;
+    LHadCanvasFocus := (document.activeElement <> nil) and (FView <> nil) and
+      FView.Surface.contains(document.activeElement);
+    LPrevHostHeight := Ceil(LHost.getBoundingClientRect.height);
+    if LPrevHostHeight > 0 then
+    begin
+      LHost.style.setProperty('min-height', IntToStr(LPrevHostHeight) + 'px');
+    end;
+  end;
+  try
+    RenderWorkspace(LHost, LCanvasHost);
+    if LPreserveScroll and (LCanvasHost <> nil) then
+    begin
+      LTargetScrollY := Max(0, WindowScrollY +
+        (LCanvasHost.getBoundingClientRect.top - LPrevCanvasTop));
+    end;
+  finally
+    if LPreserveScroll then
+    begin
+      LHost.style.removeProperty('min-height');
+    end;
+  end;
+  if LPreserveScroll and (LCanvasHost <> nil) then
+  begin
+    WindowScrollTo(LPrevScrollX, LTargetScrollY);
+  end;
+  if LHadCanvasFocus and (FView <> nil) then
+  begin
+    LSelectedButton := TJSHTMLElement(FView.Surface.querySelector(
+      '[data-node^="graph-node-"][data-variant="primary"]'));
+    if LSelectedButton <> nil then
+      FocusNoScroll(LSelectedButton)
+    else
+      FocusNoScroll(FView.Surface);
+  end
+  else if LPreserveScroll and (document.activeElement <> nil) and
+    (document.activeElement <> document.body) and not LHost.contains(document.activeElement) then
+  begin
+    TJSHTMLElement(document.activeElement).blur;
+  end;
+end;
+
+procedure TOracleGraphExplorer.RenderWorkspace(AHost: TJSHTMLElement;
+  out ACanvasHost: TJSHTMLElement);
+var
+  LCanvasHost: TJSHTMLElement;
   LHome: TJSHTMLElement;
   LPage: TNyxNode;
   LInspector: TNyxNode;
@@ -976,13 +1079,9 @@ var
   LNodeTitle: String;
   LMetadata: TJSObject;
 begin
-  if FHost = nil then
-  begin
-    Exit;
-  end;
-  LHost := FHost;
+  ACanvasHost := nil;
   Detach;
-  FHost := LHost;
+  FHost := AHost;
   FDocument := TNyxDocument.Create;
   FRenderer := TNyxBrowserRenderer.Create;
   LPage := Control(nkPage, 'graph-workspace', '');
@@ -1107,6 +1206,7 @@ begin
   FRenderer.Render(FDocument, LPage, FHost);
   UpdateLevelSlots;
   LCanvasHost := FRenderer.ElementFor('graph-canvas');
+  ACanvasHost := LCanvasHost;
   LCompact := (LCanvasHost.clientWidth > 0) and (LCanvasHost.clientWidth < CCompactWidth);
   LShouldFrame := FRecenter or (FCompact <> LCompact);
   if LShouldFrame then
