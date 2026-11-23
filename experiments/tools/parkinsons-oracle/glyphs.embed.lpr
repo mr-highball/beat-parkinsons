@@ -83,7 +83,12 @@ begin
           end;
         end;
         Require(LTransparent and LOpaque, 'Glyph requires transparent and opaque pixels: ' + LName);
+        {$IF FPC_FULLVERSION >= 30300}
         LWriter.GrayScale := True;
+        {$ELSE}
+        // FPC 3.2.2 ColorDataGrayAB uses 'and' instead of 'or', zeroing alpha in GrayScale+Alpha mode.
+        LWriter.GrayScale := False;
+        {$ENDIF}
         LWriter.UseAlpha := True;
         LWriter.WordSized := False;
         LWriter.CompressionLevel := clMax;
