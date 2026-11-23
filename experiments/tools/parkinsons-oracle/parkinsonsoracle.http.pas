@@ -19,7 +19,8 @@ procedure ServeOracleWeb(const AWebRoot: String; APort: Word; AInvoke: TOracleIn
 implementation
 
 uses
-  Classes, SysUtils, StrUtils, Types, Sockets, fphttpserver, jsonparser, jsonscanner;
+  Classes, SysUtils, StrUtils, Types, Sockets, fphttpserver, jsonparser, jsonscanner,
+  parkinsonsoracle.compat;
 
 const
   LoopbackAddress = '127.0.0.1';
@@ -148,7 +149,7 @@ begin
   begin
     raise EConvertError.Create('Invalid JSON body.');
   end;
-  Utf8ToUnicode(nil, 0, PAnsiChar(LBody), Length(LBody), False);
+  RequireValidUtf8(RawByteString(LBody));
   CheckJsonDepth(LBody);
   LParser := TJSONParser.Create(LBody, [joUTF8, joStrict]);
   try

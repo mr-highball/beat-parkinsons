@@ -131,7 +131,7 @@ type
 
 implementation
 
-uses {$IFDEF WINDOWS}Windows,{$ENDIF} StrUtils, FPSHA256, foodexperiment.externaldata,
+uses {$IFDEF WINDOWS}Windows,{$ENDIF} StrUtils, parkinsonsoracle.compat, foodexperiment.externaldata,
   foodexperiment.confidence, foodexperiment.auditstatus, parkinsonsoracle.trend,
   parkinsonsoracle.rubric, parkinsonsoracle.ingredients, parkinsonsoracle.presentation,
   parkinsonsoracle.culture, wfc;
@@ -228,16 +228,8 @@ begin
 end;
 
 function HashText(const AData: String): String;
-var
-  LStream: TStringStream;
 begin
-  LStream := TStringStream.Create(AData);
-  try
-    TSHA256.StreamHexa(LStream, Result);
-    Result := LowerCase(Result);
-  finally
-    LStream.Free;
-  end;
+  Result := ComputeSha256Hex(RawByteString(AData));
 end;
 
 constructor TClaim.Create;

@@ -3,13 +3,14 @@ program OracleGraphExport;
 
 {$mode delphi}{$H+}{$codepage utf8}
 
-uses SysUtils, Classes, fpjson, FPSHA256, parkinsonsoracle.claims;
+uses SysUtils, Classes, fpjson, parkinsonsoracle.compat, parkinsonsoracle.claims;
 
 procedure Run;
 var
   LIndex: TClaimIndex;
   LModel: TJSONObject;
   LStream: TStringStream;
+  LJson: UTF8String;
   LHash: String;
 begin
   if ParamCount <> 2 then
@@ -20,14 +21,14 @@ begin
   try
     LModel := LIndex.StaticModel('');
     try
-      LStream := TStringStream.Create(UTF8String(LModel.AsJSON));
+      LJson := UTF8String(LModel.AsJSON);
+      LHash := ComputeSha256Hex(RawByteString(LJson));
+      LStream := TStringStream.Create(LJson);
       try
-        TSHA256.StreamHexa(LStream, LHash);
-        LStream.Position := 0;
         LStream.SaveToFile(ParamStr(2));
         WriteLn('graph_revision=', LModel.Strings['revision'],
           ' claims=', LModel.Arrays['claims'].Count, ' model_bytes=', LStream.Size,
-          ' model_sha256=', LowerCase(LHash));
+          ' model_sha256=', LHash);
       finally
         LStream.Free;
       end;

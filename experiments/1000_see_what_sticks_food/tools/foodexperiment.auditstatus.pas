@@ -51,7 +51,7 @@ function VerifyExperimentResearchStatus(const AExperimentDir: String;
 implementation
 
 uses
-  StrUtils, Generics.Collections, fpjson, FPSha256, foodexperiment.externaldata,
+  StrUtils, Generics.Collections, fpjson, parkinsonsoracle.compat, foodexperiment.externaldata,
   foodexperiment.confidence, parkinsonsoracle.rubric;
 
 const
@@ -104,17 +104,8 @@ begin
 end;
 
 function Sha256Hex(const AText: UTF8String): String;
-var
-  LBytes: TBytes;
-  LHex: AnsiString;
 begin
-  SetLength(LBytes, Length(AText));
-  if Length(AText) > 0 then
-  begin
-    Move(AText[1], LBytes[0], Length(AText));
-  end;
-  TSHA256.DigestHexa(LBytes, LHex);
-  Result := LowerCase(String(LHex));
+  Result := ComputeSha256Hex(RawByteString(AText));
 end;
 
 function IsDigitRange(const AText: String; AStart, ALen: Integer): Boolean;

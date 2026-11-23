@@ -5,7 +5,8 @@ param(
     [string] $Pas2js = $env:PAS2JS,
     [string] $Runtime = $env:PAS2JS_RTL,
     [string] $UnitRoot = $env:PAS2JS_UNITS,
-    [string] $RepositoryUrl
+    [string] $RepositoryUrl,
+    [string] $OutputDirectory
 )
 
 $ErrorActionPreference = 'Stop'
@@ -96,9 +97,23 @@ try {
     $Stage = (Resolve-Path -LiteralPath $Stage).Path
     $OracleBuild = (Resolve-Path -LiteralPath $OracleBuild).Path
     $Pages = (Resolve-Path -LiteralPath $Pages).Path
-    $Published = Join-Path $Pages $Id
-    if (!$Stage.StartsWith($OracleBuild + [IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase) -or
-        !$Published.StartsWith($Pages + [IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)) {
+    if ($OutputDirectory) {
+        $Published = [IO.Path]::GetFullPath($OutputDirectory)
+        if (!$Published.StartsWith($OracleBuild + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) {
+            throw 'The Pages output directory must remain under the ignored oracle build directory.'
+        }
+        if (Test-Path -LiteralPath $Published) {
+            Remove-Item -LiteralPath $Published -Recurse -Force
+        }
+        $PublishedParent = Split-Path -Parent $Published
+        New-Item -ItemType Directory -Path $PublishedParent -Force | Out-Null
+    } else {
+        $Published = Join-Path $Pages $Id
+        if (!$Published.StartsWith($Pages + [IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)) {
+            throw 'The Pages artifact directories must remain under the ignored oracle build directory.'
+        }
+    }
+    if (!$Stage.StartsWith($OracleBuild + [IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)) {
         throw 'The Pages artifact directories must remain under the ignored oracle build directory.'
     }
     Move-Item -LiteralPath $Stage -Destination $Published
