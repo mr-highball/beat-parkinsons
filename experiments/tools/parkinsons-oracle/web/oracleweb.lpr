@@ -14,10 +14,14 @@ uses
 type
   TOracleView = (ovClaims, ovCatalog);
   TSourceOffsets = array of Integer;
+  TLocalSourceAction = reference to procedure(const APath: String);
 
 const
   CPageSize = 8;
   CSourceURLPattern = 'https?://[^\s<>\[\]{}"''\x60]+';
+  CSourceLinkPattern = '\[([^\]\r\n]+)\]\(([^)\s\r\n]+)\)|(https?://[^\s<>\[\]{}"''\x60]+)';
+  CCatalogKindValues: array[0..7] of String = ('', 'source_text', 'cultural', 'conversations',
+    'traditional_practices', 'ceremonial_accounts', 'personal_reports', 'local_knowledge');
   CTextInputs: array[0..1] of String = ('terms', 'period');
   CQuickSymptoms: array[0..4] of String = ('rest tremor severity', 'constipation severity',
     'fatigue severity', 'insomnia severity', 'pain severity');
@@ -412,6 +416,7 @@ procedure ShowList(AResults: TJSObject; AFocus: Boolean = True); forward;
 procedure Query(ANewQuery: Boolean; AOffset: Integer); forward;
 procedure RenderRelated(AFocus: Boolean = False); forward;
 procedure SwitchView(AView: TOracleView); forward;
+procedure OpenReference(const APath: String; AReturn: TPickerAction); forward;
 procedure BindReference(const ANodeId, APath: String; AReturn: TPickerAction); forward;
 procedure ShowGraph(AGraph: TOracleGraphExplorer; AReturn: TPickerAction;
   const ASymptoms: TStringValues); forward;
@@ -646,6 +651,30 @@ begin
   end;
 end;
 
+procedure SetMobileFiltersOpen(AOpen: Boolean);
+var
+  LButton: TJSHTMLElement;
+  LBody: TJSHTMLElement;
+begin
+  if (GRenderer = nil) or (GRenderer.Root = nil) or
+    (GRenderer.Root.Find('controls-body') = nil) then
+    Exit;
+  LButton := GRenderer.ElementFor('mobile-filters-toggle');
+  LBody := GRenderer.ElementFor('controls-body');
+  if AOpen then
+  begin
+    LBody.removeAttribute('data-mobile-collapsed');
+    LButton.setAttribute('aria-expanded', 'true');
+    LButton.textContent := 'Hide search & filters';
+  end
+  else
+  begin
+    LBody.setAttribute('data-mobile-collapsed', 'true');
+    LButton.setAttribute('aria-expanded', 'false');
+    LButton.textContent := 'Edit search & filters';
+  end;
+end;
+
 procedure HideSuggestions;
 begin
   GSymptom.HideSuggestions;
@@ -837,6 +866,9 @@ begin
       LScorecardLine: String;
       LQueued: String;
       LOrigPairs: String;
+      LSeenRefs: TJSSet;
+      LExtraRefs: TJSArray;
+      LRefPath: String;
     begin
       if LSequence <> GSequence then
         Exit;
@@ -939,6 +971,7 @@ begin
           CEvidenceGroups[LGroup] + ' · ' + IntToStr(LCounts[LGroup])));
         LPage.Add(LGroups[LGroup]);
       end;
+      LSeenRefs := TJSSet.new;
       for LIndex := 0 to LItems.Length - 1 do
       begin
         LRow := TJSObject(LItems[LIndex]);
@@ -947,8 +980,11 @@ begin
         LCard := Section(nkCard, 'evidence-' + LTag);
         LCard.Add(Caption(nkBadge, 'role-' + LTag, GraphAssessmentLabel(LRole, LDirection)));
         if TextOf(LRow, 'local_reference') <> '' then
+        begin
+          LSeenRefs.add(ReferenceFile(TextOf(LRow, 'local_reference')));
           LCard.Add(SourceLink('study-' + LTag, TextOf(LRow, 'local_reference'),
-            'Read study reference · ' + TextOf(LRow, 'study')))
+            'Read study reference · ' + TextOf(LRow, 'study')));
+        end
         else
           LCard.Add(Caption(nkHeading, 'study-key-' + LTag, TextOf(LRow, 'study')));
         LCard.Add(Caption(nkLabel, 'fit-' + LTag, TextOf(LRow, 'fit')));
@@ -961,11 +997,21 @@ begin
         LGroups[EvidenceGroup(LRole)].Add(LCard);
       end;
       LItems := ItemsOf(AData, 'local_references');
-      if LItems.Length > 0 then
+      LExtraRefs := TJSArray.new;
+      for LIndex := 0 to LItems.Length - 1 do
       begin
-        LPage.Add(Caption(nkHeading, 'citations-heading', 'Source references'));
-        for LIndex := 0 to LItems.Length - 1 do
-          LPage.Add(SourceLink('citation-' + IntToStr(LIndex), JSValueText(LItems[LIndex])));
+        LRefPath := JSValueText(LItems[LIndex]);
+        if not LSeenRefs.has(ReferenceFile(LRefPath)) then
+        begin
+          LSeenRefs.add(ReferenceFile(LRefPath));
+          LExtraRefs.push(LRefPath);
+        end;
+      end;
+      if LExtraRefs.Length > 0 then
+      begin
+        LPage.Add(Caption(nkHeading, 'citations-heading', 'Additional source references'));
+        for LIndex := 0 to LExtraRefs.Length - 1 do
+          LPage.Add(SourceLink('citation-' + IntToStr(LIndex), JSValueText(LExtraRefs[LIndex])));
       end;
 
       PublishResults(LDocument, LPage);
@@ -1021,10 +1067,9 @@ begin
         GResultsRenderer.ElementFor('role-' + IntToStr(LIndex)).setAttribute('data-trend',
           AssessmentTone(TextOf(LRow, 'role'), LDirection));
       end;
-      LItems := ItemsOf(AData, 'local_references');
-      for LIndex := 0 to LItems.Length - 1 do
+      for LIndex := 0 to LExtraRefs.Length - 1 do
         if GStaticOracle = nil then
-          BindReference('citation-' + IntToStr(LIndex), JSValueText(LItems[LIndex]), LRestore)
+          BindReference('citation-' + IntToStr(LIndex), JSValueText(LExtraRefs[LIndex]), LRestore)
         else
           SetExternalLink('citation-' + IntToStr(LIndex));
       BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
@@ -1118,38 +1163,163 @@ begin
   end;
 end;
 
-procedure PopulateSourceLinks(AHost: TJSHTMLElement; const AText: String; AHasNext: Boolean);
+function ResolveRelativeResearchPath(const ACurrentPath, ATarget: String): String;
+var
+  LClean: String;
+  LHash: Integer;
+  LQuery: Integer;
+  LParts: TStringDynArray;
+  LStack: array of String;
+  LStackLen: Integer;
+  LPart: String;
+  LBaseDir: String;
+  LSlash: Integer;
+  LIndex: Integer;
+  LLower: String;
+begin
+  Result := '';
+  LClean := Trim(StringReplace(ATarget, '\', '/', [rfReplaceAll]));
+  LHash := Pos('#', LClean);
+  if LHash > 0 then
+    LClean := Copy(LClean, 1, LHash - 1);
+  LQuery := Pos('?', LClean);
+  if LQuery > 0 then
+    LClean := Copy(LClean, 1, LQuery - 1);
+  if (LClean = '') or StartsText('http://', LClean) or StartsText('https://', LClean) or
+    StartsText('mailto:', LClean) or StartsText('javascript:', LClean) or
+    (LClean[1] = '/') then
+    Exit;
+  if StartsStr('research/', LClean) then
+    LBaseDir := ''
+  else
+  begin
+    LBaseDir := StringReplace(ACurrentPath, '\', '/', [rfReplaceAll]);
+    LSlash := LastDelimiter('/', LBaseDir);
+    if LSlash > 0 then
+      LBaseDir := Copy(LBaseDir, 1, LSlash)
+    else
+      LBaseDir := '';
+  end;
+  LParts := SplitString(LBaseDir + LClean, '/');
+  SetLength(LStack, Length(LParts));
+  LStackLen := 0;
+  for LPart in LParts do
+  begin
+    if (LPart = '') or (LPart = '.') then
+      Continue;
+    if LPart = '..' then
+    begin
+      if LStackLen = 0 then
+        Exit;
+      Dec(LStackLen);
+      Continue;
+    end;
+    LStack[LStackLen] := LPart;
+    Inc(LStackLen);
+  end;
+  if LStackLen = 0 then
+    Exit;
+  LClean := '';
+  for LIndex := 0 to LStackLen - 1 do
+  begin
+    if LClean <> '' then
+      LClean := LClean + '/';
+    LClean := LClean + LStack[LIndex];
+  end;
+  LLower := LowerCase(LClean);
+  if StartsStr('research/', LLower) and
+    (EndsStr('.md', LLower) or EndsStr('.txt', LLower) or EndsStr('.tsv', LLower)) then
+    Result := LClean;
+end;
+
+procedure PopulateSourceLinks(AHost: TJSHTMLElement; const AText, ACurrentPath: String;
+  AHasNext: Boolean; AOnOpenLocal: TLocalSourceAction);
 var
   LPattern: TJSRegexp;
   LMatch: TStringDynArray;
   LBody: TJSHTMLElement;
   LLink: TJSHTMLAnchorElement;
+  LBtn: TJSHTMLElement;
   LStart: Integer;
   LCursor: Integer;
+  LMatched: String;
   LLabel: String;
+  LTarget: String;
   LURL: String;
+  LLocalPath: String;
+
+  procedure AppendLocalButton(const AButtonText, ALocal: String);
+  var
+    LClick: TJSEventHandler;
+  begin
+    LBtn := TJSHTMLElement(document.createElement('button'));
+    LBtn.setAttribute('type', 'button');
+    LBtn.className := 'oracle-inline-source-link';
+    LBtn.textContent := AButtonText;
+    LBtn.setAttribute('title', 'Open ' + ALocal);
+    LClick :=
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        AOnOpenLocal(ALocal);
+        Result := True;
+      end;
+    LBtn.addEventListener('click', LClick);
+    LBody.appendChild(LBtn);
+  end;
+
 begin
   LBody := TJSHTMLElement(document.createElement('pre'));
-  LPattern := TJSRegexp.new(CSourceURLPattern, 'gi');
+  LPattern := TJSRegexp.new(CSourceLinkPattern, 'gi');
   LCursor := 1;
   LMatch := LPattern.exec(AText);
   while LMatch <> nil do
   begin
     if AHasNext and (LPattern.lastIndex = Length(AText)) then
       Break;
-    LStart := LPattern.lastIndex - Length(LMatch[0]) + 1;
-    LLabel := SourceURLText(LMatch[0]);
-    LURL := ExternalSourceURL(LLabel);
-    if LURL <> '' then
+    LMatched := LMatch[0];
+    LStart := LPattern.lastIndex - Length(LMatched) + 1;
+    if (Length(LMatch) >= 3) and isDefined(LMatch[1]) and (LMatch[1] <> '') then
     begin
-      LBody.appendChild(document.createTextNode(Copy(AText, LCursor, LStart - LCursor)));
-      LLink := TJSHTMLAnchorElement(document.createElement('a'));
-      LLink.href := LURL;
-      LLink.textContent := LLabel;
-      LLink.target := '_blank';
-      LLink.rel := 'noopener noreferrer';
-      LBody.appendChild(LLink);
-      LCursor := LStart + Length(LLabel);
+      LLabel := LMatch[1];
+      LTarget := LMatch[2];
+      LURL := ExternalSourceURL(SourceURLText(LTarget));
+      if LURL <> '' then
+      begin
+        LBody.appendChild(document.createTextNode(Copy(AText, LCursor, LStart - LCursor)));
+        LLink := TJSHTMLAnchorElement(document.createElement('a'));
+        LLink.href := LURL;
+        LLink.textContent := LLabel;
+        LLink.target := '_blank';
+        LLink.rel := 'noopener noreferrer';
+        LBody.appendChild(LLink);
+        LCursor := LStart + Length(LMatched);
+      end
+      else if Assigned(AOnOpenLocal) then
+      begin
+        LLocalPath := ResolveRelativeResearchPath(ACurrentPath, LTarget);
+        if LLocalPath <> '' then
+        begin
+          LBody.appendChild(document.createTextNode(Copy(AText, LCursor, LStart - LCursor)));
+          AppendLocalButton(LLabel, LLocalPath);
+          LCursor := LStart + Length(LMatched);
+        end;
+      end;
+    end
+    else
+    begin
+      LLabel := SourceURLText(LMatched);
+      LURL := ExternalSourceURL(LLabel);
+      if LURL <> '' then
+      begin
+        LBody.appendChild(document.createTextNode(Copy(AText, LCursor, LStart - LCursor)));
+        LLink := TJSHTMLAnchorElement(document.createElement('a'));
+        LLink.href := LURL;
+        LLink.textContent := LLabel;
+        LLink.target := '_blank';
+        LLink.rel := 'noopener noreferrer';
+        LBody.appendChild(LLink);
+        LCursor := LStart + Length(LLabel);
+      end;
     end;
     LMatch := LPattern.exec(AText);
   end;
@@ -1157,7 +1327,8 @@ begin
   AHost.appendChild(LBody);
 end;
 
-procedure OpenSource(const APath: String; const AOffsets: TSourceOffsets; AReturn: TPickerAction);
+procedure OpenSource(const APath: String; const AOffsets: TSourceOffsets; AReturn: TPickerAction;
+  const AOriginalURL: String = '');
 var
   LArgs: TJSObject;
   LSequence: Integer;
@@ -1183,6 +1354,7 @@ begin
       LHasPrevious: Boolean;
       LHasNext: Boolean;
       LCanExplore: Boolean;
+      LRestoreSource: TPickerAction;
     begin
       if LSequence <> GSequence then
         Exit;
@@ -1207,18 +1379,17 @@ begin
       LHasPrevious := (AError = '') and (Length(AOffsets) > 1);
       LHasNext := (AError = '') and (LNext > LOffset);
       LText := TextOf(AData, 'text');
+      LOriginalURL := AOriginalURL;
       if (AError = '') and (LOffset = 0) then
-      begin
         LOriginalURL := OriginalSourceURL(LText);
-        if LOriginalURL <> '' then
-        begin
-          if IsConversationSource(APath) then
-            LOriginalCaption := 'Open original discussion'
-          else
-            LOriginalCaption := 'Open original source';
-          LPage.Add(Section(nkLink, 'original-source').Configure
-            .Text(LOriginalCaption).LinkTo(LOriginalURL).Done);
-        end;
+      if (AError = '') and (LOriginalURL <> '') then
+      begin
+        if IsConversationSource(APath) then
+          LOriginalCaption := 'Open original discussion'
+        else
+          LOriginalCaption := 'Open original source';
+        LPage.Add(Section(nkLink, 'original-source').Configure
+          .Text(LOriginalCaption).LinkTo(LOriginalURL).Done);
       end;
       LCanExplore := (AError = '') and (LText <> '');
       if AError <> '' then
@@ -1245,19 +1416,23 @@ begin
       end;
       PublishResults(LDocument, LPage);
       FocusResults;
+      LRestoreSource := procedure
+        begin
+          OpenSource(APath, AOffsets, AReturn, LOriginalURL);
+        end;
       if LOriginalURL <> '' then
         SetExternalLink('original-source');
       if LCanExplore then
       begin
-        PopulateSourceLinks(GResultsRenderer.ElementFor('source-body'), LText, LHasNext);
+        PopulateSourceLinks(GResultsRenderer.ElementFor('source-body'), LText, APath, LHasNext,
+          procedure(const ALinkedPath: String)
+          begin
+            OpenReference(ALinkedPath, LRestoreSource);
+          end);
         BindEvent(GResultsRenderer.ElementFor('source-connections'), 'click',
           function(AEvent: TEventListenerEvent): Boolean
           begin
-            StartGraph(nil, '', GraphKey('source', APath),
-              procedure
-              begin
-                OpenSource(APath, AOffsets, AReturn);
-              end);
+            StartGraph(nil, '', GraphKey('source', APath), LRestoreSource);
             Result := True;
           end);
       end;
@@ -1271,7 +1446,7 @@ begin
         BindEvent(GResultsRenderer.ElementFor('previous-page'), 'click',
           function(AEvent: TEventListenerEvent): Boolean
           begin
-            OpenSource(APath, Copy(AOffsets, 0, Length(AOffsets) - 1), AReturn);
+            OpenSource(APath, Copy(AOffsets, 0, Length(AOffsets) - 1), AReturn, LOriginalURL);
             Result := True;
           end);
       if LHasNext then
@@ -1283,7 +1458,7 @@ begin
             LOffsets := Copy(AOffsets, 0, Length(AOffsets));
             SetLength(LOffsets, Length(LOffsets) + 1);
             LOffsets[High(LOffsets)] := LNext;
-            OpenSource(APath, LOffsets, AReturn);
+            OpenSource(APath, LOffsets, AReturn, LOriginalURL);
             Result := True;
           end);
     end);
@@ -1635,9 +1810,16 @@ begin
     end;
     LPage.Add(LSection);
   end;
+  LPage.Add(Button('back-to-top', '↑ Back to top', nvSecondary));
   PublishResults(LDocument, LPage);
   if LExpandedIngredient <> '' then
     BindIngredientGallery(GResultsRenderer, LExpandedIngredient, '-comparison');
+  BindEvent(GResultsRenderer.ElementFor('back-to-top'), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      FocusResults;
+      Result := True;
+    end);
   BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
     function(AEvent: TEventListenerEvent): Boolean
     begin
@@ -2058,6 +2240,7 @@ begin
       function(AEvent: TEventListenerEvent): Boolean
       begin
         TJSHTMLInputElement(GRenderer.InputFor('terms')).value := GRelatedTerms;
+        TJSHTMLSelectElement(GRenderer.InputFor('catalog-kind')).selectedIndex := 0;
         SwitchView(ovCatalog);
         Query(True, 0);
         Result := True;
@@ -2277,7 +2460,16 @@ begin
 
   if (GView = ovClaims) and (GRelatedTerms <> '') then
     LPage.Add(Section(nkColumn, 'related-host'));
+  if LRecords.Length >= 5 then
+    LPage.Add(Button('back-to-top', '↑ Back to top', nvSecondary));
   PublishResults(LDocument, LPage);
+  if LRecords.Length >= 5 then
+    BindEvent(GResultsRenderer.ElementFor('back-to-top'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        FocusResults;
+        Result := True;
+      end);
   if (GView = ovClaims) and (GRelatedTerms <> '') then
   begin
     GRelatedHost := GResultsRenderer.ElementFor('related-host');
@@ -2493,7 +2685,12 @@ begin
       end;
       GArguments['terms'] := InputValue('terms');
       MaybeSet(GArguments, 'period', InputValue('period'));
+      if (SelectedIndex('catalog-kind') > 0) and
+        (SelectedIndex('catalog-kind') <= High(CCatalogKindValues)) then
+        MaybeSet(GArguments, 'source_kind', CCatalogKindValues[SelectedIndex('catalog-kind')]);
     end;
+    if window.innerWidth <= 740 then
+      SetMobileFiltersOpen(False);
   end;
   HideSuggestions;
   GArguments['offset'] := AOffset;
@@ -2675,6 +2872,7 @@ var
   LHeader: TNyxNode;
   LWorkspace: TNyxNode;
   LControls: TNyxNode;
+  LControlsBody: TNyxNode;
   LTabs: TNyxNode;
   LClaims: TNyxNode;
   LCatalog: TNyxNode;
@@ -2697,10 +2895,12 @@ begin
   LWorkspace := Section(nkGrid, 'workspace');
   LControls := Section(nkPanel, 'reader-controls');
   LControls.Add(Caption(nkHeading, 'filters-heading', 'Find Parkinson’s research'));
+  LControls.Add(Button('mobile-filters-toggle', 'Hide search & filters', nvSecondary));
+  LControlsBody := Section(nkColumn, 'controls-body');
   LTabs := Section(nkRow, 'lookup-tabs');
   LTabs.Add(Button('claims-tab', 'Symptoms & foods', nvSecondary));
   LTabs.Add(Button('catalog-tab', 'Search sources', nvSecondary));
-  LControls.Add(LTabs);
+  LControlsBody.Add(LTabs);
 
   LClaims := Section(nkColumn, 'claim-form');
   LClaims.Add(Caption(nkLabel, 'guidance',
@@ -2730,14 +2930,18 @@ begin
   LFilters.Add(SelectField('direction', 'Claim being tested', 'Any direction'#10'Could reduce'#10'Could worsen'));
   LClaims.Add(LFilters);
   LClaims.Add(Button('search-claims', 'Find research', nvPrimary));
-  LControls.Add(LClaims);
+  LControlsBody.Add(LClaims);
 
   LCatalog := Section(nkColumn, 'catalog-form');
   LCatalog.Add(Field('terms', 'Search terms', 'e.g. black tea tremor'));
   LCatalog.Add(Field('period', 'Period', 'Any period (e.g. 2010-2014)'));
+  LCatalog.Add(SelectField('catalog-kind', 'Source type',
+    'All catalog sources'#10'Studies & source texts'#10'All culture & experience'#10 +
+    'Conversations & forums'#10'Traditional practices'#10'Ceremonial accounts'#10 +
+    'Personal reports'#10'Local knowledge'));
   LCatalog.Add(Button('search-catalog', 'Search catalog', nvPrimary));
-  LControls.Add(LCatalog);
-  LControls.Add(Button('show-evidence-guide', 'How to read the results', nvSecondary));
+  LControlsBody.Add(LCatalog);
+  LControlsBody.Add(Button('show-evidence-guide', 'How to read the results', nvSecondary));
   LHelp := Section(nkColumn, 'evidence-guide');
   LHelp.Add(Caption(nkLabel, 'guide-question',
     'Each result starts with a question the research team is investigating.'));
@@ -2755,7 +2959,8 @@ begin
     'Traditional practices and personal reports are collected separately and carry lower evidential weight for treatment effects than controlled studies. A documented account is not proof of benefit.'));
   LHelp.Add(Caption(nkLabel, 'guide-shared',
     'Use the studies to prepare questions for your care team.'));
-  LControls.Add(LHelp);
+  LControlsBody.Add(LHelp);
+  LControls.Add(LControlsBody);
   LWorkspace.Add(LControls);
   LWorkspace.Add(Section(nkPanel, 'results-frame'));
   LPage.Add(LWorkspace);
@@ -2780,6 +2985,15 @@ begin
   BindTrend('trend-worsens', 'worsens');
   SelectTrend('');
   TJSHTMLSelectElement(GRenderer.InputFor('scope')).selectedIndex := 3;
+  GRenderer.ElementFor('controls-body').id := 'controls-body';
+  GRenderer.ElementFor('mobile-filters-toggle').setAttribute('aria-controls', 'controls-body');
+  GRenderer.ElementFor('mobile-filters-toggle').setAttribute('aria-expanded', 'true');
+  BindEvent(GRenderer.ElementFor('mobile-filters-toggle'), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      SetMobileFiltersOpen(GRenderer.ElementFor('controls-body').hasAttribute('data-mobile-collapsed'));
+      Result := True;
+    end);
   GRenderer.ElementFor('extra-filters').id := 'extra-filters';
   GRenderer.ElementFor('extra-filters').setAttribute('hidden', '');
   GRenderer.ElementFor('show-filters').setAttribute('aria-controls', 'extra-filters');

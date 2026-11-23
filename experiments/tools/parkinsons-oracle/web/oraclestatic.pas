@@ -185,6 +185,7 @@ var
   LPreparation: String;
   LDirection: String;
   LVerdict: String;
+  LScorecardStatus: String;
   LResearchStatus: String;
   LTrend: String;
   LRound: Integer;
@@ -202,6 +203,7 @@ begin
   LPreparation := LowerCase(VocabularyText(AArguments, 'preparation'));
   LDirection := VocabularyText(AArguments, 'direction');
   LVerdict := VocabularyText(AArguments, 'verdict');
+  LScorecardStatus := LowerCase(VocabularyText(AArguments, 'scorecard_status'));
   LResearchStatus := LowerCase(VocabularyText(AArguments, 'research_status'));
   LTrend := VocabularyText(AArguments, 'trend');
   LRound := Count(AArguments, 'round');
@@ -227,6 +229,7 @@ begin
         not ((LVerdict = 'Unknown (Researched)') and
           (VocabularyText(LRow, 'verdict') = 'Unknown') and
           (VocabularyText(LRow, 'research_status') = 'researched'))) or
+      ((LScorecardStatus <> '') and (LowerCase(VocabularyText(LRow, 'scorecard_status')) <> LScorecardStatus)) or
       ((LResearchStatus <> '') and (VocabularyText(LRow, 'research_status') <> LResearchStatus)) or
       ((LTrend <> '') and (ClaimTrend(VocabularyText(LRow, 'verdict'),
         VocabularyText(LRow, 'hypothesis_direction')) <> LTrend)) then
@@ -457,12 +460,47 @@ begin
   SetLength(Result, LCount);
 end;
 
+function MatchesCatalogSourceKind(const APath, APeriod, ASourceKind: String): Boolean;
+const
+  CCultureRoot = 'cultural-and-experiential/';
+var
+  LPrefix: String;
+  LLower: String;
+  LRel: String;
+begin
+  if (ASourceKind = '') or (ASourceKind = 'all') then
+    Exit(True);
+  if APeriod = '' then
+    Exit(False);
+  LPrefix := LowerCase('research/' + APeriod + '/');
+  LLower := LowerCase(StringReplace(APath, '\', '/', [rfReplaceAll]));
+  if not StartsStr(LPrefix, LLower) then
+    Exit(False);
+  LRel := Copy(LLower, Length(LPrefix) + 1, MaxInt);
+  if ASourceKind = 'source_text' then
+    Exit(StartsStr('source-text/', LRel));
+  if not EndsStr('.txt', LRel) then
+    Exit(False);
+  case IndexStr(ASourceKind, ['cultural', 'conversations', 'traditional_practices',
+    'ceremonial_accounts', 'personal_reports', 'local_knowledge']) of
+    0: Result := StartsStr(CCultureRoot, LRel);
+    1: Result := StartsStr(CCultureRoot + 'conversations/', LRel);
+    2: Result := StartsStr(CCultureRoot + 'traditional-practices/', LRel);
+    3: Result := StartsStr(CCultureRoot + 'ceremonial-accounts/', LRel);
+    4: Result := StartsStr(CCultureRoot + 'personal-reports/', LRel);
+    5: Result := StartsStr(CCultureRoot + 'local-knowledge/', LRel);
+  else
+    Result := False;
+  end;
+end;
+
 procedure TStaticOracle.Search(AArguments: TJSObject; AReply: TOracleReply);
 var
   LTerms: TJSArray;
   LTerm: Integer;
   LCandidates: TPostingIds;
   LPeriod: String;
+  LSourceKind: String;
   LOffset: Integer;
   LLimit: Integer;
 
@@ -483,6 +521,8 @@ var
         Continue;
       LDoc := TJSArray(FDocuments[LId - 1]);
       if (LPeriod <> '') and (AsText(LDoc[1]) <> LPeriod) then
+        Continue;
+      if not MatchesCatalogSourceKind(AsText(LDoc[0]), AsText(LDoc[1]), LSourceKind) then
         Continue;
       if (LCount >= LOffset) and (LRows.Length < LLimit) then
       begin
@@ -556,6 +596,7 @@ begin
   end;
   LTerm := 0;
   LPeriod := VocabularyText(AArguments, 'period');
+  LSourceKind := LowerCase(VocabularyText(AArguments, 'source_kind'));
   LOffset := Count(AArguments, 'offset');
   LLimit := Count(AArguments, 'limit', 12);
   if FManifest <> nil then
