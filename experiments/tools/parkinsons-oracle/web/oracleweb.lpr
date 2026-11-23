@@ -560,10 +560,69 @@ procedure FocusResults;
 var
   LHeading: TJSHTMLElement;
 begin
+  if (GResultsRenderer = nil) or (GResultsRenderer.Root = nil) or
+    (GResultsRenderer.Root.Find('result-heading') = nil) then
+    Exit;
   LHeading := GResultsRenderer.ElementFor('result-heading');
   LHeading.setAttribute('tabindex', '-1');
   LHeading.focus;
   LHeading.scrollIntoView(True);
+end;
+
+procedure TryFocusElement(ARenderer: TNyxBrowserRenderer; const AId: String);
+begin
+  if (ARenderer <> nil) and (ARenderer.Root <> nil) and (ARenderer.Root.Find(AId) <> nil) then
+    ARenderer.ElementFor(AId).focus
+  else
+    FocusResults;
+end;
+
+function TierSummaryLabel(const AVerdict, AConfidence, AResearchStatus: String): String;
+var
+  LValue: Double;
+begin
+  if (AVerdict = '') or (AVerdict = 'Unreviewed') then
+    Exit('Awaiting review');
+  if AVerdict = 'Unknown' then
+  begin
+    if AResearchStatus = 'researched' then
+      Exit('Open evidence (researched)');
+    Exit('Open evidence');
+  end;
+  LValue := StrToFloatDef(AConfidence, 0);
+  if LValue >= 75 then
+    Exit('Strong clinical consensus');
+  if LValue >= 60 then
+    Exit('Moderate clinical evidence');
+  if LValue >= 55 then
+    Exit('Direct clinical signal');
+  if LValue >= 51 then
+    Exit('Limited clinical link');
+  if LValue > 50 then
+    Exit('Minimal signal');
+  Result := 'Reviewed evidence';
+end;
+
+function YesNoLabel(const AValue: String): String;
+begin
+  if AValue = 'true' then
+    Result := 'Yes'
+  else
+    Result := 'No';
+end;
+
+function ScorecardStatusLabel(const AStatus: String): String;
+begin
+  if AStatus = 'recorded' then
+    Result := 'Recorded'
+  else if AStatus = 'historical_scorecard' then
+    Result := 'Historical scorecard'
+  else if AStatus = 'verdict_mismatch' then
+    Result := 'Needs scorecard review'
+  else if AStatus <> '' then
+    Result := Capitalized(AStatus)
+  else
+    Result := 'Not yet scored';
 end;
 
 procedure TogglePanel(const AButton, APanel, AClosed, AOpen: String);
@@ -601,7 +660,7 @@ var
   LLabel: String;
 begin
   LCount := Ord((GPreparation.Chosen <> '') or (Trim(GPreparation.Input.value) <> '')) +
-    Ord(SelectedIndex('scope') <> 2) + Ord(SelectedIndex('direction') > 0);
+    Ord(SelectedIndex('scope') <> 3) + Ord(SelectedIndex('direction') > 0);
   LButton := GRenderer.ElementFor('show-filters');
   if LButton.getAttribute('aria-expanded') = 'true' then
     LLabel := 'Fewer filters'
@@ -771,6 +830,13 @@ begin
       LTag: String;
       LRole: String;
       LDirection: String;
+      LAuditPanel: TNyxNode;
+      LAudit: TJSObject;
+      LConfidence: String;
+      LResearchStatus: String;
+      LScorecardLine: String;
+      LQueued: String;
+      LOrigPairs: String;
     begin
       if LSequence <> GSequence then
         Exit;
@@ -797,24 +863,67 @@ begin
       LPage.Add(ClaimIndicators(AData, 'detail'));
       AddIngredientGallery(LPage, TextOf(AData, 'ingredient'));
       LPage.Add(Caption(nkLabel, 'claim-question', ResearchQuestion(AData)));
-      if TextOf(AData, 'confidence') <> '' then
-        LPage.Add(Caption(nkLabel, 'claim-confidence',
-          'Reviewer judgment ' + TextOf(AData, 'confidence') + '/100'));
+      LConfidence := TextOf(AData, 'confidence');
+      LResearchStatus := TextOf(AData, 'research_status');
+      LPage.Add(Caption(nkLabel, 'claim-confidence',
+        'Evidence tier: ' + TierSummaryLabel(TextOf(AData, 'verdict'), LConfidence, LResearchStatus)));
       LPage.Add(Caption(nkLabel, 'claim-number',
         'Round ' + IntToStr(ARound) + ' · Claim ' + AId));
       LPage.Add(Caption(nkLabel, 'claim-statement-heading', 'Original claim under review'));
       LPage.Add(Caption(nkLabel, 'claim-statement', TextOf(AData, 'statement')));
       if TextOf(AData, 'rationale') <> '' then
         LPage.Add(Caption(nkLabel, 'claim-rationale', TextOf(AData, 'rationale')));
-      if TextOf(AData, 'queued_original_pairs') <> '' then
-        LPage.Add(Caption(nkLabel, 'claim-coverage',
-          TextOf(AData, 'queued_original_pairs') + ' original Europe PMC pairs still queued'));
+
+      LPage.Add(Button('claim-audit-toggle', 'Research & audit details', nvSecondary));
+      LAuditPanel := Section(nkColumn, 'claim-audit-panel');
+      LScorecardLine := 'Scorecard: ' + ScorecardStatusLabel(TextOf(AData, 'scorecard_status'));
+      if LConfidence <> '' then
+        LScorecardLine := LScorecardLine + ' · Anchor ' + LConfidence + '/100';
+      LAuditPanel.Add(Caption(nkLabel, 'audit-scorecard', LScorecardLine));
+      if LResearchStatus <> '' then
+        LAuditPanel.Add(Caption(nkLabel, 'audit-research-status',
+          'Research status: ' + Capitalized(LResearchStatus)));
+      if isDefined(AData['research_audit']) and not isNull(AData['research_audit']) then
+      begin
+        LAudit := TJSObject(AData['research_audit']);
+        LAuditPanel.Add(Caption(nkLabel, 'audit-checks',
+          'Checks — Lab/clinical: ' + YesNoLabel(TextOf(LAudit, 'lab_clinical_checked')) +
+          ' · Cultural/experiential: ' + YesNoLabel(TextOf(LAudit, 'cultural_checked')) +
+          ' · Scorecard: ' + YesNoLabel(TextOf(LAudit, 'scorecard_checked'))));
+        if TextOf(LAudit, 'last_checked_utc') <> '' then
+          LAuditPanel.Add(Caption(nkLabel, 'audit-checked-at',
+            'Last verified (UTC): ' + TextOf(LAudit, 'last_checked_utc')));
+        if TextOf(LAudit, 'search_basis') <> '' then
+          LAuditPanel.Add(Caption(nkLabel, 'audit-search-basis',
+            'Search basis: ' + TextOf(LAudit, 'search_basis')));
+        if TextOf(LAudit, 'open_gaps') <> '' then
+          LAuditPanel.Add(Caption(nkLabel, 'audit-open-gaps',
+            'Open gaps: ' + TextOf(LAudit, 'open_gaps')));
+      end;
+      LQueued := TextOf(AData, 'queued_original_pairs');
+      if LQueued <> '' then
+      begin
+        LOrigPairs := TextOf(AData, 'original_europe_pmc_pairs');
+        if LOrigPairs <> '' then
+          LAuditPanel.Add(Caption(nkLabel, 'claim-coverage',
+            'Europe PMC screening: ' + LOrigPairs + ' original pairs · ' + LQueued + ' still queued'))
+        else
+          LAuditPanel.Add(Caption(nkLabel, 'claim-coverage',
+            LQueued + ' original Europe PMC pairs still queued'));
+      end;
+      LPage.Add(LAuditPanel);
 
       LItems := ItemsOf(AData, 'assessments');
       LDirection := TextOf(AData, 'hypothesis_direction');
       LPage.Add(Caption(nkHeading, 'evidence-heading', 'What the studies looked at'));
       if LItems.Length = 0 then
-        LPage.Add(Caption(nkLabel, 'result-message', 'This claim is awaiting study review.'));
+      begin
+        if LResearchStatus = 'researched' then
+          LPage.Add(Caption(nkLabel, 'result-message',
+            'Exhaustive literature and cultural screening found no qualifying study directly evaluating this exact preparation and symptom yet.'))
+        else
+          LPage.Add(Caption(nkLabel, 'result-message', 'This claim is awaiting study review.'));
+      end;
       for LIndex := 0 to LItems.Length - 1 do
       begin
         LGroup := EvidenceGroup(TextOf(TJSObject(LItems[LIndex]), 'role'));
@@ -861,6 +970,32 @@ begin
 
       PublishResults(LDocument, LPage);
       BindIngredientGallery(GResultsRenderer, TextOf(AData, 'ingredient'));
+      GResultsRenderer.ElementFor('claim-audit-panel').id := 'claim-audit-panel';
+      GResultsRenderer.ElementFor('claim-audit-panel').setAttribute('hidden', '');
+      GResultsRenderer.ElementFor('claim-audit-toggle').setAttribute('aria-controls', 'claim-audit-panel');
+      GResultsRenderer.ElementFor('claim-audit-toggle').setAttribute('aria-expanded', 'false');
+      BindEvent(GResultsRenderer.ElementFor('claim-audit-toggle'), 'click',
+        function(AEvent: TEventListenerEvent): Boolean
+        var
+          LBtn: TJSHTMLElement;
+          LPanel: TJSHTMLElement;
+        begin
+          LBtn := GResultsRenderer.ElementFor('claim-audit-toggle');
+          LPanel := GResultsRenderer.ElementFor('claim-audit-panel');
+          if LPanel.hasAttribute('hidden') then
+          begin
+            LPanel.removeAttribute('hidden');
+            LBtn.setAttribute('aria-expanded', 'true');
+            LBtn.textContent := 'Hide research & audit details';
+          end
+          else
+          begin
+            LPanel.setAttribute('hidden', '');
+            LBtn.setAttribute('aria-expanded', 'false');
+            LBtn.textContent := 'Research & audit details';
+          end;
+          Result := True;
+        end);
       FocusResults;
       BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
         function(AEvent: TEventListenerEvent): Boolean
@@ -911,7 +1046,7 @@ begin
         procedure
         begin
           ShowList(GResults, False);
-          GResultsRenderer.ElementFor('inspect-' + ATag).focus;
+          TryFocusElement(GResultsRenderer, 'inspect-' + ATag);
         end);
     end);
 end;
@@ -1197,7 +1332,7 @@ begin
         procedure
         begin
           ShowList(GResults, False);
-          ARenderer.ElementFor('open-source-' + ATag).focus;
+          TryFocusElement(ARenderer, 'open-source-' + ATag);
         end);
       Result := True;
     end);
@@ -1237,7 +1372,7 @@ begin
       else
         AProfile['expanded_gallery'] := AButton;
       ShowIngredientEffects(AProfile, ABack, False);
-      GResultsRenderer.ElementFor(AButton).focus;
+      TryFocusElement(GResultsRenderer, AButton);
       Result := True;
     end);
 end;
@@ -1256,7 +1391,7 @@ begin
         procedure
         begin
           ShowIngredientEffects(AProfile, ABack, False);
-          GResultsRenderer.ElementFor(AButton).focus;
+          TryFocusElement(GResultsRenderer, AButton);
         end);
     end);
 end;
@@ -1415,7 +1550,7 @@ begin
     if LKey = 'unresolved' then
     begin
       LSection.Add(Caption(nkLabel, 'ingredient-open-explanation',
-        'For these ingredients, the selected symptoms still have open or unreviewed evidence.'));
+        'For these ingredients, the selected symptoms are currently Unknown (Researched) or awaiting review.'));
       LSection.Add(Field('ingredient-open-filter', 'Find an ingredient', 'Type its name'));
       LSection.Add(Caption(nkLabel, 'ingredient-open-count',
         IntToStr(LGroup.Length) + ' ingredients'));
@@ -1734,7 +1869,7 @@ begin
         procedure
         begin
           ShowList(GResults, False);
-          GResultsRenderer.ElementFor('claim-graph-' + ATag).focus;
+          TryFocusElement(GResultsRenderer, 'claim-graph-' + ATag);
         end);
       Result := True;
     end);
@@ -1791,7 +1926,7 @@ begin
         procedure
         begin
           ShowList(GResults, False);
-          ARenderer.ElementFor('catalog-graph-' + ATag).focus;
+          TryFocusElement(ARenderer, 'catalog-graph-' + ATag);
         end);
       Result := True;
     end);
@@ -2031,10 +2166,24 @@ begin
         LResultActions.Add(Button('jump-to-sources', 'Jump to sources', nvSecondary));
       LPage.Add(LResultActions);
       LKindTabs := Section(nkRow, 'research-kind-tabs');
-      LKindTabs.Add(Button('research-kind-all', 'All research', nvSecondary));
-      LKindTabs.Add(Button('research-kind-studies', 'Studies & analyses', nvSecondary));
-      LKindTabs.Add(Button('research-kind-culture', 'Culture & experience', nvSecondary));
+      LKindTabs.Add(Button('research-kind-all', 'All research', nvSecondary)
+        .Configure.Pressed(GResearchKind = SourceKindAll).Done);
+      LKindTabs.Add(Button('research-kind-studies', 'Studies & analyses', nvSecondary)
+        .Configure.Pressed(GResearchKind = SourceKindStudies).Done);
+      LKindTabs.Add(Button('research-kind-culture', 'Culture & experience', nvSecondary)
+        .Configure.Pressed(GResearchKind = SourceKindCulture).Done);
       LPage.Add(LKindTabs);
+    end
+    else
+    begin
+      if LRecords.Length > 0 then
+      begin
+        LResultActions := Section(nkRow, 'result-actions');
+        LResultActions.Add(Button('open-graph', 'Graph view', nvSecondary));
+        LPage.Add(LResultActions);
+      end;
+      LPage.Add(Caption(nkLabel, 'trend-results-guidance',
+        'Showing directional findings across all symptoms. Open any card to inspect studies or connections.'));
     end;
     if GResearchKind = SourceKindCulture then
     begin
@@ -2154,7 +2303,7 @@ begin
             procedure
             begin
               ShowList(GResults, False);
-              GResultsRenderer.ElementFor('compare-ingredients').focus;
+              TryFocusElement(GResultsRenderer, 'compare-ingredients');
             end);
           Result := True;
         end);
@@ -2170,6 +2319,21 @@ begin
           LHeading.scrollIntoView;
           Result := True;
         end);
+  end
+  else if (GView = ovClaims) and LTrendOnly and (LRecords.Length > 0) then
+  begin
+    BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      var
+        LFirst: TJSObject;
+        LGraphSymptoms: TStringValues;
+      begin
+        LFirst := TJSObject(LRecords[0]);
+        LGraphSymptoms := nil;
+        StartGraph(AddSelection(LGraphSymptoms, TextOf(LFirst, 'symptom')),
+          TextOf(LFirst, 'ingredient'));
+        Result := True;
+      end);
   end;
   if AFocus then
     FocusResults;
@@ -2213,6 +2377,7 @@ begin
       function(AEvent: TEventListenerEvent): Boolean
       begin
         GArguments['scope'] := 'assessed';
+        GClaimUnion := nil;
         TJSHTMLSelectElement(GRenderer.InputFor('scope')).selectedIndex := 1;
         UpdateFilterCount;
         Query(False, 0);
@@ -2274,6 +2439,7 @@ begin
     GClaimUnion := nil;
     if GView = ovClaims then
     begin
+      GResearchKind := SourceKindAll;
       if not GSymptom.ReadValues(LValues) then
         Exit;
       if Length(LValues) = 1 then
@@ -2304,7 +2470,12 @@ begin
       end;
       case SelectedIndex('scope') of
         1: GArguments['scope'] := 'assessed';
-        2: GArguments['scope'] := 'frozen';
+        2:
+          begin
+            GArguments['scope'] := 'assessed';
+            GArguments['verdict'] := 'Unknown (Researched)';
+          end;
+        3: GArguments['scope'] := 'frozen';
       end;
       case SelectedIndex('direction') of
         1: GArguments['direction'] := 'reduces';
@@ -2555,7 +2726,7 @@ begin
   LFilters := Section(nkColumn, 'extra-filters');
   LFilters.Add(CreatePickerField('preparation', 'Preparation', 'Any preparation'));
   LFilters.Add(SelectField('scope', 'Which claims to show',
-    'Directional findings only'#10'All reviewed claims'#10'All findings and open questions'));
+    'Directional findings only'#10'All reviewed claims'#10'Unknown (Researched) only'#10'All findings and open questions'));
   LFilters.Add(SelectField('direction', 'Claim being tested', 'Any direction'#10'Could reduce'#10'Could worsen'));
   LClaims.Add(LFilters);
   LClaims.Add(Button('search-claims', 'Find research', nvPrimary));
@@ -2577,7 +2748,9 @@ begin
   LHelp.Add(Caption(nkLabel, 'guide-limited',
     'Limited evidence means the findings lean one way. The studies may have tested a different preparation, symptom, or group of people.'));
   LHelp.Add(Caption(nkLabel, 'guide-unclear',
-    'Still unclear means the available findings leave the question open. See the studies for what was measured and what still needs review.'));
+    'Unknown (Researched) means our team completed lab, clinical, and cultural searches and verified the scorecard, and the evidence still leaves the direction open.'));
+  LHelp.Add(Caption(nkLabel, 'guide-awaiting',
+    'Awaiting review means the claim is queued in a later round and has not yet been researched.'));
   LHelp.Add(Caption(nkLabel, 'guide-traditional',
     'Traditional practices and personal reports are collected separately and carry lower evidential weight for treatment effects than controlled studies. A documented account is not proof of benefit.'));
   LHelp.Add(Caption(nkLabel, 'guide-shared',
@@ -2606,7 +2779,7 @@ begin
   BindTrend('trend-eases', 'eases');
   BindTrend('trend-worsens', 'worsens');
   SelectTrend('');
-  TJSHTMLSelectElement(GRenderer.InputFor('scope')).selectedIndex := 2;
+  TJSHTMLSelectElement(GRenderer.InputFor('scope')).selectedIndex := 3;
   GRenderer.ElementFor('extra-filters').id := 'extra-filters';
   GRenderer.ElementFor('extra-filters').setAttribute('hidden', '');
   GRenderer.ElementFor('show-filters').setAttribute('aria-controls', 'extra-filters');

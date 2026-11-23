@@ -41,5 +41,9 @@ begin
     'Unfinished Unknown retains Open hypothesis.');
   Check(GraphClaimLabelWithStatus('Maybe False', 'worsens', 'researched') = 'May ease',
     'Directional verdicts keep directional graph labels when researched.');
+  Check(GraphClaimLabelWithStatus('Unreviewed', 'reduces', 'unreviewed') = 'Awaiting review',
+    'Unreviewed claims surface as Awaiting review.');
+  Check(GraphClaimLabelWithStatus('', 'worsens', '') = 'Awaiting review',
+    'Empty verdicts surface as Awaiting review.');
   WriteLn(GChecks, ' graph evidence-direction checks passed.');
 end.

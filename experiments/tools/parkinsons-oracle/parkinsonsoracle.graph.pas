@@ -40,6 +40,10 @@ begin
   begin
     Exit('Unknown (Researched)');
   end;
+  if (AVerdict = '') or (AVerdict = 'Unreviewed') then
+  begin
+    Exit('Awaiting review');
+  end;
   Result := GraphClaimLabel(AVerdict, ADirection);
 end;
 

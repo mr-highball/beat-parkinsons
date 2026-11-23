@@ -37,6 +37,7 @@ type
     FOnSubmit: TPickerAction;
     FBrowsing: Boolean;
     FFirst: TJSHTMLElement;
+    FOptionCount: Integer;
     function Matches(const AText: String): TPickerOptions;
     function LabelFor(const AValue: String): String;
     procedure UpdateSuggestions;
@@ -188,7 +189,7 @@ begin
     .AccessibleName(AName).Placeholder(APlaceholder).Done);
   if AMultiple then
     Result.Add(TNyxNode.Create(nkRow, AId + '-selected').Configure
-      .AccessibleName('Selected symptoms').Done)
+      .AccessibleName('Chosen ' + AId + ' tags').Done)
   else
     Result.Add(TNyxNode.Create(nkButton, AId + '-selected').Configure
       .Text('Clear selection').Variant(nvSecondary).Done);
@@ -269,6 +270,7 @@ procedure TOraclePicker.HideSuggestions;
 begin
   FHost.setAttribute('hidden', '');
   FFirst := nil;
+  FOptionCount := 0;
   FBrowsing := False;
   if FBrowseButton <> nil then
     FBrowseButton.setAttribute('aria-expanded', 'false');
@@ -430,8 +432,15 @@ begin
     LPage.Add(TNyxNode.Create(nkLabel, 'picker-message').Configure.Text(LCaption).Done);
   end;
   for LIndex := 0 to LLimit - 1 do
-    LPage.Add(TNyxNode.Create(nkButton, 'option-' + IntToStr(LIndex)).Configure
-      .Text(LOptions[LIndex].LabelText).Variant(nvSecondary).Done);
+  begin
+    if FMultiple then
+      LPage.Add(TNyxNode.Create(nkButton, 'option-' + IntToStr(LIndex)).Configure
+        .Text(LOptions[LIndex].LabelText).Variant(nvSecondary)
+        .Pressed(Contains(LOptions[LIndex].Value)).Done)
+    else
+      LPage.Add(TNyxNode.Create(nkButton, 'option-' + IntToStr(LIndex)).Configure
+        .Text(LOptions[LIndex].LabelText).Variant(nvSecondary).Done);
+  end;
   if LLimit < Length(LOptions) then
     LPage.Add(TNyxNode.Create(nkLabel, 'picker-message').Configure
       .Text('Type more letters to narrow the suggestions.').Done);
@@ -439,6 +448,7 @@ begin
   FRenderer.Render(LDocument, LPage, FHost);
   FDocument := LDocument;
   LPrior.Free;
+  FOptionCount := LLimit;
   FFirst := nil;
   if LLimit > 0 then
     FFirst := FRenderer.ElementFor('option-0');
@@ -554,6 +564,8 @@ begin
   FHost.id := 'suggestions-' + AId;
   FHost.setAttribute('role', 'group');
   FHost.setAttribute('aria-label', Capitalized(AId) + ' suggestions');
+  if FMultiple then
+    FSelected.setAttribute('role', 'group');
   FInput.setAttribute('autocomplete', 'off');
   FInput.setAttribute('aria-controls', FHost.id);
   FSelected.setAttribute('hidden', '');
@@ -611,11 +623,46 @@ begin
   FInput.addEventListener('keydown', LKey);
   LKey :=
     function(AEvent: TEventListenerEvent): Boolean
+    var
+      LPressed: String;
+      LTarget: TJSElement;
+      LCurrent: Integer;
     begin
-      if TJSKeyboardEvent(AEvent).key = 'Escape' then
+      LPressed := TJSKeyboardEvent(AEvent).key;
+      if LPressed = 'Escape' then
       begin
         HideSuggestions;
         FInput.focus;
+      end
+      else if (FOptionCount > 0) and ((LPressed = 'ArrowDown') or (LPressed = 'ArrowUp') or
+        (LPressed = 'Home') or (LPressed = 'End')) then
+      begin
+        LCurrent := -1;
+        if (AEvent.target <> nil) and (TJSNode(AEvent.target).nodeType = 1) then
+        begin
+          LTarget := TJSElement(AEvent.target).closest('[data-node^="option-"]');
+          if LTarget <> nil then
+            LCurrent := StrToIntDef(Copy(LTarget.getAttribute('data-node'), 8, MaxInt), -1);
+        end;
+        AEvent.preventDefault;
+        if LPressed = 'Home' then
+          FRenderer.ElementFor('option-0').focus
+        else if LPressed = 'End' then
+          FRenderer.ElementFor('option-' + IntToStr(FOptionCount - 1)).focus
+        else if LPressed = 'ArrowDown' then
+        begin
+          if LCurrent < FOptionCount - 1 then
+            FRenderer.ElementFor('option-' + IntToStr(LCurrent + 1)).focus
+          else
+            FRenderer.ElementFor('option-0').focus;
+        end
+        else if LPressed = 'ArrowUp' then
+        begin
+          if LCurrent > 0 then
+            FRenderer.ElementFor('option-' + IntToStr(LCurrent - 1)).focus
+          else
+            FInput.focus;
+        end;
       end;
       Result := True;
     end;

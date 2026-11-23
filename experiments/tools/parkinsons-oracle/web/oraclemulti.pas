@@ -50,8 +50,9 @@ uses parkinsonsoracle.presentation;
 const
   CResponseFields: array[0..4] of String =
     ('revision', 'symptoms', 'symptom', 'scope', 'no_match_reason');
-  CClaimFilters: array[0..6] of String =
-    ('ingredient', 'preparation', 'scope', 'direction', 'verdict', 'trend', 'round');
+  CClaimFilters: array[0..8] of String =
+    ('ingredient', 'preparation', 'scope', 'direction', 'verdict', 'trend', 'round',
+      'research_status', 'scorecard_status');
 
 function ValueText(AValue: JSValue): String; external name 'String';
 

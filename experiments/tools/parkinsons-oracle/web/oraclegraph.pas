@@ -32,6 +32,7 @@ type
     FEdgeKeys: TJSSet;
     FExpanded: TJSObject;
     FLanes: array[TGraphLevel] of TJSSet;
+    FLevelSlots: array[TGraphLevel] of Integer;
     FSelected: String;
     FHistory: TStringValues;
     FHost: TJSHTMLElement;
@@ -39,6 +40,9 @@ type
     FRenderer: TNyxBrowserRenderer;
     FView: INyxBrowserCanvasWorkspaceView;
     FCanvasClick: TJSEventHandler;
+    FHomeKeyHandler: TJSEventHandler;
+    FHomeClickHandler: TJSEventHandler;
+    FHomeButton: TJSHTMLElement;
     FTouchHandler: TJSEventHandler;
     FTouch: TGraphTouch;
     FTapKey: String;
@@ -54,6 +58,7 @@ type
     procedure Select(const AKey: String);
     procedure NavigateBack;
     procedure FocusBranch;
+    procedure UpdateLevelSlots;
     procedure Render;
     procedure BindNeighbor(const AId, AKey: String);
     procedure BindEvidence(const AId: String; AEdge: TJSObject; ASource: Boolean);
@@ -62,6 +67,7 @@ type
     function NodeAt(ATarget: TJSNode): String;
     function PositionOf(const AKey: String): TNyxCanvasPoint;
     function SelectedCenter: TNyxCanvasPoint;
+    function FocusCamera(AViewportW, AViewportH: Double): TNyxCanvasCamera;
     function OnCanvasClick(AEvent: TEventListenerEvent): Boolean;
     function OnCanvasTouch(AEvent: TEventListenerEvent): Boolean;
     function OnCanvasHomeKey(AEvent: TEventListenerEvent): Boolean;
@@ -84,13 +90,13 @@ uses nyx.controls, nyx.drawing, nyx.colors, oraclevocab, parkinsonsoracle.presen
 const
   CExpandPage = 12;
   CNodeWidth = 216;
-  CNodeHeight = 78;
+  CNodeHeight = 92;
   CColumnStep = 392;
-  CRowStep = 154;
+  CRowStep = 168;
   CCompactWidth = 550;
   CCompactNodeStep = 278;
-  CCompactLevelStep = 174;
-  CDrawingMargin = 84;
+  CCompactLevelStep = 192;
+  CDrawingMargin = 96;
   CTouchEvents: array[0..4] of String = ('pointerdown', 'pointermove', 'pointerup',
     'pointercancel', 'lostpointercapture');
 
@@ -184,7 +190,8 @@ begin
 end;
 
 function LinkGeometry(ACompact: Boolean; const AFrom, ATo: TNyxCanvasPoint;
-  AFromPort, AToPort: Double; ABadgeAtOrigin: Boolean): TGraphLinkGeometry;
+  AFromPort, AToPort: Double; ABadgeAtOrigin: Boolean;
+  AGutterSlot: Integer = 0): TGraphLinkGeometry;
 var
   LFromLane: Double;
   LToLane: Double;
@@ -199,6 +206,7 @@ var
   LSpread: Integer;
   LDeparture: Double;
   LArrival: Double;
+  LGutterOffset: Double;
   LGutter: Double;
   LMiddle: Double;
 
@@ -235,9 +243,10 @@ begin
 
   LSign := Sign(LToLevel - LFromLevel);
   LSpread := Sign(LToLane - LFromLane);
-  LGutter := LToLane - 24;
+  LGutterOffset := 24 + (AGutterSlot mod 4) * 14;
+  LGutter := LToLane - LGutterOffset;
   if LSpread <= 0 then
-    LGutter := LToLane + LLaneSize + 24;
+    LGutter := LToLane + LLaneSize + LGutterOffset;
   LFromLane := LFromLane + LLaneSize / 2 + AFromPort;
   LToLane := LToLane + LLaneSize / 2 + AToPort;
   LFromLevel := LFromLevel + (1 + LSign) * LLevelSize / 2;
@@ -329,9 +338,9 @@ begin
     RegisterPort(GraphText(LEdge, 'from'), GraphText(LEdge, 'to'), 'origin-port');
     RegisterPort(GraphText(LEdge, 'to'), GraphText(LEdge, 'from'), 'target-port');
   end;
-  LSpan := CNodeHeight - 24;
+  LSpan := CNodeHeight - 16;
   if ACompact then
-    LSpan := CNodeWidth - 36;
+    LSpan := CNodeWidth - 28;
   LCompare :=
     function(ALeft, ARight: JSValue): NativeInt
     begin
@@ -526,13 +535,19 @@ begin
   if FView <> nil then
   begin
     FCamera := FView.Camera;
-    RemoveCapture(FView.Surface, 'click', FCanvasClick);
-    RemoveCapture(FView.Surface, 'keydown', @OnCanvasHomeKey);
-    for LName in CTouchEvents do
-    begin
-      RemoveCapture(FView.Surface, LName, FTouchHandler);
-    end;
+    if Assigned(FCanvasClick) then
+      RemoveCapture(FView.Surface, 'click', FCanvasClick);
+    if Assigned(FHomeKeyHandler) then
+      RemoveCapture(FView.Surface, 'keydown', FHomeKeyHandler);
+    if (FHomeButton <> nil) and Assigned(FHomeClickHandler) then
+      RemoveCapture(FHomeButton, 'click', FHomeClickHandler);
+    if Assigned(FTouchHandler) then
+      for LName in CTouchEvents do
+        RemoveCapture(FView.Surface, LName, FTouchHandler);
     FCanvasClick := nil;
+    FHomeKeyHandler := nil;
+    FHomeClickHandler := nil;
+    FHomeButton := nil;
     FTouchHandler := nil;
     FTouch.Reset;
     FTapKey := '';
@@ -636,14 +651,48 @@ begin
   end;
 end;
 
+procedure TOracleGraphExplorer.UpdateLevelSlots;
+var
+  LPresent: array[TGraphLevel] of Boolean;
+  LIndex: Integer;
+  LLevel: Integer;
+  LSlot: Integer;
+begin
+  for LLevel := Low(LPresent) to High(LPresent) do
+  begin
+    LPresent[LLevel] := False;
+    FLevelSlots[LLevel] := LLevel;
+  end;
+  for LIndex := 0 to FVisible.Length - 1 do
+  begin
+    LLevel := Integer(TJSObject(FPositions[String(FVisible[LIndex])])['level']);
+    if (LLevel >= Low(LPresent)) and (LLevel <= High(LPresent)) then
+      LPresent[LLevel] := True;
+  end;
+  LSlot := 0;
+  for LLevel := Low(LPresent) to High(LPresent) do
+  begin
+    if LPresent[LLevel] then
+    begin
+      FLevelSlots[LLevel] := LSlot;
+      Inc(LSlot);
+    end;
+  end;
+end;
+
 function TOracleGraphExplorer.PositionOf(const AKey: String): TNyxCanvasPoint;
 var
   LPosition: TJSObject;
+  LLevelIndex: Integer;
   LLevel: Double;
   LRow: Double;
 begin
   LPosition := TJSObject(FPositions[AKey]);
-  LLevel := Double(LPosition['level']);
+  LLevelIndex := Integer(LPosition['level']);
+  if (LLevelIndex >= Low(FLevelSlots)) and (LLevelIndex <= High(FLevelSlots)) then
+    LLevel := FLevelSlots[LLevelIndex]
+  else
+    LLevel := LLevelIndex;
   LRow := Double(LPosition['row']);
   if FCompact then
   begin
@@ -655,27 +704,91 @@ end;
 function TOracleGraphExplorer.SelectedCenter: TNyxCanvasPoint;
 var
   LPoint: TNyxCanvasPoint;
-  LOffset: Double;
-  LLevel: Integer;
 begin
   if FSelected = '' then
-  begin
     Exit(NyxCanvasPoint(0, 0));
-  end;
   LPoint := PositionOf(FSelected);
-  LLevel := LevelFor(FSelected);
-  LOffset := 0;
-  if (FVisible.Length > 1) and (LLevel = Low(GraphKinds)) then
-    LOffset := 0.5
-  else if (FVisible.Length > 1) and (LLevel = High(GraphKinds)) then
-    LOffset := -0.5;
-  if FCompact then
+  Result := NyxCanvasPoint(LPoint.X + CNodeWidth / 2, LPoint.Y + CNodeHeight / 2);
+end;
+
+function TOracleGraphExplorer.FocusCamera(AViewportW, AViewportH: Double): TNyxCanvasCamera;
+var
+  LViewW: Double;
+  LViewH: Double;
+  LSelPos: TNyxCanvasPoint;
+  LPoint: TNyxCanvasPoint;
+  LMinX: Double;
+  LMinY: Double;
+  LMaxX: Double;
+  LMaxY: Double;
+  LNeighbors: TJSArray;
+  LIndex: Integer;
+  LIncluded: Integer;
+  LOther: String;
+  LBoxW: Double;
+  LBoxH: Double;
+  LZoom: Double;
+  LCenterX: Double;
+  LCenterY: Double;
+  LVisW: Double;
+  LVisH: Double;
+  LMinCenter: Double;
+  LMaxCenter: Double;
+begin
+  LViewW := AViewportW;
+  LViewH := AViewportH;
+  if LViewW <= 0 then
+    LViewW := 800;
+  if LViewH <= 0 then
+    LViewH := 456;
+  if FSelected = '' then
+    Exit(FCamera.WithViewport(LViewW, LViewH).AtCenter(NyxCanvasPoint(0, 0), 1));
+  LSelPos := PositionOf(FSelected);
+  LMinX := LSelPos.X;
+  LMinY := LSelPos.Y;
+  LMaxX := LSelPos.X + CNodeWidth;
+  LMaxY := LSelPos.Y + CNodeHeight;
+  LIncluded := 0;
+  LNeighbors := FModel.Connections(FSelected);
+  for LIndex := 0 to LNeighbors.Length - 1 do
   begin
-    Exit(NyxCanvasPoint(LPoint.X + CNodeWidth / 2,
-      LPoint.Y + CNodeHeight / 2 + LOffset * CCompactLevelStep));
+    LOther := GraphText(TJSObject(LNeighbors[LIndex]), 'node');
+    if not isDefined(FPositions[LOther]) then
+      Continue;
+    LPoint := PositionOf(LOther);
+    LMinX := Min(LMinX, LPoint.X);
+    LMinY := Min(LMinY, LPoint.Y);
+    LMaxX := Max(LMaxX, LPoint.X + CNodeWidth);
+    LMaxY := Max(LMaxY, LPoint.Y + CNodeHeight);
+    Inc(LIncluded);
+    if LIncluded >= 6 then
+      Break;
   end;
-  Result := NyxCanvasPoint(LPoint.X + CNodeWidth / 2 + LOffset * CColumnStep,
-    LPoint.Y + CNodeHeight / 2);
+  if LIncluded = 0 then
+    Exit(FCamera.WithViewport(LViewW, LViewH).AtCenter(SelectedCenter, 1));
+  LBoxW := (LMaxX - LMinX) + 96;
+  LBoxH := (LMaxY - LMinY) + 96;
+  LZoom := Min(1.0, Min(LViewW / LBoxW, LViewH / LBoxH));
+  if LZoom < 0.62 then
+    LZoom := 0.62;
+  LCenterX := (LMinX + LMaxX) / 2;
+  LCenterY := (LMinY + LMaxY) / 2;
+  LVisW := LViewW / LZoom;
+  LVisH := LViewH / LZoom;
+  { Guarantee the selected node stays completely inside the viewport with margin. }
+  LMinCenter := (LSelPos.X + CNodeWidth + 32) - LVisW / 2;
+  LMaxCenter := (LSelPos.X - 32) + LVisW / 2;
+  if LMinCenter <= LMaxCenter then
+    LCenterX := Max(LMinCenter, Min(LMaxCenter, LCenterX))
+  else
+    LCenterX := LSelPos.X + CNodeWidth / 2;
+  LMinCenter := (LSelPos.Y + CNodeHeight + 32) - LVisH / 2;
+  LMaxCenter := (LSelPos.Y - 32) + LVisH / 2;
+  if LMinCenter <= LMaxCenter then
+    LCenterY := Max(LMinCenter, Min(LMaxCenter, LCenterY))
+  else
+    LCenterY := LSelPos.Y + CNodeHeight / 2;
+  Result := FCamera.WithViewport(LViewW, LViewH).AtCenter(NyxCanvasPoint(LCenterX, LCenterY), LZoom);
 end;
 
 function TOracleGraphExplorer.OnCanvasClick(AEvent: TEventListenerEvent): Boolean;
@@ -704,7 +817,7 @@ function TOracleGraphExplorer.OnCanvasHome(AEvent: TEventListenerEvent): Boolean
 begin
   AEvent.stopImmediatePropagation;
   AEvent.preventDefault;
-  FView.SetCamera(FView.Camera.AtCenter(SelectedCenter, 1));
+  FView.SetCamera(FocusCamera(FView.Surface.clientWidth, FView.Surface.clientHeight));
   Result := True;
 end;
 
@@ -829,6 +942,7 @@ var
   LLabelPoint: TNyxCanvasPoint;
   LGeometry: TGraphLinkGeometry;
   LPass: Integer;
+  LLongSlot: Integer;
   LRoutesByPair: TJSObject;
   LRoutes: TJSArray;
   LRoute: TJSObject;
@@ -871,7 +985,7 @@ begin
   LLegend.Add(Control(nkBadge, 'effect-relief-graph-key', 'May ease'));
   LLegend.Add(Control(nkBadge, 'effect-worse-graph-key', 'May worsen'));
   LLegend.Add(Control(nkBadge, 'effect-challenged-graph-key', 'Claim challenged'));
-  LLegend.Add(Control(nkBadge, 'grade-unclear-graph-key', 'Open or related'));
+  LLegend.Add(Control(nkBadge, 'grade-unclear-graph-key', 'Unknown (Researched) / Open'));
   LLegend.Add(Control(nkBadge, 'graph-mixed-key', 'Multiple signals'));
   LLegend.Add(Control(nkBadge, 'graph-culture-key', 'Culture & experience'));
   LPage.Add(LLegend);
@@ -981,12 +1095,13 @@ begin
     LGroups[LevelFor(LOther)].Add(LCard);
   end;
   FRenderer.Render(FDocument, LPage, FHost);
+  UpdateLevelSlots;
   LCanvasHost := FRenderer.ElementFor('graph-canvas');
   LCompact := (LCanvasHost.clientWidth > 0) and (LCanvasHost.clientWidth < CCompactWidth);
   if FRecenter or (FCompact <> LCompact) then
   begin
     FCompact := LCompact;
-    FCamera := FCamera.AtCenter(SelectedCenter, 1);
+    FCamera := FocusCamera(LCanvasHost.clientWidth, Max(280, LCanvasHost.clientHeight - 56));
     FRecenter := False;
   end;
   LScene := NewNyxCanvasScene;
@@ -1037,6 +1152,7 @@ begin
     so crossings stay readable without dropping the surrounding branch. }
   for LPass := 0 to 1 do
   begin
+    LLongSlot := 0;
     for LIndex := 0 to LRoutes.Length - 1 do
     begin
       LRoute := TJSObject(LRoutes[LIndex]);
@@ -1048,7 +1164,9 @@ begin
         Continue;
       LTone := GraphText(LRoute, 'tone');
       LGeometry := LinkGeometry(FCompact, PositionOf(LFrom), PositionOf(LTo),
-        Double(LRoute['origin-port']), Double(LRoute['target-port']), LTo = FSelected);
+        Double(LRoute['origin-port']), Double(LRoute['target-port']), LTo = FSelected,
+        LLongSlot);
+      Inc(LLongSlot);
       LPaint := NyxDrawingPaint(LinkColor(LTone, LFocused));
       LStroke := 1.25;
       if LTone <> '' then
@@ -1114,9 +1232,9 @@ begin
         LNodeKind := 'Conversation'
       else
         LNodeKind := 'Cultural account';
-      if Length(LNodeTitle) > 42 then
-        LNodeTitle := Trim(Copy(LNodeTitle, 1, 40)) + '…';
     end;
+    if Length(LNodeTitle) > 36 then
+      LNodeTitle := Trim(Copy(LNodeTitle, 1, 34)) + '…';
     LNodeControl.Configure.Text(LNodeKind + #10 + LNodeTitle)
       .AccessibleName(GraphText(LNode, 'kind') + ': ' +
       GraphText(LNode, 'label') + '. Explore connections.').Variant(LVariant).Done;
@@ -1131,14 +1249,15 @@ begin
   FView.Surface.style.setProperty('touch-action', 'none');
   FCanvasClick := @OnCanvasClick;
   FView.Surface.addEventListener('click', FCanvasClick, True);
-  LClick := @OnCanvasHomeKey;
-  FView.Surface.addEventListener('keydown', LClick, True);
+  FHomeKeyHandler := @OnCanvasHomeKey;
+  FView.Surface.addEventListener('keydown', FHomeKeyHandler, True);
   LHome := TJSHTMLElement(LCanvasHost.querySelector('[data-node="' +
     NyxCanvasWorkspacePart('research-web', ncwpHome).ID + '"]'));
   if LHome <> nil then
   begin
-    LClick := @OnCanvasHome;
-    LHome.addEventListener('click', LClick, True);
+    FHomeButton := LHome;
+    FHomeClickHandler := @OnCanvasHome;
+    LHome.addEventListener('click', FHomeClickHandler, True);
   end;
   FTouchHandler := @OnCanvasTouch;
   for LName in CTouchEvents do
