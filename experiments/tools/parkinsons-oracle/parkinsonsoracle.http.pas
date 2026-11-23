@@ -332,6 +332,9 @@ procedure TOracleWeb.CallOracle(ARequest: TFPHTTPConnectionRequest;
   AResponse: TFPHTTPConnectionResponse);
 var
   LBytes: TBytes;
+  {$IF FPC_FULLVERSION < 30300}
+  LBodyText: RawByteString;
+  {$ENDIF}
   LBody: TJSONData;
   LObject: TJSONObject;
   LName: TJSONData;
@@ -344,7 +347,14 @@ begin
     WriteError(AResponse, 415, 'Send an uncompressed UTF-8 application/json body.');
     Exit;
   end;
+  {$IF FPC_FULLVERSION >= 30300}
   LBytes := ARequest.ContentBytes;
+  {$ELSE}
+  LBodyText := RawByteString(ARequest.Content);
+  SetLength(LBytes, Length(LBodyText));
+  if Length(LBodyText) > 0 then
+    Move(LBodyText[1], LBytes[0], Length(LBodyText));
+  {$ENDIF}
   if (Length(LBytes) = 0) or (ARequest.GetFieldByName('Transfer-Encoding') <> '') then
   begin
     WriteError(AResponse, 400, 'A nonempty JSON body with Content-Length is required.');
