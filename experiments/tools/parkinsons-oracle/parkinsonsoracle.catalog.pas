@@ -58,7 +58,8 @@ implementation
 
 uses
   BufStream, Classes, Generics.Collections, JwaNative, JwaWinternl, Math, StrUtils, Windows,
-  foodexperiment.archiveidentity, parkinsonsoracle.presentation, parkinsonsoracle.culture;
+  foodexperiment.archiveidentity, parkinsonsoracle.compat, parkinsonsoracle.presentation,
+  parkinsonsoracle.culture;
 
 const
   CatalogApplicationId = $504F5243;
@@ -471,7 +472,7 @@ begin
   // An unchanged body was already validated. Its prefix can end mid-character.
   if (APrefixBytes = 0) and (Result <> '') then
   begin
-    Utf8ToUnicode(nil, 0, PAnsiChar(Result), Length(Result), False);
+    RequireValidUtf8(RawByteString(Result));
   end;
 end;
 
@@ -730,7 +731,7 @@ begin
     raise ESourceReadError.Create('The indexed source is not readable UTF-8 text.');
   end;
   try
-    Utf8ToUnicode(nil, 0, PAnsiChar(Result), Length(Result), False);
+    RequireValidUtf8(RawByteString(Result));
   except
     on EConvertError do
     begin
