@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [2007 frontotemporal dementia original-access note](Source-Text/2007-PMID18166608-Frontotemporal-Dementia-Original-Access.txt) preserves the exact abstract, pending PDF route and the 14 Round 1 pairs that still need original scope.
+
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
 
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.

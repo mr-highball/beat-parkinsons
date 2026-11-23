@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [Round 1 priority-five source audit](Food-Experiment-Round-1-Priority-Five-Body-Replay-Nov22.md) links 45 identified originals and remaining access paths. It traces a reported sesame-carrier comparison and a separate cassia-bark practice.
+
 The [Round 1 grouped source review](Food-Experiment-Round-1-Grouped-Body-Scope-Nov22.md) links 40 verified source scopes by date. The [Cypriot olive-oil historical record](Cultural-and-Experiential/Traditional-Practices/2026-John-the-Physician-Cyprus-Olive-Oil-Headache.txt) records a topical headache indication in its cultural context.
 
 The [Round 1 saffron and original-source audit](Food-Experiment-Round-1-Saffron-Originals-Nov22.md) links dated texts for 19 recovered originals and the outstanding questions that the audited studies could not answer. A [period comparison](Observations/Food-Experiment-Saffron-Comparator-Scope-Nov22.md) records how the clinical controls and predeclared outcomes differed.

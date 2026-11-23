@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [priority-five research checkpoint](../2025-2029/Food-Experiment-Round-1-Priority-Five-Body-Replay-Nov22.md) links dated notes on foods, molecules and living with Parkinson disease. The [cassia bark historical note](Cultural-and-Experiential/Traditional-Practices/2021-Cassia-Bark-Bie-Lu-Pain-and-Mixture.txt) records older indications under the date of the inspected review.
+
 The [Round 1 grouped source review](../2025-2029/Food-Experiment-Round-1-Grouped-Body-Scope-Nov22.md) links dated main-body descriptions, including the [657-page ESICM collection](Source-Text/2023-PMID37874422-ESICM-Proceedings-Kefir-and-Exposure-Scope.txt) and the [753-page EANM collection](Source-Text/2020-PMID32945931-EANM-Proceedings-Caffeine-and-Exposure-Scope.txt).
 
 The [Round 1 saffron and original-source audit](../2025-2029/Food-Experiment-Round-1-Saffron-Originals-Nov22.md) links the verified originals from this period, the [Parkinson gold kiwi prebiotic registration](Source-Text/Trials/ACTRN12620000991910.txt), and its [conference outcomes](Source-Text/2024-Livaux-Parkinson-Constipation-Conference-Results.txt).

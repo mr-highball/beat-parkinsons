@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [tegaserod editorial](Source-Text/2011-PMID21969099-Tegaserod-Editorial-Archive-Alias-Correction.txt) documents its verified three-page publisher original and a mismatched archive alias. The [Round 1 priority-five source audit](../2025-2029/Food-Experiment-Round-1-Priority-Five-Body-Replay-Nov22.md) links the other dated scopes.
+
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
 
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
