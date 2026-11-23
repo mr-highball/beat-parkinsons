@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [Round 1 original-source audit](../2025-2029/Food-Experiment-Round-1-Mixed-Originals-Nov22.md) includes dated source notes in this period. [PMID 10727478](Source-Text/2000-PMID10727478-Wenning-Parkinson-MSA-Diagnostic-Scope.txt) · [PMID 11511745](Source-Text/2001-PMID11511745-Occupational-Pesticides-Parkinsonism.txt) · [PMID 11603162](Source-Text/2001-PMID11603162-Alzheimer-Extrapyramidal-Signs.txt) · [PMID 14654573](Source-Text/2003-PMID14654573-Older-Adult-Musculoskeletal-Pain.txt)
+
 The [2004 multiple-sclerosis pain crossover](Source-Text/2004-PMID15258006-Svendsen-Sesame-Oil-Pain-Control.txt) exposed both arms to sesame oil. Its published contrast estimates the effect of adding dronabinol and leaves the oil-specific pain question open.
 
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.

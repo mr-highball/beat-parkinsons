@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [Round 1 original-source audit](../2025-2029/Food-Experiment-Round-1-Mixed-Originals-Nov22.md) includes dated source notes in this period. [PMID 10369823](Source-Text/1999-PMID10369823-SAGE-Mortality-Database.txt)
+
 The [1996 progressive supranuclear palsy original](Source-Text/1996-PMID8648326-Progressive-Supranuclear-Palsy-Printed-Scope.txt) preserves printed-page fall data and the distinction from culinary sage and Parkinson disease.
 
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.

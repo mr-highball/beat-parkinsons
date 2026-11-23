@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [Round 1 original-source audit](../2025-2029/Food-Experiment-Round-1-Mixed-Originals-Nov22.md) includes dated source notes in this period. [PMID 15751449](Source-Text/2005-PMID15751449-Dementia-Chronic-Pain-Review.txt) · [PMID 16003927](Source-Text/2005-PMID16003927-Dementia-Pain-Letter-and-Reply.txt) · [PMID 17623389](Source-Text/2007-PMID17623389-Apathy-Evaluation-Scale-Original-Scope.txt) · [PMID 19327151](Source-Text/2009-PMID19327151-TGFB1-Sciatic-Ligation-Pain.txt) · [PMID 19346502](Source-Text/2009-PMID19346502-Early-Onset-Dementia-Apathy.txt) · [PMID 19565381](Source-Text/2009-PMID19565381-Auditory-Pacer-Gait-Article-Title-Scope.txt) · [PMID 19660496](Source-Text/2009-PMID19660496-Curcumin-Paraquat-N27-Contrary-Cells.txt)
+
 The [2007 frontotemporal dementia original-access note](Source-Text/2007-PMID18166608-Frontotemporal-Dementia-Original-Access.txt) preserves the exact abstract, pending PDF route and the 14 Round 1 pairs that still need original scope.
 
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.

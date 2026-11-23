@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [Round 1 original-source audit](../2025-2029/Food-Experiment-Round-1-Mixed-Originals-Nov22.md) includes dated source notes in this period. [PMID 25696779](Source-Text/2015-PMID25696779-Psychogenic-Parkinsonism-Original-Access.txt) · [PMID 26328004](Source-Text/2015-PMID26328004-Plant-Derived-Neuroprotection-Review.txt)
+
 The [Round 1 priority-five source audit](../2025-2029/Food-Experiment-Round-1-Priority-Five-Body-Replay-Nov22.md) links whole-source checks for synthetic curcumin, ginger, nigella seed and the other publications examined in this period.
 
 The [2015 Samad rice bran oil original](Source-Text/2015-PMID28911693-Samad-Rice-Bran-Oil-Motor-Outcome-Scope.txt) identifies a 16-animal experiment and distinguishes its chewing and coordination outcomes from clinical rigidity and dystonia. The [2017 companion note](Source-Text/2017-PMID28374238-Samad-Haleem-Rice-Bran-Oil-Access.txt) records the abstract and original-body gap.

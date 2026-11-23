@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [Round 1 original-source audit](../2025-2029/Food-Experiment-Round-1-Mixed-Originals-Nov22.md) includes dated source notes in this period. [PMID 35556131](Source-Text/2022-PMID35556131-Donadio-Curcumin-Motor-Item-Scope.txt)
+
 The [priority-five research checkpoint](../2025-2029/Food-Experiment-Round-1-Priority-Five-Body-Replay-Nov22.md) links dated notes on foods, molecules and living with Parkinson disease. The [cassia bark historical note](Cultural-and-Experiential/Traditional-Practices/2021-Cassia-Bark-Bie-Lu-Pain-and-Mixture.txt) records older indications under the date of the inspected review.
 
 The [Round 1 grouped source review](../2025-2029/Food-Experiment-Round-1-Grouped-Body-Scope-Nov22.md) links dated main-body descriptions, including the [657-page ESICM collection](Source-Text/2023-PMID37874422-ESICM-Proceedings-Kefir-and-Exposure-Scope.txt) and the [753-page EANM collection](Source-Text/2020-PMID32945931-EANM-Proceedings-Caffeine-and-Exposure-Scope.txt).
