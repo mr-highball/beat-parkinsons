@@ -14,10 +14,14 @@ uses
 type
   TOracleView = (ovClaims, ovCatalog);
   TSourceOffsets = array of Integer;
+  TLocalSourceAction = reference to procedure(const APath: String);
 
 const
   CPageSize = 8;
   CSourceURLPattern = 'https?://[^\s<>\[\]{}"''\x60]+';
+  CSourceLinkPattern = '\[([^\]\r\n]+)\]\(([^)\s\r\n]+)\)|(https?://[^\s<>\[\]{}"''\x60]+)';
+  CCatalogKindValues: array[0..7] of String = ('', 'source_text', 'cultural', 'conversations',
+    'traditional_practices', 'ceremonial_accounts', 'personal_reports', 'local_knowledge');
   CTextInputs: array[0..1] of String = ('terms', 'period');
   CQuickSymptoms: array[0..4] of String = ('rest tremor severity', 'constipation severity',
     'fatigue severity', 'insomnia severity', 'pain severity');
@@ -55,6 +59,12 @@ var
   GGraph: TOracleGraphExplorer;
   GGraphModel: TOracleGraphModel;
   GGraphStack: array of TOracleGraphExplorer;
+  GMainRequest: TJSXMLHttpRequest;
+  GRelatedRequest: TJSXMLHttpRequest;
+  GMainGeneration: Integer;
+  GRelatedGeneration: Integer;
+  GStatusLoaded: Boolean;
+  GStatusLoading: Boolean;
 
 function JSValueText(AValue: JSValue): String; external name 'String';
 function OpenWindow(const AURL, ATarget, AFeatures: String): TJSWindow; external name 'window.open';
@@ -160,26 +170,80 @@ begin
   end;
 end;
 
+procedure LoadStatus; forward;
+
+procedure CancelRequest(var ARequest: TJSXMLHttpRequest);
+var
+  LPrior: TJSXMLHttpRequest;
+begin
+  if ARequest <> nil then
+  begin
+    LPrior := ARequest;
+    ARequest := nil;
+    try
+      LPrior.onabort := nil;
+      LPrior.onerror := nil;
+      LPrior.ontimeout := nil;
+      LPrior.onload := nil;
+      LPrior.abort;
+    except
+    end;
+  end;
+end;
+
+procedure CancelMainRequest;
+begin
+  Inc(GMainGeneration);
+  CancelRequest(GMainRequest);
+end;
+
+procedure CancelRelatedRequest;
+begin
+  Inc(GRelatedGeneration);
+  CancelRequest(GRelatedRequest);
+end;
+
 procedure RequestLocal(const ABody: String; AReply: TOracleReply; ACanRetry,
-  AClaimPage: Boolean);
+  AFastTimeout: Boolean; AChannel: Integer = 0);
 var
   LRequest: TJSXMLHttpRequest;
   LCompleted: Boolean;
+  LGeneration: Integer;
+
+  procedure ReleaseSlot;
+  begin
+    if (AChannel = 1) and (GMainRequest = LRequest) then
+      GMainRequest := nil
+    else if (AChannel = 2) and (GRelatedRequest = LRequest) then
+      GRelatedRequest := nil;
+  end;
+
+  function ChannelActive: Boolean;
+  begin
+    if AChannel = 1 then
+      Result := LGeneration = GMainGeneration
+    else if AChannel = 2 then
+      Result := LGeneration = GRelatedGeneration
+    else
+      Result := True;
+  end;
 
   procedure Fail(const AError: String; ATransient: Boolean);
   begin
     if LCompleted then
       Exit;
     LCompleted := True;
-    if ATransient and ACanRetry then
+    ReleaseSlot;
+    if ATransient and ACanRetry and ChannelActive then
     begin
       window.setTimeout(
         procedure
         begin
-          RequestLocal(ABody, AReply, False, AClaimPage);
+          if ChannelActive then
+            RequestLocal(ABody, AReply, False, AFastTimeout, AChannel);
         end, 500);
     end
-    else
+    else if ChannelActive then
       AReply(nil, AError);
   end;
 
@@ -191,13 +255,28 @@ var
 
 begin
   LCompleted := False;
+  LGeneration := 0;
+  if AChannel = 1 then
+  begin
+    CancelMainRequest;
+    LGeneration := GMainGeneration;
+  end
+  else if AChannel = 2 then
+  begin
+    CancelRelatedRequest;
+    LGeneration := GRelatedGeneration;
+  end;
   LRequest := TJSXMLHttpRequest.new;
+  if AChannel = 1 then
+    GMainRequest := LRequest
+  else if AChannel = 2 then
+    GRelatedRequest := LRequest;
   LRequest.onerror := @ConnectionFailed;
   LRequest.onabort := @ConnectionFailed;
   LRequest.ontimeout :=
     function(AEvent: TJSProgressEvent): Boolean
     begin
-      Fail('The request took too long. Please try again.', not AClaimPage);
+      Fail('The request took too long. Please try again.', False);
       Result := False;
     end;
   LRequest.onload :=
@@ -216,6 +295,7 @@ begin
         Exit;
       end;
       LCompleted := True;
+      ReleaseSlot;
       try
         LValue := TJSJSON.parse(LRequest.responseText);
       except
@@ -230,22 +310,25 @@ begin
       LError := TextOf(TJSObject(LValue), 'error');
       if (LError = '') and (LRequest.Status >= 400) then
         LError := 'The oracle reported HTTP ' + IntToStr(LRequest.Status) + '.';
+      if (LError = '') and not GStatusLoaded and not GStatusLoading then
+        LoadStatus;
       AReply(TJSObject(LValue), LError);
     end;
   try
     LRequest.open('POST', '/api/oracle', True);
     LRequest.setRequestHeader('Content-Type', 'application/json');
-    if AClaimPage then
+    if AFastTimeout then
       LRequest.timeout := 10000
     else
-      LRequest.timeout := 25000;
+      LRequest.timeout := 20000;
     LRequest.send(ABody);
   except
     Fail('The request could not start. Please try again.', False);
   end;
 end;
 
-procedure Request(const ATool: String; AArguments: TJSObject; AReply: TOracleReply);
+procedure RequestChannel(const ATool: String; AArguments: TJSObject; AReply: TOracleReply;
+  AChannel: Integer);
 var
   LBody: TJSObject;
 begin
@@ -257,7 +340,30 @@ begin
   LBody := TJSObject.new;
   LBody['name'] := ATool;
   LBody['arguments'] := AArguments;
-  RequestLocal(TJSJSON.stringify(LBody), AReply, True, ATool = 'oracle_query');
+  RequestLocal(TJSJSON.stringify(LBody), AReply, True,
+    (ATool = 'oracle_query') or (ATool = 'oracle_read_source') or (ATool = 'oracle_claim'),
+    AChannel);
+end;
+
+procedure Request(const ATool: String; AArguments: TJSObject; AReply: TOracleReply);
+var
+  LChannel: Integer;
+begin
+  LChannel := 0;
+  if (ATool = 'oracle_claim') or (ATool = 'oracle_read_source') or
+    (ATool = 'oracle_ingredient_effects') then
+    LChannel := 1;
+  RequestChannel(ATool, AArguments, AReply, LChannel);
+end;
+
+procedure RequestMain(const ATool: String; AArguments: TJSObject; AReply: TOracleReply);
+begin
+  RequestChannel(ATool, AArguments, AReply, 1);
+end;
+
+procedure RequestRelated(const ATool: String; AArguments: TJSObject; AReply: TOracleReply);
+begin
+  RequestChannel(ATool, AArguments, AReply, 2);
 end;
 
 procedure PublishResults(ADocument: TNyxDocument; APage: TNyxNode);
@@ -300,6 +406,7 @@ begin
       function(AEvent: TEventListenerEvent): Boolean
       begin
         Inc(GSequence);
+        CancelMainRequest;
         ABack();
         Result := True;
       end);
@@ -309,6 +416,7 @@ procedure ShowList(AResults: TJSObject; AFocus: Boolean = True); forward;
 procedure Query(ANewQuery: Boolean; AOffset: Integer); forward;
 procedure RenderRelated(AFocus: Boolean = False); forward;
 procedure SwitchView(AView: TOracleView); forward;
+procedure OpenReference(const APath: String; AReturn: TPickerAction); forward;
 procedure BindReference(const ANodeId, APath: String; AReturn: TPickerAction); forward;
 procedure ShowGraph(AGraph: TOracleGraphExplorer; AReturn: TPickerAction;
   const ASymptoms: TStringValues); forward;
@@ -457,10 +565,69 @@ procedure FocusResults;
 var
   LHeading: TJSHTMLElement;
 begin
+  if (GResultsRenderer = nil) or (GResultsRenderer.Root = nil) or
+    (GResultsRenderer.Root.Find('result-heading') = nil) then
+    Exit;
   LHeading := GResultsRenderer.ElementFor('result-heading');
   LHeading.setAttribute('tabindex', '-1');
   LHeading.focus;
   LHeading.scrollIntoView(True);
+end;
+
+procedure TryFocusElement(ARenderer: TNyxBrowserRenderer; const AId: String);
+begin
+  if (ARenderer <> nil) and (ARenderer.Root <> nil) and (ARenderer.Root.Find(AId) <> nil) then
+    ARenderer.ElementFor(AId).focus
+  else
+    FocusResults;
+end;
+
+function TierSummaryLabel(const AVerdict, AConfidence, AResearchStatus: String): String;
+var
+  LValue: Double;
+begin
+  if (AVerdict = '') or (AVerdict = 'Unreviewed') then
+    Exit('Awaiting review');
+  if AVerdict = 'Unknown' then
+  begin
+    if AResearchStatus = 'researched' then
+      Exit('Open evidence (researched)');
+    Exit('Open evidence');
+  end;
+  LValue := StrToFloatDef(AConfidence, 0);
+  if LValue >= 75 then
+    Exit('Strong clinical consensus');
+  if LValue >= 60 then
+    Exit('Moderate clinical evidence');
+  if LValue >= 55 then
+    Exit('Direct clinical signal');
+  if LValue >= 51 then
+    Exit('Limited clinical link');
+  if LValue > 50 then
+    Exit('Minimal signal');
+  Result := 'Reviewed evidence';
+end;
+
+function YesNoLabel(const AValue: String): String;
+begin
+  if AValue = 'true' then
+    Result := 'Yes'
+  else
+    Result := 'No';
+end;
+
+function ScorecardStatusLabel(const AStatus: String): String;
+begin
+  if AStatus = 'recorded' then
+    Result := 'Recorded'
+  else if AStatus = 'historical_scorecard' then
+    Result := 'Historical scorecard'
+  else if AStatus = 'verdict_mismatch' then
+    Result := 'Needs scorecard review'
+  else if AStatus <> '' then
+    Result := Capitalized(AStatus)
+  else
+    Result := 'Not yet scored';
 end;
 
 procedure TogglePanel(const AButton, APanel, AClosed, AOpen: String);
@@ -484,6 +651,30 @@ begin
   end;
 end;
 
+procedure SetMobileFiltersOpen(AOpen: Boolean);
+var
+  LButton: TJSHTMLElement;
+  LBody: TJSHTMLElement;
+begin
+  if (GRenderer = nil) or (GRenderer.Root = nil) or
+    (GRenderer.Root.Find('controls-body') = nil) then
+    Exit;
+  LButton := GRenderer.ElementFor('mobile-filters-toggle');
+  LBody := GRenderer.ElementFor('controls-body');
+  if AOpen then
+  begin
+    LBody.removeAttribute('data-mobile-collapsed');
+    LButton.setAttribute('aria-expanded', 'true');
+    LButton.textContent := 'Hide search & filters';
+  end
+  else
+  begin
+    LBody.setAttribute('data-mobile-collapsed', 'true');
+    LButton.setAttribute('aria-expanded', 'false');
+    LButton.textContent := 'Edit search & filters';
+  end;
+end;
+
 procedure HideSuggestions;
 begin
   GSymptom.HideSuggestions;
@@ -498,7 +689,7 @@ var
   LLabel: String;
 begin
   LCount := Ord((GPreparation.Chosen <> '') or (Trim(GPreparation.Input.value) <> '')) +
-    Ord(SelectedIndex('scope') <> 2) + Ord(SelectedIndex('direction') > 0);
+    Ord(SelectedIndex('scope') <> 3) + Ord(SelectedIndex('direction') > 0);
   LButton := GRenderer.ElementFor('show-filters');
   if LButton.getAttribute('aria-expanded') = 'true' then
     LLabel := 'Fewer filters'
@@ -651,7 +842,7 @@ begin
   LArgs := TJSObject.new;
   LArgs['round'] := ARound;
   LArgs['id'] := AId;
-  MessageView('Loading evidence', 'Reading the published assessment ledger.');
+  MessageView('Loading evidence', 'Reading the published assessment ledger.', LBack, '‹ Cancel');
   Request('oracle_claim', LArgs,
     procedure(AData: TJSObject; const AError: String)
     var
@@ -668,6 +859,16 @@ begin
       LTag: String;
       LRole: String;
       LDirection: String;
+      LAuditPanel: TNyxNode;
+      LAudit: TJSObject;
+      LConfidence: String;
+      LResearchStatus: String;
+      LScorecardLine: String;
+      LQueued: String;
+      LOrigPairs: String;
+      LSeenRefs: TJSSet;
+      LExtraRefs: TJSArray;
+      LRefPath: String;
     begin
       if LSequence <> GSequence then
         Exit;
@@ -694,24 +895,67 @@ begin
       LPage.Add(ClaimIndicators(AData, 'detail'));
       AddIngredientGallery(LPage, TextOf(AData, 'ingredient'));
       LPage.Add(Caption(nkLabel, 'claim-question', ResearchQuestion(AData)));
-      if TextOf(AData, 'confidence') <> '' then
-        LPage.Add(Caption(nkLabel, 'claim-confidence',
-          'Reviewer judgment ' + TextOf(AData, 'confidence') + '/100'));
+      LConfidence := TextOf(AData, 'confidence');
+      LResearchStatus := TextOf(AData, 'research_status');
+      LPage.Add(Caption(nkLabel, 'claim-confidence',
+        'Evidence tier: ' + TierSummaryLabel(TextOf(AData, 'verdict'), LConfidence, LResearchStatus)));
       LPage.Add(Caption(nkLabel, 'claim-number',
         'Round ' + IntToStr(ARound) + ' · Claim ' + AId));
       LPage.Add(Caption(nkLabel, 'claim-statement-heading', 'Original claim under review'));
       LPage.Add(Caption(nkLabel, 'claim-statement', TextOf(AData, 'statement')));
       if TextOf(AData, 'rationale') <> '' then
         LPage.Add(Caption(nkLabel, 'claim-rationale', TextOf(AData, 'rationale')));
-      if TextOf(AData, 'queued_original_pairs') <> '' then
-        LPage.Add(Caption(nkLabel, 'claim-coverage',
-          TextOf(AData, 'queued_original_pairs') + ' original Europe PMC pairs still queued'));
+
+      LPage.Add(Button('claim-audit-toggle', 'Research & audit details', nvSecondary));
+      LAuditPanel := Section(nkColumn, 'claim-audit-panel');
+      LScorecardLine := 'Scorecard: ' + ScorecardStatusLabel(TextOf(AData, 'scorecard_status'));
+      if LConfidence <> '' then
+        LScorecardLine := LScorecardLine + ' · Anchor ' + LConfidence + '/100';
+      LAuditPanel.Add(Caption(nkLabel, 'audit-scorecard', LScorecardLine));
+      if LResearchStatus <> '' then
+        LAuditPanel.Add(Caption(nkLabel, 'audit-research-status',
+          'Research status: ' + Capitalized(LResearchStatus)));
+      if isDefined(AData['research_audit']) and not isNull(AData['research_audit']) then
+      begin
+        LAudit := TJSObject(AData['research_audit']);
+        LAuditPanel.Add(Caption(nkLabel, 'audit-checks',
+          'Checks — Lab/clinical: ' + YesNoLabel(TextOf(LAudit, 'lab_clinical_checked')) +
+          ' · Cultural/experiential: ' + YesNoLabel(TextOf(LAudit, 'cultural_checked')) +
+          ' · Scorecard: ' + YesNoLabel(TextOf(LAudit, 'scorecard_checked'))));
+        if TextOf(LAudit, 'last_checked_utc') <> '' then
+          LAuditPanel.Add(Caption(nkLabel, 'audit-checked-at',
+            'Last verified (UTC): ' + TextOf(LAudit, 'last_checked_utc')));
+        if TextOf(LAudit, 'search_basis') <> '' then
+          LAuditPanel.Add(Caption(nkLabel, 'audit-search-basis',
+            'Search basis: ' + TextOf(LAudit, 'search_basis')));
+        if TextOf(LAudit, 'open_gaps') <> '' then
+          LAuditPanel.Add(Caption(nkLabel, 'audit-open-gaps',
+            'Open gaps: ' + TextOf(LAudit, 'open_gaps')));
+      end;
+      LQueued := TextOf(AData, 'queued_original_pairs');
+      if LQueued <> '' then
+      begin
+        LOrigPairs := TextOf(AData, 'original_europe_pmc_pairs');
+        if LOrigPairs <> '' then
+          LAuditPanel.Add(Caption(nkLabel, 'claim-coverage',
+            'Europe PMC screening: ' + LOrigPairs + ' original pairs · ' + LQueued + ' still queued'))
+        else
+          LAuditPanel.Add(Caption(nkLabel, 'claim-coverage',
+            LQueued + ' original Europe PMC pairs still queued'));
+      end;
+      LPage.Add(LAuditPanel);
 
       LItems := ItemsOf(AData, 'assessments');
       LDirection := TextOf(AData, 'hypothesis_direction');
       LPage.Add(Caption(nkHeading, 'evidence-heading', 'What the studies looked at'));
       if LItems.Length = 0 then
-        LPage.Add(Caption(nkLabel, 'result-message', 'This claim is awaiting study review.'));
+      begin
+        if LResearchStatus = 'researched' then
+          LPage.Add(Caption(nkLabel, 'result-message',
+            'Exhaustive literature and cultural screening found no qualifying study directly evaluating this exact preparation and symptom yet.'))
+        else
+          LPage.Add(Caption(nkLabel, 'result-message', 'This claim is awaiting study review.'));
+      end;
       for LIndex := 0 to LItems.Length - 1 do
       begin
         LGroup := EvidenceGroup(TextOf(TJSObject(LItems[LIndex]), 'role'));
@@ -727,6 +971,7 @@ begin
           CEvidenceGroups[LGroup] + ' · ' + IntToStr(LCounts[LGroup])));
         LPage.Add(LGroups[LGroup]);
       end;
+      LSeenRefs := TJSSet.new;
       for LIndex := 0 to LItems.Length - 1 do
       begin
         LRow := TJSObject(LItems[LIndex]);
@@ -735,8 +980,11 @@ begin
         LCard := Section(nkCard, 'evidence-' + LTag);
         LCard.Add(Caption(nkBadge, 'role-' + LTag, GraphAssessmentLabel(LRole, LDirection)));
         if TextOf(LRow, 'local_reference') <> '' then
+        begin
+          LSeenRefs.add(ReferenceFile(TextOf(LRow, 'local_reference')));
           LCard.Add(SourceLink('study-' + LTag, TextOf(LRow, 'local_reference'),
-            'Read study reference · ' + TextOf(LRow, 'study')))
+            'Read study reference · ' + TextOf(LRow, 'study')));
+        end
         else
           LCard.Add(Caption(nkHeading, 'study-key-' + LTag, TextOf(LRow, 'study')));
         LCard.Add(Caption(nkLabel, 'fit-' + LTag, TextOf(LRow, 'fit')));
@@ -749,15 +997,51 @@ begin
         LGroups[EvidenceGroup(LRole)].Add(LCard);
       end;
       LItems := ItemsOf(AData, 'local_references');
-      if LItems.Length > 0 then
+      LExtraRefs := TJSArray.new;
+      for LIndex := 0 to LItems.Length - 1 do
       begin
-        LPage.Add(Caption(nkHeading, 'citations-heading', 'Source references'));
-        for LIndex := 0 to LItems.Length - 1 do
-          LPage.Add(SourceLink('citation-' + IntToStr(LIndex), JSValueText(LItems[LIndex])));
+        LRefPath := JSValueText(LItems[LIndex]);
+        if not LSeenRefs.has(ReferenceFile(LRefPath)) then
+        begin
+          LSeenRefs.add(ReferenceFile(LRefPath));
+          LExtraRefs.push(LRefPath);
+        end;
+      end;
+      if LExtraRefs.Length > 0 then
+      begin
+        LPage.Add(Caption(nkHeading, 'citations-heading', 'Additional source references'));
+        for LIndex := 0 to LExtraRefs.Length - 1 do
+          LPage.Add(SourceLink('citation-' + IntToStr(LIndex), JSValueText(LExtraRefs[LIndex])));
       end;
 
       PublishResults(LDocument, LPage);
       BindIngredientGallery(GResultsRenderer, TextOf(AData, 'ingredient'));
+      GResultsRenderer.ElementFor('claim-audit-panel').id := 'claim-audit-panel';
+      GResultsRenderer.ElementFor('claim-audit-panel').setAttribute('hidden', '');
+      GResultsRenderer.ElementFor('claim-audit-toggle').setAttribute('aria-controls', 'claim-audit-panel');
+      GResultsRenderer.ElementFor('claim-audit-toggle').setAttribute('aria-expanded', 'false');
+      BindEvent(GResultsRenderer.ElementFor('claim-audit-toggle'), 'click',
+        function(AEvent: TEventListenerEvent): Boolean
+        var
+          LBtn: TJSHTMLElement;
+          LPanel: TJSHTMLElement;
+        begin
+          LBtn := GResultsRenderer.ElementFor('claim-audit-toggle');
+          LPanel := GResultsRenderer.ElementFor('claim-audit-panel');
+          if LPanel.hasAttribute('hidden') then
+          begin
+            LPanel.removeAttribute('hidden');
+            LBtn.setAttribute('aria-expanded', 'true');
+            LBtn.textContent := 'Hide research & audit details';
+          end
+          else
+          begin
+            LPanel.setAttribute('hidden', '');
+            LBtn.setAttribute('aria-expanded', 'false');
+            LBtn.textContent := 'Research & audit details';
+          end;
+          Result := True;
+        end);
       FocusResults;
       BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
         function(AEvent: TEventListenerEvent): Boolean
@@ -783,10 +1067,9 @@ begin
         GResultsRenderer.ElementFor('role-' + IntToStr(LIndex)).setAttribute('data-trend',
           AssessmentTone(TextOf(LRow, 'role'), LDirection));
       end;
-      LItems := ItemsOf(AData, 'local_references');
-      for LIndex := 0 to LItems.Length - 1 do
+      for LIndex := 0 to LExtraRefs.Length - 1 do
         if GStaticOracle = nil then
-          BindReference('citation-' + IntToStr(LIndex), JSValueText(LItems[LIndex]), LRestore)
+          BindReference('citation-' + IntToStr(LIndex), JSValueText(LExtraRefs[LIndex]), LRestore)
         else
           SetExternalLink('citation-' + IntToStr(LIndex));
       BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
@@ -808,7 +1091,7 @@ begin
         procedure
         begin
           ShowList(GResults, False);
-          GResultsRenderer.ElementFor('inspect-' + ATag).focus;
+          TryFocusElement(GResultsRenderer, 'inspect-' + ATag);
         end);
     end);
 end;
@@ -880,38 +1163,163 @@ begin
   end;
 end;
 
-procedure PopulateSourceLinks(AHost: TJSHTMLElement; const AText: String; AHasNext: Boolean);
+function ResolveRelativeResearchPath(const ACurrentPath, ATarget: String): String;
+var
+  LClean: String;
+  LHash: Integer;
+  LQuery: Integer;
+  LParts: TStringDynArray;
+  LStack: array of String;
+  LStackLen: Integer;
+  LPart: String;
+  LBaseDir: String;
+  LSlash: Integer;
+  LIndex: Integer;
+  LLower: String;
+begin
+  Result := '';
+  LClean := Trim(StringReplace(ATarget, '\', '/', [rfReplaceAll]));
+  LHash := Pos('#', LClean);
+  if LHash > 0 then
+    LClean := Copy(LClean, 1, LHash - 1);
+  LQuery := Pos('?', LClean);
+  if LQuery > 0 then
+    LClean := Copy(LClean, 1, LQuery - 1);
+  if (LClean = '') or StartsText('http://', LClean) or StartsText('https://', LClean) or
+    StartsText('mailto:', LClean) or StartsText('javascript:', LClean) or
+    (LClean[1] = '/') then
+    Exit;
+  if StartsStr('research/', LClean) then
+    LBaseDir := ''
+  else
+  begin
+    LBaseDir := StringReplace(ACurrentPath, '\', '/', [rfReplaceAll]);
+    LSlash := LastDelimiter('/', LBaseDir);
+    if LSlash > 0 then
+      LBaseDir := Copy(LBaseDir, 1, LSlash)
+    else
+      LBaseDir := '';
+  end;
+  LParts := SplitString(LBaseDir + LClean, '/');
+  SetLength(LStack, Length(LParts));
+  LStackLen := 0;
+  for LPart in LParts do
+  begin
+    if (LPart = '') or (LPart = '.') then
+      Continue;
+    if LPart = '..' then
+    begin
+      if LStackLen = 0 then
+        Exit;
+      Dec(LStackLen);
+      Continue;
+    end;
+    LStack[LStackLen] := LPart;
+    Inc(LStackLen);
+  end;
+  if LStackLen = 0 then
+    Exit;
+  LClean := '';
+  for LIndex := 0 to LStackLen - 1 do
+  begin
+    if LClean <> '' then
+      LClean := LClean + '/';
+    LClean := LClean + LStack[LIndex];
+  end;
+  LLower := LowerCase(LClean);
+  if StartsStr('research/', LLower) and
+    (EndsStr('.md', LLower) or EndsStr('.txt', LLower) or EndsStr('.tsv', LLower)) then
+    Result := LClean;
+end;
+
+procedure PopulateSourceLinks(AHost: TJSHTMLElement; const AText, ACurrentPath: String;
+  AHasNext: Boolean; AOnOpenLocal: TLocalSourceAction);
 var
   LPattern: TJSRegexp;
   LMatch: TStringDynArray;
   LBody: TJSHTMLElement;
   LLink: TJSHTMLAnchorElement;
+  LBtn: TJSHTMLElement;
   LStart: Integer;
   LCursor: Integer;
+  LMatched: String;
   LLabel: String;
+  LTarget: String;
   LURL: String;
+  LLocalPath: String;
+
+  procedure AppendLocalButton(const AButtonText, ALocal: String);
+  var
+    LClick: TJSEventHandler;
+  begin
+    LBtn := TJSHTMLElement(document.createElement('button'));
+    LBtn.setAttribute('type', 'button');
+    LBtn.className := 'oracle-inline-source-link';
+    LBtn.textContent := AButtonText;
+    LBtn.setAttribute('title', 'Open ' + ALocal);
+    LClick :=
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        AOnOpenLocal(ALocal);
+        Result := True;
+      end;
+    LBtn.addEventListener('click', LClick);
+    LBody.appendChild(LBtn);
+  end;
+
 begin
   LBody := TJSHTMLElement(document.createElement('pre'));
-  LPattern := TJSRegexp.new(CSourceURLPattern, 'gi');
+  LPattern := TJSRegexp.new(CSourceLinkPattern, 'gi');
   LCursor := 1;
   LMatch := LPattern.exec(AText);
   while LMatch <> nil do
   begin
     if AHasNext and (LPattern.lastIndex = Length(AText)) then
       Break;
-    LStart := LPattern.lastIndex - Length(LMatch[0]) + 1;
-    LLabel := SourceURLText(LMatch[0]);
-    LURL := ExternalSourceURL(LLabel);
-    if LURL <> '' then
+    LMatched := LMatch[0];
+    LStart := LPattern.lastIndex - Length(LMatched) + 1;
+    if (Length(LMatch) >= 3) and isDefined(LMatch[1]) and (LMatch[1] <> '') then
     begin
-      LBody.appendChild(document.createTextNode(Copy(AText, LCursor, LStart - LCursor)));
-      LLink := TJSHTMLAnchorElement(document.createElement('a'));
-      LLink.href := LURL;
-      LLink.textContent := LLabel;
-      LLink.target := '_blank';
-      LLink.rel := 'noopener noreferrer';
-      LBody.appendChild(LLink);
-      LCursor := LStart + Length(LLabel);
+      LLabel := LMatch[1];
+      LTarget := LMatch[2];
+      LURL := ExternalSourceURL(SourceURLText(LTarget));
+      if LURL <> '' then
+      begin
+        LBody.appendChild(document.createTextNode(Copy(AText, LCursor, LStart - LCursor)));
+        LLink := TJSHTMLAnchorElement(document.createElement('a'));
+        LLink.href := LURL;
+        LLink.textContent := LLabel;
+        LLink.target := '_blank';
+        LLink.rel := 'noopener noreferrer';
+        LBody.appendChild(LLink);
+        LCursor := LStart + Length(LMatched);
+      end
+      else if Assigned(AOnOpenLocal) then
+      begin
+        LLocalPath := ResolveRelativeResearchPath(ACurrentPath, LTarget);
+        if LLocalPath <> '' then
+        begin
+          LBody.appendChild(document.createTextNode(Copy(AText, LCursor, LStart - LCursor)));
+          AppendLocalButton(LLabel, LLocalPath);
+          LCursor := LStart + Length(LMatched);
+        end;
+      end;
+    end
+    else
+    begin
+      LLabel := SourceURLText(LMatched);
+      LURL := ExternalSourceURL(LLabel);
+      if LURL <> '' then
+      begin
+        LBody.appendChild(document.createTextNode(Copy(AText, LCursor, LStart - LCursor)));
+        LLink := TJSHTMLAnchorElement(document.createElement('a'));
+        LLink.href := LURL;
+        LLink.textContent := LLabel;
+        LLink.target := '_blank';
+        LLink.rel := 'noopener noreferrer';
+        LBody.appendChild(LLink);
+        LCursor := LStart + Length(LLabel);
+      end;
     end;
     LMatch := LPattern.exec(AText);
   end;
@@ -919,7 +1327,8 @@ begin
   AHost.appendChild(LBody);
 end;
 
-procedure OpenSource(const APath: String; const AOffsets: TSourceOffsets; AReturn: TPickerAction);
+procedure OpenSource(const APath: String; const AOffsets: TSourceOffsets; AReturn: TPickerAction;
+  const AOriginalURL: String = '');
 var
   LArgs: TJSObject;
   LSequence: Integer;
@@ -931,7 +1340,7 @@ begin
   LArgs := TJSObject.new;
   LArgs['path'] := APath;
   LArgs['offset'] := LOffset;
-  MessageView('Opening source', 'Reading the indexed research file.');
+  MessageView('Opening source', 'Reading the indexed research file.', AReturn, '‹ Cancel');
   Request('oracle_read_source', LArgs,
     procedure(AData: TJSObject; const AError: String)
     var
@@ -945,6 +1354,7 @@ begin
       LHasPrevious: Boolean;
       LHasNext: Boolean;
       LCanExplore: Boolean;
+      LRestoreSource: TPickerAction;
     begin
       if LSequence <> GSequence then
         Exit;
@@ -969,18 +1379,17 @@ begin
       LHasPrevious := (AError = '') and (Length(AOffsets) > 1);
       LHasNext := (AError = '') and (LNext > LOffset);
       LText := TextOf(AData, 'text');
+      LOriginalURL := AOriginalURL;
       if (AError = '') and (LOffset = 0) then
-      begin
         LOriginalURL := OriginalSourceURL(LText);
-        if LOriginalURL <> '' then
-        begin
-          if IsConversationSource(APath) then
-            LOriginalCaption := 'Open original discussion'
-          else
-            LOriginalCaption := 'Open original source';
-          LPage.Add(Section(nkLink, 'original-source').Configure
-            .Text(LOriginalCaption).LinkTo(LOriginalURL).Done);
-        end;
+      if (AError = '') and (LOriginalURL <> '') then
+      begin
+        if IsConversationSource(APath) then
+          LOriginalCaption := 'Open original discussion'
+        else
+          LOriginalCaption := 'Open original source';
+        LPage.Add(Section(nkLink, 'original-source').Configure
+          .Text(LOriginalCaption).LinkTo(LOriginalURL).Done);
       end;
       LCanExplore := (AError = '') and (LText <> '');
       if AError <> '' then
@@ -1007,19 +1416,23 @@ begin
       end;
       PublishResults(LDocument, LPage);
       FocusResults;
+      LRestoreSource := procedure
+        begin
+          OpenSource(APath, AOffsets, AReturn, LOriginalURL);
+        end;
       if LOriginalURL <> '' then
         SetExternalLink('original-source');
       if LCanExplore then
       begin
-        PopulateSourceLinks(GResultsRenderer.ElementFor('source-body'), LText, LHasNext);
+        PopulateSourceLinks(GResultsRenderer.ElementFor('source-body'), LText, APath, LHasNext,
+          procedure(const ALinkedPath: String)
+          begin
+            OpenReference(ALinkedPath, LRestoreSource);
+          end);
         BindEvent(GResultsRenderer.ElementFor('source-connections'), 'click',
           function(AEvent: TEventListenerEvent): Boolean
           begin
-            StartGraph(nil, '', GraphKey('source', APath),
-              procedure
-              begin
-                OpenSource(APath, AOffsets, AReturn);
-              end);
+            StartGraph(nil, '', GraphKey('source', APath), LRestoreSource);
             Result := True;
           end);
       end;
@@ -1033,7 +1446,7 @@ begin
         BindEvent(GResultsRenderer.ElementFor('previous-page'), 'click',
           function(AEvent: TEventListenerEvent): Boolean
           begin
-            OpenSource(APath, Copy(AOffsets, 0, Length(AOffsets) - 1), AReturn);
+            OpenSource(APath, Copy(AOffsets, 0, Length(AOffsets) - 1), AReturn, LOriginalURL);
             Result := True;
           end);
       if LHasNext then
@@ -1045,7 +1458,7 @@ begin
             LOffsets := Copy(AOffsets, 0, Length(AOffsets));
             SetLength(LOffsets, Length(LOffsets) + 1);
             LOffsets[High(LOffsets)] := LNext;
-            OpenSource(APath, LOffsets, AReturn);
+            OpenSource(APath, LOffsets, AReturn, LOriginalURL);
             Result := True;
           end);
     end);
@@ -1094,7 +1507,7 @@ begin
         procedure
         begin
           ShowList(GResults, False);
-          ARenderer.ElementFor('open-source-' + ATag).focus;
+          TryFocusElement(ARenderer, 'open-source-' + ATag);
         end);
       Result := True;
     end);
@@ -1134,7 +1547,7 @@ begin
       else
         AProfile['expanded_gallery'] := AButton;
       ShowIngredientEffects(AProfile, ABack, False);
-      GResultsRenderer.ElementFor(AButton).focus;
+      TryFocusElement(GResultsRenderer, AButton);
       Result := True;
     end);
 end;
@@ -1153,7 +1566,7 @@ begin
         procedure
         begin
           ShowIngredientEffects(AProfile, ABack, False);
-          GResultsRenderer.ElementFor(AButton).focus;
+          TryFocusElement(GResultsRenderer, AButton);
         end);
     end);
 end;
@@ -1312,7 +1725,7 @@ begin
     if LKey = 'unresolved' then
     begin
       LSection.Add(Caption(nkLabel, 'ingredient-open-explanation',
-        'For these ingredients, the selected symptoms still have open or unreviewed evidence.'));
+        'For these ingredients, the selected symptoms are currently Unknown (Researched) or awaiting review.'));
       LSection.Add(Field('ingredient-open-filter', 'Find an ingredient', 'Type its name'));
       LSection.Add(Caption(nkLabel, 'ingredient-open-count',
         IntToStr(LGroup.Length) + ' ingredients'));
@@ -1397,9 +1810,16 @@ begin
     end;
     LPage.Add(LSection);
   end;
+  LPage.Add(Button('back-to-top', '↑ Back to top', nvSecondary));
   PublishResults(LDocument, LPage);
   if LExpandedIngredient <> '' then
     BindIngredientGallery(GResultsRenderer, LExpandedIngredient, '-comparison');
+  BindEvent(GResultsRenderer.ElementFor('back-to-top'), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      FocusResults;
+      Result := True;
+    end);
   BindEvent(GResultsRenderer.ElementFor('back-results'), 'click',
     function(AEvent: TEventListenerEvent): Boolean
     begin
@@ -1631,7 +2051,7 @@ begin
         procedure
         begin
           ShowList(GResults, False);
-          GResultsRenderer.ElementFor('claim-graph-' + ATag).focus;
+          TryFocusElement(GResultsRenderer, 'claim-graph-' + ATag);
         end);
       Result := True;
     end);
@@ -1688,7 +2108,7 @@ begin
         procedure
         begin
           ShowList(GResults, False);
-          ARenderer.ElementFor('catalog-graph-' + ATag).focus;
+          TryFocusElement(ARenderer, 'catalog-graph-' + ATag);
         end);
       Result := True;
     end);
@@ -1820,6 +2240,7 @@ begin
       function(AEvent: TEventListenerEvent): Boolean
       begin
         TJSHTMLInputElement(GRenderer.InputFor('terms')).value := GRelatedTerms;
+        TJSHTMLSelectElement(GRenderer.InputFor('catalog-kind')).selectedIndex := 0;
         SwitchView(ovCatalog);
         Query(True, 0);
         Result := True;
@@ -1928,10 +2349,24 @@ begin
         LResultActions.Add(Button('jump-to-sources', 'Jump to sources', nvSecondary));
       LPage.Add(LResultActions);
       LKindTabs := Section(nkRow, 'research-kind-tabs');
-      LKindTabs.Add(Button('research-kind-all', 'All research', nvSecondary));
-      LKindTabs.Add(Button('research-kind-studies', 'Studies & analyses', nvSecondary));
-      LKindTabs.Add(Button('research-kind-culture', 'Culture & experience', nvSecondary));
+      LKindTabs.Add(Button('research-kind-all', 'All research', nvSecondary)
+        .Configure.Pressed(GResearchKind = SourceKindAll).Done);
+      LKindTabs.Add(Button('research-kind-studies', 'Studies & analyses', nvSecondary)
+        .Configure.Pressed(GResearchKind = SourceKindStudies).Done);
+      LKindTabs.Add(Button('research-kind-culture', 'Culture & experience', nvSecondary)
+        .Configure.Pressed(GResearchKind = SourceKindCulture).Done);
       LPage.Add(LKindTabs);
+    end
+    else
+    begin
+      if LRecords.Length > 0 then
+      begin
+        LResultActions := Section(nkRow, 'result-actions');
+        LResultActions.Add(Button('open-graph', 'Graph view', nvSecondary));
+        LPage.Add(LResultActions);
+      end;
+      LPage.Add(Caption(nkLabel, 'trend-results-guidance',
+        'Showing directional findings across all symptoms. Open any card to inspect studies or connections.'));
     end;
     if GResearchKind = SourceKindCulture then
     begin
@@ -2025,7 +2460,16 @@ begin
 
   if (GView = ovClaims) and (GRelatedTerms <> '') then
     LPage.Add(Section(nkColumn, 'related-host'));
+  if LRecords.Length >= 5 then
+    LPage.Add(Button('back-to-top', '↑ Back to top', nvSecondary));
   PublishResults(LDocument, LPage);
+  if LRecords.Length >= 5 then
+    BindEvent(GResultsRenderer.ElementFor('back-to-top'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        FocusResults;
+        Result := True;
+      end);
   if (GView = ovClaims) and (GRelatedTerms <> '') then
   begin
     GRelatedHost := GResultsRenderer.ElementFor('related-host');
@@ -2051,7 +2495,7 @@ begin
             procedure
             begin
               ShowList(GResults, False);
-              GResultsRenderer.ElementFor('compare-ingredients').focus;
+              TryFocusElement(GResultsRenderer, 'compare-ingredients');
             end);
           Result := True;
         end);
@@ -2067,6 +2511,21 @@ begin
           LHeading.scrollIntoView;
           Result := True;
         end);
+  end
+  else if (GView = ovClaims) and LTrendOnly and (LRecords.Length > 0) then
+  begin
+    BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      var
+        LFirst: TJSObject;
+        LGraphSymptoms: TStringValues;
+      begin
+        LFirst := TJSObject(LRecords[0]);
+        LGraphSymptoms := nil;
+        StartGraph(AddSelection(LGraphSymptoms, TextOf(LFirst, 'symptom')),
+          TextOf(LFirst, 'ingredient'));
+        Result := True;
+      end);
   end;
   if AFocus then
     FocusResults;
@@ -2110,6 +2569,7 @@ begin
       function(AEvent: TEventListenerEvent): Boolean
       begin
         GArguments['scope'] := 'assessed';
+        GClaimUnion := nil;
         TJSHTMLSelectElement(GRenderer.InputFor('scope')).selectedIndex := 1;
         UpdateFilterCount;
         Query(False, 0);
@@ -2162,13 +2622,16 @@ var
 begin
   Inc(GSequence);
   LSequence := GSequence;
+  CancelMainRequest;
   if ANewQuery then
   begin
     Inc(GRelatedSequence);
+    CancelRelatedRequest;
     GArguments := TJSObject.new;
     GClaimUnion := nil;
     if GView = ovClaims then
     begin
+      GResearchKind := SourceKindAll;
       if not GSymptom.ReadValues(LValues) then
         Exit;
       if Length(LValues) = 1 then
@@ -2199,7 +2662,12 @@ begin
       end;
       case SelectedIndex('scope') of
         1: GArguments['scope'] := 'assessed';
-        2: GArguments['scope'] := 'frozen';
+        2:
+          begin
+            GArguments['scope'] := 'assessed';
+            GArguments['verdict'] := 'Unknown (Researched)';
+          end;
+        3: GArguments['scope'] := 'frozen';
       end;
       case SelectedIndex('direction') of
         1: GArguments['direction'] := 'reduces';
@@ -2217,7 +2685,12 @@ begin
       end;
       GArguments['terms'] := InputValue('terms');
       MaybeSet(GArguments, 'period', InputValue('period'));
+      if (SelectedIndex('catalog-kind') > 0) and
+        (SelectedIndex('catalog-kind') <= High(CCatalogKindValues)) then
+        MaybeSet(GArguments, 'source_kind', CCatalogKindValues[SelectedIndex('catalog-kind')]);
     end;
+    if window.innerWidth <= 740 then
+      SetMobileFiltersOpen(False);
   end;
   HideSuggestions;
   GArguments['offset'] := AOffset;
@@ -2228,9 +2701,27 @@ begin
     LTool := 'oracle_search_catalog';
   ClearGraphHistory;
   if GView = ovClaims then
-    MessageView('Searching…', 'Looking up ingredient and symptom claims.')
+  begin
+    if GResults <> nil then
+      MessageView('Searching…', 'Looking up ingredient and symptom claims.',
+        procedure
+        begin
+          ShowList(GResults, False);
+        end, '‹ Cancel')
+    else
+      MessageView('Searching…', 'Looking up ingredient and symptom claims.');
+  end
   else
-    MessageView('Searching…', 'Checking the research catalog.');
+  begin
+    if GResults <> nil then
+      MessageView('Searching…', 'Checking the research catalog.',
+        procedure
+        begin
+          ShowList(GResults, False);
+        end, '‹ Cancel')
+    else
+      MessageView('Searching…', 'Checking the research catalog.');
+  end;
   LReceive :=
     procedure(AData: TJSObject; const AError: String)
     begin
@@ -2277,7 +2768,7 @@ begin
     if GClaimUnion <> nil then
       LReceive(ClaimUnionPage(GClaimUnion, AOffset, CPageSize), '')
     else
-      LoadClaimUnion(@Request, GArguments, LCurrent,
+      LoadClaimUnion(@RequestMain, GArguments, LCurrent,
         procedure(AData: TJSObject; const AError: String)
         begin
           if not LCurrent() then
@@ -2292,13 +2783,15 @@ begin
         end);
   end
   else
-    Request(LTool, GArguments, LReceive);
+    RequestChannel(LTool, GArguments, LReceive, 1);
 end;
 
 procedure SwitchView(AView: TOracleView);
 begin
   Inc(GSequence);
   Inc(GRelatedSequence);
+  CancelMainRequest;
+  CancelRelatedRequest;
   GView := AView;
   ClearGraphHistory;
   HideSuggestions;
@@ -2331,6 +2824,9 @@ end;
 
 procedure LoadStatus;
 begin
+  if GStatusLoading then
+    Exit;
+  GStatusLoading := True;
   Request('oracle_status', TJSObject.new,
     procedure(AData: TJSObject; const AError: String)
     var
@@ -2338,10 +2834,21 @@ begin
       LCatalog: TJSObject;
       LStatus: String;
     begin
+      GStatusLoading := False;
       if AError <> '' then
-        LStatus := 'Catalog status unavailable'
+      begin
+        LStatus := 'Catalog status unavailable';
+        if not GStatusLoaded then
+          window.setTimeout(
+            procedure
+            begin
+              if not GStatusLoaded then
+                LoadStatus;
+            end, 2500);
+      end
       else
       begin
+        GStatusLoaded := True;
         LClaims := TJSObject(AData['claims']);
         LCatalog := TJSObject(AData['catalog']);
         LStatus := TextOf(LClaims, 'frozen_claims') + ' research questions';
@@ -2365,6 +2872,7 @@ var
   LHeader: TNyxNode;
   LWorkspace: TNyxNode;
   LControls: TNyxNode;
+  LControlsBody: TNyxNode;
   LTabs: TNyxNode;
   LClaims: TNyxNode;
   LCatalog: TNyxNode;
@@ -2387,10 +2895,12 @@ begin
   LWorkspace := Section(nkGrid, 'workspace');
   LControls := Section(nkPanel, 'reader-controls');
   LControls.Add(Caption(nkHeading, 'filters-heading', 'Find Parkinson’s research'));
+  LControls.Add(Button('mobile-filters-toggle', 'Hide search & filters', nvSecondary));
+  LControlsBody := Section(nkColumn, 'controls-body');
   LTabs := Section(nkRow, 'lookup-tabs');
   LTabs.Add(Button('claims-tab', 'Symptoms & foods', nvSecondary));
   LTabs.Add(Button('catalog-tab', 'Search sources', nvSecondary));
-  LControls.Add(LTabs);
+  LControlsBody.Add(LTabs);
 
   LClaims := Section(nkColumn, 'claim-form');
   LClaims.Add(Caption(nkLabel, 'guidance',
@@ -2416,18 +2926,22 @@ begin
   LFilters := Section(nkColumn, 'extra-filters');
   LFilters.Add(CreatePickerField('preparation', 'Preparation', 'Any preparation'));
   LFilters.Add(SelectField('scope', 'Which claims to show',
-    'Directional findings only'#10'All reviewed claims'#10'All findings and open questions'));
+    'Directional findings only'#10'All reviewed claims'#10'Unknown (Researched) only'#10'All findings and open questions'));
   LFilters.Add(SelectField('direction', 'Claim being tested', 'Any direction'#10'Could reduce'#10'Could worsen'));
   LClaims.Add(LFilters);
   LClaims.Add(Button('search-claims', 'Find research', nvPrimary));
-  LControls.Add(LClaims);
+  LControlsBody.Add(LClaims);
 
   LCatalog := Section(nkColumn, 'catalog-form');
   LCatalog.Add(Field('terms', 'Search terms', 'e.g. black tea tremor'));
   LCatalog.Add(Field('period', 'Period', 'Any period (e.g. 2010-2014)'));
+  LCatalog.Add(SelectField('catalog-kind', 'Source type',
+    'All catalog sources'#10'Studies & source texts'#10'All culture & experience'#10 +
+    'Conversations & forums'#10'Traditional practices'#10'Ceremonial accounts'#10 +
+    'Personal reports'#10'Local knowledge'));
   LCatalog.Add(Button('search-catalog', 'Search catalog', nvPrimary));
-  LControls.Add(LCatalog);
-  LControls.Add(Button('show-evidence-guide', 'How to read the results', nvSecondary));
+  LControlsBody.Add(LCatalog);
+  LControlsBody.Add(Button('show-evidence-guide', 'How to read the results', nvSecondary));
   LHelp := Section(nkColumn, 'evidence-guide');
   LHelp.Add(Caption(nkLabel, 'guide-question',
     'Each result starts with a question the research team is investigating.'));
@@ -2438,12 +2952,15 @@ begin
   LHelp.Add(Caption(nkLabel, 'guide-limited',
     'Limited evidence means the findings lean one way. The studies may have tested a different preparation, symptom, or group of people.'));
   LHelp.Add(Caption(nkLabel, 'guide-unclear',
-    'Still unclear means the available findings leave the question open. See the studies for what was measured and what still needs review.'));
+    'Unknown (Researched) means our team completed lab, clinical, and cultural searches and verified the scorecard, and the evidence still leaves the direction open.'));
+  LHelp.Add(Caption(nkLabel, 'guide-awaiting',
+    'Awaiting review means the claim is queued in a later round and has not yet been researched.'));
   LHelp.Add(Caption(nkLabel, 'guide-traditional',
     'Traditional practices and personal reports are collected separately and carry lower evidential weight for treatment effects than controlled studies. A documented account is not proof of benefit.'));
   LHelp.Add(Caption(nkLabel, 'guide-shared',
     'Use the studies to prepare questions for your care team.'));
-  LControls.Add(LHelp);
+  LControlsBody.Add(LHelp);
+  LControls.Add(LControlsBody);
   LWorkspace.Add(LControls);
   LWorkspace.Add(Section(nkPanel, 'results-frame'));
   LPage.Add(LWorkspace);
@@ -2454,7 +2971,7 @@ begin
   GRenderer.Render(GDocument, LPage, TJSHTMLElement(document.getElementById('oracle')));
   GRenderer.ElementFor('brand').setAttribute('aria-level', '1');
   GRenderer.ElementFor('results-frame').setAttribute('aria-live', 'polite');
-  GSourceUnion := TOracleSourceUnion.Create(@Request);
+  GSourceUnion := TOracleSourceUnion.Create(@RequestRelated);
   GSymptom := TOraclePicker.Create(GRenderer, 'symptom', @SymptomChanged, @SubmitLookup, True);
   GIngredient := TOraclePicker.Create(GRenderer, 'ingredient', @IngredientChanged, @SubmitLookup);
   GPreparation := TOraclePicker.Create(GRenderer, 'preparation', @UpdateFilterCount, @SubmitLookup);
@@ -2467,7 +2984,16 @@ begin
   BindTrend('trend-eases', 'eases');
   BindTrend('trend-worsens', 'worsens');
   SelectTrend('');
-  TJSHTMLSelectElement(GRenderer.InputFor('scope')).selectedIndex := 2;
+  TJSHTMLSelectElement(GRenderer.InputFor('scope')).selectedIndex := 3;
+  GRenderer.ElementFor('controls-body').id := 'controls-body';
+  GRenderer.ElementFor('mobile-filters-toggle').setAttribute('aria-controls', 'controls-body');
+  GRenderer.ElementFor('mobile-filters-toggle').setAttribute('aria-expanded', 'true');
+  BindEvent(GRenderer.ElementFor('mobile-filters-toggle'), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      SetMobileFiltersOpen(GRenderer.ElementFor('controls-body').hasAttribute('data-mobile-collapsed'));
+      Result := True;
+    end);
   GRenderer.ElementFor('extra-filters').id := 'extra-filters';
   GRenderer.ElementFor('extra-filters').setAttribute('hidden', '');
   GRenderer.ElementFor('show-filters').setAttribute('aria-controls', 'extra-filters');

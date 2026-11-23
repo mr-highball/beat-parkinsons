@@ -68,7 +68,7 @@ begin
   LPanel.Add(LNav);
   LPanel.Add(TNyxNode.Create(nkLabel, 'ingredient-gallery-credit' + AKey));
   LPanel.Add(TNyxNode.Create(nkLink, 'ingredient-gallery-photo-source' + AKey)
-    .Configure.Text('Photo credit').LinkTo(CIngredientGuides[LIndex].TipURL).Done);
+    .Configure.Text('Photo credit').LinkTo(CIngredientGuides[LIndex].Frames[0].CreditURL).Done);
   AParent.Add(LPanel);
 end;
 

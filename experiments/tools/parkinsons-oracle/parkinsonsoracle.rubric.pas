@@ -8,10 +8,25 @@ unit parkinsonsoracle.rubric;
 
 interface
 
-uses fpjson;
+uses Classes, Generics.Collections, fpjson;
 
 const
   EvidenceRubricVersion = '1';
+
+type
+  TScorecardIndex = class
+  private
+    FHasData: Boolean;
+    FDecisionHeaderLine: String;
+    FSourceHeaderLine: String;
+    FDecisions: TObjectDictionary<String, TStringList>;
+    FSources: TObjectDictionary<String, TStringList>;
+  public
+    constructor Create(const ADecisions, ASources: String);
+    destructor Destroy; override;
+    procedure AddEvidenceScorecardFor(AResponse: TJSONObject;
+      const AId, ADirection, AVerdict: String; AConfidence: Currency);
+  end;
 
 procedure AddEvidenceRubricSchema(AResponse: TJSONObject);
 procedure AddEvidenceScorecard(AResponse: TJSONObject;
@@ -20,7 +35,7 @@ procedure AddEvidenceScorecard(AResponse: TJSONObject;
 
 implementation
 
-uses Classes, SysUtils, StrUtils, foodexperiment.externaldata, foodexperiment.confidence;
+uses SysUtils, StrUtils, foodexperiment.externaldata, foodexperiment.confidence;
 
 const
   CDecisionHeader: array[0..4] of String =
@@ -313,6 +328,103 @@ begin
     LSources.Free;
     LDecisions.Free;
   end;
+end;
+
+procedure IndexScorecardRows(const AText, ALabel: String;
+  const AHeader: array of String; AMap: TObjectDictionary<String, TStringList>;
+  out AHeaderLine: String);
+var
+  LLines: TStringList;
+  LFields: TFields;
+  LIndex: Integer;
+  LColumn: Integer;
+  LBucket: TStringList;
+begin
+  LLines := TStringList.Create;
+  try
+    LLines.Text := AText;
+    if LLines.Count = 0 then
+      raise EConvertError.Create('Missing header in published ' + ALabel + '.');
+    LFields := SplitFields(LLines[0], #9);
+    if Length(LFields) <> Length(AHeader) then
+      raise EConvertError.Create('Invalid header in published ' + ALabel + '.');
+    for LColumn := Low(AHeader) to High(AHeader) do
+    begin
+      if LFields[LColumn] <> AHeader[LColumn] then
+        raise EConvertError.Create('Invalid header in published ' + ALabel + '.');
+    end;
+    AHeaderLine := LLines[0];
+    for LIndex := 1 to LLines.Count - 1 do
+    begin
+      if LLines[LIndex] = '' then
+        Continue;
+      LFields := SplitFields(LLines[LIndex], #9);
+      if Length(LFields) <> Length(AHeader) then
+        raise EConvertError.CreateFmt('Invalid row width in %s at line %d.',
+          [ALabel, LIndex + 1]);
+      if not AMap.TryGetValue(LFields[0], LBucket) then
+      begin
+        LBucket := TStringList.Create;
+        AMap.Add(LFields[0], LBucket);
+      end;
+      LBucket.Add(LLines[LIndex]);
+    end;
+  finally
+    LLines.Free;
+  end;
+end;
+
+constructor TScorecardIndex.Create(const ADecisions, ASources: String);
+begin
+  inherited Create;
+  FDecisions := TObjectDictionary<String, TStringList>.Create([doOwnsValues]);
+  FSources := TObjectDictionary<String, TStringList>.Create([doOwnsValues]);
+  FHasData := (ADecisions <> '') or (ASources <> '');
+  if not FHasData then
+    Exit;
+  IndexScorecardRows(ADecisions, 'scorecards', CDecisionHeader, FDecisions, FDecisionHeaderLine);
+  IndexScorecardRows(ASources, 'scorecard sources', CSourceHeader, FSources, FSourceHeaderLine);
+end;
+
+destructor TScorecardIndex.Destroy;
+begin
+  FSources.Free;
+  FDecisions.Free;
+  inherited Destroy;
+end;
+
+procedure TScorecardIndex.AddEvidenceScorecardFor(AResponse: TJSONObject;
+  const AId, ADirection, AVerdict: String; AConfidence: Currency);
+var
+  LDecLines: TStringList;
+  LSrcLines: TStringList;
+  LDecText: String;
+  LSrcText: String;
+  LIndex: Integer;
+begin
+  if not FHasData then
+  begin
+    AResponse.Add('review_status', 'no_scorecard');
+    Exit;
+  end;
+  LDecLines := nil;
+  LSrcLines := nil;
+  FDecisions.TryGetValue(AId, LDecLines);
+  FSources.TryGetValue(AId, LSrcLines);
+  if (LDecLines = nil) and (LSrcLines = nil) then
+  begin
+    AResponse.Add('review_status', 'no_scorecard');
+    Exit;
+  end;
+  LDecText := FDecisionHeaderLine + #10;
+  if LDecLines <> nil then
+    for LIndex := 0 to LDecLines.Count - 1 do
+      LDecText := LDecText + LDecLines[LIndex] + #10;
+  LSrcText := FSourceHeaderLine + #10;
+  if LSrcLines <> nil then
+    for LIndex := 0 to LSrcLines.Count - 1 do
+      LSrcText := LSrcText + LSrcLines[LIndex] + #10;
+  AddEvidenceScorecard(AResponse, LDecText, LSrcText, AId, ADirection, AVerdict, AConfidence, False);
 end;
 
 end.
