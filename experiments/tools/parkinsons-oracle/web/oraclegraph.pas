@@ -724,10 +724,12 @@ var
   LNeighbors: TJSArray;
   LIndex: Integer;
   LIncluded: Integer;
+  LMaxInclude: Integer;
   LOther: String;
   LBoxW: Double;
   LBoxH: Double;
   LZoom: Double;
+  LMinZoom: Double;
   LCenterX: Double;
   LCenterY: Double;
   LVisW: Double;
@@ -749,6 +751,13 @@ begin
   LMaxX := LSelPos.X + CNodeWidth;
   LMaxY := LSelPos.Y + CNodeHeight;
   LIncluded := 0;
+  LMaxInclude := 6;
+  LMinZoom := 0.62;
+  if FCompact then
+  begin
+    LMaxInclude := 3;
+    LMinZoom := 0.50;
+  end;
   LNeighbors := FModel.Connections(FSelected);
   for LIndex := 0 to LNeighbors.Length - 1 do
   begin
@@ -761,7 +770,7 @@ begin
     LMaxX := Max(LMaxX, LPoint.X + CNodeWidth);
     LMaxY := Max(LMaxY, LPoint.Y + CNodeHeight);
     Inc(LIncluded);
-    if LIncluded >= 6 then
+    if LIncluded >= LMaxInclude then
       Break;
   end;
   if LIncluded = 0 then
@@ -769,8 +778,8 @@ begin
   LBoxW := (LMaxX - LMinX) + 96;
   LBoxH := (LMaxY - LMinY) + 96;
   LZoom := Min(1.0, Min(LViewW / LBoxW, LViewH / LBoxH));
-  if LZoom < 0.62 then
-    LZoom := 0.62;
+  if LZoom < LMinZoom then
+    LZoom := LMinZoom;
   LCenterX := (LMinX + LMaxX) / 2;
   LCenterY := (LMinY + LMaxY) / 2;
   LVisW := LViewW / LZoom;
@@ -959,6 +968,7 @@ var
   LClick: TJSEventHandler;
   LName: String;
   LCompact: Boolean;
+  LShouldFrame: Boolean;
   LVariant: TNyxVariant;
   LHasGallery: Boolean;
   LIsCulture: Boolean;
@@ -1098,10 +1108,14 @@ begin
   UpdateLevelSlots;
   LCanvasHost := FRenderer.ElementFor('graph-canvas');
   LCompact := (LCanvasHost.clientWidth > 0) and (LCanvasHost.clientWidth < CCompactWidth);
-  if FRecenter or (FCompact <> LCompact) then
+  LShouldFrame := FRecenter or (FCompact <> LCompact);
+  if LShouldFrame then
   begin
     FCompact := LCompact;
-    FCamera := FocusCamera(LCanvasHost.clientWidth, Max(280, LCanvasHost.clientHeight - 56));
+    if FCompact then
+      FCamera := FocusCamera(LCanvasHost.clientWidth, Max(220, LCanvasHost.clientHeight - 116))
+    else
+      FCamera := FocusCamera(LCanvasHost.clientWidth, Max(280, LCanvasHost.clientHeight - 56));
     FRecenter := False;
   end;
   LScene := NewNyxCanvasScene;
@@ -1245,6 +1259,11 @@ begin
   LWorkspace := NewNyxCanvasWorkspace('research-web', LScene).WithCamera(FCamera)
     .WithGrid(NyxCanvasGrid(20, ncgsNone)).WithScaling(nccsUniform);
   FView := MountNyxBrowserCanvasWorkspace(LWorkspace, FDocument, LCanvasHost);
+  if LShouldFrame and (FView.Surface.clientWidth > 0) and (FView.Surface.clientHeight > 0) then
+  begin
+    FCamera := FocusCamera(FView.Surface.clientWidth, FView.Surface.clientHeight);
+    FView.SetCamera(FCamera);
+  end;
   FView.Surface.setAttribute('data-oracle-graph-surface', '');
   FView.Surface.style.setProperty('touch-action', 'none');
   FCanvasClick := @OnCanvasClick;
