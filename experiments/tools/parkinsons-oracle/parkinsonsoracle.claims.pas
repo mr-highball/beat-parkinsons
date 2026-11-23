@@ -678,9 +678,13 @@ begin
       if LTables.IndexOf(LSuffix + CResearchStatusPath) >= 0 then
         FResearchStatus[LRound] := ReadBlob(LProcess, LSuffix + CResearchStatusPath);
     end;
+    {$IF FPC_FULLVERSION >= 30300}
     // FPC's pipe stream owns the writer once Input has been accessed.
     LProcess.Input.DontClose := True;
     FileClose(LProcess.Input.Handle);
+    {$ELSE}
+    LProcess.CloseInput;
+    {$ENDIF}
     if not LProcess.WaitOnExit or (LProcess.ExitStatus <> 0) then
     begin
       raise EInOutError.Create('Git could not finish reading the published experiment.');
@@ -1811,8 +1815,13 @@ begin
       end;
       if LTopics.Count <> 0 then
         raise EConvertError.Create('Cultural graph topics reference missing source records.');
-      LProcess.Input.DontClose := True;
-      FileClose(LProcess.Input.Handle);
+      {$IF FPC_FULLVERSION >= 30300}
+    // FPC's pipe stream owns the writer once Input has been accessed.
+    LProcess.Input.DontClose := True;
+    FileClose(LProcess.Input.Handle);
+    {$ELSE}
+    LProcess.CloseInput;
+    {$ENDIF}
       if not LProcess.WaitOnExit or (LProcess.ExitStatus <> 0) then
         raise EInOutError.Create('Git could not finish reading the published cultural sources.');
     except
