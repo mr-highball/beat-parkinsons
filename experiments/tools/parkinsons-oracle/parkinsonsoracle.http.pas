@@ -30,8 +30,10 @@ const
 
 type
   TOracleHttpServer = class(TFPHTTPServer)
+  {$IF FPC_FULLVERSION >= 30300}
   public
     property MaxBodySize;
+  {$ENDIF}
   end;
 
   TOracleWeb = class
@@ -532,6 +534,7 @@ begin
   try
     LServer.Address := FBindAddress;
     LServer.Port := APort;
+    {$IF FPC_FULLVERSION >= 30300}
     // The Windows FPC connection pool can spin and leave API requests unanswered.
     LServer.ThreadMode := tmThread;
     LServer.KeepConnections := False;
@@ -540,6 +543,9 @@ begin
     LServer.MaxHeaderCount := 64;
     // Dispatch modest oversize bodies for a JSON 413. Bound transport reads separately.
     LServer.MaxBodySize := MaximumTransportBodyBytes;
+    {$ELSE}
+    LServer.Threaded := True;
+    {$ENDIF}
     LServer.OnRequest := HandleRequest;
     WriteLn('Parkinson''s oracle web URL: http://', FHost, '/');
     Flush(Output);
