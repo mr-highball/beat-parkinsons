@@ -1,0 +1,13 @@
+# Round 1 culinary exposures and model outcomes
+
+The November 24 review resolved 61 claim–source pairs across 35 articles. It preserves the distinction between observed and assigned exposures and identifies the outcomes measured, including sensory tasks, whole dietary patterns and molecular readouts. [Exact source notes and scopes](../../experiments/1000_see_what_sticks_food/followup/priority-five-diet-and-model-nov24/claim-source-scopes.tsv)
+
+## Olive oil and bradykinesia
+
+The oral olive-oil vehicle group in an MPTP mouse study showed no clear pole or rotarod improvement. Its saline model control used a different route. The injected extra-virgin olive oil study favored open-field activity and rotarod retention, with a separate corn-oil arm. The ageing-mouse article reports a favorable rotarod finding after dietary oil, while the worm study reports lower α-synuclein aggregation with selected isolated polyphenols. The latter two are verified at abstract depth. These models and measured endpoints differ from clinical bradykinesia after cold-pressed olive oil. The 0629 scorecard retains Unknown and now preserves ten separate families. [Oral oil-only model](../2020-2024/Food-Experiment-Oil-Followup.md#oral-olive-oil-alone-in-a-mptp-mouse-study) · [Injected oil study](../2020-2024/Source-Text/2020-Farfan-Garcia-EVOO-Mouse-Motor-Extract.txt) · [Ageing model](../2010-2014/Source-Text/2012-PMID22950431-Pitozzi-Dietary-Olive-Oil-and-Coordination.txt) · [Isolated phenols](../2020-2024/Source-Text/2024-PMID38817211-Olive-Oil-Tyrosols-Aggregation-Abstract.txt)
+
+MED-PARK compares a modified Mediterranean diet with the usual diet. The latest public registry response still shows no posted results. Its GI symptom and constipation quality-of-life measures are planned outcomes. Study completion dates are estimates. The registry supplies no result for an olive-oil grade. [Current registry scope](../2020-2024/Source-Text/2024-NCT06705517-MED-PARK-Registry-Extract.txt)
+
+## Sensory and laboratory comparisons
+
+Cinnamon appears as a stimulus in olfactory and flavor-identification testing. The source has no culinary cinnamon intervention for Parkinson olfactory impairment. Isolated crocin in chronically stressed rats altered neurite morphology in particular regions without a separate depression comparison. The mango constituent and green-tea mixtures reviewed elsewhere likewise supply different exposures and model endpoints. [Cinnamon sensory methods](Source-Text/2026-PMID41623157-Olfactory-Testing-and-Cinnamon-Stimulus.txt) · [Crocin morphology](Source-Text/2025-PMID41601568-Crocin-Stress-Rats-and-Neuronal-Morphology.txt) · [Mango and zebrafish](Source-Text/2026-PMID42292841-Zebrafish-Traditional-Compounds-and-Mangiferin.txt)
