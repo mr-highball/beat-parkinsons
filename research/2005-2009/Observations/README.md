@@ -1,5 +1,7 @@
 # Observations for 2005-2009
 
+- [Olive oil in both registered Crohn comparison arms](2009-Olive-Oil-Carrier-and-Crohn-Registration.md).
+
 - [Clinical fatigue measurements and the coffee exposure gap](2009-Filipino-Parkinson-Fatigue-Measurement.md).
 
 - [Reported mango uses in Lagos](2008-Lagos-Mango-Reported-Sleep-Use.md).
