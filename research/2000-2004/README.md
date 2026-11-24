@@ -1,5 +1,7 @@
 # 2000-2004
 
+- [Caffeine and isolated muscle power during recovery from fatigue](Source-Text/2003-PMID14506097-Caffeine-and-Isolated-Muscle-Fatigue-Recovery.txt).
+
 - [Corn oil as a shared carrier in carotenoid and monocyte studies](Source-Text/2000-PMID10944479-Corn-Oil-Carrier-and-Monocytes.txt).
 
 The [caffeine withdrawal comparison](Source-Text/2003-PMID12601503-Caffeine-Withdrawal-and-Nonconsumers.txt) records alertness separately from other acute psychomotor and mood outcomes.

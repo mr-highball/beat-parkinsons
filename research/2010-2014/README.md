@@ -1,5 +1,10 @@
 # 2010-2014
 
+- [Caffeine, perceived fatigue and vigor in a healthy older sample](Source-Text/2013-PMID24303144-Caffeine-and-Older-Adult-Fatigue.txt).
+- [Caffeine and readiness to invest effort](Source-Text/2014-PMID25470803-Caffeine-and-Functional-Effort.txt).
+- [Opposite isolated muscle endurance directions by activation](Source-Text/2013-PMID23292763-Caffeine-and-Activation-Dependent-Endurance.txt).
+- [Turmeric formulation in brain tumor cell experiments](Source-Text/2012-PMID22944718-Turmeric-Formulation-and-Brain-Tumor-Cells.txt).
+
 - [Dates among labor food choices and later-stage pain](Source-Text/2012-ZJRMS93776-Food-Choices-and-Labor-Pain.txt).
 - [Related Gonabad labor-progression and food-choice comparison](Source-Text/2012-PMID23304677-Rahmani-Carbohydrate-Choices-and-Labor.txt).
 

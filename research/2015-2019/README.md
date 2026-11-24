@@ -1,5 +1,10 @@
 # 2015-2019
 
+- [Turmeric, sage, cinnamon and clove extracts in a cellular screen](Source-Text/2016-PMID27846826-Turmeric-Sage-Cinnamon-and-Clove-Cellular-Screen.txt).
+- [Cinnamon odor and clinical screening in iRBD](Source-Text/2017-PMID28330956-Cinnamon-Odor-and-Prodromal-Parkinson-Screening.txt).
+- [Marquesan turmeric and ginger practices](Cultural-and-Experiential/Traditional-Practices/2016-Jost-Marquesas-Turmeric-and-Ginger-Cosmetic-Uses.txt).
+- [Other checked originals and related contexts](../2025-2029/Food-Experiment-Round-1-Turmeric-and-Clinical-Nov24.md).
+
 - [Persian date-syrup labor-pain trial](Source-Text/2019-DOI3111618-Fathi-Date-Syrup-and-Labor-Pain.txt).
 - [Honey syrup and matching control rows](Source-Text/2019-PMID30858948-Honey-Syrup-and-Shared-Labor-Trial.txt).
 - [Isolated EGCG and multiple sclerosis exercise metabolism](Source-Text/2015-PMID25733633-EGCG-and-MS-Exercise-Metabolism.txt).

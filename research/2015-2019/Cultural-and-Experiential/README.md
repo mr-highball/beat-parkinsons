@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2015-2019
 
+- [Marquesan turmeric and ginger in cosmetic practice](Traditional-Practices/2016-Jost-Marquesas-Turmeric-and-Ginger-Cosmetic-Uses.txt). The survey documents different ginger species and separates their reported uses.
+
 - [Talbina as a customary barley food during illness or bereavement](Traditional-Practices/2016-FEBS-Talbina-Illness-and-Bereavement.txt).
 
 - [Trinidad ginger decoctions, added olive oil and botanical names](Traditional-Practices/2015-Trinidad-Ginger-Olive-Oil-and-Culinary-Names.txt).

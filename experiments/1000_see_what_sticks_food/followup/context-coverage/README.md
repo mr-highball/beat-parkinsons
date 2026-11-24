@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 24 turmeric and clinical-measurement review resolved 42 exact scopes across 30 publications. The current replay leaves 36,619 checks across 23,390 publications. [Originals and reconciled scopes](../priority-five-turmeric-and-clinical-nov24/README.md)
+
 The November 24 pain and mobility review resolved 41 exact scopes across 30 publications. The current replay leaves 36,661 checks across 23,420 publications. [Originals, exact dispositions and scorecards](../priority-five-pain-and-mobility-nov24/README.md)
 
 The November 24 motor, pain and mechanism review resolved 34 exact scopes across 30 publications. The current replay leaves 36,702 checks across 23,450 publications. [Originals and evidence scopes](../priority-five-motor-and-mechanism-nov24/README.md)
