@@ -17,6 +17,26 @@ type
   end;
   TPickerOptions = array of TPickerOption;
 
+  TResearchIngredientInfo = record
+    InPool: Boolean;
+    Canonical: String;
+    Trend: String;
+    EasesCount: Integer;
+    WorsensCount: Integer;
+  end;
+
+  TOracleResearchPool = class
+  private
+    FMap: TJSObject;
+    FLoaded: Boolean;
+    function TryGet(const AKey: String; out AInfo: TResearchIngredientInfo): Boolean;
+  public
+    constructor Create;
+    procedure LoadFromFilterIngredients(AIngredients: TJSArray);
+    function Lookup(const AIngredient: String): TResearchIngredientInfo;
+    property Loaded: Boolean read FLoaded;
+  end;
+
   TOraclePicker = class
   private
     FId: String;
@@ -68,6 +88,9 @@ function Capitalized(const AText: String): String;
 function VocabularyText(AObject: TJSObject; const AKey: String): String;
 function VocabularyItems(AObject: TJSObject; const AKey: String): TJSArray;
 function IngredientPreparations(AOptions: TJSObject; const AIngredient: String): TJSArray;
+function ResearchIngredientURL(const AInfo: TResearchIngredientInfo): String;
+function ResearchIngredientTrendText(const ATrend: String): String;
+function ReadOracleURLParam(const AKey: String): String;
 
 implementation
 
@@ -115,6 +138,208 @@ const
   );
 
 function JSValueText(AValue: JSValue): String; external name 'String';
+function EncodeURIComponentVocab(const AText: String): String; external name 'encodeURIComponent';
+
+function DecodeURIComponentSafeVocab(const AText: String): String;
+begin
+  try
+    asm
+      return decodeURIComponent(AText.replace(/\+/g, ' '));
+    end;
+  except
+    Result := AText;
+  end;
+end;
+
+function ExtractQueryParam(const AQuery, ATargetKey: String): String;
+var
+  LClean: String;
+  LStart: Integer;
+  LIndex: Integer;
+  LPair: String;
+  LEq: Integer;
+  LKey: String;
+begin
+  Result := '';
+  LClean := Trim(AQuery);
+  if (LClean <> '') and ((LClean[1] = '?') or (LClean[1] = '#')) then
+    Delete(LClean, 1, 1);
+  if LClean = '' then
+    Exit;
+  LStart := 1;
+  for LIndex := 1 to Length(LClean) + 1 do
+  begin
+    if (LIndex > Length(LClean)) or (LClean[LIndex] = '&') then
+    begin
+      LPair := Copy(LClean, LStart, LIndex - LStart);
+      LEq := Pos('=', LPair);
+      if LEq > 1 then
+      begin
+        LKey := LowerCase(Trim(Copy(LPair, 1, LEq - 1)));
+        if LKey = ATargetKey then
+          Exit(Trim(DecodeURIComponentSafeVocab(Copy(LPair, LEq + 1, MaxInt))));
+      end;
+      LStart := LIndex + 1;
+    end;
+  end;
+end;
+
+function ReadOracleURLParam(const AKey: String): String;
+var
+  LTarget: String;
+begin
+  LTarget := LowerCase(Trim(AKey));
+  Result := ExtractQueryParam(window.location.search, LTarget);
+  if Result = '' then
+    Result := ExtractQueryParam(window.location.hash, LTarget);
+end;
+
+function ResearchIngredientURL(const AInfo: TResearchIngredientInfo): String;
+begin
+  if (not AInfo.InPool) or (AInfo.Canonical = '') then
+    Exit('');
+  Result := './?ingredient=' + EncodeURIComponentVocab(AInfo.Canonical);
+  if (AInfo.Trend = 'eases') or (AInfo.Trend = 'worsens') then
+    Result := Result + '&trend=' + EncodeURIComponentVocab(AInfo.Trend)
+  else if AInfo.Trend = 'mixed' then
+    Result := Result + '&scope=directional';
+end;
+
+function ResearchIngredientTrendText(const ATrend: String): String;
+begin
+  if ATrend = 'eases' then
+    Result := 'May ease symptoms'
+  else if ATrend = 'worsens' then
+    Result := 'May worsen symptoms'
+  else if ATrend = 'mixed' then
+    Result := 'Mixed symptom signals'
+  else
+    Result := '';
+end;
+
+{ TOracleResearchPool }
+
+constructor TOracleResearchPool.Create;
+begin
+  inherited Create;
+  FMap := TJSObject.new;
+  FLoaded := False;
+end;
+
+procedure TOracleResearchPool.LoadFromFilterIngredients(AIngredients: TJSArray);
+var
+  LIndex: Integer;
+  LAliasIndex: Integer;
+  LItem: TJSObject;
+  LValue: String;
+  LKey: String;
+  LAliases: TJSArray;
+  LAliasKey: String;
+  LEntry: TJSObject;
+begin
+  FMap := TJSObject.new;
+  FLoaded := False;
+  if AIngredients = nil then
+    Exit;
+  for LIndex := 0 to AIngredients.Length - 1 do
+  begin
+    LItem := TJSObject(AIngredients[LIndex]);
+    LValue := Trim(VocabularyText(LItem, 'value'));
+    if LValue = '' then
+      Continue;
+    LEntry := TJSObject.new;
+    LEntry['canonical'] := LValue;
+    LEntry['trend'] := LowerCase(Trim(VocabularyText(LItem, 'trend')));
+    LEntry['eases'] := StrToIntDef(VocabularyText(LItem, 'eases_count'), 0);
+    LEntry['worsens'] := StrToIntDef(VocabularyText(LItem, 'worsens_count'), 0);
+    LKey := LowerCase(LValue);
+    FMap['k:' + LKey] := LEntry;
+    LAliases := VocabularyItems(LItem, 'aliases');
+    for LAliasIndex := 0 to LAliases.Length - 1 do
+    begin
+      LAliasKey := LowerCase(Trim(JSValueText(LAliases[LAliasIndex])));
+      if (LAliasKey <> '') and not isDefined(FMap['k:' + LAliasKey]) then
+        FMap['k:' + LAliasKey] := LEntry;
+    end;
+  end;
+  FLoaded := AIngredients.Length > 0;
+end;
+
+function TOracleResearchPool.TryGet(const AKey: String;
+  out AInfo: TResearchIngredientInfo): Boolean;
+var
+  LRaw: JSValue;
+  LEntry: TJSObject;
+begin
+  AInfo := Default(TResearchIngredientInfo);
+  Result := False;
+  if (AKey = '') or (FMap = nil) then
+    Exit;
+  LRaw := FMap['k:' + AKey];
+  if (not isDefined(LRaw)) or isNull(LRaw) then
+    Exit;
+  LEntry := TJSObject(LRaw);
+  AInfo.InPool := True;
+  AInfo.Canonical := VocabularyText(LEntry, 'canonical');
+  AInfo.Trend := VocabularyText(LEntry, 'trend');
+  AInfo.EasesCount := StrToIntDef(VocabularyText(LEntry, 'eases'), 0);
+  AInfo.WorsensCount := StrToIntDef(VocabularyText(LEntry, 'worsens'), 0);
+  Result := AInfo.Canonical <> '';
+end;
+
+function TOracleResearchPool.Lookup(const AIngredient: String): TResearchIngredientInfo;
+var
+  LKey: String;
+  LMapped: String;
+begin
+  Result := Default(TResearchIngredientInfo);
+  if not FLoaded then
+    Exit;
+  LKey := LowerCase(Trim(AIngredient));
+  if LKey = '' then
+    Exit;
+  if TryGet(LKey, Result) then
+    Exit;
+  // Unambiguous culinary aliases matching canonical research-pool entries.
+  LMapped := '';
+  if (LKey = 'pea') or (LKey = 'peas') then
+    LMapped := 'green peas'
+  else if LKey = 'dill' then
+    LMapped := 'dill weed'
+  else if LKey = 'buckwheat' then
+    LMapped := 'buckwheat groats'
+  else if LKey = 'pomegranate' then
+    LMapped := 'pomegranate arils'
+  else if LKey = 'ground chicken' then
+    LMapped := 'chicken'
+  else if LKey = 'ground turkey' then
+    LMapped := 'turkey'
+  else if LKey = 'pork tenderloin' then
+    LMapped := 'pork'
+  else if LKey = 'greek yogurt' then
+    LMapped := 'yogurt'
+  else if LKey = 'celery' then
+    LMapped := 'celery stalk'
+  else if LKey = 'cilantro leaf' then
+    LMapped := 'cilantro'
+  else if LKey = 'rolled oats' then
+    LMapped := 'oats'
+  else if LKey = 'dark chocolate chips' then
+    LMapped := 'dark chocolate';
+  if (LMapped <> '') and TryGet(LMapped, Result) then
+    Exit;
+  // Exact singular/plural variations (e.g. chickpea -> chickpeas, lentil -> lentils).
+  if TryGet(LKey + 's', Result) then
+    Exit;
+  if TryGet(LKey + 'es', Result) then
+    Exit;
+  if (Length(LKey) > 3) and (LKey[Length(LKey)] = 's') and
+    TryGet(Copy(LKey, 1, Length(LKey) - 1), Result) then
+    Exit;
+  if (Length(LKey) > 4) and (Copy(LKey, Length(LKey) - 2, 3) = 'ies') and
+    TryGet(Copy(LKey, 1, Length(LKey) - 3) + 'y', Result) then
+    Exit;
+end;
 
 function VocabularyText(AObject: TJSObject; const AKey: String): String;
 var
@@ -545,6 +770,7 @@ constructor TOraclePicker.Create(ARenderer: TNyxBrowserRenderer; const AId: Stri
   AOnChange, AOnSubmit: TPickerAction; AMultiple: Boolean);
 var
   LType: TJSEventHandler;
+  LFocus: TJSEventHandler;
   LKey: TJSEventHandler;
   LClear: TJSEventHandler;
 begin
@@ -587,6 +813,24 @@ begin
       Result := True;
     end;
   FInput.addEventListener('input', LType);
+  LFocus :=
+    function(AEvent: TEventListenerEvent): Boolean
+    var
+      LTarget: TJSHTMLInputElement;
+    begin
+      LTarget := FInput;
+      if window.innerWidth <= 780 then
+        window.setTimeout(
+          procedure
+          begin
+            if document.activeElement = LTarget then
+              asm
+                try { LTarget.scrollIntoView({ block: 'start', behavior: 'smooth' }); } catch (e) {}
+              end;
+          end, 160);
+      Result := True;
+    end;
+  FInput.addEventListener('focus', LFocus);
   LClear :=
     function(AEvent: TEventListenerEvent): Boolean
     begin

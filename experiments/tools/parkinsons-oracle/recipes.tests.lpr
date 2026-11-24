@@ -64,6 +64,7 @@ var
   LDetail: TRecipeIngredientDetail;
   LCore: String;
   LRoundCelery: TRecipe;
+  LCandidates: TRecipeIngredientCandidates;
 begin
   LRepo := '.';
   if ParamCount >= 1 then
@@ -297,6 +298,25 @@ begin
     Check(Length(LSuggestions) = 8, 'Provides 8 complementary ingredient suggestions.');
     for I := 0 to High(LSuggestions) do
       Check(LSuggestions[I] <> 'celery stalk', 'Suggestions exclude core ingredient.');
+
+    // Verify look-ahead ingredient autocomplete ranks matching real catalog ingredients first.
+    LCandidates := LCatalog.SuggestExtraIngredients('anise seed', nil, rcAll, 'o', 8);
+    Check(Length(LCandidates) >= 3, 'Look-ahead for "o" on anise seed returns multiple real ingredients.');
+    Check(LCandidates[0].MatchCount > 0, 'Top look-ahead match has > 0 anise seed recipes.');
+    Check(Pos('o', LCandidates[0].Name) = 1, 'Top look-ahead match starts with "o".');
+    for I := 0 to High(LCandidates) do
+      Check(LCandidates[I].Name <> 'anise seed', 'Look-ahead excludes main ingredient.');
+
+    // Verify comma-separated look-ahead matches active token and excludes earlier tokens.
+    LCandidates := LCatalog.SuggestExtraIngredients('anise seed', nil, rcAll, 'lemon, o', 8);
+    Check(Length(LCandidates) >= 2, 'Comma-separated look-ahead "lemon, o" returns candidates.');
+    for I := 0 to High(LCandidates) do
+      Check(LCandidates[I].Name <> 'lemon', 'Comma-separated look-ahead excludes already-entered token.');
+
+    // Verify catalog-wide look-ahead still finds real catalog ingredients even with 0 matches for current core.
+    LCandidates := LCatalog.SuggestExtraIngredients('anise seed', nil, rcAll, 'salm', 5);
+    Check((Length(LCandidates) >= 1) and (LCandidates[0].Name = 'salmon') and
+      (LCandidates[0].CatalogCount > 0), 'Catalog-wide look-ahead finds real ingredient "salmon".');
 
     WriteLn(GChecks, ' recipe model and WFC checks passed.');
   finally

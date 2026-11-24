@@ -1408,6 +1408,9 @@ var
   LClaim: TClaim;
   LKey: String;
   LPreparation: String;
+  LTrend: String;
+  LEases: Integer;
+  LWorsens: Integer;
 begin
   LKeys := nil;
   LIngredientPreparations := nil;
@@ -1442,15 +1445,36 @@ begin
       begin
         LClaims := FByIngredient[LKey];
         LIngredientPreparations.Clear;
+        LEases := 0;
+        LWorsens := 0;
         for LClaim in LClaims do
         begin
           LIngredientPreparations.Add(LClaim.Preparation);
           LAllPreparations.Add(LClaim.Preparation);
+          if LClaim.IsDirectional and (LClaim.AssessedRows > 0) then
+          begin
+            LTrend := ClaimTrend(LClaim.Verdict, LClaim.Direction);
+            if LTrend = 'eases' then
+              Inc(LEases)
+            else if LTrend = 'worsens' then
+              Inc(LWorsens);
+          end;
         end;
         LOption := TJSONObject.Create(['value', LClaims[0].Ingredient]);
         LIngredients.Add(LOption);
         LOption.Add('aliases', AliasesFor(LKey, FIngredientAliases));
         LOption.Add('preparations', StringOptions(LIngredientPreparations));
+        if (LEases > 0) and (LWorsens > 0) then
+          LTrend := 'mixed'
+        else if LEases > 0 then
+          LTrend := 'eases'
+        else if LWorsens > 0 then
+          LTrend := 'worsens'
+        else
+          LTrend := '';
+        LOption.Add('trend', LTrend);
+        LOption.Add('eases_count', LEases);
+        LOption.Add('worsens_count', LWorsens);
       end;
 
       LPreparations := TJSONArray.Create;

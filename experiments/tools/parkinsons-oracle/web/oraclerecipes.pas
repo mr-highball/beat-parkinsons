@@ -7,7 +7,7 @@ interface
 
 uses
   SysUtils, JS, Web, nyx.model, nyx.types, nyx.collections, nyx.modal,
-  nyx.modal.browser, nyx.render.browser, parkinsonsoracle.recipes, wfc;
+  nyx.modal.browser, nyx.render.browser, oraclevocab, parkinsonsoracle.recipes, wfc;
 
 type
   TOracleRecipesModal = class
@@ -19,6 +19,8 @@ type
     FTabsRenderer: TNyxBrowserRenderer;
     FChipsDoc: TNyxDocument;
     FChipsRenderer: TNyxBrowserRenderer;
+    FAddSuggestDoc: TNyxDocument;
+    FAddSuggestRenderer: TNyxBrowserRenderer;
     FCardsDoc: TNyxDocument;
     FCardsRenderer: TNyxBrowserRenderer;
     FCollectionKey: TNyxCollectionRef;
@@ -39,6 +41,7 @@ type
     FCatalog: TRecipeCatalog;
     FCatalogLoading: Boolean;
     FCatalogError: String;
+    FResearchPool: TOracleResearchPool;
     FMainIngredient: String;
     FMainDisplay: String;
     FExtraIngredients: TRecipeStrings;
@@ -48,9 +51,26 @@ type
     FLastResult: TRecipeWfcResult;
     FInvoker: TJSHTMLElement;
     FBackdropClick: TJSEventHandler;
+    FViewportResize: TJSEventHandler;
     FRenderedInCollapse: Boolean;
+    FAddCandidates: TRecipeIngredientCandidates;
+    FAddHighlight: Integer;
+    FAddSuggestOpen: Boolean;
+    FAddFocused: Boolean;
+    FBlurTimer: Integer;
     procedure InitCollection;
     procedure EnsureCatalogLoaded;
+    function LookupPool(const AIngredient: String): TResearchIngredientInfo;
+    procedure UpdateMainChipTheme;
+    procedure KeepAddInputVisible;
+    procedure SetAddInputFocused(AFocused: Boolean);
+    procedure BindVisualViewport;
+    procedure UnbindVisualViewport;
+    procedure UpdateAddSuggestions(const AQuery: String);
+    procedure HideAddSuggestions;
+    procedure UpdateAddHighlightDOM;
+    procedure PickAddSuggestion(const AName: String);
+    procedure CommitAddInput;
     procedure OnCollectionChanged(const ACollection: INyxCollection;
       const AChanges: INyxCollectionChanges);
     function OnBackdropClick(AEvent: TEventListenerEvent): Boolean;
@@ -67,6 +87,7 @@ type
   public
     constructor Create;
     destructor Destroy; override;
+    procedure SetResearchPool(APool: TOracleResearchPool);
     procedure Open(const AIngredient: String; AInvoker: TJSHTMLElement = nil);
     procedure Close;
     function IsOpen: Boolean;
@@ -75,7 +96,7 @@ type
 implementation
 
 uses
-  StrUtils, Math, nyx.hostspace, oraclestatic, oraclevocab, parkinsonsoracle.presentation;
+  StrUtils, Math, nyx.hostspace, oraclestatic, parkinsonsoracle.presentation;
 
 const
   CCollapseLimits: array[0..3] of Integer = (5, 10, 15, 25);
@@ -164,12 +185,20 @@ begin
   FShellRenderer := TNyxBrowserRenderer.Create;
   FTabsRenderer := TNyxBrowserRenderer.Create;
   FChipsRenderer := TNyxBrowserRenderer.Create;
+  FAddSuggestRenderer := TNyxBrowserRenderer.Create;
   FCardsRenderer := TNyxBrowserRenderer.Create;
+  FAddHighlight := -1;
 end;
 
 destructor TOracleRecipesModal.Destroy;
 begin
   Close;
+  UnbindVisualViewport;
+  if FBlurTimer <> 0 then
+  begin
+    window.clearTimeout(FBlurTimer);
+    FBlurTimer := 0;
+  end;
   if FSubscription <> nil then
   begin
     FSubscription.Disconnect;
@@ -184,6 +213,7 @@ begin
     FModalHost := nil;
   end;
   FCardsRenderer.Free;
+  FAddSuggestRenderer.Free;
   FChipsRenderer.Free;
   FTabsRenderer.Free;
   FShellRenderer.Free;
@@ -229,6 +259,12 @@ begin
   if FCardsRenderer <> nil then
     FCardsRenderer.Unmount;
   FreeAndNil(FCardsDoc);
+  if FAddSuggestRenderer <> nil then
+    FAddSuggestRenderer.Unmount;
+  FreeAndNil(FAddSuggestDoc);
+  FAddCandidates := nil;
+  FAddHighlight := -1;
+  FAddSuggestOpen := False;
   if FChipsRenderer <> nil then
     FChipsRenderer.Unmount;
   FreeAndNil(FChipsDoc);
@@ -243,6 +279,386 @@ end;
 function TOracleRecipesModal.IsOpen: Boolean;
 begin
   Result := (FModalHost <> nil) and FModalHost.IsOpen;
+end;
+
+function TOracleRecipesModal.LookupPool(const AIngredient: String): TResearchIngredientInfo;
+begin
+  if FResearchPool <> nil then
+    Result := FResearchPool.Lookup(AIngredient)
+  else
+    Result := Default(TResearchIngredientInfo);
+end;
+
+procedure TOracleRecipesModal.UpdateMainChipTheme;
+var
+  LChip: TJSHTMLElement;
+  LInfo: TResearchIngredientInfo;
+  LTrendText: String;
+begin
+  if (FShellRenderer = nil) or (FShellRenderer.Root = nil) or
+    (FShellRenderer.Root.Find('recipes-main-chip') = nil) then
+    Exit;
+  LChip := FShellRenderer.ElementFor('recipes-main-chip');
+  LInfo := LookupPool(FMainIngredient);
+  LChip.setAttribute('data-match', 'main');
+  if LInfo.InPool then
+  begin
+    LChip.setAttribute('data-in-pool', 'true');
+    if LInfo.Trend <> '' then
+      LChip.setAttribute('data-trend', LInfo.Trend)
+    else
+      LChip.removeAttribute('data-trend');
+    LTrendText := ResearchIngredientTrendText(LInfo.Trend);
+    if LTrendText <> '' then
+      LChip.setAttribute('title', FMainDisplay + ' · Primary ingredient · ' + LTrendText)
+    else
+      LChip.setAttribute('title', FMainDisplay + ' · Primary ingredient');
+  end
+  else
+  begin
+    LChip.removeAttribute('data-in-pool');
+    LChip.removeAttribute('data-trend');
+    LChip.setAttribute('title', FMainDisplay + ' · Primary ingredient');
+  end;
+end;
+
+procedure TOracleRecipesModal.SetResearchPool(APool: TOracleResearchPool);
+begin
+  FResearchPool := APool;
+  if IsOpen then
+  begin
+    UpdateMainChipTheme;
+    RenderSidebarChips;
+    if FAddSuggestOpen and (FShellRenderer <> nil) and (FShellRenderer.Root <> nil) then
+      UpdateAddSuggestions(TJSHTMLInputElement(FShellRenderer.InputFor('recipes-add-input')).value);
+    if FCollection <> nil then
+      RenderCards(FCollection.Snapshot);
+  end;
+end;
+
+procedure TOracleRecipesModal.KeepAddInputVisible;
+var
+  LSection: TJSHTMLElement;
+  LPage: TJSHTMLElement;
+begin
+  if (not IsOpen) or (FShellRenderer = nil) or (FShellRenderer.Root = nil) then
+    Exit;
+  if FShellRenderer.Root.Find('recipes-add-section') = nil then
+    Exit;
+  LSection := FShellRenderer.ElementFor('recipes-add-section');
+  LPage := FShellRenderer.ElementFor('recipes-modal-page');
+  if (window.innerWidth <= 780) or (window.innerHeight <= 540) then
+  begin
+    if LPage <> nil then
+      LPage.scrollTop := 0;
+    asm
+      try { LSection.scrollIntoView({ block: 'nearest', behavior: 'auto' }); } catch (e) {}
+    end;
+  end;
+end;
+
+procedure TOracleRecipesModal.SetAddInputFocused(AFocused: Boolean);
+begin
+  FAddFocused := AFocused;
+  if FModalHost = nil then
+    Exit;
+  if AFocused then
+  begin
+    FModalHost.Element.setAttribute('data-input-focused', 'true');
+    KeepAddInputVisible;
+    window.setTimeout(
+      procedure
+      begin
+        if FAddFocused then
+          KeepAddInputVisible;
+      end, 160);
+    window.setTimeout(
+      procedure
+      begin
+        if FAddFocused then
+          KeepAddInputVisible;
+      end, 340);
+  end
+  else
+    FModalHost.Element.removeAttribute('data-input-focused');
+end;
+
+procedure TOracleRecipesModal.BindVisualViewport;
+var
+  LSelf: TOracleRecipesModal;
+begin
+  if Assigned(FViewportResize) then
+    Exit;
+  LSelf := Self;
+  FViewportResize :=
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      if LSelf.FAddFocused then
+        LSelf.KeepAddInputVisible;
+      Result := True;
+    end;
+  asm
+    if (window.visualViewport && typeof window.visualViewport.addEventListener === 'function') {
+      window.visualViewport.addEventListener('resize', LSelf.FViewportResize);
+    }
+  end;
+end;
+
+procedure TOracleRecipesModal.UnbindVisualViewport;
+var
+  LHandler: TJSEventHandler;
+begin
+  if not Assigned(FViewportResize) then
+    Exit;
+  LHandler := FViewportResize;
+  FViewportResize := nil;
+  asm
+    if (window.visualViewport && typeof window.visualViewport.removeEventListener === 'function') {
+      window.visualViewport.removeEventListener('resize', LHandler);
+    }
+  end;
+end;
+
+procedure TOracleRecipesModal.HideAddSuggestions;
+var
+  LHost: TJSHTMLElement;
+  LInput: TJSHTMLElement;
+begin
+  FAddSuggestOpen := False;
+  FAddHighlight := -1;
+  FAddCandidates := nil;
+  if (FShellRenderer = nil) or (FShellRenderer.Root = nil) then
+    Exit;
+  if FShellRenderer.Root.Find('recipes-add-suggestions') <> nil then
+  begin
+    LHost := FShellRenderer.ElementFor('recipes-add-suggestions');
+    LHost.hidden := True;
+  end;
+  LInput := FShellRenderer.InputFor('recipes-add-input');
+  if LInput <> nil then
+  begin
+    LInput.setAttribute('aria-expanded', 'false');
+    LInput.removeAttribute('aria-activedescendant');
+  end;
+end;
+
+procedure TOracleRecipesModal.UpdateAddHighlightDOM;
+var
+  LIndex: Integer;
+  LBtn: TJSHTMLElement;
+  LInput: TJSHTMLElement;
+  LActiveId: String;
+begin
+  if (FAddSuggestRenderer = nil) or (FAddSuggestRenderer.Root = nil) then
+    Exit;
+  LActiveId := '';
+  for LIndex := 0 to High(FAddCandidates) do
+  begin
+    LBtn := FAddSuggestRenderer.ElementFor('recipes-add-opt-' + IntToStr(LIndex));
+    if LBtn = nil then
+      Continue;
+    if LIndex = FAddHighlight then
+    begin
+      LBtn.setAttribute('aria-selected', 'true');
+      LActiveId := LBtn.id;
+      asm
+        try { LBtn.scrollIntoView({ block: 'nearest' }); } catch (e) {}
+      end;
+    end
+    else
+      LBtn.setAttribute('aria-selected', 'false');
+  end;
+  if (FShellRenderer <> nil) and (FShellRenderer.Root <> nil) then
+  begin
+    LInput := FShellRenderer.InputFor('recipes-add-input');
+    if LInput <> nil then
+    begin
+      if LActiveId <> '' then
+        LInput.setAttribute('aria-activedescendant', LActiveId)
+      else
+        LInput.removeAttribute('aria-activedescendant');
+    end;
+  end;
+end;
+
+procedure TOracleRecipesModal.UpdateAddSuggestions(const AQuery: String);
+var
+  LHost: TJSHTMLElement;
+  LInput: TJSHTMLElement;
+  LDoc: TNyxDocument;
+  LList: TNyxNode;
+  LIndex: Integer;
+  LCandidate: TRecipeIngredientCandidate;
+  LBtnId: String;
+  LBtn: TJSHTMLElement;
+  LNameSpan: TJSHTMLElement;
+  LCountSpan: TJSHTMLElement;
+  LCountText: String;
+  LInfo: TResearchIngredientInfo;
+
+  procedure BindOption(const AId, AName: String);
+  begin
+    LBtn := FAddSuggestRenderer.ElementFor(AId);
+    LBtn.id := AId;
+    LBtn.setAttribute('role', 'option');
+    LBtn.setAttribute('aria-selected', 'false');
+    BindHandler(LBtn, 'mousedown',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        AEvent.preventDefault;
+        Result := False;
+      end);
+    BindHandler(LBtn, 'click',
+      function(AEvent: TEventListenerEvent): Boolean
+      begin
+        PickAddSuggestion(AName);
+        Result := True;
+      end);
+  end;
+
+begin
+  if (FShellRenderer = nil) or (FShellRenderer.Root = nil) or
+    (FShellRenderer.Root.Find('recipes-add-suggestions') = nil) then
+    Exit;
+  if FCatalog = nil then
+  begin
+    HideAddSuggestions;
+    Exit;
+  end;
+  FAddCandidates := FCatalog.SuggestExtraIngredients(FMainIngredient, FExtraIngredients,
+    FCategory, AQuery, 8);
+  FAddHighlight := -1;
+  LHost := FShellRenderer.ElementFor('recipes-add-suggestions');
+  LInput := FShellRenderer.InputFor('recipes-add-input');
+  if Length(FAddCandidates) = 0 then
+  begin
+    HideAddSuggestions;
+    Exit;
+  end;
+
+  LDoc := TNyxDocument.Create;
+  LList := MakeNode(nkColumn, 'recipes-add-suggestions-list');
+  LDoc.AddPage(LList);
+  for LIndex := 0 to High(FAddCandidates) do
+  begin
+    LCandidate := FAddCandidates[LIndex];
+    LBtnId := 'recipes-add-opt-' + IntToStr(LIndex);
+    if LCandidate.MatchCount = 1 then
+      LCountText := '1 recipe'
+    else if LCandidate.MatchCount > 1 then
+      LCountText := IntToStr(LCandidate.MatchCount) + ' recipes'
+    else
+      LCountText := 'Other recipes';
+    LList.Add(MakeButton(LBtnId, Capitalized(LCandidate.Name), nvSecondary)
+      .Configure.AccessibleName(Capitalized(LCandidate.Name) + ' (' + LCountText + ')').Done);
+  end;
+
+  FAddSuggestRenderer.Render(LDoc, LList, LHost);
+  FAddSuggestDoc.Free;
+  FAddSuggestDoc := LDoc;
+
+  for LIndex := 0 to High(FAddCandidates) do
+  begin
+    LCandidate := FAddCandidates[LIndex];
+    LBtnId := 'recipes-add-opt-' + IntToStr(LIndex);
+    BindOption(LBtnId, LCandidate.Name);
+    LBtn := FAddSuggestRenderer.ElementFor(LBtnId);
+    LInfo := LookupPool(LCandidate.Name);
+    if LInfo.InPool and (LInfo.Trend <> '') then
+      LBtn.setAttribute('data-trend', LInfo.Trend);
+    if LCandidate.MatchCount = 0 then
+      LBtn.setAttribute('data-other-catalog', 'true');
+    LBtn.textContent := '';
+    LNameSpan := TJSHTMLElement(document.createElement('span'));
+    LNameSpan.className := 'recipes-add-opt-name';
+    LNameSpan.textContent := Capitalized(LCandidate.Name);
+    LBtn.appendChild(LNameSpan);
+    LCountSpan := TJSHTMLElement(document.createElement('span'));
+    LCountSpan.className := 'recipes-add-opt-count';
+    if LCandidate.MatchCount = 1 then
+      LCountSpan.textContent := '1 recipe'
+    else if LCandidate.MatchCount > 1 then
+      LCountSpan.textContent := IntToStr(LCandidate.MatchCount) + ' recipes'
+    else
+      LCountSpan.textContent := 'Other recipes';
+    LBtn.appendChild(LCountSpan);
+  end;
+
+  FAddSuggestOpen := True;
+  LHost.hidden := False;
+  if LInput <> nil then
+    LInput.setAttribute('aria-expanded', 'true');
+  KeepAddInputVisible;
+end;
+
+procedure TOracleRecipesModal.PickAddSuggestion(const AName: String);
+var
+  LInput: TJSHTMLInputElement;
+  LValue: String;
+  LLastSep: Integer;
+  LIndex: Integer;
+  LCombined: String;
+begin
+  if (FShellRenderer = nil) or (FShellRenderer.Root = nil) then
+    Exit;
+  if FBlurTimer <> 0 then
+  begin
+    window.clearTimeout(FBlurTimer);
+    FBlurTimer := 0;
+  end;
+  LInput := TJSHTMLInputElement(FShellRenderer.InputFor('recipes-add-input'));
+  LValue := LInput.value;
+  LLastSep := 0;
+  for LIndex := Length(LValue) downto 1 do
+  begin
+    if (LValue[LIndex] = ',') or (LValue[LIndex] = ';') or
+      (LValue[LIndex] = #10) or (LValue[LIndex] = #13) then
+    begin
+      LLastSep := LIndex;
+      Break;
+    end;
+  end;
+  if LLastSep > 0 then
+    LCombined := Copy(LValue, 1, LLastSep) + ' ' + AName
+  else
+    LCombined := AName;
+  LInput.value := '';
+  AddIngredientsFromText(LCombined);
+  HideAddSuggestions;
+  if (window.innerWidth <= 780) or (window.innerHeight <= 540) then
+  begin
+    LInput.blur;
+    SetAddInputFocused(False);
+  end
+  else
+    NyxFocusWithoutScroll(LInput);
+end;
+
+procedure TOracleRecipesModal.CommitAddInput;
+var
+  LInput: TJSHTMLInputElement;
+  LRaw: String;
+begin
+  if (FShellRenderer = nil) or (FShellRenderer.Root = nil) then
+    Exit;
+  if FBlurTimer <> 0 then
+  begin
+    window.clearTimeout(FBlurTimer);
+    FBlurTimer := 0;
+  end;
+  LInput := TJSHTMLInputElement(FShellRenderer.InputFor('recipes-add-input'));
+  LRaw := Trim(LInput.value);
+  if LRaw <> '' then
+    AddIngredientsFromText(LRaw);
+  LInput.value := '';
+  HideAddSuggestions;
+  if (window.innerWidth <= 780) or (window.innerHeight <= 540) then
+  begin
+    LInput.blur;
+    SetAddInputFocused(False);
+  end
+  else if LRaw <> '' then
+    NyxFocusWithoutScroll(LInput);
 end;
 
 function TOracleRecipesModal.OnBackdropClick(AEvent: TEventListenerEvent): Boolean;
@@ -335,6 +751,7 @@ begin
     .MaximumWidth(1140)
     .MaximumHeight(820)
     .Sizing(nhfAvailableHeight));
+  BindVisualViewport;
 
   EnsureCatalogLoaded;
   RunCollapse;
@@ -348,6 +765,14 @@ procedure TOracleRecipesModal.Close;
 var
   LInvoker: TJSHTMLElement;
 begin
+  if FBlurTimer <> 0 then
+  begin
+    window.clearTimeout(FBlurTimer);
+    FBlurTimer := 0;
+  end;
+  SetAddInputFocused(False);
+  HideAddSuggestions;
+  UnbindVisualViewport;
   LInvoker := FInvoker;
   FInvoker := nil;
   if FModalHost <> nil then
@@ -402,9 +827,10 @@ begin
   LAddRow := MakeNode(nkRow, 'recipes-add-row');
   LAddRow.Add(MakeNode(nkInput, 'recipes-add-input')
     .Configure.AccessibleName('Include other ingredients')
-    .Placeholder('e.g. black pepper, onions').Done);
+    .Placeholder('Type an ingredient, e.g. olive oil, lemon').Done);
   LAddRow.Add(MakeButton('recipes-add-btn', 'Add', nvPrimary));
   LAddSection.Add(LAddRow);
+  LAddSection.Add(MakeNode(nkColumn, 'recipes-add-suggestions'));
   LSidebar.Add(LAddSection);
 
   LSidebar.Add(MakeNode(nkColumn, 'recipes-sidebar-chips'));
@@ -429,6 +855,7 @@ begin
 
   FShellRenderer.Render(LDoc, LPage, FModalHost.Element);
   FShellDoc := LDoc;
+  UpdateMainChipTheme;
 
   BindHandler(FShellRenderer.ElementFor('recipes-close'), 'click',
     function(AEvent: TEventListenerEvent): Boolean
@@ -438,22 +865,116 @@ begin
     end);
 
   LInput := TJSHTMLInputElement(FShellRenderer.InputFor('recipes-add-input'));
+  LInput.setAttribute('role', 'combobox');
+  LInput.setAttribute('aria-autocomplete', 'list');
+  LInput.setAttribute('aria-expanded', 'false');
+  LInput.setAttribute('aria-controls', 'recipes-add-suggestions');
+  LInput.setAttribute('autocomplete', 'off');
+  LInput.setAttribute('autocorrect', 'off');
+  LInput.setAttribute('autocapitalize', 'none');
+  LInput.setAttribute('spellcheck', 'false');
+  LInput.setAttribute('enterkeyhint', 'done');
+  FShellRenderer.ElementFor('recipes-add-suggestions').id := 'recipes-add-suggestions';
+  FShellRenderer.ElementFor('recipes-add-suggestions').setAttribute('role', 'listbox');
+  FShellRenderer.ElementFor('recipes-add-suggestions').setAttribute('aria-label', 'Matching recipe ingredients');
+  FShellRenderer.ElementFor('recipes-add-suggestions').hidden := True;
+
+  BindHandler(FShellRenderer.ElementFor('recipes-add-btn'), 'mousedown',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      AEvent.preventDefault;
+      Result := False;
+    end);
   BindHandler(FShellRenderer.ElementFor('recipes-add-btn'), 'click',
     function(AEvent: TEventListenerEvent): Boolean
     begin
-      AddIngredientsFromText(LInput.value);
-      LInput.value := '';
-      NyxFocusWithoutScroll(LInput);
+      CommitAddInput;
+      Result := True;
+    end);
+  BindHandler(LInput, 'focus',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      if FBlurTimer <> 0 then
+      begin
+        window.clearTimeout(FBlurTimer);
+        FBlurTimer := 0;
+      end;
+      SetAddInputFocused(True);
+      UpdateAddSuggestions(LInput.value);
+      Result := True;
+    end);
+  BindHandler(LInput, 'input',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      UpdateAddSuggestions(LInput.value);
+      Result := True;
+    end);
+  BindHandler(LInput, 'blur',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      if FBlurTimer <> 0 then
+        window.clearTimeout(FBlurTimer);
+      FBlurTimer := window.setTimeout(
+        procedure
+        begin
+          FBlurTimer := 0;
+          if document.activeElement <> LInput then
+          begin
+            HideAddSuggestions;
+            SetAddInputFocused(False);
+          end;
+        end, 180);
       Result := True;
     end);
   BindHandler(LInput, 'keydown',
     function(AEvent: TEventListenerEvent): Boolean
+    var
+      LKey: String;
     begin
-      if TJSKeyboardEvent(AEvent).key = 'Enter' then
+      LKey := TJSKeyboardEvent(AEvent).key;
+      if LKey = 'ArrowDown' then
+      begin
+        if not FAddSuggestOpen then
+          UpdateAddSuggestions(LInput.value);
+        if Length(FAddCandidates) > 0 then
+        begin
+          AEvent.preventDefault;
+          if FAddHighlight < High(FAddCandidates) then
+            Inc(FAddHighlight)
+          else
+            FAddHighlight := 0;
+          UpdateAddHighlightDOM;
+        end;
+      end
+      else if LKey = 'ArrowUp' then
+      begin
+        if FAddSuggestOpen and (Length(FAddCandidates) > 0) then
+        begin
+          AEvent.preventDefault;
+          if FAddHighlight > 0 then
+            Dec(FAddHighlight)
+          else
+            FAddHighlight := High(FAddCandidates);
+          UpdateAddHighlightDOM;
+        end;
+      end
+      else if LKey = 'Escape' then
+      begin
+        if FAddSuggestOpen then
+        begin
+          AEvent.preventDefault;
+          AEvent.stopPropagation;
+          HideAddSuggestions;
+        end;
+      end
+      else if LKey = 'Enter' then
       begin
         AEvent.preventDefault;
-        AddIngredientsFromText(LInput.value);
-        LInput.value := '';
+        if FAddSuggestOpen and (FAddHighlight >= 0) and
+          (FAddHighlight <= High(FAddCandidates)) then
+          PickAddSuggestion(FAddCandidates[FAddHighlight].Name)
+        else
+          CommitAddInput;
       end;
       Result := True;
     end);
@@ -617,9 +1138,18 @@ var
   end;
 
   procedure BindSuggest(const AId, AIngredient: String; AActive: Boolean);
+  var
+    LInfo: TResearchIngredientInfo;
   begin
     LButton := FChipsRenderer.ElementFor(AId);
     LButton.setAttribute('aria-pressed', LowerCase(BoolToStr(AActive, True)));
+    LInfo := LookupPool(AIngredient);
+    if LInfo.InPool and (LInfo.Trend <> '') then
+    begin
+      LButton.setAttribute('data-trend', LInfo.Trend);
+      LButton.setAttribute('title', Capitalized(AIngredient) + ' · ' +
+        ResearchIngredientTrendText(LInfo.Trend));
+    end;
     BindHandler(LButton, 'click',
       function(AEvent: TEventListenerEvent): Boolean
       begin
@@ -718,6 +1248,13 @@ var
   LRecipeId: String;
   LRecipeTitle: String;
   LRecipeURL: String;
+  LIngName: String;
+  LIngId: String;
+  LIngInfo: TResearchIngredientInfo;
+  LIsMain: Boolean;
+  LIsExtra: Boolean;
+  LTrendText: String;
+  LAccessible: String;
 
   procedure BindStepsToggle(const AToggleId, APanelId: String);
   begin
@@ -875,8 +1412,26 @@ begin
       LIngredients := SplitPacked(LItem.GetValue(FIngredientsField), '|');
       LIngRow := MakeNode(nkRow, 'recipe-ingredients-' + LTag);
       for LSubIndex := 0 to High(LIngredients) do
-        LIngRow.Add(MakeNode(nkBadge, 'recipe-ing-' + LTag + '-' + IntToStr(LSubIndex),
-          Capitalized(LIngredients[LSubIndex])));
+      begin
+        LIngName := LIngredients[LSubIndex];
+        LIngId := 'recipe-ing-' + LTag + '-' + IntToStr(LSubIndex);
+        LIngInfo := LookupPool(LIngName);
+        LIsMain := (LIngName = FMainIngredient) or
+          (LIngInfo.InPool and (LowerCase(LIngInfo.Canonical) = LowerCase(FMainIngredient)));
+        if LIngInfo.InPool and (not LIsMain) then
+        begin
+          LTrendText := ResearchIngredientTrendText(LIngInfo.Trend);
+          LAccessible := Capitalized(LIngName);
+          if LTrendText <> '' then
+            LAccessible := LAccessible + ' (' + LTrendText + ')';
+          LAccessible := LAccessible + ' — open research details in a new tab';
+          LIngRow.Add(MakeNode(nkLink, LIngId, Capitalized(LIngName))
+            .Configure.LinkTo(ResearchIngredientURL(LIngInfo))
+            .AccessibleName(LAccessible).Done);
+        end
+        else
+          LIngRow.Add(MakeNode(nkBadge, LIngId, Capitalized(LIngName)));
+      end;
       LCard.Add(LIngRow);
 
       LSteps := SplitPacked(LItem.GetValue(FStepsField), #10);
@@ -921,10 +1476,41 @@ begin
       LIngredients := SplitPacked(LItem.GetValue(FIngredientsField), '|');
       for LSubIndex := 0 to High(LIngredients) do
       begin
+        LIngName := LIngredients[LSubIndex];
         LBadge := FCardsRenderer.ElementFor('recipe-ing-' + LTag + '-' + IntToStr(LSubIndex));
-        if LIngredients[LSubIndex] = FMainIngredient then
-          LBadge.setAttribute('data-match', 'main')
-        else if HasExtra(FExtraIngredients, LIngredients[LSubIndex]) then
+        LIngInfo := LookupPool(LIngName);
+        LIsMain := (LIngName = FMainIngredient) or
+          (LIngInfo.InPool and (LowerCase(LIngInfo.Canonical) = LowerCase(FMainIngredient)));
+        LIsExtra := (not LIsMain) and HasExtra(FExtraIngredients, LIngName);
+        LTrendText := ResearchIngredientTrendText(LIngInfo.Trend);
+        if LIngInfo.InPool then
+        begin
+          LBadge.setAttribute('data-in-pool', 'true');
+          if LIngInfo.Trend <> '' then
+            LBadge.setAttribute('data-trend', LIngInfo.Trend);
+        end;
+        if LIsMain then
+        begin
+          LBadge.setAttribute('data-match', 'main');
+          if LTrendText <> '' then
+            LBadge.setAttribute('title', Capitalized(LIngName) + ' · Primary ingredient · ' + LTrendText)
+          else
+            LBadge.setAttribute('title', Capitalized(LIngName) + ' · Primary ingredient');
+        end
+        else if LIngInfo.InPool then
+        begin
+          LBadge.setAttribute('target', '_blank');
+          LBadge.setAttribute('rel', 'noopener noreferrer');
+          if LIsExtra then
+            LBadge.setAttribute('data-match', 'extra');
+          if LTrendText <> '' then
+            LBadge.setAttribute('title', Capitalized(LIngName) + ' · ' + LTrendText +
+              ' — open research details in new tab')
+          else
+            LBadge.setAttribute('title', Capitalized(LIngName) +
+              ' · In research pool — open research details in new tab');
+        end
+        else if LIsExtra then
           LBadge.setAttribute('data-match', 'extra');
       end;
       LLinkEl := FCardsRenderer.ElementFor('recipe-open-full-' + LTag);

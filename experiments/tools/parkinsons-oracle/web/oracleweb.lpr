@@ -52,6 +52,10 @@ var
   GRelatedBusy: Boolean;
   GTrend: String;
   GFilterOptions: TJSObject;
+  GResearchPool: TOracleResearchPool;
+  GPendingIngredient: String;
+  GPendingTrend: String;
+  GPendingScope: String;
   GStaticOracle: TStaticOracle;
   GSymptom: TOraclePicker;
   GIngredient: TOraclePicker;
@@ -774,6 +778,11 @@ begin
 end;
 
 procedure LoadFilterOptions;
+var
+  LInfo: TResearchIngredientInfo;
+  LTargetIngredient: String;
+  LTargetTrend: String;
+  LTargetScope: String;
 begin
   Request('oracle_filter_options', TJSObject.new,
     procedure(AData: TJSObject; const AError: String)
@@ -785,9 +794,36 @@ begin
         Exit;
       end;
       GFilterOptions := AData;
+      if GResearchPool = nil then
+        GResearchPool := TOracleResearchPool.Create;
+      GResearchPool.LoadFromFilterIngredients(ItemsOf(AData, 'ingredients'));
+      if GRecipesModal <> nil then
+        GRecipesModal.SetResearchPool(GResearchPool);
       GSymptom.SetChoices(ItemsOf(AData, 'symptoms'));
       GIngredient.SetChoices(ItemsOf(AData, 'ingredients'));
       IngredientChanged;
+      if GPendingIngredient <> '' then
+      begin
+        LTargetIngredient := GPendingIngredient;
+        LTargetTrend := GPendingTrend;
+        LTargetScope := GPendingScope;
+        GPendingIngredient := '';
+        GPendingTrend := '';
+        GPendingScope := '';
+        LInfo := GResearchPool.Lookup(LTargetIngredient);
+        if LInfo.InPool then
+          LTargetIngredient := LInfo.Canonical;
+        GIngredient.Pick(LTargetIngredient);
+        if (LTargetTrend = 'eases') or (LTargetTrend = 'worsens') then
+          SelectTrend(LTargetTrend)
+        else
+          SelectTrend('');
+        if LTargetScope = 'directional' then
+          TJSHTMLSelectElement(GRenderer.InputFor('scope')).selectedIndex := 0;
+        UpdateFilterCount;
+        document.title := Capitalized(LTargetIngredient) + ' · Parkinson’s Oracle';
+        Query(True, 0);
+      end;
     end);
 end;
 
@@ -2066,6 +2102,8 @@ begin
     begin
       if GRecipesModal = nil then
         GRecipesModal := TOracleRecipesModal.Create;
+      if GResearchPool <> nil then
+        GRecipesModal.SetResearchPool(GResearchPool);
       GRecipesModal.Open(AIngredient, GResultsRenderer.ElementFor('claim-recipes-' + ATag));
       Result := True;
     end);
@@ -2343,6 +2381,8 @@ begin
       LMessage := 'Research across ' + IntToStr(Length(LSymptoms)) + ' symptoms'
     else if TextOf(AResults, 'symptom') <> '' then
       LMessage := 'Research on ' + LowerCase(FriendlySymptom(TextOf(AResults, 'symptom')))
+    else if TextOf(AResults, 'ingredient') <> '' then
+      LMessage := 'Research on ' + Capitalized(TextOf(AResults, 'ingredient'))
     else if LTrendOnly then
     begin
       if LTrend = 'eases' then
@@ -2361,6 +2401,8 @@ begin
       LResultActions.Add(Button('open-graph', 'Graph view', nvSecondary));
       if (GRelatedTerms <> '') and (GResearchKind <> SourceKindCulture) then
         LResultActions.Add(Button('jump-to-sources', 'Jump to sources', nvSecondary));
+      if (TextOf(AResults, 'ingredient') <> '') and (LTrend <> '') and (LRecords.Length > 0) then
+        LResultActions.Add(Button('show-any-trend', 'Show all claims', nvSecondary));
       LPage.Add(LResultActions);
       LKindTabs := Section(nkRow, 'research-kind-tabs');
       LKindTabs.Add(Button('research-kind-all', 'All research', nvSecondary)
@@ -2571,7 +2613,7 @@ begin
         Result := True;
       end);
   end;
-  if LCanShowAnyTrend then
+  if LCanShowAnyTrend or (GResultsRenderer.Root.Find('show-any-trend') <> nil) then
     BindEvent(GResultsRenderer.ElementFor('show-any-trend'), 'click',
       function(AEvent: TEventListenerEvent): Boolean
       begin
@@ -3063,7 +3105,13 @@ begin
     end);
   for LInputId in CTextInputs do
     BindEvent(GRenderer.InputFor(LInputId), 'keydown', @SubmitOnEnter);
+  GPendingIngredient := ReadOracleURLParam('ingredient');
+  GPendingTrend := LowerCase(ReadOracleURLParam('trend'));
+  GPendingScope := LowerCase(ReadOracleURLParam('scope'));
   SwitchView(ovClaims);
+  if GPendingIngredient <> '' then
+    MessageView('Loading research…',
+      'Looking up research details for ' + Capitalized(GPendingIngredient) + '.');
   LoadFilterOptions;
   LoadStatus;
 end;
@@ -3080,7 +3128,11 @@ begin
   if LRecipeId <> '' then
   begin
     GRecipePage := TOracleRecipePage.Create;
-    GRecipePage.Mount(LRecipeId);
+    GRecipePage.Mount(LRecipeId,
+      procedure(AReply: TOracleReply)
+      begin
+        Request('oracle_filter_options', TJSObject.new, AReply);
+      end);
     Exit;
   end;
   Mount;

@@ -6,14 +6,18 @@ unit oraclerecipepage;
 interface
 
 uses
-  SysUtils, JS, Web, nyx.model, nyx.types, nyx.render.browser, parkinsonsoracle.recipes;
+  SysUtils, JS, Web, nyx.model, nyx.types, nyx.render.browser,
+  oraclestatic, oraclevocab, parkinsonsoracle.recipes;
 
 type
+  TRecipeFilterLoader = reference to procedure(AReply: TOracleReply);
+
   TOracleRecipePage = class
   private
     FRenderer: TNyxBrowserRenderer;
     FDoc: TNyxDocument;
     FCatalog: TRecipeCatalog;
+    FResearchPool: TOracleResearchPool;
     FRecipe: TRecipe;
     FRecipeId: String;
     FLoading: Boolean;
@@ -26,6 +30,7 @@ type
     FCheckedIngredients: array of Boolean;
     FDoneSteps: array of Boolean;
     FVisibilityHandler: TJSEventHandler;
+    function LookupPool(const AIngredient: String): TResearchIngredientInfo;
     procedure Render;
     procedure RenderStateCard(const ATitle, AMessage: String);
     procedure RenderRecipe;
@@ -45,7 +50,7 @@ type
   public
     constructor Create;
     destructor Destroy; override;
-    procedure Mount(const ARecipeId: String);
+    procedure Mount(const ARecipeId: String; AFilterLoader: TRecipeFilterLoader = nil);
   end;
 
 function ReadRequestedRecipeId: String;
@@ -53,7 +58,7 @@ function ReadRequestedRecipeId: String;
 implementation
 
 uses
-  StrUtils, Math, oraclestatic, oraclevocab;
+  StrUtils, Math;
 
 const
   CScaleFactors: array[0..3] of Double = (0.5, 1.0, 2.0, 3.0);
@@ -202,10 +207,19 @@ begin
   end;
   FDoc.Free;
   FCatalog.Free;
+  FResearchPool.Free;
   inherited Destroy;
 end;
 
-procedure TOracleRecipePage.Mount(const ARecipeId: String);
+function TOracleRecipePage.LookupPool(const AIngredient: String): TResearchIngredientInfo;
+begin
+  if FResearchPool <> nil then
+    Result := FResearchPool.Lookup(AIngredient)
+  else
+    Result := Default(TResearchIngredientInfo);
+end;
+
+procedure TOracleRecipePage.Mount(const ARecipeId: String; AFilterLoader: TRecipeFilterLoader);
 var
   LHost: TJSHTMLElement;
 begin
@@ -223,6 +237,20 @@ begin
   document.body.setAttribute('data-oracle-recipe-page', 'true');
 
   Render;
+
+  if Assigned(AFilterLoader) then
+    AFilterLoader(
+      procedure(AData: TJSObject; const AError: String)
+      begin
+        if (AError = '') and (AData <> nil) then
+        begin
+          if FResearchPool = nil then
+            FResearchPool := TOracleResearchPool.Create;
+          FResearchPool.LoadFromFilterIngredients(VocabularyItems(AData, 'ingredients'));
+          if FRecipe <> nil then
+            Render;
+        end;
+      end);
 
   GetOracleAsset('./recipes.json',
     procedure(AData: TJSObject; const AError: String)
@@ -490,6 +518,7 @@ var
   LTools: TNyxNode;
   LHero: TNyxNode;
   LBadges: TNyxNode;
+  LIngPills: TNyxNode;
   LMetaGrid: TNyxNode;
   LBody: TNyxNode;
   LIngCol: TNyxNode;
@@ -521,6 +550,13 @@ var
   LDoneCount: Integer;
   LHasDetails: Boolean;
   LDetail: TRecipeIngredientDetail;
+  LPillName: String;
+  LPillId: String;
+  LPillInfo: TResearchIngredientInfo;
+  LPillIsMain: Boolean;
+  LPillTrendText: String;
+  LPillLabel: String;
+  LPillEl: TJSHTMLElement;
 
   procedure AddMetaTile(const AId, ALabel, AValue: String);
   var
@@ -615,6 +651,31 @@ begin
 
   LHero.Add(MakeNode(nkHeading, 'recipe-sheet-title', FRecipe.Title));
   LHero.Add(MakeNode(nkLabel, 'recipe-sheet-summary', FRecipe.Summary));
+
+  if Length(FRecipe.Ingredients) > 0 then
+  begin
+    LIngPills := MakeNode(nkRow, 'recipe-sheet-ing-pills');
+    for LIndex := 0 to High(FRecipe.Ingredients) do
+    begin
+      LPillName := FRecipe.Ingredients[LIndex];
+      LPillId := 'recipe-sheet-ing-pill-' + IntToStr(LIndex);
+      LPillInfo := LookupPool(LPillName);
+      if LPillInfo.InPool then
+      begin
+        LPillTrendText := ResearchIngredientTrendText(LPillInfo.Trend);
+        LPillLabel := Capitalized(LPillName);
+        if LPillTrendText <> '' then
+          LPillLabel := LPillLabel + ' (' + LPillTrendText + ')';
+        LPillLabel := LPillLabel + ' — open research details in a new tab';
+        LIngPills.Add(MakeNode(nkLink, LPillId, Capitalized(LPillName))
+          .Configure.LinkTo(ResearchIngredientURL(LPillInfo))
+          .AccessibleName(LPillLabel).Done);
+      end
+      else
+        LIngPills.Add(MakeNode(nkBadge, LPillId, Capitalized(LPillName)));
+    end;
+    LHero.Add(LIngPills);
+  end;
 
   LMetaGrid := MakeNode(nkGrid, 'recipe-sheet-meta');
   AddMetaTile('recipe-meta-prep', 'Prep time', FormatMinutesLabel(FRecipe.PrepMinutes));
@@ -744,6 +805,42 @@ begin
     RecipeCategoryKey(FRecipe.Category));
   FRenderer.ElementFor('recipe-sheet-effort').setAttribute('data-effort',
     RecipeEffortKey(FRecipe.Effort));
+  for LIndex := 0 to High(FRecipe.Ingredients) do
+  begin
+    LPillName := FRecipe.Ingredients[LIndex];
+    LPillEl := FRenderer.ElementFor('recipe-sheet-ing-pill-' + IntToStr(LIndex));
+    if LPillEl = nil then
+      Continue;
+    LPillInfo := LookupPool(LPillName);
+    LPillIsMain := (LPillName = FRecipe.CoreIngredient) or
+      (LPillInfo.InPool and (LowerCase(LPillInfo.Canonical) = LowerCase(FRecipe.CoreIngredient)));
+    LPillTrendText := ResearchIngredientTrendText(LPillInfo.Trend);
+    if LPillInfo.InPool then
+    begin
+      LPillEl.setAttribute('data-in-pool', 'true');
+      LPillEl.setAttribute('target', '_blank');
+      LPillEl.setAttribute('rel', 'noopener noreferrer');
+      if LPillInfo.Trend <> '' then
+        LPillEl.setAttribute('data-trend', LPillInfo.Trend);
+      if LPillIsMain then
+      begin
+        if LPillTrendText <> '' then
+          LPillEl.setAttribute('title', Capitalized(LPillName) +
+            ' · Primary ingredient · ' + LPillTrendText + ' — open research details in new tab')
+        else
+          LPillEl.setAttribute('title', Capitalized(LPillName) +
+            ' · Primary ingredient — open research details in new tab');
+      end
+      else if LPillTrendText <> '' then
+        LPillEl.setAttribute('title', Capitalized(LPillName) + ' · ' + LPillTrendText +
+          ' — open research details in new tab')
+      else
+        LPillEl.setAttribute('title', Capitalized(LPillName) +
+          ' · In research pool — open research details in new tab');
+    end;
+    if LPillIsMain then
+      LPillEl.setAttribute('data-match', 'main');
+  end;
   FRenderer.ElementFor('recipe-sheet-scale-group').setAttribute('role', 'group');
   FRenderer.ElementFor('recipe-sheet-scale-group').setAttribute('aria-label', 'Scale servings');
 
