@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The November 24 shift-work and grape review resolved 34 of 35 exact scopes across 30 publications. The queue now holds 37,127 pairs across 23,750 identities. One abstract-depth hold joins the dated access map. [Shift-work and grape review](../priority-five-shiftwork-and-grape-nov24/README.md)
+The November 24 cocoa and cinnamon review resolved 14 exact scopes across three publications. The queue now holds 37,113 pairs across 23,747 identities. [Source and citation review](../priority-five-cocoa-and-cinnamon-nov24/README.md)
+
+The November 24 shift-work and grape review resolved 34 of 35 exact scopes across 30 publications. That checkpoint held 37,127 pairs across 23,750 identities. One abstract-depth hold joins the dated access map. [Shift-work and grape review](../priority-five-shiftwork-and-grape-nov24/README.md)
 
 The November 24 curcumin and legacy review resolved 42 of 44 exact checks across 37 publications. That checkpoint held 37,161 pairs across 23,779 identities. Six previously recorded holds closed. [Curcumin and legacy review](../priority-five-curcumin-and-legacy-nov24/README.md)
 
@@ -16,12 +18,12 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 23,766 |
+| Local body or other primary-source context | 23,780 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 35 |
 | Pending or access-only disposition | 383 |
-| No imported exact review | 36,709 |
+| No imported exact review | 36,695 |
 | **Total** | **61,252** |
 
 The exact queue includes 401 explicit pending or access-only pairs. Eighteen also retain a stronger imported title or index review in the table above, which reports the strongest recorded review across layers. All 401 have dated local source texts in the [known original access index](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md).

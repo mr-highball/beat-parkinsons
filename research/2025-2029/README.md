@@ -926,3 +926,5 @@ See the [Round 1 tea, constipation and original-source review](Food-Experiment-R
 See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Curcumin-Legacy-Nov24.md) for the dated evidence and access context.
 
 - [Round 1 shift-work and grape original-source audit](Food-Experiment-Round-1-Shiftwork-Grape-Nov24.md)
+
+- [Round 1 cocoa, cinnamon and original-source scope](Food-Experiment-Round-1-Cocoa-Cinnamon-Nov24.md)

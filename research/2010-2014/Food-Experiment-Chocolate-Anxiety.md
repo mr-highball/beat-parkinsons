@@ -15,3 +15,7 @@ Ten adults with severe chronic fatigue syndrome completed randomized eight-week 
 ## Registered brewed cocoa crossover and posted cognitive and vigor outcomes
 
 The study record was first posted July 27, 2012 and lists completed status and posted results. It registers a crossover of brewed cocoa, cocoa with added caffeine, flavored water, and caffeinated flavored water. The registered main outcomes include serial subtraction and Bakan-task performance, and the secondary mood result is POMS vigor. The 2017 linked report additionally analyzes anxiety under a cognitive challenge. Registered and published outcomes should be kept distinct. This study used drinks and had no Parkinson participants. [Original source](https://clinicaltrials.gov/study/NCT01651793) · [Local factual text](Source-Text/2012-07-27-NCT01651793-Brewed-Cocoa-Crossover.txt)
+
+## Separate 2009 cocoa and anxiety-trait trials
+
+Martin 2009 grouped healthy participants by initial trait anxiety and reported metabolic changes. It is independent of the 2012 Martin randomized snack study. Scholey 2009 studied cocoa beverages and measured state anxiety, with no clear treatment effect and a sequence difference. The original report gives a mental-fatigue signal only at its lower added flavanol dose. [Full source review](../2025-2029/Food-Experiment-Round-1-Cocoa-Cinnamon-Nov24.md)
