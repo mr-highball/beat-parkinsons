@@ -1,5 +1,11 @@
 # 2005-2009
 
+- [Tao et al. eugenol analogs, monoamine oxidase and forced swim](Source-Text/2005-PMID15936201-Tao-Eugenol-Analogs-and-Forced-Swim.txt).
+- [Ebihara et al. menthol and acutely triggered swallowing in older adults](Source-Text/2006-PMC1885135-Ebihara-Menthol-Swallow-Reflex.txt).
+- [Kurian et al. isolated injected eugenol, nociception and motor coordination](Source-Text/2006-Kurian-Eugenol-Route-Pain-and-Motor-Confound.txt).
+- [Daniel et al. oral isolated eugenol and separate chemical and thermal nociception outcomes](Source-Text/2009-DOIS0102695X2009000200006-Daniel-Oral-Eugenol-Pain.txt).
+- [Three-arm black pepper oil trial and reflex results](Source-Text/2006-Ebihara-Baseline-Olfaction-Extract.txt).
+
 - [Xi and Qian on crocetin, crocin and saffron](Source-Text/2006-DOI1934578X0600100112-Xi-Qian-Crocetin-Crocin-and-Saffron.txt).
 - [Saffron in the Bencao Gangmu and in reported Tibetan incense practice](Cultural-and-Experiential/Traditional-Practices/2006-Xi-Qian-Saffron-Compendium-and-Tibetan-Incense.txt).
 

@@ -1,5 +1,7 @@
 # 2000-2004
 
+- [Irie and Keung isolated eugenol and rodent behavioral mood proxies](Source-Text/2004-PMID15157811-Irie-Eugenol-Immobilization-and-Mood.txt).
+
 - [Bradbury et al. olive-oil control and perceived stress](Source-Text/2004-PMID15566625-Olive-Oil-Control-and-Perceived-Stress.txt).
 
 
