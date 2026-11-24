@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [refined sesame oil mood and fatigue report](Source-Text/2023-Atefi-Sesame-Sunflower-Anxiety-Factual-Extract.txt) preserves the original abstract and contrast limits. [Trial lineage and original-source gaps](../2025-2029/Food-Experiment-Round-1-Vitamin-and-Botanical-Nov24.md).
+
 The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Legacy-Originals-Nov24.md) checked 1 publications from this period. [PMID 38037432](Source-Text/2023-PMID38037432-Enteroendocrine-Visceral-Pain.txt).
 
 The [brewed green tea conversation](Cultural-and-Experiential/Conversations/2022-Reddit-Green-Tea-Coffee-and-Muscle-Symptoms.txt) preserves a first-person Parkinson symptom or medication-timing observation with its preparation and limitations.

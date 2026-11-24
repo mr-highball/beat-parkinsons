@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [vitamin D, botanical models and clinical extracts audit](Food-Experiment-Round-1-Vitamin-and-Botanical-Nov24.md) resolves 49 exact scopes. The [sesame oil biomarker companion](Source-Text/2025-Atefi-Oil-Use-Factual-Extract.txt) documents the registered cohort and participant flow.
+
 The [November 24 dementia and caffeine audit](Food-Experiment-Round-1-Dementia-Caffeine-Nov24.md) includes the [2025 caffeine-addition study](Source-Text/2025-PMID39897922-Lesar-Coffee-and-Arousal.txt) and rechecks the [coffee and fatigue conversation](Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt).
 
 The [November 24 legacy-original review](Food-Experiment-Round-1-Legacy-Originals-Nov24.md) connects complete legacy source recoveries and exact outstanding access routes with the cinnamon pain scorecard.
