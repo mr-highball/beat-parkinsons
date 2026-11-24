@@ -48,6 +48,12 @@ begin
   Check(RelatedSourceTerms('mucuna', 'rest tremor severity', SourceKindCulture) =
     'mucuna tremor cultural experiential', 'Cultural lookup includes collection metadata.');
   Check(RelatedSourceTerms('', '', SourceKindCulture) = '', 'Do not issue an empty lookup.');
+  Check(FormatCulturalBadgeCount(-3) = '0', 'Negative counts clamp to 0.');
+  Check(FormatCulturalBadgeCount(0) = '0', 'Zero cultural sources formats as 0.');
+  Check(FormatCulturalBadgeCount(7) = '7', 'Small cultural count renders exact number.');
+  Check(FormatCulturalBadgeCount(99) = '99', 'Ninety-nine cultural sources stays exact.');
+  Check(FormatCulturalBadgeCount(100) = '99+', 'One hundred cultural sources caps at 99+.');
+  Check(FormatCulturalBadgeCount(312) = '99+', 'Large cultural counts cap at 99+.');
   SetLength(LPaths, 13);
   for LIndex := 0 to 12 do
   begin

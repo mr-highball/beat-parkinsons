@@ -23,6 +23,7 @@ function IsCulturalSource(const APath: String): Boolean;
 function IsConversationSource(const APath: String): Boolean;
 function MatchesSourceKind(const APath: String; AKind: Integer): Boolean;
 function RelatedSourceTerms(const AIngredient, ASymptom: String; AKind: Integer): String;
+function FormatCulturalBadgeCount(ACount: Integer): String;
 function SelectSourcePage(const APaths: array of String; AKind,
   ARemaining: Integer): TSourceSelection;
 
@@ -82,6 +83,15 @@ begin
   begin
     Result := Result + ' cultural experiential';
   end;
+end;
+
+function FormatCulturalBadgeCount(ACount: Integer): String;
+begin
+  if ACount <= 0 then
+    Exit('0');
+  if ACount > 99 then
+    Exit('99+');
+  Result := IntToStr(ACount);
 end;
 
 function SelectSourcePage(const APaths: array of String; AKind,
