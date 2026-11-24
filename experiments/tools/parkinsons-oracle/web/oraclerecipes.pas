@@ -1441,7 +1441,7 @@ begin
       LActionsRow := MakeNode(nkRow, 'recipe-actions-' + LTag);
       if Length(LSteps) > 0 then
         LActionsRow.Add(MakeButton('recipe-steps-toggle-' + LTag, 'Show quick steps', nvSecondary));
-      LActionsRow.Add(MakeNode(nkLink, 'recipe-open-full-' + LTag)
+      LActionsRow.Add(MakeNode(nkLink, 'recipe-open-full-' + LTag, 'Open full recipe')
         .Configure.LinkTo(LRecipeURL)
         .AccessibleName('Open full recipe for ' + LRecipeTitle + ' in a new tab').Done);
       LCard.Add(LActionsRow);

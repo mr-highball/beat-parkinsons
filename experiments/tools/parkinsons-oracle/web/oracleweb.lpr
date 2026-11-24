@@ -9,7 +9,7 @@ uses
   SysUtils, StrUtils, Types, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
   oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation,
   parkinsonsoracle.selection, parkinsonsoracle.graph, oraclemulti, oraclegraph,
-  oraclegraphmodel, oraclegallery, oraclepopover, oraclerecipes, oraclerecipepage;
+  oraclegraphmodel, oraclegallery, oraclepopover, oraclerecipes, oraclerecipepage, oraclereader;
 
 type
   TOracleView = (ovClaims, ovCatalog);
@@ -71,6 +71,7 @@ var
   GGraphModel: TOracleGraphModel;
   GGraphStack: array of TOracleGraphExplorer;
   GRecipesModal: TOracleRecipesModal;
+  GReaderModal: TOracleReaderModal;
   GRecipePage: TOracleRecipePage;
   GMainRequest: TJSXMLHttpRequest;
   GRelatedRequest: TJSXMLHttpRequest;
@@ -2336,11 +2337,44 @@ begin
     end);
 end;
 
+procedure OpenReaderModal(const APath: String; AInvoker: TJSHTMLElement = nil);
+begin
+  if GReaderModal = nil then
+    GReaderModal := TOracleReaderModal.Create(GStaticOracle,
+      procedure(const ASourcePath: String; AOffset: Integer; AReply: TReaderChunkReply)
+      var
+        LArgs: TJSObject;
+      begin
+        LArgs := TJSObject.new;
+        LArgs['path'] := ASourcePath;
+        LArgs['offset'] := AOffset;
+        Request('oracle_read_source', LArgs,
+          procedure(AData: TJSObject; const AError: String)
+          begin
+            if AError <> '' then
+              AReply('', 0, AError)
+            else
+              AReply(TextOf(AData, 'text'), CountOf(AData, 'next_offset'), '');
+          end);
+      end,
+      procedure(const ASourcePath: String)
+      begin
+        StartGraph(nil, '', GraphKey('source', ReferenceFile(ASourcePath)),
+          procedure
+          begin
+            ShowList(GResults, False);
+          end);
+      end);
+  GReaderModal.Open(ReferenceFile(APath), AInvoker);
+end;
+
 function CatalogPreview(const ATag, APath, APeriod: String): TNyxNode;
 var
   LURL: String;
   LActions: TNyxNode;
+  LTitle: String;
 begin
+  LTitle := SavedSourceTitle(APath);
   if IsConversationSource(APath) then
   begin
     Result := Section(nkCard, 'source-conversation-' + ATag);
@@ -2356,29 +2390,32 @@ begin
     Result := Section(nkCard, 'source-study-' + ATag);
     Result.Add(Caption(nkBadge, 'source-kind-' + ATag, 'Research source'));
   end;
-  Result.Add(Caption(nkHeading, 'source-title-' + ATag, SavedSourceTitle(APath)));
+  Result.Add(Caption(nkHeading, 'source-title-' + ATag, LTitle));
   Result.Add(Caption(nkLabel, 'source-period-' + ATag, APeriod));
-  LActions := Section(nkRow, 'source-actions-' + ATag);
-  if GStaticOracle = nil then
-    LActions.Add(Button('open-source-' + ATag, 'Read source', nvSecondary)
-      .Configure.AccessibleName('Read source ' + ExtractFileName(APath)).Done)
-  else
+  LActions := Section(nkColumn, 'source-actions-' + ATag);
+  LActions.Add(Button('read-source-' + ATag, 'Read', nvPrimary)
+    .Configure.AccessibleName('Read ' + LTitle).Done);
+  if GStaticOracle <> nil then
   begin
     LURL := GStaticOracle.ReferenceURL(APath);
     if LURL <> '' then
       LActions.Add(Section(nkLink, 'open-source-' + ATag).Configure.Text('Read on GitHub')
-        .AccessibleName('Read source ' + ExtractFileName(APath) + ' on GitHub').LinkTo(LURL).Done);
+        .AccessibleName('Read ' + LTitle + ' on GitHub').LinkTo(LURL).Done);
   end;
   LActions.Add(Button('catalog-graph-' + ATag, 'See connections', nvSecondary)
-    .Configure.AccessibleName('See connections for ' + ExtractFileName(APath)).Done);
+    .Configure.AccessibleName('See connections for ' + LTitle).Done);
   Result.Add(LActions);
 end;
 
 procedure BindCatalogCard(ARenderer: TNyxBrowserRenderer; const ATag, APath: String);
 begin
-  if GStaticOracle = nil then
-    BindSource(ARenderer, ATag, APath)
-  else
+  BindEvent(ARenderer.ElementFor('read-source-' + ATag), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      OpenReaderModal(APath, ARenderer.ElementFor('read-source-' + ATag));
+      Result := True;
+    end);
+  if GStaticOracle <> nil then
     SetExternalLink('open-source-' + ATag);
   BindEvent(ARenderer.ElementFor('catalog-graph-' + ATag), 'click',
     function(AEvent: TEventListenerEvent): Boolean

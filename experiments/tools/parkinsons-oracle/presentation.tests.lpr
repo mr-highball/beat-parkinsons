@@ -54,6 +54,23 @@ begin
   Check(FormatCulturalBadgeCount(99) = '99', 'Ninety-nine cultural sources stays exact.');
   Check(FormatCulturalBadgeCount(100) = '99+', 'One hundred cultural sources caps at 99+.');
   Check(FormatCulturalBadgeCount(312) = '99+', 'Large cultural counts cap at 99+.');
+  Check(GitHubRawURL('https://github.com/example-org/sample-repo', 'abc1234',
+    'research/2000-2004/Cultural-and-Experiential/Traditional-Practices/2002-Sage.txt') =
+    'https://raw.githubusercontent.com/example-org/sample-repo/abc1234/research/2000-2004/Cultural-and-Experiential/Traditional-Practices/2002-Sage.txt',
+    'GitHubRawURL maps research paths to raw.githubusercontent.com.');
+  Check(GitHubRawURL('https://github.com/example-org/sample-repo.git/', 'main',
+    'research/2020-2024/Notes With Spaces.md#section-1') =
+    'https://raw.githubusercontent.com/example-org/sample-repo/main/research/2020-2024/Notes%20With%20Spaces.md',
+    'GitHubRawURL strips .git, anchors and encodes spaces.');
+  Check(GitHubRawURL('https://github.com/example-org/sample-repo', 'abc1234',
+    'research/../README.md') = '',
+    'GitHubRawURL rejects parent-directory traversal.');
+  Check(GitHubRawURL('https://example.com/example-org/sample-repo', 'abc1234',
+    'research/2020-2024/a.txt') = '',
+    'GitHubRawURL rejects non-GitHub hosts.');
+  Check(GitHubRawURL('https://github.com/example-org/sample-repo', 'abc1234',
+    'experiments/file.md') = '',
+    'GitHubRawURL keeps raw fetches scoped to research/.');
   SetLength(LPaths, 13);
   for LIndex := 0 to 12 do
   begin
