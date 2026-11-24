@@ -32,3 +32,5 @@ An oral pollen comparison in cancer patients reported less mucositis pain. A fam
 | [0948 Brewed green tea and fatigue](0948-scorecard-check.json) | Maybe True | 38 |
 
 All 15 scorecards retained their prior verdicts. The current replay leaves 35,686 checks across 22,700 publications, including 402 mapped access holds. The next batch is pinned at 73 checks across 60 originals. Round 2 remains queued.
+
+The complete 2026 colitis original later verified fecal occult blood and tissue measures as its relevant outcomes. [Follow-up scorecard check](0502-colitis-full-text-scorecard-check.json)

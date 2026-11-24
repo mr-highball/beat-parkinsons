@@ -8,7 +8,7 @@ The [Round 1 experiment audit](../../experiments/1000_see_what_sticks_food/follo
 - [Date seed powder and abdominal pain case](Source-Text/2021-PMID33959162-Date-Seed-Powder-and-Abdominal-Pain.txt)
 - [Zahidi date flesh and seed biomarker pilot](Source-Text/2023-PMID37780309-Zahidi-Date-Flesh-and-Seed-Biomarkers.txt)
 - [Polynesian turmeric co-use and the separate Premna entry](Cultural-and-Experiential/Traditional-Practices/2022-Polynesian-Turmeric-Mixture-and-Premna-Uses.txt)
-- [Experimental colitis and date palm pollen abstract](../2025-2029/Source-Text/2026-PMID42635914-Date-Palm-Pollen-and-Colitis-Endpoints.txt)
+- [Experimental colitis and date palm pollen original](../2025-2029/Source-Text/2026-PMID42635914-Date-Palm-Pollen-and-Colitis-Endpoints.txt)
 - [Original grape seed oil and spatial-memory study](Source-Text/PMC7335983.txt)
 - [Cross-period observations](Observations/2021-2023-Date-Parts-and-Polynesian-Supplement.md)
 
