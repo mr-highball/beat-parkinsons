@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [Round 1 cognition and nutrition review](Food-Experiment-Round-1-Cognition-and-Nutrition-Nov24.md) links verified originals, the [caffeine fatigue exercise study](Source-Text/2025-PMID40704635-Caffeine-Cycling-and-Perceived-Fatigue.txt), the [grape-powder retraction](Source-Text/2025-PMID40058952-Grape-Powder-Study-Retraction.txt) and the [Kampa Vata proceedings case](Cultural-and-Experiential/Traditional-Practices/2025-Colombo-Ksheerabala-Kampa-Vata-Case.txt).
+
 The [motor studies and clinical caffeine audit](Food-Experiment-Round-1-Motor-and-Clinical-Nov24.md) resolves 40 original-source checks and distinguishes withdrawal, fatigue and exercise effort.
 
 The [caffeine, anxiety and mobility audit](Food-Experiment-Round-1-Anxiety-and-Motor-Nov24.md) traces the green tea leaf tradition and cited trials while resolving 41 exact original-source scopes.

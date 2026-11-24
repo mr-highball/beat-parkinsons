@@ -1,0 +1,7 @@
+# Ksheerabala clinical and traditional records
+
+The [2025 one-page Kampa Vata report](../Cultural-and-Experiential/Traditional-Practices/2025-Colombo-Ksheerabala-Kampa-Vata-Case.txt) describes a bundled intervention with reported motor changes. The [2021 group comparison](../../2020-2024/Source-Text/2021-Verma-Ksheerbala-Parkinson-Clinical-Abstract.txt) also reports symptom categories in two groups receiving mixed procedures. The [2018 case table](../../2015-2019/Source-Text/2018-IJAR7678-Panchakarma-Parkinson-Case.txt) records residual slight rest tremor despite a broader author statement about resolution. Timing, medications and the procedures vary across reports.
+
+The [1996 formulation paper](../../1995-1999/Cultural-and-Experiential/Traditional-Practices/1996-PMID22556766-Ksheerabala-Formulation.txt) distinguishes the physical and chemical properties of a mixed medicated oil from clinical outcomes. The [2010 experiment](../../2010-2014/Source-Text/2010-PMID20532090-Ksheerabala-Mixed-Oil-Rat-Scope.txt) studies oxidative stress after administering the full formulation in rats. Sesame oil, Bala and cow's milk remain named together. The documented preparations motivate clinical questions about the whole regimen. No record measures an isolated toasted sesame oil effect or establishes an oral culinary equivalent.
+
+The [Round 1 source audit](../Food-Experiment-Round-1-Cognition-and-Nutrition-Nov24.md) follows the citations and records the evidence limits and continuing access work.

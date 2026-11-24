@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 24 cognition and nutrition review resolved 44 exact scopes across 30 publications. The queue holds 36,778 pairs across 23,510 publications. [Cognition, nutrition and source lineage](../priority-five-cognition-and-nutrition-nov24/README.md)
+
 The November 24 motor and clinical caffeine review resolved 40 exact scopes across 30 complete originals. The queue holds 36,822 pairs across 23,540 publications. [Original and clinical source scope](../priority-five-motor-and-clinical-nov24/README.md)
 
 The November 24 caffeine, anxiety and mobility review resolved 41 exact scopes across 30 complete originals. The queue holds 36,862 pairs across 23,570 publications. [Original source and clinical endpoint scope](../priority-five-anxiety-and-motor-nov24/README.md)

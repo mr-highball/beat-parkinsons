@@ -1,5 +1,7 @@
 # Observations for 1995–1999
 
+The [1996 formulation standardization](../Cultural-and-Experiential/Traditional-Practices/1996-PMID22556766-Ksheerabala-Formulation.txt) reports physicochemical properties of a sesame-based mixture. The [later clinical and cultural comparison](../../2025-2029/Observations/2025-Ksheerabala-Clinical-and-Cultural-Scope.md) distinguishes formulation, reported motor symptoms and ingredient-attributable outcomes.
+
 A [1997 counterbalanced caffeine study](../Source-Text/1997-PMID9264092-Lane-Caffeine-Abstinence-and-Fatigue.txt) distinguishes fatigue during short abstinence from psychomotor performance. The later [2025 caffeine-addition experiment](../../2025-2029/Source-Text/2025-PMID39897922-Lesar-Coffee-and-Arousal.txt) measured performance and EEG without a fatigue rating.
 
 The 1994 botulinum report links dystonic toes to pain and gait and describes a local intervention. The 1995 naproxen report starts from musculoskeletal pain and describes deterioration in other Parkinson symptoms after drug exposure. The 1999 case examines central post-stroke pain and cites separate Parkinson pain work. The papers distinguish different causes and endpoints without identifying a dried-date effect. [1994 original scope](../../1990-1994/Source-Text/1994-PMID8201355-Dried-Date-Pain-Original-Scope.txt) · [1995 original scope](../Source-Text/1995-PMID7640588-Dried-Date-Pain-Original-Scope.txt) · [1999 original scope](../Source-Text/1999-PMC2485464-Dried-Date-Pain-Original-Scope.txt)

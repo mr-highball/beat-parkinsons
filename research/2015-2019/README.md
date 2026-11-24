@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [cognition and nutrition audit](../2025-2029/Food-Experiment-Round-1-Cognition-and-Nutrition-Nov24.md) links 29 dated originals in this period, including the [stilbene review](Source-Text/2015-PMID26180583-Stilbene-Review-Grape-and-Olive-Source-Lineage.txt), [isolated sesamol comparison](Source-Text/2015-PMID25829772-Sesamol-Cognition-and-Sesame-Oil-Scope.txt) and [cisplatin hypoalgesia comparison](Source-Text/2015-PMID26113793-Curcumin-Cisplatin-Thermal-Hypoalgesia.txt). The separately traced [2018 case](Source-Text/2018-IJAR7678-Panchakarma-Parkinson-Case.txt) documents residual tremor during a bundled regimen.
+
 The [caffeine and L-theanine fatigue comparison](Source-Text/2015-PMID25761837-Dodd-Theanine-Caffeine-and-Mental-Fatigue.txt) preserves the inconclusive treatment term and descriptive means. [Period observations](Observations/2015-Caffeine-Theanine-and-Fatigue-Contrasts.md).
 
 The [brewed green tea conversation](Cultural-and-Experiential/Conversations/2019-Reddit-Brewed-Green-Tea-and-Medication-Wearing-Off.txt) preserves a first-person Parkinson symptom or medication-timing observation with its preparation and limitations.

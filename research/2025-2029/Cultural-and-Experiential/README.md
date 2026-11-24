@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2025-2029
 
+- [Panchakarma regimen with Ksheerabala and reported Kampa Vata motor changes](Traditional-Practices/2025-Colombo-Ksheerabala-Kampa-Vata-Case.txt).
+
 - [Patient experiences in the staged MCT and ketogenic-diet study](Personal-Reports/2026-Tidman-MCT-Phase-Interview-Experiences.txt).
 
 - [Caregiver report of olive oil shots and softer stools in a public Parkinson discussion](Conversations/2026-Reddit-Olive-Oil-and-Parkinson-Constipation.txt). Uncontrolled caregiver account noting softer stools with unspecified oil grade and concurrent walking.

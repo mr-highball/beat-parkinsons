@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+The [Ksheerabala clinical and traditional comparison](2025-Ksheerabala-Clinical-and-Cultural-Scope.md) brings together the 1996 preparation, an earlier controlled laboratory scope, and motor observations in different bundled regimens.
+
 Acute [caffeine addition to a shared decaf base](../Source-Text/2025-PMID39897922-Lesar-Coffee-and-Arousal.txt) answers a distinct question from [short abstinence in 1997](../../1995-1999/Source-Text/1997-PMID9264092-Lane-Caffeine-Abstinence-and-Fatigue.txt). Neither tested brewed coffee on Parkinson fatigue. The [2025 conversation](../Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt) preserves perceived energy and fatigue effects as separate reports.
 
 The 2026 antipsychotic motor review traces rice bran oil back to the 2015 Samad movement-model work. The reported chewing and coordination data leave clinical rigidity and dystonia open. The Cypriot historical paper shows a distinct use of olive oil as a topical carrier. Earlier diet studies considered oral consumption within whole diet patterns. [Source comparison and limits](../Food-Experiment-Round-1-Grouped-Body-Scope-Nov22.md) · [Dated traditional practice](../Cultural-and-Experiential/Traditional-Practices/2026-John-the-Physician-Cyprus-Olive-Oil-Headache.txt)

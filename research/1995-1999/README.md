@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [1996 Ksheerabala formulation record](Cultural-and-Experiential/Traditional-Practices/1996-PMID22556766-Ksheerabala-Formulation.txt) distinguishes a traditional mixed preparation from isolated sesame oil.
+
 The [hot tea, coffee and water crossover](Source-Text/1997-PMID9399380-Hot-Coffee-Tea-and-Mood.txt) reports mood and physiological responses after abstinence. Separate fatigue estimates remain unverified.
 
 The [1997 caffeine-deprivation comparison](Source-Text/1997-PMID9264092-Lane-Caffeine-Abstinence-and-Fatigue.txt) records higher subjective fatigue during brief abstinence with preparation and exact variance still open.

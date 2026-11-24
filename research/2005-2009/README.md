@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [2006 caffeine metabolic companion](Source-Text/2006-PMID16886964-Caffeine-Exercise-Metabolic-Companion.txt) reports acute biochemical responses during exercise and leaves cohort overlap with the endurance article open.
+
 The [caffeine, habituation and exercise source audit](../2025-2029/Food-Experiment-Round-1-Motor-and-Clinical-Nov24.md) links first-publication records for isolated caffeine, ingredient combinations and acute fatigue outcomes.
 
 The [enriched green tea extract experiment](Source-Text/2007-PMID18019399-Tea-Extract-Enriched-Drink-and-EEG.txt) used randomized crossover with EEG and attention proxies.
