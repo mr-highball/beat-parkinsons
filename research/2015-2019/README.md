@@ -1,5 +1,7 @@
 # 2015-2019
 
+- [Saffron combination and sage identity](Observations/2016-2017-Nutraceutical-and-Sage-Attribution.md).
+
 - [Curcumin timing studies and clinical outcome limits](Observations/2015-2019-Curcumin-Exercise-Timing-and-Soreness.md).
 
 - [Unani descriptions of date fruit and pain](Cultural-and-Experiential/Traditional-Practices/2015-Azhar-Unani-Date-Fruit-and-Pain.txt) and [experimental neuropathy and Crohn comparison sources](Observations/2015-2017-Unani-Date-Pain-and-Curcumin-Endpoints.md).

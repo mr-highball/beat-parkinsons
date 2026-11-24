@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The November 24 ginger, fig and neurological audit resolved 79 checks across 60 originals. The current replay leaves 35,293 checks across 22,401 publications. [Originals and reconciled scopes](../priority-five-date-and-neurological-nov24/README.md)
+The November 24 sage, coffee and dietary audit resolved 100 checks across 60 originals. The current replay leaves 35,193 checks across 22,341 publications. [Originals and reconciled scopes](../priority-five-date-and-motor-nov24/README.md)
+
+The November 24 ginger, fig and neurological audit resolved 79 checks across 60 originals. That replay left 35,293 checks across 22,401 publications. [Originals and reconciled scopes](../priority-five-date-and-neurological-nov24/README.md)
 
 The November 24 exercise-soreness and clinical audit resolved 79 checks across 60 originals. That replay left 35,372 checks across 22,461 publications. [Originals and reconciled scopes](../priority-five-date-and-clinical-continuation-nov24/README.md)
 

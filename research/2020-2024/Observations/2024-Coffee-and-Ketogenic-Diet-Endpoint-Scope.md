@@ -1,0 +1,5 @@
+# Coffee and ketogenic-diet outcome attribution
+
+The [coffee crossover](../Source-Text/2024-PMID38867964-Regular-and-Decaf-Coffee-ECG-Crossover.txt) compares regular and decaffeinated coffee for ECG classification in healthy habitual caffeine users. It records ratings of alertness and other states as tasks, with no Parkinson fatigue comparison. The [2018 trial](../../2015-2019/Source-Text/PMC6213082.txt) reports a mental-fatigue outcome after filtered coffee and flavored water. The newer measurements cannot substitute for that endpoint or the comparator.
+
+The [Parkinson ketogenic follow-up](../Source-Text/PMID38869924-coconut-qualitative-extract.txt) retains reports of changing fatigue and bowel symptoms under a whole dietary intervention. Coconut, avocado and medium-chain oils occur in different narratives. The [earlier controlled dietary trial](../../2015-2019/Source-Text/2018-PMID30098269-Phillips-Diet-Adverse-Outcomes.txt) specifies virgin coconut oil among diet ingredients and separately reports whole-diet outcomes. Both show why a reported dietary change needs verified ingredient assignment and a separable outcome before an oil claim can be updated.

@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The ginger, fig and neurological audit resolved 79 exact checks, added 19 related assessments and revalidated 26 scorecards. The new ginger original trials in mice report preparation-dependent changes in provoked pain models. Raw fig rest tremor remains open. The current queue holds 35,293 checks across 22,401 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-date-and-neurological-nov24/README.md)
+The sage, coffee and dietary audit resolved 100 exact checks, added 31 assessments and revalidated 38 scorecards. The saffron combination original distinguishes depression change within arms from the separately marked cognition and stress contrasts. The Spanish sage record preserves customary topical preparations without a fall comparison. The current queue holds 35,193 checks across 22,341 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-date-and-motor-nov24/README.md)
+
+The ginger, fig and neurological audit resolved 79 exact checks, added 19 related assessments and revalidated 26 scorecards. The new ginger original trials in mice report preparation-dependent changes in provoked pain models. Raw fig rest tremor remains open. That replay left 35,293 checks across 22,401 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-date-and-neurological-nov24/README.md)
 
 The exercise-soreness and clinical audit resolved 79 exact scopes, added 21 related assessments and checked 16 scorecards at their existing verdicts. The cited original soreness outcomes differ by timing and measurement. The Parkinson olive-carrier trial adds observed adverse events without an isolated culinary oil comparison. That replay left 35,372 checks across 22,461 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-date-and-clinical-continuation-nov24/README.md)
 

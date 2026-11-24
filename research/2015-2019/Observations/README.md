@@ -1,5 +1,7 @@
 # Observations for 2015-2019
 
+- [Saffron combinations and sage identity in earlier sources](2016-2017-Nutraceutical-and-Sage-Attribution.md).
+
 - [Curcumin timing and post-exercise soreness](2015-2019-Curcumin-Exercise-Timing-and-Soreness.md).
 
 - [Unani date descriptions and experimental turmeric pain endpoints](2015-2017-Unani-Date-Pain-and-Curcumin-Endpoints.md).

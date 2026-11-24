@@ -1,5 +1,7 @@
 # Observations for 2020-2024
 
+- [Coffee and ketogenic-diet outcome attribution](2024-Coffee-and-Ketogenic-Diet-Endpoint-Scope.md).
+
 - [Ginger preparations and tremor measurements](2023-2024-Ginger-Preparations-and-Tremor-Endpoints.md).
 
 - [Clinical carriers, dietary suggestions and exercise evidence](2023-2024-Carriers-Dietary-Suggestions-and-Exercise.md).

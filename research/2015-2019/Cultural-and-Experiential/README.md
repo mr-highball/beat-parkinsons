@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2015-2019
 
+- [Valencian Spanish-sage preparations for headache and fatigue](Traditional-Practices/2017-PMID28790914-Valencian-Sage-Taxa-Pain-and-Fatigue-Uses.txt).
+
 - [Marquesan turmeric and ginger in cosmetic practice](Traditional-Practices/2016-Jost-Marquesas-Turmeric-and-Ginger-Cosmetic-Uses.txt). The survey documents different ginger species and separates their reported uses.
 
 - [Talbina as a customary barley food during illness or bereavement](Traditional-Practices/2016-FEBS-Talbina-Illness-and-Bereavement.txt).
