@@ -1,0 +1,3 @@
+# Round 1 comparison with the preceding period
+
+The [2020–2024 rosemary experiments](../../2020-2024/Observations/2024-Rosemary-Assays-and-Egg-Fall-Reporting.md) distinguish increased wet stool after oral extract from reduced transit after injection during induced diarrhea. The [2026 trial record](../Source-Text/2026-NCT07541729-Rosemary-Bowel-Safety.txt) combines both types of symptoms in its adverse-event question and currently has no posted results. Keep the outcome dimensions separate when revisiting the newer trial. The [cross-period report](../Food-Experiment-Round-1-Sage-and-Nonmotor-Nov24.md) preserves the full source checks and preparation limits.

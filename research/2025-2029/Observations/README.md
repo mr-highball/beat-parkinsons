@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+- [Sage and nonmotor outcome comparisons](Round-1-Sage-and-Nonmotor-Comparisons-Nov24.md).
+
 The [Ksheerabala clinical and traditional comparison](2025-Ksheerabala-Clinical-and-Cultural-Scope.md) brings together the 1996 preparation, an earlier controlled laboratory scope, and motor observations in different bundled regimens.
 
 Acute [caffeine addition to a shared decaf base](../Source-Text/2025-PMID39897922-Lesar-Coffee-and-Arousal.txt) answers a distinct question from [short abstinence in 1997](../../1995-1999/Source-Text/1997-PMID9264092-Lane-Caffeine-Abstinence-and-Fatigue.txt). Neither tested brewed coffee on Parkinson fatigue. The [2025 conversation](../Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt) preserves perceived energy and fatigue effects as separate reports.

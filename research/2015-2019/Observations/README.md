@@ -1,5 +1,7 @@
 # Observations for 2015-2019
 
+- [Egg and curcumin outcome scope](2018-Egg-and-Curcumin-Outcome-Scope.md).
+
 - [Date syrup, mixed food access and shared controls](2019-Date-Syrup-Labor-Pain-Shared-Controls.md).
 
 A [public green tea account](../Cultural-and-Experiential/Conversations/2019-Reddit-Brewed-Green-Tea-and-Medication-Wearing-Off.txt) belongs to the same conversation family across 2019 and 2022. Initially perceived little effect, later wearing-off perceptions and a beverage switch with muscle symptoms are distinct observations without a measured fatigue endpoint.

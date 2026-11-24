@@ -1,5 +1,10 @@
 # 2015-2019
 
+- [2018 solid-lipid curcumin balance and fatigue trial](Source-Text/2018-PMID29951592-Curcumin-Balance-and-Fatigue.txt).
+- [2018 whole eggs and dietary protein trial](Source-Text/2018-PMID30041437-Whole-Egg-Protein-and-Muscle-Composition.txt).
+- [Egg-white trial registry with fall measures](Source-Text/Trials/NCT03530774.txt).
+- [Sage, rosemary and nonmotor source checks](../2025-2029/Food-Experiment-Round-1-Sage-and-Nonmotor-Nov24.md).
+
 - [Turmeric, sage, cinnamon and clove extracts in a cellular screen](Source-Text/2016-PMID27846826-Turmeric-Sage-Cinnamon-and-Clove-Cellular-Screen.txt).
 - [Cinnamon odor and clinical screening in iRBD](Source-Text/2017-PMID28330956-Cinnamon-Odor-and-Prodromal-Parkinson-Screening.txt).
 - [Marquesan turmeric and ginger practices](Cultural-and-Experiential/Traditional-Practices/2016-Jost-Marquesas-Turmeric-and-Ginger-Cosmetic-Uses.txt).

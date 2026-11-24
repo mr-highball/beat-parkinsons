@@ -1,0 +1,13 @@
+# Original retrieval and follow-up routes
+
+Review date 2026-11-24. The branch Oracle revision 77 checked the 30 planned PMID and PMCID identities first. Twenty-nine first-pass originals were missing. One previously archived amantadine original was reused. That prior question does not count again. The branch-local knowledge base also had prior coverage of three separately carried access or identity items. Keep those outside the 41 checked pairs.
+
+Twenty original bodies were recovered as structured XML and ten as complete authenticated HTML. The official classic PMC route returned the short ACS patent summary, cross-checked against the [ACS original](https://pubs.acs.org/doi/pdf/10.1021/acsmedchemlett.7b00208). See [verified-originals.tsv](verified-originals.tsv) for identity, channel, extent and specific paths.
+
+## Targeted citation trails
+
+- Ground turmeric and falls. Queried local turmeric and balance or falls, then the exact healthy-adult trial and Parkinson curcumin trial identifiers. The original PMC balance table identifies rapid steps, gait speed and fatigue within a healthy-adult formulation study. Separate fall adverse-event data in the Ghodsi trial remain an original-access gap. Earlier verified rodent results in opposite directions and dietary route distinctions still apply.
+- Egg and falls. Searched egg or egg-white protein with falls, gait, balance and physical performance. Checked the whole-egg diet, recipe intervention and egg-white pilot identities. Searched the pilot DOI and registry together and separately with fall frequency, Falls Efficacy Scale and publication or thesis terms. The official registry lists fall counts and has no results. The direct publisher full-text route is restricted and its supplementary download returned HTTP 403. No inspectable arm-level fall data were found on these routes. Revisit the full paper or author-provided aggregate results if access becomes available. Keep the registry and article in one source family.
+- Rosemary and bowel effects. Started with the earlier rosemary constipation synthesis and exact journal DOI. Followed the preprint, checked the separate laxative and castor-oil Methods and Results, and compared both with the journal abstract and official oral rosemary-extract registry. Journal figures and tables beyond the abstract were unavailable. The original preprint figures and results support the model-specific signs. No new dietary rosemary clinical comparison was identified. Check the newer diabetes trial when results post.
+
+These citation searches refine existing Round 1 evidence. The 41-item original review verifies source scope and does not replace the broader lab, clinical, traditional-practice and public-conversation searches recorded for the claims.

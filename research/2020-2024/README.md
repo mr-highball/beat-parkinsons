@@ -1,5 +1,8 @@
 # 2020-2024
 
+- [2021 egg-white protein pilot report](Source-Text/2021-PMID34730461-Egg-White-Protein-and-Physical-Function.txt).
+- [2024 rosemary extract wet stool and transit experiments](Source-Text/2024-PMID38801915-Rosemary-Wet-Stool-and-Transit.txt).
+
 - [Date fruit, labor duration and delivery review](Source-Text/2020-PMC7157989-Date-Fruit-Delivery-Outcome-Review.txt).
 - [Coffeeberry extract and conflicting acute mental-fatigue findings](Source-Text/2023-PMID37299382-Coffeeberry-and-Mental-Fatigue.txt).
 - [Date syrup and two independently measured labor-pain comparisons](Source-Text/2024-PMC10759543-Date-Syrup-Labor-Pain-Lineage.txt).

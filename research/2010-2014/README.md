@@ -1,5 +1,7 @@
 # 2010-2014
 
+- [2014 Parkinson olfaction and verbal memory original](Source-Text/2014-PMID28360659-Olfactory-Function-and-Verbal-Memory-in-Parkinson.txt).
+
 - [Caffeine, perceived fatigue and vigor in a healthy older sample](Source-Text/2013-PMID24303144-Caffeine-and-Older-Adult-Fatigue.txt).
 - [Caffeine and readiness to invest effort](Source-Text/2014-PMID25470803-Caffeine-and-Functional-Effort.txt).
 - [Opposite isolated muscle endurance directions by activation](Source-Text/2013-PMID23292763-Caffeine-and-Activation-Dependent-Endurance.txt).
