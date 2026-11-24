@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [Round 1 primary endpoint audit](Food-Experiment-Round-1-Primary-Endpoints-Nov23.md) records clinical, animal and biochemical comparisons with exact exposure boundaries.
+
 The [Round 1 original-source audit](Food-Experiment-Round-1-Mixed-Originals-Nov22.md) includes dated source notes in this period. [2025 congress catalepsy](Source-Text/2025-MDS-Darbinyan-Turmeric-Catalepsy-Abstract.txt) · [PMID 40694716](Source-Text/2025-PMID40694716-Manukyan-Turmeric-Rotenone-Cylinder.txt) · [PMID 40952533](Source-Text/2025-PMID40952533-Darbinyan-Curcumin-Catalepsy-Figure.txt)
 
 The [Round 1 priority-five source audit](Food-Experiment-Round-1-Priority-Five-Body-Replay-Nov22.md) links 45 identified originals and remaining access paths. It traces a reported sesame-carrier comparison and a separate cassia-bark practice.
