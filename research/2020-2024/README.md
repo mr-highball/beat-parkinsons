@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [brewed green tea conversation](Cultural-and-Experiential/Conversations/2022-Reddit-Green-Tea-Coffee-and-Muscle-Symptoms.txt) preserves a first-person Parkinson symptom or medication-timing observation with its preparation and limitations.
+
 The [November 24 diet and model review](../2025-2029/Food-Experiment-Round-1-Diet-Model-Nov24.md) links each publication to the frozen outcomes checked. [PMID 41585745](Source-Text/2022-PMID41585745-Mobile-Stroke-Unit-and-Clinical-Conditions.txt) · [Olive-oil tyrosols and aggregation abstract](Source-Text/2024-PMID38817211-Olive-Oil-Tyrosols-Aggregation-Abstract.txt) · [MED-PARK registry recheck](Source-Text/2024-NCT06705517-MED-PARK-Registry-Extract.txt)
 
 The [November 24 original access and symptom audit](../2025-2029/Food-Experiment-Round-1-Original-Access-Nov24.md) links the verified scope notes to the exact reviews. [PMID 39497418](Source-Text/2024-PMID39497418-Nociplastic-Pain-and-Curcuminoid-Citation.txt) · [PMID 39618882](Source-Text/2024-PMID39618882-Pandemic-Activity-and-Parkinson-Interviews.txt) · [PMID 39624950](Source-Text/2024-PMID39624950-Joint-Ferroptosis-and-Cardamonin-Identity.txt) · [PMID 39640650](Source-Text/2024-PMID39640650-Traditional-Saffron-and-Rosemary-Citation-Scope.txt) · [PMID 39957195](Source-Text/2024-PMID39957195-Parkinson-Antidepressant-Matched-Cohorts.txt) · [PMID 41395455](Source-Text/2024-PMID41395455-Early-Onset-Parkinson-Nosology-and-Coffee-Odor.txt)

@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [brewed green tea conversation](Cultural-and-Experiential/Conversations/2019-Reddit-Brewed-Green-Tea-and-Medication-Wearing-Off.txt) preserves a first-person Parkinson symptom or medication-timing observation with its preparation and limitations.
+
 [Tamegart saffron extract in a lead-toxicity model](Source-Text/2018-PMID30573341-Tamegart-Saffron-Lead-Model-Abstract.txt) · [Phillips fatigue and Epworth-related diet scope](Source-Text/2018-PMID30098269-Phillips-Diet-Adverse-Outcomes.txt)
 
 [Earlier Ayurveda review and continuing sesame reference access gap](Source-Text/2018-PMID30147009-Ayurveda-Abhyanga-Citation-Gap.txt).

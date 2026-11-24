@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The diet and model outcome review resolved 61 exact checks from 35 articles and added 20 related assessments, including two original olive-oil abstracts. Claim 0629 remains Unknown after separating ten study families. The current queue has 37,368 original-source checks. [Scope audit and checked scorecard](followup/priority-five-diet-and-model-nov24/README.md)
+The motor and fatigue review resolved 53 exact checks across 36 original articles and added five related assessments. The 12-family brewed green-tea fatigue scorecard retains a tentative worsening direction. The current queue has 37,315 original-source checks. [Original scopes and checked scorecard](followup/priority-five-motor-and-fatigue-nov24/README.md)
+
+The diet and model outcome review resolved 61 exact checks from 35 articles and added 20 related assessments, including two original olive-oil abstracts. Claim 0629 remains Unknown after separating ten study families. That checkpoint left 37,368 original-source checks. [Scope audit and checked scorecard](followup/priority-five-diet-and-model-nov24/README.md)
 
 The original source and access review resolved 62 exact checks from 25 articles. A November 2026 Parkinson trial supplied MCT fatigue and Epworth results, and three coconut-oil scorecards retain Unknown. That checkpoint left 37,429 original-source checks and eight highest-priority access holds. [Original articles and validated scorecards](followup/priority-five-and-access-nov24/README.md)
 
