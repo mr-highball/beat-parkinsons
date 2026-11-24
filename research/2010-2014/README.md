@@ -1,5 +1,8 @@
 # 2010-2014
 
+- [Wild-grape amurensin G and rotenone cell injury](Source-Text/2013-PMID23485458-Wild-Grape-Amurensin-and-Rotenone-Cells.txt).
+- [Clinical features with Parkinson and supranuclear palsy pathology](Source-Text/2014-PMID30363831-Parkinson-with-Progressive-Supranuclear-Palsy-Pathology.txt).
+
 - [Purified saffron crocin and rat forced-swim behavior](Source-Text/2014-PMID24401376-Crocin-and-Forced-Swim-Behavior.txt).
 
 - [2014 Parkinson olfaction and verbal memory original](Source-Text/2014-PMID28360659-Olfactory-Function-and-Verbal-Memory-in-Parkinson.txt).

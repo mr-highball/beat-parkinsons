@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The November 24 sage, citrus and preparation review resolved 91 exact source scopes across 60 publications. The current replay leaves 36,487 checks across 23,300 publications. [Originals and reconciled scopes](../priority-five-date-sage-and-ingredients-nov24/README.md)
+The November 24 grape motor and saffron sleep review resolved 68 exact scopes across 60 publications. The current replay leaves 36,419 checks across 23,240 publications. [Originals and reconciled scopes](../priority-five-clinical-date-and-sage-nov24/README.md)
+
+The November 24 sage, citrus and preparation review resolved 91 exact source scopes across 60 publications. That replay left 36,487 checks across 23,300 publications. [Originals and reconciled scopes](../priority-five-date-sage-and-ingredients-nov24/README.md)
 
 The November 24 sage, rosemary and nonmotor review resolved 41 exact source scopes across 30 publications. That replay left 36,578 checks across 23,360 publications. [Originals and reconciled scopes](../priority-five-sage-and-nonmotor-nov24/README.md)
 
