@@ -1,0 +1,5 @@
+# Curcumin timing and post-exercise soreness
+
+The [2015 crossover](../Source-Text/2015-PMID25921600-Curcumin-Crossover-and-No-Clear-Soreness-Effect.txt) reports similar palpation and extension soreness responses. The [2019 crossover abstract](../Source-Text/2019-PMID30566760-Curcumin-Before-or-After-Exercise-Crossover.txt) and [2019 parallel original](../Source-Text/2019-PMID30814417-Curcumin-Timing-and-Palpation-versus-Extension.txt) describe favorable selected outcomes with post-exercise supplementation. Figure 5 of the parallel report attaches the day-three result to palpation and the day-four result to extension. Participant linkage between those 2019 reports remains open.
+
+The [earlier running trial](../../2010-2014/Source-Text/2014-PMID24982601-Phytosome-Curcumin-and-Regional-Soreness.txt) gives a third set of exposure, measurement and region choices. The [later synthesis](../../2020-2024/Source-Text/2023-PMID37408367-Curcumin-Exercise-Soreness-and-Strength-Meta-Analysis.txt) pools time-specific soreness and retains uncertainty. These comparisons do not directly address culinary turmeric and Parkinson pain.

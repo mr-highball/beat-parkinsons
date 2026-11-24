@@ -1,0 +1,11 @@
+# Search routes and scope limits
+
+The branch-local first pass used Oracle catalog revision 95. One indexed intracranial review was reused for a separate claim question. Forty-six distinct initial source questions missed. Fourteen originals had prior first-pass receipts. The 60 publication identities were verified across 52 structured originals and eight authenticated complete HTML alternatives.
+
+| Question | Inspected evidence | Continuing gaps |
+| --- | --- | --- |
+| Ground turmeric pain | Oracle assessed, cultural and exact lookups. Checked the 79-scope batch, curcumin meta-analysis, two complete PMC studies, one complete J-STAGE PDF and one investigator abstract. PDF figure inspection separates palpation at day three from extension at day four. | Late pooled soreness includes zero. Formulations, timing and outcome methods vary. Participant overlap across two 2019 reports remains uncertain and the crossover full report was unavailable. No new Parkinson culinary comparison. |
+| Saffron depression | Oracle assessed and culture lookups. The complete microRNA review and branded Repron animal report were checked for their assigned exposures and outcomes. | Retinal findings and object recognition are distinct from mood. The direct ground-stigma clinical evidence retains its existing role. |
+| Olive oil and kefir | The verified small Parkinson trial uses the same olive carrier in all active arms and records adverse events. The autonomic review identifies dietary suggestions and separate clinical intervention citations. | No grade-specific olive oil effect or plain kefir comparison for fall frequency. |
+| Dried dates and raw fig | Oracle assessed and cultural searches plus original food identity and outcome checks. Thirty-nine date pain checks, six date apathy checks and three fig rest-tremor checks had no corresponding intake comparison. The earlier Unani record remains retrievable as context. | No new attributable Parkinson pain, apathy or rest tremor estimate. |
+| Scope collisions | The source set also contains exposure cues, food-derived compounds, generic clinical studies and drug carriers. Exact exposure and endpoint roles were recorded before accepting or excluding a pair. | Source dispositions apply only to the pinned publication and claim. |

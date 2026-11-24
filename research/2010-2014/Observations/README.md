@@ -1,5 +1,7 @@
 # Observations for 2010-2014
 
+- [A curcumin phytosome and regional soreness](2014-Phytosome-and-Regional-Soreness.md).
+
 - [Experimental formulations and clinical endpoints](2013-2014-Saffron-and-Turmeric-Formulation-Boundaries.md).
 
 - [Sunflower oil in combined diets](2012-Sunflower-Oil-in-Combined-Diets.md).

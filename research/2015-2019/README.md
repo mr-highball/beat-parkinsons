@@ -1,5 +1,7 @@
 # 2015-2019
 
+- [Curcumin timing studies and clinical outcome limits](Observations/2015-2019-Curcumin-Exercise-Timing-and-Soreness.md).
+
 - [Unani descriptions of date fruit and pain](Cultural-and-Experiential/Traditional-Practices/2015-Azhar-Unani-Date-Fruit-and-Pain.txt) and [experimental neuropathy and Crohn comparison sources](Observations/2015-2017-Unani-Date-Pain-and-Curcumin-Endpoints.md).
 
 - [Route-specific experimental curcumin pain results](Source-Text/2016-PMID27260322-Oral-and-Topical-Curcumin-Osteoarthritis-Pain.txt) and [public coffee and fatigue accounts](Cultural-and-Experiential/Conversations/2019-Parkinsons-UK-Coffee-and-Persistent-Fatigue.txt).

@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The November 24 dried-date, turmeric and coffee audit resolved 84 checks across 60 originals. The current replay leaves 35,451 checks across 22,521 publications. [Originals and reconciled scopes](../priority-five-saffron-and-clinical-next-nov24/README.md)
+The November 24 exercise-soreness and clinical audit resolved 79 checks across 60 originals. The current replay leaves 35,372 checks across 22,461 publications. [Originals and reconciled scopes](../priority-five-date-and-clinical-continuation-nov24/README.md)
+
+The November 24 dried-date, turmeric and coffee audit resolved 84 checks across 60 originals. That replay left 35,451 checks across 22,521 publications. [Originals and reconciled scopes](../priority-five-saffron-and-clinical-next-nov24/README.md)
 
 The November 24 fig and coffee audit resolved 79 checks across 60 originals. That replay left 35,535 checks across 22,581 publications. [Originals and reconciled scopes](../priority-five-fig-coffee-and-clinical-next-nov24/README.md)
 

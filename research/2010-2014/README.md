@@ -1,5 +1,7 @@
 # 2010-2014
 
+- [Phytosome curcumin and regional soreness](Source-Text/2014-PMID24982601-Phytosome-Curcumin-and-Regional-Soreness.txt).
+
 - [Lipid-formulated curcumin and experimental arthritis](Source-Text/2014-PMID25400173-Lipid-Curcumin-and-Arthritis-Pain-Abstract.txt) and [isolated crocins in an experimental behavioral model](Source-Text/2013-PMID24096536-Crocins-and-Experimental-Behavioral-Outcomes.txt).
 
 - [High-oleic sunflower oil in both arms of a combined-diet experiment](Source-Text/2012-PMID22662127-Combined-Oil-Diet-and-Mouse-Memory.txt).

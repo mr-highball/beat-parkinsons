@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [exercise-soreness and clinical audit](Food-Experiment-Round-1-Exercise-Soreness-and-Clinical-Nov24.md) links verified originals and [the cross-period observations](Observations/2023-2024-Carriers-Dietary-Suggestions-and-Exercise.md).
+
 The [dried-date, turmeric and coffee audit](Food-Experiment-Round-1-Date-Turmeric-and-Coffee-Nov24.md) links 60 originals and [cross-period observations](Observations/2020-2023-Turmeric-Delivery-and-Coffee-Outcome-Boundaries.md).
 
 The [fig and coffee clinical audit](Food-Experiment-Round-1-Fig-Coffee-and-Clinical-Nov24.md) links 60 verified originals with [cross-period evidence observations](Observations/2022-2023-Coffee-Fig-and-Clinical-Comparisons.md).
