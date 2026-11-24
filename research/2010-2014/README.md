@@ -657,3 +657,5 @@ The [2011 Wang rosmarinic acid model](Source-Text/2011-PMID22205146-Wang-Rosmari
 - [Round 1 clinical and culinary exposure context](../2025-2029/Food-Experiment-Round-1-Clinical-and-Food-Context-Nov24.md)
 
 - [Round 1 food exposure, diagnosis and movement outcomes](../2025-2029/Food-Experiment-Round-1-Food-Risk-and-Falls-Nov24.md)
+
+- [Round 1 cinnamon, piperine and falls source audit](../2025-2029/Food-Experiment-Round-1-Cinnamon-Piperine-and-Falls-Nov24.md)

@@ -1,0 +1,5 @@
+# 2013–2014 oral piperine and soybean oil outcome scope
+
+The earlier aroma patch report recorded observations under inhaled exposure. The 2013 piperine study tested an acute oral route with a matched-viscosity nectar vehicle. The higher concentration improved instrumental airway-protection scores, the lower concentration result was inconclusive, and Parkinson outcomes were unavailable separately. The comparison leaves the relevance of culinary cracked pepper preparation open. [Earlier aroma patch report](../../2005-2009/Food-Experiment-Black-Pepper.md) · [Original piperine study](../Source-Text/2013-PMID24326980-Oral-Piperine-and-Swallowing-Physiology.txt)
+
+The 2014 TEAM-AD report specifies soybean oil as the placebo capsule in a vitamin E comparison. The original adverse-event table distinguishes the number of falls from the percentage of people with falls. Soybean oil was tied to the assigned treatment comparison, leaving a separate effect of the oil and any transfer to Parkinson unresolved. Later reviews reuse counts from the same trial. [Original trial and adverse-event table](../Source-Text/2014-PMID24381967-TEAM-AD-Soybean-Comparator-and-Falls.txt)

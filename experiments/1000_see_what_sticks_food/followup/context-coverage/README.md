@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The November 24 grape motor and saffron sleep review resolved 68 exact scopes across 60 publications. The current replay leaves 36,419 checks across 23,240 publications. [Originals and reconciled scopes](../priority-five-clinical-date-and-sage-nov24/README.md)
+The November 24 cinnamon, piperine and falls review resolved 74 exact scopes across 60 publications. The current replay leaves 36,345 checks across 23,180 publications. [Originals and reconciled scopes](../priority-five-diet-dates-and-motor-nov24/README.md)
+
+The November 24 grape motor and saffron sleep review resolved 68 exact scopes across 60 publications. That replay left 36,419 checks across 23,240 publications. [Originals and reconciled scopes](../priority-five-clinical-date-and-sage-nov24/README.md)
 
 The November 24 sage, citrus and preparation review resolved 91 exact source scopes across 60 publications. That replay left 36,487 checks across 23,300 publications. [Originals and reconciled scopes](../priority-five-date-sage-and-ingredients-nov24/README.md)
 

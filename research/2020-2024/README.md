@@ -1043,3 +1043,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Round 1 food exposure, diagnosis and movement outcomes](../2025-2029/Food-Experiment-Round-1-Food-Risk-and-Falls-Nov24.md)
 
 - [Raw tomato intake and conflicting reports of joint symptoms](Cultural-and-Experiential/Conversations/2024-Tomato-Junction-Raw-Tomato-and-Joint-Stiffness.txt)
+
+- [Isolated piperine in edible films, sensory detection and adaptation](Source-Text/2023-PMID38141751-Oral-Piperine-Detection-and-Adaptation.txt)
