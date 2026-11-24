@@ -10,7 +10,7 @@ The clinical comparison extends the earlier [aroma patch record](../2005-2009/Fo
 
 ## Cinnamon and orange experimental outcomes
 
-The oral ground Ceylon cinnamon group in the 2019 MPTP mouse study is separable from the sodium-benzoate arm. The rotarod interaction p value was .021. The rearing and grooming interaction p values were .164 and .322. Figure 8 offers no separate muscle rigidity measure. Claim 0146 stays Unknown. The same article's figure labels are a lexical exclusion for figs and lower-limb pain in claim 0559. [Inspected cinnamon study and figure](../2015-2019/Source-Text/2019-PMID31119595-Cinnamon-GDNF-Motor-Extract.txt)
+The oral ground Ceylon cinnamon group in the 2019 MPTP mouse study is separable from the sodium-benzoate arm. The rotarod interaction p value was .021. The rearing and grooming interaction p values were .164 and .322. Figure 8 offers no separate muscle rigidity measure. Claim 0146 stays Unknown. The same article's figure labels are a lexical exclusion for raw figs and rest tremor in claim 0559. [Inspected cinnamon study and figure](../2015-2019/Source-Text/2019-PMID31119595-Cinnamon-GDNF-Motor-Extract.txt)
 
 A 2019 Parkinson model used orange odor during a scent task and measured stool output in a separate comparison by genotype and age. A raw-orange intake effect was outside the scope of the bowel comparisons. [Orange odor and bowel study scope](../2015-2019/Source-Text/2019-PMID31139367-Orange-Odor-and-Separate-Constipation-in-Parkinson-Model.txt)
 

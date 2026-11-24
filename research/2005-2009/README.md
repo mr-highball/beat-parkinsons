@@ -440,3 +440,5 @@ See the [Round 1 curcumin and original-source audit](../2025-2029/Food-Experimen
 - [Round 1 caffeine, tremor and fish source audit](../2025-2029/Food-Experiment-Round-1-Caffeine-Tremor-and-Fish-Nov24.md)
 
 - [Round 1 clinical and culinary exposure context](../2025-2029/Food-Experiment-Round-1-Clinical-and-Food-Context-Nov24.md)
+
+- [Isolated safranal seizure experiment and citation scope](Source-Text/2006-PMID16707256-Safranal-Seizures-and-Citation-Scope.txt)

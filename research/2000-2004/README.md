@@ -283,3 +283,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [Round 1 shift-work and grape original-source audit](../2025-2029/Food-Experiment-Round-1-Shiftwork-Grape-Nov24.md)
 
 - [Round 1 food exposure, diagnosis and movement outcomes](../2025-2029/Food-Experiment-Round-1-Food-Risk-and-Falls-Nov24.md)
+
+- [Saffron stigma extracts and forced-swim assays](Source-Text/2004-ActaHortic-650-54-Saffron-Stigma-and-Forced-Swim.txt)

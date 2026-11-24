@@ -923,3 +923,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Round 1 food exposure, diagnosis and movement outcomes](../2025-2029/Food-Experiment-Round-1-Food-Risk-and-Falls-Nov24.md)
 
 - [Round 1 cinnamon, piperine and falls source audit](../2025-2029/Food-Experiment-Round-1-Cinnamon-Piperine-and-Falls-Nov24.md)
+
+- [Round 1 saffron, dietary oil and clove source audit](../2025-2029/Food-Experiment-Round-1-Saffron-Oil-and-Clove-Nov24.md)

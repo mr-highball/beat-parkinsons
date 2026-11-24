@@ -632,3 +632,5 @@ Participants in a Riyadh focus group reported date fruit at iftar, with differen
 The 2015 trauma trial compared topical sesame oil and massage with routine care. The 2017 trial used a paraffin massage control and reported a later pain contrast, with original formulation information still open. Their injury, skin application and different comparators matter when reusing either observation for a culinary pain question. [2015 original trial](../Source-Text/2015-PMID26161326-Topical-Sesame-Oil-Trauma-Pain.txt) · [2017 source note](../Source-Text/2017-Sesame-Trauma-Pain-Extract.txt)
 
 - [Cinnamon motor tests and orange sensory exposure](2019-Cinnamon-Motor-and-Orange-Sensory-Outcomes.md)
+
+- [Saffron citation, dietary oil cohort and clove events](2019-Saffranal-Citation-Oil-Cohort-and-Clove-Events.md)
