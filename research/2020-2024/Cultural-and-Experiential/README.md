@@ -1,5 +1,8 @@
 # Cultural and experiential accounts, 2020-2024
 
+- [Sesame-oil abhyanga in a spinal cord injury review](Traditional-Practices/2023-PMID37467569-Sesame-Abhyanga-Review.txt).
+- [Rahul and Krishna case during a mixed Ayurvedic treatment course](Traditional-Practices/2024-Rahul-Krishna-Kampavata-Oil-Massage-Course.txt).
+
 - [Apathya dietary terminology and dates in a menopause case](Traditional-Practices/2024-Patel-Makim-Apathya-Diet-Terminology.txt).
 
 - [Unani tremor formulations and peepal identity](Traditional-Practices/2023-Akhtar-Unani-Tremor-Peepal-Identity.txt).
