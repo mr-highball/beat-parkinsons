@@ -1,5 +1,7 @@
 # 1885-1889
 
+- [1888 dental pain original and historical surname boundary](Source-Text/1888-PMID33699290-Historic-Dental-Pain-and-Surname-Collision.txt).
+
 January 1, 1885 through December 31, 1889.
 
 ## Annotated research

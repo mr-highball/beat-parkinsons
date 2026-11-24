@@ -1,5 +1,7 @@
 # 2025-2029
 
+- [Round 1 coffee, theacrine, turmeric and date-fruit checks](Food-Experiment-Round-1-Coffee-Theacrine-Turmeric-and-Dates-Nov24.md).
+
 - [Round 1 grape motor outcomes and saffron sleep](Food-Experiment-Round-1-Grape-Motor-and-Saffron-Sleep-Nov24.md).
 
 - [Round 1 sage, citrus and preparation audit](Food-Experiment-Round-1-Sage-Citrus-and-Preparation-Nov24.md).

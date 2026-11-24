@@ -1,5 +1,7 @@
 # Observations for 1885-1889
 
+- [Dental pain and historical indexing](1888-Dental-Pain-Surname-Boundary.md).
+
 ## Major observations
 
 - Gowers describes side of onset, subsequent spread, and several distinguishing features in one clinical chapter. [Clinical sources](../Clinical-and-Diagnosis.md)

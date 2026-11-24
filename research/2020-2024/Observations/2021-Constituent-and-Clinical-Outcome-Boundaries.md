@@ -1,0 +1,5 @@
+# Preparation, endpoint and clinical transfer
+
+The [2020–2024 originals](../../2025-2029/Food-Experiment-Round-1-Coffee-Theacrine-Turmeric-and-Dates-Nov24.md) cite substantially earlier work. A [2004 olive-oil stress comparator](../../2000-2004/Source-Text/2004-PMID15566625-Olive-Oil-Control-and-Perceived-Stress.txt) separates within-group change from the trial's randomized fish-oil comparison and a separately observed group. The [2011 soluble-coffee study](../../2010-2014/Source-Text/2011-PMID21773723-Soluble-Coffee-and-Mental-Fatigue.txt) separates exploratory acute mental fatigue from alertness. The [2015–2019 theacrine comparisons](../../2015-2019/Observations/2018-Theacrine-Fatigue-Source-Lineage.md) separate shared trial members from independent studies.
+
+The 1888 dental record is a distinct source-age problem. An author surname from around the time of early Parkinson literature can appear beside a symptom word without indicating a neurological diagnosis. The [period's reading note](../../1885-1889/Observations/1888-Dental-Pain-Surname-Boundary.md) records that boundary.
