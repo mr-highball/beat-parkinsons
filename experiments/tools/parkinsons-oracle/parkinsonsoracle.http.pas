@@ -469,6 +469,8 @@ const
 var
   LOrigin: String;
   LPeerAddress: TSockAddr;
+  LRoutePath: String;
+  LQueryPos: Integer;
   LIndex: Integer;
   LImage: String;
   LData: TJSONObject;
@@ -505,9 +507,13 @@ begin
     end;
     Exit;
   end;
-  LIndex := IndexStr(ARequest.URI, Paths);
-  LImage := IngredientPhotoPath(ARequest.URI);
-  if (LIndex < 0) and (LImage = '') and (ARequest.URI <> '/health') then
+  LRoutePath := ARequest.URI;
+  LQueryPos := Pos('?', LRoutePath);
+  if LQueryPos > 0 then
+    LRoutePath := Copy(LRoutePath, 1, LQueryPos - 1);
+  LIndex := IndexStr(LRoutePath, Paths);
+  LImage := IngredientPhotoPath(LRoutePath);
+  if (LIndex < 0) and (LImage = '') and (LRoutePath <> '/health') then
   begin
     WriteError(AResponse, 404, 'Route not found.');
     Exit;

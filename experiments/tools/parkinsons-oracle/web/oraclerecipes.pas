@@ -80,6 +80,8 @@ uses
 const
   CCollapseLimits: array[0..3] of Integer = (5, 10, 15, 25);
 
+function EncodeURIComponent(const AText: String): String; external name 'encodeURIComponent';
+
 function MakeNode(AKind: TNyxKind; const AId: String; const AText: String = ''): TNyxNode;
 begin
   Result := TNyxNode.Create(AKind, AId);
@@ -695,6 +697,7 @@ var
   LCard: TNyxNode;
   LMeta: TNyxNode;
   LIngRow: TNyxNode;
+  LActionsRow: TNyxNode;
   LStepsPanel: TNyxNode;
   LItem: TNyxCollectionItem;
   LIndex: Integer;
@@ -705,12 +708,16 @@ var
   LCat: TRecipeCategory;
   LEffort: TRecipeEffort;
   LBadge: TJSHTMLElement;
+  LLinkEl: TJSHTMLElement;
   LToggle: TJSHTMLElement;
   LPanel: TJSHTMLElement;
   LHasCoreRecipes: Boolean;
   LStatusText: String;
   LServings: Integer;
   LServingLabel: String;
+  LRecipeId: String;
+  LRecipeTitle: String;
+  LRecipeURL: String;
 
   procedure BindStepsToggle(const AToggleId, APanelId: String);
   begin
@@ -858,9 +865,19 @@ begin
       LCard.Add(LIngRow);
 
       LSteps := SplitPacked(LItem.GetValue(FStepsField), #10);
+      LRecipeId := LItem.GetValue(FIdField);
+      LRecipeTitle := LItem.GetValue(FTitleField);
+      LRecipeURL := './?recipe=' + EncodeURIComponent(LRecipeId);
+      LActionsRow := MakeNode(nkRow, 'recipe-actions-' + LTag);
+      if Length(LSteps) > 0 then
+        LActionsRow.Add(MakeButton('recipe-steps-toggle-' + LTag, 'Show quick steps', nvSecondary));
+      LActionsRow.Add(MakeNode(nkLink, 'recipe-open-full-' + LTag)
+        .Configure.LinkTo(LRecipeURL)
+        .AccessibleName('Open full recipe for ' + LRecipeTitle + ' in a new tab').Done);
+      LCard.Add(LActionsRow);
+
       if Length(LSteps) > 0 then
       begin
-        LCard.Add(MakeButton('recipe-steps-toggle-' + LTag, 'Show quick steps', nvSecondary));
         LStepsPanel := MakeNode(nkColumn, 'recipe-steps-' + LTag);
         for LSubIndex := 0 to High(LSteps) do
           LStepsPanel.Add(MakeNode(nkLabel, 'recipe-step-' + LTag + '-' + IntToStr(LSubIndex),
@@ -895,6 +912,10 @@ begin
         else if HasExtra(FExtraIngredients, LIngredients[LSubIndex]) then
           LBadge.setAttribute('data-match', 'extra');
       end;
+      LLinkEl := FCardsRenderer.ElementFor('recipe-open-full-' + LTag);
+      LLinkEl.setAttribute('target', '_blank');
+      LLinkEl.setAttribute('rel', 'noopener noreferrer');
+      LLinkEl.setAttribute('title', 'Open full recipe in new tab');
       LSteps := SplitPacked(LItem.GetValue(FStepsField), #10);
       if Length(LSteps) > 0 then
         BindStepsToggle('recipe-steps-toggle-' + LTag, 'recipe-steps-' + LTag);
@@ -955,7 +976,7 @@ begin
       .WithValue(FCoreField, LRecipe.CoreIngredient)
       .WithValue(FCategoryField, RecipeCategoryKey(LRecipe.Category))
       .WithValue(FEffortField, RecipeEffortKey(LRecipe.Effort))
-      .WithValue(FPrepField, LRecipe.PrepMinutes)
+      .WithValue(FPrepField, LRecipe.TotalMinutes)
       .WithValue(FServingsField, LRecipe.Servings)
       .WithValue(FSummaryField, LRecipe.Summary)
       .WithValue(FIngredientsField, JoinPacked(LRecipe.Ingredients, '|'))

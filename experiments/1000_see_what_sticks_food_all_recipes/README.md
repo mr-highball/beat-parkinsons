@@ -1,13 +1,8 @@
-# Common Recipe Store (`1000_see_what_sticks_food_all_recipes`)
+# Shared Food Experiment Recipe Collection
 
-Shared recipe collection for the `1000_see_what_sticks_food` experiment family and Parkinson's Oracle web interface.
+This directory is the common recipe store for `1000_see_what_sticks_food` and Parkinson's Oracle. Each JSON file under `recipes/` follows the `parkinsons-oracle-recipes-1` schema and deserializes directly into `TRecipeCatalog` / `TRecipe` in `experiments/tools/parkinsons-oracle/parkinsonsoracle.recipes.pas`.
 
-## Layout
-
-- `recipes/<ingredient-slug>.json` — Per-core-ingredient recipe files using the common `parkinsons-oracle-recipes-1` JSON schema.
-- Build pipelines (`experiments/tools/parkinsons-oracle/recipes.embed.lpr`) load every `recipes/*.json` file through the Pascal model (`TRecipeCatalog` in `parkinsonsoracle.recipes.pas`), validate schema/uniqueness/categories/effort levels, and emit the combined `recipes.json` web asset.
-
-## Common JSON Schema (`parkinsons-oracle-recipes-1`)
+## Schema (`parkinsons-oracle-recipes-1`)
 
 ```json
 {
@@ -20,23 +15,35 @@ Shared recipe collection for the `1000_see_what_sticks_food` experiment family a
       "category": "breakfast | lunch | dinner | smoothies | juices",
       "effort": "low | medium | high",
       "prep_minutes": 10,
+      "cook_minutes": 6,
       "servings": 2,
-      "summary": "One-sentence description for recipe cards.",
-      "ingredients": ["celery stalk", "onion", "black pepper"],
-      "steps": ["Short step 1.", "Short step 2."],
-      "tags": ["quick", "savory"]
+      "summary": "Short description of the dish.",
+      "ingredients": ["celery stalk", "black pepper", "onion"],
+      "ingredient_details": [
+        {
+          "key": "celery stalk",
+          "amount": 2,
+          "unit": "stalks",
+          "item": "celery stalk",
+          "note": "finely diced"
+        }
+      ],
+      "equipment": ["Medium skillet", "Cutting board", "Chef's knife"],
+      "steps": ["Step 1", "Step 2", "Step 3"],
+      "tips": ["Helpful preparation or storage tip."],
+      "tags": ["savory", "quick"]
     }
   ]
 }
 ```
 
-### Field rules
+### Field Notes
 
-- `core_ingredient`: Canonical lowercase ingredient name matching the experiment vocabulary (`ingredients.tsv`), directly queryable in code via `TRecipe.CoreIngredient` and `TRecipeCatalog.QueryByCoreIngredient`.
-- `category`: One of `breakfast`, `lunch`, `dinner`, `smoothies`, or `juices`.
-- `effort`: One of `low`, `medium`, or `high`.
-- `ingredients`: Canonical lowercase ingredient list used by the WFC recipe constraint solver when combining the main ingredient with user-selected extra ingredients.
+- `core_ingredient` is normalized (`NormalizeRecipeIngredient`) and directly queryable via `TRecipe.HasCoreIngredient` and `TRecipeCatalog.QueryByCoreIngredient`.
+- `ingredients` stores normalized ingredient names used by the WFC constraint solver and multi-ingredient filtering.
+- `cook_minutes`, `ingredient_details`, `equipment`, and `tips` are optional in JSON for backward compatibility and power the full recipe view (serving scaler, printable sheet, ingredient checklist, cook mode, and kitchen tips).
+- Inside `ingredient_details`, numeric `amount` values scale cleanly into kitchen fractions (`1/4`, `1/2`, `1 1/2`, etc.); unmeasured seasonings can omit `amount` and supply `amount_text` (for example `"to taste"` or `"1 pinch"`).
 
-## Proof-of-Concept Coverage
+## Current Coverage
 
-- `recipes/celery-stalk.json`: 25 low-to-medium effort recipes for `celery stalk` (5 each across Breakfast, Lunch, Dinner, Smoothies, and Juices).
+- `recipes/celery-stalk.json`: 25 low-to-medium effort recipes (5 each across Breakfast, Lunch, Dinner, Smoothies, and Juices) with full measured ingredients, cook times, equipment lists, and kitchen tips.

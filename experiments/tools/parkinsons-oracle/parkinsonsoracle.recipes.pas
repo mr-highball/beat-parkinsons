@@ -21,6 +21,16 @@ type
 
   TRecipeEffort = (reLow, reMedium, reHigh);
 
+  TRecipeIngredientDetail = record
+    IngredientKey: String;
+    Amount: Double;
+    AmountText: String;
+    UnitName: String;
+    Item: String;
+    PrepNote: String;
+  end;
+  TRecipeIngredientDetails = array of TRecipeIngredientDetail;
+
   TRecipe = class(TObject)
   private
     FId: String;
@@ -29,10 +39,14 @@ type
     FCategory: TRecipeCategory;
     FEffort: TRecipeEffort;
     FPrepMinutes: Integer;
+    FCookMinutes: Integer;
     FServings: Integer;
     FSummary: String;
     FIngredients: TRecipeStrings;
+    FIngredientDetails: TRecipeIngredientDetails;
+    FEquipment: TRecipeStrings;
     FSteps: TRecipeStrings;
+    FTips: TRecipeStrings;
     FTags: TRecipeStrings;
   public
     property Id: String read FId write FId;
@@ -41,12 +55,17 @@ type
     property Category: TRecipeCategory read FCategory write FCategory;
     property Effort: TRecipeEffort read FEffort write FEffort;
     property PrepMinutes: Integer read FPrepMinutes write FPrepMinutes;
+    property CookMinutes: Integer read FCookMinutes write FCookMinutes;
     property Servings: Integer read FServings write FServings;
     property Summary: String read FSummary write FSummary;
     property Ingredients: TRecipeStrings read FIngredients write FIngredients;
+    property IngredientDetails: TRecipeIngredientDetails read FIngredientDetails write FIngredientDetails;
+    property Equipment: TRecipeStrings read FEquipment write FEquipment;
     property Steps: TRecipeStrings read FSteps write FSteps;
+    property Tips: TRecipeStrings read FTips write FTips;
     property Tags: TRecipeStrings read FTags write FTags;
 
+    function TotalMinutes: Integer;
     function HasCoreIngredient(const AIngredient: String): Boolean;
     function HasIngredient(const AIngredient: String): Boolean;
     function MatchesAllIngredients(const AIngredients: TRecipeStrings): Boolean;
@@ -122,6 +141,14 @@ function RecipeEffortKey(AEffort: TRecipeEffort): String;
 function RecipeEffortLabel(AEffort: TRecipeEffort): String;
 function TryParseRecipeEffort(const AText: String; out AEffort: TRecipeEffort): Boolean;
 function ParseIngredientList(const AText: String): TRecipeStrings;
+function FormatRecipeAmount(AAmount: Double): String;
+function FormatIngredientUnit(const AUnit: String; AAmount: Double): String;
+function FormatIngredientMeasure(const ADetail: TRecipeIngredientDetail;
+  AScale: Double = 1.0): String;
+function FormatIngredientLine(const ADetail: TRecipeIngredientDetail;
+  AScale: Double = 1.0): String;
+function FormatScaledServings(ABaseServings: Integer; AScale: Double): String;
+function FormatMinutesLabel(AMinutes: Integer): String;
 function CollapseRecipesWithWfc(ACatalog: TRecipeCatalog;
   const AQuery: TRecipeWfcQuery): TRecipeWfcResult;
 
@@ -394,6 +421,251 @@ begin
     raise EConvertError.Create('Recipe JSON array cannot be empty: ' + AField);
 end;
 
+function CopyDetails(const AValues: TRecipeIngredientDetails): TRecipeIngredientDetails;
+var
+  LIndex: Integer;
+begin
+  Result := nil;
+  SetLength(Result, Length(AValues));
+  for LIndex := 0 to High(AValues) do
+    Result[LIndex] := AValues[LIndex];
+end;
+
+function FormatRecipeAmount(AAmount: Double): String;
+const
+  CFracValues: array[0..7] of Double = (
+    0.125, 0.25, 1.0 / 3.0, 0.375, 0.5, 2.0 / 3.0, 0.75, 0.875);
+  CFracLabels: array[0..7] of String = (
+    '1/8', '1/4', '1/3', '3/8', '1/2', '2/3', '3/4', '7/8');
+var
+  LWhole: Integer;
+  LFrac: Double;
+  LIndex: Integer;
+  LTenths: Integer;
+begin
+  if AAmount <= 0 then
+    Exit('');
+  LWhole := Trunc(AAmount);
+  LFrac := AAmount - LWhole;
+  if LFrac < 0.04 then
+  begin
+    if LWhole <= 0 then
+      Exit('1/8');
+    Exit(IntToStr(LWhole));
+  end;
+  if LFrac > 0.96 then
+    Exit(IntToStr(LWhole + 1));
+  for LIndex := Low(CFracValues) to High(CFracValues) do
+  begin
+    if Abs(LFrac - CFracValues[LIndex]) <= 0.045 then
+    begin
+      if LWhole > 0 then
+        Exit(IntToStr(LWhole) + ' ' + CFracLabels[LIndex]);
+      Exit(CFracLabels[LIndex]);
+    end;
+  end;
+  LTenths := Round(AAmount * 10);
+  if (LTenths mod 10) = 0 then
+    Result := IntToStr(LTenths div 10)
+  else
+    Result := IntToStr(LTenths div 10) + '.' + IntToStr(LTenths mod 10);
+end;
+
+function FormatIngredientUnit(const AUnit: String; AAmount: Double): String;
+var
+  LTrimmed: String;
+  LLower: String;
+  LPlural: Boolean;
+begin
+  LTrimmed := Trim(AUnit);
+  if LTrimmed = '' then
+    Exit('');
+  LLower := LowerCase(LTrimmed);
+  LPlural := AAmount > 1.04;
+  if (LLower = 'stalk') or (LLower = 'stalks') then
+    Exit(IfThen(LPlural, 'stalks', 'stalk'));
+  if (LLower = 'rib') or (LLower = 'ribs') then
+    Exit(IfThen(LPlural, 'ribs', 'rib'));
+  if (LLower = 'cup') or (LLower = 'cups') then
+    Exit(IfThen(LPlural, 'cups', 'cup'));
+  if (LLower = 'clove') or (LLower = 'cloves') then
+    Exit(IfThen(LPlural, 'cloves', 'clove'));
+  if (LLower = 'slice') or (LLower = 'slices') then
+    Exit(IfThen(LPlural, 'slices', 'slice'));
+  if (LLower = 'fillet') or (LLower = 'fillets') then
+    Exit(IfThen(LPlural, 'fillets', 'fillet'));
+  if (LLower = 'leaf') or (LLower = 'leaves') then
+    Exit(IfThen(LPlural, 'leaves', 'leaf'));
+  if (LLower = 'sprig') or (LLower = 'sprigs') then
+    Exit(IfThen(LPlural, 'sprigs', 'sprig'));
+  if (LLower = 'can') or (LLower = 'cans') then
+    Exit(IfThen(LPlural, 'cans', 'can'));
+  if (LLower = 'pinch') or (LLower = 'pinches') then
+    Exit(IfThen(LPlural, 'pinches', 'pinch'));
+  if (LLower = 'inch') or (LLower = 'inches') then
+    Exit(IfThen(LPlural, 'inches', 'inch'));
+  Result := LTrimmed;
+end;
+
+function FormatIngredientMeasure(const ADetail: TRecipeIngredientDetail; AScale: Double): String;
+var
+  LScaled: Double;
+  LAmountStr: String;
+  LUnitStr: String;
+begin
+  if AScale <= 0 then
+    AScale := 1.0;
+  if ADetail.Amount > 0 then
+  begin
+    LScaled := ADetail.Amount * AScale;
+    LAmountStr := FormatRecipeAmount(LScaled);
+    LUnitStr := FormatIngredientUnit(ADetail.UnitName, LScaled);
+    if LUnitStr <> '' then
+      Result := LAmountStr + ' ' + LUnitStr
+    else
+      Result := LAmountStr;
+  end
+  else
+  begin
+    Result := Trim(ADetail.AmountText);
+    if (Result <> '') and (Trim(ADetail.UnitName) <> '') then
+      Result := Result + ' ' + Trim(ADetail.UnitName);
+  end;
+end;
+
+function FormatIngredientLine(const ADetail: TRecipeIngredientDetail; AScale: Double): String;
+var
+  LMeasure: String;
+  LItem: String;
+begin
+  LMeasure := FormatIngredientMeasure(ADetail, AScale);
+  LItem := Trim(ADetail.Item);
+  if LItem = '' then
+    LItem := ADetail.IngredientKey;
+  if LMeasure <> '' then
+    Result := LMeasure + ' ' + LItem
+  else
+    Result := LItem;
+  if Trim(ADetail.PrepNote) <> '' then
+    Result := Result + ', ' + Trim(ADetail.PrepNote);
+end;
+
+function FormatScaledServings(ABaseServings: Integer; AScale: Double): String;
+var
+  LScaled: Double;
+  LText: String;
+begin
+  if ABaseServings < 1 then
+    ABaseServings := 1;
+  if AScale <= 0 then
+    AScale := 1.0;
+  LScaled := ABaseServings * AScale;
+  LText := FormatRecipeAmount(LScaled);
+  if Abs(LScaled - 1.0) <= 0.04 then
+    Result := '1 serving'
+  else
+    Result := LText + ' servings';
+end;
+
+function FormatMinutesLabel(AMinutes: Integer): String;
+var
+  LHours: Integer;
+  LRem: Integer;
+begin
+  if AMinutes <= 0 then
+    Exit('No cook');
+  if AMinutes < 60 then
+    Exit(IntToStr(AMinutes) + ' min');
+  LHours := AMinutes div 60;
+  LRem := AMinutes mod 60;
+  if LRem = 0 then
+    Result := IntToStr(LHours) + ' hr'
+  else
+    Result := IntToStr(LHours) + ' hr ' + IntToStr(LRem) + ' min';
+end;
+
+function ReadOptionalString(AObject: TJSONObject; const AField: String): String;
+var
+  LData: TJSONData;
+begin
+  LData := AObject.Find(AField);
+  if LData = nil then
+    Exit('');
+  if LData.JSONType <> jtString then
+    raise EConvertError.Create('Recipe JSON requires a string field: ' + AField);
+  Result := Trim(LData.AsString);
+end;
+
+function ReadOptionalFloat(AObject: TJSONObject; const AField: String; ADefault: Double): Double;
+var
+  LData: TJSONData;
+begin
+  LData := AObject.Find(AField);
+  if LData = nil then
+    Exit(ADefault);
+  if LData.JSONType <> jtNumber then
+    raise EConvertError.Create('Recipe JSON requires a numeric field: ' + AField);
+  Result := LData.AsFloat;
+end;
+
+function ReadIngredientDetails(AObject: TJSONObject; const AField: String): TRecipeIngredientDetails;
+var
+  LData: TJSONData;
+  LArray: TJSONArray;
+  LIndex: Integer;
+  LEntry: TJSONObject;
+  LDetail: TRecipeIngredientDetail;
+begin
+  Result := nil;
+  LData := AObject.Find(AField);
+  if LData = nil then
+    Exit;
+  if LData.JSONType <> jtArray then
+    raise EConvertError.Create('Recipe JSON field must be an array: ' + AField);
+  LArray := TJSONArray(LData);
+  SetLength(Result, LArray.Count);
+  for LIndex := 0 to LArray.Count - 1 do
+  begin
+    if (LArray.Items[LIndex] = nil) or (LArray.Items[LIndex].JSONType <> jtObject) then
+      raise EConvertError.Create('Each ingredient detail must be a JSON object: ' + AField);
+    LEntry := TJSONObject(LArray.Items[LIndex]);
+    LDetail := Default(TRecipeIngredientDetail);
+    LDetail.Item := ReadRequiredString(LEntry, 'item');
+    LDetail.IngredientKey := NormalizeRecipeIngredient(ReadOptionalString(LEntry, 'key'));
+    if LDetail.IngredientKey = '' then
+      LDetail.IngredientKey := NormalizeRecipeIngredient(LDetail.Item);
+    LDetail.Amount := ReadOptionalFloat(LEntry, 'amount', 0);
+    LDetail.AmountText := ReadOptionalString(LEntry, 'amount_text');
+    LDetail.UnitName := ReadOptionalString(LEntry, 'unit');
+    LDetail.PrepNote := ReadOptionalString(LEntry, 'note');
+    Result[LIndex] := LDetail;
+  end;
+end;
+
+function DetailsToJSONArray(const AValues: TRecipeIngredientDetails): TJSONArray;
+var
+  LIndex: Integer;
+  LEntry: TJSONObject;
+begin
+  Result := TJSONArray.Create;
+  for LIndex := 0 to High(AValues) do
+  begin
+    LEntry := TJSONObject.Create;
+    if AValues[LIndex].IngredientKey <> '' then
+      LEntry.Add('key', AValues[LIndex].IngredientKey);
+    if AValues[LIndex].Amount > 0 then
+      LEntry.Add('amount', AValues[LIndex].Amount);
+    if AValues[LIndex].AmountText <> '' then
+      LEntry.Add('amount_text', AValues[LIndex].AmountText);
+    if AValues[LIndex].UnitName <> '' then
+      LEntry.Add('unit', AValues[LIndex].UnitName);
+    LEntry.Add('item', AValues[LIndex].Item);
+    if AValues[LIndex].PrepNote <> '' then
+      LEntry.Add('note', AValues[LIndex].PrepNote);
+    Result.Add(LEntry);
+  end;
+end;
+
 function StringsToJSONArray(const AValues: TRecipeStrings): TJSONArray;
 var
   LIndex: Integer;
@@ -404,6 +676,11 @@ begin
 end;
 
 { TRecipe }
+
+function TRecipe.TotalMinutes: Integer;
+begin
+  Result := FPrepMinutes + FCookMinutes;
+end;
 
 function TRecipe.HasCoreIngredient(const AIngredient: String): Boolean;
 var
@@ -459,10 +736,14 @@ begin
   Result.FCategory := FCategory;
   Result.FEffort := FEffort;
   Result.FPrepMinutes := FPrepMinutes;
+  Result.FCookMinutes := FCookMinutes;
   Result.FServings := FServings;
   Result.FSummary := FSummary;
   Result.FIngredients := CopyStrings(FIngredients);
+  Result.FIngredientDetails := CopyDetails(FIngredientDetails);
+  Result.FEquipment := CopyStrings(FEquipment);
   Result.FSteps := CopyStrings(FSteps);
+  Result.FTips := CopyStrings(FTips);
   Result.FTags := CopyStrings(FTags);
 end;
 
@@ -476,10 +757,18 @@ begin
     Result.Add('category', RecipeCategoryKey(FCategory));
     Result.Add('effort', RecipeEffortKey(FEffort));
     Result.Add('prep_minutes', FPrepMinutes);
+    if FCookMinutes > 0 then
+      Result.Add('cook_minutes', FCookMinutes);
     Result.Add('servings', FServings);
     Result.Add('summary', FSummary);
     Result.Add('ingredients', StringsToJSONArray(FIngredients));
+    if Length(FIngredientDetails) > 0 then
+      Result.Add('ingredient_details', DetailsToJSONArray(FIngredientDetails));
+    if Length(FEquipment) > 0 then
+      Result.Add('equipment', StringsToJSONArray(FEquipment));
     Result.Add('steps', StringsToJSONArray(FSteps));
+    if Length(FTips) > 0 then
+      Result.Add('tips', StringsToJSONArray(FTips));
     Result.Add('tags', StringsToJSONArray(FTags));
   except
     Result.Free;
@@ -512,12 +801,16 @@ begin
     Result.FCategory := LCategory;
     Result.FEffort := LEffort;
     Result.FPrepMinutes := Max(1, ReadOptionalInt(AObject, 'prep_minutes', 10));
+    Result.FCookMinutes := Max(0, ReadOptionalInt(AObject, 'cook_minutes', 0));
     Result.FServings := Max(1, ReadOptionalInt(AObject, 'servings', 1));
     Result.FSummary := ReadRequiredString(AObject, 'summary');
     Result.FIngredients := ReadStringArray(AObject, 'ingredients', True, True);
     if not ContainsTextItem(Result.FIngredients, Result.FCoreIngredient) then
       AppendTextItem(Result.FIngredients, Result.FCoreIngredient);
+    Result.FIngredientDetails := ReadIngredientDetails(AObject, 'ingredient_details');
+    Result.FEquipment := ReadStringArray(AObject, 'equipment', False, False);
     Result.FSteps := ReadStringArray(AObject, 'steps', False, False);
+    Result.FTips := ReadStringArray(AObject, 'tips', False, False);
     Result.FTags := ReadStringArray(AObject, 'tags', False, False);
   except
     Result.Free;
