@@ -1,8 +1,10 @@
 # Round 1 known original access gaps, November 22, 2026
 
+The [November 24 dementia and caffeine audit](Food-Experiment-Round-1-Dementia-Caffeine-Nov24.md) closed four recorded access checks and mapped nine first-time gaps. Six prior scopes were rechecked.
+
 In the [November 24 legacy-originals audit](Food-Experiment-Round-1-Legacy-Originals-Nov24.md), 34 mapped holds closed and seven new exact access holds were added. Three existing holds were rechecked.
 
-The [exact original access locators](Food-Experiment-Round-1-Original-Access-Locators-Nov22.tsv) give 393 currently queued pairs with a documented pending or access-only disposition across 95 dated research notes. Each row contains the claim, source key, frozen ingredient, preparation and symptom, recorded review depth, a readable local research file, the prior receipt and what remains open. The mixed original-source checkpoint adds 22 newly documented gaps and revisits three existing ones. [Mixed original-source audit](Food-Experiment-Round-1-Mixed-Originals-Nov22.md)
+The [exact original access locators](Food-Experiment-Round-1-Original-Access-Locators-Nov22.tsv) give 398 currently queued pairs with a documented pending or access-only disposition across 97 dated research notes. Each row contains the claim, source key, frozen ingredient, preparation and symptom, recorded review depth, a readable local research file, the prior receipt and what remains open. The mixed original-source checkpoint adds 22 newly documented gaps and revisits three existing ones. [Mixed original-source audit](Food-Experiment-Round-1-Mixed-Originals-Nov22.md)
 
 The initial 522-entry reconciliation traced 325 entries to their existing dated texts and connected 125 entries to additional source texts already present in Oracle. Twelve source summaries in their original publication periods cover the remaining 72 mapped entries. The twelve notes cover seven administrative pages, three meeting collections and two article abstracts. The meeting notes identify the primary material inspected so far and the remaining member or booklet routes. Those access records preserve their original review depths. The next review added 13 continuing access notes, bringing that checkpoint to 535 pairs across 243 dated source files. [Next exact review and current gaps](Food-Experiment-Tea-Ginger-and-Priority-Originals-Nov22.md)
 

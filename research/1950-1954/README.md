@@ -1,5 +1,7 @@
 # 1950-1954
 
+The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Dementia-Caffeine-Nov24.md) checked 2 publications from this period. [PMID 14772655](Source-Text/1950-PMID14772655-Historical-Parkinson-Therapy.txt) · [PMID 14916067](Source-Text/1952-PMID14916067-Painless-Cardiac-Infarction.txt).
+
 The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Legacy-Originals-Nov24.md) checked 1 publications from this period. [PMID 12987520](Source-Text/1952-PMID12987520-Electrocardiographic-Signs-of-Cardiac-Pain.txt).
 
 The [December 1953 BMJ issue](Source-Text/1953-PMC2030426-BMJ-December-Administrative-Context.txt) separates an early food regimen discussion from the indexed administrative pages.

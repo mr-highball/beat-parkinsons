@@ -1,5 +1,7 @@
 # 1960-1964
 
+The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Dementia-Caffeine-Nov24.md) checked 2 publications from this period. [PMID 13711233](Source-Text/1961-PMID13711233-Stereotaxic-Procedures-and-Pain.txt) · [PMID 13966588](Source-Text/1963-PMID13966588-Oxyphenbutazone-and-Postoperative-Markers.txt).
+
 The [1960 human magnesium-deficiency article](Source-Text/1960-PMID13840893-Magnesium-Deficiency-Tetany-Access.txt) is indexed at verified publisher preview depth. The clinical case body is still needed for [the later hallucination citation trail](../2020-2024/Observations/Visual-End-Points-and-Magnesium-Citation-Follow-Through.md).
 
 January 1, 1960 through December 31, 1964.

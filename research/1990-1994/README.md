@@ -1,5 +1,7 @@
 # 1990-1994
 
+The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Dementia-Caffeine-Nov24.md) checked 1 publications from this period. [PMID 1515348](Source-Text/1992-PMID1515348-Styrene-Exposure-and-Neurochemical-Markers.txt).
+
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
 
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.

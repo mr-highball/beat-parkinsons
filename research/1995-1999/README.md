@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [1997 caffeine-deprivation comparison](Source-Text/1997-PMID9264092-Lane-Caffeine-Abstinence-and-Fatigue.txt) records higher subjective fatigue during brief abstinence with preparation and exact variance still open.
+
 The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Legacy-Originals-Nov24.md) checked 2 publications from this period. [PMID 10483384](Source-Text/1998-PMID10483384-Dental-Anesthesia-Clinical-Series.txt) · [PMID 10369823](Source-Text/1999-PMID10369823-SAGE-Mortality-Database.txt).
 
 The [Round 1 original-source audit](../2025-2029/Food-Experiment-Round-1-Mixed-Originals-Nov22.md) includes dated source notes in this period. [PMID 10369823](Source-Text/1999-PMID10369823-SAGE-Mortality-Database.txt)

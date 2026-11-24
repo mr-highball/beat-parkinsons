@@ -1,5 +1,7 @@
 # 1930-1934
 
+The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Dementia-Caffeine-Nov24.md) checked 2 publications from this period. [PMID 16694011](Source-Text/1931-PMID16694011-ECG-Angina-and-Paroxysmal-Pain.txt) · [PMID 16694202](Source-Text/1934-PMID16694202-Skeletal-Muscle-Pain-During-Anoxemia.txt).
+
 [Slot’s case discussion](Source-Text/1930-Slot-Fruit-Regimen-and-Sprue-Context.txt) distinguishes the earlier strawberry practice from his later report of mixed fruit treatment.
 
 January 1, 1930 through December 31, 1934.

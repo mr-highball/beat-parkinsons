@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [November 24 dementia and caffeine audit](Food-Experiment-Round-1-Dementia-Caffeine-Nov24.md) includes the [2025 caffeine-addition study](Source-Text/2025-PMID39897922-Lesar-Coffee-and-Arousal.txt) and rechecks the [coffee and fatigue conversation](Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt).
+
 The [November 24 legacy-original review](Food-Experiment-Round-1-Legacy-Originals-Nov24.md) connects complete legacy source recoveries and exact outstanding access routes with the cinnamon pain scorecard.
 
 The [November 24 motor and fatigue review](Food-Experiment-Round-1-Motor-Fatigue-Nov24.md) links 36 original articles to 53 checked ingredient and symptom scopes and records the remaining green-tea fatigue evidence gaps.
