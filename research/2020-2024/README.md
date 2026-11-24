@@ -1018,3 +1018,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [PMID:38603229, original source scope](Source-Text/2022-PMID38603229-Parkinson-Restrictions-Nondiet-Cohort-Scope.txt)
 - [PMID:39005987, original source scope](Source-Text/2024-PMID39005987-Aromas-Fatigue-and-Culinary-Route.txt)
 - [PMID:39075852, original source scope](Source-Text/2024-PMID39075852-Caregiver-Symptom-Study-Date-Sage-Scope.txt)
+
+See the [Round 1 tea, constipation and original-source review](../2025-2029/Food-Experiment-Round-1-Tea-Constipation-Nov24.md) for the dated source records and scope notes.

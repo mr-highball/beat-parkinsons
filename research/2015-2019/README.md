@@ -881,3 +881,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [PMID:29314866, original source scope](Source-Text/2018-PMID29314866-Herrlinger-Spearmint-Extract-Memory-Sleep-Mood.txt)
 - [PMID:29464125, original source scope](Source-Text/2017-PMID29464125-Botanicals-BDNF-Model-Exposure.txt)
 - [PMID:30559636, original source scope](Source-Text/2018-PMID30559636-Vibration-Review-Sage-Date-Collisions.txt)
+
+See the [Round 1 tea, constipation and original-source review](../2025-2029/Food-Experiment-Round-1-Tea-Constipation-Nov24.md) for the dated source records and scope notes.

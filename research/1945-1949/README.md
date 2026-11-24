@@ -33,3 +33,5 @@ January 1, 1945 through December 31, 1949.
 - [Olive oil mentioned in an esophageal ulcer treatment regimen](Food-Experiment-Olive-Oil-Dysphagia-History.md#olive-oil-mentioned-in-an-esophageal-ulcer-treatment-regimen)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+See the [Round 1 tea, constipation and original-source review](../2025-2029/Food-Experiment-Round-1-Tea-Constipation-Nov24.md) for the dated source records and scope notes.

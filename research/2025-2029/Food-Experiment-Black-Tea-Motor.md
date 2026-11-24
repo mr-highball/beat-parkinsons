@@ -2,7 +2,7 @@
 
 ## Habitual caffeine and bradykinesia progression in a PPMI preprint
 
-The September 2026 Research Square preprint grouped 261 people with idiopathic Parkinson disease by observed caffeine intake. It reports an association with faster bradykinesia and rigidity progression among 207 with one to four years of recorded follow-up. It used generalized estimating equations and separately reports a striatal transporter mediation analysis. The publisher body was inaccessible at review. The caffeine sources, intake definition, adjusted estimates and control for confounders remain unverified. This observational progression signal conflicts with the short randomized isolated-caffeine symptom score finding. [Original preprint](https://www.researchsquare.com/article/rs-11054916/v1) · [Indexed original abstract](https://sciety.org/articles/activity/10.21203/rs.3.rs-11054916/v1)
+The September 2026 PPMI preprint groups participants by habitual caffeinated coffee. The full body and Table 3 confirm a current-versus-never coffee association with worse bradykinesia (beta 2.503, p = .002) and an inconclusive rest-tremor result (p = .249). It follows an observational cohort and does not test brewed black tea. The published exposure definition and estimates resolve the previous abstract-only access gap. [Original preprint](https://www.researchsquare.com/article/rs-11054916/v1) · [Local full-body review](Source-Text/2026-ResearchSquare-11054916-PPMI-Coffee-and-Motor-Progression.txt)
 
 ## Black tea and repeated motor composite scores in LRRK2 Parkinson disease
 

@@ -920,3 +920,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 ## Round 1 original-source review and rice bran oil reassessment
 
 [Review, observations and access gaps](Food-Experiment-Round-1-Priority-Five-Multi-Route-Nov22.md)
+
+See the [Round 1 tea, constipation and original-source review](Food-Experiment-Round-1-Tea-Constipation-Nov24.md) for the dated source records and scope notes.

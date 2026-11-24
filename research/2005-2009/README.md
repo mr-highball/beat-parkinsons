@@ -410,3 +410,5 @@ The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-
 
 - [PMID:18684235, original source scope](Source-Text/2008-PMID18684235-Resveratrol-and-Grape-Exposure-Scope.txt)
 - [PMID:19191039, original source scope](Source-Text/2008-PMID19191039-Botanical-Phenolics-and-Parkinson-Transfer.txt)
+
+See the [Round 1 tea, constipation and original-source review](../2025-2029/Food-Experiment-Round-1-Tea-Constipation-Nov24.md) for the dated source records and scope notes.

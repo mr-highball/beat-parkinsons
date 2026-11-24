@@ -142,3 +142,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [PMID:8058144 · claim 0305 · abstract](Source-Text/1994-PMID8058144-Priority-Four-Original-Scope.txt).
 - [PMID:8147565 · claim 0305 · full text](Source-Text/1994-PMID8147565-Priority-Four-Original-Scope.txt).
 - [PMID:8196678 · claim 0305 · abstract](Source-Text/1994-PMID8196678-Priority-Four-Original-Scope.txt).
+
+See the [Round 1 tea, constipation and original-source review](../2025-2029/Food-Experiment-Round-1-Tea-Constipation-Nov24.md) for the dated source records and scope notes.
