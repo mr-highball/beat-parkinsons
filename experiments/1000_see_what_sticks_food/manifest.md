@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The botanical and clinical source review resolved 79 exact checks from 29 article bodies and added 36 related assessments. The 0359 grated-turmeric rigidity scorecard remains Unknown after adding two distinct motor-assay families. Sesame abhyanga now has a dated customary-use note and a separate earlier citation gap. The current queue has 37,491 original-source checks. [Audit and 0359 scorecard](followup/priority-five-botanical-and-clinical-nov24/README.md)
+The original source and access review resolved 62 exact checks from 25 articles. A November 2026 Parkinson trial supplied MCT fatigue and Epworth results, and three coconut-oil scorecards retain Unknown. The queue has 37,429 original-source checks and eight highest-priority access holds. [Original articles and validated scorecards](followup/priority-five-and-access-nov24/README.md)
+
+The botanical and clinical source review resolved 79 exact checks from 29 article bodies and added 36 related assessments. The 0359 grated-turmeric rigidity scorecard remains Unknown after adding two distinct motor-assay families. Sesame abhyanga now has a dated customary-use note and a separate earlier citation gap. That checkpoint left 37,491 original-source checks. [Audit and 0359 scorecard](followup/priority-five-botanical-and-clinical-nov24/README.md)
 
 The exposure, population and outcome review resolved 75 exact checks from 28 original articles and added 33 contextual assessments. It distinguishes grouped cinnamon and ginger extract findings from each single-extract result and preserves an early Parkinson interview about coffee and morning slowness separately from fatigue. That checkpoint left 37,570 source checks queued. The 420 mapped access gaps and current verdicts carry forward. [Original scopes and evidence boundaries](followup/priority-five-population-endpoints-nov24/README.md)
 

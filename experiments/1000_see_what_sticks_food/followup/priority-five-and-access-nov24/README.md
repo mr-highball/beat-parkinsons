@@ -1,0 +1,9 @@
+# Round 1 original-source and access review
+
+This checkpoint resolved 62 claim–source checks from 25 complete articles, including 50 priority-five and 12 priority-six checks. It records 46 exclusions and 16 context assessments. Three additional related assessments preserve the newly published Parkinson MCT study within the coconut-oil claim records.
+
+The November 2026 study reports separately measured fatigue and daytime sleepiness after staged diet phases using C8/C10 MCT oil. The phase effects were inconclusive, and the publication gives no assigned virgin or refined coconut oil. The scorecards for 0229, 0513 and 0598 retain Unknown. They now hold 12, four and ten study families, respectively. The study’s participant experiences are recorded separately while retaining the same lineage.
+
+All eight highest-priority access holds remain across five publications. One cited saffron animal study is now indexed at abstract depth. Round 1 has 37,429 original-source checks queued across 23,954 source identities. All 420 documented access mappings remain linked. Oracle recorded zero strict first-pass hits across 16 new source questions in this selected scope. Eleven repeat checks kept their prior records. Round 2 stays queued.
+
+[Dated research audit](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov24.md) · [Verified originals](verified-originals.tsv) · [Exact claim scopes](claim-source-scopes.tsv) · [Dispositions](dispositions.tsv) · [Assessment additions](new-assessments.tsv) · [Priority-three access](high-priority-access.tsv) · [0229 scorecard](0229-scorecard-check.json) · [0513 scorecard](0513-scorecard-check.json) · [0598 scorecard](0598-scorecard-check.json) · [Queue replay](native-replay-verification.txt) · [Oracle first pass](lookup-merge.txt) · [Search trails](search-trails.tsv)

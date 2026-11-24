@@ -1,5 +1,7 @@
 # 2015-2019
 
+[Tamegart saffron extract in a lead-toxicity model](Source-Text/2018-PMID30573341-Tamegart-Saffron-Lead-Model-Abstract.txt) · [Phillips fatigue and Epworth-related diet scope](Source-Text/2018-PMID30098269-Phillips-Diet-Adverse-Outcomes.txt)
+
 [Earlier Ayurveda review and continuing sesame reference access gap](Source-Text/2018-PMID30147009-Ayurveda-Abhyanga-Citation-Gap.txt).
 
 The [cranberry and urinary outcomes source note](Source-Text/2018-PMID33415211-Urinary-Symptoms-Cranberry-Scope.txt) keeps urinary symptoms separate from the frozen depression question. [Round 1 exposure and outcome audit](../2025-2029/Food-Experiment-Round-1-Population-Endpoints-Nov24.md)
