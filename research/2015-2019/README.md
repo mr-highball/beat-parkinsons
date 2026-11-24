@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [date-fruit case series](Source-Text/2016-PMID27186159-Date-Fruit-and-Fructose-Intolerance.txt) describes a possible abdominal pain reaction in a family with fructose intolerance. The [Omani field survey](Cultural-and-Experiential/Traditional-Practices/2016-PMID27403235-Oman-Date-Palm-and-Ginger-Uses.txt) records tonic and cooling use. [Related observations](Observations/2016-Date-Fruit-Intolerance-and-Omani-Uses.md).
+
 The [student rosemary trial](Source-Text/2017-PMID29389474-Nematolahi-Oral-Rosemary-and-Depression.txt) was first published in 2017. Its [depression outcome notes](Observations/2017-Rosemary-Capsule-and-Depression-Scope.md) identify the unresolved original arm tables and the separate 2022 trial.
 
 - [2018 cannabis-placebo and pain context check](Source-Text/2018-PMID34676323-Cannabis-Placebo-Commentary-and-Pain-Scope.txt).

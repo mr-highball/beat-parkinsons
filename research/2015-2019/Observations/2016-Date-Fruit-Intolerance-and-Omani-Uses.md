@@ -1,0 +1,3 @@
+# Date fruit intolerance and customary uses
+
+The [family series](../Source-Text/2016-PMID27186159-Date-Fruit-and-Fructose-Intolerance.txt) gives a possible date-associated abdominal pain history in one of three relatives. Fructose testing was conducted in two relatives. The outcome and family condition limit transfer to a general dried-date pain claim. The [Omani survey](../Cultural-and-Experiential/Traditional-Practices/2016-PMID27403235-Oman-Date-Palm-and-Ginger-Uses.txt) lists tonic and cooling uses and a bronchitis indication for date palm. Its stomach-ailment entry belongs to ginger. Preserve this distinction when comparing the [2014 date fruit inventory](../../2010-2014/Cultural-and-Experiential/Traditional-Practices/2014-Rivera-Date-Fruit-and-Pain-Spain.txt).

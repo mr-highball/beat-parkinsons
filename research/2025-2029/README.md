@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [experimental date pollen report](Source-Text/2026-PMID42635914-Date-Palm-Pollen-and-Colitis-Endpoints.txt) is indexed at abstract depth. Its [cross-period observation](Observations/2026-Date-Palm-Pollen-Colitis-and-Pain-Endpoints.md) separates tissue findings and human pain measures.
+
 The [sodium-benzoate retraction](Source-Text/2026-PMID41758926-Sodium-Benzoate-Brain-Injury-Retraction.txt) and [corrected article](Source-Text/2026-PMID42221706-Sodium-Benzoate-Brain-Injury-Republication.txt) share one study lineage. The [Guadalajara follow-up](Cultural-and-Experiential/Traditional-Practices/2025-PMID40941951-Guadalajara-Sage-and-Cinnamon-Followup.txt) and [lineage observations](Observations/Cinnamon-Metabolite-and-Guadalajara-Lineage.md) preserve the distinction between cultural indications and measured trial outcomes.
 
 - [Round 1 black pepper, eugenol and clinical source checks](Food-Experiment-Round-1-Black-Pepper-Eugenol-and-Clinical-Nov24.md).

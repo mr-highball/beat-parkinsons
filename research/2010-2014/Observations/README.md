@@ -1,5 +1,7 @@
 # Observations for 2010-2014
 
+- [Date palm pollen and oral pain](2014-Date-Palm-Pollen-and-Oral-Pain.md).
+
 - [Caffeine, perceived fatigue and isolated muscle outcomes](2013-Caffeine-Mood-and-Isolated-Muscle-Outcomes.md).
 
 - [Date analgesia, fruit preparation and observed outcome](2014-Date-Analgesia-and-Preparation-Scope.md).

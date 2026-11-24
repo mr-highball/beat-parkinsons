@@ -1,5 +1,7 @@
 # Observations for 2020-2024
 
+- [Date plant parts and identity in herbal inventories](2021-2023-Date-Parts-and-Polynesian-Supplement.md).
+
 - [Sage, mango and clinical evidence boundaries](2021-2024-Sage-Mango-and-Clinical-Scope.md).
 
 - [Swallow testing and spice constituents across periods](2021-Swallow-Route-and-Spice-Constituent-Boundaries.md).

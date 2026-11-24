@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+- [Pollen extract and pain endpoints](2026-Date-Palm-Pollen-Colitis-and-Pain-Endpoints.md).
+
 - [Cinnamon source lineage](Cinnamon-Metabolite-and-Guadalajara-Lineage.md).
 
 - [Mecasin pain outcomes across periods](2026-Mecasin-Pain-and-Mixed-Exposure-Boundaries.md).

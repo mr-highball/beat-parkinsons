@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The sage, mango and clinical audit resolved 79 exact scopes across 61 originals, added 19 related assessments and recorded four cultural summaries. Thirteen checked scorecards retained their verdicts. The current queue holds 35,768 checks across 22,760 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-sage-and-clinical-nov24/README.md)
+The dried-date and clinical audit resolved 82 exact scopes across 60 originals and added 22 related assessments. It documents oral pollen pain, possible adverse date fruit and seed reports, and distinct food-biomarker or ethnobotanical outcomes. The 15 checked scorecards retained their prior verdicts. The current queue holds 35,686 checks across 22,700 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-dried-date-and-clinical-nov24/README.md)
+
+The sage, mango and clinical audit resolved 79 exact scopes across 61 originals, added 19 related assessments and recorded four cultural summaries. Thirteen checked scorecards retained their verdicts. That replay left 35,768 checks across 22,760 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-sage-and-clinical-nov24/README.md)
 
 The black pepper, eugenol and clinical audit resolved 77 exact scopes across 60 originals and added 23 related assessments. It traces the original three-arm pepper oil reflex trial, separates the menthol crossover and retains conflicting eugenol endpoints. Thirteen validated scorecards retain their verdicts. That replay left 35,847 checks across 22,821 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-pepper-and-clinical-nov24/README.md)
 

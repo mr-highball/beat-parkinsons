@@ -1,0 +1,3 @@
+# Pollen extract and pain endpoints
+
+The [2026 colitis abstract](../Source-Text/2026-PMID42635914-Date-Palm-Pollen-and-Colitis-Endpoints.txt) reports inflammatory and tissue endpoints after date palm pollen extract. The [2014 oral mucositis pilot](../../2010-2014/Source-Text/2014-PMID25148841-Date-Palm-Pollen-and-Mouth-Pain.txt) gives oral pain and swallowing values after a pollen suspension during cancer treatment. Their preparations and measured conditions differ. The [2023 Zahidi study](../../2020-2024/Source-Text/2023-PMID37780309-Zahidi-Date-Flesh-and-Seed-Biomarkers.txt) includes date flesh and blood results. The remaining outcome gap is pain severity after whole dried fruit in Parkinson disease.

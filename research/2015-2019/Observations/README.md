@@ -1,5 +1,7 @@
 # Observations for 2015-2019
 
+- [Date fruit intolerance and customary uses](2016-Date-Fruit-Intolerance-and-Omani-Uses.md).
+
 - [Depression measures in the student rosemary trial](2017-Rosemary-Capsule-and-Depression-Scope.md).
 
 - [Grape motor proxies and saffron sleep citations](2018-Grape-Motor-Proxies-and-Saffron-Sleep-Citations.md).

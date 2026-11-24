@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The November 24 sage, mango and clinical audit resolved 79 checks across 61 originals. The current replay leaves 35,768 checks across 22,760 publications. [Originals and reconciled scopes](../priority-five-sage-and-clinical-nov24/README.md)
+The November 24 dried-date and clinical audit resolved 82 checks across 60 originals. The current replay leaves 35,686 checks across 22,700 publications. [Originals and reconciled scopes](../priority-five-dried-date-and-clinical-nov24/README.md)
+
+The November 24 sage, mango and clinical audit resolved 79 checks across 61 originals. That replay left 35,768 checks across 22,760 publications. [Originals and reconciled scopes](../priority-five-sage-and-clinical-nov24/README.md)
 
 The November 24 black pepper, eugenol and clinical audit resolved 77 checks across 60 originals. That replay left 35,847 checks across 22,821 publications. [Originals and reconciled scopes](../priority-five-pepper-and-clinical-nov24/README.md)
 

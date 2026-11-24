@@ -1,0 +1,5 @@
+# Date plant parts and identity in herbal inventories
+
+The [date seed case](../Source-Text/2021-PMID33959162-Date-Seed-Powder-and-Abdominal-Pain.txt) reports an acute abdominal event after seed powder use for chronic knee pain. The [Zahidi crossover](../Source-Text/2023-PMID37780309-Zahidi-Date-Flesh-and-Seed-Biomarkers.txt) distinguishes flesh from seed and reports biomarkers. The [earlier family series](../../2015-2019/Source-Text/2016-PMID27186159-Date-Fruit-and-Fructose-Intolerance.txt) instead involves date fruit of unreported drying state and a fructose-related condition. These sources leave the effect on Parkinson pain severity unresolved.
+
+In the [Polynesian survey](../Cultural-and-Experiential/Traditional-Practices/2022-Polynesian-Turmeric-Mixture-and-Premna-Uses.txt), the turmeric rhizome is a co-use for cystitis. Supplemental Table S1 describes constipation use for Premna serratifolia. This concern is independent of turmeric, nutmeg and sumac. The [earlier Marquesas record](../../2015-2019/Cultural-and-Experiential/Traditional-Practices/2016-Jost-Marquesas-Turmeric-and-Ginger-Cosmetic-Uses.txt) records different botanical practices and indications.
