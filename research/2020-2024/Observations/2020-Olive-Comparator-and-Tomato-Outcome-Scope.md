@@ -1,0 +1,5 @@
+# 2020 extra-virgin olive oil and tomato outcome scope
+
+The earlier dietary oil observations used the total PRO-PD measure and food-frequency data with grade unspecified. The ulcerative-colitis crossover now provides a grade-specific contrast on a constipation item. The registered Australian substitution study has planned anxiety and fatigue measures but no attached results. These are separate cohorts and settings. [Prior dietary oil observations](../../2015-2019/Observations/2019-Saffranal-Citation-Oil-Cohort-and-Clove-Events.md) · [Published crossover](../Source-Text/2020-PMID31901082-Morvaridi-EVOO-vs-Canola-UC-Constipation.txt) · [Original registration](../../2015-2019/Source-Text/Trials/2019-ACTRN12619000150145-COLONIC-Extra-Virgin-Olive-Oil.txt)
+
+The tomato cohort separates basic tomatoes from processed products. Its pooled estimates concern Parkinson diagnosis incidence and the interval includes no association. This endpoint does not measure the severity of rigidity in diagnosed patients. [Original cohort and Table 3](../Source-Text/2020-PMID32725131-Tomato-Food-Frequency-and-Incident-Parkinson.txt)

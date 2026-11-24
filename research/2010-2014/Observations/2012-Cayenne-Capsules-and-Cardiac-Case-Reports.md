@@ -1,0 +1,5 @@
+# 2010–2012 cayenne capsule safety reports
+
+Two emergency presentations during weight-loss pill use in 2010 involved different arrhythmias. A January 2012 patient in a separate report from the overlapping investigator group had chest pain and myocardial injury with patent coronary arteries. The later 2012 author's abstract describes a distinct myocardial infarction case. These reports add possible safety outcomes with preparation and attribution limits. [2010 cases](../Source-Text/2010-TJEM-294-Cayenne-Pill-Arrhythmia-Cases.txt) · [January 2012 case](../Source-Text/2012-PMID22264348-Cayenne-Pill-Vasospasm-and-Chest-Pain.txt) · [April 2012 case](../Source-Text/2012-PMID22527825-Cayenne-Pill-and-Myocardial-Infarction.txt)
+
+The historical pepper-aroma work used an inhaled stimulus and assessed aspiration-related care. The cayenne reports concern a different species context, concentrated oral formulation and cardiac outcomes. The comparison supports keeping ingredient, route and outcome separate. [Earlier pepper aroma report](../../2005-2009/Food-Experiment-Black-Pepper.md)

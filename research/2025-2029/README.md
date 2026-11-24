@@ -964,3 +964,5 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 - [Round 1 cinnamon, piperine and falls source audit](Food-Experiment-Round-1-Cinnamon-Piperine-and-Falls-Nov24.md)
 
 - [Round 1 saffron, dietary oil and clove source audit](Food-Experiment-Round-1-Saffron-Oil-and-Clove-Nov24.md)
+
+- [Round 1 olive oil comparator and cayenne source audit](Food-Experiment-Round-1-Olive-Comparator-and-Cayenne-Nov24.md)

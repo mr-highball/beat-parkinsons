@@ -464,3 +464,5 @@ The 2014 Deglet Nour paper gives lower mouse writhing counts for both fruit frac
 The 2014 red rice bran oil experiment showed opposite directions in separate drug-exposed and water-control groups. The later [enriched-oil study](../../2020-2024/Food-Experiment-Soybean-Rice-Bran-Oils.md#chamuangone-enriched-rice-bran-oil-and-rat-motor-assays) used a different preparation and showed an early time-point difference in the opposite direction. Timing, oil grade and the drug background are important when interpreting catalepsy as a rigidity proxy. [2014 original scope](../Source-Text/2014-Naz-Shireen-Red-Rice-Bran-Oil-Catalepsy.txt)
 
 - [Oral piperine and soybean oil outcome scope](2014-Piperine-and-Team-AD-Outcome-Scope.md)
+
+- [Cayenne weight-loss capsules and cardiac case reports](2012-Cayenne-Capsules-and-Cardiac-Case-Reports.md)
