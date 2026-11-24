@@ -204,7 +204,7 @@ jobs:
           $ErrorActionPreference = 'Stop'
           $testOut = 'build/parkinsons-oracle/ci-tests'
           New-Item -ItemType Directory -Path "$testOut/units", "$testOut/bin" -Force | Out-Null
-          foreach ($t in @('compat.tests.lpr', 'graph.tests.lpr', 'presentation.tests.lpr', 'selection.tests.lpr', 'rubric.tests.lpr', 'ingredients.tests.lpr')) {
+          foreach ($t in @('compat.tests.lpr', 'graph.tests.lpr', 'presentation.tests.lpr', 'selection.tests.lpr', 'rubric.tests.lpr', 'ingredients.tests.lpr', 'recipes.tests.lpr')) {
             & $env:FPC -Mdelphi -Sa -Cr -Co -Ci -gl `
               -Fuexperiments/tools/parkinsons-oracle `
               -Fuexperiments/tools/vendor/wfc/src `
@@ -232,7 +232,7 @@ jobs:
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
 
           $rev = (git rev-parse --verify HEAD).Trim()
-          foreach ($rel in @('index.html', '.nojekyll', 'app.js', 'rtl.js', 'oracle.css', "model/$rev/claims.json", "model/$rev/search/manifest.json", "model/$rev/search/documents.json")) {
+          foreach ($rel in @('index.html', '.nojekyll', 'app.js', 'rtl.js', 'oracle.css', 'recipes.json', "model/$rev/claims.json", "model/$rev/search/manifest.json", "model/$rev/search/documents.json")) {
             $full = Join-Path $siteDir $rel
             if (!(Test-Path -LiteralPath $full -PathType Leaf)) {
               throw "Missing required Pages file: $rel"
@@ -250,13 +250,10 @@ jobs:
           include-hidden-files: true
           retention-days: 1
 
-  deploy:
-    name: Deploy to GitHub Pages
+  package:
+    name: Package GitHub Pages artifact
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Download built site artifact
         uses: actions/download-artifact@v4
@@ -269,6 +266,7 @@ jobs:
           test -f _site/index.html
           test -f _site/.nojekyll
           test -f _site/app.js
+          test -f _site/recipes.json
           ls -la _site
 
       - name: Upload GitHub Pages artifact
@@ -276,6 +274,14 @@ jobs:
         with:
           path: _site
 
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: package
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
