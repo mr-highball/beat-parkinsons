@@ -33,3 +33,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Qualitative focus groups on functional food literacy, cooking fatigue and caregiver support in Parkinson disease and multiple sclerosis (Sauzet et al., 2026)](Personal-Reports/2026-PMID42047406-Sauzet-PD-MS-Food-Literacy-Focus-Groups.txt).
 - [Focus-group accounts of dysphagia, religious rituals and cultural food traditions in the United States (Helder et al., 2026)](Ceremonial-Accounts/2026-PMID41071416-Helder-Dysphagia-Religious-Cultural-Food-Rituals.txt).
 - [Parkinson's UK Forum query on combining turmeric, ginger and black pepper supplements with Madopar for joint pain](Conversations/2026-Parkinsons-UK-Madopar-Turmeric-Ginger-Black-Pepper-Query.txt).
+
+- [Tomato sauce mentioned in a multi-food change and stiffness discussion](Conversations/2026-Mayo-Connect-Tomato-Sauce-and-Diet-Change.txt)

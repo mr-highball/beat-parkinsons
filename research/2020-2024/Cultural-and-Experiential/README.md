@@ -66,3 +66,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Fez-Meknes Moroccan herbalist survey of traditional remedies for insomnia, asthenia and oral conditions (Beniaich et al., 2022)](Traditional-Practices/2022-PMID34031820-Beniaich-Fez-Meknes-Insomnia-Asthenia-Survey.txt).
 - [Chinese and Western traditional insomnia rationale and rat hydrosol study of Rosmarinus officinalis (Li et al., 2024)](Traditional-Practices/2024-PMID37532071-Li-Rosemary-Traditional-Insomnia-Context.txt).
 - [Parkinson's UK Forum discussion on green tea, daytime relaxation and no noticed Parkinson symptom effect](Conversations/2020-Parkinsons-UK-Green-Tea-Relaxation-and-No-Effect.txt).
+
+- [Raw tomato intake and conflicting reports of joint symptoms](Conversations/2024-Tomato-Junction-Raw-Tomato-and-Joint-Stiffness.txt)

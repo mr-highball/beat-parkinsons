@@ -934,3 +934,7 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 - [Round 1 curcumin, falls and ginger source audit](Food-Experiment-Round-1-Curcumin-Falls-Ginger-Nov24.md)
 
 - [Round 1 clinical and culinary exposure context](Food-Experiment-Round-1-Clinical-and-Food-Context-Nov24.md)
+
+- [Round 1 food exposure, diagnosis and movement outcomes](Food-Experiment-Round-1-Food-Risk-and-Falls-Nov24.md)
+
+- [Tomato sauce mentioned in a multi-food change and stiffness discussion](Cultural-and-Experiential/Conversations/2026-Mayo-Connect-Tomato-Sauce-and-Diet-Change.txt)

@@ -708,3 +708,5 @@ Two Persian posts share a recommendation to eat figs in a wider regimen. The ear
 - [Visual hallucination outcomes and recorded dietary exposure](Visual-Hallucination-Outcome-and-Dietary-Exposure.md).
 
 - [Diet records and visual hallucination outcome gaps](Diet-Records-and-Visual-Hallucination-Outcome-Gaps.md).
+
+- [Raw tomato intake and conflicting reports of joint symptoms](../Cultural-and-Experiential/Conversations/2024-Tomato-Junction-Raw-Tomato-and-Joint-Stiffness.txt)
