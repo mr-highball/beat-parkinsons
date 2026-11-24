@@ -189,7 +189,7 @@ body { margin: 0; }
   background: #fae9e7;
   border: 1px solid #e7b9b3;
 }
-#oracle [data-node^="hypothesis-"], #oracle [data-node="claim-statement"] {
+#oracle [data-node^="hypothesis-"]:not([data-node^="hypothesis-box-"]):not([data-node^="hypothesis-info-"]), #oracle [data-node="claim-statement"] {
   line-height: 1.45;
   font-weight: 550;
 }
@@ -1245,7 +1245,7 @@ body {
   mask: var(--glyph-preparation) center / contain no-repeat;
 }
 #oracle [data-node^="claim-identity-"]:not([data-node^="claim-identity-text-"]) {
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: .75rem;
   width: 100%;
@@ -1256,11 +1256,20 @@ body {
   overflow-wrap: anywhere;
 }
 #oracle [data-node^="claim-identity-text-"] [data-node^="ingredient-"] { margin: 0; }
-#oracle button[data-node^="claim-photo-"] {
+#oracle [data-node^="claim-media-"] {
   margin-inline-start: auto;
   flex: 0 0 auto;
   width: 3.75rem;
+  align-items: stretch;
+  gap: .32rem;
+  padding: 0;
+  background: transparent;
+}
+#oracle button[data-node^="claim-photo-"] {
+  flex: 0 0 auto;
+  width: 3.75rem;
   height: 3.75rem;
+  min-height: 3.75rem;
   padding: 0;
   border: 1px solid #c5d0c2;
   border-radius: .65rem;
@@ -1270,6 +1279,112 @@ body {
   cursor: zoom-in;
 }
 #oracle button[data-node^="claim-photo-"][aria-expanded="true"] { cursor: zoom-out; }
+#oracle button[data-node^="claim-tip-"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .24rem;
+  width: 3.75rem;
+  min-height: 1.85rem;
+  padding: .22rem .3rem;
+  border: 1px solid #c5d6c7;
+  border-radius: .46rem;
+  background: #edf4ea;
+  color: var(--forest);
+  font-size: .74rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: background-color .14s ease, border-color .14s ease;
+}
+#oracle button[data-node^="claim-tip-"]::before {
+  content: "i";
+  display: inline-grid;
+  place-items: center;
+  width: 1.15em;
+  height: 1.15em;
+  border: 1.25px solid currentColor;
+  border-radius: 100%;
+  font-size: .72rem;
+  font-weight: 750;
+  line-height: 1;
+  flex: none;
+}
+#oracle button[data-node^="claim-tip-"]:hover,
+#oracle button[data-node^="claim-tip-"][aria-expanded="true"] {
+  background: #dfeee2;
+  border-color: #8eb29a;
+}
+#oracle [data-node^="hypothesis-box-"],
+#oracle [data-node="claim-question-box"] {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start;
+  gap: .58rem;
+  padding: .56rem .78rem;
+  margin: .1rem 0;
+  border: 1px solid #d5e2d7;
+  border-left: 3px solid #6b967c;
+  border-radius: .55rem;
+  background: #f5f9f5;
+  width: 100%;
+  cursor: help;
+  transition: background-color .15s ease, border-color .15s ease;
+}
+#oracle [data-node="claim-question-box"] {
+  margin: .6rem 0;
+}
+#oracle [data-node^="hypothesis-box-"]:hover,
+#oracle [data-node="claim-question-box"]:hover {
+  background: #edf5ef;
+  border-color: #b7ceb9;
+}
+#oracle button[data-node^="hypothesis-info-"],
+#oracle button[data-node="claim-question-info"] {
+  flex: 0 0 1.45rem !important;
+  display: inline-grid;
+  place-items: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  min-width: 1.45rem;
+  min-height: 1.45rem;
+  margin-top: .08rem;
+  padding: 0;
+  border: 1.5px solid #558068;
+  border-radius: 999px;
+  background: #e4f0e7;
+  color: var(--forest);
+  font-size: .82rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: help;
+  transition: background-color .14s ease, color .14s ease, border-color .14s ease;
+}
+#oracle button[data-node^="hypothesis-info-"]:hover,
+#oracle button[data-node^="hypothesis-info-"][aria-expanded="true"],
+#oracle button[data-node="claim-question-info"]:hover,
+#oracle button[data-node="claim-question-info"][aria-expanded="true"] {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: #fff;
+}
+#oracle [data-node^="hypothesis-box-"] [data-node^="hypothesis-"]:not([data-node^="hypothesis-info-"]) {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: #1f3c2e;
+  font-size: .95rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+#oracle [data-node="claim-question-box"] [data-node="claim-question"] {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  color: #1c3a2c;
+  font-size: 1.08rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
 
 #oracle [data-node^="match-"] {
   gap: .65rem;
@@ -2839,7 +2954,118 @@ body[data-oracle-recipe-page="true"] {
   }
 }
 
+/* Floating info popovers (shopping tips & research-question explanations) */
+.oracle-floating-popover {
+  position: fixed;
+  z-index: 260;
+  width: max-content;
+  max-width: min(21rem, calc(100vw - 24px));
+  padding: .72rem .88rem .78rem;
+  border: 1px solid #b6cbb9;
+  border-radius: .72rem;
+  background: #fcfef9;
+  color: #1d3228;
+  box-shadow: 0 12px 30px rgba(16, 39, 28, .2), 0 2px 6px rgba(16, 39, 28, .08);
+  font-family: Inter, system-ui, sans-serif;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .18s ease, transform .18s ease;
+}
+.oracle-floating-popover[hidden] {
+  display: none !important;
+}
+.oracle-floating-popover[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+.oracle-floating-popover[data-fading="true"] {
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.oracle-floating-popover[data-kind="question"] {
+  border-color: #b4cbb8;
+  background: #f8fcf8;
+}
+.oracle-floating-popover-arrow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: inherit;
+  border-left: 1px solid #b6cbb9;
+  border-top: 1px solid #b6cbb9;
+  margin-left: -5px;
+  pointer-events: none;
+}
+.oracle-floating-popover[data-placement="bottom"] .oracle-floating-popover-arrow {
+  top: -6px;
+  transform: rotate(45deg);
+}
+.oracle-floating-popover[data-placement="top"] .oracle-floating-popover-arrow {
+  bottom: -6px;
+  transform: rotate(225deg);
+}
+.oracle-floating-popover-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .6rem;
+  margin-bottom: .32rem;
+}
+.oracle-floating-popover-title {
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .01em;
+  color: var(--forest);
+}
+.oracle-floating-popover-close {
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: .38rem;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+.oracle-floating-popover-close:hover {
+  background: #eaf2eb;
+  color: var(--forest);
+}
+.oracle-floating-popover-close:focus-visible,
+.oracle-floating-popover-source:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.oracle-floating-popover-body {
+  margin: 0;
+  font-size: .86rem;
+  line-height: 1.5;
+  color: #253b30;
+}
+.oracle-floating-popover-source {
+  display: inline-block;
+  margin-top: .42rem;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: .16em;
+}
+.oracle-floating-popover-source[hidden] {
+  display: none !important;
+}
+
 @media print {
+  .oracle-floating-popover {
+    display: none !important;
+  }
   body[data-oracle-recipe-page="true"],
   #oracle[data-oracle-recipe-page="true"] {
     background: #fff !important;

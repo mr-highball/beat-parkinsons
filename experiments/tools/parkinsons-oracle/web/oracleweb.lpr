@@ -9,7 +9,7 @@ uses
   SysUtils, StrUtils, Types, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
   oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation,
   parkinsonsoracle.selection, parkinsonsoracle.graph, oraclemulti, oraclegraph,
-  oraclegraphmodel, oraclegallery, oraclerecipes, oraclerecipepage;
+  oraclegraphmodel, oraclegallery, oraclepopover, oraclerecipes, oraclerecipepage;
 
 type
   TOracleView = (ovClaims, ovCatalog);
@@ -376,6 +376,7 @@ procedure PublishResults(ADocument: TNyxDocument; APage: TNyxNode);
 var
   LPrior: TNyxDocument;
 begin
+  HideFloatingPopover;
   if GGraph <> nil then
   begin
     GGraph.Detach;
@@ -888,6 +889,7 @@ begin
       LPage: TNyxNode;
       LCard: TNyxNode;
       LActions: TNyxNode;
+      LQuestionBox: TNyxNode;
       LGroups: array[0..2] of TNyxNode;
       LCounts: array[0..2] of Integer;
       LGroup: Integer;
@@ -932,7 +934,11 @@ begin
       LPage.Add(Caption(nkLabel, 'claim-symptom', FriendlySymptom(TextOf(AData, 'symptom'))));
       LPage.Add(ClaimIndicators(AData, 'detail'));
       AddIngredientGallery(LPage, TextOf(AData, 'ingredient'));
-      LPage.Add(Caption(nkLabel, 'claim-question', ResearchQuestion(AData)));
+      LQuestionBox := Section(nkRow, 'claim-question-box');
+      LQuestionBox.Add(Button('claim-question-info', '?', nvSecondary)
+        .Configure.AccessibleName('What is this research question?').Done);
+      LQuestionBox.Add(Caption(nkLabel, 'claim-question', ResearchQuestion(AData)));
+      LPage.Add(LQuestionBox);
       LConfidence := TextOf(AData, 'confidence');
       LResearchStatus := TextOf(AData, 'research_status');
       LPage.Add(Caption(nkLabel, 'claim-confidence',
@@ -1054,6 +1060,9 @@ begin
 
       PublishResults(LDocument, LPage);
       BindIngredientGallery(GResultsRenderer, TextOf(AData, 'ingredient'));
+      BindQuestionPopover(
+        GResultsRenderer.ElementFor('claim-question-box'),
+        GResultsRenderer.ElementFor('claim-question-info'));
       GResultsRenderer.ElementFor('claim-audit-panel').id := 'claim-audit-panel';
       GResultsRenderer.ElementFor('claim-audit-panel').setAttribute('hidden', '');
       GResultsRenderer.ElementFor('claim-audit-toggle').setAttribute('aria-controls', 'claim-audit-panel');
@@ -2175,6 +2184,7 @@ end;
 procedure BindSearchGallery(const ATag, AIngredient: String);
 var
   LURL: String;
+  LTipText: String;
   LThumb: TJSHTMLElement;
   LPanel: TJSHTMLElement;
   LKey: String;
@@ -2206,6 +2216,14 @@ begin
       LThumb.setAttribute('aria-expanded', LowerCase(BoolToStr(not LPanel.hidden, True)));
       Result := True;
     end);
+  LTipText := IngredientTipText(AIngredient);
+  if LTipText <> '' then
+    BindShoppingTipPopover(
+      GResultsRenderer.ElementFor('claim-tip-' + ATag),
+      AIngredient,
+      LTipText,
+      IngredientTipSource(AIngredient),
+      IngredientTipURL(AIngredient));
 end;
 
 procedure RenderRelated(AFocus: Boolean);
@@ -2334,6 +2352,8 @@ var
   LCardActions: TNyxNode;
   LIdentity: TNyxNode;
   LIdentityText: TNyxNode;
+  LMedia: TNyxNode;
+  LQuestionBox: TNyxNode;
   LResultActions: TNyxNode;
   LPaging: TNyxNode;
   LRecords: TJSArray;
@@ -2482,11 +2502,22 @@ begin
           FriendlySymptom(TextOf(LRow, 'symptom'))));
       LIdentity.Add(LIdentityText);
       if HasIngredientGallery(LIngredient) then
-        LIdentity.Add(Button('claim-photo-' + LTag, '', nvSecondary)
+      begin
+        LMedia := Section(nkColumn, 'claim-media-' + LTag);
+        LMedia.Add(Button('claim-photo-' + LTag, '', nvSecondary)
           .Configure.AccessibleName('View photos of ' + LIngredient).Done);
+        if IngredientTipText(LIngredient) <> '' then
+          LMedia.Add(Button('claim-tip-' + LTag, 'Tip', nvSecondary)
+            .Configure.AccessibleName('Shopping tip for ' + LIngredient).Done);
+        LIdentity.Add(LMedia);
+      end;
       LCard.Add(LIdentity);
       AddIngredientGallery(LCard, LIngredient, '-search-' + LTag);
-      LCard.Add(Caption(nkLabel, 'hypothesis-' + LTag, ResearchQuestion(LRow)));
+      LQuestionBox := Section(nkRow, 'hypothesis-box-' + LTag);
+      LQuestionBox.Add(Button('hypothesis-info-' + LTag, '?', nvSecondary)
+        .Configure.AccessibleName('What is this research question?').Done);
+      LQuestionBox.Add(Caption(nkLabel, 'hypothesis-' + LTag, ResearchQuestion(LRow)));
+      LCard.Add(LQuestionBox);
       if TextOf(LRow, 'rationale') <> '' then
         LCard.Add(Caption(nkLabel, 'rationale-' + LTag, TextOf(LRow, 'rationale')));
 
@@ -2534,7 +2565,13 @@ begin
   end;
   if GView = ovClaims then
     for LIndex := 0 to LRecords.Length - 1 do
-      BindSearchGallery(IntToStr(LIndex), TextOf(TJSObject(LRecords[LIndex]), 'ingredient'));
+    begin
+      LTag := IntToStr(LIndex);
+      BindSearchGallery(LTag, TextOf(TJSObject(LRecords[LIndex]), 'ingredient'));
+      BindQuestionPopover(
+        GResultsRenderer.ElementFor('hypothesis-box-' + LTag),
+        GResultsRenderer.ElementFor('hypothesis-info-' + LTag));
+    end;
   if (GView = ovClaims) and not LTrendOnly then
   begin
     BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',

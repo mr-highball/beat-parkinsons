@@ -3,7 +3,7 @@
 > **Explore the live interactive research app & recipes:**
 > **[https://mr-highball.github.io/beat-parkinsons/](https://mr-highball.github.io/beat-parkinsons/)**
 >
-> *No installation required—search Parkinson’s symptoms and foods, inspect primary studies and historical/cultural records, explore the interactive connection graph, and browse 1,100+ low-to-medium effort recipes directly in your browser.*
+> *No installation required—search Parkinson’s symptoms and foods, inspect primary studies and historical/cultural records, explore the interactive connection graph, and browse 2,200 low-to-medium effort recipes directly in your browser.*
 
 Beat Parkinson’s is an **open-source, research-first effort** to collect, organize, verify, and publish disparate Parkinson’s research across centuries—giving people living with Parkinson’s disease, caregivers, clinicians, and researchers transparent access to primary evidence, unresolved gaps, and practical kitchen resources.
 
@@ -29,7 +29,7 @@ This repository takes a **research-first, audit-friendly approach**:
    - Across **7 rounds**, the food experiment generated **6,930 frozen claims** pairing **210 canonical ingredients** with **33 Parkinson’s symptoms** before looking up literature, pinning each freeze with a SHA-256 hash.
    - Every graded claim follows the versioned [evidence scorecard](experiments/1000_see_what_sticks_food/EVIDENCE-SCORECARD.md), linking exact study keys, preparations, competing evidence, and rationales.
 4. **Practical resources for daily life:**
-   - All **44 positive-lean ("May ease") ingredients** are backed by **1,100 low-to-medium effort recipes** (25 per ingredient across Breakfast, Lunch, Dinner, Smoothies, and Juices—with protein-appropriate splits for chicken and salmon) in [1000_see_what_sticks_food_all_recipes](experiments/1000_see_what_sticks_food_all_recipes/README.md).
+   - All **44 positive-lean ("May ease") ingredients** are backed by **2,200 low-to-medium effort recipes** (50 per ingredient across Breakfast, Lunch, Dinner, Smoothies, and Juices—with protein-appropriate splits for chicken and salmon, emphasizing overlapping easing-lean ingredient synergies) in [1000_see_what_sticks_food_all_recipes](experiments/1000_see_what_sticks_food_all_recipes/README.md).
    - Supplemental ingredients on recipe cards are color-coded with directional research indicators and link directly to their underlying research in a new tab, and every recipe opens as a scalable, printable cooking sheet.
 
 ---
@@ -188,7 +188,7 @@ beat-parkinsons/
 ├── experiments/
 │   ├── 1000_see_what_sticks_food/                   # Round 1 frozen claims, scorecard & follow-up ledgers
 │   ├── 1000_see_what_sticks_food_round_2..7/        # Rounds 2–7 frozen claims & ledgers (6,930 total)
-│   ├── 1000_see_what_sticks_food_all_recipes/       # Shared recipe store (1,100 recipes across 44 ingredients)
+│   ├── 1000_see_what_sticks_food_all_recipes/       # Shared recipe store (2,200 recipes across 44 ingredients)
 │   ├── oracle-coverage/                             # First-pass Oracle lookup hit-rate ledger
 │   └── tools/
 │       ├── parkinsons-oracle/                       # MCP server, WFC models, tests & Nyx web app

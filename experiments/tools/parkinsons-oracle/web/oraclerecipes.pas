@@ -99,7 +99,7 @@ uses
   StrUtils, Math, nyx.hostspace, oraclestatic, parkinsonsoracle.presentation;
 
 const
-  CCollapseLimits: array[0..3] of Integer = (5, 10, 15, 25);
+  CCollapseLimits: array[0..4] of Integer = (5, 10, 15, 25, 50);
 
 function EncodeURIComponent(const AText: String): String; external name 'encodeURIComponent';
 
@@ -839,7 +839,7 @@ begin
   LControls.Add(MakeNode(nkSelect, 'recipes-limit')
     .Configure.Text('Recipes shown')
     .AccessibleName('Number of recipes shown')
-    .Items('5 recipes'#10'10 recipes'#10'15 recipes'#10'25 recipes')
+    .Items('5 recipes'#10'10 recipes'#10'15 recipes'#10'25 recipes'#10'50 recipes')
     .Value('10 recipes').Done);
   LControls.Add(MakeButton('recipes-shuffle', 'Show different ideas', nvSecondary));
   LSidebar.Add(LControls);
