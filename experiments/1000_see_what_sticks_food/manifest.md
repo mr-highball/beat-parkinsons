@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The ingredient endpoint review resolved 58 exact checks from 24 complete original articles and added 16 related source assessments. The 0146 and 0962 cinnamon scorecards retain Unknown while separately recording animal timing tasks, passive rigidity and the human case diaries. Round 1 now has 37,645 source checks queued. All 420 documented access gaps remain locatable. [Originals and cinnamon scorecards](followup/priority-five-ingredient-endpoints-nov23/README.md)
+The exposure, population and outcome review resolved 75 exact checks from 28 original articles and added 33 contextual assessments. It distinguishes grouped cinnamon and ginger extract findings from each single-extract result and preserves an early Parkinson interview about coffee and morning slowness separately from fatigue. Round 1 has 37,570 source checks queued. The 420 mapped access gaps and current verdicts carry forward. [Original scopes and evidence boundaries](followup/priority-five-population-endpoints-nov24/README.md)
+
+The ingredient endpoint review resolved 58 exact checks from 24 complete original articles and added 16 related source assessments. The 0146 and 0962 cinnamon scorecards retain Unknown while separately recording animal timing tasks, passive rigidity and the human case diaries. That checkpoint left 37,645 source checks queued. All 420 documented access gaps remain locatable. [Originals and cinnamon scorecards](followup/priority-five-ingredient-endpoints-nov23/README.md)
 
 The primary endpoint review resolved 39 exact original-source checks across 16 publications. That checkpoint held 37,703 checks across 24,060 sources and 420 mapped access gaps. The ground-turmeric bradykinesia scorecard separates ten families and records an opposing walking-speed comparison in older adults outside Parkinson disease. The overall direction remains a minimal easing signal. [Source and scorecard audit](followup/priority-five-primary-endpoints-nov23/README.md)
 

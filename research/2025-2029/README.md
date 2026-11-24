@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [November 24 Round 1 audit](Food-Experiment-Round-1-Population-Endpoints-Nov24.md) links 75 original-source checks and identifies the remaining exposure, population and outcome gaps.
+
 The [Round 1 ingredient endpoint audit](Food-Experiment-Round-1-Ingredient-Endpoints-Nov23.md) links the dated originals and the claim-level preparation, population and outcome checks.
 
 The [Round 1 primary endpoint audit](Food-Experiment-Round-1-Primary-Endpoints-Nov23.md) records clinical, animal and biochemical comparisons with exact exposure boundaries.
