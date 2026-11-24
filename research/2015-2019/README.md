@@ -883,3 +883,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [PMID:30559636, original source scope](Source-Text/2018-PMID30559636-Vibration-Review-Sage-Date-Collisions.txt)
 
 See the [Round 1 tea, constipation and original-source review](../2025-2029/Food-Experiment-Round-1-Tea-Constipation-Nov24.md) for the dated source records and scope notes.
+
+- [Round 1 shift-work and grape original-source audit](../2025-2029/Food-Experiment-Round-1-Shiftwork-Grape-Nov24.md)

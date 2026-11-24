@@ -269,3 +269,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [PMID:14615078 · claim 0370 · abstract](Source-Text/2004-PMID14615078-Priority-Four-Original-Scope.txt).
 - [PMID:14978684 · claim 0178 · full text](Source-Text/2004-PMID14978684-Familial-Parkinson-Dystonia-Access.txt).
 - [PMID:15282366 · claim 0305 · abstract](Source-Text/2004-PMID15282366-Priority-Four-Original-Scope.txt).
+
+- [Round 1 shift-work and grape original-source audit](../2025-2029/Food-Experiment-Round-1-Shiftwork-Grape-Nov24.md)
