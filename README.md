@@ -212,3 +212,9 @@ Before opening a pull request:
 1. Run all portability unit tests (`./scripts/bootstrap.ps1 -RunTests` or `./scripts/bootstrap.sh --run-tests`).
 2. Keep temporary outputs inside ignored `build/` directories.
 3. Verify that no personal identifiers, private IPs, or local machine paths appear in tracked files or commit history.
+
+---
+
+## License
+
+This project is released under the [MIT License](LICENSE) (`Copyright (c) 2026 mr-highball`). Third-party archived publications and linked external studies retain their respective original licenses and attributions documented in each file’s provenance header.
