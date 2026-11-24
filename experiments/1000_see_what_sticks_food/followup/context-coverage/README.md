@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 24 caffeine, anxiety and mobility review resolved 41 exact scopes across 30 complete originals. The queue holds 36,862 pairs across 23,570 publications. [Original source and clinical endpoint scope](../priority-five-anxiety-and-motor-nov24/README.md)
+
 The November 24 vitamin D, botanical and extract review resolved 49 exact scopes across 30 complete originals. The queue holds 36,903 pairs across 23,600 publications. [Exposure, endpoint and original source scope](../priority-five-vitamin-and-botanical-nov24/README.md)
 
 The November 24 food exposure and outcome review resolved 39 exact scopes across 30 publications. The queue now holds 36,952 pairs across 23,630 identities. [Diagnosis, exposure and outcome scope](../priority-five-food-risk-and-falls-nov24/README.md)
@@ -28,12 +30,12 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 23,990 |
+| Local body or other primary-source context | 24,031 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 35 |
 | Pending or access-only disposition | 383 |
-| No imported exact review | 36,485 |
+| No imported exact review | 36,444 |
 | **Total** | **61,252** |
 
 The exact queue includes 401 explicit pending or access-only pairs. Eighteen also retain a stronger imported title or index review in the table above, which reports the strongest recorded review across layers. All 401 have dated local source texts in the [known original access index](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md).

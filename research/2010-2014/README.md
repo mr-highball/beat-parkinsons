@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [caffeine, anxiety and mobility audit](../2025-2029/Food-Experiment-Round-1-Anxiety-and-Motor-Nov24.md) links 30 complete research originals, the [green tea leaf monograph](Cultural-and-Experiential/Traditional-Practices/2014-EMA-Green-Tea-Leaf-Fatigue.txt) and [period observations](Observations/2014-Green-Tea-Fatigue-Tradition-and-Clinical-Endpoints.md).
+
 The [Round 1 vitamin D, botanical and extract audit](../2025-2029/Food-Experiment-Round-1-Vitamin-and-Botanical-Nov24.md) links 30 complete originals, the [sesamol memory article](Source-Text/2010-PMID20102363-Sesamol-Maze-Memory-Scope.txt), and the [green tea extract fibroid trial](Source-Text/2013-PMID23950663-Roshdy-Green-Tea-Extract-Fibroid-Scope.txt).
 
 [Dietary olive oil and rotarod coordination in ageing mice](Source-Text/2012-PMID22950431-Pitozzi-Dietary-Olive-Oil-and-Coordination.txt).

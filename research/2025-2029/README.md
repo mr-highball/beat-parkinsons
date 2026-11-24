@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [caffeine, anxiety and mobility audit](Food-Experiment-Round-1-Anxiety-and-Motor-Nov24.md) traces the green tea leaf tradition and cited trials while resolving 41 exact original-source scopes.
+
 The [vitamin D, botanical models and clinical extracts audit](Food-Experiment-Round-1-Vitamin-and-Botanical-Nov24.md) resolves 49 exact scopes. The [sesame oil biomarker companion](Source-Text/2025-Atefi-Oil-Use-Factual-Extract.txt) documents the registered cohort and participant flow.
 
 The [November 24 dementia and caffeine audit](Food-Experiment-Round-1-Dementia-Caffeine-Nov24.md) includes the [2025 caffeine-addition study](Source-Text/2025-PMID39897922-Lesar-Coffee-and-Arousal.txt) and rechecks the [coffee and fatigue conversation](Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-Tea-Energy-and-Tremor.txt).

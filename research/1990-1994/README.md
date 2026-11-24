@@ -1,5 +1,7 @@
 # 1990-1994
 
+The [caffeine alertness trial](Source-Text/1990-PMID2296626-Caffeine-Alertness-and-Fatigue-Boundary.txt) separates objective sleep latency and vigilance from fatigue at author-abstract depth.
+
 The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Dementia-Caffeine-Nov24.md) checked 1 publications from this period. [PMID 1515348](Source-Text/1992-PMID1515348-Styrene-Exposure-and-Neurochemical-Markers.txt).
 
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.

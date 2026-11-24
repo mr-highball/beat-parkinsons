@@ -1,5 +1,7 @@
 # 1985-1989
 
+The [caffeine tiredness crossover](Source-Text/1986-PMID3741730-Bruce-Caffeine-Tiredness-Crossover.txt) reports a nine-person isolated-caffeine comparison after abstinence.
+
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
 
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.

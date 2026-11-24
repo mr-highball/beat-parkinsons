@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2010-2014
 
+- [European green tea leaf monograph for fatigue and perceived weakness](Traditional-Practices/2014-EMA-Green-Tea-Leaf-Fatigue.txt). The infusion and powdered leaf indication is recorded under traditional use.
+
 - [Figs and subjective dry mouth in a Persian medicine review](Traditional-Practices/2014-Persian-Review-Fig-and-Dry-Mouth.txt). The source points to a 2009 guide and leaves the original preparation and saliva response unmeasured.
 
 - [Bougainville reports of ginger use for abdominal pain and constipation](Traditional-Practices/2011-Bougainville-Ginger-Abdominal-Pain-and-Constipation.txt). The survey groups these indications in a typhoid context.
