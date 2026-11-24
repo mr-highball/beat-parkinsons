@@ -1,5 +1,11 @@
 # 2010-2014
 
+- [Cropley et al. coffee formulations and short-term mental fatigue](Source-Text/2011-PMID21773723-Coffee-Formulations-and-Acute-Mental-Fatigue.txt).
+- [Feduccia et al. isolated theacrine and rat locomotor activity](Source-Text/2012-PMID22579816-Isolated-Theacrine-and-Rat-Locomotion.txt).
+- [Purushothuman et al. saffron pretreatment and dopaminergic-cell counts in a mouse model](Source-Text/2013-PMID23938314-Saffron-and-Dopaminergic-Cell-Counts.txt).
+- [Habowski et al. P49 isolated theacrine pilot and acute fatigue](Source-Text/2014-PMC4271659-P49-Theacrine-Pilot-and-Fatigue.txt).
+
+
 - [Wild-grape amurensin G and rotenone cell injury](Source-Text/2013-PMID23485458-Wild-Grape-Amurensin-and-Rotenone-Cells.txt).
 - [Clinical features with Parkinson and supranuclear palsy pathology](Source-Text/2014-PMID30363831-Parkinson-with-Progressive-Supranuclear-Palsy-Pathology.txt).
 

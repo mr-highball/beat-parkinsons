@@ -1,5 +1,8 @@
 # 2000-2004
 
+- [Bradbury et al. olive-oil control and perceived stress](Source-Text/2004-PMID15566625-Olive-Oil-Control-and-Perceived-Stress.txt).
+
+
 - [Caffeine and isolated muscle power during recovery from fatigue](Source-Text/2003-PMID14506097-Caffeine-and-Isolated-Muscle-Fatigue-Recovery.txt).
 
 - [Corn oil as a shared carrier in carotenoid and monocyte studies](Source-Text/2000-PMID10944479-Corn-Oil-Carrier-and-Monocytes.txt).

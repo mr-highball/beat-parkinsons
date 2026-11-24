@@ -1,5 +1,15 @@
 # 2015-2019
 
+- [Cross-period theacrine fatigue observations](Observations/2018-Theacrine-Fatigue-Source-Lineage.md).
+
+- [Taylor et al. eight-week isolated theacrine safety trial and secondary fatigue outcome](Source-Text/2016-PMID26766930-Theacrine-and-Eight-Week-Fatigue.txt).
+- [Ziegenfuss et al. isolated theacrine acute fatigue and open-label extension](Source-Text/2016-PMID27164220-Theacrine-Pilot-Fatigue-Full-Report.txt).
+- [Butawan et al. P36 single-dose theacrine and caffeine abstract](Source-Text/2017-ISSN-P36-Theacrine-Caffeine-and-Subjective-Feelings.txt).
+- [Bloomer et al. single-dose theacrine and caffeine crossover full report](Source-Text/2018-DOI100034-Theacrine-Caffeine-Crossover-Full-Report.txt).
+- [US20180104248A1 theacrine–caffeine patent and pilot lineage](Source-Text/2018-US20180104248A1-Theacrine-Caffeine-Patent-Fatigue-Lineage.txt).
+- [US20190374546A1 theacrine–caffeine continuation and repeated fatigue data](Source-Text/2019-US20190374546A1-Theacrine-Caffeine-Continuation-and-Fatigue.txt).
+
+
 - [Grape motor, saffron sleep and related clinical original checks](../2025-2029/Food-Experiment-Round-1-Grape-Motor-and-Saffron-Sleep-Nov24.md).
 - [The saffron toxicology table and its petal-trial source](Source-Text/2017-PMID28293386-Saffron-Toxicity-and-Petal-Insomnia-Table.txt).
 
