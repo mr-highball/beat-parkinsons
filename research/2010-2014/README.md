@@ -1,5 +1,7 @@
 # 2010-2014
 
+- [High-oleic sunflower oil in both arms of a combined-diet experiment](Source-Text/2012-PMID22662127-Combined-Oil-Diet-and-Mouse-Memory.txt).
+
 The [date-palm pollen pilot](Source-Text/2014-PMID25148841-Date-Palm-Pollen-and-Mouth-Pain.txt) gives a treatment-related oral pain contrast. The [cross-period observation](Observations/2014-Date-Palm-Pollen-and-Oral-Pain.md) compares the evidence by plant part and endpoint.
 
 - [Banji et al. green tea extract in a developmental experimental model](Source-Text/2011-PMID21820650-Banji-Green-Tea-Extract-and-Behavioral-Endpoints.txt).

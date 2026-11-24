@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [fig, tomato and clinical audit](Food-Experiment-Round-1-Fig-Tomato-and-Clinical-Nov24.md) maps verified originals, one PDF access hold and [cross-period observations](Observations/2022-Fig-Homographs-and-Culinary-Exposure-Boundaries.md).
+
 The [dried-date and clinical audit](Food-Experiment-Round-1-Dried-Date-and-Clinical-Nov24.md) maps the inspected study originals and [related observations](Observations/2021-2023-Date-Parts-and-Polynesian-Supplement.md). It links the [Polynesian use inventory](Cultural-and-Experiential/Traditional-Practices/2022-Polynesian-Turmeric-Mixture-and-Premna-Uses.txt) with the supplemental constipation plant identity.
 
 The [sage, mango and clinical audit](Food-Experiment-Round-1-Sage-Mango-and-Clinical-Nov24.md) links its original sources, including [the Lagos survey](Cultural-and-Experiential/Traditional-Practices/2022-Lagos-Mango-Use-and-Sleep-Scope.txt), [Guadalajara field inventory](Cultural-and-Experiential/Traditional-Practices/2024-Guadalajara-Sage-Cinnamon-and-Rosemary-Field-Inventory.txt) and [cross-period observations](Observations/2021-2024-Sage-Mango-and-Clinical-Scope.md).

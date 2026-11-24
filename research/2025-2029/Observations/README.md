@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+- [Chitrakoot fig fruit and constipation](2026-Chitrakoot-Fig-Constipation-and-Tremor-Scope.md).
+
 - [Pollen extract and pain endpoints](2026-Date-Palm-Pollen-Colitis-and-Pain-Endpoints.md).
 
 - [Cinnamon source lineage](Cinnamon-Metabolite-and-Guadalajara-Lineage.md).

@@ -1,5 +1,7 @@
 # Observations for 2010-2014
 
+- [Sunflower oil in combined diets](2012-Sunflower-Oil-in-Combined-Diets.md).
+
 - [Date palm pollen and oral pain](2014-Date-Palm-Pollen-and-Oral-Pain.md).
 
 - [Caffeine, perceived fatigue and isolated muscle outcomes](2013-Caffeine-Mood-and-Isolated-Muscle-Outcomes.md).

@@ -1,6 +1,8 @@
 ## Findings and limits
 
-The dried-date and clinical audit resolved 82 exact scopes across 60 originals and added 22 related assessments. It documents oral pollen pain, possible adverse date fruit and seed reports, and distinct food-biomarker or ethnobotanical outcomes. The 15 checked scorecards retained their prior verdicts. The current queue holds 35,686 checks across 22,700 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-dried-date-and-clinical-nov24/README.md)
+The fig, tomato and clinical audit resolved 72 of 73 exact checks and validated 13 scorecards at existing verdicts. The raw fig rest tremor claim remains open. A new fig-fruit field record documents customary constipation use. The current queue holds 35,614 exact checks across 22,641 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-fig-tomato-and-clinical-nov24/README.md)
+
+The dried-date and clinical audit resolved 82 exact scopes across 60 originals and added 22 related assessments. It documents oral pollen pain, possible adverse date fruit and seed reports, and distinct food-biomarker or ethnobotanical outcomes. The 15 checked scorecards retained their prior verdicts. That replay left 35,686 checks across 22,700 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-dried-date-and-clinical-nov24/README.md)
 
 The sage, mango and clinical audit resolved 79 exact scopes across 61 originals, added 19 related assessments and recorded four cultural summaries. Thirteen checked scorecards retained their verdicts. That replay left 35,768 checks across 22,760 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-sage-and-clinical-nov24/README.md)
 
