@@ -1,0 +1,5 @@
+# Cinnamon source lineage
+
+The [retraction notice](../Source-Text/2026-PMID41758926-Sodium-Benzoate-Brain-Injury-Retraction.txt) and [corrected paper](../Source-Text/2026-PMID42221706-Sodium-Benzoate-Brain-Injury-Republication.txt) refer to the same mouse traumatic-brain-injury data lineage first published in the 2020–2024 bucket. The corrected behavioral readouts concern locomotion, memory and depression-like behaviors. Keep this lineage distinct from the other sodium-benzoate Parkinson-model experiment and its own figure correction.
+
+The [Guadalajara follow-up](../Cultural-and-Experiential/Traditional-Practices/2025-PMID40941951-Guadalajara-Sage-and-Cinnamon-Followup.txt) cites the [earlier field survey](../../2020-2024/Cultural-and-Experiential/Traditional-Practices/2024-Guadalajara-Sage-Cinnamon-and-Rosemary-Field-Inventory.txt). Western psychiatric scales and the local terms for distress describe different clinical and cultural contexts. The companion paper broadens the context without adding an independent local participant sample.

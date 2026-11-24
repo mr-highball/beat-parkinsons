@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+- [Cinnamon source lineage](Cinnamon-Metabolite-and-Guadalajara-Lineage.md).
+
 - [Mecasin pain outcomes across periods](2026-Mecasin-Pain-and-Mixed-Exposure-Boundaries.md).
 
 - [Sage and nonmotor outcome comparisons](Round-1-Sage-and-Nonmotor-Comparisons-Nov24.md).

@@ -1,0 +1,3 @@
+# Depression measures in the student rosemary trial
+
+The [student trial](../Source-Text/2017-PMID29389474-Nematolahi-Oral-Rosemary-and-Depression.txt) adds a verifiable trial identifier and a favorable abstract statement for dried rosemary capsules. The accessible 2026 synthesis gives a depression endpoint estimate whose interval crosses zero. Table-level baseline and endpoint data from the original remain open. The [2022 adjunctive trial](../../2020-2024/Source-Text/2022-PMID36343423-Dried-Rosemary-Adjunct-Depression.txt) studies major depression during SSRI initiation and supplies a separate baseline-imbalanced result. Fresh culinary rosemary and Parkinson depression remain outside both trials.

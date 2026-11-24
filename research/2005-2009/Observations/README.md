@@ -1,5 +1,7 @@
 # Observations for 2005-2009
 
+- [Reported mango uses in Lagos](2008-Lagos-Mango-Reported-Sleep-Use.md).
+
 The [caffeine withdrawal and maintenance comparison](2009-Caffeine-Withdrawal-and-Maintenance-Contrasts.md) traces distinct fatigue readings in earlier and later controlled cohorts.
 
 The [gastroparesis review](../Source-Text/2009-PMID19115465-Gastroparesis-Ginger-Citation-Scope.txt) cites the preceding period's [rat emptying study](../../2000-2004/Source-Text/2001-PMID11876024-Ginger-Extract-Rat-Gastric-Emptying.txt) and [human electrical response](../../2000-2004/Source-Text/2003-PMID14534370-Ginger-Gastric-Electrical-Rhythm.txt). The [perioperative review](../Source-Text/2006-PMID16856030-Perioperative-Ginger-Review-Endpoints.txt) reports inconclusive nausea and vomiting estimates alongside a separate reduction in rescue medication. These measure different outcomes from chronic constipation.

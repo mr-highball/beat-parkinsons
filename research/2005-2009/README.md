@@ -1,5 +1,7 @@
 # 2005-2009
 
+[Lagos mango plant parts and reported insomnia use](Cultural-and-Experiential/Traditional-Practices/2008-Lagos-Mango-Plant-Parts-and-Insomnia.txt) preserves the market inventory and its [comparison with the later survey](Observations/2008-Lagos-Mango-Reported-Sleep-Use.md).
+
 - [Tao et al. eugenol analogs, monoamine oxidase and forced swim](Source-Text/2005-PMID15936201-Tao-Eugenol-Analogs-and-Forced-Swim.txt).
 - [Ebihara et al. menthol and acutely triggered swallowing in older adults](Source-Text/2006-PMC1885135-Ebihara-Menthol-Swallow-Reflex.txt).
 - [Kurian et al. isolated injected eugenol, nociception and motor coordination](Source-Text/2006-Kurian-Eugenol-Route-Pain-and-Motor-Confound.txt).

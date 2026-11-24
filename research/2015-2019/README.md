@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [student rosemary trial](Source-Text/2017-PMID29389474-Nematolahi-Oral-Rosemary-and-Depression.txt) was first published in 2017. Its [depression outcome notes](Observations/2017-Rosemary-Capsule-and-Depression-Scope.md) identify the unresolved original arm tables and the separate 2022 trial.
+
 - [2018 cannabis-placebo and pain context check](Source-Text/2018-PMID34676323-Cannabis-Placebo-Commentary-and-Pain-Scope.txt).
 
 - [Cited Kim thesis on Gamijakyakgamchobuja-tang and neuropathic pain in rats](Source-Text/2015-Kim-Mecasin-Neuropathic-Pain-Thesis-Access-Gap.txt).

@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [sage, mango and clinical audit](Food-Experiment-Round-1-Sage-Mango-and-Clinical-Nov24.md) links its original sources, including [the Lagos survey](Cultural-and-Experiential/Traditional-Practices/2022-Lagos-Mango-Use-and-Sleep-Scope.txt), [Guadalajara field inventory](Cultural-and-Experiential/Traditional-Practices/2024-Guadalajara-Sage-Cinnamon-and-Rosemary-Field-Inventory.txt) and [cross-period observations](Observations/2021-2024-Sage-Mango-and-Clinical-Scope.md).
+
 - [Round 1 pepper, eugenol and clinical original checks](../2025-2029/Food-Experiment-Round-1-Black-Pepper-Eugenol-and-Clinical-Nov24.md).
 
 - [Lee et al. measured piperine in black pepper and selected foods](Source-Text/2021-PMID33732511-Lee-Piperine-in-Pepper-and-Food-Matrices.txt).

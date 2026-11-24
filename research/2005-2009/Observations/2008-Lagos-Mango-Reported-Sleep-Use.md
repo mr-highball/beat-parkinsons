@@ -1,0 +1,3 @@
+# Reported mango uses in Lagos
+
+The [market inventory](../Cultural-and-Experiential/Traditional-Practices/2008-Lagos-Mango-Plant-Parts-and-Insomnia.txt) lists insomnia among uses of mango leaves, stem bark and root. It leaves the preparation and assignment of individual parts unresolved. The [2022 interview inventory](../../2020-2024/Cultural-and-Experiential/Traditional-Practices/2022-Lagos-Mango-Use-and-Sleep-Scope.txt) records mango uses for malaria and fever, with sleep complaints assigned to other plants. The studies sampled different groups. Their lists cannot establish a change in practice over time or an outcome after raw fruit.

@@ -1,0 +1,7 @@
+# Sage, mango and clinical evidence boundaries
+
+The [Guadalajara survey](../Cultural-and-Experiential/Traditional-Practices/2024-Guadalajara-Sage-Cinnamon-and-Rosemary-Field-Inventory.txt) records preparation and reported use of common sage, true cinnamon and rosemary. Cinnamon's altered-nerves category describes intended care. The [2025 companion](../../2025-2029/Cultural-and-Experiential/Traditional-Practices/2025-PMID40941951-Guadalajara-Sage-and-Cinnamon-Followup.txt) draws on the same field inventory, so the documents represent one ethnobotanical lineage.
+
+The [2022 Lagos record](../Cultural-and-Experiential/Traditional-Practices/2022-Lagos-Mango-Use-and-Sleep-Scope.txt) gives the reported indications of mango in a 100-person inventory. The [earlier market survey](../../2005-2009/Cultural-and-Experiential/Traditional-Practices/2008-Lagos-Mango-Plant-Parts-and-Insomnia.txt) describes insomnia use of nonfruit parts. The [acute mango leaf crossover report](../Source-Text/2020-Lopez-Rios-Leaf-Pilot-Fatigue.txt) measured fatigue and task response. Its placebo fatigue mean decreased further as printed, and the study reports no between-condition fatigue estimate or sleep outcome.
+
+The [original source map](../Food-Experiment-Round-1-Sage-Mango-and-Clinical-Nov24.md) also distinguishes cultural indications from measured outcomes, drugs or company names from sage, and isolated turmeric nanoparticles from culinary preparations.
