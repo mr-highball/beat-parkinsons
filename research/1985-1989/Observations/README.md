@@ -64,3 +64,5 @@ The primary diabetes paper separates the tarragon diet from the herbal mixture a
 
 
 - [BMJ index and Parkinson gait measurements](BMJ-Index-and-Clinical-Gait.md).
+
+A coffee substitution experiment and the investigators' later review identify fatigue as a withdrawal observation in heavy coffee users. The original report and adapted figure share the same people and differ from later Parkinson fatigue trials by exposure and population. [Original abstract and withdrawal analysis](../Source-Text/1986-PMID3772801-Griffiths-Coffee-Withdrawal-and-Fatigue.txt)

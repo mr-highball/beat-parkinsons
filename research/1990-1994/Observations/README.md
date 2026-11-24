@@ -94,3 +94,5 @@ The rat study measured dry fecal mass separately from its provoked diarrhea expe
 ## Corn oil and standing symptom evidence
 
 The crossover gives an identifiable corn-oil arm for seated pressure. A future standing measurement would address a separate clinical question. [Study comparisons](../Food-Experiment-Corn-Oil-Standing-Symptoms.md)
+
+The 1991 Ayurvedic discussion adds a textual description of shaking, stiffness and depression to the earlier period's clinical and medication studies. It attributes the modern cowhage observation to a separate 1978 report. The article leaves historical diagnosis, tremor type and response to any one preparation uncertain. [Traditional account](../Cultural-and-Experiential/Traditional-Practices/1991-PMID1886119-Gourie-Devi-Kampavata-and-Mucuna.txt) · [1985–1989 observations](../../1985-1989/Observations/README.md) · [1978 source locator](../../1975-1979/Source-Text/1978-PMID753996-Vaidya-Mucuna-Original-Access.txt)

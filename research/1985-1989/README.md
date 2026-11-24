@@ -116,3 +116,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 
 - [PMID:2472582 · claim 0305 · abstract](Source-Text/1989-PMID2472582-Priority-Four-Original-Scope.txt).
 - [PMID:2690730 · claim 0305 · full text](Source-Text/1989-PMID2690730-Priority-Four-Original-Scope.txt).
+
+- [Round 1 caffeine, tremor and fish source audit](../2025-2029/Food-Experiment-Round-1-Caffeine-Tremor-and-Fish-Nov24.md)
