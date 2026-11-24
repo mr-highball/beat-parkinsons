@@ -274,7 +274,7 @@ begin
       FCatalogLoading := False;
       if AError <> '' then
       begin
-        FCatalogError := 'Unable to load the recipe catalog right now.';
+        FCatalogError := 'Unable to load recipes right now. Please try again in a moment.';
       end
       else
       begin
@@ -288,7 +288,7 @@ begin
           on E: Exception do
           begin
             LLoaded.Free;
-            FCatalogError := 'Recipe catalog format error: ' + E.Message;
+            FCatalogError := 'Unable to load recipes right now. Please try again in a moment.';
           end;
         end;
       end;
@@ -379,10 +379,10 @@ begin
   LHeaderText := MakeNode(nkColumn, 'recipes-modal-heading-group');
   LHeaderText.Add(MakeNode(nkHeading, 'recipes-modal-title', 'Recipes · ' + FMainDisplay));
   LHeaderText.Add(MakeNode(nkLabel, 'recipes-modal-subtitle',
-    'Filter by category or add extra ingredients to collapse non-repeating recipe cards with WFC.'));
+    'Browse simple recipe ideas by meal type, or add ingredients you already have on hand.'));
   LHeader.Add(LHeaderText);
   LHeader.Add(MakeButton('recipes-close', '× Close', nvSecondary)
-    .Configure.AccessibleName('Close recipes modal').Done);
+    .Configure.AccessibleName('Close recipes').Done);
   LPage.Add(LHeader);
 
   LPage.Add(MakeNode(nkPanel, 'recipes-tabs-host'));
@@ -390,16 +390,16 @@ begin
   LBody := MakeNode(nkGrid, 'recipes-modal-body');
 
   LSidebar := MakeNode(nkColumn, 'recipes-sidebar');
-  LSidebar.Add(MakeNode(nkHeading, 'recipes-sidebar-heading', 'Ingredient constraints'));
+  LSidebar.Add(MakeNode(nkHeading, 'recipes-sidebar-heading', 'Ingredients'));
   LSidebar.Add(MakeNode(nkColumn, 'recipes-main-section')
     .Add(MakeNode(nkLabel, 'recipes-main-label', 'Main ingredient'))
     .Add(MakeNode(nkBadge, 'recipes-main-chip', FMainDisplay)));
 
   LAddSection := MakeNode(nkColumn, 'recipes-add-section');
-  LAddSection.Add(MakeNode(nkLabel, 'recipes-add-label', 'Add extra ingredients'));
+  LAddSection.Add(MakeNode(nkLabel, 'recipes-add-label', 'Include other ingredients'));
   LAddRow := MakeNode(nkRow, 'recipes-add-row');
   LAddRow.Add(MakeNode(nkInput, 'recipes-add-input')
-    .Configure.AccessibleName('Add extra ingredients')
+    .Configure.AccessibleName('Include other ingredients')
     .Placeholder('e.g. black pepper, onions').Done);
   LAddRow.Add(MakeButton('recipes-add-btn', 'Add', nvPrimary));
   LAddSection.Add(LAddRow);
@@ -409,11 +409,11 @@ begin
 
   LControls := MakeNode(nkColumn, 'recipes-wfc-controls');
   LControls.Add(MakeNode(nkSelect, 'recipes-limit')
-    .Configure.Text('Cards to collapse')
-    .AccessibleName('Maximum recipes to collapse')
-    .Items('Up to 5 recipes'#10'Up to 10 recipes'#10'Up to 15 recipes'#10'Up to 25 recipes')
-    .Value('Up to 10 recipes').Done);
-  LControls.Add(MakeButton('recipes-shuffle', 'Shuffle selection', nvSecondary));
+    .Configure.Text('Recipes shown')
+    .AccessibleName('Number of recipes shown')
+    .Items('5 recipes'#10'10 recipes'#10'15 recipes'#10'25 recipes')
+    .Value('10 recipes').Done);
+  LControls.Add(MakeButton('recipes-shuffle', 'Show different ideas', nvSecondary));
   LSidebar.Add(LControls);
 
   LBody.Add(LSidebar);
@@ -635,7 +635,7 @@ begin
 
   if Length(FExtraIngredients) > 0 then
   begin
-    LRoot.Add(MakeNode(nkLabel, 'recipes-extras-label', 'Active added ingredients'));
+    LRoot.Add(MakeNode(nkLabel, 'recipes-extras-label', 'Also includes'));
     LExtrasRow := MakeNode(nkRow, 'recipes-extras-list');
     for LIndex := 0 to High(FExtraIngredients) do
     begin
@@ -645,12 +645,12 @@ begin
         .Configure.AccessibleName('Remove ingredient ' + LName).Done);
     end;
     LRoot.Add(LExtrasRow);
-    LRoot.Add(MakeButton('recipes-clear-extras', 'Clear extra ingredients', nvSecondary));
+    LRoot.Add(MakeButton('recipes-clear-extras', 'Clear added ingredients', nvSecondary));
   end
   else
   begin
     LRoot.Add(MakeNode(nkLabel, 'recipes-extras-hint',
-      'Add ingredients like black pepper or onions to narrow the WFC collapse.'));
+      'Add ingredients like black pepper or onions to narrow your recipe ideas.'));
   end;
 
   LSuggestions := nil;
@@ -742,20 +742,35 @@ begin
   if (FShellRenderer = nil) or (FShellRenderer.Root = nil) then
     Exit;
 
+  LHasCoreRecipes := (FCatalog <> nil) and
+    (Length(FCatalog.QueryByCoreIngredient(FMainIngredient)) > 0);
+
   if FCatalogLoading then
-    LStatusText := 'Loading common recipe catalog…'
+    LStatusText := 'Loading recipes…'
   else if FCatalogError <> '' then
     LStatusText := FCatalogError
   else if (ASnapshot = nil) or (ASnapshot.Count = 0) then
-    LStatusText := '0 matching recipes for the active constraints · WFC seed #' + IntToStr(FSeed)
+  begin
+    if not LHasCoreRecipes then
+      LStatusText := 'No recipes for ' + FMainDisplay + ' yet'
+    else
+      LStatusText := 'No matching recipes for these ingredients';
+  end
+  else if ASnapshot.Count = FLastResult.TotalCandidates then
+  begin
+    if ASnapshot.Count = 1 then
+      LStatusText := 'Showing 1 recipe'
+    else
+      LStatusText := 'Showing all ' + IntToStr(ASnapshot.Count) + ' recipes';
+    if FCategory <> rcAll then
+      LStatusText := LStatusText + ' in ' + RecipeCategoryLabel(FCategory);
+  end
   else
   begin
     LStatusText := 'Showing ' + IntToStr(ASnapshot.Count) + ' of ' +
-      IntToStr(FLastResult.TotalCandidates) + ' matching recipes';
+      IntToStr(FLastResult.TotalCandidates) + ' recipes';
     if FCategory <> rcAll then
       LStatusText := LStatusText + ' in ' + RecipeCategoryLabel(FCategory);
-    LStatusText := LStatusText + ' · WFC seed #' + IntToStr(FLastResult.Seed) +
-      ' · non-repeating';
   end;
   FShellRenderer.ElementFor('recipes-status-bar').textContent := LStatusText;
 
@@ -768,7 +783,7 @@ begin
     LDeck.Add(MakeNode(nkCard, 'recipes-empty-card')
       .Add(MakeNode(nkHeading, 'recipes-empty-title', 'Loading recipes…'))
       .Add(MakeNode(nkLabel, 'recipes-empty-message',
-        'Reading the shared recipe collection and preparing the WFC constraint solver.')));
+        'Finding recipe ideas for you…')));
   end
   else if FCatalogError <> '' then
   begin
@@ -778,33 +793,35 @@ begin
   end
   else if (ASnapshot = nil) or (ASnapshot.Count = 0) then
   begin
-    LHasCoreRecipes := (FCatalog <> nil) and
-      (Length(FCatalog.QueryByCoreIngredient(FMainIngredient)) > 0);
     LCard := MakeNode(nkCard, 'recipes-empty-card');
     if not LHasCoreRecipes then
     begin
       LCard.Add(MakeNode(nkHeading, 'recipes-empty-title',
-        'No recipes stored for ' + FMainDisplay + ' yet'));
+        'No recipes for ' + FMainDisplay + ' yet'));
       LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
-        'Recipes are currently available for Celery stalk as the initial proof-of-concept collection. More ingredients will be added to the shared recipe catalog over time.'));
+        'We are still building our recipe library — Celery stalk recipes are available now, and more ingredients are on the way.'));
     end
     else
     begin
-      LCard.Add(MakeNode(nkHeading, 'recipes-empty-title', 'No recipes match all constraints'));
+      LCard.Add(MakeNode(nkHeading, 'recipes-empty-title', 'No recipes match those ingredients'));
       if (FCategory <> rcAll) and (FLastResult.CategoryCounts[rcAll] > 0) then
       begin
-        LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
-          IntToStr(FLastResult.CategoryCounts[rcAll]) +
-          ' recipe(s) match your ingredients in other categories.'));
+        if FLastResult.CategoryCounts[rcAll] = 1 then
+          LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
+            '1 recipe matches your ingredients in another category.'))
+        else
+          LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
+            IntToStr(FLastResult.CategoryCounts[rcAll]) +
+            ' recipes match your ingredients in other categories.'));
         LCard.Add(MakeButton('recipes-empty-all', 'Show All categories', nvPrimary));
       end
       else
       begin
         LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
-          'Try removing one of the added ingredients in the sidebar to relax the WFC constraints.'));
+          'Try removing an added ingredient to see more recipe ideas.'));
       end;
       if Length(FExtraIngredients) > 0 then
-        LCard.Add(MakeButton('recipes-empty-clear', 'Clear extra ingredients', nvSecondary));
+        LCard.Add(MakeButton('recipes-empty-clear', 'Clear added ingredients', nvSecondary));
     end;
     LDeck.Add(LCard);
   end
