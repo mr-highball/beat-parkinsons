@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [caffeine, habituation and exercise source audit](../2025-2029/Food-Experiment-Round-1-Motor-and-Clinical-Nov24.md) links first-publication records for isolated caffeine, ingredient combinations and acute fatigue outcomes.
+
 The [enriched green tea extract experiment](Source-Text/2007-PMID18019399-Tea-Extract-Enriched-Drink-and-EEG.txt) used randomized crossover with EEG and attention proxies.
 
 The Huntington citation review identified distinct animal motor, memory and renal questions. [Curcumin and general movement](Source-Text/2007-PMID17344940-Curcumin-Huntington-Model-Scope.txt) · [Sesamol and renal injury](Source-Text/2008-PMID18539378-Sesamol-Renal-Citation-Scope.txt) · [Sesamol and motor coordination](Source-Text/2009-PMID19504387-Sesamol-Huntington-Motor-Scope.txt).

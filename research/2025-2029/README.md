@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [motor studies and clinical caffeine audit](Food-Experiment-Round-1-Motor-and-Clinical-Nov24.md) resolves 40 original-source checks and distinguishes withdrawal, fatigue and exercise effort.
+
 The [caffeine, anxiety and mobility audit](Food-Experiment-Round-1-Anxiety-and-Motor-Nov24.md) traces the green tea leaf tradition and cited trials while resolving 41 exact original-source scopes.
 
 The [vitamin D, botanical models and clinical extracts audit](Food-Experiment-Round-1-Vitamin-and-Botanical-Nov24.md) resolves 49 exact scopes. The [sesame oil biomarker companion](Source-Text/2025-Atefi-Oil-Use-Factual-Extract.txt) documents the registered cohort and participant flow.

@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [motor studies and clinical caffeine audit](../2025-2029/Food-Experiment-Round-1-Motor-and-Clinical-Nov24.md) links new source scopes, including [instant coffee and stroke balance](Source-Text/2014-PMID25566476-Instant-Coffee-Stroke-Posture-and-Fatigue-Scope.txt) and the [eight-hour caffeine registry](Source-Text/Trials/NCT01048515.txt).
+
 The [caffeine, anxiety and mobility audit](../2025-2029/Food-Experiment-Round-1-Anxiety-and-Motor-Nov24.md) links 30 complete research originals, the [green tea leaf monograph](Cultural-and-Experiential/Traditional-Practices/2014-EMA-Green-Tea-Leaf-Fatigue.txt) and [period observations](Observations/2014-Green-Tea-Fatigue-Tradition-and-Clinical-Endpoints.md).
 
 The [Round 1 vitamin D, botanical and extract audit](../2025-2029/Food-Experiment-Round-1-Vitamin-and-Botanical-Nov24.md) links 30 complete originals, the [sesamol memory article](Source-Text/2010-PMID20102363-Sesamol-Maze-Memory-Scope.txt), and the [green tea extract fibroid trial](Source-Text/2013-PMID23950663-Roshdy-Green-Tea-Extract-Fibroid-Scope.txt).
