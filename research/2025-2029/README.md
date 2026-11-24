@@ -932,3 +932,5 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 - [Round 1 caffeine, tremor and fish source audit](Food-Experiment-Round-1-Caffeine-Tremor-and-Fish-Nov24.md)
 
 - [Round 1 curcumin, falls and ginger source audit](Food-Experiment-Round-1-Curcumin-Falls-Ginger-Nov24.md)
+
+- [Round 1 clinical and culinary exposure context](Food-Experiment-Round-1-Clinical-and-Food-Context-Nov24.md)

@@ -887,3 +887,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Round 1 shift-work and grape original-source audit](../2025-2029/Food-Experiment-Round-1-Shiftwork-Grape-Nov24.md)
 
 - [Round 1 curcumin, falls and ginger source audit](../2025-2029/Food-Experiment-Round-1-Curcumin-Falls-Ginger-Nov24.md)
+
+- [Round 1 clinical and culinary exposure context](../2025-2029/Food-Experiment-Round-1-Clinical-and-Food-Context-Nov24.md)
