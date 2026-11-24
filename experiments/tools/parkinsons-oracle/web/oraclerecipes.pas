@@ -760,6 +760,8 @@ begin
   begin
     if not LHasCoreRecipes then
       LStatusText := 'No recipes for ' + FMainDisplay + ' yet'
+    else if (Length(FExtraIngredients) = 0) and (FCategory <> rcAll) then
+      LStatusText := 'No ' + LowerCase(RecipeCategoryLabel(FCategory)) + ' for ' + FMainDisplay
     else
       LStatusText := 'No matching recipes for these ingredients';
   end
@@ -806,29 +808,42 @@ begin
       LCard.Add(MakeNode(nkHeading, 'recipes-empty-title',
         'No recipes for ' + FMainDisplay + ' yet'));
       LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
-        'We are still building our recipe library — Celery stalk recipes are available now, and more ingredients are on the way.'));
+        'Recipes are currently available for ingredients with promising symptom-relief signals, and more ingredients are on the way.'));
     end
     else
     begin
-      LCard.Add(MakeNode(nkHeading, 'recipes-empty-title', 'No recipes match those ingredients'));
-      if (FCategory <> rcAll) and (FLastResult.CategoryCounts[rcAll] > 0) then
+      if (Length(FExtraIngredients) = 0) and (FCategory <> rcAll) and
+        (FLastResult.CategoryCounts[rcAll] > 0) then
       begin
-        if FLastResult.CategoryCounts[rcAll] = 1 then
-          LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
-            '1 recipe matches your ingredients in another category.'))
-        else
-          LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
-            IntToStr(FLastResult.CategoryCounts[rcAll]) +
-            ' recipes match your ingredients in other categories.'));
+        LCard.Add(MakeNode(nkHeading, 'recipes-empty-title',
+          'No ' + LowerCase(RecipeCategoryLabel(FCategory)) + ' for ' + FMainDisplay));
+        LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
+          'Browse ' + IntToStr(FLastResult.CategoryCounts[rcAll]) + ' ' + FMainDisplay +
+          ' recipes in other categories.'));
         LCard.Add(MakeButton('recipes-empty-all', 'Show All categories', nvPrimary));
       end
       else
       begin
-        LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
-          'Try removing an added ingredient to see more recipe ideas.'));
+        LCard.Add(MakeNode(nkHeading, 'recipes-empty-title', 'No recipes match those ingredients'));
+        if (FCategory <> rcAll) and (FLastResult.CategoryCounts[rcAll] > 0) then
+        begin
+          if FLastResult.CategoryCounts[rcAll] = 1 then
+            LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
+              '1 recipe matches your ingredients in another category.'))
+          else
+            LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
+              IntToStr(FLastResult.CategoryCounts[rcAll]) +
+              ' recipes match your ingredients in other categories.'));
+          LCard.Add(MakeButton('recipes-empty-all', 'Show All categories', nvPrimary));
+        end
+        else
+        begin
+          LCard.Add(MakeNode(nkLabel, 'recipes-empty-message',
+            'Try removing an added ingredient to see more recipe ideas.'));
+        end;
+        if Length(FExtraIngredients) > 0 then
+          LCard.Add(MakeButton('recipes-empty-clear', 'Clear added ingredients', nvSecondary));
       end;
-      if Length(FExtraIngredients) > 0 then
-        LCard.Add(MakeButton('recipes-empty-clear', 'Clear added ingredients', nvSecondary));
     end;
     LDeck.Add(LCard);
   end

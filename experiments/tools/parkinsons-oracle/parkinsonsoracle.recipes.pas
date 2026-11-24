@@ -202,6 +202,17 @@ begin
     Exit;
 
   // Canonical experiment vocabulary and common culinary aliases.
+  if (Result = 'anise') or (Result = 'anise seeds') or (Result = 'ground anise') or
+    (Result = 'ground anise seed') then
+    Exit('anise seed');
+  if (Result = 'bananas') or (Result = 'raw banana') or (Result = 'ripe banana') then
+    Exit('banana');
+  if (Result = 'pearl barley') or (Result = 'hulled barley') or (Result = 'boiled barley') or
+    (Result = 'cooked barley') then
+    Exit('barley');
+  if (Result = 'fresh basil') or (Result = 'sweet basil') or (Result = 'basil leaf') or
+    (Result = 'basil leaves') then
+    Exit('basil');
   if (Result = 'celery') or (Result = 'celery rib') or (Result = 'celery ribs') or
     (Result = 'celery stalks') or (Result = 'raw celery') or (Result = 'raw celery stalk') then
     Exit('celery stalk');
@@ -209,6 +220,106 @@ begin
     (Result = 'cracked black pepper') or (Result = 'ground black pepper') or
     (Result = 'pepper') or (Result = 'black peppers') then
     Exit('black pepper');
+  if (Result = 'brewed black tea') or (Result = 'black tea bag') or (Result = 'black tea leaves') then
+    Exit('black tea');
+  if (Result = 'blueberries') or (Result = 'raw blueberry') or (Result = 'fresh blueberries') or
+    (Result = 'frozen blueberries') then
+    Exit('blueberry');
+  if (Result = 'cantaloupes') or (Result = 'raw cantaloupe') then
+    Exit('cantaloupe');
+  if (Result = 'cayenne') or (Result = 'ground cayenne') or (Result = 'ground cayenne pepper') then
+    Exit('cayenne pepper');
+  if (Result = 'cherries') or (Result = 'dried cherry') or (Result = 'dried cherries') or
+    (Result = 'tart cherry') or (Result = 'tart cherries') or (Result = 'sweet cherry') or
+    (Result = 'sweet cherries') then
+    Exit('cherry');
+  if (Result = 'poached chicken') or (Result = 'chicken breast') or (Result = 'chicken thigh') or
+    (Result = 'chicken thighs') or (Result = 'shredded chicken') then
+    Exit('chicken');
+  if (Result = 'fresh cilantro') or (Result = 'dried cilantro') or (Result = 'coriander leaf') or
+    (Result = 'coriander leaves') then
+    Exit('cilantro');
+  if (Result = 'ground cinnamon') or (Result = 'ceylon cinnamon') or (Result = 'cinnamon stick') then
+    Exit('cinnamon');
+  if (Result = 'cloves') or (Result = 'ground clove') or (Result = 'ground cloves') or
+    (Result = 'whole clove') or (Result = 'whole cloves') then
+    Exit('clove');
+  if (Result = 'brewed coffee') or (Result = 'cold brew') or (Result = 'cold-brew coffee') or
+    (Result = 'espresso') then
+    Exit('coffee');
+  if (Result = 'ground cumin') or (Result = 'cumin seed') or (Result = 'cumin seeds') then
+    Exit('cumin');
+  if (Result = 'plain dark chocolate') or (Result = 'dark chocolate chips') or
+    (Result = '70% dark chocolate') or (Result = 'bittersweet chocolate') then
+    Exit('dark chocolate');
+  if (Result = 'fennel seeds') or (Result = 'toasted fennel seed') or
+    (Result = 'toasted fennel seeds') then
+    Exit('fennel seed');
+  if (Result = 'cold-pressed flaxseed oil') or (Result = 'flax oil') or
+    (Result = 'cold pressed flaxseed oil') then
+    Exit('flaxseed oil');
+  if (Result = 'ginger root') or (Result = 'fresh ginger') or (Result = 'grated ginger') then
+    Exit('ginger');
+  if (Result = 'grapes') or (Result = 'red grape') or (Result = 'red grapes') or
+    (Result = 'green grape') or (Result = 'green grapes') or (Result = 'frozen grape') or
+    (Result = 'frozen grapes') then
+    Exit('grape');
+  if (Result = 'brewed lemon balm') or (Result = 'lemon balm tea') or (Result = 'lemon balm leaf') or
+    (Result = 'lemon balm leaves') or (Result = 'fresh lemon balm') then
+    Exit('lemon balm');
+  if (Result = 'nigella seeds') or (Result = 'ground nigella seed') or
+    (Result = 'toasted nigella seed') or (Result = 'black seed') or (Result = 'kalonji') then
+    Exit('nigella seed');
+  if (Result = 'extra virgin olive oil') or (Result = 'extra-virgin olive oil') or
+    (Result = 'cold-pressed olive oil') or (Result = 'evoo') then
+    Exit('olive oil');
+  if (Result = 'oranges') or (Result = 'orange juice') or (Result = 'navel orange') or
+    (Result = 'raw orange') then
+    Exit('orange');
+  if (Result = 'cold-pressed pumpkin seed oil') or (Result = 'toasted pumpkin seed oil') then
+    Exit('pumpkin seed oil');
+  if (Result = 'raspberries') or (Result = 'frozen raspberry') or (Result = 'frozen raspberries') or
+    (Result = 'fresh raspberries') then
+    Exit('raspberry');
+  if (Result = 'refined rice bran oil') then
+    Exit('rice bran oil');
+  if (Result = 'fresh rosemary') or (Result = 'dried rosemary') or (Result = 'rosemary sprig') then
+    Exit('rosemary');
+  if (Result = 'saffron threads') or (Result = 'dried saffron') or (Result = 'ground saffron') then
+    Exit('saffron');
+  if (Result = 'fresh sage') or (Result = 'dried sage') or (Result = 'sage leaf') or
+    (Result = 'sage leaves') then
+    Exit('sage');
+  if (Result = 'poached salmon') or (Result = 'salmon fillet') or (Result = 'salmon fillets') then
+    Exit('salmon');
+  if (Result = 'toasted sesame oil') or (Result = 'cold-pressed sesame oil') then
+    Exit('sesame oil');
+  if (Result = 'shiso leaf') or (Result = 'shiso leaves') or (Result = 'fresh shiso') or
+    (Result = 'dried shiso') or (Result = 'perilla leaf') or (Result = 'perilla leaves') then
+    Exit('shiso');
+  if (Result = 'sichuan peppercorn') or (Result = 'sichuan peppercorns') or
+    (Result = 'szechuan pepper') or (Result = 'szechuan peppercorn') or
+    (Result = 'szechuan peppercorns') or (Result = 'ground sichuan pepper') or
+    (Result = 'toasted sichuan pepper') then
+    Exit('sichuan pepper');
+  if (Result = 'dried spearmint') or (Result = 'fresh spearmint') or (Result = 'spearmint leaf') or
+    (Result = 'spearmint leaves') then
+    Exit('spearmint');
+  if (Result = 'ground sumac') then
+    Exit('sumac');
+  if (Result = 'fresh summer savory') or (Result = 'dried summer savory') or (Result = 'savory') then
+    Exit('summer savory');
+  if (Result = 'refined sunflower oil') then
+    Exit('sunflower oil');
+  if (Result = 'fresh tarragon') or (Result = 'dried tarragon') or (Result = 'tarragon leaves') then
+    Exit('tarragon');
+  if (Result = 'fresh thyme') or (Result = 'dried thyme') or (Result = 'thyme leaves') then
+    Exit('thyme');
+  if (Result = 'ground turmeric') or (Result = 'fresh turmeric') or (Result = 'grated turmeric') or
+    (Result = 'turmeric root') then
+    Exit('turmeric');
+  if (Result = 'cold-pressed walnut oil') or (Result = 'toasted walnut oil') then
+    Exit('walnut oil');
   if (Result = 'onions') or (Result = 'yellow onion') or (Result = 'yellow onions') or
     (Result = 'sweet onion') or (Result = 'sweet onions') or (Result = 'red onion') or
     (Result = 'red onions') or (Result = 'white onion') or (Result = 'white onions') then
@@ -217,8 +328,6 @@ begin
     Exit('garlic');
   if (Result = 'bell peppers') or (Result = 'sweet pepper') or (Result = 'sweet peppers') then
     Exit('bell pepper');
-  if (Result = 'ginger root') or (Result = 'fresh ginger') then
-    Exit('ginger');
   if (Result = 'lemon juice') or (Result = 'lemons') then
     Exit('lemon');
   if (Result = 'lime juice') or (Result = 'limes') then
@@ -237,12 +346,8 @@ begin
     Exit('potato');
   if (Result = 'tomatoes') then
     Exit('tomato');
-  if (Result = 'blueberries') then
-    Exit('blueberry');
   if (Result = 'oats') or (Result = 'rolled oats') or (Result = 'oat') then
     Exit('oats');
-  if (Result = 'extra virgin olive oil') or (Result = 'evoo') then
-    Exit('olive oil');
 
   // General singularization fallback for arbitrary user-typed ingredients.
   LLen := Length(Result);
@@ -504,6 +609,8 @@ begin
     Exit(IfThen(LPlural, 'pinches', 'pinch'));
   if (LLower = 'inch') or (LLower = 'inches') then
     Exit(IfThen(LPlural, 'inches', 'inch'));
+  if (LLower = 'strip') or (LLower = 'strips') then
+    Exit(IfThen(LPlural, 'strips', 'strip'));
   Result := LTrimmed;
 end;
 
@@ -1123,17 +1230,151 @@ begin
 end;
 
 {$IFDEF PAS2JS}
+function JSReadString(AObj: TJSObject; const AKey: String): String;
+var
+  LVal: JSValue;
+begin
+  LVal := AObj[AKey];
+  if isString(LVal) then
+    Result := Trim(String(LVal))
+  else
+    Result := '';
+end;
+
+function JSReadInt(AObj: TJSObject; const AKey: String; ADefault: Integer): Integer;
+var
+  LVal: JSValue;
+begin
+  LVal := AObj[AKey];
+  if isNumber(LVal) then
+    Result := Trunc(Double(LVal))
+  else
+    Result := ADefault;
+end;
+
+function JSReadFloat(AObj: TJSObject; const AKey: String; ADefault: Double): Double;
+var
+  LVal: JSValue;
+begin
+  LVal := AObj[AKey];
+  if isNumber(LVal) then
+    Result := Double(LVal)
+  else
+    Result := ADefault;
+end;
+
+function JSReadStrings(AObj: TJSObject; const AKey: String;
+  ANormalizeIngredients: Boolean): TRecipeStrings;
+var
+  LVal: JSValue;
+  LArr: TJSArray;
+  LIndex: Integer;
+  LText: String;
+begin
+  Result := nil;
+  LVal := AObj[AKey];
+  if not isArray(LVal) then
+    Exit;
+  LArr := TJSArray(LVal);
+  for LIndex := 0 to LArr.Length - 1 do
+  begin
+    if not isString(LArr[LIndex]) then
+      Continue;
+    LText := Trim(String(LArr[LIndex]));
+    if ANormalizeIngredients then
+      LText := NormalizeRecipeIngredient(LText);
+    if (LText <> '') and (not ANormalizeIngredients or not ContainsTextItem(Result, LText)) then
+      AppendTextItem(Result, LText);
+  end;
+end;
+
+function JSReadDetails(AObj: TJSObject; const AKey: String): TRecipeIngredientDetails;
+var
+  LVal: JSValue;
+  LArr: TJSArray;
+  LIndex: Integer;
+  LEntry: TJSObject;
+  LDetail: TRecipeIngredientDetail;
+begin
+  Result := nil;
+  LVal := AObj[AKey];
+  if not isArray(LVal) then
+    Exit;
+  LArr := TJSArray(LVal);
+  SetLength(Result, LArr.Length);
+  for LIndex := 0 to LArr.Length - 1 do
+  begin
+    LDetail := Default(TRecipeIngredientDetail);
+    if isObject(LArr[LIndex]) then
+    begin
+      LEntry := TJSObject(LArr[LIndex]);
+      LDetail.Item := JSReadString(LEntry, 'item');
+      LDetail.IngredientKey := NormalizeRecipeIngredient(JSReadString(LEntry, 'key'));
+      if LDetail.IngredientKey = '' then
+        LDetail.IngredientKey := NormalizeRecipeIngredient(LDetail.Item);
+      LDetail.Amount := JSReadFloat(LEntry, 'amount', 0);
+      LDetail.AmountText := JSReadString(LEntry, 'amount_text');
+      LDetail.UnitName := JSReadString(LEntry, 'unit');
+      LDetail.PrepNote := JSReadString(LEntry, 'note');
+    end;
+    Result[LIndex] := LDetail;
+  end;
+end;
+
 procedure TRecipeCatalog.LoadFromJSObject(AData: TJSObject; AAppend: Boolean);
 var
-  LData: TJSONData;
+  LSchema: String;
+  LRecipesVal: JSValue;
+  LArr: TJSArray;
+  LIndex: Integer;
+  LEntry: TJSObject;
+  LRecipe: TRecipe;
+  LCat: TRecipeCategory;
+  LEffort: TRecipeEffort;
+  LBaseLen: Integer;
 begin
-  LData := JSValueToJSONData(AData);
-  try
-    if (LData = nil) or (LData.JSONType <> jtObject) then
-      raise EConvertError.Create('Recipe catalog JSON root must be an object.');
-    LoadFromJSON(TJSONObject(LData), AAppend);
-  finally
-    LData.Free;
+  if AData = nil then
+    raise EConvertError.Create('Recipe catalog JSON cannot be nil.');
+  LSchema := JSReadString(AData, 'schema');
+  if LSchema <> CRecipesSchema then
+    raise EConvertError.Create('Unsupported recipe catalog schema.');
+  LRecipesVal := AData['recipes'];
+  if not isArray(LRecipesVal) then
+    raise EConvertError.Create('Recipe catalog requires a recipes array.');
+  if not AAppend then
+    Clear;
+  FSchema := CRecipesSchema;
+  LArr := TJSArray(LRecipesVal);
+  LBaseLen := Length(FRecipes);
+  SetLength(FRecipes, LBaseLen + LArr.Length);
+  for LIndex := 0 to LArr.Length - 1 do
+  begin
+    if not isObject(LArr[LIndex]) then
+      raise EConvertError.Create('Each recipe entry must be a JSON object.');
+    LEntry := TJSObject(LArr[LIndex]);
+    if not TryParseRecipeCategory(JSReadString(LEntry, 'category'), LCat) or (LCat = rcAll) then
+      raise EConvertError.Create('Invalid recipe category.');
+    if not TryParseRecipeEffort(JSReadString(LEntry, 'effort'), LEffort) then
+      raise EConvertError.Create('Invalid recipe effort.');
+    LRecipe := TRecipe.Create;
+    LRecipe.FId := JSReadString(LEntry, 'id');
+    LRecipe.FTitle := JSReadString(LEntry, 'title');
+    LRecipe.FCoreIngredient := NormalizeRecipeIngredient(JSReadString(LEntry, 'core_ingredient'));
+    LRecipe.FCategory := LCat;
+    LRecipe.FEffort := LEffort;
+    LRecipe.FPrepMinutes := Max(1, JSReadInt(LEntry, 'prep_minutes', 10));
+    LRecipe.FCookMinutes := Max(0, JSReadInt(LEntry, 'cook_minutes', 0));
+    LRecipe.FServings := Max(1, JSReadInt(LEntry, 'servings', 1));
+    LRecipe.FSummary := JSReadString(LEntry, 'summary');
+    LRecipe.FIngredients := JSReadStrings(LEntry, 'ingredients', True);
+    if not ContainsTextItem(LRecipe.FIngredients, LRecipe.FCoreIngredient) then
+      AppendTextItem(LRecipe.FIngredients, LRecipe.FCoreIngredient);
+    LRecipe.FIngredientDetails := JSReadDetails(LEntry, 'ingredient_details');
+    LRecipe.FEquipment := JSReadStrings(LEntry, 'equipment', False);
+    LRecipe.FSteps := JSReadStrings(LEntry, 'steps', False);
+    LRecipe.FTips := JSReadStrings(LEntry, 'tips', False);
+    LRecipe.FTags := JSReadStrings(LEntry, 'tags', False);
+    FRecipes[LBaseLen + LIndex] := LRecipe;
   end;
 end;
 {$ELSE}
