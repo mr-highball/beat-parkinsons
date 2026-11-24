@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Legacy-Originals-Nov24.md) checked 1 publications from this period. [PMID 38037432](Source-Text/2023-PMID38037432-Enteroendocrine-Visceral-Pain.txt).
+
 The [brewed green tea conversation](Cultural-and-Experiential/Conversations/2022-Reddit-Green-Tea-Coffee-and-Muscle-Symptoms.txt) preserves a first-person Parkinson symptom or medication-timing observation with its preparation and limitations.
 
 The [November 24 diet and model review](../2025-2029/Food-Experiment-Round-1-Diet-Model-Nov24.md) links each publication to the frozen outcomes checked. [PMID 41585745](Source-Text/2022-PMID41585745-Mobile-Stroke-Unit-and-Clinical-Conditions.txt) · [Olive-oil tyrosols and aggregation abstract](Source-Text/2024-PMID38817211-Olive-Oil-Tyrosols-Aggregation-Abstract.txt) · [MED-PARK registry recheck](Source-Text/2024-NCT06705517-MED-PARK-Registry-Extract.txt)

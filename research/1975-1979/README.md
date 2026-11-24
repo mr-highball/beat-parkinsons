@@ -1,5 +1,7 @@
 # 1975-1979
 
+The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Legacy-Originals-Nov24.md) checked 1 publications from this period. [PMID 1259839](Source-Text/1976-PMID1259839-Mitral-Leaflet-Prolapse-and-Chest-Pain.txt).
+
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.
 
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.

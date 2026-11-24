@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Legacy-Originals-Nov24.md) checked 2 publications from this period. [PMID 10483384](Source-Text/1998-PMID10483384-Dental-Anesthesia-Clinical-Series.txt) · [PMID 10369823](Source-Text/1999-PMID10369823-SAGE-Mortality-Database.txt).
+
 The [Round 1 original-source audit](../2025-2029/Food-Experiment-Round-1-Mixed-Originals-Nov22.md) includes dated source notes in this period. [PMID 10369823](Source-Text/1999-PMID10369823-SAGE-Mortality-Database.txt)
 
 The [1996 progressive supranuclear palsy original](Source-Text/1996-PMID8648326-Progressive-Supranuclear-Palsy-Printed-Scope.txt) preserves printed-page fall data and the distinction from culinary sage and Parkinson disease.

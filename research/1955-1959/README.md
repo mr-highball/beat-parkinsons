@@ -1,5 +1,7 @@
 # 1955-1959
 
+The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Legacy-Originals-Nov24.md) checked 2 publications from this period. [PMID 13239933](Source-Text/1955-PMID13239933-Mitral-Stenosis-and-Cardiac-Pain.txt) · [PMID 13638836](Source-Text/1959-PMID13638836-Myocardial-Infarction-Survival.txt).
+
 New source records on oral outcomes and symptom measurement include [Chesler Sialorrhea and Rhythm](Source-Text/1957-PMID13471827-Chesler-Sialorrhea-and-Rhythm.txt).
 
 January 1, 1955 through December 31, 1959.

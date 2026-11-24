@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The motor and fatigue review resolved 53 exact checks across 36 original articles and added five related assessments. The 12-family brewed green-tea fatigue scorecard retains a tentative worsening direction. The current queue has 37,315 original-source checks. [Original scopes and checked scorecard](followup/priority-five-motor-and-fatigue-nov24/README.md)
+The legacy-originals audit resolved 49 of 59 exact checks from 28 publications and added six related assessments. The cinnamon pain review records opposite pain-related reflex changes in separate rat groups, within one mixed evidence family. Claim 0161 retains its minimal easing lean. The current queue has 37,266 original-source checks. [Original scopes and checked scorecard](followup/priority-five-legacy-originals-nov24/README.md)
+
+The motor and fatigue review resolved 53 exact checks across 36 original articles and added five related assessments. The 12-family brewed green-tea fatigue scorecard retains a tentative worsening direction. That checkpoint left 37,315 original-source checks. [Original scopes and checked scorecard](followup/priority-five-motor-and-fatigue-nov24/README.md)
 
 The diet and model outcome review resolved 61 exact checks from 35 articles and added 20 related assessments, including two original olive-oil abstracts. Claim 0629 remains Unknown after separating ten study families. That checkpoint left 37,368 original-source checks. [Scope audit and checked scorecard](followup/priority-five-diet-and-model-nov24/README.md)
 
@@ -43,7 +45,7 @@ Round 1 resolved 531 exact source checks across 40 publications. A 2015 rice bra
 
 Round 1 resolved 101 further source checks across 19 originals. Three new assessed comparisons add context on saffron and crocin and retain both provisional saffron verdicts. That checkpoint left 38,548 exact pairs across 24,176 sources. The 384 explicit access gaps remain indexed in 88 dated texts. [Saffron and original-source checkpoint](followup/saffron-and-originals-nov22/README.md)
 
-All 1,000 frozen Round 1 claims have a v1 evidence scorecard with 3,859 source-family rows. Round 1 now records 72 directional verdicts (38 Maybe True and 34 Maybe False) across 18 symptoms and 928 open verdicts. There are 70 easing leans and two worsening leans, with 2 direct clinical signals, 3 limited clinical links and 67 minimal signals. Research-status rows document completed checks and open gaps. The original-source queue, deeper searches and independent direction audit remain open. [Scorecards](followup/scorecards.tsv) · [Research status](followup/research-status.tsv) · [Direction audit](followup/direction-bias-audit-nov21/README.md) · [Dietary protein follow-up](followup/protein-levodopa-audit-nov22/README.md) · [Caffeine and tea follow-up](followup/caffeine-and-tea-originals-nov22/README.md)
+All 1,000 frozen Round 1 claims have a v1 evidence scorecard with 3,879 source-family rows. Round 1 now records 72 directional verdicts (38 Maybe True and 34 Maybe False) across 18 symptoms and 928 open verdicts. There are 70 easing leans and two worsening leans, with 2 direct clinical signals, 3 limited clinical links and 67 minimal signals. Research-status rows document completed checks and open gaps. The original-source queue, deeper searches and independent direction audit remain open. [Scorecards](followup/scorecards.tsv) · [Research status](followup/research-status.tsv) · [Direction audit](followup/direction-bias-audit-nov21/README.md) · [Dietary protein follow-up](followup/protein-levodopa-audit-nov22/README.md) · [Caffeine and tea follow-up](followup/caffeine-and-tea-originals-nov22/README.md)
 
 ### Highlighted checked v1 findings
 
