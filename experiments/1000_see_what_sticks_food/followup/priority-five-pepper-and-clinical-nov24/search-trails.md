@@ -1,0 +1,9 @@
+# Original access, local Oracle coverage and continuing gaps
+
+Oracle revision 87 supplied 23 blended claim lookups and accession checks for the 60 pinned originals. The merge logs 53 new first-pass original misses and seven previously recorded questions. Two already indexed originals were expanded in place. The citation follow-up logs one partial and eight misses. The partial language search recovered the existing 2006 black pepper note when its exact accession did not resolve. Its first line lacked the required Title header. The canonical path and prior findings were retained and the header was corrected.
+
+The inventory includes 46 regular structured originals, one complete short structured original, 12 authenticated PMC HTML texts and a complete Karger commentary from 2018. The latter is below the generic HTML size threshold but the publisher edition and page range establish its scope.
+
+The pepper review's primary members were checked for direction, participant count, route and independence. The eugenol citations separate chemical, formalin, thermal, motor and behavioral mood measurements. PubMed primary abstracts preserve the developmental tea and piperine endpoint gaps, and the analytical food study is cataloged apart from clinical efficacy. [Dated synthesis and source paths](../../../../research/2025-2029/Food-Experiment-Round-1-Black-Pepper-Eugenol-and-Clinical-Nov24.md).
+
+The complete results tables for several older constituent reports remain open, especially the piperine model's separately identifiable nociception data and the 2004 eugenol methods. The full clinical pepper study supports the reflex result for its inhaled exposure. No comparable oral cracked-pepper and Parkinson swallowing-severity estimate emerged from the inspected material. The earlier green-bean supplement access hold remains queued.

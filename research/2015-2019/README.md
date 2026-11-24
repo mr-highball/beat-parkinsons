@@ -1,5 +1,7 @@
 # 2015-2019
 
+- [2018 cannabis-placebo and pain context check](Source-Text/2018-PMID34676323-Cannabis-Placebo-Commentary-and-Pain-Scope.txt).
+
 - [Cited Kim thesis on Gamijakyakgamchobuja-tang and neuropathic pain in rats](Source-Text/2015-Kim-Mecasin-Neuropathic-Pain-Thesis-Access-Gap.txt).
 - [Ji et al. Mecasin mixed extract and pain behavior in mice](Source-Text/2018-Ji-Mecasin-Mouse-Neuropathic-Pain.txt).
 - [Mecasin phase IIa randomized ALS trial protocol](Source-Text/2018-PMC5899359-Mecasin-ALS-Phase-IIa-Protocol.txt).

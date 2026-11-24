@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The November 24 crocetin, Mecasin, cumin and clinical review resolved 83 checks across 60 originals. The current replay leaves 35,924 checks across 22,881 publications. [Originals and reconciled scopes](../priority-five-crocetin-and-clinical-nov24/README.md)
+The November 24 black pepper, eugenol and clinical audit resolved 77 checks across 60 originals. The current replay leaves 35,847 checks across 22,821 publications. [Originals and reconciled scopes](../priority-five-pepper-and-clinical-nov24/README.md)
+
+The November 24 crocetin, Mecasin, cumin and clinical review resolved 83 checks across 60 originals. That replay left 35,924 checks across 22,881 publications. [Originals and reconciled scopes](../priority-five-crocetin-and-clinical-nov24/README.md)
 
 The November 24 coffee, theacrine, turmeric and date-fruit review resolved 87 checks across 60 originals. That replay left 36,007 checks across 22,941 publications. [Originals and reconciled scopes](../priority-five-coffee-turmeric-and-dates-nov24/README.md)
 

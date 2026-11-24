@@ -1,5 +1,7 @@
 # Observations for 2020-2024
 
+- [Swallow testing and spice constituents across periods](2021-Swallow-Route-and-Spice-Constituent-Boundaries.md).
+
 - [Preparation, endpoint and clinical transfer](2021-Constituent-and-Clinical-Outcome-Boundaries.md).
 
 - [Brewed coffee, wakefulness and fatigue](2022-Brewed-Coffee-Wakefulness-and-Fatigue.md).

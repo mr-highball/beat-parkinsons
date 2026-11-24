@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The crocetin, Mecasin, cumin and clinical review resolved 83 exact scopes across 60 originals and added 18 related assessments. It traces the mixed turmeric-containing ALS trials, diagnostic odor exposures and traditional saffron and black caraway accounts. Eleven checked scorecards retain their verdicts. The current queue holds 35,924 checks across 22,881 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-crocetin-and-clinical-nov24/README.md)
+The black pepper, eugenol and clinical audit resolved 77 exact scopes across 60 originals and added 23 related assessments. It traces the original three-arm pepper oil reflex trial, separates the menthol crossover and retains conflicting eugenol endpoints. Thirteen validated scorecards retain their verdicts. The current queue holds 35,847 checks across 22,821 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-pepper-and-clinical-nov24/README.md)
+
+The crocetin, Mecasin, cumin and clinical review resolved 83 exact scopes across 60 originals and added 18 related assessments. It traces the mixed turmeric-containing ALS trials, diagnostic odor exposures and traditional saffron and black caraway accounts. Eleven checked scorecards retain their verdicts. That replay left 35,924 checks across 22,881 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-crocetin-and-clinical-nov24/README.md)
 
 The coffee, theacrine, turmeric and date-fruit review resolved 87 exact scopes across 60 originals and added 27 related assessments. It reconciles the isolated-theacrine fatigue studies, the olive-oil stress control and the soluble-coffee crossover. Four checked scorecards retain their verdicts. That replay left 36,007 checks across 22,941 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-coffee-turmeric-and-dates-nov24/README.md)
 
