@@ -1,0 +1,3 @@
+# Coffee and persistent fatigue in public accounts
+
+The [2019 public discussion](../Cultural-and-Experiential/Conversations/2019-Parkinsons-UK-Coffee-and-Persistent-Fatigue.txt) contains a direct report of persistent tiredness after coffee and a caregiver's separate observation of activity with coffee and medication. The latter appears again in another thread and counts once. The [2009 clinical comparison](../../2005-2009/Source-Text/2009-PMID24868347-Filipino-Parkinson-Fatigue-Measurement.txt) measures fatigue without coffee exposure. A later [community sample](../../2020-2024/Source-Text/2022-PMID36352842-Parkinson-Community-Coffee-and-Fatigability.txt) notes coffee and easy fatigability without a beverage-specific outcome comparison.

@@ -1,5 +1,7 @@
 # Observations for 2005-2009
 
+- [Clinical fatigue measurements and the coffee exposure gap](2009-Filipino-Parkinson-Fatigue-Measurement.md).
+
 - [Reported mango uses in Lagos](2008-Lagos-Mango-Reported-Sleep-Use.md).
 
 The [caffeine withdrawal and maintenance comparison](2009-Caffeine-Withdrawal-and-Maintenance-Contrasts.md) traces distinct fatigue readings in earlier and later controlled cohorts.

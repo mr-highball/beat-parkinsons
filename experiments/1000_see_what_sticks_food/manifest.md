@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The fig, tomato and clinical audit resolved 72 of 73 exact checks and validated 13 scorecards at existing verdicts. The raw fig rest tremor claim remains open. A new fig-fruit field record documents customary constipation use. The current queue holds 35,614 exact checks across 22,641 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-fig-tomato-and-clinical-nov24/README.md)
+The fig, coffee and clinical audit resolved 79 exact scopes, added 32 related assessments and validated 19 scorecards at their existing verdicts. The evidence distinguishes public coffee and fatigue reports from clinical fatigue measures. An additional isolated-curcumin animal comparison favors timed movement. Raw fig and rest tremor remains Unknown. The current queue holds 35,535 checks across 22,581 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-fig-coffee-and-clinical-next-nov24/README.md)
+
+The fig, tomato and clinical audit resolved 72 of 73 exact checks and validated 13 scorecards at existing verdicts. The raw fig rest tremor claim remains open. A new fig-fruit field record documents customary constipation use. That replay left 35,614 exact checks across 22,641 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-fig-tomato-and-clinical-nov24/README.md)
 
 The dried-date and clinical audit resolved 82 exact scopes across 60 originals and added 22 related assessments. It documents oral pollen pain, possible adverse date fruit and seed reports, and distinct food-biomarker or ethnobotanical outcomes. The 15 checked scorecards retained their prior verdicts. That replay left 35,686 checks across 22,700 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-dried-date-and-clinical-nov24/README.md)
 

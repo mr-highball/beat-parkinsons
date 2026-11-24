@@ -1,5 +1,7 @@
 # Observations for 2020-2024
 
+- [Coffee, fig and clinical comparison limits](2022-2023-Coffee-Fig-and-Clinical-Comparisons.md).
+
 - [Fig homographs and culinary exposure boundaries](2022-Fig-Homographs-and-Culinary-Exposure-Boundaries.md).
 
 - [Date plant parts and identity in herbal inventories](2021-2023-Date-Parts-and-Polynesian-Supplement.md).

@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+- [Coffee during wearing off and the distinction between alertness and fatigue](2025-2026-Coffee-Fatigue-and-Wearing-Off.md).
+
 - [Chitrakoot fig fruit and constipation](2026-Chitrakoot-Fig-Constipation-and-Tremor-Scope.md).
 
 - [Pollen extract and pain endpoints](2026-Date-Palm-Pollen-Colitis-and-Pain-Endpoints.md).

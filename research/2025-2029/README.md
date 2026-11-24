@@ -1,5 +1,7 @@
 # 2025-2029
 
+- [Coffee and tiredness during medication wearing off](Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-and-Wearing-Off-Tiredness.txt) and [variable coffee and energy accounts](Cultural-and-Experiential/Conversations/2026-Reddit-Coffee-and-Variable-Energy-Reports.txt).
+
 - [Chitrakoot field inventory of fig fruit use for constipation](Cultural-and-Experiential/Traditional-Practices/2026-PMID42613621-Chitrakoot-Fig-Fruit-and-Constipation.txt).
 
 The [experimental date pollen report](Source-Text/2026-PMID42635914-Date-Palm-Pollen-and-Colitis-Endpoints.txt) is indexed with the inspected original outcome scope. Its [cross-period observation](Observations/2026-Date-Palm-Pollen-Colitis-and-Pain-Endpoints.md) separates tissue findings and human pain measures.

@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [fig and coffee clinical audit](Food-Experiment-Round-1-Fig-Coffee-and-Clinical-Nov24.md) links 60 verified originals with [cross-period evidence observations](Observations/2022-2023-Coffee-Fig-and-Clinical-Comparisons.md).
+
 The [fig, tomato and clinical audit](Food-Experiment-Round-1-Fig-Tomato-and-Clinical-Nov24.md) maps verified originals, one PDF access hold and [cross-period observations](Observations/2022-Fig-Homographs-and-Culinary-Exposure-Boundaries.md).
 
 The [dried-date and clinical audit](Food-Experiment-Round-1-Dried-Date-and-Clinical-Nov24.md) maps the inspected study originals and [related observations](Observations/2021-2023-Date-Parts-and-Polynesian-Supplement.md). It links the [Polynesian use inventory](Cultural-and-Experiential/Traditional-Practices/2022-Polynesian-Turmeric-Mixture-and-Premna-Uses.txt) with the supplemental constipation plant identity.

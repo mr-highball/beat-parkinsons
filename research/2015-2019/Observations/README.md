@@ -1,5 +1,7 @@
 # Observations for 2015-2019
 
+- [Coffee and persistent fatigue in public accounts](2019-Coffee-and-Persistent-Fatigue.md).
+
 - [Date fruit intolerance and customary uses](2016-Date-Fruit-Intolerance-and-Omani-Uses.md).
 
 - [Depression measures in the student rosemary trial](2017-Rosemary-Capsule-and-Depression-Scope.md).
