@@ -11,3 +11,5 @@ Nasution and colleagues randomized 48 participants undergoing hemodialysis to tw
 ## Curcumin and time to fall from a rotarod
 
 The 2026 6-OHDA mouse study found longer latency to fall from a rotating rod after intravenous curcumin, with p = .0018, .0004, .0013 and .0033 against lesioned controls at the four weekly measurements. Curcumin alone had inconclusive open-field locomotor changes. The comparison concerns coordination during a forced test with isolated curcumin. It provides no count of real-world falls or evidence about ground turmeric. [Primary article, Figure 3B](https://pmc.ncbi.nlm.nih.gov/articles/PMC12926497/) · [Local CC BY article text](Source-Text/PMC12926497.txt)
+
+The 2012 and 2019 dietary curcumin studies report opposing rotating-rod task effects in distinct Huntington mouse models. The 2026 Parkinson animal synthesis finds a pooled longer time with high heterogeneity. The corresponding Parkinson clinical trail still lacks an attributable fall-frequency result. [Opposing experiments and the clinical endpoint audit](Food-Experiment-Round-1-Curcumin-Falls-Ginger-Nov24.md)

@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The November 24 caffeine, tremor and fish review resolved 39 exact scopes across 27 publications. The queue now holds 37,074 pairs across 23,720 identities. [Original questions and citation trails](../priority-five-caffeine-and-tremor-nov24/README.md)
+The November 24 curcumin, falls and ginger review resolved 39 exact scopes across 30 original publications. The queue now holds 37,035 pairs across 23,690 identities. [Source scope and citation trails](../priority-five-curcumin-falls-and-ginger-nov24/README.md)
+
+The November 24 caffeine, tremor and fish review resolved 39 exact scopes across 27 publications. That checkpoint held 37,074 pairs across 23,720 identities. [Original questions and citation trails](../priority-five-caffeine-and-tremor-nov24/README.md)
 
 The November 24 cocoa and cinnamon review resolved 14 exact scopes across three publications. That checkpoint held 37,113 pairs across 23,747 identities. [Source and citation review](../priority-five-cocoa-and-cinnamon-nov24/README.md)
 
@@ -20,12 +22,12 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 23,819 |
+| Local body or other primary-source context | 23,858 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 35 |
 | Pending or access-only disposition | 383 |
-| No imported exact review | 36,656 |
+| No imported exact review | 36,617 |
 | **Total** | **61,252** |
 
 The exact queue includes 401 explicit pending or access-only pairs. Eighteen also retain a stronger imported title or index review in the table above, which reports the strongest recorded review across layers. All 401 have dated local source texts in the [known original access index](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md).
