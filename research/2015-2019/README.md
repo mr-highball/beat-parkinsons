@@ -1,5 +1,9 @@
 # 2015-2019
 
+- [Cited Kim thesis on Gamijakyakgamchobuja-tang and neuropathic pain in rats](Source-Text/2015-Kim-Mecasin-Neuropathic-Pain-Thesis-Access-Gap.txt).
+- [Ji et al. Mecasin mixed extract and pain behavior in mice](Source-Text/2018-Ji-Mecasin-Mouse-Neuropathic-Pain.txt).
+- [Mecasin phase IIa randomized ALS trial protocol](Source-Text/2018-PMC5899359-Mecasin-ALS-Phase-IIa-Protocol.txt).
+
 - [Cross-period theacrine fatigue observations](Observations/2018-Theacrine-Fatigue-Source-Lineage.md).
 
 - [Taylor et al. eight-week isolated theacrine safety trial and secondary fatigue outcome](Source-Text/2016-PMID26766930-Theacrine-and-Eight-Week-Fatigue.txt).

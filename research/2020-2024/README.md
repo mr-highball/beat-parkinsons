@@ -1,5 +1,10 @@
 # 2020-2024
 
+- [Kim et al. Mecasin phase IIa ALS trial and secondary pain outcome](Source-Text/2023-PMID37257710-Mecasin-ALS-Phase-IIa-Pain.txt).
+- [Jung phase IIb Mecasin ALS dissertation and pain endpoint provenance](Source-Text/2024-RISS-T16964903-Mecasin-ALS-Phase-IIb-Abstract.txt).
+- [Reported Iranian calming use of black caraway and black pepper](Cultural-and-Experiential/Traditional-Practices/2021-Bunium-Black-Pepper-Calming-Use-Persian-Medicine.txt).
+- [Clinicians' summary of patient-perceived benefit from antioxidant diet options in FXTAS](Cultural-and-Experiential/Personal-Reports/2021-FXTAS-Patient-Reports-Antioxidant-Diet-Turmeric.txt).
+
 - [Round 1 coffee, theacrine, turmeric and ingredient original checks](../2025-2029/Food-Experiment-Round-1-Coffee-Theacrine-Turmeric-and-Dates-Nov24.md).
 
 - [Yemeni brewed coffee and devotional wakefulness](Cultural-and-Experiential/Ceremonial-Accounts/2022-British-Museum-Yemeni-Coffee-and-Devotional-Wakefulness.txt).

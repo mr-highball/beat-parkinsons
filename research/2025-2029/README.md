@@ -1,5 +1,7 @@
 # 2025-2029
 
+- [Shin et al. Mecasin phase IIb ALS trial and pain VAS outcomes](Source-Text/2026-DOI15229076-Mecasin-ALS-Phase-IIb-Pain.txt).
+
 - [Round 1 coffee, theacrine, turmeric and date-fruit checks](Food-Experiment-Round-1-Coffee-Theacrine-Turmeric-and-Dates-Nov24.md).
 
 - [Round 1 grape motor outcomes and saffron sleep](Food-Experiment-Round-1-Grape-Motor-and-Saffron-Sleep-Nov24.md).

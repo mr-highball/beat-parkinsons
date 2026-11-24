@@ -1,5 +1,8 @@
 # 2005-2009
 
+- [Xi and Qian on crocetin, crocin and saffron](Source-Text/2006-DOI1934578X0600100112-Xi-Qian-Crocetin-Crocin-and-Saffron.txt).
+- [Saffron in the Bencao Gangmu and in reported Tibetan incense practice](Cultural-and-Experiential/Traditional-Practices/2006-Xi-Qian-Saffron-Compendium-and-Tibetan-Incense.txt).
+
 - [Hosseinzadeh et al. saffron-petal constituent kaempferol and rodent forced-swim behavior](Source-Text/2007-PharmacologyOnline1205-Saffron-Petal-Kaempferol-and-Forced-Swim.txt).
 
 
