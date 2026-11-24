@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2010-2014
 
+- [Reported analgesic and postpartum-pain uses of date fruit in Spanish literature](Traditional-Practices/2014-Rivera-Date-Fruit-and-Pain-Spain.txt). The drying state and patient outcomes remain open.
+
 - [European green tea leaf monograph for fatigue and perceived weakness](Traditional-Practices/2014-EMA-Green-Tea-Leaf-Fatigue.txt). The infusion and powdered leaf indication is recorded under traditional use.
 
 - [Figs and subjective dry mouth in a Persian medicine review](Traditional-Practices/2014-Persian-Review-Fig-and-Dry-Mouth.txt). The source points to a 2009 guide and leaves the original preparation and saliva response unmeasured.

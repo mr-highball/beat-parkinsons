@@ -1,5 +1,9 @@
 # 2020-2024
 
+- [Date fruit, labor duration and delivery review](Source-Text/2020-PMC7157989-Date-Fruit-Delivery-Outcome-Review.txt).
+- [Coffeeberry extract and conflicting acute mental-fatigue findings](Source-Text/2023-PMID37299382-Coffeeberry-and-Mental-Fatigue.txt).
+- [Date syrup and two independently measured labor-pain comparisons](Source-Text/2024-PMC10759543-Date-Syrup-Labor-Pain-Lineage.txt).
+
 The [remote caffeine reduction registration](Source-Text/Trials/NCT04560595.txt) includes results posted in 2025. A [2023 public coffee cessation discussion](Cultural-and-Experiential/Conversations/2023-Reddit-Coffee-Cessation-Sleep-and-Fatigue.txt) describes fatigue and sleep changes in a different, uncontrolled context.
 
 The [cognition and nutrition audit](../2025-2029/Food-Experiment-Round-1-Cognition-and-Nutrition-Nov24.md) links [wood-bark oil variability](Source-Text/2020-PMID32728267-Cinnamon-Bark-Oil-Chemotype.txt), [commercial cinnamon bark chemistry](Source-Text/2022-PMID35888738-Cinnamon-Bark-and-Commercial-Volatiles.txt), [a measured bark-oil linalool result](Source-Text/2024-PMID38559956-Ceylon-Cinnamon-Bark-Linalool.txt) and [an open-label Ksheerbala study](Source-Text/2021-Verma-Ksheerbala-Parkinson-Clinical-Abstract.txt).

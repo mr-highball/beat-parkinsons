@@ -1,5 +1,7 @@
 # Additional date palm and pain research, 2015–2019
 
+- [Tabuk fresh fruit trial and pooled labor-pain categories](Source-Text/2018-PMC6695006-Fresh-Date-Fruit-and-Pooled-Labor-Pain.txt). The original gives 76 pooled severity ratings without a separate pain comparison by arm.
+
 ## Date syrup and labor pain registration
 
 IRCT registered IRCT201405182172N16 on March 15, 2015. The record describes date syrup, honey syrup, and a control, with pain measured every 30 minutes by visual analogue scale. The registry describes an unblinded design. The later reports differ in sample count and supply outcomes for acute labor pain outside Parkinson’s. [Primary registration](https://irct.ir/trial/1798) · [Outcome reports](Food-Experiment-Food-Followup.md#date-syrup-and-labor-pain)

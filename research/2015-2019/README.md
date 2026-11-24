@@ -1,5 +1,9 @@
 # 2015-2019
 
+- [Chlorogenic acid review and primary citations](Source-Text/2016-PMID27012954-Chlorogenic-Acid-Plant-Parts-and-Coffee-Citations.txt).
+- [Fresh date fruit and pooled labor-pain categories](Source-Text/2018-PMC6695006-Fresh-Date-Fruit-and-Pooled-Labor-Pain.txt).
+- [Other verified motor, pain and mechanism originals from this period](../2025-2029/Food-Experiment-Round-1-Motor-and-Mechanism-Nov24.md).
+
 The [caffeine and mobility audit](../2025-2029/Food-Experiment-Round-1-Caffeine-and-Mobility-Nov24.md) links 28 originals from this period. The [manualized treatment trial](Source-Text/2015-PMID26501499-Manualized-Caffeine-Reduction-and-Fatigue-Scope.txt), [manual-only withdrawal composite](Source-Text/2018-PMID30580203-Caffeine-Taper-and-Withdrawal-Composite.txt) and [Parkinson fatigue definition](Source-Text/2016-PMID26879133-Parkinson-Fatigue-Case-Definition-and-Apathy.txt) distinguish clinical and grouped fatigue-related outcomes.
 
 The [cognition and nutrition audit](../2025-2029/Food-Experiment-Round-1-Cognition-and-Nutrition-Nov24.md) links 29 dated originals in this period, including the [stilbene review](Source-Text/2015-PMID26180583-Stilbene-Review-Grape-and-Olive-Source-Lineage.txt), [isolated sesamol comparison](Source-Text/2015-PMID25829772-Sesamol-Cognition-and-Sesame-Oil-Scope.txt) and [cisplatin hypoalgesia comparison](Source-Text/2015-PMID26113793-Curcumin-Cisplatin-Thermal-Hypoalgesia.txt). The separately traced [2018 case](Source-Text/2018-IJAR7678-Panchakarma-Parkinson-Case.txt) documents residual tremor during a bundled regimen.

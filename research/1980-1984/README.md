@@ -1,5 +1,7 @@
 # 1980-1984
 
+- [Chum salmon pituitary peptide isolation](Source-Text/1983-PMID6621686-Chum-Salmon-Pituitary-Peptide.txt). The source gives biochemical provenance for the later receptor literature.
+
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.
 
 The [1984 ginger constituent study](Source-Text/1984-PMID6335723-Ginger-Constituents-Route-and-Transit.txt) measured acute transit through rat small intestine and found different results for oral and intravenous 6-shogaol. Its stomach and isolated-ileum experiments used distinct endpoints.

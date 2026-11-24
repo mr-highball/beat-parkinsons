@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The caffeine, mobility and withdrawal review resolved 42 source checks across 30 originals and added 20 related assessments. Blinded withdrawal ratings were separated from manualized caffeine reduction and pooled symptom scores. The two updated fatigue scorecards retained their verdicts. The queue holds 36,736 checks across 23,480 publications. [Originals and fatigue scorecards](followup/priority-five-caffeine-and-mobility-nov24/README.md)
+The motor, pain and mechanism review resolved 34 exact checks across 30 complete originals. Twelve added assessments distinguish whole date fruit, syrup, reported traditional use and nonculinary constituent experiments. The four scorecards retain their verdicts. The current queue holds 36,702 exact checks across 23,450 publications, including 401 mapped access holds. [Source packet and checked scorecards](followup/priority-five-motor-and-mechanism-nov24/README.md)
+
+The caffeine, mobility and withdrawal review resolved 42 source checks across 30 originals and added 20 related assessments. Blinded withdrawal ratings were separated from manualized caffeine reduction and pooled symptom scores. The two updated fatigue scorecards retained their verdicts. That replay left 36,736 checks across 23,480 publications. [Originals and fatigue scorecards](followup/priority-five-caffeine-and-mobility-nov24/README.md)
 
 The cognition and nutrition review resolved 44 exact checks from 30 originals and added 20 related assessments. The grape review repeats a retracted source. Cinnamon bark chemistry qualifies transfer from concentrated leaf oil, and the new cultural records document a mixed sesame-oil formulation. All seven updated scorecards retained their verdicts. The queue holds 36,778 checks across 23,510 publications. [Reviewed originals and scorecards](followup/priority-five-cognition-and-nutrition-nov24/README.md)
 

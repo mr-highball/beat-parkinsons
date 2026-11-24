@@ -1,5 +1,7 @@
 # Additional date palm and pain research, 2020–2024
 
+- [2024 review of preparation and cohort lineage for labor pain](Source-Text/2024-PMC10759543-Date-Syrup-Labor-Pain-Lineage.txt). Two independent favorable syrup trials and one fresh-fruit study with pooled pain categories account for the review’s four pain publications.
+
 ## Public Belgian Parkinson dietary files
 
 Baert and colleagues made three workbooks public on July 13, 2020, before the July 21 article. The study collected two nonconsecutive days of dietary records. The released dietary sheet contains 34 participant rows of energy and nutrient totals. It omits the original food records. The questionnaire and medication workbooks concern dietary habits, demographics, medication and food–drug knowledge. The files do not provide individual dates eaten or Parkinson’s pain or apathy severity. [Primary article](https://pmc.ncbi.nlm.nih.gov/articles/PMC7385303/) · [Local article text](Source-Text/PMC7385303.txt) · [Dataset version 1](https://doi.org/10.6084/m9.figshare.12646451.v1)

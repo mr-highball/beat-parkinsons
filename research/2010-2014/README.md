@@ -1,5 +1,10 @@
 # 2010-2014
 
+- [The soluble coffee crossover and acute mental fatigue](Source-Text/2011-PMID21773723-Soluble-Coffee-and-Mental-Fatigue.txt).
+- [Late-pregnancy whole date fruit and labor progression](Source-Text/2011-PMID21280989-Whole-Date-Fruit-and-Labor-Outcomes.txt).
+- [Salmon-derived peptide and receptor context](Source-Text/2014-PMID27152164-Melanin-Concentrating-Hormone-Receptors.txt).
+- [Reported date-fruit uses for pain in Spanish literature](Cultural-and-Experiential/Traditional-Practices/2014-Rivera-Date-Fruit-and-Pain-Spain.txt).
+
 The [caffeine-dependence intake cohort](Source-Text/2012-PMID22369218-Caffeine-Dependence-Intake-Cohort.txt) links to a later caffeine reduction trial without counting a second treatment cohort. The [orofacial pain original quiz](Source-Text/2011-PMID26527354-Orofacial-Pain-Question-Set-and-Sage-Scope.txt) clarifies the fresh sage source exclusion. [Caffeine and mobility audit](../2025-2029/Food-Experiment-Round-1-Caffeine-and-Mobility-Nov24.md)
 
 The [cognition and nutrition audit](../2025-2029/Food-Experiment-Round-1-Cognition-and-Nutrition-Nov24.md) links the [2014 Taiwanese cinnamon leaf-oil experiment](Source-Text/2014-PMID26151006-Taiwan-Cinnamon-Leaf-Oil-and-Mouse-Anxiety.txt), [2013 retracted grape study](Source-Text/2013-PMID23596160-Grape-Powder-and-Anxiety-Retracted.txt), [2011 retinal-cell hydroxytyrosol scope](Source-Text/2011-PMID21937211-Hydroxytyrosol-Retinal-Cell-Scope.txt) and [2010 mixed Ksheerabala experiment](Source-Text/2010-PMID20532090-Ksheerabala-Mixed-Oil-Rat-Scope.txt).

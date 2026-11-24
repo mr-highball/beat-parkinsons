@@ -1,5 +1,7 @@
 # Observations for 2010-2014
 
+- [Date analgesia, fruit preparation and observed outcome](2014-Date-Analgesia-and-Preparation-Scope.md).
+
 The [2014 Persian medicine review](../Cultural-and-Experiential/Traditional-Practices/2014-Persian-Review-Fig-and-Dry-Mouth.txt) reports dietary use for subjective dryness. The preceding [SCS-PD validation](../../2005-2009/Source-Text/2006-PMID17089393-Perez-Lloret-Sialorrhea-Scale.txt) assessed perceived drooling burden separately from volume. The reported indication, measurement and evidence provenance differ.
 
 The [healthy adult transit report](../Source-Text/2010-PMID20378829-Daikenchuto-Healthy-Colonic-Transit.txt) matches the preceding period's [60-person protocol](../../2005-2009/Source-Text/Trials/NCT00871325.txt). It found faster emptying in part of the colon under one formula dose and inconclusive stool diary outcomes. The [22-person constipation report](../Source-Text/PMC5139733.txt) and its [conference companion](../Source-Text/2010-T1829-Daikenchuto-Constipation-and-Pain-Abstract.txt) found within-person pain changes and inconclusive stool frequency. Their link to the preceding period's [single-arm protocol](../../2005-2009/Source-Text/Trials/NCT00522093.txt) remains tentative because of design and enrollment differences.
