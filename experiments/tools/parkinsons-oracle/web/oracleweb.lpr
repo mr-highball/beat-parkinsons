@@ -9,7 +9,7 @@ uses
   SysUtils, StrUtils, Types, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
   oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation,
   parkinsonsoracle.selection, parkinsonsoracle.graph, oraclemulti, oraclegraph,
-  oraclegraphmodel, oraclegallery;
+  oraclegraphmodel, oraclegallery, oraclerecipes;
 
 type
   TOracleView = (ovClaims, ovCatalog);
@@ -59,6 +59,7 @@ var
   GGraph: TOracleGraphExplorer;
   GGraphModel: TOracleGraphModel;
   GGraphStack: array of TOracleGraphExplorer;
+  GRecipesModal: TOracleRecipesModal;
   GMainRequest: TJSXMLHttpRequest;
   GRelatedRequest: TJSXMLHttpRequest;
   GMainGeneration: Integer;
@@ -2057,6 +2058,18 @@ begin
     end);
 end;
 
+procedure BindClaimRecipes(const ATag, AIngredient: String);
+begin
+  BindEvent(GResultsRenderer.ElementFor('claim-recipes-' + ATag), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      if GRecipesModal = nil then
+        GRecipesModal := TOracleRecipesModal.Create;
+      GRecipesModal.Open(AIngredient, GResultsRenderer.ElementFor('claim-recipes-' + ATag));
+      Result := True;
+    end);
+end;
+
 function CatalogPreview(const ATag, APath, APeriod: String): TNyxNode;
 var
   LURL: String;
@@ -2437,6 +2450,7 @@ begin
       LCardActions := Section(nkRow, 'claim-actions-' + LTag);
       LCardActions.Add(Button('inspect-' + LTag, 'Studies & sources', nvSecondary));
       LCardActions.Add(Button('claim-graph-' + LTag, 'Connections', nvSecondary));
+      LCardActions.Add(Button('claim-recipes-' + LTag, 'Recipes', nvSecondary));
       LCard.Add(LCardActions);
     end
     else
@@ -2582,6 +2596,7 @@ begin
     begin
       BindDetail(IntToStr(LIndex), CountOf(LRow, 'round'), TextOf(LRow, 'claim_id'));
       BindClaimGraph(IntToStr(LIndex), TextOf(LRow, 'symptom'), TextOf(LRow, 'ingredient'));
+      BindClaimRecipes(IntToStr(LIndex), TextOf(LRow, 'ingredient'));
     end;
     if GView = ovCatalog then
       BindCatalogCard(GResultsRenderer, IntToStr(LIndex), TextOf(LRow, 'path'));

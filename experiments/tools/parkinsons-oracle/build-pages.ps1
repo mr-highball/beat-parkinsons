@@ -73,7 +73,7 @@ try {
     if ($LASTEXITCODE -or @(git ls-files --others -- research).Count -ne 0) {
         throw 'The research working tree changed during the build.'
     }
-    $Assets = @('index.html', 'app.js', 'rtl.js', 'oracle.css', "$Model/claims.json",
+    $Assets = @('index.html', 'app.js', 'rtl.js', 'oracle.css', 'recipes.json', "$Model/claims.json",
         "$Model/search/manifest.json", "$Model/search/documents.json")
     foreach ($Asset in $Assets) {
         if (!(Test-Path -LiteralPath (Join-Path $Stage $Asset) -PathType Leaf)) {
