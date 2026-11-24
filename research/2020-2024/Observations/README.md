@@ -718,3 +718,5 @@ Two Persian posts share a recommendation to eat figs in a wider regimen. The ear
 - [Raw tomato intake and conflicting reports of joint symptoms](../Cultural-and-Experiential/Conversations/2024-Tomato-Junction-Raw-Tomato-and-Joint-Stiffness.txt)
 
 - [Olive oil comparator and tomato outcome scope](2020-Olive-Comparator-and-Tomato-Outcome-Scope.md)
+
+- [Green beans, fatigue and assigned exposure](2020-Green-Bean-Fatigue-and-Exposure-Boundaries.md)

@@ -1,0 +1,11 @@
+# Search trails and evidence limits
+
+The branch-local Oracle checked the 60 original identities and returned 20 claim replies with cultural context. Fifty-one new exact original lookups and one supplementary-table lookup missed. Nine prior original lookups were reused. The intake includes 50 regular structured originals, one complete short structured article and nine authenticated HTML bodies. [Originals](verified-originals.tsv) · [Exact scopes](claim-source-scopes.tsv)
+
+| Trail | Retained limits |
+| --- | --- |
+| Oracle exact and keyword review for PMID 33022693, PMCID PMC7727483 and DOI 10.1093/ajcn/nqaa256. Official article main body, Dietary Assessment and Results. | String beans appear in questionnaire validation. The verified HR 0.83 (95% CI 0.78–0.88) is for pooled vegetables and the fatigue component. |
+| Supplemental Tables 2–3. The PMC landing page identifies the DOCX asset and the publisher lists supplementary data. Direct official asset request returned HTML instead of a document. Alternate PMC and publisher CDN paths returned 404, the old Oxford path returned 403, and two Europe PMC supplement requests timed out. The PMC open-data listing returned no package rows. | The checked routes did not produce the primary supplemental tables. The exact 0561/PMID:33022693 review remains queued. The supplement must be examined before ruling out bean-specific fatigue data. [Original article](https://pmc.ncbi.nlm.nih.gov/articles/PMC7727483/) · [Named supplementary object](https://pmc.ncbi.nlm.nih.gov/articles/instance/7727483/bin/nqaa256_supplemental_file.docx) |
+| PMID 32770138 regular structured article. Checked vehicle comparison, administration route, treadmill and receptor-status groups. | Treadmill workload and endurance after isolated injections do not measure fatigue after oral brewed coffee. |
+| PMID 33244562 body, Methods and stool outcomes. Compared the reported orange flavor against the similar-tasting placebo description. | The oral formulation comparison isolates probiotic assignment. Orange fruit content and a separate raw-fruit assignment are not reported. |
+| PMID 33173523 and PMID 33062012 original methods and outcomes. | A Mediterranean pattern item and an injected vehicle are different exposure roles. Neither supplies the frozen cold-pressed oil outcome. |

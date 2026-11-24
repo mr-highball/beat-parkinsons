@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The olive oil and cayenne review resolved 76 scopes across 60 originals and added 17 related assessments. The published caption now gives a separate active-oil constipation contrast outside Parkinson. The cayenne reports retain concentrated-product safety context. Eleven checked scorecards retain their verdicts. The current queue holds 36,174 checks across 23,060 publications, including 401 mapped access holds. [Source packet and checked scorecards](followup/priority-five-dates-sage-and-cayenne-nov24/README.md)
+The green-bean, caffeine and orange review checked 81 exact scopes across 60 originals. It resolved 80 source checks and preserves the green-bean supplement review in the queue. Eight related assessments and one pending assessment were added. Seven checked scorecards retain their verdicts. The current queue holds 36,094 checks across 23,001 publications, including 402 mapped access holds. [Source packet and checked scorecards](followup/priority-five-dates-caffeine-and-orange-nov24/README.md)
+
+The olive oil and cayenne review resolved 76 scopes across 60 originals and added 17 related assessments. The published caption now gives a separate active-oil constipation contrast outside Parkinson. The cayenne reports retain concentrated-product safety context. Eleven checked scorecards retain their verdicts. That replay left 36,174 checks across 23,060 publications, including 401 mapped access holds. [Source packet and checked scorecards](followup/priority-five-dates-sage-and-cayenne-nov24/README.md)
 
 The saffron, dietary oil and clove review resolved 95 scopes across 60 originals and added 32 related assessments. It follows a mismatched safranal depression citation, deduplicates the Parkinson composite oil survey and preserves abdominal-pain reports from the composite herbal capsule. Twenty-five scorecards retain their verdicts. That replay left 36,250 checks across 23,120 publications, including 401 mapped access holds. [Source packet and checked scorecards](followup/priority-five-saffron-sage-and-dates-nov24/README.md)
 

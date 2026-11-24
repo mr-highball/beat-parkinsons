@@ -1049,3 +1049,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Round 1 saffron, oil and clove source audit with later clinical context](../2025-2029/Food-Experiment-Round-1-Saffron-Oil-and-Clove-Nov24.md)
 
 - [Round 1 olive oil comparator, tomato incidence and cayenne source audit](../2025-2029/Food-Experiment-Round-1-Olive-Comparator-and-Cayenne-Nov24.md)
+
+- [Green-bean fatigue supplement gap and neighboring exposure checks](../2025-2029/Food-Experiment-Round-1-Green-Beans-Caffeine-and-Orange-Nov24.md)

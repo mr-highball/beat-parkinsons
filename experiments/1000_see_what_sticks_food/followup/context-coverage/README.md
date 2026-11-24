@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The November 24 olive oil and cayenne review resolved 76 exact scopes across 60 publications. The current replay leaves 36,174 checks across 23,060 publications. [Originals and reconciled scopes](../priority-five-dates-sage-and-cayenne-nov24/README.md)
+The November 24 green-bean, caffeine and orange review checked 81 exact scopes across 60 publications. Eighty were resolved and the green-bean cohort supplement remains open. The current replay leaves 36,094 checks across 23,001 publications. [Originals and reconciled scopes](../priority-five-dates-caffeine-and-orange-nov24/README.md)
+
+The November 24 olive oil and cayenne review resolved 76 exact scopes across 60 publications. That replay left 36,174 checks across 23,060 publications. [Originals and reconciled scopes](../priority-five-dates-sage-and-cayenne-nov24/README.md)
 
 The November 24 saffron, dietary oil and clove review resolved 95 exact scopes across 60 publications. That replay left 36,250 checks across 23,120 publications. [Originals and reconciled scopes](../priority-five-saffron-sage-and-dates-nov24/README.md)
 
