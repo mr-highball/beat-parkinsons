@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-Round 1 resolved 238 of 252 checks across 45 source identities, including 88 priority-five pairs. The 14 continuing checks have a dated original-access note. The current queue holds 37,779 exact pairs across 24,092 sources. The sesame oil pain scorecard now tracks nine distinct study families, with its provisional verdict retained. [Priority-five source audit](../priority-five-body-replay-nov22/README.md)
+The November 24 curcumin and legacy review resolved 42 of 44 exact checks across 37 publications. The current queue holds 37,161 pairs across 23,779 identities. Six previously recorded holds closed. [Latest review](../priority-five-curcumin-and-legacy-nov24/README.md)
+
+Round 1 resolved 238 of 252 checks across 45 source identities, including 88 priority-five pairs. The 14 continuing checks have a dated original-access note. That checkpoint held 37,779 exact pairs across 24,092 sources. The sesame oil pain scorecard now tracks nine distinct study families, with its provisional verdict retained. [Priority-five source audit](../priority-five-body-replay-nov22/README.md)
 
 Round 1 resolved 531 exact source checks across 40 publications. A 2015 rice bran oil experiment was corrected to animal evidence, and both affected verdicts retain their prior directions and scores. That checkpoint left 38,017 pairs across 24,136 sources. That snapshot verified all 384 documented access gaps. [Grouped originals](../large-source-bodies-nov22/README.md)
 
@@ -12,15 +14,15 @@ The original searches produced 69,107 result appearances across 2,000 expression
 
 | Strongest recorded exact review | Pairs |
 | --- | ---: |
-| Local body or other primary-source context | 23,114 |
+| Local body or other primary-source context | 23,732 |
 | Exact assessment with basis unspecified | 133 |
 | Abstract context | 226 |
 | Title or index | 35 |
-| Pending or access-only disposition | 380 |
-| No imported exact review | 37,364 |
+| Pending or access-only disposition | 382 |
+| No imported exact review | 36,744 |
 | **Total** | **61,252** |
 
-The exact queue includes 398 explicit pending or access-only pairs. Eighteen also retain a stronger imported title or index review in the table above, which reports the strongest recorded review across layers. All 398 have dated local source texts in the [known original access index](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md).
+The exact queue includes 400 explicit pending or access-only pairs. Eighteen also retain a stronger imported title or index review in the table above, which reports the strongest recorded review across layers. All 400 have dated local source texts in the [known original access index](../../../../research/2025-2029/Food-Experiment-Round-1-Original-Access-Nov22.md).
 
 The tea and ginger reassessment retained the existing verdicts, added five source families, and verified 16 additional original-source checks. Thirteen continuing access gaps have dated local source files. That checkpoint left 40,056 exact pairs. [Tea and ginger evidence and access routes](../priority-three-replay-nov22/README.md)
 

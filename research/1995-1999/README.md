@@ -196,3 +196,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 
 - [PMID:10653307 · claim 0583 · abstract](Source-Text/1999-PMID10653307-Priority-Four-Original-Scope.txt).
 - [PMID:9854977 · claim 0175 · title and index](Source-Text/PMC2170387.txt).
+
+See the [Round 1 curcumin and original-source audit](../2025-2029/Food-Experiment-Round-1-Curcumin-Legacy-Nov24.md) for the dated evidence and access context.

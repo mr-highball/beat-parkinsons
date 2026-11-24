@@ -922,3 +922,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 [Review, observations and access gaps](Food-Experiment-Round-1-Priority-Five-Multi-Route-Nov22.md)
 
 See the [Round 1 tea, constipation and original-source review](Food-Experiment-Round-1-Tea-Constipation-Nov24.md) for the dated source records and scope notes.
+
+See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Curcumin-Legacy-Nov24.md) for the dated evidence and access context.

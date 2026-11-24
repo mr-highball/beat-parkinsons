@@ -412,3 +412,5 @@ The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-
 - [PMID:19191039, original source scope](Source-Text/2008-PMID19191039-Botanical-Phenolics-and-Parkinson-Transfer.txt)
 
 See the [Round 1 tea, constipation and original-source review](../2025-2029/Food-Experiment-Round-1-Tea-Constipation-Nov24.md) for the dated source records and scope notes.
+
+See the [Round 1 curcumin and original-source audit](../2025-2029/Food-Experiment-Round-1-Curcumin-Legacy-Nov24.md) for the dated evidence and access context.
