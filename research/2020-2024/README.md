@@ -1,5 +1,7 @@
 # 2020-2024
 
+- [Yemeni brewed coffee and devotional wakefulness](Cultural-and-Experiential/Ceremonial-Accounts/2022-British-Museum-Yemeni-Coffee-and-Devotional-Wakefulness.txt).
+
 - [2021 egg-white protein pilot report](Source-Text/2021-PMID34730461-Egg-White-Protein-and-Physical-Function.txt).
 - [2024 rosemary extract wet stool and transit experiments](Source-Text/2024-PMID38801915-Rosemary-Wet-Stool-and-Transit.txt).
 

@@ -1,5 +1,7 @@
 # Observations for 2015-2019
 
+- [Curcumin motor controls and citrus peel preparation](2018-Curcumin-Rotarod-and-Citrus-Peel-Preparation.md).
+
 - [Egg and curcumin outcome scope](2018-Egg-and-Curcumin-Outcome-Scope.md).
 
 - [Date syrup, mixed food access and shared controls](2019-Date-Syrup-Labor-Pain-Shared-Controls.md).

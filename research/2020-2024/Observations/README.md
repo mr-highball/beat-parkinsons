@@ -1,5 +1,7 @@
 # Observations for 2020-2024
 
+- [Brewed coffee, wakefulness and fatigue](2022-Brewed-Coffee-Wakefulness-and-Fatigue.md).
+
 - [Rosemary assays and egg-trial falls reporting](2024-Rosemary-Assays-and-Egg-Fall-Reporting.md).
 
 The [public cessation conversation](../Cultural-and-Experiential/Conversations/2023-Reddit-Coffee-Cessation-Sleep-and-Fatigue.txt) describes later fatigue and sleep changes without a verified diagnosis or exposure isolation. The [manual-only trial](../../2015-2019/Source-Text/2018-PMID30580203-Caffeine-Taper-and-Withdrawal-Composite.txt) reported a grouped withdrawal measure.
