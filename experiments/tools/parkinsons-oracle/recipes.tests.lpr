@@ -30,6 +30,18 @@ begin
 end;
 
 procedure Run;
+const
+  CPositiveLeanIngredients: array[0..43] of String = (
+    'anise seed', 'banana', 'barley', 'basil', 'black pepper', 'black tea',
+    'blueberry', 'cantaloupe', 'cayenne pepper', 'celery stalk', 'cherry',
+    'chicken', 'cilantro', 'cinnamon', 'clove', 'coffee', 'cumin',
+    'dark chocolate', 'fennel seed', 'flaxseed oil', 'ginger', 'grape',
+    'lemon balm', 'nigella seed', 'olive oil', 'orange', 'pumpkin seed oil',
+    'raspberry', 'rice bran oil', 'rosemary', 'saffron', 'sage', 'salmon',
+    'sesame oil', 'shiso', 'sichuan pepper', 'spearmint', 'sumac',
+    'summer savory', 'sunflower oil', 'tarragon', 'thyme', 'turmeric',
+    'walnut oil'
+  );
 var
   LRepo: String;
   LDir: String;
@@ -38,6 +50,7 @@ var
   LSerialized: String;
   LCelery: TRecipeArray;
   LCeleryAlias: TRecipeArray;
+  LGroup: TRecipeArray;
   LCounts: TRecipeCategoryCounts;
   LCat: TRecipeConcreteCategory;
   LQuery: TRecipeWfcQuery;
@@ -45,10 +58,12 @@ var
   LRes2: TRecipeWfcResult;
   LRes3: TRecipeWfcResult;
   LSeenCat: array[TRecipeConcreteCategory] of Boolean;
-  I: Integer;
+  I, J: Integer;
   LDiffers: Boolean;
   LSuggestions: TRecipeStrings;
   LDetail: TRecipeIngredientDetail;
+  LCore: String;
+  LRoundCelery: TRecipe;
 begin
   LRepo := '.';
   if ParamCount >= 1 then
@@ -59,33 +74,60 @@ begin
   LCatalog := TRecipeCatalog.Create;
   try
     LCatalog.LoadFromDirectory(LDir);
-    Check(LCatalog.Count >= 25, 'Catalog loads at least 25 celery recipes.');
+    Check(LCatalog.Count = 1100, 'Catalog loads all 1,100 positive-lean recipes (44 x 25).');
+    Check(Length(LCatalog.CoreIngredients) = 44, 'Catalog covers all 44 positive-lean core ingredients.');
 
-    // Verify core ingredient queryability (canonical + alias).
+    // Verify every positive-lean ingredient has 25 low-to-medium effort recipes with valid category splits and rich details.
+    for I := Low(CPositiveLeanIngredients) to High(CPositiveLeanIngredients) do
+    begin
+      LCore := CPositiveLeanIngredients[I];
+      LGroup := LCatalog.QueryByCoreIngredient(LCore);
+      Check(Length(LGroup) = 25, 'Core ingredient "' + LCore + '" has exactly 25 recipes.');
+      LCounts := LCatalog.CategoryCounts(LCore, nil);
+      if (LCore = 'chicken') or (LCore = 'salmon') then
+      begin
+        Check(LCounts[rcBreakfast] = 8, LCore + ' has 8 breakfast recipes.');
+        Check(LCounts[rcLunch] = 8, LCore + ' has 8 lunch recipes.');
+        Check(LCounts[rcDinner] = 9, LCore + ' has 9 dinner recipes.');
+        Check(LCounts[rcSmoothies] = 0, LCore + ' omits smoothies.');
+        Check(LCounts[rcJuices] = 0, LCore + ' omits juices.');
+      end
+      else
+      begin
+        for LCat := Low(TRecipeConcreteCategory) to High(TRecipeConcreteCategory) do
+          Check(LCounts[LCat] = 5,
+            LCore + ' category ' + RecipeCategoryKey(LCat) + ' has exactly 5 recipes.');
+      end;
+      for J := 0 to High(LGroup) do
+      begin
+        Check(LGroup[J].Effort in [reLow, reMedium],
+          'Recipe ' + LGroup[J].Id + ' is low or medium effort.');
+        Check(Length(LGroup[J].IngredientDetails) >= 3,
+          'Recipe ' + LGroup[J].Id + ' has measured ingredient details.');
+        Check(Length(LGroup[J].Equipment) >= 2,
+          'Recipe ' + LGroup[J].Id + ' lists equipment.');
+        Check(Length(LGroup[J].Steps) >= 3,
+          'Recipe ' + LGroup[J].Id + ' lists preparation steps.');
+        Check(Length(LGroup[J].Tips) >= 2,
+          'Recipe ' + LGroup[J].Id + ' provides kitchen tips.');
+        Check(LGroup[J].TotalMinutes = LGroup[J].PrepMinutes + LGroup[J].CookMinutes,
+          'TotalMinutes equals PrepMinutes + CookMinutes for ' + LGroup[J].Id);
+      end;
+    end;
+
+    // Verify core ingredient queryability (canonical + aliases + unpopulated ingredient).
     LCelery := LCatalog.QueryByCoreIngredient('celery stalk');
     LCeleryAlias := LCatalog.QueryByCoreIngredient('celery');
-    Check(Length(LCelery) >= 25, 'QueryByCoreIngredient(celery stalk) returns >= 25 recipes.');
+    Check(Length(LCelery) = 25, 'QueryByCoreIngredient(celery stalk) returns 25 recipes.');
     Check(Length(LCeleryAlias) = Length(LCelery), 'Alias "celery" queries same recipes.');
-    Check(Length(LCatalog.QueryByCoreIngredient('black tea')) = 0,
+    Check(Length(LCatalog.QueryByCoreIngredient('blueberries')) = 25, 'Alias "blueberries" matches blueberry.');
+    Check(Length(LCatalog.QueryByCoreIngredient('extra virgin olive oil')) = 25, 'Alias "extra virgin olive oil" matches olive oil.');
+    Check(Length(LCatalog.QueryByCoreIngredient('turmeric root')) = 25, 'Alias "turmeric root" matches turmeric.');
+    Check(Length(LCatalog.QueryByCoreIngredient('kalonji')) = 25, 'Alias "kalonji" matches nigella seed.');
+    Check(Length(LCatalog.QueryByCoreIngredient('sichuan peppercorn')) = 25, 'Alias "sichuan peppercorn" matches sichuan pepper.');
+    Check(Length(LCatalog.QueryByCoreIngredient('poached salmon')) = 25, 'Alias "poached salmon" matches salmon.');
+    Check(Length(LCatalog.QueryByCoreIngredient('grapefruit')) = 0,
       'Unpopulated core ingredient returns 0 recipes.');
-
-    // Verify at least 5 low -> medium effort recipes in every category for celery.
-    LCounts := LCatalog.CategoryCounts('celery stalk', nil);
-    for LCat := Low(TRecipeConcreteCategory) to High(TRecipeConcreteCategory) do
-      Check(LCounts[LCat] >= 5, 'Category ' + RecipeCategoryKey(LCat) + ' has >= 5 recipes.');
-    for I := 0 to High(LCelery) do
-    begin
-      Check(LCelery[I].Effort in [reLow, reMedium],
-        'Celery recipe ' + LCelery[I].Id + ' is low or medium effort.');
-      Check(Length(LCelery[I].IngredientDetails) >= 3,
-        'Celery recipe ' + LCelery[I].Id + ' has measured ingredient details.');
-      Check(Length(LCelery[I].Equipment) >= 2,
-        'Celery recipe ' + LCelery[I].Id + ' lists equipment.');
-      Check(Length(LCelery[I].Tips) >= 2,
-        'Celery recipe ' + LCelery[I].Id + ' provides kitchen tips.');
-      Check(LCelery[I].TotalMinutes = LCelery[I].PrepMinutes + LCelery[I].CookMinutes,
-        'TotalMinutes equals PrepMinutes + CookMinutes.');
-    end;
 
     // Verify kitchen scaling & unit formatting helpers.
     Check(FormatRecipeAmount(0.25) = '1/4', 'FormatRecipeAmount(0.25) -> 1/4');
@@ -95,41 +137,47 @@ begin
     Check(FormatRecipeAmount(2.0) = '2', 'FormatRecipeAmount(2.0) -> 2');
     Check(FormatIngredientUnit('stalks', 1.0) = 'stalk', 'Singularizes stalk at 1');
     Check(FormatIngredientUnit('stalk', 2.0) = 'stalks', 'Pluralizes stalks at 2');
+    Check(FormatIngredientUnit('strips', 1.0) = 'strip', 'Singularizes strip at 1');
+    Check(FormatIngredientUnit('strip', 2.0) = 'strips', 'Pluralizes strips at 2');
     Check(FormatScaledServings(2, 0.5) = '1 serving', 'Scales 2 servings * 0.5 -> 1 serving');
     Check(FormatScaledServings(2, 2.0) = '4 servings', 'Scales 2 servings * 2 -> 4 servings');
     Check(FormatScaledServings(3, 0.5) = '1 1/2 servings', 'Scales 3 servings * 0.5 -> 1 1/2 servings');
     Check(FormatMinutesLabel(0) = 'No cook', 'FormatMinutesLabel(0) -> No cook');
     Check(FormatMinutesLabel(65) = '1 hr 5 min', 'FormatMinutesLabel(65) -> 1 hr 5 min');
-    LDetail := LCatalog.Items[0].IngredientDetails[0];
+    LDetail := LCelery[0].IngredientDetails[0];
     Check(FormatIngredientLine(LDetail, 0.5) = '1 stalk celery stalk, finely diced',
       'Half-scales measured ingredient line with singularized unit.');
     Check(FormatIngredientLine(LDetail, 2.0) = '4 stalks celery stalk, finely diced',
       'Double-scales measured ingredient line cleanly.');
 
-    // Verify JSON serialization/deserialization round-trip.
+    // Verify JSON serialization/deserialization round-trip across all 1,100 recipes.
     LSerialized := LCatalog.ToJSONString(False);
     LRoundTrip := TRecipeCatalog.Create;
     try
       LRoundTrip.LoadFromJSONString(LSerialized);
-      Check(LRoundTrip.Count = LCatalog.Count, 'Round-trip preserves recipe count.');
+      Check(LRoundTrip.Count = LCatalog.Count, 'Round-trip preserves full 1,100 recipe count.');
       Check(LRoundTrip.Items[0].Id = LCatalog.Items[0].Id, 'Round-trip preserves first id.');
-      Check(LRoundTrip.Items[0].CoreIngredient = 'celery stalk',
-        'Round-trip preserves queryable CoreIngredient.');
-      Check(LRoundTrip.Items[0].Title = LCatalog.Items[0].Title, 'Round-trip preserves title.');
-      Check(LRoundTrip.Items[0].CookMinutes = LCatalog.Items[0].CookMinutes,
+      Check(LRoundTrip.Items[0].CoreIngredient = LCatalog.Items[0].CoreIngredient,
+        'Round-trip preserves first queryable CoreIngredient.');
+      LRoundCelery := LRoundTrip.FindById(LCelery[0].Id);
+      Check(LRoundCelery <> nil, 'Round-trip FindById locates celery recipe.');
+      Check(LRoundCelery.CoreIngredient = 'celery stalk',
+        'Round-trip preserves celery CoreIngredient.');
+      Check(LRoundCelery.Title = LCelery[0].Title, 'Round-trip preserves title.');
+      Check(LRoundCelery.CookMinutes = LCelery[0].CookMinutes,
         'Round-trip preserves cook_minutes.');
-      Check(Length(LRoundTrip.Items[0].Ingredients) = Length(LCatalog.Items[0].Ingredients),
+      Check(Length(LRoundCelery.Ingredients) = Length(LCelery[0].Ingredients),
         'Round-trip preserves ingredients.');
-      Check(Length(LRoundTrip.Items[0].IngredientDetails) = Length(LCatalog.Items[0].IngredientDetails),
+      Check(Length(LRoundCelery.IngredientDetails) = Length(LCelery[0].IngredientDetails),
         'Round-trip preserves ingredient_details.');
-      Check(LRoundTrip.Items[0].IngredientDetails[0].PrepNote =
-        LCatalog.Items[0].IngredientDetails[0].PrepNote,
+      Check(LRoundCelery.IngredientDetails[0].PrepNote =
+        LCelery[0].IngredientDetails[0].PrepNote,
         'Round-trip preserves ingredient prep note.');
-      Check(Length(LRoundTrip.Items[0].Equipment) = Length(LCatalog.Items[0].Equipment),
+      Check(Length(LRoundCelery.Equipment) = Length(LCelery[0].Equipment),
         'Round-trip preserves equipment.');
-      Check(Length(LRoundTrip.Items[0].Steps) = Length(LCatalog.Items[0].Steps),
+      Check(Length(LRoundCelery.Steps) = Length(LCelery[0].Steps),
         'Round-trip preserves steps.');
-      Check(Length(LRoundTrip.Items[0].Tips) = Length(LCatalog.Items[0].Tips),
+      Check(Length(LRoundCelery.Tips) = Length(LCelery[0].Tips),
         'Round-trip preserves tips.');
     finally
       LRoundTrip.Free;
@@ -144,7 +192,7 @@ begin
     LRes1 := CollapseRecipesWithWfc(LCatalog, LQuery);
     Check(LRes1.Solved, 'WFC ALL collapse solves cleanly.');
     Check(Length(LRes1.Recipes) = 10, 'WFC ALL collapse returns requested 10 recipes.');
-    Check(LRes1.TotalCandidates >= 25, 'WFC ALL reports full candidate count.');
+    Check(LRes1.TotalCandidates = 25, 'WFC ALL reports full candidate count.');
     AssertUniqueRecipes(LRes1.Recipes, 'WFC ALL');
     for LCat := Low(TRecipeConcreteCategory) to High(TRecipeConcreteCategory) do
       LSeenCat[LCat] := False;
@@ -153,7 +201,45 @@ begin
     for LCat := Low(TRecipeConcreteCategory) to High(TRecipeConcreteCategory) do
       Check(LSeenCat[LCat], 'WFC ALL collapse includes category ' + RecipeCategoryKey(LCat));
 
+    // Verify WFC collapse on newly populated positive-lean ingredients (5-category fruit + 3-category protein).
+    LQuery := Default(TRecipeWfcQuery);
+    LQuery.CoreIngredient := 'blueberry';
+    LQuery.Category := rcAll;
+    LQuery.MaxCount := 10;
+    LQuery.Seed := 42;
+    LRes2 := CollapseRecipesWithWfc(LCatalog, LQuery);
+    Check(LRes2.Solved and (Length(LRes2.Recipes) = 10), 'Blueberry WFC ALL collapses 10 recipes.');
+    AssertUniqueRecipes(LRes2.Recipes, 'WFC blueberry');
+    for LCat := Low(TRecipeConcreteCategory) to High(TRecipeConcreteCategory) do
+      LSeenCat[LCat] := False;
+    for I := 0 to High(LRes2.Recipes) do
+      LSeenCat[LRes2.Recipes[I].Category] := True;
+    for LCat := Low(TRecipeConcreteCategory) to High(TRecipeConcreteCategory) do
+      Check(LSeenCat[LCat], 'Blueberry WFC ALL includes category ' + RecipeCategoryKey(LCat));
+
+    LQuery := Default(TRecipeWfcQuery);
+    LQuery.CoreIngredient := 'salmon';
+    LQuery.Category := rcAll;
+    LQuery.MaxCount := 10;
+    LQuery.Seed := 42;
+    LRes2 := CollapseRecipesWithWfc(LCatalog, LQuery);
+    Check(LRes2.Solved and (Length(LRes2.Recipes) = 10), 'Salmon WFC ALL collapses 10 recipes.');
+    AssertUniqueRecipes(LRes2.Recipes, 'WFC salmon');
+    for LCat := Low(TRecipeConcreteCategory) to High(TRecipeConcreteCategory) do
+      LSeenCat[LCat] := False;
+    for I := 0 to High(LRes2.Recipes) do
+      LSeenCat[LRes2.Recipes[I].Category] := True;
+    Check(LSeenCat[rcBreakfast] and LSeenCat[rcLunch] and LSeenCat[rcDinner],
+      'Salmon WFC ALL spans breakfast, lunch, and dinner.');
+    Check((not LSeenCat[rcSmoothies]) and (not LSeenCat[rcJuices]),
+      'Salmon WFC ALL has no smoothies or juices.');
+
     // Verify deterministic replay with same seed, and variety across seeds.
+    LQuery := Default(TRecipeWfcQuery);
+    LQuery.CoreIngredient := 'celery stalk';
+    LQuery.Category := rcAll;
+    LQuery.MaxCount := 10;
+    LQuery.Seed := 101;
     LRes2 := CollapseRecipesWithWfc(LCatalog, LQuery);
     Check(LRes2.Solved and (Length(LRes2.Recipes) = Length(LRes1.Recipes)),
       'WFC same-seed replay succeeds.');

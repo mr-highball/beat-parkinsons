@@ -46,4 +46,12 @@ This directory is the common recipe store for `1000_see_what_sticks_food` and Pa
 
 ## Current Coverage
 
-- `recipes/celery-stalk.json`: 25 low-to-medium effort recipes (5 each across Breakfast, Lunch, Dinner, Smoothies, and Juices) with full measured ingredients, cook times, equipment lists, and kitchen tips.
+All **44 positive-lean ("May ease") ingredients** from `1000_see_what_sticks_food` are covered with **25 low-to-medium effort recipes each** (**1,100 recipes total**), every entry including measured `ingredient_details`, `cook_minutes`, `equipment`, `steps`, and `tips`:
+
+- **Fruits (7 files, 175 recipes — 5 each across Breakfast, Lunch, Dinner, Smoothies, Juices):** `banana.json`, `blueberry.json`, `cantaloupe.json`, `cherry.json`, `grape.json`, `orange.json`, `raspberry.json`
+- **Vegetables (1 file, 25 recipes — 5 per category):** `celery-stalk.json`
+- **Grains, Brews & Dark Chocolate (4 files, 100 recipes — 5 per category):** `barley.json`, `black-tea.json`, `coffee.json`, `dark-chocolate.json`
+- **Culinary Oils (7 files, 175 recipes — 5 per category):** `flaxseed-oil.json`, `olive-oil.json`, `pumpkin-seed-oil.json`, `rice-bran-oil.json`, `sesame-oil.json`, `sunflower-oil.json`, `walnut-oil.json`
+- **Proteins (2 files, 50 recipes — 8 Breakfast, 8 Lunch, 9 Dinner; smoothies and juices intentionally omitted):** `chicken.json`, `salmon.json`
+- **Herbs (10 files, 250 recipes — 5 per category):** `basil.json`, `cilantro.json`, `lemon-balm.json`, `rosemary.json`, `sage.json`, `shiso.json`, `spearmint.json`, `summer-savory.json`, `tarragon.json`, `thyme.json`
+- **Spices (13 files, 325 recipes — 5 per category):** `anise-seed.json`, `black-pepper.json`, `cayenne-pepper.json`, `cinnamon.json`, `clove.json`, `cumin.json`, `fennel-seed.json`, `ginger.json`, `nigella-seed.json`, `saffron.json`, `sichuan-pepper.json`, `sumac.json`, `turmeric.json`
