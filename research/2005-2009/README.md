@@ -1,5 +1,7 @@
 # 2005-2009
 
+- [Whole-grape and knotweed extract in a fly locomotion study](Source-Text/2009-PMID19929256-Whole-Grape-Knotweed-and-Climbing.txt).
+
 - [Sweet potato chlorogenic acids by plant part](Source-Text/2008-DOI200705053-Sweet-Potato-Root-and-Leaf-Phenolics.txt). The authors compared profiles of roots, leaves and stems.
 
 Two 2009 caffeine crossover originals examine [maintenance and withdrawal](Source-Text/2009-PMID19241060-Caffeine-Maintenance-and-Fatigue.txt) and [usual consumption versus abstention](Source-Text/2009-PMID19777214-Caffeine-Usual-Use-and-Abstention.txt). [Period observations](Observations/2009-Caffeine-Withdrawal-and-Maintenance-Contrasts.md) connect the fatigue comparisons.

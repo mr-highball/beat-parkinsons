@@ -1,5 +1,7 @@
 # Additional date palm and pain research, 2020–2024
 
+- [Original labor trial evidence and shared comparison groups](../2025-2029/Food-Experiment-Round-1-Pain-and-Mobility-Nov24.md#labor-pain-and-attribution).
+
 - [2024 review of preparation and cohort lineage for labor pain](Source-Text/2024-PMC10759543-Date-Syrup-Labor-Pain-Lineage.txt). Two independent favorable syrup trials and one fresh-fruit study with pooled pain categories account for the review’s four pain publications.
 
 ## Public Belgian Parkinson dietary files

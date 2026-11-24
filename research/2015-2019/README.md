@@ -1,5 +1,10 @@
 # 2015-2019
 
+- [Persian date-syrup labor-pain trial](Source-Text/2019-DOI3111618-Fathi-Date-Syrup-and-Labor-Pain.txt).
+- [Honey syrup and matching control rows](Source-Text/2019-PMID30858948-Honey-Syrup-and-Shared-Labor-Trial.txt).
+- [Isolated EGCG and multiple sclerosis exercise metabolism](Source-Text/2015-PMID25733633-EGCG-and-MS-Exercise-Metabolism.txt).
+- [Motor, pain and constituent source trail](../2025-2029/Food-Experiment-Round-1-Pain-and-Mobility-Nov24.md).
+
 - [Chlorogenic acid review and primary citations](Source-Text/2016-PMID27012954-Chlorogenic-Acid-Plant-Parts-and-Coffee-Citations.txt).
 - [Fresh date fruit and pooled labor-pain categories](Source-Text/2018-PMC6695006-Fresh-Date-Fruit-and-Pooled-Labor-Pain.txt).
 - [Other verified motor, pain and mechanism originals from this period](../2025-2029/Food-Experiment-Round-1-Motor-and-Mechanism-Nov24.md).

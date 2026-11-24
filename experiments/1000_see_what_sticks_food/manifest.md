@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The motor, pain and mechanism review resolved 34 exact checks across 30 complete originals. Twelve added assessments distinguish whole date fruit, syrup, reported traditional use and nonculinary constituent experiments. The four scorecards retain their verdicts. The current queue holds 36,702 exact checks across 23,450 publications, including 401 mapped access holds. [Source packet and checked scorecards](followup/priority-five-motor-and-mechanism-nov24/README.md)
+The pain and mobility review resolved 41 source checks across 30 originals and added 16 related assessments. It separates shared controls in date and honey syrup reports, pain outcomes for pooled food choices, and compounds or materials with unrelated clinical endpoints. Nine scorecards retain their verdicts. The current queue holds 36,661 exact checks across 23,420 publications, including 401 mapped access holds. [Source packet and checked scorecards](followup/priority-five-pain-and-mobility-nov24/README.md)
+
+The motor, pain and mechanism review resolved 34 exact checks across 30 complete originals. Twelve added assessments distinguish whole date fruit, syrup, reported traditional use and nonculinary constituent experiments. The four scorecards retain their verdicts. That replay left 36,702 exact checks across 23,450 publications, including 401 mapped access holds. [Source packet and checked scorecards](followup/priority-five-motor-and-mechanism-nov24/README.md)
 
 The caffeine, mobility and withdrawal review resolved 42 source checks across 30 originals and added 20 related assessments. Blinded withdrawal ratings were separated from manualized caffeine reduction and pooled symptom scores. The two updated fatigue scorecards retained their verdicts. That replay left 36,736 checks across 23,480 publications. [Originals and fatigue scorecards](followup/priority-five-caffeine-and-mobility-nov24/README.md)
 

@@ -1,5 +1,7 @@
 # Observations for 2015-2019
 
+- [Date syrup, mixed food access and shared controls](2019-Date-Syrup-Labor-Pain-Shared-Controls.md).
+
 A [public green tea account](../Cultural-and-Experiential/Conversations/2019-Reddit-Brewed-Green-Tea-and-Medication-Wearing-Off.txt) belongs to the same conversation family across 2019 and 2022. Initially perceived little effect, later wearing-off perceptions and a beverage switch with muscle symptoms are distinct observations without a measured fatigue endpoint.
 
 The [2019 poststroke reanalysis](../Source-Text/2019-PMID31823650-Daikenchuto-Poststroke-Reanalysis.txt) reuses the 34 people in the [2014 randomized add-on trial](../../2010-2014/Source-Text/2014-PMID25089144-Daikenchuto-Poststroke-Constipation.txt). The [2015 uncontrolled bloating report](../Source-Text/2015-PMID27069528-Daikenchuto-Bloating-and-Pain.txt) adds a distinct clinical population. Its stool frequency was inconclusive, as in the earlier [separate placebo transit trial](../../2010-2014/Source-Text/2013-PMID23451764-Daikenchuto-Transit-and-Rectal-Sensation.txt). The [2018 chart review](../Source-Text/2018-PMID29693001-Daikenchuto-Stool-Frequency-Chart-Review.txt) records more stools over time without an untreated comparison.

@@ -1,5 +1,7 @@
 # 2000-2004
 
+- [Corn oil as a shared carrier in carotenoid and monocyte studies](Source-Text/2000-PMID10944479-Corn-Oil-Carrier-and-Monocytes.txt).
+
 The [caffeine withdrawal comparison](Source-Text/2003-PMID12601503-Caffeine-Withdrawal-and-Nonconsumers.txt) records alertness separately from other acute psychomotor and mood outcomes.
 
 Two caffeine reviews report distinct source trails. [2002 behavior and withdrawal review](Source-Text/2002-PMID12204388-Smith-Caffeine-Behavior-and-Withdrawal.txt) · [2004 arousal and fatigue chapter](Source-Text/2004-Smith-Osborne-Caffeine-Arousal-Chapter.txt).

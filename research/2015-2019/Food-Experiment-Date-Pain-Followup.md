@@ -1,5 +1,7 @@
 # Additional date palm and pain research, 2015–2019
 
+- [2019 Persian date-syrup pain tables](Source-Text/2019-DOI3111618-Fathi-Date-Syrup-and-Labor-Pain.txt) and [2019 honey and control lineage](Source-Text/2019-PMID30858948-Honey-Syrup-and-Shared-Labor-Trial.txt). These reports share a registration with the English date-syrup result.
+
 - [Tabuk fresh fruit trial and pooled labor-pain categories](Source-Text/2018-PMC6695006-Fresh-Date-Fruit-and-Pooled-Labor-Pain.txt). The original gives 76 pooled severity ratings without a separate pain comparison by arm.
 
 ## Date syrup and labor pain registration

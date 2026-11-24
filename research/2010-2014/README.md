@@ -1,5 +1,8 @@
 # 2010-2014
 
+- [Dates among labor food choices and later-stage pain](Source-Text/2012-ZJRMS93776-Food-Choices-and-Labor-Pain.txt).
+- [Related Gonabad labor-progression and food-choice comparison](Source-Text/2012-PMID23304677-Rahmani-Carbohydrate-Choices-and-Labor.txt).
+
 - [The soluble coffee crossover and acute mental fatigue](Source-Text/2011-PMID21773723-Soluble-Coffee-and-Mental-Fatigue.txt).
 - [Late-pregnancy whole date fruit and labor progression](Source-Text/2011-PMID21280989-Whole-Date-Fruit-and-Labor-Outcomes.txt).
 - [Salmon-derived peptide and receptor context](Source-Text/2014-PMID27152164-Melanin-Concentrating-Hormone-Receptors.txt).

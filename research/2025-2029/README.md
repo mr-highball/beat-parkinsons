@@ -1,5 +1,7 @@
 # 2025-2029
 
+- [Round 1 pain, mobility and source lineage](Food-Experiment-Round-1-Pain-and-Mobility-Nov24.md).
+
 - [Round 1 motor, pain and mechanism source review](Food-Experiment-Round-1-Motor-and-Mechanism-Nov24.md).
 
 The [Round 1 caffeine and mobility review](Food-Experiment-Round-1-Caffeine-and-Mobility-Nov24.md) follows exact study scopes, withdrawal exposure differences and a [2026 remote reduction trial](Source-Text/2026-PMID41864111-Remote-Caffeine-Reduction-Outcomes.txt).
