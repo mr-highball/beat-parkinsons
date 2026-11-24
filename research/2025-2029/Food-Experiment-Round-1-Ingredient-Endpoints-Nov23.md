@@ -1,0 +1,15 @@
+# Round 1 ingredient and clinical endpoint boundaries
+
+The November 23 checkpoint links 24 original articles to 58 exact Round 1 questions. Sixteen related results preserve ingredient and endpoint context. The source checks distinguish publication and illustration labels from measured foods, compare botanical mixtures with isolated constituents, and preserve original experimental outcomes even when clinical transfer remains uncertain. [Exact claim scopes and original locators](../../experiments/1000_see_what_sticks_food/followup/priority-five-ingredient-endpoints-nov23/claim-source-scopes.tsv)
+
+## Cinnamon movement outcomes, muscle rigidity and dyskinesia
+
+The Wang rat study observed 21 seconds on the catalepsy bar with leaf powder in hydrosol versus 26 seconds with rotenone alone. The Lee study’s leaf powder dispersed in water yielded 23.7 versus 26.1 seconds with the same statistical letter at week nine. The different leaf preparations and protocol timing limit attribution. In the A53T experiment, oral ground cinnamon affected pole timing and rotarod performance. The targeted rigidity and dyskinesia severity measures remain absent. [Wang original Figure 5](https://doi.org/10.3389/fnut.2023.1229192) · [Lee original Figure 10](https://pmc.ncbi.nlm.nih.gov/articles/PMC12938807/) · [Dated A53T methods, figures and correction](../2020-2024/Source-Text/2020-PMID32889602-Cinnamon-A53T-Motor-Extract.txt)
+
+The Kalia report is a clinical case with a combined cinnamon-and-honey exposure alongside Parkinson medication and exercise. Both illustrative diaries give 15 minutes of dyskinesia without rating severity. The A53T and cinnamaldehyde studies address movement or cellular measures. Both Round 1 hypotheses stay open at the same rubric anchor. [Clinical case and original figure transcriptions](../2015-2019/Source-Text/2019-Kalia-Cinnamon-Honey-Case.txt) · [Cinnamaldehyde experiment](../2015-2019/Source-Text/2018-PMID29439518-Cinnamaldehyde-Neuronal-Endpoints.txt)
+
+## Flaxseed oil, food fibers and botanical mixtures
+
+The 682-participant Rush aging analysis models antioxidant intake against composite parkinsonian signs. It cites, separately, a Parkinson trial of flaxseed-derived omega-3 plus vitamin E. Keep the cohort and the combined intervention as distinct records. Oil processing and the isolated rigidity or bradykinesia comparisons remain open. [Cohort and linked trial identity](../2020-2024/Source-Text/2020-PMID32441566-Antioxidant-Cohort-and-Flaxseed-Cited-Trial.txt) · [Trial original-outcome extract](../2015-2019/Source-Text/2017-Taghizadeh-Flaxseed-UPDRS-Extract.txt)
+
+A gut–brain review describes bananas, lentils and oats as fiber sources, while the anxiety outcomes discussed elsewhere come from different interventions. The Boswellia review cites a ginger combination in an animal model. Each local scope preserves the real food context and the missing symptom or ingredient-specific comparison. [Fiber sources and endpoint scope](../2020-2024/Source-Text/2020-PMID32667590-Gut-Brain-Fiber-Foods-and-Anxiety.txt) · [Ginger combination](../2020-2024/Source-Text/2020-PMID32440312-Boswellia-and-Ginger-Combination.txt)
