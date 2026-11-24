@@ -48,6 +48,7 @@ var
   I: Integer;
   LDiffers: Boolean;
   LSuggestions: TRecipeStrings;
+  LDetail: TRecipeIngredientDetail;
 begin
   LRepo := '.';
   if ParamCount >= 1 then
@@ -73,8 +74,37 @@ begin
     for LCat := Low(TRecipeConcreteCategory) to High(TRecipeConcreteCategory) do
       Check(LCounts[LCat] >= 5, 'Category ' + RecipeCategoryKey(LCat) + ' has >= 5 recipes.');
     for I := 0 to High(LCelery) do
+    begin
       Check(LCelery[I].Effort in [reLow, reMedium],
         'Celery recipe ' + LCelery[I].Id + ' is low or medium effort.');
+      Check(Length(LCelery[I].IngredientDetails) >= 3,
+        'Celery recipe ' + LCelery[I].Id + ' has measured ingredient details.');
+      Check(Length(LCelery[I].Equipment) >= 2,
+        'Celery recipe ' + LCelery[I].Id + ' lists equipment.');
+      Check(Length(LCelery[I].Tips) >= 2,
+        'Celery recipe ' + LCelery[I].Id + ' provides kitchen tips.');
+      Check(LCelery[I].TotalMinutes = LCelery[I].PrepMinutes + LCelery[I].CookMinutes,
+        'TotalMinutes equals PrepMinutes + CookMinutes.');
+    end;
+
+    // Verify kitchen scaling & unit formatting helpers.
+    Check(FormatRecipeAmount(0.25) = '1/4', 'FormatRecipeAmount(0.25) -> 1/4');
+    Check(FormatRecipeAmount(0.333) = '1/3', 'FormatRecipeAmount(0.333) -> 1/3');
+    Check(FormatRecipeAmount(0.5) = '1/2', 'FormatRecipeAmount(0.5) -> 1/2');
+    Check(FormatRecipeAmount(1.5) = '1 1/2', 'FormatRecipeAmount(1.5) -> 1 1/2');
+    Check(FormatRecipeAmount(2.0) = '2', 'FormatRecipeAmount(2.0) -> 2');
+    Check(FormatIngredientUnit('stalks', 1.0) = 'stalk', 'Singularizes stalk at 1');
+    Check(FormatIngredientUnit('stalk', 2.0) = 'stalks', 'Pluralizes stalks at 2');
+    Check(FormatScaledServings(2, 0.5) = '1 serving', 'Scales 2 servings * 0.5 -> 1 serving');
+    Check(FormatScaledServings(2, 2.0) = '4 servings', 'Scales 2 servings * 2 -> 4 servings');
+    Check(FormatScaledServings(3, 0.5) = '1 1/2 servings', 'Scales 3 servings * 0.5 -> 1 1/2 servings');
+    Check(FormatMinutesLabel(0) = 'No cook', 'FormatMinutesLabel(0) -> No cook');
+    Check(FormatMinutesLabel(65) = '1 hr 5 min', 'FormatMinutesLabel(65) -> 1 hr 5 min');
+    LDetail := LCatalog.Items[0].IngredientDetails[0];
+    Check(FormatIngredientLine(LDetail, 0.5) = '1 stalk celery stalk, finely diced',
+      'Half-scales measured ingredient line with singularized unit.');
+    Check(FormatIngredientLine(LDetail, 2.0) = '4 stalks celery stalk, finely diced',
+      'Double-scales measured ingredient line cleanly.');
 
     // Verify JSON serialization/deserialization round-trip.
     LSerialized := LCatalog.ToJSONString(False);
@@ -86,10 +116,21 @@ begin
       Check(LRoundTrip.Items[0].CoreIngredient = 'celery stalk',
         'Round-trip preserves queryable CoreIngredient.');
       Check(LRoundTrip.Items[0].Title = LCatalog.Items[0].Title, 'Round-trip preserves title.');
+      Check(LRoundTrip.Items[0].CookMinutes = LCatalog.Items[0].CookMinutes,
+        'Round-trip preserves cook_minutes.');
       Check(Length(LRoundTrip.Items[0].Ingredients) = Length(LCatalog.Items[0].Ingredients),
         'Round-trip preserves ingredients.');
+      Check(Length(LRoundTrip.Items[0].IngredientDetails) = Length(LCatalog.Items[0].IngredientDetails),
+        'Round-trip preserves ingredient_details.');
+      Check(LRoundTrip.Items[0].IngredientDetails[0].PrepNote =
+        LCatalog.Items[0].IngredientDetails[0].PrepNote,
+        'Round-trip preserves ingredient prep note.');
+      Check(Length(LRoundTrip.Items[0].Equipment) = Length(LCatalog.Items[0].Equipment),
+        'Round-trip preserves equipment.');
       Check(Length(LRoundTrip.Items[0].Steps) = Length(LCatalog.Items[0].Steps),
         'Round-trip preserves steps.');
+      Check(Length(LRoundTrip.Items[0].Tips) = Length(LCatalog.Items[0].Tips),
+        'Round-trip preserves tips.');
     finally
       LRoundTrip.Free;
     end;

@@ -9,7 +9,7 @@ uses
   SysUtils, StrUtils, Types, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
   oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation,
   parkinsonsoracle.selection, parkinsonsoracle.graph, oraclemulti, oraclegraph,
-  oraclegraphmodel, oraclegallery, oraclerecipes;
+  oraclegraphmodel, oraclegallery, oraclerecipes, oraclerecipepage;
 
 type
   TOracleView = (ovClaims, ovCatalog);
@@ -60,6 +60,7 @@ var
   GGraphModel: TOracleGraphModel;
   GGraphStack: array of TOracleGraphExplorer;
   GRecipesModal: TOracleRecipesModal;
+  GRecipePage: TOracleRecipePage;
   GMainRequest: TJSXMLHttpRequest;
   GRelatedRequest: TJSXMLHttpRequest;
   GMainGeneration: Integer;
@@ -3070,10 +3071,18 @@ end;
 procedure Start;
 var
   LModel: TJSElement;
+  LRecipeId: String;
 begin
   LModel := document.querySelector('meta[name="oracle-revision"]');
   if LModel <> nil then
     GStaticOracle := TStaticOracle.Create(LModel.getAttribute('content'));
+  LRecipeId := ReadRequestedRecipeId;
+  if LRecipeId <> '' then
+  begin
+    GRecipePage := TOracleRecipePage.Create;
+    GRecipePage.Mount(LRecipeId);
+    Exit;
+  end;
   Mount;
 end;
 
