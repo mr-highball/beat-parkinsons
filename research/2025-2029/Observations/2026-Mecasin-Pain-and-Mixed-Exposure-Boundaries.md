@@ -1,0 +1,5 @@
+# Mecasin pain outcomes across publication periods
+
+The [2018 mouse original](../../2015-2019/Source-Text/2018-Ji-Mecasin-Mouse-Neuropathic-Pain.txt) reports lower evoked neuropathic pain behavior with the combined extract. The [2021 cell study](../../2020-2024/Source-Text/2021-PMID33884029-Mecasin-Turmeric-Component-and-Cellular-Inflammation.txt) compares turmeric component extract and formula conditions, but observes molecular markers.
+
+The [phase IIa clinical result](../../2020-2024/Source-Text/2023-PMID37257710-Mecasin-ALS-Phase-IIa-Pain.txt) and [phase IIb full report](../Source-Text/2026-DOI15229076-Mecasin-ALS-Phase-IIb-Pain.txt) examine secondary pain VAS for the formula in ALS, in distinct registered trials. The first compares three groups and reports p=.916. The second provides separate regional contrasts and all confidence intervals span zero. The point estimates are higher with Mecasin in the later trial. Report the comparative pain values separately from primary function and respiratory findings. The clinical data leave the Parkinson culinary turmeric question open.

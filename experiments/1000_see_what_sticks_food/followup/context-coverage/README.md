@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The November 24 coffee, theacrine, turmeric and date-fruit review resolved 87 checks across 60 originals. The current replay leaves 36,007 checks across 22,941 publications. [Originals and reconciled scopes](../priority-five-coffee-turmeric-and-dates-nov24/README.md)
+The November 24 crocetin, Mecasin, cumin and clinical review resolved 83 checks across 60 originals. The current replay leaves 35,924 checks across 22,881 publications. [Originals and reconciled scopes](../priority-five-crocetin-and-clinical-nov24/README.md)
+
+The November 24 coffee, theacrine, turmeric and date-fruit review resolved 87 checks across 60 originals. That replay left 36,007 checks across 22,941 publications. [Originals and reconciled scopes](../priority-five-coffee-turmeric-and-dates-nov24/README.md)
 
 The November 24 green-bean, caffeine and orange review checked 81 exact scopes across 60 publications. Eighty were resolved and the green-bean cohort supplement remains open. That replay left 36,094 checks across 23,001 publications. [Originals and reconciled scopes](../priority-five-dates-caffeine-and-orange-nov24/README.md)
 

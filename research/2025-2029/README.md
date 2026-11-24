@@ -1,5 +1,7 @@
 # 2025-2029
 
+- [Round 1 crocetin, Mecasin and clinical source checks](Food-Experiment-Round-1-Crocetin-Mecasin-and-Clinical-Nov24.md).
+
 - [Shin et al. Mecasin phase IIb ALS trial and pain VAS outcomes](Source-Text/2026-DOI15229076-Mecasin-ALS-Phase-IIb-Pain.txt).
 
 - [Round 1 coffee, theacrine, turmeric and date-fruit checks](Food-Experiment-Round-1-Coffee-Theacrine-Turmeric-and-Dates-Nov24.md).

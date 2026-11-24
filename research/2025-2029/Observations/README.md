@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+- [Mecasin pain outcomes across periods](2026-Mecasin-Pain-and-Mixed-Exposure-Boundaries.md).
+
 - [Sage and nonmotor outcome comparisons](Round-1-Sage-and-Nonmotor-Comparisons-Nov24.md).
 
 The [Ksheerabala clinical and traditional comparison](2025-Ksheerabala-Clinical-and-Cultural-Scope.md) brings together the 1996 preparation, an earlier controlled laboratory scope, and motor observations in different bundled regimens.
