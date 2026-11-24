@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [blinded short-deprivation study](Source-Text/1997-PMID9402612-Blinded-Caffeine-and-Brief-Deprivation.txt) and [caffeine reinforcement crossover](Source-Text/1998-PMID9784073-Caffeine-Dependence-and-Fatigue.txt) document different withdrawal conditions and separate fatigue-measure access gaps.
+
 The [1996 Ksheerabala formulation record](Cultural-and-Experiential/Traditional-Practices/1996-PMID22556766-Ksheerabala-Formulation.txt) distinguishes a traditional mixed preparation from isolated sesame oil.
 
 The [hot tea, coffee and water crossover](Source-Text/1997-PMID9399380-Hot-Coffee-Tea-and-Mood.txt) reports mood and physiological responses after abstinence. Separate fatigue estimates remain unverified.

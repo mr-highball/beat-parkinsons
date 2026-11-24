@@ -1,5 +1,7 @@
 # 2005-2009
 
+Two 2009 caffeine crossover originals examine [maintenance and withdrawal](Source-Text/2009-PMID19241060-Caffeine-Maintenance-and-Fatigue.txt) and [usual consumption versus abstention](Source-Text/2009-PMID19777214-Caffeine-Usual-Use-and-Abstention.txt). [Period observations](Observations/2009-Caffeine-Withdrawal-and-Maintenance-Contrasts.md) connect the fatigue comparisons.
+
 The [2006 caffeine metabolic companion](Source-Text/2006-PMID16886964-Caffeine-Exercise-Metabolic-Companion.txt) reports acute biochemical responses during exercise and leaves cohort overlap with the endurance article open.
 
 The [caffeine, habituation and exercise source audit](../2025-2029/Food-Experiment-Round-1-Motor-and-Clinical-Nov24.md) links first-publication records for isolated caffeine, ingredient combinations and acute fatigue outcomes.

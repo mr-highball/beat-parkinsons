@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2020-2024
 
+- [Coffee cessation and reports of fatigue and sleep at different times](Conversations/2023-Reddit-Coffee-Cessation-Sleep-and-Fatigue.txt).
+
 - [Sesame-oil abhyanga in a spinal cord injury review](Traditional-Practices/2023-PMID37467569-Sesame-Abhyanga-Review.txt).
 - [Rahul and Krishna case during a mixed Ayurvedic treatment course](Traditional-Practices/2024-Rahul-Krishna-Kampavata-Oil-Massage-Course.txt).
 

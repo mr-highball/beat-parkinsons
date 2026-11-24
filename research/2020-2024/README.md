@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [remote caffeine reduction registration](Source-Text/Trials/NCT04560595.txt) includes results posted in 2025. A [2023 public coffee cessation discussion](Cultural-and-Experiential/Conversations/2023-Reddit-Coffee-Cessation-Sleep-and-Fatigue.txt) describes fatigue and sleep changes in a different, uncontrolled context.
+
 The [cognition and nutrition audit](../2025-2029/Food-Experiment-Round-1-Cognition-and-Nutrition-Nov24.md) links [wood-bark oil variability](Source-Text/2020-PMID32728267-Cinnamon-Bark-Oil-Chemotype.txt), [commercial cinnamon bark chemistry](Source-Text/2022-PMID35888738-Cinnamon-Bark-and-Commercial-Volatiles.txt), [a measured bark-oil linalool result](Source-Text/2024-PMID38559956-Ceylon-Cinnamon-Bark-Linalool.txt) and [an open-label Ksheerbala study](Source-Text/2021-Verma-Ksheerbala-Parkinson-Clinical-Abstract.txt).
 
 The [refined sesame oil mood and fatigue report](Source-Text/2023-Atefi-Sesame-Sunflower-Anxiety-Factual-Extract.txt) preserves the original abstract and contrast limits. [Trial lineage and original-source gaps](../2025-2029/Food-Experiment-Round-1-Vitamin-and-Botanical-Nov24.md).

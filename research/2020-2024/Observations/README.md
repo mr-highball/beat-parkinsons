@@ -1,5 +1,7 @@
 # Observations for 2020-2024
 
+The [public cessation conversation](../Cultural-and-Experiential/Conversations/2023-Reddit-Coffee-Cessation-Sleep-and-Fatigue.txt) describes later fatigue and sleep changes without a verified diagnosis or exposure isolation. The [manual-only trial](../../2015-2019/Source-Text/2018-PMID30580203-Caffeine-Taper-and-Withdrawal-Composite.txt) reported a grouped withdrawal measure.
+
 A [public green tea account](../Cultural-and-Experiential/Conversations/2022-Reddit-Green-Tea-Coffee-and-Muscle-Symptoms.txt) belongs to the same conversation family across 2019 and 2022. Initially perceived little effect, later wearing-off perceptions and a beverage switch with muscle symptoms are distinct observations without a measured fatigue endpoint.
 
 The [2024 Parkinson cannabinoid trial](../Food-Experiment-Oil-Followup.md#sesame-oil-carrier-in-a-randomized-cannabinoid-trial) used sesame oil in both groups, as did the [2004 multiple-sclerosis crossover](../../2000-2004/Source-Text/2004-PMID15258006-Svendsen-Sesame-Oil-Pain-Control.txt). These independent trials estimate different drug effects with the carrier held fixed. A [dated cassia bark record](../Cultural-and-Experiential/Traditional-Practices/2021-Cassia-Bark-Bie-Lu-Pain-and-Mixture.txt) preserves a different historical pain indication and the limits of its clinical interpretation.
