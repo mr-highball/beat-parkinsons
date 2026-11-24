@@ -59,9 +59,20 @@ if (!$StaticModel) {
     & $GraphExe $Repo (Join-Path $Output 'graph.json')
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
 }
+$RecipesArgs = @('-Mdelphi', '-Sa', '-Cr', '-Co', '-Ci', '-gl', "-Fu$SharedUnits",
+    "-Fu$Repo/experiments/tools/vendor/wfc/src",
+    "-FU$GlyphBuild/units", "-FE$GlyphBuild/bin", (Join-Path $SharedUnits 'recipes.embed.lpr'))
+& $NativeCompiler @RecipesArgs
+if ($LASTEXITCODE) { exit $LASTEXITCODE }
+$RecipesExe = Join-Path $GlyphBuild 'bin/recipes.embed.exe'
+if (!(Test-Path -LiteralPath $RecipesExe)) { $RecipesExe = Join-Path $GlyphBuild 'bin/recipes.embed' }
+& $RecipesExe $Repo (Join-Path $Output 'recipes.json')
+if ($LASTEXITCODE) { exit $LASTEXITCODE }
+
 $CompilerArgs = @(
     '-Mdelphi', '-Tbrowser', '-Jc',
-    "-Fu$Vendor", "-Fi$Vendor", "-Fu$SharedUnits", "-FE$Output"
+    "-Fu$Vendor", "-Fi$Vendor", "-Fu$Repo/experiments/tools/vendor/wfc/src",
+    "-Fu$SharedUnits", "-FE$Output"
 )
 if ($UnitRoot) {
     $Packages = (Resolve-Path -LiteralPath $UnitRoot).Path
@@ -87,7 +98,7 @@ if ($LASTEXITCODE) { exit $LASTEXITCODE }
 [IO.File]::AppendAllText((Join-Path $Output 'oracle.css'), [IO.File]::ReadAllText($InlineCss), [Text.UTF8Encoding]::new($false))
 
 if (!$StaticModel) {
-    foreach ($Name in @('app.js', 'rtl.js', 'oracle.css', 'graph.json')) {
+    foreach ($Name in @('app.js', 'rtl.js', 'oracle.css', 'graph.json', 'recipes.json')) {
         $Asset = Join-Path $Output $Name
         $InputStream = [IO.File]::OpenRead($Asset)
         try {

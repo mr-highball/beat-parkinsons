@@ -458,13 +458,14 @@ end;
 procedure TOracleWeb.HandleRequest(Sender: TObject; var ARequest: TFPHTTPConnectionRequest;
   var AResponse: TFPHTTPConnectionResponse);
 const
-  Paths: array[0..5] of String = ('/', '/index.html', '/app.js', '/rtl.js', '/oracle.css',
-    '/graph.json');
-  Files: array[0..5] of String = ('index.html', 'index.html', 'app.js', 'rtl.js', 'oracle.css',
-    'graph.json');
-  Types: array[0..5] of String = ('text/html; charset=utf-8', 'text/html; charset=utf-8',
+  Paths: array[0..6] of String = ('/', '/index.html', '/app.js', '/rtl.js', '/oracle.css',
+    '/graph.json', '/recipes.json');
+  Files: array[0..6] of String = ('index.html', 'index.html', 'app.js', 'rtl.js', 'oracle.css',
+    'graph.json', 'recipes.json');
+  Types: array[0..6] of String = ('text/html; charset=utf-8', 'text/html; charset=utf-8',
     'application/javascript; charset=utf-8', 'application/javascript; charset=utf-8',
-    'text/css; charset=utf-8', 'application/json; charset=utf-8');
+    'text/css; charset=utf-8', 'application/json; charset=utf-8',
+    'application/json; charset=utf-8');
 var
   LOrigin: String;
   LPeerAddress: TSockAddr;
