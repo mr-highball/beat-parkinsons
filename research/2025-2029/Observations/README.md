@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+[Fatigue endpoints and shared flavor](Fatigue-Endpoints-and-Shared-Flavor-Nov25.md) compares adverse-event reports, symptom severity measurements and the clinical use of shared flavoring.
+
 [Shared food source contexts](Shared-Food-Source-Contexts-Nov25.md) compares clinical test preparations and original food-composition measurements across periods.
 
 - [Ground ginger exposure and abnormal movement outcomes](2026-Ginger-Exposure-and-Abnormal-Movement.md).
