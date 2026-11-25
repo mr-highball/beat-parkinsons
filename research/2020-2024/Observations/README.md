@@ -1,5 +1,7 @@
 # Observations for 2020-2024
 
+- [Rest-tremor trajectories and the saffron add-on contrast](2024-Rest-Tremor-Trajectories-and-Saffron-Trial-Attribution.md).
+
 - [Coffee fatigue and rest tremor measurement](2024-Coffee-Fatigue-and-Rest-Tremor-Endpoints.md).
 
 - [Coffee and ketogenic-diet outcome attribution](2024-Coffee-and-Ketogenic-Diet-Endpoint-Scope.md).

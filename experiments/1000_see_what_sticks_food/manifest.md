@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The coffee, lemon balm and clinical audit resolved 102 exact checks, added 36 assessments and revalidated 42 scorecards. The original multiple sclerosis cohort separates coffee intake from the later isolated caffeine trial. The lemon balm review reuses prior participant outcomes. The current queue holds 35,091 checks across 22,281 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-mid2024-clinical-nov24/README.md)
+The raw fig, clinical tremor and saffron audit resolved 80 exact checks, added 13 assessments and revalidated 20 scorecards. The original saffron add-on result is inconclusive, and the dated fig preparation account supplies cultural context. The current queue holds 35,011 checks across 22,221 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-late2024-clinical-nov24/README.md)
+
+The coffee, lemon balm and clinical audit resolved 102 exact checks, added 36 assessments and revalidated 42 scorecards. The original multiple sclerosis cohort separates coffee intake from the later isolated caffeine trial. The lemon balm review reuses prior participant outcomes. That replay left 35,091 checks across 22,281 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-mid2024-clinical-nov24/README.md)
 
 The sage, coffee and dietary audit resolved 100 exact checks, added 31 assessments and revalidated 38 scorecards. The saffron combination original distinguishes depression change within arms from the separately marked cognition and stress contrasts. The Spanish sage record preserves customary topical preparations without a fall comparison. That replay left 35,193 checks across 22,341 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-date-and-motor-nov24/README.md)
 

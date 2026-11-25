@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2000-2004
 
+- [Cazorla fig food and drying practices](Traditional-Practices/2000-Cazorla-Fresh-and-Dried-Fig-Practices.txt).
+
 - [Broad-bean meal practice and reported responses](Traditional-Practices/2000-Broad-Bean-Turkish-Meal-Context.txt).
 - [Jordanian market survey of sage leaf and intestinal pain](Traditional-Practices/2002-Lev-Amar-Jordan-Market-Sage-Leaf.txt).
 
