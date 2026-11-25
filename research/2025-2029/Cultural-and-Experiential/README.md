@@ -43,3 +43,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Dragon Boat Festival zongzi materials and preparations](Ceremonial-Accounts/2026-PMID42675503-Zongzi-Culinary-Materials.txt).
 
 - [Kerala traditional hot-processed virgin coconut oil](Traditional-Practices/2026-PMID42217587-Kerala-Urukku-Velichenna.txt).
+
+- [Public levodopa discussion with distinct nausea and movement reports](Conversations/2026-Reddit-Levodopa-Ginger-and-Nausea-Context.txt).

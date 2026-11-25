@@ -13,13 +13,15 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 926 |
+| Unknown | 1000 | 925 |
 | Maybe True | 0 | 38 |
-| Maybe False | 0 | 36 |
+| Maybe False | 0 | 37 |
 | True | 0 | 0 |
 | False | 0 | 0 |
 
 ## Findings and limits
+
+Claim 0271 shifted to Maybe False at 50.005 after the dried ginger extract AIM comparison was checked against the Korean original and measured 6-shogaol was documented in commercial ground ginger. The result is a minimal easing lean and two original proceedings checks remain open. [Evidence review](followup/ginger-dyskinesia-exposure-bridge-nov25/README.md)
 
 The November 25 ginger and saffron review resolved 26 exact checks, verified nine scorecards and documented the crocin mouse model, ginger inhalation and a traditional ginger-processed bark account. The queue has 31,764 checks across 21,412 sources. [Review and replay](followup/ginger-lipids-and-bmj-originals-nov25/README.md)
 
@@ -297,6 +299,7 @@ The dried-date pain scorecard was checked against the whole-fruit crossover and 
 - [0256](statements/0256.txt) **Maybe True** (50.005%) Consuming cold-pressed flaxseed oil reduces insomnia severity in people with Parkinson's disease.
 - [0262](statements/0262.txt) **Maybe True** (50.005%) Consuming cold-pressed sesame oil reduces depressive symptom severity in people with Parkinson's disease.
 - [0267](statements/0267.txt) **Maybe False** (50.005%) Consuming refined sunflower oil worsens swallowing difficulty severity in people with Parkinson's disease.
+- [0271](statements/0271.txt) **Maybe False** (50.005%) Consuming ground ginger worsens dyskinesia severity in people with Parkinson's disease.
 - [0277](statements/0277.txt) **Maybe False** (50.005%) Consuming ground anise seed worsens fatigue severity in people with Parkinson's disease.
 - [0281](statements/0281.txt) **Maybe False** (50.005%) Consuming raw celery stalk worsens rest tremor severity in people with Parkinson's disease.
 - [0285](statements/0285.txt) **Maybe True** (50.005%) Consuming fresh tarragon reduces pain severity in people with Parkinson's disease.

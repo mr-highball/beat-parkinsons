@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+- [Ground ginger exposure and abnormal movement outcomes](2026-Ginger-Exposure-and-Abnormal-Movement.md).
+
 - [Ginger motor performance and dyskinesia terminology](2025-Ginger-Motor-and-Dyskinesia-Citation.md).
 
 [Grape powder, anxiety outcomes and a later retraction](2025-Grape-Powder-Retraction-and-Anxiety-Measurements.md) distinguishes retracted findings from separate anxiety and cognition comparisons.

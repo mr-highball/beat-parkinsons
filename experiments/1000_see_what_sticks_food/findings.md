@@ -1,5 +1,7 @@
 ## Findings and limits
 
+Claim 0271 shifted to Maybe False at 50.005 after the dried ginger extract AIM comparison was checked against the Korean original and measured 6-shogaol was documented in commercial ground ginger. The result is a minimal easing lean and two original proceedings checks remain open. [Evidence review](followup/ginger-dyskinesia-exposure-bridge-nov25/README.md)
+
 The November 25 ginger and saffron review resolved 26 exact checks, verified nine scorecards and documented the crocin mouse model, ginger inhalation and a traditional ginger-processed bark account. The queue has 31,764 checks across 21,412 sources. [Review and replay](followup/ginger-lipids-and-bmj-originals-nov25/README.md)
 
 The November 25 proceedings and ginger audit resolved 18 original-source checks. A later review's description of ginger and dyskinesia was traced to the original mouse motor and immobility outcomes and recorded as context. [Dated audit](followup/proceedings-and-ginger-abstracts-nov25/README.md)

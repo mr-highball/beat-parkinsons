@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [ground ginger and dyskinesia audit](../2025-2029/Food-Experiment-Ginger-Dyskinesia-Exposure-Bridge.md) links the 2010 retail 6-shogaol analysis and the 2011 zingerone animal study.
+
 The [November 25 ginger, saffron and original-access audit](../2025-2029/Food-Experiment-Round-1-Ginger-and-Older-Originals-Nov25.md) links the dated records for this period.
 
 The [November 25 review of thirteen originals](../2025-2029/Food-Experiment-Round-1-Thirteen-Original-Collections-Nov25.md) lists the new dated source texts and companion records in this period.
