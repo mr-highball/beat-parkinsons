@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+[Olive-oil incidence and sage-containing blend outcomes](2026-Oil-Anxiety-and-Sage-Fatigue-Outcome-Boundaries.md) compares the new cohort and apathy trial with earlier clinical and fatigue outcomes.
+
 [Constipation and tremor outcomes across study designs](2025-Oil-Constipation-and-Tremor-Comparison-Boundaries.md) compares settings and clinical measurement differences with the preceding period.
 
 [Mangiferin citations and tremor measurement](2025-Mangiferin-Citation-and-Tremor-Measurements.md) follows the relevant preparation and measurement distinctions.

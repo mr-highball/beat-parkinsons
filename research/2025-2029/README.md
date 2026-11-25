@@ -1,5 +1,7 @@
 # 2025-2029
 
+[Round 1 olive-oil anxiety, sage fatigue and banana checks](Food-Experiment-Round-1-Olive-Anxiety-Sage-and-Banana-Nov24.md) indexes the verified originals and underlying study-boundary comparisons.
+
 [Round 1 olive oil, constipation and clinical source checks](Food-Experiment-Round-1-Olive-Oil-Constipation-and-Clinical-Nov24.md) indexes 60 authenticated originals and follows separate oil, dietary pattern and stool outcome comparisons.
 
 [Round 1 mangiferin and clinical original source checks](Food-Experiment-Round-1-Mangiferin-and-Clinical-Nov24.md) indexes 60 authenticated originals and the mangiferin citation trail.

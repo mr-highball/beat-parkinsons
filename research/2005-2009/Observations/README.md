@@ -1,5 +1,7 @@
 # Observations for 2005-2009
 
+[Banana intake markers and measurements in different tissues](2009-Banana-Blood-Markers-and-Tissue-Measures.md) distinguishes human plasma and rat tissue findings.
+
 - [Olive oil in both registered Crohn comparison arms](2009-Olive-Oil-Carrier-and-Crohn-Registration.md).
 
 - [Clinical fatigue measurements and the coffee exposure gap](2009-Filipino-Parkinson-Fatigue-Measurement.md).

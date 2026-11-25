@@ -1,5 +1,7 @@
 # 2005-2009
 
+[Banana intake and circulating markers](Observations/2009-Banana-Blood-Markers-and-Tissue-Measures.md) links the first electronic publication and separates blood, tissue and clinical outcomes.
+
 - [Registry listing olive oil in both Crohn comparison arms](Source-Text/Trials/NCT01037322.txt).
 
 - [Fatigue in stable Filipino patients with Parkinson disease](Source-Text/2009-PMID24868347-Filipino-Parkinson-Fatigue-Measurement.txt) and [market saffron composition and laboratory binding](Source-Text/2008-PMID18496783-Saffron-Quality-Market-Samples-and-Receptor-Binding.txt).
