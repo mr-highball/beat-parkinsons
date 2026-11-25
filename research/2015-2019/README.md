@@ -983,3 +983,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 [November 25 original-access and asparagus review](../2025-2029/Food-Experiment-Round-1-Alternate-Originals-Nov25.md) links the dated records added to this period.
 
 [November 25 journal and repository audit](../2025-2029/Food-Experiment-Round-1-Journals-and-Repositories-Nov25.md) links 10 checked source records in this period.
+
+[November 25 Round 1 source checks and citation trails](../2025-2029/Food-Experiment-Round-1-Eleven-Staged-Originals-Nov25.md) link the new dated records and their review depths.

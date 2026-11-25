@@ -39,3 +39,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Parkinson's UK Forum discussion on turmeric, black pepper, chia seeds and exercise routine](Conversations/2017-Parkinsons-UK-Turmeric-Black-Pepper-and-Chia-Routine.txt).
 - [Parkinson's UK Forum discussion on dairy reduction, protein timing and levodopa OFF periods](Conversations/2018-Parkinsons-UK-Dairy-Protein-and-Off-Periods.txt).
 - [Parkinson's UK Forum discussion on constipation coping with prunes, figs, dates, walnuts and milled golden flaxseed](Conversations/2019-Parkinsons-UK-Constipation-Prunes-Figs-Dates-Flaxseed.txt).
+
+- [Practitioner dietary guidance for weak Spleen Qi](Traditional-Practices/2017-Spleen-Qi-Dietary-Guidance.txt).

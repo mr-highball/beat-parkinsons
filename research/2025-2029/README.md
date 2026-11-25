@@ -1024,3 +1024,5 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 [November 25 journal and repository audit](../2025-2029/Food-Experiment-Round-1-Journals-and-Repositories-Nov25.md) links 4 checked source records in this period.
 
 [Balance discordance and raw-orange scope](Observations/2026-Balance-Discordance-and-Raw-Orange-Scope.md) separates confidence, timed mobility and counted falls.
+
+[November 25 Round 1 source checks and citation trails](Food-Experiment-Round-1-Eleven-Staged-Originals-Nov25.md) link the new dated records and their review depths.

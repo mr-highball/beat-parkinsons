@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The latest November 25 source review resolved 112 exact Round 1 checks in 11 original bodies. Forty-four remain related leads and 68 had a contextual mismatch. Sixty-eight scorecards retained their published verdicts and anchors. The exact queue now holds 33,626 pairs across 21,697 sources. [Scope, chronological accessions and one historical access gap](followup/twelve-collection-originals-nov25/README.md)
+
 The November 25 review of thirteen originals resolved 148 exact checks, including 75 related contexts and 73 exclusions. Eighty-three scorecards retained their verdicts and anchors after linked study and retraction checks. The exact queue holds 33,738 pairs across 21,708 sources. [Scope and source trail](followup/thirteen-collection-originals-nov25/README.md)
 
 The November 25 nine-original review resolved 122 checks, including 37 related contexts and 85 exclusions. Seventy-one scorecards retained their verdicts and anchors after four related additions. The exact queue holds 33,886 pairs across 21,721 sources. [Original scopes and follow-up](followup/nine-collection-originals-nov25/README.md)

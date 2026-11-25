@@ -39,3 +39,5 @@ January 1, 1955 through December 31, 1959.
 - [Observations on clinical names and advertised foods](Observations/Strawberry-Clinical-Name-and-Food.md).
 
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
+
+[November 25 Round 1 source checks and citation trails](../2025-2029/Food-Experiment-Round-1-Eleven-Staged-Originals-Nov25.md) link the new dated records and their review depths.

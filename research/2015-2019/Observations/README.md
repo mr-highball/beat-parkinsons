@@ -650,3 +650,5 @@ The 2015 trauma trial compared topical sesame oil and massage with routine care.
 - [Cinnamon motor tests and orange sensory exposure](2019-Cinnamon-Motor-and-Orange-Sensory-Outcomes.md)
 
 - [Saffron citation, dietary oil cohort and clove events](2019-Saffranal-Citation-Oil-Cohort-and-Clove-Events.md)
+
+- [Food exposure, source membership and traditional dietary guidance](Food-Exposure-and-Practitioner-Context.md).
