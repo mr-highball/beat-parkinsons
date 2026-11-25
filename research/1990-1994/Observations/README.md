@@ -106,3 +106,9 @@ The 1990 food-systems paper records eggs, oats, millet, citrus and brassica in t
 The 1993 archive uses peanut oil as a drug suspension in a rat pharmacokinetics abstract. This extends the prior period observations on foods used in laboratory methods. The 1994 Mainz proceedings remain an original-access gap. [British proceedings](../Source-Text/PMC1364582-Round1-Original-Scope.txt) · [Mainz access](../Source-Text/1994-PMID8183379-Mainz-Pharmacology-Original-Access.txt)
 
 The 1992 pharmacology posters use corn oil as an injected comparator and olive oil as an injected vehicle in separate studies. They add route-specific context to earlier oil discussions. [Poster communications](../Source-Text/PMC1908116-Round1-Original-Scope.txt)
+
+## Nutmeg and carrot source observations
+
+The Maluku and Java survey documents continued insomnia and diarrhea uses. The original abstract supplies no clinical outcomes for those uses and the full report remains an access lead.
+
+- [Ethnobotany of nutmeg in the Spice Islands](../Cultural-and-Experiential/Traditional-Practices/1994-PMID8072304-Maluku-Java-Nutmeg-Uses.txt)

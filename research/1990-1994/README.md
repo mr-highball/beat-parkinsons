@@ -162,3 +162,7 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 [November 25 journal and repository audit](../2025-2029/Food-Experiment-Round-1-Journals-and-Repositories-Nov25.md) links 1 checked source records in this period.
 
 - [1994 Parkinson clinical review, verified against the original printed pages](Source-Text/1994-PMID7755681-Parkinson-Clinical-Review-Food-Scopes.txt).
+
+## Round 1 food experiment sources
+
+- [Ethnobotany of nutmeg in the Spice Islands](Cultural-and-Experiential/Traditional-Practices/1994-PMID8072304-Maluku-Java-Nutmeg-Uses.txt)

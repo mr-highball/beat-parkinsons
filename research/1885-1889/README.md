@@ -28,3 +28,7 @@ January 1, 1885 through December 31, 1889.
 [All periods and collection method](../README.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+## Round 1 food experiment sources
+
+- [Nutmegs in Retrospective Therapeutics, Southern Medical Record](Cultural-and-Experiential/Traditional-Practices/1889-PMID36024268-Shoemaker-Nutmeg-Sleep-and-Diarrhea.txt)

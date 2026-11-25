@@ -670,3 +670,10 @@ The newer coconut gel trial record is complete, with no posted results, and uses
 The later Urukku Velichenna study concerns hot-processed oil alone. The 2022 Kerala account and 2024 experimental follow-up concern a preparation that combines oil and edible crab. Their endpoints and preparations need distinct evidence judgments. [2026 oil report](../Source-Text/2026-PMID42217587-Deepika-Hot-Processed-Coconut-Oil.txt) · [2024 combined-preparation report](../../2020-2024/Source-Text/2024-PMID39134229-Deepika-Karkataka-Taila-Preclinical.txt)
 
 [Historical sleep routes and food fiber comparisons](2026-Nutmeg-Sleep-Routes-and-Food-Fiber-Comparisons.md) reviews the documented historical route and distinct clinical outcomes.
+
+## Nutmeg and carrot source observations
+
+The Gorontalo survey retains medicinal use of nutmeg for diarrhea. A new 15-person, uncontrolled carrot-juice report in pregnancy adds a preliminary constipation result after the carrot fiber trial. Transfer to steamed carrot in Parkinson remains unresolved.
+
+- [Ethnomedicinal survey of plants used for treatment of mild COVID-19-related symptoms in Gorontalo Province, Indonesia](../Cultural-and-Experiential/Traditional-Practices/2025-PMID40330798-Gorontalo-Nutmeg-Diarrhea.txt)
+- [The relationship between carrot juice consumption and constipation in pregnancy](../Source-Text/2026-IJHESS10930-Carrot-Juice-Constipation.txt)

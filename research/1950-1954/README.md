@@ -42,3 +42,7 @@ January 1, 1950 through December 31, 1954.
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 - [Common fig names in the USDA plant inventory](Cultural-and-Experiential/Local-Knowledge/1950-USDA-Anjir-Fig-Accessions.txt).
+
+## Round 1 food experiment sources
+
+- [Current Topics, Etc.](Source-Text/1951-PMID29015135-Groundnut-Milk-Flavor-Scope.txt)

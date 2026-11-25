@@ -768,3 +768,14 @@ The Karkataka Taila field description gives tremor and palsy as local purposes. 
 - [Common fig identity and traditional preparations](2024-Fig-Species-and-Traditional-Fruit-Use.md).
 
 [Oats, gluten challenge and duplicate poster reports](2023-Oats-Gluten-Challenge-and-Poster-Duplicates.md) traces the shared study families.
+
+## Nutmeg and carrot source observations
+
+An original psychiatric abstract reports insomnia during mania after high nutmeg use. A separate rat poster reports gait after nutmeg extract. The Nigerian ethnobotanical interview record describes a different species called African nutmeg, and the carrot-named software in the Parkinson classifier is unrelated to dietary exposure.
+
+- [E-Poster Viewing](../Source-Text/2020-PMC13070663-EPA-Nutmeg-Original-Scope.txt)
+- [Non-motor clinical and biomarker predictors enable high cross-validated accuracy detection of early PD](../Source-Text/2020-PMID32477243-Parkinson-Classifier-Carrot-Software.txt)
+- [Natural antioxidant and anti-inflammatory compounds in foodstuff or medicinal herbs inducing heme oxygenase-1 expression](../Source-Text/2020-PMID33260980-Nutmeg-Malabaricone-Cell-Scope.txt)
+- [Which plants for what ailments: a quantitative analysis of medicinal ethnobotany of Ile-Ife](../Cultural-and-Experiential/Traditional-Practices/2021-PMID34394387-Ile-Ife-African-Nutmeg-and-Insomnia.txt)
+- [Bee pollen as functional food: insights into its composition and therapeutic properties](../Source-Text/2023-PMID36978805-Wild-Carrot-Bee-Pollen-Scope.txt)
+- [18th Asian Federation of Sports Medicine Congress scientific abstracts](../Source-Text/2024-PMID39234315-Sport-Congress-Nutmeg-Contusion-Scope.txt)

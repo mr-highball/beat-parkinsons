@@ -997,3 +997,9 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [High-oleic peanut oil and extra-virgin olive oil in a rat metabolic comparison](Source-Text/2019-PMID31817909-Peanut-and-Olive-Oil-Rat-Metabolism.txt).
 
 [The 2017 isolated resveratrol trial](Source-Text/2017-PMID28054939-Resveratrol-Postmenopause-Anxiety.txt) records the anxiety subscale result and its adjusted threshold.
+
+## Round 1 food experiment sources
+
+- [Effect of Acacia catechu on oxidative stress with possible implications in alleviating selected cognitive disorders](Source-Text/2016-PMID26949964-Acacia-Nutmeg-Citation-Scope.txt)
+- [Traditional Chinese herbal medicine for vascular dementia](Source-Text/2018-PMID30520514-Nutmeg-in-Vascular-Dementia-Formulas.txt)
+- [Traditional uses of medicinal plants in Polonnaruwa District in North Central Province of Sri Lanka](Cultural-and-Experiential/Traditional-Practices/2019-PMID31275693-Polonnaruwa-Nutmeg-Stomachache.txt)

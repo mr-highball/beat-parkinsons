@@ -22,3 +22,9 @@
 ## Almond oil source follow-up
 
 - Printed pages 151 to 152 discuss olive oil or almond oil as local respiratory preparations for dry mucosa and mucus clearance. The aphonia and hoarseness paragraph directly above concerns glycerine. The almond-oil paragraph does not describe a Parkinson cohort, a patient-specific loudness outcome, oral consumption, or how the oil was obtained. [Period source](../Food-Experiment-Almond-Oil-Airway-History.md)
+
+## Nutmeg and carrot source observations
+
+The 1889 article attributes a sleep remedy to a physician and also describes toxicity. It follows the historical therapeutic tradition of recording uses and adverse effects side by side. A traced 1891 reprint repeats the same attribution.
+
+- [Nutmegs in Retrospective Therapeutics, Southern Medical Record](../Cultural-and-Experiential/Traditional-Practices/1889-PMID36024268-Shoemaker-Nutmeg-Sleep-and-Diarrhea.txt)

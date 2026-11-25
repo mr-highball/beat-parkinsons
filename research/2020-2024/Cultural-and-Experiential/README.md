@@ -93,3 +93,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Ginger-processed Eucommia bark for traditional back and knee indications](Traditional-Practices/2024-Ginger-Processed-Eucommia-Back-and-Knee-Pain.txt).
 
 - [Sudhnoti food and laxative reports for common fig fruit](Traditional-Practices/2024-PMID39333361-Sudhnoti-Fig-Edible-and-Laxative-Use.txt).
+
+- [Which plants for what ailments: a quantitative analysis of medicinal ethnobotany of Ile-Ife](Traditional-Practices/2021-PMID34394387-Ile-Ife-African-Nutmeg-and-Insomnia.txt)

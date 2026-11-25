@@ -25,3 +25,10 @@ Look for follow-up to the small protein study and independent nutrition evidence
 Carrot feeding studies document a stool bulk response in healthy people. The early studies introduce a physiologic outcome and leave symptom severity unmeasured. [Original source notes](../Food-Experiment-Bowel-and-Motor-Outcomes.md)
 
 Ground nutmeg and bowel frequency are documented within the 1975 treatment switch. The 1976 letter remains an access gap for the reported constipation cases. The later extract experiments used stool output or an intestinal marker, which address distinct mechanisms and preparations. [Clinical observations](../Food-Experiment-Nutmeg-Paprika.md) · [Later stool output](../../1990-1994/Food-Experiment-Nutmeg-Paprika.md#nutmeg-seed-extracts-and-dry-stool-output-in-rats)
+
+## Nutmeg and carrot source observations
+
+The BMJ index routes to a 1976 letter that follows the 1975 report of ground nutmeg for severe secretory diarrhea. The second letter adds adverse symptoms and a dose reduction. The separate NEJM constipation letter still needs original access.
+
+- [Index to Volume I for 1976](../Source-Text/1976-PMC1638127-BMJ-Nutmeg-Index-Scope.txt)
+- [Nutmeg poisoning, Venables and colleagues](../Source-Text/1976-PMID942686-Venables-Nutmeg-Diarrhea-and-Toxicity.txt)

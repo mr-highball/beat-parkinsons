@@ -1048,3 +1048,10 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 [Cross-period beverage and constituent observations](Observations/2026-Beverage-Citation-and-Exposure-Scopes.md) compare chemical, absorption and clinical mood measures.
 
 [Round 1 clinical food and household source audit](Food-Experiment-Round-1-Clinical-Food-and-Household-Scopes-Nov25.md) links the current original texts and historical evidence.
+
+## Round 1 food experiment sources
+
+- [Ethnomedicinal survey of plants used for treatment of mild COVID-19-related symptoms in Gorontalo Province, Indonesia](Cultural-and-Experiential/Traditional-Practices/2025-PMID40330798-Gorontalo-Nutmeg-Diarrhea.txt)
+- [The relationship between carrot juice consumption and constipation in pregnancy](Source-Text/2026-IJHESS10930-Carrot-Juice-Constipation.txt)
+
+[Round 1 nutmeg and carrot source review](Food-Experiment-Round-1-Nutmeg-and-Carrot-Originals-Nov25.md) links the original page checks and research receipts.

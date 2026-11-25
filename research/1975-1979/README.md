@@ -56,3 +56,8 @@ January 1, 1975 through December 31, 1979.
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
 
 - [Round 1 caffeine, tremor and fish source audit](../2025-2029/Food-Experiment-Round-1-Caffeine-Tremor-and-Fish-Nov24.md)
+
+## Round 1 food experiment sources
+
+- [Index to Volume I for 1976](Source-Text/1976-PMC1638127-BMJ-Nutmeg-Index-Scope.txt)
+- [Nutmeg poisoning, Venables and colleagues](Source-Text/1976-PMID942686-Venables-Nutmeg-Diarrhea-and-Toxicity.txt)

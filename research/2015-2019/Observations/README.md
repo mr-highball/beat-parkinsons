@@ -658,3 +658,11 @@ Fly locomotion after saffron extract or crocin is distinct from separately rated
 The 2019 oil comparison assigns identified products in an animal metabolic model. It provides product specificity and microbiota outcomes, while the earlier coconut registration addresses clinical cognition in Alzheimer disease. Neither addresses Parkinson falls, fatigue or constipation. [Animal oil comparison](../Source-Text/2019-PMID31817909-Peanut-and-Olive-Oil-Rat-Metabolism.txt) · [Earlier registry](../../2010-2014/Source-Text/2013-NCT01883648-Coconut-Oil-Alzheimer-Trial-Termination.txt)
 
 String beans appear as a meal ingredient in a Parkinson community post. A superficially similar English study title concerns mung beans and was later retracted. The pediatric trial estimates cognitive fatigue for a broad vegetable category. [Meal account](../Cultural-and-Experiential/Personal-Reports/2015-Parking-Suns-String-Beans-in-Mixed-Meals.txt) · [Retraction trail](../Source-Text/2015-PMID26998181-Mung-Bean-Fatigue-Retraction.txt) · [Pediatric trial](../Source-Text/2015-PMID25781221-Green-Vegetables-and-Pediatric-Fatigue.txt)
+
+## Nutmeg and carrot source observations
+
+The periods add distinctions between clinical formulas, laboratory citations and a field use for stomachache. These extend the period's exposure history without isolating ground nutmeg for insomnia or constipation.
+
+- [Effect of Acacia catechu on oxidative stress with possible implications in alleviating selected cognitive disorders](../Source-Text/2016-PMID26949964-Acacia-Nutmeg-Citation-Scope.txt)
+- [Traditional Chinese herbal medicine for vascular dementia](../Source-Text/2018-PMID30520514-Nutmeg-in-Vascular-Dementia-Formulas.txt)
+- [Traditional uses of medicinal plants in Polonnaruwa District in North Central Province of Sri Lanka](../Cultural-and-Experiential/Traditional-Practices/2019-PMID31275693-Polonnaruwa-Nutmeg-Stomachache.txt)

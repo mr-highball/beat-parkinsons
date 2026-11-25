@@ -1136,3 +1136,12 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 [UEG 2021 original poster audit](Food-Experiment-Round-1-UEG-2021-Original-Posters.md) links the full-section screen to the preparation and cohort boundaries.
 
 [Carrot RG-I fermentation](Source-Text/2020-PMID32610452-Carrot-RG-I-Fermentation.txt) and the [orange fiber twin pilot](Source-Text/2022-PMID35533274-Orange-Fiber-Twin-Pilot.txt) distinguish laboratory and human biomarker endpoints.
+
+## Round 1 food experiment sources
+
+- [E-Poster Viewing](Source-Text/2020-PMC13070663-EPA-Nutmeg-Original-Scope.txt)
+- [Non-motor clinical and biomarker predictors enable high cross-validated accuracy detection of early PD](Source-Text/2020-PMID32477243-Parkinson-Classifier-Carrot-Software.txt)
+- [Natural antioxidant and anti-inflammatory compounds in foodstuff or medicinal herbs inducing heme oxygenase-1 expression](Source-Text/2020-PMID33260980-Nutmeg-Malabaricone-Cell-Scope.txt)
+- [Which plants for what ailments: a quantitative analysis of medicinal ethnobotany of Ile-Ife](Cultural-and-Experiential/Traditional-Practices/2021-PMID34394387-Ile-Ife-African-Nutmeg-and-Insomnia.txt)
+- [Bee pollen as functional food: insights into its composition and therapeutic properties](Source-Text/2023-PMID36978805-Wild-Carrot-Bee-Pollen-Scope.txt)
+- [18th Asian Federation of Sports Medicine Congress scientific abstracts](Source-Text/2024-PMID39234315-Sport-Congress-Nutmeg-Contusion-Scope.txt)

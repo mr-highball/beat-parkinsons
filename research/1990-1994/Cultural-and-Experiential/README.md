@@ -7,3 +7,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [1991 journal discussion of kampavata and traditional treatments](Traditional-Practices/1991-PMID1886119-Gourie-Devi-Kampavata-and-Mucuna.txt)
 
 - [Saffron in Chinese medical literature, documented and attributed by Zhang in 1994](Traditional-Practices/1994-Zhang-Saffron-in-Chinese-Medical-Literature.txt)
+
+- [Ethnobotany of nutmeg in the Spice Islands](Traditional-Practices/1994-PMID8072304-Maluku-Java-Nutmeg-Uses.txt)

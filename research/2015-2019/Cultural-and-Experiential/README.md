@@ -43,3 +43,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Practitioner dietary guidance for weak Spleen Qi](Traditional-Practices/2017-Spleen-Qi-Dietary-Guidance.txt).
 
 - [Cooked string beans in a Parkinson community meal account](Personal-Reports/2015-Parking-Suns-String-Beans-in-Mixed-Meals.txt).
+
+- [Traditional uses of medicinal plants in Polonnaruwa District in North Central Province of Sri Lanka](Traditional-Practices/2019-PMID31275693-Polonnaruwa-Nutmeg-Stomachache.txt)

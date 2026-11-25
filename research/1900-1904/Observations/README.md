@@ -16,3 +16,9 @@
 
 - Locate additional longitudinal reports on antimuscarinic exposure and follow-up of unilateral cases. Food-effect evidence was not identified.
 
+
+## Nutmeg and carrot source observations
+
+The BMJ meeting report uses nutmeg liver as a pathology term. The name reflects the organ's appearance and offers no spice exposure to compare with the preceding period’s therapeutic references.
+
+- [Seventy-Second Annual Meeting of the British Medical Association](../Source-Text/1904-PMC2355572-BMA-Nutmeg-Liver-Scope.txt)

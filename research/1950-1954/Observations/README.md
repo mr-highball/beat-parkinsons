@@ -31,3 +31,9 @@ The annual index leads to a respiratory account whose author distinguishes funga
 ## Food identity in historical sources
 
 The fig inventory distinguishes common fig accessions from entries identified only to Ficus. Anjir and closely related names occur across both groups. Later folk and research references can be searched with those names while preserving species and preparation uncertainty. [Original inventory context](../Cultural-and-Experiential/Local-Knowledge/1950-USDA-Anjir-Fig-Accessions.txt).
+
+## Nutmeg and carrot source observations
+
+Nutmeg appears as a flavoring candidate for groundnut milk. The period source adds a preparation context without evidence of a bowel response.
+
+- [Current Topics, Etc.](../Source-Text/1951-PMID29015135-Groundnut-Milk-Flavor-Scope.txt)
