@@ -1205,3 +1205,7 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 
 - [2022 systematic review of saffron and insomnia](Source-Text/2022-PMID36141931-Saffron-Insomnia-Synthesis.txt)
 - [2022 trial registration with linked 2025 results](Source-Text/Trials/NCT05315986.txt)
+
+## Round 1 original dietary and trial scopes
+
+[Geisinger fatigability](Source-Text/2021-PMID33920900-Geisinger-Fatigability-and-HEI-Green-Bean-Classification.txt) links the adjusted food-group estimates to their dietary coding. The [Aran trial](Source-Text/2021-PMID33536055-Olive-Oil-Shared-Vehicle-in-Autism-Trial.txt) and its [sleep report](Source-Text/2022-PMID35884990-Autism-Sleep-and-Shared-Olive-Oil.txt) share a trial family and olive oil vehicle. The [Salvador garden survey](Cultural-and-Experiential/Local-Knowledge/2020-PMID33121514-Salvador-Gardeners-Culinary-Crops.txt) preserves grower accounts and crops. The [November 25 packet](../../experiments/1000_see_what_sticks_food/followup/structured-frailty-balance-trails-nov25/README.md) lists all additional structured originals.

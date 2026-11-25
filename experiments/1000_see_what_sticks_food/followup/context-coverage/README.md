@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 25 structured-original review closed 109 exact source checks, including 42 related scopes and 67 exclusions. It linked three follow-through reports for dietary fatigue and an olive-oil carrier, then validated 38 scorecards with unchanged verdicts and anchors. The replay leaves 30,464 exact checks across 21,012 source keys and 389 frozen claims. [Originals, findings and replay](../structured-frailty-balance-trails-nov25/README.md)
+
 The November 25 priority review recovered two previously pending older originals, linked the Lang saffron sleep publication to its registry and revalidated four scorecards. The packet adds two conversational sources, a systematic review and a clinical guideline. The exact replay leaves 30,573 checks across 21,030 source keys and 389 frozen claims, including eight priority-three checks still awaiting full original access. [Original sources, boundaries and replay](../priority-review-trails-nov25/README.md)
 
 The November 25 proceedings and article follow-through resolved 124 exact Round 1 checks across ten original collections. Fifty-two related contexts and 72 exclusions were recorded. All 35 affected scorecards retain their verdicts and evidence anchors. The exact replay leaves 30,575 checks across 21,032 source keys and 389 frozen claims. The cumulative pharmacological index retains 16 open pairs. [Originals, scorecards and replay](../shared-archive-contexts-next-nov25/README.md)

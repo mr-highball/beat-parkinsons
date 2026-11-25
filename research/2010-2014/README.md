@@ -745,3 +745,7 @@ The [2011 Wang rosmarinic acid model](Source-Text/2011-PMID22205146-Wang-Rosmari
 - 2011-09-21 · [22nd European Students' Conference Abstracts](Source-Text/2011-PMC3476934-Round1-Proceedings-Scope.txt)
 
 [Exact checks and scorecards](../../experiments/1000_see_what_sticks_food/followup/shared-archive-contexts-next-nov25/README.md)
+
+## Round 1 original proceedings scope
+
+The [2014 multiple sclerosis oral presentations](Source-Text/2014-PMC4518813-Round1-Structured-Scope.txt) document cod liver oil as an adjustment variable in an environmental risk abstract. The exposure and outcome leave the cooked cod and fatigue claim open.

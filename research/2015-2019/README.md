@@ -1031,3 +1031,7 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - 2019-10-15 · [Atti del 52° Congresso Nazionale, Società Italiana di Igiene, Medicina Preventiva e Sanità Pubblica](Source-Text/2019-PMC6865078-Round1-Proceedings-Scope.txt)
 
 [Exact checks and scorecards](../../experiments/1000_see_what_sticks_food/followup/shared-archive-contexts-next-nov25/README.md)
+
+## Round 1 botanical practice and neurophysiology
+
+The [2017 Pikuni–Blackfeet original](Source-Text/2017-PMC6149223-Round1-Structured-Scope.txt) separates community plant-use reporting, botanical identity and assay findings. The [2019 Parkinson neurophysiology article](Source-Text/2019-PMC6463734-Round1-Structured-Scope.txt) documents sensorimotor testing and the absence of an assigned culinary exposure in those comparisons.

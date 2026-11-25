@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+[Dietary grouping, shared vehicles and original-source review](Structured-Food-Exposure-Scopes-Nov25.md) compares string-bean food coding, shared olive oil in clinical formulations and community growing records.
+
 [Date and orange exposures](Date-and-Orange-Exposure-Scopes-Nov25.md) compares extract preparations, inflammatory endpoints, flavoring and mixtures across periods.
 
 [Fatigue endpoints and shared flavor](Fatigue-Endpoints-and-Shared-Flavor-Nov25.md) compares adverse-event reports, symptom severity measurements and the clinical use of shared flavoring.
