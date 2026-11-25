@@ -1,0 +1,7 @@
+# Search trails and scope
+
+Oracle revision 101 supplied the first-pass publication lookups. Three exact original paths were reused. Review verified 54 PMC structured article bodies and six PMC article HTML bodies under the same source identifiers. These were originals for their own studies, with citation mentions treated as background. The dispositions ledger gives source-specific scope and each archived source's year follows its known first publication date.
+
+After exact accession lookups, the live follow-up retrieved the [2022 publisher crossover](https://pubmed.ncbi.nlm.nih.gov/36102329/), the [2026 citrus blend original](https://pmc.ncbi.nlm.nih.gov/articles/PMC13305325/), and the [2024 UK Biobank author abstract](https://pubmed.ncbi.nlm.nih.gov/39159603/). The locally kept crossover supplement records the unresolved main-effect p-value difference and the baseline inconsistency. The publisher route for the cohort returned an abstract page, so the extraction remains at abstract depth. No additional claim held in the frozen corpus was marked as a positive or negative effect from these three reports.
+
+Among the 79 checked scopes, 44 ask about dried date outcomes and 16 about culinary sage outcomes. The sources include underlying symptom measurement and clinical distinctions, giving context for future searches. None supplies a new directional kitchen-preparation comparison for a frozen claim.

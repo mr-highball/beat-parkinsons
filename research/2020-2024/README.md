@@ -1,5 +1,7 @@
 # 2020-2024
 
+[Orange pomace crossover and bowel habits before Parkinson diagnosis](Observations/2024-Orange-Pomace-Endpoints-and-Constipation-Risk.md) preserves the primary frequency, secondary regularity, and cohort outcomes.
+
 The [fig, tremor and saffron audit](Food-Experiment-Round-1-Fig-Tremor-and-Saffron-Nov24.md) links authenticated sources and [cross-period observations](Observations/2024-Rest-Tremor-Trajectories-and-Saffron-Trial-Attribution.md).
 
 The [coffee, lemon balm and clinical source audit](Food-Experiment-Round-1-Coffee-Lemon-Balm-and-Clinical-Nov24.md) links verified originals and [cross-period observations](Observations/2024-Coffee-Fatigue-and-Rest-Tremor-Endpoints.md).

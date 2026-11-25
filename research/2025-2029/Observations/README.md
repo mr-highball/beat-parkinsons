@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+[Citrus-containing fibre blend and constipation](2026-Citrus-Fibre-Blend-and-Constipation.md) compares the later clinical formulation with the earlier pomace crossover.
+
 - [Caffeine and lemon balm preparation limits](2025-2026-Caffeine-and-Lemon-Balm-Exposure-Boundaries.md).
 
 - [Coffee during wearing off and the distinction between alertness and fatigue](2025-2026-Coffee-Fatigue-and-Wearing-Off.md).

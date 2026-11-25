@@ -1,5 +1,7 @@
 # Observations for 2020-2024
 
+[Orange pomace outcomes and bowel habits before diagnosis](2024-Orange-Pomace-Endpoints-and-Constipation-Risk.md) compares the 2022 crossover with the prior beverage study, alongside the 2024 cohort.
+
 - [Rest-tremor trajectories and the saffron add-on contrast](2024-Rest-Tremor-Trajectories-and-Saffron-Trial-Attribution.md).
 
 - [Coffee fatigue and rest tremor measurement](2024-Coffee-Fatigue-and-Rest-Tremor-Endpoints.md).

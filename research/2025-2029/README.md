@@ -1,5 +1,7 @@
 # 2025-2029
 
+[Round 1 orange constipation and clinical source audit](Food-Experiment-Round-1-Orange-Constipation-and-Clinical-Nov24.md) catalogs 60 originals by publication date and follows the citrus and constipation leads.
+
 - [Caffeine and lemon balm preparation limits](Observations/2025-2026-Caffeine-and-Lemon-Balm-Exposure-Boundaries.md).
 
 - [Coffee and tiredness during medication wearing off](Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-and-Wearing-Off-Tiredness.txt) and [variable coffee and energy accounts](Cultural-and-Experiential/Conversations/2026-Reddit-Coffee-and-Variable-Energy-Reports.txt).

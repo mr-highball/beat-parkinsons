@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The November 24 raw fig, clinical tremor and saffron audit resolved 80 checks across 60 originals. The current replay leaves 35,011 checks across 22,221 publications. [Originals and reconciled scopes](../priority-five-late2024-clinical-nov24/README.md)
+The November 24 orange, sage, dried-date and clinical audit resolved 79 checks across 60 originals. The current replay leaves 34,932 checks across 22,161 publications. [Originals and reconciled scopes](../priority-five-early2025-clinical-nov24/README.md)
+
+The November 24 raw fig, clinical tremor and saffron audit resolved 80 checks across 60 originals. That replay left 35,011 checks across 22,221 publications. [Originals and reconciled scopes](../priority-five-late2024-clinical-nov24/README.md)
 
 The November 24 coffee, lemon balm and clinical audit resolved 102 checks across 60 originals. That replay left 35,091 checks across 22,281 publications. [Originals and reconciled scopes](../priority-five-mid2024-clinical-nov24/README.md)
 

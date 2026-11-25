@@ -1,0 +1,5 @@
+# Bowel outcomes in a citrus-containing fibre blend
+
+The [2026 randomized trial](../Source-Text/2026-PMID42369644-Citrus-Fibre-Blend-and-Constipation.txt) reports a week-four between-group increase of 1.88 bowel movements per week for a four-fibre blend against placebo. This differs from the [2022 crossover](../../2020-2024/Observations/2024-Orange-Pomace-Endpoints-and-Constipation-Risk.md), whose isolated added-pomace comparison in healthy adults had an inconclusive primary weekly frequency result. The later trial enrolled adults with functional constipation and excluded Parkinson disease. The treatment arm did not isolate citrus fibre.
+
+The [clinical source audit](../Food-Experiment-Round-1-Orange-Constipation-and-Clinical-Nov24.md) also found that a dialysis study's bowel result followed inhaled Melissa and that the conceptual colonic review cites previous citrus work. Keeping each population, preparation and comparison visible prevents those records from falsely reinforcing one another.
