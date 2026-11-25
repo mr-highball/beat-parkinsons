@@ -82,3 +82,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Thirisadham traditional three-spice formulation](Traditional-Practices/2023-JAHM-Thirisadham-Three-Spice-Tradition.txt).
 
 - [Consensus trail for a cinnamon-twig and kudzu formula in Parkinson pain](Traditional-Practices/2021-TCM-Consensus-Cinnamon-Twig-and-Kudzu-Parkinson-Pain.txt).
+
+- [Sri Lankan Ayurveda and traditional botanical cosmetic practices](Traditional-Practices/2021-PMID34257686-Sri-Lankan-Cosmetic-Plants.txt).

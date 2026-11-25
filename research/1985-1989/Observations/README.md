@@ -70,3 +70,5 @@ The primary diabetes paper separates the tarragon diet from the herbal mixture a
 A coffee substitution experiment and the investigators' later review identify fatigue as a withdrawal observation in heavy coffee users. The original report and adapted figure share the same people and differ from later Parkinson fatigue trials by exposure and population. [Original abstract and withdrawal analysis](../Source-Text/1986-PMID3772801-Griffiths-Coffee-Withdrawal-and-Fatigue.txt)
 
 The 1988 proceedings recover distinct experiments that used decaffeinated coffee, corn oil and orange juice as carriers or controls. The exposures answer drug-effect questions and supply no Parkinson symptom comparison for the foods themselves. [Printed proceedings](../Source-Text/1988-PMID3207568-BPS-Clinical-Pharmacology-Proceedings-Food-Scopes.txt)
+
+The printed aluminium review identified onion root tissue in a plant-cell assay. A later database record surfaced the material chiefly through its references, which also use orange as part of laboratory labels. [Original scan scope](../Source-Text/PMC1474689-Round1-Original-Scope.txt)

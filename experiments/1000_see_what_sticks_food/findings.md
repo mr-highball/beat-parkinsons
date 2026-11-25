@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The November 25 diet and cultural methods audit resolved 203 exact checks across 29 original publications. All 85 checked scorecards retained their verdicts and anchors. The original queue holds 32,403 checks across 21,547 sources. [Diet, archive and cultural source checks](followup/cultural-methods-and-diet-originals-nov25/README.md)
+
 The November 25 print and congress audit resolved 126 exact source checks across 18 publications. All 65 affected scorecards retained their published decisions. Ninety-eight staged checks still require further original access, and the full queue holds 32,606 checks across 21,576 sources. [Printed archives and congress scopes](followup/printed-indexes-and-congress-scopes-nov25/README.md)
 
 The latest November 25 audit resolved 214 exact checks across 27 original publications. The 95 verified scorecards retained their verdicts and anchors. Eight separately reviewed Irish proceedings checks await the 1997 original, and the total queue holds 32,732 checks across 21,594 sources. [Movement and traditional context audit](followup/staged-movement-and-traditional-context-nov25/README.md)
