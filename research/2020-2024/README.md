@@ -1200,3 +1200,8 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - 2023-12-03 · [Wild and cultivated olive oil in hypertensive mice](Source-Text/2023-PMID38044285-Wild-and-Cultivated-Olive-Oil-Retinal-Outcomes.txt)
 
 [Exact checks and scorecards](../../experiments/1000_see_what_sticks_food/followup/shared-archive-contexts-next-nov25/README.md)
+
+## Saffron and insomnia evidence synthesis
+
+- [2022 systematic review of saffron and insomnia](Source-Text/2022-PMID36141931-Saffron-Insomnia-Synthesis.txt)
+- [2022 trial registration with linked 2025 results](Source-Text/Trials/NCT05315986.txt)

@@ -1081,3 +1081,9 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 - 2025-07-17 · [ECR 2025 Book of Abstracts](Source-Text/2025-PMC12270984-Round1-Proceedings-Scope.txt)
 
 [Exact checks and scorecards](../../experiments/1000_see_what_sticks_food/followup/shared-archive-contexts-next-nov25/README.md)
+
+## Saffron and insomnia original results and guidance
+
+- [2025 older-adult extract trial](Source-Text/2025-PMID40762630-Lang-Saffron-Sleep-Trial.txt)
+- [VA/DoD chronic insomnia guideline and cited saffron trial](Source-Text/2025-VADOD-Chronic-Insomnia-Guideline-Saffron-Scope.txt)
+- [Two public conversations about variable sleep](Observations/README.md#saffron-and-sleep-observations)

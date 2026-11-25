@@ -693,3 +693,12 @@ The ergothioneine paper tests an isolated constituent and uses separate motor re
 - [Preparation and outcomes in the recovered proceedings](Proceedings-Preparation-and-Outcome-Nov25.md)
 
 - [Food and article identity in the internal medicine review](SGIM-Food-and-Archive-Identity-Nov25.md)
+
+## Saffron and sleep observations
+
+The 2022 pooled estimate for insomnia severity spans zero and combines an oral extract with an intranasal multicomponent preparation. The 2025 older-adult trial also has an inconclusive insomnia severity contrast, with better global sleep quality and sleep onset latency. The new conversation summaries capture early perceived improvement, later sleep difficulty, and reports of night waking under distinct products. The clinical and conversational sources leave the effect of ground saffron on Parkinson insomnia open.
+
+- [2022 trial synthesis](../../2020-2024/Source-Text/2022-PMID36141931-Saffron-Insomnia-Synthesis.txt)
+- [2025 trial results](../Source-Text/2025-PMID40762630-Lang-Saffron-Sleep-Trial.txt)
+- [Variable sleep after extract](../Cultural-and-Experiential/Conversations/2025-Reddit-Saffron-Extract-Variable-Sleep.txt)
+- [Reported night waking after supplement](../Cultural-and-Experiential/Conversations/2026-Reddit-Saffron-Supplement-and-Night-Waking.txt)

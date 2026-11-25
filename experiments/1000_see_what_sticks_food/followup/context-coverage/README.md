@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 25 priority review recovered two previously pending older originals, linked the Lang saffron sleep publication to its registry and revalidated four scorecards. The packet adds two conversational sources, a systematic review and a clinical guideline. The exact replay leaves 30,573 checks across 21,030 source keys and 389 frozen claims, including eight priority-three checks still awaiting full original access. [Original sources, boundaries and replay](../priority-review-trails-nov25/README.md)
+
 The November 25 proceedings and article follow-through resolved 124 exact Round 1 checks across ten original collections. Fifty-two related contexts and 72 exclusions were recorded. All 35 affected scorecards retain their verdicts and evidence anchors. The exact replay leaves 30,575 checks across 21,032 source keys and 389 frozen claims. The cumulative pharmacological index retains 16 open pairs. [Originals, scorecards and replay](../shared-archive-contexts-next-nov25/README.md)
 
 The November 25 shared archive review resolved 118 checks from ten original publications, recorded 29 related contexts and verified all 26 affected scorecards. The exact replay leaves 30,699 checks across 21,042 source keys and 392 frozen claims. [Shared originals and verified replay](../shared-cloud-originals-nov25/README.md)
