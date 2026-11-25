@@ -1,5 +1,7 @@
 # 2025-2029
 
+[Round 1 mangiferin and clinical original source checks](Food-Experiment-Round-1-Mangiferin-and-Clinical-Nov24.md) indexes 60 authenticated originals and the mangiferin citation trail.
+
 [Round 1 orange constipation and clinical source audit](Food-Experiment-Round-1-Orange-Constipation-and-Clinical-Nov24.md) catalogs 60 originals by publication date and follows the citrus and constipation leads.
 
 - [Caffeine and lemon balm preparation limits](Observations/2025-2026-Caffeine-and-Lemon-Balm-Exposure-Boundaries.md).

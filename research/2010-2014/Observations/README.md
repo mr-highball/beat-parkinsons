@@ -1,5 +1,7 @@
 # Observations for 2010-2014
 
+[Isolated mangiferin and mouse behavior](2014-Mangiferin-Behavior-and-Food-Attribution.md) follows the relevant preparation and measurement distinctions.
+
 - [A curcumin phytosome and regional soreness](2014-Phytosome-and-Regional-Soreness.md).
 
 - [Experimental formulations and clinical endpoints](2013-2014-Saffron-and-Turmeric-Formulation-Boundaries.md).

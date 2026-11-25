@@ -1,0 +1,7 @@
+# Search trails and boundaries
+
+The batch used Oracle catalog revision 102 for the exact accession pass. It authenticated 54 PMC structured bodies and six alternate PMC HTML originals. No exact standalone source was found for the pinned publication set. The dated text records preserve the review basis and identify the exact question each original was checked against.
+
+The local evidence index had the [Ghodsi clinical curcumin report](../../../../research/2020-2024/Source-Text/2022-PMID35636380-Ghodsi-Parkinson-Curcumin-Symptom-Gaps.txt) and the [fresh mango trial record](../../../../research/2025-2029/Source-Text/NCT06800833-Fresh-Mango-Depression.txt). ClinicalTrials.gov API, NCT06800833, returned `RECRUITING`, last registry update 2026-01-30, the change in depression questionnaire scores and no posted results on this pass. The curcumin add-on pilot does not give a separate pain contrast.
+
+The new [mangiferin review](../../../../research/2025-2029/Source-Text/2025-PMID40696232-Mango-Constituent-and-Mouse-Behavior-Citation-Trail.txt) led to three original accession searches. PMC or publisher access provided Yan's full article. The Cao and Jangra publisher routes did not expose full text, so those source summaries retain author-abstract depth. The review's secondary account of Cao's sucrose result was checked against the author abstract. No original trial of dried mango for Parkinson depression was identified from these citation trails.

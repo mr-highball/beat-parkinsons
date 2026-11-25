@@ -1,5 +1,7 @@
 # Observations for 2015-2019
 
+[Mangiferin and sucrose consumption](2017-Mangiferin-and-Sucrose-Direction.md) follows the relevant preparation and measurement distinctions.
+
 - [Saffron combinations and sage identity in earlier sources](2016-2017-Nutraceutical-and-Sage-Attribution.md).
 
 - [Curcumin timing and post-exercise soreness](2015-2019-Curcumin-Exercise-Timing-and-Soreness.md).

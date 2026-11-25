@@ -1,5 +1,7 @@
 # 2015-2019
 
+[Mangiferin and sucrose consumption](Observations/2017-Mangiferin-and-Sucrose-Direction.md) records interpretation and links to the dated originals.
+
 - [Curcumin plus saffron and the planned depression add-on contrast](Source-Text/2016-PMID27723543-Curcumin-Saffron-and-Depression-Contrasts.txt).
 
 - [Saffron combination and sage identity](Observations/2016-2017-Nutraceutical-and-Sage-Attribution.md).

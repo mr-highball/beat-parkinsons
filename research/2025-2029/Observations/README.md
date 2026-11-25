@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+[Mangiferin citations and tremor measurement](2025-Mangiferin-Citation-and-Tremor-Measurements.md) follows the relevant preparation and measurement distinctions.
+
 [Citrus-containing fibre blend and constipation](2026-Citrus-Fibre-Blend-and-Constipation.md) compares the later clinical formulation with the earlier pomace crossover.
 
 - [Caffeine and lemon balm preparation limits](2025-2026-Caffeine-and-Lemon-Balm-Exposure-Boundaries.md).
