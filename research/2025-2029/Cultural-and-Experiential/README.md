@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2025-2029
 
+[Jambi ginger and turmeric literature synthesis](Traditional-Practices/2026-Jambi-Ginger-and-Turmeric-Cultural-Review.txt) records attributed blood-pressure use separately from clinical Parkinson evidence.
+
 - [Panchakarma regimen with Ksheerabala and reported Kampa Vata motor changes](Traditional-Practices/2025-Colombo-Ksheerabala-Kampa-Vata-Case.txt).
 
 - [Patient experiences in the staged MCT and ketogenic-diet study](Personal-Reports/2026-Tidman-MCT-Phase-Interview-Experiences.txt).

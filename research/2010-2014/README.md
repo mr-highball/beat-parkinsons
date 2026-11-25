@@ -1,5 +1,7 @@
 # 2010-2014
 
+[Jambi 2012 traditional medicine field excerpt](Observations/2012-Jambi-Constipation-Practice-and-Plant-Names.md) documents a constipation preparation using two local plant names.
+
 [Isolated mangiferin and mouse behavior](Observations/2014-Mangiferin-Behavior-and-Food-Attribution.md) records interpretation and links to the dated originals.
 
 - [Phytosome curcumin and regional soreness](Source-Text/2014-PMID24982601-Phytosome-Curcumin-and-Regional-Soreness.txt).

@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2010-2014
 
+[Jambi 2012 field-survey excerpt](Traditional-Practices/2012-RISTOJA-Jambi-Constipation-Field-Excerpt.txt) records a customary constipation preparation without a verified botanical identification.
+
 - [Reported analgesic and postpartum-pain uses of date fruit in Spanish literature](Traditional-Practices/2014-Rivera-Date-Fruit-and-Pain-Spain.txt). The drying state and patient outcomes remain open.
 
 - [European green tea leaf monograph for fatigue and perceived weakness](Traditional-Practices/2014-EMA-Green-Tea-Leaf-Fatigue.txt). The infusion and powdered leaf indication is recorded under traditional use.

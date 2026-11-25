@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The olive-oil anxiety, sage fatigue and banana audit resolved 103 exact checks across 60 originals, added 27 assessments and revalidated 31 scorecards. The current queue holds 34,647 checks across 21,981 publications, including 403 mapped access holds. [Source packet and scorecard checks](followup/priority-five-2025-2026-clinical-nov24/README.md)
+The Jambi cultural, ginger, grape-seed and clinical audit resolved 98 exact checks across 60 originals, added 20 assessments and revalidated 38 scorecards. The current queue holds 34,549 checks across 21,921 publications, including 403 mapped access holds. [Source packet and scorecard checks](followup/priority-five-mid2026-clinical-nov24/README.md)
+
+The olive-oil anxiety, sage fatigue and banana audit resolved 103 exact checks across 60 originals, added 27 assessments and revalidated 31 scorecards. That replay left 34,647 checks across 21,981 publications, including 403 mapped access holds. [Source packet and scorecard checks](followup/priority-five-2025-2026-clinical-nov24/README.md)
 
 The olive oil, constipation and clinical audit resolved 91 checks across 60 originals, added 20 assessments and revalidated 30 scorecards. That replay left 34,750 checks across 22,041 publications, including 403 mapped access holds. [Source packet and scorecard checks](followup/priority-five-late2025-clinical-nov24/README.md)
 
