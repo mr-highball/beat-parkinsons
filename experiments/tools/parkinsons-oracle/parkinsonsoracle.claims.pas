@@ -211,14 +211,26 @@ function CompareClaimsByUsefulness(ALeft, ARight: Pointer): Integer;
 var
   LLeft: TClaim;
   LRight: TClaim;
+  LLeftRank: Integer;
+  LRightRank: Integer;
 begin
   LLeft := TClaim(ALeft);
   LRight := TClaim(ARight);
-  Result := CompareClaimUsefulness(
-    ClaimUsefulnessRank(LLeft.Verdict, LLeft.Direction, LLeft.ResearchStatus),
-    Double(LLeft.Confidence), LLeft.Round, LLeft.Id,
-    ClaimUsefulnessRank(LRight.Verdict, LRight.Direction, LRight.ResearchStatus),
-    Double(LRight.Confidence), LRight.Round, LRight.Id);
+  LLeftRank := ClaimUsefulnessRank(LLeft.Verdict, LLeft.Direction, LLeft.ResearchStatus);
+  LRightRank := ClaimUsefulnessRank(LRight.Verdict, LRight.Direction, LRight.ResearchStatus);
+  if LLeftRank < LRightRank then
+    Exit(-1);
+  if LLeftRank > LRightRank then
+    Exit(1);
+  if LLeft.Confidence > LRight.Confidence then
+    Exit(-1);
+  if LLeft.Confidence < LRight.Confidence then
+    Exit(1);
+  if LLeft.Round < LRight.Round then
+    Exit(-1);
+  if LLeft.Round > LRight.Round then
+    Exit(1);
+  Result := CompareStr(LLeft.Id, LRight.Id);
 end;
 
 procedure AddPosting(AIndex: TObjectDictionary<String, TList<TClaim>>;
@@ -283,6 +295,7 @@ var
   LStop: Integer;
   LIndex: Integer;
   LAssessment: TJSONObject;
+  LConfidence: Double;
 begin
   Result := TJSONObject.Create([
     'round', Round, 'claim_id', Id, 'category', Category, 'ingredient', Ingredient,
@@ -296,7 +309,10 @@ begin
       if Frac(Confidence) = 0 then
         Result.Add('confidence', Trunc(Confidence))
       else
-        Result.Add('confidence', Double(Confidence));
+      begin
+        LConfidence := Confidence;
+        Result.Add('confidence', LConfidence);
+      end;
     end;
     if QueuedPairs >= 0 then
     begin
