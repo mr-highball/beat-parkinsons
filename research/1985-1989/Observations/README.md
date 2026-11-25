@@ -1,5 +1,7 @@
 # Observations for 1985–1989
 
+The [printed tremor study](1989-Printed-Tremor-Measurement.md) distinguishes resting tremor from instrumented tremor after movement.
+
 ## Major observations
 
 - [Protein redistribution](../Food-and-Nutrition.md) extended meal challenges into repeated clinical observations. Better daytime mobility and more dyskinesia could occur together, and continued adherence varied.

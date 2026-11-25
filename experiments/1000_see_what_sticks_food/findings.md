@@ -1,6 +1,8 @@
 ## Findings and limits
 
-The Jambi cultural, ginger, grape-seed and clinical audit resolved 98 exact checks across 60 originals, added 20 assessments and revalidated 38 scorecards. The current queue holds 34,549 checks across 21,921 publications, including 403 mapped access holds. [Source packet and scorecard checks](followup/priority-five-mid2026-clinical-nov24/README.md)
+The PMC and printed-original audit resolved 87 exact checks across 60 publications, added 14 related assessments and revalidated 24 scorecards. The original queue holds 34,462 checks across 21,861 publications, including 403 mapped access holds. [Scope and source coverage](followup/priority-five-pmc-and-printed-nov24/README.md)
+
+The Jambi cultural, ginger, grape-seed and clinical audit resolved 98 exact checks across 60 originals, added 20 assessments and revalidated 38 scorecards. That replay left 34,549 checks across 21,921 publications, including 403 mapped access holds. [Source packet and scorecard checks](followup/priority-five-mid2026-clinical-nov24/README.md)
 
 The olive-oil anxiety, sage fatigue and banana audit resolved 103 exact checks across 60 originals, added 27 assessments and revalidated 31 scorecards. That replay left 34,647 checks across 21,981 publications, including 403 mapped access holds. [Source packet and scorecard checks](followup/priority-five-2025-2026-clinical-nov24/README.md)
 

@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [Round 1 PMC and printed originals](../2025-2029/Food-Experiment-Round-1-PMC-and-Printed-Nov24.md) lists the source summaries and exact claim scopes filed in this period.
+
 [Round 1 Jambi, ginger and grape original checks](Food-Experiment-Round-1-Jambi-Ginger-and-Grape-Nov24.md) links 60 authenticated original sources and the evidence by preparation and outcome.
 
 [Round 1 olive-oil anxiety, sage fatigue and banana checks](Food-Experiment-Round-1-Olive-Anxiety-Sage-and-Banana-Nov24.md) indexes the verified originals and underlying study-boundary comparisons.

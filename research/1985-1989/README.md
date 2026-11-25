@@ -1,5 +1,7 @@
 # 1985-1989
 
+The [Round 1 PMC and printed originals](../2025-2029/Food-Experiment-Round-1-PMC-and-Printed-Nov24.md) lists the source summaries and exact claim scopes filed in this period.
+
 The [caffeine tiredness crossover](Source-Text/1986-PMID3741730-Bruce-Caffeine-Tiredness-Crossover.txt) reports a nine-person isolated-caffeine comparison after abstinence.
 
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.

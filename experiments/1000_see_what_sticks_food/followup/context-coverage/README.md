@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The latest native replay resolves 87 exact checks across 60 publications, including 11 verified printed originals. The queue holds 34,462 checks across 21,861 publications. [Source scopes and replay](../priority-five-pmc-and-printed-nov24/README.md)
+
 The November 24 Jambi and clinical audit resolved 98 checks across 60 originals. The current replay leaves 34,549 checks across 21,921 publications. [Originals and reconciled scopes](../priority-five-mid2026-clinical-nov24/README.md)
 
 The November 24 olive-oil anxiety, sage fatigue and banana audit resolved 103 checks across 60 originals. That replay left 34,647 checks across 21,981 publications. [Originals and reconciled scopes](../priority-five-2025-2026-clinical-nov24/README.md)

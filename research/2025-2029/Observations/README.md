@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+[Saffron endpoints and geraniol sedation](2026-Saffron-Endpoints-and-Geraniol-Sedation.md) tracks a sensitivity analysis and endpoints across animal and human studies.
+
 [Ginger rigidity, grape tension and source attribution](2026-Ginger-Rigidity-Grape-Tension-and-Source-Attribution.md) compares food, extracts, model endpoints and traditional source provenance.
 
 [Olive-oil incidence and sage-containing blend outcomes](2026-Oil-Anxiety-and-Sage-Fatigue-Outcome-Boundaries.md) compares the new cohort and apathy trial with earlier clinical and fatigue outcomes.

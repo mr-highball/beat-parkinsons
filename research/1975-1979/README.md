@@ -1,5 +1,7 @@
 # 1975-1979
 
+The [Round 1 PMC and printed originals](../2025-2029/Food-Experiment-Round-1-PMC-and-Printed-Nov24.md) lists the source summaries and exact claim scopes filed in this period.
+
 The [November 24 original-source review](../2025-2029/Food-Experiment-Round-1-Legacy-Originals-Nov24.md) checked 1 publications from this period. [PMID 1259839](Source-Text/1976-PMID1259839-Mitral-Leaflet-Prolapse-and-Chest-Pain.txt).
 
 The [dried-date and apathy source review](../2025-2029/Food-Experiment-Dried-Date-Apathy-Originals-Nov22.md) links original article summaries, exact access routes, and the evidence still needed for the Parkinson claim.

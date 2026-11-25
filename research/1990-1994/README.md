@@ -1,5 +1,7 @@
 # 1990-1994
 
+The [Round 1 PMC and printed originals](../2025-2029/Food-Experiment-Round-1-PMC-and-Printed-Nov24.md) lists the source summaries and exact claim scopes filed in this period.
+
 The [low-dose caffeine substitution](Source-Text/1990-PMID2262896-Low-Dose-Caffeine-Withdrawal.txt), [short and extended abstinence comparison](Source-Text/1991-PMID22282364-Caffeine-Abstinence-Tiredness.txt) and [blinded fatigue withdrawal study](Source-Text/1992-PMID1528206-Blinded-Caffeine-Cessation-Fatigue.txt) preserve the distinct outcome measures and remaining original-access gaps.
 
 The [caffeine alertness trial](Source-Text/1990-PMID2296626-Caffeine-Alertness-and-Fatigue-Boundary.txt) separates objective sleep latency and vigilance from fatigue at author-abstract depth.

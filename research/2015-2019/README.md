@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [Round 1 PMC and printed originals](../2025-2029/Food-Experiment-Round-1-PMC-and-Printed-Nov24.md) lists the source summaries and exact claim scopes filed in this period.
+
 [Mangiferin and sucrose consumption](Observations/2017-Mangiferin-and-Sucrose-Direction.md) records interpretation and links to the dated originals.
 
 - [Curcumin plus saffron and the planned depression add-on contrast](Source-Text/2016-PMID27723543-Curcumin-Saffron-and-Depression-Contrasts.txt).
