@@ -762,3 +762,5 @@ The registered coffee comparison shows why the symptom measure matters. In healt
 The quinoa claim shows how a review table can transform an experiment on donated samples into a reported symptom result. The prior period supplies a parallel citation check in which the sunflower trial assigned oils to healthy adults and evaluated broader outcomes. [Baert primary](../Source-Text/PMC8363715.txt) · [Harvey primary](../../2015-2019/Source-Text/2018-PMID29951312-Harvey-Sunflower-MCT-Keto-Induction.txt)
 
 The Karkataka Taila field description gives tremor and palsy as local purposes. Its experimental follow-ups distinguish compound toxicology and broader motor results from outcomes observed by practitioners. [Kerala field record](../Cultural-and-Experiential/Traditional-Practices/2022-Deepika-Kerala-Karkataka-Taila.txt) · [Preclinical follow-up](../Source-Text/2024-PMID39134229-Deepika-Karkataka-Taila-Preclinical.txt)
+
+- [Ginger, Eucommia bark and pain attribution](2024-Eucommia-Ginger-Preparation-and-Pain.md).

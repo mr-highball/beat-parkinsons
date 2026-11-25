@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [November 25 ginger, saffron and original-access audit](Food-Experiment-Round-1-Ginger-and-Older-Originals-Nov25.md) indexes the source review, older access receipts and the traditional Eucommia record.
+
 The [November 25 review of thirteen originals](Food-Experiment-Round-1-Thirteen-Original-Collections-Nov25.md) indexes the study records and grape-powder retraction audit.
 
 The [November 25 nine-original review](Food-Experiment-Round-1-Nine-Original-Collections-Nov25.md) indexes nine original bodies and the spice and cranberry study trails.

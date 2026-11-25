@@ -1,0 +1,5 @@
+# Ginger, processing and symptom attribution
+
+The Chinese historical article describes ginger juice in the preparation of Eucommia bark for customary back and knee indications. The 2024 Eucommia review lists the auxiliary preparation and covers other parts of the plant, including leaves processed as tea. Exposure attribution requires keeping the ginger, bark and leaf preparations distinct. Neither article assigns a clinical pain result to ginger itself. [Historical study](../Cultural-and-Experiential/Traditional-Practices/2024-Ginger-Processed-Eucommia-Back-and-Knee-Pain.txt) · [Eucommia review](../Source-Text/PMC10834829-Round1-Original-Scope.txt)
+
+The prior-period Trinidad interview study documents an oral decoction of ginger rhizome for a different customary indication. It provides a useful distinction between ginger as the principal botanical preparation and ginger as an auxiliary for another plant. Both source types preserve reported practice. [2015 Trinidad interview study](../../2015-2019/Cultural-and-Experiential/Traditional-Practices/2015-Trinidad-Ginger-Olive-Oil-and-Culinary-Names.txt)

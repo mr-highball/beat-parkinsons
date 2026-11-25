@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [November 25 ginger, saffron and original-access audit](../2025-2029/Food-Experiment-Round-1-Ginger-and-Older-Originals-Nov25.md) links the dated records for this period.
+
 The [November 25 review of thirteen originals](../2025-2029/Food-Experiment-Round-1-Thirteen-Original-Collections-Nov25.md) lists the new dated source texts and companion records in this period.
 
 The [November 25 original collection review](../2025-2029/Food-Experiment-Round-1-Eleven-Original-Collections-Nov25.md) indexes the new dated source texts in this period.

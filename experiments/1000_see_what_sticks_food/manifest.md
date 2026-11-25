@@ -21,11 +21,13 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The November 25 proceedings access audit resolved 18 prior holds across three collections and verified 16 scorecards. The queue contains 31,790 original-source checks across 21,424 sources. [Audit and replay](followup/proceedings-and-ginger-abstracts-nov25/README.md)
+The November 25 ginger and saffron review resolved 26 exact checks, verified nine scorecards and documented the crocin mouse model, ginger inhalation and a traditional ginger-processed bark account. The queue has 31,764 checks across 21,412 sources. [Review and replay](followup/ginger-lipids-and-bmj-originals-nov25/README.md)
 
-The November 25 dietary cohort and ginger audit resolved 53 exact checks across 20 publications and verified 38 scorecards. Twelve previously staged access holds are resolved. The queue contains 31,808 original checks across 21,427 sources. [Audit and native verification](followup/dietary-cohorts-and-ginger-nov25/README.md)
+The November 25 proceedings and ginger audit resolved 18 original-source checks. A later review's description of ginger and dyskinesia was traced to the original mouse motor and immobility outcomes and recorded as context. [Dated audit](followup/proceedings-and-ginger-abstracts-nov25/README.md)
 
-The November 25 medication and constituent audit resolved 114 exact checks in 27 original publications. All 59 rechecked scorecards matched their published decisions. The queue contains 31,861 original-source checks across 21,447 sources. [Dated audit and native verification](followup/medication-and-constituent-originals-nov25/README.md)
+The November 25 dietary cohort and ginger audit distinguished counted disease diagnoses, mortality, constituent interventions and food preparations. Two new exact ginger source records add mouse motor context to the rigidity scorecard. [Original-source and clinical registry audit](followup/dietary-cohorts-and-ginger-nov25/README.md)
+
+The November 25 medication and constituent audit resolved 114 exact checks. The original sources distinguish culinary exposures from drugs, constituent assays and keyword collisions. The Hunan Gansong record documents traditional indications beyond the frozen vocabulary. [Original-source audit](followup/medication-and-constituent-originals-nov25/README.md)
 
 The November 25 priority and archive pass resolved 61 exact original checks across 11 publications. The 39 rechecked scorecards matched their recorded verdicts and anchors. The queue contains 31,975 checks across 21,474 sources. [Priority and archive audit](followup/priority-and-printed-indexes-nov25/README.md)
 
@@ -35,7 +37,7 @@ The November 25 diet and ethnobotany review resolved 188 exact source checks acr
 
 The November 25 diet and cultural methods audit resolved 203 exact checks across 29 original publications. All 85 checked scorecards retained their verdicts and anchors. The original queue holds 32,403 checks across 21,547 sources. [Diet, archive and cultural source checks](followup/cultural-methods-and-diet-originals-nov25/README.md)
 
-The November 25 print and congress audit resolved 126 exact checks across 18 publications and confirmed 65 published scorecards. Ninety-eight staged access checks remain open. The original-source queue holds 32,606 exact checks across 21,576 sources. [Printed archives and congress scopes](followup/printed-indexes-and-congress-scopes-nov25/README.md)
+The November 25 print and congress audit resolved 126 exact source checks across 18 publications. All 65 affected scorecards retained their published decisions. Ninety-eight staged checks still require further original access, and the full queue holds 32,606 checks across 21,576 sources. [Printed archives and congress scopes](followup/printed-indexes-and-congress-scopes-nov25/README.md)
 
 The latest November 25 audit resolved 214 exact checks across 27 original publications. The 95 verified scorecards retained their verdicts and anchors. Eight separately reviewed Irish proceedings checks await the 1997 original, and the total queue holds 32,732 checks across 21,594 sources. [Movement and traditional context audit](followup/staged-movement-and-traditional-context-nov25/README.md)
 

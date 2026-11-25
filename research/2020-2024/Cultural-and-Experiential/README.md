@@ -89,3 +89,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Society Islands interviews on traditional childhood care](Traditional-Practices/2023-PMID37853377-Society-Islands-Child-Care.txt).
 
 - [Kerala traditional practitioners and Karkataka Taila for tremor and palsy](Traditional-Practices/2022-Deepika-Kerala-Karkataka-Taila.txt).
+
+- [Ginger-processed Eucommia bark for traditional back and knee indications](Traditional-Practices/2024-Ginger-Processed-Eucommia-Back-and-Knee-Pain.txt).
