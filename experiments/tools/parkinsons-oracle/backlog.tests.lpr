@@ -180,6 +180,9 @@ begin
       Check(ClaimUsefulnessRank(LRow.Strings['verdict'],
         LRow.Strings['hypothesis_direction'], LRow.Strings['research_status']) in [0, 1],
         'First tremor result under frozen scope must lean toward easing.');
+      Check((LRow.Find('confidence') <> nil) and (LRow.Floats['confidence'] > 50.0) and
+        (LRow.Floats['confidence'] <= 100.0),
+        'Fractional Currency confidence must convert numerically rather than bit-cast.');
     finally
       LTremor.Free;
     end;
