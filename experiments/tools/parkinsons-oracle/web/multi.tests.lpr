@@ -71,6 +71,62 @@ begin
   LOffset := N(AArguments, 'offset');
   if ATool = 'oracle_query' then
   begin
+    if GMode = 'usefulness' then
+    begin
+      LData['symptom'] := AArguments['symptom'];
+      if S(AArguments, 'symptom') = 'rest tremor severity' then
+      begin
+        LRow := TJSObject.new;
+        LRow['round'] := 1;
+        LRow['claim_id'] := '0001';
+        LRow['verdict'] := 'Unknown';
+        LRow['hypothesis_direction'] := 'reduces';
+        LRow['research_status'] := 'researched';
+        LRow['confidence'] := 50;
+        LRows.push(LRow);
+
+        LRow := TJSObject.new;
+        LRow['round'] := 1;
+        LRow['claim_id'] := '0002';
+        LRow['verdict'] := 'Maybe True';
+        LRow['hypothesis_direction'] := 'worsens';
+        LRow['research_status'] := 'researched';
+        LRow['confidence'] := 51;
+        LRows.push(LRow);
+
+        LRow := TJSObject.new;
+        LRow['round'] := 2;
+        LRow['claim_id'] := '0003';
+        LRow['verdict'] := 'Unreviewed';
+        LRow['hypothesis_direction'] := 'reduces';
+        LRow['research_status'] := 'unreviewed';
+        LRows.push(LRow);
+      end
+      else
+      begin
+        LRow := TJSObject.new;
+        LRow['round'] := 1;
+        LRow['claim_id'] := '0004';
+        LRow['verdict'] := 'Maybe True';
+        LRow['hypothesis_direction'] := 'reduces';
+        LRow['research_status'] := 'researched';
+        LRow['confidence'] := 50.5;
+        LRows.push(LRow);
+
+        LRow := TJSObject.new;
+        LRow['round'] := 1;
+        LRow['claim_id'] := '0005';
+        LRow['verdict'] := 'Maybe False';
+        LRow['hypothesis_direction'] := 'worsens';
+        LRow['research_status'] := 'researched';
+        LRow['confidence'] := 55;
+        LRows.push(LRow);
+      end;
+      LData['options'] := LRows;
+      LData['total_matches'] := LRows.Length;
+      AReply(LData, '');
+      Exit;
+    end;
     Check((S(AArguments, 'scope') = 'frozen') and (S(AArguments, 'trend') = 'eases') and
       (S(AArguments, 'ingredient') = 'black tea'), 'Preserve common filters per symptom.');
     LData['symptom'] := AArguments['symptom'];
@@ -197,6 +253,17 @@ begin
   Reset('premature-end');
   LoadClaimUnion(@Transport, LArguments, @Current, @Receive);
   Check((GReply = nil) and (GError <> ''), 'Reject premature claim pagination completion.');
+  Reset('usefulness');
+  LoadClaimUnion(@Transport, LArguments, @Current, @Receive);
+  Check(GError = '', 'Usefulness union succeeds without error.');
+  LRows := TJSArray(GReply['options']);
+  Check(LRows.Length = 5, 'Usefulness union preserves all distinct claims across symptoms.');
+  Check((S(TJSObject(LRows[0]), 'claim_id') = '0005') and
+    (S(TJSObject(LRows[1]), 'claim_id') = '0004') and
+    (S(TJSObject(LRows[2]), 'claim_id') = '0002') and
+    (S(TJSObject(LRows[3]), 'claim_id') = '0001') and
+    (S(TJSObject(LRows[4]), 'claim_id') = '0003'),
+    'Combined claims sort descending by usefulness: eases, worsens, unknown (researched), unreviewed.');
 
   LUnion := TOracleSourceUnion.Create(@Transport);
   LTerms := nil;

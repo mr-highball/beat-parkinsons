@@ -70,6 +70,21 @@ begin
   Result := StrToIntDef(TextOf(AObject, AKey), 0);
 end;
 
+function ConfidenceOf(AObject: TJSObject): Double;
+var
+  LVal: JSValue;
+begin
+  Result := -1;
+  if (AObject <> nil) and isDefined(AObject['confidence']) and not isNull(AObject['confidence']) then
+  begin
+    LVal := AObject['confidence'];
+    if jsTypeOf(LVal) = 'number' then
+      Result := Double(LVal)
+    else
+      Result := StrToFloatDef(ValueText(LVal), -1);
+  end;
+end;
+
 function RowsOf(AObject: TJSObject; const AKey: String): TJSArray;
 begin
   if (AObject <> nil) and TJSArray.isArray(AObject[AKey]) then
@@ -215,6 +230,10 @@ var
         begin
           LIdentities[LIndex].Round := NumberOf(TJSObject(LRows[LIndex]), 'round');
           LIdentities[LIndex].Id := TextOf(TJSObject(LRows[LIndex]), 'claim_id');
+          LIdentities[LIndex].Verdict := TextOf(TJSObject(LRows[LIndex]), 'verdict');
+          LIdentities[LIndex].Direction := TextOf(TJSObject(LRows[LIndex]), 'hypothesis_direction');
+          LIdentities[LIndex].ResearchStatus := TextOf(TJSObject(LRows[LIndex]), 'research_status');
+          LIdentities[LIndex].Confidence := ConfidenceOf(TJSObject(LRows[LIndex]));
         end;
         LOrder := OrderedUniqueClaims(LIdentities);
         LOrdered := TJSArray.new;

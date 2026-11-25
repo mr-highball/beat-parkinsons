@@ -207,6 +207,20 @@ begin
     ATarget.Add(LKey, ACanonical);
 end;
 
+function CompareClaimsByUsefulness(ALeft, ARight: Pointer): Integer;
+var
+  LLeft: TClaim;
+  LRight: TClaim;
+begin
+  LLeft := TClaim(ALeft);
+  LRight := TClaim(ARight);
+  Result := CompareClaimUsefulness(
+    ClaimUsefulnessRank(LLeft.Verdict, LLeft.Direction, LLeft.ResearchStatus),
+    Double(LLeft.Confidence), LLeft.Round, LLeft.Id,
+    ClaimUsefulnessRank(LRight.Verdict, LRight.Direction, LRight.ResearchStatus),
+    Double(LRight.Confidence), LRight.Round, LRight.Id);
+end;
+
 procedure AddPosting(AIndex: TObjectDictionary<String, TList<TClaim>>;
   const AKey: String; AClaim: TClaim);
 var
@@ -616,6 +630,7 @@ var
   LArguments: TFields;
   LTables: TStringList;
   LProcess: TProcess;
+  LSorted: TList;
   LClaim: TClaim;
   LTrend: String;
 begin
@@ -702,8 +717,29 @@ begin
   FDecisions := CompileClaimDecisions;
   LoadScorecardStatuses;
   LoadResearchStatuses;
+  LSorted := TList.Create;
+  try
+    LSorted.Capacity := FClaims.Count;
+    for LClaim in FClaims do
+      LSorted.Add(LClaim);
+    LSorted.Sort(@CompareClaimsByUsefulness);
+    FClaims.OwnsObjects := False;
+    try
+      for LIndex := 0 to LSorted.Count - 1 do
+        FClaims[LIndex] := TClaim(LSorted[LIndex]);
+    finally
+      FClaims.OwnsObjects := True;
+    end;
+  finally
+    LSorted.Free;
+  end;
+  FBySymptom.Clear;
+  FByIngredient.Clear;
+  FByTrend.Clear;
   for LClaim in FClaims do
   begin
+    AddPosting(FBySymptom, Normalize(LClaim.Symptom), LClaim);
+    AddPosting(FByIngredient, Normalize(LClaim.Ingredient), LClaim);
     LTrend := ClaimTrend(LClaim.Verdict, LClaim.Direction);
     if LTrend <> '' then
     begin
