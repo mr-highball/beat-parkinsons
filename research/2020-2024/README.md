@@ -1130,3 +1130,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Round 1 printed pharmacology and food-context audit](../2025-2029/Food-Experiment-Round-1-Printed-Pharmacology-and-Food-Scopes-Nov25.md), including stroke, implementation and movement-disorder proceedings.
 
 - [Chinese cinnamon-twig formula guidance and other Round 1 context checks](../2025-2029/Food-Experiment-Round-1-Movement-and-Traditional-Contexts-Nov25.md).
+
+[The 2023 annual sage cell study](Source-Text/2023-PMID36768200-Salvia-Plebeia-Myotubes.txt) records the species and atrophy endpoints.

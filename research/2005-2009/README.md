@@ -484,3 +484,5 @@ See the [Round 1 curcumin and original-source audit](../2025-2029/Food-Experimen
 - [Lancet expression of concern for the 2002 Indo-Mediterranean Diet Heart Study](Source-Text/2005-PMID16054927-Indo-Mediterranean-Trial-Editorial-Notice.txt).
 
 - [Curcumin and turmeric identity](Source-Text/2007-PMID17900536-Curcumin-and-Turmeric-Identity.txt) and [composition in 11 certified saffron samples](Source-Text/2007-DOI-FoodChem-Saffron-Eleven-Samples.txt).
+
+[Seeram’s 2008 beverage assays and pomegranate metabolite study](../2025-2029/Food-Experiment-Round-1-UEG-and-Food-Exposures-Nov25.md) have distinct source records.

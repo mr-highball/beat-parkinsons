@@ -600,3 +600,5 @@ Check the abstract-access ledger against the saved ingredient search. The native
 ```powershell
 & "$tools/foodexperiment.abstractaudit.exe" "$experiment/build/ingredient-search/ingredient_results.tsv" "$experiment/followup/abstract-access.tsv"
 ```
+
+[November 25 original articles, food exposures and UEG access](ueg-and-food-exposures-nov25/README.md) adds 47 exact source checks and verifies 25 scorecards. The native replay has 31,696 queued originals, including 2,338 for raw fig and rest tremor. Round 1 has 75 directional verdicts and 925 open claims.

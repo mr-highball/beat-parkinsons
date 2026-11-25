@@ -995,3 +995,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Saffron extract and crocin in a fly model](Source-Text/2015-PMID26705857-Saffron-Extract-and-Crocin-in-Flies.txt) and [green-tea extract capsules and human gut microbiota](Source-Text/2016-DOI-PLOS-Green-Tea-Extract-and-Microbiota.txt).
 
 - [High-oleic peanut oil and extra-virgin olive oil in a rat metabolic comparison](Source-Text/2019-PMID31817909-Peanut-and-Olive-Oil-Rat-Metabolism.txt).
+
+[The 2017 isolated resveratrol trial](Source-Text/2017-PMID28054939-Resveratrol-Postmenopause-Anxiety.txt) records the anxiety subscale result and its adjusted threshold.
