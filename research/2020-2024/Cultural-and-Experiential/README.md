@@ -75,3 +75,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Parkinson's UK Forum discussion on green tea, daytime relaxation and no noticed Parkinson symptom effect](Conversations/2020-Parkinsons-UK-Green-Tea-Relaxation-and-No-Effect.txt).
 
 - [Raw tomato intake and conflicting reports of joint symptoms](Conversations/2024-Tomato-Junction-Raw-Tomato-and-Joint-Stiffness.txt)
+
+- [Agusan Manobo sweet basil decoction and soup indications](Traditional-Practices/2020-PMID32138749-Manobo-Sweet-Basil-Bowel-Practice.txt).

@@ -656,3 +656,5 @@ The Bradford interviews distinguish the iftar date routine from a separate parti
 The 2026 review uses plant-level group labels. Its public references identify pharmaceutical butylphthalide and ground soybeans with Parkinson medication as specific preparations. A public forum post repeats the botanical labels without documenting individual exposure. The recovered butylphthalide registration also identifies retrospective enrollment. [Review](../Source-Text/2026-PMID42489905-Sukmueng-Plant-Therapies-and-Preparation-Scope.txt) · [Registration](../../2015-2019/Source-Text/Trials/ChiCTR1800018892.txt) · [Conversation](../Cultural-and-Experiential/Conversations/2026-MJFF-Plant-Therapy-Review-and-Celery-Scope.txt)
 
 - [Tomato sauce mentioned in a multi-food change and stiffness discussion](../Cultural-and-Experiential/Conversations/2026-Mayo-Connect-Tomato-Sauce-and-Diet-Change.txt)
+
+- [Sweet basil exposure, intestinal transit and group differences](Sweet-Basil-Transit-and-Cultural-Uses.md).

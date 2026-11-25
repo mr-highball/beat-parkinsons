@@ -750,3 +750,5 @@ Two Persian posts share a recommendation to eat figs in a wider regimen. The ear
 - [Olive oil comparator and tomato outcome scope](2020-Olive-Comparator-and-Tomato-Outcome-Scope.md)
 
 - [Green beans, fatigue and assigned exposure](2020-Green-Bean-Fatigue-and-Exposure-Boundaries.md)
+
+The Manobo sweet basil account identifies the species and a decoction or soup alongside multiple customary indications. The prior-period Parkinson cohort measured colonic transit and subjective constipation separately, with no basil exposure. [Manobo traditional account](../Cultural-and-Experiential/Traditional-Practices/2020-PMID32138749-Manobo-Sweet-Basil-Bowel-Practice.txt) · [Prior Parkinson cohort](../../2015-2019/Source-Text/2017-PMID28157109-Knudsen-Parkinson-Colonic-Transit-Abstract.txt)

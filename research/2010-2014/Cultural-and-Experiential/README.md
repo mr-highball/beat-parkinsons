@@ -37,3 +37,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Parkinson's UK Forum discussion on cinnamon, Ceylon versus Cassia coumarin safety and Parkinson diet lists](Conversations/2014-Parkinsons-UK-Cinnamon-Coumarin-and-PD-Diet-Lists.txt).
 
 - [Forum account of figs and elevated blood pressure while taking rasagiline](Conversations/2014-Parkinsons-UK-Figs-Rasagiline-Blood-Pressure.txt).
+
+- [Dominican dried or fresh albahaca leaf and bowel-use profile](Traditional-Practices/2011-Dominican-Albahaca-Bowel-Practice.txt).

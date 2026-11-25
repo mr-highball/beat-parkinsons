@@ -480,3 +480,5 @@ The 2014 red rice bran oil experiment showed opposite directions in separate dru
 - [Oral piperine and soybean oil outcome scope](2014-Piperine-and-Team-AD-Outcome-Scope.md)
 
 - [Cayenne weight-loss capsules and cardiac case reports](2012-Cayenne-Capsules-and-Cardiac-Case-Reports.md)
+
+The Dominican interview profile records dried or fresh leaf preparations and intended bowel uses. It adds practice context to the preceding period’s controlled rat study of botanically identified sweet basil. The profile's synonym usage leaves the plant identity of individual interview accounts open. [Dominican profile](../Cultural-and-Experiential/Traditional-Practices/2011-Dominican-Albahaca-Bowel-Practice.txt) · [Prior transit study](../../2005-2009/Source-Text/2006-Abbah-Sweet-Basil-Intestinal-Transit.txt)

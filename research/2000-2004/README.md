@@ -298,3 +298,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 [Round 1 journal, preprint and grant source audit](../2025-2029/Food-Experiment-Round-1-Versioned-Originals-Nov24.md) links 3 dated source checkpoint entries from this period.
 
 [November 25 journal and repository audit](../2025-2029/Food-Experiment-Round-1-Journals-and-Repositories-Nov25.md) links 1 checked source records in this period.
+
+[Sweet basil and clove basil transit comparisons](../2025-2029/Food-Experiment-Round-1-Originals-and-Basil-Transit-Nov25.md) link the original records and the distinct species.

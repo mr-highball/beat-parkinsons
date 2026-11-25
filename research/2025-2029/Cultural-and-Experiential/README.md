@@ -39,3 +39,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Parkinson's UK Forum query on combining turmeric, ginger and black pepper supplements with Madopar for joint pain](Conversations/2026-Parkinsons-UK-Madopar-Turmeric-Ginger-Black-Pepper-Query.txt).
 
 - [Tomato sauce mentioned in a multi-food change and stiffness discussion](Conversations/2026-Mayo-Connect-Tomato-Sauce-and-Diet-Change.txt)
+
+- [Dragon Boat Festival zongzi materials and preparations](Ceremonial-Accounts/2026-PMID42675503-Zongzi-Culinary-Materials.txt).

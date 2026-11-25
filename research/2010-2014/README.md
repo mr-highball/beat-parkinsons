@@ -704,3 +704,5 @@ The [2011 Wang rosmarinic acid model](Source-Text/2011-PMID22205146-Wang-Rosmari
 [November 25 journal and repository audit](../2025-2029/Food-Experiment-Round-1-Journals-and-Repositories-Nov25.md) links 10 checked source records in this period.
 
 [November 25 Round 1 source checks and citation trails](../2025-2029/Food-Experiment-Round-1-Eleven-Staged-Originals-Nov25.md) link the new dated records and their review depths.
+
+- [Dominican interview accounts of albahaca for bowel symptoms](Cultural-and-Experiential/Traditional-Practices/2011-Dominican-Albahaca-Bowel-Practice.txt).
