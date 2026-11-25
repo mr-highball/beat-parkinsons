@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The November 25 fig and rest-tremor review resolved 21 exact checks and checked the primary species behind a later paralysis citation. The original Bangladesh entry names sacred fig. [Review and replay](followup/fig-rest-tremor-new-originals-nov25/README.md)
+
 Claim 0271 shifted to Maybe False at 50.005 after the dried ginger extract AIM comparison was checked against the Korean original and measured 6-shogaol was documented in commercial ground ginger. The result is a minimal easing lean and two original proceedings checks remain open. [Evidence review](followup/ginger-dyskinesia-exposure-bridge-nov25/README.md)
 
 The November 25 ginger and saffron review resolved 26 exact checks, verified nine scorecards and documented the crocin mouse model, ginger inhalation and a traditional ginger-processed bark account. The queue has 31,764 checks across 21,412 sources. [Review and replay](followup/ginger-lipids-and-bmj-originals-nov25/README.md)

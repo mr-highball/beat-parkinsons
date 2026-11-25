@@ -91,3 +91,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Kerala traditional practitioners and Karkataka Taila for tremor and palsy](Traditional-Practices/2022-Deepika-Kerala-Karkataka-Taila.txt).
 
 - [Ginger-processed Eucommia bark for traditional back and knee indications](Traditional-Practices/2024-Ginger-Processed-Eucommia-Back-and-Knee-Pain.txt).
+
+- [Sudhnoti food and laxative reports for common fig fruit](Traditional-Practices/2024-PMID39333361-Sudhnoti-Fig-Edible-and-Laxative-Use.txt).

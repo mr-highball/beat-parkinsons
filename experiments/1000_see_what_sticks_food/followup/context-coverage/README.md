@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 25 fig review reconciled 21 exact pairs in 18 original journals and published the per-claim replay. [Native scope and coverage verification](../fig-rest-tremor-new-originals-nov25/README.md)
+
 The committed [per-claim coverage table](coverage-by-claim.tsv) supplies the queue counts in Oracle MCP and the web graph. After a verified replay, copy the generated table from the output directory and commit it with the replay receipt and input fingerprints. The November 25 refresh reconciled all 1,000 claims to 31,764 queued checks. [Coverage verification](../ginger-dyskinesia-exposure-bridge-nov25/oracle-coverage-sync-verification.txt)
 
 The November 25 ginger and older-source pass reviewed 26 pairs at original depth and retained 28 source-access holds. [Original-source and queue receipts](../ginger-lipids-and-bmj-originals-nov25/README.md)

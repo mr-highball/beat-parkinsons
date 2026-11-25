@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [November 25 raw fig and rest-tremor audit](Food-Experiment-Round-1-Fig-Rest-Tremor-Originals-Nov25.md) indexes 18 original papers and their companion botanical records.
+
 The [ground ginger and dyskinesia audit](Food-Experiment-Ginger-Dyskinesia-Exposure-Bridge.md) links the original AIM comparison, commercial food chemistry and a 2026 review of six clinical formula trials.
 
 The [November 25 ginger, saffron and original-access audit](Food-Experiment-Round-1-Ginger-and-Older-Originals-Nov25.md) indexes the source review, older access receipts and the traditional Eucommia record.

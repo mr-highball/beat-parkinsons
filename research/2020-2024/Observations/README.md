@@ -764,3 +764,5 @@ The quinoa claim shows how a review table can transform an experiment on donated
 The Karkataka Taila field description gives tremor and palsy as local purposes. Its experimental follow-ups distinguish compound toxicology and broader motor results from outcomes observed by practitioners. [Kerala field record](../Cultural-and-Experiential/Traditional-Practices/2022-Deepika-Kerala-Karkataka-Taila.txt) · [Preclinical follow-up](../Source-Text/2024-PMID39134229-Deepika-Karkataka-Taila-Preclinical.txt)
 
 - [Ginger, Eucommia bark and pain attribution](2024-Eucommia-Ginger-Preparation-and-Pain.md).
+
+- [Common fig identity and traditional preparations](2024-Fig-Species-and-Traditional-Fruit-Use.md).

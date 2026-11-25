@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [November 25 fig and rest-tremor audit](../2025-2029/Food-Experiment-Round-1-Fig-Rest-Tremor-Originals-Nov25.md) links the new dated source records for this period.
+
 The [Round 1 PMC follow-through](../2025-2029/Food-Experiment-Round-1-PMC-Followthrough-Nov24.md) lists the dated study notes and original access updates for this period.
 
 - [Common fig food and preparation records in the Cazorla area](Observations/2000-Cazorla-Fig-Uses-and-Plant-Parts.md).
