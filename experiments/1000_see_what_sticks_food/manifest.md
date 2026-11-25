@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The November 25 collection audit retired 99 original-depth checks across five source groups. The new source notes record 56 related contexts and 43 exclusions. Three added context families and 73 scorecard checks preserved every published verdict. The exact queue holds 34,232 pairs across 21,744 sources. [Original collections and clinical companions](followup/collection-originals-and-pod-trails-nov25/README.md)
+
 The November 25 printed-original follow-up retired two priority-four checks and preserved the green-bean supplement gap. Five checked verdicts held after preparation, outcome and source-kind updates. The exact queue holds 34,331 pairs across 21,749 source groups. [Printed articles and dietary context](followup/priority-four-and-beans-nov25/README.md)
 
 The November 25 archive audit retired 30 original-depth checks across 29 sources and retained two related leads. Twelve scorecards retained their verdicts and anchors, with two CRANMOOD family records corrected to the primary trial design. The Round 1 queue holds 34,333 checks across 21,751 source groups. [Source scopes and trial corrections](followup/staged-journal-and-repository-nov25/README.md)

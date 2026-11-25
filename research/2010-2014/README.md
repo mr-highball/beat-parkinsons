@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [November 25 original collection and bean-pod audit](../2025-2029/Food-Experiment-Round-1-Collection-Originals-and-Bean-Pod-Trails-Nov25.md) links the new dated source texts in this period.
+
 The [seedless bean pod tradition](Observations/2014-Seedless-Bean-Pods-and-Urinary-Tradition.md) links the original EMA assessment to later dietary sources.
 
 The [November 25 archived original checks](../2025-2029/Food-Experiment-Round-1-Archived-Source-Scopes-Nov25.md) index the newly reviewed source scopes and study-version locators for this period.

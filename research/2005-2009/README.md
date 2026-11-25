@@ -1,5 +1,7 @@
 # 2005-2009
 
+The [November 25 original collection and bean-pod audit](../2025-2029/Food-Experiment-Round-1-Collection-Originals-and-Bean-Pod-Trails-Nov25.md) links the new dated source texts in this period.
+
 The [November 25 archived original checks](../2025-2029/Food-Experiment-Round-1-Archived-Source-Scopes-Nov25.md) index the newly reviewed source scopes and study-version locators for this period.
 
 The [Round 1 PMC follow-through](../2025-2029/Food-Experiment-Round-1-PMC-Followthrough-Nov24.md) lists the dated study notes and original access updates for this period.
