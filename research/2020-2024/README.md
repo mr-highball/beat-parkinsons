@@ -1116,3 +1116,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 [November 25 Round 1 source checks and citation trails](../2025-2029/Food-Experiment-Round-1-Eleven-Staged-Originals-Nov25.md) link the new dated records and their review depths.
 
 - [Manobo sweet basil practice and original source scopes](Cultural-and-Experiential/Traditional-Practices/2020-PMID32138749-Manobo-Sweet-Basil-Bowel-Practice.txt).
+
+- [Original dietary antioxidant reviews and scope checks](../2025-2029/Food-Experiment-Round-1-Historical-Scans-and-Cultural-Records-Nov25.md).

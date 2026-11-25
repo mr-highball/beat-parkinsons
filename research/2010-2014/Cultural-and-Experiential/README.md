@@ -39,3 +39,6 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Forum account of figs and elevated blood pressure while taking rasagiline](Conversations/2014-Parkinsons-UK-Figs-Rasagiline-Blood-Pressure.txt).
 
 - [Dominican dried or fresh albahaca leaf and bowel-use profile](Traditional-Practices/2011-Dominican-Albahaca-Bowel-Practice.txt).
+
+- [Edremit lemon balm and spearmint](Traditional-Practices/2011-PMID22193175-Edremit-Lemon-Balm-and-Spearmint.txt).
+- [Elazığ culinary plant indications](Traditional-Practices/2014-PMID24793217-Elazig-Culinary-Plant-Indications.txt).

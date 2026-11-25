@@ -476,3 +476,5 @@ See the [Round 1 curcumin and original-source audit](../2025-2029/Food-Experimen
 [November 25 journal and repository audit](../2025-2029/Food-Experiment-Round-1-Journals-and-Repositories-Nov25.md) links 8 checked source records in this period.
 
 - [Sweet basil leaf extract and intestinal transit in rats](Source-Text/2006-Abbah-Sweet-Basil-Intestinal-Transit.txt).
+
+- [Kırklareli lemon balm and community plant-use survey](Cultural-and-Experiential/Traditional-Practices/2006-PMID17257791-Kirklareli-Lemon-Balm-Survey-Abstract.txt).

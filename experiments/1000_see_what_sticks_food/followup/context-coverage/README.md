@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The latest November 25 replay resolved 180 checks in 18 publications. The exact queue holds 33,446 pairs across 21,679 sources, including the eight priority-three checks and all 449 previously mapped access holds. [Exact scopes and replay](../eighteen-staged-originals-nov25/README.md)
+The latest November 25 source replay resolved 82 checks in nine originals, including the ten previously queued in the scanned WHO report. The exact queue holds 33,364 pairs across 21,670 sources. [Replay and printed-original scope](../eight-originals-and-archive-checks-nov25/README.md)
+
+The preceding November 25 replay resolved 180 checks in 18 publications. The exact queue holds 33,446 pairs across 21,679 sources, including the eight priority-three checks and all 449 previously mapped access holds. [Exact scopes and replay](../eighteen-staged-originals-nov25/README.md)
 
 The preceding November 25 replay resolved 112 checks in 11 complete source bodies. The exact queue holds 33,626 pairs across 21,697 sources. All eight priority-three checks and 449 previously mapped original-access holds remain. [Exact scopes and replay proof](../twelve-collection-originals-nov25/README.md)
 

@@ -10,3 +10,5 @@ Collect traditional practices, ceremonial accounts, public personal reports and 
 Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experiential.md). Create the applicable subcategory when adding records, and cross-link prior research without duplicating studies.
 
 - [Fresh and dried figs in the inspected Kabylie account](Local-Knowledge/2003-Hanoteau-Letourneux-Fresh-and-Dried-Fig-Account.txt).
+
+- [Gönen ethnobotanical survey and access boundary](Traditional-Practices/2001-PMID11395255-Gonen-Ethnobotany-Abstract.txt).

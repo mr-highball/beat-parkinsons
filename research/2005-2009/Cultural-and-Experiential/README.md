@@ -17,3 +17,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [Lucania interviews distinguish common fig from linden for shaking](Traditional-Practices/2005-PMID15978757-Lucania-Fig-and-Linden-Use.txt).
 - [Reported Ayurvedic use of turmeric for skin and muscle pain](Traditional-Practices/2008-PMID19966973-Ayurvedic-Turmeric-Skin-and-Muscle-Pain.txt)
+
+- [Kırklareli lemon balm use survey](Traditional-Practices/2006-PMID17257791-Kirklareli-Lemon-Balm-Survey-Abstract.txt).

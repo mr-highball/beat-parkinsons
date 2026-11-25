@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The latest November 25 pass resolved 180 original claim–source checks in 18 publications, with 132 related contexts and 48 exclusions. A sweet basil whole-animal transit comparison now supplies a minimal easing lean for claim 0662, against the frozen worsening hypothesis. Clinical Parkinson outcomes, the culinary preparation and direct constipation measures remain open. The exact queue holds 33,446 pairs across 21,679 sources. [Audit and basil scorecard](followup/eighteen-staged-originals-nov25/README.md)
+The latest November 25 review resolved 82 checks across nine originals, including ten from a recovered 295-page WHO report. Sixty scorecards passed with their current verdicts. The exact queue now holds 33,364 pairs across 21,670 sources. [Scanned originals and Turkish plant-use context](followup/eight-originals-and-archive-checks-nov25/README.md)
+
+The preceding November 25 pass resolved 180 original claim–source checks in 18 publications, with 132 related contexts and 48 exclusions. A sweet basil whole-animal transit comparison now supplies a minimal easing lean for claim 0662, against the frozen worsening hypothesis. Clinical Parkinson outcomes, the culinary preparation and direct constipation measures remain open. The exact queue holds 33,446 pairs across 21,679 sources. [Audit and basil scorecard](followup/eighteen-staged-originals-nov25/README.md)
 
 The latest November 25 source review resolved 112 exact Round 1 checks in 11 original bodies. Forty-four remain related leads and 68 had a contextual mismatch. Sixty-eight scorecards retained their published verdicts and anchors. The exact queue now holds 33,626 pairs across 21,697 sources. [Scope, chronological accessions and one historical access gap](followup/twelve-collection-originals-nov25/README.md)
 

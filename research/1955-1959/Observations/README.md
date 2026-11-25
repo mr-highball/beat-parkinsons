@@ -21,3 +21,5 @@ Retrieve early regional epidemiology and Japanese neurochemistry reports, the 19
 Two original Gotoh scans trace the pharmacology to Japanese pepper bark or bark fractions. The printed receipt dates appear later than the listed issue dates. The period catalog keeps both date fields visible. [Original preparation notes](../Food-Experiment-Japanese-Pepper-Bark-Preparations.md)
 
 The WHO opioid review has a bibliographic and page index record, with the scanned monographs still open. The ten related search results retain that access boundary and do not count as original inspections. [Dated access record](../Source-Text/1957-PMID13511135-WHO-Opioid-Review-Original-Access.txt)
+
+- [Printed source access and culinary relevance](1957-WHO-Scanned-Original-and-Context.md).

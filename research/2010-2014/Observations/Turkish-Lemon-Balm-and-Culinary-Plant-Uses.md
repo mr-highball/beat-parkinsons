@@ -1,0 +1,5 @@
+# Traditional plant indications and how the records differ
+
+[Previous period observations](../../2005-2009/Observations/README.md)
+
+The Kırklareli abstract identifies lemon balm without giving its preparation or symptom entry. The Edremit table specifies an infusion of flowering branches for reported insomnia, stomach discomfort and other indications. The Elazığ table identifies a decoction from aerial parts and describes its sedative use. These observations broaden the cultural context and come from different field surveys. None measures symptom change in people with Parkinson disease. [Kırklareli abstract](../../2005-2009/Cultural-and-Experiential/Traditional-Practices/2006-PMID17257791-Kirklareli-Lemon-Balm-Survey-Abstract.txt) · [Edremit survey](../../2010-2014/Cultural-and-Experiential/Traditional-Practices/2011-PMID22193175-Edremit-Lemon-Balm-and-Spearmint.txt) · [Elazığ survey](../../2010-2014/Cultural-and-Experiential/Traditional-Practices/2014-PMID24793217-Elazig-Culinary-Plant-Indications.txt)
