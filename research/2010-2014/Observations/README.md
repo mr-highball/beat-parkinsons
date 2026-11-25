@@ -1,5 +1,7 @@
 # Observations for 2010-2014
 
+- [Gansong preparation and the later nardosinone model](2010-Gansong-Preparation-and-Later-Nardosinone.md).
+
 [Spice receptor activation and arthritis endpoint fit](2010-Spice-Receptor-and-Arthritis-Endpoint-Scope.md) separates receptor activity and paw swelling from the mapped human symptoms.
 
 [Jambi constipation practice and local plant names](2012-Jambi-Constipation-Practice-and-Plant-Names.md) records the available original evidence and limits of the published excerpt.

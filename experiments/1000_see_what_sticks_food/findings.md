@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The November 25 medication and constituent audit resolved 114 exact checks. The original sources distinguish culinary exposures from drugs, constituent assays and keyword collisions. The Hunan Gansong record documents traditional indications beyond the frozen vocabulary. [Original-source audit](followup/medication-and-constituent-originals-nov25/README.md)
+
 The November 25 priority and archive pass resolved 61 exact original checks across 11 publications. The 39 rechecked scorecards matched their recorded verdicts and anchors. The queue contains 31,975 checks across 21,474 sources. [Priority and archive audit](followup/priority-and-printed-indexes-nov25/README.md)
 
 The November 25 diet and proceedings audit resolved 179 exact checks across 31 original publications. The 92 rechecked scorecards matched the recorded verdicts and anchors. The remaining queue contains 32,036 checks across 21,485 original publications. [Original source audit](followup/diet-and-proceedings-originals-nov25/README.md)

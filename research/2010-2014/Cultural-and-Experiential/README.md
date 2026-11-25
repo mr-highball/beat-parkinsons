@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2010-2014
 
+- [Gansong root and rhizome in the Hunan preparation standard](Traditional-Practices/2010-Hunan-Gansong-Root-Monograph.txt) records the traditional preparation, routes and indications.
+
 [Seedless green bean pod infusion in the European traditional-use assessment](Traditional-Practices/2014-EMA-Seedless-Green-Bean-Pod-Urinary-Use.txt), with the preparation and historical urinary indication.
 
 [Jambi 2012 field-survey excerpt](Traditional-Practices/2012-RISTOJA-Jambi-Constipation-Field-Excerpt.txt) records a customary constipation preparation without a verified botanical identification.
