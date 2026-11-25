@@ -1,0 +1,11 @@
+# Archive recovery and review scope
+
+The Oracle exact-identifier lookup preceded publisher and archive retrieval. The publisher landing links returned browser challenge pages for the PDF-only cohort. The National Library of Medicine open collection exposed official PDF objects for 25 proceedings, with 254 exact frozen claim and source checks. The archive URL, version, dataset-provided checksum and local SHA-256 were checked against the response and archive metadata. The pinned locators preserve the exact retrieved version. [PMC Cloud Service](https://pmc.ncbi.nlm.nih.gov/tools/pmcaws)
+
+The native Free Pascal screen recorded 148 distinct archive and ingredient searches over all extracted pages. The page inventory identified 9,072 PDF pages, of which 9,031 had substantive extracted text. Local screening normalizes common typographic ligatures and line breaks, covers variant ingredient names and constituents, and retains page and match location for inspection. It is a discovery aid. Human interpretation of the cited member, exposure and outcome determines the disposition. Raw PDFs and text indexes stay in ignored scratch storage.
+
+The first six proceedings contained interpretable text on every PDF page. The study summaries identify specimen and figure colors, author names, a nerve histology term, research dates, a food-safety survey, and two genuine but indirect exposures. The food-safety survey concerns a sample of chicken meat and gives no comparison of fatigue after consumption. The olive oil appearance is a non-oral vehicle and supplies no clinical bowel outcome.
+
+The swallowing abstract uses an orange-flavored solution during brain imaging. Its later matched journal report identifies orange extract in a sweet-sour mixture in 21 healthy adults. The two reports are one evidence family. The findings concern activity in relevant brain regions. Clinical falls and constipation after eating raw orange remain unassessed in this study. [Full journal report and stimulus composition](https://onlinelibrary.wiley.com/doi/10.1002/brb3.2928)
+
+The other 19 recovered PDFs still require full member review. Four contain pages with little or no extractable text and need visual verification before those collections support a closure. The recovery records preserve these limitations. Earlier pending archives outside the recovered set remain queued.
