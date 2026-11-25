@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 25 EASD and Nutrition replay retired 53 original-depth checks in three collections. The exact queue holds 34,179 checks across 21,741 sources. All eight priority-three checks and 449 recorded original-access holds remain queued. [Exact scopes and verified replay](../easd-and-nutrition-originals-nov25/README.md)
+
 The November 25 collection replay retired 99 exact checks in five collections. The queue holds 34,232 checks across 21,744 sources. All eight priority-three checks and 449 dated access holds remain queued. [Original scopes and replay verification](../collection-originals-and-pod-trails-nov25/README.md)
 
 The November 25 follow-through resolved two priority-four original reads and mapped 449 remaining access holds. The exact queue holds 34,331 pairs across 21,749 sources. [Original records and cultural validation](../priority-four-and-beans-nov25/README.md)

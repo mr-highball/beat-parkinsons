@@ -1,5 +1,7 @@
 # Observations for 2015-2019
 
+[Food preparation and symptom specificity in the 2017–2019 abstracts](2017-2019-Conference-Food-and-Symptom-Scope.md) compares the new conference reports with caffeine evidence from the preceding period.
+
 [Mangiferin and sucrose consumption](2017-Mangiferin-and-Sucrose-Direction.md) follows the relevant preparation and measurement distinctions.
 
 - [Saffron combinations and sage identity in earlier sources](2016-2017-Nutraceutical-and-Sage-Attribution.md).

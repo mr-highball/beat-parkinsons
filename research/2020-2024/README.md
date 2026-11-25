@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [November 25 EASD and Nutrition review](../2025-2029/Food-Experiment-Round-1-EASD-and-Nutrition-Originals-Nov25.md) links the 2020 article on diabetes-related dopaminergic vulnerability to its earlier poster.
+
 The [November 25 original collection and bean-pod audit](../2025-2029/Food-Experiment-Round-1-Collection-Originals-and-Bean-Pod-Trails-Nov25.md) links the new dated source texts in this period.
 
 The [November 25 printed and dietary follow-through](../2025-2029/Food-Experiment-Round-1-Printed-Originals-and-Green-Beans-Nov25.md) indexes the dated evidence for this period.

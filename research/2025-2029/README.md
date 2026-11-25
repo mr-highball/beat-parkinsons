@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [November 25 EASD and Nutrition review](Food-Experiment-Round-1-EASD-and-Nutrition-Originals-Nov25.md) indexes three original conference collections and two dated companion reports.
+
 The [November 25 original collection and bean-pod audit](Food-Experiment-Round-1-Collection-Originals-and-Bean-Pod-Trails-Nov25.md) links the new dated source texts in this period.
 
 The [November 25 printed and dietary follow-through](Food-Experiment-Round-1-Printed-Originals-and-Green-Beans-Nov25.md) indexes the dated evidence for this period.

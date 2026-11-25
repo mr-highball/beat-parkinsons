@@ -1,0 +1,5 @@
+# Food preparation and symptom specificity in the 2017–2019 abstracts
+
+The [2010–2014 caffeine observations](../../2010-2014/Observations/2013-Caffeine-Mood-and-Isolated-Muscle-Outcomes.md) distinguish perceived fatigue from isolated muscle outcomes. The [2017 EASD supplement](../Source-Text/2017-EASD-Lisbon-Abstracts-Food-Scopes.txt) adds coffee-specific mortality results in people with diabetes and a separate isolated-caffeine metabolic experiment. Both address questions distinct from Parkinson fatigue.
+
+The [2018 orange-pomace poster](../Source-Text/2018-Nutrition-Aging-Chronic-Disease-Abstracts-Food-Scopes.txt) and [2019 article](../Source-Text/2019-DOI103438-Orange-Pomace-Laxation-Companion.txt) share a randomized cohort. Their processed fiber preparation was associated with more frequent stools alongside gas and bloating. The [2018 dietary-recall report](../Source-Text/2018-Nutrition-Energy-Macronutrient-Abstracts-Food-Scopes.txt) adds food details in a Parkinson group, with no controlled comparison by ingredient.
