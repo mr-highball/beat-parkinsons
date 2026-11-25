@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+[Turmeric in a practice account and basil seed mucilage](2026-Turmeric-Context-and-Basil-Seed-Mucilage.md) compares the current period's cultural and laboratory findings with earlier preparation-specific evidence.
+
 [Saffron endpoints and geraniol sedation](2026-Saffron-Endpoints-and-Geraniol-Sedation.md) tracks a sensitivity analysis and endpoints across animal and human studies.
 
 [Ginger rigidity, grape tension and source attribution](2026-Ginger-Rigidity-Grape-Tension-and-Source-Attribution.md) compares food, extracts, model endpoints and traditional source provenance.

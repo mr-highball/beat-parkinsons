@@ -1,0 +1,5 @@
+# Turmeric in a practice account and basil seed mucilage
+
+The [2020–2024 turmeric review](../../2020-2024/Food-Experiment-Turmeric-Followup.md) separates bioavailable curcumin formulations, mixed meals and isolated laboratory exposures. Accessible reports include a Parkinson trial on nanomicelle curcumin with mixed composite motor results. The [2026 Ayurvedic account](../Cultural-and-Experiential/Traditional-Practices/2026-IANCON-Ayurvedic-Turmeric-Parkinson-Context.txt) places turmeric among other herbs, diet and non-dietary practices. This adds a description of therapeutic use. Preparation and symptom results remain unresolved.
+
+The [2026 FEBS poster P19.064](../Source-Text/2026-FEBS-Poster-Abstracts-Food-Scopes.txt) compares seed mucilages from basil, flax and chia in bench measurements. Chia had the greatest extensional stretch, followed by basil and flax. The research concerns a formulation for dry mouth. Leaf preparations, measured drooling, and the frozen rigidity, fatigue and insomnia outcomes are separate questions.

@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The November 25 original-collection review resolved 171 exact checks, including 74 related contexts and 97 exclusions. Ninety-nine revalidated scorecards preserved their published verdicts and anchors. The queue holds 34,008 pairs across 21,730 sources. [Original scopes and study trails](followup/eleven-collection-originals-nov25/README.md)
+
 The November 25 EASD and Nutrition review retired 53 exact source checks, including 42 related contexts and 11 exclusions. Forty-two scorecards retained their published verdicts and anchors. The queue holds 34,179 pairs across 21,741 sources. [Original scopes and trial lineage](followup/easd-and-nutrition-originals-nov25/README.md)
 
 The November 25 collection audit retired 99 original-depth checks across five source groups. The new source notes record 56 related contexts and 43 exclusions. Three added context families and 73 scorecard checks preserved every published verdict. The exact queue holds 34,232 pairs across 21,744 sources. [Original collections and clinical companions](followup/collection-originals-and-pod-trails-nov25/README.md)
