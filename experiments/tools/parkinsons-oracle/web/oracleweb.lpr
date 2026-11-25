@@ -1034,7 +1034,7 @@ begin
         if LTargetScope = 'directional' then
           TJSHTMLSelectElement(GRenderer.InputFor('scope')).selectedIndex := 0;
         UpdateFilterCount;
-        document.title := Capitalized(LTargetIngredient) + ' · Parkinson’s Oracle';
+        document.title := Capitalized(LTargetIngredient) + ' · The Parkinson’s Cookbook';
         Query(True, 0, False);
       end;
     end);
@@ -3236,6 +3236,9 @@ procedure Mount;
 var
   LPage: TNyxNode;
   LHeader: TNyxNode;
+  LBrandGroup: TNyxNode;
+  LBrandEl: TJSHTMLElement;
+  LHatSpan: TJSHTMLElement;
   LWorkspace: TNyxNode;
   LControls: TNyxNode;
   LControlsBody: TNyxNode;
@@ -3254,7 +3257,10 @@ begin
   GDocument.AddPage(LPage);
 
   LHeader := Section(nkRow, 'masthead');
-  LHeader.Add(Caption(nkHeading, 'brand', 'Parkinson’s Oracle'));
+  LBrandGroup := Section(nkColumn, 'brand-group');
+  LBrandGroup.Add(Caption(nkHeading, 'brand', 'The Parkinson’s Cookbook'));
+  LBrandGroup.Add(Caption(nkLabel, 'brand-subtitle', 'Everyday food notes, recipes & research'));
+  LHeader.Add(LBrandGroup);
   LHeader.Add(Caption(nkLabel, 'index-status', 'Loading the research catalog…'));
   LPage.Add(LHeader);
 
@@ -3335,7 +3341,16 @@ begin
   GResultsRenderer := TNyxBrowserRenderer.Create;
   GRelatedRenderer := TNyxBrowserRenderer.Create;
   GRenderer.Render(GDocument, LPage, TJSHTMLElement(document.getElementById('oracle')));
-  GRenderer.ElementFor('brand').setAttribute('aria-level', '1');
+  LBrandEl := GRenderer.ElementFor('brand');
+  LBrandEl.setAttribute('aria-level', '1');
+  LBrandEl.setAttribute('aria-label', 'The Parkinson’s Cookbook');
+  LBrandEl.textContent := '';
+  LBrandEl.appendChild(document.createTextNode('The '));
+  LHatSpan := TJSHTMLElement(document.createElement('span'));
+  LHatSpan.className := 'brand-p';
+  LHatSpan.textContent := 'P';
+  LBrandEl.appendChild(LHatSpan);
+  LBrandEl.appendChild(document.createTextNode('arkinson’s Cookbook'));
   GRenderer.ElementFor('results-frame').setAttribute('aria-live', 'polite');
   GSourceUnion := TOracleSourceUnion.Create(@RequestRelated);
   GSymptom := TOraclePicker.Create(GRenderer, 'symptom', @SymptomChanged, @SubmitLookup, True);
@@ -3431,9 +3446,9 @@ begin
     if GPendingTerms <> '' then
     begin
       if GPendingSourceKind = 'cultural' then
-        document.title := Capitalized(GPendingTerms) + ' cultural sources · Parkinson’s Oracle'
+        document.title := Capitalized(GPendingTerms) + ' cultural sources · The Parkinson’s Cookbook'
       else
-        document.title := GPendingTerms + ' · Catalog · Parkinson’s Oracle';
+        document.title := GPendingTerms + ' · Catalog · The Parkinson’s Cookbook';
       Query(True, 0, False);
     end;
   end
