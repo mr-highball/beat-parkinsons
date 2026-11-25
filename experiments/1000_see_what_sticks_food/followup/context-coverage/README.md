@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The alternate-originals replay retired nine verified body checks and retains seven abstract-depth access holds from this pass. The queue holds 34,372 checks across 21,789 source groups. [Alternate originals and access records](../priority-five-alternate-originals-nov25/README.md)
+
 The versioned-originals replay retired 21 verified body or original-publication checks and retains the crocin abstract hold. The queue holds 34,381 checks across 21,798 source groups. [Journal, preprint and grant review](../priority-five-other-originals-nov24/README.md)
 
 The latest exact replay retired 60 original-depth checks and leaves 17 of the reviewed scopes at their recorded access depth. The original queue holds 34,402 checks across 21,815 publications. [PMC originals and access review](../priority-five-remaining-pmc-nov24/README.md)

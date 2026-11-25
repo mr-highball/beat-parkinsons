@@ -1002,3 +1002,7 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 - [Round 1 green beans, caffeine and orange source audit](Food-Experiment-Round-1-Green-Beans-Caffeine-and-Orange-Nov24.md)
 
 [Round 1 journal, preprint and grant source audit](../2025-2029/Food-Experiment-Round-1-Versioned-Originals-Nov24.md) links 4 dated source checkpoint entries from this period.
+
+[November 25 original-access and asparagus review](../2025-2029/Food-Experiment-Round-1-Alternate-Originals-Nov25.md) links the dated records added to this period.
+
+[Asparagus stem extract and fatigue transfer](Observations/2026-Asparagus-Stem-Extract-and-Fatigue-Transfer.md) tracks the original comparative sign and the differences between clinical fatigue, challenge fatigue and sleep outcomes.

@@ -686,3 +686,5 @@ The [2011 Wang rosmarinic acid model](Source-Text/2011-PMID22205146-Wang-Rosmari
 - [Round 1 cinnamon, piperine and falls source audit](../2025-2029/Food-Experiment-Round-1-Cinnamon-Piperine-and-Falls-Nov24.md)
 
 - [Cayenne capsule cardiac case reports](Observations/2012-Cayenne-Capsules-and-Cardiac-Case-Reports.md)
+
+[November 25 original-access and asparagus review](../2025-2029/Food-Experiment-Round-1-Alternate-Originals-Nov25.md) links the dated records added to this period.

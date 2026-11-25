@@ -1094,3 +1094,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Green-bean fatigue supplement gap and neighboring exposure checks](../2025-2029/Food-Experiment-Round-1-Green-Beans-Caffeine-and-Orange-Nov24.md)
 
 [Round 1 journal, preprint and grant source audit](../2025-2029/Food-Experiment-Round-1-Versioned-Originals-Nov24.md) links 10 dated source checkpoint entries from this period.
+
+[November 25 original-access and asparagus review](../2025-2029/Food-Experiment-Round-1-Alternate-Originals-Nov25.md) links the dated records added to this period.
