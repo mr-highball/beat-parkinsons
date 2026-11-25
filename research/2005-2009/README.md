@@ -464,3 +464,5 @@ See the [Round 1 curcumin and original-source audit](../2025-2029/Food-Experimen
 - [Round 1 clinical and culinary exposure context](../2025-2029/Food-Experiment-Round-1-Clinical-and-Food-Context-Nov24.md)
 
 - [Isolated safranal seizure experiment and citation scope](Source-Text/2006-PMID16707256-Safranal-Seizures-and-Citation-Scope.txt)
+
+[November 25 journal and repository audit](../2025-2029/Food-Experiment-Round-1-Journals-and-Repositories-Nov25.md) links 8 checked source records in this period.

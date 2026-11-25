@@ -969,3 +969,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 [Crocin motor tasks and saffron fall frequency](Observations/2018-Crocin-Motor-Tasks-and-Falls.md) distinguishes apparatus latency from counted falls.
 
 [November 25 original-access and asparagus review](../2025-2029/Food-Experiment-Round-1-Alternate-Originals-Nov25.md) links the dated records added to this period.
+
+[November 25 journal and repository audit](../2025-2029/Food-Experiment-Round-1-Journals-and-Repositories-Nov25.md) links 10 checked source records in this period.

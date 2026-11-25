@@ -1,0 +1,5 @@
+# Balance discordance, fall counts and the raw-orange scope
+
+A 2010 Parkinson report distinguishes recalled falls from fear of falling. Its abstract links the two while giving examples of frequent fallers with low reported fear. Earlier forced-task and medication sources in the catalog measure still other movement outcomes. [Earlier Parkinson falls report](../../2010-2014/Source-Text/2010-PMID20157723-Fear-and-Fall-Frequency.txt) · [Earlier freezing-of-gait infusion report](../../2010-2014/Source-Text/2014-PMID25578290-Infusion-Freezing-and-Falls.txt)
+
+The 2026 study compares confidence with timed mobility to construct balance discordance. Its authors' deposited full-sample analysis uses orange to color a fitted line. That label describes a figure styling choice. A balance confidence measure, a balance discordance score and counted falls are distinct outcomes. The final study body remains an access hold for exact eligibility on raw-orange exposure and falls. [Current author supplement and access scope](../Source-Text/2026-PMID41992280-Balance-Discordance-and-Clinical-Predictors-Access.txt)

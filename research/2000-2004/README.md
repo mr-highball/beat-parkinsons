@@ -296,3 +296,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [Saffron stigma extracts and forced-swim assays](Source-Text/2004-ActaHortic-650-54-Saffron-Stigma-and-Forced-Swim.txt)
 
 [Round 1 journal, preprint and grant source audit](../2025-2029/Food-Experiment-Round-1-Versioned-Originals-Nov24.md) links 3 dated source checkpoint entries from this period.
+
+[November 25 journal and repository audit](../2025-2029/Food-Experiment-Round-1-Journals-and-Repositories-Nov25.md) links 1 checked source records in this period.

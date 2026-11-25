@@ -1006,3 +1006,7 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 [November 25 original-access and asparagus review](../2025-2029/Food-Experiment-Round-1-Alternate-Originals-Nov25.md) links the dated records added to this period.
 
 [Asparagus stem extract and fatigue transfer](Observations/2026-Asparagus-Stem-Extract-and-Fatigue-Transfer.md) tracks the original comparative sign and the differences between clinical fatigue, challenge fatigue and sleep outcomes.
+
+[November 25 journal and repository audit](../2025-2029/Food-Experiment-Round-1-Journals-and-Repositories-Nov25.md) links 4 checked source records in this period.
+
+[Balance discordance and raw-orange scope](Observations/2026-Balance-Discordance-and-Raw-Orange-Scope.md) separates confidence, timed mobility and counted falls.
