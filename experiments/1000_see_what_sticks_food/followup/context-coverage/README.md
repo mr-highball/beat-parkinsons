@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 25 shared archive review resolved 118 checks from ten original publications, recorded 29 related contexts and verified all 26 affected scorecards. The exact replay leaves 30,699 checks across 21,042 source keys and 392 frozen claims. [Shared originals and verified replay](../shared-cloud-originals-nov25/README.md)
+
 The November 25 version-specific review resolved five dried-date pain source checks and verified the existing cranberry and green-bean scorecards. The replay leaves 30,817 pairs across 21,052 source keys and 393 claims. The three scorecards remain Unknown. [Original versions and verified replay](../date-pain-preprint-originals-nov25/README.md)
 
 The November 25 internal medicine review resolved 27 exact checks and retained 26 access holds tied to crossed article identifiers. The native replay verifies 30,822 queued checks across 21,057 source keys and 393 frozen claims. [Source identity checks and replay](../sgim-and-archive-identities-nov25/README.md)

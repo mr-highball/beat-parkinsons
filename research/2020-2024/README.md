@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [November 25 shared archive audit](../2010-2014/Food-Experiment-Shared-Cloud-Originals.md) links the 2023 SISMES supplement and distinguishes the apple formula from baked fruit.
+
 The [dried-date pain preprint review](Food-Experiment-Date-Pain-Preprint-Originals.md) links the verified original versions and the separate RECOVER journal article.
 
 The [November 25 internal medicine and archive identity review](../2025-2029/Food-Experiment-Round-1-SGIM-and-Archive-Identities-Nov25.md#2020-2024) links the verified source notes for this period.

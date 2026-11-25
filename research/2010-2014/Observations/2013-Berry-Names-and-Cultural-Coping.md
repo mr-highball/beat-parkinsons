@@ -1,0 +1,5 @@
+# Berry names and coping in the Circumpolar proceedings
+
+A 2013 community interview synthesis describes berry gathering as part of shared practices for coping. Participants were not asked to isolate culinary cranberry or raspberry effects. The separate Alaskan berry experiment measures antioxidant capacity. It describes highbush cranberry as Viburnum edule and excludes whole dried highbush berries from its processing comparison. These reports have different subjects and outcomes. The contemporary study does not verify a depression or anxiety effect. [Interview scope](../Cultural-and-Experiential/Local-Knowledge/2013-Circumpolar-Berry-Gathering-and-Coping.txt) · [Proceedings review](../Source-Text/2013-PMC6080057-Round1-Proceedings-Scope.txt)
+
+The berry assay also uses the local name watermelon berry. University of Alaska Cooperative Extension identifies it as Streptopus amplexifolius. The assay can't answer a question about the culinary watermelon, Citrullus lanatus. [University species reference](https://www.uaf.edu/ces/publications/database/food/watermelon-berries.php)

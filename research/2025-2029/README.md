@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [November 25 shared original access note](Food-Experiment-Shared-Original-Access-Nov25.md) preserves original PDF evidence, source-identity boundaries and the remaining archive routes.
+
 The [2025 cannabidiol preprint scope](Source-Text/2025-Cannabidiol-Neurology-Preprint-Access.txt) records the original pain and Parkinson sections and links its exact review.
 
 The [November 25 proceedings follow-through](./Food-Experiment-Round-1-Proceedings-Contexts-Nov25.md#2025-2029) links the new original scopes and source identity records for this period.

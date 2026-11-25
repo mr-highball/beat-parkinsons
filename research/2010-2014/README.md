@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [November 25 shared archive audit](Food-Experiment-Shared-Cloud-Originals.md) links the full Circumpolar Health proceedings, pediatric allergy paper and other verified originals. The [berry-gathering account](Cultural-and-Experiential/Local-Knowledge/2013-Circumpolar-Berry-Gathering-and-Coping.txt) has a separate [observations record](Observations/2013-Berry-Names-and-Cultural-Coping.md).
+
 The [November 25 internal medicine and archive identity review](../2025-2029/Food-Experiment-Round-1-SGIM-and-Archive-Identities-Nov25.md#2010-2014) links the verified source notes for this period.
 
 The [November 25 proceedings follow-through](../2025-2029/Food-Experiment-Round-1-Proceedings-Contexts-Nov25.md#2010-2014) links the new original scopes and source identity records for this period.

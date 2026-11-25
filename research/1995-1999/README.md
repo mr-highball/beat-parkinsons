@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [November 25 shared archive audit](../2010-2014/Food-Experiment-Shared-Cloud-Originals.md) links the DOI-defined 1999 neurology meeting scope and its member distinctions.
+
 The [Round 1 PMC follow-through](../2025-2029/Food-Experiment-Round-1-PMC-Followthrough-Nov24.md) lists the dated study notes and original access updates for this period.
 
 The [blinded short-deprivation study](Source-Text/1997-PMID9402612-Blinded-Caffeine-and-Brief-Deprivation.txt) and [caffeine reinforcement crossover](Source-Text/1998-PMID9784073-Caffeine-Dependence-and-Fatigue.txt) document different withdrawal conditions and separate fatigue-measure access gaps.

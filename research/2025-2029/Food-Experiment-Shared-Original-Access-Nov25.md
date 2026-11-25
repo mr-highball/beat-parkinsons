@@ -1,0 +1,7 @@
+# Shared original access for the Round 1 evidence audit
+
+The November 25 archive review began from 170 shared source keys covering 2,095 open Round 1 pairs. The complete 170-row inventory records which official PMC files were available, verified and used, alongside the prior source holds. Ten verified originals resolved 118 pairs. Original reviews continue for the available sources whose version, sections or individual exposures still need checking. [Route inventory](../../experiments/1000_see_what_sticks_food/followup/shared-cloud-originals-nov25/archive-route-sweep.tsv) · [Dated source index](../2010-2014/Food-Experiment-Shared-Cloud-Originals.md)
+
+The highest remaining shared-source access groups include the FEBS poster collections, UEG 2022 and 2025, and the AES 2014 supplement. The 2025 Wiley poster extract checked in this pass ends at PP0334. The separate gastroenterology society PDF is a selection of posters. Neither provides the whole DOI-defined supplement. The Italian Society of Neurology poster 212 figures remain a separate access task for its olive-oil scopes. [Access checks](../../experiments/1000_see_what_sticks_food/followup/shared-cloud-originals-nov25/search-and-access.md)
+
+For conflicting source IDs, start the next search from the exact article's expected DOI or PMID. The retrieved proceedings sometimes have distinct titles, dates and identifiers. These collections remain separate source records. [Archive identity policy](../../experiments/1000_see_what_sticks_food/followup/context-coverage/README.md)
