@@ -1000,3 +1000,5 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 - [Round 1 olive oil comparator and cayenne source audit](Food-Experiment-Round-1-Olive-Comparator-and-Cayenne-Nov24.md)
 
 - [Round 1 green beans, caffeine and orange source audit](Food-Experiment-Round-1-Green-Beans-Caffeine-and-Orange-Nov24.md)
+
+[Round 1 journal, preprint and grant source audit](../2025-2029/Food-Experiment-Round-1-Versioned-Originals-Nov24.md) links 4 dated source checkpoint entries from this period.

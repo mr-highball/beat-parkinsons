@@ -294,3 +294,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [Round 1 food exposure, diagnosis and movement outcomes](../2025-2029/Food-Experiment-Round-1-Food-Risk-and-Falls-Nov24.md)
 
 - [Saffron stigma extracts and forced-swim assays](Source-Text/2004-ActaHortic-650-54-Saffron-Stigma-and-Forced-Swim.txt)
+
+[Round 1 journal, preprint and grant source audit](../2025-2029/Food-Experiment-Round-1-Versioned-Originals-Nov24.md) links 3 dated source checkpoint entries from this period.

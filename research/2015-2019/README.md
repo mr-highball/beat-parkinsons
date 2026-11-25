@@ -963,3 +963,7 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Round 1 saffron, dietary oil and clove source audit](../2025-2029/Food-Experiment-Round-1-Saffron-Oil-and-Clove-Nov24.md)
 
 - [Extra-virgin olive oil COLONIC trial registration](Source-Text/Trials/2019-ACTRN12619000150145-COLONIC-Extra-Virgin-Olive-Oil.txt)
+
+[Round 1 journal, preprint and grant source audit](../2025-2029/Food-Experiment-Round-1-Versioned-Originals-Nov24.md) links 1 dated source checkpoint entries from this period.
+
+[Crocin motor tasks and saffron fall frequency](Observations/2018-Crocin-Motor-Tasks-and-Falls.md) distinguishes apparatus latency from counted falls.
