@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 25 diet and ethnobotany review resolved 188 original-source checks, including 127 related contexts and 61 scope mismatches. The seven original-access gaps in the December 1871 archive remain in the exact queue. [Scope and replay](../diet-and-ethnobotany-originals-nov25/README.md)
+
 The November 25 review resolved 203 exact checks across 29 original publications, with 91 related contexts and 112 scope mismatches. Twenty-one staged access checks remain open. [Scope and native replay](../cultural-methods-and-diet-originals-nov25/README.md)
 
 The November 25 print and congress replay resolved 126 checks across 18 original publications. The case notes preserve 46 related contexts and 80 mismatches, with 98 open access receipts and 32,606 exact checks still queued. [Scope and native verification](../printed-indexes-and-congress-scopes-nov25/README.md)

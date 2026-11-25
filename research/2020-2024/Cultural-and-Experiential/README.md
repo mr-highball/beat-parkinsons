@@ -84,3 +84,6 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Consensus trail for a cinnamon-twig and kudzu formula in Parkinson pain](Traditional-Practices/2021-TCM-Consensus-Cinnamon-Twig-and-Kudzu-Parkinson-Pain.txt).
 
 - [Sri Lankan Ayurveda and traditional botanical cosmetic practices](Traditional-Practices/2021-PMID34257686-Sri-Lankan-Cosmetic-Plants.txt).
+
+- [Yoruba compilation of plant uses](Local-Knowledge/2021-PMID35024488-Ajao-Yoruba-Plant-Uses.txt).
+- [Society Islands interviews on traditional childhood care](Traditional-Practices/2023-PMID37853377-Society-Islands-Child-Care.txt).
