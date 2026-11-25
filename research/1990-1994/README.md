@@ -160,3 +160,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [1994 saffron extract, memory and induced sleep](Source-Text/1994-PMID8205119-Saffron-Extract-Memory-and-Induced-Sleep.txt)
 
 [November 25 journal and repository audit](../2025-2029/Food-Experiment-Round-1-Journals-and-Repositories-Nov25.md) links 1 checked source records in this period.
+
+- [1994 Parkinson clinical review, verified against the original printed pages](Source-Text/1994-PMID7755681-Parkinson-Clinical-Review-Food-Scopes.txt).

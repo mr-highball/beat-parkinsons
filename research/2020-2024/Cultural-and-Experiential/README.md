@@ -80,3 +80,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [Thai-style Mediterranean adaptation and familiar foods](Local-Knowledge/2023-PMID37334427-Thai-Mediterranean-Local-Foods.txt).
 - [Thirisadham traditional three-spice formulation](Traditional-Practices/2023-JAHM-Thirisadham-Three-Spice-Tradition.txt).
+
+- [Consensus trail for a cinnamon-twig and kudzu formula in Parkinson pain](Traditional-Practices/2021-TCM-Consensus-Cinnamon-Twig-and-Kudzu-Parkinson-Pain.txt).

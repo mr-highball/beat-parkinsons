@@ -660,3 +660,5 @@ The 2026 review uses plant-level group labels. Its public references identify ph
 - [Sweet basil exposure, intestinal transit and group differences](Sweet-Basil-Transit-and-Cultural-Uses.md).
 
 The 2025 TRP review's cited piperine analysis is a secondary reuse of the earlier piperine trial. The Siddha neuroscience review's topical sesame-oil reference traces to a prior-period stroke case. Separate accessions preserve the review and original-case boundaries. [Round 1 source trail](../Food-Experiment-Round-1-Diet-and-Clinical-Contexts-Nov25.md)
+
+The newer coconut gel trial record is complete, with no posted results, and uses a topical intervention in oral lichen planus. The older coconut oil record used a beverage and ended early in an Alzheimer population. Those design differences matter when checking related oil exposures. [Topical trial](../Source-Text/2025-NCT07100145-Topical-Coconut-Gel-Oral-Lichen-Planus.txt) · [Earlier beverage trial](../../2010-2014/Source-Text/2013-NCT01883648-Coconut-Oil-Alzheimer-Trial-Termination.txt)

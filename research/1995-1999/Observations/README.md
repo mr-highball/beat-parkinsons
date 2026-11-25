@@ -141,3 +141,5 @@ The annual report records an inconclusive hot-water test from a ground preparati
 ### Oil composition and anxiety-like behavior
 
 The mouse diets varied the proportion of peanut and rapeseed oils and their alpha-linolenic acid content. Three anxiety-like assays gave inconclusive group comparisons. [Original dietary comparison](../Food-Experiment-Peanut-Oil-Carriers.md#peanut-and-rapeseed-oil-diets-in-developmental-mouse-anxiety-assays)
+
+The 1997 Irish meeting archive links a PDF but the tested routes do not yield its original proceedings. The same-titled 1998 publication carries a different DOI and cannot certify the earlier issue's full content. Eight original checks stay queued. [Dated access record](../Source-Text/1997-PMID9181698-Irish-National-Medical-Meeting-Archive-Access.txt)

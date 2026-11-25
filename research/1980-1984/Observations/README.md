@@ -44,3 +44,5 @@ The original interviews distinguish ojé from the genus-level identity of renaco
 The [1980 muscle-twitch study](../Source-Text/1980-PMID7431032-Raw-Fig-Rest-Tremor-Original-Access.txt) applies a timed perturbation to analyze tremor. The [1979 rhythmic-force report](../../1975-1979/Source-Text/1979-PMID762588-Raw-Fig-Rest-Tremor-Original-Access.txt) measures the interaction between an external force and resting tremor. The original methods distinguish a perturbation response from any dietary exposure.
 
 The 1982 neuropathy case uses onion-bulb terminology for the absence of a particular nerve-biopsy morphology. Reading the original printed page keeps this lexical match separate from the raw-onion rigidity hypothesis. [Printed case scope](../Source-Text/1982-PMID6281391-Round1-Priority-Original.txt)
+
+A 1981 review identifies coffee or tea as a possible aggravating circumstance in some people with essential tremor. It separately lists physical fatigue as a possible aggravator. Neither observation supplies a controlled Parkinson coffee-fatigue comparison. [Original printed scope](../Source-Text/1981-PMID7018658-Essential-Tremor-Original-Food-Scopes.txt)

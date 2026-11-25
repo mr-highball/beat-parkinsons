@@ -710,3 +710,5 @@ The [2011 Wang rosmarinic acid model](Source-Text/2011-PMID22205146-Wang-Rosmari
 - [Edremit and Elazığ preparations and customary uses](Observations/Turkish-Lemon-Balm-and-Culinary-Plant-Uses.md).
 
 - [Medicinal-food review and customary spice accounts](Cultural-and-Experiential/Traditional-Practices/2014-PMID24822061-Medicinal-Food-Spice-Accounts.txt).
+
+- [Egyptian herbal-practice historical review](Cultural-and-Experiential/Traditional-Practices/2010-Aboelsoud-Egyptian-Herbal-Practice-Summary.txt) and [registered coconut-oil beverage trial in Alzheimer disease](Source-Text/2013-NCT01883648-Coconut-Oil-Alzheimer-Trial-Termination.txt).

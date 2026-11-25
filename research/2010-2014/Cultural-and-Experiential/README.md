@@ -44,3 +44,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Elazığ culinary plant indications](Traditional-Practices/2014-PMID24793217-Elazig-Culinary-Plant-Indications.txt).
 
 - [Reported customary combinations with black pepper, cinnamon, clove, cumin and onion](Traditional-Practices/2014-PMID24822061-Medicinal-Food-Spice-Accounts.txt).
+
+- [Modern historical review of reported Egyptian basil, cardamom and turmeric uses](Traditional-Practices/2010-Aboelsoud-Egyptian-Herbal-Practice-Summary.txt).
