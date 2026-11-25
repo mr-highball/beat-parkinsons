@@ -41,3 +41,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Parkinson's UK Forum discussion on constipation coping with prunes, figs, dates, walnuts and milled golden flaxseed](Conversations/2019-Parkinsons-UK-Constipation-Prunes-Figs-Dates-Flaxseed.txt).
 
 - [Practitioner dietary guidance for weak Spleen Qi](Traditional-Practices/2017-Spleen-Qi-Dietary-Guidance.txt).
+
+- [Cooked string beans in a Parkinson community meal account](Personal-Reports/2015-Parking-Suns-String-Beans-in-Mixed-Meals.txt).

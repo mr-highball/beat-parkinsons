@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 25 priority and archive pass resolved 61 checks at original depth. The baseline access map retains 448 open rows and one verified resolution. [Original scopes, access and replay](../priority-and-printed-indexes-nov25/README.md)
+
 The November 25 proceedings review resolved 179 exact source checks, with 108 related contexts and 71 scope mismatches. Seven exact checks remain open on the 1994 Mainz abstracts. [Source scopes and replay](../diet-and-proceedings-originals-nov25/README.md)
 
 The November 25 diet and ethnobotany review resolved 188 original-source checks, including 127 related contexts and 61 scope mismatches. The seven original-access gaps in the December 1871 archive remain in the exact queue. [Scope and replay](../diet-and-ethnobotany-originals-nov25/README.md)

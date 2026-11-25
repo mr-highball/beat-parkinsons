@@ -23,3 +23,5 @@ Extract the 1973 dietary trial’s participant and outcome details. Seek reports
 ## Marjoram in an ethnobotanical report
 
 The 1970 report describes attempted use and supplies no usable symptom or exposure history. A later medicinal review covers specifically identified preparations. [Historical article](../Food-Experiment-Marjoram-Hallucination-Reports.md) · [Later review](../../2015-2019/Food-Experiment-Marjoram-Hallucination-Reports.md)
+
+The 1972 volume index points to instant-coffee caffeine content. It records a food preparation and constituent lead separate from the clinical symptom comparisons in the experiment. [1972 index](../Source-Text/PMC1785425-Round1-Original-Scope.txt)

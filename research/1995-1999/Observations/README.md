@@ -145,3 +145,5 @@ The mouse diets varied the proportion of peanut and rapeseed oils and their alph
 The 1997 Irish meeting archive links a PDF but the tested routes do not yield its original proceedings. The same-titled 1998 publication carries a different DOI and cannot certify the earlier issue's full content. Eight original checks stay queued. [Dated access record](../Source-Text/1997-PMID9181698-Irish-National-Medical-Meeting-Archive-Access.txt)
 
 The 1996 autopsy series documents hallucination timing and clinical overlap with Parkinson disease, with a separate treatment history. The medication and vehicle proceedings from the previous period concern different exposures and endpoints. [1996 cases](../Source-Text/PMC486366-Round1-Original-Scope.txt) · [1993 proceedings](../../1990-1994/Source-Text/PMC1364582-Round1-Original-Scope.txt)
+
+The 1995 full levodopa paper measures neural firing in rats. Its discussion links drug response to motor features and provides the primary endpoint context for one formerly open source check. [1995 levodopa original](../Source-Text/1995-PMID7666198-Repeated-Levodopa-and-Dopamine-Cell-Firing.txt)

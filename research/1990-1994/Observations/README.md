@@ -104,3 +104,5 @@ Motor and nonmotor fluctuations in the 1994 Parkinson review are framed around l
 The 1990 food-systems paper records eggs, oats, millet, citrus and brassica in trade or production contexts. The scan helps distinguish food availability from evidence about symptoms, including the separate laboratory references from the 1986 aluminium paper. [Food-systems archive](../Source-Text/PMC1567760-Round1-Original-Scope.txt) · [1986 aluminium archive](../../1985-1989/Source-Text/PMC1474689-Round1-Original-Scope.txt)
 
 The 1993 archive uses peanut oil as a drug suspension in a rat pharmacokinetics abstract. This extends the prior period observations on foods used in laboratory methods. The 1994 Mainz proceedings remain an original-access gap. [British proceedings](../Source-Text/PMC1364582-Round1-Original-Scope.txt) · [Mainz access](../Source-Text/1994-PMID8183379-Mainz-Pharmacology-Original-Access.txt)
+
+The 1992 pharmacology posters use corn oil as an injected comparator and olive oil as an injected vehicle in separate studies. They add route-specific context to earlier oil discussions. [Poster communications](../Source-Text/PMC1908116-Round1-Original-Scope.txt)
