@@ -31,11 +31,18 @@ end;
 
 procedure Run;
 const
-  CPositiveLeanIngredients: array[0..43] of String = (
-    'anise seed', 'banana', 'barley', 'basil', 'black pepper', 'black tea',
-    'blueberry', 'cantaloupe', 'cayenne pepper', 'celery stalk', 'cherry',
-    'chicken', 'cilantro', 'cinnamon', 'clove', 'coffee', 'cumin',
-    'dark chocolate', 'fennel seed', 'flaxseed oil', 'ginger', 'grape',
+  CPositiveLeanIngredients: array[0..79] of String = (
+    'almond', 'almond oil', 'anise seed', 'annatto', 'apple', 'apricot',
+    'artichoke', 'arugula', 'asparagus', 'banana', 'barley', 'basil',
+    'bay leaf', 'beef', 'beetroot', 'bell pepper', 'black pepper',
+    'black tea', 'blackberry', 'blueberry', 'brazil nut', 'broccoli',
+    'brown rice', 'brussels sprouts', 'buckwheat groats', 'butternut squash',
+    'button mushroom', 'cantaloupe', 'caraway', 'carrot', 'cashew',
+    'cayenne pepper', 'celery leaf', 'celery seed', 'celery stalk',
+    'chamomile', 'cherry', 'chia seed', 'chicken', 'chickpeas', 'cilantro',
+    'cinnamon', 'clams', 'clove', 'coffee', 'coriander seed', 'cranberry',
+    'cucumber', 'culinary lavender', 'cumin', 'curry leaf', 'dark chocolate',
+    'date', 'dill seed', 'fennel seed', 'flaxseed oil', 'ginger', 'grape',
     'lemon balm', 'nigella seed', 'olive oil', 'orange', 'pumpkin seed oil',
     'raspberry', 'rice bran oil', 'rosemary', 'saffron', 'sage', 'salmon',
     'sesame oil', 'shiso', 'sichuan pepper', 'spearmint', 'sumac',
@@ -75,8 +82,8 @@ begin
   LCatalog := TRecipeCatalog.Create;
   try
     LCatalog.LoadFromDirectory(LDir);
-    Check(LCatalog.Count = 2200, 'Catalog loads all 2,200 positive-lean recipes (44 x 50).');
-    Check(Length(LCatalog.CoreIngredients) = 44, 'Catalog covers all 44 positive-lean core ingredients.');
+    Check(LCatalog.Count = 4000, 'Catalog loads all 4,000 positive-lean recipes (80 x 50).');
+    Check(Length(LCatalog.CoreIngredients) = 80, 'Catalog covers all 80 positive-lean core ingredients.');
 
     // Verify every positive-lean ingredient has 50 low-to-medium effort recipes with valid category splits and rich details.
     for I := Low(CPositiveLeanIngredients) to High(CPositiveLeanIngredients) do
@@ -85,7 +92,10 @@ begin
       LGroup := LCatalog.QueryByCoreIngredient(LCore);
       Check(Length(LGroup) = 50, 'Core ingredient "' + LCore + '" has exactly 50 recipes.');
       LCounts := LCatalog.CategoryCounts(LCore, nil);
-      if (LCore = 'chicken') or (LCore = 'salmon') then
+      if (LCore = 'artichoke') or (LCore = 'asparagus') or (LCore = 'beef') or
+        (LCore = 'brussels sprouts') or (LCore = 'button mushroom') or
+        (LCore = 'chicken') or (LCore = 'chickpeas') or (LCore = 'clams') or
+        (LCore = 'salmon') then
       begin
         Check(LCounts[rcBreakfast] = 16, LCore + ' has 16 breakfast recipes.');
         Check(LCounts[rcLunch] = 16, LCore + ' has 16 lunch recipes.');
@@ -127,6 +137,14 @@ begin
     Check(Length(LCatalog.QueryByCoreIngredient('kalonji')) = 50, 'Alias "kalonji" matches nigella seed.');
     Check(Length(LCatalog.QueryByCoreIngredient('sichuan peppercorn')) = 50, 'Alias "sichuan peppercorn" matches sichuan pepper.');
     Check(Length(LCatalog.QueryByCoreIngredient('poached salmon')) = 50, 'Alias "poached salmon" matches salmon.');
+    Check(Length(LCatalog.QueryByCoreIngredient('beets')) = 50, 'Alias "beets" matches beetroot.');
+    Check(Length(LCatalog.QueryByCoreIngredient('kasha')) = 50, 'Alias "kasha" matches buckwheat groats.');
+    Check(Length(LCatalog.QueryByCoreIngredient('garbanzo beans')) = 50, 'Alias "garbanzo beans" matches chickpeas.');
+    Check(Length(LCatalog.QueryByCoreIngredient('brussel sprout')) = 50, 'Alias "brussel sprout" matches brussels sprouts.');
+    Check(Length(LCatalog.QueryByCoreIngredient('clam')) = 50, 'Alias "clam" matches clams.');
+    Check(Length(LCatalog.QueryByCoreIngredient('achiote')) = 50, 'Alias "achiote" matches annatto.');
+    Check(Length(LCatalog.QueryByCoreIngredient('lavender')) = 50, 'Alias "lavender" matches culinary lavender.');
+    Check(Length(LCatalog.QueryByCoreIngredient('ground coriander')) = 50, 'Alias "ground coriander" matches coriander seed.');
     Check(Length(LCatalog.QueryByCoreIngredient('grapefruit')) = 0,
       'Unpopulated core ingredient returns 0 recipes.');
 
@@ -151,12 +169,12 @@ begin
     Check(FormatIngredientLine(LDetail, 2.0) = '4 stalks celery stalk, finely diced',
       'Double-scales measured ingredient line cleanly.');
 
-    // Verify JSON serialization/deserialization round-trip across all 2,200 recipes.
+    // Verify JSON serialization/deserialization round-trip across all 4,000 recipes.
     LSerialized := LCatalog.ToJSONString(False);
     LRoundTrip := TRecipeCatalog.Create;
     try
       LRoundTrip.LoadFromJSONString(LSerialized);
-      Check(LRoundTrip.Count = LCatalog.Count, 'Round-trip preserves full 2,200 recipe count.');
+      Check(LRoundTrip.Count = LCatalog.Count, 'Round-trip preserves full 4,000 recipe count.');
       Check(LRoundTrip.Items[0].Id = LCatalog.Items[0].Id, 'Round-trip preserves first id.');
       Check(LRoundTrip.Items[0].CoreIngredient = LCatalog.Items[0].CoreIngredient,
         'Round-trip preserves first queryable CoreIngredient.');
