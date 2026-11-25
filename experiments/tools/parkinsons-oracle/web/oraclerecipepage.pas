@@ -274,7 +274,7 @@ begin
           FRecipe := FCatalog.FindById(FRecipeId);
           if FRecipe <> nil then
           begin
-            document.title := FRecipe.Title + ' · Recipes · Parkinson’s Oracle';
+            document.title := FRecipe.Title + ' · Recipes · The Parkinson’s Cookbook';
             LDetailCount := Length(FRecipe.IngredientDetails);
             if LDetailCount = 0 then
               LDetailCount := Length(FRecipe.Ingredients);
@@ -282,7 +282,7 @@ begin
             SetLength(FDoneSteps, Length(FRecipe.Steps));
           end
           else
-            document.title := 'Recipe not found · Parkinson’s Oracle';
+            document.title := 'Recipe not found · The Parkinson’s Cookbook';
         except
           on E: Exception do
           begin
@@ -473,7 +473,7 @@ begin
     RenderStateCard('Recipe unavailable', FError)
   else if FRecipe = nil then
     RenderStateCard('Recipe not found',
-      'We could not find a recipe matching this link. Return to Parkinson’s Oracle to browse available recipes.')
+      'We could not find a recipe matching this link. Return to The Parkinson’s Cookbook to browse available recipes.')
   else
     RenderRecipe;
 end;
@@ -494,14 +494,14 @@ begin
   LDoc.AddPage(LPage);
 
   LTopbar := MakeNode(nkRow, 'recipe-sheet-topbar');
-  LTopbar.Add(MakeNode(nkLink, 'recipe-sheet-back', '← Back to Parkinson’s Oracle')
+  LTopbar.Add(MakeNode(nkLink, 'recipe-sheet-back', '← Back to The Parkinson’s Cookbook')
     .Configure.LinkTo('./').Done);
   LPage.Add(LTopbar);
 
   LCard := MakeNode(nkCard, 'recipe-sheet-state-card');
   LCard.Add(MakeNode(nkHeading, 'recipe-sheet-state-title', ATitle));
   LCard.Add(MakeNode(nkLabel, 'recipe-sheet-state-message', AMessage));
-  LCard.Add(MakeNode(nkLink, 'recipe-sheet-state-home', 'Browse Parkinson’s Oracle')
+  LCard.Add(MakeNode(nkLink, 'recipe-sheet-state-home', 'Browse The Parkinson’s Cookbook')
     .Configure.LinkTo('./').Done);
   LPage.Add(LCard);
 
@@ -622,7 +622,7 @@ begin
 
   // Sticky top utility toolbar (hidden on print)
   LTopbar := MakeNode(nkRow, 'recipe-sheet-topbar');
-  LTopbar.Add(MakeNode(nkLink, 'recipe-sheet-back', '← Back to Parkinson’s Oracle')
+  LTopbar.Add(MakeNode(nkLink, 'recipe-sheet-back', '← Back to The Parkinson’s Cookbook')
     .Configure.LinkTo('./').Done);
 
   LTools := MakeNode(nkRow, 'recipe-sheet-tools');
@@ -793,7 +793,7 @@ begin
   LPage.Add(LBody);
 
   LPage.Add(MakeNode(nkLabel, 'recipe-sheet-print-footer',
-    'Parkinson’s Oracle · Recipes · ' + FRecipe.Title + ' · ' +
+    'The Parkinson’s Cookbook · Recipes · ' + FRecipe.Title + ' · ' +
     FormatScaledServings(FRecipe.Servings, FScale)));
 
   FRenderer.Render(LDoc, LPage, LHost);
