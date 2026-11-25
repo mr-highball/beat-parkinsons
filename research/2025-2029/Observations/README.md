@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+[Shared food source contexts](Shared-Food-Source-Contexts-Nov25.md) compares clinical test preparations and original food-composition measurements across periods.
+
 - [Ground ginger exposure and abnormal movement outcomes](2026-Ginger-Exposure-and-Abnormal-Movement.md).
 
 - [Ginger motor performance and dyskinesia terminology](2025-Ginger-Motor-and-Dyskinesia-Citation.md).

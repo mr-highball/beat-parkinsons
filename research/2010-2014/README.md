@@ -1,5 +1,7 @@
 # 2010-2014
 
+The [November 25 shared-source and proceedings review](../2025-2029/Food-Experiment-Round-1-Shared-Sources-Nov25.md#2010-2014) links the dated original scopes for this period.
+
 The [November 25 fig and rest-tremor audit](../2025-2029/Food-Experiment-Round-1-Fig-Rest-Tremor-Originals-Nov25.md) links the new dated source records for this period.
 
 The [ground ginger and dyskinesia audit](../2025-2029/Food-Experiment-Ginger-Dyskinesia-Exposure-Bridge.md) links the 2010 retail 6-shogaol analysis and the 2011 zingerone animal study.

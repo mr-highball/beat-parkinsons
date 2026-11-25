@@ -1,5 +1,7 @@
 # Food thought experiment follow-up
 
+The November 25 shared-publication review resolved 222 exact checks across 55 originals and revalidated 64 scorecards. The replay leaves 31,332 checks across 21,285 source keys and 396 frozen claims. Twelve staged 2001 proceedings checks remain open pending the missing pages and erratum. [Shared original scope and replay](shared-orange-sources-nov25/README.md)
+
 - [Original historical and cultural source checkpoint](tremor-cultural-nov18-03/README.md): five records, historical date validation and preserved access limits; clinical grades unchanged.
 
 - [Second inclusive tremor checkpoint](tremor-cultural-nov17-02/README.md): five more cultural records, existing-trial reporting audit, five Oracle partials and preserved clinical grades.
