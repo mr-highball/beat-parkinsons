@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [November 25 proceedings follow-through](../2025-2029/Food-Experiment-Round-1-Proceedings-Contexts-Nov25.md#2020-2024) links the new original scopes and source identity records for this period.
+
 The [November 25 review of recovered proceedings](../2025-2029/Food-Experiment-Round-1-Proceedings-PDFs-Nov25.md#2020-2024) links the original source notes for this period.
 
 The [November 25 date and orange source review](../2025-2029/Food-Experiment-Round-1-Date-and-Orange-Bodies-Nov25.md#2020-2024) links the dated study notes and original scopes for this period.
