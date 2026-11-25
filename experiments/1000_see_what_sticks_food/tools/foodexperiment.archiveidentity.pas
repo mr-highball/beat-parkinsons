@@ -27,6 +27,7 @@ function RegistryArchiveFileIdentifier(const AFileName: String): String;
 function OtherRegistryHeaderMatches(const AText: RawByteString;
   const AExpected: String): Boolean;
 function NormalizeArchiveIdentifier(const AValue: String): String;
+function PmcAliasHasDoiConflict(const AExpected, AArchive: TArchiveIdentity): Boolean;
 function ArchiveIdentityConflicts(const AExpected, AArchive: TArchiveIdentity): String;
 function SameTitledArchive(const AExpected, AArchive: TArchiveIdentity): Boolean;
 
@@ -623,6 +624,17 @@ begin
     SameText(AExpected.Pmid, AArchive.Pmid) and IsCollectionTitle(AArchive.Title) and
     not IsCollectionTitle(AExpected.Title) then
     Result := 'collection_title';
+end;
+
+function PmcAliasHasDoiConflict(const AExpected, AArchive: TArchiveIdentity): Boolean;
+var
+  LExpectedDoi, LArchiveDoi: String;
+begin
+  LExpectedDoi := NormalizeDoi(AExpected.Doi);
+  LArchiveDoi := NormalizeDoi(AArchive.Doi);
+  Result := (AExpected.Pmcid <> '') and SameText(AExpected.Pmcid, AArchive.Pmcid) and
+    (LExpectedDoi <> '') and (LArchiveDoi <> '') and (LExpectedDoi <> LArchiveDoi) and
+    not SameTitledArchive(AExpected, AArchive);
 end;
 
 function SameTitledArchive(const AExpected, AArchive: TArchiveIdentity): Boolean;

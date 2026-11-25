@@ -110,6 +110,7 @@ var
   GScreenRows: Integer;
   GBodyRows: Integer;
   GArchiveIdentityConflicts: Integer;
+  GAssessmentAliasConflicts: Integer;
   GArchiveIdentityAdvisories: Integer;
   GReviewedJoins: Integer;
   GInputProof: TextFile;
@@ -558,7 +559,39 @@ begin
   WriteLn('Retained archive joins with DOI advisories: ', GArchiveIdentityAdvisories);
 end;
 
-procedure ApplyReview(const AClaim, ASource, ARole, ABasis, AReceipt: String; ALevel: Integer);
+function ConflictingPmcAssessment(ASource: TSource;
+  const AStudy, AReference: String): Boolean;
+var
+  LArchive, LExpected: TArchiveIdentity;
+  LStudy, LPath: String;
+  LAnchor: Integer;
+begin
+  Result := False;
+  LStudy := Normalize(AStudy);
+  if (AReference = '') or (ASource.Key = LStudy) or
+    not AnsiStartsStr('PMCID:', LStudy) then
+    Exit;
+  LPath := Trim(AReference);
+  LAnchor := Pos('#', LPath);
+  if LAnchor > 0 then
+    SetLength(LPath, LAnchor - 1);
+  if not AnsiStartsStr('research/', LPath) or (Pos('/Source-Text/', LPath) = 0) or
+    not SameText(ExtractFileExt(LPath), '.txt') or (Pos('|', LPath) > 0) or
+    (Pos(':', LPath) > 0) or (Pos('', LPath) > 0) or (Pos('/../', LPath + '/') > 0) then
+    Exit;
+  LArchive := ReadArchiveIdentity(GRoot + '../../' + LPath);
+  if NormalizeArchiveIdentifier(LArchive.Pmcid) <> LStudy then
+    Exit;
+  LExpected := Default(TArchiveIdentity);
+  LExpected.Pmcid := ASource.Pmcid;
+  LExpected.Pmid := ASource.Pmid;
+  LExpected.Doi := ASource.Doi;
+  LExpected.Title := ASource.Title;
+  Result := PmcAliasHasDoiConflict(LExpected, LArchive);
+end;
+
+procedure ApplyReview(const AClaim, ASource, ARole, ABasis, AReceipt: String;
+  ALevel: Integer; const AReference: String = '');
 var
   LPair: TPair;
 begin
@@ -571,6 +604,12 @@ begin
   if LPair = nil then
   begin
     Inc(GSourceMismatches);
+    Exit;
+  end;
+  if (AReference <> '') and ConflictingPmcAssessment(LPair.Source, ASource, AReference) then
+  begin
+    Inc(GSourceMismatches);
+    Inc(GAssessmentAliasConflicts);
     Exit;
   end;
   Inc(GReviewedJoins);
@@ -673,7 +712,7 @@ begin
               LStudy := 'PMID:' + LStudy;
             end;
             ApplyReview(Trim(LId), LStudy, LRole, LBasis, APath + ':' + IntToStr(LTable.Line),
-              LLevel);
+              LLevel, LTable.Value('local_reference'));
           end;
         end
         else
@@ -1307,6 +1346,7 @@ begin
   WriteLn('Lexical bibliographic rows: ', GScreenRows, '; archived join rows: ', GBodyRows);
   WriteLn('Review inputs: ', GReviewSeen, '; joined observations: ', GReviewedJoins,
     '; outside overlay or unresolved alias: ', GSourceMismatches);
+  WriteLn('Assessments held for conflicting PMC aliases: ', GAssessmentAliasConflicts);
   for J := Low(ReviewStates) to High(ReviewStates) do
   begin
     WriteLn(ReviewStates[J], ': ', LReviewTotals[J]);

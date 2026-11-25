@@ -35,6 +35,15 @@ begin
     Assert(ArchiveIdentityConflicts(LExpected, LArchive) = 'doi',
       'A conference file with a matching PMCID and conflicting DOI must be flagged');
     Assert(not SameTitledArchive(LExpected, LArchive), 'A different article was corroborated');
+    Assert(PmcAliasHasDoiConflict(LExpected, LArchive),
+      'A proceedings DOI must not retire the linked individual article');
+    LArchive.Doi := '';
+    Assert(not PmcAliasHasDoiConflict(LExpected, LArchive),
+      'Missing DOI metadata is not a confirmed alias conflict');
+    LArchive := LExpected;
+    LArchive.Doi := '10.1007/s11739-011-0736-y';
+    Assert(not PmcAliasHasDoiConflict(LExpected, LArchive),
+      'Matching title and both accessions retain legitimate DOI advisories');
 
     LArchive := LExpected;
     LArchive.Title := 'A subtle case of iron deficiency anemia.';

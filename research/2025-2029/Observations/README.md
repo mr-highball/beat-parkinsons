@@ -691,3 +691,5 @@ The ergothioneine paper tests an isolated constituent and uses separate motor re
 - [Exposure context across the recovered proceedings](Proceedings-Exposure-Context-Nov25.md)
 
 - [Preparation and outcomes in the recovered proceedings](Proceedings-Preparation-and-Outcome-Nov25.md)
+
+- [Food and article identity in the internal medicine review](SGIM-Food-and-Archive-Identity-Nov25.md)

@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The November 25 internal medicine review resolved 27 exact checks and retained 26 access holds tied to crossed article identifiers. The native replay verifies 30,822 queued checks across 21,057 source keys and 396 frozen claims. [Source identity checks and replay](followup/sgim-and-archive-identities-nov25/README.md)
+
 The November 25 proceedings follow-through resolved 169 exact checks across 15 originals and retained 69 related contexts. The 48 affected scorecards held their verdicts and anchors. The verified replay leaves 30,849 checks across 21,059 source keys and 396 frozen claims. [Source scopes and verified replay](followup/proceedings-pdf-contexts-nov25/README.md)
 
 The November 25 proceedings recovery resolved 32 exact checks across six originals. Three related contexts were recorded, and all three affected scorecards retained their published verdicts. The verified replay leaves 31,018 checks across 21,074 source keys and 396 frozen claims. [Recovery inventory and verified replay](followup/proceedings-pdf-first-six-nov25/README.md)
