@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The mangiferin, dried-date, raw fig and clinical audit resolved 91 checks across 60 originals, added 22 assessments and revalidated 31 scorecards. The current queue holds 34,841 checks across 22,101 publications, including 403 mapped access holds. [Source packet and scorecard checks](followup/priority-five-mid2025-clinical-nov24/README.md)
+The olive oil, constipation and clinical audit resolved 91 checks across 60 originals, added 20 assessments and revalidated 30 scorecards. The current queue holds 34,750 checks across 22,041 publications, including 403 mapped access holds. [Source packet and scorecard checks](followup/priority-five-late2025-clinical-nov24/README.md)
+
+The mangiferin, dried-date, raw fig and clinical audit resolved 91 checks across 60 originals, added 22 assessments and revalidated 31 scorecards. That replay left 34,841 checks across 22,101 publications, including 403 mapped access holds. [Source packet and scorecard checks](followup/priority-five-mid2025-clinical-nov24/README.md)
 
 The orange, sage, dried-date and clinical audit resolved 79 exact checks, added eight contextual assessments, refined one and revalidated 19 scorecards. That replay left 34,932 checks across 22,161 publications, including 403 mapped access holds. [Source packet and scorecard checks](followup/priority-five-early2025-clinical-nov24/README.md)
 

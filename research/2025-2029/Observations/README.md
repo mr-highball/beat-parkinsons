@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+[Constipation and tremor outcomes across study designs](2025-Oil-Constipation-and-Tremor-Comparison-Boundaries.md) compares settings and clinical measurement differences with the preceding period.
+
 [Mangiferin citations and tremor measurement](2025-Mangiferin-Citation-and-Tremor-Measurements.md) follows the relevant preparation and measurement distinctions.
 
 [Citrus-containing fibre blend and constipation](2026-Citrus-Fibre-Blend-and-Constipation.md) compares the later clinical formulation with the earlier pomace crossover.

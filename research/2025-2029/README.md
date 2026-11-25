@@ -1,5 +1,7 @@
 # 2025-2029
 
+[Round 1 olive oil, constipation and clinical source checks](Food-Experiment-Round-1-Olive-Oil-Constipation-and-Clinical-Nov24.md) indexes 60 authenticated originals and follows separate oil, dietary pattern and stool outcome comparisons.
+
 [Round 1 mangiferin and clinical original source checks](Food-Experiment-Round-1-Mangiferin-and-Clinical-Nov24.md) indexes 60 authenticated originals and the mangiferin citation trail.
 
 [Round 1 orange constipation and clinical source audit](Food-Experiment-Round-1-Orange-Constipation-and-Clinical-Nov24.md) catalogs 60 originals by publication date and follows the citrus and constipation leads.
