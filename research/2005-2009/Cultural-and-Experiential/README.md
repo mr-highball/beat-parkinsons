@@ -19,3 +19,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Reported Ayurvedic use of turmeric for skin and muscle pain](Traditional-Practices/2008-PMID19966973-Ayurvedic-Turmeric-Skin-and-Muscle-Pain.txt)
 
 - [Kırklareli lemon balm use survey](Traditional-Practices/2006-PMID17257791-Kirklareli-Lemon-Balm-Survey-Abstract.txt).
+
+- [Customary ginseng and chicken soup in China and Korea](Traditional-Practices/2009-PMID19689273-Ginseng-and-Chicken-Soup.txt).

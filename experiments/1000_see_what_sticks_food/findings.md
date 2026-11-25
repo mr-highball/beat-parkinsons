@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The November 25 print and congress audit resolved 126 exact source checks across 18 publications. All 65 affected scorecards retained their published decisions. Ninety-eight staged checks still require further original access, and the full queue holds 32,606 checks across 21,576 sources. [Printed archives and congress scopes](followup/printed-indexes-and-congress-scopes-nov25/README.md)
+
 The latest November 25 audit resolved 214 exact checks across 27 original publications. The 95 verified scorecards retained their verdicts and anchors. Eight separately reviewed Irish proceedings checks await the 1997 original, and the total queue holds 32,732 checks across 21,594 sources. [Movement and traditional context audit](followup/staged-movement-and-traditional-context-nov25/README.md)
 
 The preceding November 25 audit resolved 184 original-source checks across 23 publications. The 92 rechecked scorecards retained their verdicts. The exact queue holds 32,946 pairs across 21,621 sources. [Printed pharmacology and food-context audit](followup/staged-collections-and-food-scopes-nov25/README.md)

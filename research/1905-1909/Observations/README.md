@@ -18,3 +18,5 @@
 
 
 Cushny’s April 1908 article brings earlier nutmeg case observations into the dated record and describes acute drowsiness or stupor. The case collection is attributed to Wallace and supplies no systematic ordinary-use comparison. [Original source and attribution](../Food-Experiment-Nutmeg-Poisoning.md)
+
+Separate 1907 publications describe three distinct routes or settings. One discusses historical injected olive oil and oral eggs mixed with other foods for gastric ulcer. The BMJ issue proposes olive oil to aid fat assimilation in colitis. The ulcer scan lacks printed page 376. [Ulcer discussion](../Source-Text/PMC2038545-Round1-Scanned-Scope.txt) · [BMJ issue](../Source-Text/PMC2358415-Round1-Original-Scope.txt)
