@@ -87,7 +87,7 @@ See [experiments/tools/parkinsons-oracle/README.md](experiments/tools/parkinsons
 
 After bootstrapping on Windows (see below):
 
-**Codex CLI** (or use the project’s checked-in `.codex/config.toml` in a trusted workspace):
+**Codex CLI**:
 ```powershell
 $OracleBinary = (Resolve-Path ./build/parkinsons-oracle/bin/parkinsons-oracle.exe).Path
 codex mcp add parkinsons-oracle -- $OracleBinary serve (Get-Location).Path

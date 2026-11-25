@@ -10,6 +10,10 @@ type
   TClaimIdentity = record
     Round: Integer;
     Id: String;
+    Verdict: String;
+    Direction: String;
+    ResearchStatus: String;
+    Confidence: Double;
   end;
   TClaimIdentities = array of TClaimIdentity;
   TClaimIndices = array of Integer;
@@ -21,7 +25,7 @@ function OrderedUniqueClaims(const AClaims: TClaimIdentities): TClaimIndices;
 
 implementation
 
-uses SysUtils;
+uses SysUtils, parkinsonsoracle.trend;
 
 function HasSelection(const AValues: TStringValues; const AValue: String): Boolean;
 var
@@ -74,10 +78,11 @@ end;
 function OrderedUniqueClaims(const AClaims: TClaimIdentities): TClaimIndices;
 var
   LOrder: TClaimIndices;
+  LRanks: array of Integer;
   LIndex: Integer;
   LCount: Integer;
 
-  function Compare(ALeft, ARight: Integer): Integer;
+  function CompareIdentity(ALeft, ARight: Integer): Integer;
   begin
     if AClaims[ALeft].Round < AClaims[ARight].Round then
     begin
@@ -94,7 +99,18 @@ var
     end;
   end;
 
-  procedure Sort(ALeft, ARight: Integer);
+  function CompareUsefulness(ALeft, ARight: Integer): Integer;
+  begin
+    Result := CompareClaimUsefulness(
+      LRanks[ALeft], AClaims[ALeft].Confidence, AClaims[ALeft].Round, AClaims[ALeft].Id,
+      LRanks[ARight], AClaims[ARight].Confidence, AClaims[ARight].Round, AClaims[ARight].Id);
+    if Result = 0 then
+    begin
+      Result := ALeft - ARight;
+    end;
+  end;
+
+  procedure SortByIdentity(var AItems: TClaimIndices; ALeft, ARight: Integer);
   var
     LLeft: Integer;
     LRight: Integer;
@@ -103,45 +119,86 @@ var
   begin
     LLeft := ALeft;
     LRight := ARight;
-    LPivot := LOrder[(ALeft + ARight) div 2];
+    LPivot := AItems[(ALeft + ARight) div 2];
     repeat
-      while Compare(LOrder[LLeft], LPivot) < 0 do
+      while CompareIdentity(AItems[LLeft], LPivot) < 0 do
       begin
         Inc(LLeft);
       end;
-      while Compare(LOrder[LRight], LPivot) > 0 do
+      while CompareIdentity(AItems[LRight], LPivot) > 0 do
       begin
         Dec(LRight);
       end;
       if LLeft <= LRight then
       begin
-        LSwap := LOrder[LLeft];
-        LOrder[LLeft] := LOrder[LRight];
-        LOrder[LRight] := LSwap;
+        LSwap := AItems[LLeft];
+        AItems[LLeft] := AItems[LRight];
+        AItems[LRight] := LSwap;
         Inc(LLeft);
         Dec(LRight);
       end;
     until LLeft > LRight;
     if ALeft < LRight then
     begin
-      Sort(ALeft, LRight);
+      SortByIdentity(AItems, ALeft, LRight);
     end;
     if LLeft < ARight then
     begin
-      Sort(LLeft, ARight);
+      SortByIdentity(AItems, LLeft, ARight);
+    end;
+  end;
+
+  procedure SortByUsefulness(var AItems: TClaimIndices; ALeft, ARight: Integer);
+  var
+    LLeft: Integer;
+    LRight: Integer;
+    LPivot: Integer;
+    LSwap: Integer;
+  begin
+    LLeft := ALeft;
+    LRight := ARight;
+    LPivot := AItems[(ALeft + ARight) div 2];
+    repeat
+      while CompareUsefulness(AItems[LLeft], LPivot) < 0 do
+      begin
+        Inc(LLeft);
+      end;
+      while CompareUsefulness(AItems[LRight], LPivot) > 0 do
+      begin
+        Dec(LRight);
+      end;
+      if LLeft <= LRight then
+      begin
+        LSwap := AItems[LLeft];
+        AItems[LLeft] := AItems[LRight];
+        AItems[LRight] := LSwap;
+        Inc(LLeft);
+        Dec(LRight);
+      end;
+    until LLeft > LRight;
+    if ALeft < LRight then
+    begin
+      SortByUsefulness(AItems, ALeft, LRight);
+    end;
+    if LLeft < ARight then
+    begin
+      SortByUsefulness(AItems, LLeft, ARight);
     end;
   end;
 
 begin
   Result := nil;
   SetLength(LOrder, Length(AClaims));
+  SetLength(LRanks, Length(AClaims));
   for LIndex := 0 to High(AClaims) do
   begin
     LOrder[LIndex] := LIndex;
+    LRanks[LIndex] := ClaimUsefulnessRank(AClaims[LIndex].Verdict,
+      AClaims[LIndex].Direction, AClaims[LIndex].ResearchStatus);
   end;
   if Length(LOrder) > 1 then
   begin
-    Sort(0, High(LOrder));
+    SortByIdentity(LOrder, 0, High(LOrder));
   end;
   SetLength(Result, Length(LOrder));
   LCount := 0;
@@ -156,6 +213,10 @@ begin
     end;
   end;
   SetLength(Result, LCount);
+  if Length(Result) > 1 then
+  begin
+    SortByUsefulness(Result, 0, High(Result));
+  end;
 end;
 
 end.

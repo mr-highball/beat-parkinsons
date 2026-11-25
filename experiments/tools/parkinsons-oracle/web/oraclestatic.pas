@@ -115,6 +115,47 @@ begin
   GetOracleAsset(FAssetPath + APath, AJson, ABuffer);
 end;
 
+function ConfidenceOf(AObject: TJSObject): Double;
+var
+  LVal: JSValue;
+begin
+  Result := -1;
+  if (AObject <> nil) and isDefined(AObject['confidence']) and not isNull(AObject['confidence']) then
+  begin
+    LVal := AObject['confidence'];
+    if jsTypeOf(LVal) = 'number' then
+      Result := Double(LVal)
+    else
+      Result := StrToFloatDef(AsText(LVal), -1);
+  end;
+end;
+
+procedure SortModelClaimsByUsefulness(AModel: TJSObject);
+var
+  LClaims: TJSArray;
+begin
+  LClaims := VocabularyItems(AModel, 'claims');
+  if LClaims.Length <= 1 then
+    Exit;
+  LClaims.sort(
+    function(ALeft, ARight: JSValue): NativeInt
+    var
+      LA, LB: TJSObject;
+    begin
+      LA := TJSObject(ALeft);
+      LB := TJSObject(ARight);
+      Result := CompareClaimUsefulness(
+        ClaimUsefulnessRank(VocabularyText(LA, 'verdict'),
+          VocabularyText(LA, 'hypothesis_direction'),
+          VocabularyText(LA, 'research_status')),
+        ConfidenceOf(LA), Count(LA, 'round'), VocabularyText(LA, 'claim_id'),
+        ClaimUsefulnessRank(VocabularyText(LB, 'verdict'),
+          VocabularyText(LB, 'hypothesis_direction'),
+          VocabularyText(LB, 'research_status')),
+        ConfidenceOf(LB), Count(LB, 'round'), VocabularyText(LB, 'claim_id'));
+    end);
+end;
+
 procedure TStaticOracle.Loaded(AData: TJSObject; const AError: String);
 var
   LWaiting: array of TOracleReply;
@@ -123,7 +164,10 @@ begin
   LWaiting := FWaiting;
   FWaiting := nil;
   if AError = '' then
+  begin
+    SortModelClaimsByUsefulness(AData);
     FModel := AData;
+  end;
   for LReply in LWaiting do
     LReply(AData, AError);
 end;

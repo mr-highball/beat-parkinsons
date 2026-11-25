@@ -6,7 +6,7 @@ program BacklogTests;
 {$codepage utf8}
 
 uses
-  Classes, SysUtils, fpjson, parkinsonsoracle.claims;
+  Classes, SysUtils, fpjson, parkinsonsoracle.claims, parkinsonsoracle.trend;
 
 procedure Check(ACondition: Boolean; const AMessage: String);
 begin
@@ -32,6 +32,14 @@ var
   LDirectional: Integer;
   LWithCard: Integer;
   LWithoutCard: Integer;
+  LTremor: TJSONObject;
+  LOptions: TJSONArray;
+  LRow: TJSONObject;
+  LIdx: Integer;
+  LRank: Integer;
+  LPrevRank: Integer;
+  LHasEases: Boolean;
+  LHasUnknown: Boolean;
 begin
   LIndex := TClaimIndex.Create(ARepoRoot);
   try
@@ -140,6 +148,41 @@ begin
       end;
     end;
     Check(LRejected, 'Invalid scorecard_status filter must be rejected.');
+
+    LQuery := Default(TClaimQuery);
+    LQuery.Symptom := 'rest tremor severity';
+    LQuery.Scope := 'frozen';
+    LQuery.OmitCulture := True;
+    LQuery.Limit := 100;
+    LTremor := LIndex.Query(LQuery);
+    try
+      LOptions := LTremor.Arrays['options'];
+      Check(LOptions.Count > 0, 'Tremor query must return claims.');
+      LPrevRank := -1;
+      LHasEases := False;
+      LHasUnknown := False;
+      for LIdx := 0 to LOptions.Count - 1 do
+      begin
+        LRow := LOptions.Objects[LIdx];
+        LRank := ClaimUsefulnessRank(LRow.Strings['verdict'],
+          LRow.Strings['hypothesis_direction'], LRow.Strings['research_status']);
+        Check(LRank >= LPrevRank,
+          'Claim query results must be ordered descending by usefulness.');
+        if LRank in [0, 1] then
+          LHasEases := True;
+        if LRank in [5, 6] then
+          LHasUnknown := True;
+        LPrevRank := LRank;
+      end;
+      Check(LHasEases and LHasUnknown,
+        'Tremor frozen query should span directional easing and unknown tiers.');
+      LRow := LOptions.Objects[0];
+      Check(ClaimUsefulnessRank(LRow.Strings['verdict'],
+        LRow.Strings['hypothesis_direction'], LRow.Strings['research_status']) in [0, 1],
+        'First tremor result under frozen scope must lean toward easing.');
+    finally
+      LTremor.Free;
+    end;
   finally
     LIndex.Free;
   end;
