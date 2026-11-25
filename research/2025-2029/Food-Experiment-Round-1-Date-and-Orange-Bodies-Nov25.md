@@ -13,8 +13,8 @@ The November 25 batch archives verified source scopes for 168 original articles.
 
 ## 2005-2009
 
-- [Ondansetron: A Selective 5‐HT3 Receptor Antagonist and Its Applications in CNS‐Related Disorders](../2005-2009/Source-Text/2006-PMC6741689-Round1-Date-Orange-Scope.txt)
-- [Moclobemide: Therapeutic Use and Clinical Studies](../2005-2009/Source-Text/2006-PMC6741704-Round1-Date-Orange-Scope.txt)
+- [Ondansetron: A Selective 5‐HT3 Receptor Antagonist and Its Applications in CNS‐Related Disorders](../2000-2004/Source-Text/2001-PMC6741689-Round1-Date-Orange-Scope.txt)
+- [Moclobemide: Therapeutic Use and Clinical Studies](../2000-2004/Source-Text/2003-PMC6741704-Round1-Date-Orange-Scope.txt)
 - [Amantadine for adynamic speech: possible benefit for aphasia?](../2005-2009/Source-Text/2007-PMC1939971-Round1-Date-Orange-Scope.txt)
 - [Deep brain stimulation for Parkinson’s disease](../2005-2009/Source-Text/2008-PMC5084172-Round1-Date-Orange-Scope.txt)
 
