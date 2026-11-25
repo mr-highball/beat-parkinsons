@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The November 25 proceedings access audit resolved 18 prior holds across three collections and verified 16 scorecards. The queue contains 31,790 original-source checks across 21,424 sources. [Audit and replay](followup/proceedings-and-ginger-abstracts-nov25/README.md)
+
 The November 25 dietary cohort and ginger audit resolved 53 exact checks across 20 publications and verified 38 scorecards. Twelve previously staged access holds are resolved. The queue contains 31,808 original checks across 21,427 sources. [Audit and native verification](followup/dietary-cohorts-and-ginger-nov25/README.md)
 
 The November 25 medication and constituent audit resolved 114 exact checks in 27 original publications. All 59 rechecked scorecards matched their published decisions. The queue contains 31,861 original-source checks across 21,447 sources. [Dated audit and native verification](followup/medication-and-constituent-originals-nov25/README.md)

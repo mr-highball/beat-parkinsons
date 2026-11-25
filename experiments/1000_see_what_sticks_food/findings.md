@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The November 25 proceedings and ginger audit resolved 18 original-source checks. A later review's description of ginger and dyskinesia was traced to the original mouse motor and immobility outcomes and recorded as context. [Dated audit](followup/proceedings-and-ginger-abstracts-nov25/README.md)
+
 The November 25 dietary cohort and ginger audit distinguished counted disease diagnoses, mortality, constituent interventions and food preparations. Two new exact ginger source records add mouse motor context to the rigidity scorecard. [Original-source and clinical registry audit](followup/dietary-cohorts-and-ginger-nov25/README.md)
 
 The November 25 medication and constituent audit resolved 114 exact checks. The original sources distinguish culinary exposures from drugs, constituent assays and keyword collisions. The Hunan Gansong record documents traditional indications beyond the frozen vocabulary. [Original-source audit](followup/medication-and-constituent-originals-nov25/README.md)
