@@ -1,52 +1,78 @@
-# Execution mode
+# Agent & Contributor Guidelines
 
-Dexter works in single-agent mode following the graph interface checkpoint. Do not spawn, resume or assign new work to subagents unless the user explicitly requests it. The role profiles below remain available for such a request; their existence does not authorize delegation. Preserve completed research handoffs for Dexter to resume.
+This document defines high-level repository layout, toolchain bootstrap, submodule policy, research methodology, and publication standards for contributors and coding agents working in `beat-parkinsons`.
 
-# Project team
+## Repository layout
 
-| Role | Model and reasoning | Responsibility |
-| --- | --- | --- |
-| Dexter | Primary Codex agent | Coordinate and own the experiments. Verify research, evidence judgments, catalog updates, and final deliverables across the project. |
-| Pinky | GPT-6.1 Terra, High | Search the internet for assigned questions and summarize the primary sources, exact results, and limits. |
-| Slinky | GPT-6.1 Terra, High | Search the internet for assigned questions and summarize the primary sources, exact results, and limits. |
-| Binky | GPT-6.1 Terra, High | Run independent internet research in parallel with Pinky and summarize the primary sources, exact results, and limits. |
-| Blimbo | GPT-6 Luna, High | Support Pinky, Binky, and Slinky with source searches and materials for evidence review. |
-| The Brain | GPT-6.1 Sol, Ultra | Take higher-level reasoning, difficult evidence judgments, or independent quality review when Dexter is occupied. |
+| Path | Purpose |
+| --- | --- |
+| `research/` | Chronological Parkinson’s literature and cultural/experiential archive bucketed into 5-year windows (`1595–1599`, `1660–1664`, and continuous `1865–1869` through `2025–2029`), plus Python retrieval and cataloging scripts. |
+| `experiments/1000_see_what_sticks_food` (and `_round_2`..`_round_7`) | Frozen food-and-symptom claim experiments (6,930 claims across 7 rounds), SHA-256 freeze files, verdict ledgers, evidence scorecards, and per-claim assessment tables. |
+| `experiments/1000_see_what_sticks_food_all_recipes/` | Shared JSON recipe store (`parkinsons-oracle-recipes-1`) backing the Parkinson’s Oracle recipe browser and printable recipe sheets. |
+| `experiments/oracle-coverage/` | First-pass Oracle lookup coverage ledger and batch hit-rate summaries. |
+| `experiments/tools/parkinsons-oracle/` | Native Free Pascal MCP stdio server, SQLite FTS5 catalog indexer, WFC claim/recipe models, unit tests, and Nyx/`pas2js` browser web application (`web/`). |
+| `experiments/tools/vendor/wfc/` | Pinned Git submodule for the Wave Function Collapse constraint solver (`mr-highball/wfc`). |
+| `experiments/tools/vendor/nyx/` | Pinned Git submodule for the UI, modal, canvas, and browser renderer (`mr-highball/nyx`). |
+| `scripts/` | Cross-platform toolchain bootstrap scripts (`bootstrap.ps1` for Windows, `bootstrap.sh` for Linux/macOS). |
+| `build/` | Ignored local compiler outputs, pinned `pas2js` build, SQLite catalog database, and static site staging artifacts. |
 
-Use only Pinky, Slinky, Binky, Blimbo, and The Brain as subagents unless the user authorizes another. Dexter assigns all delegated work and verifies the results before publishing.
+## Submodules
 
-- When the user explicitly authorizes delegation, give internet research to Pinky, Slinky, and Binky as independent assignments become available.
-- Under that explicit authorization, assign Blimbo source searches and preparation, or bring in The Brain for difficult reasoning or quality review.
-- Reuse the named agents for follow-ups. Give each agent a distinct deliverable, parallelize work that advances the experiment, and leave agents idle when their roles have no substantive work.
-- Use the project agent profiles for [Pinky](.codex/agents/pinky.toml), [Slinky](.codex/agents/slinky.toml), [Binky](.codex/agents/binky.toml), [Blimbo](.codex/agents/blimbo.toml), and [The Brain](.codex/agents/the_brain.toml). If the dispatch tool takes model settings directly, specify the model and reasoning effort from the profile and give the agent the context it needs for the assignment.
+The repository pins two external Free Pascal libraries as Git submodules:
 
-# Research commits
+- `experiments/tools/vendor/wfc` — deterministic WFC constraint solver used by the claim decision table, blind statement generator, and multi-ingredient recipe selector.
+- `experiments/tools/vendor/nyx` — UI and browser canvas/modal framework transpiled via `pas2js`.
 
-Commit verified research and experiment updates incrementally. Use a descriptive subject and include the material source additions, verdict changes, or open evidence gaps in the commit body. Keep temporary downloads and build outputs in the ignored build directories.
+Initialize both before building or testing:
 
-# Inclusive evidence collection
+```bash
+git submodule update --init --recursive -- experiments/tools/vendor/wfc experiments/tools/vendor/nyx
+```
 
-- A defensible directional lean qualifies for Maybe, however small. Apply the [evidence scorecard](experiments/1000_see_what_sticks_food/EVIDENCE-SCORECARD.md) in every round. Record the observed direction, competing evidence and why it may transfer to the frozen exposure and symptom.
-- Collect cultural and traditional practices, ceremonial accounts, local knowledge and public personal reports alongside formal studies. Preserve favorable, unfavorable and no-benefit accounts. Follow the [cultural and experiential record policy](research/Cultural-and-Experiential.md).
-- Store these records separately under each period's `Cultural-and-Experiential/` folder, using the source's publication date and an explicit date basis. Distinguish a historical practice's claimed age from the date of the document actually inspected.
-- Include relevant public Reddit and other forum discussions under `Cultural-and-Experiential/Conversations/`. Preserve the original thread locator, approximate or exact date basis and a privacy-safe account of what participants observed. Let the available source information determine the rest of the format.
-- Label source kind, authenticity, symptom specificity and efficacy uncertainty separately. Traditional or personal claims have lower evidential weight for treatment effects than controlled clinical studies. Repetition of a claim is not independent confirmation, and documenting a belief does not verify efficacy.
-- Preserve the frozen experiments. Catalog relevant practices and ingredients outside their vocabulary without inventing completed assessments or changing frozen pairs. Cross-link existing studies rather than duplicating cohorts.
-- The public research view includes findings, Unknowns and unreviewed questions by default, with clear labels. Offer explicit filters without silently excluding unresolved material. Surface catalog-source leads beyond the frozen claim set and distinguish them from assessed findings.
+Treat vendored submodules as pinned upstream dependencies. Do not modify files inside `experiments/tools/vendor/*` to work around application-level issues; adapt application code under `experiments/tools/parkinsons-oracle/` or update the submodule pin deliberately against an upstream commit.
 
-# Oracle-first research
+## Toolchain bootstrap & verification
 
-- Dexter, Pinky, Binky, Slinky, Blimbo, and The Brain use [Parkinson’s oracle](experiments/tools/parkinsons-oracle/README.md) as the first knowledge base for each evidence question. Consult it before broad file scans or web discovery. During blind generation, use only the experiment inputs.
-- At the beginning of an evidence-review session, call `oracle_evidence_rubric` for the current shared rules. Use its round and claim ID lookup before rerating a claim. If the managed connection lacks either rubric tool or its transport closes, invoke the same methods through the local launcher before scoring. All evidence reviewers and source handoffs use its source-role, fit, independence and tier criteria. Before handing off a proposed verdict or publishing a new or changed one, run `oracle_check_scorecard` on its draft decision and source families. Publish the checked scorecard and verify the committed record through MCP.
-- Attach the round, claim ID, revision, rubric version, decision and material source rows, and `valid_draft` result to any proposed verdict. Include the strongest contrary observation and open coverage gaps. For a source-only handoff, include the underlying comparison, who observed it, its five fits and family lineage.
-- For claim evidence, start with `oracle_query` using the ingredient, symptom, and `scope: "assessed"`. Retrieve the needed `oracle_claim` assessments and coverage. For known PMIDs, PMCIDs, DOIs, NCT IDs or ACTRN, ISRCTN, IRCT and DRKS registrations, use `oracle_find_sources` to locate archived texts in one request. Read the relevant passage with `oracle_read_source` using the exact indexed path. Use `oracle_search_catalog` for citation trails, catalog notes and alternate terms. Check earlier experiments for reusable work while preserving the exact exposure, preparation, population, and endpoint.
-- For cultural, traditional and experiential material, start with `oracle_search_catalog` using the ingredient, preparation or symptom and `source_kind: "cultural"`. Use `source_kind: "conversations"` for public forum summaries and the narrower categories when applicable. Read the returned paths with oracle_read_source, then search externally for unresolved sources and perspectives. Follow the [Oracle examples](experiments/tools/parkinsons-oracle/README.md#cultural-and-conversational-lookup).
-- Use the local MCP launcher when the session has no direct Oracle tools or an older tool schema lacks the needed argument or operation. The [launcher example](experiments/oracle-coverage/README.md#local-launcher) and the same read-only tools apply to all project agents. When checking one known ledger study, use `oracle_claim` with its exact `assessment_study` key. For initial triage of a claim with many assessments, use `assessment_limit: 8`. Follow `next_assessment_offset` while the revision matches or request all assessments when the review needs them. A local match does not close any required external search.
-- Record one first-pass result per evidence question as a hit, partial, miss, or unavailable. Send the outcome, query, citation, and unresolved dimension to Dexter for the [coverage ledger](experiments/oracle-coverage/README.md). Log repeat searches as part of the same question. Keep tool and index failures separate from catalog gaps.
-- Distill material research gaps into indexed local research text as they are identified. Record the exact source identity, verified depth, affected claims, remaining exposure or outcome questions, and the next source route when known. File source-specific gaps under the source's publication period, link them from the experiment, and verify that the branch-local Oracle can find and read them. A partial note stays partial in the experiment evidence ledger.
-- At each research checkpoint, compare strict hit rates for comparable batches and record the denominator. When rates decline, identify recurring partials and misses by exposure, symptom, and missing evidence. Prioritize those gaps for catalog expansion, while keeping the experiment’s existing review order and search coverage requirements. Verify index health before interpreting the trend and refresh the index after committed catalog updates.
-- Fix verified oracle inefficiencies when they materially slow research. Compare equivalent requests against the same data before and after each fix. Verify that evidence, result order and freshness checks still work. Report response bytes, lookup timing and any measured model tokens separately.
+Bootstrap the toolchain from the repository root before building, running tests, or launching the Oracle:
 
-# Publication privacy
+- **Windows (PowerShell):**
+  ```powershell
+  ./scripts/bootstrap.ps1 -RefreshCatalog -RunTests
+  ```
+  Pass `-InstallFpc` if Free Pascal is not yet installed locally; verified FPC 3.2.2 and the pinned SHA-256-verified `pas2js 3.3.1` compiler are placed under the ignored `build/parkinsons-oracle/` directory.
+- **Linux / macOS (Bash):**
+  ```bash
+  ./scripts/bootstrap.sh --run-tests
+  ```
+  Builds the pinned `pas2js 3.3.1` toolchain, runs all 7 strict portability unit tests, and builds the Nyx web bundle. (The local SQLite FTS5 / MCP server executable currently links Windows `winsqlite3.dll`.)
 
-Keep personal identifiers out of material prepared for public release. Supply local network bindings through runtime arguments and keep personal files outside Git. Before publishing, check the release files, generated search assets, dependency references, and Git history for identifying details. Resolve any findings before uploading.
+Before committing code or recipe changes:
+
+1. Compile and run all portability unit tests with strict Free Pascal checks (`-Mdelphi -Sa -Cr -Co -Ci -gl`): `compat.tests.lpr`, `graph.tests.lpr`, `presentation.tests.lpr`, `selection.tests.lpr`, `rubric.tests.lpr`, `ingredients.tests.lpr`, and `recipes.tests.lpr`.
+2. Rebuild the web bundle (`experiments/tools/parkinsons-oracle/build.ps1` on Windows or `./scripts/bootstrap.sh` on Linux/macOS) and verify zero compiler/console errors.
+3. Keep all temporary downloads, compiled binaries, SQLite indexes, and scratch artifacts inside ignored `build/` directories.
+
+## Oracle-first research workflow
+
+Use [Parkinson’s Oracle](experiments/tools/parkinsons-oracle/README.md) as the first knowledge base for every evidence question before broad filesystem scans or external web searches (during blind hypothesis generation, use only experiment inputs):
+
+- Call `oracle_evidence_rubric` at the start of an evidence review session for the current rubric version, tier anchors, and TSV rules, and look up the claim's current published record (`round`, `id`) before rerating.
+- Start claim evidence lookups with `oracle_query` (`scope: "assessed"`) and `oracle_claim` (`assessment_limit: 8` for triage, or exact `assessment_study` for one study key). Use `oracle_find_sources` for batch exact-ID lookup (PMID, PMCID, DOI, NCT, ACTRN, ISRCTN, IRCT, DRKS, UMIN, TCTR), `oracle_search_catalog` for citation trails and alternate terms, and `oracle_read_source` to inspect archived texts.
+- For cultural, traditional, and experiential material, start with `oracle_search_catalog` using `source_kind: "cultural"` or `source_kind: "conversations"`, then search externally for unresolved perspectives.
+- Validate every proposed or updated verdict with `oracle_check_scorecard` before committing, and verify the committed record through MCP afterward.
+- When a managed MCP connection lacks a needed tool or schema update, invoke the same read-only tools via the [local launcher](experiments/oracle-coverage/README.md#local-launcher).
+- Record first-pass lookup outcomes (`hit`, `partial`, `miss`, `unavailable`) in the [coverage ledger](experiments/oracle-coverage/README.md), distill verified material source gaps into indexed chronological text records, and refresh the catalog index after committed archive updates.
+
+## Inclusive evidence collection
+
+- Apply the [evidence scorecard](experiments/1000_see_what_sticks_food/EVIDENCE-SCORECARD.md) in every round. Any defensible directional lean qualifies for a `Maybe` verdict; record observed direction, competing evidence, and transferability to the frozen exposure and symptom.
+- Collect cultural and traditional practices, ceremonial accounts, local knowledge, and public personal reports alongside formal studies, preserving favorable, unfavorable, and no-benefit accounts under each period’s `Cultural-and-Experiential/` directory per [Cultural-and-Experiential.md](research/Cultural-and-Experiential.md).
+- Place relevant public forum discussions under `Cultural-and-Experiential/Conversations/` with the original thread locator, explicit date basis, and a privacy-safe summary of observations.
+- Distinguish publication date from claimed historical age, and separate source kind, authenticity, symptom specificity, and efficacy uncertainty. Traditional or personal accounts carry lower evidential weight for treatment effects than controlled clinical studies; documenting an account does not establish efficacy.
+- Preserve frozen experiments. Never mutate frozen claim wording, pair vocabularies, or `.sha256` freeze proofs; cross-link reusable cohorts rather than duplicating them.
+- Keep findings, `Unknown (Researched)`, and unreviewed questions visible by default in public views with clear labels and explicit filters—never silently exclude unresolved material.
+
+## Commits & publication privacy
+
+- Commit verified research, recipe, and code updates incrementally with descriptive subjects and clear summaries of source additions, verdict changes, or open evidence gaps in the commit body.
+- Keep personal identifiers, local machine paths, private network addresses, and untracked personal files out of tracked sources, generated search assets, dependency notices, and Git history. Pass local network bindings strictly via runtime arguments. Verify all modified files before pushing or publishing.

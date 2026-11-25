@@ -64,6 +64,7 @@ var
   LDetail: TRecipeIngredientDetail;
   LCore: String;
   LRoundCelery: TRecipe;
+  LCandidates: TRecipeIngredientCandidates;
 begin
   LRepo := '.';
   if ParamCount >= 1 then
@@ -74,29 +75,29 @@ begin
   LCatalog := TRecipeCatalog.Create;
   try
     LCatalog.LoadFromDirectory(LDir);
-    Check(LCatalog.Count = 1100, 'Catalog loads all 1,100 positive-lean recipes (44 x 25).');
+    Check(LCatalog.Count = 2200, 'Catalog loads all 2,200 positive-lean recipes (44 x 50).');
     Check(Length(LCatalog.CoreIngredients) = 44, 'Catalog covers all 44 positive-lean core ingredients.');
 
-    // Verify every positive-lean ingredient has 25 low-to-medium effort recipes with valid category splits and rich details.
+    // Verify every positive-lean ingredient has 50 low-to-medium effort recipes with valid category splits and rich details.
     for I := Low(CPositiveLeanIngredients) to High(CPositiveLeanIngredients) do
     begin
       LCore := CPositiveLeanIngredients[I];
       LGroup := LCatalog.QueryByCoreIngredient(LCore);
-      Check(Length(LGroup) = 25, 'Core ingredient "' + LCore + '" has exactly 25 recipes.');
+      Check(Length(LGroup) = 50, 'Core ingredient "' + LCore + '" has exactly 50 recipes.');
       LCounts := LCatalog.CategoryCounts(LCore, nil);
       if (LCore = 'chicken') or (LCore = 'salmon') then
       begin
-        Check(LCounts[rcBreakfast] = 8, LCore + ' has 8 breakfast recipes.');
-        Check(LCounts[rcLunch] = 8, LCore + ' has 8 lunch recipes.');
-        Check(LCounts[rcDinner] = 9, LCore + ' has 9 dinner recipes.');
+        Check(LCounts[rcBreakfast] = 16, LCore + ' has 16 breakfast recipes.');
+        Check(LCounts[rcLunch] = 16, LCore + ' has 16 lunch recipes.');
+        Check(LCounts[rcDinner] = 18, LCore + ' has 18 dinner recipes.');
         Check(LCounts[rcSmoothies] = 0, LCore + ' omits smoothies.');
         Check(LCounts[rcJuices] = 0, LCore + ' omits juices.');
       end
       else
       begin
         for LCat := Low(TRecipeConcreteCategory) to High(TRecipeConcreteCategory) do
-          Check(LCounts[LCat] = 5,
-            LCore + ' category ' + RecipeCategoryKey(LCat) + ' has exactly 5 recipes.');
+          Check(LCounts[LCat] = 10,
+            LCore + ' category ' + RecipeCategoryKey(LCat) + ' has exactly 10 recipes.');
       end;
       for J := 0 to High(LGroup) do
       begin
@@ -118,14 +119,14 @@ begin
     // Verify core ingredient queryability (canonical + aliases + unpopulated ingredient).
     LCelery := LCatalog.QueryByCoreIngredient('celery stalk');
     LCeleryAlias := LCatalog.QueryByCoreIngredient('celery');
-    Check(Length(LCelery) = 25, 'QueryByCoreIngredient(celery stalk) returns 25 recipes.');
+    Check(Length(LCelery) = 50, 'QueryByCoreIngredient(celery stalk) returns 50 recipes.');
     Check(Length(LCeleryAlias) = Length(LCelery), 'Alias "celery" queries same recipes.');
-    Check(Length(LCatalog.QueryByCoreIngredient('blueberries')) = 25, 'Alias "blueberries" matches blueberry.');
-    Check(Length(LCatalog.QueryByCoreIngredient('extra virgin olive oil')) = 25, 'Alias "extra virgin olive oil" matches olive oil.');
-    Check(Length(LCatalog.QueryByCoreIngredient('turmeric root')) = 25, 'Alias "turmeric root" matches turmeric.');
-    Check(Length(LCatalog.QueryByCoreIngredient('kalonji')) = 25, 'Alias "kalonji" matches nigella seed.');
-    Check(Length(LCatalog.QueryByCoreIngredient('sichuan peppercorn')) = 25, 'Alias "sichuan peppercorn" matches sichuan pepper.');
-    Check(Length(LCatalog.QueryByCoreIngredient('poached salmon')) = 25, 'Alias "poached salmon" matches salmon.');
+    Check(Length(LCatalog.QueryByCoreIngredient('blueberries')) = 50, 'Alias "blueberries" matches blueberry.');
+    Check(Length(LCatalog.QueryByCoreIngredient('extra virgin olive oil')) = 50, 'Alias "extra virgin olive oil" matches olive oil.');
+    Check(Length(LCatalog.QueryByCoreIngredient('turmeric root')) = 50, 'Alias "turmeric root" matches turmeric.');
+    Check(Length(LCatalog.QueryByCoreIngredient('kalonji')) = 50, 'Alias "kalonji" matches nigella seed.');
+    Check(Length(LCatalog.QueryByCoreIngredient('sichuan peppercorn')) = 50, 'Alias "sichuan peppercorn" matches sichuan pepper.');
+    Check(Length(LCatalog.QueryByCoreIngredient('poached salmon')) = 50, 'Alias "poached salmon" matches salmon.');
     Check(Length(LCatalog.QueryByCoreIngredient('grapefruit')) = 0,
       'Unpopulated core ingredient returns 0 recipes.');
 
@@ -150,12 +151,12 @@ begin
     Check(FormatIngredientLine(LDetail, 2.0) = '4 stalks celery stalk, finely diced',
       'Double-scales measured ingredient line cleanly.');
 
-    // Verify JSON serialization/deserialization round-trip across all 1,100 recipes.
+    // Verify JSON serialization/deserialization round-trip across all 2,200 recipes.
     LSerialized := LCatalog.ToJSONString(False);
     LRoundTrip := TRecipeCatalog.Create;
     try
       LRoundTrip.LoadFromJSONString(LSerialized);
-      Check(LRoundTrip.Count = LCatalog.Count, 'Round-trip preserves full 1,100 recipe count.');
+      Check(LRoundTrip.Count = LCatalog.Count, 'Round-trip preserves full 2,200 recipe count.');
       Check(LRoundTrip.Items[0].Id = LCatalog.Items[0].Id, 'Round-trip preserves first id.');
       Check(LRoundTrip.Items[0].CoreIngredient = LCatalog.Items[0].CoreIngredient,
         'Round-trip preserves first queryable CoreIngredient.');
@@ -192,7 +193,7 @@ begin
     LRes1 := CollapseRecipesWithWfc(LCatalog, LQuery);
     Check(LRes1.Solved, 'WFC ALL collapse solves cleanly.');
     Check(Length(LRes1.Recipes) = 10, 'WFC ALL collapse returns requested 10 recipes.');
-    Check(LRes1.TotalCandidates = 25, 'WFC ALL reports full candidate count.');
+    Check(LRes1.TotalCandidates = 50, 'WFC ALL reports full 50 candidate count.');
     AssertUniqueRecipes(LRes1.Recipes, 'WFC ALL');
     for LCat := Low(TRecipeConcreteCategory) to High(TRecipeConcreteCategory) do
       LSeenCat[LCat] := False;
@@ -263,10 +264,49 @@ begin
     LQuery.MaxCount := 10;
     LQuery.Seed := 7;
     LRes1 := CollapseRecipesWithWfc(LCatalog, LQuery);
-    Check(LRes1.Solved and (Length(LRes1.Recipes) = 5), 'Juices collapse returns all 5 unique juices.');
+    Check(LRes1.Solved and (Length(LRes1.Recipes) = 10), 'Juices collapse returns all 10 unique juices.');
     AssertUniqueRecipes(LRes1.Recipes, 'WFC juices');
     for I := 0 to High(LRes1.Recipes) do
       Check(LRes1.Recipes[I].Category = rcJuices, 'All collapsed juice cards have juices category.');
+
+    // Verify overlapping positive-lean easing ingredient synergies (e.g. blueberry + banana, turmeric + black pepper + olive oil).
+    LQuery := Default(TRecipeWfcQuery);
+    LQuery.CoreIngredient := 'blueberry';
+    LQuery.ExtraIngredients := ParseIngredientList('banana');
+    LQuery.Category := rcAll;
+    LQuery.MaxCount := 10;
+    LQuery.Seed := 17;
+    LRes1 := CollapseRecipesWithWfc(LCatalog, LQuery);
+    Check(LRes1.Solved and (Length(LRes1.Recipes) >= 5),
+      'Overlapping easing synergy blueberry + banana yields at least 5 recipes.');
+    AssertUniqueRecipes(LRes1.Recipes, 'WFC blueberry + banana');
+    for I := 0 to High(LRes1.Recipes) do
+    begin
+      Check(LRes1.Recipes[I].HasCoreIngredient('blueberry'), 'Synergy matches core blueberry.');
+      Check(LRes1.Recipes[I].HasIngredient('banana'), 'Synergy matches companion banana.');
+    end;
+
+    LQuery := Default(TRecipeWfcQuery);
+    LQuery.CoreIngredient := 'turmeric';
+    LQuery.ExtraIngredients := ParseIngredientList('black pepper, olive oil');
+    LQuery.Category := rcAll;
+    LQuery.MaxCount := 10;
+    LQuery.Seed := 23;
+    LRes1 := CollapseRecipesWithWfc(LCatalog, LQuery);
+    Check(LRes1.Solved and (Length(LRes1.Recipes) >= 5),
+      'Overlapping easing synergy turmeric + black pepper + olive oil yields at least 5 recipes.');
+    AssertUniqueRecipes(LRes1.Recipes, 'WFC turmeric + black pepper + olive oil');
+
+    LQuery := Default(TRecipeWfcQuery);
+    LQuery.CoreIngredient := 'salmon';
+    LQuery.ExtraIngredients := ParseIngredientList('olive oil, black pepper');
+    LQuery.Category := rcAll;
+    LQuery.MaxCount := 10;
+    LQuery.Seed := 31;
+    LRes1 := CollapseRecipesWithWfc(LCatalog, LQuery);
+    Check(LRes1.Solved and (Length(LRes1.Recipes) >= 5),
+      'Overlapping easing synergy salmon + olive oil + black pepper yields at least 5 recipes.');
+    AssertUniqueRecipes(LRes1.Recipes, 'WFC salmon + olive oil + black pepper');
 
     // Verify arbitrary multi-ingredient constraints (e.g. "black pepper" + "onions").
     LQuery := Default(TRecipeWfcQuery);
@@ -287,7 +327,7 @@ begin
     end;
 
     // Verify unmatched arbitrary ingredient returns empty cleanly.
-    LQuery.ExtraIngredients := ParseIngredientList('saffron');
+    LQuery.ExtraIngredients := ParseIngredientList('durian');
     LRes1 := CollapseRecipesWithWfc(LCatalog, LQuery);
     Check(LRes1.Solved and (Length(LRes1.Recipes) = 0) and (LRes1.TotalCandidates = 0),
       'Unmatched extra ingredient returns empty cleanly without error.');
@@ -297,6 +337,25 @@ begin
     Check(Length(LSuggestions) = 8, 'Provides 8 complementary ingredient suggestions.');
     for I := 0 to High(LSuggestions) do
       Check(LSuggestions[I] <> 'celery stalk', 'Suggestions exclude core ingredient.');
+
+    // Verify look-ahead ingredient autocomplete ranks matching real catalog ingredients first.
+    LCandidates := LCatalog.SuggestExtraIngredients('anise seed', nil, rcAll, 'o', 8);
+    Check(Length(LCandidates) >= 3, 'Look-ahead for "o" on anise seed returns multiple real ingredients.');
+    Check(LCandidates[0].MatchCount > 0, 'Top look-ahead match has > 0 anise seed recipes.');
+    Check(Pos('o', LCandidates[0].Name) = 1, 'Top look-ahead match starts with "o".');
+    for I := 0 to High(LCandidates) do
+      Check(LCandidates[I].Name <> 'anise seed', 'Look-ahead excludes main ingredient.');
+
+    // Verify comma-separated look-ahead matches active token and excludes earlier tokens.
+    LCandidates := LCatalog.SuggestExtraIngredients('anise seed', nil, rcAll, 'lemon, o', 8);
+    Check(Length(LCandidates) >= 2, 'Comma-separated look-ahead "lemon, o" returns candidates.');
+    for I := 0 to High(LCandidates) do
+      Check(LCandidates[I].Name <> 'lemon', 'Comma-separated look-ahead excludes already-entered token.');
+
+    // Verify catalog-wide look-ahead still finds real catalog ingredients even with 0 matches for current core.
+    LCandidates := LCatalog.SuggestExtraIngredients('anise seed', nil, rcAll, 'salm', 5);
+    Check((Length(LCandidates) >= 1) and (LCandidates[0].Name = 'salmon') and
+      (LCandidates[0].CatalogCount > 0), 'Catalog-wide look-ahead finds real ingredient "salmon".');
 
     WriteLn(GChecks, ' recipe model and WFC checks passed.');
   finally

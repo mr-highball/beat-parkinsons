@@ -9,6 +9,9 @@ uses nyx.model, nyx.render.browser;
 
 function HasIngredientGallery(const AIngredient: String): Boolean;
 function IngredientThumbnailURL(const AIngredient: String): String;
+function IngredientTipText(const AIngredient: String): String;
+function IngredientTipSource(const AIngredient: String): String;
+function IngredientTipURL(const AIngredient: String): String;
 procedure AddIngredientGallery(AParent: TNyxNode; const AIngredient: String;
   const AKey: String = '');
 procedure BindIngredientGallery(ARenderer: TNyxBrowserRenderer; const AIngredient: String;
@@ -33,6 +36,36 @@ begin
     Exit('');
   end;
   Result := 'ingredients/' + IngredientThumbnailName(LIndex);
+end;
+
+function IngredientTipText(const AIngredient: String): String;
+var
+  LIndex: Integer;
+begin
+  LIndex := IngredientGuideIndex(AIngredient);
+  if LIndex < 0 then
+    Exit('');
+  Result := CIngredientGuides[LIndex].Tip;
+end;
+
+function IngredientTipSource(const AIngredient: String): String;
+var
+  LIndex: Integer;
+begin
+  LIndex := IngredientGuideIndex(AIngredient);
+  if LIndex < 0 then
+    Exit('');
+  Result := CIngredientGuides[LIndex].TipSource;
+end;
+
+function IngredientTipURL(const AIngredient: String): String;
+var
+  LIndex: Integer;
+begin
+  LIndex := IngredientGuideIndex(AIngredient);
+  if LIndex < 0 then
+    Exit('');
+  Result := CIngredientGuides[LIndex].TipURL;
 end;
 
 procedure AddIngredientGallery(AParent: TNyxNode; const AIngredient: String; const AKey: String);

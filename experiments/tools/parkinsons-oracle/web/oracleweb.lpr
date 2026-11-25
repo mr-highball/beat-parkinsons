@@ -9,7 +9,7 @@ uses
   SysUtils, StrUtils, Types, JS, Web, nyx.model, nyx.types, nyx.render.browser, oraclevocab,
   oraclestatic, parkinsonsoracle.trend, parkinsonsoracle.presentation,
   parkinsonsoracle.selection, parkinsonsoracle.graph, oraclemulti, oraclegraph,
-  oraclegraphmodel, oraclegallery, oraclerecipes, oraclerecipepage;
+  oraclegraphmodel, oraclegallery, oraclepopover, oraclerecipes, oraclerecipepage, oraclereader;
 
 type
   TOracleView = (ovClaims, ovCatalog);
@@ -52,6 +52,17 @@ var
   GRelatedBusy: Boolean;
   GTrend: String;
   GFilterOptions: TJSObject;
+  GResearchPool: TOracleResearchPool;
+  GPendingIngredient: String;
+  GPendingTrend: String;
+  GPendingScope: String;
+  GPendingView: String;
+  GPendingTerms: String;
+  GPendingSourceKind: String;
+  GCulturalCounts: TJSObject;
+  GCulturalInFlight: TJSSet;
+  GCulturalQueue: TStringValues;
+  GCulturalRunning: Boolean;
   GStaticOracle: TStaticOracle;
   GSymptom: TOraclePicker;
   GIngredient: TOraclePicker;
@@ -60,6 +71,7 @@ var
   GGraphModel: TOracleGraphModel;
   GGraphStack: array of TOracleGraphExplorer;
   GRecipesModal: TOracleRecipesModal;
+  GReaderModal: TOracleReaderModal;
   GRecipePage: TOracleRecipePage;
   GMainRequest: TJSXMLHttpRequest;
   GRelatedRequest: TJSXMLHttpRequest;
@@ -70,6 +82,7 @@ var
 
 function JSValueText(AValue: JSValue): String; external name 'String';
 function OpenWindow(const AURL, ATarget, AFeatures: String): TJSWindow; external name 'window.open';
+function EncodeURIComponent(const AText: String): String; external name 'encodeURIComponent';
 
 function TextOf(AObject: TJSObject; const AKey: String): String;
 var
@@ -372,6 +385,7 @@ procedure PublishResults(ADocument: TNyxDocument; APage: TNyxNode);
 var
   LPrior: TNyxDocument;
 begin
+  HideFloatingPopover;
   if GGraph <> nil then
   begin
     GGraph.Detach;
@@ -415,7 +429,7 @@ begin
 end;
 
 procedure ShowList(AResults: TJSObject; AFocus: Boolean = True); forward;
-procedure Query(ANewQuery: Boolean; AOffset: Integer); forward;
+procedure Query(ANewQuery: Boolean; AOffset: Integer; AFocusResults: Boolean = True); forward;
 procedure RenderRelated(AFocus: Boolean = False); forward;
 procedure SwitchView(AView: TOracleView); forward;
 procedure OpenReference(const APath: String; AReturn: TPickerAction); forward;
@@ -502,12 +516,202 @@ begin
   end;
 end;
 
+function CulturalSourcesURL(const AIngredient: String): String;
+begin
+  Result := './?view=catalog&terms=' + EncodeURIComponent(Trim(AIngredient)) +
+    '&source_kind=cultural';
+end;
+
+function TryCachedCulturalCount(const AIngredient: String; out ACount: Integer): Boolean;
+var
+  LKey: String;
+  LValue: JSValue;
+begin
+  Result := False;
+  ACount := 0;
+  if GCulturalCounts = nil then
+    Exit;
+  LKey := LowerCase(Trim(AIngredient));
+  if LKey = '' then
+    Exit;
+  LValue := GCulturalCounts[LKey];
+  if isDefined(LValue) and not isNull(LValue) then
+  begin
+    ACount := StrToIntDef(JSValueText(LValue), 0);
+    Result := True;
+  end;
+end;
+
+procedure ApplyCulturalBadgeState(ABadge: TJSHTMLElement; const AIngredient: String;
+  ACount: Integer; ALoaded: Boolean);
+var
+  LLabel: String;
+  LCountText: String;
+  LKey: String;
+  LNodeId: String;
+  LNode: TNyxNode;
+begin
+  if ABadge = nil then
+    Exit;
+  LKey := LowerCase(Trim(AIngredient));
+  ABadge.setAttribute('target', '_blank');
+  ABadge.setAttribute('rel', 'noopener');
+  if LKey <> '' then
+  begin
+    ABadge.setAttribute('data-culture-ingredient', LKey);
+    ABadge.setAttribute('data-culture-label', Capitalized(AIngredient));
+  end;
+  if not ALoaded then
+  begin
+    LCountText := '…';
+    ABadge.textContent := LCountText;
+    ABadge.setAttribute('data-count-loaded', 'false');
+    ABadge.setAttribute('data-empty', 'false');
+    LLabel := 'Cultural & experiential sources for ' + Capitalized(AIngredient) +
+      ' (opens in new tab)';
+  end
+  else
+  begin
+    LCountText := FormatCulturalBadgeCount(ACount);
+    ABadge.textContent := LCountText;
+    ABadge.setAttribute('data-count-loaded', 'true');
+    ABadge.setAttribute('data-empty', LowerCase(BoolToStr(ACount <= 0, True)));
+    if ACount = 1 then
+      LLabel := '1 cultural & experiential source for ' + Capitalized(AIngredient) +
+        ' (opens in new tab)'
+    else
+      LLabel := LCountText + ' cultural & experiential sources for ' + Capitalized(AIngredient) +
+        ' (opens in new tab)';
+  end;
+  ABadge.setAttribute('title', LLabel);
+  ABadge.setAttribute('aria-label', LLabel);
+  LNodeId := ABadge.getAttribute('data-node');
+  if (LNodeId <> '') and (GResultsRenderer <> nil) and (GResultsRenderer.Root <> nil) then
+  begin
+    LNode := GResultsRenderer.Root.Find(LNodeId);
+    if LNode <> nil then
+      LNode.Configure.Text(LCountText).AccessibleName(LLabel);
+  end;
+end;
+
+procedure ApplyCulturalCountToDOM(const AKey: String; ATotal: Integer);
+var
+  LNodes: TJSNodeList;
+  LIndex: NativeInt;
+  LBadge: TJSHTMLElement;
+  LLabel: String;
+begin
+  LNodes := document.querySelectorAll('a[data-node^="claim-culture-"]');
+  for LIndex := 0 to LNodes.length - 1 do
+  begin
+    LBadge := TJSHTMLElement(LNodes.item(LIndex));
+    if LBadge.getAttribute('data-culture-ingredient') = AKey then
+    begin
+      LLabel := LBadge.getAttribute('data-culture-label');
+      if LLabel = '' then
+        LLabel := AKey;
+      ApplyCulturalBadgeState(LBadge, LLabel, ATotal, True);
+    end;
+  end;
+end;
+
+procedure PumpCulturalQueue;
+var
+  LCurrentKey: String;
+  LNext: TStringValues;
+  LIndex: Integer;
+  LArgs: TJSObject;
+begin
+  if GCulturalRunning or (Length(GCulturalQueue) = 0) then
+    Exit;
+  LCurrentKey := GCulturalQueue[0];
+  SetLength(LNext, Length(GCulturalQueue) - 1);
+  for LIndex := 1 to High(GCulturalQueue) do
+    LNext[LIndex - 1] := GCulturalQueue[LIndex];
+  GCulturalQueue := LNext;
+  GCulturalRunning := True;
+  LArgs := TJSObject.new;
+  LArgs['terms'] := LCurrentKey;
+  LArgs['source_kind'] := 'cultural';
+  LArgs['offset'] := 0;
+  LArgs['limit'] := 1;
+  RequestChannel('oracle_search_catalog', LArgs,
+    procedure(AData: TJSObject; const AError: String)
+    var
+      LTotal: Integer;
+    begin
+      GCulturalRunning := False;
+      if GCulturalInFlight <> nil then
+        GCulturalInFlight.delete(LCurrentKey);
+      if AError = '' then
+      begin
+        LTotal := CountOf(AData, 'total');
+        if GCulturalCounts = nil then
+          GCulturalCounts := TJSObject.new;
+        GCulturalCounts[LCurrentKey] := LTotal;
+        ApplyCulturalCountToDOM(LCurrentKey, LTotal);
+      end
+      else
+        ApplyCulturalCountToDOM(LCurrentKey, 0);
+      PumpCulturalQueue;
+    end, 0);
+end;
+
+procedure BindCulturalBadges(const ATags, AIngredients: TStringValues);
+var
+  LNewKeys: TStringValues;
+  LMerged: TStringValues;
+  LIndex: Integer;
+  LKey: String;
+  LCount: Integer;
+  LBadge: TJSHTMLElement;
+begin
+  if GCulturalInFlight = nil then
+    GCulturalInFlight := TJSSet.new;
+  LNewKeys := nil;
+  for LIndex := 0 to High(ATags) do
+  begin
+    LKey := LowerCase(Trim(AIngredients[LIndex]));
+    if LKey = '' then
+      Continue;
+    if (GResultsRenderer = nil) or (GResultsRenderer.Root = nil) or
+      (GResultsRenderer.Root.Find('claim-culture-' + ATags[LIndex]) = nil) then
+      Continue;
+    LBadge := GResultsRenderer.ElementFor('claim-culture-' + ATags[LIndex]);
+    if TryCachedCulturalCount(LKey, LCount) then
+      ApplyCulturalBadgeState(LBadge, AIngredients[LIndex], LCount, True)
+    else
+    begin
+      ApplyCulturalBadgeState(LBadge, AIngredients[LIndex], 0, False);
+      if not GCulturalInFlight.has(LKey) then
+      begin
+        GCulturalInFlight.add(LKey);
+        SetLength(LNewKeys, Length(LNewKeys) + 1);
+        LNewKeys[High(LNewKeys)] := LKey;
+      end;
+    end;
+  end;
+  if Length(LNewKeys) > 0 then
+  begin
+    SetLength(LMerged, Length(LNewKeys) + Length(GCulturalQueue));
+    for LIndex := 0 to High(LNewKeys) do
+      LMerged[LIndex] := LNewKeys[LIndex];
+    for LIndex := 0 to High(GCulturalQueue) do
+      LMerged[Length(LNewKeys) + LIndex] := GCulturalQueue[LIndex];
+    GCulturalQueue := LMerged;
+  end;
+  PumpCulturalQueue;
+end;
+
 function ClaimIndicators(AClaim: TJSObject; const AId: String): TNyxNode;
 var
   LVerdict: String;
   LEffect: String;
   LEffectId: String;
   LEvidence: String;
+  LIngredient: String;
+  LCachedCount: Integer;
+  LBadgeText: String;
 begin
   LVerdict := TextOf(AClaim, 'verdict');
   LEvidence := EvidenceLabel(LVerdict, TextOf(AClaim, 'research_status'));
@@ -546,6 +750,19 @@ begin
     Result.Add(Caption(nkBadge, 'grade-unclear-' + AId, LEvidence))
   else
     Result.Add(Caption(nkBadge, 'grade-' + AId, LEvidence));
+  LIngredient := Trim(TextOf(AClaim, 'ingredient'));
+  if LIngredient <> '' then
+  begin
+    if TryCachedCulturalCount(LIngredient, LCachedCount) then
+      LBadgeText := FormatCulturalBadgeCount(LCachedCount)
+    else
+      LBadgeText := '…';
+    Result.Add(Section(nkLink, 'claim-culture-' + AId)
+      .Configure.Text(LBadgeText)
+      .AccessibleName('Cultural & experiential sources for ' + Capitalized(LIngredient) +
+        ' (opens in new tab)')
+      .LinkTo(CulturalSourcesURL(LIngredient)).Done);
+  end;
 end;
 
 function ResearchQuestion(AClaim: TJSObject): String;
@@ -774,6 +991,11 @@ begin
 end;
 
 procedure LoadFilterOptions;
+var
+  LInfo: TResearchIngredientInfo;
+  LTargetIngredient: String;
+  LTargetTrend: String;
+  LTargetScope: String;
 begin
   Request('oracle_filter_options', TJSObject.new,
     procedure(AData: TJSObject; const AError: String)
@@ -785,9 +1007,36 @@ begin
         Exit;
       end;
       GFilterOptions := AData;
+      if GResearchPool = nil then
+        GResearchPool := TOracleResearchPool.Create;
+      GResearchPool.LoadFromFilterIngredients(ItemsOf(AData, 'ingredients'));
+      if GRecipesModal <> nil then
+        GRecipesModal.SetResearchPool(GResearchPool);
       GSymptom.SetChoices(ItemsOf(AData, 'symptoms'));
       GIngredient.SetChoices(ItemsOf(AData, 'ingredients'));
       IngredientChanged;
+      if GPendingIngredient <> '' then
+      begin
+        LTargetIngredient := GPendingIngredient;
+        LTargetTrend := GPendingTrend;
+        LTargetScope := GPendingScope;
+        GPendingIngredient := '';
+        GPendingTrend := '';
+        GPendingScope := '';
+        LInfo := GResearchPool.Lookup(LTargetIngredient);
+        if LInfo.InPool then
+          LTargetIngredient := LInfo.Canonical;
+        GIngredient.Pick(LTargetIngredient);
+        if (LTargetTrend = 'eases') or (LTargetTrend = 'worsens') then
+          SelectTrend(LTargetTrend)
+        else
+          SelectTrend('');
+        if LTargetScope = 'directional' then
+          TJSHTMLSelectElement(GRenderer.InputFor('scope')).selectedIndex := 0;
+        UpdateFilterCount;
+        document.title := Capitalized(LTargetIngredient) + ' · Parkinson’s Oracle';
+        Query(True, 0, False);
+      end;
     end);
 end;
 
@@ -852,6 +1101,7 @@ begin
       LPage: TNyxNode;
       LCard: TNyxNode;
       LActions: TNyxNode;
+      LQuestionBox: TNyxNode;
       LGroups: array[0..2] of TNyxNode;
       LCounts: array[0..2] of Integer;
       LGroup: Integer;
@@ -871,6 +1121,8 @@ begin
       LSeenRefs: TJSSet;
       LExtraRefs: TJSArray;
       LRefPath: String;
+      LCultureTags: TStringValues;
+      LCultureIngs: TStringValues;
     begin
       if LSequence <> GSequence then
         Exit;
@@ -896,7 +1148,11 @@ begin
       LPage.Add(Caption(nkLabel, 'claim-symptom', FriendlySymptom(TextOf(AData, 'symptom'))));
       LPage.Add(ClaimIndicators(AData, 'detail'));
       AddIngredientGallery(LPage, TextOf(AData, 'ingredient'));
-      LPage.Add(Caption(nkLabel, 'claim-question', ResearchQuestion(AData)));
+      LQuestionBox := Section(nkRow, 'claim-question-box');
+      LQuestionBox.Add(Button('claim-question-info', '?', nvSecondary)
+        .Configure.AccessibleName('What is this research question?').Done);
+      LQuestionBox.Add(Caption(nkLabel, 'claim-question', ResearchQuestion(AData)));
+      LPage.Add(LQuestionBox);
       LConfidence := TextOf(AData, 'confidence');
       LResearchStatus := TextOf(AData, 'research_status');
       LPage.Add(Caption(nkLabel, 'claim-confidence',
@@ -1018,6 +1274,14 @@ begin
 
       PublishResults(LDocument, LPage);
       BindIngredientGallery(GResultsRenderer, TextOf(AData, 'ingredient'));
+      BindQuestionPopover(
+        GResultsRenderer.ElementFor('claim-question-box'),
+        GResultsRenderer.ElementFor('claim-question-info'));
+      SetLength(LCultureTags, 1);
+      SetLength(LCultureIngs, 1);
+      LCultureTags[0] := 'detail';
+      LCultureIngs[0] := TextOf(AData, 'ingredient');
+      BindCulturalBadges(LCultureTags, LCultureIngs);
       GResultsRenderer.ElementFor('claim-audit-panel').id := 'claim-audit-panel';
       GResultsRenderer.ElementFor('claim-audit-panel').setAttribute('hidden', '');
       GResultsRenderer.ElementFor('claim-audit-toggle').setAttribute('aria-controls', 'claim-audit-panel');
@@ -2066,16 +2330,51 @@ begin
     begin
       if GRecipesModal = nil then
         GRecipesModal := TOracleRecipesModal.Create;
+      if GResearchPool <> nil then
+        GRecipesModal.SetResearchPool(GResearchPool);
       GRecipesModal.Open(AIngredient, GResultsRenderer.ElementFor('claim-recipes-' + ATag));
       Result := True;
     end);
+end;
+
+procedure OpenReaderModal(const APath: String; AInvoker: TJSHTMLElement = nil);
+begin
+  if GReaderModal = nil then
+    GReaderModal := TOracleReaderModal.Create(GStaticOracle,
+      procedure(const ASourcePath: String; AOffset: Integer; AReply: TReaderChunkReply)
+      var
+        LArgs: TJSObject;
+      begin
+        LArgs := TJSObject.new;
+        LArgs['path'] := ASourcePath;
+        LArgs['offset'] := AOffset;
+        Request('oracle_read_source', LArgs,
+          procedure(AData: TJSObject; const AError: String)
+          begin
+            if AError <> '' then
+              AReply('', 0, AError)
+            else
+              AReply(TextOf(AData, 'text'), CountOf(AData, 'next_offset'), '');
+          end);
+      end,
+      procedure(const ASourcePath: String)
+      begin
+        StartGraph(nil, '', GraphKey('source', ReferenceFile(ASourcePath)),
+          procedure
+          begin
+            ShowList(GResults, False);
+          end);
+      end);
+  GReaderModal.Open(ReferenceFile(APath), AInvoker);
 end;
 
 function CatalogPreview(const ATag, APath, APeriod: String): TNyxNode;
 var
   LURL: String;
   LActions: TNyxNode;
+  LTitle: String;
 begin
+  LTitle := SavedSourceTitle(APath);
   if IsConversationSource(APath) then
   begin
     Result := Section(nkCard, 'source-conversation-' + ATag);
@@ -2091,29 +2390,32 @@ begin
     Result := Section(nkCard, 'source-study-' + ATag);
     Result.Add(Caption(nkBadge, 'source-kind-' + ATag, 'Research source'));
   end;
-  Result.Add(Caption(nkHeading, 'source-title-' + ATag, SavedSourceTitle(APath)));
+  Result.Add(Caption(nkHeading, 'source-title-' + ATag, LTitle));
   Result.Add(Caption(nkLabel, 'source-period-' + ATag, APeriod));
-  LActions := Section(nkRow, 'source-actions-' + ATag);
-  if GStaticOracle = nil then
-    LActions.Add(Button('open-source-' + ATag, 'Read source', nvSecondary)
-      .Configure.AccessibleName('Read source ' + ExtractFileName(APath)).Done)
-  else
+  LActions := Section(nkColumn, 'source-actions-' + ATag);
+  LActions.Add(Button('read-source-' + ATag, 'Read', nvPrimary)
+    .Configure.AccessibleName('Read ' + LTitle).Done);
+  if GStaticOracle <> nil then
   begin
     LURL := GStaticOracle.ReferenceURL(APath);
     if LURL <> '' then
       LActions.Add(Section(nkLink, 'open-source-' + ATag).Configure.Text('Read on GitHub')
-        .AccessibleName('Read source ' + ExtractFileName(APath) + ' on GitHub').LinkTo(LURL).Done);
+        .AccessibleName('Read ' + LTitle + ' on GitHub').LinkTo(LURL).Done);
   end;
   LActions.Add(Button('catalog-graph-' + ATag, 'See connections', nvSecondary)
-    .Configure.AccessibleName('See connections for ' + ExtractFileName(APath)).Done);
+    .Configure.AccessibleName('See connections for ' + LTitle).Done);
   Result.Add(LActions);
 end;
 
 procedure BindCatalogCard(ARenderer: TNyxBrowserRenderer; const ATag, APath: String);
 begin
-  if GStaticOracle = nil then
-    BindSource(ARenderer, ATag, APath)
-  else
+  BindEvent(ARenderer.ElementFor('read-source-' + ATag), 'click',
+    function(AEvent: TEventListenerEvent): Boolean
+    begin
+      OpenReaderModal(APath, ARenderer.ElementFor('read-source-' + ATag));
+      Result := True;
+    end);
+  if GStaticOracle <> nil then
     SetExternalLink('open-source-' + ATag);
   BindEvent(ARenderer.ElementFor('catalog-graph-' + ATag), 'click',
     function(AEvent: TEventListenerEvent): Boolean
@@ -2137,6 +2439,7 @@ end;
 procedure BindSearchGallery(const ATag, AIngredient: String);
 var
   LURL: String;
+  LTipText: String;
   LThumb: TJSHTMLElement;
   LPanel: TJSHTMLElement;
   LKey: String;
@@ -2168,6 +2471,14 @@ begin
       LThumb.setAttribute('aria-expanded', LowerCase(BoolToStr(not LPanel.hidden, True)));
       Result := True;
     end);
+  LTipText := IngredientTipText(AIngredient);
+  if LTipText <> '' then
+    BindShoppingTipPopover(
+      GResultsRenderer.ElementFor('claim-tip-' + ATag),
+      AIngredient,
+      LTipText,
+      IngredientTipSource(AIngredient),
+      IngredientTipURL(AIngredient));
 end;
 
 procedure RenderRelated(AFocus: Boolean);
@@ -2296,6 +2607,8 @@ var
   LCardActions: TNyxNode;
   LIdentity: TNyxNode;
   LIdentityText: TNyxNode;
+  LMedia: TNyxNode;
+  LQuestionBox: TNyxNode;
   LResultActions: TNyxNode;
   LPaging: TNyxNode;
   LRecords: TJSArray;
@@ -2314,6 +2627,8 @@ var
   LNoTrendMatches: Boolean;
   LKindTabs: TNyxNode;
   LSymptoms: TStringValues;
+  LCultureTags: TStringValues;
+  LCultureIngs: TStringValues;
 begin
   LDocument := TNyxDocument.Create;
   LPage := Section(nkPage, 'result-page');
@@ -2343,6 +2658,8 @@ begin
       LMessage := 'Research across ' + IntToStr(Length(LSymptoms)) + ' symptoms'
     else if TextOf(AResults, 'symptom') <> '' then
       LMessage := 'Research on ' + LowerCase(FriendlySymptom(TextOf(AResults, 'symptom')))
+    else if TextOf(AResults, 'ingredient') <> '' then
+      LMessage := 'Research on ' + Capitalized(TextOf(AResults, 'ingredient'))
     else if LTrendOnly then
     begin
       if LTrend = 'eases' then
@@ -2361,6 +2678,8 @@ begin
       LResultActions.Add(Button('open-graph', 'Graph view', nvSecondary));
       if (GRelatedTerms <> '') and (GResearchKind <> SourceKindCulture) then
         LResultActions.Add(Button('jump-to-sources', 'Jump to sources', nvSecondary));
+      if (TextOf(AResults, 'ingredient') <> '') and (LTrend <> '') and (LRecords.Length > 0) then
+        LResultActions.Add(Button('show-any-trend', 'Show all claims', nvSecondary));
       LPage.Add(LResultActions);
       LKindTabs := Section(nkRow, 'research-kind-tabs');
       LKindTabs.Add(Button('research-kind-all', 'All research', nvSecondary)
@@ -2393,7 +2712,11 @@ begin
   begin
     LRecords := ItemsOf(AResults, 'matches');
     LTotal := CountOf(AResults, 'total');
-    LPage.Add(Caption(nkHeading, 'result-heading', 'Catalog results'));
+    if (TextOf(GArguments, 'source_kind') = 'cultural') and (TextOf(GArguments, 'terms') <> '') then
+      LPage.Add(Caption(nkHeading, 'result-heading',
+        'Cultural & experiential sources · ' + Capitalized(TextOf(GArguments, 'terms'))))
+    else
+      LPage.Add(Caption(nkHeading, 'result-heading', 'Catalog results'));
   end;
   if LRecords.Length > 0 then
   begin
@@ -2414,6 +2737,9 @@ begin
       LMessage := 'No clear direction in the reviewed evidence for this search. You can explore what the studies looked at.'
     else if GView = ovClaims then
       LMessage := 'No matches for these filters. Try a different symptom or clear a filter.'
+    else if TextOf(GArguments, 'source_kind') = 'cultural' then
+      LMessage := 'No cultural or experiential sources are cataloged for "' +
+        TextOf(GArguments, 'terms') + '" yet. This remains an open collection gap.'
     else
       LMessage := 'No indexed document contains all of these search terms.';
     LPage.Add(Caption(nkLabel, 'result-message', LMessage));
@@ -2440,18 +2766,29 @@ begin
           FriendlySymptom(TextOf(LRow, 'symptom'))));
       LIdentity.Add(LIdentityText);
       if HasIngredientGallery(LIngredient) then
-        LIdentity.Add(Button('claim-photo-' + LTag, '', nvSecondary)
+      begin
+        LMedia := Section(nkColumn, 'claim-media-' + LTag);
+        LMedia.Add(Button('claim-photo-' + LTag, '', nvSecondary)
           .Configure.AccessibleName('View photos of ' + LIngredient).Done);
+        if IngredientTipText(LIngredient) <> '' then
+          LMedia.Add(Button('claim-tip-' + LTag, 'Tip', nvSecondary)
+            .Configure.AccessibleName('Shopping tip for ' + LIngredient).Done);
+        LIdentity.Add(LMedia);
+      end;
       LCard.Add(LIdentity);
       AddIngredientGallery(LCard, LIngredient, '-search-' + LTag);
-      LCard.Add(Caption(nkLabel, 'hypothesis-' + LTag, ResearchQuestion(LRow)));
+      LQuestionBox := Section(nkRow, 'hypothesis-box-' + LTag);
+      LQuestionBox.Add(Button('hypothesis-info-' + LTag, '?', nvSecondary)
+        .Configure.AccessibleName('What is this research question?').Done);
+      LQuestionBox.Add(Caption(nkLabel, 'hypothesis-' + LTag, ResearchQuestion(LRow)));
+      LCard.Add(LQuestionBox);
       if TextOf(LRow, 'rationale') <> '' then
         LCard.Add(Caption(nkLabel, 'rationale-' + LTag, TextOf(LRow, 'rationale')));
 
-      LCardActions := Section(nkRow, 'claim-actions-' + LTag);
-      LCardActions.Add(Button('inspect-' + LTag, 'Studies & sources', nvSecondary));
-      LCardActions.Add(Button('claim-graph-' + LTag, 'Connections', nvSecondary));
+      LCardActions := Section(nkColumn, 'claim-actions-' + LTag);
       LCardActions.Add(Button('claim-recipes-' + LTag, 'Recipes', nvSecondary));
+      LCardActions.Add(Button('claim-graph-' + LTag, 'Connections', nvSecondary));
+      LCardActions.Add(Button('inspect-' + LTag, 'Studies & sources', nvSecondary));
       LCard.Add(LCardActions);
     end
     else
@@ -2491,8 +2828,22 @@ begin
     RenderRelated;
   end;
   if GView = ovClaims then
+  begin
+    SetLength(LCultureTags, LRecords.Length);
+    SetLength(LCultureIngs, LRecords.Length);
     for LIndex := 0 to LRecords.Length - 1 do
-      BindSearchGallery(IntToStr(LIndex), TextOf(TJSObject(LRecords[LIndex]), 'ingredient'));
+    begin
+      LTag := IntToStr(LIndex);
+      LIngredient := TextOf(TJSObject(LRecords[LIndex]), 'ingredient');
+      LCultureTags[LIndex] := LTag;
+      LCultureIngs[LIndex] := LIngredient;
+      BindSearchGallery(LTag, LIngredient);
+      BindQuestionPopover(
+        GResultsRenderer.ElementFor('hypothesis-box-' + LTag),
+        GResultsRenderer.ElementFor('hypothesis-info-' + LTag));
+    end;
+    BindCulturalBadges(LCultureTags, LCultureIngs);
+  end;
   if (GView = ovClaims) and not LTrendOnly then
   begin
     BindEvent(GResultsRenderer.ElementFor('open-graph'), 'click',
@@ -2571,7 +2922,7 @@ begin
         Result := True;
       end);
   end;
-  if LCanShowAnyTrend then
+  if LCanShowAnyTrend or (GResultsRenderer.Root.Find('show-any-trend') <> nil) then
     BindEvent(GResultsRenderer.ElementFor('show-any-trend'), 'click',
       function(AEvent: TEventListenerEvent): Boolean
       begin
@@ -2626,7 +2977,7 @@ begin
     AObject[AKey] := AText;
 end;
 
-procedure Query(ANewQuery: Boolean; AOffset: Integer);
+procedure Query(ANewQuery: Boolean; AOffset: Integer; AFocusResults: Boolean);
 var
   LTool: String;
   LSequence: Integer;
@@ -2705,8 +3056,7 @@ begin
         (SelectedIndex('catalog-kind') <= High(CCatalogKindValues)) then
         MaybeSet(GArguments, 'source_kind', CCatalogKindValues[SelectedIndex('catalog-kind')]);
     end;
-    if window.innerWidth <= 740 then
-      SetMobileFiltersOpen(False);
+    SetMobileFiltersOpen(False);
   end;
   HideSuggestions;
   GArguments['offset'] := AOffset;
@@ -2748,14 +3098,14 @@ begin
         MessageView('Search unavailable', AError,
           procedure
           begin
-            Query(ANewQuery, AOffset);
+            Query(ANewQuery, AOffset, AFocusResults);
           end, 'Retry search');
         Exit;
       end;
       GResults := AData;
       if not ANewQuery and (GView = ovClaims) then
       begin
-        ShowList(GResults);
+        ShowList(GResults, AFocusResults);
         Exit;
       end;
       GRelatedSources := nil;
@@ -2771,7 +3121,7 @@ begin
         ResetRelatedSources;
         GRelatedBusy := GRelatedTerms <> '';
       end;
-      ShowList(GResults);
+      ShowList(GResults, AFocusResults);
       if GRelatedBusy then
         RefreshRelated(0, False);
     end;
@@ -3063,7 +3413,37 @@ begin
     end);
   for LInputId in CTextInputs do
     BindEvent(GRenderer.InputFor(LInputId), 'keydown', @SubmitOnEnter);
-  SwitchView(ovClaims);
+  GPendingIngredient := ReadOracleURLParam('ingredient');
+  GPendingTrend := LowerCase(ReadOracleURLParam('trend'));
+  GPendingScope := LowerCase(ReadOracleURLParam('scope'));
+  GPendingView := LowerCase(ReadOracleURLParam('view'));
+  GPendingTerms := Trim(ReadOracleURLParam('terms'));
+  GPendingSourceKind := LowerCase(ReadOracleURLParam('source_kind'));
+  if (GPendingView = 'catalog') or ((GPendingTerms <> '') and (GPendingSourceKind <> '')) then
+  begin
+    SwitchView(ovCatalog);
+    TJSHTMLInputElement(GRenderer.InputFor('terms')).value := GPendingTerms;
+    LIndex := IndexStr(GPendingSourceKind, CCatalogKindValues);
+    if LIndex < 0 then
+      LIndex := 0;
+    TJSHTMLSelectElement(GRenderer.InputFor('catalog-kind')).selectedIndex := LIndex;
+    GPendingIngredient := '';
+    if GPendingTerms <> '' then
+    begin
+      if GPendingSourceKind = 'cultural' then
+        document.title := Capitalized(GPendingTerms) + ' cultural sources · Parkinson’s Oracle'
+      else
+        document.title := GPendingTerms + ' · Catalog · Parkinson’s Oracle';
+      Query(True, 0, False);
+    end;
+  end
+  else
+  begin
+    SwitchView(ovClaims);
+    if GPendingIngredient <> '' then
+      MessageView('Loading research…',
+        'Looking up research details for ' + Capitalized(GPendingIngredient) + '.');
+  end;
   LoadFilterOptions;
   LoadStatus;
 end;
@@ -3080,7 +3460,11 @@ begin
   if LRecipeId <> '' then
   begin
     GRecipePage := TOracleRecipePage.Create;
-    GRecipePage.Mount(LRecipeId);
+    GRecipePage.Mount(LRecipeId,
+      procedure(AReply: TOracleReply)
+      begin
+        Request('oracle_filter_options', TJSObject.new, AReply);
+      end);
     Exit;
   end;
   Mount;

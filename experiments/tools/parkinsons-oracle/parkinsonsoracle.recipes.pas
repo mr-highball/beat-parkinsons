@@ -31,6 +31,13 @@ type
   end;
   TRecipeIngredientDetails = array of TRecipeIngredientDetail;
 
+  TRecipeIngredientCandidate = record
+    Name: String;
+    MatchCount: Integer;
+    CatalogCount: Integer;
+  end;
+  TRecipeIngredientCandidates = array of TRecipeIngredientCandidate;
+
   TRecipe = class(TObject)
   private
     FId: String;
@@ -96,6 +103,9 @@ type
       const AExtraIngredients: TRecipeStrings): TRecipeCategoryCounts;
     function AvailableExtraIngredients(const ACoreIngredient: String;
       AMaxSuggestions: Integer = 12): TRecipeStrings;
+    function SuggestExtraIngredients(const ACoreIngredient: String;
+      const ACurrentExtras: TRecipeStrings; ACategory: TRecipeCategory;
+      const AQuery: String; AMaxResults: Integer = 8): TRecipeIngredientCandidates;
     function CoreIngredients: TRecipeStrings;
     function ToJSON: TJSONObject;
     function ToJSONString(AFormatted: Boolean = False): String;
@@ -1129,6 +1139,191 @@ begin
   SetLength(Result, LLimit);
   for LIndex := 0 to LLimit - 1 do
     Result[LIndex] := LNames[LIndex];
+end;
+
+function ExtractActiveQueryToken(const AQuery: String; out APrefixItems: TRecipeStrings): String;
+var
+  LIndex: Integer;
+  LLastSep: Integer;
+begin
+  APrefixItems := nil;
+  LLastSep := 0;
+  for LIndex := Length(AQuery) downto 1 do
+  begin
+    if (AQuery[LIndex] = ',') or (AQuery[LIndex] = ';') or
+      (AQuery[LIndex] = #10) or (AQuery[LIndex] = #13) then
+    begin
+      LLastSep := LIndex;
+      Break;
+    end;
+  end;
+  if LLastSep > 0 then
+  begin
+    APrefixItems := ParseIngredientList(Copy(AQuery, 1, LLastSep - 1));
+    Result := CollapseSpaces(LowerCase(Trim(Copy(AQuery, LLastSep + 1, MaxInt))));
+  end
+  else
+    Result := CollapseSpaces(LowerCase(Trim(AQuery)));
+end;
+
+function IngredientTextMatchRank(const AToken, ANormToken, AName: String): Integer;
+begin
+  if AToken = '' then
+    Exit(0);
+  if (Pos(AToken, AName) = 1) or ((ANormToken <> '') and (Pos(ANormToken, AName) = 1)) then
+    Exit(0);
+  if (Pos(' ' + AToken, AName) > 0) or
+    ((ANormToken <> '') and (Pos(' ' + ANormToken, AName) > 0)) then
+    Exit(1);
+  if (Pos(AToken, AName) > 0) or ((ANormToken <> '') and (Pos(ANormToken, AName) > 0)) then
+    Exit(2);
+  Result := 3;
+end;
+
+function TRecipeCatalog.SuggestExtraIngredients(const ACoreIngredient: String;
+  const ACurrentExtras: TRecipeStrings; ACategory: TRecipeCategory;
+  const AQuery: String; AMaxResults: Integer): TRecipeIngredientCandidates;
+var
+  LCore: String;
+  LExcluded: TRecipeStrings;
+  LPrefixItems: TRecipeStrings;
+  LToken: String;
+  LNormToken: String;
+  LAll: TRecipeIngredientCandidates;
+  LRanks: array of Integer;
+  LIndex: Integer;
+  LIngIndex: Integer;
+  LSlot: Integer;
+  LRecipe: TRecipe;
+  LRecipeMatches: Boolean;
+  LName: String;
+  LRank: Integer;
+  LBest: Integer;
+  LTempItem: TRecipeIngredientCandidate;
+  LTempRank: Integer;
+  LLimit: Integer;
+
+  function CandidateBetter(ALeft, ARight: Integer): Boolean;
+  var
+    LLeftHasMatch: Boolean;
+    LRightHasMatch: Boolean;
+  begin
+    LLeftHasMatch := LAll[ALeft].MatchCount > 0;
+    LRightHasMatch := LAll[ARight].MatchCount > 0;
+    if LLeftHasMatch <> LRightHasMatch then
+      Exit(LLeftHasMatch);
+    if LRanks[ALeft] <> LRanks[ARight] then
+      Exit(LRanks[ALeft] < LRanks[ARight]);
+    if LAll[ALeft].MatchCount <> LAll[ARight].MatchCount then
+      Exit(LAll[ALeft].MatchCount > LAll[ARight].MatchCount);
+    if LAll[ALeft].CatalogCount <> LAll[ARight].CatalogCount then
+      Exit(LAll[ALeft].CatalogCount > LAll[ARight].CatalogCount);
+    Result := LAll[ALeft].Name < LAll[ARight].Name;
+  end;
+
+begin
+  Result := nil;
+  LAll := nil;
+  LRanks := nil;
+  LCore := NormalizeRecipeIngredient(ACoreIngredient);
+  LToken := ExtractActiveQueryToken(AQuery, LPrefixItems);
+  LNormToken := NormalizeRecipeIngredient(LToken);
+
+  LExcluded := nil;
+  if LCore <> '' then
+    AppendTextItem(LExcluded, LCore);
+  AppendTextItem(LExcluded, 'water');
+  for LIndex := 0 to High(ACurrentExtras) do
+  begin
+    LName := NormalizeRecipeIngredient(ACurrentExtras[LIndex]);
+    if (LName <> '') and not ContainsTextItem(LExcluded, LName) then
+      AppendTextItem(LExcluded, LName);
+  end;
+  for LIndex := 0 to High(LPrefixItems) do
+    if (LPrefixItems[LIndex] <> '') and not ContainsTextItem(LExcluded, LPrefixItems[LIndex]) then
+      AppendTextItem(LExcluded, LPrefixItems[LIndex]);
+
+  for LIndex := 0 to High(FRecipes) do
+  begin
+    LRecipe := FRecipes[LIndex];
+    LRecipeMatches := LRecipe.HasCoreIngredient(LCore) and
+      ((ACategory = rcAll) or (LRecipe.Category = ACategory));
+    if LRecipeMatches then
+    begin
+      for LSlot := 0 to High(ACurrentExtras) do
+        if not LRecipe.HasIngredient(ACurrentExtras[LSlot]) then
+        begin
+          LRecipeMatches := False;
+          Break;
+        end;
+    end;
+    if LRecipeMatches then
+    begin
+      for LSlot := 0 to High(LPrefixItems) do
+        if not LRecipe.HasIngredient(LPrefixItems[LSlot]) then
+        begin
+          LRecipeMatches := False;
+          Break;
+        end;
+    end;
+    for LIngIndex := 0 to High(LRecipe.Ingredients) do
+    begin
+      LName := NormalizeRecipeIngredient(LRecipe.Ingredients[LIngIndex]);
+      if (LName = '') or ContainsTextItem(LExcluded, LName) then
+        Continue;
+      LRank := IngredientTextMatchRank(LToken, LNormToken, LName);
+      if LRank > 2 then
+        Continue;
+      if (LToken = '') and (not LRecipeMatches) then
+        Continue;
+      LSlot := -1;
+      for LBest := 0 to High(LAll) do
+      begin
+        if LAll[LBest].Name = LName then
+        begin
+          LSlot := LBest;
+          Break;
+        end;
+      end;
+      if LSlot < 0 then
+      begin
+        LSlot := Length(LAll);
+        SetLength(LAll, LSlot + 1);
+        SetLength(LRanks, LSlot + 1);
+        LAll[LSlot].Name := LName;
+        LAll[LSlot].MatchCount := 0;
+        LAll[LSlot].CatalogCount := 0;
+        LRanks[LSlot] := LRank;
+      end;
+      Inc(LAll[LSlot].CatalogCount);
+      if LRecipeMatches then
+        Inc(LAll[LSlot].MatchCount);
+    end;
+  end;
+
+  for LIndex := 0 to High(LAll) - 1 do
+  begin
+    LBest := LIndex;
+    for LSlot := LIndex + 1 to High(LAll) do
+      if CandidateBetter(LSlot, LBest) then
+        LBest := LSlot;
+    if LBest <> LIndex then
+    begin
+      LTempItem := LAll[LIndex];
+      LAll[LIndex] := LAll[LBest];
+      LAll[LBest] := LTempItem;
+      LTempRank := LRanks[LIndex];
+      LRanks[LIndex] := LRanks[LBest];
+      LRanks[LBest] := LTempRank;
+    end;
+  end;
+
+  LLimit := Length(LAll);
+  if (AMaxResults > 0) and (LLimit > AMaxResults) then
+    LLimit := AMaxResults;
+  SetLength(Result, LLimit);
+  for LIndex := 0 to LLimit - 1 do
+    Result[LIndex] := LAll[LIndex];
 end;
 
 function TRecipeCatalog.CoreIngredients: TRecipeStrings;

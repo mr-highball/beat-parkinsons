@@ -32,6 +32,7 @@ type
     constructor Create(const ARevision: String);
     procedure Call(const ATool: String; AArguments: TJSObject; AReply: TOracleReply);
     function ReferenceURL(const ALocal: String): String;
+    function RawReferenceURL(const ALocal: String): String;
     procedure GraphModel(AReply: TOracleReply);
   end;
 
@@ -40,7 +41,8 @@ procedure GetOracleAsset(const APath: String; AJson: TOracleReply;
 
 implementation
 
-uses StrUtils, fpjson, oraclevocab, parkinsonsoracle.trend, parkinsonsoracle.ingredients;
+uses StrUtils, fpjson, oraclevocab, parkinsonsoracle.trend, parkinsonsoracle.ingredients,
+  parkinsonsoracle.presentation;
 
 procedure TStaticOracle.GraphModel(AReply: TOracleReply);
 begin
@@ -694,6 +696,12 @@ begin
   for LPart in SplitString(LPath, '/') do
     Result := Result + '/' + EncodePathSegment(LPart);
   Result := Result + LAnchor;
+end;
+
+function TStaticOracle.RawReferenceURL(const ALocal: String): String;
+begin
+  Result := GitHubRawURL(VocabularyText(FModel, 'repository'),
+    VocabularyText(FModel, 'revision'), ALocal);
 end;
 
 end.
