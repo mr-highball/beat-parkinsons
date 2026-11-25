@@ -1074,3 +1074,10 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 - [Potential Protection Against Parkinson’s Disease by Ergothioneine—Nature’s Multifactorial Neuroprotectant](Source-Text/2026-PMID42072160-Round1-Orange-Scope.txt)
 
 [Round 1 orange and merged-source review](Food-Experiment-Round-1-Merged-Originals-and-Orange-Nov25.md)
+
+## Round 1 proceedings and article follow-through
+
+- 2025-05-02 · [23rd International Medical, Pharmaceutical, Cosmeceutical and Health Science Symposium](Source-Text/2025-PMC12716347-Round1-Proceedings-Scope.txt)
+- 2025-07-17 · [ECR 2025 Book of Abstracts](Source-Text/2025-PMC12270984-Round1-Proceedings-Scope.txt)
+
+[Exact checks and scorecards](../../experiments/1000_see_what_sticks_food/followup/shared-archive-contexts-next-nov25/README.md)

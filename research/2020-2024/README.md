@@ -1192,3 +1192,11 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Metabolic and other morbid complications in congenital generalized lipodystrophy type 4](Source-Text/2024-PMID38234231-Round1-Orange-Scope.txt)
 - [Therapeutic Targets of Probiotics in Parkinson Disease: A Systematic Review of Randomized Controlled Trials](Source-Text/2024-PMID39228448-Round1-Orange-Scope.txt)
 - [Scientific opinion on the tolerable upper intake level for selenium](Source-Text/2023-PMID36698500-EFSA-2023-Selenium-Upper-Limit-Brazil-Nut-Safety.txt)
+
+## Round 1 proceedings and article follow-through
+
+- 2020-09-04 · [E-Poster Viewing, European Psychiatry 2020](Source-Text/PMC13070663.txt)
+- 2022-09-15 · [Abstracts of the XL Congress of the Spanish Society of Physiological Sciences](Source-Text/2022-PMC9476395-Round1-Proceedings-Scope.txt)
+- 2023-12-03 · [Wild and cultivated olive oil in hypertensive mice](Source-Text/2023-PMID38044285-Wild-and-Cultivated-Olive-Oil-Retinal-Outcomes.txt)
+
+[Exact checks and scorecards](../../experiments/1000_see_what_sticks_food/followup/shared-archive-contexts-next-nov25/README.md)

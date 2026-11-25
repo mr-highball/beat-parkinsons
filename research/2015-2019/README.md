@@ -1022,3 +1022,12 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 
 - [GST-4-Dependent Suppression of Neurodegeneration in C. elegans Models of Parkinson’s and Machado-Joseph Disease by Rapeseed Pomace Extract Supplementation](Source-Text/2019-PMID31680826-Pohl-2019-Rapeseed-Pomace-Extract-C-Elegans-Parkinson-Model.txt)
 - [Different experiences with oranges and constipation in a Parkinson’s UK discussion](Cultural-and-Experiential/Conversations/2019-Parkinsons-UK-Oranges-Constipation-Conversation.txt)
+
+## Round 1 proceedings and article follow-through
+
+- 2015-12 · [Poster Session Abstracts, Indian Journal of Pharmacology](Source-Text/2015-PMC4755075-Round1-Proceedings-Scope.txt)
+- 2017-06-26 · [Abstracts, European Biophysics Journal 2017 supplement](Source-Text/2017-PMC7080123-Round1-Proceedings-Scope.txt)
+- 2018-07-05 · [Posters, 43rd FEBS Congress](Source-Text/2018-PMC6031936-Round1-Proceedings-Scope.txt)
+- 2019-10-15 · [Atti del 52° Congresso Nazionale, Società Italiana di Igiene, Medicina Preventiva e Sanità Pubblica](Source-Text/2019-PMC6865078-Round1-Proceedings-Scope.txt)
+
+[Exact checks and scorecards](../../experiments/1000_see_what_sticks_food/followup/shared-archive-contexts-next-nov25/README.md)

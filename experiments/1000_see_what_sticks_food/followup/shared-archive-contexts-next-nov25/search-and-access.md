@@ -1,0 +1,19 @@
+# Search and original-source scope
+
+The branch-local Oracle checks for these eleven collection candidates are recorded in the preceding [archive recovery batch](../shared-cloud-originals-nov25/archive-route-sweep.tsv). This pass verified ten official PMC Cloud PDFs against their PMC publication metadata, file versions and SHA-256 hashes. The PDF page locators refer to each downloaded object. For the ECR book the cover and four day dividers were inspected as images. The Italian public-health proceedings have an image-only cover. The other pages of the ten verified originals provided extractable text.
+
+The screening used ingredient names, multiword preparations, scientific names and associated constituent terms. Each food match was read in the surrounding abstract or study member. The resulting ledger records genuine exposure or analytical contexts separately from accidental text matches. The archive PDFs are referenced by stable source locators, with the new digests stored in their publication periods.
+
+## Follow-up from the Spanish physiology proceedings
+
+The PMID:36107382 poster O5-03 led to PMID:38044285. The exact PMID and DOI were missing from the merged branch catalog at revision 159. The journal article was read at full-text depth. Its 90 assigned mice were spread across six arms. The reported ocular pressure and retinal fibrosis findings varied by oil type and endpoint. Group the conference and journal records as a likely single study family because the model, exposures, endpoints and research group correspond. Independent sample identifiers were unavailable. Claim 0343 concerns Parkinson anxiety, an unreported endpoint. [Original journal article](https://onlinelibrary.wiley.com/doi/full/10.1002/mnfr.202200623) · [Dated local digest](../../../../research/2020-2024/Source-Text/2023-PMID38044285-Wild-and-Cultivated-Olive-Oil-Retinal-Outcomes.txt)
+
+## Human contexts with incomplete effect reporting
+
+The 2011 student survey gives an overall constipation prevalence of 11% in 800 students and describes a coffee association as significant. It leaves the association direction, effect size, preparation, and specific Parkinson fatigue endpoint unreported. The 2025 fishermen study gives n=30, erythrocyte indices and an internally inconsistent count for one index. It supplies no fatigue outcome. The two surveys represent distinct populations. The 2015 topical oil poster follows skin outcomes in 56 randomized patients with atopic dermatitis and adds tacrolimus later. It supplies no oral oil comparison for the frozen claims. [Karachi survey original](https://doi.org/10.1186/2047-783X-16-S1-1) · [Fishermen original, printed pp. 1041–1042](https://mjournal.squ.edu.om/cgi/viewcontent.cgi?article=2938&context=home) · [Topical oil poster](https://pmc.ncbi.nlm.nih.gov/articles/PMC4755075/)
+
+## Open chapters and access
+
+The cumulative pharmacological index PMC7148939 is a separate source of citation leads. Its sixteen exact pairs remain queued because the cited pages and primary references are still needed. The Oracle located the local bibliographic record for the 2000 anticonvulsant review DOI 10.1016/S1572-5995(00)80034-4. Publisher access again exposed metadata or an access restriction along the checked routes. The original page 526 and its Melissa officinalis sources remain open. Traditional seizure or historical hysteria terms have no direct mapping to clinical Parkinson depression. [Open exact pairs](pharmacology-index-open-pairs.tsv) · [Dated local chapter record](../../../../research/2000-2004/Source-Text/2000-Anticonvulsant-Plant-Review-Index-Record.txt) · [Publisher chapter page](https://www.sciencedirect.com/science/article/abs/pii/S1572599500800344)
+
+The earlier cultural and public-conversation searches and first-pass judgments retain their provenance. This tranche examined formal proceedings and original articles.

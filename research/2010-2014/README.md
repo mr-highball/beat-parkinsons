@@ -738,3 +738,10 @@ The [2011 Wang rosmarinic acid model](Source-Text/2011-PMID22205146-Wang-Rosmari
 - [Protective effects of Althaea officinalis L. extract in 6-hydroxydopamine-induced hemi-Parkinsonism model: behavioral, biochemical and histochemical evidence](Source-Text/2014-PMID24464760-Round1-Orange-Scope.txt)
 - [Whole sweet orange for constipation in a northwest Pakistan interview survey](Cultural-and-Experiential/Traditional-Practices/2014-PMID24963328-Northwest-Pakistan-Whole-Orange-Constipation.txt)
 - [Sweet orange juice in a Shivalik ethnomedicinal survey](Cultural-and-Experiential/Traditional-Practices/2014-Shivalik-Sweet-Orange-Juice-Constipation.txt)
+
+## Round 1 proceedings and article follow-through
+
+- 2010-09-22 · [ISNI 2010 Abstracts, Journal of Neuroimmunology](Source-Text/2010-PMC7119879-Round1-Proceedings-Scope.txt)
+- 2011-09-21 · [22nd European Students' Conference Abstracts](Source-Text/2011-PMC3476934-Round1-Proceedings-Scope.txt)
+
+[Exact checks and scorecards](../../experiments/1000_see_what_sticks_food/followup/shared-archive-contexts-next-nov25/README.md)
