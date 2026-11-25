@@ -16,3 +16,4 @@ Four affected scorecards passed native draft validation. Seven assessment rows w
 - [Oracle first-pass coverage](oracle-coverage-merge.txt)
 - [Native research depth ledger validation](research-status-verification.txt).
 - [Replay reconciliation](queue-replay-verification.txt).
+- [Published Oracle coverage synchronization](oracle-coverage-sync-verification.txt).
