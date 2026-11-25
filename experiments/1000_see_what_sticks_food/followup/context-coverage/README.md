@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 25 date and orange review resolved 224 exact checks across 168 original bodies, traced the date extract and arthritis evidence, and revalidated four scorecards. The replay leaves 31,050 checks across 21,080 source keys and 396 frozen claims. [Date and orange originals and verified replay](../date-and-orange-remaining-bodies-nov25/README.md)
+
 The November 25 specific-outcome review resolved 58 exact checks across 37 original bodies, traced four saffron trial results and revalidated 13 scorecards. The replay leaves 31,274 checks across 21,248 source keys and 396 frozen claims. Eight priority-three original-access pairs remain queued. [Primary outcomes and verified replay](../specific-outcomes-and-priority-leads-nov25/README.md)
 
 The November 25 shared-publication review resolved 222 exact checks across 55 originals and revalidated 64 scorecards. The replay leaves 31,332 checks across 21,285 source keys and 396 frozen claims. Twelve staged 2001 proceedings checks remain open pending the missing pages and erratum. [Shared original scope and replay](../shared-orange-sources-nov25/README.md)

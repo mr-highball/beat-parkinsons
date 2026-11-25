@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+[Date and orange exposures](Date-and-Orange-Exposure-Scopes-Nov25.md) compares extract preparations, inflammatory endpoints, flavoring and mixtures across periods.
+
 [Fatigue endpoints and shared flavor](Fatigue-Endpoints-and-Shared-Flavor-Nov25.md) compares adverse-event reports, symptom severity measurements and the clinical use of shared flavoring.
 
 [Shared food source contexts](Shared-Food-Source-Contexts-Nov25.md) compares clinical test preparations and original food-composition measurements across periods.
