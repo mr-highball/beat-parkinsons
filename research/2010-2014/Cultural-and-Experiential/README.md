@@ -48,3 +48,6 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Reported customary combinations with black pepper, cinnamon, clove, cumin and onion](Traditional-Practices/2014-PMID24822061-Medicinal-Food-Spice-Accounts.txt).
 
 - [Modern historical review of reported Egyptian basil, cardamom and turmeric uses](Traditional-Practices/2010-Aboelsoud-Egyptian-Herbal-Practice-Summary.txt).
+
+- [Whole sweet orange for constipation in a northwest Pakistan interview survey](Traditional-Practices/2014-PMID24963328-Northwest-Pakistan-Whole-Orange-Constipation.txt)
+- [Sweet orange juice in a Shivalik ethnomedicinal survey](Traditional-Practices/2014-Shivalik-Sweet-Orange-Juice-Constipation.txt)

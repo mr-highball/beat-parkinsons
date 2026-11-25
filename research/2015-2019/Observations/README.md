@@ -666,3 +666,10 @@ The periods add distinctions between clinical formulas, laboratory citations and
 - [Effect of Acacia catechu on oxidative stress with possible implications in alleviating selected cognitive disorders](../Source-Text/2016-PMID26949964-Acacia-Nutmeg-Citation-Scope.txt)
 - [Traditional Chinese herbal medicine for vascular dementia](../Source-Text/2018-PMID30520514-Nutmeg-in-Vascular-Dementia-Formulas.txt)
 - [Traditional uses of medicinal plants in Polonnaruwa District in North Central Province of Sri Lanka](../Cultural-and-Experiential/Traditional-Practices/2019-PMID31275693-Polonnaruwa-Nutmeg-Stomachache.txt)
+
+## Orange sources and exposure identity
+
+A Parkinson’s UK discussion contains mixed orange experiences during constipation management. Combine this with the preceding period's intended whole-fruit and juice uses as historical context. The later trial with processed orange pomace provides a controlled comparison of bowel outcomes, while the forum accounts provide no isolated estimate.
+
+- [GST-4-Dependent Suppression of Neurodegeneration in C. elegans Models of Parkinson’s and Machado-Joseph Disease by Rapeseed Pomace Extract Supplementation](../Source-Text/2019-PMID31680826-Pohl-2019-Rapeseed-Pomace-Extract-C-Elegans-Parkinson-Model.txt)
+- [Different experiences with oranges and constipation in a Parkinson’s UK discussion](../Cultural-and-Experiential/Conversations/2019-Parkinsons-UK-Oranges-Constipation-Conversation.txt)

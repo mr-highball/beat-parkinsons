@@ -1055,3 +1055,10 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 - [The relationship between carrot juice consumption and constipation in pregnancy](Source-Text/2026-IJHESS10930-Carrot-Juice-Constipation.txt)
 
 [Round 1 nutmeg and carrot source review](Food-Experiment-Round-1-Nutmeg-and-Carrot-Originals-Nov25.md) links the original page checks and research receipts.
+
+## Original source audit for orange and merged studies
+
+- [Ergothioneine Treatment Ameliorates the Pathological Phenotypes of Parkinson's Disease Models](Source-Text/2025-PMID40696819-Tng-2025-Ergothioneine-Parkinson-Models-OCTN1.txt)
+- [Potential Protection Against Parkinson’s Disease by Ergothioneine—Nature’s Multifactorial Neuroprotectant](Source-Text/2026-PMID42072160-Round1-Orange-Scope.txt)
+
+[Round 1 orange and merged-source review](Food-Experiment-Round-1-Merged-Originals-and-Orange-Nov25.md)

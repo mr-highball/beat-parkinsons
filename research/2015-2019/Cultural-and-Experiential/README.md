@@ -45,3 +45,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Cooked string beans in a Parkinson community meal account](Personal-Reports/2015-Parking-Suns-String-Beans-in-Mixed-Meals.txt).
 
 - [Traditional uses of medicinal plants in Polonnaruwa District in North Central Province of Sri Lanka](Traditional-Practices/2019-PMID31275693-Polonnaruwa-Nutmeg-Stomachache.txt)
+
+- [Different experiences with oranges and constipation in a Parkinson’s UK discussion](Conversations/2019-Parkinsons-UK-Oranges-Constipation-Conversation.txt)

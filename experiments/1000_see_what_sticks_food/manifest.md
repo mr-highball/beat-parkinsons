@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The November 25 original and orange-source audit resolved 37 exact checks from 32 originals and added three contextual evidence families. The replay leaves 31,554 exact checks across 21,340 source keys and 397 frozen claims. [Originals and verified replay](followup/merged-originals-and-orange-nov25/README.md)
+
 The November 25 nutmeg and carrot review resolved 18 exact checks across 14 originals and validated three open scorecards. The replay leaves 31,591 exact checks across 21,363 source keys. [Original sources and native replay](followup/nutmeg-and-carrot-originals-nov25/README.md)
 
 The November 25 clinical, food and household review resolved 62 exact checks across 11 originals. It added 33 related assessments and verified 37 scorecards. The replay leaves 31,609 exact checks across 21,365 sources. [Original sources and native replay](followup/clinical-food-and-household-scopes-nov25/README.md)

@@ -1003,3 +1003,8 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Effect of Acacia catechu on oxidative stress with possible implications in alleviating selected cognitive disorders](Source-Text/2016-PMID26949964-Acacia-Nutmeg-Citation-Scope.txt)
 - [Traditional Chinese herbal medicine for vascular dementia](Source-Text/2018-PMID30520514-Nutmeg-in-Vascular-Dementia-Formulas.txt)
 - [Traditional uses of medicinal plants in Polonnaruwa District in North Central Province of Sri Lanka](Cultural-and-Experiential/Traditional-Practices/2019-PMID31275693-Polonnaruwa-Nutmeg-Stomachache.txt)
+
+## Original source audit for orange and merged studies
+
+- [GST-4-Dependent Suppression of Neurodegeneration in C. elegans Models of Parkinson’s and Machado-Joseph Disease by Rapeseed Pomace Extract Supplementation](Source-Text/2019-PMID31680826-Pohl-2019-Rapeseed-Pomace-Extract-C-Elegans-Parkinson-Model.txt)
+- [Different experiences with oranges and constipation in a Parkinson’s UK discussion](Cultural-and-Experiential/Conversations/2019-Parkinsons-UK-Oranges-Constipation-Conversation.txt)

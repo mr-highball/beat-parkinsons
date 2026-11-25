@@ -490,3 +490,10 @@ The Dominican interview profile records dried or fresh leaf preparations and int
 A medicinal-food review describes distinct mixed remedies for diabetes, diarrhea and stomachache. Earlier food chemistry differentiated individual constituents from their botanical sources. These records distinguish named ingredients and preparations without inferring an individual measured bowel effect from a customary blend. [Traditional review account](../Cultural-and-Experiential/Traditional-Practices/2014-PMID24822061-Medicinal-Food-Spice-Accounts.txt) · [Prior-period composition study](../../2005-2009/Source-Text/2007-DOI-FoodChem-Saffron-Eleven-Samples.txt)
 
 The 2010 Egyptian plant-use review supplies a traceable ancestor for a later plant table. Its named uses concern different conditions than the frozen Parkinson outcomes. The 2013 registered beverage trial concerns Alzheimer cognition and was later terminated without posted results. [Historical record](../Cultural-and-Experiential/Traditional-Practices/2010-Aboelsoud-Egyptian-Herbal-Practice-Summary.txt) · [Trial status](../Source-Text/2013-NCT01883648-Coconut-Oil-Alzheimer-Trial-Termination.txt)
+
+## Orange sources and exposure identity
+
+The Pakistan survey describes eating sweet orange fruit and the Shivalik survey describes drinking juice. These two accounts specify different routes of preparation. Their medicinal intent is documented separately from the later evidence on orange pomace, and the cited orange-peel model in a 2014 article still needs its original report.
+
+- [Whole sweet orange for constipation in a northwest Pakistan interview survey](../Cultural-and-Experiential/Traditional-Practices/2014-PMID24963328-Northwest-Pakistan-Whole-Orange-Constipation.txt)
+- [Sweet orange juice in a Shivalik ethnomedicinal survey](../Cultural-and-Experiential/Traditional-Practices/2014-Shivalik-Sweet-Orange-Juice-Constipation.txt)

@@ -779,3 +779,10 @@ An original psychiatric abstract reports insomnia during mania after high nutmeg
 - [Which plants for what ailments: a quantitative analysis of medicinal ethnobotany of Ile-Ife](../Cultural-and-Experiential/Traditional-Practices/2021-PMID34394387-Ile-Ife-African-Nutmeg-and-Insomnia.txt)
 - [Bee pollen as functional food: insights into its composition and therapeutic properties](../Source-Text/2023-PMID36978805-Wild-Carrot-Bee-Pollen-Scope.txt)
 - [18th Asian Federation of Sports Medicine Congress scientific abstracts](../Source-Text/2024-PMID39234315-Sport-Congress-Nutmeg-Contusion-Scope.txt)
+
+## Orange sources and exposure identity
+
+Orange search results include laboratory fluorescence, chart labels, named chemical exposures, aromatherapy and a shared flavor. The controlled probiotic trial's bowel contrast concerns its active formulation. Selenium-enriched chicken and broccoli chemistry remain related evidence on different exposures and endpoints.
+
+- [Neuroprotective Effect of Phloretin in Rotenone-Induced Mice Model of Parkinson’s Disease: Modulating mTOR-NRF2-p62 Mediated Autophagy-Oxidative Stress Crosstalk](../Source-Text/2023-PMID36463449-Shirgadwar-2023-Phloretin-Rotenone-PD-Mice.txt)
+- [Scientific opinion on the tolerable upper intake level for selenium](../Source-Text/2023-PMID36698500-EFSA-2023-Selenium-Upper-Limit-Brazil-Nut-Safety.txt)

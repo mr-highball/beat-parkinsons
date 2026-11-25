@@ -720,3 +720,9 @@ The [2011 Wang rosmarinic acid model](Source-Text/2011-PMID22205146-Wang-Rosmari
 - [Egyptian herbal-practice historical review](Cultural-and-Experiential/Traditional-Practices/2010-Aboelsoud-Egyptian-Herbal-Practice-Summary.txt) and [registered coconut-oil beverage trial in Alzheimer disease](Source-Text/2013-NCT01883648-Coconut-Oil-Alzheimer-Trial-Termination.txt).
 
 [Turmeric tablets and circulating geranylgeranoic acid](Source-Text/2010-PMID20490321-Turmeric-Tablet-GGA-Exposure.txt) records a human exposure comparison.
+
+## Original source audit for orange and merged studies
+
+- [Protective effects of Althaea officinalis L. extract in 6-hydroxydopamine-induced hemi-Parkinsonism model: behavioral, biochemical and histochemical evidence](Source-Text/2014-PMID24464760-Round1-Orange-Scope.txt)
+- [Whole sweet orange for constipation in a northwest Pakistan interview survey](Cultural-and-Experiential/Traditional-Practices/2014-PMID24963328-Northwest-Pakistan-Whole-Orange-Constipation.txt)
+- [Sweet orange juice in a Shivalik ethnomedicinal survey](Cultural-and-Experiential/Traditional-Practices/2014-Shivalik-Sweet-Orange-Juice-Constipation.txt)

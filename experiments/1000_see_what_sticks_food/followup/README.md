@@ -601,6 +601,8 @@ Check the abstract-access ledger against the saved ingredient search. The native
 & "$tools/foodexperiment.abstractaudit.exe" "$experiment/build/ingredient-search/ingredient_results.tsv" "$experiment/followup/abstract-access.tsv"
 ```
 
+The November 25 original and orange-source audit resolved 37 exact checks from 32 originals and added three contextual evidence families. The replay leaves 31,554 exact checks across 21,340 source keys and 397 frozen claims. [Originals and verified replay](merged-originals-and-orange-nov25/README.md)
+
 The November 25 nutmeg and carrot review resolved 18 exact checks across 14 originals and validated three open scorecards. The replay leaves 31,591 exact checks across 21,363 source keys. [Original sources and native replay](nutmeg-and-carrot-originals-nov25/README.md)
 
 The November 25 clinical, food and household review resolved 62 exact checks across 11 originals. It added 33 related assessments and verified 37 scorecards. The replay leaves 31,609 exact checks across 21,365 sources. [Original sources and native replay](clinical-food-and-household-scopes-nov25/README.md)

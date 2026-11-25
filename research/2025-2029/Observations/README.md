@@ -677,3 +677,7 @@ The Gorontalo survey retains medicinal use of nutmeg for diarrhea. A new 15-pers
 
 - [Ethnomedicinal survey of plants used for treatment of mild COVID-19-related symptoms in Gorontalo Province, Indonesia](../Cultural-and-Experiential/Traditional-Practices/2025-PMID40330798-Gorontalo-Nutmeg-Diarrhea.txt)
 - [The relationship between carrot juice consumption and constipation in pregnancy](../Source-Text/2026-IJHESS10930-Carrot-Juice-Constipation.txt)
+
+## Orange sources and exposure identity
+
+The ergothioneine paper tests an isolated constituent and uses separate motor readouts in models. It carries no basil or dried-date intervention. The previous period’s phloretin model likewise supplies an isolated compound experiment, and its orange fluorescence is a laboratory label.
