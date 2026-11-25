@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [COMBAT registry outcome extract](Source-Text/2018-ISRCTN76069316-COMBAT-Registry-Outcomes.txt) records the 2018 posting and the public outcome fields for the cranberry powder trial.
+
 The [November 25 internal medicine and archive identity review](../2025-2029/Food-Experiment-Round-1-SGIM-and-Archive-Identities-Nov25.md#2015-2019) links the verified source notes for this period.
 
 The [November 25 proceedings follow-through](../2025-2029/Food-Experiment-Round-1-Proceedings-Contexts-Nov25.md#2015-2019) links the new original scopes and source identity records for this period.

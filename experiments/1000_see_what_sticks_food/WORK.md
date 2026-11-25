@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The November 25 version-specific review resolved five dried-date pain source checks and verified the existing cranberry and green-bean scorecards. The replay leaves 30,817 pairs across 21,052 source keys and 393 claims. The three scorecards remain Unknown. [Original versions and verified replay](followup/date-pain-preprint-originals-nov25/README.md)
+
 Round 1 resolved 238 of 252 checks across 45 source identities, including 88 priority-five pairs. The 14 continuing checks have a dated original-access note. The current queue holds 37,779 exact pairs across 24,092 sources. The sesame oil pain scorecard now tracks nine distinct study families, with its provisional verdict retained. [Priority-five source audit](followup/priority-five-body-replay-nov22/README.md)
 
 Round 1 resolved 531 exact source checks across 40 publications. A 2015 rice bran oil experiment was corrected to animal evidence, and both affected verdicts retain their prior directions and scores. That checkpoint left 38,017 pairs across 24,136 sources. That snapshot verified all 384 documented access gaps. [Grouped originals](followup/large-source-bodies-nov22/README.md)

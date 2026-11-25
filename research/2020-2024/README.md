@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [dried-date pain preprint review](Food-Experiment-Date-Pain-Preprint-Originals.md) links the verified original versions and the separate RECOVER journal article.
+
 The [November 25 internal medicine and archive identity review](../2025-2029/Food-Experiment-Round-1-SGIM-and-Archive-Identities-Nov25.md#2020-2024) links the verified source notes for this period.
 
 The [November 25 proceedings follow-through](../2025-2029/Food-Experiment-Round-1-Proceedings-Contexts-Nov25.md#2020-2024) links the new original scopes and source identity records for this period.
