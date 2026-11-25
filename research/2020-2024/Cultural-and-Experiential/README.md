@@ -87,3 +87,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [Yoruba compilation of plant uses](Local-Knowledge/2021-PMID35024488-Ajao-Yoruba-Plant-Uses.txt).
 - [Society Islands interviews on traditional childhood care](Traditional-Practices/2023-PMID37853377-Society-Islands-Child-Care.txt).
+
+- [Kerala traditional practitioners and Karkataka Taila for tremor and palsy](Traditional-Practices/2022-Deepika-Kerala-Karkataka-Taila.txt).

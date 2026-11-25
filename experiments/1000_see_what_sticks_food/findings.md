@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The November 25 diet and proceedings audit resolved 179 exact checks across 31 original publications. The 92 rechecked scorecards matched the recorded verdicts and anchors. The remaining queue contains 32,036 checks across 21,485 original publications. [Original source audit](followup/diet-and-proceedings-originals-nov25/README.md)
+
 The November 25 diet and ethnobotany review resolved 188 exact source checks across 31 original publications. The 95 rechecked scorecards agreed with the existing verdicts and anchors. The queue contains 32,215 original-source checks across 21,516 publications. [Audit and source notes](followup/diet-and-ethnobotany-originals-nov25/README.md)
 
 The November 25 diet and cultural methods audit resolved 203 exact checks across 29 original publications. All 85 checked scorecards retained their verdicts and anchors. The original queue holds 32,403 checks across 21,547 sources. [Diet, archive and cultural source checks](followup/cultural-methods-and-diet-originals-nov25/README.md)

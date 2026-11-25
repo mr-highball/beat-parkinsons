@@ -27,3 +27,5 @@ Retrieve the original 1938 Hassler disease-pathology paper, the full Denis Hill 
 ## Almond oil source follow-up
 
 - On printed pages 990–991, the discussion of laryngeal tuberculosis describes hoarseness, weakness of the voice, aphonia and voice rest. The almond-oil reference on page 993 occurs in a separate report on injections for hemorrhoids. Scans of all six printed pages were recovered and OCR-checked. The volume shares both search terms because it combines these discussions. The oil was an injection vehicle; vocal loudness after almond-oil ingestion was not evaluated. [Period source](../Food-Experiment-Almond-Oil-Airway-History.md)
+
+The 1938 journal digest on excessive coffee use records subjectively less fatigue alongside rapid tremor and insomnia. The original French report reported by the digest remains open for case details. [1937–1938 source trail](../Source-Text/1937-Privat-de-Fortunie-Belfils-Caffeine-Intoxication-Trail.txt)

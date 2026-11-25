@@ -41,3 +41,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Tomato sauce mentioned in a multi-food change and stiffness discussion](Conversations/2026-Mayo-Connect-Tomato-Sauce-and-Diet-Change.txt)
 
 - [Dragon Boat Festival zongzi materials and preparations](Ceremonial-Accounts/2026-PMID42675503-Zongzi-Culinary-Materials.txt).
+
+- [Kerala traditional hot-processed virgin coconut oil](Traditional-Practices/2026-PMID42217587-Kerala-Urukku-Velichenna.txt).
