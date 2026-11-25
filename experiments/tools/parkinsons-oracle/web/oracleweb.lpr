@@ -1265,6 +1265,14 @@ begin
           LExtraRefs.push(LRefPath);
         end;
       end;
+      if LExtraRefs.Length > 1 then
+        LExtraRefs.sort(
+          function(ALeft, ARight: JSValue): NativeInt
+          begin
+            Result := CompareSourcesByYearDesc(
+              ReferenceFile(JSValueText(ALeft)), '',
+              ReferenceFile(JSValueText(ARight)), '');
+          end);
       if LExtraRefs.Length > 0 then
       begin
         LPage.Add(Caption(nkHeading, 'citations-heading', 'Additional source references'));

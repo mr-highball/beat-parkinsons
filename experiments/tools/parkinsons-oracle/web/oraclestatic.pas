@@ -18,6 +18,7 @@ type
     FModel: TJSObject;
     FManifest: TJSObject;
     FDocuments: TJSArray;
+    FDocKeys: array of Integer;
     FAssetPath: String;
     FWaiting: array of TOracleReply;
     procedure GetAsset(const APath: String; AJson: TOracleReply; ABuffer: TBufferReply = nil);
@@ -554,13 +555,15 @@ var
   var
     LId: Integer;
     LCount: Integer;
+    LIndex: Integer;
+    LEnd: Integer;
+    LMatched: TJSArray;
     LRows: TJSArray;
     LDoc: TJSArray;
     LHit: TJSObject;
     LResult: TJSObject;
   begin
-    LRows := TJSArray.new;
-    LCount := 0;
+    LMatched := TJSArray.new;
     for LId in LCandidates do
     begin
       if (LId < 1) or (LId > FDocuments.Length) then
@@ -570,14 +573,34 @@ var
         Continue;
       if not MatchesCatalogSourceKind(AsText(LDoc[0]), AsText(LDoc[1]), LSourceKind) then
         Continue;
-      if (LCount >= LOffset) and (LRows.Length < LLimit) then
-      begin
-        LHit := TJSObject.new;
-        LHit['path'] := LDoc[0];
-        LHit['period'] := LDoc[1];
-        LRows.push(LHit);
-      end;
-      Inc(LCount);
+      LMatched.push(LId);
+    end;
+    if LMatched.Length > 1 then
+      LMatched.sort(
+        function(ALeft, ARight: JSValue): NativeInt
+        var
+          LA: Integer;
+          LB: Integer;
+        begin
+          LA := NativeInt(ALeft);
+          LB := NativeInt(ARight);
+          Result := FDocKeys[LB - 1] - FDocKeys[LA - 1];
+          if Result = 0 then
+            Result := LA - LB;
+        end);
+    LCount := LMatched.Length;
+    LRows := TJSArray.new;
+    LEnd := LOffset + LLimit;
+    if LEnd > LCount then
+      LEnd := LCount;
+    for LIndex := LOffset to LEnd - 1 do
+    begin
+      LId := NativeInt(LMatched[LIndex]);
+      LDoc := TJSArray(FDocuments[LId - 1]);
+      LHit := TJSObject.new;
+      LHit['path'] := LDoc[0];
+      LHit['period'] := LDoc[1];
+      LRows.push(LHit);
     end;
     LResult := TJSObject.new;
     LResult['total'] := LCount;
@@ -628,6 +651,14 @@ var
           else
           begin
             FDocuments := TJSArray(AData);
+            SetLength(FDocKeys, FDocuments.Length);
+            for LTerm := 0 to FDocuments.Length - 1 do
+            begin
+              FDocKeys[LTerm] := SourceDocumentSortKey(
+                AsText(TJSArray(FDocuments[LTerm])[0]),
+                AsText(TJSArray(FDocuments[LTerm])[1]));
+            end;
+            LTerm := 0;
             ReadNext;
           end;
         end);

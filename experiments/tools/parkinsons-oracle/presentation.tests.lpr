@@ -71,6 +71,45 @@ begin
   Check(GitHubRawURL('https://github.com/example-org/sample-repo', 'abc1234',
     'experiments/file.md') = '',
     'GitHubRawURL keeps raw fetches scoped to research/.');
+  Check(SourceDocumentYear(
+    'research/1595-1599/Cultural-and-Experiential/Traditional-Practices/1597-Langham-Rosemary-Shaking-Claims.txt',
+    '1595-1599') = 1597, 'Extract leading publication year from filename.');
+  Check(SourceDocumentYear(
+    'research/2025-2029/Cultural-and-Experiential/Personal-Reports/2026-PMID41584153-Wroclaw-Lemon-Balm-Survey.txt',
+    '2025-2029') = 2026, 'Extract recent 2026 leading year from filename.');
+  Check(SourceDocumentYear(
+    'research/2000-2004/Source-Text/Trials/NCT00001929.txt', '2000-2004') = 2000,
+    'Do not misread embedded trial digits as a publication year.');
+  Check(SourceDocumentYear(
+    'research/1890-1894/Source-Text/PMC9176509.txt', '1890-1894') = 1890,
+    'Do not misread embedded PMC digits as a publication year.');
+  Check(SourceDocumentYear(
+    'RESEARCH\2025-2029\Food-and-Nutrition.md', '') = 2025,
+    'Fallback to research period segment when period argument is empty.');
+  Check(SourceDocumentYear('research/README.md', '') = 0,
+    'Undated root documents receive year 0.');
+  Check(CompareSourcesByYearDesc(
+    'research/2025-2029/Cultural-and-Experiential/Personal-Reports/2026-Survey.txt', '2025-2029',
+    'research/2025-2029/Source-Text/2025-Trial.txt', '2025-2029') < 0,
+    'Newer 2026 document sorts before 2025 document.');
+  Check(CompareSourcesByYearDesc(
+    'research/2025-2029/Source-Text/2025-Trial.txt', '2025-2029',
+    'research/2025-2029/Food-and-Nutrition.md', '2025-2029') < 0,
+    'Exact-dated 2025 document sorts before undated 2025-2029 summary.');
+  Check(CompareSourcesByYearDesc(
+    'research/2025-2029/Food-and-Nutrition.md', '2025-2029',
+    'research/2020-2024/Source-Text/2024-Study.txt', '2020-2024') < 0,
+    '2025-2029 document sorts before 2024 document.');
+  Check(CompareSourcesByYearDesc(
+    'research/2020-2024/Source-Text/2024-Study.txt', '2020-2024',
+    'research/1595-1599/Cultural-and-Experiential/Traditional-Practices/1597-Langham-Rosemary-Shaking-Claims.txt',
+    '1595-1599') < 0,
+    'Modern 2024 research sorts ahead of 1597 historical source.');
+  Check(CompareSourcesByYearDesc(
+    'research/1595-1599/Cultural-and-Experiential/Traditional-Practices/1597-Langham-Rosemary-Shaking-Claims.txt',
+    '1595-1599',
+    'research/README.md', '') < 0,
+    'Dated historical source sorts ahead of undated root documentation.');
   SetLength(LPaths, 13);
   for LIndex := 0 to 12 do
   begin
