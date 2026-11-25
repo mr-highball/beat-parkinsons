@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [Round 1 PMC follow-through](../2025-2029/Food-Experiment-Round-1-PMC-Followthrough-Nov24.md) lists the dated study notes and original access updates for this period.
+
 The [Round 1 PMC and printed originals](../2025-2029/Food-Experiment-Round-1-PMC-and-Printed-Nov24.md) lists the source summaries and exact claim scopes filed in this period.
 
 [Round 1 Jambi, ginger and grape original checks](Food-Experiment-Round-1-Jambi-Ginger-and-Grape-Nov24.md) links 60 authenticated original sources and the evidence by preparation and outcome.

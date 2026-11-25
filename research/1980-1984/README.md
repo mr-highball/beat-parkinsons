@@ -1,5 +1,7 @@
 # 1980-1984
 
+The [Round 1 PMC follow-through](../2025-2029/Food-Experiment-Round-1-PMC-Followthrough-Nov24.md) lists the dated study notes and original access updates for this period.
+
 - [Chum salmon pituitary peptide isolation](Source-Text/1983-PMID6621686-Chum-Salmon-Pituitary-Peptide.txt). The source gives biochemical provenance for the later receptor literature.
 
 The [raw-fig and resting tremor review](../2025-2029/Food-Experiment-Fig-Rest-Tremor-Originals-Nov22.md) links original source summaries and access notes filed in this period.

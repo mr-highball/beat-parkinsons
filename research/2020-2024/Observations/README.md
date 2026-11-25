@@ -1,5 +1,7 @@
 # Observations for 2020-2024
 
+[Coffee illustrations and measured fatigue outcomes](2022-Coffee-and-Fatigue-Outcome-Scope.md) traces the editorial and vegetable-cohort evidence at its measured scope.
+
 [Mangiferin across behavioral models](2022-Mangiferin-Model-Comparisons.md) follows the relevant preparation and measurement distinctions.
 
 [Orange pomace outcomes and bowel habits before diagnosis](2024-Orange-Pomace-Endpoints-and-Constipation-Risk.md) compares the 2022 crossover with the prior beverage study, alongside the 2024 cohort.

@@ -1,6 +1,8 @@
 ## Findings and limits
 
-The PMC and printed-original audit resolved 87 exact checks across 60 publications, added 14 related assessments and revalidated 24 scorecards. The original queue holds 34,462 checks across 21,861 publications, including 403 mapped access holds. [Scope and source coverage](followup/priority-five-pmc-and-printed-nov24/README.md)
+The remaining PMC review retired 60 of 77 exact checks across 57 publications, added one related assessment, and revalidated 26 scorecards. The queue holds 34,402 checks across 21,815 publications, with 400 mapped access holds. [Source scope and original access](followup/priority-five-remaining-pmc-nov24/README.md)
+
+The PMC and printed-original audit resolved 87 exact checks across 60 publications, added 14 related assessments and revalidated 24 scorecards. That replay left 34,462 checks across 21,861 publications, including 403 mapped access holds. [Scope and source coverage](followup/priority-five-pmc-and-printed-nov24/README.md)
 
 The Jambi cultural, ginger, grape-seed and clinical audit resolved 98 exact checks across 60 originals, added 20 assessments and revalidated 38 scorecards. That replay left 34,549 checks across 21,921 publications, including 403 mapped access holds. [Source packet and scorecard checks](followup/priority-five-mid2026-clinical-nov24/README.md)
 

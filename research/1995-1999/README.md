@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [Round 1 PMC follow-through](../2025-2029/Food-Experiment-Round-1-PMC-Followthrough-Nov24.md) lists the dated study notes and original access updates for this period.
+
 The [blinded short-deprivation study](Source-Text/1997-PMID9402612-Blinded-Caffeine-and-Brief-Deprivation.txt) and [caffeine reinforcement crossover](Source-Text/1998-PMID9784073-Caffeine-Dependence-and-Fatigue.txt) document different withdrawal conditions and separate fatigue-measure access gaps.
 
 The [1996 Ksheerabala formulation record](Cultural-and-Experiential/Traditional-Practices/1996-PMID22556766-Ksheerabala-Formulation.txt) distinguishes a traditional mixed preparation from isolated sesame oil.
