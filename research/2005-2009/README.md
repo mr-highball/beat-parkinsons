@@ -496,3 +496,5 @@ See the [Round 1 curcumin and original-source audit](../2025-2029/Food-Experimen
 - [Curcumin and turmeric identity](Source-Text/2007-PMID17900536-Curcumin-and-Turmeric-Identity.txt) and [composition in 11 certified saffron samples](Source-Text/2007-DOI-FoodChem-Saffron-Eleven-Samples.txt).
 
 [Seeram’s 2008 beverage assays and pomegranate metabolite study](../2025-2029/Food-Experiment-Round-1-UEG-and-Food-Exposures-Nov25.md) have distinct source records.
+
+The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedings-Historical-Scope.txt) document odor tests and tea constituents. The [Sies and Brooker case](Source-Text/2005-PMID15836886-Sies-Brooker-Analysis-of-Oil-Flush-Material.txt) tests a visual interpretation from an oil-based remedy.

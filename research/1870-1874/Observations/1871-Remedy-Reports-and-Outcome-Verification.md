@@ -1,0 +1,7 @@
+# Reported kitchen remedies and source verification
+
+The December 1871 Georgia Medical Companion reprinted a reporter’s account of taking olive oil in a multi-part remedy and observing material assumed to be biliary calculi. The same collection mentions cinnamon oil and aniseed essence in different combinations and barley water as one of several supportive foods. The issue records historical use and its reported indications. The claimed identity of the material rests on appearance. [Historical account](../Cultural-and-Experiential/Local-Knowledge/1871-PMID36021001-Extracts-and-Gleanings-Kitchen-Remedies.txt)
+
+A separate clinical and laboratory report in 2005 compared soft fatty material passed after another olive oil regimen with confirmed cholesterol stones removed later. The analysis gives a documented alternative explanation for a visual interpretation while leaving the historical specimen unidentified. This is a comparison across biliary reports without an efficacy finding about Parkinson symptoms. [Laboratory case](../../2005-2009/Source-Text/2005-PMID15836886-Sies-Brooker-Analysis-of-Oil-Flush-Material.txt)
+
+The 1865–1869 bucket documents bedside efforts to distinguish Parkinson signs by observing tremor and slowness. The 1871 miscellany shows why a visual identification in a remedy report still requires corroboration specific to the claimed outcome. [Observations for 1865–1869](../../1865-1869/Observations/README.md)

@@ -1,5 +1,7 @@
 # Observations for 1870-1874
 
+[Remedy reports and outcome verification](1871-Remedy-Reports-and-Outcome-Verification.md) compares the 1871 remedy anecdote with a separate clinical laboratory case.
+
 ## Major observations
 
 - The Salpêtrière lectures make rigidity and slowness more explicit as separable clinical findings. Jones’s cases show the breadth of contemporary usage of the term. [Clinical sources](../Clinical-and-Diagnosis.md)

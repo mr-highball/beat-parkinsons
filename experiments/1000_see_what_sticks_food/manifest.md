@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The November 25 proceedings and folio review closed 34 exact source checks across five original records. The replay leaves 30,430 checks across 21,007 source keys and 388 claims. Twenty assessed claims retain their existing verdicts and score anchors. [Originals and replay](followup/priority-originals-and-saffron-citations-nov25/README.md)
+
 The November 25 structured-original review closed 109 exact source checks, including 42 related scopes and 67 exclusions. It linked three follow-through reports for dietary fatigue and an olive-oil carrier, then validated 38 scorecards with unchanged verdicts and anchors. The replay leaves 30,464 exact checks across 21,012 source keys and 389 frozen claims. [Originals, findings and replay](followup/structured-frailty-balance-trails-nov25/README.md)
 
 The November 25 priority review recovered two previously pending older originals, linked the Lang saffron sleep publication to its registry and revalidated four scorecards. The packet adds two conversational sources, a systematic review and a clinical guideline. The exact replay leaves 30,573 checks across 21,030 source keys and 389 frozen claims, including eight priority-three checks still awaiting full original access. [Original sources, boundaries and replay](followup/priority-review-trails-nov25/README.md)

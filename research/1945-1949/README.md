@@ -35,3 +35,5 @@ January 1, 1945 through December 31, 1949.
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 See the [Round 1 tea, constipation and original-source review](../2025-2029/Food-Experiment-Round-1-Tea-Constipation-Nov24.md) for the dated source records and scope notes.
+
+The [Indian Medical Gazette volume index](Source-Text/1945-PMC5218258-Round1-Proceedings-Historical-Scope.txt) locates medicinal formulations and distinguishes topical and injected exposures from the food claims.

@@ -749,3 +749,5 @@ The [2011 Wang rosmarinic acid model](Source-Text/2011-PMID22205146-Wang-Rosmari
 ## Round 1 original proceedings scope
 
 The [2014 multiple sclerosis oral presentations](Source-Text/2014-PMC4518813-Round1-Structured-Scope.txt) document cod liver oil as an adjustment variable in an environmental risk abstract. The exposure and outcome leave the cooked cod and fatigue claim open.
+
+The [2010 ozonetherapy chapter](Source-Text/2010-PMC7498916-Round1-Proceedings-Historical-Scope.txt) provides preparation-specific sunflower oil and egg contexts that do not measure the frozen Parkinson outcomes.
