@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The November 25 archive audit retired 30 original-depth checks across 29 sources and retained two related leads. Twelve scorecards retained their verdicts and anchors, with two CRANMOOD family records corrected to the primary trial design. The Round 1 queue holds 34,333 checks across 21,751 source groups. [Source scopes and trial corrections](followup/staged-journal-and-repository-nov25/README.md)
+
 The staged journal and repository audit accounted for all 57 scoped pairs, resolving nine and recording 48 at their verified access depth. Sixteen Oracle scorecard validations confirmed the published decisions. The Round 1 queue holds 34,363 checks across 21,780 source groups. [Originals and remaining access](followup/staged-journal-and-repository-nov25/README.md)
 
 The alternate-originals pass resolved nine exact source checks and retained seven abstract-depth holds. The original asparagus crossover gives a minimal easing signal for claim 0837, opposed to the frozen wording, with substantial preparation and population limits. That replay left 34,372 checks across 21,789 source groups. [Originals, reviewed figure and scorecard](followup/priority-five-alternate-originals-nov25/README.md)
