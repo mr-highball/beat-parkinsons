@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 25 dietary cohort and ginger pass resolved 53 checks, including 12 prior access holds and five raw fig source checks. The remaining queue has 31,808 exact checks. [Original sources and queue replay](../dietary-cohorts-and-ginger-nov25/README.md)
+
 The November 25 medication and constituent review resolved 114 exact checks, including 39 related contexts and 75 scope mismatches. Five staged collections still need original access or identity validation for 30 exact checks. [Source scopes and queue replay](../medication-and-constituent-originals-nov25/README.md)
 
 The November 25 priority and archive pass resolved 61 checks at original depth. The baseline access map retains 448 open rows and one verified resolution. [Original scopes, access and replay](../priority-and-printed-indexes-nov25/README.md)
