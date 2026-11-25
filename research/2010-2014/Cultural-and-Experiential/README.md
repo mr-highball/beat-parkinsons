@@ -1,5 +1,7 @@
 # Cultural and experiential accounts, 2010-2014
 
+[Seedless green bean pod infusion in the European traditional-use assessment](Traditional-Practices/2014-EMA-Seedless-Green-Bean-Pod-Urinary-Use.txt), with the preparation and historical urinary indication.
+
 [Jambi 2012 field-survey excerpt](Traditional-Practices/2012-RISTOJA-Jambi-Constipation-Field-Excerpt.txt) records a customary constipation preparation without a verified botanical identification.
 
 - [Reported analgesic and postpartum-pain uses of date fruit in Spanish literature](Traditional-Practices/2014-Rivera-Date-Fruit-and-Pain-Spain.txt). The drying state and patient outcomes remain open.

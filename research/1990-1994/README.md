@@ -1,5 +1,7 @@
 # 1990-1994
 
+The [November 25 printed and dietary follow-through](../2025-2029/Food-Experiment-Round-1-Printed-Originals-and-Green-Beans-Nov25.md) indexes the dated evidence for this period.
+
 The [Round 1 PMC follow-through](../2025-2029/Food-Experiment-Round-1-PMC-Followthrough-Nov24.md) lists the dated study notes and original access updates for this period.
 
 The [Round 1 PMC and printed originals](../2025-2029/Food-Experiment-Round-1-PMC-and-Printed-Nov24.md) lists the source summaries and exact claim scopes filed in this period.

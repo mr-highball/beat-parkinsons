@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The November 25 follow-through resolved two priority-four original reads and mapped 449 remaining access holds. The exact queue holds 34,331 pairs across 21,749 sources. [Original records and cultural validation](../priority-four-and-beans-nov25/README.md)
+
 The November 25 archived source replay retired 30 verified original-depth checks. All eight priority-three original-access gaps remain queued. The queue holds 34,333 checks across 21,751 source groups. [Dated archive review](../staged-journal-and-repository-nov25/README.md)
 
 The journal and repository replay retired nine verified original-depth checks and preserves 48 scoped original-access holds. The queue holds 34,363 checks across 21,780 source groups. [Dated archive review](../staged-journal-and-repository-nov25/README.md)
