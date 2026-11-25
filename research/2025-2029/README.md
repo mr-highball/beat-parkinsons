@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [November 25 review of thirteen originals](Food-Experiment-Round-1-Thirteen-Original-Collections-Nov25.md) indexes the study records and grape-powder retraction audit.
+
 The [November 25 nine-original review](Food-Experiment-Round-1-Nine-Original-Collections-Nov25.md) indexes nine original bodies and the spice and cranberry study trails.
 
 The [November 25 original collection review](Food-Experiment-Round-1-Eleven-Original-Collections-Nov25.md) indexes 11 original bodies, two clinical or observational companion articles, and a [dated Ayurvedic narrative](Cultural-and-Experiential/Traditional-Practices/2026-IANCON-Ayurvedic-Turmeric-Parkinson-Context.txt).

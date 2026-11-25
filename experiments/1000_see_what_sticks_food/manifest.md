@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The November 25 review of thirteen originals resolved 148 exact checks, including 75 related contexts and 73 exclusions. Eighty-three scorecards retained their verdicts and anchors after linked study and retraction checks. The exact queue holds 33,738 pairs across 21,708 sources. [Scope and source trail](followup/thirteen-collection-originals-nov25/README.md)
+
 The November 25 nine-original review resolved 122 checks, including 37 related contexts and 85 exclusions. Seventy-one scorecards retained their verdicts and anchors after four related additions. The exact queue holds 33,886 pairs across 21,721 sources. [Original scopes and follow-up](followup/nine-collection-originals-nov25/README.md)
 
 The November 25 original-collection review resolved 171 exact checks, including 74 related contexts and 97 exclusions. Ninety-nine revalidated scorecards preserved their published verdicts and anchors. The queue holds 34,008 pairs across 21,730 sources. [Original scopes and study trails](followup/eleven-collection-originals-nov25/README.md)

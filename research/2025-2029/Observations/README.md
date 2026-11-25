@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+[Grape powder, anxiety outcomes and a later retraction](2025-Grape-Powder-Retraction-and-Anxiety-Measurements.md) distinguishes retracted findings from separate anxiety and cognition comparisons.
+
 [Turmeric in a practice account and basil seed mucilage](2026-Turmeric-Context-and-Basil-Seed-Mucilage.md) compares the current period's cultural and laboratory findings with earlier preparation-specific evidence.
 
 [Saffron endpoints and geraniol sedation](2026-Saffron-Endpoints-and-Geraniol-Sedation.md) tracks a sensitivity analysis and endpoints across animal and human studies.
