@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The November 25 nine-original review resolved 122 checks, including 37 related contexts and 85 exclusions. Seventy-one scorecards retained their verdicts and anchors after four related additions. The exact queue holds 33,886 pairs across 21,721 sources. [Original scopes and follow-up](followup/nine-collection-originals-nov25/README.md)
+
 The November 25 original-collection review resolved 171 exact checks, including 74 related contexts and 97 exclusions. Ninety-nine revalidated scorecards preserved their published verdicts and anchors. The queue holds 34,008 pairs across 21,730 sources. [Original scopes and study trails](followup/eleven-collection-originals-nov25/README.md)
 
 The November 25 EASD and Nutrition review retired 53 exact source checks, including 42 related contexts and 11 exclusions. Forty-two scorecards retained their published verdicts and anchors. The queue holds 34,179 pairs across 21,741 sources. [Original scopes and trial lineage](followup/easd-and-nutrition-originals-nov25/README.md)
