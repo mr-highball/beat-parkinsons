@@ -658,3 +658,5 @@ The 2026 review uses plant-level group labels. Its public references identify ph
 - [Tomato sauce mentioned in a multi-food change and stiffness discussion](../Cultural-and-Experiential/Conversations/2026-Mayo-Connect-Tomato-Sauce-and-Diet-Change.txt)
 
 - [Sweet basil exposure, intestinal transit and group differences](Sweet-Basil-Transit-and-Cultural-Uses.md).
+
+The 2025 TRP review's cited piperine analysis is a secondary reuse of the earlier piperine trial. The Siddha neuroscience review's topical sesame-oil reference traces to a prior-period stroke case. Separate accessions preserve the review and original-case boundaries. [Round 1 source trail](../Food-Experiment-Round-1-Diet-and-Clinical-Contexts-Nov25.md)

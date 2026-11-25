@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The latest November 25 audit resolved 234 exact checks in 26 original publications and revalidated 102 affected scorecards. The queue holds 33,130 pairs across 21,644 sources. The updated source notes clarify ingredient attribution and cohort reuse. [Diet, clinical and traditional context audit](followup/staged-diet-clinical-context-nov25/README.md)
+
 The latest November 25 review resolved 82 checks across nine originals, including ten from a recovered 295-page WHO report. Sixty scorecards passed with their current verdicts. The exact queue now holds 33,364 pairs across 21,670 sources. [Scanned originals and Turkish plant-use context](followup/eight-originals-and-archive-checks-nov25/README.md)
 
 The preceding November 25 pass resolved 180 original claim–source checks in 18 publications, with 132 related contexts and 48 exclusions. A sweet basil whole-animal transit comparison now supplies a minimal easing lean for claim 0662, against the frozen worsening hypothesis. Clinical Parkinson outcomes, the culinary preparation and direct constipation measures remain open. The exact queue holds 33,446 pairs across 21,679 sources. [Audit and basil scorecard](followup/eighteen-staged-originals-nov25/README.md)

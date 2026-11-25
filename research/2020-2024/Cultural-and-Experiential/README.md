@@ -77,3 +77,6 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Raw tomato intake and conflicting reports of joint symptoms](Conversations/2024-Tomato-Junction-Raw-Tomato-and-Joint-Stiffness.txt)
 
 - [Agusan Manobo sweet basil decoction and soup indications](Traditional-Practices/2020-PMID32138749-Manobo-Sweet-Basil-Bowel-Practice.txt).
+
+- [Thai-style Mediterranean adaptation and familiar foods](Local-Knowledge/2023-PMID37334427-Thai-Mediterranean-Local-Foods.txt).
+- [Thirisadham traditional three-spice formulation](Traditional-Practices/2023-JAHM-Thirisadham-Three-Spice-Tradition.txt).

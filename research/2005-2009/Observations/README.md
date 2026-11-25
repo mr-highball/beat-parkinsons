@@ -317,3 +317,5 @@ The 12-year [hospital record review](../Source-Text/2005-PMID15814256-Oje-Latex-
 - [Scope of the Lucania fig and linden interviews](2005-Lucania-Fig-and-Linden-Source-Boundary.md).
 
 The preceding Gönen abstract emphasized aggregate indications. The Kırklareli abstract also distinguishes wild and cultivated plants and names lemon balm among frequent uses, while the plant's individual symptom record remains open. [Kırklareli](../Cultural-and-Experiential/Traditional-Practices/2006-PMID17257791-Kirklareli-Lemon-Balm-Survey-Abstract.txt) · [Gönen](../../2000-2004/Cultural-and-Experiential/Traditional-Practices/2001-PMID11395255-Gonen-Ethnobotany-Abstract.txt)
+
+The Indo-Mediterranean cardiovascular trial from the prior period now has a dated record of its 2005 expression of concern. Later regional Parkinson diet proposals cite the trial as a pattern example. Its outcome and attribution stay at the trial's original scope. [Editorial notice](../Source-Text/2005-PMID16054927-Indo-Mediterranean-Trial-Editorial-Notice.txt)
