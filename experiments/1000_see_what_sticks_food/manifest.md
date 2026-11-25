@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The November 25 UEG 2021 audit verified the complete poster section and resolved 25 exact checks. It added 10 related Oracle assessments and revalidated 25 scorecards. The replay leaves 31,671 exact checks across 21,376 sources. [Original source and verified replay](followup/ueg-2021-original-poster-audit-nov25/README.md)
+
 The November 25 food exposure review resolved 47 exact checks across 17 originals, added 21 related assessments and revalidated 25 scorecards. Its replay leaves 31,696 exact checks across 21,377 sources, including 2,338 checks for raw fig and rest tremor. Thirty-nine UEG poster checks remain open at collection level. [Verified sources and review packet](followup/ueg-and-food-exposures-nov25/README.md)
 
 The November 25 fig and rest-tremor review resolved 21 exact checks and checked the primary species behind a later paralysis citation. The original Bangladesh entry names sacred fig. [Review and replay](followup/fig-rest-tremor-new-originals-nov25/README.md)

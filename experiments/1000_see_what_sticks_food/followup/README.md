@@ -601,4 +601,6 @@ Check the abstract-access ledger against the saved ingredient search. The native
 & "$tools/foodexperiment.abstractaudit.exe" "$experiment/build/ingredient-search/ingredient_results.tsv" "$experiment/followup/abstract-access.tsv"
 ```
 
+The November 25 UEG 2021 audit verified the complete poster section and resolved 25 exact checks. It added 10 related Oracle assessments and revalidated 25 scorecards. The replay leaves 31,671 exact checks across 21,376 sources. [Original source and verified replay](ueg-2021-original-poster-audit-nov25/README.md)
+
 [November 25 original articles, food exposures and UEG access](ueg-and-food-exposures-nov25/README.md) adds 47 exact source checks and verifies 25 scorecards. The native replay has 31,696 queued originals, including 2,338 for raw fig and rest tremor. Round 1 has 75 directional verdicts and 925 open claims.

@@ -1132,3 +1132,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Chinese cinnamon-twig formula guidance and other Round 1 context checks](../2025-2029/Food-Experiment-Round-1-Movement-and-Traditional-Contexts-Nov25.md).
 
 [The 2023 annual sage cell study](Source-Text/2023-PMID36768200-Salvia-Plebeia-Myotubes.txt) records the species and atrophy endpoints.
+
+[UEG 2021 original poster audit](Food-Experiment-Round-1-UEG-2021-Original-Posters.md) links the full-section screen to the preparation and cohort boundaries.

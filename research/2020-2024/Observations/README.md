@@ -766,3 +766,5 @@ The Karkataka Taila field description gives tremor and palsy as local purposes. 
 - [Ginger, Eucommia bark and pain attribution](2024-Eucommia-Ginger-Preparation-and-Pain.md).
 
 - [Common fig identity and traditional preparations](2024-Fig-Species-and-Traditional-Fruit-Use.md).
+
+[Oats, gluten challenge and duplicate poster reports](2023-Oats-Gluten-Challenge-and-Poster-Duplicates.md) traces the shared study families.
