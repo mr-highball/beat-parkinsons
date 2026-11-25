@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The November 24 sage, coffee and dietary audit resolved 100 checks across 60 originals. The current replay leaves 35,193 checks across 22,341 publications. [Originals and reconciled scopes](../priority-five-date-and-motor-nov24/README.md)
+The November 24 coffee, lemon balm and clinical audit resolved 102 checks across 60 originals. The current replay leaves 35,091 checks across 22,281 publications. [Originals and reconciled scopes](../priority-five-mid2024-clinical-nov24/README.md)
+
+The November 24 sage, coffee and dietary audit resolved 100 checks across 60 originals. That replay left 35,193 checks across 22,341 publications. [Originals and reconciled scopes](../priority-five-date-and-motor-nov24/README.md)
 
 The November 24 ginger, fig and neurological audit resolved 79 checks across 60 originals. That replay left 35,293 checks across 22,401 publications. [Originals and reconciled scopes](../priority-five-date-and-neurological-nov24/README.md)
 

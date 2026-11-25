@@ -1,0 +1,5 @@
+# Coffee fatigue and rest tremor measurement
+
+The [multiple sclerosis coffee cohort](../Source-Text/PMC7468779.txt) found no clear Fatigue Severity Scale difference across four coffee-intake groups. Subjective attention and fatigue scales answer distinct questions. Its [later evidence review](../Source-Text/2024-PMID39460478-Coffee-Caffeine-and-Multiple-Sclerosis-Fatigue-Review.txt) identifies the same cohort. The [earlier filtered-coffee trial](../../2015-2019/Source-Text/PMC6213082.txt) assigned coffee and measured acute mental fatigue in healthy people. The populations, assignment and scales limit cross-study comparisons.
+
+The [Parkinson stimulation cohort](../Source-Text/2024-PMID38975093-Parkinson-Rest-Tremor-in-Stimulation-Cohorts.txt) separates rest and postural tremor and reports a clearer rest-tremor change in one cohort. The [earlier tremor circuit report](../../2010-2014/Source-Text/PMC4240284.txt) also separates tremor phenotypes. Neither compares an assigned culinary exposure.

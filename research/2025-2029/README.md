@@ -1,5 +1,7 @@
 # 2025-2029
 
+- [Caffeine and lemon balm preparation limits](Observations/2025-2026-Caffeine-and-Lemon-Balm-Exposure-Boundaries.md).
+
 - [Coffee and tiredness during medication wearing off](Cultural-and-Experiential/Conversations/2025-Reddit-Coffee-and-Wearing-Off-Tiredness.txt) and [variable coffee and energy accounts](Cultural-and-Experiential/Conversations/2026-Reddit-Coffee-and-Variable-Energy-Reports.txt).
 
 - [Chitrakoot field inventory of fig fruit use for constipation](Cultural-and-Experiential/Traditional-Practices/2026-PMID42613621-Chitrakoot-Fig-Fruit-and-Constipation.txt).

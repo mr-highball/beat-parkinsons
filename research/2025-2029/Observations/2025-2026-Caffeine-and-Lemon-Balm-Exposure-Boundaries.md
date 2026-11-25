@@ -1,0 +1,5 @@
+# Caffeine and lemon balm preparation limits
+
+The [multiple sclerosis caffeine trial](../Source-Text/2025-PMID41406935-Oral-Caffeine-and-MS-Fatigue.txt) reports lower primary fatigue scores under isolated caffeine. The [earlier coffee cohort](../../2020-2024/Source-Text/PMC7468779.txt) found no clear fatigue difference by coffee intake. One assigned a compound and the other observed a beverage. Differences do not establish an equivalent effect for brewed coffee.
+
+The [new lemon balm preparation review](../Source-Text/2026-Lemon-Balm-Preparation-and-Evidence-Review.txt) calculated an unadjusted BDI-II change contrast from the earlier [diabetes trial](../../2020-2024/Source-Text/PMC10152712.txt). The interval uses the 44 available participant outcomes. The original's adjusted result and the review's crude interval answer different statistical questions. The eight-week table caption and 12-week methods description remain on record. The newer review supplies no new exposure to brewed tea or a separate Parkinson cohort.

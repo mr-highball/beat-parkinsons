@@ -21,7 +21,9 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
-The sage, coffee and dietary audit resolved 100 exact checks, added 31 assessments and revalidated 38 scorecards. The saffron combination original distinguishes depression change within arms from the separately marked cognition and stress contrasts. The Spanish sage record preserves customary topical preparations without a fall comparison. The current queue holds 35,193 checks across 22,341 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-date-and-motor-nov24/README.md)
+The coffee, lemon balm and clinical audit resolved 102 exact checks, added 36 assessments and revalidated 42 scorecards. The original multiple sclerosis cohort separates coffee intake from the later isolated caffeine trial. The lemon balm review reuses prior participant outcomes. The current queue holds 35,091 checks across 22,281 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-mid2024-clinical-nov24/README.md)
+
+The sage, coffee and dietary audit resolved 100 exact checks, added 31 assessments and revalidated 38 scorecards. The saffron combination original distinguishes depression change within arms from the separately marked cognition and stress contrasts. The Spanish sage record preserves customary topical preparations without a fall comparison. That replay left 35,193 checks across 22,341 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-date-and-motor-nov24/README.md)
 
 The ginger, fig and neurological audit resolved 79 exact checks, added 19 related assessments and revalidated 26 scorecards. The new ginger original trials in mice report preparation-dependent changes in provoked pain models. Raw fig rest tremor remains open. That replay left 35,293 checks across 22,401 publications, including 403 mapped access holds. [Source packet and checked scorecards](followup/priority-five-date-and-neurological-nov24/README.md)
 
