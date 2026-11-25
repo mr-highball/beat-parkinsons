@@ -45,3 +45,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Kerala traditional hot-processed virgin coconut oil](Traditional-Practices/2026-PMID42217587-Kerala-Urukku-Velichenna.txt).
 
 - [Public levodopa discussion with distinct nausea and movement reports](Conversations/2026-Reddit-Levodopa-Ginger-and-Nausea-Context.txt).
+
+[Boyle manuscript anise and nutmeg sleep entries](Traditional-Practices/2026-Wellcome-MS1340-Anise-Nutmeg-Sleep.txt) and the [separate oral mixed-spice remedy for loose stools](Traditional-Practices/2026-Wellcome-MS1340-Nutmeg-Spice-Looseness.txt) preserve the original routes and intended outcomes.

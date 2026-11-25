@@ -1046,3 +1046,5 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 [Round 1 original articles, food exposures and UEG access](Food-Experiment-Round-1-UEG-and-Food-Exposures-Nov25.md) documents the companion source trail and remaining proceedings checks.
 
 [Cross-period beverage and constituent observations](Observations/2026-Beverage-Citation-and-Exposure-Scopes.md) compare chemical, absorption and clinical mood measures.
+
+[Round 1 clinical food and household source audit](Food-Experiment-Round-1-Clinical-Food-and-Household-Scopes-Nov25.md) links the current original texts and historical evidence.

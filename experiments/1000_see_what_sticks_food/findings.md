@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The November 25 clinical, food and household review resolved 62 exact checks across 11 originals. It added 33 related assessments and verified 37 scorecards. The replay leaves 31,609 exact checks across 21,365 sources. [Original sources and native replay](followup/clinical-food-and-household-scopes-nov25/README.md)
+
 The November 25 UEG 2021 audit verified the complete poster section and resolved 25 exact checks. It added 10 related Oracle assessments and revalidated 25 scorecards. The replay leaves 31,671 exact checks across 21,376 sources. [Original source and verified replay](followup/ueg-2021-original-poster-audit-nov25/README.md)
 
 The November 25 food exposure review resolved 47 exact checks across 17 originals, added 21 related assessments and revalidated 25 scorecards. Its replay leaves 31,696 exact checks across 21,377 sources, including 2,338 checks for raw fig and rest tremor. Thirty-nine UEG poster checks remain open at collection level. [Verified sources and review packet](followup/ueg-and-food-exposures-nov25/README.md)

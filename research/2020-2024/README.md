@@ -1134,3 +1134,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 [The 2023 annual sage cell study](Source-Text/2023-PMID36768200-Salvia-Plebeia-Myotubes.txt) records the species and atrophy endpoints.
 
 [UEG 2021 original poster audit](Food-Experiment-Round-1-UEG-2021-Original-Posters.md) links the full-section screen to the preparation and cohort boundaries.
+
+[Carrot RG-I fermentation](Source-Text/2020-PMID32610452-Carrot-RG-I-Fermentation.txt) and the [orange fiber twin pilot](Source-Text/2022-PMID35533274-Orange-Fiber-Twin-Pilot.txt) distinguish laboratory and human biomarker endpoints.

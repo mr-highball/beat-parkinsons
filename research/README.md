@@ -1,6 +1,6 @@
 # Parkinson’s research archive
 
-Original cultural-source context before 1865 is accessioned in inspected periods only: [1595–1599](1595-1599/README.md) and [1660–1664](1660-1664/README.md). These do not imply complete intervening coverage or verified historical Parkinson diagnoses. The original continuous 1865-onward series is preserved.
+Historical cultural sources are organized by their verified document dates. The indexed periods are [1595–1599](1595-1599/README.md), [1660–1664](1660-1664/README.md), [1675–1679](1675-1679/README.md), [1800–1804](1800-1804/README.md), [1805–1809](1805-1809/README.md), [1815–1819](1815-1819/README.md).
 
 The initial collection snapshot is **November 11, 2026**. Collection and evidence review continue in the [experiment work record](../experiments/1000_see_what_sticks_food/WORK.md). Each period covers five calendar years; the active [2025–2029 bucket](2025-2029/README.md) is partial.
 
