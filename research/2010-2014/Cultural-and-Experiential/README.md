@@ -42,3 +42,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [Edremit lemon balm and spearmint](Traditional-Practices/2011-PMID22193175-Edremit-Lemon-Balm-and-Spearmint.txt).
 - [Elazığ culinary plant indications](Traditional-Practices/2014-PMID24793217-Elazig-Culinary-Plant-Indications.txt).
+
+- [Reported customary combinations with black pepper, cinnamon, clove, cumin and onion](Traditional-Practices/2014-PMID24822061-Medicinal-Food-Spice-Accounts.txt).

@@ -652,3 +652,5 @@ The 2015 trauma trial compared topical sesame oil and massage with routine care.
 - [Saffron citation, dietary oil cohort and clove events](2019-Saffranal-Citation-Oil-Cohort-and-Clove-Events.md)
 
 - [Food exposure, source membership and traditional dietary guidance](Food-Exposure-and-Practitioner-Context.md).
+
+Fly locomotion after saffron extract or crocin is distinct from separately rated human rigidity. The green-tea extract trial assessed microbiota and body composition. Both add controlled experimental context to earlier food composition or use descriptions, with the mapped Parkinson outcomes still open. [Saffron extract and crocin](../Source-Text/2015-PMID26705857-Saffron-Extract-and-Crocin-in-Flies.txt) · [Green-tea extract RCT](../Source-Text/2016-DOI-PLOS-Green-Tea-Extract-and-Microbiota.txt)

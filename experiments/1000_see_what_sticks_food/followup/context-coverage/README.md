@@ -1,6 +1,8 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
-The latest November 25 replay resolved 234 checks across 26 original publications. The exact queue holds 33,130 pairs across 21,644 sources and all 449 previously mapped access holds remain queued. [Exact scopes and replay verification](../staged-diet-clinical-context-nov25/README.md)
+The latest November 25 replay resolved 184 checks in 23 publications, including eight checked against 64 original pharmacology scans. The exact queue holds 32,946 pairs across 21,621 sources. [Exact scopes and native review](../staged-collections-and-food-scopes-nov25/README.md)
+
+The preceding November 25 replay resolved 234 checks across 26 original publications. The exact queue holds 33,130 pairs across 21,644 sources and all 449 previously mapped access holds remain queued. [Exact scopes and replay verification](../staged-diet-clinical-context-nov25/README.md)
 
 The latest November 25 source replay resolved 82 checks in nine originals, including the ten previously queued in the scanned WHO report. The exact queue holds 33,364 pairs across 21,670 sources. [Replay and printed-original scope](../eight-originals-and-archive-checks-nov25/README.md)
 

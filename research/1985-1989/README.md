@@ -124,3 +124,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [PMID:2690730 · claim 0305 · full text](Source-Text/1989-PMID2690730-Priority-Four-Original-Scope.txt).
 
 - [Round 1 caffeine, tremor and fish source audit](../2025-2029/Food-Experiment-Round-1-Caffeine-Tremor-and-Fish-Nov24.md)
+
+- [British Pharmacological Society proceedings from November 1988](Source-Text/1988-PMID3207568-BPS-Clinical-Pharmacology-Proceedings-Food-Scopes.txt), screened across 64 original printed pages.

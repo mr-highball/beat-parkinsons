@@ -1120,3 +1120,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Original dietary antioxidant reviews and scope checks](../2025-2029/Food-Experiment-Round-1-Historical-Scans-and-Cultural-Records-Nov25.md).
 
 - [Round 1 diet and clinical contexts](../2025-2029/Food-Experiment-Round-1-Diet-and-Clinical-Contexts-Nov25.md), including the [curcumin dyspepsia primary abstract](Source-Text/2021-PMID33861441-Curcumin-Functional-Dyspepsia.txt), [Siddha stroke primary abstract](Source-Text/2024-GJRMS-Siddha-Patchavaatham-Post-Stroke-Case.txt), [cardamom-oil rat study](Source-Text/2023-PMID36781058-Cardamom-Oil-Reserpine-Rat-Behavior.txt) and [cultural records](Cultural-and-Experiential/README.md).
+
+- [Round 1 printed pharmacology and food-context audit](../2025-2029/Food-Experiment-Round-1-Printed-Pharmacology-and-Food-Scopes-Nov25.md), including stroke, implementation and movement-disorder proceedings.

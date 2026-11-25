@@ -708,3 +708,5 @@ The [2011 Wang rosmarinic acid model](Source-Text/2011-PMID22205146-Wang-Rosmari
 - [Dominican interview accounts of albahaca for bowel symptoms](Cultural-and-Experiential/Traditional-Practices/2011-Dominican-Albahaca-Bowel-Practice.txt).
 
 - [Edremit and Elazığ preparations and customary uses](Observations/Turkish-Lemon-Balm-and-Culinary-Plant-Uses.md).
+
+- [Medicinal-food review and customary spice accounts](Cultural-and-Experiential/Traditional-Practices/2014-PMID24822061-Medicinal-Food-Spice-Accounts.txt).

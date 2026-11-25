@@ -1032,3 +1032,5 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 - [Round 1 historical scans and Turkish plant records](Food-Experiment-Round-1-Historical-Scans-and-Cultural-Records-Nov25.md).
 
 - [Round 1 diet, clinical and traditional context audit](Food-Experiment-Round-1-Diet-and-Clinical-Contexts-Nov25.md).
+
+- [Round 1 printed pharmacology and food-context audit](Food-Experiment-Round-1-Printed-Pharmacology-and-Food-Scopes-Nov25.md).
