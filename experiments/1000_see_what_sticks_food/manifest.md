@@ -13,8 +13,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 | Verdict | Local review | Current verdict |
 | --- | ---: | ---: |
-| Unknown | 1000 | 925 |
-| Maybe True | 0 | 38 |
+| Unknown | 1000 | 924 |
+| Maybe True | 0 | 39 |
 | Maybe False | 0 | 37 |
 | True | 0 | 0 |
 | False | 0 | 0 |
@@ -375,6 +375,8 @@ The November 26 shared-original audit verified 138 exact source memberships. Gro
 
 The November 26 official-scan audit reconciled 87 original memberships. Exact printed-page reading resolved the renal transplant article, and a recovered rice supplement separated timed climbing findings from standing balance. [Source and endpoint audit](followup/official-scans-and-endpoints-nov26/README.md)
 
+The November 26 clinical-outcome audit reconciled 264 original memberships. The original oral cold-pressed flaxseed-oil study gives claim 0141 a minimal easing signal from a mouse anxiety-like avoidance test. The human Parkinson anxiety comparison remains open. [Research and scorecard audit](followup/library-and-clinical-outcomes-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).
@@ -403,6 +405,7 @@ The November 26 official-scan audit reconciled 87 original memberships. Exact pr
 - [0133](statements/0133.txt) **Maybe True** (50.005%) Consuming brewed lemon balm reduces depressive symptom severity in people with Parkinson's disease.
 - [0139](statements/0139.txt) **Maybe False** (50.005%) Consuming ground nigella seed worsens fatigue severity in people with Parkinson's disease.
 - [0140](statements/0140.txt) **Maybe True** (50.005%) Consuming dried spearmint reduces insomnia severity in people with Parkinson's disease.
+- [0141](statements/0141.txt) **Maybe True** (50.005%) Consuming cold-pressed flaxseed oil reduces anxiety severity in people with Parkinson's disease.
 - [0144](statements/0144.txt) **Maybe True** (50.005%) Consuming toasted sesame oil reduces pain severity in people with Parkinson's disease.
 - [0161](statements/0161.txt) **Maybe True** (50.005%) Consuming ground cinnamon reduces pain severity in people with Parkinson's disease.
 - [0171](statements/0171.txt) **Maybe False** (50.005%) Consuming toasted fennel seed worsens fatigue severity in people with Parkinson's disease.

@@ -894,3 +894,5 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#2010-2014)
 
 - [November 26 Round 1 official scans and endpoint follow-through](../../experiments/1000_see_what_sticks_food/followup/official-scans-and-endpoints-nov26/originals-by-period.md#2010-2014)
+
+- [November 26 Round 1 catalog and clinical outcome records](../../experiments/1000_see_what_sticks_food/followup/library-and-clinical-outcomes-nov26/originals-by-period.md#2010-2014)

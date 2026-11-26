@@ -1912,3 +1912,5 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#2025-2029)
 
 - [November 26 Round 1 official scans and endpoint follow-through](../../experiments/1000_see_what_sticks_food/followup/official-scans-and-endpoints-nov26/originals-by-period.md#2025-2029)
+
+- [November 26 Round 1 catalog and clinical outcome records](../../experiments/1000_see_what_sticks_food/followup/library-and-clinical-outcomes-nov26/originals-by-period.md#2025-2029)

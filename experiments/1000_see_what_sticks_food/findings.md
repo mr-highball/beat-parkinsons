@@ -354,6 +354,8 @@ The November 26 shared-original audit verified 138 exact source memberships. Gro
 
 The November 26 official-scan audit reconciled 87 original memberships. Exact printed-page reading resolved the renal transplant article, and a recovered rice supplement separated timed climbing findings from standing balance. [Source and endpoint audit](followup/official-scans-and-endpoints-nov26/README.md)
 
+The November 26 clinical-outcome audit reconciled 264 original memberships. The original oral cold-pressed flaxseed-oil study gives claim 0141 a minimal easing signal from a mouse anxiety-like avoidance test. The human Parkinson anxiety comparison remains open. [Research and scorecard audit](followup/library-and-clinical-outcomes-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

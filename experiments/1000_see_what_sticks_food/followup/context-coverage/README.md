@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The clinical-outcome audit resolved 264 exact checks across 132 authenticated publications. 23106 checks remain across 18090 publication keys and 285 claims. [Original sources and outcome audit](../library-and-clinical-outcomes-nov26/README.md)
+
 The printed-original audit resolved 87 exact checks across 21 authenticated publications. 23370 checks remain across 18222 publication keys and 285 claims. [Original sources and outcome audit](../official-scans-and-endpoints-nov26/README.md)
 
 The shared-original audit resolved 138 exact checks across 55 authenticated publications. 23457 checks remain across 18243 publication keys and 285 claims. [Original sources and outcome audit](../high-degree-originals-nov26/README.md)

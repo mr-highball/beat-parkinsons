@@ -1,0 +1,155 @@
+# Round 1 original-source records by period
+
+Links include authenticated bodies and separately labeled remaining-access receipts.
+
+## 2010-2014
+
+- [EP155826](../../../../research/2010-2014/Source-Text/2011-Kumar-Flaxseed-and-Perilla-Mouse-Anxiety.txt) · indexed author abstract
+
+- [PMID:20930186](../../../../research/2010-2014/Source-Text/2010-PMC10845326-Round1-Source-Scope.txt) · Original publication
+- [PMID:20880503](../../../../research/2010-2014/Source-Text/2010-PMC2948545-Round1-Source-Scope.txt) · Original publication
+- [PMID:20858231](../../../../research/2010-2014/Source-Text/2010-PMC2954939-Round1-Source-Scope.txt) · Original publication
+- [PMID:21212852](../../../../research/2010-2014/Source-Text/2010-PMC3016083-Round1-Source-Scope.txt) · Original publication
+- [PMID:21057541](../../../../research/2010-2014/Source-Text/2010-PMC4684645-Round1-Source-Scope.txt) · Original publication
+- [PMID:20967425](../../../../research/2010-2014/Source-Text/2010-PMC5438255-Round1-Source-Scope.txt) · Original publication
+- [PMID:21155988](../../../../research/2010-2014/Source-Text/2010-PMC6493872-Round1-Source-Scope.txt) · Original publication
+- [PMID:20121342](../../../../research/2010-2014/Source-Text/2010-PMC6777976-Round1-Source-Scope.txt) · Original publication
+- [PMID:21282274](../../../../research/2010-2014/Source-Text/2011-PMC10845396-Round1-Source-Scope.txt) · Original publication
+- [PMID:21307980](../../../../research/2010-2014/Source-Text/2011-PMC3012294-Round1-Source-Scope.txt) · Original publication
+- [PMID:21403820](../../../../research/2010-2014/Source-Text/2011-PMC3042619-Round1-Source-Scope.txt) · Original publication
+- [PMID:20712409](../../../../research/2010-2014/Source-Text/2011-PMC3048813-Round1-Source-Scope.txt) · Original publication
+- [PMID:21403858](../../../../research/2010-2014/Source-Text/2011-PMC3049335-Round1-Source-Scope.txt) · Original publication
+- [PMID:21288981](../../../../research/2010-2014/Source-Text/2011-PMC3059145-Round1-Source-Scope.txt) · Original publication
+- [PMID:20849373](../../../../research/2010-2014/Source-Text/2011-PMC3061199-Round1-Source-Scope.txt) · Original publication
+- [PMID:21375464](../../../../research/2010-2014/Source-Text/2011-PMC3076924-Round1-Source-Scope.txt) · Original publication
+- [PMID:21415126](../../../../research/2010-2014/Source-Text/2011-PMC3082451-Round1-Source-Scope.txt) · Original publication
+- [PMID:21482550](../../../../research/2010-2014/Source-Text/2011-PMC3102236-Round1-Source-Scope.txt) · Original publication
+- [PMID:21655340](../../../../research/2010-2014/Source-Text/2011-PMC3104685-Round1-Source-Scope.txt) · Original publication
+- [PMID:21050138](../../../../research/2010-2014/Source-Text/2011-PMC3118610-Round1-Source-Scope.txt) · Original publication
+- [PMID:21219083](../../../../research/2010-2014/Source-Text/2011-PMC3119327-Round1-Source-Scope.txt) · Original publication
+- [PMID:20615073](../../../../research/2010-2014/Source-Text/2011-PMC3122891-Round1-Source-Scope.txt) · Original publication
+- [PMID:22131937](../../../../research/2010-2014/Source-Text/2011-PMC3131719-Round1-Source-Scope.txt) · Original publication
+- [PMID:21383066](../../../../research/2010-2014/Source-Text/2011-PMC3133352-Round1-Source-Scope.txt) · Original publication
+- [PMID:21543839](../../../../research/2010-2014/Source-Text/2011-PMC3146241-Round1-Source-Scope.txt) · Original publication
+- [PMID:21399908](../../../../research/2010-2014/Source-Text/2011-PMC3155038-Round1-Source-Scope.txt) · Original publication
+- [PMID:21487414](../../../../research/2010-2014/Source-Text/2011-PMC3185880-Round1-Source-Scope.txt) · Original publication
+- [PMID:22011052](../../../../research/2010-2014/Source-Text/2011-PMC3228591-Round1-Source-Scope.txt) · Original publication
+- [PMID:21963226](../../../../research/2010-2014/Source-Text/2011-PMC3230726-Round1-Source-Scope.txt) · Original publication
+- [PMID:22229124](../../../../research/2010-2014/Source-Text/2011-PMC3234454-Round1-Source-Scope.txt) · Original publication
+- [PMID:22191065](../../../../research/2010-2014/Source-Text/2011-PMC3236421-Round1-Source-Scope.txt) · Original publication
+- [PMID:22191077](../../../../research/2010-2014/Source-Text/2011-PMC3236465-Round1-Source-Scope.txt) · Original publication
+- [PMID:21918508](../../../../research/2010-2014/Source-Text/2011-PMC3238082-Round1-Source-Scope.txt) · Original publication
+- [PMID:22001159](../../../../research/2010-2014/Source-Text/2011-PMC3268878-Round1-Source-Scope.txt) · Original publication
+- [PMID:21639859](../../../../research/2010-2014/Source-Text/2011-PMC3296483-Round1-Source-Scope.txt) · Original publication
+- [PMID:22185664](../../../../research/2010-2014/Source-Text/2011-PMC3298518-Round1-Source-Scope.txt) · Original publication
+- [PMID:22181047](../../../../research/2010-2014/Source-Text/2011-PMC3328761-Round1-Source-Scope.txt) · Original publication
+- [PMID:22193376](../../../../research/2010-2014/Source-Text/2011-PMC3370887-Round1-Source-Scope.txt) · Original publication
+- [PMID:22870478](../../../../research/2010-2014/Source-Text/2011-PMC3382679-Round1-Source-Scope.txt) · Original publication
+- [PMID:22277925](../../../../research/2010-2014/Source-Text/2011-PMC3586334-Round1-Source-Scope.txt) · Original publication
+- [PMID:23861646](../../../../research/2010-2014/Source-Text/2011-PMC3663603-Round1-Source-Scope.txt) · Original publication
+- [PMID:23983832](../../../../research/2010-2014/Source-Text/2011-PMC3726101-Round1-Source-Scope.txt) · Original publication
+- [PMID:22229308](../../../../research/2010-2014/Source-Text/2011-PMC3738214-Round1-Source-Scope.txt) · Original publication
+- [PMID:21672674](../../../../research/2010-2014/Source-Text/2011-PMC3873135-Round1-Source-Scope.txt) · Original publication
+- [PMID:22003063](../../../../research/2010-2014/Source-Text/2011-PMC4500647-Round1-Source-Scope.txt) · Original publication
+- [PMID:21930184](../../../../research/2010-2014/Source-Text/2011-PMC9014725-Round1-Source-Scope.txt) · Original publication
+- [PMID:22298943](../../../../research/2010-2014/Source-Text/2012-PMC3269317-Round1-Source-Scope.txt) · Original publication
+- [PMID:22066468](../../../../research/2010-2014/Source-Text/2012-PMC3270051-Round1-Source-Scope.txt) · Original publication
+- [PMID:22366793](../../../../research/2010-2014/Source-Text/2012-PMC3286335-Round1-Source-Scope.txt) · Original publication
+- [PMID:22300409](../../../../research/2010-2014/Source-Text/2012-PMC3310304-Round1-Source-Scope.txt) · Original publication
+- [PMID:22221489](../../../../research/2010-2014/Source-Text/2012-PMC3316137-Round1-Source-Scope.txt) · Original publication
+- [PMID:22611332](../../../../research/2010-2014/Source-Text/2012-PMC3345898-Round1-Source-Scope.txt) · Original publication
+- [PMID:22447335](../../../../research/2010-2014/Source-Text/2012-PMC3370891-Round1-Source-Scope.txt) · Original publication
+- [PMID:22417773](../../../../research/2010-2014/Source-Text/2012-PMC3389826-Round1-Source-Scope.txt) · Original publication
+- [PMID:22966490](../../../../research/2010-2014/Source-Text/2012-PMC3404883-Round1-Source-Scope.txt) · Original publication
+- [PMID:22848335](../../../../research/2010-2014/Source-Text/2012-PMC3406266-Round1-Source-Scope.txt) · Original publication
+- [PMID:22339371](../../../../research/2010-2014/Source-Text/2012-PMC3411350-Round1-Source-Scope.txt) · Original publication
+- [PMID:22224485](../../../../research/2010-2014/Source-Text/2012-PMC3417436-Round1-Source-Scope.txt) · Original publication
+- [PMID:22919484](../../../../research/2010-2014/Source-Text/2012-PMC3423946-Round1-Source-Scope.txt) · Original publication
+- [PMID:22973425](../../../../research/2010-2014/Source-Text/2012-PMC3437530-Round1-Source-Scope.txt) · Original publication
+- [PMID:23082113](../../../../research/2010-2014/Source-Text/2012-PMC3474814-Round1-Source-Scope.txt) · Original publication
+- [PMID:22841649](../../../../research/2010-2014/Source-Text/2012-PMC3479364-Round1-Source-Scope.txt) · Original publication
+- [PMID:23112770](../../../../research/2010-2014/Source-Text/2012-PMC3480633-Round1-Source-Scope.txt) · Original publication
+- [PMID:22988242](../../../../research/2010-2014/Source-Text/2012-PMC3493939-Round1-Source-Scope.txt) · Original publication
+- [PMID:23730260](../../../../research/2010-2014/Source-Text/2012-PMC3520046-Round1-Source-Scope.txt) · Original publication
+- [PMID:22887993](../../../../research/2010-2014/Source-Text/2012-PMC3521852-Round1-Source-Scope.txt) · Original publication
+- [PMID:23206152](../../../../research/2010-2014/Source-Text/2012-PMC3557439-Round1-Source-Scope.txt) · Original publication
+- [PMID:23382778](../../../../research/2010-2014/Source-Text/2012-PMC3563154-Round1-Source-Scope.txt) · Original publication
+- [PMID:23232947](../../../../research/2010-2014/Source-Text/2012-PMC3587814-Round1-Source-Scope.txt) · Original publication
+- [PMID:23983981](../../../../research/2010-2014/Source-Text/2012-PMC3736953-Round1-Source-Scope.txt) · Original publication
+- [PMID:26082068](../../../../research/2010-2014/Source-Text/2012-PMC3760632-Round1-Source-Scope.txt) · Original publication
+- [PMID:24116286](../../../../research/2010-2014/Source-Text/2012-PMC3792209-Round1-Source-Scope.txt) · Original publication
+- [PMID:25083224](../../../../research/2010-2014/Source-Text/2012-PMC4110829-Round1-Source-Scope.txt) · Original publication
+- [PMID:22344629](../../../../research/2010-2014/Source-Text/2012-PMC4188387-Round1-Source-Scope.txt) · Original publication
+- [PMID:22786497](../../../../research/2010-2014/Source-Text/2012-PMC4204633-Round1-Source-Scope.txt) · Original publication
+- [PMID:22683450](../../../../research/2010-2014/Source-Text/2012-PMC4220550-Round1-Source-Scope.txt) · Original publication
+- [PMID:23222477](../../../../research/2010-2014/Source-Text/2012-PMC4993195-Round1-Source-Scope.txt) · Original publication
+- [PMID:23239837](../../../../research/2010-2014/Source-Text/2012-PMC5408511-Round1-Source-Scope.txt) · Original publication
+- [PMID:29213787](../../../../research/2010-2014/Source-Text/2012-PMC5618960-Round1-Source-Scope.txt) · Original publication
+- [PMID:30082958](../../../../research/2010-2014/Source-Text/2012-PMC6027085-Round1-Source-Scope.txt) · Original publication
+- [PMID:23051837](../../../../research/2010-2014/Source-Text/2012-PMC6638727-Round1-Source-Scope.txt) · Original publication
+- [PMID:22258978](../../../../research/2010-2014/Source-Text/2012-PMC6823258-Round1-Source-Scope.txt) · Original publication
+- [PMID:23321284](../../../../research/2010-2014/Source-Text/2012-PMID23321284-Borsonelo-Linseed-Oil-Elevated-Plus-Maze.txt) · original author abstract
+- [PMID:23728651](../../../../research/2010-2014/Source-Text/2013-PMC11972847-Round1-Source-Scope.txt) · Original publication
+- [PMID:22667998](../../../../research/2010-2014/Source-Text/2013-PMC3545354-Round1-Source-Scope.txt) · Original publication
+- [PMID:23365649](../../../../research/2010-2014/Source-Text/2013-PMC3554713-Round1-Source-Scope.txt) · Original publication
+- [PMID:23339207](../../../../research/2010-2014/Source-Text/2013-PMC3589241-Round1-Source-Scope.txt) · Original publication
+- [PMID:23359374](../../../../research/2010-2014/Source-Text/2013-PMC3590050-Round1-Source-Scope.txt) · Original publication
+- [PMID:23487540](../../../../research/2010-2014/Source-Text/2013-PMC3592512-Round1-Source-Scope.txt) · Original publication
+- [PMID:22746161](../../../../research/2010-2014/Source-Text/2013-PMC3603496-Round1-Source-Scope.txt) · Original publication
+- [PMID:22746273](../../../../research/2010-2014/Source-Text/2013-PMC3603497-Round1-Source-Scope.txt) · Original publication
+- [PMID:23475957](../../../../research/2010-2014/Source-Text/2013-PMC3605461-Round1-Source-Scope.txt) · Original publication
+- [PMID:23378523](../../../../research/2010-2014/Source-Text/2013-PMC3605947-Round1-Source-Scope.txt) · Original publication
+- [PMID:23724362](../../../../research/2010-2014/Source-Text/2013-PMC3638085-Round1-Source-Scope.txt) · Original publication
+- [PMID:23432396](../../../../research/2010-2014/Source-Text/2013-PMC3650105-Round1-Source-Scope.txt) · Original publication
+- [PMID:23761983](../../../../research/2010-2014/Source-Text/2013-PMC3674021-Round1-Source-Scope.txt) · Original publication
+- [PMID:23843682](../../../../research/2010-2014/Source-Text/2013-PMC3697414-Round1-Source-Scope.txt) · Original publication
+- [PMID:23818131](../../../../research/2010-2014/Source-Text/2013-PMC3698935-Round1-Source-Scope.txt) · Original publication
+- [PMID:23509917](../../../../research/2010-2014/Source-Text/2013-PMC3715770-Round1-Source-Scope.txt) · Original publication
+- [PMID:23088365](../../../../research/2010-2014/Source-Text/2013-PMC3717198-Round1-Source-Scope.txt) · Original publication
+- [PMID:23659480](../../../../research/2010-2014/Source-Text/2013-PMC3719464-Round1-Source-Scope.txt) · Original publication
+- [PMID:23951139](../../../../research/2010-2014/Source-Text/2013-PMC3738590-Round1-Source-Scope.txt) · Original publication
+- [PMID:23737534](../../../../research/2010-2014/Source-Text/2013-PMC3742966-Round1-Source-Scope.txt) · Original publication
+- [PMID:23855332](../../../../research/2010-2014/Source-Text/2013-PMC3746291-Round1-Source-Scope.txt) · Original publication
+- [PMID:23909463](../../../../research/2010-2014/Source-Text/2013-PMC3756629-Round1-Source-Scope.txt) · Original publication
+- [PMID:24065919](../../../../research/2010-2014/Source-Text/2013-PMC3776152-Round1-Source-Scope.txt) · Original publication
+- [PMID:24204389](../../../../research/2010-2014/Source-Text/2013-PMC3800597-Round1-Source-Scope.txt) · Original publication
+- [PMID:24167677](../../../../research/2010-2014/Source-Text/2013-PMC3805395-Round1-Source-Scope.txt) · Original publication
+- [PMID:24167681](../../../../research/2010-2014/Source-Text/2013-PMC3805397-Round1-Source-Scope.txt) · Original publication
+- [PMID:24273368](../../../../research/2010-2014/Source-Text/2013-PMC3834895-Round1-Source-Scope.txt) · Original publication
+- [PMID:23939821](../../../../research/2010-2014/Source-Text/2013-PMC3857130-Round1-Source-Scope.txt) · Original publication
+- [PMID:24067924](../../../../research/2010-2014/Source-Text/2013-PMC3865178-Round1-Source-Scope.txt) · Original publication
+- [PMID:24416077](../../../../research/2010-2014/Source-Text/2013-PMC3883192-Round1-Source-Scope.txt) · Original publication
+- [PMID:24470791](../../../../research/2010-2014/Source-Text/2013-PMC3891543-Round1-Source-Scope.txt) · Original publication
+- [PMID:24310604](../../../../research/2010-2014/Source-Text/2013-PMC3899482-Round1-Source-Scope.txt) · Original publication
+- [PMID:24288035](../../../../research/2010-2014/Source-Text/2013-PMC3899484-Round1-Source-Scope.txt) · Original publication
+- [PMID:23852096](../../../../research/2010-2014/Source-Text/2013-PMC3929022-Round1-Source-Scope.txt) · Original publication
+- [PMID:24714281](../../../../research/2010-2014/Source-Text/2013-PMC3959432-Round1-Source-Scope.txt) · Original publication
+- [PMID:23806097](../../../../research/2010-2014/Source-Text/2013-PMC3967117-Round1-Source-Scope.txt) · Original publication
+- [PMID:24517197](../../../../research/2010-2014/Source-Text/2013-PMC3978928-Round1-Source-Scope.txt) · Original publication
+- [PMID:23353924](../../../../research/2010-2014/Source-Text/2013-PMC3994881-Round1-Source-Scope.txt) · Original publication
+- [PMID:23334463](../../../../research/2010-2014/Source-Text/2013-PMC4023541-Round1-Source-Scope.txt) · Original publication
+- [PMID:25206012](../../../../research/2010-2014/Source-Text/2013-PMC4117113-Round1-Source-Scope.txt) · Original publication
+- [PMID:24157858](../../../../research/2010-2014/Source-Text/2013-PMC4144334-Round1-Source-Scope.txt) · Original publication
+- [PMID:25949131](../../../../research/2010-2014/Source-Text/2013-PMC4282293-Round1-Source-Scope.txt) · Original publication
+- [PMID:24352519](../../../../research/2010-2014/Source-Text/2013-PMC5408159-Round1-Source-Scope.txt) · Original publication
+- [PMID:24366103](../../../../research/2010-2014/Source-Text/2014-PMC3940333-Round1-Source-Scope.txt) · Original publication
+- [PMID:23641945](../../../../research/2010-2014/Source-Text/2014-PMC3942694-Round1-Source-Scope.txt) · Original publication
+- [PMID:24918005](../../../../research/2010-2014/Source-Text/2014-PMC4040799-Round1-Source-Scope.txt) · Original publication
+- [PMID:25750687](../../../../research/2010-2014/Source-Text/2014-PMC4350240-Round1-Source-Scope.txt) · Original publication
+- [PMID:25054899](../../../../research/2010-2014/Source-Text/2014-PMC6128201-Round1-Source-Scope.txt) · Original publication
+- [PMID:24385408](../../../../research/2010-2014/Source-Text/2014-PMC6473905-Round1-Source-Scope.txt) · Original publication
+- [PMID:24518152](../../../../research/2010-2014/Source-Text/2014-PMID24518152-Grape-Seed-Proanthocyanidins-and-Insomnia.txt) · original abstract and registry
+- [Satapathy-2014-linseed](../../../../research/2010-2014/Source-Text/2014-Satapathy-Linseed-Extract-and-Elevated-Plus-Maze.txt) · original table and methods
+- [PMID:23283708](../../../../research/2010-2014/Source-Text/PMC3894820.txt) · Original publication
+- [UMIN000009353](../../../../research/2010-2014/Source-Text/Trials/UMIN000009353.txt) · official trial registration
+
+## 2015-2019
+
+- [PMID:26810548](../../../../research/2015-2019/Source-Text/2016-PMID26810548-Soybeans-Levodopa-Crossover-Extract.txt) · primary thesis summary and indexed table
+- [DOI:10.18203/2319-2003.ijbcp20175215](../../../../research/2015-2019/Source-Text/2017-Patil-Cold-Pressed-Flaxseed-Oil-Anxiety-Mice.txt) · original tables and methods
+- [DOI:10.7600/jpfsm.7.247](../../../../research/2015-2019/Source-Text/2018-Ichihara-Paprika-Xanthophyll-Exercise-Fatigue.txt) · original fatigue table
+
+## 2025-2029
+
+- [DOI:10.4103/jdras.jdras_28_24](../../../../research/2025-2029/Source-Text/2025-Tanna-Linseed-Oil-and-Milk-Anxiety-Assays.txt) · original author abstract
+- [UMIN000056794](../../../../research/2025-2029/Source-Text/Trials/UMIN000056794.txt) · official registry and product scope
