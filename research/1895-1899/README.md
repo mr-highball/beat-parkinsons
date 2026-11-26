@@ -28,3 +28,5 @@ January 1, 1895 through December 31, 1899.
 [All periods and collection method](../README.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+- [November 26 Round 1 outcome tables and rare original sources](../../experiments/1000_see_what_sticks_food/followup/outcome-tables-and-rare-originals-nov26/originals-by-period.md#1895-1899)

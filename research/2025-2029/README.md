@@ -1898,3 +1898,5 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [Nigella seed extract and forced-swim comparison](Source-Text/2025-PMID41251809-Nigella-Extract-and-Rat-Swim-Behavior.txt)
 
 - [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#2025-2029)
+
+- [November 26 Round 1 outcome tables and rare original sources](../../experiments/1000_see_what_sticks_food/followup/outcome-tables-and-rare-originals-nov26/originals-by-period.md#2025-2029)

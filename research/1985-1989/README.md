@@ -130,3 +130,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 A paired-data sensitivity note in the [lemongrass sleep study](Source-Text/1986-Leite-Lemongrass-Tea-Sleep-Extract.txt) bounds what the original waking-sleepiness marginals can establish.
 
 - [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1985-1989)
+
+- [November 26 Round 1 outcome tables and rare original sources](../../experiments/1000_see_what_sticks_food/followup/outcome-tables-and-rare-originals-nov26/originals-by-period.md#1985-1989)

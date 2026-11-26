@@ -30,3 +30,5 @@ January 1, 1905 through December 31, 1909.
 - [Historical nutmeg observations](Food-Experiment-Nutmeg-Poisoning.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+- [November 26 Round 1 outcome tables and rare original sources](../../experiments/1000_see_what_sticks_food/followup/outcome-tables-and-rare-originals-nov26/originals-by-period.md#1905-1909)

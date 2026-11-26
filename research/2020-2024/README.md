@@ -1952,3 +1952,5 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [Original full tulsi–cardamom depression trial and its comparator](Source-Text/2021-DOI10-18311-jnr-27128-Tulsi-Cardamom-and-Depression.txt)
 
 - [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#2020-2024)
+
+- [November 26 Round 1 outcome tables and rare original sources](../../experiments/1000_see_what_sticks_food/followup/outcome-tables-and-rare-originals-nov26/originals-by-period.md#2020-2024)

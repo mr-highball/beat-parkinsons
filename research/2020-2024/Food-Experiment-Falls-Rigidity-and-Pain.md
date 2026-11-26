@@ -19,3 +19,7 @@ The December 2024 public MVP summary includes the same unadjusted baseline PD-on
 ## Coconut oil review and underlying cohort
 
 This review went online in October 2022. Its original discussion cites the earlier MVP composite analysis and discusses testimony from an uncontrolled lifestyle program that allowed coconut oil. The original Null report separates its two Parkinson testimonials from a multiple sclerosis testimonial and does not verify individual oil intake. The clinical citations add no independently measured balance result or refined oil contrast. [Primary survey](https://pubmed.ncbi.nlm.nih.gov/29081890/) · [Local review context receipt](Source-Text/2022-deepika-source-context.txt)
+
+## Access to item-level coconut-oil and balance data
+
+The 2024 MVP report, printed pp.63–64, shows an unadjusted heatmap cell for coconut-oil frequency and self-rated balance. Its shade suggests an inverse association without a numerical coefficient, interval or oil grade. The 2017 cohort analysis gives an adjusted −20.2 total PRO-PD points per coconut-frequency category (95% CI −31.0 to −9.4). The 2023 overlapping analysis also reports an aggregate PRO-PD score. These comparisons do not provide the balance-item effect. The 2024 report directs readers to a dataset application route on printed p.44. No analysis dataset was retrieved. [2017 paper and Table 2](https://doi.org/10.1155/2017/6405278) · [Dataset application](https://redcap.link/c49s8ht4)

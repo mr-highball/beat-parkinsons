@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The outcome-table audit resolved 273 exact checks across 137 source records. 24669 checks remain across 18831 publication keys and 289 claims. [Original tables and authenticated sources](../outcome-tables-and-rare-originals-nov26/README.md)
+
 The last-pair audit resolved 254 exact checks across 130 original records. 24942 checks remain across 18967 publication keys and 289 claims. [Verified originals and clinical follow-through](../last-pairs-and-near-completion-nov26/README.md)
 
 The collections audit resolved 267 exact checks across 124 originals. 25196 checks remain across 19097 publication keys and 293 claims. [Verified originals and clinical follow-through](../conference-parity-and-outcome-trails-nov26/README.md)
