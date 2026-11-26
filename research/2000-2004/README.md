@@ -326,3 +326,5 @@ The [Finley feeding study](Source-Text/2003-PMID12949376-Finley-Corn-Oil-and-Neu
 - [PMID:15736910 | n-3 fatty acids, inflammation, and immunity: relevance to postsurgical and critically ill patients](Source-Text/2004-PMC7101959-Round1-Original-Scope.txt)
 
 - [November 26 Round 1 rare original and clinical protocol records](../../experiments/1000_see_what_sticks_food/followup/rare-members-and-clinical-protocols-nov26/originals-by-period.md#2000-2004)
+
+- [November 26 Round 1 original scope and outcome audit](../../experiments/1000_see_what_sticks_food/followup/scope-and-outcome-audit-nov26/originals-by-period.md#2000-2004)
