@@ -38,3 +38,5 @@ January 1, 1960 through December 31, 1964.
 - [Routes, original episodes and access gaps](Observations/Clinical-Magnesium-Routes-and-Access.md).
 
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
+
+- [PMID:14139096 | Royal Apothecaries of the Tudor Period](Cultural-and-Experiential/Local-Knowledge/1964-PMID14139096-Tudor-Anise-and-Fennel-Accounts.txt)

@@ -814,3 +814,6 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [PMID:24252612 | Mitochondrial genome changes and neurodegenerative diseases☆](Source-Text/2013-PMC4283582-Round1-Source-Scope.txt)
 
 - [Abstracts from the 4th Meeting of the FESN and 28th Meeting of the GNP](Source-Text/2013-PMC5215690-Round1-PDF-Scope.txt)
+
+- [PMID:20696139 | Tocotrienols, the Vitamin E of the 21st Century: It’s Potential Against Cancer and Other Chronic Diseases](Source-Text/2010-PMC2956867-Round1-Source-Scope.txt)
+- [PMID:21692372 | A SURVEY OF OXIDATIVE PARACATALYTIC REACTIONS CATALYZED BY ENZYMES THAT GENERATE CARBANIONIC INTERMEDIATES: IMPLICATIONS FOR ROS PRODUCTION, CANCER ETIOLOGY, AND NEURODEGENERATIVE DISEASES](Source-Text/2011-PMC3563061-Round1-Source-Scope.txt)

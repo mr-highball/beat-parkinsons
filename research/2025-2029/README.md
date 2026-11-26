@@ -1534,3 +1534,15 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [Electroconvulsive shock and transcranial magnetic stimulation do not alter the survival or spine density of adult-born striatal neurons](Source-Text/2025-PMC11774372-Round1-PDF-Scope.txt)
 - [Different roles of D1/D2 medium spiny neurons in the nucleus accumbens in pair bond formation of male mandarin voles](Source-Text/2025-PMC12143883-Round1-PDF-Scope.txt)
 - [Proceedings of the 57th Italian Society of Hygiene congress, Palermo 2024](Source-Text/2025-PMC12312728-Round1-PDF-Scope.txt)
+
+- [PMID:40443044 | Cardiopulmonary responses to acute exogenous ketosis at rest, and during submaximal and maximal exercise](Source-Text/2025-PMC12122769-Round1-Source-Scope.txt)
+- [PMID:40933952 | The role of redox-active iron, copper, manganese, and redox-inactive zinc in toxicity, oxidative stress, and human diseases](Source-Text/2025-PMC12419454-Round1-Source-Scope.txt)
+- [PMID:40088335 | Neuroprotective effects of semaglutide and metformin against rotenone-induced neurobehavioral changes in male diabetic rats](Source-Text/2025-PMC12449337-Round1-Source-Scope.txt)
+- [PMID:41979281 | Acid–Base Dysregulation Links Aging Metabolism to Frailty](Source-Text/2026-PMC13078138-Round1-Source-Scope.txt)
+- [PMID:42593278 | Bypassing the bottleneck: Gamma-glutamylcysteine supplementation for brain glutathione enrichment in Alzheimer's disease](Source-Text/2026-PMC13631388-Round1-Source-Scope.txt)
+
+- [Tocotrienol-rich vitamin E complex in CADASIL (T3CAD)](Source-Text/2026-PMID42005919-CADASIL-Soybean-Oil-Comparator.txt)
+
+- [Oral HA35 trial and grapeseed-oil pain comparator](Source-Text/2026-NCT07630571-Grapeseed-Oil-Oral-Pain-Comparator.txt)
+
+- [SCENT olfactory training trial protocol](Source-Text/2025-PMID41488386-SCENT-Odor-Battery-and-Ginger.txt)

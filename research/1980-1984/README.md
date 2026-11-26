@@ -83,3 +83,7 @@ The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-
 - [Essential tremor review and the original printed discussion of coffee and tea](Source-Text/1981-PMID7018658-Essential-Tremor-Original-Food-Scopes.txt).
 
 - [AJNR symposium collection access note](Source-Text/1983-PMID6410704-AJNR-Collection-Access.txt)
+
+- [PMCID:PMC1713266 | Index to volume 281 for 1980](Source-Text/1980-PMC1713266-BMJ-Cumulative-Index-Scope.txt)
+
+- [Beware of bay leaf](Source-Text/1980-PMID7470211-Intact-Bay-Leaf-Impaction.txt)

@@ -523,3 +523,7 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [Impact of Prenatal Stress on Neuroendocrine Programming](Source-Text/2007-PMC5901338-Round1-PDF-Scope.txt)
 
 - [ISN conference collection access note](Source-Text/2006-PMID16922993-ISN-Collection-Access.txt)
+
+- [PMID:17380245 | Odour Identification in Frontotemporal Lobar Degeneration](Source-Text/2007-PMC2567055-Round1-Source-Scope.txt)
+- [PMID:19698803 | Energy Expenditure and Aging](Source-Text/2009-PMC2818133-Round1-Source-Scope.txt)
+- [PMID:19276784 | Understanding Memory Dysfunction](Source-Text/2009-PMC8170590-Round1-Source-Scope.txt)
