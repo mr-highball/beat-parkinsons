@@ -108,3 +108,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Donguibogam turmeric and the historical skincare pain term](Local-Knowledge/2020-PMC7388188-Donguibogam-Turmeric-and-Skin-Pain.txt)
 
 - [Colouring Flowers: Books, Art, and Experiment in the Household of Margery and Henry Power](Local-Knowledge/2023-PMC7614357-Household-Manuscripts-and-Parsley.txt)
+
+- [Artemisia spp.: An Update on Its Chemical Composition, Pharmacological and Toxicological Profiles](Local-Knowledge/2022-PMC9467740-Traditional-Tarragon-and-Wound-Care.txt)

@@ -817,3 +817,10 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 
 - [PMID:20696139 | Tocotrienols, the Vitamin E of the 21st Century: It’s Potential Against Cancer and Other Chronic Diseases](Source-Text/2010-PMC2956867-Round1-Source-Scope.txt)
 - [PMID:21692372 | A SURVEY OF OXIDATIVE PARACATALYTIC REACTIONS CATALYZED BY ENZYMES THAT GENERATE CARBANIONIC INTERMEDIATES: IMPLICATIONS FOR ROS PRODUCTION, CANCER ETIOLOGY, AND NEURODEGENERATIVE DISEASES](Source-Text/2011-PMC3563061-Round1-Source-Scope.txt)
+
+- [PMID:21682930 | Melittin restores proteasome function in an animal model of ALS](Source-Text/2011-PMC3142224-Round1-Source-Scope.txt)
+- [PMID:22160321 | Myofibrillar disorganization characterizes myopathy of camptocormia in Parkinson’s disease](Source-Text/2011-PMC3282910-Round1-Source-Scope.txt)
+- [PMID:22474496 | Ethnopharmacology of Medicinal Plants of the Pantanal Region (Mato Grosso, Brazil)](Cultural-and-Experiential/Local-Knowledge/2011-PMC3303862-Pantanal-Oregano-and-Cough.txt)
+- [PMID:24188563 | Medicinal plants used by women from Agnalazaha littoral forest (Southeastern Madagascar)](Source-Text/2013-PMC3827988-Round1-Source-Scope.txt)
+- [PMID:24976947 | The effects of perinatal testosterone exposure on the DNA methylome of the mouse brain are late-emerging](Source-Text/2014-PMC4074311-Round1-Source-Scope.txt)
+- [PMID:23235581 | Serenoa repens for benign prostatic hyperplasia](Source-Text/2012-PMC7084061-Round1-Original-Scope.txt)

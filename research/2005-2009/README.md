@@ -527,3 +527,6 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [PMID:17380245 | Odour Identification in Frontotemporal Lobar Degeneration](Source-Text/2007-PMC2567055-Round1-Source-Scope.txt)
 - [PMID:19698803 | Energy Expenditure and Aging](Source-Text/2009-PMC2818133-Round1-Source-Scope.txt)
 - [PMID:19276784 | Understanding Memory Dysfunction](Source-Text/2009-PMC8170590-Round1-Source-Scope.txt)
+
+- [PMID:19750042 | Medical management of Parkinson disease](Source-Text/2008-PMC2730785-Round1-Original-Scope.txt)
+- [PMID:17502850 | The alpha7 nicotinic acetylcholine receptor as a pharmacological target for inflammation](Source-Text/2007-PMC2042938-Round1-Original-Scope.txt)

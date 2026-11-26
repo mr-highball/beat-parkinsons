@@ -51,3 +51,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [Whole sweet orange for constipation in a northwest Pakistan interview survey](Traditional-Practices/2014-PMID24963328-Northwest-Pakistan-Whole-Orange-Constipation.txt)
 - [Sweet orange juice in a Shivalik ethnomedicinal survey](Traditional-Practices/2014-Shivalik-Sweet-Orange-Juice-Constipation.txt)
+
+- [Ethnopharmacology of Medicinal Plants of the Pantanal Region (Mato Grosso, Brazil)](Local-Knowledge/2011-PMC3303862-Pantanal-Oregano-and-Cough.txt)

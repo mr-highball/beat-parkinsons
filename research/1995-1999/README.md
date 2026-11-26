@@ -220,3 +220,5 @@ The [environmental toxicology source-scope record](Source-Text/1999-PMC1566810-R
 The [BMJ February 1998 issue review](../../experiments/1000_see_what_sticks_food/followup/priority-originals-nov26/README.md) verifies six independent articles surfaced in the dried-date and pain search.
 
 - [Disease, transplantation and regeneration](Source-Text/1996-PMC7134801-Round1-PDF-Scope.txt)
+
+- [PMCID:PMC1281787 | Thirty-ninth Annual Biophysical Society Meeting: Wednesday Symposia and Posters, Part III](Source-Text/1995-PMC1281787-Round1-Original-Scope.txt)

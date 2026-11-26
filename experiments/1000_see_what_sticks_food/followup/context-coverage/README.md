@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The recovered conference and trial batch resolved 236 exact checks across 92 originals. It leaves 26,467 checks across 19,732 publication keys and 311 claims. [Recovered originals and clinical review](../closing-sources-and-trials-nov26/README.md)
+
 The final-source audit resolved 180 exact checks across 78 originals. It leaves 26,703 checks across 19,824 publication keys and 328 claims. [Authenticated sources and claim coverage](../claim-final-source-audit-nov26/README.md)
 
 The authenticated article and IAPCON batch resolved 227 exact checks across 76 originals. It leaves 26,883 checks across 19,902 publication keys and 352 claims. [Verified originals and replay evidence](../body-first-evidence-nov26/README.md)

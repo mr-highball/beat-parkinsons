@@ -1546,3 +1546,27 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [Oral HA35 trial and grapeseed-oil pain comparator](Source-Text/2026-NCT07630571-Grapeseed-Oil-Oral-Pain-Comparator.txt)
 
 - [SCENT olfactory training trial protocol](Source-Text/2025-PMID41488386-SCENT-Odor-Battery-and-Ginger.txt)
+
+- [PMID:39897859 | Exploring phytochemicals and their pharmacological applications from ethnomedicinal plants: A focus on Lycium barbarum, Solanacea](Source-Text/2025-PMC11786657-Round1-Source-Scope.txt)
+- [PMID:39907291 | Grey‐Matter Structure Markers of Alzheimer's Disease, Alzheimer's Conversion, Functioning and Cognition: A Meta‐Analysis Across 11 Cohorts](Source-Text/2025-PMC11795582-Round1-Source-Scope.txt)
+- [PMID:40158023 | Development and evaluation of S-carboxymethyl-L-cystine-loaded solid lipid nanoparticles for Parkinson’s disease in murine and zebrafish models](Source-Text/2025-PMC11954961-Round1-Source-Scope.txt)
+- [PMID:40474964 | Rare Copy Number Variants Intersecting Parkinson’s-associated Genes in a Cohort of children With Autism Spectrum Disorders](Source-Text/2025-PMC12138218-Round1-Source-Scope.txt)
+- [PMID:39956963 | Overlap in the diagnostic criteria of frontotemporal dementia syndromes with parkinsonism](Source-Text/2025-PMC12322327-Round1-Source-Scope.txt)
+- [PMID:40918179 | Neurobiological Synergy of Plant and Animal Sources of Omega‐3 and Exercise in Aging: Implications for Molecular Signaling, Memory, Spatial Learning, and Brain Function](Source-Text/2025-PMC12411248-Round1-Source-Scope.txt)
+- [PMID:40970498 | Antioxidant Properties of Food‐Derived Lactic Acid Bacteria: A Review](Source-Text/2025-PMC12447235-Round1-Source-Scope.txt)
+- [PMID:41705050 | Advances in the neurotoxicity of ecological pesticide maneb: mechanisms and implications for human health](Source-Text/2026-PMC12907399-Round1-Source-Scope.txt)
+- [PMID:41920373 | The alteration of brain function in overweight/obese individuals and the neurological benefit of thymoquinone: uncovering molecular mechanisms](Source-Text/2026-PMC13043623-Round1-Source-Scope.txt)
+- [PMID:42004516 | Rosemary (Rosmarinus officinalis L.) and nervous system disorders: New findings on its neuroprotective properties](Source-Text/2026-PMC13090973-Round1-Source-Scope.txt)
+- [PMID:42199532 | Unveiling the multifaceted potential of Artemisia: Cutting-edge insights into nutritional benefits and emerging therapeutic applications](Source-Text/2025-PMC13199817-Round1-Source-Scope.txt)
+- [PMID:41603025 | Nanomaterial strategies for mitigating protein misfolding and neuroinflammation in neurodegenerative diseases](Source-Text/2026-PMC13276651-Round1-Source-Scope.txt)
+- [PMID:42518888 | The Qur'anic heart and converging evidence from contemporary cardiac science: From qalb to cardioception](Source-Text/2026-PMC13382262-Round1-Source-Scope.txt)
+- [PMID:42683979 | Role of arbutin and acetoside against Parkinson’s disease](Source-Text/2026-PMC13610762-Round1-Source-Scope.txt)
+- [PMID:40785490 | Sleep disorders across the parkinsonism continuum: a typical example of geriatric complexity](Source-Text/2025-PMC12645868-Round1-Original-Scope.txt)
+- [PMCID:PMC12496561 | UEG Week 2025 Poster Presentations](Source-Text/2025-PMC12496561-Round1-Original-Scope.txt)
+- [PMCID:PMC13439031 | Special Collection: Abstracts from IUNS-ICN Paris 2025](Source-Text/2026-PMC13439031-Round1-Original-Scope.txt)
+
+- [Inflasinusans, thyme and olfaction in acute rhinosinusitis](Source-Text/2025-PMID40899893-Inflasinusans-and-Olfactory-Index.txt)
+
+- [Pumpkin-seed-oil and bladder function pilot](Source-Text/Trials/NCT06944392.txt)
+
+- [Tongyangxiao lotion and postoperative wound healing](Source-Text/Trials/NCT07562672.txt)

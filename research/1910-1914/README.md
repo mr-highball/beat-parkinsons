@@ -26,3 +26,5 @@ January 1, 1910 through December 31, 1914.
 [All periods and collection method](../README.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+- [PMCID:PMC2336197 | Seventy-eighth Annual Meeting of the British Medical Association: proceedings of sections](Source-Text/1910-PMC2336197-Round1-Original-Scope.txt)
