@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The publisher and culinary context wave resolved 158 exact checks across 69 authenticated originals. It leaves 28,038 checks across 20,296 publication keys and 364 claims. [Original evidence and source replay](../publisher-and-culinary-context-nov26/README.md)
+
 The priority and culinary source wave resolved 143 exact checks across 86 originals, including four priority-four pairs recovered through publisher or journal-reprint material. It leaves 28,196 checks across 20,365 publication keys and 364 claims. [Publisher and culinary scope audit](../priority-cloud-and-food-nov26/README.md)
 
 The PMC Cloud wave resolved 379 exact checks across 125 authenticated sources. It leaves 28,339 checks across 20,451 publication keys and 369 claims. The four high-priority saffron reviews still require the full original. [Cloud source verification and queue replay](../cloud-jats-originals-nov26/README.md)

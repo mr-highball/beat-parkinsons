@@ -504,3 +504,5 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 [Persian traditional saffron and low-mood attribution](Cultural-and-Experiential/Traditional-Practices/2005-Persian-Saffron-Low-Mood-Attribution.txt)
 
 [Saffron petal and stigma study identity](Observations/Saffron-Petal-and-Stigma-Trial-Identity-Nov26.md)
+
+- [Symptoms, attitudes and treatment choices surrounding menopause among the Q’eqchi Maya of Livingston, Guatemala](Cultural-and-Experiential/Local-Knowledge/2006-PMID16580764-Qeqchi-Staple-Foods-and-Sleep-Remedies.txt)

@@ -1227,3 +1227,13 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [PMID:31993129 | Therapeutic alternative of the ketogenic Mediterranean diet to improve mitochondrial activity in Amyotrophic Lateral Sclerosis (ALS): A Comprehensive Review](Source-Text/2019-PMC6977418-Round1-Source-Scope.txt)
 
 - [Public Earth Clinic account of cayenne and anxiety](Cultural-and-Experiential/Conversations/2015-EarthClinic-Cayenne-and-Anxiety-Account.txt)
+
+- [PMID:27038054 | HDQLIFE: The development of two new computer adaptive tests for use in Huntington disease, Speech Difficulties and Swallowing Difficulties](Source-Text/2016-PMC5011441-Round1-Source-Scope.txt)
+- [PMID:27866330 | Human gut microbiota: the links with dementia development](Source-Text/2016-PMC5291774-Round1-Source-Scope.txt)
+- [PMID:30937343 | Sleep and circadian rhythm disruption and stress intersect in Alzheimer's disease](Source-Text/2018-PMC6279965-Round1-Source-Scope.txt)
+- [PMID:30838323 | Sleep-State Dependent Alterations in Brain Functional Connectivity under Urethane Anesthesia in a Rat Model of Early-Stage Parkinson’s Disease](Source-Text/2019-PMC6399428-Round1-Source-Scope.txt)
+- [PMID:31255487 | Transneuronal Propagation of Pathologic α-Synuclein from the Gut to the Brain Models Parkinson’s disease](Source-Text/2019-PMC6706297-Round1-Source-Scope.txt)
+- [PMID:31568686 | The role of the brain–gut–microbiota axis in psychology: The importance of considering gut microbiota in the development, perpetuation, and treatment of psychological disorders](Source-Text/2019-PMC6851798-Round1-Source-Scope.txt)
+- [PMID:31038176 | Sleep and risk of parkinsonism and Parkinson’s disease: a population-based study](Source-Text/2019-PMC6911221-Round1-Source-Scope.txt)
+
+- [Ethnobiological treatments of neurological conditions in the Chota Nagpur Plateau, India](Cultural-and-Experiential/Traditional-Practices/2016-PMID28017696-Chota-Nagpur-Black-Pepper-Insomnia-Source-Trail.txt)
