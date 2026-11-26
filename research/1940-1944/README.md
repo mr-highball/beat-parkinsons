@@ -27,3 +27,5 @@ January 1, 1940 through December 31, 1944.
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 - [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#1940-1944)
+
+- [November 26 Round 1 official scans and endpoint follow-through](../../experiments/1000_see_what_sticks_food/followup/official-scans-and-endpoints-nov26/originals-by-period.md#1940-1944)

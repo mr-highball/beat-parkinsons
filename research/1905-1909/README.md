@@ -32,3 +32,5 @@ January 1, 1905 through December 31, 1909.
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 - [November 26 Round 1 outcome tables and rare original sources](../../experiments/1000_see_what_sticks_food/followup/outcome-tables-and-rare-originals-nov26/originals-by-period.md#1905-1909)
+
+- [November 26 Round 1 official scans and endpoint follow-through](../../experiments/1000_see_what_sticks_food/followup/official-scans-and-endpoints-nov26/originals-by-period.md#1905-1909)

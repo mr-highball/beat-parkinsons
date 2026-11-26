@@ -31,3 +31,9 @@ First published June 14, 2024. Soybean oil at 5% by weight served as the control
 ## Saffron cognition review and outcome scope
 
 The review first appeared August 4, 2021. Section 3.2.8 identifies saffron-extract dementia trials using global cognition and dementia measures. The retrieved body gives no separate executive-function result in Parkinson disease. The local full text supports exclusion of a direct inference while preserving the Alzheimer study trail. [Recovered 2021 source](https://pmc.ncbi.nlm.nih.gov/articles/PMC8445631/) · [Local text](Source-Text/PMC8445631.txt#L559)
+
+## Brown rice hydrolysate outcomes by physical test
+
+The primary randomized human trial allocated 30 older adults to rice protein hydrolysate and 10 to maltodextrin. Figure 4 supplies the overall Short Physical Performance Battery and chair-stand changes at four weeks, including p=.04 and p=.02 respectively. The analyzed denominators differ from allocated counts. The separately usable standing-balance estimate is absent. The primary gut-discomfort endpoint was not met. The randomized comparison used a processed protein hydrolysate, with no cooked-whole-rice or Parkinson postural outcome.
+
+[Original trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC7555431/) · [Trial registry](https://clinicaltrials.gov/study/NCT04450979)

@@ -30,3 +30,5 @@ January 1, 1910 through December 31, 1914.
 - [PMCID:PMC2336197 | Seventy-eighth Annual Meeting of the British Medical Association: proceedings of sections](Source-Text/1910-PMC2336197-Round1-Original-Scope.txt)
 
 - [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1910-1914)
+
+- [November 26 Round 1 official scans and endpoint follow-through](../../experiments/1000_see_what_sticks_food/followup/official-scans-and-endpoints-nov26/originals-by-period.md#1910-1914)

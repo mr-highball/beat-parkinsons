@@ -34,3 +34,5 @@ January 1, 1925 through December 31, 1929.
 - [PMCID:PMC2453796 access and exact claim scope](Source-Text/1927-PMCIDPMC2453796-Round1-Original-Access.txt).
 
 - [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#1925-1929)
+
+- [November 26 Round 1 official scans and endpoint follow-through](../../experiments/1000_see_what_sticks_food/followup/official-scans-and-endpoints-nov26/originals-by-period.md#1925-1929)

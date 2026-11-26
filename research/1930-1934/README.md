@@ -44,3 +44,5 @@ January 1, 1930 through December 31, 1934.
 [The 1932 Ojibwe ethnobotany record](Cultural-and-Experiential/Traditional-Practices/1932-Smith-Ojibwe-Cranberry-Food-and-Tea.txt) records small cranberry as a wild food and documents a separate tea use for nausea.
 
 - [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#1930-1934)
+
+- [November 26 Round 1 official scans and endpoint follow-through](../../experiments/1000_see_what_sticks_food/followup/official-scans-and-endpoints-nov26/originals-by-period.md#1930-1934)

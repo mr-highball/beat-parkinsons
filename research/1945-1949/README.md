@@ -39,3 +39,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 The [Indian Medical Gazette volume index](Source-Text/1945-PMC5218258-Round1-Proceedings-Historical-Scope.txt) locates medicinal formulations and distinguishes topical and injected exposures from the food claims.
 
 - [PMCID:PMC2946808 | Alphabetical index to diseases and nature of injury, P–Q](Source-Text/1949-PMC2946808-Round1-Original-Scope.txt)
+
+- [November 26 Round 1 official scans and endpoint follow-through](../../experiments/1000_see_what_sticks_food/followup/official-scans-and-endpoints-nov26/originals-by-period.md#1945-1949)

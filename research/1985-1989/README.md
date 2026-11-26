@@ -136,3 +136,5 @@ A paired-data sensitivity note in the [lemongrass sleep study](Source-Text/1986-
 - [November 26 Round 1 original-member and outcome records](../../experiments/1000_see_what_sticks_food/followup/original-members-and-trial-contrasts-nov26/originals-by-period.md#1985-1989)
 
 - [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#1985-1989)
+
+- [November 26 Round 1 official scans and endpoint follow-through](../../experiments/1000_see_what_sticks_food/followup/official-scans-and-endpoints-nov26/originals-by-period.md#1985-1989)
