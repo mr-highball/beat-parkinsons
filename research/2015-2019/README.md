@@ -1247,3 +1247,16 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [PMID:31942474 | Expert consensus on the assessment and treatment of chronic constipation in the elderly](Source-Text/2018-PMC6880707-Round1-Source-Scope.txt)
 - [PMID:31780742 | Tsc1-mTORC1 signaling controls striatal dopamine release and cognitive flexibility](Source-Text/2019-PMC6882901-Round1-Source-Scope.txt)
 - [PMID:32104425 | Challenges and trends in apomorphine drug delivery systems for the treatment of Parkinson's disease](Source-Text/2017-PMC7032113-Round1-Source-Scope.txt)
+
+- [PMID:30080229 | A Combination of Essential Fatty Acids, Panax Ginseng Extract, and Green Tea Catechins Modifies Brain fMRI Signals in Healthy Older Adults](Source-Text/2018-PMC12880479-Round1-Source-Scope.txt)
+- [PMID:26131307 | The Masters Athlete](Source-Text/2015-PMC4482301-Round1-Source-Scope.txt)
+- [PMID:26135716 | Hippocampal sharp wave‐ripple: A cognitive biomarker for episodic memory and planning](Source-Text/2015-PMC4648295-Round1-Source-Scope.txt)
+- [PMID:26569387 | Association Between Olfactory Dysfunction and Amnestic Mild Cognitive Impairment and Alzheimer Disease Dementia](Source-Text/2016-PMC4710557-Round1-Source-Scope.txt)
+- [PMID:26966356 | Oropharyngeal dysphagia in older persons – from pathophysiology to adequate intervention: a review and summary of an international expert meeting](Source-Text/2016-PMC4770066-Round1-Source-Scope.txt)
+- [PMID:27535749 | The retina as an early biomarker of neurodegeneration in a rotenone-induced model of Parkinson’s disease: evidence for a neuroprotective effect of rosiglitazone in the eye and brain](Source-Text/2016-PMC4989531-Round1-Source-Scope.txt)
+- [PMID:27571768 | Recognizing the Importance of Dysphagia: Stumbling Blocks and Stepping Stones in the Twenty-First Century](Source-Text/2016-PMC5306342-Round1-Source-Scope.txt)
+- [PMID:27783533 | A case-control comparison of direct healthcare-provider medical costs of chronic idiopathic constipation and irritable bowel syndrome with constipation in a community-based cohort](Source-Text/2016-PMC5596640-Round1-Source-Scope.txt)
+
+- [Raw, roasted and fried cumin composition](Source-Text/2018-Cumin-Raw-Roasted-and-Fried-Composition.txt)
+
+- [Grapeseed-oil drug delivery and rat oral dyskinesia](Source-Text/2017-PMID29209877-Grapeseed-Nanocapsules-and-Orofacial-Movement.txt)

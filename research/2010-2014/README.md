@@ -786,3 +786,14 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [PMID:24949473 | Phytochemical, Therapeutic, and Ethnopharmacological Overview for a Traditionally Important Herb: Boerhavia diffusa Linn.](Source-Text/2014-PMC4053255-Round1-Source-Scope.txt)
 - [PMID:25379285 | Amino Acid Compositions of 27 Food Fishes and Their Importance in Clinical Nutrition](Source-Text/2014-PMC4213980-Round1-Source-Scope.txt)
 - [PMID:24682347 | 2014 AHA/ACC/HRS Guideline for the Management of Patients With Atrial Fibrillation](Source-Text/2014-PMC4676081-Round1-Source-Scope.txt)
+
+- [PMID:22837979 | Neuromuscular Electrical Stimulation Therapy for Dysphagia Caused by Wilson's Disease](Source-Text/2012-PMC3400883-Round1-Source-Scope.txt)
+- [PMID:23055946 | Cul3 and the BTB Adaptor Insomniac Are Key Regulators of Sleep Homeostasis and a Dopamine Arousal Pathway in Drosophila](Source-Text/2012-PMC3464197-Round1-Source-Scope.txt)
+- [PMID:22864020 | Cognitive effects of dopamine depletion in the context of diminished acetylcholine signaling capacity in mice](Source-Text/2012-PMC3529349-Round1-Source-Scope.txt)
+- [PMID:23261065 | American Gastroenterological Association Technical Review on Constipation](Source-Text/2013-PMC3531555-Round1-Source-Scope.txt)
+- [PMID:23710148 | A Review of the Mechanism of Injury and Treatment Approaches for Illness Resulting from Exposure to Water-Damaged Buildings, Mold, and Mycotoxins](Source-Text/2013-PMC3654247-Round1-Source-Scope.txt)
+- [PMID:24891993 | The Role of the Gut Microbiome in the Pathogenesis and Treatment of Obesity](Source-Text/2014-PMC4030605-Round1-Source-Scope.txt)
+- [PMID:25360228 | Electrophysiological Evaluation of Oropharyngeal Dysphagia in Parkinson’s Disease](Source-Text/2014-PMC4213532-Round1-Source-Scope.txt)
+- [PMID:25763239 | Efficacy of Viola odorata in Treatment of Chronic Insomnia](Source-Text/2014-PMC4341349-Round1-Source-Scope.txt)
+
+- [Grape-seed proanthocyanidin tablets and insomnia outcomes](Source-Text/2014-PMID24518152-Grape-Seed-Proanthocyanidins-and-Insomnia.txt)

@@ -1,0 +1,18 @@
+# Follow-through for six exhausted original-source queues
+
+The pinned Oracle read the claim records, cultural source summaries and version 1 scorecards at revision 186. The original-queue replay then accounted for the last pending exact Europe PMC sources for these claims. The targeted follow-through used culinary and botanical names, clinical and animal outcome terms, registry names, and cultural and public discussion leads. Counts below describe provider returns. Earlier full search and review receipts remain in the experiment.
+
+| Claim | Follow-through | Status |
+| --- | --- | --- |
+| 0209, ground clove and apathy | Recent Parkinson and botanical-name apathy/motivation searches found indirect mood or olfactory tasks and no new matched oral comparison. The two closing originals were olfactory tasks. | Unknown (Researched) |
+| 0227, cracked black pepper and constipation | Piperine and powder comparisons include mixed or inconclusive transit measures. The newly indexed uncontrolled black-pepper and senna formula showed improvement for the mixture. | Unknown (Researched) |
+| 0458, steamed spinach and postural instability | Europe PMC returned 48 for the botanical name plus Parkinson and balance/posture/gait and 7 for spinach with postural balance. Five spinach/balance registry results included SPISAR, which has no posted force-platform balance result. Its strength paper and count-matched 2023 thesis still leave balance unresolved. The two records use different placebo descriptions. | Partial |
+| 0487, refined grapeseed oil and insomnia | The oil-cookie and hospital-sleep registries still lack a separate sleep result. The insomnia cookie registry leaves its oil unidentified. The extract trial has an author abstract with a within-arm insomnia change and an unlocated placebo-relative sleep comparison. | Partial |
+| 0596, toasted cumin and postural instability | Europe PMC returned 21 for the botanical name and 72 for cumin plus Parkinson and balance/posture/gait. The targeted registry query returned no matching cumin/Parkinson registration. Favorable day-20 rotarod retention after aqueous-extract pretreatment remains a model observation. The preparation chemistry provides no equivalent active exposure after toasting. | Unknown (Researched) |
+| 0806, cold-pressed grapeseed oil and dystonia | The authenticated reference describes injected haloperidol formulations and a jaw dyskinesia endpoint. Targeted oral oil and dystonia discovery and cultural searches gave no usable contrast or outstanding closely matched study. | Unknown (Researched) |
+
+No frozen wording, tier or clinical sign was changed in this audit. A researched status records the documented review and keeps the underlying efficacy decision open. Culture discovery returned ingredient and symptom context. In the spinach and cumin trails, the ethnographic lead documents spinach for iron deficiency and a separate black-cumin reference, which supplies no Parkinson posture comparison.
+
+- [SPISAR registry](https://clinicaltrials.gov/study/NCT04612127), [primary strength report](https://pmc.ncbi.nlm.nih.gov/articles/PMC8706266/) and [institutional thesis](https://repositorio.ucam.edu/rest/api/core/bitstreams/bcd9d658-d214-4eef-bb5f-1a4a66049bbf/content)
+- [Cookie sleep registration](https://clinicaltrials.gov/study/NCT04677946), [separate grapeseed-oil cookie registration](https://clinicaltrials.gov/study/NCT04677920) and [first oil-cookie publication](https://pmc.ncbi.nlm.nih.gov/articles/PMC9540417/)
+- [Referenced texts](focused-originals.tsv) and [native replay](native-replay-verification.txt)
