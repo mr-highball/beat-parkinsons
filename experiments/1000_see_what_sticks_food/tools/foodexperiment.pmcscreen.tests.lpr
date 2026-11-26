@@ -144,16 +144,19 @@ procedure RunReaderTests;
 const
   CMeta = '<meta name="citation_pmid" content="1234">' +
     '<meta name="citation_doi" content="10.1234/example">' +
-    '<meta name="citation_title" content="A dietary trial">' +
-    '<meta name="citation_abstract_html_url" content="https://pmc.ncbi.nlm.nih.gov/articles/PMC4321/">';
+    '<meta name="citation_title" content="A dietary trial">';
+  CCitation = '<meta name="citation_abstract_html_url" content="https://pmc.ncbi.nlm.nih.gov/articles/PMC4321/">';
+  CCanonical = '<link rel="canonical" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4321/">';
+  CForeignCanonical = '<link rel="canonical" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4322/">';
 var
-  LHtml: String;
+  LHtml, LBody: String;
   LRes: TPmcScreenResult;
 begin
-  LHtml := CMeta + '<article lang="en"><section class="body main-article-body">' +
+  LBody := '<article lang="en"><section class="body main-article-body">' +
     '<section><p>The study used curcumin and olive oil. ' + MakePad(450) + '</p></section>' +
     '<section id="ref-list1" class="ref-list"><p>Salmon A. Reference title.</p></section>' +
     '</section></article><p>Footer broccoli</p>';
+  LHtml := CMeta + CCitation + LBody;
   LRes := ScreenPmcReaderHtml(LHtml, 'PMC4321', '1234', '10.1234/Example', 'turmeric');
   Check((LRes.Kind = pkBodyMatch) and (LRes.BodyHits = 1), 'Reader body retains constituent aliases');
   Inc(GPassed);
@@ -169,6 +172,21 @@ begin
     (ScreenPmcReaderHtml(LHtml, 'PMC4321', '1234', '10.1234/crossed', 'turmeric').Kind = pkPmidMismatch),
     'Reader identity mismatches remain on hold');
   Inc(GPassed);
+  LRes := ScreenPmcReaderHtml(CMeta + CCanonical + LBody, 'PMC4321', '1234',
+    '10.1234/example', 'turmeric');
+  Check(LRes.Kind = pkBodyMatch, 'An older reader can authenticate with the canonical link alone');
+  Inc(GPassed);
+  LRes := ScreenPmcReaderHtml(CMeta + CCanonical + CCitation + LBody, 'PMC4321',
+    '1234', '', 'turmeric');
+  Check(LRes.Kind = pkBodyMatch, 'Matching canonical and citation links agree on the article');
+  Inc(GPassed);
+  LRes := ScreenPmcReaderHtml(CMeta + CForeignCanonical + CCitation + LBody, 'PMC4321',
+    '1234', '', 'turmeric');
+  Check(LRes.Kind = pkPmidMismatch, 'A conflicting canonical link stays on hold');
+  Inc(GPassed);
+  LRes := ScreenPmcReaderHtml(CMeta + LBody, 'PMC4321', '1234', '', 'turmeric');
+  Check(LRes.Kind = pkPmidMismatch, 'A reader with no verified article link stays on hold');
+  Inc(GPassed);
   SetLength(LHtml, Pos('</article>', LHtml) - 1);
   Check(ScreenPmcReaderHtml(LHtml, 'PMC4321', '1234', '', 'turmeric').Kind = pkNoBody,
     'A truncated reader cannot supply original scope');
@@ -179,5 +197,5 @@ begin
   SetMultiByteConversionCodePage(CP_UTF8);
   RunTests;
   RunReaderTests;
-  WriteLn('PmcScreenTests passed (', GPassed, '/17).');
+  WriteLn('PmcScreenTests passed (', GPassed, '/21).');
 end.

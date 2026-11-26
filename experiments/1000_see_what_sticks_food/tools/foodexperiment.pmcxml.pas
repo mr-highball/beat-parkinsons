@@ -622,20 +622,23 @@ begin
   end;
 end;
 
-function ReaderMeta(const AHead, AName: String): String;
+function ReaderQuotedValue(const AHead, APrefix: String): String;
 var
-  LPrefix: String;
   LStart, LEnd: Integer;
 begin
   Result := '';
-  LPrefix := '<meta name="' + AName + '" content="';
-  LStart := Pos(LPrefix, AHead);
+  LStart := Pos(APrefix, AHead);
   if LStart = 0 then
     Exit;
-  Inc(LStart, Length(LPrefix));
+  Inc(LStart, Length(APrefix));
   LEnd := PosEx('"', AHead, LStart);
   if LEnd > LStart then
     Result := Copy(AHead, LStart, LEnd - LStart);
+end;
+
+function ReaderMeta(const AHead, AName: String): String;
+begin
+  Result := ReaderQuotedValue(AHead, '<meta name="' + AName + '" content="');
 end;
 
 function ScreenPmcReaderHtml(const AHtml, AExpectedPmcid, AExpectedPmid,
@@ -645,6 +648,7 @@ const
   CArticleUrl = 'https://pmc.ncbi.nlm.nih.gov/articles/';
 var
   LHead, LArticle, LTitle, LPmid, LFront, LBack, LScreenInput: String;
+  LCanonical, LCitationUrl, LExpectedUrl: String;
   LArticleStart, LNext, LBodyStart, LRefs: Integer;
 begin
   Result := Default(TPmcScreenResult);
@@ -662,9 +666,13 @@ begin
   LHead := Copy(AHtml, 1, LArticleStart - 1);
   LPmid := ReaderMeta(LHead, 'citation_pmid');
   Result.XmlPmid := LPmid;
-  if (AExpectedPmcid = '') or (AExpectedPmid = '') or
-     (LPmid <> AExpectedPmid) or not SameText(ReaderMeta(LHead, 'citation_abstract_html_url'),
-       CArticleUrl + AExpectedPmcid + '/') or
+  LExpectedUrl := CArticleUrl + AExpectedPmcid + '/';
+  LCanonical := ReaderQuotedValue(LHead, '<link rel="canonical" href="');
+  LCitationUrl := ReaderMeta(LHead, 'citation_abstract_html_url');
+  if (AExpectedPmcid = '') or (AExpectedPmid = '') or (LPmid <> AExpectedPmid) or
+     ((LCanonical = '') and (LCitationUrl = '')) or
+     ((LCanonical <> '') and not SameText(LCanonical, LExpectedUrl)) or
+     ((LCitationUrl <> '') and not SameText(LCitationUrl, LExpectedUrl)) or
      ((AExpectedDoi <> '') and not SameText(ReaderMeta(LHead, 'citation_doi'), AExpectedDoi)) then
   begin
     Result.Kind := pkPmidMismatch;
