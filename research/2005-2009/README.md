@@ -555,3 +555,5 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [PMID:16855961 | Polyunsaturated fatty acid supplementation for schizophrenia](Source-Text/2006-PMC7032618-Round1-Original-Scope.txt)
 
 - [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#2005-2009)
+
+- [November 26 Round 1 rare original and clinical protocol records](../../experiments/1000_see_what_sticks_food/followup/rare-members-and-clinical-protocols-nov26/originals-by-period.md#2005-2009)
