@@ -56,3 +56,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Involvement of blood mononuclear cells in the infertility, age-associated diseases and cancer treatment](Local-Knowledge/2016-PMC5183987-Propolis-and-Cayenne-Narrative.txt)
 
 - [Black seed and fatigue, 2018 secondary historical attribution](Local-Knowledge/2018-PMC5818345-Nigella-and-Fatigue-Historical-Attribution.txt)
+
+- [Parkinson patient-use survey, coconut oil](Local-Knowledge/2017-PMC5664950-Coconut-Oil-Parkinson-Use-Survey.txt)

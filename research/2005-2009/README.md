@@ -538,3 +538,12 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [PMID:19690020 | Hypertension Increases Cerebral 6-18F-Fluorodopa–Derived Radioactivity](Source-Text/2009-PMC4164388-Round1-Source-Scope.txt)
 - [PMID:17618701 | Gait dynamics, fractals and falls: finding meaning in the stride-to-stride fluctuations of human walking](Source-Text/2007-PMC2267927-Round1-Original-Scope.txt)
 - [PMID:19725249 | Persistent short-term memory defects following sleep deprivation in a drosophila model of Parkinson disease](Source-Text/2009-PMC2717205-Round1-Original-Scope.txt)
+
+- [PMID:17047311 | Screening Pesticides for Neuropathogenicity](Source-Text/2006-PMC1559928-Round1-Source-Scope.txt)
+- [PMID:16097484 | Role of the Basal Ganglia in Balance Control](Source-Text/2005-PMC2565457-Round1-Source-Scope.txt)
+- [PMID:19087341 | Hydrocephalus 2008, 17–20th September, Hannover Germany: a conference report](Source-Text/2008-PMC2615740-Round1-Source-Scope.txt)
+- [PMID:18774901 | Molecular Mechanisms and Clinical Implications of Reversible Protein S-Glutathionylation](Source-Text/2008-PMC2774718-Round1-Source-Scope.txt)
+- [PMID:18616392 | Neuropsychological Assessment of Dementia*](Source-Text/2009-PMC2864104-Round1-Source-Scope.txt)
+- [PMID:19802812 | Assessment of Parkinson Disease Manifestations](Source-Text/2009-PMC2897716-Round1-Source-Scope.txt)
+- [PMID:18702696 | Olfactory deficits in mice overexpressing human wildtype α-synuclein](Source-Text/2008-PMC3108548-Round1-Source-Scope.txt)
+- [PMID:18061085 | Fever of Unknown Origin Due to Zoonoses](Source-Text/2007-PMC7135411-Round1-Source-Scope.txt)

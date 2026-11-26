@@ -860,3 +860,6 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [PMID:21205749 | Physical activity and survival after prostate cancer diagnosis in the health professionals follow-up study](Source-Text/2011-PMC3056656-Round1-Original-Scope.txt)
 - [PMID:21257733 | Lewy Bodies and Olfactory Dysfunction in Old Age](Source-Text/2011-PMC3073534-Round1-Original-Scope.txt)
 - [PMID:21061154 | Detoxified extract of Rhus verniciflua stokes inhibits rotenone-induced apoptosis in human dopaminergic cells, SH-SY5Y](Source-Text/2010-PMC11498594-Round1-Original-Scope.txt)
+
+- [PMID:25249938 | Transcription factors Foxa1 and Foxa2 are required for adult dopamine neurons maintenance](Source-Text/2014-PMC4158790-Round1-Source-Scope.txt)
+- [DOI:10.1089/jwh.2011.ab02 | Abstracts from the NIH Office of Research on Women's Health Eighth Annual Interdisciplinary Women's Health Research Symposium](Source-Text/2011-PMC3197080-Round1-Original-Scope.txt)

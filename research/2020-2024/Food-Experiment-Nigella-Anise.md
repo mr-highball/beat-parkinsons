@@ -91,3 +91,11 @@ First published November 29, 2024, assigned to a 2026 issue. In a randomized PMS
 The acute-COVID trial randomized 45 adults to ground aniseed and rock sugar and 180 to placebo, with open-ended adverse-event collection. The authors report two anise and three placebo participants with mild or moderate adverse events in the abstract. The results list throat itching and thirst in the anise group and cough and cramps in the placebo group. The symptom counts are not unique participant counts. The protocol did not specify falls and the clinical report supplies no fall-frequency result. [Original trial Methods and Results](https://pmc.ncbi.nlm.nih.gov/articles/PMC10824915/) · [Earlier registration](Source-Text/Trials/IRCT20120506009651N3.txt)
 
 On November 26, 2026, rechecking the original protocol and registration identity against the metabolic report found no extractable HADS outcome for IRCT20200411047027N1. The matched results report presents metabolic and inflammatory outcomes. The separate Black Seed antiviral chapter discusses animal infection behavior and does not supply the missing human depression outcome. [Trial protocol](https://pubmed.ncbi.nlm.nih.gov/35120579/) · [Matched results](https://pmc.ncbi.nlm.nih.gov/articles/PMC9033343/) · [Chapter scope](Source-Text/2021-PMC8629349-Round1-Original-Scope.txt)
+
+### Locating the original five-arm fatigue tables
+
+A 2025 thesis review identifies a 2021 Gaziantep doctoral thesis with the same five 30-person groups and Fatigue Severity Scale as PMID 39642267 and NCT06298760. The institutional advisor bibliography confirms the thesis title and degree. The separate 2016 thesis concerns rheumatoid arthritis and is not a copy of this experiment. The 2021 thesis tables and matched-placebo contrasts remain unavailable.
+
+- [Institutional thesis listing](https://www.mu.edu.tr/en/personel/sevginsamancioglu)
+- [Thesis review, pages 53–54](https://dergipark.org.tr/tr/download/article-file/4588196)
+- [Related 2026 EVACUR protocol, a separate study](../2025-2029/Source-Text/2026-NCT07398885-EVACUR-Methods-Only-Protocol.txt)

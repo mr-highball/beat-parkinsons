@@ -1396,3 +1396,17 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 
 - [Journal comparison of fennel extract and menstrual fatigue](Source-Text/2019-Motavalli-Fennel-Drops-and-Fatigue.txt)
 - [Historical black-seed and fatigue attribution](Cultural-and-Experiential/Local-Knowledge/2018-PMC5818345-Nigella-and-Fatigue-Historical-Attribution.txt)
+
+- [PMID:26070241 | Genetic reduction of mitochondrial complex I function does not lead to loss of dopamine neurons in vivo](Source-Text/2015-PMC4523431-Round1-Source-Scope.txt)
+- [PMID:26612995 | Antioxidant Formulae, Shengmai San, and LingGuiZhuGanTang, Prevent MPTP Induced Brain Dysfunction and Oxidative Damage in Mice](Source-Text/2015-PMC4647033-Round1-Source-Scope.txt)
+- [PMID:26585523 | Current Pharmaceutical Treatments and Alternative Therapies of Parkinson's Disease](Source-Text/2016-PMC4876590-Round1-Source-Scope.txt)
+- [PMID:27231142 | Mutations in SLC39A14 disrupt manganese homeostasis and cause childhood-onset parkinsonism–dystonia](Source-Text/2016-PMC4894980-Round1-Source-Scope.txt)
+- [PMID:27920621 | Toxins, Toxicity, and Endotoxemia: A Historical and Clinical Perspective for Chiropractors](Source-Text/2016-PMC5127911-Round1-Source-Scope.txt)
+- [PMID:27865980 | Aging of Cerebral White Matter](Source-Text/2016-PMC5250573-Round1-Source-Scope.txt)
+- [PMID:28786886 | Beliefs about Use of Complementary Health Approaches for Parkinson’s disease](Source-Text/2017-PMC5664950-Round1-Source-Scope.txt)
+- [PMID:28985263 | The effect of perindopril on postural instability in older people with a history of falls—a randomised controlled trial](Source-Text/2017-PMC5860560-Round1-Source-Scope.txt)
+- [PMID:29626009 | The Nurr1 Ligand,1,1-bis(3′-Indolyl)-1-(p-Chlorophenyl)Methane, Modulates Glial Reactivity and Is Neuroprotective in MPTP-Induced Parkinsonism](Source-Text/2018-PMC5941193-Round1-Source-Scope.txt)
+- [PMID:30079229 | An early diagnosis is not the same as a timely diagnosis of Parkinson's disease](Source-Text/2018-PMC6053699-Round1-Source-Scope.txt)
+- [PMID:31365862 | Distinct Connectivity and Functionality of Aldehyde Dehydrogenase 1a1-Positive Nigrostriatal Dopaminergic Neurons in Motor Learning](Source-Text/2019-PMC6741442-Round1-Source-Scope.txt)
+
+- [Parkinson patient-use survey, coconut oil](Cultural-and-Experiential/Local-Knowledge/2017-PMC5664950-Coconut-Oil-Parkinson-Use-Survey.txt)

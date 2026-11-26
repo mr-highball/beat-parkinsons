@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The priority-original audit resolved 230 exact checks across 124 originals. It leaves 26,024 checks across 19,510 publication keys and 299 claims. [Priority originals and clinical follow-through](../priority-and-shared-originals-nov26/README.md)
+
 The publication-first audit resolved 213 exact checks across 98 originals. It leaves 26,254 checks across 19,634 publication keys and 300 claims. [Verified originals and focused claim audit](../catalog-and-final-sources-nov26/README.md)
 
 The recovered conference and trial batch resolved 236 exact checks across 92 originals. It leaves 26,467 checks across 19,732 publication keys and 311 claims. [Recovered originals and clinical review](../closing-sources-and-trials-nov26/README.md)

@@ -112,3 +112,7 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Artemisia spp.: An Update on Its Chemical Composition, Pharmacological and Toxicological Profiles](Local-Knowledge/2022-PMC9467740-Traditional-Tarragon-and-Wound-Care.txt)
 
 - [Feed plants, ethnoveterinary medicine, and biocultural values: insights on the Luchuan pig from Hakka communities in China](Local-Knowledge/2023-PMC10502998-Hakka-Lemongrass-Veterinary-Use.txt)
+
+- [Participant-reported practice in a qualitative study, coconut oil](Local-Knowledge/2024-PMC11907177-Topical-Coconut-Oil-Interview-Account.txt)
+
+- [Research-author attribution of traditional Siddha practice, black pepper](Local-Knowledge/2024-PMC11402773-Siddha-Black-Pepper-and-Leaves.txt)

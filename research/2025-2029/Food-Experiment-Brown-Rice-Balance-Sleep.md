@@ -19,3 +19,9 @@ Mohan and colleagues first published July 28, 2026, before the December issue da
 ## Separate fermented rice germ trial of perceived stress
 
 2026. An eight-week randomized trial in 80 adults with perceived stress reported a Stress Response Inventory difference of −5.39 points versus placebo (95% CI −10.25 to −0.54, p = .035). The accessible primary abstract lists stress, quality of life and biochemical outcomes and does not give any REM or dream-enactment result. The original body was unavailable through the publisher route tested. It is independent of the rat study and uses the same branded germ extract. [Primary structured abstract](https://doi.org/10.1016/j.jff.2026.107183)
+
+### Related original mitophagy and fly-climbing report
+
+Figure 2 reports better short-distance climbing after the brown-rice feed than with iron alone. The reported threshold is p < .05 and the caption gives three replicates of 20 flies. Methods describe 6 cm in six seconds, while the figure axis describes 8 cm. The report uses 1% brown rice in experimental feed and does not establish a clinical postural-instability outcome.
+
+- [Complete journal scope and family limits](Source-Text/2025-Yankuzo-Brown-Rice-Mitophagy-and-Fly-Climbing.txt)
