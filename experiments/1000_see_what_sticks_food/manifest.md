@@ -319,6 +319,8 @@ The November 26 high-fanout publication audit closed 215 checks and added 44 dat
 
 The November 26 preparation and symptom review closed 180 exact checks and added 49 dated sources and one cultural account. It preserves the constipation-table discrepancy in the cinnamon extract trial and the preparation limits of flaxseed and carnitine results. Five clinical rationales were extended after reviewing 50 scorecards. The replay leaves 29,173 exact checks across 20,722 publication keys and 374 claims. [Batch evidence and provenance](followup/preparation-and-symptom-outcomes-nov26/README.md)
 
+The November 26 nonmotor outcome review closed 200 exact checks across 50 publications. It links a separate sage incontinence result and a dated traditional use account while preserving the distinction from Parkinson urgency. It also corrects five trial family classifications and validates 42 affected scorecards. The replay leaves 28,973 exact checks across 20,672 publication keys and 374 claims. [Batch evidence and provenance](followup/nonmotor-and-diet-outcomes-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

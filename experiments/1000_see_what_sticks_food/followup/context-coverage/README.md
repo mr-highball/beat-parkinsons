@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The nonmotor outcome review resolved 200 checks across 50 dated originals, including 76 related contexts and 124 exclusions. It leaves 28,973 checks across 20,672 publication keys and 374 claims. [Original scope and focused nonmotor review](../nonmotor-and-diet-outcomes-nov26/README.md)
+
 The preparation and symptom review resolved 180 checks across 45 dated originals, including 72 related contexts and 108 exclusions. It leaves 29,173 checks across 20,722 publication keys and 374 claims. [Original scope and targeted clinical comparisons](../preparation-and-symptom-outcomes-nov26/README.md)
 
 The high-fanout publication audit resolved 215 exact checks across 43 dated originals, with 108 related contexts and 107 exclusions. It leaves 29,353 checks across 20,767 publication keys and 378 claims. [Original bodies and counterevidence](../priority-and-high-fanout-originals-nov26/README.md)

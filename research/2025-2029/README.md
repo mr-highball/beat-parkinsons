@@ -1263,3 +1263,11 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [PMID:41377384 | Safety and effectiveness of marjoram and cinnamon herbal tea supplementation in managing polycystic ovary syndrome: a pilot randomized, double-blind, controlled trial](Source-Text/2025-PMC12689000-Marjoram-Cinnamon-Tea-Bowel-Reports.txt)
 
 [Cinnamon and flaxseed preparation comparisons](Observations/Cinnamon-and-Flaxseed-Preparation-Comparisons-Nov26.md)
+
+- [PMID:39808166 | Polyphenols as Wnt/β‐catenin pathway modulators: A promising strategy in clinical neurodegeneration](Source-Text/2025-PMC11871115-Polyphenols-and-Wnt-Signaling.txt)
+- [PMID:40046485 | Clinical practice guidelines for assessment and management of mild neurocognitive disorder](Source-Text/2025-PMC11878458-Mild-Neurocognitive-Disorder-Nutrition-Guideline.txt)
+- [PMID:41384242 | Cannabinoids for Anxiety and Sleep Disturbances: A Scoping Review](Source-Text/2025-PMC12695116-Cannabinoid-Anxiety-Sleep-Vehicles.txt)
+- [PMID:40842659 | Digital adaptation of odor identification test: Current knowledge, gaps, and initial insights from a DAC global cohort](Source-Text/2025-PMC12365445-Odor-Identification-Test-Materials.txt)
+- [PMID:40808708 | A qualitative study exploring physiotherapists’ insights on the design and development of technology-enhanced gait and balance assessment systems for older adults](Source-Text/2025-PMC12344322-Physiotherapist-Gait-Assessment-Interviews.txt)
+- [PMID:40444534 | Restoration of Memory Along With Neurogenic Enhancement by Therapeutic Botulinum Neurotoxin in a Preclinical Model of Parkinson’s Disease](Source-Text/2025-PMC12126647-Botulinum-Neurotoxin-Memory-Model.txt)
+- [PMID:40162161 | Effectiveness of telerehabilitation on the International Classification of Functioning, Disability, and Health framework outcomes during the COVID-19 pandemic: A systematic review and meta-analysis of randomized controlled trials](Source-Text/2025-PMC11951915-Telerehabilitation-Function-Review.txt)

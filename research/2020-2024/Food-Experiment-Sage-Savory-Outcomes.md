@@ -27,3 +27,9 @@ The November 2021 prospective record describes allocation by dormitory room, com
 ## Inhaled essential-oil mixture and registered sleep measurements
 
 NCT06208800 combines morning and evening essential-oil preparations. The current article uses two names for clary sage as one ingredient, while the registry text lists clary and musk sage in separate words. The registry reports no posted results. The 2026 article is the linked result of this study. [Dated official registry summary](Source-Text/2024-NCT06208800.txt) · [Dated results](../2025-2029/Source-Text/2026-PMID42011111.txt)
+
+## Common sage extract and urinary incontinence in menopause
+
+Zeidabadi and colleagues report the urinary incontinence item separately in Table 2. The extract and starch-placebo means at week 12 were 0.81 and 1.07, respectively (p=.369 for the published endpoint comparison). Urinary leakage scores do not establish how often participants felt urgency. Dimpfel and colleagues also report a urogenital composite in a different product trial, without a separate urgency result. [Local Zeidabadi outcome extract](Source-Text/2020-PMC7114003-Sage-Extract-Menopause-Exhaustion.txt) · [Original Table 2](https://pmc.ncbi.nlm.nih.gov/articles/PMC7114003/#T2)
+
+The unrelated 2021 community survey records customary use involving renal colic or diuresis. It reports intended use without a measured change in urgency. [Local fieldwork extract](Cultural-and-Experiential/Local-Knowledge/2021-Bencheikh-Sage-Renal-Use-Northeastern-Morocco.txt)
