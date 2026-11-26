@@ -314,3 +314,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [Gönen medicinal plant survey, original abstract](Cultural-and-Experiential/Traditional-Practices/2001-PMID11395255-Gonen-Ethnobotany-Abstract.txt).
 
 The [2001 Israel Society for Neurosciences proceedings](Source-Text/2001-PMC2565376-Round1-Proceedings-Historical-Scope.txt) contain a sesame-oil vehicle in a rat catalepsy model and a corn-oil preload in a feeding experiment.
+
+The [Finley feeding study](Source-Text/2003-PMID12949376-Finley-Corn-Oil-and-Neurologic-Examination.txt) records corn-oil and cocoa-butter arm identity, the neurological exam and separate motor steadiness measures.

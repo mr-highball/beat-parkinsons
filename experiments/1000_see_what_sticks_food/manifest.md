@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+The shared original-source review closed 156 exact checks using 26 identity-verified publications, with 85 scope exclusions and 71 related contexts. The queue now holds 30,274 checks across 20,981 source keys and 388 frozen claims. Fifty-one scorecards retain their verdicts and anchors. [Originals and exact replay](followup/shared-original-scope-dedup-nov25/README.md)
+
 The November 25 proceedings and folio review closed 34 exact source checks across five original records. The replay leaves 30,430 checks across 21,007 source keys and 388 claims. Twenty assessed claims retain their existing verdicts and score anchors. [Originals and replay](followup/priority-originals-and-saffron-citations-nov25/README.md)
 
 The November 25 structured-original review closed 109 exact source checks, including 42 related scopes and 67 exclusions. It linked three follow-through reports for dietary fatigue and an olive-oil carrier, then validated 38 scorecards with unchanged verdicts and anchors. The replay leaves 30,464 exact checks across 21,012 source keys and 389 frozen claims. [Originals, findings and replay](followup/structured-frailty-balance-trails-nov25/README.md)

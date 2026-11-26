@@ -1087,3 +1087,5 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 - [2025 older-adult extract trial](Source-Text/2025-PMID40762630-Lang-Saffron-Sleep-Trial.txt)
 - [VA/DoD chronic insomnia guideline and cited saffron trial](Source-Text/2025-VADOD-Chronic-Insomnia-Guideline-Saffron-Scope.txt)
 - [Two public conversations about variable sleep](Observations/README.md#saffron-and-sleep-observations)
+
+The [shared originals packet](../../experiments/1000_see_what_sticks_food/followup/shared-original-scope-dedup-nov25/README.md) includes 11 structured publications in this period. The [2025 stomatitis series](Source-Text/2025-PMID40914980-Cinnamon-Gum-and-Candy-Contact-Stomatitis.txt) archives the oral contact findings.

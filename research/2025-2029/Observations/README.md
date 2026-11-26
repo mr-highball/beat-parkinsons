@@ -1,5 +1,7 @@
 # Observations for 2025-2029
 
+[Original arm labels and voice outcomes](Original-Arm-Labels-And-Voice-Outcomes-Nov25.md) compares the feeding study and several oral and speech outcomes.
+
 [Dietary grouping, shared vehicles and original-source review](Structured-Food-Exposure-Scopes-Nov25.md) compares string-bean food coding, shared olive oil in clinical formulations and community growing records.
 
 [Date and orange exposures](Date-and-Orange-Exposure-Scopes-Nov25.md) compares extract preparations, inflammatory endpoints, flavoring and mixtures across periods.
