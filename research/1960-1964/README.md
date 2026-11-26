@@ -40,3 +40,5 @@ January 1, 1960 through December 31, 1964.
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
 
 - [PMID:14139096 | Royal Apothecaries of the Tudor Period](Cultural-and-Experiential/Local-Knowledge/1964-PMID14139096-Tudor-Anise-and-Fennel-Accounts.txt)
+
+- [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1960-1964)

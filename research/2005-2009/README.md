@@ -553,3 +553,5 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [Ayurveda congress account of traditional turmeric wound care](Cultural-and-Experiential/Local-Knowledge/2008-PMC2586317-Turmeric-and-Ayurveda-Wound-Care-Account.txt)
 
 - [PMID:16855961 | Polyunsaturated fatty acid supplementation for schizophrenia](Source-Text/2006-PMC7032618-Round1-Original-Scope.txt)
+
+- [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#2005-2009)

@@ -1896,3 +1896,5 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [Patient-reported food aggravators in a rosacea survey](Cultural-and-Experiential/Local-Knowledge/2025-PMC12274754-Rosacea-Reported-Cinnamon-and-Ginger-Triggers.txt)
 
 - [Nigella seed extract and forced-swim comparison](Source-Text/2025-PMID41251809-Nigella-Extract-and-Rat-Swim-Behavior.txt)
+
+- [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#2025-2029)

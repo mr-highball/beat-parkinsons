@@ -128,3 +128,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [British Pharmacological Society proceedings from November 1988](Source-Text/1988-PMID3207568-BPS-Clinical-Pharmacology-Proceedings-Food-Scopes.txt), screened across 64 original printed pages.
 
 A paired-data sensitivity note in the [lemongrass sleep study](Source-Text/1986-Leite-Lemongrass-Tea-Sleep-Extract.txt) bounds what the original waking-sleepiness marginals can establish.
+
+- [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1985-1989)

@@ -61,3 +61,5 @@ The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-
 
 - [Index to Volume I for 1976](Source-Text/1976-PMC1638127-BMJ-Nutmeg-Index-Scope.txt)
 - [Nutmeg poisoning, Venables and colleagues](Source-Text/1976-PMID942686-Venables-Nutmeg-Diarrhea-and-Toxicity.txt)
+
+- [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1975-1979)

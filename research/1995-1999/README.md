@@ -222,3 +222,5 @@ The [BMJ February 1998 issue review](../../experiments/1000_see_what_sticks_food
 - [Disease, transplantation and regeneration](Source-Text/1996-PMC7134801-Round1-PDF-Scope.txt)
 
 - [PMCID:PMC1281787 | Thirty-ninth Annual Biophysical Society Meeting: Wednesday Symposia and Posters, Part III](Source-Text/1995-PMC1281787-Round1-Original-Scope.txt)
+
+- [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1995-1999)

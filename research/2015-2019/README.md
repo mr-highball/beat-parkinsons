@@ -1420,3 +1420,5 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [PMID:29987760 | Abstracts of 20th Annual ASENT Meeting](Source-Text/2018-PMC6095775-Round1-Original-Scope.txt)
 
 - [PMID:29075224 | Defining a Conceptual Topography of Word Concreteness: Clustering Properties of Emotion, Sensation, and Magnitude among 750 English Words](Source-Text/2017-PMC5641898-Round1-Source-Scope.txt)
+
+- [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#2015-2019)

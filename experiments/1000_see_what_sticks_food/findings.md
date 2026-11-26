@@ -336,6 +336,8 @@ The November 26 remaining-originals audit resolved 273 exact checks across 135 o
 
 The November 26 collections audit resolved 267 exact checks across 124 original publications and collections. Two official scan sets are newly archived. Six registry records add current outcome coverage, and the reported verdicts and anchors stay the same. [Originals and clinical trial checks](followup/conference-parity-and-outcome-trails-nov26/README.md)
 
+The November 26 last-pair audit resolved 254 exact checks across 130 original records. The baked-sardine anxiety claim is now Unknown (Researched). Three examined claims at zero exact pairs retain named clinical or access gaps. [Searches, originals and completed audit](followup/last-pairs-and-near-completion-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

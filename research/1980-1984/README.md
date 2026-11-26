@@ -87,3 +87,5 @@ The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-
 - [PMCID:PMC1713266 | Index to volume 281 for 1980](Source-Text/1980-PMC1713266-BMJ-Cumulative-Index-Scope.txt)
 
 - [Beware of bay leaf](Source-Text/1980-PMID7470211-Intact-Bay-Leaf-Impaction.txt)
+
+- [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1980-1984)

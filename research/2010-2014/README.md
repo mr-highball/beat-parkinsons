@@ -876,3 +876,5 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [PMID:25532813 | Discriminating Simulated Vocal Tremor Source Using Amplitude Modulation Spectra](Source-Text/2014-PMC4361255-Round1-Source-Scope.txt)
 
 - [Original Japanese choking series, O-220](Source-Text/2010-JJSPEN-O220-Choking-Diagnoses-and-Foods.txt)
+
+- [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#2010-2014)

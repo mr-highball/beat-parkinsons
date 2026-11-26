@@ -43,3 +43,5 @@ The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-
 [November 25 Round 1 source checks and citation trails](../2025-2029/Food-Experiment-Round-1-Eleven-Staged-Originals-Nov25.md) link the new dated records and their review depths.
 
 - [Verified 1957 WHO report and culinary search contexts](Source-Text/1957-PMID13511135-WHO-Original-Scans-Culinary-Context.txt).
+
+- [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1955-1959)
