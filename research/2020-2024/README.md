@@ -1264,3 +1264,15 @@ The [shared originals packet](../../experiments/1000_see_what_sticks_food/follow
 The [public lemongrass bedtime suggestion](Cultural-and-Experiential/Conversations/2020-Reddit-Lemongrass-as-a-Sleep-Suggestion.txt) illustrates a conversational lead without an attributed symptom change.
 
 The [Tehran saffron capsule article](Source-Text/2024-Lalezari-Parkinson-Saffron-Capsules.txt) is indexed by the publication DOI and linked to the separately filed registry.
+
+The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Scopes.txt) links the [Hamburg journal cohort](Source-Text/2023-PMID36771381-Hamburg-Coffee-and-Brain-MRI.txt) and the separate [member withdrawal](Source-Text/2024-PMID38477683-ESOC-Abstract-Retraction-Scope.txt). The [menopause manual](Source-Text/2022-PMC9490892-Menopause-Manual-Food-Scope.txt) and [sunflower oil laboratory vehicle](Source-Text/2022-PMC9729861-Sunflower-Vehicle-Poster-Scope.txt) preserve their individual food and outcome boundaries.
+
+- [Diet and the Microbiota–Gut–Brain Axis: Sowing the Seeds of Good Mental Health](Source-Text/2021-PMID33693453-microbiota-diet-review-food-scope.txt)
+
+- [Dietary Modification for the Restoration of Gut Microbiome and Management of Symptoms in Irritable Bowel Syndrome](Source-Text/2021-PMID36072680-ibs-dietary-advice-scope.txt)
+
+- [Interventions for the treatment of persistent post-COVID-19 olfactory dysfunction](Source-Text/2022-PMID36062970-olfactory-rehabilitation-clove-scope.txt)
+
+- [Potential mechanisms to modify impaired glucose metabolism in neurodegenerative disorders](Source-Text/2022-PMID36281012-glucose-metabolism-food-scope.txt)
+
+- [Acupuncture Treatment of Autonomic Nervous Dysfunction in Patients with Parkinson's Disease](Source-Text/2024-PMID39309401-acupuncture-autonomic-scope.txt)

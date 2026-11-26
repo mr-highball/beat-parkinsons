@@ -1,0 +1,5 @@
+# Ingredient identity, delivery vehicle and outcome scope
+
+Proceedings from 2015–2019 and 2020–2024 distinguished ingredients administered as food from incidental mentions and laboratory vehicles. Its meal-oil comparison also exposed an unresolved conflict between the named design and results arms. [ESICON 2019](../../2015-2019/Source-Text/2019-PMC6892323-ESICON-Meal-Oil-Scope.txt) · [Sunflower vehicle scope](../../2020-2024/Source-Text/2022-PMC9729861-Sunflower-Vehicle-Poster-Scope.txt)
+
+The current period's meclofenoxate research uses an olive-oil vehicle in a Parkinson model. The reported treatment comparison concerns meclofenoxate. The olfactory study uses sensory stimuli during testing. An ingredient presented to measure smell supplies a different exposure from eating, drinking or cooking with it. Neither comparison isolates the frozen culinary preparation's effect. [Meclofenoxate vehicle scope](../Source-Text/2025-PMID40514362-meclofenoxate-olive-vehicle-scope.txt) · [Olfactory test stimulus scope](../Source-Text/2026-PMID41667476-olfactory-test-stimulus-scope.txt)

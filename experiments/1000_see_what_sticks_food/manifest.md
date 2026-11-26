@@ -307,6 +307,8 @@ The weak-direction review added a randomized brewed green tea comparison outside
 
 The November 26 print-issue audit separated six original publications, removing six dried-date pain checks from the exact queue. The Tehran saffron capsule article is now indexed under its DOI with the Hamilton result and absent outcome details documented. Five existing scorecards were checked with their directions unchanged. [Original issue and saffron publication](followup/priority-originals-nov26/README.md)
 
+The November 26 shared-original review closed 121 source checks across 19 identity-verified publications and added 20 dated catalog texts. Sixty-six scopes are related and 55 are excluded. The 53 checked scorecards retain their directions and anchors. Conference and journal reports for the Hamburg coffee cohort share one study family. The verified queue holds 29,834 exact checks across 20,895 publication keys and 380 claims. [Methods, source scopes and replay](followup/shared-issue-recovery-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

@@ -1115,3 +1115,16 @@ The [shared originals packet](../../experiments/1000_see_what_sticks_food/follow
 [Exact assessments and source scopes](../../experiments/1000_see_what_sticks_food/followup/open-archive-reuse-nov25/README.md)
 
 The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans subjective fatigue measurement. The public record leaves the beverage composition and outcomes open.
+
+### Shared original publications and exact source checks
+
+- [PMID:40255448 | Targeting dopaminergic neuronal death: Luteolin as a therapeutic modulator in Parkinson's disease](Source-Text/2025-PMID40255448-luteolin-vegetable-scope.txt)
+- [PMID:40453679 | Long-term Neurological Consequences of COVID-19 in Patients With Pre-existing Alzheimer's and Parkinson's Disease](Source-Text/2025-PMID40453679-post-covid-review-food-scope.txt)
+- [PMID:40514362 | Repurposing the memory-promoting meclofenoxate hydrochloride as a treatment for Parkinson's disease through integrative multi-omics analysis](Source-Text/2025-PMID40514362-meclofenoxate-olive-vehicle-scope.txt)
+- [PMID:40718363 | Vitamin K and women's health: a review](Source-Text/2025-PMID40718363-vitamin-k-food-scope.txt)
+- [PMID:40722839 | The Small Intestinal Microbiota and the Gut–Brain Axis in Parkinson's Disease: A Narrative Review](Source-Text/2025-PMID40722839-intestinal-microbiota-food-scope.txt)
+- [PMID:41178942 | Effects of the ketogenic diet on skin—potential benefits and risks](Source-Text/2025-PMID41178942-ketogenic-food-components-scope.txt)
+- [PMID:40832691 | The Management of Parkinson's Disease Before, during and after Pregnancy—an MDS Scientific Issues Committee Review](Source-Text/2025-PMID40832691-pregnancy-review-food-scope.txt)
+- [PMID:41667476 | Olfactory sensory map is perturbed in a human wild-type α-synuclein overexpressing transgenic mouse model of Parkinson's disease](Source-Text/2026-PMID41667476-olfactory-test-stimulus-scope.txt)
+
+[Ingredient identity, delivery vehicle and outcome scope](Observations/Shared-Original-Ingredient-and-Outcome-Scope-Nov26.md)

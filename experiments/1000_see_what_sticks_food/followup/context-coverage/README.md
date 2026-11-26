@@ -1,5 +1,9 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The shared-original batch resolved 121 checks across 19 authenticated publications, with 66 related contexts and 55 scope exclusions. The replay leaves 29,834 exact checks across 20,895 publication keys and 380 frozen claims. [Source checks and replay](../shared-issue-recovery-nov26/README.md)
+
+Group pending pairs by canonical study ID after preserving evidence priority. Within a priority, favor originals shared by several queued pairs. Batch exact Oracle lookups before retrieval, then reuse each verified original across its eligible scopes. Validate each proposed scorecard and exact disposition, and refresh the catalog and web snapshot once for the verified batch.
+
 Printed BMJ issue follow-up closed six dated source checks for claim 0502, including two earlier access-only scopes. The replay leaves 29,955 exact checks across 20,914 publications and 384 frozen claims. [Issue methods and replay](../priority-originals-nov26/README.md)
 
 The weak-direction review closed 11 checks across two identity-matched publications, including two related contexts and nine scope exclusions. The verified queue holds 29961 checks across 20920 source keys and 384 frozen claims. [Originals and exact replay](../weak-direction-crossover-nov25/README.md)
