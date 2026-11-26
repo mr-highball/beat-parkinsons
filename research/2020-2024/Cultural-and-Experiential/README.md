@@ -110,3 +110,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Colouring Flowers: Books, Art, and Experiment in the Household of Margery and Henry Power](Local-Knowledge/2023-PMC7614357-Household-Manuscripts-and-Parsley.txt)
 
 - [Artemisia spp.: An Update on Its Chemical Composition, Pharmacological and Toxicological Profiles](Local-Knowledge/2022-PMC9467740-Traditional-Tarragon-and-Wound-Care.txt)
+
+- [Feed plants, ethnoveterinary medicine, and biocultural values: insights on the Luchuan pig from Hakka communities in China](Local-Knowledge/2023-PMC10502998-Hakka-Lemongrass-Veterinary-Use.txt)

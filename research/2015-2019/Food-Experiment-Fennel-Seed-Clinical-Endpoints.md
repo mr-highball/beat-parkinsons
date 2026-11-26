@@ -29,3 +29,9 @@ ClinicalTrials.gov first posted this registration on October 18, 2018. It compar
 Zhang and colleagues measured stomach retention and small-intestinal progression separately after oral fennel essential oil. In normal mice, the middle oil dose reduced intestinal propulsion (p < .05), while the gastric emptying differences were nonsignificant. With atropine, neither outcome differed significantly from the drug-only group. With neostigmine, the high oil dose reduced intestinal propulsion (p < .01), while gastric emptying fell nonsignificantly. The Chinese Results and Tables 1–3 provide the endpoint-specific reading. Slower intestinal progression alone cannot establish delayed stomach emptying or longer Parkinson OFF time.
 
 [Original 2019 record](https://tjzhongyiyao.tjutcm.edu.cn/html/tjzyydxxb/2019/5/20190515.htm) · [Local text](Source-Text/2019-10-11656-j-issn-1673-9043-2019-05-15-Fennel-Extract.txt)
+
+### Fennel extract drops and fatigue occurrence
+
+The indexed original Table 2 lists fatigue after treatment in 8 of 36 participants in each arm, with baseline 4 of 36 versus 5 of 36. This measures occurrence during dysmenorrhea. The comparator and tabular analysis remain uncertain, and the oral extract does not establish an effect of toasted culinary fennel seed or a Parkinson fatigue-severity effect.
+
+- [Indexed journal original and registry discrepancy](Source-Text/2019-Motavalli-Fennel-Drops-and-Fatigue.txt)

@@ -52,3 +52,7 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [Vietnamese editorial account of a mixed black-bean sleep remedy](Traditional-Practices/2016-VietKings-Black-Bean-Sleep-Decoction.txt)
 - [Bogota medicinal plant market survey](Local-Knowledge/2018-PMC6011411-Bogota-Market-Plant-Uses.txt)
+
+- [Involvement of blood mononuclear cells in the infertility, age-associated diseases and cancer treatment](Local-Knowledge/2016-PMC5183987-Propolis-and-Cayenne-Narrative.txt)
+
+- [Black seed and fatigue, 2018 secondary historical attribution](Local-Knowledge/2018-PMC5818345-Nigella-and-Fatigue-Historical-Attribution.txt)

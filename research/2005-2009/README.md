@@ -530,3 +530,11 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 
 - [PMID:19750042 | Medical management of Parkinson disease](Source-Text/2008-PMC2730785-Round1-Original-Scope.txt)
 - [PMID:17502850 | The alpha7 nicotinic acetylcholine receptor as a pharmacological target for inflammation](Source-Text/2007-PMC2042938-Round1-Original-Scope.txt)
+
+- [PMID:19133145 | Iron behaving badly: inappropriate iron chelation as a major contributor to the aetiology of vascular and other progressive inflammatory and degenerative diseases](Source-Text/2009-PMC2672098-Round1-Source-Scope.txt)
+- [PMID:19944301 | Update and Critique of Natural Remedies as Antidepressant Treatments](Source-Text/2009-PMC2786903-Round1-Source-Scope.txt)
+- [PMID:19751960 | Linguistic Correlates of Asymmetric Motor Symptom Severity in Parkinson's Disease](Source-Text/2009-PMC2819546-Round1-Source-Scope.txt)
+- [PMID:23015913 | Cardiovascular Health, Part 1](Source-Text/2009-PMC3445149-Round1-Source-Scope.txt)
+- [PMID:19690020 | Hypertension Increases Cerebral 6-18F-Fluorodopa–Derived Radioactivity](Source-Text/2009-PMC4164388-Round1-Source-Scope.txt)
+- [PMID:17618701 | Gait dynamics, fractals and falls: finding meaning in the stride-to-stride fluctuations of human walking](Source-Text/2007-PMC2267927-Round1-Original-Scope.txt)
+- [PMID:19725249 | Persistent short-term memory defects following sleep deprivation in a drosophila model of Parkinson disease](Source-Text/2009-PMC2717205-Round1-Original-Scope.txt)

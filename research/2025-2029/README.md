@@ -1570,3 +1570,9 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [Pumpkin-seed-oil and bladder function pilot](Source-Text/Trials/NCT06944392.txt)
 
 - [Tongyangxiao lotion and postoperative wound healing](Source-Text/Trials/NCT07562672.txt)
+
+- [PMID:39866496 | From contamination to detection: The growing threat of heavy metals](Source-Text/2025-PMC11760309-Round1-Source-Scope.txt)
+- [PMID:40416785 | Stimulus-responsive cellulose hydrogels in biomedical applications and challenges](Source-Text/2025-PMC12098173-Round1-Source-Scope.txt)
+- [PMID:40701123 | Stable Two-Year Longitudinal Clinical Outcomes in LRRK2 G2019S Non-Manifest Carriers in a Remote Nationwide Study](Source-Text/2025-PMC12403045-Round1-Source-Scope.txt)
+- [PMID:40146632 | d‐amino acids: new functional insights](Source-Text/2025-PMC12414876-Round1-Source-Scope.txt)
+- [PMID:41139204 | Free odor identification engages domain-general cognitive abilities in old adults](Source-Text/2025-PMC12603616-Round1-Source-Scope.txt)

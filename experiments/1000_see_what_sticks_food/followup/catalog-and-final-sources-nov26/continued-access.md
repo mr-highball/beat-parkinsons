@@ -1,0 +1,14 @@
+# Named open primary-source routes
+
+These records retain the queue or claim-level gap at the depth actually reached. Dates describe the original publication periods. Checked November 26, 2026.
+
+| Source | Verified scope and remaining gap |
+| --- | --- |
+| [UEG Week 2022, PMC9548091](../../../../research/2020-2024/Source-Text/2022-PMC9548091-UEG-Lemon-Balm-Blend-Members.txt) | The official issue runs from printed pages 473 to 1092, with poster P0001 at the start and P1025 at the end. Three direct publisher PDF routes returned HTTP 403. Selected original members are cataloged. All 39 exact scope checks remain open pending issue-wide review. |
+| [2010 iron-deficiency case, PMID20532731](../../../../research/2010-2014/Source-Text/2010-PMID20532731-Original-Access-Gap.txt) | The publisher figure and the matching archive metadata are accessible. The distinct conference identity cannot substitute for the case narrative. The 30 exact checks remain open until the published article text is available. |
+| [1992 Haines and Hurwitz source, PMID1345147](https://pubmed.ncbi.nlm.nih.gov/1345147/) | The public [NLM-stamped exhibit scan](https://ptacts.uspto.gov/ptacts/public-informations/petitions/1498274/download-documents?artifactId=LZ4Co-HwpnptbZnwRwa133_LzkLjTXpGkXccxzfDiQtI21n1VnV2VEo) contains front matter and the skin chapter beginning at printed page 50. It is a partial copy of a 91-page source. The 16 exact scopes remain open. |
+| [Italian Society of Neurology 2020, PMC7683589](../../../../research/2020-2024/Source-Text/2020-PMC7683589-Italian-Neurology-Collection-Review-Gap.txt) | The October program lists an identically titled poster and investigator group as number 215. The later program and proceedings identify it as 212. Keep the same 111-person series and its distinct formulations. The three figures still have no authenticated copy. |
+| [FEBS 2024, PMC11089011](https://pmc.ncbi.nlm.nih.gov/articles/PMC11089011/) | Member P001 concerns tomato preservation, P039 cardamom extract in rat bladder experiments, and P070 kefir characterization. Full-member parity remains unverified. |
+| [ASENT, PMC6095775](https://pmc.ncbi.nlm.nih.gov/articles/PMC6095775/) | A selected member uses black cumin, Nigella sativa, distinct from Cuminum cyminum. Collection-wide coverage remains unverified. |
+| MVP pilot report | Page 64 offers a qualitative balance tile, alongside a total score on page 56. The 2017 total association is a separate overall measure. Neither supplies a quantitative isolated balance result for the frozen outcome. |
+| [Fennel extract and fatigue, 2007](../../../../research/2005-2009/Food-Experiment-Fennel-Fatigue.md) | The [publisher abstract](https://www.magiran.com/paper/434449/clinical-effects-of-foeniculum-vulgare-extract-on-primary-dysmenorrhea?lang=en) is traceable. The comparative fatigue-specific table remains unavailable. The 2019 original is a separate study. |
