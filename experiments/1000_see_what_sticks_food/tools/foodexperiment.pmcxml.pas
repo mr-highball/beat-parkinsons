@@ -641,6 +641,80 @@ begin
   Result := ReaderQuotedValue(AHead, '<meta name="' + AName + '" content="');
 end;
 
+function ReaderSectionEnd(const AHtml: String; AContentStart: Integer): Integer;
+const
+  CSectionClose = '</section>';
+var
+  LOpen, LClose, LDepth: Integer;
+begin
+  LDepth := 1;
+  LOpen := PosEx('<section', AHtml, AContentStart);
+  LClose := PosEx(CSectionClose, AHtml, AContentStart);
+  while LClose > 0 do
+  begin
+    if (LOpen > 0) and (LOpen < LClose) then
+    begin
+      Inc(LDepth);
+      LOpen := PosEx('<section', AHtml, LOpen + 1);
+      Continue;
+    end;
+    Dec(LDepth);
+    Inc(LClose, Length(CSectionClose));
+    if LDepth = 0 then
+    begin
+      Exit(LClose);
+    end;
+    LClose := PosEx(CSectionClose, AHtml, LClose);
+  end;
+  Result := 0;
+end;
+
+function SplitReaderFrontMatter(var ABody: String; out AAbstract: String): Boolean;
+var
+  LStart, LTagEnd, LEnd: Integer;
+  LClass: String;
+  LIsAbstract: Boolean;
+begin
+  AAbstract := '';
+  LStart := 1;
+  { PMC can place the abstract and keywords inside the main-body wrapper. }
+  while LStart <= Length(ABody) do
+  begin
+    while (LStart <= Length(ABody)) and (ABody[LStart] in [#9, #10, #13, ' ']) do
+    begin
+      Inc(LStart);
+    end;
+    if Copy(ABody, LStart, 9) <> '<section ' then
+    begin
+      Break;
+    end;
+    LTagEnd := PosEx('>', ABody, LStart);
+    if LTagEnd = 0 then
+    begin
+      Exit(False);
+    end;
+    LClass := ' ' + ReaderQuotedValue(Copy(ABody, LStart, LTagEnd - LStart),
+      ' class="') + ' ';
+    LIsAbstract := Pos(' abstract ', LClass) > 0;
+    if not LIsAbstract and (Pos(' kwd-group ', LClass) = 0) then
+    begin
+      Break;
+    end;
+    LEnd := ReaderSectionEnd(ABody, LTagEnd + 1);
+    if LEnd = 0 then
+    begin
+      Exit(False);
+    end;
+    if LIsAbstract then
+    begin
+      AAbstract := AAbstract + ' ' + Copy(ABody, LTagEnd + 1, LEnd - LTagEnd - 1);
+    end;
+    LStart := LEnd;
+  end;
+  Delete(ABody, 1, LStart - 1);
+  Result := True;
+end;
+
 function ScreenPmcReaderHtml(const AHtml, AExpectedPmcid, AExpectedPmid,
   AExpectedDoi, AIngredient: String): TPmcScreenResult;
 const
@@ -648,6 +722,7 @@ const
   CArticleUrl = 'https://pmc.ncbi.nlm.nih.gov/articles/';
 var
   LHead, LArticle, LTitle, LPmid, LFront, LBack, LScreenInput: String;
+  LAbstract: String;
   LCanonical, LCitationUrl, LExpectedUrl: String;
   LArticleStart, LNext, LBodyStart, LRefs: Integer;
 begin
@@ -687,8 +762,10 @@ begin
     Exit;
   LFront := Copy(LArticle, 1, LBodyStart - 1);
   LArticle := Copy(LArticle, LBodyStart + Length(CBodyStart), MaxInt);
-  if Pos('<p', LArticle) = 0 then
+  if not SplitReaderFrontMatter(LArticle, LAbstract) then
+  begin
     Exit;
+  end;
   LRefs := Pos('class="ref-list"', LArticle);
   LBack := '';
   if LRefs > 0 then
@@ -701,10 +778,19 @@ begin
     end;
   end;
 
+  if Pos('<p', LArticle) = 0 then
+  begin
+    Exit;
+  end;
+  if LAbstract = '' then
+  begin
+    LAbstract := ReaderMeta(LHead, 'citation_abstract');
+  end;
+
   { This structure supplies the common term matcher. The saved HTML remains the original. }
   LScreenInput := '<article><front><article-meta><article-id pub-id-type="pmid">' +
     LPmid + '</article-id><article-title>' + LTitle + '</article-title>' +
-    '<abstract>' + ReaderMeta(LHead, 'citation_abstract') + '</abstract>' +
+    '<abstract>' + LAbstract + '</abstract>' +
     LFront + '</article-meta></front><body>' + LArticle + '</body><back>' +
     LBack + '</back></article>';
   Result := ScreenPmcJatsXml(LScreenInput, AExpectedPmid, AIngredient);

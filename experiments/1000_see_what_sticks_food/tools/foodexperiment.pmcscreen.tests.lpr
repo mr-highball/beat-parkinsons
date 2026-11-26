@@ -187,6 +187,23 @@ begin
   LRes := ScreenPmcReaderHtml(CMeta + LBody, 'PMC4321', '1234', '', 'turmeric');
   Check(LRes.Kind = pkPmidMismatch, 'A reader with no verified article link stays on hold');
   Inc(GPassed);
+  LBody := '<article lang="en"><section class="body main-article-body">' +
+    '<section class="abstract" id="abstract1"><section><p>Curcumin ' + MakePad(450) +
+    '</p></section></section>' +
+    '<section id="kwd-group1" class="kwd-group"><p>' + MakePad(450) + '</p></section>';
+  LRes := ScreenPmcReaderHtml(CMeta + CCitation + LBody + '</section></article>',
+    'PMC4321', '1234', '', 'turmeric');
+  Check((LRes.Kind = pkNoBody) and (LRes.BodyHits = 0),
+    'An abstract and keywords inside the reader body wrapper do not supply original scope');
+  Inc(GPassed);
+
+  LRes := ScreenPmcReaderHtml(CMeta + CCitation + LBody +
+    '<p>Olive oil was the comparator. ' + MakePad(450) + '</p></section></article>',
+    'PMC4321', '1234', '', 'turmeric');
+  Check((LRes.Kind = pkBodyMatch) and (LRes.TitleAbsHits = 1) and (LRes.BodyHits = 0),
+    'A structured abstract retains its own matches when a substantive body follows');
+  Inc(GPassed);
+
   SetLength(LHtml, Pos('</article>', LHtml) - 1);
   Check(ScreenPmcReaderHtml(LHtml, 'PMC4321', '1234', '', 'turmeric').Kind = pkNoBody,
     'A truncated reader cannot supply original scope');
@@ -197,5 +214,5 @@ begin
   SetMultiByteConversionCodePage(CP_UTF8);
   RunTests;
   RunReaderTests;
-  WriteLn('PmcScreenTests passed (', GPassed, '/21).');
+  WriteLn('PmcScreenTests passed (', GPassed, '/23).');
 end.
