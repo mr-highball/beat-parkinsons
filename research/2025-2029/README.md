@@ -1154,3 +1154,45 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [Baseline diet quality and adequacy of AU-ARROW participants: preliminary findings](Source-Text/2025-AU-ARROW-Baseline-Diet-Adequacy.txt)
 
 [Olive-oil anxiety evidence across cohorts](Observations/Olive-Oil-Anxiety-Outcome-and-Study-Families-Nov26.md)
+
+- [PMCID:PMC13650511 | Depression severity and sleep efficiency's associations with amyloid burden are additive but dependent on underlying genetic risk in late life depression](Source-Text/2026-PMC13650511-Sleep-Amyloid-and-Depression.txt)
+
+- [PMID:40110113 | Aripiprazole Lauroxil: Development and Evidence-Based Review of a Long-Acting Injectable Atypical Antipsychotic for the Treatment of Schizophrenia](Source-Text/2025-PMC11921517-Aripiprazole-Lauroxil-Review.txt)
+
+- [PMID:40320755 | Early thinking palliative care for people with Parkinson's disease: A thematic synthesis based on a systematic mixed-methods review](Source-Text/2025-PMC13347479-Parkinson-Palliative-Care-Review.txt)
+
+- [PMID:40321408 | Clinical Spectrum of Non-motor Symptoms in Correlation with Quality of Life in Parkinson’s Disease and Atypical Parkinsonism: Evidence in Reaching Consensus](Source-Text/2025-PMC12043622-Parkinson-Nonmotor-Symptoms-and-Quality-of-Life.txt)
+
+- [PMID:40411378 | Impact of Anxiety and Anxiolytic Medication on Driving Outcomes in Older Adults: A LongROAD Study](Source-Text/2025-PMC12989031-Anxiolytics-and-Driving.txt)
+
+- [PMID:40590427 | Kaempferide and Norbergenin avert aluminium chloride-induced amyloid β accumulation and neurocognitive shutdown via oxidative and apoptotic mechanisms](Source-Text/2025-PMC12214314-Kaempferide-Norbergenin-Plant-Background.txt)
+
+- [PMID:40619871 | Discontinuation or acute unplanned cessation of oral dopaminergic medications in persons with Parkinson's disease: A practice review](Source-Text/2025-PMC13347516-Dopaminergic-Medication-Interruption.txt)
+
+- [PMID:40843281 | Orthostatic hypotension in Parkinson’s disease: therapeutic considerations](Source-Text/2025-PMC12365467-Parkinson-Orthostatic-Hypotension-Review.txt)
+
+- [PMID:40856637 | What medicines do people with Parkinson's disease want?](Source-Text/2025-PMC13435191-Parkinson-Medication-Preferences.txt)
+
+- [PMID:40944028 | Autonomic Dysfunction in Myalgic Encephalomyelitis/Chronic Fatigue Syndrome (ME/CFS): Findings from the Multi-Site Clinical Assessment of ME/CFS (MCAM) Study in the USA](Source-Text/2025-PMC12428951-ME-CFS-and-Post-Acute-COVID-Autonomic-Study.txt)
+
+- [PMID:41170178 | The effectiveness of virtual reality to improve depression: A systematic evidence map](Source-Text/2025-PMC12569364-Virtual-Reality-Depression-Anxiety-Review.txt)
+
+- [PMID:41171999 | Deep Brain Stimulation to the Subgenual Cingulate Gyrus for Treatment-Resistant Depression: A Randomized Controlled Trial and 2-Year Long-Term Follow-Up: Stimulation cérébrale profonde du gyrus cingulaire subgénual pour traiter la dépression résistante au traitement : Essai contrôlé à répartition aléatoire et suivi à long terme sur deux ans](Source-Text/2025-PMC12578624-Depression-Deep-Brain-Stimulation-Outcomes.txt)
+
+- [PMID:41200409 | Management of Parkinson’s in the Community: Interests and Expectations of People Living with Parkinson’s, Family Carers, Healthcare Professionals and Stakeholders in Spain](Source-Text/2025-PMC12586870-Parkinson-Community-Care-Interviews.txt)
+
+- [PMID:41388619 | LRRK2 as a Potential Disease‐Modifying Target in Sporadic Parkinson's Disease](Source-Text/2025-PMC12951277-LRRK2-Sporadic-Parkinson-Review.txt)
+
+- [PMID:41783284 | A systematic review on wearable-enabled remote health monitoring](Source-Text/2026-PMC12954012-Wearable-Health-Monitoring-Review.txt)
+
+- [PMID:41785480 | The Safety, Efficacy, and Feasibility of Fecal Microbiota Transplantation in a Population With Bipolar Disorder During Depressive Episodes: A Pilot Parallel Arm Randomized Controlled Trial: Sécurité, efficacité et faisabilité de la transplantation de microbiote fécal chez une population atteinte de troubles bipolaires, au cours d’épisodes dépressifs : essai pilote contrôlé à répartition aléatoire et à groupes parallèles](Source-Text/2026-PMC12962988-Fecal-Microbiota-Bipolar-Depression-Trial.txt)
+
+- [PMID:42585299 | PT320, a GLP-1 receptor agonist, mitigates nucleus accumbens–associated depression- and anxiety-like behaviors in MitoPark mice of Parkinson's disease](Source-Text/2026-PMC13473357-GLP1-Agonist-and-Mouse-Depression-Model.txt)
+
+- [PMID:42742463 | Rethinking the concept of disease modification in an evolving Parkinson's disease treatment landscape](Source-Text/2026-PMC13578137-Parkinson-Disease-Modification-Perspective.txt)
+
+- [DOI:10.1002/ohn.70316 | Nonpharmacologic Therapy for Pediatric Posttonsillectomy Pain: A Systematic Review](Source-Text/2026-PMC13655757-Sage-Rinse-Tonsillectomy-Review.txt)
+
+- [DOI:10.3389/fphar.2025.1609605 | Understanding the research landscape of over-the-counter herbal products, dietary supplements, and medications evaluated for depressive symptoms in adults: a scoping review](Source-Text/2025-Frost-OTC-Depression-Lemon-Balm-Study-Families.txt)
+
+[Sage pain and lemon balm depression across study families](Observations/Sage-Pain-and-Lemon-Balm-Depression-Counterevidence-Nov26.md)

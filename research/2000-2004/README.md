@@ -316,3 +316,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 The [2001 Israel Society for Neurosciences proceedings](Source-Text/2001-PMC2565376-Round1-Proceedings-Historical-Scope.txt) contain a sesame-oil vehicle in a rat catalepsy model and a corn-oil preload in a feeding experiment.
 
 The [Finley feeding study](Source-Text/2003-PMID12949376-Finley-Corn-Oil-and-Neurologic-Examination.txt) records corn-oil and cocoa-butter arm identity, the neurological exam and separate motor steadiness measures.
+
+- [PMID:24672091 | Comparison of benzydamine hydrochloride and Salvia officinalis as an adjuvant local treatment to systemic nonsteroidal anti-inflammatory drug in controlling pain after tonsillectomy, adenoidectomy, or both](Source-Text/2004-PMC3964578-Sage-Rinse-Postoperative-Pain.txt)

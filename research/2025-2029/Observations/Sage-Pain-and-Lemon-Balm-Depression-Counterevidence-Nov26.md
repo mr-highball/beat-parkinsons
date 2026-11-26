@@ -1,0 +1,7 @@
+# Sage and lemon balm across study families
+
+The [2004 sage-rinse comparison](../../2000-2004/Source-Text/2004-PMC3964578-Sage-Rinse-Postoperative-Pain.txt) found poorer pediatric pain outcomes relative to an active analgesic. The [2026 surgical review](../Source-Text/2026-PMC13655757-Sage-Rinse-Tonsillectomy-Review.txt) draws its sage information from the same trial. Its reported proportion concerns bleeding. Neither record establishes whether eating fresh sage increases or reduces Parkinson pain.
+
+The [2025 lemon balm scoping review](../Source-Text/2025-Frost-OTC-Depression-Lemon-Balm-Study-Families.txt) groups two standalone preparations with one combination. The [2011 matched combination trial](../../2010-2014/Source-Text/2011-PMID21631360-Solberg-YTE-Melissa-Extract.txt) allows a separate check of the added lemon balm and reports no clear difference. The active-comparator and capsule-placebo trials measure other preparations and populations. The brewed-tea and Parkinson depression comparison remains open.
+
+For the sage-fatigue claim, the [dry sage extract trial](../../2020-2024/Food-Experiment-Herb-Spice-Followup.md#sage-extract-and-exhaustion-in-a-registered-menopause-trial) gives an inconclusive exhaustion comparison and the [dried-sage mood and stress trial](../../2005-2009/Source-Text/2005-PMID16205785-Dried-Sage-Mood-Stressor.txt) measures acute alertness in healthy participants. Both qualify transfer to fresh sage and Parkinson fatigue.

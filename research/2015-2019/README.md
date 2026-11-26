@@ -1130,3 +1130,23 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [Interventions for fatigue in Parkinson's disease](Source-Text/2015-PMID26447539-Cochrane-Parkinson-Fatigue-Caffeine-Family.txt)
 
 [Uíge ethnobotanical survey preparation notes](Cultural-and-Experiential/Local-Knowledge/2018-Uige-Coffee-Root-Mango-Leaf-and-Asparagus-Survey.txt)
+
+- [PMID:26134254 | Combined Metabolomics and Proteomics Analysis of Major Depression in an Animal Model: Perturbed Energy Metabolism in the Chronic Mild Stressed Rat Cerebellum](Source-Text/2015-PMC4505772-Stress-Model-Metabolomics.txt)
+
+- [PMID:26406130 | Feasibility of Virtual Research Visits in Fox Trial Finder](Source-Text/2015-PMC4923707-Virtual-Parkinson-Research-Recruitment.txt)
+
+- [PMID:27765867 | Risk of Cognitive Decline Associated With Paroxetine Use in Elderly Nursing Home Patients With Depression](Source-Text/2016-PMC10852634-Paroxetine-and-Cognitive-Decline.txt)
+
+- [PMID:28338983 | Multi-Site Clinical Assessment of Myalgic Encephalomyelitis/Chronic Fatigue Syndrome (MCAM): Design and Implementation of a Prospective/Retrospective Rolling Cohort Study](Source-Text/2017-PMC5565838-ME-CFS-Clinical-Cohort-Design.txt)
+
+- [PMID:29212411 | Geriatric Traumatic Brain Injury: Epidemiology, Outcomes, Knowledge Gaps, and Future Directions](Source-Text/2018-PMC5865621-Geriatric-Brain-Injury-Review.txt)
+
+- [PMID:29399046 | Extended-release oral capsule of carbidopa–levodopa in Parkinson disease](Source-Text/2017-PMC5784558-Extended-Release-Levodopa-Review.txt)
+
+- [PMID:29483867 | Ethnopharmacological Approaches for Dementia Therapy and Significance of Natural Products and Herbal Drugs](Source-Text/2018-PMC5816049-Ethnopharmacology-Dementia-Plant-Scopes.txt)
+
+- [PMID:29746466 | Validity and reliability of the Traditional Chinese version of the Multidimensional Fatigue Inventory in general population](Source-Text/2018-PMC5945051-Traditional-Chinese-Fatigue-Inventory.txt)
+
+- [PMID:30524702 | Anti-cytokine agents for anhedonia: targeting inflammation and the immune system to treat dimensional disturbances in depression](Source-Text/2018-PMC6278744-Anticytokine-Agents-and-Anhedonia.txt)
+
+- [PMID:30574308 | Explicit and implicit experience of own’s body in painful musculoskeletal disorders and rheumatic diseases: A scoping review protocol of available quantitative and qualitative evidence](Source-Text/2018-PMC6299299-Musculoskeletal-Pain-Body-Perception.txt)

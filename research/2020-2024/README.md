@@ -1304,3 +1304,13 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [PMID:39752998 | Molecular hydrogen reduces dermatitis-induced itch, diabetic itch and cholestatic itch by inhibiting spinal oxidative stress and synaptic plasticity via SIRT1-β-catenin pathway in mice](Source-Text/2024-PMC11754494-Itch-Model-Olive-Oil-Vehicle.txt)
 
 - [The AUstralian multidomain Approach to Reduce dementia Risk by prOtecting brain health With lifestyle intervention study (AU-ARROW): a study protocol](Source-Text/2024-PMID38596483-AU-ARROW-Diet-Protocol-and-Anxiety-Schedule.txt)
+
+- [PMID:37066662 | Efficacy of low carbohydrate and ketogenic diets in treating mood and anxiety disorders: systematic review and implications for clinical practice](Source-Text/2023-PMC10134254-Low-Carbohydrate-Diet-Mood-Review.txt)
+
+- [PMID:37816224 | Roles and usages of neuro service dogs for caregivers living at home with persons with dementia: An exploratory comparative case study](Source-Text/2023-PMC10644692-Dementia-Service-Dog-Study.txt)
+
+- [PMID:39367742 | Association of Baseline Depression and Anxiety with Longitudinal Health Outcomes in Parkinson's Disease](Source-Text/2024-PMC11452785-Parkinson-Depression-Anxiety-and-Progression.txt)
+
+- [PMID:39639753 | Ginsenoside Rg1: A Neuroprotective Natural Dammarane‐Type Triterpenoid Saponin With Anti‐Depressive Properties](Source-Text/2024-PMC11621566-Ginsenoside-and-Experimental-Drug-Context.txt)
+
+[PMC7114003 | Sage extract and menopausal exhaustion](Source-Text/2020-PMC7114003-Sage-Extract-Menopause-Exhaustion.txt)

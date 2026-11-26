@@ -313,6 +313,8 @@ The November 26 full-body scope batch closed 60 checks across nine original bodi
 
 The November 26 publication and family audit closed 93 checks across 44 original bodies and added 51 dated source texts. The olive-oil review, ParkWest reports, AU-ARROW records and Cochrane synthesis preserve independent study boundaries. Sixteen reviewed scorecards retain their anchors. The replay leaves 29,681 exact checks across 20,842 publication keys and 380 claims. [Batch review and provenance](followup/cold-pressed-and-family-audit-nov26/README.md)
 
+The November 26 sage and lemon balm audit closed 113 checks across 32 originals and added 36 dated source texts. Report-level distinctions preserve the independence of surgical and depression trial families. Seven scorecards retained their anchors. The replay leaves 29,568 exact checks across 20,810 publication keys and 380 claims. [Batch review and provenance](followup/sage-and-balm-evidence-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).
