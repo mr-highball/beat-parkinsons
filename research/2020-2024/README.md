@@ -1627,3 +1627,21 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [PMID:36703022 | Mapping the Insomnia Severity Index Instrument to EQ-5D Health State Utilities: A United Kingdom Perspective](Source-Text/2023-PMC9928998-Round1-Source-Scope.txt)
 
 - [Black pepper in a multicomponent constipation tablet study](Source-Text/2024-Verma-Petsaffa-Black-Pepper-and-Constipation.txt)
+
+- [PMID:37214662 | Wearable sensors and features for diagnosis of neurodegenerative diseases: A systematic review](Source-Text/2023-PMC10192816-Round1-Source-Scope.txt)
+- [PMID:37465540 | Case-Based Questions for Teaching Emergency Medicine Pharmacotherapy](Source-Text/2021-PMC10332758-Round1-Source-Scope.txt)
+- [PMID:38959622 | Deadly excess copper☆](Source-Text/2024-PMC11269798-Round1-Source-Scope.txt)
+- [PMID:32241955 | Research criteria for the diagnosis of prodromal dementia with Lewy bodies](Source-Text/2020-PMC7274845-Round1-Source-Scope.txt)
+- [PMID:32650482 | Nutraceutical Compounds Targeting Inflammasomes in Human Diseases](Source-Text/2020-PMC7402342-Round1-Source-Scope.txt)
+- [PMID:32850291 | Role of natural products in mitigation of toxic effects of methamphetamine: A review of in vitro and in vivo studies](Source-Text/2020-PMC7430958-Round1-Source-Scope.txt)
+- [PMID:32668827 | Development of a Korean Culture-Friendly Olfactory Function Test and Optimization of a Diagnostic Cutoff Value](Source-Text/2020-PMC7435434-Round1-Source-Scope.txt)
+- [PMID:33727939 | The Complementary and Alternative Medicine for Polycystic Ovary Syndrome: A Review of Clinical Application and Mechanism](Source-Text/2021-PMC7935573-Round1-Source-Scope.txt)
+- [PMID:34287261 | 36th Annual CAPO Conference: Advocating for All: Psychosocial Oncology at the Intersections of Equity, Diversity, and Inclusion, 8–10 June 2021](Source-Text/2021-PMC8293246-Round1-Source-Scope.txt)
+- [PMID:34488620 | The International Headache Congress – IHS and EHF joint congress 2021](Source-Text/2021-PMC8421196-Round1-Source-Scope.txt)
+- [PMID:35647576 | Role of Environmental Toxicants on Neurodegenerative Disorders](Source-Text/2022-PMC9131020-Round1-Source-Scope.txt)
+- [PMID:35740342 | Carbon Graphitization: Towards Greener Alternatives to Develop Nanomaterials for Targeted Drug Delivery](Source-Text/2022-PMC9220131-Round1-Source-Scope.txt)
+- [PMID:35889562 | Inorganic Nanomaterials versus Polymer-Based Nanoparticles for Overcoming Neurodegeneration](Source-Text/2022-PMC9317100-Round1-Source-Scope.txt)
+
+- [Public account of ground cayenne and a panic episode](Cultural-and-Experiential/Conversations/2024-Reddit-Ground-Cayenne-and-Panic.txt)
+- [Spinach-extract and exercise study protocol in the UCAM conference book](Source-Text/2022-UCAM-SPISAR-Conference-Protocol.txt)
+- [Diaphragmatic breathing, reflux-related cough and anxiety outcomes](Source-Text/2024-PMID38637797-Breathing-Training-and-Capsaicin-Cough-Test.txt)

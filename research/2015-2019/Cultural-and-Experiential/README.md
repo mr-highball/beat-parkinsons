@@ -49,3 +49,6 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Different experiences with oranges and constipation in a Parkinson’s UK discussion](Conversations/2019-Parkinsons-UK-Oranges-Constipation-Conversation.txt)
 
 [Cedro interviews on lemongrass leaf tea and customary indications](Local-Knowledge/2019-Silva-Cedro-Lemongrass-Tea-and-Insomnia.txt).
+
+- [Vietnamese editorial account of a mixed black-bean sleep remedy](Traditional-Practices/2016-VietKings-Black-Bean-Sleep-Decoction.txt)
+- [Bogota medicinal plant market survey](Local-Knowledge/2018-PMC6011411-Bogota-Market-Plant-Uses.txt)

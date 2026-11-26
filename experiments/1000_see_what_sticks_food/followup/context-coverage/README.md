@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The zero-queue and original-source batch resolved 139 exact checks across 37 originals. It leaves 27,503 checks across 20,094 publication keys and 357 claims. [Original evidence and replay](../zero-queue-and-originals-nov26/README.md)
+
 The conference and priority batch resolved 163 checks across 73 authenticated originals. It leaves 27,642 checks across 20,131 publication keys and 358 claims. [Original evidence and source replay](../conference-and-priority-nov26/README.md)
 
 The clinical and provenance batch resolved 233 exact checks across 92 authenticated originals. It leaves 27,805 checks across 20,204 publication keys and 364 claims. [Original evidence and source replay](../clinical-and-provenance-nov26/README.md)

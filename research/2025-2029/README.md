@@ -1492,3 +1492,8 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [PMID:42734242 | Intraoral Condition as a Risk Factor for Dysphagia in Non‐Hospitalized Older People: An Updated Systematic Review](Source-Text/2026-PMC13573603-Round1-Source-Scope.txt)
 
 - [Isfahan saffron trial protocol and dated draft revisions](Source-Text/2025-PMC12574437-Isfahan-Saffron-Protocol.txt)
+
+- [Public cayenne report during racing-heart and panic episodes](Cultural-and-Experiential/Conversations/2026-Capture-Reddit-Cayenne-Palpitations-and-Panic.txt)
+- [Retail review of a black-bean and sesame powder drink and sleep](Cultural-and-Experiential/Conversations/2026-Vietnamese-Retail-Black-Bean-Sesame-and-Sleep.txt)
+- [Registration of topical capsaicin pain provocation and pain-related beliefs](Source-Text/2026-NCT07688525-Topical-Capsaicin-and-Pain-Beliefs.txt)
+- [Capsaicin as a delivery component in experimental vagus stimulation](Source-Text/2026-PMID42977739-Capsaicin-in-Vagus-Stimulation-System.txt)

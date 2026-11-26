@@ -51,3 +51,6 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Ethnomedicinal survey of plants used for treatment of mild COVID-19-related symptoms in Gorontalo Province, Indonesia](Traditional-Practices/2025-PMID40330798-Gorontalo-Nutmeg-Diarrhea.txt)
 
 - [Traditional cranberry harvesting and drying in a Dakota and Ojibwe food resource](Traditional-Practices/2025-NATIFS-Dakota-Ojibwe-Cranberry-Preservation.txt).
+
+- [Public cayenne report during racing-heart and panic episodes](Conversations/2026-Capture-Reddit-Cayenne-Palpitations-and-Panic.txt)
+- [Retail review of a black-bean and sesame powder drink and sleep](Conversations/2026-Vietnamese-Retail-Black-Bean-Sesame-and-Sleep.txt)

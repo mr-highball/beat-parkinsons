@@ -99,3 +99,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 [Public lemongrass bedtime tea suggestion](Conversations/2020-Reddit-Lemongrass-as-a-Sleep-Suggestion.txt).
 
 - [Cayenne in a public conversation about reflux and anxiety](Conversations/2023-Reddit-Cayenne-Reflux-Anxiety.txt)
+
+- [Public account of ground cayenne and a panic episode](Conversations/2024-Reddit-Ground-Cayenne-and-Panic.txt)

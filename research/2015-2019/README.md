@@ -1260,3 +1260,25 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [Raw, roasted and fried cumin composition](Source-Text/2018-Cumin-Raw-Roasted-and-Fried-Composition.txt)
 
 - [Grapeseed-oil drug delivery and rat oral dyskinesia](Source-Text/2017-PMID29209877-Grapeseed-Nanocapsules-and-Orofacial-Movement.txt)
+
+- [PMID:27247029 | The Fifth International Meeting of ISEV, ISEV2016, Rotterdam, The Netherlands, 4 – 7 May, 2016](Source-Text/2016-PMC4887520-Round1-Source-Scope.txt)
+- [PMID:28082758 | The good, the bad and the tasty: The many roles of mushrooms](Source-Text/2016-PMC5220184-Round1-Source-Scope.txt)
+- [PMID:28179815 | Considering sex and gender in Alzheimer disease and other dementias](Source-Text/2016-PMC5286729-Round1-Source-Scope.txt)
+- [PMID:28583361 | Narrative constructs in modern clinical case reporting](Source-Text/2017-PMC5471339-Round1-Source-Scope.txt)
+- [PMID:28919119 | Global, regional, and national comparative risk assessment of 84 behavioural, environmental and occupational, and metabolic risks or clusters of risks, 1990–2016: a systematic analysis for the Global Burden of Disease Study 2016](Source-Text/2017-PMC5614451-Round1-Source-Scope.txt)
+- [PMID:29046763 | Abstract Book: ISEV2017](Source-Text/2017-PMC5637785-Round1-Source-Scope.txt)
+- [PMID:29093983 | The Importance of Magnesium in Clinical Healthcare](Source-Text/2017-PMC5637834-Round1-Source-Scope.txt)
+- [PMID:28937858 | Our (Mother’s) Mitochondria and Our Mind](Source-Text/2017-PMC5761714-Round1-Source-Scope.txt)
+- [PMID:29376097 | Xeroderma pigmentosum is a definite cause of Huntington's disease‐like syndrome](Source-Text/2017-PMC5771320-Round1-Source-Scope.txt)
+- [PMID:29468148 | Polyamines: Bio-Molecules with Diverse Functions in Plant and Human Health and Disease](Source-Text/2018-PMC5807879-Round1-Source-Scope.txt)
+- [PMID:28745072 | Assessment of Somatization and Medically Unexplained Symptoms in Later Life](Source-Text/2017-PMC5865474-Round1-Source-Scope.txt)
+- [PMID:29872665 | Visual Hallucinations and Paranoid Delusions](Source-Text/2018-PMC5977418-Round1-Source-Scope.txt)
+- [PMID:27664125 | Adult ADHD and Comorbid Somatic Disease: A Systematic Literature Review](Source-Text/2016-PMC5987989-Round1-Source-Scope.txt)
+- [PMID:29942573 | ‘Pushed’ self-tracking using digital technologies for chronic health condition management: a critical interpretive synthesis](Source-Text/2016-PMC6001233-Round1-Source-Scope.txt)
+- [PMID:29925407 | Astonishing diversity—the medicinal plant markets of Bogotá, Colombia](Cultural-and-Experiential/Local-Knowledge/2018-PMC6011411-Bogota-Market-Plant-Uses.txt)
+- [PMID:28831921 | In Silico Studies in Drug Research Against Neurodegenerative Diseases](Source-Text/2018-PMC6080098-Round1-Source-Scope.txt)
+
+- [Vietnamese editorial account of a mixed black-bean sleep remedy](Cultural-and-Experiential/Traditional-Practices/2016-VietKings-Black-Bean-Sleep-Decoction.txt)
+
+- [Isolated sesamin, levodopa and mouse motor outcomes](Source-Text/2016-PMID27789382-Sesamin-and-Mouse-Motor-Tests.txt)
+- [Isolated sesamin and rat motor outcomes](Source-Text/2017-PMID28157651-Sesamin-and-Rat-Motor-Asymmetry.txt)

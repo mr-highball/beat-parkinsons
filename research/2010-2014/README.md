@@ -797,3 +797,11 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [PMID:25763239 | Efficacy of Viola odorata in Treatment of Chronic Insomnia](Source-Text/2014-PMC4341349-Round1-Source-Scope.txt)
 
 - [Grape-seed proanthocyanidin tablets and insomnia outcomes](Source-Text/2014-PMID24518152-Grape-Seed-Proanthocyanidins-and-Insomnia.txt)
+
+- [PMID:20187060 | Searching For Valid Psychiatric Phenotypes: Discrete Latent Variable Models](Source-Text/2010-PMC2877764-Round1-Source-Scope.txt)
+- [PMID:20814491 | Diagnosis and treatment of chronic insomnia](Source-Text/2010-PMC2924526-Round1-Source-Scope.txt)
+- [PMID:21605282 | Diagnosis and treatment of chronic constipation – a European perspective](Source-Text/2011-PMC3170709-Round1-Source-Scope.txt)
+- [PMID:22022157 | An open-label, prospective clinical study to evaluate the efficacy and safety of TLPL/AY/01/2008 in the management of functional constipation](Source-Text/2011-PMC3193686-Round1-Source-Scope.txt)
+- [PMID:23055579 | Green tea: A boon for periodontal and general health](Source-Text/2012-PMC3459493-Round1-Source-Scope.txt)
+
+- [Acute toxicity report for a multi-ingredient weight-loss supplement](Source-Text/2013-PMID24501816-Cayenne-in-Mixed-Supplement-Poisoning.txt)

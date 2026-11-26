@@ -506,3 +506,8 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 [Saffron petal and stigma study identity](Observations/Saffron-Petal-and-Stigma-Trial-Identity-Nov26.md)
 
 - [Symptoms, attitudes and treatment choices surrounding menopause among the Q’eqchi Maya of Livingston, Guatemala](Cultural-and-Experiential/Local-Knowledge/2006-PMID16580764-Qeqchi-Staple-Foods-and-Sleep-Remedies.txt)
+
+- [PMID:19809592 | Iron Chelators as Potential Therapeutic Agents for Parkinson’s Disease](Source-Text/2008-PMC2756717-Round1-Source-Scope.txt)
+- [PMID:19205066 | Dysautonomia Rating Scales in Parkinson’s Disease: Sialorrhea, Dysphagia, and Constipation—Critique and Recommendations by Movement Disorders Task Force on Rating Scales for Parkinson’s Disease](Source-Text/2009-PMC4404514-Round1-Source-Scope.txt)
+
+- [Nicotine, cough provocation and anxiety measurement](Source-Text/2008-PMID19100331-Nicotine-and-Capsaicin-Cough-Challenge.txt)
