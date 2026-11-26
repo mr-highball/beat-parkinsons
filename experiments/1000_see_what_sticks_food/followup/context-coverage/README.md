@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The high-fanout publication audit resolved 215 exact checks across 43 dated originals, with 108 related contexts and 107 exclusions. It leaves 29,353 checks across 20,767 publication keys and 378 claims. [Original bodies and counterevidence](../priority-and-high-fanout-originals-nov26/README.md)
+
 The sage and lemon balm audit resolved 113 exact checks across 32 dated originals, with five related contexts and 108 scope exclusions. It leaves 29,568 checks across 20,810 publication keys and 380 claims. [Exact source scopes and linked studies](../sage-and-balm-evidence-nov26/README.md)
 
 The publication and family audit resolved 93 exact checks across 44 dated originals, with 71 related contexts and 22 scope exclusions. It leaves 29,681 checks across 20,842 publication keys and 380 claims. [Exact source scopes and linked studies](../cold-pressed-and-family-audit-nov26/README.md)

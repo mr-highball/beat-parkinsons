@@ -498,3 +498,9 @@ See the [Round 1 curcumin and original-source audit](../2025-2029/Food-Experimen
 [Seeram’s 2008 beverage assays and pomegranate metabolite study](../2025-2029/Food-Experiment-Round-1-UEG-and-Food-Exposures-Nov25.md) have distinct source records.
 
 The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedings-Historical-Scope.txt) document odor tests and tea constituents. The [Sies and Brooker case](Source-Text/2005-PMID15836886-Sies-Brooker-Analysis-of-Oil-Flush-Material.txt) tests a visual interpretation from an oil-based remedy.
+
+[Moshiri 2006 petal-extract trial and depression](Source-Text/2006-PMID16979327-Moshiri-Saffron-Petal-Placebo-Depression.txt)
+
+[Persian traditional saffron and low-mood attribution](Cultural-and-Experiential/Traditional-Practices/2005-Persian-Saffron-Low-Mood-Attribution.txt)
+
+[Saffron petal and stigma study identity](Observations/Saffron-Petal-and-Stigma-Trial-Identity-Nov26.md)

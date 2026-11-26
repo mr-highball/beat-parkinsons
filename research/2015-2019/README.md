@@ -1150,3 +1150,14 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [PMID:30524702 | Anti-cytokine agents for anhedonia: targeting inflammation and the immune system to treat dimensional disturbances in depression](Source-Text/2018-PMC6278744-Anticytokine-Agents-and-Anhedonia.txt)
 
 - [PMID:30574308 | Explicit and implicit experience of own’s body in painful musculoskeletal disorders and rheumatic diseases: A scoping review protocol of available quantitative and qualitative evidence](Source-Text/2018-PMC6299299-Musculoskeletal-Pain-Body-Perception.txt)
+
+- [PMID:29486635 | The predictive utility of the plant phylogeny in identifying sources of cardiovascular drugs](Source-Text/2018-PMC6130559-Plant-Phylogeny-Cardiovascular-Research.txt)
+- [PMID:30136898 | Telemedicine in Neurological Disorders: Opportunities and Challenges](Source-Text/2019-PMC6664824-Telemedicine-Neurological-Care-Scope.txt)
+- [PMID:28904554 | Plants-Derived Neuroprotective Agents: Cutting the Cycle of Cell Death through Multiple Mechanisms](Source-Text/2017-PMC5585568-Neuroprotective-Plant-Constituents-Review.txt)
+- [PMID:28867897 | Extrapyramidal Symptoms Probably Related to Risperidone Treatment: A Case Series](Source-Text/2017-PMC5566679-Risperidone-Extrapyramidal-Case-Series.txt)
+- [PMID:28533783 | Progress on Azadirachta indica Based Biopesticides in Replacing Synthetic Toxic Pesticides](Source-Text/2017-PMC5420583-Plant-Products-and-Insect-Control.txt)
+- [PMID:32625454 | Re‐evaluation of lecithins (E 322) as a food additive](Source-Text/2017-PMC7010002-Lecithins-Food-Additive-Review.txt)
+- [PMID:29263993 | Sleep disorders in the elderly: Diagnosis and management](Source-Text/2017-PMC5689397-Sleep-in-Older-Adults-Caffeine-Context.txt)
+- [PMID:28122885 | Heart Disease and Stroke Statistics—2017 Update: A Report From the American Heart Association](Source-Text/2017-PMC5408160-Heart-Stroke-Statistics-Diet-Scope.txt)
+- [PMID:28154522 | Metal Dyshomeostasis and Their Pathological Role in Prion and Prion-Like Diseases: The Basis for a Nutritional Approach](Source-Text/2017-PMC5243831-Metal-Dyshomeostasis-and-Plant-Constituents.txt)
+- [PMID:26062575 | Cerebral Toxocariasis: Silent Progression to Neurodegenerative Disorders?](Source-Text/2015-PMC4462679-Toxocariasis-Food-Exposure-Scope.txt)

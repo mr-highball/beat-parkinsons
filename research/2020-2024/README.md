@@ -1314,3 +1314,8 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [PMID:39639753 | Ginsenoside Rg1: A Neuroprotective Natural Dammarane‐Type Triterpenoid Saponin With Anti‐Depressive Properties](Source-Text/2024-PMC11621566-Ginsenoside-and-Experimental-Drug-Context.txt)
 
 [PMC7114003 | Sage extract and menopausal exhaustion](Source-Text/2020-PMC7114003-Sage-Extract-Menopause-Exhaustion.txt)
+
+- [PMID:39691994 | The Effect of Exercise on Nonmotor Symptoms in Parkinson's Disease with Deep Brain Stimulation](Source-Text/2024-PMC11998686-Exercise-Nonmotor-Symptoms-and-DBS.txt)
+- [PMID:39399551 | Distinguishing Prodromal Dementia With Lewy Bodies From Prodromal Alzheimer Disease: A Longitudinal Study](Source-Text/2024-PMC11464229-Prodromal-Dementia-Longitudinal-Scope.txt)
+- [PMID:40625600 | Vitamin D in Disease Prevention and Cure-Part I: An Update on Molecular Mechanism and Significance on Human Health](Source-Text/2024-PMC12229305-Vitamin-D-Dietary-Sources-Scope.txt)
+- [PMID:35992895 | Mitochondria–lysosome crosstalk in GBA1-associated Parkinson’s disease](Source-Text/2022-PMC9388709-GBA1-Lysosomal-Research-and-Plant-Sources.txt)

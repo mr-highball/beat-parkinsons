@@ -759,3 +759,17 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [Unsaturated fat intakes and mental health outcomes in young women from the Australian Longitudinal Study on Women's Health](Source-Text/2014-PMID24717118-Daley-Oleic-Acid-Anxiety.txt)
 
 - [Differential effect of environmental risk factors on postural instability gait difficulties and tremor dominant Parkinson's disease](Source-Text/2010-PMID20669310-Skeie-ParkWest-Coffee-and-Risk.txt)
+
+- [PMID:24397572 | Old Dog, New Tricks: The Attentional Set-Shifting Test as a Novel Cognitive Behavioral Task after Controlled Cortical Impact Injury](Source-Text/2014-PMC4012626-Brain-Injury-Odor-Cues.txt)
+- [PMID:24367954 | Systematic Review of the Effectiveness of Occupational Therapy–Related Interventions for People With Parkinson’s Disease](Source-Text/2014-PMC4413458-Parkinson-Occupational-Therapy-Scope.txt)
+- [PMID:22010042 | Therapeutic potential of melatonin and its analogs in Parkinson’s disease: focus on sleep and neuroprotection](Source-Text/2011-PMC3187674-Melatonin-Parkinson-Sleep-Scope.txt)
+- [PMID:21339905 | The effects of deep brain stimulation on sleep in Parkinson’s disease](Source-Text/2011-PMC3036959-Deep-Brain-Stimulation-and-Sleep.txt)
+- [PMID:20523337 | Retrospect and prospect of active principles from Chinese herbs in the treatment of dementia](Source-Text/2010-PMC4002969-Chinese-Herbs-Dementia-Exposure-Scopes.txt)
+- [PMID:24452435 | Chronic Spinal Cord Electrical Stimulation Protects Against 6-hydroxydopamine Lesions](Source-Text/2014-PMC3899601-Spinal-Stimulation-Parkinson-Model.txt)
+- [PMID:24194433 | Pimozide for schizophrenia or related psychoses](Source-Text/2013-PMC11927953-Pimozide-Psychosis-Review.txt)
+- [PMID:24490118 | Evidence for Gender Differences in Cognition, Emotion and Quality of Life in Parkinson’s Disease?](Source-Text/2013-PMC3901615-Parkinson-Sex-Differences-Nonmotor-Review.txt)
+- [PMID:24073012 | Advances in Neuroprotective Ingredients of Medicinal Herbs by Using Cellular and Animal Models of Parkinson's Disease](Source-Text/2013-PMC3774059-Medicinal-Plant-Compounds-Parkinson-Models.txt)
+- [PMID:23294010 | Phenotypic Variability in Resting-State Functional Connectivity: Current Status](Source-Text/2013-PMC3634144-Resting-State-Connectivity-Scope.txt)
+- [PMID:23922450 | Exploring scientifically proven herbal aphrodisiacs](Source-Text/2013-PMC3731873-Herbal-Aphrodisiacs-and-Nutmeg-Context.txt)
+- [PMID:22419320 | Antioxidant supplements for prevention of mortality in healthy participants and patients with various diseases](Source-Text/2012-PMC8407395-Antioxidant-Trials-Ingredient-Carriers.txt)
+- [PMID:22228951 | Free radicals, antioxidants and functional foods: Impact on human health](Source-Text/2010-PMC3249911-Functional-Food-Antioxidant-Context.txt)

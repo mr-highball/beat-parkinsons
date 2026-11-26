@@ -1,0 +1,5 @@
+# Saffron petal and stigma comparator evidence
+
+The [2005 stigma placebo comparison](../Source-Text/PMID15852492-Saffron-Extract-Depression.txt) found a −7.10-point difference in six-week Hamilton Depression Rating Scale change. The newly recovered [2006 petal placebo comparison](../Source-Text/2006-PMID16979327-Moshiri-Saffron-Petal-Placebo-Depression.txt) reports a −8.96-point difference. The articles identify different recruitment periods at the same center and different plant parts. The near-parallel designs make the prior reported enrollment dates important for discerning study identity. Neither compared the two extracts head to head. Neither tested culinary ground stigma among people with Parkinson disease.
+
+The [Persian customary attribution](../Cultural-and-Experiential/Traditional-Practices/2005-Persian-Saffron-Low-Mood-Attribution.txt) is already visible in the earlier article rationale and is repeated in the later petal article. Its history and outcomes have to be evaluated separately from the two randomized comparisons.
