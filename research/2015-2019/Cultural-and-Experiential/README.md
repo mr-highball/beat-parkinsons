@@ -47,3 +47,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Traditional uses of medicinal plants in Polonnaruwa District in North Central Province of Sri Lanka](Traditional-Practices/2019-PMID31275693-Polonnaruwa-Nutmeg-Stomachache.txt)
 
 - [Different experiences with oranges and constipation in a Parkinson’s UK discussion](Conversations/2019-Parkinsons-UK-Oranges-Constipation-Conversation.txt)
+
+[Cedro interviews on lemongrass leaf tea and customary indications](Local-Knowledge/2019-Silva-Cedro-Lemongrass-Tea-and-Insomnia.txt).

@@ -1260,3 +1260,5 @@ The [shared originals packet](../../experiments/1000_see_what_sticks_food/follow
 - [PMC11832816 | Digital Outcomes as Biomarkers of Disease Progression in Early Parkinson's Disease: A Systematic Review](Source-Text/2024-PMC11832816-Round1-Original-Comparisons.txt)
 
 [Exact assessments and source scopes](../../experiments/1000_see_what_sticks_food/followup/open-archive-reuse-nov25/README.md)
+
+The [public lemongrass bedtime suggestion](Cultural-and-Experiential/Conversations/2020-Reddit-Lemongrass-as-a-Sleep-Suggestion.txt) illustrates a conversational lead without an attributed symptom change.

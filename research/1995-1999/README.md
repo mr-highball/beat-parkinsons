@@ -214,3 +214,5 @@ See the [Round 1 curcumin and original-source audit](../2025-2029/Food-Experimen
 [November 25 journal and repository audit](../2025-2029/Food-Experiment-Round-1-Journals-and-Repositories-Nov25.md) links 2 checked source records in this period.
 
 - [1997 Irish national meeting archived bibliography and original PDF access trail](Source-Text/1997-PMID9181698-Irish-National-Medical-Meeting-Archive-Access.txt).
+
+The [environmental toxicology source-scope record](Source-Text/1999-PMC1566810-Round1-Source-Scope.txt) documents nine search results with no studied culinary exposure.

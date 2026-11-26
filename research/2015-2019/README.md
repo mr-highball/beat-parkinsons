@@ -1044,3 +1044,5 @@ The [mint contact-reaction case](Source-Text/2015-PMID26312097-Cinnamon-Mint-Con
 - [PMC10623920 | Feasibility of Conducting Nonpharmacological Interventions to Manage Dementia Symptoms in Community-Dwelling Older Adults: A Cluster Randomized Controlled Trial](Source-Text/2019-PMC10623920-Round1-Original-Comparisons.txt)
 
 [Exact assessments and source scopes](../../experiments/1000_see_what_sticks_food/followup/open-archive-reuse-nov25/README.md)
+
+The [ProDiet brewed-green-tea comparison](Source-Text/2018-PMID30309839-ProDiet-Brewed-Green-Tea-and-Fatigue.txt) and [Cedro lemongrass survey](Cultural-and-Experiential/Local-Knowledge/2019-Silva-Cedro-Lemongrass-Tea-and-Insomnia.txt) inform the [comparison of beverage fatigue outcomes and customary sleep uses](Observations/2019-Tea-Fatigue-and-Lemongrass-Sleep.md).

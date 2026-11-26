@@ -126,3 +126,5 @@ These dated notes preserve verified source depth and remaining gaps. [Round 1 so
 - [Round 1 caffeine, tremor and fish source audit](../2025-2029/Food-Experiment-Round-1-Caffeine-Tremor-and-Fish-Nov24.md)
 
 - [British Pharmacological Society proceedings from November 1988](Source-Text/1988-PMID3207568-BPS-Clinical-Pharmacology-Proceedings-Food-Scopes.txt), screened across 64 original printed pages.
+
+A paired-data sensitivity note in the [lemongrass sleep study](Source-Text/1986-Leite-Lemongrass-Tea-Sleep-Extract.txt) bounds what the original waking-sleepiness marginals can establish.

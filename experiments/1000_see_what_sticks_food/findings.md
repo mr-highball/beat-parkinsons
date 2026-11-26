@@ -282,6 +282,8 @@ The highest-priority follow-through verified the prospective saffron extract rec
 
 The open archive comparison review closed 302 checks using 59 identity-matched original publications. The queue has 29972 exact checks remaining. The new original scopes distinguish cinnamon odor training from oral exposure and oil vehicle or excipient screening from an assigned food intervention. The 57 revalidated scorecards retain their prior directions. [Source review and exact checks](followup/open-archive-reuse-nov25/README.md)
 
+The weak-direction review added a randomized brewed green tea comparison outside Parkinson disease and two lemongrass customary or conversational records. The existing two worsening leans retain their anchors. The two exact-source body reviews resolve 11 checks, leaving 29961. [Source review and exact checks](followup/weak-direction-crossover-nov25/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

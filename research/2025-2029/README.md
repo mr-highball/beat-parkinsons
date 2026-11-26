@@ -1113,3 +1113,5 @@ The [shared originals packet](../../experiments/1000_see_what_sticks_food/follow
 - [PMC13520518 | Self-Emulsifying Formulation of Huperzia carinata Extract to Improve Huperzine A Solubility for Therapeutic Efficacy Enhancement in Parkinsonian Mice](Source-Text/2026-PMC13520518-Round1-Original-Comparisons.txt)
 
 [Exact assessments and source scopes](../../experiments/1000_see_what_sticks_food/followup/open-archive-reuse-nov25/README.md)
+
+The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans subjective fatigue measurement. The public record leaves the beverage composition and outcomes open.
