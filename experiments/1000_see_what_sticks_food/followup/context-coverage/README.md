@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The PDF member batch resolved 229 exact checks across 73 originals. It leaves 27,110 checks across 19,978 publication keys and 354 claims. [Originals, PDF receipts and replay evidence](../pdf-members-and-primary-nov26/README.md)
+
 The PDF and identity batch resolved 164 exact checks across 43 originals. It leaves 27,339 checks across 20,051 publication keys and 354 claims. [PDF, identity and replay evidence](../pdf-and-identity-nov26/README.md)
 
 The zero-queue and original-source batch resolved 139 exact checks across 37 originals. It leaves 27,503 checks across 20,094 publication keys and 357 claims. [Original evidence and replay](../zero-queue-and-originals-nov26/README.md)

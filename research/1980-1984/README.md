@@ -81,3 +81,5 @@ The [tea, ginger and original-source audit](../2025-2029/Food-Experiment-Tea-Gin
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
 
 - [Essential tremor review and the original printed discussion of coffee and tea](Source-Text/1981-PMID7018658-Essential-Tremor-Original-Food-Scopes.txt).
+
+- [AJNR symposium collection access note](Source-Text/1983-PMID6410704-AJNR-Collection-Access.txt)

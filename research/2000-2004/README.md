@@ -320,3 +320,5 @@ The [Finley feeding study](Source-Text/2003-PMID12949376-Finley-Corn-Oil-and-Neu
 - [PMID:24672091 | Comparison of benzydamine hydrochloride and Salvia officinalis as an adjuvant local treatment to systemic nonsteroidal anti-inflammatory drug in controlling pain after tonsillectomy, adenoidectomy, or both](Source-Text/2004-PMC3964578-Sage-Rinse-Postoperative-Pain.txt)
 
 - [Fig and mulberry cross-allergy](Source-Text/2003-PMID14692435-Fresh-Fig-and-Mulberry-Allergy.txt)
+
+- [N-3 polyunsaturated fatty acids and inflammation: from molecular biology to the clinic](Source-Text/2003-PMC7101988-Round1-PDF-Scope.txt)

@@ -166,3 +166,7 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 ## Round 1 food experiment sources
 
 - [Ethnobotany of nutmeg in the Spice Islands](Cultural-and-Experiential/Traditional-Practices/1994-PMID8072304-Maluku-Java-Nutmeg-Uses.txt)
+
+- [Endogenous opiates: 1993](Source-Text/1994-PMC7124241-Round1-PDF-Scope.txt)
+
+- [Frye and colleagues on corn oil and thermal pain in rats](Source-Text/1993-PMID8516368-Corn-Oil-and-Thermal-Pain-in-Rats.txt)

@@ -101,3 +101,6 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Cayenne in a public conversation about reflux and anxiety](Conversations/2023-Reddit-Cayenne-Reflux-Anxiety.txt)
 
 - [Public account of ground cayenne and a panic episode](Conversations/2024-Reddit-Ground-Cayenne-and-Panic.txt)
+
+- [Historical cinnamon and spearmint uses](Local-Knowledge/2023-PMC10275721-Historical-Cinnamon-and-Spearmint-Uses.txt)
+- [Traditional Garcinia and coconut-oil use](Local-Knowledge/2023-PMC10748532-Garcinia-and-Coconut-Oil-Traditional-Use.txt)

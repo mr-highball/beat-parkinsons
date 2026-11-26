@@ -1526,3 +1526,11 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [PMID:42474759 | Unraveling potent therapeutic potentials of tanshinones, lipophilic abietane diterpenes: a holistic literature review](Source-Text/2026-PMC13695630-Round1-Source-Scope.txt)
 
 - [Proceedings of the 58th Italian Society of Hygiene congress, Bologna 2025](Source-Text/2026-PMC13085856-Round1-PDF-Scope.txt)
+
+- [PMID:39973452 | Hyperconnectivity in resting-state fMRI as a marker of disease severity in Myotonic Dystrophy Type 1](Source-Text/2025-PMC11949304-Round1-Source-Scope.txt)
+- [PMID:40343060 | Moving toward the digitalization of neuropsychological tests: An exploratory study on usability and operator perception](Source-Text/2025-PMC12059415-Round1-Source-Scope.txt)
+- [PMID:41146681 | Global trends and hotspots of the digital therapeutics in rehabilitation: A bibliometric analysis](Source-Text/2025-PMC12553931-Round1-Source-Scope.txt)
+
+- [Electroconvulsive shock and transcranial magnetic stimulation do not alter the survival or spine density of adult-born striatal neurons](Source-Text/2025-PMC11774372-Round1-PDF-Scope.txt)
+- [Different roles of D1/D2 medium spiny neurons in the nucleus accumbens in pair bond formation of male mandarin voles](Source-Text/2025-PMC12143883-Round1-PDF-Scope.txt)
+- [Proceedings of the 57th Italian Society of Hygiene congress, Palermo 2024](Source-Text/2025-PMC12312728-Round1-PDF-Scope.txt)

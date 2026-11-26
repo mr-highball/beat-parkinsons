@@ -339,6 +339,8 @@ The November 26 zero-queue and original-source batch verified 139 exact checks a
 
 The November 26 PDF and identity batch closed 164 exact checks, added 47 dated texts and verified three new Unknown (Researched) statuses. The capsaicinoid capsule and whole-grain outcomes remain preparation-specific contextual evidence, and 42 affected scorecards retained their verdicts and anchors. [Originals, access limits and scorecards](followup/pdf-and-identity-nov26/README.md)
 
+The November 26 PDF member batch closed 229 exact source checks and added 75 dated catalog texts. All 43 affected scorecards retained their verdicts and anchors. [Originals, access routes and scorecards](followup/pdf-members-and-primary-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

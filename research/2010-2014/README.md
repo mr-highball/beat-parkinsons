@@ -812,3 +812,5 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [PMID:23251841 | Occupational Neurotoxic Diseases in Taiwan](Source-Text/2012-PMC3521924-Round1-Source-Scope.txt)
 - [PMID:24244710 | Loss of Leucine-Rich Repeat Kinase 2 (LRRK2) in Rats Leads to Progressive Abnormal Phenotypes in Peripheral Organs](Source-Text/2013-PMC3828242-Round1-Source-Scope.txt)
 - [PMID:24252612 | Mitochondrial genome changes and neurodegenerative diseases☆](Source-Text/2013-PMC4283582-Round1-Source-Scope.txt)
+
+- [Abstracts from the 4th Meeting of the FESN and 28th Meeting of the GNP](Source-Text/2013-PMC5215690-Round1-PDF-Scope.txt)
