@@ -1,0 +1,12 @@
+# Cinnamon and flaxseed preparation review
+
+This November 26 Round 1 pass used branch-pinned Oracle lookup before reviewing original publications. The 45 authenticated bodies close 180 exact checks. There are 72 related contexts and 108 documented scope exclusions. Four additional dated clinical texts and one dated cultural account complement those original-body reviews.
+
+- **Cinnamon constipation and pain.** The Imani study’s randomized adjunct comparison reports constipation in 11 to 6 and 18 to 15 participants over 14 days, with Table 2 giving p=.10 despite the abstract’s broader significance statement. The same report counts fewer people with epigastric pain after concurrent therapy. The marjoram and cinnamon leaf tea pilot has qualitative bowel and abdominal discomfort reports without an attributable cinnamon comparison.
+- **Cultural field report.** The July 2024 Botanical Survey of India account identifies Cinnamomum verum root paste for constipation and bark powder for joint pain. The original names different plant parts and gives no measured clinical outcomes. The new dated extract has both topics in the Oracle graph index.
+- **Flaxseed oil and seed preparations.** The oil and carnitine migraine trial reports improved anxiety with the combination and gives no value for its registered sleep outcome. Favorable bowel comparisons from other cohorts used baked flaxseed or flaxseed flour. These outcomes provide preparation context for flaxseed oil without an isolate-specific comparison.
+- **Pending supplemental data.** The older-women frailty cohort supplies a pooled vegetable estimate for the fatigue component. Its exact vegetable-group and fatigue supplemental tables remain inaccessible through the routes checked. The three-oil dialysis trial’s original thesis and oil-grade confirmation also remain open.
+
+All 50 checked scorecards retain their verdicts and anchors. Five claim rationales now reflect the additional clinical and cultural context. The replay accounts for all 61,252 original memberships and leaves 29,173 exact checks across 20,722 publication keys and 374 claims. Round 2 remains queued.
+
+[Original bodies](verified-originals.tsv) · [Exact dispositions](dispositions.tsv) · [Clinical source scopes](linked-source-scopes.tsv) · [Scorecard rationales](decision-reassessment.tsv) · [Priority access attempts](priority-access.tsv) · [Search receipts](targeted-search-receipts.tsv) · [Replay](native-replay-verification.txt)
