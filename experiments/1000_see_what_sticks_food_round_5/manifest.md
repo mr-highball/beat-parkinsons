@@ -1,0 +1,134 @@
+# Parkinson's food thought experiment results
+
+Verdicts are tracked for **1,000** frozen statements. Confidence values are reviewer judgments.
+
+- Frozen SHA-256 `4c01d3a5d5f0ef711628e8ef876d36c52711782696534836be645dde39b5e862`
+- [Statement verdict ledger](verdicts.tsv)
+- [First-pass search ledger](queries.tsv) with 2000 completed records and 1000 statements covered
+- [Counts by category and claim direction](results-summary.tsv)
+- [Per-citation source-depth and verification milestone ledger](followup/source-depth.tsv) (`377` `original_body_verified` / `366` `first_pass_screened` across `743` unique cited files — `50.7%` original-body verified)
+
+## Verdict counts
+
+| Verdict | Local review | Current verdict |
+| --- | ---: | ---: |
+| Unknown | 1000 | 946 |
+| Maybe True | 0 | 26 |
+| Maybe False | 0 | 28 |
+| True | 0 | 0 |
+| False | 0 | 0 |
+
+## Findings and limits
+
+All 1,000 frozen Round 5 claims (`0001`–`1000`) have been researched using the Oracle-first workflow, Rounds 1–4 evidence transfer, 2,000 neutral Europe PMC queries ([queries.tsv](queries.tsv)), live PubMed XML, batch NCBI PMC open-access JATS full-text XML, ClinicalTrials.gov v2 sweeps, targeted coordinator adversarial opposing-evidence checks across all proposed directional claims, and inclusive cultural/traditional/public forum collection. Every claim carries a validated v1 evidence scorecard ([scorecards.tsv](followup/scorecards.tsv)), per-citation source-depth milestone audit ([source-depth.tsv](followup/source-depth.tsv)), and completion audit row ([research-status.tsv](followup/research-status.tsv)).
+
+Round 5 spans 37 unique ingredients (15 new pantry-expansion ingredients across all 33 symptoms each—`lamb`, `lemon`, `lima beans`, `lime`, `macadamia nut`, `mackerel`, `mung beans`, `mussels`, `nectarine`, `okra`, `oyster mushroom`, `oysters`, `papaya`, `parsnip`, and `peanut`—plus 22 shared Rounds 1–4 exposures covering their non-overlapping reserved symptoms). Raw cross-round percentages are not directly comparable across rounds without category and ingredient standardization: Round 5 contains `745` food, `132` herb, `77` spice, and `46` oil claims.
+
+| Verdict / Tier | Count | Notes |
+| --- | ---: | --- |
+| `Maybe True` | 26 | Directional evidence aligns with frozen hypothesis direction (`2` `limited_clinical_link`, `24` `minimal_signal`) |
+| `Maybe False` | 28 | Directional evidence opposes frozen hypothesis direction (`3` `limited_clinical_link`, `25` `minimal_signal`) |
+| `Unknown` (`Unknown (Researched)`) | 946 | Exhaustively checked; no defensible net directional lean (`open`, anchor `50`) |
+| **Total frozen claims** | **1,000** | `500` frozen `reduces` / `500` frozen `worsens` |
+
+By v1 scorecard tier and direction:
+- **`limited_clinical_link` (anchor `51`):** `5` claims (`1` easing lean, `4` worsening leans)
+- **`minimal_signal` (anchor `50.005`):** `49` claims (`46` easing leans, `3` worsening leans)
+- **`open` (anchor `50`, displayed as `Unknown (Researched)`):** `946` claims
+- **Symptom breadth:** `54` directional claims across `18` distinct symptoms and `22` ingredients (`15` ingredients remained `100%` `Unknown (Researched)`: `lemongrass`, `lentils`, `lima beans`, `lime`, `lovage leaf`, `macadamia oil`, `mung beans`, `mustard seed`, `nectarine`, `oregano`, `paprika`, `parsley`, `parsnip`, `peach`, `peanut oil`).
+- **Category breakdown:** `food` (`20` Maybe True, `21` Maybe False, `704` Unknown / `745` total), `herb` (`3` Maybe True, `1` Maybe False, `128` Unknown / `132` total), `spice` (`2` Maybe True, `5` Maybe False, `70` Unknown / `77` total), `oil` (`1` Maybe True, `1` Maybe False, `44` Unknown / `46` total).
+
+### Source-depth and verification milestones
+
+Round 5 separates **first-pass screening** from **original-body verification** in [followup/source-depth.tsv](followup/source-depth.tsv) across all `743` unique cited archive files (`4,130` unique claim–file citations), crossing the **`50%` original-body verification milestone**:
+
+| Verification Milestone | Unique Cited Files | Claim–File Citations | Directional-Claim Files | Composition |
+| --- | ---: | ---: | ---: | --- |
+| `original_body_verified` | `377` (`50.7%`) | `2,302` (`55.7%`) | `143 / 268` (`53.4%`) | `213` `oa_fulltext_verified` (NCBI PMC OA JATS full-text XML), `91` `cultural_or_forum_record` (full public/traditional records), `73` full local `archived_source_text` originals (`>6 KB`) |
+| `first_pass_screened` | `366` (`49.3%`) | `1,828` (`44.3%`) | `125 / 268` (`46.6%`) | `275` `primary_abstract_only` (paywalled / non-OA XML queued for original-body table verification), `86` compact local archive extracts, `5` `registry_protocol_only` (ClinicalTrials.gov v2 without posted results) |
+| **Total cited in Round 5** | **`743`** | **`4,130`** | **`268`** | Every directional claim also passed a targeted PubMed `pub_date` + `relevance` adversarial opposing-evidence audit (`156` uncited clinical candidates triaged; `0` unaddressed conflicting human RCTs) |
+
+### Highlighted checked v1 findings
+
+- **Marjoram (*Origanum majorana*) — direct diagnosed-PD clinical trial (`0395`, `limited_clinical_link` at `51`, eases -> Maybe False):** Double-blind randomized controlled pilot in idiopathic Parkinson's disease (`Chbili/Chahra 2021`, `PMID:34455218`, *Parkinsonism Relat Disord*, `60` randomized / `51` completers consuming filtered dried *Origanum majorana* leaf tea vs placebo × 30 days alongside conventional PD therapy) directly demonstrated BDI depression improvement (`p<0.0001` within marjoram vs no placebo change, zero AEs). Held strictly at tier `51` (`limited_clinical_link`) due to strained dried-leaf infusion vs frozen fresh leaves (`exposure_fit=remote`), differential dropout (`2` vs `7`), paywalled full between-arm CIs, and lack of independent replication; composite UPDRS-III (`p=0.069`) and unitemized NMSS kept all 18 other marjoram claims `open`.
+- **Animal-protein daytime LNAA levodopa competition — four clinical-tier (`51`) worsening leans on daily OFF time:** Maintaining exact Rounds 2–4 calibration (`beef`, `chicken`, `clams`, `cod`, `cow's milk`, `egg`, `herring`, `kefir`), cooked lamb ([0023](statements/0023.txt), Maybe True; directly bridged by cooked NZ lamb plasma LNAA DB-RCT `Pham 2022` `PMC9154224`, +133% EAA/BCAA/LNAA iAUC vs PBMA `p=0.001`), canned mackerel ([0331](statements/0331.txt), Maybe True; `Uhe 1992` + `Rego 2026` thermal EAA retention), cooked mussels ([0476](statements/0476.txt), Maybe False; `Bjerknes 2024` `PMC11563823`), and cooked oysters ([0798](statements/0798.txt), Maybe False; `Cho 2023` `PMC10703100`) carry `limited_clinical_link` (`51`) worsening leans on daily OFF time via direct PD protein-redistribution trials (`Barichella 2006`, `Tsui 1989`, `Carter 1989`, `Eriksson 1988`), honestly tempered by patient-level protein-effect heterogeneity (`Virmani 2016`, `Cucca 2015`). Consistent with Rounds 2–4 plant-legume calibration (`Kashyap 2019/2024`, `Kouw 2022`), `lentils`, `lima beans`, `mung beans`, and `peanut` remained `open` for `daily off time`.
+- **Three worsening leans at `minimal_signal` (`50.005`) — including first-ever visual hallucination directional signal and refined-vs-virgin olive oil divergence:**
+  - **Grated nutmeg (*Myristica fragrans*):** Supradietary human poison-control cohorts (>400 single-substance exposures across 6 independent centers: `Bleisch 2026` `PMC13206746` n=236, `Carstairs 2011` n=119, `Ehrenpreis 2014` `PMID:24452991` `PMC4057546` n=32, `Pietsch 2018`, `Reynoard 2019`, `Forrester 2005`) and accidental culinary-excess cases (`Ichibayashi 2024` `PMC11571034`, 5–10 g in pasta sauce) support worsening leans on **visual hallucination frequency** ([0593](statements/0593.txt), Maybe False) and **anxiety severity** ([0576](statements/0576.txt), Maybe True), with explicit culinary-pinch (<1 g) vs toxic-dose (≥5–15 g) scaling caveats and PD anticholinergic vulnerability.
+  - **Refined vs cold-pressed olive oil ([0659](statements/0659.txt) & [0654](statements/0654.txt)):** `Ni 2026` (`PMC12910899` Table 2, n=656 PREDIMED-Plus 2-yr cohort) found fully adjusted **common/refined olive oil** predicted **executive-function decline** (`-0.047/10 g/d, p=0.010; T3 p-trend=0.001`, directly opposing virgin olive oil `+0.036, p=0.002`), yielding a worsening lean for refined olive oil ([0659](statements/0659.txt), Maybe False), whereas cold-pressed EVOO carried an easing lean on **depressive symptoms** ([0654](statements/0654.txt), Maybe True; `Foshati 2022` `PMID:34358723` MDD DB-RCT + `Kyrozis 2009`, balanced against `PREDIMED`/`PREDIDEP` nulls).
+- **Oyster mushroom (*Pleurotus ostreatus*, `5` minimal-signal easing leans across `0760`–`0777`):** Newly published whole culinary *P. ostreatus* human RCTs — `Cha 2026` OYSCOG (`PMID:42299921`, n=80 12-wk RCT) and OYSACO (`PMID:41416984`, n=33 4-arm acute crossover) — supported minimal easing leans on anxiety ([0760](statements/0760.txt)), depression/sadness ([0767](statements/0767.txt)), task-switching executive function ([0772](statements/0772.txt)), and acute mental fatigue ([0774](statements/0774.txt)), tempered by null mixed-mushroom MED trial `Uffelman 2024` (`PMC11311880`), plus L-ergothioneine sleep easing ([0777](statements/0777.txt), calibrated to R2 `0968`).
+- **Other high-signal easing clusters (`minimal_signal` at `50.005`):**
+  - `nigella seed` (`5`: `0559` daytime sleepiness `Mohan 2023`/`Harshith 2026`; `0563` executive function `Bin Sayeed 2013`; `0566` rigidity & `0575` walking slowness PD/neuroleptic models balanced against null `Rathod 2025/2026`; `0568` oral OA/RA pain `Huseini 2022`/`Amirtaheri Afshar 2023`/`Kheirouri 2016` balanced against null oral seed-powder `Salimzadeh 2017` and excluding all topical oils).
+  - `lemon` (`4`: `0111` swallowing difficulty via `Gunes 2026` `PMC13507510` n=95 RCT + `Logemann 1995` + `Pelletier & Lawless 2003`, tempered by `Cola 2012` & `Alves 2013`; plus `0085` bradykinesia, `0101` rigidity, `0108` shortened stride from `Yazawa 1994` hypochlorhydric PD lemon-juice levodopa pilot, heavily tempered by `Nagayama 2004` null overall ascorbic acid & `Miyaue 2022`).
+  - `onion` (`4`: `0671` anxiety; `0672` apathy & `0678` depression from OA Table 5 of `Nishihira 2021` `PMC8482389` quercetin-rich onion powder DB-RCT; `0688` insomnia from `Nakayama 2020` `PMC7708608` ACSO sleep crossover bridged to dry-heat roasting via `Kim 2016`).
+  - `orange` (`4`: `0704` attention, `0713` executive function, `0716` hand dexterity via `Alharbi 2016` `PMC5009163` + `Kean 2015` + `Lamport 2016`; `0708` depression via `Li 2024` + `Chang 2016` + `Khorasanian 2023` balanced against null `Park 2020` & `Choi 2022`).
+  - `kiwi fruit` (`3`: `0001` fatigue `Billows 2025` GoKiPH vs null `Gearry 2023` POMS; `0003` insomnia `Nodtvedt 2017` + `Kerkeni 2025` vs null `Kanon 2023`; `0008` GI/IBS-C abdominal pain `Gearry 2023`/`Eady 2019–2020` vs null `Bayer 2022`), `lemon balm` (`3`: `0115` anxiety, `0128` insomnia, `0133` pain across oral monotherapy DB-RCTs balanced against `Di Pierro 2024` STAI null, `Mathews 2026` anxiety null, `Safari 2023` PSQI null, and `Ehsani 2024` OA Table 4 nulls), `mussels` (`2` easing `0485` fatigue & `0493` pain `Lindqvist 2018` MIRA + whole *Perna* meat powder balanced against null ROAM `Slade 2024` n=120), `oysters` (`2` easing `0807` fatigue & `0810` insomnia `Saito 2017` n=120 whole-oyster actigraphy RCT vs 3 null zinc-supplement RCTs), `peanut` (`2`: `0959` anxiety `ARISTOTLE` `PMID:34656952` SRP vs CB `p2=0.001`; `0971` executive function `Barbour 2017` balanced against nulls `Kerkhof 2025`, `Chiriac 2026`, `Parilli-Moser 2021`), `millet` (`2`: `0412` constipation, `0419` executive function), `okra` (`2`: `0619` anxiety, `0626` depression preclinical single-ingredient series while quarantining multi-herb `CL18100F4`), plus single minimal-signal easing leans on `lamb` (`0050` walking slowness, calibrated to R2 `beef` `0503`), `leek` (`0057` depression), `macadamia nut` (`0282` depression `Somerset 2011`), `mackerel` (`0340` fatigue), `mango` (`0363` constipation `Venancio 2018` vs null `Kim/Rosas 2023`), `oats` (`0598` constipation `Mannila 2025` `PMC12189175` + deduplicated `Sturtzel 2008–2010` `PMID:19214342`), and `papaya` (`0830` constipation `Muss 2013` `Caricol`).
+
+### Key exclusions, integrity catches, and open findings
+
+- **OA full-text table audits & integrity catches:** Caught fatal coding/sign inversion in `Nisar 2019` (`PMC6476615`, lima beans & sleep: Table 1 crude `OR=0.41` worse sleep contradicting prose `OR=6.57` -> `reliability_fit=unusable`); caught `Es-Safi 2021` (`PMC8037343`, parsley: zero statistical tests or p-values reported anywhere, OFT hyperlocomotion confound -> `unusable`); caught `Ehsani 2024` (`PMC11166494`, lemon balm: OA Table 4 between-group QLQ-C30 completely NULL for pain `p=0.82`, fatigue `p=0.87`, insomnia `p=0.82`); caught `Mirabi 2018` (`PMC6447884` Table 2 fatigue NULL `p=0.97` + cohort deduplication with `Mirabi 2017`); caught `Rafiee Zadeh 2022` (`PMC9081508` Table 2 DASS-21 anxiety NULL `p=0.545`, keeping `0556` nigella anxiety `open`); caught `Park 2020` (`PMC7353347` Δ CES-D NULL `p=0.889`), `ARISTOTLE` HADS-D all-arm drop (`p2=0.639`, keeping `0966` peanut depression `open`), `Durán González 2026` (`PMC13301056` n=250) + `Mendonça 2021` (`PMC8582684` n=149) keeping `0668` olive oil pain `open`, `Barnett 2023` (`PMC10707902` Table 5 proving lentil cognitive gains were solely NaFeEDTA iron fortification), `Avula 2025` (`PMC11854323` proving L-DOPA undetected in lima/mung beans), and excluded retracted trials (`Bukhari 2022` `PMID:35646151`, `Tabeshpour 2020` `PMID:31728856`, `Tekeoglu 2006` `PMID:25918766`, `Qi & Ying 2015` `PMID:28932324`) and `Musazadeh 2026` non-Nigella "black seed raisin" / double-counting errors.
+- **Strict botanical, plant-part, matrix, route, and homonym boundaries:** Separated `oyster mushroom` (*P. ostreatus*) from marine `oysters` (*Crassostrea*) and Lion's Mane; separated culinary blue `mussels` (*M. edulis*) from `PCSO-524`/`Lyprinol` lipid capsules; separated whole `peanut`/`macadamia nut` from `peanut oil`/`macadamia oil` (`0` directional); separated rolled `oats` grain from green oat aerial herb (`Neuravena`) and `OATS` CBT-I trial acronym; separated raw `papaya` fruit from yeast-fermented `FPP`/`Immun'Âge`, bundled `Caricol-Gastro` (+ oat flour), and TCM *Mu Gua* (*Chaenomeles speciosa*); separated whole `mango` fruit from mango **leaf** extracts (`Zynamite`, `Stadice`); separated *Prunus persica* fruit (`peach`/`nectarine`) from kernels/*Taoren*, leaves, and `PEACH`/`NECTARINE` trial acronyms; separated oral `lemongrass` (`Leite 1986` `PMID:2429120` null) from inhaled aromatherapy; separated `lime` (*C. aurantifolia*, `Bailey 2003` mean felodipine AUC null) from `grapefruit`; separated `marjoram` (*O. majorana*) from `oregano` (*O. vulgare*); separated `parsley`/`lovage leaf` from `lovage root`/`Canephron N` and *Ligusticum chuanxiong*; separated `okra` from `hibiscus` and *Withania*+okra (`CL18100F4`); separated `nigella seed` from `cumin` and topical oils; and separated sweet `paprika` from pungent `cayenne pepper`. Safety caveats documented across raw lima bean linamarin, raw oyster *Vibrio vulnificus*, shellfish PSP/ASP biotoxins, *Conium*/*Aconitum* lookalikes, parsnip psoralen CYP1A2, IgE/Pru p 3 allergies, and supradietary nutmeg anticholinergic toxicity.
+- **Open findings (`946` claims):** All `946` open claims carry `verdict = Unknown` and `research_status = researched` (displaying as `Unknown (Researched)` in Parkinson's Oracle MCP and the Nyx web UI), with explicit unresolved gaps recorded per claim in [research-status.tsv](followup/research-status.tsv).
+
+### Search coverage and limits
+
+- **Oracle-first & transfer baseline:** Audited all 37 Round 5 ingredients against catalog revision `284` (`41,398` indexed files, `0` read errors) and transferred applicable Rounds 1–4 evidence across the 22 shared exposures before external retrieval. First-pass coverage rates (`0 / 37` strict claim hits with `37 / 37` partial leads; `2 / 462` strict baseline source hits across `462` newly verified primary PMID/NCT IDs) are logged in [experiments/oracle-coverage/](../oracle-coverage/README.md).
+- **External clinical & scientific retrieval:** Completed `2,000 / 2,000` neutral Europe PMC queries ([queries.tsv](queries.tsv), `0` failed queries, `1,249` with hits, `2,758` unique PMIDs, `0` uncited exact-ingredient PD trial titles), live PubMed XML, batch NCBI PMC OA JATS full-text XML (`226` dossier OA bodies + `158` post-integration OA upgrades), and ClinicalTrials.gov v2 sweeps across all 37 ingredients, plus targeted PubMed `pub_date` + `relevance` adversarial opposing-evidence audits across all `54` directional claims (`156` uncited clinical candidates triaged), archiving `465` newly extracted primary source texts under chronological `research/YYYY-YYYY/Source-Text/` buckets.
+- **Inclusive cultural & experiential collection:** Archived `76` new traditional-practice, local-knowledge, personal-report, and anonymized public forum conversation records (Parkinson's UK Discourse, Cure Parkinson's HealthUnlocked, peer-reviewed ethnobotanical texts) under `research/YYYY-YYYY/Cultural-and-Experiential/`, bringing total verified cultural records to `451` (`451 / 451` mapped in `experiments/tools/parkinsons-oracle/cultural-graph-topics.tsv`).
+- **Ledger depth:** `1,000` v1 scorecards, `3,765` scorecard source-family rows, `2,949` per-claim study assessments, `743` per-citation source-depth rows (`377` `original_body_verified`, `366` `first_pass_screened`), `0` scorecard mismatches against live `oracle_check_scorecard`, and `1,000 / 1,000` passing `foodexperiment.researchstatus verify-complete`.
+
+## Directional verdicts
+
+- [0001](statements/0001.txt) **Maybe False** (50.005%) Consuming raw kiwi fruit worsens fatigue severity in people with Parkinson's disease.
+- [0003](statements/0003.txt) **Maybe False** (50.005%) Consuming raw kiwi fruit worsens insomnia severity in people with Parkinson's disease.
+- [0008](statements/0008.txt) **Maybe True** (50.005%) Consuming raw kiwi fruit reduces pain severity in people with Parkinson's disease.
+- [0023](statements/0023.txt) **Maybe True** (51%) Consuming cooked lamb worsens daily off time in people with Parkinson's disease.
+- [0050](statements/0050.txt) **Maybe False** (50.005%) Consuming cooked lamb worsens walking slowness in people with Parkinson's disease.
+- [0057](statements/0057.txt) **Maybe False** (50.005%) Consuming roasted leek worsens depressive symptom severity in people with Parkinson's disease.
+- [0085](statements/0085.txt) **Maybe True** (50.005%) Consuming raw lemon reduces bradykinesia severity in people with Parkinson's disease.
+- [0101](statements/0101.txt) **Maybe False** (50.005%) Consuming cooked lemon worsens muscle rigidity severity in people with Parkinson's disease.
+- [0108](statements/0108.txt) **Maybe False** (50.005%) Consuming cooked lemon worsens shortened stride severity in people with Parkinson's disease.
+- [0111](statements/0111.txt) **Maybe True** (50.005%) Consuming raw lemon reduces swallowing difficulty severity in people with Parkinson's disease.
+- [0115](statements/0115.txt) **Maybe True** (50.005%) Consuming fresh lemon balm reduces anxiety severity in people with Parkinson's disease.
+- [0128](statements/0128.txt) **Maybe True** (50.005%) Consuming fresh lemon balm reduces insomnia severity in people with Parkinson's disease.
+- [0133](statements/0133.txt) **Maybe True** (50.005%) Consuming fresh lemon balm reduces pain severity in people with Parkinson's disease.
+- [0282](statements/0282.txt) **Maybe False** (50.005%) Consuming roasted macadamia nut worsens depressive symptom severity in people with Parkinson's disease.
+- [0331](statements/0331.txt) **Maybe True** (51%) Consuming canned mackerel worsens daily off time in people with Parkinson's disease.
+- [0340](statements/0340.txt) **Maybe True** (50.005%) Consuming canned mackerel reduces fatigue severity in people with Parkinson's disease.
+- [0363](statements/0363.txt) **Maybe False** (50.005%) Consuming raw mango worsens constipation severity in people with Parkinson's disease.
+- [0395](statements/0395.txt) **Maybe False** (51%) Consuming fresh marjoram worsens depressive symptom severity in people with Parkinson's disease.
+- [0412](statements/0412.txt) **Maybe True** (50.005%) Consuming cooked millet reduces constipation severity in people with Parkinson's disease.
+- [0419](statements/0419.txt) **Maybe True** (50.005%) Consuming cooked millet reduces executive function impairment in people with Parkinson's disease.
+- [0476](statements/0476.txt) **Maybe False** (51%) Consuming cooked mussels reduces daily off time in people with Parkinson's disease.
+- [0485](statements/0485.txt) **Maybe False** (50.005%) Consuming cooked mussels worsens fatigue severity in people with Parkinson's disease.
+- [0493](statements/0493.txt) **Maybe True** (50.005%) Consuming cooked mussels reduces pain severity in people with Parkinson's disease.
+- [0559](statements/0559.txt) **Maybe False** (50.005%) Consuming ground nigella seed worsens daytime sleepiness severity in people with Parkinson's disease.
+- [0563](statements/0563.txt) **Maybe False** (50.005%) Consuming ground nigella seed worsens executive function impairment in people with Parkinson's disease.
+- [0566](statements/0566.txt) **Maybe False** (50.005%) Consuming ground nigella seed worsens muscle rigidity severity in people with Parkinson's disease.
+- [0568](statements/0568.txt) **Maybe True** (50.005%) Consuming toasted nigella seed reduces pain severity in people with Parkinson's disease.
+- [0575](statements/0575.txt) **Maybe False** (50.005%) Consuming toasted nigella seed worsens walking slowness in people with Parkinson's disease.
+- [0576](statements/0576.txt) **Maybe True** (50.005%) Consuming grated nutmeg worsens anxiety severity in people with Parkinson's disease.
+- [0593](statements/0593.txt) **Maybe False** (50.005%) Consuming grated nutmeg reduces visual hallucination frequency in people with Parkinson's disease.
+- [0598](statements/0598.txt) **Maybe False** (50.005%) Consuming rolled oats worsens constipation severity in people with Parkinson's disease.
+- [0619](statements/0619.txt) **Maybe True** (50.005%) Consuming cooked okra reduces anxiety severity in people with Parkinson's disease.
+- [0626](statements/0626.txt) **Maybe True** (50.005%) Consuming cooked okra reduces depressive symptom severity in people with Parkinson's disease.
+- [0654](statements/0654.txt) **Maybe True** (50.005%) Consuming cold-pressed olive oil reduces depressive symptom severity in people with Parkinson's disease.
+- [0659](statements/0659.txt) **Maybe False** (50.005%) Consuming refined olive oil reduces executive function impairment in people with Parkinson's disease.
+- [0671](statements/0671.txt) **Maybe True** (50.005%) Consuming raw onion reduces anxiety severity in people with Parkinson's disease.
+- [0672](statements/0672.txt) **Maybe False** (50.005%) Consuming raw onion worsens apathy severity in people with Parkinson's disease.
+- [0678](statements/0678.txt) **Maybe True** (50.005%) Consuming raw onion reduces depressive symptom severity in people with Parkinson's disease.
+- [0688](statements/0688.txt) **Maybe True** (50.005%) Consuming roasted onion reduces insomnia severity in people with Parkinson's disease.
+- [0704](statements/0704.txt) **Maybe True** (50.005%) Consuming raw orange reduces attention impairment in people with Parkinson's disease.
+- [0708](statements/0708.txt) **Maybe True** (50.005%) Consuming raw orange reduces depressive symptom severity in people with Parkinson's disease.
+- [0713](statements/0713.txt) **Maybe False** (50.005%) Consuming raw orange worsens executive function impairment in people with Parkinson's disease.
+- [0716](statements/0716.txt) **Maybe False** (50.005%) Consuming raw orange worsens hand dexterity impairment in people with Parkinson's disease.
+- [0760](statements/0760.txt) **Maybe False** (50.005%) Consuming roasted oyster mushroom worsens anxiety severity in people with Parkinson's disease.
+- [0767](statements/0767.txt) **Maybe True** (50.005%) Consuming cooked oyster mushroom reduces depressive symptom severity in people with Parkinson's disease.
+- [0772](statements/0772.txt) **Maybe False** (50.005%) Consuming roasted oyster mushroom worsens executive function impairment in people with Parkinson's disease.
+- [0774](statements/0774.txt) **Maybe False** (50.005%) Consuming roasted oyster mushroom worsens fatigue severity in people with Parkinson's disease.
+- [0777](statements/0777.txt) **Maybe True** (50.005%) Consuming cooked oyster mushroom reduces insomnia severity in people with Parkinson's disease.
+- [0798](statements/0798.txt) **Maybe False** (51%) Consuming cooked oysters reduces daily off time in people with Parkinson's disease.
+- [0807](statements/0807.txt) **Maybe False** (50.005%) Consuming cooked oysters worsens fatigue severity in people with Parkinson's disease.
+- [0810](statements/0810.txt) **Maybe True** (50.005%) Consuming cooked oysters reduces insomnia severity in people with Parkinson's disease.
+- [0830](statements/0830.txt) **Maybe False** (50.005%) Consuming raw papaya worsens constipation severity in people with Parkinson's disease.
+- [0959](statements/0959.txt) **Maybe True** (50.005%) Consuming roasted peanut reduces anxiety severity in people with Parkinson's disease.
+- [0971](statements/0971.txt) **Maybe False** (50.005%) Consuming boiled peanut worsens executive function impairment in people with Parkinson's disease.
