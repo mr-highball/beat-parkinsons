@@ -309,6 +309,8 @@ The November 26 print-issue audit separated six original publications, removing 
 
 The November 26 shared-original review closed 121 source checks across 19 identity-verified publications and added 20 dated catalog texts. Sixty-six scopes are related and 55 are excluded. The 53 checked scorecards retain their directions and anchors. Conference and journal reports for the Hamburg coffee cohort share one study family. The verified queue holds 29,834 exact checks across 20,895 publication keys and 380 claims. [Methods, source scopes and replay](followup/shared-issue-recovery-nov26/README.md)
 
+The November 26 full-body scope batch closed 60 checks across nine original bodies and added 15 dated catalog texts. It logged PubMed relevance and recent-date searches for brewed coffee and fatigue and cold-pressed olive oil and anxiety. Eleven scorecards retained their verdicts and anchors. The replay leaves 29,774 exact checks across 20,886 publication keys and 380 claims. [Resumable source and counterevidence review](followup/priority-and-shared-open-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

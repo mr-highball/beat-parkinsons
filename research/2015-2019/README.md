@@ -1050,3 +1050,19 @@ The [ProDiet brewed-green-tea comparison](Source-Text/2018-PMID30309839-ProDiet-
 The [ESICON meal study](Source-Text/2019-PMC6892323-ESICON-Meal-Oil-Scope.txt) retains conflicting oil names across methods and results. The [vascular dementia formula tables](Source-Text/2018-PMID30520514-Nutmeg-in-Vascular-Dementia-Formulas.txt) distinguish culinary spice leads from red sage root.
 
 The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol-and-Affect.txt) separates cortisol, within-arm affect and the active-comparator result.
+
+- [PMCID:PMC4768436 | POSTERS](Source-Text/2016-PMC4768436-Psychiatry-Posters-Kale-and-Date-Scope.txt)
+
+- [PMCID:PMC5724662 | Arthroplasty-Cervical: P001 - Double Crush Syndrome of the Vertebral Artery Loop and Foraminal Stenosis Causing Monoparesis](Source-Text/2017-PMC5724662-Spine-Congress-Sage-Kale-and-Date-Scope.txt)
+
+- [PMCID:PMC7161410 | Diseases of the Respiratory System](Source-Text/2017-PMC7161410-Veterinary-Respiratory-Food-and-Lab-Scopes.txt)
+
+- [PMID:30068225 | Mild Cognitive Impairment in Clinical Practice: A Review Article](Source-Text/2018-PMID30068225-Mild-Cognitive-Impairment-Sage-and-Date-Scope.txt)
+
+- [PMID:30363487 | Complementary Therapies for Parkinson's Disease: What's Promoted, Rationale, Potential Risks and Benefits](Source-Text/2015-PMID30363487-Complementary-Parkinson-Dietary-Scopes.txt)
+
+- [PMID:30815958 | XIX International Congress of Neuropathology](Source-Text/2019-PMID30815958-Neuropathology-Conference-Morphology-and-Food-Scope.txt)
+
+- [PMID:31694708 | 34th Annual Meeting & Pre-Conference Programs of the Society for Immunotherapy of Cancer (SITC 2019): part 2: National Harbor, MD, USA. 10 November 2019](Source-Text/2019-PMID31694708-SITC-Poster-Food-Identity-Scopes.txt)
+
+- [Neurochemical and behavioral effects of Nigella sativa and Olea europaea oil in rats](Source-Text/2016-PMID27868798-Cheema-Olive-Oil-Anxiety-Like-Behavior.txt)

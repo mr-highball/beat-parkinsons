@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The full-body scope batch resolved 60 checks across nine authenticated originals, with 12 related contexts and 48 scope exclusions. It leaves 29,774 checks across 20,886 publication keys and 380 claims. [Source checks, counterevidence and replay](../priority-and-shared-open-nov26/README.md)
+
 The shared-original batch resolved 121 checks across 19 authenticated publications, with 66 related contexts and 55 scope exclusions. The replay leaves 29,834 exact checks across 20,895 publication keys and 380 frozen claims. [Source checks and replay](../shared-issue-recovery-nov26/README.md)
 
 Group pending pairs by canonical study ID after preserving evidence priority. Within a priority, favor originals shared by several queued pairs. Batch exact Oracle lookups before retrieval, then reuse each verified original across its eligible scopes. Validate each proposed scorecard and exact disposition, and refresh the catalog and web snapshot once for the verified batch.

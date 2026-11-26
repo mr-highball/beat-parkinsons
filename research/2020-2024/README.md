@@ -1276,3 +1276,11 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [Potential mechanisms to modify impaired glucose metabolism in neurodegenerative disorders](Source-Text/2022-PMID36281012-glucose-metabolism-food-scope.txt)
 
 - [Acupuncture Treatment of Autonomic Nervous Dysfunction in Patients with Parkinson's Disease](Source-Text/2024-PMID39309401-acupuncture-autonomic-scope.txt)
+
+- [PMID:34705296 | Award Winners and Abstracts of the 35th Anniversary Symposium of The Protein Society, July 7–14, 2021 | Virtual](Source-Text/2021-PMID34705296-Protein-Society-Food-Identity-Scopes.txt)
+
+- [Exploratory study to assess the efficacy of improving the intestinal environment by ingestion of chocolate](Source-Text/Trials/UMIN000049960.txt)
+
+- [Evaluation of olive oil effects on human stress response by measuring cerebral blood flow](Source-Text/2021-PMID33841804-Mitsukura-Olive-Oil-Typing-Stress.txt)
+
+- [The role of olive oil and its constituents in mental health: a scoping review](Source-Text/2024-PMID39696776-Eedy-Olive-Oil-Mental-Health-Scoping.txt)

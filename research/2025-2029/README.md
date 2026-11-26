@@ -1128,3 +1128,11 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [PMID:41667476 | Olfactory sensory map is perturbed in a human wild-type α-synuclein overexpressing transgenic mouse model of Parkinson's disease](Source-Text/2026-PMID41667476-olfactory-test-stimulus-scope.txt)
 
 [Ingredient identity, delivery vehicle and outcome scope](Observations/Shared-Original-Ingredient-and-Outcome-Scope-Nov26.md)
+
+- [PMID:42472778 | Abstracts from the 19th European Headache Congress (EHC)](Source-Text/2026-PMID42472778-Headache-Congress-Coffee-and-Food-Scope.txt)
+
+- [Ingestion of dark chocolate improves constipation and alters the intestinal microbiota in Japanese women](Source-Text/2025-PMID40636155-Ito-Dark-Chocolate-Bowel-Frequency.txt)
+
+- [Olive-leaf anxiety pilot, original controlled results](Source-Text/2026-DOI10.3390-Life16071081-Olive-Leaf-Anxiety.txt)
+
+[Dark chocolate and different bowel outcomes](Observations/Food-Review-Chocolate-Bowel-Outcomes-Nov26.md)
