@@ -1271,3 +1271,10 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [PMID:40808708 | A qualitative study exploring physiotherapists’ insights on the design and development of technology-enhanced gait and balance assessment systems for older adults](Source-Text/2025-PMC12344322-Physiotherapist-Gait-Assessment-Interviews.txt)
 - [PMID:40444534 | Restoration of Memory Along With Neurogenic Enhancement by Therapeutic Botulinum Neurotoxin in a Preclinical Model of Parkinson’s Disease](Source-Text/2025-PMC12126647-Botulinum-Neurotoxin-Memory-Model.txt)
 - [PMID:40162161 | Effectiveness of telerehabilitation on the International Classification of Functioning, Disability, and Health framework outcomes during the COVID-19 pandemic: A systematic review and meta-analysis of randomized controlled trials](Source-Text/2025-PMC11951915-Telerehabilitation-Function-Review.txt)
+
+- [PMID:40273394 | Investigating Plasma Metabolomics and Gut Microbiota Changes Associated With Parkinson Disease: A Focus on Caffeine Metabolism](Source-Text/2025-PMC12022887-Parkinson-Metabolomics-Figure-Colors.txt)
+- [PMID:40632678 | Caffeine Intoxication: An Analysis of Published Case Reports, 1883–2023](Source-Text/2025-PMC12620904-Caffeine-Poisoning-Case-Review.txt)
+- [PMID:40808466 | Amelioration of behavioral and neural deficits in animal models of neurodegenerative disease by nanoformulations of curcumin and quercetin](Source-Text/2025-PMC13452665-Curcumin-Quercetin-Formulation-Review.txt)
+
+- [Date palm fruit and premenstrual symptoms over five menstrual cycles](Source-Text/2025-Al-Sayyed-Date-Fruit-Premenstrual-Trial.txt)
+- [Ajwa date and menstrual pain review, checked citation scope](Source-Text/2025-Zhafirah-Ajwa-Dysmenorrhea-Citation-Scope.txt)

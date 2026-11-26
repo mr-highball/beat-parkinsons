@@ -1163,3 +1163,12 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [PMID:26062575 | Cerebral Toxocariasis: Silent Progression to Neurodegenerative Disorders?](Source-Text/2015-PMC4462679-Toxocariasis-Food-Exposure-Scope.txt)
 
 - [PMID:29780230 | A randomized trial of the effects of flaxseed to manage constipation, weight, glycemia, and lipids in constipated patients with type 2 diabetes](Source-Text/2018-PMC5944250-Baked-Flaxseed-and-Constipation.txt)
+
+- [PMID:27164829 | Curcumin exerts anti-inflammatory and antioxidative properties in 1-methyl-4-phenylpyridinium ion (MPP+)-stimulated mesencephalic astrocytes by interference with TLR4 and downstream signaling pathway](Source-Text/2016-PMC4908001-Curcumin-Cell-Study-Figure-Scope.txt)
+- [PMID:27320048 | The Safety, Pharmacokinetics, and Nervous System Effects of Two Natural Sources of Caffeine in Healthy Adult Males](Source-Text/2016-PMC5350996-Caffeine-Source-Comparison.txt)
+- [PMID:27403251 | Therapeutic effects of saffron (Crocus sativus L.) in digestive disorders: a review](Source-Text/2016-PMC4923465-Saffron-Digestive-Disorders.txt)
+- [PMID:28677810 | Caffeine induces sustained apoptosis of human gastric cancer cells by activating the caspase-9/caspase-3 signalling pathway](Source-Text/2017-PMC5547974-Caffeine-and-Gastric-Cell-Experiment.txt)
+- [PMID:30464480 | Profile of inhaled levodopa and its potential in the treatment of Parkinson’s disease: evidence to date](Source-Text/2018-PMC6220433-Inhaled-Levodopa-Review.txt)
+- [PMID:30622948 | The Impact of Coffee and Caffeine on Multiple Sclerosis Compared to Other Neurodegenerative Diseases](Source-Text/2018-PMC6308803-Coffee-Caffeine-and-Neurodegenerative-Disease.txt)
+- [PMID:30808064 | Molecular mechanisms of caffeine‐mediated intestinal epithelial ion transports](Source-Text/2019-PMC6514291-Caffeine-Intestinal-Transport.txt)
+- [PMID:31270815 | An overview of the pharmacology of olive oil and its active ingredients](Source-Text/2019-PMC7056466-Olive-Oil-Pharmacology-Review.txt)

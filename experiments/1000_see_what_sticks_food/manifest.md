@@ -321,6 +321,8 @@ The November 26 preparation and symptom review closed 180 exact checks and added
 
 The November 26 nonmotor outcome review closed 200 exact checks across 50 publications. It links a separate sage incontinence result and a dated traditional use account while preserving the distinction from Parkinson urgency. It also corrects five trial family classifications and validates 42 affected scorecards. The replay leaves 28,973 exact checks across 20,672 publication keys and 374 claims. [Batch evidence and provenance](followup/nonmotor-and-diet-outcomes-nov26/README.md)
 
+The November 26 priority source and fruit review closed 28 exact checks, with 162 higher-priority checks retaining their access gaps. A new fig-derived toxicity report did not isolate a rest-tremor outcome. An original cinnamon powder trial adds a fourth indirect favorable pain comparison, with the same minimal tier. The corrected trial counts, date fruit abstract, and Aydin fig and olive oil traditions are indexed. Eight scorecards were verified. The replay leaves 28,945 exact checks across 20,647 publication keys and 374 claims. [Original sources and review limits](followup/priority-identity-and-fig-tremor-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

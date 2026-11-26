@@ -773,3 +773,12 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [PMID:23922450 | Exploring scientifically proven herbal aphrodisiacs](Source-Text/2013-PMC3731873-Herbal-Aphrodisiacs-and-Nutmeg-Context.txt)
 - [PMID:22419320 | Antioxidant supplements for prevention of mortality in healthy participants and patients with various diseases](Source-Text/2012-PMC8407395-Antioxidant-Trials-Ingredient-Carriers.txt)
 - [PMID:22228951 | Free radicals, antioxidants and functional foods: Impact on human health](Source-Text/2010-PMC3249911-Functional-Food-Antioxidant-Context.txt)
+
+- [PMID:22293536 | PharmGKB summary: caffeine pathway](Source-Text/2012-PMC3381939-Caffeine-Pharmacogenomics.txt)
+- [PMID:23370395 | Xenohormetic and anti-aging activity of secoiridoid polyphenols present in extra virgin olive oil: A new family of gerosuppressant agents](Source-Text/2013-PMC3594257-Extra-Virgin-Olive-Oil-Secoiridoids.txt)
+- [PMID:24764514 | Caffeine extends life span, improves healthspan, and delays age-associated pathology in Caenorhabditis elegans](Source-Text/2012-PMC3922918-Caffeine-in-Worm-Aging-Models.txt)
+- [PMID:24817901 | Cinnamon: A Multifaceted Medicinal Plant](Source-Text/2014-PMC4003790-Cinnamon-Review-Clove-Oil-Scope.txt)
+- [PMID:25019344 | Oleocanthal, a Phenolic Derived from Virgin Olive Oil: A Review of the Beneficial Effects on Inflammatory Disease](Source-Text/2014-PMC4139846-Virgin-Olive-Oil-Oleocanthal.txt)
+- [PMID:25104940 | Combination ergotamine and caffeine improves seated blood pressure and presyncopal symptoms in autonomic failure](Source-Text/2014-PMC4109567-Ergotamine-Caffeine-Autonomic-Trial.txt)
+
+- [Fig and olive oil in customary practices from the Aydin region](Cultural-and-Experiential/Traditional-Practices/2014-Ozatalay-Fig-and-Olive-Oil-Practices-in-Aydin.txt)

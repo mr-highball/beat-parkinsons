@@ -1371,3 +1371,16 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [PMID:36743024 | Natural Bioactive Molecules as Neuromedicines for the Treatment/Prevention of Neurodegenerative Diseases](Source-Text/2023-PMC9893457-Neuromedicine-Review-Grape-Tomato-Turmeric.txt)
 
 - [Common sage use for renal complaints in northeastern Morocco](Cultural-and-Experiential/Local-Knowledge/2021-Bencheikh-Sage-Renal-Use-Northeastern-Morocco.txt)
+
+- [PMID:31985131 | Effect of the fixed combination of valerian, lemon balm, passionflower, and butterbur extracts (Ze 185) on the prescription pattern of benzodiazepines in hospitalized psychiatric patients—A retrospective case‐control investigation](Source-Text/2020-PMC7317844-Combination-Herb-Context-Hospital-Prescribing.txt)
+- [PMID:33615006 | The role of Safranal and saffron stigma extracts in oxidative stress, diseases and photoaging: A systematic review](Source-Text/2021-PMC7881230-Safranal-and-Cumin-Source-Context.txt)
+- [PMID:34512350 | Olive Oil: Nutritional Applications, Beneficial Health Aspects and its Prospective Application in Poultry Production](Source-Text/2021-PMC8424077-Canola-in-Poultry-Feed-Nutrition.txt)
+- [PMID:34578966 | Caffeine as a Factor Influencing the Functioning of the Human Body—Friend or Foe?](Source-Text/2021-PMC8467199-Caffeine-Human-Physiology-Review.txt)
+- [PMID:34825873 | Curcumin, Resveratrol and Cannabidiol as Natural Key Prototypes in Drug Design for Neuroprotective Agents](Source-Text/2022-PMC9881080-Natural-Compounds-in-Neuroprotective-Drug-Design.txt)
+- [PMID:35303012 | Physicochemical investigation of a novel curcumin diethyl γ-aminobutyrate, a carbamate ester prodrug of curcumin with enhanced anti-neuroinflammatory activity](Source-Text/2022-PMC9048745-Curcumin-Prodrug-and-Color-False-Hit.txt)
+- [PMID:36918462 | Caffeine plus haloperidol reduces fatigue in an experimental model of Parkinson's disease – a prospective to A2AR-D2R heterodimer antagonism](Source-Text/2023-PMC10828253-Caffeine-Haloperidol-Model-and-Figures.txt)
+- [PMID:37691886 | Caffeine intake interacts with Asian gene variants in Parkinson's disease: a study in 4488 subjects](Source-Text/2023-PMC10485627-Caffeine-Genotype-Parkinson-Association.txt)
+
+- [A comprehensive study of extracted pectin from Ficus carica fruit](Source-Text/2022-Kuthuru-Fig-Fruit-Pectin-and-Toxicity.txt)
+- [Effects of Dry Figs on Primary Dysmenorrhea Symptoms, Perceived Stress Levels and the Quality of Life](Source-Text/2020-PMID33320461-Amanak-Fig-Cinnamon-and-Dysmenorrhea.txt)
+- [Erratum for Amanak dried figs and primary dysmenorrhea](Source-Text/2021-PMID33876922-Amanak-Erratum.txt)
