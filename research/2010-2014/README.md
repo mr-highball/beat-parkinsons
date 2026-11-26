@@ -805,3 +805,10 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [PMID:23055579 | Green tea: A boon for periodontal and general health](Source-Text/2012-PMC3459493-Round1-Source-Scope.txt)
 
 - [Acute toxicity report for a multi-ingredient weight-loss supplement](Source-Text/2013-PMID24501816-Cayenne-in-Mixed-Supplement-Poisoning.txt)
+
+- [PMID:20211655 | Behavioral phenotyping of mouse models of Parkinson's Disease](Source-Text/2010-PMC2862121-Round1-Source-Scope.txt)
+- [PMID:20438142 | Compassion: An Evolutionary Analysis and Empirical Review](Source-Text/2010-PMC2864937-Round1-Source-Scope.txt)
+- [PMID:22025850 | Sugar substitutes: Health controversy over perceived benefits](Source-Text/2011-PMC3198517-Round1-Source-Scope.txt)
+- [PMID:23251841 | Occupational Neurotoxic Diseases in Taiwan](Source-Text/2012-PMC3521924-Round1-Source-Scope.txt)
+- [PMID:24244710 | Loss of Leucine-Rich Repeat Kinase 2 (LRRK2) in Rats Leads to Progressive Abnormal Phenotypes in Peripheral Organs](Source-Text/2013-PMC3828242-Round1-Source-Scope.txt)
+- [PMID:24252612 | Mitochondrial genome changes and neurodegenerative diseases☆](Source-Text/2013-PMC4283582-Round1-Source-Scope.txt)

@@ -675,3 +675,5 @@ A Parkinson’s UK discussion contains mixed orange experiences during constipat
 - [Different experiences with oranges and constipation in a Parkinson’s UK discussion](../Cultural-and-Experiential/Conversations/2019-Parkinsons-UK-Oranges-Constipation-Conversation.txt)
 
 [Comparison of beverage fatigue outcomes and customary sleep uses](2019-Tea-Fatigue-and-Lemongrass-Sleep.md).
+
+- A full publisher PDF resolved the crossed index identity for the 2018 mass-spectrometry editorial. A later correction addresses the printed issue year. Its first publication remains November 2018. [Editorial source review](../Source-Text/2018-PMID30430435-Round1-PDF-Scope.txt)

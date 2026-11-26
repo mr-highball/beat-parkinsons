@@ -1645,3 +1645,8 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [Public account of ground cayenne and a panic episode](Cultural-and-Experiential/Conversations/2024-Reddit-Ground-Cayenne-and-Panic.txt)
 - [Spinach-extract and exercise study protocol in the UCAM conference book](Source-Text/2022-UCAM-SPISAR-Conference-Protocol.txt)
 - [Diaphragmatic breathing, reflux-related cough and anxiety outcomes](Source-Text/2024-PMID38637797-Breathing-Training-and-Capsaicin-Cough-Test.txt)
+
+- [PMID:39840272 | Confronting allergies: strategies for combating pollution and safeguarding our health](Source-Text/2024-PMC11747219-Round1-Source-Scope.txt)
+
+- [Abstracts of the 28th Annual Conference of the International Society for Quality of Life Research](Source-Text/2021-PMC8508470-Round1-PDF-Scope.txt)
+- [ESICM LIVES 2022: Paris meeting abstracts, part 2](Source-Text/2022-PMC9579253-Round1-PDF-Scope.txt)

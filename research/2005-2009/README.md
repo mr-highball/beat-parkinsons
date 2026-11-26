@@ -511,3 +511,11 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [PMID:19205066 | Dysautonomia Rating Scales in Parkinson’s Disease: Sialorrhea, Dysphagia, and Constipation—Critique and Recommendations by Movement Disorders Task Force on Rating Scales for Parkinson’s Disease](Source-Text/2009-PMC4404514-Round1-Source-Scope.txt)
 
 - [Nicotine, cough provocation and anxiety measurement](Source-Text/2008-PMID19100331-Nicotine-and-Capsaicin-Cough-Challenge.txt)
+
+- [Arterial imaging in rabbits and the crossed proceedings identity](Source-Text/2009-PMID19898904-Arterial-Imaging-Article-Identity.txt)
+- [Present and future drug treatment for Parkinson disease](Source-Text/2005-PMID16227533-Parkinson-Drug-Review-Original-Access.txt)
+- [Clinical care and management of frontotemporal lobar degeneration](Source-Text/2008-PMID18421010-Dementia-Management-Original-Access.txt)
+- [Surgical management of Parkinson disease: original access note](Source-Text/2007-PMID20566105-Parkinson-Surgical-Review-Original-Access.txt)
+
+- [PMID:19300565 | Continuous levodopa for advanced Parkinson’s disease](Source-Text/2007-PMC2654791-Round1-Source-Scope.txt)
+- [PMID:22084580 | Assessment of the Potential Role of Tryptophan as the Precursor of Serotonin and Melatonin for the Aged Sleep-wake Cycle and Immune Function: Streptopelia Risoria as a Model](Source-Text/2009-PMC3195230-Round1-Source-Scope.txt)

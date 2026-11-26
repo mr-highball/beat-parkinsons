@@ -1282,3 +1282,11 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 
 - [Isolated sesamin, levodopa and mouse motor outcomes](Source-Text/2016-PMID27789382-Sesamin-and-Mouse-Motor-Tests.txt)
 - [Isolated sesamin and rat motor outcomes](Source-Text/2017-PMID28157651-Sesamin-and-Rat-Motor-Asymmetry.txt)
+
+- [2019 International Congress of Immunology abstract-book access and member scope](Source-Text/2019-PMID31592543-ICI-Meeting-Original-Access.txt)
+
+- [PMID:26415143 | Clinical Relevance of Biomarkers of Oxidative Stress](Source-Text/2015-PMC4657513-Round1-Source-Scope.txt)
+
+- [Third National Festival and International Congress on Stem Cell and Regenerative Medicine](Source-Text/2018-PMC6350633-Round1-PDF-Scope.txt)
+- [ESICM LIVES 2019: Berlin congress abstracts](Source-Text/2019-PMC6763544-Round1-PDF-Scope.txt)
+- [A Focus Honoring Carol Robinson's Election to the National Academy of Sciences](Source-Text/2018-PMID30430435-Round1-PDF-Scope.txt)
