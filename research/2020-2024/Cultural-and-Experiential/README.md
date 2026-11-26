@@ -104,3 +104,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [Historical cinnamon and spearmint uses](Local-Knowledge/2023-PMC10275721-Historical-Cinnamon-and-Spearmint-Uses.txt)
 - [Traditional Garcinia and coconut-oil use](Local-Knowledge/2023-PMC10748532-Garcinia-and-Coconut-Oil-Traditional-Use.txt)
+
+- [Donguibogam turmeric and the historical skincare pain term](Local-Knowledge/2020-PMC7388188-Donguibogam-Turmeric-and-Skin-Pain.txt)

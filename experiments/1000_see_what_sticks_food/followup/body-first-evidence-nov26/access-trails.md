@@ -1,0 +1,7 @@
+# Original-access and member boundaries checked November 26, 2026
+
+- [UEG 2022](https://doi.org/10.1002/ueg2.12295) exposes intact members in indexed publisher HTML. The PMC cover authenticates the same issue. Complete coverage of pages 473–1092 remains unverified. The local selected-member record preserves food findings, separate comparators and preparation limits. All 39 exact pairs remain queued.
+- [AES annual supplement](https://pmc.ncbi.nlm.nih.gov/articles/PMC4591846/) is a PDF-only parent collection, printed pages 1–578. The local archive is a selected digest. The original PMC PDF route returned a challenge and the checked cloud and publisher routes did not supply a complete PDF. All 38 pairs remain open.
+- [IUNS-ICN Paris 2025 proceedings](https://doi.org/10.1017/jns.2026.10126) were published on July 23, 2026. The checked routes verified the cover and a PDF-only collection. Thyme member coverage remains open for both pairs.
+- The NIH News Briefs, PMC2151985 and PMC1512546 verified their accession metadata through eFetch but supplied no readable primary body from the tested official routes. The same acquisition found the complete 147-member IAPCON collection through independent PMC cloud and EFetch packages.
+- The two clinical-source trails in the focused records remain open after exact replay. Record the original-access boundary at its current depth before assigning a research-complete status.

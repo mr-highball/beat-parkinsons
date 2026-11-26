@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The authenticated article and IAPCON batch resolved 227 exact checks across 76 originals. It leaves 26,883 checks across 19,902 publication keys and 352 claims. [Verified originals and replay evidence](../body-first-evidence-nov26/README.md)
+
 The PDF member batch resolved 229 exact checks across 73 originals. It leaves 27,110 checks across 19,978 publication keys and 354 claims. [Originals, PDF receipts and replay evidence](../pdf-members-and-primary-nov26/README.md)
 
 The PDF and identity batch resolved 164 exact checks across 43 originals. It leaves 27,339 checks across 20,051 publication keys and 354 claims. [PDF, identity and replay evidence](../pdf-and-identity-nov26/README.md)

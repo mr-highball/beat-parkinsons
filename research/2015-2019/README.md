@@ -1290,3 +1290,5 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [Third National Festival and International Congress on Stem Cell and Regenerative Medicine](Source-Text/2018-PMC6350633-Round1-PDF-Scope.txt)
 - [ESICM LIVES 2019: Berlin congress abstracts](Source-Text/2019-PMC6763544-Round1-PDF-Scope.txt)
 - [A Focus Honoring Carol Robinson's Election to the National Academy of Sciences](Source-Text/2018-PMID30430435-Round1-PDF-Scope.txt)
+
+- [PMCID:PMC5412126 | 2017 IAPCON Abstracts](Source-Text/2017-PMC5412126-Round1-Original-Scope.txt)
