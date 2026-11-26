@@ -98,4 +98,4 @@ A 2025 thesis review identifies a 2021 Gaziantep doctoral thesis with the same f
 
 - [Institutional thesis listing](https://www.mu.edu.tr/en/personel/sevginsamancioglu)
 - [Thesis review, pages 53–54](https://dergipark.org.tr/tr/download/article-file/4588196)
-- [Related 2026 EVACUR protocol, a separate study](../2025-2029/Source-Text/2026-NCT07398885-EVACUR-Methods-Only-Protocol.txt)
+- [Related 2026 EVACUR protocol, a separate study](../2025-2029/Source-Text/Trials/NCT07398885.txt)

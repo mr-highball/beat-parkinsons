@@ -1660,6 +1660,6 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 
 - [Brown-rice feed and fly climbing, related mitophagy report](Source-Text/2025-Yankuzo-Brown-Rice-Mitophagy-and-Fly-Climbing.txt)
 
-- [EVACUR mixed botanical lupus fatigue protocol](Source-Text/2026-NCT07398885-EVACUR-Methods-Only-Protocol.txt)
+- [EVACUR mixed botanical lupus fatigue protocol](Source-Text/Trials/NCT07398885.txt)
 
-- [Paprika xanthophyll and everyday-fatigue registration](Source-Text/2025-UMIN000056794-Paprika-Everyday-Fatigue-Registration.txt)
+- [Paprika xanthophyll and everyday-fatigue registration](Source-Text/Trials/UMIN000056794.txt)
