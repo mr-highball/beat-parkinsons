@@ -350,6 +350,8 @@ The November 26 original-member audit closed 184 checks across 92 authenticated 
 
 The November 26 archival-original audit verified 254 original-source memberships. Official PMC readers supplied 38 bodies missing from the Cloud collection. Recovered clinical and registry material refined three scorecard explanations at existing verdicts and anchors. [Archival and trial follow-up](followup/archival-members-and-contrast-depth-nov26/README.md)
 
+The November 26 shared-original audit verified 138 exact source memberships. Ground cardamom and pain reached zero queued original Europe PMC pairs. Its cultural and preclinical evidence leaves the clinical direction open. [Original sources and case distinctions](followup/high-degree-originals-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

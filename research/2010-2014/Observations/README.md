@@ -497,3 +497,5 @@ The Pakistan survey describes eating sweet orange fruit and the Shivalik survey 
 
 - [Whole sweet orange for constipation in a northwest Pakistan interview survey](../Cultural-and-Experiential/Traditional-Practices/2014-PMID24963328-Northwest-Pakistan-Whole-Orange-Constipation.txt)
 - [Sweet orange juice in a Shivalik ethnomedicinal survey](../Cultural-and-Experiential/Traditional-Practices/2014-Shivalik-Sweet-Orange-Juice-Constipation.txt)
+
+- [Cardamom customary use and pain outcomes](2010-2011-Cardamom-Customary-Use-and-Pain-Scope.md)

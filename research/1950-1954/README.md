@@ -46,3 +46,5 @@ January 1, 1950 through December 31, 1954.
 ## Round 1 food experiment sources
 
 - [Current Topics, Etc.](Source-Text/1951-PMID29015135-Groundnut-Milk-Flavor-Scope.txt)
+
+- [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#1950-1954)

@@ -89,3 +89,5 @@ The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-
 - [Beware of bay leaf](Source-Text/1980-PMID7470211-Intact-Bay-Leaf-Impaction.txt)
 
 - [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1980-1984)
+
+- [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#1980-1984)

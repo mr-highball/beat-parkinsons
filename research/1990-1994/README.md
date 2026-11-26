@@ -176,3 +176,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [PMID:1527543 | Progressive subcortical gliosis and progressive supranuclear palsy can have similar clinical and PET abnormalities](Source-Text/1992-PMC489210-Round1-Original-Scope.txt)
 
 - [November 26 Round 1 rare original and clinical protocol records](../../experiments/1000_see_what_sticks_food/followup/rare-members-and-clinical-protocols-nov26/originals-by-period.md#1990-1994)
+
+- [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#1990-1994)

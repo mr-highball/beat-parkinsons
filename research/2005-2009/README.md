@@ -561,3 +561,5 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [November 26 Round 1 authenticated originals and trial follow-up](../../experiments/1000_see_what_sticks_food/followup/indexes-and-near-claims-nov26/originals-by-period.md#2005-2009)
 
 - [November 26 Round 1 original-member and outcome records](../../experiments/1000_see_what_sticks_food/followup/original-members-and-trial-contrasts-nov26/originals-by-period.md#2005-2009)
+
+- [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#2005-2009)

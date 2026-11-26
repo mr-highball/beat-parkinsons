@@ -1962,3 +1962,7 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [November 26 Round 1 original scope and outcome audit](../../experiments/1000_see_what_sticks_food/followup/scope-and-outcome-audit-nov26/originals-by-period.md#2020-2024)
 
 - [November 26 Round 1 archival and clinical original-source records](../../experiments/1000_see_what_sticks_food/followup/archival-members-and-contrast-depth-nov26/originals-by-period.md#2020-2024)
+
+- [Shiitake eating difficulty in a Japanese elder-care account](Cultural-and-Experiential/Local-Knowledge/2023-Roushikyo-Shiitake-and-Eating-Difficulty.txt)
+
+- [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#2020-2024)

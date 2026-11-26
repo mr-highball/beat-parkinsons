@@ -786,3 +786,5 @@ Orange search results include laboratory fluorescence, chart labels, named chemi
 
 - [Neuroprotective Effect of Phloretin in Rotenone-Induced Mice Model of Parkinson’s Disease: Modulating mTOR-NRF2-p62 Mediated Autophagy-Oxidative Stress Crosstalk](../Source-Text/2023-PMID36463449-Shirgadwar-2023-Phloretin-Rotenone-PD-Mice.txt)
 - [Scientific opinion on the tolerable upper intake level for selenium](../Source-Text/2023-PMID36698500-EFSA-2023-Selenium-Upper-Limit-Brazil-Nut-Safety.txt)
+
+- [Shiitake texture and reported eating difficulty](2023-Shiitake-Texture-and-Swallowing-Reports.md)

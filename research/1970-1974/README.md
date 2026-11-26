@@ -47,3 +47,5 @@ January 1, 1970 through December 31, 1974.
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-Date-Pain-Priority-Four-Nov22.md) links dated articles from this period, review depths and open source routes.
+
+- [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#1970-1974)

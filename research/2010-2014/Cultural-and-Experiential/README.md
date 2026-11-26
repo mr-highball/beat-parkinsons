@@ -53,3 +53,6 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Sweet orange juice in a Shivalik ethnomedicinal survey](Traditional-Practices/2014-Shivalik-Sweet-Orange-Juice-Constipation.txt)
 
 - [Ethnopharmacology of Medicinal Plants of the Pantanal Region (Mato Grosso, Brazil)](Local-Knowledge/2011-PMC3303862-Pantanal-Oregano-and-Cough.txt)
+
+- [West Yorkshire cardamom toothache reports](Traditional-Practices/2010-Pieroni-West-Yorkshire-Cardamom-Toothache.txt)
+- [Kani cardamom fruit powder reports](Traditional-Practices/2011-Ayyanar-Kani-Cardamom-Powder-Pain.txt)

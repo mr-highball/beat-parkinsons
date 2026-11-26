@@ -1,0 +1,5 @@
+# Shiitake texture and reported eating difficulty
+
+A Japanese elder-care interview relays one person’s reported difficulty eating shiitake. The person was reported to have Parkinson disease. The source does not give the cooking method or distinguish chewing from swallowing difficulty. [Interview account](../Cultural-and-Experiential/Local-Knowledge/2023-Roushikyo-Shiitake-and-Eating-Difficulty.txt)
+
+The [2010 Japanese clinical report](../../2010-2014/Source-Text/2010-Kameda-O220-Printed-Choking-Scope.txt) lists one shiitake obstruction and five patients with Parkinson disease among fifteen presentations in separate totals. The source does not link the food to a specific patient. The [2025 blinded crossover](../../2025-2029/Source-Text/2025-PMID40604458-Shiitake-Smoothie-FEES.txt) records immediate endoscopic outcomes for an entire thicker chicken–shiitake smoothie. It gives better spillage scores in the symptomatic subgroup, with inconclusive overall performance and zero observed aspiration in both of the compared feeds. Ingredient, texture, cooking grade and Parkinson subgroup effects remain unresolved.
