@@ -1942,3 +1942,11 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [PMCID:PMC10601341 | Abstracts of the ICARE 2023 77th SIAARTI National Congress](Source-Text/2023-PMC10601341-Round1-Original-Scope.txt)
 
 - [Original sumac powder randomized comparison and Table 4](Source-Text/2020-DOI10-1002-ptr-6737-Sumac-Powder-and-Depression.txt)
+
+- [PMID:38322910 | Risk factors of postoperative delirium following spine surgery: A meta-analysis of 50 cohort studies with 1.1 million participants](Source-Text/2024-PMC10844026-Round1-Source-Scope.txt)
+- [PMID:39877800 | Non-invasive brain stimulation in cognitive sciences and Alzheimer's disease](Source-Text/2024-PMC11772349-Round1-Source-Scope.txt)
+- [PMID:39773131 | Exploring Non-invasive Brain Stimulation Effects on Physical Outcomes in People With Parkinson’s Disease: An Umbrella Evidence Mapping Review With Meta-analyses](Source-Text/2024-PMC11982587-Round1-Source-Scope.txt)
+- [PMID:34135821 | eStroop: Implementation, Standardization, and Systematic Comparison of a New Voice-Key Version of the Traditional Stroop Task](Source-Text/2021-PMC8200406-Round1-Source-Scope.txt)
+- [PMID:33614949 | A Review of Hemp as Food and Nutritional Supplement](Source-Text/2021-PMC7891210-Round1-Original-Scope.txt)
+
+- [Original full tulsi–cardamom depression trial and its comparator](Source-Text/2021-DOI10-18311-jnr-27128-Tulsi-Cardamom-and-Depression.txt)

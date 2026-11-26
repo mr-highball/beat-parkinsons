@@ -1418,3 +1418,5 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [PMID:29031500 | Transcription and Signaling Regulators in Developing Neuronal Subtypes of Mouse and Human Enteric Nervous System](Source-Text/2018-PMC6381388-Round1-Source-Scope.txt)
 - [PMID:30328585 | Low-grade inflammation aggravates rotenone neurotoxicity and disrupts circadian clock gene expression in rats](Source-Text/2018-PMC6543539-Round1-Source-Scope.txt)
 - [PMID:29987760 | Abstracts of 20th Annual ASENT Meeting](Source-Text/2018-PMC6095775-Round1-Original-Scope.txt)
+
+- [PMID:29075224 | Defining a Conceptual Topography of Word Concreteness: Clustering Properties of Emotion, Sensation, and Magnitude among 750 English Words](Source-Text/2017-PMC5641898-Round1-Source-Scope.txt)

@@ -57,3 +57,9 @@ Wightman and colleagues analyzed 66 supplement and 62 placebo participants. The 
 ## Recognition of cardamom essence in a Parkinson smell test
 
 Mukhtar and colleagues used ten odorants in a Pakistani case-control smell identification test. Original Table 4 reports correct identification of a commercial cardamom essence in 36 of 87 Parkinson cases and 49 of 58 controls (p < .001). The article PDF lists publication December 31, 2021 and the journal record lists posting January 19, 2022. A different 2022 natural cardamom smell test reports an inconclusive case-control difference. The tests measured recognition of presented odors with distinct procedures. They did not study the effect of eating ground cardamom. [original Methods and Table 4](https://nja.pastic.gov.pk/PJCIS/index.php/PJNS/article/download/3641/3584) · [Local text](Source-Text/2021-Mukhtar-Cardamom-Odor-Table-Extract.txt)
+
+### Original tulsi–cardamom outcome tables
+
+The full randomized report gives post-treatment Geriatric Depression Scale mean ranks 11.98 for the aqueous tulsi–cardamom blend and 29.03 for green tea, 20 older adults per arm. U=29.5 and Z=−4.634, reported p<.001. The product contained both plants, and the report estimates a post-treatment rank contrast rather than a between-group change. It supplies no isolated ground cardamom or Parkinson depression estimate.
+
+- [Dated digest of the version of record](Source-Text/2021-DOI10-18311-jnr-27128-Tulsi-Cardamom-and-Depression.txt)

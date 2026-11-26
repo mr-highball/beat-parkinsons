@@ -172,3 +172,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [Frye and colleagues on corn oil and thermal pain in rats](Source-Text/1993-PMID8516368-Corn-Oil-and-Thermal-Pain-in-Rats.txt)
 
 - [PMID:1602325 | Proceedings of the Association of British Neurologists and the Liaison Psychiatry Group](Source-Text/1992-PMC489098-Round1-Original-Scope.txt)
+
+- [PMID:1527543 | Progressive subcortical gliosis and progressive supranuclear palsy can have similar clinical and PET abnormalities](Source-Text/1992-PMC489210-Round1-Original-Scope.txt)
