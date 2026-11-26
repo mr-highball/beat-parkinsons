@@ -1172,3 +1172,7 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [PMID:30622948 | The Impact of Coffee and Caffeine on Multiple Sclerosis Compared to Other Neurodegenerative Diseases](Source-Text/2018-PMC6308803-Coffee-Caffeine-and-Neurodegenerative-Disease.txt)
 - [PMID:30808064 | Molecular mechanisms of caffeine‐mediated intestinal epithelial ion transports](Source-Text/2019-PMC6514291-Caffeine-Intestinal-Transport.txt)
 - [PMID:31270815 | An overview of the pharmacology of olive oil and its active ingredients](Source-Text/2019-PMC7056466-Olive-Oil-Pharmacology-Review.txt)
+
+- [PMID:30941198 | An Updated List of Neuromedicinal Plants of Pakistan, Their Uses, and Phytochemistry](Source-Text/2019-PMC6420976-Pakistan-Neuromedicinal-Plant-Scopes.txt)
+- [PMID:30251253 | Modifying the consistency of food and fluids for swallowing difficulties in dementia](Source-Text/2018-PMC6513397-Chicken-as-Food-Texture-Example.txt)
+- [PMID:31824298 | Altered Intra- and Inter-regional Functional Connectivity of the Anterior Cingulate Gyrus in Patients With Tremor-Dominant Parkinson’s Disease Complicated With Sleep Disorder](Source-Text/2019-PMC6881235-Tremor-Dominant-Parkinson-Connectivity.txt)

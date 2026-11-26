@@ -323,6 +323,8 @@ The November 26 nonmotor outcome review closed 200 exact checks across 50 public
 
 The November 26 priority source and fruit review closed 28 exact checks, with 162 higher-priority checks retaining their access gaps. A new fig-derived toxicity report did not isolate a rest-tremor outcome. An original cinnamon powder trial adds a fourth indirect favorable pain comparison, with the same minimal tier. The corrected trial counts, date fruit abstract, and Aydin fig and olive oil traditions are indexed. Eight scorecards were verified. The replay leaves 28,945 exact checks across 20,647 publication keys and 374 claims. [Original sources and review limits](followup/priority-identity-and-fig-tremor-nov26/README.md)
 
+The November 26 date and fig source wave closed 227 exact checks across 72 authenticated originals and added 74 dated source records. Two original menstrual-pain studies tested date-containing mixtures in single pre/post groups. Their findings provide related context for date and ginger hypotheses. The 39 checked scorecards retain their original directions and anchors. The replay leaves 28,718 exact checks across 20,575 publication keys and 372 claims. [Source scope and verification](followup/date-fig-originals-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

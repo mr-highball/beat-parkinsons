@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The date and fig source wave resolved 227 exact checks across 72 authenticated originals. It leaves 28,718 checks across 20,575 publication keys and 372 claims, with 206 of those checks identified for additional access work in this batch. [Publication-first audit and replay](../date-fig-originals-nov26/README.md)
+
 The fig and cinnamon follow-up resolved 28 exact checks across 25 original publications and recorded new access receipts for the 162 higher-priority checks. It leaves 28,945 checks across 20,647 publication keys and 374 claims. [Priority source screen and targeted outcomes](../priority-identity-and-fig-tremor-nov26/README.md)
 
 The nonmotor outcome review resolved 200 checks across 50 dated originals, including 76 related contexts and 124 exclusions. It leaves 28,973 checks across 20,672 publication keys and 374 claims. [Original scope and focused nonmotor review](../nonmotor-and-diet-outcomes-nov26/README.md)

@@ -1,0 +1,14 @@
+# Round 1 original-source review for the date and fig queues
+
+The November 26 publication-first batch started with 132 queued PMC identities covering 433 exact claim–source checks. Oracle was queried before the external originals. Screening accepted 72 structured bodies after matching PMC, PubMed and DOI metadata and verifying the body hash. The other 60 captures cover 206 checks and remain open. Six need a closer look at the available text and 54 need an authenticated capture. Oracle recorded 114 new exact identity gaps after removing previous lookup records from the denominator.
+
+Reading the 72 bodies closed 227 exact checks, with 63 related contexts and 164 source-scope exclusions. Each exclusion applies to that publication and frozen claim only. Seventy-two dated originals and two additional dated originals from focused searches were distilled into the catalog. The replay preserves all 61,252 original memberships. It leaves 28,718 checks across 20,575 publication keys and 372 claims.
+
+Two original menstrual-pain studies provide indirect context for dried dates. One used dates, ginger and lemongrass in 20 students. The other used dates, lemongrass and coconut water in 60 adolescents. Both compared outcomes before and after a mixture in one group, with drying status unspecified and no way to isolate the ingredient effect. Their symptom and population are also indirect. The new source families and those from the original-body review were checked against the project rubric on 39 claims. Directional verdicts and score anchors remain as previously published.
+
+The [FPC screen](../../tools/foodexperiment.bodyscreen.lpr) accepts expected publication identities, the capture inventory, the extracted article directory, the term list and an output path in that order. The inventory carries captured identities and an article hash. Extracted article text carries heading, paragraph and table-row tags in each PMC-numbered screen file. The screen distinguishes main article text from references, accepts article-level section headings for structural checks, and reports topic flags for reading. These mechanical checks make no evidence dispositions. The capture and source-scope checks control intake.
+
+- [Expected identities](screen-inputs.tsv), [screening vocabulary](screen-topics.tsv), [native output](native-body-screen.tsv) and [validation](native-screen-validation.txt)
+- [Publication and archived source links](verified-originals.tsv), [current access routes](source-attempts.tsv) and [Oracle accounting](oracle-coverage-merge.txt)
+- [Exact review scope](pinned-scope.tsv), [dispositions](dispositions.tsv), [still-open checks in this batch](open-cluster-pairs.tsv) and [replay verification](native-replay-verification.txt)
+- [Focused search receipts](targeted-search-receipts.tsv), [linked assessments](assessment-updates.tsv) and [scorecard verification](scorecard-verification.tsv)
