@@ -1284,3 +1284,23 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [Evaluation of olive oil effects on human stress response by measuring cerebral blood flow](Source-Text/2021-PMID33841804-Mitsukura-Olive-Oil-Typing-Stress.txt)
 
 - [The role of olive oil and its constituents in mental health: a scoping review](Source-Text/2024-PMID39696776-Eedy-Olive-Oil-Mental-Health-Scoping.txt)
+
+- [PMID:32438686 | Clinical Features of Parkinson’s Disease: The Evolution of Critical Symptoms](Source-Text/2020-PMC7285080-Parkinson-Symptom-Evolution-Coffee-Scope.txt)
+
+- [PMID:32692754 | Kaempferol and zinc gluconate mitigate neurobehavioral deficits and oxidative stress induced by noise exposure in Wistar rats](Source-Text/2020-PMC7373279-Kaempferol-Review-Context-Olive-Oil.txt)
+
+- [PMID:34633054 | Mental depression: Relation to different disease status, newer treatments and its association with COVID-19 pandemic](Source-Text/2021-PMC8524409-Depression-Review-Mediterranean-Olive-Scope.txt)
+
+- [PMID:34966477 | New Metabolic, Digestive, and Oxidative Stress-Related Manifestations Associated with Posttraumatic Stress Disorder](Source-Text/2021-PMC8712172-PTSD-Review-Coffee-Date-and-Olive-Scope.txt)
+
+- [PMID:36133818 | Parkinson’s disease, dopaminergic drugs and the plant world](Source-Text/2022-PMC9483127-Plant-World-Parkinson-Olive-Scope.txt)
+
+- [PMID:36681683 | Inhibition of carnitine palmitoyl-transferase 1 is a potential target in a mouse model of Parkinson’s disease](Source-Text/2023-PMC9867753-Parkinson-Model-Olive-Oil-Vehicle.txt)
+
+- [PMID:38311314 | The Mediterranean-Dietary Approaches to Stop Hypertension Intervention for Neurodegenerative Delay (MIND) Diet for the Aging Brain: A Systematic Review](Source-Text/2024-PMC10942868-MIND-Diet-Olive-Oil-Review-Scope.txt)
+
+- [PMID:38684752 | Association of composite dietary antioxidant index with depression and all-cause mortality in middle-aged and elderly population](Source-Text/2024-PMC11058273-Antioxidant-Index-Olive-Oil-and-Date-Scopes.txt)
+
+- [PMID:39752998 | Molecular hydrogen reduces dermatitis-induced itch, diabetic itch and cholestatic itch by inhibiting spinal oxidative stress and synaptic plasticity via SIRT1-β-catenin pathway in mice](Source-Text/2024-PMC11754494-Itch-Model-Olive-Oil-Vehicle.txt)
+
+- [The AUstralian multidomain Approach to Reduce dementia Risk by prOtecting brain health With lifestyle intervention study (AU-ARROW): a study protocol](Source-Text/2024-PMID38596483-AU-ARROW-Diet-Protocol-and-Anxiety-Schedule.txt)

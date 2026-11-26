@@ -755,3 +755,7 @@ The [2010 ozonetherapy chapter](Source-Text/2010-PMC7498916-Round1-Proceedings-H
 The [2010 cinnamon-related vocal fold case](Source-Text/2010-ACAAI-P179-Cinnamon-and-Vocal-Fold-Dysfunction.txt) and [2014 tomato seed experiment](Source-Text/2014-PMID24831121-Gokul-Tomato-Seed-Gait-and-Endpoint-Scope.txt) preserve the outcomes underlying the related diet claims.
 
 The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Task-Fatigue.txt) and [polyphenol review scope](Source-Text/2013-PMC3690243-Polyphenol-Review-Scope.txt) distinguish acute fatigue measurements from constituent context.
+
+- [Unsaturated fat intakes and mental health outcomes in young women from the Australian Longitudinal Study on Women's Health](Source-Text/2014-PMID24717118-Daley-Oleic-Acid-Anxiety.txt)
+
+- [Differential effect of environmental risk factors on postural instability gait difficulties and tremor dominant Parkinson's disease](Source-Text/2010-PMID20669310-Skeie-ParkWest-Coffee-and-Risk.txt)

@@ -1066,3 +1066,67 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [PMID:31694708 | 34th Annual Meeting & Pre-Conference Programs of the Society for Immunotherapy of Cancer (SITC 2019): part 2: National Harbor, MD, USA. 10 November 2019](Source-Text/2019-PMID31694708-SITC-Poster-Food-Identity-Scopes.txt)
 
 - [Neurochemical and behavioral effects of Nigella sativa and Olea europaea oil in rats](Source-Text/2016-PMID27868798-Cheema-Olive-Oil-Anxiety-Like-Behavior.txt)
+
+- [PMCID:PMC6291871 | The Pupil Dilation Response During Speech Perception in Dark and Light: The Involvement of the Parasympathetic Nervous System in Listening Effort](Source-Text/2018-PMC6291871-Listening-Effort-Coffee-and-Publisher.txt)
+
+- [PMID:25552854 | Psychiatric aspects of Parkinson's disease](Source-Text/2015-PMC4244792-Psychiatric-Parkinson-Coffee-Scope.txt)
+
+- [PMID:25670949 | Stress Changes the Spatial Arrangement of Neurons and Glial Cells of Medial Prefrontal Cortex and Sertraline and Curcumin Prevent It](Source-Text/2015-PMC4310924-Stress-Model-Olive-Oil-Comparator.txt)
+
+- [PMID:25829994 | Excessive Daytime Sleepiness and Unintended Sleep Episodes Associated with Parkinson’s Disease](Source-Text/2015-PMC4371466-Parkinson-Somnolence-Caffeine-Trial-Lineage.txt)
+
+- [PMID:26078821 | Markers of Oxidative Stress and Neuroprogression in Depression Disorder](Source-Text/2015-PMC4453280-Depression-Review-EGCG-and-Olive-Oil.txt)
+
+- [PMID:26156950 | Fiber and Saturated Fat Are Associated with Sleep Arousals and Slow Wave Sleep](Source-Text/2016-PMC4702189-Diet-Sleep-Coffee-Intake-Restriction.txt)
+
+- [PMID:26508953 | Healthy and Unhealthy Dietary Patterns Are Related to Depression: A Case-Control Study](Source-Text/2015-PMC4620299-Dietary-Patterns-Depression-Olive-Scope.txt)
+
+- [PMID:26670691 | Genome-Wide DNA Methylation Profiling of Peripheral Blood Mononuclear Cells in Irritable Bowel Syndrome](Source-Text/2015-PMC4760882-IBS-Study-Coffee-Eligibility-Scope.txt)
+
+- [PMID:27175668 | Detailed Relationship Between the Pattern of Blood Pressure Change During the Valsalva Maneuver and the Degree of Orthostatic Hypotension During the Head-Up Tilt Test in Patients With Orthostatic Intolerance: A Retrospective Case–Control Study](Source-Text/2016-PMC4902510-Orthostatic-Lab-Coffee-Restriction.txt)
+
+- [PMID:27496234 | Combined cognitive–behavioural and mindfulness programme for people living with dystonia: a proof-of-concept study](Source-Text/2016-PMC4985914-Dystonia-Programme-Coffee-Break-Scope.txt)
+
+- [PMID:27738491 | Oxidative Stress and Inflammation: What Polyphenols Can Do for Us?](Source-Text/2016-PMC5055983-Polyphenol-Review-Coffee-and-Green-Tea.txt)
+
+- [PMID:27790141 | Dietary Phytochemicals in Neuroimmunoaging: A New Therapeutic Possibility for Humans?](Source-Text/2016-PMC5062465-Neuroimmunoaging-Review-Coffee-and-Tea.txt)
+
+- [PMID:28116038 | The Role of Reactive Oxygen Species in the Pathogenesis of Alzheimer's Disease, Parkinson's Disease, and Huntington's Disease: A Mini Review](Source-Text/2016-PMC5223034-Oxidative-Stress-Olive-Tomato-and-Balm.txt)
+
+- [PMID:28168008 | Protective Effect of Antioxidants on Neuronal Dysfunction and Plasticity in Huntington's Disease](Source-Text/2017-PMC5266860-Huntington-Review-Plant-Ingredient-Scope.txt)
+
+- [PMID:28316999 | Does the Gut Microbiota Influence Immunity and Inflammation in Multiple Sclerosis Pathophysiology?](Source-Text/2017-PMC5337874-MS-Microbiota-Review-Coffee-Context.txt)
+
+- [PMID:28649603 | The gut-brain axis: is intestinal inflammation a silent driver of Parkinson’s disease pathogenesis?](Source-Text/2017-PMC5445611-Parkinson-Gut-Brain-Coffee-Risk-Context.txt)
+
+- [PMID:28887905 | Past, Present, and Future of Parkinson’s Disease: A Special Essay on the 200th Anniversary of the Shaking Palsy](Source-Text/2017-PMC5685546-Parkinson-Bicentennial-Coffee-Date-and-Fig-Scopes.txt)
+
+- [PMID:29154293 | The Changing Landscape of Parkinson Epidemiologic Research](Source-Text/2018-PMC5836408-Parkinson-Epidemiology-Coffee-and-Date-Scopes.txt)
+
+- [PMID:29161953 | Mental Simulation of Visceral States Affects Preferences and Behavior](Source-Text/2017-PMC5810913-Visceral-Simulation-Coffee-Sage-and-Date.txt)
+
+- [PMID:29614726 | Mediterranean Diet and Health Outcomes in the SUN Cohort](Source-Text/2018-PMC5946224-SUN-Cohort-Olive-Oil-and-Date-Scopes.txt)
+
+- [PMID:29720955 | Environmental Strategies of Affect Regulation and Their Associations With Subjective Well-Being](Source-Text/2018-PMC5915835-Affect-Regulation-Coffee-Item.txt)
+
+- [PMID:30045744 | First large-scale ethnobotanical survey in the province of Uíge, northern Angola](Source-Text/2018-PMC6060550-Uige-Ethnobotany-Food-Identity-Scopes.txt)
+
+- [PMID:30405397 | A Single Bout of Aerobic Exercise Improves Motor Skill Consolidation in Parkinson’s Disease](Source-Text/2018-PMC6204491-Exercise-Motor-Learning-Coffee-Restrictions.txt)
+
+- [PMID:30778297 | Nrf2/ARE Pathway Modulation by Dietary Energy Regulation in Neurological Disorders](Source-Text/2019-PMC6369171-Dietary-Energy-Review-Coffee-and-Tea-Scopes.txt)
+
+- [PMID:30833231 | Clinical progression in Parkinson’s disease with features of REM Sleep Behavior Disorder: a population-based longitudinal study](Source-Text/2019-PMC6589360-PD-REM-Cohort-Coffee-and-Date-Scopes.txt)
+
+- [PMID:30937360 | The Parkinson’s phenome—traits associated with Parkinson’s disease in a broadly phenotyped cohort](Source-Text/2019-PMC6437217-Parkinson-Phenome-Caffeine-and-Date-Scopes.txt)
+
+- [PMID:31781020 | The Role of the Gut Microbiota in the Pathogenesis of Parkinson's Disease](Source-Text/2019-PMC6851172-Parkinson-Microbiota-Coffee-Review-Scope.txt)
+
+- [PMID:27245310 | Speech and language therapy for aphasia following stroke](Source-Text/2016-PMC8078645-Aphasia-Review-Coffee-Language-Prompt.txt)
+
+- [Extra Virgin Olive Oil Improves Oxidative Stress, Functional Capacity, and Health-Related Psychological Status in Patients With Fibromyalgia: A Preliminary Study](Source-Text/2016-PMID27443526-Rus-Extra-Virgin-Olive-Oil-Fibromyalgia-Mental-Health.txt)
+
+- [Fatigue in early Parkinson's disease: the Norwegian ParkWest study](Source-Text/2016-PMID27670392-Ongre-ParkWest-Fatigue.txt)
+
+- [Interventions for fatigue in Parkinson's disease](Source-Text/2015-PMID26447539-Cochrane-Parkinson-Fatigue-Caffeine-Family.txt)
+
+[Uíge ethnobotanical survey preparation notes](Cultural-and-Experiential/Local-Knowledge/2018-Uige-Coffee-Root-Mango-Leaf-and-Asparagus-Survey.txt)

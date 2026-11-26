@@ -1136,3 +1136,21 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [Olive-leaf anxiety pilot, original controlled results](Source-Text/2026-DOI10.3390-Life16071081-Olive-Leaf-Anxiety.txt)
 
 [Dark chocolate and different bowel outcomes](Observations/Food-Review-Chocolate-Bowel-Outcomes-Nov26.md)
+
+- [PMCID:PMC13661608 | Perspectives on ionizing radiation and Parkinson’s disease](Source-Text/2026-PMC13661608-Radiation-Parkinson-and-Coffee-Confounding.txt)
+
+- [PMCID:PMC13674463 | Artificial intelligence driven diet‐intestinal microbiota‐host health integration: A four‐dimensional paradigm for advancing host wellness research](Source-Text/2026-PMC13674463-Food-Analytics-Oils-Grapes-and-Coffee.txt)
+
+- [PMID:39928205 | Gut Microbiome, Diet and Depression: Literature Review of Microbiological, Nutritional and Neuroscientific Aspects](Source-Text/2025-PMC11811453-Gut-Mood-Review-Chocolate-Olive-Family-Scopes.txt)
+
+- [PMID:40109017 | Mediterranean vs. Western diet effects on the primate cerebral cortical pre‐synaptic proteome: Relationships with the transcriptome and multi‐system phenotypes](Source-Text/2025-PMC11923382-Primate-Dietary-Pattern-Olive-and-Date-Scope.txt)
+
+- [PMID:41394959 | Parkinson's Disease: The Epidemiology, Risk Factors, Molecular Pathogenesis, Prevention, and Therapy](Source-Text/2025-PMC12701306-Parkinson-Risk-Review-Olive-Oil-Scope.txt)
+
+- [PMID:41724666 | Regulation of autophagy‐mediated pathways by diet, physical activity, and sleep in Alzheimer's disease](Source-Text/2026-PMC12928064-Alzheimer-Autophagy-Review-Olive-Exposure-Scope.txt)
+
+- [PMID:42792151 | Trans-Vitisin B Targets Neuroinflammation, Oxidative Stress, and Tau Pathology to Improve Behavioral Outcomes in a Mouse Model of Parkinson’s Disease](Source-Text/2026-PMC13603367-Grape-Stilbene-and-Olive-Vehicle-Scopes.txt)
+
+- [Baseline diet quality and adequacy of AU-ARROW participants: preliminary findings](Source-Text/2025-AU-ARROW-Baseline-Diet-Adequacy.txt)
+
+[Olive-oil anxiety evidence across cohorts](Observations/Olive-Oil-Anxiety-Outcome-and-Study-Families-Nov26.md)

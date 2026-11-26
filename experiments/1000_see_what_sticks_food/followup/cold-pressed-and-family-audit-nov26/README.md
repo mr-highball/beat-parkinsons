@@ -1,0 +1,14 @@
+# Coffee, olive oil and evidence-family review
+
+This November 26 Round 1 batch grouped candidate checks by publication. It began with Oracle's rubric, the existing claim records and batched exact source lookups. Forty-four archived bodies support 93 exact claim–source dispositions. There are 71 related contexts and 22 scope exclusions. Sixteen checked scorecards retain their verdicts and anchors. The batch adds 51 dated source texts and one cultural record.
+
+- The olive-oil scoping review groups four human intervention studies. The only separately reported anxiety study is the previously recorded Canheta trial. The other reports measure major depression, a mental-health composite in fibromyalgia and an imaging stress surrogate. The older Daley study associates estimated dietary oleic acid with self-reported diagnosed anxiety, with no corresponding result on the broader symptom measure. It did not compare olive-oil grades. The existing minimal Round 1 easing lean remains anchored in the previously reviewed exposure evidence.
+- The active-oil fibromyalgia comparison supplies an adjusted mental-health composite difference. The result cannot be transferred as a separate Parkinson anxiety measure. The AU-ARROW protocol, registry and dietary baseline report are one study family, with participant follow-up still ongoing.
+- The ParkWest paper provides an original coffee-intake contrast by diagnosis and motor subgroup. Fatigue trajectories come from a different report in the same cohort. The publicly available records give no joined coffee and fatigue estimate. The Cochrane review reuses the earlier Postuma caffeine capsule trial. Its summary prose and signed severity estimate disagree, with uncertainty spanning zero. This does not add another clinical trial or a new effect direction.
+- The Uíge survey records a coffee-root mouthwash, mango leaf preparations and species-specific Asparagus practices. The catalog preserves the customary context separately. Plant part, species and route matter when screening the frozen culinary claims.
+
+Three earlier cultural records had missing date or review fields. Their source pages were rechecked, the printed page locator for the Cedro table was corrected, and the native cultural validator passed all 379 records. Two priority articles checked through alternate routes remain open at the required full-body depth.
+
+The replay leaves 29,681 exact checks across 20,842 publication keys and 380 claims. All original denominators and per-priority counts reconcile.
+
+[Original bodies](verified-originals.tsv) · [Exact dispositions](dispositions.tsv) · [Linked evidence families](linked-source-scopes.tsv) · [Scorecards](scorecard-verification.tsv) · [Priority access checks](priority-original-access.txt) · [Cultural validation](culture-validation.txt) · [Native replay](native-replay-verification.txt)
