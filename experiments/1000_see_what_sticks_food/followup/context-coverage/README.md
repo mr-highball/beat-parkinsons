@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The PMC Cloud wave resolved 379 exact checks across 125 authenticated sources. It leaves 28,339 checks across 20,451 publication keys and 369 claims. The four high-priority saffron reviews still require the full original. [Cloud source verification and queue replay](../cloud-jats-originals-nov26/README.md)
+
 The date and fig source wave resolved 227 exact checks across 72 authenticated originals. It leaves 28,718 checks across 20,575 publication keys and 372 claims, with 206 of those checks identified for additional access work in this batch. [Publication-first audit and replay](../date-fig-originals-nov26/README.md)
 
 The fig and cinnamon follow-up resolved 28 exact checks across 25 original publications and recorded new access receipts for the 162 higher-priority checks. It leaves 28,945 checks across 20,647 publication keys and 374 claims. [Priority source screen and targeted outcomes](../priority-identity-and-fig-tremor-nov26/README.md)

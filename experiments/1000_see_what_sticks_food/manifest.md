@@ -325,6 +325,8 @@ The November 26 priority source and fruit review closed 28 exact checks, with 16
 
 The November 26 date and fig source wave closed 227 exact checks across 72 authenticated originals and added 74 dated source records. Two original menstrual-pain studies tested date-containing mixtures in single pre/post groups. Their findings provide related context for date and ginger hypotheses. The 39 checked scorecards retain their original directions and anchors. The replay leaves 28,718 exact checks across 20,575 publication keys and 372 claims. [Source scope and verification](followup/date-fig-originals-nov26/README.md)
 
+The November 26 PMC Cloud wave closed 379 exact checks and added 125 dated source or publisher-notice records. It recovered previously held originals, retained a true string-bean alias and marked an existing ethnobotany record as withdrawn. The 86 checked scorecards retained their existing verdicts and score anchors. The replay leaves 28,339 exact checks across 20,451 publication keys and 369 claims. [Cloud originals and publication notices](followup/cloud-jats-originals-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

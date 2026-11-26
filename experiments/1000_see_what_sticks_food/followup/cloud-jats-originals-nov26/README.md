@@ -1,0 +1,13 @@
+# Round 1 publication-first review with PMC structured originals
+
+After exact Oracle lookup, this batch used the National Library of Medicine's PMC Cloud Service to recover full JATS originals. The selected 140 publication keys covered 443 queued claim–source checks. Cloud version identity, PMC, PubMed and DOI metadata, an article body and a local capture digest were checked. Native Pascal reported 385 exact pairs across 126 authenticated bodies. The 10 native screening tests passed. The XML remained in ignored build storage.
+
+The source and ingredient review accepted 379 dispositions across 125 publications. It retained 163 related contexts and excluded 216 scopes. The other 64 selected checks remain open, including six where the authenticated capture is a conference collection with insufficient individual member coverage. In the previous batch, HTML capture left 60 identities open. The Cloud route recovered bodies for 52 of those and supported actual dispositions for 163 checks across 51 of them.
+
+The review preserved the distinction between source scope and clinical direction. The MIND-diet trial groups green beans under string beans and reports multicomponent diet effects, with no independent vegetable estimate. The cinnamic-acid study reported improved rotarod performance in a Parkinson mouse model, but tested a purified constituent and did not separately measure the frozen symptoms. The two-oil poster comparison belongs to one individual conference abstract. The previously indexed Ile-Ife medicinal-plant survey was marked as withdrawn and linked to the verified publisher retraction notice. It carries no weight for the reported insomnia practice or treatment. The four higher-priority saffron checks remain open at abstract depth.
+
+The 125 new dated texts include 122 original-source summaries and three publisher notices. Three existing source records received updated scope notes. Oracle draft validation covered 86 scorecards, with the existing verdicts and anchors preserved. The replay leaves 28,339 exact checks across 20,451 publications and 369 claims.
+
+- [Cloud receipt](cloud-capture.tsv), [verified publications](verified-originals.tsv), [publisher notices](publisher-notices.tsv) and [remaining access and member scopes](open-capture-pairs.tsv)
+- [Exact frozen scope](pinned-scope.tsv), [dispositions](dispositions.tsv), [source assessment updates](assessment-updates.tsv), [scorecard verification](scorecard-verification.tsv) and [queue replay](native-replay-verification.txt)
+- [Oracle publication lookup counts](oracle-coverage-merge.txt) and [saffron access receipt](saffron-access.txt)

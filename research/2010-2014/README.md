@@ -782,3 +782,7 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [PMID:25104940 | Combination ergotamine and caffeine improves seated blood pressure and presyncopal symptoms in autonomic failure](Source-Text/2014-PMC4109567-Ergotamine-Caffeine-Autonomic-Trial.txt)
 
 - [Fig and olive oil in customary practices from the Aydin region](Cultural-and-Experiential/Traditional-Practices/2014-Ozatalay-Fig-and-Olive-Oil-Practices-in-Aydin.txt)
+
+- [PMID:24949473 | Phytochemical, Therapeutic, and Ethnopharmacological Overview for a Traditionally Important Herb: Boerhavia diffusa Linn.](Source-Text/2014-PMC4053255-Round1-Source-Scope.txt)
+- [PMID:25379285 | Amino Acid Compositions of 27 Food Fishes and Their Importance in Clinical Nutrition](Source-Text/2014-PMC4213980-Round1-Source-Scope.txt)
+- [PMID:24682347 | 2014 AHA/ACC/HRS Guideline for the Management of Patients With Atrial Fibrillation](Source-Text/2014-PMC4676081-Round1-Source-Scope.txt)
