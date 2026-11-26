@@ -1095,3 +1095,21 @@ The [shared originals packet](../../experiments/1000_see_what_sticks_food/follow
 - [Prospective saffron extract registration](Source-Text/Trials/ACTRN12625000638437.txt) and [published outcomes](Source-Text/PMC13318664.txt).
 - [Saffron depression review with product and comparator details](Source-Text/2026-PMID41939549-Dimech-Saffron-Depression-Review.txt).
 - [Dakota and Ojibwe cranberry harvesting and preservation](Cultural-and-Experiential/Traditional-Practices/2025-NATIFS-Dakota-Ojibwe-Cranberry-Preservation.txt).
+
+## Open archive comparisons in the Round 1 food experiment
+
+- [PMC11847308 | Promotion of Healthy Aging Through the Nexus of Gut Microbiota and Dietary Phytochemicals](Source-Text/2025-PMC11847308-Round1-Original-Comparisons.txt)
+- [PMC13348324 | Subthalamic and nigral stimulation for freezing of gait in Parkinson's disease: Randomized pilot trial](Source-Text/2025-PMC13348324-Round1-Original-Comparisons.txt)
+- [PMC12634899 | Occupational Therapists’ Psychotherapy Competence: A Scoping Review of Secondary Data](Source-Text/2025-PMC12634899-Round1-Original-Comparisons.txt)
+- [PMC11833356 | Toxicity of formaldehyde, and its role in the formation of harmful and aromatic compounds during food processing](Source-Text/2025-PMC11833356-Round1-Original-Comparisons.txt)
+- [PMC12231801 | Acceptance and commitment therapy with Huntington's disease: A narrative review and case report of a caregiver-assisted intervention](Source-Text/2025-PMC12231801-Round1-Original-Comparisons.txt)
+- [PMC13347426 | Predictive potential of circular walking in prodromal Parkinson's disease](Source-Text/2025-PMC13347426-Round1-Original-Comparisons.txt)
+- [PMC11881130 | Development of an interactive biosensing application for assessing finger dexterity](Source-Text/2025-PMC11881130-Round1-Original-Comparisons.txt)
+- [PMC11904502 | Nanoparticles of natural product-derived medicines: Beyond the pandemic](Source-Text/2025-PMC11904502-Round1-Original-Comparisons.txt)
+- [PMC13347572 | The future of clinical trials? Monitoring mobility as an outcome measure in Parkinson's disease: The mobilise-D study](Source-Text/2025-PMC13347572-Round1-Original-Comparisons.txt)
+- [PMC13396421 | Current knowledge of Huntington's disease-like 2 genetic testing, clinical presentation, and patient experiences: A systematic review](Source-Text/2026-PMC13396421-Round1-Original-Comparisons.txt)
+- [PMC12959350 | The role of neuroactive steroids in psychiatric and neurological disorders: Neurobiology and therapeutic perspectives](Source-Text/2025-PMC12959350-Round1-Original-Comparisons.txt)
+- [PMC13207826 | Plant-Derived Compounds as Potential Sensitizers to Immunotherapy in Melanoma](Source-Text/2026-PMC13207826-Round1-Original-Comparisons.txt)
+- [PMC13520518 | Self-Emulsifying Formulation of Huperzia carinata Extract to Improve Huperzine A Solubility for Therapeutic Efficacy Enhancement in Parkinsonian Mice](Source-Text/2026-PMC13520518-Round1-Original-Comparisons.txt)
+
+[Exact assessments and source scopes](../../experiments/1000_see_what_sticks_food/followup/open-archive-reuse-nov25/README.md)

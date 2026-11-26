@@ -1037,3 +1037,10 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 The [2017 Pikuni–Blackfeet original](Source-Text/2017-PMC6149223-Round1-Structured-Scope.txt) separates community plant-use reporting, botanical identity and assay findings. The [2019 Parkinson neurophysiology article](Source-Text/2019-PMC6463734-Round1-Structured-Scope.txt) documents sensorimotor testing and the absence of an assigned culinary exposure in those comparisons.
 
 The [mint contact-reaction case](Source-Text/2015-PMID26312097-Cinnamon-Mint-Contact-Reaction.txt) records withdrawal and re-exposure observations for a cinnamon-flavored product.
+
+## Open archive comparisons in the Round 1 food experiment
+
+- [PMC6767412 | The neuroplastic effect of olfactory training to the recovery of olfactory system in mouse model](Source-Text/2019-PMC6767412-Round1-Original-Comparisons.txt)
+- [PMC10623920 | Feasibility of Conducting Nonpharmacological Interventions to Manage Dementia Symptoms in Community-Dwelling Older Adults: A Cluster Randomized Controlled Trial](Source-Text/2019-PMC10623920-Round1-Original-Comparisons.txt)
+
+[Exact assessments and source scopes](../../experiments/1000_see_what_sticks_food/followup/open-archive-reuse-nov25/README.md)

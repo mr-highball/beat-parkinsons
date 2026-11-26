@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The Open archive comparison review closed 302 source checks across 59 identity-matched publications, including 93 related contexts and 209 scope exclusions. The verified queue holds 29972 checks across 20922 sources and 384 frozen claims. Fifty-seven scorecards retain their verdicts and anchors. [Originals and exact replay](../open-archive-reuse-nov25/README.md)
+
 The shared original-source review closed 156 exact checks using 26 identity-verified publications, with 85 scope exclusions and 71 related contexts. The queue now holds 30,274 checks across 20,981 source keys and 388 frozen claims. Fifty-one scorecards retain their verdicts and anchors. [Originals and exact replay](../shared-original-scope-dedup-nov25/README.md)
 
 The November 25 proceedings and folio review closed 34 exact source checks across five original records. The replay leaves 30,430 checks across 21,007 source keys and 388 claims. Twenty assessed claims retain their existing verdicts and score anchors. [Originals and replay](../priority-originals-and-saffron-citations-nov25/README.md)
