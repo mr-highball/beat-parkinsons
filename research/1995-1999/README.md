@@ -216,3 +216,5 @@ See the [Round 1 curcumin and original-source audit](../2025-2029/Food-Experimen
 - [1997 Irish national meeting archived bibliography and original PDF access trail](Source-Text/1997-PMID9181698-Irish-National-Medical-Meeting-Archive-Access.txt).
 
 The [environmental toxicology source-scope record](Source-Text/1999-PMC1566810-Round1-Source-Scope.txt) documents nine search results with no studied culinary exposure.
+
+The [BMJ February 1998 issue review](../../experiments/1000_see_what_sticks_food/followup/priority-originals-nov26/README.md) verifies six independent articles surfaced in the dried-date and pain search.

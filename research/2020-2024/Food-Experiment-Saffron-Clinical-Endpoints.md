@@ -6,7 +6,7 @@ The official [IRCT20090117001556N145 record](https://irct.ir/trial/65247) descri
 
 The related 2024 Lalezari publication, DOI 10.1016/j.hermed.2024.100968, reports 52 participants and a composite Part III interaction p=.424. It also lists other depression scales and Hoehn–Yahr as secondary measures in the abstract, despite the empty registry secondary section. No individual 3.1 speech or other item results are accessible in the abstract. Part III speech evaluates volume as well as other characteristics, so even an item score would not isolate voice volume; the total result is weaker still. The registration belongs to the same trial as the article.
 
-[Local source text](Source-Text/IRCT20090117001556N145-Tehran-Saffron-Endpoints.txt)
+The [article extract and study-family link](Source-Text/2024-Lalezari-Parkinson-Saffron-Capsules.txt) preserves the accessible Hamilton depression comparisons. [Registry extract](Source-Text/IRCT20090117001556N145-Tehran-Saffron-Endpoints.txt).
 
 ## Isfahan registry and the planned MDS-UPDRS items
 

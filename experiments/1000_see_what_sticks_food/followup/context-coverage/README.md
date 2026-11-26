@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+Printed BMJ issue follow-up closed six dated source checks for claim 0502, including two earlier access-only scopes. The replay leaves 29,955 exact checks across 20,914 publications and 384 frozen claims. [Issue methods and replay](../priority-originals-nov26/README.md)
+
 The weak-direction review closed 11 checks across two identity-matched publications, including two related contexts and nine scope exclusions. The verified queue holds 29961 checks across 20920 source keys and 384 frozen claims. [Originals and exact replay](../weak-direction-crossover-nov25/README.md)
 
 The Open archive comparison review closed 302 source checks across 59 identity-matched publications, including 93 related contexts and 209 scope exclusions. The verified queue holds 29972 checks across 20922 sources and 384 frozen claims. Fifty-seven scorecards retain their verdicts and anchors. [Originals and exact replay](../open-archive-reuse-nov25/README.md)

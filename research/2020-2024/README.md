@@ -1262,3 +1262,5 @@ The [shared originals packet](../../experiments/1000_see_what_sticks_food/follow
 [Exact assessments and source scopes](../../experiments/1000_see_what_sticks_food/followup/open-archive-reuse-nov25/README.md)
 
 The [public lemongrass bedtime suggestion](Cultural-and-Experiential/Conversations/2020-Reddit-Lemongrass-as-a-Sleep-Suggestion.txt) illustrates a conversational lead without an attributed symptom change.
+
+The [Tehran saffron capsule article](Source-Text/2024-Lalezari-Parkinson-Saffron-Capsules.txt) is indexed by the publication DOI and linked to the separately filed registry.
