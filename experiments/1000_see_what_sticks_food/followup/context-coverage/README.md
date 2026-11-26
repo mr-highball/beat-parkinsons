@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The archival-original audit resolved 254 exact checks across 127 authenticated publications. 23595 checks remain across 18298 publication keys and 286 claims. [Original sources and outcome audit](../archival-members-and-contrast-depth-nov26/README.md)
+
 The original-index audit resolved 230 exact checks across 92 authenticated original publications. 23849 checks remain across 18425 publication keys and 286 claims. [Original sources and outcome audit](../original-members-and-trial-contrasts-nov26/README.md)
 
 The original-index audit resolved 230 exact checks across 92 authenticated original publications. 24033 checks remain across 18516 publication keys and 289 claims. [Original sources and outcome audit](../scope-and-outcome-audit-nov26/README.md)

@@ -1906,3 +1906,5 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [November 26 Round 1 authenticated originals and trial follow-up](../../experiments/1000_see_what_sticks_food/followup/indexes-and-near-claims-nov26/originals-by-period.md#2025-2029)
 
 - [November 26 Round 1 original scope and outcome audit](../../experiments/1000_see_what_sticks_food/followup/scope-and-outcome-audit-nov26/originals-by-period.md#2025-2029)
+
+- [November 26 Round 1 archival and clinical original-source records](../../experiments/1000_see_what_sticks_food/followup/archival-members-and-contrast-depth-nov26/originals-by-period.md#2025-2029)

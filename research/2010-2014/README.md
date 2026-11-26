@@ -886,3 +886,5 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [November 26 Round 1 authenticated originals and trial follow-up](../../experiments/1000_see_what_sticks_food/followup/indexes-and-near-claims-nov26/originals-by-period.md#2010-2014)
 
 - [November 26 Round 1 original scope and outcome audit](../../experiments/1000_see_what_sticks_food/followup/scope-and-outcome-audit-nov26/originals-by-period.md#2010-2014)
+
+- [November 26 Round 1 archival and clinical original-source records](../../experiments/1000_see_what_sticks_food/followup/archival-members-and-contrast-depth-nov26/originals-by-period.md#2010-2014)

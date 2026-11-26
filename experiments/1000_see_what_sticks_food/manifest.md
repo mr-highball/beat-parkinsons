@@ -369,6 +369,8 @@ The November 26 source-scope audit closed 177 exact checks across 92 authenticat
 
 The November 26 original-member audit closed 184 checks across 92 authenticated originals. The ground mustard falls claim completed evidence review with an open verdict. A recovered dissertation gives a cold-pressed pumpkin-seed oil comparison with unchanged depression category counts in the oil group. [Original scope and outcome audit](followup/original-members-and-trial-contrasts-nov26/README.md)
 
+The November 26 archival-original audit verified 254 original-source memberships. Official PMC readers supplied 38 bodies missing from the Cloud collection. Recovered clinical and registry material refined three scorecard explanations at existing verdicts and anchors. [Archival and trial follow-up](followup/archival-members-and-contrast-depth-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).
