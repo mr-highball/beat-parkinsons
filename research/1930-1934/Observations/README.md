@@ -21,3 +21,7 @@ Extract Anderson’s drug-by-symptom outcome tables, seek early case notes on re
 ## Original text context, November 15, 2026
 
 - Original collection scans distinguish almond oil exposure from unrelated cases or adjacent outcome discussions. The dated entry records the review limits. [Almond oil in original historical collections](../Food-Experiment-Almond-Historical-Collections.md)
+
+## Cranberry preparation
+
+The 1932 ethnobotany adds named communities and culinary preparation to the period's sparse food records. Small cranberry appears as a food, while cranberry tea is recorded for nausea. The specific plant part in the tea and any symptom changes remain unreported. The preceding period's observations focus on bedside comparisons and medicines. [Original period record](../Cultural-and-Experiential/Traditional-Practices/1932-Smith-Ojibwe-Cranberry-Food-and-Tea.txt)

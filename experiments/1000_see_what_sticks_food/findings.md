@@ -278,6 +278,8 @@ The dried-date pain scorecard was checked against the whole-fruit crossover and 
 
 The preparation and comparison audit rechecked four scorecards using original comparisons of soybean oil, sunflower oil and formulated curcumin. The curcumin walking result remains conflicting context after its uncertainty was checked, and the posted pain values add context. Round 1 has 75 directional and 925 Unknown verdicts. [Preparation and comparison audit](followup/preparation-and-conflicting-effects-nov25/README.md)
 
+The highest-priority follow-through verified the prospective saffron extract record and matched article. The trial excluded Parkinson disease and measured depression, sleep disturbance and broader sleep impairment separately. Two cranberry records add food preparation and reported tea use. The eight priority-three original-access checks remain open. [Source audit and scorecards](followup/highest-open-originals-nov25/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

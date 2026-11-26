@@ -38,3 +38,7 @@ January 1, 1930 through December 31, 1934.
 - [PMCID:PMC2369166 access and exact claim scope](Source-Text/1933-PMCIDPMC2369166-Round1-Original-Access.txt).
 - [PMCID:PMC2368176 access and exact claim scope](Source-Text/1933-PMCIDPMC2368176-Round1-Original-Access.txt).
 - [PMCID:PMC2452719 access and exact claim scope](Source-Text/1930-PMCIDPMC2452719-Round1-Original-Access.txt).
+
+## Cranberry food and tea
+
+[The 1932 Ojibwe ethnobotany record](Cultural-and-Experiential/Traditional-Practices/1932-Smith-Ojibwe-Cranberry-Food-and-Tea.txt) records small cranberry as a wild food and documents a separate tea use for nausea.

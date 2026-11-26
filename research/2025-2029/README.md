@@ -1089,3 +1089,9 @@ See the [Round 1 curcumin and original-source audit](Food-Experiment-Round-1-Cur
 - [Two public conversations about variable sleep](Observations/README.md#saffron-and-sleep-observations)
 
 The [shared originals packet](../../experiments/1000_see_what_sticks_food/followup/shared-original-scope-dedup-nov25/README.md) includes 11 structured publications in this period. The [2025 stomatitis series](Source-Text/2025-PMID40914980-Cinnamon-Gum-and-Candy-Contact-Stomatitis.txt) archives the oral contact findings.
+
+## Saffron trial registry and cranberry preparation
+
+- [Prospective saffron extract registration](Source-Text/Trials/ACTRN12625000638437.txt) and [published outcomes](Source-Text/PMC13318664.txt).
+- [Saffron depression review with product and comparator details](Source-Text/2026-PMID41939549-Dimech-Saffron-Depression-Review.txt).
+- [Dakota and Ojibwe cranberry harvesting and preservation](Cultural-and-Experiential/Traditional-Practices/2025-NATIFS-Dakota-Ojibwe-Cranberry-Preservation.txt).

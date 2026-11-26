@@ -706,3 +706,9 @@ The 2022 pooled estimate for insomnia severity spans zero and combines an oral e
 - [2025 trial results](../Source-Text/2025-PMID40762630-Lang-Saffron-Sleep-Trial.txt)
 - [Variable sleep after extract](../Cultural-and-Experiential/Conversations/2025-Reddit-Saffron-Extract-Variable-Sleep.txt)
 - [Reported night waking after supplement](../Cultural-and-Experiential/Conversations/2026-Reddit-Saffron-Supplement-and-Night-Waking.txt)
+
+## Saffron endpoint registration and cranberry preparation
+
+The saffron extract registry confirms a prespecified DASS depression primary endpoint and separate secondary measures for sleep disturbance and daytime impairment. The latter two measures diverged in the published comparison. Ground saffron and clinical Parkinson fatigue remain separate checks. The earlier period includes trials using an insomnia scale as its own endpoint. [Registry](../Source-Text/Trials/ACTRN12625000638437.txt) · [Earlier insomnia trial](../../2020-2024/Source-Text/2020-Lopresti-Saffron-ISI-Factual-Extract.txt)
+
+The Indigenous food sheet documents drying and cooking cranberry. The 2020 traditional-use review describes urinary context and supplement quality. The newer community source extends the archive's preparation detail, with depression and Parkinson outcomes remaining open. [Community source](../Cultural-and-Experiential/Traditional-Practices/2025-NATIFS-Dakota-Ojibwe-Cranberry-Preservation.txt) · [Earlier review](../../2020-2024/Cultural-and-Experiential/Traditional-Practices/2020-Vaccinium-Macrocarpon-Traditional-Urinary-Phytotherapy.txt)

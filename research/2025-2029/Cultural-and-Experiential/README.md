@@ -49,3 +49,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 [Boyle manuscript anise and nutmeg sleep entries](Traditional-Practices/2026-Wellcome-MS1340-Anise-Nutmeg-Sleep.txt) and the [separate oral mixed-spice remedy for loose stools](Traditional-Practices/2026-Wellcome-MS1340-Nutmeg-Spice-Looseness.txt) preserve the original routes and intended outcomes.
 
 - [Ethnomedicinal survey of plants used for treatment of mild COVID-19-related symptoms in Gorontalo Province, Indonesia](Traditional-Practices/2025-PMID40330798-Gorontalo-Nutmeg-Diarrhea.txt)
+
+- [Traditional cranberry harvesting and drying in a Dakota and Ojibwe food resource](Traditional-Practices/2025-NATIFS-Dakota-Ojibwe-Cranberry-Preservation.txt).
