@@ -97,3 +97,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Which plants for what ailments: a quantitative analysis of medicinal ethnobotany of Ile-Ife](Traditional-Practices/2021-PMID34394387-Ile-Ife-African-Nutmeg-and-Insomnia.txt)
 
 [Public lemongrass bedtime tea suggestion](Conversations/2020-Reddit-Lemongrass-as-a-Sleep-Suggestion.txt).
+
+- [Cayenne in a public conversation about reflux and anxiety](Conversations/2023-Reddit-Cayenne-Reflux-Anxiety.txt)

@@ -310,6 +310,8 @@ The November 26 priority and culinary source wave closed 143 exact checks and ad
 
 The November 26 publisher and culinary context wave closed 158 exact checks and added 74 dated records. Two refined grapeseed-oil claims moved to Unknown (Researched) after the topical oil, seed-powder and seed-extract scopes were verified. New black-bean and black-pepper cultural context remains distinct from clinical evidence. Forty scorecards retained their previous verdicts and anchors. [Original sources and scope audit](followup/publisher-and-culinary-context-nov26/README.md)
 
+The November 26 clinical and provenance batch verified 233 exact checks and added 95 dated texts. The updated cayenne and anxiety scorecard includes the class-level spicy-food result and retains an open verdict. A public cayenne account and ethnographic basil and turmeric reports add contextual evidence. [Original sources and scope audit](followup/clinical-and-provenance-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

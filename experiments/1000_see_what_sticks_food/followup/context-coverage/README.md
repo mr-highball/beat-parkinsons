@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The clinical and provenance batch resolved 233 exact checks across 92 authenticated originals. It leaves 27,805 checks across 20,204 publication keys and 364 claims. [Original evidence and source replay](../clinical-and-provenance-nov26/README.md)
+
 The publisher and culinary context wave resolved 158 exact checks across 69 authenticated originals. It leaves 28,038 checks across 20,296 publication keys and 364 claims. [Original evidence and source replay](../publisher-and-culinary-context-nov26/README.md)
 
 The priority and culinary source wave resolved 143 exact checks across 86 originals, including four priority-four pairs recovered through publisher or journal-reprint material. It leaves 28,196 checks across 20,365 publication keys and 364 claims. [Publisher and culinary scope audit](../priority-cloud-and-food-nov26/README.md)

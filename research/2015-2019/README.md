@@ -1237,3 +1237,13 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [PMID:31038176 | Sleep and risk of parkinsonism and Parkinson’s disease: a population-based study](Source-Text/2019-PMC6911221-Round1-Source-Scope.txt)
 
 - [Ethnobiological treatments of neurological conditions in the Chota Nagpur Plateau, India](Cultural-and-Experiential/Traditional-Practices/2016-PMID28017696-Chota-Nagpur-Black-Pepper-Insomnia-Source-Trail.txt)
+
+- [PMID:29684508 | Methylene blue ameliorates olfactory dysfunction and motor deficits in a chronic MPTP/probenecid mouse model of Parkinson’s disease](Source-Text/2018-PMC13345755-Round1-Source-Scope.txt)
+- [PMID:28798806 | Potential of Traditional Knowledge of Plants in the Management of Arthropods in Livestock Industry with Focus on (Acari) Ticks](Source-Text/2017-PMC5536150-Round1-Source-Scope.txt)
+- [PMID:29085639 | The reliability and minimal detectable change of the cardiovascular response and self-selected exercise intensity during forward and backward treadmill exercise in individuals with Parkinson disease](Source-Text/2017-PMC5648080-Round1-Source-Scope.txt)
+- [PMID:29951401 | Successful aging as a multidimensional concept: An integrative review](Source-Text/2017-PMC6014811-Round1-Source-Scope.txt)
+- [PMID:30609300 | The Effect of sequential bilateral low‐frequency rTMS over dorsolateral prefrontal cortex on serum level of BDNF and GABA in patients with primary insomnia](Source-Text/2019-PMC6379591-Round1-Source-Scope.txt)
+- [PMID:31693707 | Pharmacological signatures of the reduced incidence and the progression of cognitive decline in ageing populations suggest the protective role of beneficial polypharmacy](Source-Text/2019-PMC6834256-Round1-Source-Scope.txt)
+- [PMID:31942474 | Expert consensus on the assessment and treatment of chronic constipation in the elderly](Source-Text/2018-PMC6880707-Round1-Source-Scope.txt)
+- [PMID:31780742 | Tsc1-mTORC1 signaling controls striatal dopamine release and cognitive flexibility](Source-Text/2019-PMC6882901-Round1-Source-Scope.txt)
+- [PMID:32104425 | Challenges and trends in apomorphine drug delivery systems for the treatment of Parkinson's disease](Source-Text/2017-PMC7032113-Round1-Source-Scope.txt)
