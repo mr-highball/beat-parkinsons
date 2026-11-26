@@ -1813,6 +1813,7 @@ const
 var
   LPaths: TStringList;
   LFields: TFields;
+  LTreeArgs: TFields;
   LTopics: TDictionary<String, TFields>;
   LLines: TStringList;
   LProcess: TProcess;
@@ -1846,8 +1847,24 @@ begin
   try
     try
       LPaths.CaseSensitive := True;
-      LPaths.Text := Git(['-c', 'core.quotePath=false', 'ls-tree', '-r', '--name-only',
-        FRevision, '--', 'research', CTopics]);
+      { Limit the pinned tree listing to cultural directories before reading their blobs. }
+      LPaths.Text := Git(['-c', 'core.quotePath=false', 'ls-tree', '-rd', '--name-only',
+        FRevision, '--', 'research']);
+      LTreeArgs := ['-c', 'core.quotePath=false', 'ls-tree', '-r', '--name-only',
+        FRevision, '--', CTopics];
+      LIndex := Length(LTreeArgs);
+      SetLength(LTreeArgs, LIndex + LPaths.Count);
+      for LPath in LPaths do
+      begin
+        if IsCulturalSource(LPath + '/') and
+          (PosEx('/', LPath, Length('research/') + 1) = LastDelimiter('/', LPath)) then
+        begin
+          LTreeArgs[LIndex] := LPath;
+          Inc(LIndex);
+        end;
+      end;
+      SetLength(LTreeArgs, LIndex);
+      LPaths.Text := Git(LTreeArgs);
       LProcess.Executable := 'git';
       LProcess.CurrentDirectory := FRoot;
       LProcess.Parameters.Add('cat-file');
