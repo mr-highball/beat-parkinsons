@@ -122,10 +122,26 @@ begin
     ContainsStr(LRes.BodySnippet, 'Crocus sativus'),
     'Test 10: Crocus sativus in XML tags must trigger body_match for saffron');
   Inc(GPassed);
+
+  LXml := SampleXml('32345678', 'Dietary questionnaire', 'Food inventory.',
+    'Smith', 'The questionnaire included cooked string beans among its separately recorded items.',
+    'Ref 1');
+  LRes := ScreenPmcJatsXml(LXml, '32345678', 'green beans');
+  Check((LRes.Kind = pkBodyMatch) and ContainsStr(LRes.MatchedTerms, 'string beans'),
+    'String beans are recognized as a green-bean exposure lead');
+  Inc(GPassed);
+
+  LXml := SampleXml('42345678', 'Vehicle comparison', 'Preclinical study.',
+    'Smith', 'The experimental compound was administered in grape seed oil in one protocol.',
+    'Ref 1');
+  LRes := ScreenPmcJatsXml(LXml, '42345678', 'grapeseed oil');
+  Check((LRes.Kind = pkBodyMatch) and ContainsStr(LRes.MatchedTerms, 'grape seed oil'),
+    'Grape seed oil is recognized even when the compound uses it as a vehicle');
+  Inc(GPassed);
 end;
 
 begin
   SetMultiByteConversionCodePage(CP_UTF8);
   RunTests;
-  WriteLn('PmcScreenTests passed (', GPassed, '/10).');
+  WriteLn('PmcScreenTests passed (', GPassed, '/12).');
 end.

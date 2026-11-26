@@ -295,6 +295,11 @@ begin
     Exit(AddTerms(['saffron', 'crocus sativus', 'crocin', 'crocetin', 'safranal', 'picrocrocin']))
   else if LKey = 'grape' then
     Exit(AddTerms(['grape', 'grapes', 'vitis vinifera', 'resveratrol', 'proanthocyanidin']))
+  else if LKey = 'grapeseed oil' then
+    Exit(AddTerms(['grapeseed oil', 'grape seed oil', 'grape-seed oil']))
+  else if LKey = 'green beans' then
+    Exit(AddTerms(['green bean', 'green beans', 'string bean', 'string beans', 'snap bean',
+      'snap beans', 'French beans']))
   else if LKey = 'corn oil' then
     Exit(AddTerms(['corn oil', 'maize oil', 'zea mays']))
   else if LKey = 'salmon' then
