@@ -1319,3 +1319,9 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [PMID:39399551 | Distinguishing Prodromal Dementia With Lewy Bodies From Prodromal Alzheimer Disease: A Longitudinal Study](Source-Text/2024-PMC11464229-Prodromal-Dementia-Longitudinal-Scope.txt)
 - [PMID:40625600 | Vitamin D in Disease Prevention and Cure-Part I: An Update on Molecular Mechanism and Significance on Human Health](Source-Text/2024-PMC12229305-Vitamin-D-Dietary-Sources-Scope.txt)
 - [PMID:35992895 | Mitochondria–lysosome crosstalk in GBA1-associated Parkinson’s disease](Source-Text/2022-PMC9388709-GBA1-Lysosomal-Research-and-Plant-Sources.txt)
+
+- [DOI:10.15171/jhp.2020.08 | Effects of cinnamon extract on complications of treatment and eradication of Helicobacter pylori in infected people](Source-Text/2020-Imani-Cinnamon-Extract-Constipation-and-Abdominal-Pain.txt)
+
+- [PMID:32229443 | Effects of flaxseed supplementation on functional constipation and quality of life in a Chinese population: A randomized trial](Source-Text/2020-PMID32229443-Flaxseed-Flour-and-Lactulose-Constipation.txt)
+
+[Koyna Valley cinnamon root and bark uses](Cultural-and-Experiential/Local-Knowledge/2024-BSI-Koyna-Cinnamon-Root-and-Bark-Traditions.txt)

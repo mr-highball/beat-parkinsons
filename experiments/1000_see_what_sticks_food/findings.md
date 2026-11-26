@@ -296,6 +296,8 @@ The November 26 sage and lemon balm audit closed 113 checks across 32 originals 
 
 The November 26 high-fanout publication audit closed 215 checks and added 44 dated source texts and one cultural record. The saffron petal and stigma reports are linked with their original preparations, recruitment periods and comparator outcomes. Sixty checked scorecards retain their anchors. The replay leaves 29,353 exact checks across 20,767 publication keys and 378 claims. [Batch evidence and provenance](followup/priority-and-high-fanout-originals-nov26/README.md)
 
+The November 26 preparation and symptom review closed 180 exact checks and added 49 dated sources and one cultural account. It preserves the constipation-table discrepancy in the cinnamon extract trial and the preparation limits of flaxseed and carnitine results. Five clinical rationales were extended after reviewing 50 scorecards. The replay leaves 29,173 exact checks across 20,722 publication keys and 374 claims. [Batch evidence and provenance](followup/preparation-and-symptom-outcomes-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

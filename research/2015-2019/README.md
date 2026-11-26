@@ -1161,3 +1161,5 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [PMID:28122885 | Heart Disease and Stroke Statistics—2017 Update: A Report From the American Heart Association](Source-Text/2017-PMC5408160-Heart-Stroke-Statistics-Diet-Scope.txt)
 - [PMID:28154522 | Metal Dyshomeostasis and Their Pathological Role in Prion and Prion-Like Diseases: The Basis for a Nutritional Approach](Source-Text/2017-PMC5243831-Metal-Dyshomeostasis-and-Plant-Constituents.txt)
 - [PMID:26062575 | Cerebral Toxocariasis: Silent Progression to Neurodegenerative Disorders?](Source-Text/2015-PMC4462679-Toxocariasis-Food-Exposure-Scope.txt)
+
+- [PMID:29780230 | A randomized trial of the effects of flaxseed to manage constipation, weight, glycemia, and lipids in constipated patients with type 2 diabetes](Source-Text/2018-PMC5944250-Baked-Flaxseed-and-Constipation.txt)
