@@ -152,11 +152,6 @@ const
   CVerdictHeader = 'id'#9'verdict'#9'confidence'#9'rationale'#9'local_references'#9'search_record'#9 +
     'local_verdict';
   CEvidenceHeader = 'id'#9'study'#9'role'#9'fit'#9'local_reference'#9'assessment';
-  CCoverageHeader = 'id'#9'category'#9'ingredient'#9'overlay_pairs'#9'joined_archive'#9 +
-    'no_exact_review_imported'#9'pending_or_access_only'#9'title_index_reviewed'#9 +
-    'abstract_context_reviewed'#9'exact_assessment_basis_unspecified'#9 +
-    'body_or_primary_context_reviewed'#9'queue_priority_1'#9'queue_priority_2'#9 +
-    'queue_priority_3'#9'queue_priority_4'#9'queue_priority_5'#9'queue_priority_6';
 
 function ExperimentPath(ARound: Integer): String;
 begin
@@ -969,9 +964,7 @@ begin
         if LClaim.OriginalPairs >= 0 then
           raise EConvertError.Create('Duplicate published coverage row: ' + LClaim.Id);
         LClaim.OriginalPairs := StrToInt(LFields[3]);
-        LClaim.QueuedPairs := 0;
-        for LField in Copy(LFields, 11, 6) do
-          Inc(LClaim.QueuedPairs, StrToInt(LField));
+        LClaim.QueuedPairs := CoverageQueuedPairs(LFields);
       end;
     end;
   finally
@@ -1123,7 +1116,7 @@ begin
         LClaim.SearchBasis := LRow.SearchBasis;
         LClaim.OpenGaps := LRow.OpenGaps;
         LClaim.ResearchStatus := EffectiveResearchStatus(LRow.Status, LClaim.ScorecardStatus,
-          LClaim.Verdict, LRow.LabClinicalChecked, LRow.CulturalChecked, LRow.ScorecardChecked);
+          LClaim.Verdict, LRow.LabClinicalChecked, LRow.CulturalChecked, LRow.ScorecardChecked, LClaim.QueuedPairs);
       end;
     end;
   finally

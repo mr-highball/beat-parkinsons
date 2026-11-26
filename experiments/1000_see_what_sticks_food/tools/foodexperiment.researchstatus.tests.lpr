@@ -177,6 +177,21 @@ begin
   end;
   Check(LFailed, 'Reject unsorted research-status.tsv rows.');
 
+  Check(EffectiveResearchStatus('researched', 'recorded', 'Unknown',
+    True, True, True, 1) = 'partial', 'A queued original keeps the public claim partial.');
+  WriteUtf8(AFixtureDir + PathDelim + 'f1' + PathDelim + 'followup' + PathDelim +
+    'context-coverage' + PathDelim + 'coverage-by-claim.tsv',
+    CCoverageHeader + #13#10 +
+    '0001'#9'food'#9'apple'#9'1'#9'0'#9'1'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'1' + #13#10 +
+    '0002'#9'spice'#9'saffron'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0'#9'0' + #13#10);
+  LFailed := False;
+  try
+    VerifyExperimentResearchStatus(AFixtureDir + PathDelim + 'f1', False);
+  except
+    on E: EConvertError do LFailed := Pos('still has queued original publications', E.Message) > 0;
+  end;
+  Check(LFailed, 'The ledger verifier rejects researched claims with queued originals.');
+
   WriteLn('ResearchStatusTests passed (', GPassed, '/', GPassed, ').');
 end;
 

@@ -11,6 +11,11 @@ uses
   Classes, SysUtils;
 
 const
+  CCoverageHeader = 'id'#9'category'#9'ingredient'#9'overlay_pairs'#9'joined_archive'#9 +
+    'no_exact_review_imported'#9'pending_or_access_only'#9'title_index_reviewed'#9 +
+    'abstract_context_reviewed'#9'exact_assessment_basis_unspecified'#9 +
+    'body_or_primary_context_reviewed'#9'queue_priority_1'#9'queue_priority_2'#9 +
+    'queue_priority_3'#9'queue_priority_4'#9'queue_priority_5'#9'queue_priority_6';
   CResearchStatusHeader =
     'id'#9'research_status'#9'lab_clinical_checked'#9'cultural_checked'#9 +
     'scorecard_checked'#9'last_checked_utc'#9'search_basis'#9'open_gaps';
@@ -44,7 +49,8 @@ function ParseYesNo(const AValue, AFieldName, AClaimId: String): Boolean;
 function ParseResearchStatusRow(const ALine: String; ALineNumber: Integer): TResearchStatusRow;
 function DisplayVerdictLabel(const AVerdict, AResearchStatus: String): String;
 function EffectiveResearchStatus(const ADeclaredStatus, AScorecardStatus, AVerdict: String;
-  ALabChecked, ACulturalChecked, AScorecardChecked: Boolean): String;
+  ALabChecked, ACulturalChecked, AScorecardChecked: Boolean; AQueuedPairs: Integer): String;
+function CoverageQueuedPairs(const AFields: array of String): Integer;
 function VerifyExperimentResearchStatus(const AExperimentDir: String;
   ARequireFullCoverage: Boolean = False): TResearchStatusSummary;
 
@@ -206,10 +212,10 @@ begin
 end;
 
 function EffectiveResearchStatus(const ADeclaredStatus, AScorecardStatus, AVerdict: String;
-  ALabChecked, ACulturalChecked, AScorecardChecked: Boolean): String;
+  ALabChecked, ACulturalChecked, AScorecardChecked: Boolean; AQueuedPairs: Integer): String;
 begin
   if (ADeclaredStatus = 'researched') and ALabChecked and ACulturalChecked and
-    AScorecardChecked and (AScorecardStatus = 'recorded') then
+    AScorecardChecked and (AScorecardStatus = 'recorded') and (AQueuedPairs <= 0) then
   begin
     Exit('researched');
   end;
@@ -218,6 +224,21 @@ begin
     Exit('unreviewed');
   end;
   Result := 'partial';
+end;
+
+function CoverageQueuedPairs(const AFields: array of String): Integer;
+var
+  LIndex: Integer;
+  LCount: Integer;
+begin
+  Require(Length(AFields) = 17, 'Malformed published coverage row.');
+  Result := 0;
+  for LIndex := 11 to 16 do
+  begin
+    Require(TryStrToInt(AFields[LIndex], LCount) and (LCount >= 0),
+      'Invalid queue count for claim ' + AFields[0]);
+    Inc(Result, LCount);
+  end;
 end;
 
 function IsDirectionalVerdict(const AVerdict: String): Boolean;
@@ -236,12 +257,14 @@ var
   LSourcesText: String;
   LStatusPath: String;
   LStatusText: UTF8String;
+  LCoveragePath: String;
   LLines: TStringList;
   LFields: TFields;
   LFrozenDir: TDictionary<String, String>;
   LVerdicts: TDictionary<String, String>;
   LConfidences: TDictionary<String, Currency>;
   LSeen: TDictionary<String, Boolean>;
+  LQueuedPairsByClaim: TDictionary<String, Integer>;
   LRow: TResearchStatusRow;
   LIndex: Integer;
   LPrevId: String;
@@ -253,6 +276,7 @@ var
   LScorecardIndex: TScorecardIndex;
   LReviewStatus: String;
   LEffective: String;
+  LQueuedPairs: Integer;
 begin
   Result := Default(TResearchStatusSummary);
   LExpDir := ExcludeTrailingPathDelimiter(ExpandFileName(AExperimentDir));
@@ -280,6 +304,7 @@ begin
   LVerdicts := TDictionary<String, String>.Create;
   LConfidences := TDictionary<String, Currency>.Create;
   LSeen := TDictionary<String, Boolean>.Create;
+  LQueuedPairsByClaim := TDictionary<String, Integer>.Create;
   LLines := TStringList.Create;
   LScorecardIndex := nil;
   try
@@ -308,6 +333,25 @@ begin
         Require(Length(LFields) = 7, 'Malformed verdicts.tsv row ' + IntToStr(LIndex + 1));
         LVerdicts.Add(LFields[0], LFields[1]);
         LConfidences.Add(LFields[0], ReadReviewConfidence(LFields[2], LFields[1], LFields[0]));
+      end;
+    end;
+
+    LCoveragePath := LExpDir + PathDelim + 'followup' + PathDelim +
+      'context-coverage' + PathDelim + 'coverage-by-claim.tsv';
+    if FileExists(LCoveragePath) then
+    begin
+      LoadLines(LLines, StringReplace(String(ReadUtf8Text(LCoveragePath)),
+        #13#10, #10, [rfReplaceAll]), 'coverage-by-claim.tsv');
+      Require((LLines.Count = LFrozenDir.Count + 1) and (LLines[0] = CCoverageHeader),
+        'Published coverage does not cover the frozen round.');
+      for LIndex := 1 to LLines.Count - 1 do
+      begin
+        LFields := SplitFields(LLines[LIndex], #9);
+        LQueuedPairs := CoverageQueuedPairs(LFields);
+        Require(LFrozenDir.ContainsKey(LFields[0]) and
+          not LQueuedPairsByClaim.ContainsKey(LFields[0]),
+          'Unknown or duplicate ID in published coverage: ' + LFields[0]);
+        LQueuedPairsByClaim.Add(LFields[0], LQueuedPairs);
       end;
     end;
 
@@ -359,14 +403,20 @@ begin
           'Claim ' + LRow.Id + ' sets scorecard_checked=yes but scorecard status is ' +
           LReviewStatus + '.');
       end;
+      if not LQueuedPairsByClaim.TryGetValue(LRow.Id, LQueuedPairs) then
+      begin
+        LQueuedPairs := -1;
+      end;
       if LRow.Status = 'researched' then
       begin
         Require(LReviewStatus = 'recorded',
           'Claim ' + LRow.Id + ' marked researched requires a recorded v1 scorecard.');
+        Require(LQueuedPairs <= 0,
+          'Claim ' + LRow.Id + ' marked researched still has queued original publications.');
       end;
 
       LEffective := EffectiveResearchStatus(LRow.Status, LReviewStatus, LVerdict,
-        LRow.LabClinicalChecked, LRow.CulturalChecked, LRow.ScorecardChecked);
+        LRow.LabClinicalChecked, LRow.CulturalChecked, LRow.ScorecardChecked, LQueuedPairs);
       if LEffective = 'researched' then
       begin
         Inc(Result.Researched);
@@ -419,6 +469,7 @@ begin
   finally
     LScorecardIndex.Free;
     LLines.Free;
+    LQueuedPairsByClaim.Free;
     LSeen.Free;
     LConfidences.Free;
     LVerdicts.Free;
