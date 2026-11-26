@@ -140,8 +140,44 @@ begin
   Inc(GPassed);
 end;
 
+procedure RunReaderTests;
+const
+  CMeta = '<meta name="citation_pmid" content="1234">' +
+    '<meta name="citation_doi" content="10.1234/example">' +
+    '<meta name="citation_title" content="A dietary trial">' +
+    '<meta name="citation_abstract_html_url" content="https://pmc.ncbi.nlm.nih.gov/articles/PMC4321/">';
+var
+  LHtml: String;
+  LRes: TPmcScreenResult;
+begin
+  LHtml := CMeta + '<article lang="en"><section class="body main-article-body">' +
+    '<section><p>The study used curcumin and olive oil. ' + MakePad(450) + '</p></section>' +
+    '<section id="ref-list1" class="ref-list"><p>Salmon A. Reference title.</p></section>' +
+    '</section></article><p>Footer broccoli</p>';
+  LRes := ScreenPmcReaderHtml(LHtml, 'PMC4321', '1234', '10.1234/Example', 'turmeric');
+  Check((LRes.Kind = pkBodyMatch) and (LRes.BodyHits = 1), 'Reader body retains constituent aliases');
+  Inc(GPassed);
+  LRes := ScreenPmcReaderHtml(LHtml, 'PMC4321', '1234', '', 'salmon');
+  Check((LRes.Kind = pkZeroBodyCollision) and (LRes.BodyHits = 0) and (LRes.MetaBackHits = 1),
+    'Reader references are held outside the body');
+  Inc(GPassed);
+  LRes := ScreenPmcReaderHtml(LHtml, 'PMC4321', '1234', '', 'broccoli');
+  Check((LRes.Kind = pkZeroBodyCollision) and (LRes.MetaBackHits = 0), 'Reader footer is excluded');
+  Inc(GPassed);
+  Check((ScreenPmcReaderHtml(LHtml, 'PMC4322', '1234', '', 'turmeric').Kind = pkPmidMismatch) and
+    (ScreenPmcReaderHtml(LHtml, 'PMC4321', '1235', '', 'turmeric').Kind = pkPmidMismatch) and
+    (ScreenPmcReaderHtml(LHtml, 'PMC4321', '1234', '10.1234/crossed', 'turmeric').Kind = pkPmidMismatch),
+    'Reader identity mismatches remain on hold');
+  Inc(GPassed);
+  SetLength(LHtml, Pos('</article>', LHtml) - 1);
+  Check(ScreenPmcReaderHtml(LHtml, 'PMC4321', '1234', '', 'turmeric').Kind = pkNoBody,
+    'A truncated reader cannot supply original scope');
+  Inc(GPassed);
+end;
+
 begin
   SetMultiByteConversionCodePage(CP_UTF8);
   RunTests;
-  WriteLn('PmcScreenTests passed (', GPassed, '/12).');
+  RunReaderTests;
+  WriteLn('PmcScreenTests passed (', GPassed, '/17).');
 end.

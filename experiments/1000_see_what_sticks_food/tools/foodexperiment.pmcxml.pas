@@ -38,6 +38,8 @@ function ExtractArticleTitle(const AXml: String): String;
 function StripXmlTags(const AXml: String): String;
 function IngredientTermsFor(const AIngredient: String): TArray<String>;
 function ScreenPmcJatsXml(const AXml, AExpectedPmid, AIngredient: String): TPmcScreenResult;
+function ScreenPmcReaderHtml(const AHtml, AExpectedPmcid, AExpectedPmid,
+  AExpectedDoi, AIngredient: String): TPmcScreenResult;
 
 implementation
 
@@ -618,6 +620,86 @@ begin
       Result.BodySnippet := LSnipTitleAbs;
     end;
   end;
+end;
+
+function ReaderMeta(const AHead, AName: String): String;
+var
+  LPrefix: String;
+  LStart, LEnd: Integer;
+begin
+  Result := '';
+  LPrefix := '<meta name="' + AName + '" content="';
+  LStart := Pos(LPrefix, AHead);
+  if LStart = 0 then
+    Exit;
+  Inc(LStart, Length(LPrefix));
+  LEnd := PosEx('"', AHead, LStart);
+  if LEnd > LStart then
+    Result := Copy(AHead, LStart, LEnd - LStart);
+end;
+
+function ScreenPmcReaderHtml(const AHtml, AExpectedPmcid, AExpectedPmid,
+  AExpectedDoi, AIngredient: String): TPmcScreenResult;
+const
+  CBodyStart = '<section class="body main-article-body">';
+  CArticleUrl = 'https://pmc.ncbi.nlm.nih.gov/articles/';
+var
+  LHead, LArticle, LTitle, LPmid, LFront, LBack, LScreenInput: String;
+  LArticleStart, LNext, LBodyStart, LRefs: Integer;
+begin
+  Result := Default(TPmcScreenResult);
+  LArticleStart := Pos('<article lang="en">', AHtml);
+  if LArticleStart = 0 then
+    Exit;
+  if not FindTagInner(AHtml, 'article', LArticleStart, LArticle, LNext) then
+    Exit;
+  if Pos('<article', LArticle) > 0 then
+  begin
+    Result.Kind := pkCollectionHold;
+    Exit;
+  end;
+
+  LHead := Copy(AHtml, 1, LArticleStart - 1);
+  LPmid := ReaderMeta(LHead, 'citation_pmid');
+  Result.XmlPmid := LPmid;
+  if (AExpectedPmcid = '') or (AExpectedPmid = '') or
+     (LPmid <> AExpectedPmid) or not SameText(ReaderMeta(LHead, 'citation_abstract_html_url'),
+       CArticleUrl + AExpectedPmcid + '/') or
+     ((AExpectedDoi <> '') and not SameText(ReaderMeta(LHead, 'citation_doi'), AExpectedDoi)) then
+  begin
+    Result.Kind := pkPmidMismatch;
+    Exit;
+  end;
+
+  LTitle := ReaderMeta(LHead, 'citation_title');
+  if LTitle = '' then
+    Exit;
+  LBodyStart := Pos(CBodyStart, LArticle);
+  if LBodyStart = 0 then
+    Exit;
+  LFront := Copy(LArticle, 1, LBodyStart - 1);
+  LArticle := Copy(LArticle, LBodyStart + Length(CBodyStart), MaxInt);
+  if Pos('<p', LArticle) = 0 then
+    Exit;
+  LRefs := Pos('class="ref-list"', LArticle);
+  LBack := '';
+  if LRefs > 0 then
+  begin
+    LRefs := RPos('<section', Copy(LArticle, 1, LRefs - 1));
+    if LRefs > 0 then
+    begin
+      LBack := Copy(LArticle, LRefs, MaxInt);
+      SetLength(LArticle, LRefs - 1);
+    end;
+  end;
+
+  { This structure supplies the common term matcher. The saved HTML remains the original. }
+  LScreenInput := '<article><front><article-meta><article-id pub-id-type="pmid">' +
+    LPmid + '</article-id><article-title>' + LTitle + '</article-title>' +
+    '<abstract>' + ReaderMeta(LHead, 'citation_abstract') + '</abstract>' +
+    LFront + '</article-meta></front><body>' + LArticle + '</body><back>' +
+    LBack + '</back></article>';
+  Result := ScreenPmcJatsXml(LScreenInput, AExpectedPmid, AIngredient);
 end;
 
 end.

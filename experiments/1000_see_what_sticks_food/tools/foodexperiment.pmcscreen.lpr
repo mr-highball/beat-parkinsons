@@ -77,28 +77,27 @@ begin
   Result := StringReplace(Result, #10, ' ', [rfReplaceAll]);
 end;
 
-procedure RunScreen(const AQueuePath, AXmlDir, AOutProposalsPath, AOutReportPath: String);
+procedure RunScreen(const AQueuePath, AXmlDir, AOutProposalsPath, AOutReportPath,
+  AReaderDir: String);
 var
   LFile: TextFile;
   LBuf: array[0..65535] of Byte;
   LLine: UTF8String;
   LHeader, LFields: TFields;
-  CId, CSource, CIng, CSym, CPmid, CPmcid: Integer;
-  LId, LSource, LIng, LSym, LPmid, LPmcid, LXmlPath, LXml, LRationale: String;
+  CId, CSource, CIng, CSym, CPmid, CPmcid, CDoi: Integer;
+  LId, LSource, LIng, LSym, LPmid, LPmcid, LInputPath, LContent, LRationale: String;
   LRes: TPmcScreenResult;
   LProposals, LReport: TStringBuilder;
-  LXmlCache: TStringList;
-  LCacheIdx: Integer;
-  LTotalXml, LZeroBody, LBodyMatch, LNoBody, LMismatch, LCollection: Integer;
+  LReader: Boolean;
+  LTotalXml, LTotalReader, LZeroBody, LBodyMatch, LNoBody, LMismatch, LCollection: Integer;
 begin
   Require(FileExists(AQueuePath), 'Missing context queue: ' + AQueuePath);
   Require(DirectoryExists(AXmlDir), 'Missing XML directory: ' + AXmlDir);
+  Require((AReaderDir = '') or DirectoryExists(AReaderDir),
+    'Missing reader directory: ' + AReaderDir);
 
   LProposals := TStringBuilder.Create;
   LReport := TStringBuilder.Create;
-  LXmlCache := TStringList.Create;
-  LXmlCache.Sorted := True;
-  LXmlCache.CaseSensitive := False;
   AssignFile(LFile, AQueuePath);
   SetTextBuf(LFile, LBuf);
   Reset(LFile);
@@ -112,11 +111,16 @@ begin
     CSym := ColIdx(LHeader, 'symptom');
     CPmid := ColIdx(LHeader, 'pmid');
     CPmcid := ColIdx(LHeader, 'pmcid');
+    if AReaderDir <> '' then
+      CDoi := ColIdx(LHeader, 'doi')
+    else
+      CDoi := -1;
 
     LProposals.Append(CProposalHeader).Append(#10);
     LReport.Append(CReportHeader).Append(#10);
 
     LTotalXml := 0;
+    LTotalReader := 0;
     LZeroBody := 0;
     LBodyMatch := 0;
     LNoBody := 0;
@@ -140,13 +144,18 @@ begin
       begin
         Continue;
       end;
-      LXmlPath := IncludeTrailingPathDelimiter(AXmlDir) + LPmcid + '.xml';
-      if not FileExists(LXmlPath) then
+      LInputPath := IncludeTrailingPathDelimiter(AXmlDir) + LPmcid + '.xml';
+      LReader := False;
+      if not FileExists(LInputPath) then
       begin
-        Continue;
+        if (AReaderDir = '') or (Length(LFields) <= CDoi) then
+          Continue;
+        LInputPath := IncludeTrailingPathDelimiter(AReaderDir) + LPmcid + '.html';
+        if not FileExists(LInputPath) then
+          Continue;
+        LReader := True;
       end;
 
-      Inc(LTotalXml);
       LId := Trim(LFields[CId]);
       LSource := Trim(LFields[CSource]);
       LIng := Trim(LFields[CIng]);
@@ -157,16 +166,18 @@ begin
         LPmid := Copy(LSource, 6, MaxInt);
       end;
 
-      if LXmlCache.Find(LPmcid, LCacheIdx) then
+      LContent := ReadUtf8(LInputPath);
+      if LReader then
       begin
-        LXml := TStringList(LXmlCache.Objects[LCacheIdx]).Text;
+        Inc(LTotalReader);
+        LRes := ScreenPmcReaderHtml(LContent, LPmcid, LPmid, Trim(LFields[CDoi]), LIng);
       end
       else
       begin
-        LXml := ReadUtf8(LXmlPath);
+        Inc(LTotalXml);
+        LRes := ScreenPmcJatsXml(LContent, LPmid, LIng);
       end;
 
-      LRes := ScreenPmcJatsXml(LXml, LPmid, LIng);
       case LRes.Kind of
         pkNoBody: Inc(LNoBody);
         pkPmidMismatch: Inc(LMismatch);
@@ -174,27 +185,31 @@ begin
         pkZeroBodyCollision:
         begin
           Inc(LZeroBody);
-          if LRes.MetaBackHits > 0 then
+          { Reader output is a triage report. Human review establishes full source scope. }
+          if not LReader then
           begin
-            LRationale := 'Verified full-text NCBI PMC JATS XML (' + LPmcid +
-              ') contains zero mentions of ' + LIng +
-              ' or its botanical/constituent aliases in title, abstract, or body (' +
-              IntToStr(LRes.BodyChars) + ' body chars); lexical hit (' +
-              LRes.MatchedTerms + ') occurs strictly in front metadata or back references.';
-          end
-          else
-          begin
-            LRationale := 'Verified full-text NCBI PMC JATS XML (' + LPmcid +
+            if LRes.MetaBackHits > 0 then
+            begin
+              LRationale := 'Verified full-text NCBI PMC JATS XML (' + LPmcid +
+                ') contains zero mentions of ' + LIng +
+                ' or its botanical/constituent aliases in title, abstract, or body (' +
+                IntToStr(LRes.BodyChars) + ' body chars); lexical hit (' +
+                LRes.MatchedTerms + ') occurs strictly in front metadata or back references.';
+            end
+            else
+            begin
+              LRationale := 'Verified full-text NCBI PMC JATS XML (' + LPmcid +
               ') contains zero mentions of ' + LIng +
               ' or its botanical/constituent aliases across title, abstract, or body (' +
               IntToStr(LRes.BodyChars) + ' body chars).';
+            end;
+            LProposals.Append(LId).Append(#9)
+              .Append(LSource).Append(#9)
+              .Append('excluded').Append(#9)
+              .Append('full_text').Append(#9)
+              .Append('https://pmc.ncbi.nlm.nih.gov/articles/').Append(LPmcid).Append('/').Append(#9)
+              .Append(SanitizeCell(LRationale)).Append(#10);
           end;
-          LProposals.Append(LId).Append(#9)
-            .Append(LSource).Append(#9)
-            .Append('excluded').Append(#9)
-            .Append('full_text').Append(#9)
-            .Append('https://pmc.ncbi.nlm.nih.gov/articles/').Append(LPmcid).Append('/').Append(#9)
-            .Append(SanitizeCell(LRationale)).Append(#10);
         end;
         pkBodyMatch: Inc(LBodyMatch);
       end;
@@ -228,10 +243,10 @@ begin
       ' body_match=', LBodyMatch,
       ' collection_hold=', LCollection,
       ' pmid_mismatch=', LMismatch,
-      ' no_body=', LNoBody);
+      ' no_body=', LNoBody,
+      ' reader_pairs=', LTotalReader);
   finally
     CloseFile(LFile);
-    LXmlCache.Free;
     LReport.Free;
     LProposals.Free;
   end;
@@ -240,13 +255,13 @@ end;
 begin
   SetMultiByteConversionCodePage(CP_UTF8);
   try
-    if ParamCount <> 4 then
+    if not (ParamCount in [4, 5]) then
     begin
       WriteLn(StdErr,
-        'Usage: foodexperiment.pmcscreen <context-queue.tsv> <xml-dir> <out-proposals.tsv> <out-report.tsv>');
+        'Usage: foodexperiment.pmcscreen <context-queue.tsv> <xml-dir> <out-proposals.tsv> <out-report.tsv> [reader-html-dir]');
       Halt(1);
     end;
-    RunScreen(ParamStr(1), ParamStr(2), ParamStr(3), ParamStr(4));
+    RunScreen(ParamStr(1), ParamStr(2), ParamStr(3), ParamStr(4), ParamStr(5));
   except
     on LException: Exception do
     begin
