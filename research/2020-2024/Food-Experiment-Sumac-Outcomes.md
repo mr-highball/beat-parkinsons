@@ -35,3 +35,9 @@ Jarrar, Alatrash and Amer surveyed 100 herbal medicine practitioners in the West
 ## Generic dizziness in the combined sumac and pomegranate trial
 
 Table 4 reports nonspecific dizziness in acute-illness outpatients. Among men, the combination arm changed from 55/68 to 1/68, and standard care from 33/52 to 3/51. The table prints 8.5% beside 17 of 19 women and a post-treatment control denominator of three despite 39 at baseline. It gives no posture trigger, separate sumac-only contrast, or Parkinson comparison. Recovery and baseline differences complicate the trends. [Local article, Table 4](Source-Text/PMC9729036.txt) · [Published original](https://doi.org/10.1155/2022/6850342)
+
+### Primary-table provenance
+
+Table 4 gives mean BDI-II change −10.41 (SD 11.08) with sumac fruit powder and −9.74 (SD 8.50) with placebo, between-group p=.78. Both groups followed calorie restriction. The trial does not establish clinical equivalence or estimate Parkinson-specific depression.
+
+- [Full author-copy scope and duplicate baseline entries](Source-Text/2020-DOI10-1002-ptr-6737-Sumac-Powder-and-Depression.txt)

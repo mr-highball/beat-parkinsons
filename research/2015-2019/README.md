@@ -1410,3 +1410,11 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [PMID:31365862 | Distinct Connectivity and Functionality of Aldehyde Dehydrogenase 1a1-Positive Nigrostriatal Dopaminergic Neurons in Motor Learning](Source-Text/2019-PMC6741442-Round1-Source-Scope.txt)
 
 - [Parkinson patient-use survey, coconut oil](Cultural-and-Experiential/Local-Knowledge/2017-PMC5664950-Coconut-Oil-Parkinson-Use-Survey.txt)
+
+- [PMID:25810874 | Ellagic acid improves hyperalgesia and cognitive deficiency in 6-hydroxidopamine induced rat model of Parkinson’s disease](Source-Text/2015-PMC4366741-Round1-Source-Scope.txt)
+- [PMID:27069379 | Reward and decision processes in the brains of humans and nonhuman primates](Source-Text/2016-PMC4826770-Round1-Source-Scope.txt)
+- [PMID:27736744 | Rodent models in neuroscience research: is it a rat race?](Source-Text/2016-PMC5087838-Round1-Source-Scope.txt)
+- [PMID:28097071 | The fishing and natural mortality of large, piscivorous Bull Trout and Rainbow Trout in Kootenay Lake, British Columbia (2008–2013)](Source-Text/2017-PMC5228508-Round1-Source-Scope.txt)
+- [PMID:29031500 | Transcription and Signaling Regulators in Developing Neuronal Subtypes of Mouse and Human Enteric Nervous System](Source-Text/2018-PMC6381388-Round1-Source-Scope.txt)
+- [PMID:30328585 | Low-grade inflammation aggravates rotenone neurotoxicity and disrupts circadian clock gene expression in rats](Source-Text/2018-PMC6543539-Round1-Source-Scope.txt)
+- [PMID:29987760 | Abstracts of 20th Annual ASENT Meeting](Source-Text/2018-PMC6095775-Round1-Original-Scope.txt)

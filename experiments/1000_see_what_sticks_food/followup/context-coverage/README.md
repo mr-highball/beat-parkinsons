@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The final-pair and collection audit resolved 288 exact checks across 156 originals. It leaves 25,736 checks across 19,354 publication keys and 293 claims. [Verified collections and final pairs](../final-pairs-and-citation-trails-nov26/README.md)
+
 The priority-original audit resolved 230 exact checks across 124 originals. It leaves 26,024 checks across 19,510 publication keys and 299 claims. [Priority originals and clinical follow-through](../priority-and-shared-originals-nov26/README.md)
 
 The publication-first audit resolved 213 exact checks across 98 originals. It leaves 26,254 checks across 19,634 publication keys and 300 claims. [Verified originals and focused claim audit](../catalog-and-final-sources-nov26/README.md)

@@ -863,3 +863,16 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 
 - [PMID:25249938 | Transcription factors Foxa1 and Foxa2 are required for adult dopamine neurons maintenance](Source-Text/2014-PMC4158790-Round1-Source-Scope.txt)
 - [DOI:10.1089/jwh.2011.ab02 | Abstracts from the NIH Office of Research on Women's Health Eighth Annual Interdisciplinary Women's Health Research Symposium](Source-Text/2011-PMC3197080-Round1-Original-Scope.txt)
+
+- [PMID:20700524 | Dual Beneficial Effects of (-)-Epigallocatechin-3-Gallate on Levodopa Methylation and Hippocampal Neurodegeneration: In Vitro and In Vivo Studies](Source-Text/2010-PMC2916818-Round1-Source-Scope.txt)
+- [PMID:22482072 | Genomics of Dementia: APOE- and CYP2D6-Related Pharmacogenetics](Source-Text/2012-PMC3312254-Round1-Source-Scope.txt)
+- [PMID:22654803 | Male/Female Differences in Neuroprotection and Neuromodulation of Brain Dopamine](Source-Text/2011-PMC3356083-Round1-Source-Scope.txt)
+- [PMID:22546615 | The metabotropic glutamate receptor 8 agonist (S)-3,4-DCPG reverses motor deficits in prolonged but not acute models of Parkinson’s disease](Source-Text/2012-PMC3432150-Round1-Source-Scope.txt)
+- [PMID:23420159 | A new cultural adaptation of the University of Pennsylvania Smell Identification Test](Source-Text/2013-PMC3552441-Round1-Source-Scope.txt)
+- [PMID:23414245 | Effectiveness of a calcium sodium phosphosilicate containing prophylaxis paste in reducing dentine hypersensitivity immediately and 4 weeks after a single application: a double-blind randomized controlled trial](Source-Text/2013-PMC3675645-Round1-Source-Scope.txt)
+- [PMID:24367722 | ALS and Oxidative Stress: The Neurovascular Scenario](Source-Text/2013-PMC3866720-Round1-Source-Scope.txt)
+- [PMID:24041330 | The process of spoken word recognition in the face of signal degradation](Source-Text/2013-PMC3946825-Round1-Source-Scope.txt)
+- [PMID:24934292 | Semantic trouble sources and their repair in conversations affected by Parkinson's disease](Source-Text/2014-PMC4280885-Round1-Source-Scope.txt)
+- [PMID:25532813 | Discriminating Simulated Vocal Tremor Source Using Amplitude Modulation Spectra](Source-Text/2014-PMC4361255-Round1-Source-Scope.txt)
+
+- [Original Japanese choking series, O-220](Source-Text/2010-JJSPEN-O220-Choking-Diagnoses-and-Foods.txt)

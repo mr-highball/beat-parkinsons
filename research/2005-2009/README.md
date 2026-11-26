@@ -547,3 +547,7 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [PMID:19802812 | Assessment of Parkinson Disease Manifestations](Source-Text/2009-PMC2897716-Round1-Source-Scope.txt)
 - [PMID:18702696 | Olfactory deficits in mice overexpressing human wildtype α-synuclein](Source-Text/2008-PMC3108548-Round1-Source-Scope.txt)
 - [PMID:18061085 | Fever of Unknown Origin Due to Zoonoses](Source-Text/2007-PMC7135411-Round1-Source-Scope.txt)
+
+- [PMID:18955341 | Second World Ayurveda Congress (Theme: Ayurveda for the Future)—Inaugural Address: Part III](Source-Text/2008-PMC2586317-Round1-Source-Scope.txt)
+
+- [Ayurveda congress account of traditional turmeric wound care](Cultural-and-Experiential/Local-Knowledge/2008-PMC2586317-Turmeric-and-Ayurveda-Wound-Care-Account.txt)

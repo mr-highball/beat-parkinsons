@@ -1,0 +1,10 @@
+# Remaining source and result gaps
+
+The following access results preserve publication identity and reviewed depth. A complete main body or member roster was required for collection dispositions.
+
+- The 2017 IAGG original PMC6183407 remains at two verified pages versus 1,452 listed pages. The NCATS News Briefs article bundle PMC10846203 and athletic-training bundle PMC4538722 have PDF pointers but no verified complete article or member scans. PMC1765683 and the chromatography collection PMC7130297 remain PDF-only holds.
+- Four poster collections retain their exact passes. FEBS PMC7163982 and PMC7163937 show publisher phasing across pages 99–437 and 65–784 respectively. PMC10722649 covers SA111–SA208 and PMC6863360 covers S78–S187. Metadata and individual previews cannot support whole-collection exclusions.
+- The 2021 DGPT publisher original is indexed across S1–S61, with basil-constituent and coffee-related toxicology members. The regular PDF retrieval and complete member parity remain open. The 2017 ASENT original at DOI 10.3727/096368917X695146 has a tdTomato reporter in one member. It is distinct from the 2018 collection verified in this batch. EAN PMC12181690 and Pharmacology 2018 PMC6637035 still lack inspected original member bodies.
+- For 0324, the institutional Southampton item 493616 and its accepted figures attachment supplied a more specific publisher route. Both currently require authorization. The separate journal supplement records comparator composition, and group-level gait and balance findings remain unverified.
+- For 0410, the Tao cranberry rat paper PMID 40442918 remains abstract-only in the accessible routes and no cooked culinary preparation or independent numerical motor outcomes are verified. NCT07453537 is still recruiting.
+- For 0244, the publisher copy of O-220 gives pooled food and diagnosis data. No case-linked follow-up was located. For 0682, the separate 2019 Golshani oral sumac-oil abstract reports a forced-swim signal. The full original arm results and methods remain unavailable.

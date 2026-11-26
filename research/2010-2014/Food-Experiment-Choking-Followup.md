@@ -50,3 +50,9 @@ Luchesi and colleagues’ report first appeared online in 2014 and in the Januar
 ## 2014 early Parkinson swallowing imaging in Lille
 
 Danel Buhl and colleagues reported 62 people with Parkinson’s of less than five years’ duration in the December 2014 P195 conference abstract. None reported swallowing problems. Initial imaging showed oral-phase abnormalities in 69 percent, pharyngeal-phase abnormalities in 24 percent, and aspiration in 5 percent (95 percent CI 0–10 percent). In the 31 with two examinations, the earliest-phase impairment increased from 17 to 40 percent at two years. The publicly displayed abstract and paired table give no named food or bolus composition. The publisher lists a subscription for the PDF. A March 2012 report from several of the same investigators has a public issue entry, and a September 2016 paper identifies cold water and dilute barium. Participant overlap among these reports is unresolved. [2014 primary conference abstract and table](https://www.em-consulte.com/article/948164/tableaux/p195-etude-prospective-des-troubles-de-la-deglutit) · [2012 primary report metadata](https://doi.org/10.1016/j.neurol.2012.01.279) · [2016 full publication and bolus protocol](../2015-2019/Food-Experiment-Choking-Followup.md#cold-tap-water-and-barium-in-early-parkinson-in-lille)
+
+### Official original link and unresolved food attribution
+
+The series identifies 15 acute choking events. Five patients had Parkinson disease and one implicated food was shiitake. Chronic aspiration pneumonia was excluded. The pooled results do not show which patient had shiitake, whether the mushroom was roasted, or a symptom difference attributable to it.
+
+- [Dated original source scope](Source-Text/2010-JJSPEN-O220-Choking-Diagnoses-and-Foods.txt)
