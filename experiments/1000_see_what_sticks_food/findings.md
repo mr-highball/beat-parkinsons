@@ -358,6 +358,8 @@ The November 26 clinical-outcome audit reconciled 264 original memberships. The 
 
 The November 26 shared-source audit closed 166 of 175 selected original memberships. Partial article and proceedings routes remain open. The corn-oil comparison distinguishes participation agreement from group allocation, and the structured grapeseed registry corrects the prior crossover description. No verdict changed. [Source and endpoint audit](followup/final-originals-and-formulations-nov26/README.md)
 
+The November 26 priority original audit checked 154 authenticated bodies. Seven source comparisons remain related context. The oldest and newest cited saffron preparations remain distinct, and the older-adult cohort estimate concerns total vegetables. The high-priority original access gaps remain open. [Source and endpoint audit](followup/priority-originals-and-endpoints-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

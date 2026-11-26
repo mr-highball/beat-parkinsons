@@ -3,3 +3,7 @@
 The 2015–2019 fibromyalgia and burning-mouth trials compare extracted stigma or isolated crocin with active drugs. Their symptom-level measurements help evaluate the outcome trail. They give inconclusive between-group contrasts and leave untreated effects open. The later Parkinson trial compares fixed-dose ground Sargol stigma with placebo and provides closer preparation and population matches for fatigue and depressive symptoms. Whole-food use and independent replication remain open. [Earlier and later comparisons](../Food-Experiment-Round-1-Saffron-Originals-Nov22.md)
 
 The prospective fibromyalgia record lists fatigue as primary, while the published objectives place their emphasis on depression, fibromyalgia impact and pain. The separate Parkinson trial's original registration omitted the standalone fatigue scale. These records make early outcome definitions and archived version history important to interpretation across both periods. [Fibromyalgia registration](../../2015-2019/Source-Text/Trials/IRCT201604261556N91.txt) · [Parkinson registration history](../Food-Experiment-Saffron-Registry-History.md)
+
+## Historical formula names and ingredient changes
+
+A [published historical study](../Cultural-and-Experiential/Traditional-Practices/2026-Culpeper-Rufus-Saffron-Pill-History.txt) records saffron in the 1653 London version of a mixture attributed to Rufus. The historian identifies a similar 1914 preparation without saffron. The dated sources support comparing ingredients by edition. They supply no Parkinson outcome or independent saffron response.
