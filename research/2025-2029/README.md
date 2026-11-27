@@ -2543,3 +2543,7 @@ Full original checks distinguish culinary exposures from publication dates, figu
 - [Canola and MCT crossover registration](Source-Text/Trials/UMIN000063699.txt)
 
 - [Canola fatigue and open outcome records](Food-Experiment-Canola-and-Outcome-Access-Nov27.md)
+
+## Round 1 focused outcome source
+
+- [Parandin, Cardamom oil and depression-related behaviors in mice](Source-Text/2026-Parandin-Cardamom-Oil-Reserpine-Abstract.txt) — journal abstract and original-access limits.

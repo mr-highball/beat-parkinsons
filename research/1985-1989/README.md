@@ -149,3 +149,7 @@ A paired-data sensitivity note in the [lemongrass sleep study](Source-Text/1986-
 ## November 27 PDF recovery and whole-original scope
 
 - [PMID:3577214 | Occupational neurology.](Source-Text/1987-PMC2590302-Round1-Original-Scope.txt)
+
+## Round 1 related ingredient context
+
+- [Australian CR 40, orange juice in study drinks](Source-Text/1986-Chesher-Orange-Peppermint-Alcohol-Vehicle.txt)
