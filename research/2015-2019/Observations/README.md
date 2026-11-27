@@ -691,3 +691,5 @@ The Zanthoxylum review links fatigue to a whole traditional formula, and the mat
 - [Round 1 original scope and pain comparison review](2015-Cranberry-Depression-Source-Access-Nov27.md).
 
 - [November 27 original scope review](2017-2019-Fennel-and-Cardamom-Outcome-Scope-Nov27.md).
+
+- [Proceedings food contexts and cassia outcomes](ANA-Culinary-Context-and-Cassia-Endpoints-Nov27.md)

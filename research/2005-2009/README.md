@@ -672,3 +672,26 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 ## November 27 shared-accession and archive recovery audit
 
 - [PMID:15738444 | Artificial gametes: new paths to parenthood?](Source-Text/2005-PMC1734101-Round1-Original-Scope.txt)
+
+## November 27 accession and conference-member scope
+
+- [PMID:16393669 | Water Manganese Exposure and Children’s Intellectual Function in Araihazar, Bangladesh](Source-Text/2005-PMC1332667-Round1-Original-Scope.txt)
+- [PMID:16846510 | Schizophrenia proteomics: biomarkers on the path to laboratory medicine?](Source-Text/2006-PMC1538632-Round1-Original-Scope.txt)
+- [PMID:16899117 | Frontotemporal dementia and parkinsonism linked to chromosome 17 (FTDP-17)](Source-Text/2006-PMC1563447-Round1-Original-Scope.txt)
+- [PMID:17506226 | Hypertension, cognitive decline, and dementia: an epidemiological perspective](Source-Text/2007-PMC3181842-Round1-Original-Scope.txt)
+- [PMID:17726911 | Psychiatric manifestations of neurologic disease: where are we headed?](Source-Text/2007-PMC2687521-Round1-Original-Scope.txt)
+- [PMID:18225464 | The challenge of supporting care for dementia in primary care](Source-Text/2007-PMC2686326-Round1-Original-Scope.txt)
+- [PMID:18568128 | Mild cognitive impairment in Parkinson’s disease: the challenge and the promise](Source-Text/2005-PMC2426819-Round1-Original-Scope.txt)
+- [PMID:19013527 | Low dose rotenone treatment causes selective transcriptional activation of cell death related pathways in dopaminergic neurons in vivo](Source-Text/2008-PMC3731054-Round1-Original-Scope.txt)
+- [PMID:19142633 | FDG-PET changes in brain glucose metabolism from normal cognition to pathologically verified Alzheimer's disease](Source-Text/2009-PMC2774795-Round1-Original-Scope.txt)
+- [PMID:19328199 | The Cybrid Model of Sporadic Parkinson’s Disease](Source-Text/2009-PMC2735256-Round1-Original-Scope.txt)
+- [PMID:19385990 | Comparing the role of the anterior cingulate cortex and 6-hydroxydopamine nucleus accumbens lesions on operant effort-based decision making](Source-Text/2009-PMC2954046-Round1-Original-Scope.txt)
+- [PMID:19439368 | CD4+ T cells for the pathobiology of neurodegenerative disorders](Source-Text/2009-PMC2696588-Round1-Original-Scope.txt)
+- [PMID:19580914 | Persistent cognitive dysfunction after traumatic brain injury: A dopamine hypothesis](Source-Text/2009-PMC2806224-Round1-Original-Scope.txt)
+- [PMID:19657332 | The Neural Circuitry of Executive Functions in Healthy Subjects and Parkinson's Disease](Source-Text/2009-PMC3055448-Round1-Original-Scope.txt)
+- [PMID:19712440 | Upregulation of miRNA hsa-miR-342-3p in experimental and idiopathic prion disease](Source-Text/2009-PMC2743691-Round1-Original-Scope.txt)
+- [PMID:19736349 | Scientific and Ethical Issues Related to Deep Brain Stimulation for Disorders of Mood, Behavior and Thought](Source-Text/2009-PMC2753479-Round1-Original-Scope.txt)
+- [PMID:19850077 | Motor Control and Aging: Links to Age-Related Brain Structural, Functional, and Biochemical Effects](Source-Text/2009-PMC2838968-Round1-Original-Scope.txt)
+- [PMID:19859550 | Quantitative Assessment of Stereotyped and Challenged Locomotion after Lesion of the Striatum: A 3D Kinematic Study in Rats](Source-Text/2009-PMC2762605-Round1-Original-Scope.txt)
+- [PMID:20012385 | From Manganism to Manganese-Induced Parkinsonism: A Conceptual Model Based on the Evolution of Exposure](Source-Text/2009-PMC12409775-Round1-Original-Scope.txt)
+- [PMID:20038497 | Cholinesterase inhibitors in Alzheimer's disease and Lewy body spectrum disorders: the emerging pharmacogenetic story](Source-Text/2009-PMC3525201-Round1-Original-Scope.txt)

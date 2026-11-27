@@ -357,3 +357,7 @@ The [Finley feeding study](Source-Text/2003-PMID12949376-Finley-Corn-Oil-and-Neu
 - [PMID:11834460 | The three modern faces of mercury.](Source-Text/2002-PMC1241144-Round1-Original-Scope.txt)
 - [PMID:12926410 | NIEHS News August 2003](Source-Text/2003-PMC1241626-Round1-Original-Scope.txt)
 - [PMID:15461804 | Twilight of a hero](Source-Text/2004-PMC545585-Round1-Original-Scope.txt)
+
+## November 27 accession and conference-member scope
+
+- [PMID:22033600 | Behavioral disturbances in Parkinson's disease](Source-Text/2004-PMC3181807-Round1-Original-Scope.txt)

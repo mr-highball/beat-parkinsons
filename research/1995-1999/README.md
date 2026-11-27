@@ -247,3 +247,7 @@ The [BMJ February 1998 issue review](../../experiments/1000_see_what_sticks_food
 ## November 27 PDF recovery and whole-original scope
 
 - [PMID:10234030 | The Stimulatory Action and the Development of Tolerance to Caffeine Is Associated with Alterations in Gene Expression in Specific Brain Regions](Source-Text/1999-PMC6782739-Round1-Original-Scope.txt)
+
+## November 27 accession and conference-member scope
+
+- [PMID:9539013 | Methylcyclopentadienyl manganese tricarbonyl: health risk uncertainties and research directions.](Source-Text/1998-PMC1533284-Round1-Original-Scope.txt)
