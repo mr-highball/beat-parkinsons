@@ -370,6 +370,8 @@ The resumed audit closed 127 source checks. The cinnamon pain scorecard records 
 
 The recovered collections audit closed 443 original checks. Five hypotheses involving lentils, canola oil and saffron reached the researched Unknown status. Their original exposure, preparation and endpoint limits are recorded in the associated scorecards. [Source and endpoint audit](followup/recovered-collections-nov26/README.md)
 
+The clinical context audit closed 354 original checks. The black-tea bradykinesia claim completed its source audit with its existing limited Maybe True rating. Five claims involving walnut oil, flaxseed oil and dried basil completed the source audit with Unknown status. [Source and endpoint audit](followup/clinical-context-and-open-originals-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

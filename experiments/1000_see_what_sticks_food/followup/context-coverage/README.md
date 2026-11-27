@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The clinical context audit closed 354 original checks. 20956 checks remain across 16589 publication keys and 273 claims. [Clinical context and original audit](../clinical-context-and-open-originals-nov26/README.md)
+
 The recovered collections audit closed 443 original checks. 21310 checks remain across 16935 publication keys and 279 claims. [Recovered source audit](../recovered-collections-nov26/README.md)
 
 The resumed original-source audit closed 127 checks. 21753 checks remain across 17199 publication keys and 284 claims. [Source-level audit](../resumed-originals-and-endpoints-nov26/README.md)
