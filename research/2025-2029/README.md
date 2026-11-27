@@ -2497,3 +2497,5 @@ Full original checks distinguish culinary exposures from publication dates, figu
 - [PMID:38767482 | Multifaceted superoxide dismutase 1 expression in amyotrophic lateral sclerosis patients: a rare occurrence?](Source-Text/2025-PMC11246149-Round1-Original-Scope.txt)
 
 - [2026 CIRCUS mixed-produce outcome report](Source-Text/2026-Circulation-TH916-CIRCUS-Vascular-and-Lipid-Outcomes.txt)
+
+- [PSMF1 revised preprint and exposure scope](Source-Text/2025-PMC11326324-PSMF1-Preprint-V2-Corn-Oil-Vehicle.txt)

@@ -20,3 +20,5 @@
 - A contemporary historical article places blackberry jam in home treatment of sore throats. Its separate account of bramble root pertains to a different preparation, and there is no patient outcome. [Dated evidence](../Food-Experiment-Blackberry-Voice.md)
 
 The 1892 editor records a kale-or-broth dream custom. The reported dream content is distinct from sleep movement. [Cold kale or broth in a northern English dream-divination rhyme](../Cultural-and-Experiential/Ceremonial-Accounts/1892-Northall-Kale-or-Broth-Dream-Divination.txt)
+
+- [Heravi translation on fresh coriander juice](Coriander-Juice-and-Attributed-Alertness-Effects-Nov27.md)

@@ -197,3 +197,5 @@ See the [Round 1 tea, constipation and original-source review](../2025-2029/Food
 - [PMID:2017263 | German Society for Pharmacology and Toxicology. Abstracts of the 32nd spring meeting, 12-15 March 1991, Mainz.](Source-Text/1991-PMC7100642-Round1-Original-Scope.txt)
 - [PMID:7957360 | Abstracts of the European Association of Nuclear Medicine Congress. 20-24 August 1994, Düsseldorf, Germany.](Source-Text/1994-PMC7102265-Round1-Original-Scope.txt)
 - [PMID:8183379 | German Society for Experimental and Clinical Pharmacology and Toxicology, 35th spring meeting. Mainz, Germany, 15-17 March 1994. Abstracts.](Source-Text/1994-PMC7100645-Round1-Original-Scope.txt)
+
+- [Iranica attribution of the coriander juice warning](Cultural-and-Experiential/Traditional-Practices/1993-Alam-Coriander-Juice-Heravi-Attribution.txt)

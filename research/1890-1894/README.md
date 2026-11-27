@@ -32,3 +32,5 @@ January 1, 1890 through December 31, 1894.
 ## November 27 archive and ingredient scope review
 
 - [PMID:29833230 | The Hospital Nursing Supplement](Source-Text/1893-PMC5255030-Round1-Original-Scope.txt)
+
+- [Heravi translation on fresh coriander juice](Cultural-and-Experiential/Traditional-Practices/1893-Achundow-Heravi-Fresh-Coriander-Juice.txt)

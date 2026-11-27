@@ -11,3 +11,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Ethnobotany of nutmeg in the Spice Islands](Traditional-Practices/1994-PMID8072304-Maluku-Java-Nutmeg-Uses.txt)
 
 - [Herboristerie familiale, wild fennel and general fatigue](Traditional-Practices/1992-Herboristerie-Familiale-Fennel-Fatigue.txt)
+
+- [Iranica attribution of the coriander juice warning](Traditional-Practices/1993-Alam-Coriander-Juice-Heravi-Attribution.txt)

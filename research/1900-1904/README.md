@@ -37,3 +37,5 @@ January 1, 1900 through December 31, 1904.
 ## November 27 archive and ingredient scope review
 
 - [PMID:29583291 | Exhibition of Patients](Source-Text/1904-PMC5386050-Round1-Original-Scope.txt)
+
+- [1901 BMJ original printed page and archive boundary](Source-Text/1901-PMC2400764-BMJ-Printed-Page-and-Archive-Scope.txt)
