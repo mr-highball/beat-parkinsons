@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+Verified 300 exact checks across 300 original publications. The queue holds 17,788 checks across 13,579 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All 12 affected scorecards confirm their recorded verdict and anchor. [Original coverage and clinical follow-through](../origin-depth-nov27/README.md)
+
 Verified 303 exact checks across 303 original publications. The queue holds 18,088 checks across 13,879 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All 21 affected scorecards confirm their recorded verdict and anchor. [Original coverage and clinical follow-through](../new-originals-nov27/README.md)
 
 Verified 315 exact checks across 315 original publications. The queue holds 18,391 checks across 14,182 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All 28 affected scorecards confirm their recorded verdict and anchor. [Citations and focused trial outcomes](../vetted-citations-nov27/README.md)

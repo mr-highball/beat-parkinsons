@@ -730,3 +730,5 @@ The tarragon chapter records plant use for specific pain contexts, with leaf con
 - [Round 1 original outcome and preparation review](2025-2026-Flaxseed-Oil-and-Anxiety-Proxies.md).
 
 - [Round 1 clinical design and outcome boundaries](2025-2026-Pepper-Sleep-and-Tiredness-Outcome-Scope.md).
+
+- [November 27 original scope review](2026-Fennel-Original-Pain-and-Fatigue-Nov27.md).

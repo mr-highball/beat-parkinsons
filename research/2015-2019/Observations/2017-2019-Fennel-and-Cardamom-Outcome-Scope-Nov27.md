@@ -1,0 +1,3 @@
+# Original evidence and outcome scope
+
+The 2019 fennel-drops source gives paired time points for menstrual fatigue occurrence, unlike the earlier 2007 author abstract that reports a probability without arm data. The 2019 comparator and analysis remain open. The 2017 dietary-cardamom study reports spontaneous improvement in one symptom without matching placebo symptom counts. The later animal original reports paw swelling with unverified dietary regimen length. Keep each measured outcome and preparation distinct. [2019 fennel table](../Source-Text/2019-Motavalli-Fennel-Drops-and-Fatigue.txt) · [2019 cardamom access](../Source-Text/2019-Shantaram-Cardamom-Powder-and-Paw-Edema.txt)

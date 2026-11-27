@@ -611,3 +611,15 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [PMID:20467463 | Elevating optimal human nutrition to a central goal of plant breeding and production of plant-based foods](Source-Text/2009-PMC2866137-Round1-Original-Scope.txt)
 - [PMID:21179628 | Antipsychotic-Induced Movement Disorders: Evaluation and Treatment](Source-Text/2005-PMC3004713-Round1-Original-Scope.txt)
 - [PMID:21180562 | What are the Therapeutic Advances in Neurology? Opinions from World Experts](Source-Text/2008-PMC3002537-Round1-Original-Scope.txt)
+
+## Round 1 original-access and botanical scope review, November 27
+
+- [PMID:16091152 | Cross genome phylogenetic analysis of human and Drosophila G protein-coupled receptors: application to functional annotation of orphan receptors](Source-Text/2005-PMC1192796-Round1-Original-Scope.txt)
+- [PMID:16402109 | The role of inflammation in CNS injury and disease](Source-Text/2006-PMC1760754-Round1-Original-Scope.txt)
+- [PMID:17997358 | Supine Low Frequency Power of Heart Rate Variability Reflects Baroreflex Function, Not Cardiac Sympathetic Innervation](Source-Text/2007-PMC2204059-Round1-Original-Scope.txt)
+- [PMID:18327971 | Intracellular Iron Transport and Storage: From Molecular Mechanisms to Health Implications](Source-Text/2008-PMC2932529-Round1-Original-Scope.txt)
+- [PMID:19055811 | The oil-dispersion bath in anthroposophic medicine – an integrative review](Source-Text/2008-PMC2612644-Round1-Original-Scope.txt)
+- [PMID:19183776 | Potential cellular and regenerative approaches for the treatment of Parkinson’s disease](Source-Text/2008-PMC2626922-Round1-Original-Scope.txt)
+- [PMID:19203243 | Clinically Relevant Effects of Convection-Enhanced Delivery of AAV2-GDNF on the Dopaminergic Nigrostriatal Pathway in Aged Rhesus Monkeys](Source-Text/2009-PMC2767387-Round1-Original-Scope.txt)
+- [PMID:19558212 | Mitochondrial Glutathione, a Key Survival Antioxidant](Source-Text/2009-PMC2821140-Round1-Original-Scope.txt)
+- [PMID:19605757 | Predictors of Normal and Successful Aging Among Urban-Dwelling Elderly Brazilians](Source-Text/2009-PMC2800815-Round1-Original-Scope.txt)

@@ -344,3 +344,10 @@ The [Finley feeding study](Source-Text/2003-PMID12949376-Finley-Corn-Oil-and-Neu
 
 - [PMID:11729262 | Aspergillus Enzymes Involved in Degradation of Plant Cell Wall Polysaccharides](Source-Text/2001-PMC99039-Round1-Original-Scope.txt)
 - [PMID:14715579 | Who should look after people with Parkinson's disease? Multidisciplinary teams are needed to address the needs of patients](Source-Text/2004-PMC314038-Round1-Original-Scope.txt)
+
+## Round 1 original-access and botanical scope review, November 27
+
+- [PMID:10894697 | Mouth ulcers and other causes of orofacial soreness and pain](Source-Text/2000-PMC1118165-Round1-Original-Scope.txt)
+- [PMID:15128854 | Variant Brain-Derived Neurotrophic Factor (BDNF) (Met66) Alters the Intracellular Trafficking and Activity-Dependent Secretion of Wild-Type BDNF in Neurosecretory Cells and Cortical Neurons](Source-Text/2004-PMC6729450-Round1-Original-Scope.txt)
+- [PMID:15152986 | Enhancement of Latent Inhibition by Chronic Mild Stress in Rats Submitted to Emotional Response Conditioning](Source-Text/2003-PMC2565427-Round1-Original-Scope.txt)
+- [PMID:15289425 | Vitamin B12 (cobalamin) deficiency in elderly patients](Source-Text/2004-PMC490077-Round1-Original-Scope.txt)
