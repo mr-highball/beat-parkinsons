@@ -339,3 +339,8 @@ The [Finley feeding study](Source-Text/2003-PMID12949376-Finley-Corn-Oil-and-Neu
 - [PMID:11736868 | Herb–drug interactions: Review and assessment of report reliability](Source-Text/2001-PMC2014604-Round1-Original-Scope.txt)
 - [PMID:15656267 | Pharmacological Findings on the Biochemical Bases of Memory Processes: A General View](Source-Text/2004-PMC2567046-Round1-Original-Scope.txt)
 - [PMID:22303216 | Ethylene](Source-Text/2002-PMC3243340-Round1-Original-Scope.txt)
+
+## Round 1 recovered originals and botanical scope
+
+- [PMID:11729262 | Aspergillus Enzymes Involved in Degradation of Plant Cell Wall Polysaccharides](Source-Text/2001-PMC99039-Round1-Original-Scope.txt)
+- [PMID:14715579 | Who should look after people with Parkinson's disease? Multidisciplinary teams are needed to address the needs of patients](Source-Text/2004-PMC314038-Round1-Original-Scope.txt)

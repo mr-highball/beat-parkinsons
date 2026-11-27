@@ -594,3 +594,20 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [PMID:18047259 | Nutrition and Aging: Assessment and Treatment of Compromised Nutritional Status in Frail Elderly Patients](Source-Text/2006-PMC2682454-Round1-Original-Scope.txt)
 - [PMID:19029533 | A Non-Invasive Imaging Approach to Understanding Speech Changes following Deep Brain Stimulation in Parkinson’s Disease](Source-Text/2008-PMC2779712-Round1-Original-Scope.txt)
 - [PMID:19363256 | Epidemiological Trends Strongly Suggest Exposures as Etiologic Agents in the Pathogenesis of Sporadic Alzheimer's Disease, Diabetes Mellitus, and Non-Alcoholic Steatohepatitis](Source-Text/2009-PMC4551511-Round1-Original-Scope.txt)
+
+## Round 1 recovered originals and botanical scope
+
+- [PMID:18332428 | Acetylcholinesterase inhibitors and Gulf War illnesses.](Source-Text/2008-PMC2393741-Round1-Original-Scope.txt)
+- [PMID:18404497 | Neuroprotection by adenosine in the brain: From A(1) receptor activation to A (2A) receptor blockade.](Source-Text/2005-PMC2096528-Round1-Original-Scope.txt)
+- [PMID:18514012 | FUNCTIONAL EFFECTS OF CARDIAC SYMPATHETIC DENERVATION IN NEUROGENIC ORTHOSTATIC HYPOTENSION](Source-Text/2008-PMC2696021-Round1-Original-Scope.txt)
+- [PMID:19066512 | Application of a C. elegans Dopamine Neuron Degeneration Assay for the Validation of Potential Parkinson's Disease Genes](Source-Text/2008-PMC3253614-Round1-Original-Scope.txt)
+- [PMID:19182805 | α–Synuclein is part of a diverse and highly conserved interaction network that includes PARK9 and manganese toxicity](Source-Text/2009-PMC2683786-Round1-Original-Scope.txt)
+- [PMID:19393264 | Drug interactions at the blood-brain barrier: fact or fantasy?](Source-Text/2009-PMC2751796-Round1-Original-Scope.txt)
+- [PMID:19397864 | Space-Based but not Object-Based Inhibition of Return is Impaired in Parkinson's Disease](Source-Text/2009-PMC2696984-Round1-Original-Scope.txt)
+- [PMID:19523108 | Ergot: from witchcraft to biotechnology](Source-Text/2009-PMC6640538-Round1-Original-Scope.txt)
+- [PMID:19703660 | The role of PTEN-induced kinase 1 in mitochondrial dysfunction and dynamics](Source-Text/2009-PMC2732569-Round1-Original-Scope.txt)
+- [PMID:19863269 | Effects of social isolation on neuromuscular excitability and aggressive behaviors in Drosophila : Altered responses by Hk and gsts1 , two mutations implicated in redox regulation](Source-Text/2009-PMC3632667-Round1-Original-Scope.txt)
+- [PMID:19951921 | Spoken Word Recognition in Toddlers Who Use Cochlear Implants](Source-Text/2009-PMC2873612-Round1-Original-Scope.txt)
+- [PMID:20467463 | Elevating optimal human nutrition to a central goal of plant breeding and production of plant-based foods](Source-Text/2009-PMC2866137-Round1-Original-Scope.txt)
+- [PMID:21179628 | Antipsychotic-Induced Movement Disorders: Evaluation and Treatment](Source-Text/2005-PMC3004713-Round1-Original-Scope.txt)
+- [PMID:21180562 | What are the Therapeutic Advances in Neurology? Opinions from World Experts](Source-Text/2008-PMC3002537-Round1-Original-Scope.txt)

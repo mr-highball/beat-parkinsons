@@ -239,3 +239,7 @@ The [BMJ February 1998 issue review](../../experiments/1000_see_what_sticks_food
 - [PMID:7556009 | Ethylenebisdithiocarbamates and ethylenethiourea: possible human health hazards.](Source-Text/1995-PMC1519130-Round1-Original-Scope.txt)
 - [PMID:7629537 | Prospective study of relations between cortical Lewy bodies, poor eyesight, and hallucinations in Alzheimer's disease.](Source-Text/1995-PMC485998-Round1-Original-Scope.txt)
 - [PMID:9646038 | Children's health and the environment: a new agenda for prevention research.](Source-Text/1998-PMC1533065-Round1-Original-Scope.txt)
+
+## Round 1 recovered originals and botanical scope
+
+- [PMID:10796704 | Pergolide for levodopa‐induced complications in Parkinson's disease](Source-Text/1999-PMC13735130-Round1-Original-Scope.txt)

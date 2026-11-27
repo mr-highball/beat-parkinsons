@@ -507,3 +507,5 @@ The original Ndeup section documents millet among several externally applied mat
 - [Round 1 original outcome and preparation review](2014-Yang-Ginger-and-Tea-Stomach-Context.md).
 
 - [Round 1 clinical design and outcome boundaries](2013-Pepper-Rosemary-Attention-and-Fatigue.md).
+
+- [Round 1 original scope and pain comparison review](2011-Pumpkin-Oil-Joint-Pain-Comparisons-Nov27.md).

@@ -1,5 +1,7 @@
 ## Findings and limits
 
+Verified 303 exact checks across 303 original publications. The queue holds 18,088 checks across 13,879 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All 21 affected scorecards confirm their recorded verdict and anchor. [Original coverage and clinical follow-through](followup/new-originals-nov27/README.md)
+
 Verified 315 exact checks across 315 original publications. The queue holds 18,391 checks across 14,182 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All 28 affected scorecards confirm their recorded verdict and anchor. [Citations and focused trial outcomes](followup/vetted-citations-nov27/README.md)
 
 Verified 285 exact checks across 272 original publications. The queue holds 18,706 checks across 14,497 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All 69 affected scorecards confirm their recorded verdict and anchor. [Publication cluster and outcome review](followup/next-study-cluster-nov27/README.md)

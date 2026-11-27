@@ -2481,3 +2481,8 @@ Full original checks distinguish culinary exposures from publication dates, figu
 
 - [Registered black-pepper and Angelica aromatherapy comparison](Source-Text/2026-RBR-5svckjw-Pepper-Aromatherapy-and-Sleep-Scope.txt).
 - [Posted tiredness numbers for a cayenne-containing supplement](Source-Text/2025-NCT06023082-Cayenne-Blend-Tiredness-Results.txt).
+
+## Round 1 recovered originals and botanical scope
+
+- [PMID:39313211 | A Comprehensive Multifunctional Approach for Measuring Parkinson's Disease Severity](Source-Text/2025-PMC11693400-Round1-Original-Scope.txt)
+- [PMID:40881026 | Braiding archaeology, geomorphology and indigenous knowledge to improve the understanding of local-scale coastal change](Source-Text/2025-PMC12337584-Round1-Original-Scope.txt)

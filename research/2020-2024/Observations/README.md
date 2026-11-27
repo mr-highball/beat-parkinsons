@@ -801,3 +801,5 @@ Newly indexed topical grapeseed oil contexts use formulations or comparator appl
 - [Preparation, population and outcome observations](Round-1-Identity-and-Outcome-Audit-Nov27.md).
 
 - [Round 1 original outcome and preparation review](2024-CIRCUS-Executive-Tests-and-Pepper-Parts.md).
+
+- [Round 1 original scope and pain comparison review](2021-2024-Pepper-Extract-and-Processing-Comparisons.md).
