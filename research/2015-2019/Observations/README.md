@@ -685,3 +685,5 @@ The Zanthoxylum review links fatigue to a whole traditional formula, and the mat
 ## Round 1 original outcome follow-through
 
 - [Preparation, population and outcome observations](Round-1-Identity-and-Outcome-Audit-Nov27.md).
+
+- [Round 1 clinical design and outcome boundaries](2018-Cayenne-Crossover-Outcome-Scope.md).

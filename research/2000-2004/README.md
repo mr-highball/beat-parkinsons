@@ -332,3 +332,10 @@ The [Finley feeding study](Source-Text/2003-PMID12949376-Finley-Corn-Oil-and-Neu
 - [November 26 Round 1 original scope and outcome audit](../../experiments/1000_see_what_sticks_food/followup/scope-and-outcome-audit-nov26/originals-by-period.md#2000-2004)
 
 - [November 26 Round 1 trial outcomes and archival source scope](../../experiments/1000_see_what_sticks_food/followup/trial-outcomes-and-archival-depth-nov26/originals-by-period.md#2000-2004)
+
+## Round 1 citation identity and exposure checks
+
+- [PMID:11438599 | Hyperactivity and Intact Hippocampus-Dependent Learning in Mice Lacking the M1 Muscarinic Acetylcholine Receptor](Source-Text/2001-PMC6762828-Round1-Original-Scope.txt)
+- [PMID:11736868 | Herb–drug interactions: Review and assessment of report reliability](Source-Text/2001-PMC2014604-Round1-Original-Scope.txt)
+- [PMID:15656267 | Pharmacological Findings on the Biochemical Bases of Memory Processes: A General View](Source-Text/2004-PMC2567046-Round1-Original-Scope.txt)
+- [PMID:22303216 | Ethylene](Source-Text/2002-PMC3243340-Round1-Original-Scope.txt)

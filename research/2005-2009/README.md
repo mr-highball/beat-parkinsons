@@ -586,3 +586,11 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [PMID:19120114 | Computer Models of Stress, Allostasis, and Acute and Chronic Diseases](Source-Text/2008-PMC2715850-Round1-Original-Scope.txt)
 - [PMID:19244398 | Potential role of purinergic signaling in lithium-induced nephrogenic diabetes insipidus](Source-Text/2009-PMC2681373-Round1-Original-Scope.txt)
 - [PMID:19481555 | In Vivo Effects of 3-IC: Pharmacological and Genetic Analysis of Hypothermia and Evaluation of Chronic Treatment on Nicotinic Binding Sites](Source-Text/2009-PMC2735267-Round1-Original-Scope.txt)
+
+## Round 1 citation identity and exposure checks
+
+- [PMID:17214593 | Traits, States, and Encoding Speed: Support for a Top-Down View of Neuroticism/State Relations](Source-Text/2007-PMC2253673-Round1-Original-Scope.txt)
+- [PMID:17432724 | Motor Cortex Stimulation: Mild Transient Benefit in a Primate Model of Parkinson’s Disease](Source-Text/2007-PMC4416648-Round1-Original-Scope.txt)
+- [PMID:18047259 | Nutrition and Aging: Assessment and Treatment of Compromised Nutritional Status in Frail Elderly Patients](Source-Text/2006-PMC2682454-Round1-Original-Scope.txt)
+- [PMID:19029533 | A Non-Invasive Imaging Approach to Understanding Speech Changes following Deep Brain Stimulation in Parkinson’s Disease](Source-Text/2008-PMC2779712-Round1-Original-Scope.txt)
+- [PMID:19363256 | Epidemiological Trends Strongly Suggest Exposures as Etiologic Agents in the Pathogenesis of Sporadic Alzheimer's Disease, Diabetes Mellitus, and Non-Alcoholic Steatohepatitis](Source-Text/2009-PMC4551511-Round1-Original-Scope.txt)

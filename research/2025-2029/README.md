@@ -2438,3 +2438,46 @@ Full original checks distinguish culinary exposures from publication dates, figu
 - [PMID:41939281 | Sponsored Content as an Epistemic Market Object: How Platformization of Brand–Creator Partnerships Disrupts Valuation, Coproduction, and the Relationship Between Market Actors](Source-Text/2025-PMC13044439-Round1-Original-Scope.txt)
 - [Flaxseed oil and behavioral measures in a PCOS mouse model](Source-Text/2026-PMID42906733-Flaxseed-Oil-and-PCOS-Behavior.txt).
 - [Exercise and flaxseed oil in a mouse obesity model](Source-Text/2025-PMID41606910-Exercise-Flaxseed-Oil-and-Anxiety-Scope.txt).
+
+## Round 1 citation identity and exposure checks
+
+- [PMID:39226164 | Exploring the Frontier: Antisense Long Non-Coding RNAs as Key Regulators in Alzheimer’s Disease](Source-Text/2025-PMC12221383-Round1-Original-Scope.txt)
+- [PMID:39939834 | H4K12 Lactylation Activated‐ Spp1 in Reprogrammed Microglia Improves Functional Recovery After Spinal Cord Injury](Source-Text/2025-PMC11821456-Round1-Original-Scope.txt)
+- [PMID:39949835 | Fucoxanthin Inhibits the NMDA and AMPA Receptors Through Regulating the Calcium Response on Substantia Gelatinosa Neurons of the Trigeminal Subnucleus Caudalis in Juvenile Mice](Source-Text/2025-PMC11824308-Round1-Original-Scope.txt)
+- [PMID:39956657 | The effects of crafts‐based interventions on mental health and well‐being: A systematic review](Source-Text/2025-PMC11830576-Round1-Original-Scope.txt)
+- [PMID:39957007 | The Role of Friends in Supporting Young People With Cancer: A Scoping Review](Source-Text/2025-PMC11830860-Round1-Original-Scope.txt)
+- [PMID:39958267 | Reactive Oxygen Species: Role in Pathophysiology, and Mechanism of Endogenous and Dietary Antioxidants during Oxidative Stress](Source-Text/2025-PMC11821989-Round1-Original-Scope.txt)
+- [PMID:39965250 | Ovarian Aging: The Silent Catalyst of Age-Related Disorders in Female Body](Source-Text/2026-PMC12727064-Round1-Original-Scope.txt)
+- [PMID:39988644 | Identification of small fiber neuropathy in neuronal intranuclear inclusion disease: A clinicopathological study](Source-Text/2025-PMC11847649-Round1-Original-Scope.txt)
+- [PMID:39995125 | ISR Modulators in Neurological Diseases](Source-Text/2025-PMC12308010-Round1-Original-Scope.txt)
+- [PMID:39995575 | Comprehensive Assessment of Specific Patient-Reported Outcome Measures for Hand and Wrist Conditions in Adults: A Scoping Review](Source-Text/2025-PMC11849562-Round1-Original-Scope.txt)
+- [PMID:39996836 | The Cross-Talk Between the Peripheral and Brain Cholesterol Metabolisms](Source-Text/2025-PMC11853762-Round1-Original-Scope.txt)
+- [PMID:40001817 | Exploring Cognitive Stimulation as a Therapy for the Prevention of Delirium in a Hospital Setting: A Narrative Review](Source-Text/2025-PMC11851600-Round1-Original-Scope.txt)
+- [PMID:40002492 | The Inflammatory Mechanism of Parkinson’s Disease: Gut Microbiota Metabolites Affect the Development of the Disease Through the Gut–Brain Axis](Source-Text/2025-PMC11853208-Round1-Original-Scope.txt)
+- [PMID:40004719 | Interest of 18 F-Fluorodeoxyglucose Positron Emission Tomography/Computed Tomography for Fever and Inflammatory Syndrome of Unknown Origin in Elderly Patients: A Retrospective Real-Life Single-Center Study from a University Referral Hospital](Source-Text/2025-PMC11857032-Round1-Original-Scope.txt)
+- [PMID:40007760 | Mechanistic insights into connexin-mediated neuroglia crosstalk in neurodegenerative diseases](Source-Text/2025-PMC11850338-Round1-Original-Scope.txt)
+- [PMID:40046290 | Bladder drugs and risk of dementia: Danish nationwide active comparator study](Source-Text/2025-PMC11880786-Round1-Original-Scope.txt)
+- [PMID:40065896 | COVID-19 Presenting With Intractable Hiccups: A Literature Review and a New Case](Source-Text/2025-PMC11891498-Round1-Original-Scope.txt)
+- [PMID:40066511 | Artificial Intelligence in Temporomandibular Joint Disorders: An Umbrella Review](Source-Text/2025-PMC11894261-Round1-Original-Scope.txt)
+- [PMID:40092638 | Cathepsin B inhibition blocks amyloidogenesis in the mouse models of neurological lysosomal diseases MPS IIIC and sialidosis](Source-Text/2025-PMC11910108-Round1-Original-Scope.txt)
+- [PMID:40100646 | Decreased Serum and Salivary Levels of Aquaporin 5 in Oral Lichen Planus](Source-Text/2025-PMC11917382-Round1-Original-Scope.txt)
+- [PMID:40230708 | Metabolic dysfunction-associated steatotic liver disease (MASLD) in children with obesity: An Obesity Medicine Association (OMA) and expert joint perspective 2025](Source-Text/2025-PMC11995806-Round1-Original-Scope.txt)
+- [PMID:40256361 | Comparing mortality rates, risk, and trends of hip fracture and common cancers in Hong Kong, 2010–2020: A population-based study](Source-Text/2025-PMC12009107-Round1-Original-Scope.txt)
+- [PMID:40275931 | The Influence of Psychiatric Factors on Health-Care Resource Utilization in Patients With Gastroparesis: A National Population-Based Study](Source-Text/2025-PMC12018972-Round1-Original-Scope.txt)
+- [PMID:40291067 | Demonstration of autonomous fixed‐wing drone delivery of prescribed medications in remote islands in Japan](Source-Text/2025-PMC12022430-Round1-Original-Scope.txt)
+- [PMID:40385529 | Stem cell therapies in the clinic](Source-Text/2025-PMC12079495-Round1-Original-Scope.txt)
+- [PMID:40605939 | A Review of 25 Spontaneous and Dynamic Facial Expression Databases of Basic Emotions](Source-Text/2025-PMC12209106-Round1-Original-Scope.txt)
+- [PMID:40657200 | Anti‐Inflammatory Treatment of Subarachnoid Hemorrhage by Self‐Assembled Silymarin Nanoparticles](Source-Text/2025-PMC12244996-Round1-Original-Scope.txt)
+- [PMID:40756293 | Depression and Anxiety in Parkinson’s Disease: Prevalence and Associated Risk Factors](Source-Text/2025-PMC12314451-Round1-Original-Scope.txt)
+- [PMID:40989002 | Metric properties of the Tonic Stretch Reflex Threshold (TSRT) as a measure of spasticity: a systematic review with meta-analysis](Source-Text/2025-PMC12451295-Round1-Original-Scope.txt)
+- [PMID:41094692 | Integrative Analysis of Mitochondrial‐Related Genes Reveals Diagnostic Biomarkers and Therapeutic Targets in Acute Pancreatitis](Source-Text/2025-PMC12527819-Round1-Original-Scope.txt)
+- [PMID:41287787 | Augmented Reality in Outpatient Care: A Narrative Review](Source-Text/2025-PMC12640284-Round1-Original-Scope.txt)
+- [PMID:41398613 | Heart Failure Management in the Modern Era: A Comprehensive Review on Medical and Device-based Interventions](Source-Text/2025-PMC12676028-Round1-Original-Scope.txt)
+- [PMID:41542283 | Linking evidence for targeted blood biomarkers in post-stroke cognitive impairment and dementia](Source-Text/2025-PMC12802771-Round1-Original-Scope.txt)
+- [PMID:41661845 | Childhood appendectomy and subsequent psychiatric illness](Source-Text/2025-PMC12798240-Round1-Original-Scope.txt)
+- [PMID:42148242 | Scientometric insights into neurology publications in Iran](Source-Text/2025-PMC13174574-Round1-Original-Scope.txt)
+
+## Round 1 pepper trial and outcome follow-through
+
+- [Registered black-pepper and Angelica aromatherapy comparison](Source-Text/2026-RBR-5svckjw-Pepper-Aromatherapy-and-Sleep-Scope.txt).
+- [Posted tiredness numbers for a cayenne-containing supplement](Source-Text/2025-NCT06023082-Cayenne-Blend-Tiredness-Results.txt).

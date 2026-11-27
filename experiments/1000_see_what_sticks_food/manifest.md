@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+Verified 315 exact checks across 315 original publications. The queue holds 18,391 checks across 14,182 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All 28 affected scorecards confirm their recorded verdict and anchor. [Citations and focused trial outcomes](followup/vetted-citations-nov27/README.md)
+
 Verified 285 exact checks across 272 original publications. The queue holds 18,706 checks across 14,497 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All 69 affected scorecards confirm their recorded verdict and anchor. [Publication cluster and outcome review](followup/next-study-cluster-nov27/README.md)
 
 Verified 205 exact checks across 203 original publication records. The queue holds 18,991 checks across 14,769 source keys and 270 claims. Round 1 has 704 researched claims and 296 partial claims. The public Newcastle sage report closes the accessible clinical audit for claim 0125. All 57 affected scorecards preserve the recorded verdict and anchor. [Original reviews and focused evidence](followup/identity-outcomes-nov27/README.md)

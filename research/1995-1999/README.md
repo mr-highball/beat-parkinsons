@@ -232,3 +232,10 @@ The [BMJ February 1998 issue review](../../experiments/1000_see_what_sticks_food
 - [November 26 Round 1 swallowing and clinical endpoint records](../../experiments/1000_see_what_sticks_food/followup/exact-endpoints-and-open-libraries-nov26/originals-by-period.md#1995-1999)
 
 - [November 26 Round 1 trial outcomes and archival source scope](../../experiments/1000_see_what_sticks_food/followup/trial-outcomes-and-archival-depth-nov26/originals-by-period.md#1995-1999)
+
+## Round 1 citation identity and exposure checks
+
+- [PMID:10406992 | Alterations of muscarinic acetylcholine receptor subtypes in diffuse lewy body disease: relation to Alzheimer's disease.](Source-Text/1999-PMC1736504-Round1-Original-Scope.txt)
+- [PMID:7556009 | Ethylenebisdithiocarbamates and ethylenethiourea: possible human health hazards.](Source-Text/1995-PMC1519130-Round1-Original-Scope.txt)
+- [PMID:7629537 | Prospective study of relations between cortical Lewy bodies, poor eyesight, and hallucinations in Alzheimer's disease.](Source-Text/1995-PMC485998-Round1-Original-Scope.txt)
+- [PMID:9646038 | Children's health and the environment: a new agenda for prevention research.](Source-Text/1998-PMC1533065-Round1-Original-Scope.txt)
