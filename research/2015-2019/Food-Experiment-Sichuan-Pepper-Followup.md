@@ -27,3 +27,7 @@ Kennedy and colleagues’ December 10, 2019 randomized double-blind trial report
 ## Nepalese pepper extract and Bond Lader mood
 
 The December 2019 double-blind trial included 82 healthy adults in its reported sample. It compared standardized Nepalese pepper extract in MCT oil with sunflower-oil placebo. The acute contentment interaction yielded no clear between-arm contrast at any individual timepoint, and the paper gives no clear chronic effect on mood factors or state anxiety over 56 days. The prospective registration includes alertness, contentment and calmness and has no posted results tables. The species, oil extract and mood proxies leave Parkinson depressive symptoms after toasted Sichuan pepper unresolved. [Original Methods and Results](https://www.mdpi.com/2072-6643/11/12/3022) · [Local primary text](Source-Text/PMC6950039.txt) · [2018 registry](Source-Text/Trials/NCT03673930.txt)
+
+## Original fatigue supplement and timing labels
+
+The [primary supplement, Tables S5–S6](Source-Text/2019-PMID31835620-Nepalese-Pepper-Fatigue-Supplement.txt) gives inconclusive acute task fatigue and day-56 pre-dose changes favoring the extract in healthy adults. The baseline fatigue difference and the discrepancy between the published 5 h and supplement 6 h labels limit precise interpretation. This is the same trial family.

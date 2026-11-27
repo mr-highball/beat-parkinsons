@@ -815,3 +815,7 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 ## November 27 individual article structure follow-through
 
 - [PMID:19429166 | Characterisation of a novel NR4A2 mutation in Parkinson’s disease brain](Source-Text/2009-PMC4763922-Round1-Original-Scope.txt)
+
+## November 27 later sample authenticated originals
+
+- [PMID:20396458 | Neuroprotective Therapy in Parkinson's Disease: Current Status and New Directions from Experimental and Genetic Clues](Source-Text/2005-PMC2854916-Round1-Original-Scope.txt)

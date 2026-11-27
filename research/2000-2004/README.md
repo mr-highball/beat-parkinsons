@@ -373,3 +373,7 @@ The [Finley feeding study](Source-Text/2003-PMID12949376-Finley-Corn-Oil-and-Neu
 
 - [PMID:11744501 | Community health profile of Windsor, Ontario, Canada: anatomy of a Great Lakes area of concern.](Source-Text/2001-PMC1240618-Round1-Original-Scope.txt)
 - [PMID:11744509 | Review of the epidemiologic literature on EMF and Health.](Source-Text/2001-PMC1240626-Round1-Original-Scope.txt)
+
+## November 27 later sample authenticated originals
+
+- [PMID:14640303 | Toward An Understanding of Developmental Coordination Disorder: Terminological and Diagnostic Issues](Source-Text/2003-PMC2565424-Round1-Original-Scope.txt)

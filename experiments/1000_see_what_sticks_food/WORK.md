@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+Verified 804 original-source checks. Round 1 has 11,624 queued pairs across 7,632 source keys and 261 claims. Research depth remains 708 researched and 292 partial. All 6 affected scorecards retain their verdicts and anchors. [Originals, fatigue supplement and community context](followup/sage-and-outcome-originals-nov27/README.md)
+
 Verified 1,048 original-source checks. Round 1 has 12,428 queued pairs across 8,436 source keys and 261 claims. Research depth remains 708 researched and 292 partial. All 7 affected scorecards retain their verdicts and anchors. [Originals, executive function and mood follow-through](followup/executive-and-indexed-originals-nov27/README.md)
 
 Verified 827 exact source checks. The Round 1 queue holds 13,476 pairs across 9,484 source keys and 261 claims. Round 1 has 708 researched and 292 partial claims. All 4 affected scorecards preserve their verdicts and anchors. [Originals and fatigue outcome follow-through](followup/singleton-and-indexed-originals-nov27/README.md)

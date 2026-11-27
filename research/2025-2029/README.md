@@ -2547,3 +2547,8 @@ Full original checks distinguish culinary exposures from publication dates, figu
 ## Round 1 focused outcome source
 
 - [Parandin, Cardamom oil and depression-related behaviors in mice](Source-Text/2026-Parandin-Cardamom-Oil-Reserpine-Abstract.txt) — journal abstract and original-access limits.
+
+## Round 1 publication-integrity records
+
+- [Withdrawn Azhar trial citation](Source-Text/2025-PMID41461240-Azhar-Omega-3-Corn-Oil-Retracted.txt)
+- [Separate publisher retraction notice](Source-Text/2026-PMID42469048-Azhar-Corn-Oil-Study-Retraction.txt)
