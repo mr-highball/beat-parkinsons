@@ -571,3 +571,5 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [November 26 Round 1 swallowing and clinical endpoint records](../../experiments/1000_see_what_sticks_food/followup/exact-endpoints-and-open-libraries-nov26/originals-by-period.md#2005-2009)
 
 - [November 26 Round 1 trial outcomes and archival source scope](../../experiments/1000_see_what_sticks_food/followup/trial-outcomes-and-archival-depth-nov26/originals-by-period.md#2005-2009)
+
+- [Grape seed oil as a salve carrier in The Earthwise Herbal](Cultural-and-Experiential/Traditional-Practices/2008-Wood-Grapeseed-Oil-as-Salve-Carrier.txt)

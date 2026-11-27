@@ -56,3 +56,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 
 - [West Yorkshire cardamom toothache reports](Traditional-Practices/2010-Pieroni-West-Yorkshire-Cardamom-Toothache.txt)
 - [Kani cardamom fruit powder reports](Traditional-Practices/2011-Ayyanar-Kani-Cardamom-Powder-Pain.txt)
+
+- [Millet in the Ndeup ceremony described in African Dance as Healing Modality Throughout the Diaspora](Ceremonial-Accounts/2011-Monteiro-Wall-Ndeup-and-Millet.txt)

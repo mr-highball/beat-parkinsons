@@ -58,3 +58,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Black seed and fatigue, 2018 secondary historical attribution](Local-Knowledge/2018-PMC5818345-Nigella-and-Fatigue-Historical-Attribution.txt)
 
 - [Parkinson patient-use survey, coconut oil](Local-Knowledge/2017-PMC5664950-Coconut-Oil-Parkinson-Use-Survey.txt)
+
+- [Sichuan pepper pericarp in a traditional multi-ingredient formula mentioning fatigue](Traditional-Practices/2017-PMC5666853-Sichuan-Pepper-Formula-and-Fatigue.txt)

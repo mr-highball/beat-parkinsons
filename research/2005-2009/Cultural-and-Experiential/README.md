@@ -23,3 +23,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Customary ginseng and chicken soup in China and Korea](Traditional-Practices/2009-PMID19689273-Ginseng-and-Chicken-Soup.txt).
 
 - [Ayurveda congress account of traditional turmeric wound care](Local-Knowledge/2008-PMC2586317-Turmeric-and-Ayurveda-Wound-Care-Account.txt)
+
+- [Grape seed oil as a salve carrier in The Earthwise Herbal](Traditional-Practices/2008-Wood-Grapeseed-Oil-as-Salve-Carrier.txt)

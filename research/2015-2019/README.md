@@ -1454,3 +1454,7 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [Effect of olive oil consumption on aging in a senescence-accelerated mice-prone 8 (SAMP8) model](Source-Text/2019-PMID31656282-Soy-Oil-and-Olive-Oil-SAMP8.txt)
 
 - [Effects of blueberries on inflammation, motor performance, and cognitive function](Source-Text/2017-PMC6183796-Blueberry-Motor-Cognition-Abstract.txt)
+
+- [Sichuan pepper pericarp in a traditional multi-ingredient formula mentioning fatigue](Cultural-and-Experiential/Traditional-Practices/2017-PMC5666853-Sichuan-Pepper-Formula-and-Fatigue.txt)
+
+- [Engineering electrospun multicomponent polyurethane scaffolding platform comprising grapeseed oil and honey/propolis for bone tissue regeneration](Source-Text/2018-PMID30372449-Grapeseed-Oil-Scaffold-Scope.txt)

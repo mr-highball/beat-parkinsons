@@ -26,3 +26,5 @@ January 1, 1890 through December 31, 1894.
 [All periods and collection method](../README.md)
 
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
+
+- [Cold kale or broth in a northern English dream-divination rhyme](Cultural-and-Experiential/Ceremonial-Accounts/1892-Northall-Kale-or-Broth-Dream-Divination.txt)
