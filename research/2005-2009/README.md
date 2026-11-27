@@ -668,3 +668,7 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [PMID:19812781 | Unsupervised Meta-Analysis on Diverse Gene Expression Datasets Allows Insight into Gene Function and Regulation](Source-Text/2008-PMC2735942-Round1-Original-Scope.txt)
 - [PMID:21416012 | Social networks and their role in preventing dementia](Source-Text/2009-PMC3038528-Round1-Original-Scope.txt)
 - [PMID:21572838 | Environmental Health: Threats and their Interactions](Source-Text/2008-PMC3091332-Round1-Original-Scope.txt)
+
+## November 27 shared-accession and archive recovery audit
+
+- [PMID:15738444 | Artificial gametes: new paths to parenthood?](Source-Text/2005-PMC1734101-Round1-Original-Scope.txt)

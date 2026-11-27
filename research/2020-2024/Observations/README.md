@@ -811,3 +811,5 @@ Newly indexed topical grapeseed oil contexts use formulations or comparator appl
 - [November 27 original outcome and scope review](2020-Carrot-Juice-Preclinical-Outcome-Scope-Nov27.md).
 
 - [Nigella-Fatigue-Presence-and-Duration-Nov27](Nigella-Fatigue-Presence-and-Duration-Nov27.md)
+
+- [Green-bean and HADS outcome availability](Green-Bean-Fatigue-Population-and-HADS-Outcome-Nov27.md)
