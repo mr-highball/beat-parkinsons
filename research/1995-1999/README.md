@@ -1,5 +1,7 @@
 # 1995-1999
 
+The [November 26 Round 1 source audit](../../experiments/1000_see_what_sticks_food/followup/pdf-originals-and-fresh-sweeps-nov26/source-records.md#1995-1999) links 2 dated original-source records for this period.
+
 The [November 26 Round 1 source audit](../../experiments/1000_see_what_sticks_food/followup/priority-papers-and-source-fanout-nov26/source-records.md#1995-1999) links 2 dated original-source records for this period.
 
 The [November 25 shared archive audit](../2010-2014/Food-Experiment-Shared-Cloud-Originals.md) links the DOI-defined 1999 neurology meeting scope and its member distinctions.

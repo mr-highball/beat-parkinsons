@@ -1,5 +1,7 @@
 # 1990-1994
 
+The [November 26 Round 1 source audit](../../experiments/1000_see_what_sticks_food/followup/pdf-originals-and-fresh-sweeps-nov26/source-records.md#1990-1994) links 4 dated original-source records for this period.
+
 The [November 26 Round 1 source audit](../../experiments/1000_see_what_sticks_food/followup/priority-papers-and-source-fanout-nov26/source-records.md#1990-1994) links 1 dated original-source records for this period.
 
 The [November 25 printed and dietary follow-through](../2025-2029/Food-Experiment-Round-1-Printed-Originals-and-Green-Beans-Nov25.md) indexes the dated evidence for this period.

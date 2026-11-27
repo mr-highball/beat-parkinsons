@@ -395,6 +395,8 @@ The clinical context audit closed 354 original checks. The black-tea bradykinesi
 
 The publication-first batch closed 275 exact checks across 213 originals. It recorded anatomical, laboratory, observational and population boundaries for food-related leads and preserved the outstanding priority access gaps. All verdicts retain their existing scorecard grades. [Source dispositions and access gaps](followup/priority-papers-and-source-fanout-nov26/README.md)
 
+The archived PDF and focused outcome audit closed 320 exact checks, including 33 from ten recovered PDFs. A pediatric protocol and a first-morning medication crossover refine the limits of the broccoli attention and soybean-oil daily OFF claims. Both claims retain the open tier. [Original and outcome audit](followup/pdf-originals-and-fresh-sweeps-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).
