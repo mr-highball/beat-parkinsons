@@ -1,0 +1,115 @@
+# Parkinson's food thought experiment results
+
+Verdicts are tracked for **930** frozen statements (completing all **6,930 / 6,930** claims across Rounds 1–7). Confidence values are reviewer judgments.
+
+- Frozen SHA-256 `1a40eb9d94b96d4253eeb5189fdf0560bd53e5762f466428dc34a0e8ddfaadcf`
+- [Statement verdict ledger](verdicts.tsv)
+- [First-pass search ledger](queries.tsv) with 1860 completed records and 930 statements covered
+- [Counts by category and claim direction](results-summary.tsv)
+- [Per-citation source-depth and verification milestone ledger](followup/source-depth.tsv) (`412` `original_body_verified` / `447` `first_pass_screened` across `859` unique cited files — `48.0%` of unique files and `55.3%` of claim–file citations original-body verified)
+
+## Verdict counts
+
+| Verdict | Local review | Current verdict |
+| --- | ---: | ---: |
+| Unknown | 930 | 893 |
+| Maybe True | 0 | 16 |
+| Maybe False | 0 | 21 |
+| True | 0 | 0 |
+| False | 0 | 0 |
+
+## Findings and limits
+
+All 930 frozen Round 7 claims (`0001`–`0930`) have been researched using the Oracle-first workflow, Rounds 1–6 evidence transfer, 1,860 neutral Europe PMC queries ([queries.tsv](queries.tsv)), live PubMed XML, batch NCBI PMC open-access JATS full-text XML, ClinicalTrials.gov v2 sweeps, targeted coordinator adversarial opposing-evidence checks across all proposed directional claims, and inclusive cultural/traditional/public forum collection. Every claim carries a validated v1 evidence scorecard ([scorecards.tsv](followup/scorecards.tsv)), per-citation source-depth milestone audit ([source-depth.tsv](followup/source-depth.tsv)), and completion audit row ([research-status.tsv](followup/research-status.tsv)), bringing the entire 7-round series to **`6,930 / 6,930` (`100%`) researched** (`460` directional verdicts, `6,470` `Unknown (Researched)`, `0` unreviewed).
+
+Round 7 spans 35 unique ingredients (8 new pantry-expansion ingredients across all 33 symptoms each—`sorghum`, `sunflower seed`, `tuna`, `turnip`, `vanilla`, `walnut`, `watercress`, and `wild rice`—plus 27 shared Rounds 1–6 exposures covering their remaining non-overlapping reserved symptoms, including the final 2 `sesame seed` claims). Raw cross-round percentages are not directly comparable across rounds without category and ingredient standardization: Round 7 contains `682` food, `99` herb, `88` spice, and `61` oil claims (all 61 oil claims—`soybean oil`, `sunflower oil`, and `walnut oil`—stayed `100%` `Unknown (Researched)`).
+
+| Verdict / Tier | Count | Notes |
+| --- | ---: | --- |
+| `Maybe True` | 16 | Directional evidence aligns with frozen hypothesis direction (`2` `limited_clinical_link`, `14` `minimal_signal`) |
+| `Maybe False` | 21 | Directional evidence opposes frozen hypothesis direction (`3` `limited_clinical_link`, `18` `minimal_signal`) |
+| `Unknown` (`Unknown (Researched)`) | 893 | Exhaustively checked; no defensible net directional lean (`open`, anchor `50`) |
+| **Total frozen claims** | **930** | `465` frozen `reduces` / `465` frozen `worsens` |
+
+By v1 scorecard tier and direction:
+- **`limited_clinical_link` (anchor `51`):** `5` claims (`5` worsening leans — daytime animal/fish/crustacean/dairy protein LNAA levodopa competition on daily OFF time for `shrimp`, `trout`, `tuna`, `turkey`, and `yogurt`)
+- **`minimal_signal` (anchor `50.005`):** `32` claims (`32` easing leans across `13` ingredients)
+- **`open` (anchor `50`, displayed as `Unknown (Researched)`):** `893` claims
+- **Symptom breadth:** `37` directional claims across `15` distinct symptoms and `16` ingredients (`19` ingredients remained `100%` `Unknown (Researched)`: `sesame seed` [2 remaining], `sichuan pepper`, `sorghum`, `soybean oil`, `spinach`, `summer savory`, `sunflower oil`, `sunflower seed`, `swiss chard`, `tarragon`, `tempeh`, `tofu`, `turnip`, `walnut oil`, `watercress`, `watermelon`, `wheat berries`, `wild rice`, `zucchini`).
+- **Category breakdown:** `food` (`8` Maybe True, `13` Maybe False, `661` Unknown / `682` total), `herb` (`3` Maybe True, `2` Maybe False, `94` Unknown / `99` total), `spice` (`5` Maybe True, `6` Maybe False, `77` Unknown / `88` total), `oil` (`0` Maybe True, `0` Maybe False, `61` Unknown / `61` total).
+
+### Source-depth and verification milestones
+
+Round 7 separates **first-pass screening** from **original-body verification** in [followup/source-depth.tsv](followup/source-depth.tsv) across all `859` unique cited archive files (`4,982` unique claim–file citations):
+
+| Verification Milestone | Unique Cited Files | Claim–File Citations | Directional-Claim Files | Composition |
+| --- | ---: | ---: | ---: | --- |
+| `original_body_verified` | `412` (`48.0%`) | `2,756` (`55.3%`) | `102 / 210` (`48.6%`) | `211` `oa_fulltext_verified` (NCBI PMC OA JATS full-text XML), `118` `cultural_or_forum_record` (full public/traditional records), `83` full local `archived_source_text` originals (`>6 KB`) |
+| `first_pass_screened` | `447` (`52.0%`) | `2,226` (`44.7%`) | `108 / 210` (`51.4%`) | `366` `primary_abstract_only` (paywalled / non-OA XML queued for original-body table verification), `68` compact local archive extracts, `13` `registry_protocol_only` (ClinicalTrials.gov v2 without posted results) |
+| **Total cited in Round 7** | **`859`** | **`4,982`** | **`210`** | Every directional claim also passed a targeted PubMed `pub_date` + `relevance` adversarial opposing-evidence audit (`195` uncited clinical candidates triaged; `0` unaddressed conflicting human RCTs) |
+
+### Highlighted checked v1 findings
+
+- **Animal, fish, crustacean & dairy protein daytime LNAA levodopa competition — five clinical-tier (`51`) worsening leans on daily OFF time:** Maintaining exact Rounds 2–6 calibration (`beef`, `chicken`, `clams`, `cod`, `cow's milk`, `egg`, `herring`, `kefir`, `lamb`, `mackerel`, `mussels`, `oysters`, `pork`, `salmon`, `sardines`), grilled shrimp ([0058](statements/0058.txt), Maybe False; `Liu 2021` `PMC8619515` EAA score ~1.00), grilled trout ([0519](statements/0519.txt), Maybe True; `Rebolé 2015`, `Hallund 2010`, `Flaskerud 2017`), canned tuna ([0547](statements/0547.txt), Maybe True; `Quaresma 2026` `PMC13215829`, `Pal & Ellis 2010`), roasted turkey ([0579](statements/0579.txt), Maybe False; `Pal & Ellis 2010`, `Wurtman 2003`, `Ayuso 2024` `PMC11202710` cooked breast DIAAS), and plain yogurt ([0873](statements/0873.txt), Maybe False; `Pimentel 2018` `PMID:29788433` higher phenylalanine `p=0.03`, `Brown 2023` higher BCAA AUC) carry `limited_clinical_link` (`51`) worsening leans on daily OFF time via four direct PD protein-redistribution crossover trials (`Barichella 2006`, `Tsui 1989`, `Carter 1989`, `Eriksson 1988`), tempered by patient-level heterogeneity (`Virmani 2016`, `Nutt 1989`, `Cucca 2015`, `Pinelli 2024`). Consistent with Rounds 2–6 plant-soy calibration (`Kashyap 2019/2024`), `tofu` ([0457](statements/0457.txt)) and `tempeh` ([0403](statements/0403.txt)) remained `open` for daily OFF time.
+- **Turmeric (*Curcuma longa*, `8` minimal-signal easing leans across `0603`–`0621`):** Calibrated to Round 1 (`turmeric` pain/cognitive/motor anchors), capturing competing RCT evidence across anxiety (`0603`: 5 positive vs 5 null RCTs), depression (`0606`: 7 positive incl. `Yaikwawong 2024` n=227 vs 7 null RCTs), executive function (`0611`: `Lee 2014` 1 g culinary turmeric + `Cox 2015/2020` vs 4 null RCTs), fatigue (`0612`: 5 positive non-PD RCTs countered prominently by direct PD FSS NULL in `Maghbooli 2019` `p=0.42` + 5 non-PD nulls), insomnia (`0614`: direct PD PSQI in `Maghbooli 2019` + `Shafabakhsh 2020`/`Shojaei 2025` countered by direct ISI NULL in `Seyedabadi 2023` n=117 `p=0.71` & `Lopresti 2022`), urinary urgency (`0621`: `Karami 2023` BPH DB-RCT + `Crocerossa 2023` n=368, corroborated by 2026 BPH MA `PMID:42247029`), plus PD-model dyskinesia (`0609`: `Ryu 2018` 6-OHDA mice) and shortened stride (`0619`: `Hasan 2020` + `Geng 2022`). All held strictly at `50.005` given culinary-vs-nanocurcumin exposure gaps, null PD motor/NMSS trial (`Ghodsi 2022` `PMID:35636380`), and DILIN hepatotoxicity caution (`Halegoua-DeMarzio 2023`).
+- **Walnut (*Juglans regia*, NEW — `7` minimal-signal easing leans across `0691`–`0712`):** Anchored on newly published 2025–2026 human whole-walnut RCTs alongside large null ITT benchmarks: `0691` attention & `0701` executive function (`Bell 2025` `PMID:39924976` n=32 acute DB crossover + EEG, `Pribis 2012`, `Pinar-Martí 2023` IPW per-protocol, transparently countered by primary ITT nulls in **WAHA** `Sala-Vila 2020` n=657 `p=0.491` & `Pinar-Martí 2023` n=771); `0695` daytime sleepiness (`Zerón-Rugerio 2025` `PMID:40791136` n=76 dinner walnuts: ESS `-1.37, p=0.002`) & `0706` insomnia (`Zerón-Rugerio 2025` latency `p=0.001` + `Herselman 2022` `PMC9697272` + `Kamoun 2024` `PMC10904559`); `0696` depression (`Arab 2019` NHANES n=26,656 + `Zerón-Rugerio 2026` `PMID:42808314` POMS TMD `-4.85, p=0.030`, countered by `Bell 2025` negative affect & `Pribis 2016`/`Herselman 2022` nulls); `0712` postural instability (`Kamoun 2024` force-plate CoP sway, tempered by `Esselun 2020` & `Willis 2009`); and `0692` bradykinesia (`Choi 2016` `PMC4730349` MPTP Pole Test + `Essa 2015`, noting `Romo-Vaquero 2022` impaired PD urolithin metabotype-0).
+- **Other `minimal_signal` (`50.005`) easing clusters:**
+  - `shiso` (`3`: `0033` attention via `Baek 2026` `PMC13029764` n=93 K-MMSE-2 `p=0.027` vs null ADAS-Cog; `0036` depression via `Sharifan 2017` + 3 leaf rodent studies; `0044` pain via `Kim 2023` `PMC10043449` n=75 OA knee pain `p<0.001`, strictly excluding perilla *seed oil*).
+  - `tuna` (`2` easing: `0542` anxiety & `0556` fatigue via skipjack dried-bonito broth DB-RCTs `Nozawa 2008`, `Umeki 2008`, `Kuroda 2007`, tempered by broth-vs-fillet gap, null fatty-fish/tuna-oil trials, and light skipjack vs albacore MeHg safety).
+  - `strawberry` (`2`: `0208` depression via `Krikorian 2023` `PMID:37892506` BDI-II `p=0.04`; `0222` pain via OA Table 5 of `Schell 2017` `PMID:28846633` ICOAP total pain `p=0.007` vs null VAS `p=0.17`, deduplicated with `Basu 2018`).
+  - `tomato` (`2`: `0486` attention via `López-Solís 2026 MITOS` `PMC13203555` d2-R `q=0.022`; `0500` insomnia via `Yang 2020` `PMID:30792141` pre-bed beefsteak tomato PSQI `p=0.0297` vs null `Hirose 2015` AIS `p=0.16` and GERD caution).
+  - `vanilla` (`2`: `0663` depression & `0678` pain via oral vanillin reserpine-rat model `Kamaly 2025` `PMC12078381` n=70, strictly excluding olfactory neonatal trials & retracted `Hematzadeh 2026`, and documenting `Zhang 2026` D2 antagonism watchpoint).
+  - Single easing leans: `yogurt` ([0872](statements/0872.txt) constipation via `Kinoshita 2021` `PMC8142513` n=961 + `Yang 2008` n=126 + contextual PD synbiotic `Barichella 2016` `PMID:27543643`, balanced against 7 null plain-yogurt RCTs & calibrated with R4 `kefir`), `sweet potato` ([0324](statements/0324.txt) constipation via `Zou 2016` `PMID:25881813` n=120 whole sweet potato RCT), `shiitake mushroom` ([0019](statements/0019.txt) insomnia calibrated with R2 `button mushroom` & R5 `oyster mushroom` L-ergothioneine RCTs bridged by `Toh 2014` `PMC4168387` & `Guthrie/Gordon 2026` `PMC13445236`, plus mandatory thorough-cooking dermatitis warning `Boels 2022`), `spearmint` ([0157](statements/0157.txt) attention via `Falcone 2019` full Tables 1–3 vs null `Herrlinger 2018` attention `p=0.9312`), `thyme` ([0431](statements/0431.txt) constipation via `López-Zambrano 2026` `PMID:42930530` + `Rtibi 2019`), and `sumac` ([0243](statements/0243.txt) pain via `Alghadir 2016` + `Rezvani 2025` `PMC11976610`).
+
+### Key exclusions, integrity catches, and open findings
+
+- **OA full-text table audits & integrity catches:** Proved both `Salmalian 2014` (`PMC3992233`) and `Direkvand-Moghadam 2012` (`PMC3685784`) actually tested ***Zataria multiflora*** (NOT culinary *Thymus vulgaris*, keeping thyme pain `0447` `open`); caught impossible tables in `Alqudah 2023` (`PMID:38039009`, placebo dropping more than thyme despite printed `p=0.003` and broken PRMQ sums); caught **double disqualification** in `Ahn 2024` (`PMC11171771`, wild rice: dried *Z. latifolia* **leaves** + Table 8 ALL MFS fatigue p-values NULL); caught `da Silva 2024` (`PMC11476263`, extruded sorghum alone NULL on GSRS/Bristol); caught `Turana 2025` (`PMC12104678` Table 3, tempeh Attention/MoCA/Verbal Fluency NULL) + `West 2025` (`PMC12472887` null); caught `Ye 2026` (`PMC13703587` Table 3, two null 21-day turnip RCTs); audited `Bondonno 2014`, `Pérez-Piñero 2021` (`PMC8706266`), `Mes 2022` (`PMC8993727`), `Kavcı 2025` (`PMC11703352`), `Barnes 2023` NEJM MIND (`n=604` null), and `Robinson 2026` keeping spinach (`0/27`) & watercress (`0/33`) `open`; caught `Peppone 2019` (`PMC6512349` Table 3) & `Kleckner 2022` null fatigue scales on soybean oil; caught `Xu 2026 NMA` (`PMC13718329` null watermelon DOMS) + `Silva-Néto 2023` watermelon migraine provocation (`23.7%` vs `0%`); caught `Głąbska 2025` (`PMC12157968` 0/4 positive tomato mental-health RCTs); caught `Hematzadeh 2026` vanilla retraction (`PMID:42205309`); verified 14 corrected PMIDs verbatim (`Cassani 2011`, `Fogarty 2013`, `Pribis 2016`, `Herselman 2022`, `Arab 2019`, `Essa 2015`, `Miller 2021`, `Krikorian 2023`, `Schell 2017`, `Delaney 2025`, `Ghodsi 2022`, `Kongkam 2023`).
+- **Strict botanical, plant-part, matrix, route, and homonym boundaries:** Filtered out geographic **Turkey** country hits & urology **TUNA** BPH hits; debunked the Thanksgiving turkey tryptophan-sleep myth via `Wurtman 2003` (-54% Trp:LNAA); separated `shrimp` meat from shell astaxanthin/chitosan; separated `sorghum` grain from `Jobelyn` leaf sheath; separated `wild rice` (*Zizania*) from *Oryza sativa* & *jiaobai* stems; separated `wheat berries` from isolated wheat bran & `SmartAge` wheat-germ spermidine (null `p=0.47`); separated `watercress` from garden nasturtium (*Tropaeolum majus*) & synthetic PEITC; separated `swiss chard` from Round 2 beetroot & author-surname "Chard" PTSD trials; separated `turnip` from rutabaga & maca; separated `sweet potato` from true yams & `Caiapo` raw peel extract; separated culinary `shiitake mushroom` from IV lentinan & mycelial AHCC; separated `zucchini` fruit from *C. pepo* pumpkin seeds/oil; separated `sunflower seed` from oil/lecithin/sprouts; separated `soybean oil`, `sunflower oil`, and `walnut oil` inert placebo arms and whole-nut matrices; and documented safety hazards across MeHg, scombroid, tropomyosin/tree-nut/sunflower IgE, *Fasciola* flukes, oxalate nephropathy (`Jankowski 2026` `PMC13064373`), cucurbitacin toxicity, raw shiitake flagellate dermatitis, and Bronchostop thyme-pastille freezing pharmacovigilance (`forum.parkinsons.org.uk/t/cough-remedies/43244`).
+- **Open findings (`893` claims):** All `893` open claims carry `verdict = Unknown` and `research_status = researched` (displaying as `Unknown (Researched)` in Parkinson's Oracle MCP and the Nyx web UI), with explicit unresolved gaps recorded per claim in [research-status.tsv](followup/research-status.tsv).
+
+### Search coverage and limits
+
+- **Oracle-first & transfer baseline:** Audited all 35 Round 7 ingredients against catalog revision `286` (`42,496` indexed files, `0` read errors) and transferred applicable Rounds 1–6 evidence across the 27 shared exposures before external retrieval. First-pass coverage rates (`0 / 35` strict claim hits with `35 / 35` partial leads; `0 / 500` strict baseline source hits across `500` newly verified primary PMID/NCT IDs) are logged in [experiments/oracle-coverage/](../oracle-coverage/README.md).
+- **External clinical & scientific retrieval:** Completed `1,860 / 1,860` neutral Europe PMC queries ([queries.tsv](queries.tsv), `0` failed queries, `1,124` with hits, `2,391` unique PMIDs, `0` uncited genuine exact-ingredient PD clinical trial titles after excluding 2 country-of-Turkey prevalence papers), live PubMed XML, batch NCBI PMC OA JATS full-text XML (`224` dossier OA bodies + `153` post-integration OA upgrades), and ClinicalTrials.gov v2 sweeps across all 35 ingredients, plus targeted PubMed `pub_date` + `relevance` adversarial opposing-evidence audits across all `37` directional claims (`195` uncited clinical candidates triaged), archiving `500` newly extracted primary source texts under chronological `research/YYYY-YYYY/Source-Text/` buckets.
+- **Inclusive cultural & experiential collection:** Archived `99` new traditional-practice, local-knowledge, personal-report, and anonymized public forum conversation records (Parkinson's UK Discourse, Cure Parkinson's HealthUnlocked, UNESCO/FAO/GLIFWC/peer-reviewed ethnobotanical texts) under `research/YYYY-YYYY/Cultural-and-Experiential/`, bringing total verified cultural records to `631` (`631 / 631` mapped in `experiments/tools/parkinsons-oracle/cultural-graph-topics.tsv`).
+- **Ledger depth:** `930` v1 scorecards, `4,403` scorecard source-family rows, `4,131` per-claim study assessments, `859` per-citation source-depth rows (`412` `original_body_verified`, `447` `first_pass_screened`), `0` scorecard mismatches against live `oracle_check_scorecard`, and `930 / 930` passing `foodexperiment.researchstatus verify-complete`.
+
+## Directional verdicts
+
+- [0019](statements/0019.txt) **Maybe False** (50.005%) Consuming cooked shiitake mushroom worsens insomnia severity in people with Parkinson's disease.
+- [0033](statements/0033.txt) **Maybe True** (50.005%) Consuming dried shiso reduces attention impairment in people with Parkinson's disease.
+- [0036](statements/0036.txt) **Maybe True** (50.005%) Consuming dried shiso reduces depressive symptom severity in people with Parkinson's disease.
+- [0044](statements/0044.txt) **Maybe False** (50.005%) Consuming fresh shiso worsens pain severity in people with Parkinson's disease.
+- [0058](statements/0058.txt) **Maybe False** (51%) Consuming grilled shrimp reduces daily off time in people with Parkinson's disease.
+- [0157](statements/0157.txt) **Maybe True** (50.005%) Consuming fresh spearmint reduces attention impairment in people with Parkinson's disease.
+- [0208](statements/0208.txt) **Maybe True** (50.005%) Consuming frozen strawberry reduces depressive symptom severity in people with Parkinson's disease.
+- [0222](statements/0222.txt) **Maybe False** (50.005%) Consuming raw strawberry worsens pain severity in people with Parkinson's disease.
+- [0243](statements/0243.txt) **Maybe True** (50.005%) Consuming ground sumac reduces pain severity in people with Parkinson's disease.
+- [0324](statements/0324.txt) **Maybe True** (50.005%) Consuming roasted sweet potato reduces constipation severity in people with Parkinson's disease.
+- [0431](statements/0431.txt) **Maybe False** (50.005%) Consuming fresh thyme worsens constipation severity in people with Parkinson's disease.
+- [0486](statements/0486.txt) **Maybe False** (50.005%) Consuming cooked tomato worsens attention impairment in people with Parkinson's disease.
+- [0500](statements/0500.txt) **Maybe False** (50.005%) Consuming roasted tomato worsens insomnia severity in people with Parkinson's disease.
+- [0519](statements/0519.txt) **Maybe True** (51%) Consuming grilled trout worsens daily off time in people with Parkinson's disease.
+- [0542](statements/0542.txt) **Maybe True** (50.005%) Consuming cooked tuna reduces anxiety severity in people with Parkinson's disease.
+- [0547](statements/0547.txt) **Maybe True** (51%) Consuming canned tuna worsens daily off time in people with Parkinson's disease.
+- [0556](statements/0556.txt) **Maybe False** (50.005%) Consuming canned tuna worsens fatigue severity in people with Parkinson's disease.
+- [0579](statements/0579.txt) **Maybe False** (51%) Consuming roasted turkey reduces daily off time in people with Parkinson's disease.
+- [0603](statements/0603.txt) **Maybe True** (50.005%) Consuming grated turmeric reduces anxiety severity in people with Parkinson's disease.
+- [0606](statements/0606.txt) **Maybe False** (50.005%) Consuming ground turmeric worsens depressive symptom severity in people with Parkinson's disease.
+- [0609](statements/0609.txt) **Maybe False** (50.005%) Consuming ground turmeric worsens dyskinesia severity in people with Parkinson's disease.
+- [0611](statements/0611.txt) **Maybe False** (50.005%) Consuming grated turmeric worsens executive function impairment in people with Parkinson's disease.
+- [0612](statements/0612.txt) **Maybe True** (50.005%) Consuming ground turmeric reduces fatigue severity in people with Parkinson's disease.
+- [0614](statements/0614.txt) **Maybe True** (50.005%) Consuming grated turmeric reduces insomnia severity in people with Parkinson's disease.
+- [0619](statements/0619.txt) **Maybe False** (50.005%) Consuming ground turmeric worsens shortened stride severity in people with Parkinson's disease.
+- [0621](statements/0621.txt) **Maybe False** (50.005%) Consuming ground turmeric worsens urinary urgency frequency in people with Parkinson's disease.
+- [0663](statements/0663.txt) **Maybe True** (50.005%) Consuming ground vanilla reduces depressive symptom severity in people with Parkinson's disease.
+- [0678](statements/0678.txt) **Maybe False** (50.005%) Consuming ground vanilla worsens pain severity in people with Parkinson's disease.
+- [0691](statements/0691.txt) **Maybe False** (50.005%) Consuming raw walnut worsens attention impairment in people with Parkinson's disease.
+- [0692](statements/0692.txt) **Maybe True** (50.005%) Consuming roasted walnut reduces bradykinesia severity in people with Parkinson's disease.
+- [0695](statements/0695.txt) **Maybe False** (50.005%) Consuming raw walnut worsens daytime sleepiness severity in people with Parkinson's disease.
+- [0696](statements/0696.txt) **Maybe False** (50.005%) Consuming roasted walnut worsens depressive symptom severity in people with Parkinson's disease.
+- [0701](statements/0701.txt) **Maybe False** (50.005%) Consuming roasted walnut worsens executive function impairment in people with Parkinson's disease.
+- [0706](statements/0706.txt) **Maybe True** (50.005%) Consuming raw walnut reduces insomnia severity in people with Parkinson's disease.
+- [0712](statements/0712.txt) **Maybe True** (50.005%) Consuming raw walnut reduces postural instability severity in people with Parkinson's disease.
+- [0872](statements/0872.txt) **Maybe False** (50.005%) Consuming plain yogurt worsens constipation severity in people with Parkinson's disease.
+- [0873](statements/0873.txt) **Maybe False** (51%) Consuming plain yogurt reduces daily off time in people with Parkinson's disease.

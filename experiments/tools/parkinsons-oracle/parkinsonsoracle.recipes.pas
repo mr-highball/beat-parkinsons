@@ -497,14 +497,104 @@ begin
     Exit('lentil');
   if (Result = 'white beans') or (Result = 'cannellini bean') or (Result = 'cannellini beans') then
     Exit('white bean');
-  if (Result = 'sweet potatoes') then
+  if (Result = 'sweet potatoes') or (Result = 'roasted sweet potato') or
+    (Result = 'roasted sweet potatoes') or (Result = 'baked sweet potato') or
+    (Result = 'steamed sweet potato') or (Result = 'mashed sweet potato') or
+    (Result = 'sweet potato puree') then
     Exit('sweet potato');
   if (Result = 'potatoes') then
     Exit('potato');
-  if (Result = 'tomatoes') then
+  if (Result = 'tomatoes') or (Result = 'raw tomato') or (Result = 'cooked tomato') or
+    (Result = 'roasted tomato') or (Result = 'roasted tomatoes') or
+    (Result = 'cherry tomato') or (Result = 'cherry tomatoes') or
+    (Result = 'grape tomato') or (Result = 'grape tomatoes') or
+    (Result = 'roma tomato') or (Result = 'roma tomatoes') or
+    (Result = 'diced tomatoes') or (Result = 'tomato paste') then
     Exit('tomato');
   if (Result = 'oats') or (Result = 'rolled oats') or (Result = 'oat') then
     Exit('oats');
+  if (Result = 'pecans') or (Result = 'raw pecan') or (Result = 'raw pecans') or
+    (Result = 'roasted pecan') or (Result = 'roasted pecans') or
+    (Result = 'toasted pecans') or (Result = 'chopped pecans') or
+    (Result = 'pecan halves') then
+    Exit('pecan');
+  if (Result = 'fresh peppermint') or (Result = 'dried peppermint') or
+    (Result = 'brewed peppermint') or (Result = 'peppermint leaf') or
+    (Result = 'peppermint leaves') or (Result = 'peppermint tea') then
+    Exit('peppermint');
+  if (Result = 'pistachios') or (Result = 'raw pistachio') or (Result = 'raw pistachios') or
+    (Result = 'roasted pistachio') or (Result = 'roasted pistachios') or
+    (Result = 'shelled pistachios') or (Result = 'unsalted pistachios') or
+    (Result = 'chopped pistachios') then
+    Exit('pistachio');
+  if (Result = 'plums') or (Result = 'raw plum') or (Result = 'poached plum') or
+    (Result = 'poached plums') or (Result = 'fresh plum') or (Result = 'fresh plums') or
+    (Result = 'prune') or (Result = 'prunes') or (Result = 'dried plum') or
+    (Result = 'dried plums') then
+    Exit('plum');
+  if (Result = 'pomegranate arils') or (Result = 'pomegranate aril') or
+    (Result = 'pomegranate') or (Result = 'pomegranates') or
+    (Result = 'pomegranate seed') or (Result = 'pomegranate seeds') or
+    (Result = 'raw pomegranate arils') or (Result = 'fresh pomegranate arils') then
+    Exit('pomegranate arils');
+  if (Result = 'pumpkin seeds') or (Result = 'raw pumpkin seed') or
+    (Result = 'raw pumpkin seeds') or (Result = 'roasted pumpkin seed') or
+    (Result = 'roasted pumpkin seeds') or (Result = 'pepita') or (Result = 'pepitas') or
+    (Result = 'toasted pepitas') then
+    Exit('pumpkin seed');
+  if (Result = 'romaine') or (Result = 'raw romaine') or (Result = 'raw romaine lettuce') or
+    (Result = 'romaine leaf') or (Result = 'romaine leaves') or
+    (Result = 'romaine heart') or (Result = 'romaine hearts') or (Result = 'cos lettuce') then
+    Exit('romaine lettuce');
+  if (Result = 'rooibos') or (Result = 'brewed rooibos') or (Result = 'rooibos tea') or
+    (Result = 'red rooibos') or (Result = 'green rooibos') or (Result = 'red bush tea') or
+    (Result = 'redbush tea') then
+    Exit('rooibos');
+  if (Result = 'toasted rye bread') or (Result = 'whole-grain rye bread') or
+    (Result = 'whole grain rye bread') or (Result = 'sourdough rye bread') or
+    (Result = 'dark rye bread') or (Result = 'nordic rye bread') or (Result = 'rye toast') then
+    Exit('rye bread');
+  if (Result = 'cold-pressed safflower oil') or (Result = 'cold pressed safflower oil') or
+    (Result = 'high-oleic safflower oil') or (Result = 'high oleic safflower oil') or
+    (Result = 'unrefined safflower oil') then
+    Exit('safflower oil');
+  if (Result = 'sesame seeds') or (Result = 'toasted sesame seed') or
+    (Result = 'toasted sesame seeds') or (Result = 'ground sesame seed') or
+    (Result = 'ground sesame seeds') or (Result = 'white sesame seeds') or
+    (Result = 'black sesame seeds') or (Result = 'tahini') then
+    Exit('sesame seed');
+  if (Result = 'shiitake') or (Result = 'shiitakes') or (Result = 'shiitake mushrooms') or
+    (Result = 'cooked shiitake') or (Result = 'cooked shiitake mushroom') or
+    (Result = 'cooked shiitake mushrooms') or (Result = 'dried shiitake') or
+    (Result = 'dried shiitake mushrooms') or (Result = 'fresh shiitake') or
+    (Result = 'fresh shiitake mushrooms') then
+    Exit('shiitake mushroom');
+  if (Result = 'strawberries') or (Result = 'raw strawberry') or
+    (Result = 'raw strawberries') or (Result = 'fresh strawberry') or
+    (Result = 'fresh strawberries') or (Result = 'frozen strawberry') or
+    (Result = 'frozen strawberries') or (Result = 'sliced strawberries') then
+    Exit('strawberry');
+  if (Result = 'canned tuna') or (Result = 'cooked tuna') or (Result = 'skipjack tuna') or
+    (Result = 'light tuna') or (Result = 'canned light tuna') or
+    (Result = 'chunk light tuna') or (Result = 'albacore tuna') or
+    (Result = 'tuna fillet') or (Result = 'seared tuna') then
+    Exit('tuna');
+  if (Result = 'vanilla bean') or (Result = 'vanilla beans') or (Result = 'vanilla pod') or
+    (Result = 'vanilla pods') or (Result = 'vanilla extract') or
+    (Result = 'pure vanilla extract') or (Result = 'vanilla bean paste') or
+    (Result = 'vanilla paste') or (Result = 'ground vanilla') or
+    (Result = 'vanilla powder') then
+    Exit('vanilla');
+  if (Result = 'walnuts') or (Result = 'raw walnut') or (Result = 'raw walnuts') or
+    (Result = 'roasted walnut') or (Result = 'roasted walnuts') or
+    (Result = 'toasted walnuts') or (Result = 'chopped walnuts') or
+    (Result = 'walnut halves') then
+    Exit('walnut');
+  if (Result = 'yoghurt') or (Result = 'plain yogurt') or (Result = 'plain yoghurt') or
+    (Result = 'unsweetened yogurt') or (Result = 'unsweetened plain yogurt') or
+    (Result = 'greek yogurt') or (Result = 'plain greek yogurt') or
+    (Result = 'live-culture yogurt') then
+    Exit('yogurt');
 
   // General singularization fallback for arbitrary user-typed ingredients.
   LLen := Length(Result);
