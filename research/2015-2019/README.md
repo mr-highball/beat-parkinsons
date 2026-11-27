@@ -1458,3 +1458,7 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [Sichuan pepper pericarp in a traditional multi-ingredient formula mentioning fatigue](Cultural-and-Experiential/Traditional-Practices/2017-PMC5666853-Sichuan-Pepper-Formula-and-Fatigue.txt)
 
 - [Engineering electrospun multicomponent polyurethane scaffolding platform comprising grapeseed oil and honey/propolis for bone tissue regeneration](Source-Text/2018-PMID30372449-Grapeseed-Oil-Scaffold-Scope.txt)
+
+## Dated evidence from the Round 1 outcome audit
+
+- [Round 1 claim 0125 publication scope](Source-Text/2019-Newcastle-Sage-Pilot-Clinical-Report.txt)

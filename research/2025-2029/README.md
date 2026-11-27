@@ -2304,3 +2304,18 @@ Full original checks distinguish culinary exposures from publication dates, figu
 - [PMID:40808710 | Efficacy of computerized cognitive training using mobile devices to promote cognitive functioning in community-dwelling older adults with or without risk of mild cognitive impairment: A multi-centre longitudinal study](Source-Text/2025-PMC12344341-Round1-Original-Scope.txt)
 - [PMID:41180959 | Association between self-reported sensory impairments and low cognitive performance in older adults: A cross-sectional study based on National Health and Nutrition Examination Survey (NHANES)](Source-Text/2025-PMC12576085-Round1-Original-Scope.txt)
 - [PMID:41446341 | Sensory-driven micro-interventions for improved health and wellbeing](Source-Text/2025-PMC12722656-Round1-Original-Scope.txt)
+
+## Round 1 original publications checked for ingredient identity
+
+- [PMID:39688568 | Gut–brain axis and environmental factors in Parkinson’s disease: bidirectional link between disease onset and progression](Source-Text/2025-PMC11974660-Round1-Original-Scope.txt)
+- [PMID:39752251 | Catecholaminergic dysfunction drives postural and locomotor deficits in a mouse model of spinal muscular atrophy](Source-Text/2025-PMC11832083-Round1-Original-Scope.txt)
+- [PMID:39838596 | Essential Tremor Suppression with a Novel Anti‐Tremor Orthosis: A Randomized Crossover Trial](Source-Text/2025-PMC11926495-Round1-Original-Scope.txt)
+- [PMID:39892063 | Pilot screening for prodromal Parkinson’s disease in post-9/11 Veterans with probable rapid eye movement sleep behavior disorder](Source-Text/2025-PMC12403091-Round1-Original-Scope.txt)
+- [PMID:39931046 | Joint effect of modifiable risk factors on Parkinson’s disease: a large-scale longitudinal study](Source-Text/2025-PMC11808133-Round1-Original-Scope.txt)
+- [PMID:40718917 | Lessons Learned from a Parkinson’s Research Patient Advisory Board Model with Academic Centers](Source-Text/2025-PMC12541648-Round1-Original-Scope.txt)
+- [PMID:42559594 | ECG Bootcamp - A Novel Emergency Medicine Small Group Session](Source-Text/2026-PMC13441231-Round1-Original-Scope.txt)
+
+## Dated evidence from the Round 1 outcome audit
+
+- [Round 1 claim 0471 publication scope](Source-Text/2026-NCT07603141-Brown-Rice-Example-and-Standing-Balance.txt)
+- [Round 1 claim 0019 publication scope](Cultural-and-Experiential/Local-Knowledge/2026-Ranade-Black-Seed-and-Low-Mood.txt)

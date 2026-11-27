@@ -62,3 +62,7 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Tarragon pain-related practices documented in the Cayoose Creek Band book](Traditional-Practices/2025-Cayoose-Creek-Tarragon-and-Pain.txt)
 
 - [Reported mood symptoms during pumpkin seed oil use](Conversations/2025-Reddit-Pumpkin-Seed-Oil-and-Mood.txt)
+
+## Professional and community black-seed use
+
+- [Black seed and reported use for low mood](Local-Knowledge/2026-Ranade-Black-Seed-and-Low-Mood.txt) from qualitative practitioner interviews.

@@ -795,3 +795,7 @@ The 2020 shiitake report adds a second independent two-case series of bowel obst
 The 2023 Taounate field report documents digestive and genitourinary uses of wild carrot. The 2024 CIRCUS protocol planned cognitive assessments of a different dietary exposure and population. [Fieldwork](../Cultural-and-Experiential/Local-Knowledge/2023-Jeddi-Taounate-Wild-Carrot-Practices.txt) · [CIRCUS protocol](../Source-Text/2024-PMID39275238-CIRCUS-Protocol-and-Baseline.txt)
 
 Newly indexed topical grapeseed oil contexts use formulations or comparator applications. Registry outcomes remain unreported. [Formulation and Characterization of Oleogel as a Topical Carrier of Azithromycin](../Source-Text/2022-PMID36522608-Grapeseed-Oil-Oleogel-Scope.txt) · [Effect of Aromatherapy on Postoperative Pain: Randomized Clinical Trial](../Source-Text/2024-NCT06294769-Grapeseed-Oil-Topical-Comparator.txt) · [Essential Oils Following IUD Insertion](../Source-Text/2021-NCT04927741-Grapeseed-Oil-Topical-Comparator.txt)
+
+## Round 1 original outcome follow-through
+
+- [Preparation, population and outcome observations](Round-1-Identity-and-Outcome-Audit-Nov27.md).
