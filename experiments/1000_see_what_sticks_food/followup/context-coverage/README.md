@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The priority access and publication-first audit closed 275 original checks. 20681 checks remain across 16376 publication keys and 273 claims. [Batch audit](../priority-papers-and-source-fanout-nov26/README.md)
+
 The clinical context audit closed 354 original checks. 20956 checks remain across 16589 publication keys and 273 claims. [Clinical context and original audit](../clinical-context-and-open-originals-nov26/README.md)
 
 The recovered collections audit closed 443 original checks. 21310 checks remain across 16935 publication keys and 279 claims. [Recovered source audit](../recovered-collections-nov26/README.md)

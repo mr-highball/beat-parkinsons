@@ -1,5 +1,7 @@
 # 2015-2019
 
+The [November 26 Round 1 source audit](../../experiments/1000_see_what_sticks_food/followup/priority-papers-and-source-fanout-nov26/source-records.md#2015-2019) links 4 dated original-source records for this period.
+
 The [November 25 shared archive audit](../2010-2014/Food-Experiment-Shared-Cloud-Originals.md) links the dated radiology, neurology, neuroscience and AYUSH original scopes. The [sesame oral-holding account](Cultural-and-Experiential/Traditional-Practices/2019-AYUSH-Sesame-Gandusha-and-Oral-Dryness.txt) has a separate [observations record](Observations/2019-Sesame-Gandusha-Source-Scope.md).
 
 The [COMBAT registry outcome extract](Source-Text/2018-ISRCTN76069316-COMBAT-Registry-Outcomes.txt) records the 2018 posting and the public outcome fields for the cranberry powder trial.

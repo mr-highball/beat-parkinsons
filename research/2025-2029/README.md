@@ -1,5 +1,7 @@
 # 2025-2029
 
+The [November 26 Round 1 source audit](../../experiments/1000_see_what_sticks_food/followup/priority-papers-and-source-fanout-nov26/source-records.md#2025-2029) links 174 dated original-source records for this period.
+
 The [November 25 shared original access note](Food-Experiment-Shared-Original-Access-Nov25.md) preserves original PDF evidence, source-identity boundaries and the remaining archive routes.
 
 The [2025 cannabidiol preprint scope](Source-Text/2025-Cannabidiol-Neurology-Preprint-Access.txt) records the original pain and Parkinson sections and links its exact review.

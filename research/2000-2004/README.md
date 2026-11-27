@@ -1,5 +1,7 @@
 # 2000-2004
 
+The [November 26 Round 1 source audit](../../experiments/1000_see_what_sticks_food/followup/priority-papers-and-source-fanout-nov26/source-records.md#2000-2004) links 3 dated original-source records for this period.
+
 The [November 25 internal medicine and archive identity review](../2025-2029/Food-Experiment-Round-1-SGIM-and-Archive-Identities-Nov25.md#2000-2004) links the verified source notes for this period.
 
 The [November 25 proceedings follow-through](../2025-2029/Food-Experiment-Round-1-Proceedings-Contexts-Nov25.md#2000-2004) links the new original scopes and source identity records for this period.

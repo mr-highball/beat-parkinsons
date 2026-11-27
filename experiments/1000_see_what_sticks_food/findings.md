@@ -372,6 +372,8 @@ The recovered collections audit closed 443 original checks. Five hypotheses invo
 
 The clinical context audit closed 354 original checks. The black-tea bradykinesia claim completed its source audit with its existing limited Maybe True rating. Five claims involving walnut oil, flaxseed oil and dried basil completed the source audit with Unknown status. [Source and endpoint audit](followup/clinical-context-and-open-originals-nov26/README.md)
 
+The publication-first batch closed 275 exact checks across 213 originals. It recorded anatomical, laboratory, observational and population boundaries for food-related leads and preserved the outstanding priority access gaps. All verdicts retain their existing scorecard grades. [Source dispositions and access gaps](followup/priority-papers-and-source-fanout-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).
