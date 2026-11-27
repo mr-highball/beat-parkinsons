@@ -56,3 +56,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Retail review of a black-bean and sesame powder drink and sleep](Conversations/2026-Vietnamese-Retail-Black-Bean-Sesame-and-Sleep.txt)
 
 - [Patient-reported food aggravators in a rosacea survey](Local-Knowledge/2025-PMC12274754-Rosacea-Reported-Cinnamon-and-Ginger-Triggers.txt)
+
+[Aneityum turmeric harvest calendar](Local-Knowledge/2025-PMC12316303-Aneityum-Turmeric-Harvest.txt) documents local knowledge on Aneityum, Vanuatu.

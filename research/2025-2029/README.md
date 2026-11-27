@@ -1928,3 +1928,5 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [November 26 Round 1 swallowing and clinical endpoint records](../../experiments/1000_see_what_sticks_food/followup/exact-endpoints-and-open-libraries-nov26/originals-by-period.md#2025-2029)
 
 - [November 26 Round 1 trial outcomes and archival source scope](../../experiments/1000_see_what_sticks_food/followup/trial-outcomes-and-archival-depth-nov26/originals-by-period.md#2025-2029)
+
+[Aneityum turmeric harvest calendar](Cultural-and-Experiential/Local-Knowledge/2025-PMC12316303-Aneityum-Turmeric-Harvest.txt) records cultivation timing in a 2025 ethnographic account.

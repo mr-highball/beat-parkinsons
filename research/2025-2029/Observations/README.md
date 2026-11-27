@@ -716,3 +716,5 @@ The Indigenous food sheet documents drying and cooking cranberry. The 2020 tradi
 - **Saffron and Parkinson fatigue.** The September 2024 protocol draft and original IRCT entry omit the standalone PFS-16. The July 2025 registry revision and August 2025 journal draft name it, after receipt of the outcome report. Actual collection and analysis timing remain undocumented. [Protocol versions and dates](../Source-Text/2025-PMC12574437-Isfahan-Saffron-Protocol.txt)
 
 - The Italian hygiene congress met in 2025 and the indexed proceedings appeared in March 2026. The earlier mass-spectrometry record shows the converse issue-date sequence, with the online editorial appearing before its 2019 issue. The archive preserves publication and meeting or issue dates separately. [Italian congress source review](../Source-Text/2026-PMC13085856-Round1-PDF-Scope.txt) and [earlier editorial](../../2015-2019/Source-Text/2018-PMID30430435-Round1-PDF-Scope.txt)
+
+[Aneityum turmeric harvest calendar](2025-Aneityum-Turmeric-Harvest-Context.md) separates the cultivation practice from experimental food and symptom evidence.
