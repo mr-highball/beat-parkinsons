@@ -503,3 +503,5 @@ The Pakistan survey describes eating sweet orange fruit and the Shivalik survey 
 The 2011 diabetes-model paper distinguishes its cohort from the earlier high-fat mouse study of the same tarragon extract. Both measure responses to stimuli in neuropathy models. [2011 original](../Source-Text/2011-PMID21225225-Tarragon-Extract-Sensory-Thresholds.txt) · [2010 original](../Source-Text/PMC2852597.txt)
 
 The original Ndeup section documents millet among several externally applied materials in a group practice. The 2023 review repeats it from this source. [Millet in the Ndeup ceremony described in African Dance as Healing Modality Throughout the Diaspora](../Cultural-and-Experiential/Ceremonial-Accounts/2011-Monteiro-Wall-Ndeup-and-Millet.txt)
+
+- [Round 1 original outcome and preparation review](2014-Yang-Ginger-and-Tea-Stomach-Context.md).

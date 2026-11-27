@@ -58,3 +58,7 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Kani cardamom fruit powder reports](Traditional-Practices/2011-Ayyanar-Kani-Cardamom-Powder-Pain.txt)
 
 - [Millet in the Ndeup ceremony described in African Dance as Healing Modality Throughout the Diaspora](Ceremonial-Accounts/2011-Monteiro-Wall-Ndeup-and-Millet.txt)
+
+## Ginger and tea
+
+- [Traditionally attributed ginger suggestion for tea-associated gastric irritation](Traditional-Practices/2014-Yang-Ginger-and-Tea-Stomach-Context.txt).

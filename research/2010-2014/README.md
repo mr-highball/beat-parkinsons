@@ -912,3 +912,48 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [PMID 21225225, tarragon extract and mouse sensory responses](Source-Text/2011-PMID21225225-Tarragon-Extract-Sensory-Thresholds.txt)
 
 - [Millet in the Ndeup ceremony described in African Dance as Healing Modality Throughout the Diaspora](Cultural-and-Experiential/Ceremonial-Accounts/2011-Monteiro-Wall-Ndeup-and-Millet.txt)
+
+## Round 1 identified preparation and source scope
+
+- [Traditional ginger use described in the tea review](Cultural-and-Experiential/Traditional-Practices/2014-Yang-Ginger-and-Tea-Stomach-Context.txt).
+
+## Round 1 publication clusters checked for ingredient and member scope
+
+- [PMID:20346444 | Lesions of the Medial Prefrontal Cortex Abolish Conditioned Aversion Associated with Sexual Behavior in Male Rats](Source-Text/2010-PMC2908911-Round1-Original-Scope.txt)
+- [PMID:20423333 | Challenges for and current status of research into positive modulators of AMPA receptors](Source-Text/2010-PMC2874841-Round1-Original-Scope.txt)
+- [PMID:20589104 | Age-Related Olfactory Decline is Associated with the BDNF Val66met Polymorphism: Evidence from a Population-Based Study](Source-Text/2010-PMC2893376-Round1-Original-Scope.txt)
+- [PMID:20697546 | President's Address: Common Mechanisms of Multiple Diseases: Why Vegetables and Exercise Are Good for You](Source-Text/2010-PMC2917156-Round1-Original-Scope.txt)
+- [PMID:20706642 | Toll-Like Receptors Expression and Signaling in Glia Cells in Neuro-Amyloidogenic Diseases: Towards Future Therapeutic Application](Source-Text/2010-PMC2913815-Round1-Original-Scope.txt)
+- [PMID:20938400 | Dealing with Misfolded Proteins: Examining the Neuroprotective Role of Molecular Chaperones in Neurodegeneration](Source-Text/2010-PMC3133442-Round1-Original-Scope.txt)
+- [PMID:21073741 | Nigrostriatal neuronal death following chronic dichlorvos exposure: crosstalk between mitochondrial impairments, α synuclein aggregation, oxidative damage and behavioral changes](Source-Text/2010-PMC2996378-Round1-Original-Scope.txt)
+- [PMID:21165178 | The Dopaminergic System in the Aging Brain of Drosophila](Source-Text/2010-PMC3002484-Round1-Original-Scope.txt)
+- [PMID:21492995 | Mouse ES cells overexpressing DNMT1 produce abnormal neurons with upregulated NR1](Source-Text/2011-PMC3115397-Round1-Original-Scope.txt)
+- [PMID:21717826 | Development and classification of an operational definition of complementary and alternative medicine for the Cochrane Collaboration](Source-Text/2011-PMC3196853-Round1-Original-Scope.txt)
+- [PMID:22404658 | Molecular genetic overlap in bipolar disorder, schizophrenia, and major depressive disorder](Source-Text/2012-PMC3406228-Round1-Original-Scope.txt)
+- [PMID:22991584 | Nutraceutical Interventions for Promoting Healthy Aging in Invertebrate Models](Source-Text/2012-PMC3444043-Round1-Original-Scope.txt)
+- [PMID:23104145 | Understanding protein aggregation from the view of monomer dynamics](Source-Text/2012-PMC4834696-Round1-Original-Scope.txt)
+- [PMID:23261527 | Emerging targets in lipid-based therapy ☆](Source-Text/2012-PMC4106802-Round1-Original-Scope.txt)
+- [PMID:23531702 | Biometals in rare neurodegenerative disorders of childhood](Source-Text/2013-PMC3607070-Round1-Original-Scope.txt)
+- [PMID:23583234 | Vitamin E and memantine in Alzheimer's disease: Clinical trial methods and baseline data](Source-Text/2013-PMC4128187-Round1-Original-Scope.txt)
+- [PMID:23644052 | Inflammatory Cytokines in Depression: Neurobiological Mechanisms and Therapeutic Implications](Source-Text/2013-PMC3741070-Round1-Original-Scope.txt)
+- [PMID:23710243 | Historical Aspects of Propolis Research in Modern Times](Source-Text/2013-PMC3655583-Round1-Original-Scope.txt)
+- [PMID:23748227 | Small-Volume Analysis of Cell–Cell Signaling Molecules in the Brain](Source-Text/2013-PMC3857641-Round1-Original-Scope.txt)
+- [PMID:23848536 | 4-hydroxynonenal in the pathogenesis and progression of human diseases](Source-Text/2014-PMC3964795-Round1-Original-Scope.txt)
+- [PMID:23898966 | AC-186, a Selective Nonsteroidal Estrogen Receptor β Agonist, Shows Gender Specific Neuroprotection in a Parkinson’s Disease Rat Model](Source-Text/2013-PMC3778431-Round1-Original-Scope.txt)
+- [PMID:23936822 | Assessing Competence of Broccoli Consumption on Inflammatory and Antioxidant Pathways in Restraint-Induced Models: Estimation in Rat Hippocampus and Prefrontal Cortex](Source-Text/2013-PMC3725709-Round1-Original-Scope.txt)
+- [PMID:23945875 | Inhibition of Microglia Activation as a Phenotypic Assay in Early Drug Discovery](Source-Text/2013-PMC4111462-Round1-Original-Scope.txt)
+- [PMID:23983787 | Antiapoptotic Effects of EGb 761](Source-Text/2013-PMC3745884-Round1-Original-Scope.txt)
+- [PMID:24167416 | Beneficial Effect of Vitamin E in Rotenone Induced Model of PD: Behavioural, Neurochemical and Biochemical Study](Source-Text/2013-PMC3807008-Round1-Original-Scope.txt)
+- [PMID:24567327 | Molecular Basis for Preventing α-Synuclein Aggregation by a Molecular Tweezer](Source-Text/2014-PMC4036189-Round1-Original-Scope.txt)
+- [PMID:24570664 | The influences of age on olfaction: a review](Source-Text/2014-PMC3916729-Round1-Original-Scope.txt)
+- [PMID:24600372 | Voxelwise meta-analysis of gray matter anomalies in progressive supranuclear palsy and Parkinson's disease using anatomic likelihood estimation](Source-Text/2014-PMC3927227-Round1-Original-Scope.txt)
+- [PMID:24790636 | Evaluation of Traditional Medicines for Neurodegenerative Diseases Using Drosophila Models](Source-Text/2014-PMC3984789-Round1-Original-Scope.txt)
+- [PMID:24838095 | The effects of gut microbiota on CNS function in humans](Source-Text/2014-PMC4153780-Round1-Original-Scope.txt)
+- [PMID:24872929 | Recent Scientific Studies of a Traditional Chinese Medicine, Tea, on Prevention of Chronic Diseases](Source-Text/2014-PMC4032838-Round1-Original-Scope.txt)
+- [PMID:24923877 | Feminized Behavior and Brain Gene Expression in a Novel Mouse Model of Klinefelter Syndrome](Source-Text/2014-PMC4371776-Round1-Original-Scope.txt)
+- [PMID:25346674 | A neuropsychological instrument measuring age-related cerebral decline in older drivers: development, reliability, and validity of MedDrive](Source-Text/2014-PMC4191221-Round1-Original-Scope.txt)
+- [PMID:25395337 | Atomic-Resolution Three-Dimensional Structure of Amyloid β Fibrils Bearing the Osaka Mutation **](Source-Text/2014-PMC4502972-Round1-Original-Scope.txt)
+- [PMID:25544900 | Recovery of Olfactory Function Induces Neuroplasticity Effects in Patients with Smell Loss](Source-Text/2014-PMC4269319-Round1-Original-Scope.txt)
+- [PMID:25580149 | KCHO-1, a Novel Antineuroinflammatory Agent, Inhibits Lipopolysaccharide-Induced Neuroinflammatory Responses through Nrf2-Mediated Heme Oxygenase-1 Expression in Mouse BV2 Microglia Cells](Source-Text/2014-PMC4279125-Round1-Original-Scope.txt)
+- [PMID:26555963 | Microencapsulation for the Therapeutic Delivery of Drugs, Live Mammalian and Bacterial Cells, and Other Biopharmaceutics: Current Status and Future Directions](Source-Text/2012-PMC4595965-Round1-Original-Scope.txt)
+- [PMID:32287410 | Literature-related discovery: Potential treatments and preventatives for SARS ☆](Source-Text/2011-PMC7118796-Round1-Original-Scope.txt)

@@ -573,3 +573,16 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [November 26 Round 1 trial outcomes and archival source scope](../../experiments/1000_see_what_sticks_food/followup/trial-outcomes-and-archival-depth-nov26/originals-by-period.md#2005-2009)
 
 - [Grape seed oil as a salve carrier in The Earthwise Herbal](Cultural-and-Experiential/Traditional-Practices/2008-Wood-Grapeseed-Oil-as-Salve-Carrier.txt)
+
+## Round 1 publication clusters checked for ingredient and member scope
+
+- [PMID:15563906 | Clinical assessment of patients with smell and taste disorders](Source-Text/2005-PMC7118991-Round1-Original-Scope.txt)
+- [PMID:15975147 | The influence of long chain polyunsaturate supplementation on docosahexaenoic acid and arachidonic acid in baboon neonate central nervous system](Source-Text/2005-PMC1184078-Round1-Original-Scope.txt)
+- [PMID:16065061 | A nutraceutical a day may keep the doctor away](Source-Text/2005-PMC1369156-Round1-Original-Scope.txt)
+- [PMID:16080311 | Olfactory screening test: experience in 102 Italian subjects](Source-Text/2005-PMC2639845-Round1-Original-Scope.txt)
+- [PMID:16200173 | Facts and ideas from anywhere](Source-Text/2005-PMC1200725-Round1-Original-Scope.txt)
+- [PMID:18360585 | Percutaneous dermal drug delivery for local pain control](Source-Text/2006-PMC1661648-Round1-Original-Scope.txt)
+- [PMID:18955329 | Summary of the American College for Advancement in Medicine November 2007 Conference on Integrative Medicine: Advancing Science and Clinical Practice](Source-Text/2008-PMC2722209-Round1-Original-Scope.txt)
+- [PMID:19120114 | Computer Models of Stress, Allostasis, and Acute and Chronic Diseases](Source-Text/2008-PMC2715850-Round1-Original-Scope.txt)
+- [PMID:19244398 | Potential role of purinergic signaling in lithium-induced nephrogenic diabetes insipidus](Source-Text/2009-PMC2681373-Round1-Original-Scope.txt)
+- [PMID:19481555 | In Vivo Effects of 3-IC: Pharmacological and Genetic Analysis of Hypothermia and Evaluation of Chronic Treatment on Nicotinic Binding Sites](Source-Text/2009-PMC2735267-Round1-Original-Scope.txt)
