@@ -328,3 +328,5 @@ The [Finley feeding study](Source-Text/2003-PMID12949376-Finley-Corn-Oil-and-Neu
 - [November 26 Round 1 rare original and clinical protocol records](../../experiments/1000_see_what_sticks_food/followup/rare-members-and-clinical-protocols-nov26/originals-by-period.md#2000-2004)
 
 - [November 26 Round 1 original scope and outcome audit](../../experiments/1000_see_what_sticks_food/followup/scope-and-outcome-audit-nov26/originals-by-period.md#2000-2004)
+
+- [November 26 Round 1 trial outcomes and archival source scope](../../experiments/1000_see_what_sticks_food/followup/trial-outcomes-and-archival-depth-nov26/originals-by-period.md#2000-2004)

@@ -383,6 +383,8 @@ The November 26 priority original audit checked 154 authenticated bodies. Seven 
 
 The November 26 swallowing and endpoint audit reconciled 215 original memberships and clarified five near-complete clinical or preparation gaps. Three additional shiitake case reports document different adverse events and leave the isolated Parkinson comparison open. A separate fennel trial pools fatigue with other symptoms. [Source and endpoint audit](followup/exact-endpoints-and-open-libraries-nov26/README.md)
 
+The November 26 trial and archival audit closed 262 original memberships, with 34 related contexts. The EXPRESS outcomes were linked to a single registered rice-protein cohort and separated from cooked-grain balance evidence. Two historical accounts remain separately visible as culturally attributed practices. [Source and endpoint audit](followup/trial-outcomes-and-archival-depth-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

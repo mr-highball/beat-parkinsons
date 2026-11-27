@@ -226,3 +226,5 @@ The [BMJ February 1998 issue review](../../experiments/1000_see_what_sticks_food
 - [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1995-1999)
 
 - [November 26 Round 1 swallowing and clinical endpoint records](../../experiments/1000_see_what_sticks_food/followup/exact-endpoints-and-open-libraries-nov26/originals-by-period.md#1995-1999)
+
+- [November 26 Round 1 trial outcomes and archival source scope](../../experiments/1000_see_what_sticks_food/followup/trial-outcomes-and-archival-depth-nov26/originals-by-period.md#1995-1999)

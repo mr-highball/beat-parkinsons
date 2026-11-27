@@ -5,3 +5,5 @@ The [1817 London journal report](Source-Text/1817-PMC5611059-Ginger-Infusion-and
 [Observations and comparison](Observations/README.md) · [Cultural and experiential accounts](Cultural-and-Experiential/README.md)
 
 - [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#1815-1819)
+
+- [November 26 Round 1 trial outcomes and archival source scope](../../experiments/1000_see_what_sticks_food/followup/trial-outcomes-and-archival-depth-nov26/originals-by-period.md#1815-1819)

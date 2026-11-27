@@ -1444,3 +1444,5 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [November 26 Round 1 source review and formulation records](../../experiments/1000_see_what_sticks_food/followup/final-originals-and-formulations-nov26/originals-by-period.md#2015-2019)
 
 - [November 26 Round 1 swallowing and clinical endpoint records](../../experiments/1000_see_what_sticks_food/followup/exact-endpoints-and-open-libraries-nov26/originals-by-period.md#2015-2019)
+
+- [November 26 Round 1 trial outcomes and archival source scope](../../experiments/1000_see_what_sticks_food/followup/trial-outcomes-and-archival-depth-nov26/originals-by-period.md#2015-2019)

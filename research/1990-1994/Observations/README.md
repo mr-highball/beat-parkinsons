@@ -112,3 +112,5 @@ The 1992 pharmacology posters use corn oil as an injected comparator and olive o
 The Maluku and Java survey documents continued insomnia and diarrhea uses. The original abstract supplies no clinical outcomes for those uses and the full report remains an access lead.
 
 - [Ethnobotany of nutmeg in the Spice Islands](../Cultural-and-Experiential/Traditional-Practices/1994-PMID8072304-Maluku-Java-Nutmeg-Uses.txt)
+
+- A 1994 historical account identifies lemon balm and nutmeg in earlier British pharmacy. Its ingredient list establishes practice context without a depression observation. [Harveian Oration record](../Cultural-and-Experiential/Traditional-Practices/1994-Harveian-Oration-Melissa-and-Nutmeg.txt)

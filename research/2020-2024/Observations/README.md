@@ -788,3 +788,5 @@ Orange search results include laboratory fluorescence, chart labels, named chemi
 - [Scientific opinion on the tolerable upper intake level for selenium](../Source-Text/2023-PMID36698500-EFSA-2023-Selenium-Upper-Limit-Brazil-Nut-Safety.txt)
 
 - [Shiitake texture and reported eating difficulty](2023-Shiitake-Texture-and-Swallowing-Reports.md)
+
+- The 2016 EXPRESS registration planned a physical-performance battery. The available 2021 results abstract reports the overall comparison but leaves the standing component open. Walking time in a separate black-rice supplement study cannot supply that missing estimate. [2016 study plan](../../2015-2019/Source-Text/2016-ACTRN12616000521426-EXPRESS-Rice-Protein-Protocol.txt) · [EXPRESS outcome](../Source-Text/2021-PMID33691612-EXPRESS-Rice-Protein-and-Mobility.txt) · [Black rice and exercise](../Source-Text/2020-PMID32340343-Black-Rice-Exercise-and-Walking-Time.txt)

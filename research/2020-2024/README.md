@@ -1976,3 +1976,5 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [November 26 Round 1 swallowing and clinical endpoint records](../../experiments/1000_see_what_sticks_food/followup/exact-endpoints-and-open-libraries-nov26/originals-by-period.md#2020-2024)
 
 - [Observation on shiitake texture and Parkinson swallowing measurements](Observations/2023-2024-Shiitake-Texture-and-Swallowing-Boundaries.md)
+
+- [November 26 Round 1 trial outcomes and archival source scope](../../experiments/1000_see_what_sticks_food/followup/trial-outcomes-and-archival-depth-nov26/originals-by-period.md#2020-2024)
