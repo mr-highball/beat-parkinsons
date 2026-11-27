@@ -805,3 +805,5 @@ Newly indexed topical grapeseed oil contexts use formulations or comparator appl
 - [Round 1 original scope and pain comparison review](2021-2024-Pepper-Extract-and-Processing-Comparisons.md).
 
 - [November 27 original scope review](2024-Saffron-Secondary-Study-Access-Nov27.md).
+
+- [November 27 original source and outcome scope](2020-Cookies-and-Gait-Outcome-Scope-Nov27.md).

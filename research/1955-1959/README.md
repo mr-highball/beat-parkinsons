@@ -47,3 +47,7 @@ The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-
 - [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1955-1959)
 
 - [November 26 Round 1 official scans and endpoint follow-through](../../experiments/1000_see_what_sticks_food/followup/official-scans-and-endpoints-nov26/originals-by-period.md#1955-1959)
+
+## November 27 archive and ingredient scope review
+
+- [PMID:13291855 | An Analysis of the Activating System Including Its use for Screening Antiparkinson Drugs ‡](Source-Text/1955-PMC2603370-Round1-Original-Scope.txt)

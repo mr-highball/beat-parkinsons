@@ -623,3 +623,8 @@ The [2005 neuroscience proceedings](Source-Text/2005-PMC2565472-Round1-Proceedin
 - [PMID:19203243 | Clinically Relevant Effects of Convection-Enhanced Delivery of AAV2-GDNF on the Dopaminergic Nigrostriatal Pathway in Aged Rhesus Monkeys](Source-Text/2009-PMC2767387-Round1-Original-Scope.txt)
 - [PMID:19558212 | Mitochondrial Glutathione, a Key Survival Antioxidant](Source-Text/2009-PMC2821140-Round1-Original-Scope.txt)
 - [PMID:19605757 | Predictors of Normal and Successful Aging Among Urban-Dwelling Elderly Brazilians](Source-Text/2009-PMC2800815-Round1-Original-Scope.txt)
+
+## November 27 archive and ingredient scope review
+
+- [PMID:18601959 | Mouse models of oxidative phosphorylation defects: Powerful tools to study the pathobiology of mitochondrial diseases](Source-Text/2008-PMC2652735-Round1-Original-Scope.txt)
+- [PMID:19277012 | AAV1/2-mediated CNS gene delivery of dominant negative CCL2 mutant suppresses gliosis, beta-amyloidosis, and learning impairment of APP/PS1 mice](Source-Text/2009-PMC2709991-Round1-Original-Scope.txt)

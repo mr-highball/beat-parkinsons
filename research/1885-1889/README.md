@@ -32,3 +32,7 @@ January 1, 1885 through December 31, 1889.
 ## Round 1 food experiment sources
 
 - [Nutmegs in Retrospective Therapeutics, Southern Medical Record](Cultural-and-Experiential/Traditional-Practices/1889-PMID36024268-Shoemaker-Nutmeg-Sleep-and-Diarrhea.txt)
+
+## November 27 archive and ingredient scope review
+
+- [PMID:36024268 | Abstracts &c.](Source-Text/1889-PMC9094982-Round1-Original-Scope.txt)

@@ -140,3 +140,8 @@ A paired-data sensitivity note in the [lemongrass sleep study](Source-Text/1986-
 - [November 26 Round 1 original articles, historic issues and targeted follow-up](../../experiments/1000_see_what_sticks_food/followup/high-degree-originals-nov26/originals-by-period.md#1985-1989)
 
 - [November 26 Round 1 official scans and endpoint follow-through](../../experiments/1000_see_what_sticks_food/followup/official-scans-and-endpoints-nov26/originals-by-period.md#1985-1989)
+
+## November 27 archive and ingredient scope review
+
+- [PMID:2942683 | Physical Disability in 1986 and beyond](Source-Text/1986-PMC5371052-Round1-Original-Scope.txt)
+- [PMID:3821944 | Deutsche Gesellschaft für Pharmakologie und Toxikologie. Abstracts, 28th spring meeting. March 10-13, 1987, Mainz.](Source-Text/1987-PMC7100638-Round1-Original-Scope.txt)

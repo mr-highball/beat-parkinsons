@@ -30,3 +30,7 @@ January 1, 1895 through December 31, 1899.
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 - [November 26 Round 1 outcome tables and rare original sources](../../experiments/1000_see_what_sticks_food/followup/outcome-tables-and-rare-originals-nov26/originals-by-period.md#1895-1899)
+
+## November 27 archive and ingredient scope review
+
+- [PMID:29835537 | The Hospital Nursing Supplement](Source-Text/1895-PMC5261244-Round1-Original-Scope.txt)

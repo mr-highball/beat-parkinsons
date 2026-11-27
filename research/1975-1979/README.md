@@ -65,3 +65,7 @@ The [dried-date pain original-source review](../2025-2029/Food-Experiment-Dried-
 - [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1975-1979)
 
 - [November 26 Round 1 outcome tables and rare original sources](../../experiments/1000_see_what_sticks_food/followup/outcome-tables-and-rare-originals-nov26/originals-by-period.md#1975-1979)
+
+## November 27 archive and ingredient scope review
+
+- [PMID:720319 | Strategy for the assessment of neurobehavioral consequences of environmental factors.](Source-Text/1978-PMC1637235-Round1-Original-Scope.txt)

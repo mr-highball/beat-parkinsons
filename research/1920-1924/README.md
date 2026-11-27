@@ -31,3 +31,7 @@ January 1, 1920 through December 31, 1924.
 - [Cultural, traditional and experiential accounts](Cultural-and-Experiential/README.md).
 
 - [November 26 Round 1 official scans and endpoint follow-through](../../experiments/1000_see_what_sticks_food/followup/official-scans-and-endpoints-nov26/originals-by-period.md#1920-1924)
+
+## November 27 archive and ingredient scope review
+
+- [PMID:29583551 | Encephalitis Lethargica](Source-Text/1921-PMC5403993-Round1-Original-Scope.txt)

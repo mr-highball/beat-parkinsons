@@ -116,3 +116,5 @@ The Maluku and Java survey documents continued insomnia and diarrhea uses. The o
 - A 1994 historical account identifies lemon balm and nutmeg in earlier British pharmacy. Its ingredient list establishes practice context without a depression observation. [Harveian Oration record](../Cultural-and-Experiential/Traditional-Practices/1994-Harveian-Oration-Melissa-and-Nutmeg.txt)
 
 The 1992 herbal manual records an intended use of wild fennel for fatigue. Its dried-seed infusion appears in the digestive-use instructions. [Herbal manual excerpt](../Cultural-and-Experiential/Traditional-Practices/1992-Herboristerie-Familiale-Fennel-Fatigue.txt)
+
+- [November 27 original source and outcome scope](1991-1994-Archive-Extent-and-Conference-Members-Nov27.md).

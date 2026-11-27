@@ -33,3 +33,7 @@ January 1, 1900 through December 31, 1904.
 ## Round 1 food experiment sources
 
 - [Seventy-Second Annual Meeting of the British Medical Association](Source-Text/1904-PMC2355572-BMA-Nutmeg-Liver-Scope.txt)
+
+## November 27 archive and ingredient scope review
+
+- [PMID:29583291 | Exhibition of Patients](Source-Text/1904-PMC5386050-Round1-Original-Scope.txt)
