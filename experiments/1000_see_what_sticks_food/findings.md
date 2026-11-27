@@ -364,6 +364,8 @@ The November 26 swallowing and endpoint audit reconciled 215 original membership
 
 The November 26 trial and archival audit closed 262 original memberships, with 34 related contexts. The EXPRESS outcomes were linked to a single registered rice-protein cohort and separated from cooked-grain balance evidence. Two historical accounts remain separately visible as culturally attributed practices. [Source and endpoint audit](followup/trial-outcomes-and-archival-depth-nov26/README.md)
 
+The November 26 source audit closed 429 original checks. The cooked-tomato and shortened-stride hypothesis completed the current evidence review and remains Unknown. PRIME still has no posted results. [Source audit](followup/source-depth-and-near-completion-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

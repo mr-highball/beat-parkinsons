@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The tomato stride and source audit closed 429 exact checks. 21880 checks remain across 17243 publication keys and 284 claims. [Batch review](../source-depth-and-near-completion-nov26/README.md)
+
 The trial and archival audit resolved 262 exact checks across 188 authenticated publications. 22309 checks remain across 17394 publication keys and 285 claims. [Original sources and outcome audit](../trial-outcomes-and-archival-depth-nov26/README.md)
 
 The swallowing and endpoint audit resolved 215 exact checks across 215 authenticated publications. 22571 checks remain across 17582 publication keys and 285 claims. [Original sources and outcome audit](../exact-endpoints-and-open-libraries-nov26/README.md)
