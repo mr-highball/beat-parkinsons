@@ -718,3 +718,5 @@ The Indigenous food sheet documents drying and cooking cranberry. The 2020 tradi
 - The Italian hygiene congress met in 2025 and the indexed proceedings appeared in March 2026. The earlier mass-spectrometry record shows the converse issue-date sequence, with the online editorial appearing before its 2019 issue. The archive preserves publication and meeting or issue dates separately. [Italian congress source review](../Source-Text/2026-PMC13085856-Round1-PDF-Scope.txt) and [earlier editorial](../../2015-2019/Source-Text/2018-PMID30430435-Round1-PDF-Scope.txt)
 
 [Aneityum turmeric harvest calendar](2025-Aneityum-Turmeric-Harvest-Context.md) separates the cultivation practice from experimental food and symptom evidence.
+
+The CIRCUS 2025 abstract reports biomarker results from the trial whose 2024 publication described the protocol and baselines. Planned cognitive outcomes are still unreported in these records. [2025 meeting abstract](../Source-Text/2025-Circulation-4368203-CIRCUS-Metabolites.txt)

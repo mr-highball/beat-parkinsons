@@ -1984,3 +1984,9 @@ The [ESOC meeting book](Source-Text/2023-PMC11391898-ESOC-Ingredient-and-MRI-Sco
 - [Observation on shiitake texture and Parkinson swallowing measurements](Observations/2023-2024-Shiitake-Texture-and-Swallowing-Boundaries.md)
 
 - [November 26 Round 1 trial outcomes and archival source scope](../../experiments/1000_see_what_sticks_food/followup/trial-outcomes-and-archival-depth-nov26/originals-by-period.md#2020-2024)
+
+- [A case series of intestinal obstruction secondary to shiitake mushroom intake during Chinese New Year](Source-Text/2020-PMID33093939-Shiitake-Intestinal-Obstruction.txt)
+
+- [Systems Approach to Investigate the Role of Fruit and Vegetable Types on Vascular Function in Pre-Hypertensive Participants: Protocol and Baseline Characteristics of a Randomised Crossover Dietary Intervention](Source-Text/2024-PMID39275238-CIRCUS-Protocol-and-Baseline.txt)
+
+- [Taounate wild carrot use in the 2023 ethnobotanical fieldwork report](Cultural-and-Experiential/Local-Knowledge/2023-Jeddi-Taounate-Wild-Carrot-Practices.txt)

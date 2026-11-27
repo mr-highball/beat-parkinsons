@@ -118,3 +118,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Research-author attribution of traditional Siddha practice, black pepper](Local-Knowledge/2024-PMC11402773-Siddha-Black-Pepper-and-Leaves.txt)
 
 - [Shiitake eating difficulty in a Japanese elder-care account](Local-Knowledge/2023-Roushikyo-Shiitake-and-Eating-Difficulty.txt)
+
+- [Taounate wild carrot use in the 2023 ethnobotanical fieldwork report](Local-Knowledge/2023-Jeddi-Taounate-Wild-Carrot-Practices.txt)

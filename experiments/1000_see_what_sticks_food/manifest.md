@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+Verified 180 recent exact original-source checks. The queue holds 19,587 checks across 15,355 source keys and 271 frozen claims. Claim 0244 now meets the research-depth gates. Round 1 stands at 700 researched and 300 partial, with all 24 affected scorecards retaining their recorded verdicts and anchors. [Original-source and coverage audit](followup/zero-queue-and-recent-originals-nov27/README.md)
+
 The structured original review closed 140 exact source checks. The queue now holds 19,767 checks across 15,535 source keys and 271 frozen claims. The 14 affected version 1 scorecards validate at their existing verdicts and anchors. [Originals and replay](followup/priority-and-structured-nov27/README.md)
 
 The November 27 bulk original review resolved 111 checks across 102 verified publications. The queue holds 19,907 checks across 15,675 source keys and 271 frozen claims. The 20 affected scorecards validate at their existing verdicts and anchors. [Originals and follow-through](followup/near-claims-and-bulk-originals-nov27/README.md)

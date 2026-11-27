@@ -9,3 +9,5 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Saffron in Chinese medical literature, documented and attributed by Zhang in 1994](Traditional-Practices/1994-Zhang-Saffron-in-Chinese-Medical-Literature.txt)
 
 - [Ethnobotany of nutmeg in the Spice Islands](Traditional-Practices/1994-PMID8072304-Maluku-Java-Nutmeg-Uses.txt)
+
+- [Herboristerie familiale, wild fennel and general fatigue](Traditional-Practices/1992-Herboristerie-Familiale-Fennel-Fatigue.txt)
