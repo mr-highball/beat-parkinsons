@@ -1,5 +1,7 @@
 # Food thought experiment work record
 
+The post-merge audit closed 69 exact source checks from 36 verified originals. The queue holds 20,018 checks across 15,777 source keys and 271 claims. The batch recorded seven related contexts and 62 source-scope exclusions. [Post-merge audit](followup/post-merge-originals-nov27/README.md)
+
 The November 25 shared archive review resolved 118 checks from ten original publications, recorded 29 related contexts and verified all 26 affected scorecards. The exact replay leaves 30,699 checks across 21,042 source keys and 392 frozen claims. [Shared originals and verified replay](followup/shared-cloud-originals-nov25/README.md)
 
 The November 25 version-specific review resolved five dried-date pain source checks and verified the existing cranberry and green-bean scorecards. The replay leaves 30,817 pairs across 21,052 source keys and 393 claims. The three scorecards remain Unknown. [Original versions and verified replay](followup/date-pain-preprint-originals-nov25/README.md)

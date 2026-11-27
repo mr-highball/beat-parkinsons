@@ -1,5 +1,7 @@
 ## Findings and limits
 
+The post-merge audit closed 69 exact source checks from 36 verified originals. The queue holds 20,018 checks across 15,777 source keys and 271 claims. The batch recorded seven related contexts and 62 source-scope exclusions. [Original sources and coverage](followup/post-merge-originals-nov27/README.md)
+
 The shared original-source review closed 156 exact checks using 26 identity-verified publications, with 85 scope exclusions and 71 related contexts. The queue now holds 30,274 checks across 20,981 source keys and 388 frozen claims. Fifty-one scorecards retain their verdicts and anchors. [Originals and exact replay](followup/shared-original-scope-dedup-nov25/README.md)
 
 The November 25 proceedings and folio review closed 34 exact source checks across five original records. The replay leaves 30,430 checks across 21,007 source keys and 388 claims. Twenty assessed claims retain their existing verdicts and score anchors. [Originals and replay](followup/priority-originals-and-saffron-citations-nov25/README.md)

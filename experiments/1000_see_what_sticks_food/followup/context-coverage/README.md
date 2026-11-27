@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The post-merge audit closed 69 exact source checks from 36 verified originals. The queue holds 20,018 checks across 15,777 source keys and 271 claims. The batch recorded seven related contexts and 62 source-scope exclusions. [Exact replay and original sources](../post-merge-originals-nov27/README.md)
+
 The last-source recovery audit closed 274 original checks. 20087 checks remain across 15813 publication keys and 271 claims. [Batch audit](../last-source-recovery-nov26/README.md)
 
 The archived PDF and focused outcome audit closed 320 original checks. 20361 checks remain across 16079 publication keys and 273 claims. [Batch audit](../pdf-originals-and-fresh-sweeps-nov26/README.md)
