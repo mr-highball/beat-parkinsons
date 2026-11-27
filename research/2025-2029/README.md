@@ -2539,3 +2539,7 @@ Full original checks distinguish culinary exposures from publication dates, figu
 - [Original premenstrual pain tables](Source-Text/2025-DOI10.31983-jkb.v15i1.12663-Pumpkin-Seed-Extract-and-PMS-Pain.txt)
 - [Potentially overlapping composite-symptom report](Source-Text/2026-DOI10.52365-jm.v12i1.1657-Pumpkin-Seed-Extract-and-PMS-Total.txt)
 - [Late outcome and identity checks](Food-Experiment-Late-Outcome-and-Identity-Access-Nov27.md)
+
+- [Canola and MCT crossover registration](Source-Text/Trials/UMIN000063699.txt)
+
+- [Canola fatigue and open outcome records](Food-Experiment-Canola-and-Outcome-Access-Nov27.md)
