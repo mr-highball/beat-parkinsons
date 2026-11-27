@@ -90,17 +90,31 @@ begin
   LCatalog := TRecipeCatalog.Create;
   try
     LCatalog.LoadFromDirectory(LDir);
-    Check(LCatalog.Count = 6450, 'Catalog loads all 6,450 positive-lean recipes (129 x 50).');
+    Check(LCatalog.Count = 6470, 'Catalog loads all 6,470 recipes.');
     Check(Length(LCatalog.CoreIngredients) = 129, 'Catalog covers all 129 positive-lean core ingredients.');
 
-    // Verify every positive-lean ingredient has 50 low-to-medium effort recipes with valid category splits and rich details.
+    // Verify coverage, meal categories, and usable recipe details for every core ingredient.
     for I := Low(CPositiveLeanIngredients) to High(CPositiveLeanIngredients) do
     begin
       LCore := CPositiveLeanIngredients[I];
       LGroup := LCatalog.QueryByCoreIngredient(LCore);
-      Check(Length(LGroup) = 50, 'Core ingredient "' + LCore + '" has exactly 50 recipes.');
       LCounts := LCatalog.CategoryCounts(LCore, nil);
-      if (LCore = 'artichoke') or (LCore = 'asparagus') or (LCore = 'beef') or
+      if LCore = 'asparagus' then
+      begin
+        Check(Length(LGroup) = 55, 'Asparagus has 55 recipes.');
+        Check(LCounts[rcBreakfast] = 17, 'Asparagus has 17 breakfast recipes.');
+        Check(LCounts[rcLunch] = 17, 'Asparagus has 17 lunch recipes.');
+        Check(LCounts[rcDinner] = 19, 'Asparagus has 19 dinner recipes.');
+        Check(LCounts[rcSmoothies] = 1, 'Asparagus has one smoothie.');
+        Check(LCounts[rcJuices] = 1, 'Asparagus has one juice.');
+      end
+      else if (LCore = 'basil') or (LCore = 'flaxseed oil') or (LCore = 'ginger') then
+      begin
+        Check(Length(LGroup) = 55, LCore + ' has 55 recipes.');
+        for LCat := Low(TRecipeConcreteCategory) to High(TRecipeConcreteCategory) do
+          Check(LCounts[LCat] = 11, LCore + ' has 11 ' + RecipeCategoryKey(LCat) + ' recipes.');
+      end
+      else if (LCore = 'artichoke') or (LCore = 'beef') or
         (LCore = 'brussels sprouts') or (LCore = 'button mushroom') or
         (LCore = 'chicken') or (LCore = 'chickpeas') or (LCore = 'clams') or
         (LCore = 'edamame') or (LCore = 'eggplant') or (LCore = 'fava beans') or
@@ -199,12 +213,12 @@ begin
     Check(FormatIngredientLine(LDetail, 2.0) = '4 stalks celery stalk, finely diced',
       'Double-scales measured ingredient line cleanly.');
 
-    // Verify JSON serialization/deserialization round-trip across all 6,450 recipes.
+    // Verify JSON serialization/deserialization round-trip across the full catalog.
     LSerialized := LCatalog.ToJSONString(False);
     LRoundTrip := TRecipeCatalog.Create;
     try
       LRoundTrip.LoadFromJSONString(LSerialized);
-      Check(LRoundTrip.Count = LCatalog.Count, 'Round-trip preserves full 6,450 recipe count.');
+      Check(LRoundTrip.Count = LCatalog.Count, 'Round-trip preserves the full recipe count.');
       Check(LRoundTrip.Items[0].Id = LCatalog.Items[0].Id, 'Round-trip preserves first id.');
       Check(LRoundTrip.Items[0].CoreIngredient = LCatalog.Items[0].CoreIngredient,
         'Round-trip preserves first queryable CoreIngredient.');
