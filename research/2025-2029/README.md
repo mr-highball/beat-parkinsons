@@ -2491,3 +2491,9 @@ Full original checks distinguish culinary exposures from publication dates, figu
 
 - [PMID:39571165 | The Impact of Aging on Neurological Diseases in the Elderly: Molecular Mechanisms and Therapeutic Perspectives](Source-Text/2025-PMC12339169-Round1-Original-Scope.txt)
 - [PMID:40153582 | 1953-2023. Seventy Years of the Nerve Growth Factor: A Potential Novel Treatment in Neurological Diseases?](Source-Text/2025-PMC12221384-Round1-Original-Scope.txt)
+
+## November 27 PDF recovery and whole-original scope
+
+- [PMID:38767482 | Multifaceted superoxide dismutase 1 expression in amyotrophic lateral sclerosis patients: a rare occurrence?](Source-Text/2025-PMC11246149-Round1-Original-Scope.txt)
+
+- [2026 CIRCUS mixed-produce outcome report](Source-Text/2026-Circulation-TH916-CIRCUS-Vascular-and-Lipid-Outcomes.txt)

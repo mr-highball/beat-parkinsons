@@ -21,6 +21,8 @@ Verdicts are tracked for **1,000** frozen statements. Confidence values are revi
 
 ## Findings and limits
 
+Verified 454 exact checks across 451 original accessions. The queue holds 17,069 checks across 12,895 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All nine affected scorecards confirm their recorded verdict and anchor. [Original coverage and clinical follow-through](followup/pdf-recovery-nov27/README.md)
+
 Verified 265 exact checks across 235 original accessions. The queue holds 17,523 checks across 13,346 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All 23 affected scorecards confirm their recorded verdict and anchor. [Original coverage and clinical follow-through](followup/next-endpoints-nov27/README.md)
 
 Verified 300 exact checks across 300 original publications. The queue holds 17,788 checks across 13,579 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All 12 affected scorecards confirm their recorded verdict and anchor. [Original coverage and clinical follow-through](followup/origin-depth-nov27/README.md)

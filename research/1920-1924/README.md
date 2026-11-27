@@ -35,3 +35,7 @@ January 1, 1920 through December 31, 1924.
 ## November 27 archive and ingredient scope review
 
 - [PMID:29583551 | Encephalitis Lethargica](Source-Text/1921-PMC5403993-Round1-Original-Scope.txt)
+
+## November 27 PDF recovery and whole-original scope
+
+- [PMID:33943097 | Nosography in Modern Internal Medicine.](Source-Text/1922-PMC7034589-Round1-Original-Scope.txt)

@@ -11,3 +11,7 @@ The [1817 London journal report](Source-Text/1817-PMC5611059-Ginger-Infusion-and
 ## November 27 archive and ingredient scope review
 
 - [PMID:30493803 | Retrospective View of the Late Improvements in Medicine and Surgery](Source-Text/1817-PMC5600554-Round1-Original-Scope.txt)
+
+## November 27 PDF recovery and whole-original scope
+
+- [PMID:30329794 | Observations on Chronic Inflammation of the Brain and Its Membranes.](Source-Text/1818-PMC5754670-Round1-Original-Scope.txt)

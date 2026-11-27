@@ -145,3 +145,7 @@ A paired-data sensitivity note in the [lemongrass sleep study](Source-Text/1986-
 
 - [PMID:2942683 | Physical Disability in 1986 and beyond](Source-Text/1986-PMC5371052-Round1-Original-Scope.txt)
 - [PMID:3821944 | Deutsche Gesellschaft für Pharmakologie und Toxikologie. Abstracts, 28th spring meeting. March 10-13, 1987, Mainz.](Source-Text/1987-PMC7100638-Round1-Original-Scope.txt)
+
+## November 27 PDF recovery and whole-original scope
+
+- [PMID:3577214 | Occupational neurology.](Source-Text/1987-PMC2590302-Round1-Original-Scope.txt)

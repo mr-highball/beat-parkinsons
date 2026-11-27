@@ -243,3 +243,7 @@ The [BMJ February 1998 issue review](../../experiments/1000_see_what_sticks_food
 ## Round 1 recovered originals and botanical scope
 
 - [PMID:10796704 | Pergolide for levodopa‐induced complications in Parkinson's disease](Source-Text/1999-PMC13735130-Round1-Original-Scope.txt)
+
+## November 27 PDF recovery and whole-original scope
+
+- [PMID:10234030 | The Stimulatory Action and the Development of Tolerance to Caffeine Is Associated with Alterations in Gene Expression in Specific Brain Regions](Source-Text/1999-PMC6782739-Round1-Original-Scope.txt)
