@@ -511,3 +511,5 @@ The original Ndeup section documents millet among several externally applied mat
 - [Round 1 original scope and pain comparison review](2011-Pumpkin-Oil-Joint-Pain-Comparisons-Nov27.md).
 
 - [November 27 original source and outcome scope](2014-Coffee-Fatigue-Outcome-Nov27.md).
+
+- [Corn-Oil-Overall-and-Epworth-Analysis-Nov27](Corn-Oil-Overall-and-Epworth-Analysis-Nov27.md)

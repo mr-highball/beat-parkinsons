@@ -1,5 +1,7 @@
 ## Findings and limits
 
+Verified 451 exact checks from authenticated originals. The Round 1 queue contains 16,618 checks across 12,444 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. The seven affected scorecards retain their verdicts. [Original-source and outcome audit](followup/continued-endpoints-nov27/README.md)
+
 Verified 454 exact checks across 451 original accessions. The queue holds 17,069 checks across 12,895 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All nine affected scorecards confirm their recorded verdict and anchor. [Original coverage and clinical follow-through](followup/pdf-recovery-nov27/README.md)
 
 Verified 265 exact checks across 235 original accessions. The queue holds 17,523 checks across 13,346 source keys and 269 claims. Round 1 has 704 researched claims and 296 partial claims. All 23 affected scorecards confirm their recorded verdict and anchor. [Original coverage and clinical follow-through](followup/next-endpoints-nov27/README.md)

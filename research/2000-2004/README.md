@@ -351,3 +351,9 @@ The [Finley feeding study](Source-Text/2003-PMID12949376-Finley-Corn-Oil-and-Neu
 - [PMID:15128854 | Variant Brain-Derived Neurotrophic Factor (BDNF) (Met66) Alters the Intracellular Trafficking and Activity-Dependent Secretion of Wild-Type BDNF in Neurosecretory Cells and Cortical Neurons](Source-Text/2004-PMC6729450-Round1-Original-Scope.txt)
 - [PMID:15152986 | Enhancement of Latent Inhibition by Chronic Mild Stress in Rats Submitted to Emotional Response Conditioning](Source-Text/2003-PMC2565427-Round1-Original-Scope.txt)
 - [PMID:15289425 | Vitamin B12 (cobalamin) deficiency in elderly patients](Source-Text/2004-PMC490077-Round1-Original-Scope.txt)
+
+## November 27 continued originals and alternative archive access
+
+- [PMID:11834460 | The three modern faces of mercury.](Source-Text/2002-PMC1241144-Round1-Original-Scope.txt)
+- [PMID:12926410 | NIEHS News August 2003](Source-Text/2003-PMC1241626-Round1-Original-Scope.txt)
+- [PMID:15461804 | Twilight of a hero](Source-Text/2004-PMC545585-Round1-Original-Scope.txt)

@@ -734,3 +734,5 @@ The tarragon chapter records plant use for specific pain contexts, with leaf con
 - [November 27 original scope review](2026-Fennel-Original-Pain-and-Fatigue-Nov27.md).
 
 - [November 27 original outcome and scope review](2026-CIRCUS-Carrot-Blood-Lipids-and-Planned-Cognition-Nov27.md).
+
+- [Sulforaphane-Trial-Identity-and-Attention-Nov27](Sulforaphane-Trial-Identity-and-Attention-Nov27.md)
