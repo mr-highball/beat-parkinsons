@@ -347,6 +347,10 @@ var
   procedure Advance;
   var
     LStream: Integer;
+    LOffsetIdx: Integer;
+    LBest: Integer;
+    LBestKey: Integer;
+    LKey: Integer;
     LRow: TJSObject;
     LPath: String;
     LArguments: TJSObject;
@@ -358,69 +362,99 @@ var
     end;
     while (FRows.Length <= AOffset + ALimit) and HasMore do
     begin
-      LStream := FNextStream;
-      FNextStream := (FNextStream + 1) mod Length(FStreams);
-      if FStreams[LStream].Position < FStreams[LStream].Rows.Length then
+      // Ensure every non-exhausted stream is positioned on a matching unseen candidate.
+      for LOffsetIdx := 0 to Length(FStreams) - 1 do
       begin
-        LRow := TJSObject(FStreams[LStream].Rows[FStreams[LStream].Position]);
-        Inc(FStreams[LStream].Position);
-        LPath := TextOf(LRow, 'path');
-        if MatchesSourceKind(LPath, FKind) and not FSeen.has(LPath) then
+        LStream := (FNextStream + LOffsetIdx) mod Length(FStreams);
+        while FStreams[LStream].Position < FStreams[LStream].Rows.Length do
         begin
-          FSeen.add(LPath);
-          FRows.push(LRow);
-        end;
-      end
-      else if not FStreams[LStream].Done then
-      begin
-        LArguments := TJSObject.new;
-        LOffset := FStreams[LStream].NextOffset;
-        LArguments['terms'] := FStreams[LStream].Terms;
-        LArguments['offset'] := LOffset;
-        LArguments['limit'] := 100;
-        FNextStream := LStream;
-        FTransport('oracle_search_catalog', LArguments,
-          procedure(AData: TJSObject; const AError: String)
-          var
-            LNext: Integer;
+          LRow := TJSObject(FStreams[LStream].Rows[FStreams[LStream].Position]);
+          LPath := TextOf(LRow, 'path');
+          if MatchesSourceKind(LPath, FKind) and not FSeen.has(LPath) then
           begin
-            if (LGeneration <> FGeneration) or not ACurrent() then
+            Break;
+          end;
+          Inc(FStreams[LStream].Position);
+        end;
+        if (FStreams[LStream].Position >= FStreams[LStream].Rows.Length) and
+          not FStreams[LStream].Done then
+        begin
+          LArguments := TJSObject.new;
+          LOffset := FStreams[LStream].NextOffset;
+          LArguments['terms'] := FStreams[LStream].Terms;
+          LArguments['offset'] := LOffset;
+          LArguments['limit'] := 100;
+          FTransport('oracle_search_catalog', LArguments,
+            procedure(AData: TJSObject; const AError: String)
+            var
+              LNext: Integer;
             begin
-              Exit;
-            end;
-            if AError <> '' then
-            begin
-              AReply(nil, AError);
-              Exit;
-            end;
-            if (FRevision <> '') and (TextOf(AData, 'revision') <> FRevision) then
-            begin
-              AReply(nil, 'The catalog changed while combining symptoms. Please search again.');
-              Exit;
-            end;
-            FRevision := TextOf(AData, 'revision');
-            FStreams[LStream].Rows := RowsOf(AData, 'matches');
-            FStreams[LStream].Position := 0;
-            FStreams[LStream].Started := True;
-            FStreams[LStream].Total := NumberOf(AData, 'total');
-            LNext := NumberOf(AData, 'next_offset');
-            FStreams[LStream].Done := LNext <= LOffset;
-            FStreams[LStream].NextOffset := LNext;
-            if (FStreams[LStream].Rows.Length = 0) and not FStreams[LStream].Done then
-            begin
-              AReply(nil, 'A catalog page was empty before its reported end. Please try again.');
-              Exit;
-            end;
-            if FStreams[LStream].Done and
-              (LOffset + FStreams[LStream].Rows.Length < FStreams[LStream].Total) then
-            begin
-              AReply(nil, 'A catalog search ended before its reported total. Please try again.');
-              Exit;
-            end;
-            Advance;
-          end);
-        Exit;
+              if (LGeneration <> FGeneration) or not ACurrent() then
+              begin
+                Exit;
+              end;
+              if AError <> '' then
+              begin
+                AReply(nil, AError);
+                Exit;
+              end;
+              if (FRevision <> '') and (TextOf(AData, 'revision') <> FRevision) then
+              begin
+                AReply(nil, 'The catalog changed while combining symptoms. Please search again.');
+                Exit;
+              end;
+              FRevision := TextOf(AData, 'revision');
+              FStreams[LStream].Rows := RowsOf(AData, 'matches');
+              FStreams[LStream].Position := 0;
+              FStreams[LStream].Started := True;
+              FStreams[LStream].Total := NumberOf(AData, 'total');
+              LNext := NumberOf(AData, 'next_offset');
+              FStreams[LStream].Done := LNext <= LOffset;
+              FStreams[LStream].NextOffset := LNext;
+              if (FStreams[LStream].Rows.Length = 0) and not FStreams[LStream].Done then
+              begin
+                AReply(nil, 'A catalog page was empty before its reported end. Please try again.');
+                Exit;
+              end;
+              if FStreams[LStream].Done and
+                (LOffset + FStreams[LStream].Rows.Length < FStreams[LStream].Total) then
+              begin
+                AReply(nil, 'A catalog search ended before its reported total. Please try again.');
+                Exit;
+              end;
+              Advance;
+            end);
+          Exit;
+        end;
       end;
+
+      // Pick the newest available candidate across streams; interleave ties round-robin.
+      LBest := -1;
+      LBestKey := -1;
+      for LOffsetIdx := 0 to Length(FStreams) - 1 do
+      begin
+        LStream := (FNextStream + LOffsetIdx) mod Length(FStreams);
+        if FStreams[LStream].Position < FStreams[LStream].Rows.Length then
+        begin
+          LRow := TJSObject(FStreams[LStream].Rows[FStreams[LStream].Position]);
+          LKey := SourceDocumentSortKey(TextOf(LRow, 'path'), TextOf(LRow, 'period'));
+          if (LBest < 0) or (LKey > LBestKey) then
+          begin
+            LBest := LStream;
+            LBestKey := LKey;
+          end;
+        end;
+      end;
+      if LBest < 0 then
+      begin
+        Break;
+      end;
+      LRow := TJSObject(FStreams[LBest].Rows[FStreams[LBest].Position]);
+      Inc(FStreams[LBest].Position);
+      LPath := TextOf(LRow, 'path');
+      FSeen.add(LPath);
+      FRows.push(LRow);
+      FNextStream := (LBest + 1) mod Length(FStreams);
     end;
     AReply(MakePage(AOffset, ALimit), '');
   end;

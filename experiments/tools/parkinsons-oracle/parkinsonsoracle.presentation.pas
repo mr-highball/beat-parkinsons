@@ -25,6 +25,9 @@ function MatchesSourceKind(const APath: String; AKind: Integer): Boolean;
 function RelatedSourceTerms(const AIngredient, ASymptom: String; AKind: Integer): String;
 function FormatCulturalBadgeCount(ACount: Integer): String;
 function GitHubRawURL(const ARepository, ARevision, ALocalPath: String): String;
+function SourceDocumentYear(const APath, APeriod: String): Integer;
+function SourceDocumentSortKey(const APath, APeriod: String): Integer;
+function CompareSourcesByYearDesc(const APathA, APeriodA, APathB, APeriodB: String): Integer;
 function SelectSourcePage(const APaths: array of String; AKind,
   ARemaining: Integer): TSourceSelection;
 
@@ -180,6 +183,124 @@ begin
       LStart := LIndex + 1;
     end;
   end;
+end;
+
+function IsAsciiDigit(ACh: Char): Boolean;
+begin
+  Result := (ACh >= '0') and (ACh <= '9');
+end;
+
+function ParseFourDigitYear(const AText: String; AStart: Integer): Integer;
+var
+  LYear: Integer;
+begin
+  Result := 0;
+  if (AStart < 1) or (AStart + 3 > Length(AText)) then
+    Exit;
+  if not (IsAsciiDigit(AText[AStart]) and IsAsciiDigit(AText[AStart + 1]) and
+    IsAsciiDigit(AText[AStart + 2]) and IsAsciiDigit(AText[AStart + 3])) then
+    Exit;
+  LYear := (Ord(AText[AStart]) - Ord('0')) * 1000 +
+    (Ord(AText[AStart + 1]) - Ord('0')) * 100 +
+    (Ord(AText[AStart + 2]) - Ord('0')) * 10 +
+    (Ord(AText[AStart + 3]) - Ord('0'));
+  if (LYear >= 1500) and (LYear <= 2100) then
+    Result := LYear;
+end;
+
+function LeadingFilenameYear(const APath: String): Integer;
+var
+  LIndex: Integer;
+  LBaseStart: Integer;
+  LNextIndex: Integer;
+  LNext: Char;
+begin
+  Result := 0;
+  LBaseStart := 1;
+  for LIndex := Length(APath) downto 1 do
+  begin
+    if (APath[LIndex] = '/') or (APath[LIndex] = '\') then
+    begin
+      LBaseStart := LIndex + 1;
+      Break;
+    end;
+  end;
+  Result := ParseFourDigitYear(APath, LBaseStart);
+  if Result = 0 then
+    Exit;
+  LNextIndex := LBaseStart + 4;
+  if LNextIndex <= Length(APath) then
+  begin
+    LNext := APath[LNextIndex];
+    if (LNext <> '-') and (LNext <> '_') and (LNext <> ' ') and (LNext <> '.') then
+      Result := 0;
+  end;
+end;
+
+function PeriodStartYear(const APath, APeriod: String): Integer;
+const
+  CResearchPrefix = 'research/';
+var
+  LTrimmed: String;
+  LNormalized: String;
+begin
+  LTrimmed := Trim(APeriod);
+  Result := ParseFourDigitYear(LTrimmed, 1);
+  if (Result > 0) and (Length(LTrimmed) > 4) and (LTrimmed[5] <> '-') then
+    Result := 0;
+  if Result > 0 then
+    Exit;
+  LNormalized := LowerCase(StringReplace(Trim(APath), '\', '/', [rfReplaceAll]));
+  if Pos(CResearchPrefix, LNormalized) = 1 then
+  begin
+    Result := ParseFourDigitYear(LNormalized, Length(CResearchPrefix) + 1);
+    if (Result > 0) and (Length(LNormalized) >= Length(CResearchPrefix) + 5) and
+      (LNormalized[Length(CResearchPrefix) + 5] <> '-') then
+      Result := 0;
+  end;
+end;
+
+function SourceDocumentYear(const APath, APeriod: String): Integer;
+begin
+  Result := LeadingFilenameYear(APath);
+  if Result = 0 then
+    Result := PeriodStartYear(APath, APeriod);
+end;
+
+function SourceDocumentSortKey(const APath, APeriod: String): Integer;
+var
+  LExactYear: Integer;
+  LPeriodYear: Integer;
+  LYear: Integer;
+  LHasExact: Integer;
+begin
+  LExactYear := LeadingFilenameYear(APath);
+  LPeriodYear := PeriodStartYear(APath, APeriod);
+  if LExactYear > 0 then
+  begin
+    LYear := LExactYear;
+    LHasExact := 1;
+  end
+  else
+  begin
+    LYear := LPeriodYear;
+    LHasExact := 0;
+  end;
+  Result := (LYear * 8192) + (LHasExact * 4096) + LPeriodYear;
+end;
+
+function CompareSourcesByYearDesc(const APathA, APeriodA, APathB, APeriodB: String): Integer;
+var
+  LKeyA: Integer;
+  LKeyB: Integer;
+begin
+  LKeyA := SourceDocumentSortKey(APathA, APeriodA);
+  LKeyB := SourceDocumentSortKey(APathB, APeriodB);
+  if LKeyA > LKeyB then
+    Exit(-1);
+  if LKeyA < LKeyB then
+    Exit(1);
+  Result := CompareStr(APathA, APathB);
 end;
 
 function SelectSourcePage(const APaths: array of String; AKind,

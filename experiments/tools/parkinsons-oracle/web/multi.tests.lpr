@@ -162,6 +162,37 @@ begin
   end
   else
   begin
+    if GMode = 'years' then
+    begin
+      if S(AArguments, 'terms') = 'tremor' then
+      begin
+        LRow := TJSObject.new;
+        LRow['path'] := 'research/2025-2029/Source-Text/2025-Tremor.txt';
+        LRow['period'] := '2025-2029';
+        LRows.push(LRow);
+
+        LRow := TJSObject.new;
+        LRow['path'] := 'research/1595-1599/Cultural-and-Experiential/Traditional-Practices/1597-Langham.txt';
+        LRow['period'] := '1595-1599';
+        LRows.push(LRow);
+      end
+      else
+      begin
+        LRow := TJSObject.new;
+        LRow['path'] := 'research/2025-2029/Source-Text/2026-Pain.txt';
+        LRow['period'] := '2025-2029';
+        LRows.push(LRow);
+
+        LRow := TJSObject.new;
+        LRow['path'] := 'research/2020-2024/Source-Text/2024-Pain.txt';
+        LRow['period'] := '2020-2024';
+        LRows.push(LRow);
+      end;
+      LData['matches'] := LRows;
+      LData['total'] := LRows.Length;
+      AReply(LData, '');
+      Exit;
+    end;
     LEnd := LOffset + 100;
     if LEnd > 150 then
       LEnd := 150;
@@ -321,6 +352,17 @@ begin
   LUnion.Reset(LTerms, SourceKindAll);
   LUnion.Page(0, 8, @Current, @Receive);
   Check((GReply = nil) and (GError <> ''), 'Reject premature source pagination completion.');
+  Reset('years');
+  LUnion.Reset(LTerms, SourceKindAll);
+  LUnion.Page(0, 8, @Current, @Receive);
+  Check(GError = '', 'Year-ordered source union succeeds.');
+  LRows := TJSArray(GReply['matches']);
+  Check(LRows.Length = 4, 'Year-ordered source union returns all distinct sources.');
+  Check((S(TJSObject(LRows[0]), 'path') = 'research/2025-2029/Source-Text/2026-Pain.txt') and
+    (S(TJSObject(LRows[1]), 'path') = 'research/2025-2029/Source-Text/2025-Tremor.txt') and
+    (S(TJSObject(LRows[2]), 'path') = 'research/2020-2024/Source-Text/2024-Pain.txt') and
+    (S(TJSObject(LRows[3]), 'path') = 'research/1595-1599/Cultural-and-Experiential/Traditional-Practices/1597-Langham.txt'),
+    'Combined related sources sort strictly descending by year across symptoms.');
   WriteLn(GChecks, ' OR transport, paging, deduplication and freshness checks passed.');
 end;
 
