@@ -1359,3 +1359,6 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [PMCID:PMC7124107 | Applications](Source-Text/2014-PMC7124107-Round1-Original-Scope.txt)
 - [PMCID:PMC7139436 | Cardiology](Source-Text/2010-PMC7139436-Round1-Original-Scope.txt)
 - [PMCID:PMC7170212 | Occupational, environmental and iatrogenic lung disease](Source-Text/2011-PMC7170212-Round1-Original-Scope.txt)
+
+- [Tarragon oil and evoked animal pain](Source-Text/2013-PMID24074293-Tarragon-Essential-Oil-and-Nociception.txt)
+- [Lemongrass essential oil and mouse rotarod](Source-Text/2011-PMID21767622-Lemongrass-Oil-and-Rotarod.txt)

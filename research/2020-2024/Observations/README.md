@@ -813,3 +813,5 @@ Newly indexed topical grapeseed oil contexts use formulations or comparator appl
 - [Nigella-Fatigue-Presence-and-Duration-Nov27](Nigella-Fatigue-Presence-and-Duration-Nov27.md)
 
 - [Green-bean and HADS outcome availability](Green-Bean-Fatigue-Population-and-HADS-Outcome-Nov27.md)
+
+- [Tarragon pain attribution and preparation](2021-Tarragon-Pain-Attribution-and-Preparation.md)

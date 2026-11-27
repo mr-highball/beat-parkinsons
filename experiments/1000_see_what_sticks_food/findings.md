@@ -1,5 +1,7 @@
 ## Findings and limits
 
+Verified 601 exact source checks. The Round 1 queue holds 14,303 pairs across 10,311 source keys and 261 claims. Round 1 has 708 researched and 292 partial claims. All five affected scorecards preserve their verdicts and anchors. [Original scope and outcome follow-through](followup/scope-and-lineage-nov27/README.md)
+
 Verified 260 exact checks across 123 original publications. The Round 1 queue holds 14,904 pairs across 10,911 source keys and 262 claims. Round 1 has 707 researched and 293 partial claims. The reviewed verdicts and anchors all remain in place. [Original editions and outcome audit](followup/near-completion-originals-nov27/README.md)
 
 Verified 402 exact checks. The Round 1 queue contains 15,164 checks across 11,033 source keys and 264 claims. Round 1 has 706 researched claims and 294 partial claims. All eight affected scorecards retain their verdicts and anchors. [Research-depth and original lineage audit](followup/readiness-and-primary-lineage-nov27/README.md)
