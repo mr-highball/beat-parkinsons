@@ -1918,3 +1918,5 @@ The [exercise and tea registration](Source-Text/Trials/UMIN000061500.txt) plans 
 - [November 26 Round 1 source review and formulation records](../../experiments/1000_see_what_sticks_food/followup/final-originals-and-formulations-nov26/originals-by-period.md#2025-2029)
 
 - [November 26 Round 1 prioritized source scopes and original endpoints](../../experiments/1000_see_what_sticks_food/followup/priority-originals-and-endpoints-nov26/originals-by-period.md#2025-2029)
+
+- [November 26 Round 1 swallowing and clinical endpoint records](../../experiments/1000_see_what_sticks_food/followup/exact-endpoints-and-open-libraries-nov26/originals-by-period.md#2025-2029)

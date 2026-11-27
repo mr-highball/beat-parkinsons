@@ -224,3 +224,5 @@ The [BMJ February 1998 issue review](../../experiments/1000_see_what_sticks_food
 - [PMCID:PMC1281787 | Thirty-ninth Annual Biophysical Society Meeting: Wednesday Symposia and Posters, Part III](Source-Text/1995-PMC1281787-Round1-Original-Scope.txt)
 
 - [November 26 Round 1 original-source and access records](../../experiments/1000_see_what_sticks_food/followup/last-pairs-and-near-completion-nov26/originals-by-period.md#1995-1999)
+
+- [November 26 Round 1 swallowing and clinical endpoint records](../../experiments/1000_see_what_sticks_food/followup/exact-endpoints-and-open-libraries-nov26/originals-by-period.md#1995-1999)

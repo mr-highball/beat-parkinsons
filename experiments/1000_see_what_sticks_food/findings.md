@@ -360,6 +360,8 @@ The November 26 shared-source audit closed 166 of 175 selected original membersh
 
 The November 26 priority original audit checked 154 authenticated bodies. Seven source comparisons remain related context. The oldest and newest cited saffron preparations remain distinct, and the older-adult cohort estimate concerns total vegetables. The high-priority original access gaps remain open. [Source and endpoint audit](followup/priority-originals-and-endpoints-nov26/README.md)
 
+The November 26 swallowing and endpoint audit reconciled 215 original memberships and clarified five near-complete clinical or preparation gaps. Three additional shiitake case reports document different adverse events and leave the isolated Parkinson comparison open. A separate fennel trial pools fatigue with other symptoms. [Source and endpoint audit](followup/exact-endpoints-and-open-libraries-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

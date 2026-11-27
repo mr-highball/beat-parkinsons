@@ -1,0 +1,251 @@
+# Round 1 original-source records by period
+
+Links include authenticated bodies and separately labeled remaining-access receipts.
+
+## 1990-1994
+
+- [KMS-1992-18-3-213](../../../../research/1990-1994/Source-Text/1992-Komaki-Shiitake-Esophageal-Impaction.txt) · original journal pdf
+
+## 1995-1999
+
+- [PMID:9600497](../../../../research/1995-1999/Source-Text/1998-PMID9600497-Shiitake-Powder-Gastrointestinal-Reactions.txt) · author abstract and indexed sections
+
+## 2005-2009
+
+- [PMID:19783350](../../../../research/2005-2009/Source-Text/2009-PMID19783350-Shiitake-Esophageal-Allergy-Case.txt) · original publisher letter
+
+## 2010-2014
+
+- [PMID:23926506](../../../../research/2010-2014/Source-Text/2011-PMID23926506-Fennel-Drops-and-PMS-Fatigue-Context.txt) · original body and table
+
+## 2015-2019
+
+- [DOI:10.1016/j.phanu.2019.100165](../../../../research/2015-2019/Source-Text/2019-Shantaram-Cardamom-Powder-and-Paw-Edema.txt) · publisher excerpt
+- [JJSRE-2019-41-5-Terada-10](../../../../research/2015-2019/Source-Text/2019-Terada-Shiitake-Airway-Foreign-Body.txt) · original meeting member
+
+## 2020-2024
+
+- [PMID:37444310](../../../../research/2020-2024/Source-Text/2023-PMID37444310-Shiitake-Cooking-Texture-Comparisons.txt) · original body and table
+- [NCT04612127-thesis](../../../../research/2020-2024/Source-Text/2024-Losada-Spinach-Balance-Thesis-Extract.txt) · original thesis protocol locations
+- [PMID:38867001](../../../../research/2020-2024/Source-Text/PMC11416356.txt) · original body and table
+- [NCT06594536](../../../../research/2020-2024/Source-Text/Trials/2024-NCT06594536-Sulforaphane-Inattention.txt) · original registry
+- [NCT05084365](../../../../research/2020-2024/Source-Text/Trials/NCT05084365.txt) · original registry
+
+## 2025-2029
+
+- [PMID:41604557](../../../../research/2025-2029/Source-Text/2025-Ghannadi-Sulforaphane-Inattention-Factual-Extract.txt) · author abstract
+- [PMID:42026829](../../../../research/2025-2029/Source-Text/2026-PMC13106894-Round1-Source-Scope.txt) · Original publication
+- [PMID:42037465](../../../../research/2025-2029/Source-Text/2026-PMC13112328-Round1-Source-Scope.txt) · Original publication
+- [PMID:42052657](../../../../research/2025-2029/Source-Text/2026-PMC13123466-Round1-Source-Scope.txt) · Original publication
+- [PMID:42051037](../../../../research/2025-2029/Source-Text/2026-PMC13125974-Round1-Source-Scope.txt) · Original publication
+- [PMID:42052752](../../../../research/2025-2029/Source-Text/2026-PMC13126250-Round1-Source-Scope.txt) · Original publication
+- [PMID:42080457](../../../../research/2025-2029/Source-Text/2026-PMC13137767-Round1-Source-Scope.txt) · Original publication
+- [PMID:42185008](../../../../research/2025-2029/Source-Text/2026-PMC13218606-Round1-Source-Scope.txt) · Original publication
+- [PMID:42255497](../../../../research/2025-2029/Source-Text/2026-PMC13235505-Round1-Source-Scope.txt) · Original publication
+- [PMID:42246655](../../../../research/2025-2029/Source-Text/2026-PMC13238811-Round1-Source-Scope.txt) · Original publication
+- [PMID:42255059](../../../../research/2025-2029/Source-Text/2026-PMC13239064-Round1-Source-Scope.txt) · Original publication
+- [PMID:42222927](../../../../research/2025-2029/Source-Text/2026-PMC13239666-Round1-Source-Scope.txt) · Original publication
+- [PMID:42234570](../../../../research/2025-2029/Source-Text/2026-PMC13240034-Round1-Source-Scope.txt) · Original publication
+- [PMID:42256922](../../../../research/2025-2029/Source-Text/2026-PMC13240461-Round1-Source-Scope.txt) · Original publication
+- [PMID:42253498](../../../../research/2025-2029/Source-Text/2026-PMC13240471-Round1-Source-Scope.txt) · Original publication
+- [PMID:42212756](../../../../research/2025-2029/Source-Text/2026-PMC13240577-Round1-Source-Scope.txt) · Original publication
+- [PMID:42249056](../../../../research/2025-2029/Source-Text/2026-PMC13241528-Round1-Source-Scope.txt) · Original publication
+- [PMID:42249672](../../../../research/2025-2029/Source-Text/2026-PMC13241701-Round1-Source-Scope.txt) · Original publication
+- [PMID:42249731](../../../../research/2025-2029/Source-Text/2026-PMC13241809-Round1-Source-Scope.txt) · Original publication
+- [PMID:42251530](../../../../research/2025-2029/Source-Text/2026-PMC13242650-Round1-Source-Scope.txt) · Original publication
+- [PMID:42266711](../../../../research/2025-2029/Source-Text/2026-PMC13242977-Round1-Source-Scope.txt) · Original publication
+- [PMID:42265532](../../../../research/2025-2029/Source-Text/2026-PMC13249789-Round1-Source-Scope.txt) · Original publication
+- [PMID:42139186](../../../../research/2025-2029/Source-Text/2026-PMC13250340-Round1-Source-Scope.txt) · Original publication
+- [PMID:42281745](../../../../research/2025-2029/Source-Text/2026-PMC13250396-Round1-Source-Scope.txt) · Original publication
+- [PMID:42266103](../../../../research/2025-2029/Source-Text/2026-PMC13250462-Round1-Source-Scope.txt) · Original publication
+- [PMID:42282265](../../../../research/2025-2029/Source-Text/2026-PMC13250687-Round1-Source-Scope.txt) · Original publication
+- [PMID:42270085](../../../../research/2025-2029/Source-Text/2026-PMC13253057-Round1-Source-Scope.txt) · Original publication
+- [PMID:42274593](../../../../research/2025-2029/Source-Text/2026-PMC13256586-Round1-Source-Scope.txt) · Original publication
+- [PMID:42279231](../../../../research/2025-2029/Source-Text/2026-PMC13257467-Round1-Source-Scope.txt) · Original publication
+- [PMID:42275483](../../../../research/2025-2029/Source-Text/2026-PMC13257888-Round1-Source-Scope.txt) · Original publication
+- [PMID:42293552](../../../../research/2025-2029/Source-Text/2026-PMC13260183-Round1-Source-Scope.txt) · Original publication
+- [PMID:42293372](../../../../research/2025-2029/Source-Text/2026-PMC13260522-Round1-Source-Scope.txt) · Original publication
+- [PMID:42293120](../../../../research/2025-2029/Source-Text/2026-PMC13262275-Round1-Source-Scope.txt) · Original publication
+- [PMID:42294080](../../../../research/2025-2029/Source-Text/2026-PMC13264074-Round1-Source-Scope.txt) · Original publication
+- [PMID:42290105](../../../../research/2025-2029/Source-Text/2026-PMC13266282-Round1-Source-Scope.txt) · Original publication
+- [PMID:42311785](../../../../research/2025-2029/Source-Text/2026-PMC13268907-Round1-Source-Scope.txt) · Original publication
+- [PMID:42297725](../../../../research/2025-2029/Source-Text/2026-PMC13269008-Round1-Source-Scope.txt) · Original publication
+- [PMID:42298291](../../../../research/2025-2029/Source-Text/2026-PMC13269015-Round1-Source-Scope.txt) · Original publication
+- [PMID:42312132](../../../../research/2025-2029/Source-Text/2026-PMC13269282-Round1-Source-Scope.txt) · Original publication
+- [PMID:42299780](../../../../research/2025-2029/Source-Text/2026-PMC13270423-Round1-Source-Scope.txt) · Original publication
+- [PMID:42318554](../../../../research/2025-2029/Source-Text/2026-PMC13272358-Round1-Source-Scope.txt) · Original publication
+- [PMID:42316248](../../../../research/2025-2029/Source-Text/2026-PMC13277046-Round1-Source-Scope.txt) · Original publication
+- [PMID:42289170](../../../../research/2025-2029/Source-Text/2026-PMC13279921-Round1-Source-Scope.txt) · Original publication
+- [PMID:42339203](../../../../research/2025-2029/Source-Text/2026-PMC13284886-Round1-Source-Scope.txt) · Original publication
+- [PMID:42339393](../../../../research/2025-2029/Source-Text/2026-PMC13285315-Round1-Source-Scope.txt) · Original publication
+- [PMID:42302695](../../../../research/2025-2029/Source-Text/2026-PMC13285639-Round1-Source-Scope.txt) · Original publication
+- [PMID:42331397](../../../../research/2025-2029/Source-Text/2026-PMC13286701-Round1-Source-Scope.txt) · Original publication
+- [PMID:41603385](../../../../research/2025-2029/Source-Text/2026-PMC13288737-Round1-Source-Scope.txt) · Original publication
+- [PMID:42337937](../../../../research/2025-2029/Source-Text/2026-PMC13290663-Round1-Source-Scope.txt) · Original publication
+- [PMID:42270403](../../../../research/2025-2029/Source-Text/2026-PMC13293619-Round1-Source-Scope.txt) · Original publication
+- [PMID:42370069](../../../../research/2025-2029/Source-Text/2026-PMC13294065-Round1-Source-Scope.txt) · Original publication
+- [PMID:42370194](../../../../research/2025-2029/Source-Text/2026-PMC13294989-Round1-Source-Scope.txt) · Original publication
+- [PMID:42368109](../../../../research/2025-2029/Source-Text/2026-PMC13295018-Round1-Source-Scope.txt) · Original publication
+- [PMID:42352053](../../../../research/2025-2029/Source-Text/2026-PMC13296011-Round1-Source-Scope.txt) · Original publication
+- [PMID:42352725](../../../../research/2025-2029/Source-Text/2026-PMC13296286-Round1-Source-Scope.txt) · Original publication
+- [PMID:42346745](../../../../research/2025-2029/Source-Text/2026-PMC13301863-Round1-Source-Scope.txt) · Original publication
+- [PMID:42368468](../../../../research/2025-2029/Source-Text/2026-PMC13303477-Round1-Source-Scope.txt) · Original publication
+- [PMID:42346870](../../../../research/2025-2029/Source-Text/2026-PMC13303951-Round1-Source-Scope.txt) · Original publication
+- [PMID:42373114](../../../../research/2025-2029/Source-Text/2026-PMC13309139-Round1-Source-Scope.txt) · Original publication
+- [PMID:42376478](../../../../research/2025-2029/Source-Text/2026-PMC13311122-Round1-Source-Scope.txt) · Original publication
+- [PMID:42375635](../../../../research/2025-2029/Source-Text/2026-PMC13312467-Round1-Source-Scope.txt) · Original publication
+- [PMID:42359697](../../../../research/2025-2029/Source-Text/2026-PMC13314211-Round1-Source-Scope.txt) · Original publication
+- [PMID:42382696](../../../../research/2025-2029/Source-Text/2026-PMC13317701-Round1-Source-Scope.txt) · Original publication
+- [PMID:42389742](../../../../research/2025-2029/Source-Text/2026-PMC13318674-Round1-Source-Scope.txt) · Original publication
+- [PMID:42347922](../../../../research/2025-2029/Source-Text/2026-PMC13320104-Round1-Source-Scope.txt) · Original publication
+- [PMID:42389621](../../../../research/2025-2029/Source-Text/2026-PMC13321864-Round1-Source-Scope.txt) · Original publication
+- [PMID:42387837](../../../../research/2025-2029/Source-Text/2026-PMC13323561-Round1-Source-Scope.txt) · Original publication
+- [PMID:42394942](../../../../research/2025-2029/Source-Text/2026-PMC13324501-Round1-Source-Scope.txt) · Original publication
+- [PMID:42394801](../../../../research/2025-2029/Source-Text/2026-PMC13325401-Round1-Source-Scope.txt) · Original publication
+- [PMID:42395771](../../../../research/2025-2029/Source-Text/2026-PMC13325811-Round1-Source-Scope.txt) · Original publication
+- [PMID:42404903](../../../../research/2025-2029/Source-Text/2026-PMC13327869-Round1-Source-Scope.txt) · Original publication
+- [PMID:42404796](../../../../research/2025-2029/Source-Text/2026-PMC13328338-Round1-Source-Scope.txt) · Original publication
+- [PMID:42393076](../../../../research/2025-2029/Source-Text/2026-PMC13328759-Round1-Source-Scope.txt) · Original publication
+- [PMID:42403935](../../../../research/2025-2029/Source-Text/2026-PMC13330857-Round1-Source-Scope.txt) · Original publication
+- [PMID:42402728](../../../../research/2025-2029/Source-Text/2026-PMC13333909-Round1-Source-Scope.txt) · Original publication
+- [PMID:42440782](../../../../research/2025-2029/Source-Text/2026-PMC13334145-Round1-Source-Scope.txt) · Original publication
+- [PMID:42410797](../../../../research/2025-2029/Source-Text/2026-PMC13337033-Round1-Source-Scope.txt) · Original publication
+- [PMID:41793756](../../../../research/2025-2029/Source-Text/2026-PMC13337243-Round1-Source-Scope.txt) · Original publication
+- [PMID:42406151](../../../../research/2025-2029/Source-Text/2026-PMC13337742-Round1-Source-Scope.txt) · Original publication
+- [PMID:42416710](../../../../research/2025-2029/Source-Text/2026-PMC13338927-Round1-Source-Scope.txt) · Original publication
+- [PMID:42178762](../../../../research/2025-2029/Source-Text/2026-PMC13339514-Round1-Source-Scope.txt) · Original publication
+- [PMID:42421744](../../../../research/2025-2029/Source-Text/2026-PMC13341616-Round1-Source-Scope.txt) · Original publication
+- [PMID:42422531](../../../../research/2025-2029/Source-Text/2026-PMC13343376-Round1-Source-Scope.txt) · Original publication
+- [PMID:42421455](../../../../research/2025-2029/Source-Text/2026-PMC13347106-Round1-Source-Scope.txt) · Original publication
+- [PMID:42433669](../../../../research/2025-2029/Source-Text/2026-PMC13349899-Round1-Source-Scope.txt) · Original publication
+- [PMID:42434765](../../../../research/2025-2029/Source-Text/2026-PMC13349926-Round1-Source-Scope.txt) · Original publication
+- [PMID:42427169](../../../../research/2025-2029/Source-Text/2026-PMC13351593-Round1-Source-Scope.txt) · Original publication
+- [PMID:42429293](../../../../research/2025-2029/Source-Text/2026-PMC13353045-Round1-Source-Scope.txt) · Original publication
+- [PMID:42430207](../../../../research/2025-2029/Source-Text/2026-PMC13353325-Round1-Source-Scope.txt) · Original publication
+- [PMID:42434028](../../../../research/2025-2029/Source-Text/2026-PMC13353924-Round1-Source-Scope.txt) · Original publication
+- [PMID:42436647](../../../../research/2025-2029/Source-Text/2026-PMC13356577-Round1-Source-Scope.txt) · Original publication
+- [PMID:42438036](../../../../research/2025-2029/Source-Text/2026-PMC13358030-Round1-Source-Scope.txt) · Original publication
+- [PMID:42409423](../../../../research/2025-2029/Source-Text/2026-PMC13358260-Round1-Source-Scope.txt) · Original publication
+- [PMID:42450621](../../../../research/2025-2029/Source-Text/2026-PMC13359917-Round1-Source-Scope.txt) · Original publication
+- [PMID:42452327](../../../../research/2025-2029/Source-Text/2026-PMC13362079-Round1-Source-Scope.txt) · Original publication
+- [PMID:42440038](../../../../research/2025-2029/Source-Text/2026-PMC13364832-Round1-Source-Scope.txt) · Original publication
+- [PMID:42446066](../../../../research/2025-2029/Source-Text/2026-PMC13367029-Round1-Source-Scope.txt) · Original publication
+- [PMID:42459575](../../../../research/2025-2029/Source-Text/2026-PMC13369562-Round1-Source-Scope.txt) · Original publication
+- [PMID:42452944](../../../../research/2025-2029/Source-Text/2026-PMC13370145-Round1-Source-Scope.txt) · Original publication
+- [PMID:42360158](../../../../research/2025-2029/Source-Text/2026-PMC13374365-Round1-Source-Scope.txt) · Original publication
+- [PMID:42461963](../../../../research/2025-2029/Source-Text/2026-PMC13374792-Round1-Source-Scope.txt) · Original publication
+- [PMID:42447752](../../../../research/2025-2029/Source-Text/2026-PMC13375951-Round1-Source-Scope.txt) · Original publication
+- [PMID:42491402](../../../../research/2025-2029/Source-Text/2026-PMC13377418-Round1-Source-Scope.txt) · Original publication
+- [PMID:42441524](../../../../research/2025-2029/Source-Text/2026-PMC13378028-Round1-Source-Scope.txt) · Original publication
+- [PMID:42207491](../../../../research/2025-2029/Source-Text/2026-PMC13378764-Round1-Source-Scope.txt) · Original publication
+- [PMID:42469605](../../../../research/2025-2029/Source-Text/2026-PMC13379516-Round1-Source-Scope.txt) · Original publication
+- [PMID:42431059](../../../../research/2025-2029/Source-Text/2026-PMC13380421-Round1-Source-Scope.txt) · Original publication
+- [PMID:42473544](../../../../research/2025-2029/Source-Text/2026-PMC13380668-Round1-Source-Scope.txt) · Original publication
+- [PMID:42472893](../../../../research/2025-2029/Source-Text/2026-PMC13381663-Round1-Source-Scope.txt) · Original publication
+- [PMID:42473687](../../../../research/2025-2029/Source-Text/2026-PMC13382491-Round1-Source-Scope.txt) · Original publication
+- [PMID:42473871](../../../../research/2025-2029/Source-Text/2026-PMC13382783-Round1-Source-Scope.txt) · Original publication
+- [PMID:42518684](../../../../research/2025-2029/Source-Text/2026-PMC13383984-Round1-Source-Scope.txt) · Original publication
+- [PMID:42481479](../../../../research/2025-2029/Source-Text/2026-PMC13388714-Round1-Source-Scope.txt) · Original publication
+- [PMID:42488747](../../../../research/2025-2029/Source-Text/2026-PMC13389646-Round1-Source-Scope.txt) · Original publication
+- [PMID:42484498](../../../../research/2025-2029/Source-Text/2026-PMC13390657-Round1-Source-Scope.txt) · Original publication
+- [PMID:42494816](../../../../research/2025-2029/Source-Text/2026-PMC13391857-Round1-Source-Scope.txt) · Original publication
+- [PMID:42283596](../../../../research/2025-2029/Source-Text/2026-PMC13392738-Round1-Source-Scope.txt) · Original publication
+- [PMID:42494410](../../../../research/2025-2029/Source-Text/2026-PMC13392967-Round1-Source-Scope.txt) · Original publication
+- [PMID:42435305](../../../../research/2025-2029/Source-Text/2026-PMC13394423-Round1-Source-Scope.txt) · Original publication
+- [PMID:42362485](../../../../research/2025-2029/Source-Text/2026-PMC13395048-Round1-Source-Scope.txt) · Original publication
+- [PMID:42493762](../../../../research/2025-2029/Source-Text/2026-PMC13395969-Round1-Source-Scope.txt) · Original publication
+- [PMID:42322391](../../../../research/2025-2029/Source-Text/2026-PMC13396073-Round1-Source-Scope.txt) · Original publication
+- [PMID:42415688](../../../../research/2025-2029/Source-Text/2026-PMC13398940-Round1-Source-Scope.txt) · Original publication
+- [PMID:42497083](../../../../research/2025-2029/Source-Text/2026-PMC13399183-Round1-Source-Scope.txt) · Original publication
+- [PMID:42468112](../../../../research/2025-2029/Source-Text/2026-PMC13400763-Round1-Source-Scope.txt) · Original publication
+- [PMID:42504580](../../../../research/2025-2029/Source-Text/2026-PMC13402970-Round1-Source-Scope.txt) · Original publication
+- [PMID:42504496](../../../../research/2025-2029/Source-Text/2026-PMC13402976-Round1-Source-Scope.txt) · Original publication
+- [PMID:42510580](../../../../research/2025-2029/Source-Text/2026-PMC13405758-Round1-Source-Scope.txt) · Original publication
+- [PMID:42517186](../../../../research/2025-2029/Source-Text/2026-PMC13409040-Round1-Source-Scope.txt) · Original publication
+- [PMID:42505557](../../../../research/2025-2029/Source-Text/2026-PMC13409430-Round1-Source-Scope.txt) · Original publication
+- [PMID:42524163](../../../../research/2025-2029/Source-Text/2026-PMC13410327-Round1-Source-Scope.txt) · Original publication
+- [PMID:42506308](../../../../research/2025-2029/Source-Text/2026-PMC13413934-Round1-Source-Scope.txt) · Original publication
+- [PMID:42506779](../../../../research/2025-2029/Source-Text/2026-PMC13414801-Round1-Source-Scope.txt) · Original publication
+- [PMID:42529883](../../../../research/2025-2029/Source-Text/2026-PMC13420509-Round1-Source-Scope.txt) · Original publication
+- [PMID:42534953](../../../../research/2025-2029/Source-Text/2026-PMC13422464-Round1-Source-Scope.txt) · Original publication
+- [PMID:42402889](../../../../research/2025-2029/Source-Text/2026-PMC13423130-Round1-Source-Scope.txt) · Original publication
+- [PMID:42216231](../../../../research/2025-2029/Source-Text/2026-PMC13425774-Round1-Source-Scope.txt) · Original publication
+- [PMID:42553345](../../../../research/2025-2029/Source-Text/2026-PMC13433611-Round1-Source-Scope.txt) · Original publication
+- [PMID:42381285](../../../../research/2025-2029/Source-Text/2026-PMC13433891-Round1-Source-Scope.txt) · Original publication
+- [PMID:42183635](../../../../research/2025-2029/Source-Text/2026-PMC13435163-Round1-Source-Scope.txt) · Original publication
+- [PMID:42399098](../../../../research/2025-2029/Source-Text/2026-PMC13435190-Round1-Source-Scope.txt) · Original publication
+- [PMID:42351388](../../../../research/2025-2029/Source-Text/2026-PMC13435193-Round1-Source-Scope.txt) · Original publication
+- [PMID:42220176](../../../../research/2025-2029/Source-Text/2026-PMC13436250-Round1-Source-Scope.txt) · Original publication
+- [PMID:42558269](../../../../research/2025-2029/Source-Text/2026-PMC13437392-Round1-Source-Scope.txt) · Original publication
+- [PMID:42558925](../../../../research/2025-2029/Source-Text/2026-PMC13438289-Round1-Source-Scope.txt) · Original publication
+- [PMID:42240244](../../../../research/2025-2029/Source-Text/2026-PMC13438880-Round1-Source-Scope.txt) · Original publication
+- [PMID:42559191](../../../../research/2025-2029/Source-Text/2026-PMC13439500-Round1-Source-Scope.txt) · Original publication
+- [PMID:42559396](../../../../research/2025-2029/Source-Text/2026-PMC13440515-Round1-Source-Scope.txt) · Original publication
+- [PMID:42481917](../../../../research/2025-2029/Source-Text/2026-PMC13442930-Round1-Source-Scope.txt) · Original publication
+- [PMID:42319017](../../../../research/2025-2029/Source-Text/2026-PMC13443150-Round1-Source-Scope.txt) · Original publication
+- [PMID:42455043](../../../../research/2025-2029/Source-Text/2026-PMC13443339-Round1-Source-Scope.txt) · Original publication
+- [PMID:42564853](../../../../research/2025-2029/Source-Text/2026-PMC13445244-Round1-Source-Scope.txt) · Original publication
+- [PMID:42275385](../../../../research/2025-2029/Source-Text/2026-PMC13452566-Round1-Source-Scope.txt) · Original publication
+- [PMID:42572697](../../../../research/2025-2029/Source-Text/2026-PMC13453303-Round1-Source-Scope.txt) · Original publication
+- [PMID:42424418](../../../../research/2025-2029/Source-Text/2026-PMC13460311-Round1-Source-Scope.txt) · Original publication
+- [PMID:42386776](../../../../research/2025-2029/Source-Text/2026-PMC13462943-Round1-Source-Scope.txt) · Original publication
+- [PMID:42592186](../../../../research/2025-2029/Source-Text/2026-PMC13464090-Round1-Source-Scope.txt) · Original publication
+- [PMID:42429213](../../../../research/2025-2029/Source-Text/2026-PMC13471785-Round1-Source-Scope.txt) · Original publication
+- [PMID:42602230](../../../../research/2025-2029/Source-Text/2026-PMC13473945-Round1-Source-Scope.txt) · Original publication
+- [PMID:42599178](../../../../research/2025-2029/Source-Text/2026-PMC13474202-Round1-Source-Scope.txt) · Original publication
+- [PMID:42602560](../../../../research/2025-2029/Source-Text/2026-PMC13475223-Round1-Source-Scope.txt) · Original publication
+- [PMID:42333666](../../../../research/2025-2029/Source-Text/2026-PMC13477297-Round1-Source-Scope.txt) · Original publication
+- [PMID:42311071](../../../../research/2025-2029/Source-Text/2026-PMC13481895-Round1-Source-Scope.txt) · Original publication
+- [PMID:42204162](../../../../research/2025-2029/Source-Text/2026-PMC13490410-Round1-Source-Scope.txt) · Original publication
+- [PMID:42432671](../../../../research/2025-2029/Source-Text/2026-PMC13491992-Round1-Source-Scope.txt) · Original publication
+- [PMID:42265179](../../../../research/2025-2029/Source-Text/2026-PMC13493857-Round1-Source-Scope.txt) · Original publication
+- [PMID:42378629](../../../../research/2025-2029/Source-Text/2026-PMC13496342-Round1-Source-Scope.txt) · Original publication
+- [PMID:42286243](../../../../research/2025-2029/Source-Text/2026-PMC13498587-Round1-Source-Scope.txt) · Original publication
+- [PMID:42414894](../../../../research/2025-2029/Source-Text/2026-PMC13499318-Round1-Source-Scope.txt) · Original publication
+- [PMID:42432239](../../../../research/2025-2029/Source-Text/2026-PMC13503714-Round1-Source-Scope.txt) · Original publication
+- [PMID:42474140](../../../../research/2025-2029/Source-Text/2026-PMC13508793-Round1-Source-Scope.txt) · Original publication
+- [PMID:42290029](../../../../research/2025-2029/Source-Text/2026-PMC13518266-Round1-Source-Scope.txt) · Original publication
+- [PMID:42310670](../../../../research/2025-2029/Source-Text/2026-PMC13520336-Round1-Source-Scope.txt) · Original publication
+- [PMID:42290623](../../../../research/2025-2029/Source-Text/2026-PMC13525900-Round1-Source-Scope.txt) · Original publication
+- [PMID:42641499](../../../../research/2025-2029/Source-Text/2026-PMC13527505-Round1-Source-Scope.txt) · Original publication
+- [PMID:42236736](../../../../research/2025-2029/Source-Text/2026-PMC13538655-Round1-Source-Scope.txt) · Original publication
+- [PMID:42261810](../../../../research/2025-2029/Source-Text/2026-PMC13542964-Round1-Source-Scope.txt) · Original publication
+- [PMID:42185338](../../../../research/2025-2029/Source-Text/2026-PMC13550646-Round1-Source-Scope.txt) · Original publication
+- [PMID:42719314](../../../../research/2025-2029/Source-Text/2026-PMC13554444-Round1-Source-Scope.txt) · Original publication
+- [PMID:42446380](../../../../research/2025-2029/Source-Text/2026-PMC13554544-Round1-Source-Scope.txt) · Original publication
+- [PMID:42362955](../../../../research/2025-2029/Source-Text/2026-PMC13562273-Round1-Source-Scope.txt) · Original publication
+- [PMID:42324325](../../../../research/2025-2029/Source-Text/2026-PMC13562703-Round1-Source-Scope.txt) · Original publication
+- [PMID:42251131](../../../../research/2025-2029/Source-Text/2026-PMC13574822-Round1-Source-Scope.txt) · Original publication
+- [PMID:42746372](../../../../research/2025-2029/Source-Text/2026-PMC13575979-Round1-Source-Scope.txt) · Original publication
+- [PMID:42287138](../../../../research/2025-2029/Source-Text/2026-PMC13578577-Round1-Source-Scope.txt) · Original publication
+- [PMID:42366409](../../../../research/2025-2029/Source-Text/2026-PMC13579879-Round1-Source-Scope.txt) · Original publication
+- [PMID:42363244](../../../../research/2025-2029/Source-Text/2026-PMC13579904-Round1-Source-Scope.txt) · Original publication
+- [PMID:42237205](../../../../research/2025-2029/Source-Text/2026-PMC13581114-Round1-Source-Scope.txt) · Original publication
+- [PMID:42378627](../../../../research/2025-2029/Source-Text/2026-PMC13589669-Round1-Source-Scope.txt) · Original publication
+- [PMID:42265129](../../../../research/2025-2029/Source-Text/2026-PMC13590594-Round1-Source-Scope.txt) · Original publication
+- [PMID:42419737](../../../../research/2025-2029/Source-Text/2026-PMC13592495-Round1-Source-Scope.txt) · Original publication
+- [PMID:42236257](../../../../research/2025-2029/Source-Text/2026-PMC13602291-Round1-Source-Scope.txt) · Original publication
+- [PMID:42399256](../../../../research/2025-2029/Source-Text/2026-PMC13612825-Round1-Source-Scope.txt) · Original publication
+- [PMID:42223188](../../../../research/2025-2029/Source-Text/2026-PMC13613360-Round1-Source-Scope.txt) · Original publication
+- [PMID:42286020](../../../../research/2025-2029/Source-Text/2026-PMC13616926-Round1-Source-Scope.txt) · Original publication
+- [PMID:42285981](../../../../research/2025-2029/Source-Text/2026-PMC13635230-Round1-Source-Scope.txt) · Original publication
+- [PMID:42339583](../../../../research/2025-2029/Source-Text/2026-PMC13636615-Round1-Source-Scope.txt) · Original publication
+- [PMID:42436587](../../../../research/2025-2029/Source-Text/2026-PMC13644115-Round1-Source-Scope.txt) · Original publication
+- [PMID:42265341](../../../../research/2025-2029/Source-Text/2026-PMC13646277-Round1-Source-Scope.txt) · Original publication
+- [PMID:42463836](../../../../research/2025-2029/Source-Text/2026-PMC13672062-Round1-Source-Scope.txt) · Original publication
+- [PMID:42362553](../../../../research/2025-2029/Source-Text/2026-PMC13672338-Round1-Source-Scope.txt) · Original publication
+- [PMID:42426290](../../../../research/2025-2029/Source-Text/2026-PMC13672717-Round1-Source-Scope.txt) · Original publication
+- [PMID:42470358](../../../../research/2025-2029/Source-Text/2026-PMC13675778-Round1-Source-Scope.txt) · Original publication
+- [PMID:42482158](../../../../research/2025-2029/Source-Text/2026-PMC13681769-Round1-Source-Scope.txt) · Original publication
+- [PMID:42272078](../../../../research/2025-2029/Source-Text/2026-PMC13686109-Round1-Source-Scope.txt) · Original publication
+- [PMID:42464514](../../../../research/2025-2029/Source-Text/2026-PMC13686110-Round1-Source-Scope.txt) · Original publication
+- [PMID:42386517](../../../../research/2025-2029/Source-Text/2026-PMC13686121-Round1-Source-Scope.txt) · Original publication
+- [PMID:42479906](../../../../research/2025-2029/Source-Text/2026-PMC13688049-Round1-Source-Scope.txt) · Original publication
+- [PMID:42337584](../../../../research/2025-2029/Source-Text/2026-PMC13689014-Round1-Source-Scope.txt) · Original publication
+- [PMID:42393094](../../../../research/2025-2029/Source-Text/2026-PMC13691069-Round1-Source-Scope.txt) · Original publication
+- [PMID:42471752](../../../../research/2025-2029/Source-Text/2026-PMC13712548-Round1-Source-Scope.txt) · Original publication
+- [PMID:42401602](../../../../research/2025-2029/Source-Text/2026-PMC13714304-Round1-Source-Scope.txt) · Original publication
+- [PMID:42409815](../../../../research/2025-2029/Source-Text/2026-PMC13720001-Round1-Source-Scope.txt) · Original publication
+- [PMID:42248896](../../../../research/2025-2029/Source-Text/PMC13282387.txt) · Original publication
+- [PMID:42185329](../../../../research/2025-2029/Source-Text/PMC13482129.txt) · Original publication
+- [PMID:42259819](../../../../research/2025-2029/Source-Text/PMC13582891.txt) · Original publication

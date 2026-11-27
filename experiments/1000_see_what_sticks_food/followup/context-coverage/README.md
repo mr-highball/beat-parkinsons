@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The swallowing and endpoint audit resolved 215 exact checks across 215 authenticated publications. 22571 checks remain across 17582 publication keys and 285 claims. [Original sources and outcome audit](../exact-endpoints-and-open-libraries-nov26/README.md)
+
 The priority original audit resolved 154 exact checks across 154 authenticated publications. 22786 checks remain across 17797 publication keys and 285 claims. [Original sources and outcome audit](../priority-originals-and-endpoints-nov26/README.md)
 
 The shared source and formulation audit resolved 166 exact checks across 139 authenticated publications. 22940 checks remain across 17951 publication keys and 285 claims. [Original sources and outcome audit](../final-originals-and-formulations-nov26/README.md)
