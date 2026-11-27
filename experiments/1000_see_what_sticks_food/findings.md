@@ -1,5 +1,7 @@
 ## Findings and limits
 
+Verified 150 exact original-source checks and preserved the pending memberships in 22 high-fanout sources. The queue holds 19,437 checks across 15,205 source keys and 271 frozen claims. Claim 0391 now meets the research-depth gates. Round 1 stands at 701 researched and 299 partial. All 33 affected scorecards retain their recorded verdicts and anchors. [Originals and focused evidence](followup/fanout-and-closeouts-nov27/README.md)
+
 Verified 180 recent exact original-source checks. The queue holds 19,587 checks across 15,355 source keys and 271 frozen claims. Claim 0244 now meets the research-depth gates. Round 1 stands at 700 researched and 300 partial, with all 24 affected scorecards retaining their recorded verdicts and anchors. [Original-source and coverage audit](followup/zero-queue-and-recent-originals-nov27/README.md)
 
 The structured original review closed 140 exact source checks. The queue now holds 19,767 checks across 15,535 source keys and 271 frozen claims. The 14 affected version 1 scorecards validate at their existing verdicts and anchors. [Originals and replay](followup/priority-and-structured-nov27/README.md)

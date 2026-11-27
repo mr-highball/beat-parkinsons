@@ -499,3 +499,5 @@ The Pakistan survey describes eating sweet orange fruit and the Shivalik survey 
 - [Sweet orange juice in a Shivalik ethnomedicinal survey](../Cultural-and-Experiential/Traditional-Practices/2014-Shivalik-Sweet-Orange-Juice-Constipation.txt)
 
 - [Cardamom customary use and pain outcomes](2010-2011-Cardamom-Customary-Use-and-Pain-Scope.md)
+
+The 2011 diabetes-model paper distinguishes its cohort from the earlier high-fat mouse study of the same tarragon extract. Both measure responses to stimuli in neuropathy models. [2011 original](../Source-Text/2011-PMID21225225-Tarragon-Extract-Sensory-Thresholds.txt) · [2010 original](../Source-Text/PMC2852597.txt)

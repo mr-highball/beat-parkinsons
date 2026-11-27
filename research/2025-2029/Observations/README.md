@@ -720,3 +720,5 @@ The Indigenous food sheet documents drying and cooking cranberry. The 2020 tradi
 [Aneityum turmeric harvest calendar](2025-Aneityum-Turmeric-Harvest-Context.md) separates the cultivation practice from experimental food and symptom evidence.
 
 The CIRCUS 2025 abstract reports biomarker results from the trial whose 2024 publication described the protocol and baselines. Planned cognitive outcomes are still unreported in these records. [2025 meeting abstract](../Source-Text/2025-Circulation-4368203-CIRCUS-Metabolites.txt)
+
+The tarragon chapter records plant use for specific pain contexts, with leaf contact and tea as different exposures. The pumpkin seed oil report preserves a perceived unfavorable mood experience while using another therapy. [Tarragon chapter](../Cultural-and-Experiential/Traditional-Practices/2025-Cayoose-Creek-Tarragon-and-Pain.txt) · [Pumpkin seed oil conversation](../Cultural-and-Experiential/Conversations/2025-Reddit-Pumpkin-Seed-Oil-and-Mood.txt)

@@ -908,3 +908,5 @@ The [green tea crossover text](Source-Text/2013-Watanabe-Brewed-Green-Tea-and-Ta
 - [November 26 Round 1 swallowing and clinical endpoint records](../../experiments/1000_see_what_sticks_food/followup/exact-endpoints-and-open-libraries-nov26/originals-by-period.md#2010-2014)
 
 - [November 26 Round 1 trial outcomes and archival source scope](../../experiments/1000_see_what_sticks_food/followup/trial-outcomes-and-archival-depth-nov26/originals-by-period.md#2010-2014)
+
+- [PMID 21225225, tarragon extract and mouse sensory responses](Source-Text/2011-PMID21225225-Tarragon-Extract-Sensory-Thresholds.txt)

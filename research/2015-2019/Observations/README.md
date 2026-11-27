@@ -677,3 +677,5 @@ A Parkinson’s UK discussion contains mixed orange experiences during constipat
 [Comparison of beverage fatigue outcomes and customary sleep uses](2019-Tea-Fatigue-and-Lemongrass-Sleep.md).
 
 - A full publisher PDF resolved the crossed index identity for the 2018 mass-spectrometry editorial. A later correction addresses the printed issue year. Its first publication remains November 2018. [Editorial source review](../Source-Text/2018-PMID30430435-Round1-PDF-Scope.txt)
+
+A 2017 meeting member gives motor and cognition context for freeze-dried blueberries. Its endpoint scope is separate from constipation. A 2019 aging-model diet replaced some soybean oil with olive oil and did not report a Parkinson medication endpoint. [Blueberry member](../Source-Text/2017-PMC6183796-Blueberry-Motor-Cognition-Abstract.txt) · [Oil diet original](../Source-Text/2019-PMID31656282-Soy-Oil-and-Olive-Oil-SAMP8.txt)

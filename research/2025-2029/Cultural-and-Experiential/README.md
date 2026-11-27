@@ -58,3 +58,7 @@ Follow the [source, date, privacy and evidence policy](../../Cultural-and-Experi
 - [Patient-reported food aggravators in a rosacea survey](Local-Knowledge/2025-PMC12274754-Rosacea-Reported-Cinnamon-and-Ginger-Triggers.txt)
 
 [Aneityum turmeric harvest calendar](Local-Knowledge/2025-PMC12316303-Aneityum-Turmeric-Harvest.txt) documents local knowledge on Aneityum, Vanuatu.
+
+- [Tarragon pain-related practices documented in the Cayoose Creek Band book](Traditional-Practices/2025-Cayoose-Creek-Tarragon-and-Pain.txt)
+
+- [Reported mood symptoms during pumpkin seed oil use](Conversations/2025-Reddit-Pumpkin-Seed-Oil-and-Mood.txt)
