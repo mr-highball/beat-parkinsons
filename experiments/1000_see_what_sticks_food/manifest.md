@@ -397,6 +397,8 @@ The publication-first batch closed 275 exact checks across 213 originals. It rec
 
 The archived PDF and focused outcome audit closed 320 exact checks, including 33 from ten recovered PDFs. A pediatric protocol and a first-morning medication crossover refine the limits of the broccoli attention and soybean-oil daily OFF claims. Both claims retain the open tier. [Original and outcome audit](followup/pdf-originals-and-fresh-sweeps-nov26/README.md)
 
+The last-source recovery audit closed 274 exact checks. Cracked black pepper and pain retains a limited easing lean with an explicitly recorded opposing firsthand report. Refined soybean oil and bradykinesia reached Unknown (Researched). [Original and outcome audit](followup/last-source-recovery-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

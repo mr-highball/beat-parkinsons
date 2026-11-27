@@ -1,5 +1,7 @@
 # 2020-2024
 
+The [November 26 Round 1 source audit](../../experiments/1000_see_what_sticks_food/followup/last-source-recovery-nov26/source-records.md#2020-2024) links 2 dated original-source records for this period.
+
 The [November 26 Round 1 source audit](../../experiments/1000_see_what_sticks_food/followup/pdf-originals-and-fresh-sweeps-nov26/source-records.md#2020-2024) links 1 dated original-source records for this period.
 
 The [November 26 Round 1 source audit](../../experiments/1000_see_what_sticks_food/followup/priority-papers-and-source-fanout-nov26/source-records.md#2020-2024) links 3 dated original-source records for this period.
