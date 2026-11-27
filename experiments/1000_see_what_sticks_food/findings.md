@@ -366,6 +366,8 @@ The November 26 trial and archival audit closed 262 original memberships, with 3
 
 The November 26 source audit closed 429 original checks. The cooked-tomato and shortened-stride hypothesis completed the current evidence review and remains Unknown. PRIME still has no posted results. [Source audit](followup/source-depth-and-near-completion-nov26/README.md)
 
+The resumed audit closed 127 source checks. The cinnamon pain scorecard records a published case involving cinnamon cake and separate flavored-product reactions, while retaining its minimal easing tier for the frozen hypothesis. The RNSP account links saffron to a documented multicomponent practice. [Review packet](followup/resumed-originals-and-endpoints-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).
