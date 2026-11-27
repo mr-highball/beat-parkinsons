@@ -361,3 +361,10 @@ The [Finley feeding study](Source-Text/2003-PMID12949376-Finley-Corn-Oil-and-Neu
 ## November 27 accession and conference-member scope
 
 - [PMID:22033600 | Behavioral disturbances in Parkinson's disease](Source-Text/2004-PMC3181807-Round1-Original-Scope.txt)
+
+## November 27 original article and edition verification
+
+- [PMCID:PMC1637979 | The Beat, raw egg food safety](Source-Text/2000-PMC1637979-Round1-Original-Scope.txt)
+- [PMCID:PMC7094953 | All I want for 2005 is...](Source-Text/2004-PMC7094953-Round1-Original-Scope.txt)
+- [PMCID:PMC7103172 | C scientific exhibits (SE)](Source-Text/2002-PMC7103172-Round1-Original-Scope.txt)
+- [PMCID:PMC7128713 | Volume contents, author and keyword indices](Source-Text/2004-PMC7128713-Round1-Original-Scope.txt)

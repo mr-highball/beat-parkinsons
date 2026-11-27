@@ -1,0 +1,16 @@
+# Focused clinical and outcome checks
+
+## Green tea and smell impairment (0030)
+
+ECR scientific session p225 describes pregnant participants drinking green tea as a pre-MRI preparation; no olfaction outcome. The Kagoshima cohort and PENSA outcome remain the closest measured human evidence, with no interpretable directional finding for the frozen brewed tea claim. The source scope was the 216-page European Congress of Radiology scientific-session programme, printed pp121–336. Prior local, Europe PMC, outside clinical and registry, and cultural and conversational discovery remains documented in the research-status ledger. The branch Oracle returned zero indexed green-tea olfactory cultural matches and zero green-tea smell conversation matches for the current exact terms. New narrow discovery found the already recorded Kagoshima and extract evidence, with no newly surfaced trial joining brewed green tea and Parkinson hyposmia.
+
+The fresh PubMed and ClinicalTrials.gov searches each returned one record. PMID 35719152 is the previously assessed genetic proxy study. Its nominal baseline-hyposmia estimate favors lower odds (OR 0.92, 95% CI 0.84–0.99, p=.03), and the outcome misses the study's multiple-testing threshold. The Kagoshima cohort did not identify a hyposmia difference by tea frequency or volume. The evidence is about baseline presence or an unrelated extract setting, so it does not establish a sign for change in Parkinson smell-impairment severity after brewed tea. NCT01019343 is an already archived movement-physiology protocol with no green-tea comparison. [Exact searches](focused-search-receipt.tsv).
+
+## Cold-pressed pumpkin seed oil and pain (0480)
+
+The 42-participant three-group study reports mean pain decreases of 3.86 (SD 1.46), 1.29 (SD 1.86), and 0.57 (SD 0.94) on a 0–10 scale for high-dose extract, low-dose extract, and starch. The high-dose change comparison was reported p<.001 and low-dose versus starch p=.205. Baseline NRS means were 6.29, 4.93, and 3.86. No baseline-adjusted contrast, concealed allocation, or oil fraction was established. This was a seed extract in adolescents with premenstrual symptoms. The 2026 report may overlap. The separate oral oil adjunct still lacks obtainable numeric pain results and verified pressing grade. The oil-plus-tadalafil abstract reports an overall response in 11/25 compared with 12/25 on tadalafil alone and gives a qualitative pain-domain advantage. The full pain table remains inaccessible on the verified publisher route. The ordinal score remains open. Baseline imbalance, unclear attribution, extract-versus-oil differences, and the adolescent symptom setting leave the new study without a transferable sign.
+
+- [2004-PMC7149023-Original-Access](../../../../research/2000-2004/Source-Text/2004-PMC7149023-Original-Access.txt)
+- [2025-DOI10.31983-jkb.v15i1.12663-Pumpkin-Seed-Extract-and-PMS-Pain](../../../../research/2025-2029/Source-Text/2025-DOI10.31983-jkb.v15i1.12663-Pumpkin-Seed-Extract-and-PMS-Pain.txt)
+- [2026-DOI10.52365-jm.v12i1.1657-Pumpkin-Seed-Extract-and-PMS-Total](../../../../research/2025-2029/Source-Text/2026-DOI10.52365-jm.v12i1.1657-Pumpkin-Seed-Extract-and-PMS-Total.txt)
+- [2025-Khalil-Pumpkin-Oil-and-Tadalafil-Pelvic-Pain](../../../../research/2025-2029/Source-Text/2025-Khalil-Pumpkin-Oil-and-Tadalafil-Pelvic-Pain.txt)

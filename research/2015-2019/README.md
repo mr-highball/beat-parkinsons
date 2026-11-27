@@ -2120,3 +2120,22 @@ The [dark chocolate trial](Source-Text/2019-PMID31146395-Dark-Chocolate-Cortisol
 - [PMID:30713928 | Huntington's Disease, Huntington's Disease Look‐Alikes‎, and Benign Hereditary Chorea: What's New?](Source-Text/2016-PMC6353394-Round1-Original-Scope.txt)
 
 - [Cassia bark extract and mouse vertical-rod behavior](Source-Text/2016-Zaidi-Cassia-Bark-Extract-and-Mouse-Vertical-Rod.txt)
+
+## November 27 original article and edition verification
+
+- [PMCID:PMC4768437 | FREE PAPERS](Source-Text/2016-PMC4768437-Round1-Original-Scope.txt)
+- [PMCID:PMC5126738 | Instrumentation and Medical Physics](Source-Text/2016-PMC5126738-Round1-Original-Scope.txt)
+- [PMCID:PMC5234494 | NEWS](Source-Text/2016-PMC5234494-Round1-Original-Scope.txt)
+- [PMCID:PMC6032102 | Symposia](Source-Text/2018-PMC6032102-Round1-Original-Scope.txt)
+- [PMCID:PMC6078391 | 23rd Annual Meeting: 10–12 May 2018, Ankara, Sheraton Hotel](Source-Text/2018-PMC6078391-Round1-Original-Scope.txt)
+- [PMCID:PMC6124212 | Abstract](Source-Text/2018-PMC6124212-Round1-Original-Scope.txt)
+- [PMCID:PMC6265830 | Nutrient-Gene Interactions](Source-Text/2018-PMC6265830-Round1-Original-Scope.txt)
+- [PMCID:PMC6326017 | Abstract Submission FMPC 2015](Source-Text/2018-PMC6326017-Round1-Original-Scope.txt)
+- [PMCID:PMC6796240 | UEG Week 2018 Oral Presentations](Source-Text/2018-PMC6796240-Round1-Original-Scope.txt)
+- [PMCID:PMC6846534 | SHORT-TERM INTRAINDIVIDUAL DYNAMICS OF HEART RATE AND COGNITIVE FUNCTIONING IN OLDER ADULTS](Source-Text/2019-PMC6846534-Round1-Original-Scope.txt)
+- [PMCID:PMC7121576 | Melanom](Source-Text/2019-PMC7121576-Round1-Original-Scope.txt)
+- [PMCID:PMC7123375 | Cardiology](Source-Text/2015-PMC7123375-Round1-Original-Scope.txt)
+- [PMCID:PMC7149322 | Category Definitions](Source-Text/2017-PMC7149322-Round1-Original-Scope.txt)
+- [PMCID:PMC7149392 | Management of Breeding in Small Poultry Production Units](Source-Text/2018-PMC7149392-Round1-Original-Scope.txt)
+- [PMCID:PMC7158194 | Nervous System 1](Source-Text/2017-PMC7158194-Round1-Original-Scope.txt)
+- [PMCID:PMC7497963 | News from the Field](Source-Text/2019-PMC7497963-Round1-Original-Scope.txt)

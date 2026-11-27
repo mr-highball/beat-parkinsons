@@ -251,3 +251,10 @@ The [BMJ February 1998 issue review](../../experiments/1000_see_what_sticks_food
 ## November 27 accession and conference-member scope
 
 - [PMID:9539013 | Methylcyclopentadienyl manganese tricarbonyl: health risk uncertainties and research directions.](Source-Text/1998-PMC1533284-Round1-Original-Scope.txt)
+
+## November 27 original article and edition verification
+
+- [PMCID:PMC1113101 | Minerva: Views and Reviews](Source-Text/1998-PMC1113101-Round1-Original-Scope.txt)
+- [PMCID:PMC2062786 | Oral Presentations](Source-Text/1998-PMC2062786-Round1-Original-Scope.txt)
+- [PMCID:PMC7133215 | Subject index](Source-Text/1998-PMC7133215-Round1-Original-Scope.txt)
+- [PMCID:PMC7172550 | Subject Index](Source-Text/1998-PMC7172550-Round1-Original-Scope.txt)

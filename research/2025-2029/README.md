@@ -2499,3 +2499,42 @@ Full original checks distinguish culinary exposures from publication dates, figu
 - [2026 CIRCUS mixed-produce outcome report](Source-Text/2026-Circulation-TH916-CIRCUS-Vascular-and-Lipid-Outcomes.txt)
 
 - [PSMF1 revised preprint and exposure scope](Source-Text/2025-PMC11326324-PSMF1-Preprint-V2-Corn-Oil-Vehicle.txt)
+
+## November 27 original article and edition verification
+
+- [PMCID:PMC12949104 | Issue Information](Source-Text/2026-PMC12949104-Round1-Original-Scope.txt)
+- [PMCID:PMC13347416 | Rong Xue, Xuang Zhang, and Anette Schrag, recipients of the Parkinson Prize 2024](Source-Text/2025-PMC13347416-Round1-Original-Scope.txt)
+- [PMCID:PMC13347567 | In memory of Dr. Mark Hallett: a remarkable scientist, mentor, and human being](Source-Text/2026-PMC13347567-Round1-Original-Scope.txt)
+- [PMCID:PMC13571143 | From HIV to SARS-CoV-2 associated neurological disorder (“HAND” to “SAND”): Viral infection as a “time-bomb“ for the aging brain](Source-Text/2026-PMC13571143-Round1-Original-Scope.txt)
+- [PMCID:PMC13612329 | Treadmill exercise improves motor deficits and partially normalizes electrophysiological properties of substantia nigra pars reticulata PV-lineage neurons in 6-OHDA-lesioned mice](Source-Text/2026-PMC13612329-Round1-Original-Scope.txt)
+- [PMCID:PMC13641323 | Effectiveness of a Virtual Reality Immersion Process as a Nonpharmacological Intervention for Behavioral and Psychological Symptoms of Dementia and Immediate Well-Being in People Living in Nursing Homes: Randomized Controlled Trial](Source-Text/2026-PMC13641323-Round1-Original-Scope.txt)
+- [PMCID:PMC13650051 | Considerations for therapeutic targets for clinical trials in biomarker-characterized prodromal Parkinson's disease populations](Source-Text/2026-PMC13650051-Round1-Original-Scope.txt)
+- [PMCID:PMC13650055 | Measuring what matters: Evaluating quality of life instruments through the eyes of people with Parkinson's disease](Source-Text/2026-PMC13650055-Round1-Original-Scope.txt)
+- [PMCID:PMC13650063 | Profiling peripheral immune cells in Parkinson's disease: A scoping review](Source-Text/2026-PMC13650063-Round1-Original-Scope.txt)
+- [PMCID:PMC13650594 | MIND diet–related plasma proteins are associated with Alzheimer's disease risk](Source-Text/2026-PMC13650594-Round1-Original-Scope.txt)
+- [PMCID:PMC13655385 | Multimodal MRI to elucidate cross-organ coupling mechanisms of the heart-brain axis](Source-Text/2026-PMC13655385-Round1-Original-Scope.txt)
+- [PMCID:PMC13655632 | Phytochemistry, Pharmacological Potential, and Future Prospects of Abietane‐Type Diterpenoids From Salvia rosmarinus](Source-Text/2026-PMC13655632-Round1-Original-Scope.txt)
+- [PMCID:PMC13656851 | Physical activity and improvement of physiological parameters by training](Source-Text/2026-PMC13656851-Round1-Original-Scope.txt)
+- [PMCID:PMC13661812 | Charting the future: A multi-setting medical chart study of advance care planning in Parkinson's disease and atypical Parkinsonism](Source-Text/2026-PMC13661812-Round1-Original-Scope.txt)
+- [PMCID:PMC13661818 | An acoustic-only multivariable diagnostic model for Parkinson's disease using bowel sound acoustic signatures](Source-Text/2026-PMC13661818-Round1-Original-Scope.txt)
+- [PMCID:PMC13662296 | Tolerability of lemborexant for cognitive function and sleep quality in patients with dementia with Lewy bodies](Source-Text/2026-PMC13662296-Round1-Original-Scope.txt)
+- [PMCID:PMC13662319 | Antioxidant intake relative to established dietary recommendations and cognitive status in older adults](Source-Text/2026-PMC13662319-Round1-Original-Scope.txt)
+- [PMCID:PMC13662326 | Converting short cognitive screen scores: Comparing the Quick mild cognitive impairment screen, Montreal cognitive assessment, and Mini-mental state examination](Source-Text/2026-PMC13662326-Round1-Original-Scope.txt)
+- [PMCID:PMC13662341 | Studies on topological maturation of α-synuclein fibrils in Parkinson's disease: Insights from persistent homology and SARS-CoV-2 acceleration of aggregation](Source-Text/2026-PMC13662341-Round1-Original-Scope.txt)
+- [PMCID:PMC13662343 | Brain health in older adults: At the crossroads of frailty and resilience](Source-Text/2026-PMC13662343-Round1-Original-Scope.txt)
+- [PMCID:PMC13662353 | Biobank Alzheimer Center Limburg study: A multimodal longitudinal dementia biobank](Source-Text/2026-PMC13662353-Round1-Original-Scope.txt)
+- [PMCID:PMC13662358 | Herpes simplex virus, APOE ε4, and olfactory function in older adults: A cohort study](Source-Text/2026-PMC13662358-Round1-Original-Scope.txt)
+- [PMCID:PMC13662365 | Improving biomarkers of inflammation including phosphorylated tau in a patient with chronic Lyme disease/post-treatment Lyme disease syndrome using dapsone combination therapy: A case study and literature review](Source-Text/2026-PMC13662365-Round1-Original-Scope.txt)
+- [PMCID:PMC13664698 | Ketogenic Diet and Neurological Health: A Narrative Review with Natural Language Processing-Assisted Thematic Mapping Using BERTopic](Source-Text/2026-PMC13664698-Round1-Original-Scope.txt)
+- [PMCID:PMC13670514 | Natural products targeting mitochondrial homeostasis: a four-dimensional framework integrating dynamics, mitophagy, pharmacokinetics, and translational safety](Source-Text/2026-PMC13670514-Round1-Original-Scope.txt)
+- [PMCID:PMC13670878 | Integrated Experimental and Computational Investigation of Fluorinated Benzoylthiourea Derivatives: Structural Characterization, Hirshfeld Surface Analysis, Antioxidant Activity, and MAO–B Inhibitory Potential for Parkinson’s Disease](Source-Text/2026-PMC13670878-Round1-Original-Scope.txt)
+- [PMCID:PMC13677027 | Identification of platelet-derived biomarker in a cohort of Parkinson's disease](Source-Text/2026-PMC13677027-Round1-Original-Scope.txt)
+- [PMCID:PMC13690977 | Precision Nanomedicine for Traumatic Neural Injury: Functional Paradigms and Translational Frameworks](Source-Text/2026-PMC13690977-Round1-Original-Scope.txt)
+- [PMCID:PMC13719749 | A systematic review of environmental factors in AI-based fall risk prediction models for community-dwelling older adults](Source-Text/2026-PMC13719749-Round1-Original-Scope.txt)
+- [PMCID:PMC13733703 | Timed binary WNT activity is sufficient to model the early human neural axis](Source-Text/2026-PMC13733703-Round1-Original-Scope.txt)
+- [PMCID:PMC13742773 | The Ge netic Di scovery (GeDi) resource: Deep characterization of a multi-ancestry panel of human reference iPSCs for functional genomic studies](Source-Text/2026-PMC13742773-Round1-Original-Scope.txt)
+
+## November 27 pumpkin seed extract comparison and lineage
+
+- [Original premenstrual pain tables](Source-Text/2025-DOI10.31983-jkb.v15i1.12663-Pumpkin-Seed-Extract-and-PMS-Pain.txt)
+- [Potentially overlapping composite-symptom report](Source-Text/2026-DOI10.52365-jm.v12i1.1657-Pumpkin-Seed-Extract-and-PMS-Total.txt)
