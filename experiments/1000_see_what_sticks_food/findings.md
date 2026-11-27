@@ -368,6 +368,8 @@ The November 26 source audit closed 429 original checks. The cooked-tomato and s
 
 The resumed audit closed 127 source checks. The cinnamon pain scorecard records a published case involving cinnamon cake and separate flavored-product reactions, while retaining its minimal easing tier for the frozen hypothesis. The RNSP account links saffron to a documented multicomponent practice. [Review packet](followup/resumed-originals-and-endpoints-nov26/README.md)
 
+The recovered collections audit closed 443 original checks. Five hypotheses involving lentils, canola oil and saffron reached the researched Unknown status. Their original exposure, preparation and endpoint limits are recorded in the associated scorecards. [Source and endpoint audit](followup/recovered-collections-nov26/README.md)
+
 ### Search coverage and limits
 
 - **First-pass baseline:** All 30,593 baseline archive files were read with zero extraction failures ([local-coverage.tsv](local-coverage.tsv)), and 2,000 neutral Europe PMC queries covered all 1,000 frozen statements ([queries.tsv](queries.tsv)).

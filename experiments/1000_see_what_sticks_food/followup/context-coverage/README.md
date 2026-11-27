@@ -1,5 +1,7 @@
 # Exact claim–source coverage for the original Europe PMC searches
 
+The recovered collections audit closed 443 original checks. 21310 checks remain across 16935 publication keys and 279 claims. [Recovered source audit](../recovered-collections-nov26/README.md)
+
 The resumed original-source audit closed 127 checks. 21753 checks remain across 17199 publication keys and 284 claims. [Source-level audit](../resumed-originals-and-endpoints-nov26/README.md)
 
 The tomato stride and source audit closed 429 exact checks. 21880 checks remain across 17243 publication keys and 284 claims. [Batch review](../source-depth-and-near-completion-nov26/README.md)
